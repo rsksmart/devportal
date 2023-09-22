@@ -1,0 +1,9 @@
+paths-ignore:
+  - _site
+  - assets/vendor
+  - defi/js
+  - defi/vendor
+  - grants/js
+  - grants/vendor
+  - grants/follow-up/deps
+  - grants/follow-up/lib
