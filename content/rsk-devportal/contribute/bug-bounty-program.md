@@ -8,4 +8,4 @@ tags: rsk, rif, bounty, security, rootstock
 
 RootstockLabs has created this bug bounty program to reward security researchers that dedicate time and effort to improve the RootstockLabs platforms.
 
-<a href="https://hackerone.com/iovlabs" target="_blank" class="green-button">Bug Bounty Program</a>
+<a href="https://hackerone.com/rootstocklabs" target="_blank" class="green-button">Bug Bounty Program</a>
