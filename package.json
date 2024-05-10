@@ -2,6 +2,9 @@
   "name": "devportal-rootstock",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": "18"
+  },
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
