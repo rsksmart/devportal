@@ -1,7 +1,6 @@
 ---
-layout: rsk
 section_title: Knowledge Base
-sidebar_label: Overview
+sidebar_label: Knowledge Base
 title: Welcome to Rootstock and RIF Knowledgebase | Rootstock (RSK)
 description: "Welcome to Rootstock and RIF Knowledge-base; Explore Rootstock faqs, tutorials and guides to help you get started on building on Rootstock and RIF Technologies"
 sidebar_position: 3
@@ -13,14 +12,14 @@ sidebar_position: 3
             <a href="/kb/faqs/">
                 <div class="icon h-100">
                     <div class="icon-cont text-center my-auto">
-                        <img src="/img/rootstock-icon.png" alt="faq icon" /> 
+                        <img src="/img/rootstock-icon.png" alt="faq icon" />
                     </div>
                 </div>
             </a>
             <div class="content">
                 <a href="/kb/faqs/">
                     <div class="content-container">
-                         <div class="card-title"><h2 class="zg-text-bg">Rootstock & RIF FAQs</h2><span class="zg-label ml-1">01</span></div> 
+                         <div class="card-title"><h2 class="zg-text-bg">Rootstock & RIF FAQs</h2><span class="zg-label ml-1">01</span></div>
                         <p class="card-desc">Check out our faqs section to help you troubleshoot and view answers to questions you might have.</p>
                     </div>
                 </a>
@@ -43,7 +42,7 @@ sidebar_position: 3
             <div class="content">
                 <a href="/kb/rskj/">
                     <div class="content-container">
-                        <div class="card-title"><h2 class="zg-text-bg bg-purple">Get Started with RSKj</h2><span class="zg-label ml-1 bg-purple">02</span></div> 
+                        <div class="card-title"><h2 class="zg-text-bg bg-purple">Get Started with RSKj</h2><span class="zg-label ml-1 bg-purple">02</span></div>
                         <p class="card-desc">Explore the different ways to get started with RSKj as a developer, node runner or as a miner on Rootstock.</p>
                     </div>
                 </a>
@@ -66,7 +65,7 @@ sidebar_position: 3
             <div class="content">
                 <a href="/kb/rskj-for-developers/">
                     <div class="content-container">
-                          <div class="card-title"><h2 class="zg-text-bg bg-pink">RSKj for Developers</h2><span class="zg-label ml-1 bg-pink">03</span></div> 
+                          <div class="card-title"><h2 class="zg-text-bg bg-pink">RSKj for Developers</h2><span class="zg-label ml-1 bg-pink">03</span></div>
                         <p class="card-desc">Setup your dev environment and build dApps faster using this quick start guide</p>
                     </div>
                 </a>
@@ -89,7 +88,7 @@ sidebar_position: 3
             <div class="content">
                 <a href="/kb/rootstock-metamask/">
                     <div class="content-container">
-                        <div class="card-title"><h2 class="zg-text-bg bg-yellow">Add Rootstock to Metamask Programmatically</h2><span class="zg-label ml-1 bg-yellow">04</span></div> 
+                        <div class="card-title"><h2 class="zg-text-bg bg-yellow">Add Rootstock to Metamask Programmatically</h2><span class="zg-label ml-1 bg-yellow">04</span></div>
                         <p class="card-desc">Learn how to add and initiate a network switch on Metamask from a website.</p>
                     </div>
                 </a>
@@ -112,7 +111,7 @@ sidebar_position: 3
             <div class="content">
                 <a href="/kb/defillama/">
                     <div class="content-container">
-                        <div class="card-title"><h2 class="zg-text-bg">Add Protocol to DefiLlama</h2><span class="zg-label ml-1">05</span></div> 
+                        <div class="card-title"><h2 class="zg-text-bg">Add Protocol to DefiLlama</h2><span class="zg-label ml-1">05</span></div>
                         <p class="card-desc">Learn how to list a DeFi project and write an SDK adapter to add a Protocol to DeFiLlama.</p>
                     </div>
                 </a>
@@ -135,7 +134,7 @@ sidebar_position: 3
             <div class="content">
                 <a href="/kb/the-graph-rootstock/">
                     <div class="content-container">
-                        <div class="card-title"><h2 class="zg-text-bg">How to use TheGraph on Rootstock</h2><span class="zg-label ml-1">06</span></div> 
+                        <div class="card-title"><h2 class="zg-text-bg">How to use TheGraph on Rootstock</h2><span class="zg-label ml-1">06</span></div>
                         <p class="card-desc">The Graph is a decentralized protocol for indexing and querying blockchain data</p>
                     </div>
                 </a>
@@ -158,7 +157,7 @@ sidebar_position: 3
             <div class="content">
                 <a href="/kb/transaction-rate-limiter-rskj/">
                     <div class="content-container">
-                    <div class="card-title"><h2 class="zg-text-bg">Transaction Rate Limiter on the Rootsotck Network</h2></div> 
+                    <div class="card-title"><h2 class="zg-text-bg">Transaction Rate Limiter on the Rootsotck Network</h2></div>
                         <p class="card-desc">AKA Virtual Gas Limiter</p>
                     </div>
                 </a>
@@ -181,7 +180,7 @@ sidebar_position: 3
             <div class="content">
                 <a href="/kb/build-with-tenderly/">
                     <div class="content-container">
-                        <div class="card-title"><h2 class="zg-text-bg">Build on Rootstock with Tenderly</h2></div> 
+                        <div class="card-title"><h2 class="zg-text-bg">Build on Rootstock with Tenderly</h2></div>
                         <p class="card-desc">Tenderly helps developers build, monitor, and improve smart contracts by providing a set of tools to boost productivity.</p>
                     </div>
                 </a>
@@ -204,7 +203,7 @@ sidebar_position: 3
             <div class="content">
                 <a href="/kb/tokenbridge-troubleshooting/">
                     <div class="content-container">
-                        <div class="card-title"><h2 class="zg-text-bg">Rootstock Token Bridge Troubleshooting Guide</h2></div> 
+                        <div class="card-title"><h2 class="zg-text-bg">Rootstock Token Bridge Troubleshooting Guide</h2></div>
                         <p class="card-desc">Having issues crossing your tokens on the Token Bridge? See the troubleshooting guide for help.</p>
                     </div>
                 </a>
@@ -227,7 +226,7 @@ sidebar_position: 3
             <div class="content">
                 <a href="/kb/verify-address-ownership/">
                     <div class="content-container">
-                        <div class="card-title"><h2 class="zg-text-bg bg-pink">Verify Address Ownership</h2></div> 
+                        <div class="card-title"><h2 class="zg-text-bg bg-pink">Verify Address Ownership</h2></div>
                         <p class="card-desc">Confirm that you own a Rootstock address using RIF Identity Manager.</p>
                     </div>
                 </a>

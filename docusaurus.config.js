@@ -5,6 +5,9 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
+import {createNavItems} from './src/_utils/utils.js';
+
+const customNavItems = createNavItems('./docs');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -76,11 +79,12 @@ const config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            to: '/',
             position: 'left',
-            label: 'Docs',
+            activeBasePath: '/home',
+            label: 'Home',
           },
+          ...customNavItems,
           {
             href: 'https://github.com/rsksmart/devportal',
             label: 'GitHub',
