@@ -1,8 +1,8 @@
 ---
 layout: rsk
-menu_order: 3
+sidebar_position: 3
 section_title: RIF
-menu_title: About RIF
+sidebar_label: About RIF
 title: "RIF Developer Resources: Build on Rootstock using RIF Tools and Services | Dev.Rootstock.io"
 tags: [rif, rootstock, rif-rollup, rif-relay, rns, rif-wallet, storage, node, sdk, libraries, infrastructure, protocols, mvp, design, rbtc, defi, decentralized, quick-start, guides, tutorial, networks, dapps, tools, rsk, ethereum, smart-contracts, install, get-started, how-to, mainnet, testnet, contracts, wallets, web3, crypto]
 ---

@@ -1,9 +1,9 @@
 ---
 layout: rsk
 title: "RBTC Gas Fees: Optimizing Transaction Costs | Rootstock (RSK)"
-menu_title: Gas
+sidebar_label: Gas
 tags: [gas, transactions, rbtc, mainnet, smart-contracts, rsk, conversion, bitcoin, price, gas-price, cost]
-menu_order: 3
+sidebar_position: 3
 ---
 
 Gas is the internal pricing for running a transaction or contract.
