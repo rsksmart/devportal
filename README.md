@@ -5,7 +5,7 @@ This website is built using [Docusaurus](https://docusaurus.io/), a modern stati
 For more information on how to use Docusaurus, please refer to the [Docusaurus Documentation](https://docusaurus.io/docs).
 
 ## Requirements
-- Node >=18
+- Node 18
 
 ## Installation and development
 ### Installation
