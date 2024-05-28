@@ -31,11 +31,9 @@ $ yarn build
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
 ## Project Structure
-The structure of this website is based on the `docs` folder.
+The structure of this website is based on the `docs` folder. This structure allows for a scalable and organized website, where new sections can be easily added by creating new directories in the `docs` folder.
 Each directory within the `docs` folder represents a separate section on the website.
 This allows for a clear and organized structure, making it easy for users to navigate through the different sections of the website.
-
-The main navigation of the website is created based on the root directories in the `docs` folder. Each directory has its own sidebar for easy navigation.
 
 Here's a simplified example of how it might look:
 
@@ -51,6 +49,7 @@ Here's a simplified example of how it might look:
     doc4.md
 ```
 ### Main Navigation and Sidebars
+The main navigation of the website is created based on the root directories in the `docs` folder. Each directory has its own sidebar for easy navigation.
 
 In this case, the main navigation of the website would have two sections: "Guide" and "Tutorial".
 
