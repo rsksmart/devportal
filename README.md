@@ -57,7 +57,7 @@ Sidebars are created automatically based on the root directories in the `/docs` 
 
 Titles of the links in the sidebar are determined by the Markdown front matter of the corresponding documents.
 
-### Image (or any static files) Storage
+### Images Storage
 
 Images used in this project should be stored in the `/static/img` directory. This directory is accessible from anywhere in the project, allowing you to easily reference images in your Markdown files, JavaScript files, or CSS files.
 
