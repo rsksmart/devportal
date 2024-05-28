@@ -1,5 +1,4 @@
 ---
-layout: rsk
 sidebar_position: 3
 sidebar_label: RIF
 title: "RIF Developer Resources: Build on Rootstock using RIF Tools and Services | Dev.Rootstock.io"

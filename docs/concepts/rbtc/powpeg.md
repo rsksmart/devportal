@@ -1,11 +1,9 @@
 ---
-layout: rsk
 title: "Powpeg: Securing Bitcoin-RSK Interoperability | Rootstock (RSK)"
 sidebar_label: Powpeg
 sidebar_position: 3
 tags: [rsk, rbtc, btc, peg, powpeg, 2 way peg]
 description: "Transfer BTC to RBTC, and RBTC to BTC through the Powpeg."
-render_features: 'powpeg-hsm-attestation-frame'
 ---
 
 ## Building the Most Secure, Permissionless and Uncensorable Bitcoin Peg

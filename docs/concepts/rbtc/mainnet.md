@@ -1,12 +1,9 @@
 ---
-layout: rsk
-section_title: User Guides
 title: Mainnet Guide | Rootstock (RSK)
 sidebar_label: Mainnet Guide
 tags: [rsk, rbtc, conversion, peg, 2-way, peg-in, peg-out, federation]
 description: 'Converting BTC to RBTC (peg-in) and RBTC to BTC (peg-out).'
-sidebar_position: 100
-permalink: /rsk/rbtc/conversion/networks/mainnet/
+sidebar_position: 10
 ---
 
 In this section we will go over the steps of converting BTC to RBTC and vice versa in Bitcoin and RSK Mainnets.

@@ -1,5 +1,4 @@
 ---
-section_title: Knowledge Base
 sidebar_label: Knowledge Base
 title: Welcome to Rootstock and RIF Knowledgebase | Rootstock (RSK)
 description: "Welcome to Rootstock and RIF Knowledge-base; Explore Rootstock faqs, tutorials and guides to help you get started on building on Rootstock and RIF Technologies"

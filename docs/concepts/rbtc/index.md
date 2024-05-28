@@ -1,11 +1,8 @@
 ---
-layout: rsk
-section_title: RBTC Cryptocurrency
 title: Smart Bitcoin RBTC Token on RSK - BTC to RBTC | Rootstock (RSK)
 tags: [mainnet, token, transactions, rbtc, gas, smart-contracts, rsk, conversion, price, gas-price, gas-cost, smart bitcoin, bitcoin]
 sidebar_position: 3
 sidebar_label: RBTC Token
-permalink: /rsk/rbtc/
 ---
 
 RBTC is the token used to [pay for the execution](/rsk/rbtc/gas/) of transactions in Rootstock. You can [convert BTC into RBTC](/rsk/rbtc/conversion/) by sending BTC through the [Powpeg](/guides/two-way-peg-app/) (both in Testnet and Mainnet), or by using the [faucet in Testnet](https://faucet.testnet.rsk.co/), or via decentralized exchanges.

@@ -3,7 +3,6 @@ sidebar_position: 1
 sidebar_label: Build with Tenderly
 title: 'Build, Monitor and Troubleshoot Your Smart Contracts on RSK with Tenderly'
 description: 'Tenderly helps developers build, monitor, and improve smart contracts by providing a set of tools to boost productivity.'
-layout: 'rsk'
 ---
 
 [Tenderly](https://tenderly.co/) helps developers build, monitor, and improve smart contracts

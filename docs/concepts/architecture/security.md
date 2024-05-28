@@ -1,5 +1,4 @@
 ---
-layout: rsk
 title: Security model
 sidebar_label: Security model
 sidebar_position: 500

@@ -1,5 +1,4 @@
 ---
-layout: rsk
 title: "RBTC Gas Fees: Optimizing Transaction Costs | Rootstock (RSK)"
 sidebar_label: Gas
 tags: [gas, transactions, rbtc, mainnet, smart-contracts, rsk, conversion, bitcoin, price, gas-price, cost]

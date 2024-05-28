@@ -1,5 +1,4 @@
 ---
-section_title: Architecture
 title: Run Ethereum dApps with Bitcoin Network Security | Rootstock (RSK)
 sidebar_position: 4
 sidebar_label: Architecture

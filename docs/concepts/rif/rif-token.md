@@ -1,5 +1,4 @@
 ---
-layout: rsk
 sidebar_label: RIF Token
 sidebar_position: 100
 title: "RIF Token: Empowering Decentralized Applications | Rootstock (RSK)"

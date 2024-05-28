@@ -1,5 +1,4 @@
 ---
-layout: rsk
 sidebar_label: Account Based
 title: Account Based Rootstock Addresses | Rootstock (RSK)
 sidebar_position: 2
