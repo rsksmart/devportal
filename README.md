@@ -49,7 +49,7 @@ Here's a simplified example of how it might look:
     doc4.md
 ```
 ### Main Navigation and Sidebars
-The main navigation of the website is created based on the root directories in the `docs` folder. Each directory has its own sidebar for easy navigation.
+The main navigation of the website is created based on the root directories in the `/docs` folder. Each directory has its own sidebar for easy navigation.
 
 In this case, the main navigation of the website would have two sections: "Guide" and "Tutorial".
 
@@ -57,9 +57,16 @@ Sidebars are created automatically based on the root directories in the `/docs` 
 
 Titles of the links in the sidebar are determined by the Markdown front matter of the corresponding documents.
 
+### Image (or any static files) Storage
+
+Images used in this project should be stored in the `/static/img` directory. This directory is accessible from anywhere in the project, allowing you to easily reference images in your Markdown files, JavaScript files, or CSS files.
+
+Please note that the path to the image is relative to the root of the project, not the location of the Markdown file. This means that you should always start the path with `/img/`, regardless of where the Markdown file is located.
+
+For more information on how to use images in Docusaurus, please refer to the [Docusaurus Documentation](https://docusaurus.io/docs/next/markdown-features/assets).
+
 ## Documentation file
-For details for Doc Creation, please refer to the [Create a doc
-](https://docusaurus.io/docs/create-doc).
+For details for Doc Creation, please refer to the [Create a doc](https://docusaurus.io/docs/create-doc).
 
 Each documentation file should start with a Markdown front matter. This is a base set of metadata about the file, and it's written at the top of the file enclosed between two lines of three dashes. Here is a basic example for file `/docs/concepts/architecture/index.md`:
 
