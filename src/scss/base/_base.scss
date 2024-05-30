@@ -1,9 +1,35 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-/* You can override the default Infima variables here. */
+// magic number with help us to recalculate 1rem to 10px
+body {
+  -webkit-font-smoothing: antialiased;
+}
+html{
+  //scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+}
+html, body{
+  height: auto;
+  min-height: 100%;
+}
+:root{
+  --bs-heading-font-family: #{$headings-font-family};
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a, button{
+  transition: 0.15s ease-in-out;
+  transition-property: color, background-color, border-color, opacity;
+}
+.container {
+  @each $size, $value in $container-padding {
+    @include media-breakpoint-up($size) {
+      padding-left: $value;
+      padding-right: $value;
+    }
+  }
+}
+
 :root {
   --ifm-color-primary: #ff9100;
   --ifm-color-primary-dark: #29784c;
@@ -16,10 +42,14 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-navbar-height: auto;
   --ifm-navbar-background-color:var(--bs-body-bg);
-  --ifm-navbar-padding-vertical: 32px;
-  --ifm-navbar-padding-horizontal: 24px;
+  --ifm-navbar-padding-vertical: 16px;
+  --ifm-navbar-padding-horizontal: 16px;
 
   --bs-nav-title-color: var(--bs-purple);
+  @include media-breakpoint-up(md) {
+    --ifm-navbar-padding-vertical: 32px;
+    --ifm-navbar-padding-horizontal: 24px;
+  }
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */

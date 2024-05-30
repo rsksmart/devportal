@@ -1,0 +1,118 @@
+.rl-model-intro-node {
+  position: absolute;
+  top: 5%;
+  right: 0%;
+  width: 243px;
+  height: 326px;
+  @include media-breakpoint-up(md) {
+    top: 10%;
+    right: 10%;
+    width: 350px;
+    height: 450px;
+  }
+}
+
+.rl-model-purpose-node {
+  width: 250px;
+  height: 250px;
+  @include media-breakpoint-up(md) {
+    width: 350px;
+    height: 400px;
+  }
+  @include media-breakpoint-up(lg) {
+    position: absolute;
+    left: 0;
+    bottom: -60px;
+  }
+}
+
+.rl-model-btc-grants-intro {
+  position: absolute;
+  width: 193px;
+  height: 308px;
+  top: 68%;
+  right: 30px;
+  @include media-breakpoint-up(md) {
+    top: -80px;
+    right: -60px;
+    width: 320px;
+    height: 400px;
+  }
+  @include media-breakpoint-up(lg) {
+    left: 500px;
+    right: auto;
+  }
+  @include media-breakpoint-up(xl) {
+    top: -80px;
+    left: 700px;
+    width: 385px;
+    height: 500px;
+  }
+}
+
+.rl-model-story-builder {
+  position: absolute;
+  top: 5%;
+  right: 0%;
+  width: 300px;
+  height: 326px;
+
+  @include media-breakpoint-up(md) {
+    top: -80px;
+    right: -40px;
+    width: 450px;
+    height: 450px;
+  }
+}
+
+.rl-model-contact-arrows {
+  //pointer-events: none;
+  position: absolute;
+  top: -30px;
+  left: 20px;
+  width: 402px;
+  height: 390px;
+  @include media-breakpoint-up(md) {
+    top: 0px;
+    right: auto;
+    left: 150px;
+    width: 350px;
+    height: 450px;
+  }
+  @include media-breakpoint-up(lg) {
+    left: 100px;
+  }
+  @include media-breakpoint-up(xl) {
+    top: 20px;
+    right: auto;
+    left: 200px;
+    width: 550px;
+    height: 650px;
+  }
+}
+
+.rl-model-globe-blog {
+  position: absolute;
+  width: 265px;
+  height: 376px;
+  top: 20px;
+  left: 45px;
+  @include media-breakpoint-up(md) {
+    top: 0px;
+    left: 300px;
+    width: 450px;
+    height: 350px;
+  }
+  @include media-breakpoint-up(lg) {
+    top: -40px;
+    left: 400px;
+    right: auto;
+    width: 450px;
+    height: 350px;
+  }
+  @include media-breakpoint-up(xl) {
+    left: 600px;
+    width: 550px;
+    height: 450px;
+  }
+}

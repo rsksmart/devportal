@@ -38,7 +38,7 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
+  plugins: ['docusaurus-plugin-sass'],
   presets: [
     [
       'classic',
@@ -56,7 +56,8 @@ const config = {
         },
         blog: false, // Optional: disable the blog plugin
         theme: {
-          customCss: ['./src/css/custom.css']
+          customCss: ['./src/scss/app.scss'],
+          // customCss: ['./src/css/custom.css']
         },
       }),
     ],
@@ -74,7 +75,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/og.jpg',
       navbar: {
-        title: 'Devportal',
+        title: 'Docs',
         logo: {
           alt: 'Rootstock Devportal',
           src: 'img/logo.svg',

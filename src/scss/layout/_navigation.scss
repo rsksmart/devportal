@@ -1,0 +1,8 @@
+.navbar__title{
+  font: 500 #{$f26}/0.7 var(--bs-body-font-family);
+  color: var(--bs-nav-title-color);
+  letter-spacing: -0.04em;
+  padding-left: 12px;
+  border-left: 1px solid var(--bs-body-color);
+  margin-left: 4px;
+}
