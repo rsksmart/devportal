@@ -12,12 +12,21 @@ export const unSLug = (str) => {
 };
 export const readDirectory = (directoryPath) => {
   if (!directoryPath || !fs.existsSync(directoryPath)) return [];
+  const ignoreDirs = ['.ds_store', '.idea', '.git', 'node_modules'];
 
-  return fs.readdirSync(directoryPath);
+  const dirs = fs.readdirSync(directoryPath, {withFileTypes: true})
+    .filter(dirent => {
+      // Ignore directories that contain a special character
+      const containsSpecialChar = /[^a-zA-Z0-9_-]/.test(dirent.name);
+
+      return dirent.isDirectory() && !ignoreDirs.includes(dirent.name.toLowerCase()) && !containsSpecialChar;
+    })
+    .map(dirent => dirent.name);
+  return dirs
 };
 
 export const createNavItems = (directoryPath) => {
-  const rootDirs= readDirectory(directoryPath);
+  const rootDirs = readDirectory(directoryPath);
   let navItems = [];
 
   rootDirs.forEach((dir) => {
@@ -36,7 +45,7 @@ export const createNavItems = (directoryPath) => {
 
 export const createSidebars = (directoryPath) => {
 
-  const rootDirs= readDirectory(directoryPath);
+  const rootDirs = readDirectory(directoryPath);
   let sidebars = {};
 
   rootDirs.forEach((dir) => {
