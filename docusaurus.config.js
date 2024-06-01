@@ -137,7 +137,7 @@ const config = {
             ],
           },
         ],
-        copyright: `© ${new Date().getFullYear()}. RootstockLabs. All rights reserved`,
+        copyright: `© ${new Date().getFullYear()}. RootstockLabs. All rights reserved`
       },
       prism: {
         theme: prismThemes.github,

@@ -11,6 +11,7 @@ import NavbarMobileSidebar from '@theme/Navbar/MobileSidebar';
 import styles from './styles.module.css';
 import NavbarItem from "@theme/NavbarItem";
 import MainNavDesktop from "../MainNavDesktop";
+import useBrokenLinks from "@docusaurus/core/lib/client/exports/useBrokenLinks";
 
 function NavbarBackdrop(props) {
   return (
@@ -27,7 +28,7 @@ export default function NavbarLayout({children}) {
   } = useThemeConfig();
   const mobileSidebar = useNavbarMobileSidebar();
   const {navbarRef, isNavbarVisible} = useHideableNavbar(hideOnScroll);
-
+  
   return (
     <>
       <nav
