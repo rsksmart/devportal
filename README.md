@@ -51,6 +51,8 @@ Here's a simplified example of how it might look:
 ### Main Navigation and Sidebars
 The main navigation of the website is created based on the root directories in the `/docs` folder. Each directory has its own sidebar for easy navigation.
 
+> Root directories name must contain only a character that is a letter, a number, a dash, or an underscore. If it doesn't, the directory is ignored and won't apear in main navigation.
+
 In this case, the main navigation of the website would have two sections: "Guide" and "Tutorial".
 
 Sidebars are created automatically based on the root directories in the `/docs` folder. Each section would have its own sidebar with links to the documents within that section. For example, the "Guide" section would have a sidebar with links to `/guide`, `/guide/doc1` and `/guide/doc2`.
