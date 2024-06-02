@@ -1,0 +1,8 @@
+.footerLinkItem {
+  color: var(--ifm-footer-link-color);
+  line-height: 1;
+  letter-spacing: -.01em;
+  &:hover {
+    color: var(--ifm-footer-link-hover-color);
+  }
+}

@@ -47,7 +47,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .caption {
   font: 400 10px/1.6 $font-family-base;
-  color: rgba($body-color, 0.5);
+  color: var(--bs-body-color);
+  opacity: 0.5;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.letter-spacing-6{
+  letter-spacing: -0.06em;
 }

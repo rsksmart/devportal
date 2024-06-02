@@ -14,6 +14,7 @@ import Footer from '@theme/Footer';
 import LayoutProvider from '@theme/Layout/Provider';
 import ErrorPageContent from '@theme/ErrorPageContent';
 import styles from './styles.module.css';
+import SVGSprite from "./SVGSprite";
 export default function Layout(props) {
   const {
     children,
@@ -47,6 +48,7 @@ export default function Layout(props) {
       </div>
 
       {!noFooter && <Footer />}
+      <SVGSprite />
     </LayoutProvider>
   );
 }

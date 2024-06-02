@@ -96,7 +96,7 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        // style: 'dark',
         links: [
           {
             title: 'WHITEPAPER',
@@ -138,6 +138,15 @@ const config = {
           },
         ],
         copyright: `© ${new Date().getFullYear()}. RootstockLabs. All rights reserved`
+      },
+      socials: {
+        discord: 'http://discord.gg/rootstock',
+        x: 'https://twitter.com/rootstock_io',
+        telegram: 'https://t.me/rskofficialcommunity'
+      },
+      tagline:{
+        text1 : 'Build',
+        text2 : 'Together',
       },
       prism: {
         theme: prismThemes.github,
