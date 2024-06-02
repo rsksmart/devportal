@@ -24,9 +24,6 @@
 [data-theme='light'] .toggleButtonInner{
   transform: translateX(25px);
 }
-.toggleButton:hover {
-  /*background: var(--ifm-color-emphasis-200);*/
-}
 
 [data-theme='light'] .darkToggleIcon,
 [data-theme='dark'] .lightToggleIcon {
