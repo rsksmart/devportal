@@ -7,7 +7,7 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import {createNavItems} from './src/_utils/utils.js';
 
-const customNavItems = createNavItems('./docs');
+const mainNavItems = createNavItems('./docs');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -87,11 +87,18 @@ const config = {
             activeBasePath: '/home',
             label: 'Home',
           },
-          ...customNavItems,
+          ...mainNavItems,
           {
             href: 'https://github.com/rsksmart/devportal',
             label: 'GitHub',
             position: 'right',
+            icon: 'github',
+          },
+          {
+            href: 'http://discord.gg/rootstock',
+            label: 'Discord',
+            position: 'right',
+            icon: 'discord',
           },
         ],
       },
