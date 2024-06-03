@@ -1,7 +1,8 @@
 ---
+layout: rsk
 title: Security model
-sidebar_label: Security model
-sidebar_position: 500
+menu_title: Security model
+menu_order: 500
 tags: [rsk, security, powpeg, peg, federation, 2-way peg]
 description: "Achieving security in a Powpegged sidechain using proofs of payment"
 ---
@@ -14,11 +15,11 @@ Fully trust-minimized and third-party-free two-way pegs can be created if two pl
 
 The locking and unlocking of funds is done by the Powpeg without any human intervention. A requirement for being part of the Powpeg is the ability to maintain the PowHSM device online and connected to the RSK network with high up-time. It’s also a requirement that pegnatories are capable of auditing, or review third party audits that attest that the software that powers the node behaves as expected. The PowHSM device is manufactured by a top hardware security company and the firmware was developed by RootstockLabs. The PowHSM provides state-of-the-art maximum security for their private keys using a Secure Element (SE).
 
-As of January 2020, the Powpeg comprises 12 well-known, and highly secure pegnatories. Leading Blockchain companies are currently members of the Powpeg.  In exchange for their work, the pegnatories are awarded 1% of the transaction fees generated on RSK, in order to cover the hardware and maintenance costs.
+As of January 2020, the Powpeg comprises 12 well-known, and highly secure pegnatories. Leading Blockchain companies are currently members of the Powpeg.  In exchange for their work, the pegnatories are awarded 1% of the transaction fees generated on RSK, in order to cover the hardware and maintenance costs. 
 
 ## Powpeg Members Update
 
-The Powpeg is governed by a written protocol that establishes when it is possible or required to add or remove a member. If the conditions to change the composition are met, a pegnatory can send a message to the Bridge contract requiring the beginning of a Powpeg composition change. The change involves three phases: a voting period, a delay period and a funds migration period.  All phases are automated and coordinated by the Bridge contract, so the process is open, public, and leaves a cryptographic audit trail.  During the voting phase, each pegnatory can either accept or reject a composition change. Only if the majority of pegnatories accept the change, the next phase begins. This phase is a consensus enforced delay of one week. The delay allows users to transfer the Bitcoins back to the Bitcoin network in case they do not trust the new Powpeg composition. Finally, the composition change is activated and the last phase starts, which is responsible for the migration of the funds from the old Powpeg to the new one.
+The Powpeg is governed by a written protocol that establishes when it is possible or required to add or remove a member. If the conditions to change the composition are met, a pegnatory can send a message to the Bridge contract requiring the beginning of a Powpeg composition change. The change involves three phases: a voting period, a delay period and a funds migration period.  All phases are automated and coordinated by the Bridge contract, so the process is open, public, and leaves a cryptographic audit trail.  During the voting phase, each pegnatory can either accept or reject a composition change. Only if the majority of pegnatories accept the change, the next phase begins. This phase is a consensus enforced delay of one week. The delay allows users to transfer the Bitcoins back to the Bitcoin network in case they do not trust the new Powpeg composition. Finally, the composition change is activated and the last phase starts, which is responsible for the migration of the funds from the old Powpeg to the new one. 
 
 ## The Future
 

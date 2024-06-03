@@ -1,6 +1,6 @@
 ---
 title: "Testnet RBTC Conversion on Rootstock: Seamless Cross-Network Transactions"
-sidebar_label: Testnet Guide
+sidebar_label: Testnet
 tags: [rsk, rbtc, conversion, peg, 2-way, peg-in, peg-out, federation]
 description: 'Converting t-BTC to tRBTC (peg-in) and tRBTC to t-BTC (peg-out).'
 sidebar_position: 200

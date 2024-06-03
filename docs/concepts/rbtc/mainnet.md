@@ -1,6 +1,6 @@
 ---
 title: Mainnet Guide | Rootstock (RSK)
-sidebar_label: Mainnet Guide
+sidebar_label: Mainnet
 tags: [rsk, rbtc, conversion, peg, 2-way, peg-in, peg-out, federation]
 description: 'Converting BTC to RBTC (peg-in) and RBTC to BTC (peg-out).'
 sidebar_position: 10

@@ -1,106 +1,127 @@
 ---
-sidebar_position: 3
-sidebar_label: RIF
-title: "RIF Developer Resources: Build on Rootstock using RIF Tools and Services | Dev.Rootstock.io"
-tags: [rif, rootstock, rif-rollup, rif-relay, rns, rif-wallet, storage, node, sdk, libraries, infrastructure, protocols, mvp, design, rbtc, defi, decentralized, quick-start, guides, tutorial, networks, dapps, tools, rsk, ethereum, smart-contracts, install, get-started, how-to, mainnet, testnet, contracts, wallets, web3, crypto]
+sidebar_label: RIF Token
+sidebar_position: 400
+title: "RIF Token: Empowering Decentralized Applications | Rootstock (RSK)"
+tags: [rif, token, erc677]
+description: "Information about the RIF token, where to obtain it, how to transfer it, and technical details on its token standard"
 ---
 
-## RIF Services
+The RIF Token allows any token holder to consume the services that are compatible with the [RIF architecture](/rif/).
 
-Rootstock (RSK) Infrastructure Framework Open Standard (RIF OS) is a suite of open and decentralized infrastructure protocols that enable faster, easier and scalable development of distributed applications (dApps) within a unified environment.
+## RIF (RIF Token in Mainnet)
 
-RIF OS is an all in one, easy to use, blockchain infrastructure service framework that provides developers and organizations access to a variety of services across multiple crypto-economies.
+<table class="table">
+  <tbody>
+    <tr>
+      <td scope="row">Token Name</td>
+      <td><a href="https://coinmarketcap.com/currencies/rsk-infrastructure-framework/" target="_blank">RIF</a></td>
+    </tr>
+    <tr>
+      <td scope="row">Total Supply</td>
+      <td>1,000,000,000 RIF</td>
+    </tr>
+    <tr>
+      <td scope="row">Contract Address</td>
+      <td><a href="http://explorer.rsk.co/address/0x2acc95758f8b5f583470ba265eb685a8f45fc9d5" target="_blank">0x2acc95758f8b5f583470ba265eb685a8f45fc9d5</a></td>
+    </tr>
+    <tr>
+      <td scope="row">Contract Type</td>
+      <td>ERC677</td>
+    </tr>
+    <tr>
+      <td scope="row">How to get</td>
+      <td>
+        <ul>
+            <li><a href="#exchanges" target="_blank">Exchanges</a></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td scope="row">Logo</td>
+      <td>
+        <img src="/assets/img/rif/rif-logo.png" />
+        <a href="/assets/img/rif/rif-logo.png" target="_blank">rif-logo.png</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-RIF OS Protocols enable broad interoperability and faster time-to-deployment, and aim to bridge the gap between blockchain technologies and their mass-market adoption. RIF OS Protocols complete the Rootstock (RSK) Smart Contract Network vision of bringing the Internet of Value to life.
+## tRIF (RIF Token in Testnet)
 
-<div class="video-container">
-  <video controls src="https://cdn.rifos.org/home_video.mp4"></video>
-</div>
+<table class="table">
+  <tbody>
+    <tr>
+      <td scope="row">Token Name</td>
+      <td>tRIF</td>
+    </tr>
+    <tr>
+      <td scope="row">Total Supply</td>
+      <td>1,000,000,000 tRIF</td>
+    </tr>
+    <tr>
+      <td scope="row">Contract Testnet Address</td>
+      <td><a href="http://explorer.testnet.rsk.co/address/0x19f64674D8a5b4e652319F5e239EFd3bc969a1FE" target="_blank">0x19f64674D8a5b4e652319F5e239EFd3bc969a1FE</a></td>
+    </tr>
+    <tr>
+      <td scope="row">Contract Type</td>
+      <td>ERC677</td>
+    </tr>
+    <tr>
+      <td scope="row">How to get</td>
+      <td>
+        <ul>
+            <li><a href="https://faucet.rifos.org/" target="_blank">Faucet</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-#### RIF Wallet
+## Wallets
 
-RIF Wallet provides a full stack library of functionalities that allow you to easily integrate crypto lending, saving and paying services into your existing product or launch your own smart wallet.
+See [supported wallets](/wallet/use/).
 
-<div class="btn-container">
-  <span></span>
-    <a class="green" href="../rif/">Coming Soon</a>
-</div>
+## Exchanges
 
-#### RIF Name Service
+- [Sovryn](https://sovryn.app/convert)
+- [Binance](https://www.binance.com/en)
+- [Gate.io](https://www.gate.io/)
+- [Lbank](https://www.lbank.info/)
+- [MEXC](https://www.mexc.com/)
+- [Coinex](https://www.coinex.com/)
+- [Hotbit](https://www.hotbit.io/)
 
-RNS is a decentralized service that allows users to have a readable domain or alias. It can be used to identify other personal resources, such as payment or communication addresses.
+Looking for [RBTC](/rsk/rbtc/)?
 
-<div class="btn-container">
-  <span></span>
-    <a class="green" href="../rif/rns/">Create a domain or alias</a>
-</div>
+You can obtain RBTC using [these exchanges](/rsk/rbtc/#exchanges),
+or use the exchanges listed below👇 to obtain the RIF token.
 
-#### RIF Rollup
+## Technical information
 
-RIF Rollup is a trustless protocol for fast and scalable low-cost payments on Rootstock powered by zkRollup Technology. Its current functionality and scope includes low gas transfers of RBTC and ERC20 tokens on the Rootstock network.
+### ERC677 token standard
 
-<div class="btn-container">
-  <span></span>
-    <a class="green" href="../rif/rollup">Learn more about RIF Rollup</a>
-</div>
+An [ERC20](https://github.com/ethereum/EIPs/issues/20)
+token transaction between a regular/non-contract address and contract are two different transactions: You should call `approve` on the token contract and then call `transferFrom` on the other contract when you want to deposit your tokens into it.
 
-#### rLogin
+[ERC677](https://github.com/ethereum/EIPs/issues/677)
+simplifies this requirement and allows using the same transfer function. ERC677 tokens can be sent by calling `transfer` function on the token contract with no difference if the receiver is a contract or a wallet address, since there is a new way to notify the receiving contract of the transfer.
 
-Learn how to integrate rLogin into your app and allow users to choose their favourite wallets to log in. With a single tool, you will get connected to their wallet using an API compatible with Metamask and other wallets.
+An ERC677 token transfer will be the same as an ERC20 transfer. On the other hand, if the receiver is a contract, then the ERC677 token contract will try to call `tokenFallback` function on receiver contract. If there is no `tokenFallback` function on receiver contract, the transaction will fail.
 
-<div class="btn-container">
-  <span></span>
-    <a class="green" href="../rif/rlogin/">Get started</a>
-</div>
+### RIF transfer methods
 
-#### RIF Flyover
+- Approve and transfer:
+    ```js
+    function approve(address _spender, uint256 _value) public returns (bool)
+    function transfer(address _to, uint256 _value) public returns (bool)
+    ```
 
-The Flyover protocol performs fast peg-ins. It provides a new feature to transfer BTC from Bitcoin directly to a smart contract or EOA in RSK faster than the regular [peg in](../rsk/architecture/powpeg/) protocol.
+- Transfer and call:
+    ```js
+    function transfer(address _to, uint256 _value, bytes data)
+    ```
 
-<div class="btn-container">
-  <span></span>
-    <a class="green" href="../guides/flyover/">Learn more about RIF Flyover</a>
-</div>
-
-#### RIF Relay
-
-RIF Relay is a secure sponsored transaction system that enables users to pay the transaction fees using ERC-20 tokens. This enables end users to transact entirely using one asset instead of having to manage a separate asset for gas.
-
-<div class="btn-container">
-  <span></span>
-    <a class="green" href="../rif/relay/">Integrate RIF Relay</a>
-</div>
-
-#### RIF White Paper
-
-To understand the general vision behind RIF OS, read the [RIF White Paper](https://rif.technology/static/add903ce229a6f45a606cd78b028cf9e/RIF-whitepaper-V2.pdf).
-
-#### RIF FAQ
-
-Q: What’s the relationship between RIF services and the Rootstock (RSK) platform?
-
-A: RIF services are implementations of the RIF OS Protocols that anybody following the protocols can build. RIF Labs in particular chose to build its implementation of RIF OS Protocols on top of the Rootstock Smart Contract Network because of its unique position as the first open-source smart contract platform secured by the Bitcoin Network. All RIF OS Protocols implementations share a common set of interfaces and the acceptance of RIF token as payment means.
-
-Q: What’s the relationship between RIF Labs and the Rootstock (RSK) platform?
-
-A: RIF Labs acquired RSK Labs, the company behind the construction of the open source Rootstock Smart Contract Network. Also given Rootstock Smart's unique position as the first open source Smart Contract platform secured by the Bitcoin Network it also chose to implement its RIF OS Protocols on top of it. For clear strategic reasons RIF Labs will take the lead on technology development and community growth for the the ecosystem as a whole.
-
-Both the RIF OS Protocols and Rootstock Smart Contract Network share the same principles and mission, and now they will be supported by the combined teams of RIF Labs and RSK Labs. Together, Rootstock and RIF will continue to focus on improving the lives of millions excluded around the world by building this next generation blockchain-based infrastructure that will bring to life the Internet of Value.
-
-Q: Why did RIF Labs build RIF OS Protocols on top of the Rootstock (RSK) Smart Contract Network?
-
-A: We chose to continue building on top of Rootstock Smart because of its unique position as the first open-source smart contract platform secured by the Bitcoin network. The goal of the Rootstock Smart Contract Network and RIF OS Protocols is to add value and extend the functionality of the Bitcoin ecosystem by integrating smart-contracts, near-instant payments, and greater stability. This will also allow projects to access a variety of decentralized infrastructure services, from payments to storage, and speed up time-to-market.
-
-Rootstock (RSK) is the first open-source smart contract platform secured by the Bitcoin Network that is:
-
-* Bitcoin Friendliness: Bitcoin was the first and, today, the most secure blockchain available.
-* Security: Rootstock blockchain is secured by merge-mining, which means that Rootstock can achieve the same security as Bitcoin in terms of double-spend prevention and settlement finality.
-* Scalability: Rootstock can scale up to 100 transactions per second without sacrificing decentralization.
-* Flexibility: Instant payments allow new use cases, such as retail-ready store payments and micro-credits.
-* RIF Labs implemented RIF OS Protocols on top of the solid ground that Rootstock Smart Contract Network has built.
-
-Q: What’s the difference between RIF token and RBTC?
-
-A: Rootstock Infrastructure Framework Open Standard (RIF OS) is a suite of open and decentralized infrastructure protocols that enable faster, easier and scalable development of decentralized applications (dApps) within a unified environment. RIF OS includes support for decentralized, third-party, off-chain payment networks; a set of APIs for seamless and secure communications between decentralized applications; and easy-to-use interfaces for developers. Access to, and payment for, RIF OS services are based on the RIF Token, which allows developers to access the suite of services built on top of RIF protocols such as Directory, Payments, Data Feeds, Storage and Communications including third party-developed infrastructure services, and any other apps that might be deployed on RIF’s framework that agrees to accept RIF Tokens as a means of accessing / consuming the service or app.
-
-RBTC is the native token of the Rootstock Live Mainnet and is pegged 1:1 to BTC. It's used as gas to pay for Smart Contract execution in the same way as ETH is used as gas for Ethereum. Technical users can obtain RBTC in a decentralized manner, by converting to and from BTC by using the bridge between the Bitcoin and Rootstock protocols. Less technical users can obtain RBTC from supporting exchanges like Huobi and Bitfinex, among others. This is necessary in order to use Rootstock and all of the applications that run on Rootstock, including RIFOS once it launches.
+    **Parameters**
+    - `_to: address`: Contract address.
+    - `_value: uint256`: Amount of RIF tokens to send.
+    - `data: bytes`: 4-byte signature of the function to be executed, followed by the function parameters to be executed with encoded as a byte array.

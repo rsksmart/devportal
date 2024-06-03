@@ -1,0 +1,1 @@
+# Differences between Rootstock and Bitcoin

@@ -1,16 +1,18 @@
 ---
+layout: rsk
 title: "Powpeg: Securing Bitcoin-RSK Interoperability | Rootstock (RSK)"
-sidebar_label: Powpeg
-sidebar_position: 3
+menu_title: Powpeg
+menu_order: 3
 tags: [rsk, rbtc, btc, peg, powpeg, 2 way peg]
 description: "Transfer BTC to RBTC, and RBTC to BTC through the Powpeg."
+render_features: 'powpeg-hsm-attestation-frame'
 ---
 
 ## Building the Most Secure, Permissionless and Uncensorable Bitcoin Peg
 
 Rootstock’s (RSK) 2-way peg protocol, called “the **Powpeg**”, has matured from its inception in 2018 as a federation to now include many decentralized qualities. The new Rootstock Powpeg protects private keys stored in special purpose PowHSMs based on tamper-proof secure elements (SE). Each PowHSM runs a Rootstock node in SPV mode, and so signatures can only be commanded by chain cumulative proof of work. Security is established in the Powpeg through the simplicity of a layered design we refer to as defence-in-depth.
 
-> - The 2 Way Peg Application is now available on [Testnet](https://app.2wp.testnet.rootstock.io/) and [Mainnet](https://app.2wp.rootstock.io/).
+> - The 2 Way Peg Application is now available on [Testnet](https://app.2wp.testnet.rootstock.io/) and [Mainnet](https://app.2wp.rootstock.io/). 
 > - For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the 2 way peg app, please refer to the [2 way peg app user guide](/guides/two-way-peg-app/).
 > - Get information on the signatories and attestion in the [Powpeg HSM Firmware Attestation](#powpeg-hsm-firmware-attestation) section.
 
@@ -108,11 +110,11 @@ To verify the Powpeg nodes, follow the HSM firmware attestation process using th
 
 ### Frequently Asked Questions
 
-**Q: What is the multisig scheme for the powHSM? It is a M of N multisig.
+**Q: What is the multisig scheme for the powHSM? It is a M of N multisig. 
 What is M and what is N?**
 
-> - A: The best way to get this information is by querying the Bridge directly, since the number of members of the PowPeg may change after a PowPeg composition change.
-> - You can use the following methods to query the bridge: `getFederationSize`, `getFederationThreshold`.
+> - A: The best way to get this information is by querying the Bridge directly, since the number of members of the PowPeg may change after a PowPeg composition change. 
+> - You can use the following methods to query the bridge: `getFederationSize`, `getFederationThreshold`. 
 > - Note: By consensus the required amount of signers (M) will always be half plus one the total amount of pegnatories  `M = N / 2 + 1`. See the signatories and attestation information in [PowPeg HSM Firmware Attestation](#firmware-attestation).
 
 ## Conclusion
