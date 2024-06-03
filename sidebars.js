@@ -17,3 +17,4 @@ import {createSidebars} from './src/_utils/utils.js';
 const sidebars = createSidebars('./docs');
 
 export default sidebars;
+
