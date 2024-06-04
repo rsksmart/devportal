@@ -1,0 +1,8 @@
+.footerCtaLink {
+  letter-spacing: 0.024em;
+  color: var(--bs-footer-cta-color, #000);
+  &:hover {
+    opacity: 0.6;
+    color: var(--bs-footer-cta-hover-color, #000);
+  }
+}

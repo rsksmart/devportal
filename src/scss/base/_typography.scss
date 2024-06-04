@@ -1,0 +1,68 @@
+@each $size, $headers in $headings-styles {
+  @include media-breakpoint-up($size) {
+    @each $header, $header-defs in $headers {
+      #{$header}, .#{$header} {
+
+        @if map-has-key($header-defs, font-size) {
+          font-size: map-get($header-defs, font-size);
+        }
+        @if map-has-key($header-defs, letter-spacing) {
+          letter-spacing: map-get($header-defs, letter-spacing);
+        }
+        @if map-has-key($header-defs, line-height) {
+          line-height: map-get($header-defs, line-height);
+        }
+        @if map-has-key($header-defs, margin-top) {
+          margin-top: map-get($header-defs, margin-top);
+        }
+        @if map-has-key($header-defs, margin-bottom) {
+          margin-bottom: map-get($header-defs, margin-bottom);
+        }
+      }
+    }
+  }
+}
+
+h1, .h1 {
+}
+
+h2, .h2 {
+}
+
+h3, .h3 {
+}
+.h0{
+  font:700 #{$f78}/0.75 $headings-font-family;
+  letter-spacing: -0.06em;
+  @include media-breakpoint-up(md) {
+    font-size: $f120;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: $f200;
+  }
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  letter-spacing: -0.024em;
+}
+
+.caption {
+  font: 400 10px/1.6 $font-family-base;
+  color: var(--bs-body-color);
+  opacity: 0.5;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.letter-spacing-6{
+  letter-spacing: -0.06em;
+}
+
+.link-base{
+  color: var(--bs-body-color);
+  &:hover {
+    color: var(--bs-primary);
+  }
+}
+a{
+  color: var(--rsk-color-main);
+}

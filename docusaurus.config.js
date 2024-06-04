@@ -7,7 +7,7 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import {createNavItems} from './src/_utils/utils.js';
 
-const customNavItems = createNavItems('./docs');
+const mainNavItems = createNavItems('./docs');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -38,7 +38,7 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
+  plugins: ['docusaurus-plugin-sass'],
   presets: [
     [
       'classic',
@@ -56,7 +56,8 @@ const config = {
         },
         blog: false, // Optional: disable the blog plugin
         theme: {
-          customCss: ['./src/css/custom.css']
+          customCss: ['./src/scss/app.scss'],
+          // customCss: ['./src/css/custom.css']
         },
       }),
     ],
@@ -66,6 +67,11 @@ const config = {
   themeConfig:
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
+      },
       colorMode: {
         defaultMode: 'dark',
         disableSwitch: false,
@@ -74,7 +80,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/og.jpg',
       navbar: {
-        title: 'Devportal',
+        title: 'Docs',
         logo: {
           alt: 'Rootstock Devportal',
           src: 'img/logo.svg',
@@ -86,16 +92,23 @@ const config = {
             activeBasePath: '/home',
             label: 'Home',
           },
-          ...customNavItems,
+          ...mainNavItems,
           {
             href: 'https://github.com/rsksmart/devportal',
             label: 'GitHub',
             position: 'right',
+            icon: 'github',
+          },
+          {
+            href: 'http://discord.gg/rootstock',
+            label: 'Discord',
+            position: 'right',
+            icon: 'discord',
           },
         ],
       },
       footer: {
-        style: 'dark',
+        // style: 'dark',
         links: [
           {
             title: 'WHITEPAPER',
@@ -136,7 +149,16 @@ const config = {
             ],
           },
         ],
-        copyright: `© ${new Date().getFullYear()}. RootstockLabs. All rights reserved`,
+        copyright: `© ${new Date().getFullYear()}. RootstockLabs. All rights reserved`
+      },
+      socials: {
+        discord: 'http://discord.gg/rootstock',
+        x: 'https://twitter.com/rootstock_io',
+        telegram: 'https://t.me/rskofficialcommunity'
+      },
+      tagline:{
+        text1 : 'Build',
+        text2 : 'Together',
       },
       prism: {
         theme: prismThemes.github,

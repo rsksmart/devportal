@@ -1,0 +1,8 @@
+.footerSocials {
+  a{
+    color: var(--bs-body-color);
+    &:hover{
+      color: var(--bs-primary);
+    }
+  }
+}

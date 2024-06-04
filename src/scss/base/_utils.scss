@@ -1,0 +1,183 @@
+// 1. Include any optional Bootstrap CSS as needed
+@import '~bootstrap/scss/utilities';
+
+// 2. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+$utilities: map-merge(
+    $utilities,
+    (
+      'rounded': (
+        responsive: true,
+        property: border-radius,
+        class: rounded,
+        values: $rounded
+      ),
+      'rounded-top': (
+        responsive: true,
+        property: border-top-left-radius border-top-right-radius,
+        class: rounded-top,
+        values: $rounded
+      ),
+      'rounded-end': (
+        property: border-top-right-radius border-bottom-right-radius,
+        class: rounded-end,
+        values: $rounded
+      ),
+      'rounded-bottom': (
+        property: border-bottom-right-radius border-bottom-left-radius,
+        class: rounded-bottom,
+        values: $rounded
+      ),
+      'rounded-start': (
+        property: border-bottom-left-radius border-top-left-radius,
+        class: rounded-start,
+        values: $rounded
+      ),
+      'border-color': (
+        property: border-color,
+        class: border,
+        local-vars: (
+          'border-opacity': 1
+        ),
+        values: $theme-colors
+      ),
+      'border-style': (
+        property: border-style,
+        class: border,
+        values: (solid, dashed, dotted)
+      ),
+      'background-color': (
+        property: background-color,
+        class: bg,
+        values: $theme-colors
+      ),
+      'background-position': (
+        property: background-position,
+        class: bg-position,
+        values: (center)
+      ),
+      'background-repeat': (
+        property: background-repeat,
+        class: bg-repeat,
+        values: (no-repeat)
+      ),
+      'background-size': (
+        property: background-size,
+        class: bg-size,
+        values: (cover, contain)
+      ),
+      'text-color': (
+        property: color,
+        class: text,
+        values: $theme-colors
+      ),
+      'font-size': (
+        rfs: false,
+        responsive: true,
+        property: font-size,
+        class: fs,
+        values: $font-sizes
+      ),
+      'font-family': (
+        property: font-family,
+        class: font-family,
+        values: (
+          heading: $headings-font-family,
+          body: $font-family-base,
+        )
+      ),
+      'font-weight': (
+        property: font-weight,
+        class: fw,
+        values: (
+          normal: 400,
+          medium: 500,
+          semibold: 600,
+          bold: 700,
+          400: 400,
+          500: 500,
+          600: 600,
+          700: 700,
+        )
+      ),
+      "line-height": (
+        property: line-height,
+        class: lh,
+        responsive: true,
+        values: (
+          1: 1,
+          sm: $line-height-sm,
+          base: $line-height-base,
+          lg: $line-height-lg,
+        )
+      ),
+      "overflow-x": (
+        responsive: true,
+        property: overflow-x,
+        values: auto hidden visible scroll,
+      ),
+      'width': (
+        responsive: true,
+        property: width,
+        class: w,
+        values: (
+          0: 0%,
+          25: 25%,
+          40: 40%,
+          50: 50%,
+          75: 75%,
+          100: 100%,
+          auto: auto
+        )
+      ),
+      'max-width': (
+        responsive: true,
+        property: max-width,
+        class: max-w,
+        values: (
+          100: 100%
+        )
+      ),
+      'height': (
+        responsive: true,
+        property: height,
+        class: h,
+        values: (
+          25: 25%,
+          50: 50%,
+          75: 75%,
+          100: 100%,
+          100vh: 100vh,
+          auto: auto
+        )
+      ),
+      'cursor': (
+        property: cursor,
+        class: cursor,
+        values: (pointer)
+      ),
+      'letter-spacing': (
+        property: letter-spacing,
+        class: letter-spacing,
+        values: (
+          0: 0,
+          2: 0.02em,
+          n24: -0.024em,
+        )
+      ),
+      "position": (
+        responsive: true,
+        property: position,
+        values: static relative absolute fixed sticky
+      ),
+      'text-wrap': (
+        property: white-space,
+        class: text,
+        values: (
+          prewrap: pre-wrap,
+          nowrap: nowrap,
+        )
+      ),
+    )
+);
+
+@import '~bootstrap/scss/utilities/api';
