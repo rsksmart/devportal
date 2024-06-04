@@ -34,3 +34,33 @@
     }
   }
 }
+
+.navbar__link{
+  --ifm-navbar-item-hover-bg: var(--bs-brand-2);
+  --ifm-navbar-item-hover-border-color: var(--bs-brand-2);
+
+  &[href*="/concepts"] {
+    --ifm-navbar-item-hover-bg: var(--bs-brand-1);
+    --ifm-navbar-item-hover-border-color: var(--bs-brand-1);
+  }
+
+  &[href*="/dev-tools"] {
+    --ifm-navbar-item-hover-bg: var(--bs-brand-3);
+    --ifm-navbar-item-hover-border-color: var(--bs-brand-3);
+  }
+
+  &[href*="/developers"] {
+    --ifm-navbar-item-hover-bg: var(--bs-brand-4);
+    --ifm-navbar-item-hover-border-color: var(--bs-brand-4);
+  }
+
+  &[href*="/node-operators"] {
+    --ifm-navbar-item-hover-bg: var(--bs-brand-5);
+    --ifm-navbar-item-hover-border-color: var(--bs-brand-5);
+  }
+
+  &[href*="/resources"] {
+    --ifm-navbar-item-hover-bg: var(--bs-brand-6);
+    --ifm-navbar-item-hover-border-color: var(--bs-brand-6);
+  }
+}
