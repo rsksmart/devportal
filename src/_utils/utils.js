@@ -4,6 +4,8 @@ export const camalize = (str) => {
   return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
 }
 export const unSLug = (str) => {
+  str = str.replace(/^\d+/, ''); //Remove leading numbers (numbers usign as prefix for sorting in main nav)
+
   return str
     .replace(/-/g, ' ')
     .split(' ')
