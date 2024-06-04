@@ -1,0 +1,48 @@
+.form-block {
+  input[type="text"],
+  input[type="search"],
+  input[type="number"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="url"],
+  select,
+  textarea {
+    border: 1px solid $primary;
+    display: block;
+    width: 100%;
+    transition: 0.15s ease-in-out;
+    transition-property: color, border-color, background-color;
+    color: $black-800;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &::placeholder {
+    color: rgba($black, 0.7);
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus
+  input:-webkit-autofill,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    transition-property: border-color;
+    -webkit-box-shadow: 0 0 0 30px var(--auto-complete-bg, #fff) inset !important;
+    -webkit-text-fill-color: var(--auto-complete-color, #000) !important;
+    font-weight: 400;
+    font-family: $font-family-base;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  label {
+    cursor: pointer;
+    display: block;
+  }
+}

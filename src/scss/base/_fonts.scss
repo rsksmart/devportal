@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Rootstock Sans';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url('/src/fonts/Rootstock-Sans-Body.woff2') format('woff2'),
+  url('/src/fonts/Rootstock-Sans-Body.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Rootstock Sans';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+  src: url('/src/fonts/Rootstock-Sans-Tags.woff2') format('woff2'),
+  url('/src/fonts/Rootstock-Sans-Tags.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Rootstock Sans';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url('/src/fonts/Rootstock-Sans-Headline.woff2') format('woff2'),
+  url('/src/fonts/Rootstock-Sans-Headline.woff') format('woff');
+}

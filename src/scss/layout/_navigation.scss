@@ -1,0 +1,66 @@
+.navbar__title{
+  font: 500 #{$f26}/0.7 var(--bs-body-font-family);
+  color: var(--bs-nav-title-color);
+  letter-spacing: -0.04em;
+  padding-left: 12px;
+  border-left: 1px solid var(--bs-body-color);
+  margin-left: 8px;
+  margin-top: 2px;
+}
+.navbar{
+  &__item{
+
+  }
+  &__link{
+    font: 700 #{$f18}/1 $font-family-base;
+    letter-spacing: -0.02em;
+    border: 1px solid var(--ifm-navbar-item-border-color);
+    border-radius: 10px;
+    &:hover{
+      color: var(--ifm-navbar-link-hover-color);
+      border-color: var(--ifm-navbar-item-hover-border-color);
+      background-color: var(--ifm-navbar-item-hover-bg);
+    }
+    &--active, &:active{
+      color: var(--ifm-navbar-link-active-color);
+      border-color: var(--ifm-navbar-item-active-border-color);
+      background-color: var(--ifm-navbar-item-active-bg);
+
+    }
+  }
+  &__brand{
+    &, &:hover, &:active{
+      color: currentColor;
+    }
+  }
+}
+
+.navbar__link{
+  --ifm-navbar-item-hover-bg: var(--bs-brand-2);
+  --ifm-navbar-item-hover-border-color: var(--bs-brand-2);
+
+  &[href*="/concepts"] {
+    --ifm-navbar-item-hover-bg: var(--bs-brand-1);
+    --ifm-navbar-item-hover-border-color: var(--bs-brand-1);
+  }
+
+  &[href*="/dev-tools"] {
+    --ifm-navbar-item-hover-bg: var(--bs-brand-3);
+    --ifm-navbar-item-hover-border-color: var(--bs-brand-3);
+  }
+
+  &[href*="/developers"] {
+    --ifm-navbar-item-hover-bg: var(--bs-brand-4);
+    --ifm-navbar-item-hover-border-color: var(--bs-brand-4);
+  }
+
+  &[href*="/node-operators"] {
+    --ifm-navbar-item-hover-bg: var(--bs-brand-5);
+    --ifm-navbar-item-hover-border-color: var(--bs-brand-5);
+  }
+
+  &[href*="/resources"] {
+    --ifm-navbar-item-hover-bg: var(--bs-brand-6);
+    --ifm-navbar-item-hover-border-color: var(--bs-brand-6);
+  }
+}

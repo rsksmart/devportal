@@ -1,0 +1,31 @@
+@import 'abstracts/abstracts';
+
+@import 'vendors/bootstrap';
+
+/*! purgecss start ignore */
+//@import 'vendors/splide';
+
+@import 'global/animation';
+
+@import 'base/base',
+'base/fonts',
+'base/typography',
+'base/forms',
+'base/content';
+
+@import 'layout/main',
+'layout/header',
+'layout/navigation',
+'layout/sidebar',
+'layout/offcanvas',
+'layout/footer',
+'layout/forms';
+
+@import 'components/buttons',
+'components/sliders';
+
+@import 'pages/front';
+/*! purgecss end ignore */
+
+@import 'base/_utils'; //must be last in this file
+
