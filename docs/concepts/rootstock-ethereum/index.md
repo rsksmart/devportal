@@ -1,1 +1,0 @@
-# Differences between Rootstock and Ethereum
