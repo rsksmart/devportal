@@ -12,7 +12,7 @@ export default function DocRootLayoutMain({hiddenSidebarContainer, children}) {
       )}>
       <div
         className={clsx(
-          'px-lg-32 px-lx-60',
+          'px-lg-32 px-lx-60 w-100',
           styles.docItemWrapper,
           hiddenSidebarContainer && styles.docItemWrapperEnhanced,
         )}>

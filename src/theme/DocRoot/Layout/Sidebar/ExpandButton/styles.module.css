@@ -8,13 +8,13 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    transition: background-color var(--ifm-transition-fast) ease;
+    transition: color var(--ifm-transition-fast) ease;
     padding-top: 2px;
   }
 
   .expandButton:hover,
   .expandButton:focus {
-    background-color: var(--docusaurus-collapse-button-bg-hover);
+    color: var(--rsk-color-main);
   }
 
   .expandButtonIcon {
