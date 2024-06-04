@@ -27,6 +27,9 @@
     position: relative;
     z-index: 1;
     counter-increment: doc-menu-index;
+
+    --rsk-menu-link-index-content: counter(doc-menu-index) ".0";
+
     .menu__link{
       padding: 0;
       &:before{
@@ -35,7 +38,7 @@
 
         right: 100%;
         font: 500 #{$f12}/1.33 $font-family-base;
-        content: var(--rsk-menu-link-index-content, counter(doc-menu-index) ".0");
+        content: var(--rsk-menu-link-index-content);
         margin-right: 9px;
         border-radius: 1em;
         padding: 0 5px;
@@ -87,6 +90,7 @@
       margin-top: 20px;
       & > li {
         --rsk-menu-link-index-content: counter(doc-menu-index) "." counter(doc-submenu-index);
+
         position: relative;
         z-index: 1;
         counter-increment: doc-submenu-index;
