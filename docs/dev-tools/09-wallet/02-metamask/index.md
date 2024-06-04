@@ -16,7 +16,7 @@ You can either use the [metamask-landing.rifos.org](https://metamask-landing.rif
 
 (2) In the network selector (top right corner), choose Custom RPC.
 
-  <div style="text-align:center"><img class="metamask-screenshot" src="/assets/img/metamask/metamask.png"/></div>
+  <div ><img class="metamask-screenshot" src="/img/metamask/metamask.png"/></div>
 
 (3) Fill with these values to connect to RSK Mainnet or Testnet
 

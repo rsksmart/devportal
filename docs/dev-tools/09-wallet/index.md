@@ -1,1 +1,1 @@
-# Liquality
+# Wallet

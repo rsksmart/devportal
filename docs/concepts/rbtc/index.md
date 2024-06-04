@@ -49,8 +49,8 @@ See [supported wallets](/wallet/use/).
     <tr>
       <td scope="row">Logo</td>
       <td>
-        <img src="/assets/img/rsk/RBTC-logo.png" style="border: 2px solid black; width: 200px; height: 200px; background: white;" />
-        <a href="/assets/img/rsk/RBTC-logo.png" target="_blank">RBTC</a>
+        <img src="/img/rsk/RBTC-logo.png" />
+        <a href="/img/rsk/RBTC-logo.png" target="_blank">RBTC</a>
       </td>
     </tr>
   </tbody>
