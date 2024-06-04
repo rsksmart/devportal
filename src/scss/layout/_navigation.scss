@@ -28,4 +28,9 @@
 
     }
   }
+  &__brand{
+    &, &:hover, &:active{
+      color: currentColor;
+    }
+  }
 }

@@ -13,8 +13,8 @@ $gray-600: #73736F;
 $gray-650: #52524F;
 $gray-700: #495057;
 $gray-800: #343a40;
-$gray-900: #212529;
 $gray-850: #2F2F2D;
+$gray-900: #2B2B2B;
 $gray-550: #7D7C7A;
 
 $black: #000000;
@@ -28,7 +28,7 @@ $yellow: #DEFF1A;
 $pink: #FF70E0;
 $green: #78C700;
 
-$brand-1: #FF9100;
+$brand-1: $orange;
 $brand-2: #9E76FF;
 $brand-3: #08FFD1;
 $brand-4: #DEFF1A;
@@ -109,6 +109,8 @@ $theme-colors: (
   "gray-600": $gray-600,
   "gray-650": $gray-650,
   "gray-700": $gray-700,
+  "gray-800": $gray-800,
+  "gray-900": $gray-900,
 );
 // grid settings
 $grid-columns: 12;

@@ -1,5 +1,109 @@
 .theme-doc-sidebar-container {
+
   & > div{
     top: 96px;
+  }
+  .menu{
+    padding: 34px 0 0;
+  }
+}
+.theme-doc-sidebar-menu{
+  counter-reset: doc-menu-index;
+  position: relative;
+  padding-left: 38px;
+  &:before{
+    position: absolute;
+    top: 3px;
+    left: 13px;
+    width: 1px;
+    bottom: 10px;
+    content: "";
+    background-color: var(--bs-body-color);
+  }
+  & > li{
+    position: relative;
+    z-index: 1;
+    counter-increment: doc-menu-index;
+    .menu__link{
+      padding: 0;
+      &:before{
+        position: absolute;
+        top: 0.14em;
+
+        right: 100%;
+        font: 500 #{$f12}/1.33 $font-family-base;
+        content: var(--rsk-menu-link-index-content, counter(doc-menu-index) ".0");
+        margin-right: 9px;
+        border-radius: 1em;
+        padding: 0 5px;
+        background: var(--rsk-menu-link-index-bg, #{$gray-800} );
+        color: var(--rsk-menu-link-index-color, var(--bs-body-color));
+        min-width: 30px;
+        text-align: center;
+        //background: var(--rsk-menu-link-index-bg, var(--rsk-color-main));
+      }
+      &:hover{
+        --ifm-menu-color: var(--rsk-color-main);
+      }
+      &--active{
+        --rsk-menu-link-index-bg:var(--rsk-color-main);
+        --rsk-menu-link-index-color:var(--bs-black);
+      }
+    }
+    a{
+    }
+  }
+}
+.menu__caret{
+  padding-top: 0;
+  padding-bottom: 0;
+  &:before {
+    content: '';
+    background: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 1L4 4L1 1' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    filter: none;
+    height: 16px;
+    transform: rotate(180deg);
+    width: 16px;
+    transition: transform var(--ifm-transition-fast) linear;
+    .menu__list-item--collapsed &{
+      transform: rotate(0deg);
+    }
+  }
+}
+.menu{
+  &__list{
+    .menu__list{
+      counter-reset: doc-submenu-index;
+      padding-left: 76px;
+      margin-left: -38px;
+      margin-top: 20px;
+      & > li {
+        --rsk-menu-link-index-content: counter(doc-menu-index) "." counter(doc-submenu-index);
+        position: relative;
+        z-index: 1;
+        counter-increment: doc-submenu-index;
+        &:before{
+          position: absolute;
+          top: 0.28em;
+          right: 100%;
+          width: 7px;
+          height: 7px;
+          background: var(--bs-body-color);
+          content: "";
+          border-radius: 50%;
+          margin-right: 59px;
+        }
+        &:not(:first-child){
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  &__list-item{
+    &:not(:first-child){
+      margin-top: 20px;
+    }
   }
 }
