@@ -7,6 +7,9 @@
     padding: 34px 0 0;
   }
 }
+.menu__list-item-collapsible{
+  align-items: flex-start;
+}
 .theme-doc-sidebar-menu{
   counter-reset: doc-menu-index;
   position: relative;
@@ -24,6 +27,9 @@
     position: relative;
     z-index: 1;
     counter-increment: doc-menu-index;
+
+    --rsk-menu-link-index-content: counter(doc-menu-index) ".0";
+
     .menu__link{
       padding: 0;
       &:before{
@@ -32,7 +38,7 @@
 
         right: 100%;
         font: 500 #{$f12}/1.33 $font-family-base;
-        content: var(--rsk-menu-link-index-content, counter(doc-menu-index) ".0");
+        content: var(--rsk-menu-link-index-content);
         margin-right: 9px;
         border-radius: 1em;
         padding: 0 5px;
@@ -54,10 +60,10 @@
     }
   }
 }
-.menu__caret{
-  padding-top: 0;
-  padding-bottom: 0;
-  &:before {
+.menu__caret {
+  padding: 0.2em 12px;
+}
+.menu__caret:before, .menu__link--sublist-caret:after {
     content: '';
     background: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 1L4 4L1 1' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
     background-position: 50% 50%;
@@ -70,7 +76,10 @@
     .menu__list-item--collapsed &{
       transform: rotate(0deg);
     }
-  }
+}
+.menu__link--sublist-caret:after{
+  width: 40px;
+  margin-top: 0.2em;
 }
 .menu{
   &__list{
@@ -81,6 +90,7 @@
       margin-top: 20px;
       & > li {
         --rsk-menu-link-index-content: counter(doc-menu-index) "." counter(doc-submenu-index);
+
         position: relative;
         z-index: 1;
         counter-increment: doc-submenu-index;
@@ -97,6 +107,21 @@
         }
         &:not(:first-child){
           margin-top: 10px;
+        }
+      }
+      .menu__list{
+        padding-left: 38px;
+        margin-top: 10px;
+        & > li{
+          padding-right: 12px;
+          .menu__link{
+            &:before{
+              content:none;
+            }
+          }
+          &:before{
+            content: none;
+          }
         }
       }
     }
