@@ -7,12 +7,13 @@ import DocVersionBanner from '@theme/DocVersionBanner';
 import DocVersionBadge from '@theme/DocVersionBadge';
 import DocItemFooter from '@theme/DocItem/Footer';
 import DocItemTOCMobile from '@theme/DocItem/TOC/Mobile';
-import DocItemTOCDesktop from '@theme/DocItem/TOC/Desktop';
+
 import DocItemContent from '@theme/DocItem/Content';
 import DocBreadcrumbs from '@theme/DocBreadcrumbs';
 import Unlisted from '@theme/Unlisted';
 import styles from './styles.module.css';
-import {ShareButtons} from "../../../components/ShareButtons";
+
+import DocItemAside from "../Aside";
 /**
  * Decide if the toc should be rendered, on mobile or desktop viewports
  */
@@ -22,14 +23,10 @@ function useDocTOC() {
   const hidden = frontMatter.hide_table_of_contents;
   const canRender = !hidden && toc.length > 0;
   const mobile = canRender ? <DocItemTOCMobile /> : undefined;
-  const desktop =
-    canRender && (windowSize === 'desktop' || windowSize === 'ssr') ? (
-      <DocItemTOCDesktop />
-    ) : undefined;
+
   return {
     hidden,
-    mobile,
-    desktop,
+    mobile
   };
 }
 export default function DocItemLayout({children}) {
@@ -37,12 +34,13 @@ export default function DocItemLayout({children}) {
   const {
     metadata: {unlisted},
   } = useDoc();
+
   return (
-    <div className="row">
+    <div className="row gx-0">
       <div className={clsx('col', !docTOC.hidden && styles.docItemCol)}>
         {unlisted && <Unlisted />}
         <DocVersionBanner />
-        <div className={styles.docItemContainer}>
+        <div className={clsx(styles.docItemContainer, `px-lg-32 px-xl-56`)}>
           <article>
             <DocBreadcrumbs />
             <DocVersionBadge />
@@ -53,10 +51,9 @@ export default function DocItemLayout({children}) {
           <DocItemPaginator />
         </div>
       </div>
-      {docTOC.desktop && <div className="col col--3">
-        {docTOC.desktop}
-        <ShareButtons url={`#`}/>
-      </div>}
+      <div className="col col--3">
+			<DocItemAside />
+      </div>
     </div>
   );
 }

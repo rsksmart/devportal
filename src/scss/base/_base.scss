@@ -95,6 +95,13 @@ a, button {
 
   --rsk-menu-link-index-bg: var(--bs-gray-300);
 
+  //Aside
+  --ifm-toc-border-color:rgba(var(--bs-body-color-rgb), 0.4);
+
+  //TOC
+  --ifm-toc-padding-horizontal: 10px;
+  --ifm-toc-padding-vertical: 0;
+
   //Color Mode
   --rsk-color-mode-bg: #08FFD1; //TODO: change to css var
   --rsk-color-mode-btn-bg: #09CDA9; //TODO: change to css var
@@ -163,8 +170,4 @@ a, button {
   --rsk-color-mode-bg: var(--bs-brand-2);
   --rsk-color-mode-btn-bg: #7247D9;
 
-}
-
-body .theme-doc-toc-desktop {
-  position: static;
 }

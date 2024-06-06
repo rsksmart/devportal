@@ -1,0 +1,52 @@
+.tableOfContentsTree {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 0 0 18px;
+  position: relative;
+  &:before{
+    position: absolute;
+    content: "";
+    left: 4px;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background-color: var(--bs-body-color);
+  }
+  &, ul{
+    list-style-type: none;
+    margin: 0;
+  }
+  ul{
+    padding:0 0 0 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  & > li > a{
+    position: relative;
+    &:before{
+      position: absolute;
+      top: 0.2em;
+      right: 100%;
+      width: 7px;
+      height: 7px;
+      background: currentColor;
+      content: "";
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  }
+  a{
+    color: var(--ifm-toc-link-color);
+    font: 400 0.75rem/1.1 var(--bs-body-font-family);
+    letter-spacing: -0.024em;
+    position: relative;
+    display: block;
+    &:hover, &:focus, &[class*="active"]{
+      color: var(--rsk-color-main);
+    }
+
+  }
+}

@@ -1,0 +1,7 @@
+.docItemAside {
+  --bs-border-color: var(--ifm-toc-border-color)
+}
+.docItemAsideInner{
+  position: sticky;
+  top: 96px;
+}
