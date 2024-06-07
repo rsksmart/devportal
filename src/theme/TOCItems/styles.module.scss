@@ -13,13 +13,35 @@
     width: 1px;
     background-color: var(--bs-body-color);
   }
+  //&:after{
+  //  position: absolute;
+  //  bottom: 4px;
+  //  left: 1px;
+  //  width: 7px;
+  //  height: 7px;
+  //  background: currentColor;
+  //  content: "";
+  //  border-radius: 50%;
+  //}
+  & > li:last-child{
+    position: relative;
+    &:before{
+      position: absolute;
+      content: "";
+      left: -16px;
+      top: 0.26em;
+      bottom: 0;
+      width: 3px;
+      background-color: var(--bs-body-bg);
+    }
+  }
   &, ul{
     list-style-type: none;
     margin: 0;
   }
   ul{
     padding:0 0 0 10px;
-    margin-top: 20px;
+    margin-top: 14px;
     display: flex;
     flex-direction: column;
     gap: 10px;

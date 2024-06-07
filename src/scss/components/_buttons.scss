@@ -1,13 +1,26 @@
 .btn{
   letter-spacing: -0.02em;
-  box-shadow: var(--bs-btn-box-shadow);
-  --bs-btn-color: #{$black-800};
-  --bs-btn-bg: #{$gray-200};
-  --bs-btn-hover-bg: #{$gray-200};
-  --bs-btn-border-color: #{$gray-600};
-  --bs-btn-hover-border-color: #{$gray-600};
+  --bs-btn-color: var(--bs-body-color);
+  --bs-btn-bg: var(--bs-body-bg);;
+  --bs-btn-border-color: var(--bs-body-color);;
+
+  --bs-btn-hover-color: var(--bs-body-bg);
+  --bs-btn-hover-bg: var(--bs-body-color);
+  --bs-btn-hover-border-color: var(--bs-body-color);
+
+  --bs-btn-active-color: var(--bs-body-bg);
+  --bs-btn-active-bg: var(--bs-body-color);
+
   --bs-btn-focus-box-shadow: #{$btn-focus-box-shadow};
   --bs-btn-active-box-shadow: #{$btn-active-box-shadow};
+
+  & > span{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+    z-index: 1;
+  }
   &:hover, &:focus{
     box-shadow: var(--bs-btn-focus-box-shadow);
   }
@@ -15,12 +28,7 @@
     box-shadow: var(--bs-btn-active-box-shadow);
   }
 }
-.btn-flat{
-  --bs-btn-box-shadow: none;
-  &.active{
-  --bs-btn-box-shadow: #{$btn-focus-box-shadow};
-  }
-}
+
 .btn-ghost{
   --bs-btn-box-shadow: none;
   --bs-btn-border-color: transparent;
@@ -32,26 +40,7 @@
     box-shadow: var(--bs-btn-active-box-shadow);
   }
 }
-.btn-play{
-  width: 44px;
-  height: 44px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  color: $black-800;
-  background: $gray-200;
-  border: 1px solid $black-800;
-  border-radius: 4px;
-  svg{
-    margin-left: 4px;
-  }
-  &:hover, &:focus{
-    box-shadow: var(--bs-btn-focus-box-shadow);
-  }
-  &:active{
-    box-shadow: var(--bs-btn-active-box-shadow);
-  }
-}
+
 .btn-close{
   --bs-btn-close-color: var(--bs-forest-green);
   --bs-btn-close-hover-color: var(--bs-lime-green);
@@ -128,3 +117,31 @@
     }
   }
 }
+.btn-outline {
+  position: relative;
+  border-radius: 40px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 100%;
+    width: 100%;
+    padding: inherit;
+    border-radius: 40px;
+    border: 1px solid $white;
+    z-index: -1;
+    background-color: $black;
+  }
+
+  &--alt{
+    &:after{
+      content: none;
+    }
+  }
+  &--xs{
+    padding: 2px 12px;
+  }
+}
+

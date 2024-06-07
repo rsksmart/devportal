@@ -6,7 +6,7 @@ import Translate from '@docusaurus/Translate';
 
 export default function DocItemTOCDesktop() {
   const {toc, frontMatter} = useDoc();
-  return <>
+  return <div>
 	  <h4 className={`title-s mb-30 text-uppercase`}>
 		  <Translate
 			  id="theme.TOCCollapsible.toggleButtonLabel"
@@ -20,5 +20,5 @@ export default function DocItemTOCDesktop() {
 		  maxHeadingLevel={frontMatter.toc_max_heading_level}
 		  className={ThemeClassNames.docs.docTocDesktop}
 	  />
-  </>
+  </div>
 }

@@ -119,7 +119,7 @@ $grid-breakpoints: (
   xs: 0,
   //sm: 576px,
   md: 640px,
-  lg: 992px,
+  lg: 997px,
   xl: 1200px,
   xxl: 1400px,
   x2l: 1600px,
@@ -435,17 +435,17 @@ $input-btn-font-family:       $font-family-base;
 $input-btn-font-size:         18px;
 $input-btn-line-height:       1.2;
 
-$btn-padding-y:               8px;
-$btn-padding-x:               12px;
-$btn-font-family:             $headings-font-family;
-$btn-font-size:               $f14;
+$btn-padding-y:               5px;
+$btn-padding-x:               10px;
+$btn-font-family:             $font-family-base;
+$btn-font-size:               $f12;
 $btn-line-height:             1;
 $btn-white-space:             nowrap; // Set to `nowrap` to prevent text wrapping
 
 
 $btn-border-width:            1px;
 
-$btn-font-weight:             500;
+$btn-font-weight:             400;
 $btn-box-shadow:              3px 4px 0 0 $gray-600;
 $btn-focus-width:             $input-btn-focus-width;
 $btn-focus-box-shadow:        1px 2px 0 0 $black-800;

@@ -18,11 +18,16 @@ const DocTOCDesktop = () => {
 }
 export default function DocItemAside() {
 
-	return <div className={clsx(styles.docItemAside, `h-100 border-start ps-30`)}>
-		<div className={clsx(styles.docItemAsideInner)}>
+	return <div className={clsx(styles.docItemAside, `h-100 pt-40 pt-lg-0 ps-lg-30`)}>
+		<div className={clsx(styles.docItemAsideInner, `d-flex flex-column gap-32 justify-content-between`)}>
 			{DocTOCDesktop()}
 
-			<ShareButtons url={`#`}/>
+			<div className={`flex-grow-1 position-relative d-flex flex-column`}>
+				<div className={clsx(styles.docItemAsideBottom, 'position-sticky mt-auto')}>
+					<ShareButtons />
+				</div>
+			</div>
+
  		</div>
 	</div>
 }

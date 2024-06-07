@@ -1,7 +1,20 @@
 .docItemAside {
-  --bs-border-color: var(--ifm-toc-border-color)
+
+  @media (min-width: 997px) {
+    border-left: 1px solid var(--ifm-toc-border-color);
+  }
 }
+
 .docItemAsideInner{
-  position: sticky;
-  top: 96px;
+
+  @media (min-width: 997px) {
+    position: sticky;
+    top: 96px;
+    min-height: calc(100vh - 96px);
+  }
+}
+.docItemAsideBottom{
+  @media (min-width: 997px) {
+    bottom: 32px;
+  }
 }
