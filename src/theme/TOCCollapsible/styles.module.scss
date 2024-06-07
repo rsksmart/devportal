@@ -1,0 +1,17 @@
+.tocCollapsible {
+  background-color: var(--ifm-menu-color-background-active);
+  border-radius: var(--ifm-global-radius);
+  margin: 1rem 0;
+}
+
+.tocCollapsibleContent {
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+  & > ul {
+    margin-top: 20px;
+  }
+}
+
+
+.tocCollapsibleExpanded {
+  transform: none;
+}

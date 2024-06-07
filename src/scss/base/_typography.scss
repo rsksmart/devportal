@@ -44,7 +44,10 @@ h3, .h3 {
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   letter-spacing: -0.024em;
 }
-
+.title-s{
+  font: 400 #{$f12}/1 $font-family-base;
+  letter-spacing: -0.024em;
+}
 .caption {
   font: 400 10px/1.6 $font-family-base;
   color: var(--bs-body-color);
@@ -65,4 +68,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 a{
   color: var(--rsk-color-main);
+}
+text-body{
+  color: var(--bs-body-color) !important;
 }
