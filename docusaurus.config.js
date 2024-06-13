@@ -11,7 +11,7 @@ const mainNavItems = createNavItems('./docs');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  noIndex: true, // set to false to enable search engine indexing
+  noIndex: false, // set to false to enable search engine indexing
 
   title: 'Rootstock Developers Portal',
   tagline: 'Welcome to Rootstock',
@@ -58,6 +58,18 @@ const config = {
         theme: {
           customCss: ['./src/scss/app.scss'],
           // customCss: ['./src/css/custom.css']
+        },
+        sitemap: {
+          lastmod: 'date',
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+          createSitemapItems: async (params) => {
+            const {defaultCreateSitemapItems, ...rest} = params;
+            const items = await defaultCreateSitemapItems(rest);
+            return items.filter((item) => !item.url.includes('/page/'));
+          },
         },
       }),
     ],
@@ -156,13 +168,45 @@ const config = {
         x: 'https://twitter.com/rootstock_io',
         telegram: 'https://t.me/rskofficialcommunity'
       },
-      tagline:{
-        text1 : 'Build',
-        text2 : 'Together',
+      tagline: {
+        text1: 'Build',
+        text2: 'Together',
       },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+      },
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'WAFPQL14PU',
+
+        // Public API key: it is safe to commit it
+        apiKey: 'a934b35466d2bd24cf1a27a859fc4401',
+
+        indexName: 'dev-rootstock',
+
+        // Optional: see doc section below
+        contextualSearch: true,
+
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        //externalUrlRegex: 'external\\.com|domain\\.com',
+
+        // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+        // replaceSearchResultPathname: {
+        //   from: '/docs/', // or as RegExp: /\/docs\//
+        //   to: '/',
+        // },
+
+        // // Optional: Algolia search parameters
+        // searchParameters: {},
+        //
+        // // Optional: path for search page that enabled by default (`false` to disable it)
+        // searchPagePath: 'search',
+        //
+        // // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
+        // insights: false,
+
+        //... other Algolia params
       },
     }),
 };
