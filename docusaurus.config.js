@@ -74,7 +74,7 @@ const config = {
       }),
     ],
   ],
-  // themes: ['@docusaurus/theme-search-algolia'],
+  //themes: ['@docusaurus/theme-search-algolia'],
 
   themeConfig:
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -181,12 +181,12 @@ const config = {
         appId: 'WAFPQL14PU',
 
         // Public API key: it is safe to commit it
-        apiKey: 'a934b35466d2bd24cf1a27a859fc4401',
+        apiKey: '4da8ccafcd04d9c5efd1601a60658bce',
 
         indexName: 'dev-rootstock',
 
         // Optional: see doc section below
-        contextualSearch: true,
+        contextualSearch: false,
 
         // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
         //externalUrlRegex: 'external\\.com|domain\\.com',
