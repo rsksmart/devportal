@@ -133,7 +133,7 @@ $container-max-widths: (
   xl: 1440px,
 );
 
-$font-size-base: 1rem;
+$font-size-base: 14px;
 $body-bg: $white;
 $body-color: $black;
 $paragraph-margin-bottom:   24px;
@@ -429,10 +429,10 @@ $badge-border-radius:               8px;
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
 // scss-docs-start input-btn-variables
-$input-btn-padding-y:         14px;
-$input-btn-padding-x:         12px;
+$input-btn-padding-y:         15px;
+$input-btn-padding-x:         10px;
 $input-btn-font-family:       $font-family-base;
-$input-btn-font-size:         18px;
+$input-btn-font-size:         $f14;
 $input-btn-line-height:       1.2;
 
 $btn-padding-y:               5px;
