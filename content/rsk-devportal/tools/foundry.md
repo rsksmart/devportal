@@ -110,20 +110,22 @@ forge test
 
 ### Deploy contract on the Rootstock
 
-To deploy the counter contract on Rootstock mainnet or testnet, further configure Foundry by setting up a Rootstock RPC url and a private key of an account that’s funded with tRBTC. 
+To deploy the counter contract on Rootstock mainnet or testnet, further configure Foundry by setting up a [Rootstock RPC URL](/tools/rpc-api/) and a private key of an account that’s funded with tRBTC. 
 
 #### Environment Configuration
 
-Once you have an account with a private key, create a `.env` file in the root of the foundry project and add the variables. 
+Once you have an account with a private key and a API key to interact with the RPC API, create a `.env` file in the root of the foundry project and add the variables. 
 
 Foundry automatically loads a `.env` file present in the project directory.
 
 The `.env` file should follow this format:
 
 ```bash
-ROOTSTOCK_RPC_URL=https://public-node.testnet.rsk.co
+ROOTSTOCK_RPC_URL=https://rpc.testnet.rootstock.io/API_KEY
 PRIVATE_KEY=0x...
 ```
+
+> Replace `"API_KEY"` with the api key that you have created for this App. For information on how to create an API key, see [How to get started with RPC API](/tools/rpc-api/).
 
 At the root of the project, run:
 
