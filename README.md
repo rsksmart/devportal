@@ -103,6 +103,14 @@ Currently uses the Gatsby Remark check links plugin to runs the following basic 
 > - For changes to general content, site pages, images, etc. See the [content folder](/content/).
 > - For changes to the logic, or looking adding new features to the devportal. Refer to `gatsby-config.ts`, `gatsby-node.ts`, `/src` pages.
 
+## Add new env variable
+
+To add a new environtment variable you have to create the variable in the `.env.*` file adding `GATSBY_*` prefix. This is needed for [Vercel](https://vercel.com/) which the cloud provider for the devportal. 
+Then it will be available under for instance `process.env.GATSBY_API_URL` in your code.
+```
+process.env.GATSBY_API_URL;
+```
+
 ### Writing original documentation
 
 Steps:
