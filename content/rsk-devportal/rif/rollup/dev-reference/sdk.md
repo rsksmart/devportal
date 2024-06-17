@@ -32,10 +32,14 @@ This section contains documentation for the JS SDK for RIF Rollup. In this secti
 
 Here is a list of items necessary for setting up and running the Javascript SDK.
 
-* Ethersjs Library (v5.0). See how to setup Ethersjs on the [official site](https://docs.ethers.org/v5/getting-started/)
-* Node (v18.0 and above). See [how to install nodejs using NVM](https://nodejs.org/en/download/package-manager#nvm)
+* Ethersjs Library (v5.0).
+  * See how to setup Ethersjs on the [official site](https://docs.ethers.org/v5/getting-started/).
+* Node (v18.0 and above).
+  * See [how to install nodejs using NVM](https://nodejs.org/en/download/package-manager#nvm).
 * RBTC.
     * See how to get test tokens using the [Rootstock Faucet](https://faucet.rsk.co/) or see the guide on how to [Get Crypto on Rootstock](/guides/get-crypto-on-rsk/).
+* Get an API key to interact with the RPC API.
+    * See the guide on [how to get started with RPC API](/tools/rpc-api/).
 
 ## Dependencies
 * zkSync
@@ -95,7 +99,7 @@ const ethersProvider = ethers.getDefaultProvider(network);
 > Note that the command may not always work (as Ethers do not always support Rootstock connections), use the workaround as shown below;
 
 ```js
-const RSK_TESTNET_NODE_URL = "https://public-node.testnet.rsk.co";
+const RSK_TESTNET_NODE_URL = "https://rpc.testnet.rootstock.io/";
 const ethersProvider = new ethers.providers.JsonRpcProvider(RSK_TESTNET_NODE_URL);
 ```
 
