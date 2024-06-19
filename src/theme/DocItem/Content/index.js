@@ -30,7 +30,7 @@ export default function DocItemContent({children}) {
   return (
     <div className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown')}>
       {syntheticTitle && (
-        <header>
+        <header className={`mb-30`}>
           <Heading as="h1">{syntheticTitle}</Heading>
         </header>
       )}

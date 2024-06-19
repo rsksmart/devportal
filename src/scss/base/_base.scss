@@ -4,8 +4,8 @@ body {
 }
 
 html {
-  //scroll-behavior: smooth;
-  scroll-padding-top: 84px;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--rsk-navbar-height, 118px);
 }
 
 html, body {
@@ -37,6 +37,8 @@ a, button {
 }
 
 :root {
+  --rsk-navbar-height: 118px;
+
   --rsk-color-main: var(--bs-orange);
 
   --ifm-color-primary: var(--bs-orange);
@@ -153,6 +155,10 @@ a, button {
 
   --rsk-paginator-link-hover-color: var(--bs-body-bg);
   --rsk-paginator-link-hover-bg: var(--bs-body-color);
+
+  //Block title
+  --rsk-title-block-color: var(--bs-black);
+  --rsk-title-block-bg: var(--rsk-color-main);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -182,4 +188,5 @@ a, button {
 
   //Aside
   --ifm-toc-border-color:rgba(var(--bs-body-color-rgb), 0.4);
+
 }

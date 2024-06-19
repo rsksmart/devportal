@@ -1,7 +1,7 @@
 .theme-doc-sidebar-container {
 
   & > div{
-    top: 96px;
+    top: var(--rsk-navbar-height);
   }
   .menu{
     padding: 34px 0 0;
