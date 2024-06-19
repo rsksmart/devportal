@@ -310,6 +310,7 @@ $rounded: (
 $line-height-sm: 1.25;
 $line-height-base: 1.35;
 
+$f10: 0.625rem;
 $f12: 0.75rem;
 $f14: 0.875rem;
 $f16: 1rem;
@@ -416,12 +417,12 @@ $navbar-nav-link-padding-x: 0;
 
 //badges
 
-$badge-font-size:                   14px;
-$badge-font-weight:                 700;
-$badge-color:                       $primary;
-$badge-padding-y:                   6px;
-$badge-padding-x:                   10px;
-$badge-border-radius:               8px;
+$badge-font-size:                   12px;
+$badge-font-weight:                 500;
+$badge-color:                       $black;
+$badge-padding-y:                   1px;
+$badge-padding-x:                   4px;
+$badge-border-radius:               1.2em;
 
 
 // Buttons + Forms
