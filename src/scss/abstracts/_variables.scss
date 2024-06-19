@@ -456,3 +456,14 @@ $btn-active-box-shadow:       0px 0px 0 0 $black-800;
 $btn-border-radius:           40px;
 $btn-border-radius-sm:        32px;
 $btn-border-radius-lg:        60px;
+
+//spinners
+$spinner-width:           16px;
+$spinner-height:          $spinner-width;
+$spinner-vertical-align:  -.125em;
+$spinner-border-width:    1px;
+$spinner-animation-speed: .75s;
+
+$spinner-width-sm:        0.8rem;
+$spinner-height-sm:       $spinner-width-sm;
+$spinner-border-width-sm: 1px;

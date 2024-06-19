@@ -21,3 +21,15 @@
   --bs-modal-footer-border-color: var(--bs-modal-border-color);
   --bs-modal-footer-border-width: var(--bs-modal-border-width);
 }
+.modal-backdrop {
+  --bs-backdrop-opacity: 0.2;
+}
+.modal.fade {
+  backdrop-filter: blur(20px);
+  transition-property: opacity, backdrop-filter;
+}
+.modal-dialog{
+  @include media-breakpoint-down(md) {
+    padding: 0 16px;
+  }
+}

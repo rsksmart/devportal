@@ -120,29 +120,29 @@ a, button {
     --ifm-navbar-padding-horizontal: 24px;
   }
 
-  &:not(.docs-doc-page) {
-    --rsk-color-main: var(--bs-brand-2);
-  }
-
-  &[class*="docs-doc-id-concepts"] {
-    --rsk-color-main: var(--bs-brand-1);
-  }
-
-  &[class*="docs-doc-id-dev-tools"] {
-    --rsk-color-main: var(--bs-brand-3);
-  }
-
-  &[class*="docs-doc-id-developers"] {
-    --rsk-color-main: var(--bs-brand-4);
-  }
-
-  &[class*="docs-doc-id-node-operators"] {
-    --rsk-color-main: var(--bs-brand-5);
-  }
-
-  &[class*="docs-doc-id-resources"] {
-    --rsk-color-main: var(--bs-brand-6);
-  }
+  //&:not(.docs-doc-page) {
+  //  --rsk-color-main: var(--bs-brand-2);
+  //}
+  //
+  //&[class*="docs-doc-id-concepts"] {
+  //  --rsk-color-main: var(--bs-brand-1);
+  //}
+  //
+  //&[class*="docs-doc-id-dev-tools"] {
+  //  --rsk-color-main: var(--bs-brand-3);
+  //}
+  //
+  //&[class*="docs-doc-id-developers"] {
+  //  --rsk-color-main: var(--bs-brand-4);
+  //}
+  //
+  //&[class*="docs-doc-id-node-operators"] {
+  //  --rsk-color-main: var(--bs-brand-5);
+  //}
+  //
+  //&[class*="docs-doc-id-resources"] {
+  //  --rsk-color-main: var(--bs-brand-6);
+  //}
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
