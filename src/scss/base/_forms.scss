@@ -180,3 +180,24 @@ input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+label{
+  cursor: pointer;
+}
+.form-control{
+  font: 400 #{$f14}/1.2 $font-family-base;
+  padding: 11px 15px;
+  border-radius: 8px;
+  border: 1px solid var(--rsk-input-border-color, #3D3D3D);
+  background: var(--rsk-input-bg, #1A1A1A);
+  color: var(--rsk-input-color, var(--bs-body-color));
+  &::placeholder{
+    color: var(--rsk-input-placeholder-color, #8C8C8C);
+  }
+  &:focus{
+    outline: none;
+    border-color: var(--rsk-input-border-color-focus, var(--bs-primary));
+    box-shadow: none;
+    background: var(--rsk-input-focus-bg, #1A1A1A);
+  }
+}

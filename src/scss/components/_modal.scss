@@ -1,0 +1,35 @@
+.modal{
+  --bs-modal-border-color: var(--bs-body-color);
+  --bs-modal-zindex: #{$zindex-modal};
+  --bs-modal-width: 432px;
+  --bs-modal-padding: 32px;
+  --bs-modal-margin: #{$modal-dialog-margin};
+  --bs-modal-color: var(--bs-body-color);
+  --bs-modal-bg: var(--bs-body-bg);
+  --bs-modal-border-width: 1px;
+  --bs-modal-border-radius: 20px;
+  --bs-modal-box-shadow: none;
+  --bs-modal-inner-border-radius: 20px;
+  --bs-modal-header-padding-x: 32px;
+  --bs-modal-header-padding-y: 32px;
+  --bs-modal-header-padding: #{$modal-header-padding}; // Todo in v6: Split this padding into x and y
+  --bs-modal-header-border-color: #{$modal-header-border-color};
+  --bs-modal-header-border-width: #{$modal-header-border-width};
+  --bs-modal-title-line-height: #{$modal-title-line-height};
+  --bs-modal-footer-gap: #{$modal-footer-margin-between};
+  --bs-modal-footer-bg: var(--bs-modal-bg);
+  --bs-modal-footer-border-color: var(--bs-modal-border-color);
+  --bs-modal-footer-border-width: var(--bs-modal-border-width);
+}
+.modal-backdrop {
+  --bs-backdrop-opacity: 0.2;
+}
+.modal.fade {
+  backdrop-filter: blur(20px);
+  transition-property: opacity, backdrop-filter;
+}
+.modal-dialog{
+  @include media-breakpoint-down(md) {
+    padding: 0 16px;
+  }
+}

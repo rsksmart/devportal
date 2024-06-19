@@ -52,7 +52,7 @@ export default function DocItemLayout({children}) {
         </div>
       </div>
       <div className="col col--3">
-			<DocItemAside />
+			  <DocItemAside />
       </div>
     </div>
   );

@@ -28,7 +28,15 @@
     box-shadow: var(--bs-btn-active-box-shadow);
   }
 }
-
+.btn-blank{
+  background: none;
+  border: none;
+  color: inherit;
+  border-radius: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 0;
+}
 .btn-ghost{
   --bs-btn-box-shadow: none;
   --bs-btn-border-color: transparent;
@@ -118,22 +126,11 @@
   }
 }
 .btn-outline {
+  --bs-btn-box-shadow: 4px 4px 0 -1px var(--bs-btn-bg), 4px 4px 0 0 var(--bs-btn-border-color);
+  --bs-btn-focus-box-shadow: var(--bs-btn-box-shadow);
   position: relative;
   border-radius: 40px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    height: 100%;
-    width: 100%;
-    padding: inherit;
-    border-radius: 40px;
-    border: 1px solid $white;
-    z-index: -1;
-    background-color: $black;
-  }
+  box-shadow: var(--bs-btn-box-shadow);
 
   &--alt{
     &:after{

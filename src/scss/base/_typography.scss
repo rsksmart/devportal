@@ -72,3 +72,7 @@ a{
 text-body{
   color: var(--bs-body-color) !important;
 }
+.subtitle-2{
+  font: 400 #{$f20}/1.2 $font-family-base;
+  letter-spacing: 0.024em;
+}
