@@ -3,7 +3,6 @@ import clsx from 'clsx';
 import {ThemeClassNames} from '@docusaurus/theme-common';
 import {useDoc} from '@docusaurus/theme-common/internal';
 import TagsListInline from '@theme/TagsListInline';
-import EditMetaRow from '@theme/EditMetaRow';
 export default function DocItemFooter() {
   const {metadata} = useDoc();
   const {editUrl, lastUpdatedAt, lastUpdatedBy, tags} = metadata;
@@ -26,17 +25,6 @@ export default function DocItemFooter() {
             <TagsListInline tags={tags} />
           </div>
         </div>
-      )}
-      {canDisplayEditMetaRow && (
-        <EditMetaRow
-          className={clsx(
-            'margin-top--sm',
-            ThemeClassNames.docs.docFooterEditMetaRow,
-          )}
-          editUrl={editUrl}
-          lastUpdatedAt={lastUpdatedAt}
-          lastUpdatedBy={lastUpdatedBy}
-        />
       )}
     </footer>
   );

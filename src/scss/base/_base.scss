@@ -115,6 +115,9 @@ a, button {
   --ifm-footer-link-color: var(--bs-body-color);
   --ifm-footer-link-hover-color: var(--bs-primary);
 
+  //
+  --rsk-last-updated-color: var(--bs-gray-600);
+
   @include media-breakpoint-up(md) {
     --ifm-navbar-padding-vertical: 32px;
     --ifm-navbar-padding-horizontal: 24px;

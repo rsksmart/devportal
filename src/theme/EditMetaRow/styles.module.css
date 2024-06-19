@@ -1,0 +1,8 @@
+.lastUpdated {
+  color: var(--rsk-last-updated-color);
+  letter-spacing: -0.024em;
+  line-height: 1.16;
+  b{
+    font-weight: inherit;
+  }
+}

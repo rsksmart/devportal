@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import {useWindowSize} from '@docusaurus/theme-common';
+import {ThemeClassNames, useWindowSize} from '@docusaurus/theme-common';
 import {useDoc} from '@docusaurus/theme-common/internal';
 import DocItemPaginator from '@theme/DocItem/Paginator';
 import DocVersionBanner from '@theme/DocVersionBanner';
@@ -14,6 +14,7 @@ import Unlisted from '@theme/Unlisted';
 import styles from './styles.module.css';
 
 import DocItemAside from "../Aside";
+import EditMetaRow from "@theme/EditMetaRow";
 /**
  * Decide if the toc should be rendered, on mobile or desktop viewports
  */
@@ -40,7 +41,7 @@ export default function DocItemLayout({children}) {
       <div className={clsx('col', !docTOC.hidden && styles.docItemCol)}>
         {unlisted && <Unlisted />}
         <DocVersionBanner />
-        <div className={clsx(styles.docItemContainer, `px-lg-32 px-xl-56`)}>
+        <div className={clsx(styles.docItemContainer, `px-lg-24`)}>
           <article>
             <DocBreadcrumbs />
             <DocVersionBadge />
@@ -49,6 +50,7 @@ export default function DocItemLayout({children}) {
             <DocItemFooter />
           </article>
           <DocItemPaginator />
+          <EditMetaRow />
         </div>
       </div>
       <div className="col col--3">
