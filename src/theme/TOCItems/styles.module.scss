@@ -1,7 +1,7 @@
 .tableOfContentsTree {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   padding: 0 0 0 18px;
   position: relative;
   &:before{
@@ -62,7 +62,7 @@
   }
   a{
     color: var(--ifm-toc-link-color);
-    font: 400 0.75rem/1.1 var(--bs-body-font-family);
+    font: 400 0.75rem/1.16 var(--bs-body-font-family);
     letter-spacing: -0.024em;
     position: relative;
     display: block;
