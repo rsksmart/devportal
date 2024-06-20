@@ -159,6 +159,27 @@ a, button {
   //Block title
   --rsk-title-block-color: var(--bs-black);
   --rsk-title-block-bg: var(--rsk-color-main);
+
+  //markdown
+  --ifm-leading: 0.75rem;
+  --ifm-code-border-radius: 8px;
+  --ifm-code-padding-horizontal: 0.2em;
+  --ifm-code-background: rgba(var(--bs-body-color-rgb), 0.05);
+  --bs-code-color: var(--bs-purple);
+  --ifm-list-paragraph-margin: 12px;
+
+  --ifm-pre-padding:16px;
+  --rsk-codeblock-border-color: #{$gray-400};
+
+  --ifm-global-shadow-lw:none;
+
+  --ifm-table-border-width: 1px;
+  --ifm-table-cell-padding :16px 12px;
+
+  --ifm-table-border-color: #{$gray-500};
+  --ifm-table-background:  #{$gray-100};
+  --rsk-table-td-bg : #{$gray-100};
+  --rsk-table-th-bg : #{$gray-400};
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -189,4 +210,12 @@ a, button {
   //Aside
   --ifm-toc-border-color:rgba(var(--bs-body-color-rgb), 0.4);
 
+  //Markdown
+  --ifm-code-background: var(--bs-body-bg);
+  --rsk-codeblock-border-color: #{$gray-800};
+
+  --ifm-table-border-color: #{$gray-800};
+  --ifm-table-background:  #{$gray-950};
+  --rsk-table-td-bg : #{$gray-950};
+  --rsk-table-th-bg : #{$gray-900};
 }

@@ -34,7 +34,6 @@ export default function DocItemContent({children}) {
           <Heading as="h1">{syntheticTitle}</Heading>
         </header>
       )}
-      <ReadingTime />
       <MDXContent>{children}</MDXContent>
     </div>
   );

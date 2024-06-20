@@ -15,6 +15,7 @@ import styles from './styles.module.css';
 
 import DocItemAside from "../Aside";
 import EditMetaRow from "@theme/EditMetaRow";
+import {ReadingTime} from "../../../components/ReadingTime";
 /**
  * Decide if the toc should be rendered, on mobile or desktop viewports
  */
@@ -44,6 +45,7 @@ export default function DocItemLayout({children}) {
         <div className={clsx(styles.docItemContainer, `px-lg-24`)}>
           <article>
             <DocBreadcrumbs />
+            <ReadingTime />
             <DocVersionBadge />
             {docTOC.mobile}
             <DocItemContent>{children}</DocItemContent>

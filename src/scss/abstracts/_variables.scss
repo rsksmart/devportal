@@ -4,17 +4,18 @@ $enable-smooth-scroll: false;
 
 // scss-docs-start gray-color-variables
 $white: #ffffff;
-$gray-100: #FAF8F7;
+$gray-100: #F0F0F0;
 $gray-200: #FAFAF5;
 $gray-300: #E5E5E1;
 $gray-400: #DBD1C8;
-$gray-500: #B2B2AD;
+$gray-500: #BDBDBD;
 $gray-600: #8A8A8A;
 $gray-650: #52524F;
 $gray-700: #495057;
-$gray-800: #343a40;
+$gray-800: #3D3D3D;
 $gray-850: #2F2F2D;
-$gray-900: #2B2B2B;
+$gray-900: #262626;
+$gray-950: #1A1A1A;
 $gray-550: #7D7C7A;
 
 $black: #000000;
@@ -362,12 +363,12 @@ $font-sizes: (
 // heading styles
 $headings-styles: (
   xs: (
-    'h1': ('font-size': $f32, 'line-height' : 1),
-    'h2': ('font-size': $f24, 'line-height' : 1),
-    'h3': ('font-size': $f20, 'line-height' : 1),
-    'h4': ('font-size': $f16, 'line-height' : 1),
-    'h5': ('font-size': $f14, 'line-height' : 1.3),
-    'h6': ('font-size': $f14, 'line-height' : 1.3),
+    'h1': ('font-size': $f28, 'line-height' : 1.12),
+    'h2': ('font-size': $f20, 'line-height' : 1.12),
+    'h3': ('font-size': $f18, 'line-height' : 1.12),
+    'h4': ('font-size': $f16, 'line-height' : 1.12),
+    'h5': ('font-size': $f14, 'line-height' : 1.12),
+    'h6': ('font-size': $f14, 'line-height' : 1.12),
   ),
   //md: (
   //  'h1': ('font-size': 60px),
@@ -377,10 +378,10 @@ $headings-styles: (
   //  'h5': ('font-size': 40px),
   //  'h6': ('font-size': 28px),
   //),
-  lg: (
-    'h1': ('font-size': $f50),
-    'h2': ('font-size': $f32),
-    'h3': ('font-size': $f24),
+  md: (
+    'h1': ('font-size': $f32),
+    'h2': ('font-size': $f24),
+    'h3': ('font-size': $f20),
     'h4': ('font-size': $f16),
     'h5': ('font-size': $f14),
     'h6': ('font-size': $f14),
