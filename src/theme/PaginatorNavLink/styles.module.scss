@@ -1,0 +1,14 @@
+.paginatorLink {
+  border:1px solid var(--rsk-paginator-link-border-color, var(--bs-body-color));
+  color: var(--rsk-paginator-link-color, var(--bs-body-color));
+  background-color: var(--rsk-paginator-link-bg, var(--bs-body-bg));
+  box-shadow: var(--rsk-paginator-link-box-shadow, 4px 4px 0 -1px var(--rsk-paginator-link-bg), 4px 4px 0 0 var(--rsk-paginator-link-color));
+  &:hover {
+    color: var(--rsk-paginator-link-hover-color, var(--bs-body-bg));
+    background-color: var(--rsk-paginator-link-hover-bg, var(--bs-body-color));
+  }
+}
+.paginatorLinkSubLabel{
+  color: inherit;
+  opacity: 0.5;
+}

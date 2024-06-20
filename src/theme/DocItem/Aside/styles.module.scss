@@ -9,8 +9,8 @@
 
   @media (min-width: 997px) {
     position: sticky;
-    top: 96px;
-    min-height: calc(100vh - 96px);
+    top: var(--rsk-navbar-height);
+    min-height: calc(100vh - var(--rsk-navbar-height));
   }
 }
 .docItemAsideBottom{

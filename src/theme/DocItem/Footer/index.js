@@ -12,18 +12,15 @@ export default function DocItemFooter() {
   if (!canDisplayFooter) {
     return null;
   }
-  return (
+  return canDisplayTagsRow && (
     <footer
-      className={clsx(ThemeClassNames.docs.docFooter, 'docusaurus-mt-lg')}>
+      className={clsx(ThemeClassNames.docs.docFooter, 'mt-64')}>
       {canDisplayTagsRow && (
         <div
           className={clsx(
-            'row margin-top--sm',
             ThemeClassNames.docs.docFooterTagsRow,
           )}>
-          <div className="col">
-            <TagsListInline tags={tags} />
-          </div>
+          <TagsListInline tags={tags} />
         </div>
       )}
     </footer>

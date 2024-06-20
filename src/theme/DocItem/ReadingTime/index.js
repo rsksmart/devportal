@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from "react";
+import styles from './styles.module.scss';
 
-import styles from './styles.module.css';
+import clsx from "clsx";
 
-export const ReadingTime = () => {
+export default function ReadingTime() {
   const [time, setTime] = useState(1);
 
   function readTime(content) {
@@ -43,7 +44,7 @@ export const ReadingTime = () => {
   },[]);
 
   return (
-    <div className={styles.main}>
+    <div className={clsx(styles.readingTime, `fs-12`)}>
       Time to read: {time} min
     </div>
   )

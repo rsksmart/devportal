@@ -46,13 +46,13 @@ form.hs-form{
     transition-property: border-color, background-color, color;
     @media (hover) {
       &:hover {
-        border: 1px solid $gray-600;
+        border: 1px solid $gray-500;
         background-color: $white;
       }
     }
     &:focus{
       outline: none;
-      border-color: $gray-600;
+      border-color: $gray-500;
       background-color: $white;
     }
     &.error{
@@ -114,7 +114,7 @@ form.hs-form{
   .hs_submit{
     margin-top: 32px;
     .btn{
-      --bs-btn-box-shadow: 2px 3px 0 0 #{$gray-600};
+      --bs-btn-box-shadow: 2px 3px 0 0 #{$gray-500};
       --bs-btn-padding-y: 14px;
     }
   }

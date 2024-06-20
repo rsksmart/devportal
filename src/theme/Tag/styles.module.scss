@@ -1,0 +1,61 @@
+.tag {
+  border: 1px solid var(--rsk-tag-border-color);
+  background: var(--rsk-tag-bg);
+  transition: border var(--ifm-transition-fast);
+  transition-property: border, color, background-color;
+  padding: 2px 8px 2px 8px;
+  display: inline-flex;
+  letter-spacing: 0.05em;
+  font: 500 1.125rem/1 var(--bs-body-font-family);
+  text-transform: uppercase;
+  color: var(--rsk-tag-color);
+  border-radius: 1.375rem;
+  text-decoration: none;
+  &:hover {
+    background-color: var(--rsk-tag-hover-bg);
+    color: var(--rsk-tag-hover-color);
+  }
+}
+
+.tagWithCount {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-left: 0;
+}
+
+.tagWithCount::before,
+.tagWithCount::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  border: 1px solid var(--rsk-tag-border-color);
+  transition: inherit;
+}
+
+.tagWithCount::before {
+  right: 100%;
+  transform: translate(50%, -50%) rotate(-45deg);
+  width: 1.18rem;
+  height: 1.18rem;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.tagWithCount::after {
+  left: 0;
+  transform: translateY(-50%);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+}
+
+.tagWithCount span {
+  background: var(--ifm-color-secondary);
+  color: var(--ifm-color-black);
+  font-size: 0.7rem;
+  line-height: 1.2;
+  border-radius: var(--ifm-global-radius);
+  padding: 0.1rem 0.4rem;
+  margin-left: 0.3rem;
+}
