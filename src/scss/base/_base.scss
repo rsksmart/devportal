@@ -180,6 +180,14 @@ a, button {
   --ifm-table-background:  #{$gray-100};
   --rsk-table-td-bg : #{$gray-100};
   --rsk-table-th-bg : #{$gray-400};
+
+  //tags
+  --rsk-tag-border-color: #{$gray-300};
+  --rsk-tag-bg: #{$white};
+  --rsk-tag-color: #{$black};
+
+  --rsk-tag-hover-color: #{$white};
+  --rsk-tag-hover-bg: #{$black};
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -218,4 +226,12 @@ a, button {
   --ifm-table-background:  #{$gray-950};
   --rsk-table-td-bg : #{$gray-950};
   --rsk-table-th-bg : #{$gray-900};
+
+  //tags
+  --rsk-tag-border-color: #{$gray-800};
+  --rsk-tag-bg: #{$black};
+  --rsk-tag-color: #{$white};
+
+  --rsk-tag-hover-color: #{$black};
+  --rsk-tag-hover-bg: #{$white};
 }
