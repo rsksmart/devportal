@@ -15,7 +15,7 @@ import styles from './styles.module.css';
 
 import DocItemAside from "../Aside";
 import EditMetaRow from "@theme/EditMetaRow";
-import {ReadingTime} from "../../../components/ReadingTime";
+import ReadingTime from "../ReadingTime";
 /**
  * Decide if the toc should be rendered, on mobile or desktop viewports
  */
@@ -44,8 +44,10 @@ export default function DocItemLayout({children}) {
         <DocVersionBanner />
         <div className={clsx(styles.docItemContainer, `px-lg-24`)}>
           <article>
-            <DocBreadcrumbs />
-            <ReadingTime />
+            <div className="d-flex gap-24 justify-content-between align-items-start mb-24">
+              <DocBreadcrumbs />
+              <ReadingTime />
+            </div>
             <DocVersionBadge />
             {docTOC.mobile}
             <DocItemContent>{children}</DocItemContent>

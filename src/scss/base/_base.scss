@@ -169,17 +169,17 @@ a, button {
   --ifm-list-paragraph-margin: 12px;
 
   --ifm-pre-padding:16px;
-  --rsk-codeblock-border-color: #{$gray-400};
+  --rsk-codeblock-border-color: #{$gray-150};
 
   --ifm-global-shadow-lw:none;
 
   --ifm-table-border-width: 1px;
   --ifm-table-cell-padding :16px 12px;
 
-  --ifm-table-border-color: #{$gray-500};
+  --ifm-table-border-color: #{$gray-300};
   --ifm-table-background:  #{$gray-100};
   --rsk-table-td-bg : #{$gray-100};
-  --rsk-table-th-bg : #{$gray-400};
+  --rsk-table-th-bg : #{$gray-150};
 
   //tags
   --rsk-tag-border-color: #{$gray-300};
@@ -188,6 +188,10 @@ a, button {
 
   --rsk-tag-hover-color: #{$white};
   --rsk-tag-hover-bg: #{$black};
+
+  //breadcrumbs
+  --ifm-breadcrumb-separator: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m10.47 8-4-4-.94.94L8.58 8l-3.05 3.06.94.94 4-4Z' fill='%23000'/%3E%3C/svg%3E");
+  --ifm-breadcrumb-item-background-active: none;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -222,10 +226,10 @@ a, button {
   --ifm-code-background: var(--bs-body-bg);
   --rsk-codeblock-border-color: #{$gray-800};
 
-  --ifm-table-border-color: #{$gray-800};
-  --ifm-table-background:  #{$gray-950};
-  --rsk-table-td-bg : #{$gray-950};
-  --rsk-table-th-bg : #{$gray-900};
+  --ifm-table-border-color: #{$gray-700};
+  --ifm-table-background:  #{$gray-900};
+  --rsk-table-td-bg : #{$gray-900};
+  --rsk-table-th-bg : #{$gray-800};
 
   //tags
   --rsk-tag-border-color: #{$gray-800};
@@ -234,4 +238,11 @@ a, button {
 
   --rsk-tag-hover-color: #{$black};
   --rsk-tag-hover-bg: #{$white};
+
+  //Reading Time
+  --rsk-reading-time-color:#{$gray-500};
+
+  //Breadcrumbs
+  --ifm-breadcrumb-separator: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m10.47 8-4-4-.94.94L8.58 8l-3.05 3.06.94.94 4-4Z' fill='%23fff'/%3E%3C/svg%3E");
+
 }
