@@ -1,11 +1,5 @@
 .text-block, .rl-post-content {
-  & > :first-child {
-    margin-top: 0;
-  }
 
-  & > :last-child {
-    margin-bottom: 0;
-  }
 
   p {
     line-height: 1.5;
@@ -100,7 +94,16 @@
       margin-bottom: 12px;
     }
   }
-
+  blockquote {
+    margin: 0 0 12px 0;
+    padding: 12px 0 12px 18px;
+    & > :first-child{
+      margin-top: 0;
+    }
+    & > :last-child{
+      margin-bottom: 0;
+    }
+  }
   a:not(.hash-link){
     text-decoration: underline;
     &:hover{
@@ -141,7 +144,6 @@
   }
   code{
     --ifm-code-border-radius:4px;
-    border-color: var(--rsk-codeblock-border-color);
     font-weight: 400;
   }
   pre{
@@ -179,4 +181,16 @@
       background-color: var(--rsk-table-th-bg);
     }
   }
+
+  & > :first-child {
+    margin-top: 0;
+  }
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+}
+code{
+  border: none;
+  border-radius: 4px;
 }

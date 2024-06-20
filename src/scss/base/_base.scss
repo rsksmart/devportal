@@ -164,8 +164,10 @@ a, button {
   --ifm-leading: 0.75rem;
   --ifm-code-border-radius: 8px;
   --ifm-code-padding-horizontal: 0.2em;
-  --ifm-code-background: rgba(var(--bs-body-color-rgb), 0.05);
-  --bs-code-color: var(--bs-purple);
+
+  --ifm-code-background: #{$purple-4};
+  --bs-code-color: #{$purple-light};
+
   --ifm-list-paragraph-margin: 12px;
 
   --ifm-pre-padding:16px;
@@ -180,6 +182,9 @@ a, button {
   --ifm-table-background:  #{$gray-100};
   --rsk-table-td-bg : #{$gray-100};
   --rsk-table-th-bg : #{$gray-150};
+
+  --ifm-blockquote-border-color: var(--bs-body-color);
+  --ifm-blockquote-shadow:none;
 
   //tags
   --rsk-tag-border-color: #{$gray-300};
@@ -223,7 +228,9 @@ a, button {
   --ifm-toc-border-color:rgba(var(--bs-body-color-rgb), 0.4);
 
   //Markdown
-  --ifm-code-background: var(--bs-body-bg);
+  --ifm-code-background: #{$purple-3};
+  --bs-code-color: #{$purple};
+
   --rsk-codeblock-border-color: #{$gray-800};
 
   --ifm-table-border-color: #{$gray-700};
