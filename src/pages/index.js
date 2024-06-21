@@ -6,6 +6,8 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
+import HomepageSectionGuides from "../components/HomepageSectionGuides";
+import HomepageSectionWelcome from "../components/HomepageSectionWelcome";
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -27,9 +29,9 @@ export default function Home() {
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
       <main>
-        <HomepageFeatures />
+        <HomepageSectionWelcome />
+        <HomepageSectionGuides />
       </main>
     </Layout>
   );

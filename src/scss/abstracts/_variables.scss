@@ -461,11 +461,11 @@ $input-btn-font-family:       $font-family-base;
 $input-btn-font-size:         $f14;
 $input-btn-line-height:       1.2;
 
-$btn-padding-y:               5px;
-$btn-padding-x:               10px;
+$btn-padding-y:               10px;
+$btn-padding-x:               15px;
 $btn-font-family:             $font-family-base;
-$btn-font-size:               $f12;
-$btn-line-height:             1;
+$btn-font-size:               $f14;
+$btn-line-height:             1.28;
 $btn-white-space:             nowrap; // Set to `nowrap` to prevent text wrapping
 
 
@@ -478,10 +478,18 @@ $btn-focus-box-shadow:        1px 2px 0 0 $black-800;
 $btn-disabled-opacity:        .65;
 $btn-active-box-shadow:       0px 0px 0 0 $black-800;
 
+$btn-padding-y-sm:            7px;
+$btn-padding-x-sm:            8px;
+$btn-font-size-sm:            $f12;
+
+$btn-padding-y-lg:            18px;
+$btn-padding-x-lg:            $btn-padding-x;
+$btn-font-size-lg:            $f14;
+
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius:           40px;
-$btn-border-radius-sm:        32px;
-$btn-border-radius-lg:        60px;
+$btn-border-radius-sm:        40px;
+$btn-border-radius-lg:        40px;
 
 //spinners
 $spinner-width:           16px;

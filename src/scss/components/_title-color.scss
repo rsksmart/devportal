@@ -1,0 +1,25 @@
+.fp-title-color{
+  font: 700 #{$f56}/1 var(--bs-heading-font-family);
+  letter-spacing: -0.04em;
+  & > span{
+    padding: 0px 10px;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    display: inline;
+    line-height: 1.4;
+  }
+}
+.fp-title-color-md{
+
+}
+.fp-title-color-sm{
+  font-size: $f32;
+  letter-spacing: -0.024em;
+}
+.fp-title-color-lg{
+  font-size: $f96;
+}
+.fp-title-color-xl{
+  font-size: $f120;
+  letter-spacing: -0.06em;
+}
