@@ -1,6 +1,7 @@
 ---
 title: Supported JSON-RPC Methods
 sidebar_label: RPC Methods
+sidebar_position: 100
 tags: [rsk, rskj, node, rpc, rootstock]
 description: "The JSON-RPC methods supported by Rootstock nodes."
 render_features: 'tables-with-borders'

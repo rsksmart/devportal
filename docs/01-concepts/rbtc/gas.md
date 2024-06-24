@@ -1,23 +1,16 @@
 ---
-title: "RBTC Gas Fees: Optimizing Transaction Costs | Rootstock (RSK)"
+title: "RBTC Gas Fees: Optimizing Transaction Costs"
 sidebar_label: Gas
-tags: [gas, transactions, rbtc, mainnet, smart-contracts, rsk, conversion, bitcoin, price, gas-price, cost]
-sidebar_position: 3
+tags: [gas, transactions, rbtc, mainnet, rsk, rootstock, conversion, bitcoin, gas-price]
+sidebar_position: 302
 ---
 
 Gas is the internal pricing for running a transaction or contract.
-When you send tokens, interact with a contract, send RBTC, or do anything else on the blockchain, you must **pay for that computation**. That payment is calculated as **gas**. In RSK this is paid in [RBTC](/rsk/rbtc).
-
-- [What is gas?](#what-is-gas)
-- [How do I choose an appropriate gas price and limit?](#how-do-i-choose-an-appropriate-gas-price-and-limit)
-- [What happens if my transaction fails?](#what-happen-if-my-transaction-fails)
-- [What happens if I run out of gas?](#what-happen-if-i-run-out-of-gas)
-- [Gas in smart contracts](#gas-in-smart-contracts)
+When you send tokens, interact with a contract, send RBTC, or do anything else on the blockchain, you must **pay for that computation**. That payment is calculated as **gas**. In Rootstock, this is paid in RBTC.
 
 ## What is gas?
 
 There are four important concepts:
-
 - **Gas price**: The cost of the operation.
 - **Gas limit**: The maximum gas the operation can afford. It's an upper limit the user sets to prevent losing gas.
 - **Total gas**: The gas the operation consumed. Also referred to as **gas used**.

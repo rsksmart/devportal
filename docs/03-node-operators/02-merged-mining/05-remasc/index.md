@@ -1,7 +1,7 @@
 ---
 sidebar_label: Remasc
 title: REMASC
-tags: [rsk, mining, bitcoin, remasc]
+tags: [rsk, rootstock, mining, bitcoin, remasc]
 ---
 
 Reward Manager Smart Contract (REMASC) is a pre-compiled smart-contract that is executed on every block and has the responsibility to fairly distribute rewards collected from transaction fees into several participants of the network. However the distribution of rewards of a block is only performed once the block reaches a certain maturity. In other words, the rewards are paid only after a  fixed number of blocks have confirmed a block. With the exception of the first blocks in the blockchain after genesis, every time a block is added to the blockchain, another previous block reaches maturity and its rewards are paid.
@@ -31,11 +31,11 @@ One and only one block is mined at a height **N**. This block is the **main bloc
 The payment for the miners of the main block, the siblings and the publishers will occur on the block N + 4000. The payment occurs as specified by the following rules:
 
 * [](#top "tex-render FullBlock_{rwd}") *is the 100% of the block reward*
-* RSK will receive a fee of ~20% of the full block reward:
+* Rootstock will receive a fee of ~20% of the full block reward:
 
   [](#top "tex-render Rsk_{rwd}=\frac{FullBlock_{rwd}}{5}")
 
-* RSK Federation will receive a fee of ~0.8% of the full block reward:
+* Rootstock Federation will receive a fee of ~0.8% of the full block reward:
 
   [](#top "tex-render Fed_{rwd}=\frac{FullBlock_{rwd}-Rsk_{rwd}}{100}")
 
@@ -123,7 +123,7 @@ A, B and C share the parent P. B is the main block at height N and A and C are s
 
 This way, we compute:
 
-* **RSK** receives
+* **Rootstock** receives
 
   [](#top "tex-render Rsk_{rwd}= \frac{FullBlock_{rwd}}{5} \implies \frac{10000}{5} \implies Rsk_{rwd} = 2000")
 

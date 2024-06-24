@@ -1,21 +1,21 @@
 ---
-title: "RBTC Conversion: Seamlessly Transition to Bitcoin | Rootstock (RSK)"
-sidebar_label: Conversion
-tags: [rsk, rbtc, conversion, peg, 2-way, peg-in, peg-out, federation, powpeg]
+title: "RBTC Conversion: Peg in and Peg Out"
+sidebar_label: Peg In & Out
+tags: [rsk, rootstock, rbtc, conversion, peg, 2-way, peg-in, peg-out, federation, powpeg]
 description: 'Converting RBTC to BTC (peg-in) and BTC to RBTC (peg-out), for both Mainnet and Testnet.'
-sidebar_position: 2
+sidebar_position: 301
 ---
 
 In this article, we explain step by step on how to convert from BTC to RBTC, and vice versa.
-The process of conversion utilises a [Powpeg](/rsk/architecture/powpeg/) mechanism. Thus, these conversions are referred to as peg-ins and peg-outs.
+The process of conversion utilises a [Powpeg](/concepts/powpeg/) mechanism. Thus, these conversions are referred to as peg-ins and peg-outs.
 
 - **Peg-in**:
   - A conversion from BTC to RBTC
   - Locks BTC in the BTC Federation address
-  - Releases RBTC in the RSK derived address
+  - Releases RBTC in the Rootstock derived address
 - **Peg-out**:
   - A conversion from RBTC to BTC
-  - Locks RBTC on the RSK network
+  - Locks RBTC on the Rootstock network
   - Releases BTC on the Bitcoin network
 
 ## Compatibility
@@ -32,21 +32,19 @@ The process of conversion utilises a [Powpeg](/rsk/architecture/powpeg/) mechani
 
 Enter your BTC address below to verify whether it may be used to peg in from BTC to RBTC.
 
-[](#top "pegin-address-verifier")
-
 ## User Guide
 
-- [Mainnet Guide](/rsk/rbtc/conversion/networks/mainnet)
-- [Testnet Guide](/rsk/rbtc/conversion/networks/testnet)
+- [Mainnet Guide](/concepts/rbtc/networks#mainnet-conversion)
+- [Testnet Guide](/concepts/rbtc/networks#testnet-conversion)
 
 You can try the conversion process using either options below;
 
-- Using a [ledger hardware wallet](/rsk/rbtc/conversion/with-ledger)
-- Using a [software](/rsk/rbtc/conversion/with-node-and-console)
+- Using a [ledger hardware wallet](/concepts/rbtc/conversion-with-ledger)
+- Using a [software](/concepts/rbtc/conversion-with-node-and-console)
 
 ## Video
 
-Watch this explainer video on **How to do BTC & R-BTC Conversions using the RSK Powpeg**.
+Watch this explainer video on **How to do BTC & R-BTC Conversions using the Rootstock Powpeg**.
 
 <div class="video-container">
   <iframe width="949" height="534" src="https://youtube.com/embed/XTpQW9Rw838" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -54,14 +52,14 @@ Watch this explainer video on **How to do BTC & R-BTC Conversions using the RSK 
 
 ### Q & A
 
-**1. How often does the RSK Federation address change?**
+**1. How often does the Rootstock Federation address change?**
 
-RSK Federation address has changed three times since RSK mainnet launch.
+Rootstock Federation address has changed several times since Rootstock mainnet launch.
 
-**2. Do I lose my Bitcoin if the RSK Federation address change during my transfer?**
+**2. Do I lose my Bitcoin if the Rootstock Federation address change during my transfer?**
 
-There is a grace period for the RSK Federation address change. You will still be able to lock Bitcoin and get RBTC during the grace period. However, any Bitcoin sent to the old RSK Federation address will be lost post to the grace period.
+There is a grace period for the Rootstock Federation address change. You will still be able to lock Bitcoin and get RBTC during the grace period. However, any Bitcoin sent to the old Rootstock Federation address will be lost post to the grace period.
 
 ### Feedback
 
-Join the [Rootstock Global Dicord Community](https://rootstock.io/discord), to ask questions and get answers.
+Join the [Rootstock Global Discord Community](https://rootstock.io/discord), to ask questions and get answers.

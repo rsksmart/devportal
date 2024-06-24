@@ -1,9 +1,9 @@
 ---
 title: Personal Module Methods
 sidebar_label: Personal Module
+sidebar_position: 300
 tags: [rsk, rskj, node, rpc, rootstock]
 description: "The JSON-RPC methods supported by Rootstock nodes."
-render_features: 'tables-with-borders'
 ---
 
 ## personal_lockAccount
