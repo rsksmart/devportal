@@ -67,7 +67,7 @@ export default function HomepageSectionCommunity() {
           </div>
         )}
       </div>
-      <div className="row row-cols-1 row-cols-md-2 g-16 g-lg-24">
+      <div className="row g-16 g-lg-24">
         {data.cards.map((item, idx) => (
           <div className={`col-12 ${idx === 2 ? 'col-md-12' : 'col-md-6'}`} key={idx}>
             <Card index={`${idx + 1}.`} title={item.title} color={item.color} description={item.description}
