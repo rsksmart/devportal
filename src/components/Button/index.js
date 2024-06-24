@@ -2,8 +2,8 @@ import React, {useState, useEffect} from "react";
 import Link from '@docusaurus/Link';
 import clsx from "clsx";
 
-export default function Button ({variant, href, className, size, target, title, icon, children, ...props}) {
-  const btnClassName = clsx(`btn`, className, size && `btn-${size}`);
+export default function Button ({variant, href, className, size, target, title, icon, stretched, children, ...props}) {
+  const btnClassName = clsx(`btn`, className, size && `btn-${size}`, stretched && `stretched-link position-static`);
   const Icon = () => {
     return icon && (
       <svg width={16} height={16}>

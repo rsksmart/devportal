@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import Button from '../Button';
-import TitleColor from "../TitleColor";
+import Button from '/src/components/Button';
+import TitleColor from "/src/components/TitleColor";
 
 const content = {
   suptitle: 'Overview',

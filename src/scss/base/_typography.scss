@@ -78,3 +78,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font: 700 #{$f16}/1.25 $font-family-base;
   letter-spacing: -0.04em;
 }
+.badge{
+  letter-spacing: 0.05em;
+}

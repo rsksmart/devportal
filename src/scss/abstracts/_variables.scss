@@ -109,7 +109,7 @@ $theme-colors: (
   "yellow": $yellow,
   "green": $green,
   //"teal": $teal,
-  //"cyan": $cyan,
+  "cyan": $cyan,
   "black": $black,
   "black-800": $black-800,
   "white": $white,
@@ -138,7 +138,7 @@ $theme-colors: (
 );
 // grid settings
 $grid-columns: 12;
-$grid-gutter-width: 20px;
+$grid-gutter-width: 24px;
 $grid-breakpoints: (
   xs: 0,
   //sm: 576px,

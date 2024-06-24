@@ -1,7 +1,7 @@
 .Card{
   --rsk-card-main-color: var(--bs-orange);
 
-  a{
+  a:not([class*="btn"]){
     color: var(--rsk-card-main-color);
     text-decoration: underline;
     &:hover {
