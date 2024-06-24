@@ -1,0 +1,20 @@
+.docItemAside {
+
+  @media (min-width: 997px) {
+    border-left: 1px solid var(--ifm-toc-border-color);
+  }
+}
+
+.docItemAsideInner{
+
+  @media (min-width: 997px) {
+    position: sticky;
+    top: var(--rsk-navbar-height);
+    min-height: calc(100vh - var(--rsk-navbar-height));
+  }
+}
+.docItemAsideBottom{
+  @media (min-width: 997px) {
+    bottom: 32px;
+  }
+}

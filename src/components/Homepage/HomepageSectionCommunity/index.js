@@ -56,7 +56,7 @@ const data = {
 
 export default function HomepageSectionCommunity() {
   return (
-    <section className={`mb-64`}>
+    <section className={`mb-0`}>
       <div className="mb-32">
         {data.title && (
           <h2 className={`h1 mb-0`}>{data.title}</h2>

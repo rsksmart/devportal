@@ -12,9 +12,13 @@ import IconChangelog from "@theme/Icon/Changelog";
 
 import Link from '@docusaurus/Link';
 
-export default function MoreActions() {
-  const {metadata} = useDoc();
-  const {editUrl} = metadata;
+export default function MoreActions({editUrl}) {
+
+  //TODO fix for usign outside DocProvider
+  if(!editUrl) {
+    const {metadata} = useDoc();
+    editUrl = metadata.editUrl;
+  }
 
   return <div className={clsx(``)}>
     <h4 className={`title-s mb-12 text-uppercase`}>
