@@ -36,6 +36,7 @@ $cyan: #08FFD1;
 $yellow: #DEFF1A;
 $pink: #FF70E0;
 $green: #78C700;
+$contrast: $white;
 
 $purple-light: #966FF2;
 
@@ -89,6 +90,7 @@ $theme-colors: (
   "brand-5": $brand-5,
   "brand-6": $brand-6,
 
+  "contrast": $contrast,
   "primary": $primary,
   "success": $success,
   "info": $info,
