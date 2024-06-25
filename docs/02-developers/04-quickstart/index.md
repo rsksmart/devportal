@@ -10,8 +10,8 @@ Whether you're well-versed in other Web3 development tools or just diving into s
 
 | Resource                                                       | Description                                                                                    |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| [Rootstock Hardhat Starter Kit](./architecture/) | Smart Contract examples, Tests, Deployments and Tasks for Common ERC Standards (ERC20, ERC721, ERC1155).|
-| [Rootstock Wagmi Starter Kit](./rbtc/) | This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Wagmi and Shadcn libraries.|
-| [dApp Automation with Cucumber](./rif/) | Learn how to automate dApps using Cucumber Agile Automation Framework.|
-| [RIF Relay Starter Kit](./security/) | Starter kit to develop on RIF Relay.|
-| [TheGraph - Rootstock Subgraph Boilerplate](./stack/) | Subgraph boilerplate for Rootstock. |
+| [Rootstock Hardhat Starter Kit](/developers/quickstart/) | Smart Contract examples, Tests, Deployments and Tasks for Common ERC Standards (ERC20, ERC721, ERC1155).|
+| [Rootstock Wagmi Starter Kit](/developers/quickstart/) | This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Wagmi and Shadcn libraries.|
+| [dApp Automation with Cucumber](/developers/quickstart/dapp-automation-cucumber/) | Learn how to automate dApps using Cucumber Agile Automation Framework.|
+| [RIF Relay Starter Kit](/developers/quickstart/) | Starter kit to develop on RIF Relay.|
+| [TheGraph - Rootstock Subgraph Boilerplate](/developers/quickstart/) | Subgraph boilerplate for Rootstock. |

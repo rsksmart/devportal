@@ -1,17 +1,17 @@
 ---
 sidebar_label: Getting Started
 sidebar_position: 100
-title: Getting Started with Rootstock RPC API
+title: Getting Started with the RPC API
 tags: [faucet, Rootstock, testnet, address, wallet, tools]
 description: "Easily create, interact and deploy EVM compatible smart contracts using a robust set of JSON RPC methods available through the RPC API."
 ---
 
-The [RPC API](http://rpc.rootstock.io/) provides a seamless and intuitive web interface for developers to interact with [Rootstock nodes](/rsk/node/) via [JSON-RPC methods](/rsk/node/architecture/json-rpc/). It aims to address the challenges faced by developers when trying to access critical information like logs, transactions, and balances through RPC, which can significantly impact the timely development of dApps on the Rootstock blockchain.
+The [RPC API](http://rpc.rootstock.io/) provides a seamless and intuitive web interface for developers to interact with [Rootstock nodes](/node-operators/setup/) via [JSON-RPC](/node-operators/json-rpc/methods/) methods. It aims to address the challenges faced by developers when trying to access critical information like logs, transactions, and balances through RPC, which can significantly impact the timely development of dApps on the Rootstock blockchain.
 
 In this guide, you will learn: 
 
 - How to create an account and [make your first API call](#getting-started)
-- View a list of [JSON-RPC methods](./rpc-methods/) available. 
+- View a list of [JSON-RPC methods](/node-operators/json-rpc/methods/) available. 
 
 <div class="btn-container">
   <span></span>
@@ -20,7 +20,7 @@ In this guide, you will learn:
 
 ## Who is it for?
 
-*  DApp Developers looking to interact with the Rootstock nodes
+*  dApp Developers looking to interact with the Rootstock nodes
 
 ## Features
 
@@ -95,7 +95,7 @@ curl --location --request POST 'https://rpc.testnet.rootstock.io/<your-apikey>' 
 
 **Response:**
 
-```shell
+```text
 {"jsonrpc":"2.0","id":0,"result":"0x4b7eca"}
 ```
 

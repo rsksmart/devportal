@@ -12,9 +12,9 @@ This section guides node operators performing merged mining operations or develo
 
 | Resource                                                       | Description                                                                                    |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| [Node Setup](/docs/03-node-operators/04-node-setup/) | Set up requirements, installation, configuration and run the Rootstock nodes. |
-| [JSON RPC](/docs/03-node-operators/03-json-rpc/) | The JSON-RPC methods supported by Rootstock nodes.|
-| [Merged Mining](/docs/03-node-operators/02-merged-mining/) | How to merge mine Rootstock using Bitcoin mining pool software.|
-| [Public Nodes](/docs/03-node-operators/08-public-nodes/) | Rootstock Nodes: Public nodes (Mainnet, Testnet).|
-| [Maintenance](/docs/03-node-operators/06-maintenance/) | How to upgrade and update the Rootstock nodes.|
-| [Troubleshooting](/docs/03-node-operators/09-troubleshooting/) | Learn how to solve some known or frequently encountered issues when setting up the node.|
+| [Node Setup](/node-operators/setup/installation/) | Set up requirements, installation, configuration and run the Rootstock nodes. |
+| [JSON RPC](/node-operators/json-rpc/methods/) | The JSON-RPC methods supported by Rootstock nodes.|
+| [Merged Mining](/node-operators/merged-mining/getting-started/) | How to merge mine Rootstock using Bitcoin mining pool software.|
+| [Public Nodes](/node-operators/public-nodes/) | Rootstock Nodes: Public nodes (Mainnet, Testnet).|
+| [Maintenance](/node-operators/maintenance/network-upgrades/) | How to upgrade and update the Rootstock nodes.|
+| [Troubleshooting](/node-operators/troubleshooting/) | Learn how to solve some known or frequently encountered issues when setting up the node.|

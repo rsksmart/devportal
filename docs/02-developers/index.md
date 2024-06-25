@@ -16,15 +16,13 @@ This section enables developers getting started with the Rootstock blockchain. D
 
 | Resource                                                       | Description                                                                                    |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| [Hardware Requirements](./02-requirements/) | Set up your local environment. |
-| [Blockchain Essentials](./) | Rootstock Blockchain Essentials. |
-| [Starter Kits](./04-quickstart/) | Dive right in with step-by-step guides to get your development environment set up and deploy your first dApp.|
-| [Smart Contract Development](./05-smart-contracts/) | Explore in-depth resources on building secure and scalable smart contracts on Rootstock.|
-| [Guides](./06-guides//) | Deepen your knowledge with detailed guides and informative tutorials that cover various aspects of Rootstock development.|
-| [JSONRPC](./07-json-rpc/) | Get up and running by setting up a Rootstock node using the RPC API.|
-| [Libraries](./08-libraries/) | Access essential tools and libraries to streamline your development process. |
-
-
+| [Hardware Requirements](/developers/requirements/) | Set up your local environment. |
+| [Blockchain Essentials](/developers/blockchain-essentials/) | Rootstock Blockchain Essentials. |
+| [Starter Kits](/developers/quickstart/) | Dive right in with step-by-step guides to get your development environment set up and deploy your first dApp.|
+| [Smart Contract Development](/developers/smart-contracts/) | Explore in-depth resources on building secure and scalable smart contracts on Rootstock.|
+| [Guides](/developers/integration-guides/) | Deepen your knowledge with detailed guides and informative tutorials that cover various aspects of Rootstock development.|
+| [JSON-RPC](/developers/rpc-api/setup/) | Test your dApps on testnet in minutes before deploying to mainnet using the RPC API.|
+| [Libraries](/developers/libraries/) | Access essential tools and libraries to streamline your development process. |
 
 
 

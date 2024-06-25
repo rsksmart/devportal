@@ -13,7 +13,7 @@ Rootstock’s full technology stack is built on top of Bitcoin:
 From Rootstock smart contracts to the Rootstock Infrastructure Framework.
 The stack is designed to create a more fair and inclusive financial system.
 
-> See [The Stack](../../../01-concepts/rootstock-overview/stack/)
+> See [The Stack](/concepts/rootstock-overview/stack/)
 
 Bitcoin, is a store and transfer of value.
 The blockchain is secure because miners with high infrastructure and energy costs create new blocks to be added to the blockchain every 10 minutes.
@@ -107,7 +107,7 @@ This is another layer of compatibility, in addition to the virtual machine imple
 
 ## Merged Mining
 
-The bitcoin miners do what is known as [merged mining](/rsk/architecture/mining/),
+The bitcoin miners do what is known as [merged mining](/concepts/merged-mining/),
 securing both networks with the same infrastructure and energy consumption.
 
 <div class="sprite-transform-animation-wrapper rsk-mining">
