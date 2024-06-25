@@ -1,12 +1,12 @@
 ---
-sidebar_label: FAQ
+sidebar_label: FAQs
 sidebar_position: 4
 title: Frequently Asked Questions
 tags: [knowledgebase, rsk, faqs, help, support, rootstock]
-description: "Welcome to Rootstock and RIF Knowledge-base; Explore the Rootstock faqs section"
+description: "Explore frequently asked questions about Rootstock and RIF"
 ---
 
-Here are some frequently asked questions about the Rootstock and RIF Platform.
+Here are some frequently asked questions about the Rootstock and RIF Platforms.
 
 ## About Rootstock
 - What is Rootstock?
