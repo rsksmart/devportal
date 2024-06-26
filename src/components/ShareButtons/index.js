@@ -79,7 +79,7 @@ export const ShareButtons = () => {
 				<svg width={12} height={12}>
 					<use xlinkHref="#icon-copy"/>
 				</svg>
-				Copy link
+				Copy page link
 			</span>
         {showTip && (<span className={`position-absolute top-100 end-0 mt-12 text-body`}>Copied!</span>)}
       </button>
