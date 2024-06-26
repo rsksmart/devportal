@@ -44,7 +44,7 @@ export default function ReadingTime() {
   },[]);
 
   return (
-    <div className={clsx(styles.readingTime, `fs-12`)}>
+    <div className={clsx(styles.ReadingTime, `fs-12`)}>
       Time to read: {time} min
     </div>
   )

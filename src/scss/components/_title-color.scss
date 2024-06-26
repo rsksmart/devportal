@@ -2,6 +2,7 @@
   font: 700 #{$f56}/1 var(--bs-heading-font-family);
   letter-spacing: -0.04em;
   & > span{
+    color: var(--rsk-title-block-color);
     padding: 0px 10px;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
@@ -9,6 +10,7 @@
     line-height: 1.4;
   }
 }
+
 .fp-title-color-md{
 
 }

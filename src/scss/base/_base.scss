@@ -43,5 +43,5 @@ a, button {
 }
 .bg-contrast{
   background-color: var(--rsk-contrast);
-  color: var(--rsk-contrast-color);
+  color: var(--rsk-contrast-color) !important;
 }
