@@ -7,7 +7,7 @@ export default function TitleColor ({as = "h3", color = "orange", size = "md", c
   return <Tag
     className={clsx(`fp-title-color`, `fp-title-color-${size}`, className)}
   >
-    <span className={`bg-${color} text-black`}>
+    <span className={`bg-${color}`}>
       {children}
     </span>
   </Tag>
