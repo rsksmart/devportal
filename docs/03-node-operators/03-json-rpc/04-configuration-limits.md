@@ -1,9 +1,9 @@
 ---
 title: Configuration of Limits for JSON-RPC Interface
 sidebar_label: Configuration Limits
+sidebar_position: 400
 tags: [rsk, rskj, node, rpc, rootstock]
 description: "The JSON-RPC methods supported by Rootstock nodes."
-render_features: 'tables-with-borders'
 ---
 
 Below are the configuration limits for the following JSON-RPC methods:

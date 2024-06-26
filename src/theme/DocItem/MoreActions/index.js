@@ -49,7 +49,7 @@ export default function MoreActions({editUrl}) {
           <Translate
             id="theme.common.joinCommunity"
           >
-            Join Community
+            Join the Community
           </Translate>
         </Link>
       </li>

@@ -76,7 +76,7 @@ export const ShareButtons = () => {
                 copyLink(e);
               }}
       >
-        Copy link
+        Copy page link
         {showTip && (<span className={`position-absolute top-100 end-0 mt-12 text-body`}>Copied!</span>)}
       </Button>
     </div>

@@ -1,11 +1,11 @@
 ---
 sidebar_label: Autominer
-title: Run with autominer (Ganache-like) | Roostock (RSK)
-tags: [rsk, rskj, node, config]
-description: "Learn how to run the RSK node with autominer - similar to Ganache default config"
+title: Run with autominer (Ganache-like)
+tags: [rsk, rskj, rootstock, node, config]
+description: "Learn how to run the Rootstock node with autominer - similar to Ganache default config"
 ---
 
-[Ganache](https://trufflesuite.com/docs/ganache/quickstart/) local network runs like what RSK calls `autominer mode`, it:
+[Ganache](https://trufflesuite.com/docs/ganache/quickstart/) local network runs like what Rootstock (RSK) calls `autominer mode`, it:
 - Creates blocks when new transactions are sent to the node
 - Will not create blocks if no transactions are sent
 - Allows to mine blocks manually via RPC
@@ -48,7 +48,7 @@ java -cp rskj-core-4.1.0-HOP-all.jar -Drsk.conf.file=./autominer.conf co.rsk.Sta
 
 ## Result
 
-Now you have an RSK node running locally! It will create blocks only for new transactions, or arbitrarily by using the `evm_mine` RPC call.
+Now you have an Rootstock node running locally! It will create blocks only for new transactions, or arbitrarily by using the `evm_mine` RPC call.
 
 See gif image below for example on how to do this;
 

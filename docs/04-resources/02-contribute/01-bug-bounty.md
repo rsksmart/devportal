@@ -1,6 +1,6 @@
 ---
-
-sidebar_label: Bug Bounty
+sidebar_label: Bug Bounty Program
+sidebar_position: 2
 title: Contribute to RootstockLabs platforms security
 tags: [rsk, rif, bounty, security, rootstock]
 ---
