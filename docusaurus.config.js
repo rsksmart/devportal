@@ -9,6 +9,7 @@ import {createNavItems} from './src/_utils/utils.js';
 
 const mainNavItems = createNavItems('./docs');
 
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   noIndex: false, // set to false to enable search engine indexing
@@ -22,7 +23,11 @@ const config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
-
+  customFields: {
+    homePage: {
+      editUrl: 'https://github.com/zgraya-digital/devportal-rootstock/tree/main/',
+    }
+  },
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'rsksmart', // Usually your GitHub org/user name.
@@ -51,8 +56,7 @@ const config = {
           showLastUpdateTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/zgraya-digital/devportal-rootstock/tree/main/',
+          editUrl: 'https://github.com/zgraya-digital/devportal-rootstock/tree/main/'
         },
         blog: false, // Optional: disable the blog plugin
         theme: {

@@ -66,6 +66,7 @@
     letter-spacing: -0.024em;
     position: relative;
     display: block;
+    word-break: break-word;
     &:hover, &:focus, &[class*="active"]{
       color: var(--rsk-color-main);
     }
