@@ -37,6 +37,9 @@ a, button {
 }
 
 :root {
+  --ifm-container-width: 1440px;
+  --ifm-container-width-xl: 1440px;
+
   --rsk-navbar-height: 118px;
 
   --rsk-contrast: var(--bs-black);
