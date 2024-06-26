@@ -13,12 +13,18 @@
   --bs-btn-focus-box-shadow: #{$btn-focus-box-shadow};
   --bs-btn-active-box-shadow: #{$btn-active-box-shadow};
 
-  letter-spacing: -0.02em;
+  --bs-btn-box-shadow: 4px 4px 0 -1px var(--bs-btn-bg), 4px 4px 0 0 var(--bs-btn-border-color);
+  --bs-btn-focus-box-shadow: var(--bs-btn-box-shadow);
 
-  & > span{
-    display: flex;
+  box-shadow: var(--bs-btn-box-shadow);
+
+  letter-spacing: -0.01em;
+  position: relative;
+
+  & > span, & {
+    display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
     position: relative;
     z-index: 1;
   }

@@ -23,14 +23,6 @@
   }
 }
 
-h1, .h1 {
-}
-
-h2, .h2 {
-}
-
-h3, .h3 {
-}
 .h0{
   font:700 #{$f78}/0.75 $headings-font-family;
   letter-spacing: -0.06em;
@@ -66,9 +58,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     color: var(--bs-primary);
   }
 }
-a{
-  color: var(--rsk-color-main);
-}
+
 .text-body{
   color: var(--bs-body-color) !important;
 }
@@ -79,4 +69,7 @@ a{
 .subtitle-3{
   font: 700 #{$f16}/1.25 $font-family-base;
   letter-spacing: -0.04em;
+}
+.badge{
+  letter-spacing: 0.05em;
 }

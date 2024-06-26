@@ -1,38 +1,40 @@
 import React, {useState, useEffect} from "react";
+import Button from "../Button";
 
 export const ShareButtons = () => {
-	const [showTip, setShowTip] = useState(false);
-	const [url, setUrl] = useState('#');
+  const [showTip, setShowTip] = useState(false);
+  const [url, setUrl] = useState('#');
 
-	useEffect(() => {
-		if (window) {
-			setUrl(window.location.origin + window.location.pathname);
-		}
-	}, []);
+  useEffect(() => {
+    if (window) {
+      setUrl(window.location.origin + window.location.pathname);
+    }
+  }, []);
 
-	const copyLink = async () => {
-		try {
-			await navigator.clipboard.writeText(url);
-			setShowTip(true);
-		} catch (error) {
-			console.error('Failed to copy: ', error);
-		}
+  const copyLink = async (e) => {
+    e.preventDefault();
+    try {
+      await navigator.clipboard.writeText(url);
+      setShowTip(true);
+    } catch (error) {
+      console.error('Failed to copy: ', error);
+    }
 
-		setTimeout(() => {
-			setShowTip(false);
-		}, 1500)
-	}
+    setTimeout(() => {
+      setShowTip(false);
+    }, 1500)
+  }
 
-	return (
-		<div>
-			<div className="d-flex gap-10 mb-20">
-				<a
-					className="link-base"
-					href={`https://twitter.com/intent/tweet?url=${url}`}
-					target="_blank"
-					rel="noopener noreferrer"
-					title="Share on Twitter"
-				>
+  return (
+    <div>
+      <div className="d-flex gap-10 mb-24">
+        <a
+          className="link-base"
+          href={`https://twitter.com/intent/tweet?url=${url}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Share on Twitter"
+        >
 
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path
@@ -68,21 +70,15 @@ export const ShareButtons = () => {
           </svg>
         </a>
       </div>
-
-      <button
-        className="btn-outline btn position-relative"
-        onClick={() => {
-          copyLink();
-        }}
+      <Button size={`sm`}
+              icon={`copy`}
+              onClick={(e) => {
+                copyLink(e);
+              }}
       >
-			<span>
-				<svg width={12} height={12}>
-					<use xlinkHref="#icon-copy"/>
-				</svg>
-				Copy page link
-			</span>
+        Copy page link
         {showTip && (<span className={`position-absolute top-100 end-0 mt-12 text-body`}>Copied!</span>)}
-      </button>
+      </Button>
     </div>
-  )
+)
 }
