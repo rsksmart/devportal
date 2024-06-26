@@ -28,7 +28,7 @@ export default function DocPaginator(props) {
           </div>
         )}
         {next && (
-          <div className={`col`}>
+          <div className={clsx(`col`, next && 'ms-lg-auto')}>
             <PaginatorNavLink
               {...next}
               subLabel={
