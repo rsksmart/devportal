@@ -11,7 +11,7 @@ export default function PaginatorNavLink(props) {
         'd-flex rounded-16 p-20 align-items-center h-100',
         isNext ? 'pagination-nav__link--next' : 'pagination-nav__link--prev',
       )}
-      to={permalink}>rt
+      to={permalink}>
       <div className="d-flex justify-content-between align-items-center gap-20 w-100">
         {isNext ? (
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className={`order-last flex-shrink-0`}>

@@ -43,7 +43,7 @@
         margin-right: 9px;
         border-radius: 1em;
         padding: 0 5px;
-        background: var(--rsk-menu-link-index-bg, #{$gray-800} );
+        background: var(--rsk-menu-link-index-bg, var(--bs-gray-900));
         color: var(--rsk-menu-link-index-color, var(--bs-body-color));
         min-width: 30px;
         text-align: center;

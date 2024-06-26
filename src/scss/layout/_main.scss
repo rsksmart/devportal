@@ -1,3 +1,11 @@
+.container {
+  @each $size, $value in $container-padding {
+    @include media-breakpoint-up($size) {
+      padding-left: $value;
+      padding-right: $value;
+    }
+  }
+}
 .main-wrapper{
   @extend .container;
   margin-bottom: 100px;
