@@ -7,7 +7,7 @@ const content = {
   title: 'Rootstock Documentation',
   description: (
     <>
-      Explore guides, quick starts, and SDKs to build and integrate your dApp.
+      Explore guides, quick starts, and SDKs to build and integrate your dApps.
     </>
   ),
   links: [
