@@ -3,21 +3,21 @@ import Button from '/src/components/Button';
 import TitleColor from "/src/components/TitleColor";
 
 const content = {
-  suptitle: 'Overview',
-  title: 'Welcome to Roostock',
+  // suptitle: 'Overview',
+  title: 'Rootstock Documentation',
   description: (
     <>
-      Explore guides, quick starts, and API references to build and integrate your DApp.
+      Explore guides, quick starts, and SDKs to build and integrate your dApp.
     </>
   ),
   links: [
     {
       title: 'Quick Start',
-      url: '/developers/',
+      url: '/developers/quickstart/',
     },
     {
-      title: 'Use the Starter Kits',
-      url: '/developers/quickstart/starter-kits/',
+      title: 'Explore Docs',
+      url: '/concepts/',
     }
   ]
 };

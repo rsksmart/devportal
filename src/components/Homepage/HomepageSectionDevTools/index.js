@@ -11,42 +11,44 @@ const data = {
       color: 'pink',
       link: {
         title: 'Read more',
-        href: '#',
+        href: 'https://rootstock.io/rbtc/',
       },
       description: (
         <>
-          Explore the various ways to get RBTC using Flyover, On/Off Ramps, and Exchanges
+          Explore the various ways to get RBTC using the 2 Way Peg App, On/Off Ramps, or Exchanges.
         </>
       ),
 
     },
     {
-      title: 'Try the starter kits',
+      title: 'Quick Starts',
       color: 'yellow',
       link: {
         title: 'Read more',
-        href: '#',
+        href: '/developers/quickstart/',
       },
       description: (
         <>
-          View a repository of boilerplate code for creating, testing and deploying smart contracts on Rootstock.
+          View a repository of starter kits, 
+          sample codes and tutorials for creating, 
+          testing and deploying smart contracts on Rootstock.
         </>
       ),
     },
     {
       title: (
         <>
-          Explore Guides<br/>and Tutorials
+          EVM-compatible <br/> Tools
         </>
       ),
       color: 'cyan',
       link: {
         title: 'Read more',
-        href: '#',
+        href: '/developers/integration-guides/',
       },
       description: (
         <>
-          Get up to speed with examples and step-by-step guides on how to deploy DApps on Rootstock.
+          Build and deploy faster with EVM-compatible tools and guides on Rootstock.
         </>
       ),
     },
@@ -59,7 +61,8 @@ const data = {
       },
       description: (
         <>
-          Want to integrate any of Rootstock products? Explore the integration guides and kits to help you get started.
+          Want to integrate Rootstock products? 
+          Explore the integration guides and starter kits to get started.
         </>
       ),
     }
