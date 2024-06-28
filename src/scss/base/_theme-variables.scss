@@ -170,6 +170,8 @@
   --ifm-blockquote-border-color: var(--bs-body-color);
   --ifm-blockquote-shadow:none;
 
+  --rsk-image-border-color: #{$gray-300};
+
   //tags
   --rsk-tag-border-color: #{$gray-300};
   --rsk-tag-bg: #{$white};
@@ -238,6 +240,8 @@
   --ifm-table-background:  #{$gray-900};
   --rsk-table-td-bg : #{$gray-900};
   --rsk-table-th-bg : #{$gray-800};
+
+  --rsk-image-border-color: #{$gray-800};
 
   //tags
   --rsk-tag-border-color: #{$gray-800};

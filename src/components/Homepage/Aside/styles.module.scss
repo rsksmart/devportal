@@ -1,12 +1,9 @@
 .docItemAside {
-
   @media (min-width: 997px) {
     border-left: 1px solid var(--ifm-toc-border-color);
   }
 }
-
 .docItemAsideInner{
-
   @media (min-width: 997px) {
     position: sticky;
     top: var(--rsk-navbar-height);

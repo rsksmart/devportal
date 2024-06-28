@@ -22,6 +22,7 @@
     "@docusaurus/theme-search-algolia": "^3.4.0",
     "@formspark/use-formspark": "^0.1.39",
     "@mdx-js/react": "^3.0.0",
+    "@splidejs/react-splide": "^0.7.12",
     "bootstrap": "5.3.3",
     "clsx": "^2.0.0",
     "docusaurus-plugin-sass": "^0.2.5",

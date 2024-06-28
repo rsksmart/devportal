@@ -91,10 +91,13 @@ ul{
   iframe{
     width: 100%;
     display: block;
+    border: 1px solid var(--rsk-image-border-color);
+    border-radius: 10px;
     &[src*="youtu"], &[src*="vimeo"]{
       height: auto;
       aspect-ratio: 16/9;
     }
+
   }
 
   table{
@@ -119,6 +122,17 @@ ul{
     }
   }
 
+  img{
+    border: 1px solid var(--rsk-image-border-color);
+    border-radius: 10px;
+    max-height: 400px; //TODO test if works for all images
+    object-fit: contain;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  p > img{
+    margin: 0;
+  }
   & > :first-child {
     margin-top: 0;
   }
