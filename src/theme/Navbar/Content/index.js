@@ -14,6 +14,7 @@ import isInternalUrl from '@docusaurus/isInternalUrl';
 import Link from '@docusaurus/Link';
 
 import styles from './styles.module.css';
+import AIButton from "../AIButton";
 function useNavbarItems() {
   // TODO temporary casting until ThemeConfig type is improved
   return useThemeConfig().navbar.items;
@@ -75,6 +76,7 @@ export default function NavbarContent() {
               <SearchBar />
             </NavbarSearch>
           )}
+          <AIButton />
           <RightNavbarItems items={rightItems} />
           <NavbarColorModeToggle className={styles.colorModeToggle} />
         </div>
