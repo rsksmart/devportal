@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react";
 import Translate from '@docusaurus/Translate';
 import Modal from 'react-bootstrap/Modal';
-import styles from './styles.module.scss';
 import {useFormspark} from "@formspark/use-formspark";
 
 function MyVerticallyCenteredModal(props) {
