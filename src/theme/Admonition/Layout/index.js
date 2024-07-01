@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import {ThemeClassNames} from '@docusaurus/theme-common';
 import styles from './styles.module.scss';
+import Accordion from 'react-bootstrap/Accordion';
 function AdmonitionContainer({type, className, children}) {
   return (
     <div
