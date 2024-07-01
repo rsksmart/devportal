@@ -6,65 +6,86 @@ const data = {
   title: 'Guides for Builders',
   description: (
     <>
-      <p>Whether you're a developer building a dApp Rootstock, a node miner running a merged mining on Rootstock, or a general user of tools and services, you'll find everything you need to get started right here.</p>
+      {/* <p>Are you a node miner? Interested in merged mining on Rootstock?
+        Setup and manage the Rootstock Nodes.</p> */}
     </>
   ),
   cards: [
     {
-      title: 'New to Web3?',
+      title: 'Beginner to Web3?',
       color: 'orange',
       description: (
         <>
-          See the ways you can get started.
+          Explore Rootstock Fundamentals and resources to begin your development journey.
         </>
       ),
       list: [
         {
-          title: 'Explore Core Concepts',
-          href: '#',
+          title: 'Core Concepts',
+          href: '/concepts/rootstock-overview/',
         },
         {
-          title: 'Deploy your First DApp on Rootstock',
-          href: '#',
+          title: 'Become a Rootstock Blockchain Developer',
+          href: '/resources/courses/',
         },
       ],
 
     },
     {
-      title: 'Developers',
+      title: 'Deploy Smart Contracts',
       color: 'purple',
       description: (
         <>
-          Start building and integrating DApps
+          EVM-compatible tools and guides to deploy and scale your dApps on Rootstock.
         </>
       ),
       list: [
         {
-          title: 'Deploy Smart Contracts',
-          href: '#',
+          title: 'Quick Starts',
+          href: '/developers/quickstart/',
         },
         {
-          title: 'Quick start guide with Hardhat',
-          href: '#',
+          title: 'Join the Discord Community',
+          href: 'http://discord.gg/rootstock',
         },
       ],
     },
     {
-      title: 'Node Operators',
+      title: 'Become a Node Miner',
       color: 'green',
       description: (
         <>
-          Are you a node miner? Interested in merged mining on Rootstock? Get up and running with Rootstock nodes or use the RPC API.
+          Interested in merged mining on Rootstock?
+          Setup a Rootstock node or use the RPC API.
         </>
       ),
       list: [
         {
-          title: 'Run a Node',
-          href: '#',
+          title: 'Merged Mining',
+          href: '/node-operators/merged-mining/getting-started/',
         },
         {
           title: 'RPC API',
-          href: '#',
+          href: 'https://rpc.rootstock.io/',
+        },
+      ],
+    },
+    {
+      title: 'Apply for a Grant',
+      color: 'yellow',
+      description: (
+        <>
+          Get funding and support to build your next dApp on Rootstock through the strategic grants program.
+        </>
+      ),
+      list: [
+        {
+          title: 'Apply now',
+          href: 'https://rootstock.io/grants/',
+        },
+        {
+          title: 'Refer and Earn',
+          href: 'https://rootstock.io/referral/',
         },
       ],
     },
@@ -84,7 +105,7 @@ export default function HomepageSectionGuides() {
           </div>
         )}
       </div>
-      <div className="row row-cols-1 row-cols-md-3 g-16 g-lg-24">
+      <div className="row row-cols-1 row-cols-md-2 g-16 g-lg-24">
         {data.cards.map((item, idx) => (
           <div className={`col`} key={idx}>
             <Card index={`${idx + 1}.`} title={item.title} color={item.color} description={item.description} list={item.list}/>
