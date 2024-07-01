@@ -42,6 +42,22 @@ Rootstock Addresses incorporate an optional blockchain identifier (also known as
 
 > If you're new to Web3 and Smart Contract Development, begin by exploring the [Rootstock network](/developers/blockchain-essentials/overview/). Then progress step by step to the quick start Guide with Hardhat for a comprehensive understanding of the network and getting started with writing, testing, and deploying smart contracts on Rootstock.
 
+### Quote
+
+#### Code
+
+```jsx
+<Quote caption="Alex Min, Head of Marketing">
+  ...
+</Quote>
+````
+
+#### Render
+
+<Quote caption="Alex Min, Head of Marketing">
+  When we first integrated Rootstock, we had about 1,000 WAUs using the wallet. Less than eight months later, we have 12,000 WAUs. That’s 11x growth in 8 months, an average of nearly 140% growth month over month, with most users coming from the Rootstock community.
+</Quote>
+
 ## Video
 
 <iframe width="949" height="534" src="https://www.youtube-nocookie.com/embed/eW9UF2aJQgs?cc_load_policy=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
