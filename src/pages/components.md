@@ -4,6 +4,7 @@ title: Components example
 
 # Components example
 
+## Cards
 
 ## Heading 2
 
@@ -52,9 +53,12 @@ Rootstock Addresses incorporate an optional blockchain identifier (also known as
 
 ## Gallery / Slider
 
+#### Code
+```jsx
 <Carousel images={['/img/concepts/rootstock-tech-stack.svg', '/img/legacy-private-key.png', '/img/metamask-gas-limit.png']} />
-
-## Filter
+```
+#### Render
+<Carousel images={['/img/concepts/rootstock-tech-stack.svg', '/img/legacy-private-key.png', '/img/metamask-gas-limit.png']} />
 
 ## Admonitions
 
@@ -104,6 +108,33 @@ Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
 
 ## Accordion
 
+#### Code
+
+```jsx
+<Accordion>
+  <Accordion.Item eventKey="0">
+    <Accordion.Header as="h3">What is Rootstock?</Accordion.Header>
+    <Accordion.Body>
+      ...
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="1">
+    <Accordion.Header as="h3">What is a smart contract?</Accordion.Header>
+    <Accordion.Body>
+      ...
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="2">
+    <Accordion.Header as="h3">Is the Rootstock network compatible with the Ethereum network?</Accordion.Header>
+    <Accordion.Body>
+      ...
+    </Accordion.Body>
+  </Accordion.Item>
+</Accordion>
+```
+
+#### Render
+
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">What is Rootstock?</Accordion.Header>
@@ -132,6 +163,24 @@ Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
 </Accordion>
 
 ## Tabs
+
+#### Code
+
+```jsx
+<Tabs>
+  <TabItem value="contribute" label="Contribute to Rootstock" default>
+    ...
+  </TabItem>
+  <TabItem value="contest" label="Contest Themes">
+   ...
+  </TabItem>
+  <TabItem value="requirements" label="Requirements">
+    ...
+  </TabItem>
+</Tabs>
+```
+
+#### Render
 
 <Tabs>
   <TabItem value="contribute" label="Contribute to Rootstock" default>
