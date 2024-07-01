@@ -26,13 +26,14 @@ ul.tabs {
   padding: var(--ifm-tabs-padding-vertical) var(--ifm-tabs-padding-horizontal);
   transition: background-color var(--ifm-transition-fast) var(--ifm-transition-timing-default);
   white-space: nowrap;
-  &:hover{
-    background-color: var(--rsk-tabs-hover-bg);
-    color: var(--rsk-tabs-hover-color);
-    border-color: var(--rsk-tabs-hover-border-color);
-
+  @media (hover) {
+    &:hover {
+      background-color: var(--rsk-tabs-hover-bg);
+      color: var(--rsk-tabs-hover-color);
+      border-color: var(--rsk-tabs-hover-border-color);
+    }
   }
-  &--active{
+  &.tabs__item--active{
     background-color: var(--rsk-tabs-active-bg);
     border-color: var(--rsk-tabs-active-border-color);
     color: var(--rsk-tabs-active-color);

@@ -1,8 +1,8 @@
 ---
-title: Components example
+title: Components
 ---
 
-# Components example
+# Components
 
 ## Heading 2
 
@@ -38,6 +38,9 @@ Rootstock Addresses incorporate an optional blockchain identifier (also known as
 2. For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the 2 way peg app, please refer to the [2 way peg app user guide](/resources/user-guides/two-way-peg-app/).
 3. Get information on the signatories and attestion in the [Powpeg HSM Firmware Attestation](/concepts/powpeg/hsm-firmware-attestation) section.
 
+### Blockquote
+
+> If you're new to Web3 and Smart Contract Development, begin by exploring the [Rootstock network](/developers/blockchain-essentials/overview/). Then progress step by step to the quick start Guide with Hardhat for a comprehensive understanding of the network and getting started with writing, testing, and deploying smart contracts on Rootstock.
 
 ## Video
 
@@ -45,7 +48,11 @@ Rootstock Addresses incorporate an optional blockchain identifier (also known as
 
 ## Images
 
+### Base image
+
 ![Rootstock Technology Stack - High Level](/img/concepts/rootstock-tech-stack.svg)
+
+### Tall image (max height limit 400px)
 
 ![Metamask gas limit](/img/metamask-gas-limit.png)
 
@@ -53,10 +60,10 @@ Rootstock Addresses incorporate an optional blockchain identifier (also known as
 
 #### Code
 ```jsx
-<Carousel images={['/img/concepts/rootstock-tech-stack.svg', '/img/legacy-private-key.png', '/img/metamask-gas-limit.png']} />
+<Carousel width="370" height="260" images={['/img/concepts/rootstock-tech-stack.svg', ... , '/img/metamask-gas-limit.png']} />
 ```
 #### Render
-<Carousel images={['/img/concepts/rootstock-tech-stack.svg', '/img/legacy-private-key.png', '/img/metamask-gas-limit.png']} />
+<Carousel width="370" height="260" images={['/img/concepts/rootstock-tech-stack.svg', '/img/legacy-private-key.png', '/img/metamask-gas-limit.png', '/img/add-ganache-1.png', '/img/add-ganache-2.png']} />
 
 ## Admonitions
 

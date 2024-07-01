@@ -96,6 +96,7 @@ ul{
     display: block;
     border: 1px solid var(--rsk-image-border-color);
     border-radius: 10px;
+    margin: 12px 0;
     &[src*="youtu"], &[src*="vimeo"]{
       height: auto;
       aspect-ratio: 16/9;
