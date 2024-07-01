@@ -6,7 +6,7 @@ const data = {
   title: 'Guides for Builders',
   description: (
     <>
-      {/* <p>Are you a node miner? Interested in merged mining on Rootstock? 
+      {/* <p>Are you a node miner? Interested in merged mining on Rootstock?
         Setup and manage the Rootstock Nodes.</p> */}
     </>
   ),
@@ -55,7 +55,7 @@ const data = {
       color: 'green',
       description: (
         <>
-          Interested in merged mining on Rootstock? 
+          Interested in merged mining on Rootstock?
           Setup a Rootstock node or use the RPC API.
         </>
       ),
@@ -105,7 +105,7 @@ export default function HomepageSectionGuides() {
           </div>
         )}
       </div>
-      <div className="row row-cols-1 row-cols-md-3 g-16 g-lg-24">
+      <div className="row row-cols-1 row-cols-md-2 g-16 g-lg-24">
         {data.cards.map((item, idx) => (
           <div className={`col`} key={idx}>
             <Card index={`${idx + 1}.`} title={item.title} color={item.color} description={item.description} list={item.list}/>
