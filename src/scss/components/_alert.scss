@@ -54,8 +54,8 @@
 
 .alert--info {
   --ifm-alert-background-color: var(--ifm-color-info-contrast-background);
-  --ifm-alert-background-color-highlight: rgba(84, 199, 236, 0.15);
-  --ifm-alert-foreground-color: var(--ifm-color-info-contrast-foreground);
+  --ifm-alert-background-color-highlight: var(--ifm-color-info-contrast-highlight);
+  --ifm-alert-foreground-color: var(--bs-black);
   --ifm-alert-border-color: var(--ifm-color-info-dark);
 }
 
