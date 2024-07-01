@@ -4,12 +4,7 @@ import Card from "/src/components/Card";
 
 const data = {
   title: 'Guides for Builders',
-  description: (
-    <>
-      {/* <p>Are you a node miner? Interested in merged mining on Rootstock?
-        Setup and manage the Rootstock Nodes.</p> */}
-    </>
-  ),
+  description: null,
   cards: [
     {
       title: 'Beginner to Web3?',
