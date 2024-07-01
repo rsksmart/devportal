@@ -3,7 +3,7 @@
   --ifm-container-width: 1440px;
   --ifm-container-width-xl: 1440px;
 
-  --rsk-navbar-height: 118px;
+  --rsk-navbar-height: 104px;
 
   --bs-pink: #{$pink-light};
   --bs-purple: #{$purple-light};
@@ -53,8 +53,7 @@
   --ifm-navbar-item-active-bg: var(--rsk-color-main);
   --ifm-navbar-item-active-border-color: var(--rsk-color-main);
 
-  --ifm-navbar-padding-horizontal: var(--ifm-spacing-horizontal);
-  --ifm-navbar-padding-vertical: calc(var(--ifm-spacing-vertical) * 0.5);
+  //--ifm-navbar-padding-vertical: calc(var(--ifm-spacing-vertical) * 0.5);
   --ifm-navbar-shadow: none;
   --ifm-navbar-search-input-background-color: var(--ifm-color-emphasis-200);
   --ifm-navbar-search-input-color: var(--ifm-color-emphasis-800);
@@ -65,6 +64,7 @@
   //Typography
   --bs-heading-font-family: #{$headings-font-family};
   --rsk-caption-color: var(--bs-gray-600);
+  --ifm-font-weight-bold: 700;
 
   //Sidebar
   --doc-sidebar-hidden-width: 40px;
@@ -82,7 +82,7 @@
   --rsk-menu-link-index-bg: var(--bs-gray-150);
 
   //Aside
-  --ifm-toc-border-color:rgba(var(--bs-body-color-rgb), 0.4);
+  --ifm-toc-border-color: rgba(var(--bs-body-color-rgb), 0.4);
 
   //TOC
   --ifm-toc-padding-horizontal: 10px;
@@ -105,10 +105,12 @@
   --rsk-last-updated-color: var(--bs-gray-500);
 
   @include media-breakpoint-up(md) {
-    --ifm-navbar-padding-vertical: 32px;
-    --ifm-navbar-padding-horizontal: 24px;
+    --ifm-navbar-padding-vertical: 24px;
+    --ifm-navbar-padding-horizontal: 40px;
   }
-
+  @include media-breakpoint-up(lg) {
+    --ifm-navbar-padding-horizontal: 0;
+  }
   //&:not(.docs-doc-page) {
   //  --rsk-color-main: var(--bs-brand-2);
   //}
@@ -151,24 +153,27 @@
 
   --ifm-code-background: #{$purple-4};
   --bs-code-color: #{$purple-light};
+  --ifm-code-color: #{$purple-light};
 
   --ifm-list-paragraph-margin: 12px;
 
-  --ifm-pre-padding:16px;
+  --ifm-pre-padding: 16px;
   --rsk-codeblock-border-color: #{$gray-150};
 
-  --ifm-global-shadow-lw:none;
+  --ifm-global-shadow-lw: none;
 
   --ifm-table-border-width: 1px;
-  --ifm-table-cell-padding :16px 12px;
+  --ifm-table-cell-padding: 16px 12px;
 
   --ifm-table-border-color: #{$gray-300};
-  --ifm-table-background:  #{$gray-100};
-  --rsk-table-td-bg : #{$gray-100};
-  --rsk-table-th-bg : #{$gray-150};
+  --ifm-table-background: #{$gray-100};
+  --rsk-table-td-bg: #{$gray-100};
+  --rsk-table-th-bg: #{$gray-150};
 
   --ifm-blockquote-border-color: var(--bs-body-color);
-  --ifm-blockquote-shadow:none;
+  --ifm-blockquote-shadow: none;
+
+  --rsk-image-border-color: #{$gray-300};
 
   //tags
   --rsk-tag-border-color: #{$gray-300};
@@ -184,6 +189,53 @@
 
   //Reading Time
   --rsk-reading-time-color: #{$gray-500};
+
+  // Admonitions
+
+  --ifm-alert-background-color: inherit;
+  --ifm-alert-border-color: inherit;
+  --ifm-alert-border-radius: 10px;
+  --ifm-alert-border-width: 0px;
+  --ifm-alert-border-left-width: 0;
+  --ifm-alert-color: var(--ifm-font-color-base);
+  --ifm-alert-shadow: none;
+
+  --ifm-color-secondary-contrast-background: #{$gray-150};
+  --ifm-color-secondary-contrast-highlight: #{$gray-250};
+
+  --ifm-color-success-contrast-background: #{$green};
+  --ifm-color-success-contrast-highlight: #{$green-2};
+
+  --ifm-color-danger-contrast-background: #{$red};
+  --ifm-color-danger-contrast-highlight: #{$red-2};
+
+  --ifm-color-warning-contrast-background: #{$orange};
+  --ifm-color-warning-contrast-highlight: #{$orange-2};
+
+  --ifm-color-info-contrast-background: #{$cyan};
+  --ifm-color-info-contrast-highlight: #{$cyan-3};
+
+  --ifm-color-tip-contrast-background: #{$yellow};
+  --ifm-color-tip-contrast-highlight: #{$yellow-2};
+
+  //Tabs
+  --rsk-tabs-border-color: var(--bs-body-color);
+
+  --rsk-tabs-active-bg: var(--rsk-color-main);
+  --rsk-tabs-active-border-color: var(--rsk-color-main);
+  --rsk-tabs-active-color: var(--bs-black);
+
+  --rsk-tabs-hover-color: var(--bs-body-bg);
+  --rsk-tabs-hover-bg: var(--bs-body-color);
+  --rsk-tabs-hover-border-color: var(--bs-body-color);
+
+  --ifm-tabs-padding-vertical: 12px;
+  --ifm-tabs-padding-horizontal: 15px;
+
+  //Accordion
+  --rsk-accordion-hover-color: var(--rsk-color-main);
+  --rsk-accordion-toggle-color: var(--bs-body-color);
+  --rsk-accordion-btn-icon: #{url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.06 5.53 8 8.58 4.94 5.53 4 6.47l4 4 4-4-.94-.94Z' fill='%23000'/%3E%3C/svg%3E")}
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -226,18 +278,21 @@
   --rsk-color-mode-btn-bg: #7247D9;
 
   //Aside
-  --ifm-toc-border-color:rgba(var(--bs-body-color-rgb), 0.4);
+  --ifm-toc-border-color: rgba(var(--bs-body-color-rgb), 0.4);
 
   //Markdown
   --ifm-code-background: #{$purple-3};
   --bs-code-color: #{$purple};
+  --ifm-code-color: #{$purple};
 
   --rsk-codeblock-border-color: #{$gray-800};
 
   --ifm-table-border-color: #{$gray-700};
-  --ifm-table-background:  #{$gray-900};
-  --rsk-table-td-bg : #{$gray-900};
-  --rsk-table-th-bg : #{$gray-800};
+  --ifm-table-background: #{$gray-900};
+  --rsk-table-td-bg: #{$gray-900};
+  --rsk-table-th-bg: #{$gray-800};
+
+  --rsk-image-border-color: #{$gray-800};
 
   //tags
   --rsk-tag-border-color: #{$gray-800};
@@ -252,4 +307,28 @@
 
   //Typography
   --rsk-caption-color: #{$gray-500};
+
+
+  // Admonitions
+
+  --ifm-color-secondary-contrast-background: #{$gray-850};
+  --ifm-color-secondary-contrast-highlight: #{$gray-750};
+
+  --ifm-color-success-contrast-background: #{$green};
+  --ifm-color-success-contrast-highlight: #{$green-2};
+
+  --ifm-color-danger-contrast-background: #{$red};
+  --ifm-color-danger-contrast-highlight: #{$red-2};
+
+  --ifm-color-warning-contrast-background: #{$orange};
+  --ifm-color-warning-contrast-highlight: #{$orange-2};
+
+  --ifm-color-info-contrast-background: #{$cyan};
+  --ifm-color-info-contrast-highlight: #{$cyan-3};
+
+  --ifm-color-tip-contrast-background: #{$yellow};
+  --ifm-color-tip-contrast-highlight: #{$yellow-2};
+
+  //Accordion
+  --rsk-accordion-btn-icon: #{url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.06 5.53 8 8.58 4.94 5.53 4 6.47l4 4 4-4-.94-.94Z' fill='%23fff'/%3E%3C/svg%3E")}
 }

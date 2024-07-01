@@ -1,0 +1,45 @@
+.accordion-header{
+  margin: 0 !important;
+}
+.accordion-item{
+  & + & {
+    margin-top: 8px;
+  }
+}
+.accordion-button{
+  font: 500 #{$f18}/1.22 $font-family-base;
+  gap: 8px;
+  align-items: start;
+  &:before{
+    font: 400 #{$f14}/1 $font-family-base;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    content: 'Show more'; //TODO move to i18n
+    order: 1;
+    margin-left: auto;
+    color: var(--rsk-accordion-toggle-color);
+    margin-top: 0.35em;
+  }
+  &:after{
+    margin-left: 0;
+    order: 2;
+    margin-top: 0.15em;
+  }
+  &:not(.collapsed)::before{
+    content: 'Show less';
+  }
+
+  @media (hover) {
+    &:hover {
+      color: var(--rsk-accordion-hover-color);
+    }
+  }
+}
+.accordion-body{
+  & > :first-child{
+    margin-top: 0;
+  }
+  & > :last-child{
+    margin-bottom: 0;
+  }
+}

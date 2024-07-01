@@ -3,7 +3,7 @@
 @import 'vendors/bootstrap';
 
 /*! purgecss start ignore */
-//@import 'vendors/splide';
+@import 'vendors/splide';
 
 @import 'global/animation';
 
@@ -28,6 +28,9 @@
 'components/modal',
 'components/breadcrumbs',
 'components/title-color',
+'components/alert',
+'components/tabs',
+'components/accordion',
 'components/sliders';
 
 @import 'pages/front';

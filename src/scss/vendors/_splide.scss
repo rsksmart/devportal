@@ -4,24 +4,35 @@
 }
 .splide__arrow {
 }
-.splide__pagination{
-  padding: 0;
-  li + li {
-    margin-left: 6px;
-  }
-  &__page{
+.splide{
+  .splide__slide{
+    margin: 0;
     padding: 0;
-    width: 6px;
-    height: 6px;
-    display: block;
-    border: none;
-    border-radius: 0;
-    background: $primary;
-    transition: width 0.15s ease-in-out;
-    transition-property: width, height;
-    &.is-active{
-      width: 12px;
-      height: 12px;
+    position: relative;
+    z-index: 1;
+  }
+  .splide__pagination{
+    padding: 0;
+    margin: 24px 0 0;
+    li{
+      margin: 0;
+    }
+    li + li {
+      margin-left: 6px;
+    }
+    &__page{
+      padding: 0;
+      width: 6px;
+      height: 6px;
+      display: block;
+      border: none;
+      border-radius: 50%;
+      background: $primary;
+      transition: width 0.15s ease-in-out;
+      transition-property: width, height;
+      &.is-active{
+        transform: scale(1.5);
+      }
     }
   }
 }
