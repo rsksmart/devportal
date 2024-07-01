@@ -4,8 +4,6 @@ title: Components example
 
 # Components example
 
-## Cards
-
 ## Heading 2
 
 Miners earn a high percentage of transaction fees from the Rootstock block they mine. This mining process is done with the same hashing power used in Bitcoin mining, and has no additional cost or impact.
