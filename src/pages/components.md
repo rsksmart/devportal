@@ -93,6 +93,12 @@ Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
 
 :::
 
+:::success[Success]
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
 ## Tables
 
 

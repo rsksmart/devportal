@@ -46,10 +46,13 @@
   --ifm-alert-background-color-highlight: var(--ifm-color-success-contrast-highlight);
   --ifm-alert-foreground-color: var(--bs-black);
   --ifm-alert-border-color: var(--ifm-color-success-dark);
+}
 
-  a{
-    color: inherit;
-  }
+.alert--tip {
+  --ifm-alert-background-color: var(--ifm-color-tip-contrast-background);
+  --ifm-alert-background-color-highlight: var(--ifm-color-tip-contrast-highlight);
+  --ifm-alert-foreground-color: var(--bs-black);
+  --ifm-alert-border-color: var(--ifm-color-tip-dark);
 }
 
 .alert--info {

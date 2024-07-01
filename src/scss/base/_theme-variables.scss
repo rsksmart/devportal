@@ -212,8 +212,11 @@
   --ifm-color-warning-contrast-background: #{$orange};
   --ifm-color-warning-contrast-highlight: #{$orange-2};
 
-  --ifm-color-info-contrast-background: #{$purple};
-  --ifm-color-info-contrast-highlight: #{$purple-4};
+  --ifm-color-info-contrast-background: #{$cyan};
+  --ifm-color-info-contrast-highlight: #{$cyan-3};
+
+  --ifm-color-tip-contrast-background: #{$yellow};
+  --ifm-color-tip-contrast-highlight: #{$yellow-2};
 
   //Tabs
   --rsk-tabs-border-color: var(--bs-body-color);
@@ -320,8 +323,11 @@
   --ifm-color-warning-contrast-background: #{$orange};
   --ifm-color-warning-contrast-highlight: #{$orange-2};
 
-  --ifm-color-info-contrast-background: #{$purple};
-  --ifm-color-info-contrast-highlight: #{$purple-4};
+  --ifm-color-info-contrast-background: #{$cyan};
+  --ifm-color-info-contrast-highlight: #{$cyan-3};
+
+  --ifm-color-tip-contrast-background: #{$yellow};
+  --ifm-color-tip-contrast-highlight: #{$yellow-2};
 
   //Accordion
   --rsk-accordion-btn-icon: #{url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.06 5.53 8 8.58 4.94 5.53 4 6.47l4 4 4-4-.94-.94Z' fill='%23fff'/%3E%3C/svg%3E")}

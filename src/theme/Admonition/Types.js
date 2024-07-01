@@ -5,9 +5,12 @@ import AdmonitionTypeInfo from '@theme/Admonition/Type/Info';
 import AdmonitionTypeWarning from '@theme/Admonition/Type/Warning';
 import AdmonitionTypeDanger from '@theme/Admonition/Type/Danger';
 import AdmonitionTypeCaution from '@theme/Admonition/Type/Caution';
+import AdmonitionTypeSuccess from '@theme/Admonition/Type/Success';
+
 const admonitionTypes = {
   note: AdmonitionTypeNote,
   tip: AdmonitionTypeTip,
+  success: AdmonitionTypeSuccess,
   info: AdmonitionTypeInfo,
   warning: AdmonitionTypeWarning,
   danger: AdmonitionTypeDanger,
@@ -18,7 +21,6 @@ const admonitionTypes = {
 const admonitionAliases = {
   secondary: (props) => <AdmonitionTypeNote title="secondary" {...props} />,
   important: (props) => <AdmonitionTypeInfo title="important" {...props} />,
-  success: (props) => <AdmonitionTypeTip title="success" {...props} />,
   caution: AdmonitionTypeCaution,
 };
 export default {

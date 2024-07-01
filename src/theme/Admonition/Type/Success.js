@@ -2,10 +2,10 @@ import React from 'react';
 import clsx from 'clsx';
 import Translate from '@docusaurus/Translate';
 import AdmonitionLayout from '@theme/Admonition/Layout';
-import IconTip from '@theme/Admonition/Icon/Tip';
-const infimaClassName = 'alert alert--tip';
+import IconSuccess from '@theme/Admonition/Icon/Success';
+const infimaClassName = 'alert alert--success';
 const defaultProps = {
-  icon: <IconTip />,
+  icon: <IconSuccess />,
   title: (
     <Translate
       id="theme.admonition.tip"
@@ -14,7 +14,7 @@ const defaultProps = {
     </Translate>
   ),
 };
-export default function AdmonitionTypeTip(props) {
+export default function AdmonitionTypeSuccess(props) {
   return (
     <AdmonitionLayout
       {...defaultProps}
