@@ -709,5 +709,28 @@ menu_order: 4
             </div>
         </div>
     </li>
+    <li class="col-xl-6 col-md-6">
+        <div class="feature-card">
+            <a href="/kb/interact-with-rootstock-using-rust/">
+                <div class="icon h-100">
+                    <div class="icon-cont text-center my-auto">
+                        <img src="/assets/img/rootstock-icon.png" alt="rootstock icon">
+                    </div>
+                </div>
+            </a>
+            <div class="content">
+                <a href="/kb/interact-with-rootstock-using-rust/">
+                    <div class="content-container">
+                        <div class="card-title"><h2 class="zg-text-bg bg-pink">Get start on Rootstock using Rust</h2></div>
+                        <p class="card-desc">Learn how to interact with Rootstock Blockchain using Rust and Alloy crate</p>
+                    </div>
+                </a>
+                <div class="btn-container">
+                    <span></span>
+                    <a class="green" href="/kb/interact-with-rootstock-using-rust/">Read More</a>
+                </div>
+            </div>
+        </div>
+    </li>
     </div>
 
