@@ -17,7 +17,7 @@ const data = {
       },
       description: (
         <>
-          Join the Rootstock<br/> Developer Community on Discord
+          Join the Rootstock<br/> Developer Community on Discord.
         </>
       ),
 
@@ -27,13 +27,13 @@ const data = {
       color: 'contrast',
       icon: 'github',
       link: {
-        title: 'Explore Github',
+        title: 'Star on Github',
         href: 'https://github.com/rsksmart/devportal',
         target: '_blank',
       },
       description: (
         <>
-          Explore open source tools for easy Rootstock Development
+          Explore open source tools, smart contracts and starter kits for deploying and integrating your dApps.
         </>
       ),
     },
@@ -41,13 +41,13 @@ const data = {
       title: 'Stay Connected',
       color: 'yellow',
       link: {
-        title: 'See all Events',
+        title: 'View upcoming Events',
         href: '#',
         target: '_blank',
       },
       description: (
         <>
-          View upcoming Events, community calls,<br/> Webinars, Meetups happening<br/> around the world.
+          View upcoming events, community calls,<br/> webinars, and meetups happening<br/> around the world.
         </>
       ),
     },
