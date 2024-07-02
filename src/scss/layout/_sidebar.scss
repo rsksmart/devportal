@@ -4,7 +4,7 @@
     top: var(--rsk-navbar-height);
   }
   .menu{
-    padding: 34px 0 0;
+    padding: 48px 24px 0;
   }
 }
 .menu__list-item-collapsible{
@@ -62,7 +62,7 @@
   }
 }
 .menu__caret {
-  padding: 0.2em 12px;
+  padding: 0.2em 0 0.2em 12px;
 }
 .menu__caret:before, .menu__link--sublist-caret:after {
     content: '';
@@ -79,7 +79,7 @@
     }
 }
 .menu__link--sublist-caret:after{
-  width: 40px;
+  width: 16px;
   margin-top: 0.2em;
 }
 .menu{
@@ -112,7 +112,7 @@
       }
       .menu__list{
         padding-left: 38px;
-        margin-top: 10px;
+        margin-top: 20px;
         & > li{
           padding-right: 12px;
           .menu__link{

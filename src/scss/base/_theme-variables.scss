@@ -1,9 +1,13 @@
-
+html:root{
+  --doc-sidebar-width: 315px;
+  --doc-sidebar-hidden-width: 48px;
+}
 :root {
   --ifm-container-width: 1440px;
   --ifm-container-width-xl: 1440px;
 
   --rsk-navbar-height: 104px;
+
 
   --bs-pink: #{$pink-light};
   --bs-purple: #{$purple-light};
