@@ -12,7 +12,7 @@ export default function Aside() {
   const {siteConfig} = useDocusaurusContext();
   const {editUrl} = siteConfig?.customFields?.homePage || {};
 
-	return <div className={clsx(styles.docItemAside, `h-100 pt-40 pt-lg-0 ps-lg-30`)}>
+	return <div className={clsx(styles.docItemAside, `h-100 pt-40 pt-lg-0 ps-lg-24`)}>
 		<div className={clsx(styles.docItemAsideInner, `d-flex flex-column gap-48 justify-content-between`)}>
       <MoreActions editUrl={`${editUrl}/src/pages/index.js`} />
       <FeedbackForm />

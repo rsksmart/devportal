@@ -4,6 +4,8 @@ import Modal from 'react-bootstrap/Modal';
 import {useFormspark} from "@formspark/use-formspark";
 
 function MyVerticallyCenteredModal(props) {
+  const [url, setUrl] = useState('#');
+
   const [submit, submitting] = useFormspark({
     formId: `vg6LeINWT`,
   });
@@ -21,6 +23,10 @@ function MyVerticallyCenteredModal(props) {
 
   useEffect(() => {
     setRating(props.rating);
+
+    if (window) {
+      setUrl(window.location.origin + window.location.pathname);
+    }
   }, [props.rating, props.show]);
 
   const onSubmit = async (e) => {
@@ -29,7 +35,7 @@ function MyVerticallyCenteredModal(props) {
     e.preventDefault();
     setSending(true);
     await submit(
-      {message, email, name, rating}
+      {message, email, name, rating, url}
     );
     setSubmitted(true);
     setSending(false);
