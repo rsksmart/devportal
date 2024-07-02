@@ -1,5 +1,5 @@
 html:root{
-  --doc-sidebar-width: 240px;
+  --doc-sidebar-width: 260px;
   --doc-sidebar-hidden-width: 48px;
   @include media-breakpoint-up(xl) {
     --doc-sidebar-width: 315px;
@@ -123,9 +123,10 @@ html:root {
 
   @include media-breakpoint-up(md) {
     --ifm-navbar-padding-vertical: 24px;
-    --ifm-navbar-padding-horizontal: 40px;
+    --ifm-navbar-padding-horizontal: 16px;
   }
   @include media-breakpoint-up(lg) {
+    --ifm-navbar-padding-horizontal: 0;
     --ifm-navbar-padding-horizontal: 0;
   }
   //&:not(.docs-doc-page) {

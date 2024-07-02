@@ -42,7 +42,7 @@ export default function DocItemLayout({children}) {
       <div className={clsx('col', !docTOC.hidden && styles.docItemCol)}>
         {unlisted && <Unlisted />}
         <DocVersionBanner />
-        <div className={clsx(styles.docItemContainer, `px-lg-24`)}>
+        <div className={clsx(styles.docItemContainer, `ps-md-24 px-lg-24`)}>
           <article>
             <div className="d-flex gap-24 justify-content-between align-items-start mb-24">
               <DocBreadcrumbs />
@@ -57,7 +57,7 @@ export default function DocItemLayout({children}) {
           <EditMetaRow />
         </div>
       </div>
-      <div className="col col--3">
+      <div className="col col--3 d-none d-lg-block">
 			  <DocItemAside />
       </div>
     </div>
