@@ -50,24 +50,47 @@ html:root {
     padding: 0 24px 0 18px;
     min-width: 160px;
     text-align: left;
+    @include media-breakpoint-down(md) {
+      display: block;
+      padding: 0 16px;
+    }
+    @include media-breakpoint-only(md) {
+      display: none;
+    }
+  }
+  .DocSearch-Button-Keys{
+    @include media-breakpoint-only(md) {
+      display: none;
+    }
   }
   .DocSearch-Button{
-    padding: 16px 20px;
+    padding: 8px 16px;
     box-shadow: none;
     border: 1px solid var(--docsearch-border-color);
-    height: 54px;
+    height: 40px;
     font-weight: 400;
+    @include media-breakpoint-up(md) {
+      padding: 12px;
+      height: 40px;
+    }
+    @include media-breakpoint-up(lg) {
+      height: 54px;
+      padding: 16px 20px;
+    }
     &:hover, &:focus{
       box-shadow: none;
       border-color: var(--docsearch-border-hover-color);
     }
 
     @include media-breakpoint-down(md) {
-      padding: 12px;
-      height: auto;
+
     }
     .DocSearch-Search-Icon{
       color: var(--docsearch-muted-color);
+      @include media-breakpoint-down(lg) {
+        width: 16px;
+        height: 16px;
+      }
     }
   }
 
