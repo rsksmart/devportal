@@ -105,6 +105,8 @@ html:root {
   --ifm-toc-padding-horizontal: 10px;
   --ifm-toc-padding-vertical: 0;
 
+  --ifm-menu-link-sublist-icon: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m12 8.3-6 6 1.41 1.4L12 11.13l4.59 4.57L18 14.3l-6-6Z' fill='%23000'/%3E%3C/svg%3E");;
+
   //Color Mode
   --rsk-color-mode-bg: #08FFD1; //TODO: change to css var
   --rsk-color-mode-btn-bg: #09CDA9; //TODO: change to css var

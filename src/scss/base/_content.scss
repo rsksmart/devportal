@@ -64,7 +64,7 @@ ul{
   ol {
     list-style-type: none;
     counter-reset: items;
-    li{
+    & > li{
       counter-increment: items;
       position: relative;
       &:before {

@@ -1,13 +1,17 @@
 import React from 'react';
 
 import {useDoc} from '@docusaurus/theme-common/internal';
-import {ShareButtons} from "../../../components/ShareButtons";
+
 import DocItemTOCDesktop from "@theme/DocItem/TOC/Desktop";
 import {useWindowSize} from "@docusaurus/theme-common";
-import styles from './styles.module.scss';
+
+import {FeedbackForm} from "/src/components/FeedbackForm";
+import {ShareButtons} from "/src/components/ShareButtons";
+
+import MoreActions from "@theme/DocItem/MoreActions";
+
 import clsx from "clsx";
-import {FeedbackForm} from "../../../components/FeedbackForm";
-import MoreActions from "../MoreActions";
+import styles from './styles.module.scss';
 
 const DocTOCDesktop = () => {
 	const {frontMatter, toc} = useDoc();

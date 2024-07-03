@@ -9,13 +9,16 @@ import DocItemFooter from '@theme/DocItem/Footer';
 import DocItemTOCMobile from '@theme/DocItem/TOC/Mobile';
 
 import DocItemContent from '@theme/DocItem/Content';
-import DocBreadcrumbs from '@theme/DocBreadcrumbs';
+
 import Unlisted from '@theme/Unlisted';
 import styles from './styles.module.css';
 
-import DocItemAside from "../Aside";
+import DocItemAside from "@theme/DocItem/Aside";
 import EditMetaRow from "@theme/EditMetaRow";
-import ReadingTime from "../ReadingTime";
+
+import DocItemHeaderDesktop from "@theme/DocItem/Header/Desktop";
+import DocItemHeaderMobile from "@theme/DocItem/Header/Mobile";
+
 /**
  * Decide if the toc should be rendered, on mobile or desktop viewports
  */
@@ -44,10 +47,8 @@ export default function DocItemLayout({children}) {
         <DocVersionBanner />
         <div className={clsx(styles.docItemContainer, `ps-md-24 px-lg-24`)}>
           <article>
-            <div className="d-flex gap-24 justify-content-between align-items-start mb-24">
-              <DocBreadcrumbs />
-              <ReadingTime />
-            </div>
+            <DocItemHeaderDesktop />
+            <DocItemHeaderMobile />
             <DocVersionBadge />
             {docTOC.mobile}
             <DocItemContent>{children}</DocItemContent>

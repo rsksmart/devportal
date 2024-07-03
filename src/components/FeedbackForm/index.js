@@ -61,7 +61,7 @@ function MyVerticallyCenteredModal(props) {
         </svg>
       </button>
       <Modal.Body>
-        <Modal.Title as={'h4'} id="contained-modal-title-vcenter" className={'mb-16 subtitle-2'}>
+        <Modal.Title as={'h4'} id="contained-modal-title-vcenter" className={'mb-16 subtitle-2 pe-32'}>
           Thank you for your feedback!
         </Modal.Title>
         <p>We would love to hear your thoughts and feedback so that we can improve these Docs for you and others!</p>
