@@ -22,14 +22,14 @@ export default function DocItemHeaderMobile() {
     initialState: true,
   });
   return (
-    <div className={clsx(styles.DocItemMetaMbileWrap)}>
-      <CollapseButton className={`subtitle-1`} title={title} collapsed={collapsed} onClick={toggleCollapsed} />
+    <div className={clsx(styles.DocItemMetaMobileWrap)}>
+      <CollapseButton className={`subtitle-1`} title={title} collapsed={collapsed} onClick={toggleCollapsed}/>
       <Collapsible
         lazy
         collapsed={collapsed}>
         <div className="pb-24 d-flex flex-column gap-24">
           <DocBreadcrumbs/>
-          <MoreActions />
+          <MoreActions/>
           <div className="d-flex flex-column flex-md-row align-items-md-end gap-24">
             <FeedbackForm/>
 
@@ -45,7 +45,6 @@ export default function DocItemHeaderMobile() {
           </div>
         </div>
       </Collapsible>
-
     </div>
   );
 }

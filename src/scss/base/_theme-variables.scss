@@ -9,8 +9,10 @@ html:root {
   --ifm-container-width: 1440px;
   --ifm-container-width-xl: 1440px;
 
-  --rsk-navbar-height: 104px;
-
+  --rsk-navbar-height: 92px;
+  @include media-breakpoint-up(lg) {
+    --rsk-navbar-height: 104px;
+  }
 
   --bs-pink: #{$pink-light};
   --bs-purple: #{$purple-light};

@@ -26,6 +26,16 @@ const config = {
   customFields: {
     homePage: {
       editUrl: 'https://github.com/zgraya-digital/devportal-rootstock/tree/main/',
+    },
+    moreLinks : {
+      changelog : {
+        title: 'Changelog',
+        url : 'http://discord.gg/rootstock',
+      },
+      joinCommunity : {
+        title: 'Join the Community',
+        url : 'http://discord.gg/rootstock',
+      },
     }
   },
   // GitHub pages deployment config.

@@ -3,6 +3,8 @@ import clsx from 'clsx';
 import {ThemeClassNames} from '@docusaurus/theme-common';
 import {useDoc} from '@docusaurus/theme-common/internal';
 import TagsListInline from '@theme/TagsListInline';
+import TagsListCollapsible from '@theme/TagsListCollapsible';
+
 export default function DocItemFooter() {
   const {metadata} = useDoc();
   const {editUrl, lastUpdatedAt, lastUpdatedBy, tags} = metadata;
@@ -21,6 +23,7 @@ export default function DocItemFooter() {
             ThemeClassNames.docs.docFooterTagsRow,
           )}>
           <TagsListInline tags={tags} />
+          <TagsListCollapsible tags={tags} />
         </div>
       )}
     </footer>
