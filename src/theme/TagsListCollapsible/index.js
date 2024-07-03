@@ -8,7 +8,7 @@ import CollapseButton from '@theme/TagsListCollapsible/CollapseButton';
 
 export default function TagsListCollapsible({tags}) {
   const windowSize = useWindowSize();
-  // Mobile sidebar not visible on hydration: can avoid SSR rendering
+  // Mobile tags not visible on hydration: can avoid SSR rendering
   const shouldRenderTagsMobile = windowSize === 'mobile';
   const title = (
       <Translate

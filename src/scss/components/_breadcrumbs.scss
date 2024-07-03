@@ -1,8 +1,3 @@
-.breadcrumbs__item--active{
-  .breadcrumbs__link{
-
-  }
-}
 .breadcrumbs{
   display: flex;
   align-items: center;
@@ -17,18 +12,6 @@
     display: flex;
     align-items: center;
     &:not(:last-child){
-      &:before {
-        right: 100%;
-        font: 500 0.75rem / 1.33 var(--bs-body-font-family);
-        content: '1.0';
-        margin-right: 8px;
-        border-radius: 1em;
-        padding: 0 5px;
-        background: var(--rsk-color-main);
-        color: var(--bs-black);
-        min-width: 30px;
-        text-align: center;
-      }
       &:after{
         filter: none;
         opacity: 1;

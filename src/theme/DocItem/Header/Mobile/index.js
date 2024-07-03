@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import {Collapsible, ThemeClassNames, useCollapsible} from '@docusaurus/theme-common';
+import {Collapsible, ThemeClassNames, useCollapsible, useWindowSize} from '@docusaurus/theme-common';
 import {useDoc} from '@docusaurus/theme-common/internal';
 import Translate from '@docusaurus/Translate';
 
@@ -14,14 +14,15 @@ import {ShareButtons} from "/src/components/ShareButtons";
 import MoreActions from "@theme/DocItem/MoreActions";
 
 export default function DocItemHeaderMobile() {
+  const windowSize = useWindowSize();
+  // Mobile sidebar not visible on hydration: can avoid SSR rendering
+  const shouldRenderOnMobile = windowSize === 'mobile';
   const {frontMatter, metadata} = useDoc();
-
   const title = frontMatter?.sidebar_label || metadata.title;
-
   const {collapsed, toggleCollapsed} = useCollapsible({
     initialState: true,
   });
-  return (
+  return shouldRenderOnMobile && (
     <div className={clsx(styles.DocItemMetaMobileWrap)}>
       <CollapseButton className={`subtitle-1`} title={title} collapsed={collapsed} onClick={toggleCollapsed}/>
       <Collapsible

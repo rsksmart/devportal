@@ -11,7 +11,7 @@ export default function NavbarMobilePrimaryMenu() {
 
   const navBarItems = useThemeConfig().navbar.items;
   const [leftItems] = splitNavbarItems(navBarItems);
-  console.log(leftItems);
+
   return (
     <ul className={clsx(styles.mobilePrimaryMenuWrap, 'list-unstyled d-flex flex-wrap gap-8 mb-24 pb-16')}>
       {leftItems.map((item, i) => (
