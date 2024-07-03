@@ -36,6 +36,10 @@ const config = {
         title: 'Join the Community',
         url : 'http://discord.gg/rootstock',
       },
+      reportIssue : {
+        title: 'Report an Issue',
+        url : '#',
+      },
     }
   },
   // GitHub pages deployment config.
