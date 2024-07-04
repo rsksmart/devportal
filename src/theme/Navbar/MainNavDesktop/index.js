@@ -9,7 +9,7 @@ export default function MainNavDesktop() {
 
   return (
     <>
-      <div className="container pb-60 pt-28">
+      <div className="container pb-lg-60 pt-lg-28 pb-24 d-none d-md-block">
         <div className="d-flex gap-10 flex-wrap">
           {leftItems.map((item, i) => (
             <ErrorCauseBoundary

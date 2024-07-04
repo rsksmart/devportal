@@ -1,0 +1,28 @@
+.tocCollapsibleButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:0 0 12px;
+  width: 100%;
+  gap: 12px;
+  & > span{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+.tocCollapsibleButton::after {
+  content: '';
+  background: var(--ifm-menu-link-sublist-icon) 50% 50% / contain no-repeat;
+  filter: var(--ifm-menu-link-sublist-icon-filter);
+  height: 1.5rem;
+  width: 1.5rem;
+  transform: rotate(180deg);
+  transition: transform var(--ifm-transition-fast);
+  flex-shrink: 0;
+}
+
+.tocCollapsibleButtonExpanded::after {
+  transform: none;
+}

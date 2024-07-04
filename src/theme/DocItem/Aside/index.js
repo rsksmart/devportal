@@ -1,13 +1,17 @@
 import React from 'react';
 
 import {useDoc} from '@docusaurus/theme-common/internal';
-import {ShareButtons} from "../../../components/ShareButtons";
+
 import DocItemTOCDesktop from "@theme/DocItem/TOC/Desktop";
 import {useWindowSize} from "@docusaurus/theme-common";
-import styles from './styles.module.scss';
+
+import {FeedbackForm} from "/src/components/FeedbackForm";
+import {ShareButtons} from "/src/components/ShareButtons";
+
+import MoreActions from "@theme/DocItem/MoreActions";
+
 import clsx from "clsx";
-import {FeedbackForm} from "../../../components/FeedbackForm";
-import MoreActions from "../MoreActions";
+import styles from './styles.module.scss';
 
 const DocTOCDesktop = () => {
 	const {frontMatter, toc} = useDoc();
@@ -20,7 +24,7 @@ const DocTOCDesktop = () => {
 }
 export default function DocItemAside() {
 
-	return <div className={clsx(styles.docItemAside, `h-100 pt-40 pt-lg-0 ps-lg-30`)}>
+	return <div className={clsx(styles.docItemAside, `h-100 pt-40 pt-lg-0 ps-lg-24`)}>
 		<div className={clsx(styles.docItemAsideInner, `d-flex flex-column gap-48 justify-content-between`)}>
 			{DocTOCDesktop()}
       <MoreActions />

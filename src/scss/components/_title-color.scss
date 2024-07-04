@@ -1,6 +1,9 @@
 .fp-title-color{
-  font: 700 #{$f56}/1 var(--bs-heading-font-family);
+  font: 700 #{$f40}/1 var(--bs-heading-font-family);
   letter-spacing: -0.04em;
+  @include media-breakpoint-up(lg) {
+    font-size: $f56;
+  }
   & > span{
     color: var(--rsk-title-block-color);
     padding: 0px 10px;

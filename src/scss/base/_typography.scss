@@ -39,6 +39,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .title-s{
   font: 400 #{$f12}/1 $font-family-base;
   letter-spacing: -0.024em;
+  text-transform: uppercase;
 }
 .caption {
   font: 400 #{$f10}/1.6 $font-family-base;
@@ -60,6 +61,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .text-body{
   color: var(--bs-body-color) !important;
+}
+.subtitle-1{
+  font: 700 #{$f20}/1.2 $font-family-base;
+  letter-spacing: -0.024em;
 }
 .subtitle-2{
   font: 400 #{$f20}/1.2 $font-family-base;

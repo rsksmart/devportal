@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from "react";
 import Button from "../Button";
+import clsx from "clsx";
 
-export const ShareButtons = () => {
+export const ShareButtons = ({className}) => {
   const [showTip, setShowTip] = useState(false);
   const [url, setUrl] = useState('#');
 
@@ -26,8 +27,8 @@ export const ShareButtons = () => {
   }
 
   return (
-    <div>
-      <div className="d-flex gap-10 mb-24">
+    <div className={clsx(className || `flex-column align-items-start d-flex gap-24`, )}>
+      <div className="d-flex gap-10">
         <a
           className="link-base"
           href={`https://twitter.com/intent/tweet?url=${url}`}

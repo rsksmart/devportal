@@ -3,10 +3,13 @@ import clsx from 'clsx';
 import {ThemeClassNames} from '@docusaurus/theme-common';
 import {
   useSidebarBreadcrumbs,
-  useHomePageRoute,
+  useHomePageRoute, useDocsSidebar,
 } from '@docusaurus/theme-common/internal';
 import Link from '@docusaurus/Link';
 import {translate} from '@docusaurus/Translate';
+
+import {findSidebarItemIndex} from '/src/_utils/hooks.js';
+
 // TODO move to design system folder
 function BreadcrumbsItemLink({children, href, isLast}) {
   const className = 'breadcrumbs__link';
@@ -31,9 +34,10 @@ function BreadcrumbsItemLink({children, href, isLast}) {
   );
 }
 // TODO move to design system folder
-function BreadcrumbsItem({children, active, index, addMicrodata}) {
+function BreadcrumbsItem({children, active, index, addMicrodata, ...props}) {
   return (
     <li
+      {...props}
       {...(addMicrodata && {
         itemScope: true,
         itemProp: 'itemListElement',
@@ -47,12 +51,15 @@ function BreadcrumbsItem({children, active, index, addMicrodata}) {
     </li>
   );
 }
+
 export default function DocBreadcrumbs() {
   const breadcrumbs = useSidebarBreadcrumbs();
-  const homePageRoute = useHomePageRoute();
-  if (!breadcrumbs) {
+    if (!breadcrumbs) {
     return null;
   }
+
+  const sidebar = useDocsSidebar();
+
   return (
     <nav
       className={clsx(
@@ -66,20 +73,28 @@ export default function DocBreadcrumbs() {
       <ul
         className="breadcrumbs"
         itemScope
-        itemType="https://schema.org/BreadcrumbList">
+        itemType="https://schema.org/BreadcrumbList"
+      >
+
         {breadcrumbs.map((item, idx) => {
           const isLast = idx === breadcrumbs.length - 1;
           const href =
             item.type === 'category' && item.linkUnlisted
               ? undefined
               : item.href;
+
+          const badgeIndex = findSidebarItemIndex(sidebar.items, item);
+
           return (
             <BreadcrumbsItem
               key={idx}
               active={isLast}
               index={idx}
-              addMicrodata={!!href}>
+              addMicrodata={!!href}
+            >
               <BreadcrumbsItemLink href={href} isLast={isLast}>
+                {!isLast && <span className={`badge bg-orange me-8`}>{badgeIndex}</span>}
+
                 {item.label}
               </BreadcrumbsItemLink>
             </BreadcrumbsItem>
