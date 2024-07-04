@@ -1,50 +1,79 @@
 html:root {
+  --docsearch-primary-color: var(--bs-purple);
   --docsearch-border-color: rgba(var(--bs-body-color-rgb), 0.2);
-  --docsearch-border-hover-color: var(--docsearch-primary-color);
+  --docsearch-border-hover-color: var(--bs-body-color);
   --docsearch-searchbox-background: var(--bs-body-bg);
+  --docsearch-modal-background: var(--bs-body-bg);
+
+  --docsearch-highlight-color: var(--bs-black);
+  --docsearch-logo-color: var(--bs-black);
+
+  --docsearch-container-background: rgba(0,0,0,0.2);
   /* --docsearch-primary-color: var(--ifm-color-primary); */
   /* --docsearch-text-color: var(--ifm-font-color-base); */
   //--docsearch-muted-color: var(--ifm-color-secondary-darkest);
-  //--docsearch-container-background: rgba(94, 100, 112, 0.7);
-  ///* Modal */
+
+  /* Modal */
+  --docsearch-modal-shadow: none;
+  --docsearch-modal-border-color: var(--bs-black);
   //--docsearch-modal-background: var(--ifm-color-secondary-lighter);
   ///* Search box */
+  --docsearch-searchbox-shadow: inset 0 0 0 1px var(--bs-black);
   //--docsearch-searchbox-background: var(--ifm-color-secondary);
   //--docsearch-searchbox-focus-background: var(--ifm-color-white);
-  ///* Hit */
-  //--docsearch-hit-color: var(--ifm-font-color-base);
-  //--docsearch-hit-active-color: var(--ifm-color-white);
-  //--docsearch-hit-background: var(--ifm-color-white);
+  /* Hit */
+  --docsearch-hit-shadow: none;
+  --docsearch-hit-color: var(--bs-black);
+  --docsearch-hit-active-color: var(--bs-white);
+  --docsearch-hit-background: var(--bs-white);
   ///* Footer */
-  //--docsearch-footer-background: var(--ifm-color-white);
+  --docsearch-footer-shadow: none;
+  --docsearch-footer-background: var(--bs-white);
+
 }
 
 [data-theme='dark']:root {
   --docsearch-primary-color: var(--bs-purple);
   --docsearch-muted-color: rgba(var(--bs-body-color-rgb), 0.6);
   --docsearch-searchbox-background: var(--bs-body-bg);
+  --docsearch-highlight-color: var(--bs-white);
+  --docsearch-logo-color: var(--bs-white);
   //--docsearch-text-color: var(--ifm-font-color-base);
   //--docsearch-muted-color: var(--ifm-color-secondary-darkest);
-  //--docsearch-container-background: rgba(47, 55, 69, 0.7);
-  ///* Modal */
-  //--docsearch-modal-background: var(--ifm-background-color);
+  --docsearch-container-background: rgba(0,0,0,0.2);
+
+  /* Modal */
+  --docsearch-modal-shadow: none;
+  --docsearch-modal-border-color: var(--bs-white);
+  --docsearch-modal-background: #{$gray-950};
+  --docsearch-modal-background: var(--ifm-background-color);
+
   ///* Search box */
+  --docsearch-searchbox-shadow: inset 0 0 0 1px var(--bs-white);
   //--docsearch-searchbox-background: var(--ifm-background-color);
   //--docsearch-searchbox-focus-background: var(--ifm-color-black);
   ///* Hit */
-  //--docsearch-hit-color: var(--ifm-font-color-base);
-  //--docsearch-hit-active-color: var(--ifm-color-white);
-  //--docsearch-hit-background: var(--ifm-color-emphasis-100);
-  ///* Footer */
-  //--docsearch-footer-background: var(--ifm-background-surface-color);
-  //--docsearch-key-gradient: linear-gradient(
-  //    -26.5deg,
-  //    var(--ifm-color-emphasis-200) 0%,
-  //    var(--ifm-color-emphasis-100) 100%
-  //);
+  --docsearch-hit-shadow: none;
+  --docsearch-hit-color: var(--bs-white);
+  --docsearch-hit-active-color: var(--bs-black);
+  --docsearch-hit-background: var(--docsearch-searchbox-background);
+  /* Footer */
+  --docsearch-footer-background: var(--bs-body-bg);
+  --docsearch-footer-shadow: none;
+  --docsearch-key-gradient: linear-gradient(-26.5deg,#{$gray-700},#{$gray-800});
+  --docsearch-key-shadow: inset 0 -2px 0 0 #{$gray-800}, inset 0 0 1px 1px #{$gray-650}, 0 2px 2px 0 rgba(3,4,9,0.3);
+  --docsearch-key-pressed-shadow: inset 0 -2px 0 0 #{$gray-850}, inset 0 0 1px 1px #{$gray-650}, 0 1px 1px 0 rgba(3,4,9,0.3);
 }
 :root{
   .DocSearch-Button {
+
+  }
+  .DocSearch-Modal{
+    border: 1px solid var(--docsearch-modal-border-color);
+
+    .cls-1, .cls-2{
+      fill: var(--docsearch-logo-color);
+    }
   }
   .DocSearch-Button-Placeholder{
     padding: 0 24px 0 18px;
@@ -62,6 +91,9 @@ html:root {
     @include media-breakpoint-only(md) {
       display: none;
     }
+  }
+  .DocSearch-Hit-action, .DocSearch-Hit-icon{
+    color: var(--docsearch-primary-color);
   }
   .DocSearch-Button{
     padding: 8px 16px;
@@ -93,6 +125,8 @@ html:root {
       }
     }
   }
-
+  .DocSearch-Container{
+    backdrop-filter: blur(20px);
+  }
 }
 
