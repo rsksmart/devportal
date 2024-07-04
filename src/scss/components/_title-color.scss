@@ -18,13 +18,13 @@
 
 }
 .fp-title-color-sm{
-  font-size: $f32;
-  letter-spacing: -0.024em;
+  font-size: $f32 !important;
+  letter-spacing: -0.024em !important;;
 }
 .fp-title-color-lg{
-  font-size: $f96;
+  font-size: $f96 !important;;
 }
 .fp-title-color-xl{
-  font-size: $f120;
+  font-size: $f120 !important;;
   letter-spacing: -0.06em;
 }
