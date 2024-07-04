@@ -30,7 +30,7 @@ const config = {
     moreLinks : {
       changelog : {
         title: 'Changelog',
-        url : 'http://discord.gg/rootstock',
+        url : '#',
       },
       joinCommunity : {
         title: 'Join the Community',
