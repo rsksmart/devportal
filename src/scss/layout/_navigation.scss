@@ -31,7 +31,9 @@
     margin: 0;
   }
   &__item{
-    display: flex;
+    @include media-breakpoint-down(lg) {
+      display: flex;
+    }
   }
   &__link{
     font: 700 #{$f16}/1 $font-family-base;
