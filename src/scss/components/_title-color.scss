@@ -1,6 +1,9 @@
 .fp-title-color{
-  font: 700 #{$f56}/1 var(--bs-heading-font-family);
+  font: 700 #{$f40}/1 var(--bs-heading-font-family);
   letter-spacing: -0.04em;
+  @include media-breakpoint-up(lg) {
+    font-size: $f56;
+  }
   & > span{
     color: var(--rsk-title-block-color);
     padding: 0px 10px;
@@ -15,13 +18,13 @@
 
 }
 .fp-title-color-sm{
-  font-size: $f32;
-  letter-spacing: -0.024em;
+  font-size: $f32 !important;
+  letter-spacing: -0.024em !important;;
 }
 .fp-title-color-lg{
-  font-size: $f96;
+  font-size: $f96 !important;;
 }
 .fp-title-color-xl{
-  font-size: $f120;
+  font-size: $f120 !important;;
   letter-spacing: -0.06em;
 }

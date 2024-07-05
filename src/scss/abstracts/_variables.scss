@@ -45,7 +45,7 @@ $contrast: $white;
 $orange-light: #E68300;
 $purple-light: #966FF2;
 $cyan-light: #07E5BC;
-$yellow-light: #BEDD03;
+$yellow-light: #C8B401;
 $pink-light: #FF70E0;
 $green-light: #72BD00;
 $contrast-light: $black;
@@ -55,6 +55,9 @@ $purple-light: #966FF2;
 $orange-2: #FFC77C;
 $cyan-2: #09CDA9;
 $green-2: #CDFF80;
+$yellow-2: #FDFCD8;
+
+$cyan-3: #E0FFF9;
 
 $purple-2: #7247D9;
 $purple-3: #28203C;
@@ -145,8 +148,9 @@ $paragraph-margin-bottom: 24px;
 // container padding
 $container-padding: (
   xs : 16px,
-  md : 40px,
-  xl : 60px,
+  md : 16px,
+  lg : 24px,
+  xl : 48px,
 );
 
 // offcanvas settings
@@ -481,3 +485,39 @@ $spinner-animation-speed: .75s;
 $spinner-width-sm: 0.8rem;
 $spinner-height-sm: $spinner-width-sm;
 $spinner-border-width-sm: 1px;
+
+$accordion-padding-y:                     0;
+$accordion-padding-x:                     0;
+$accordion-color:                         var(--#{$prefix}body-color);
+$accordion-bg:                            var(--#{$prefix}body-bg);
+$accordion-border-width:                  0;
+$accordion-border-color:                  var(--#{$prefix}border-color);
+$accordion-border-radius:                 0;
+$accordion-inner-border-radius:           0;
+
+$accordion-body-padding-y:                8px;
+$accordion-body-padding-x:                0;
+
+$accordion-button-padding-y:              2px;
+$accordion-button-padding-x:              0;
+$accordion-button-color:                  var(--#{$prefix}body-color);
+$accordion-button-bg:                     transparent;
+$accordion-transition:                    $btn-transition, border-radius .15s ease;
+$accordion-button-active-bg:              transparent;
+$accordion-button-active-color:           var(--#{$prefix}body-color);
+
+// fusv-disable
+$accordion-button-focus-border-color:     transparent; // Deprecated in v5.3.3
+// fusv-enable
+$accordion-button-focus-box-shadow:       none;
+
+$accordion-icon-width:                    18px;
+$accordion-icon-color:                    $body-color;
+$accordion-icon-active-color:             $primary-text-emphasis;
+$accordion-icon-transition:               transform .2s ease-in-out;
+$accordion-icon-transform:                rotate(-180deg);
+
+
+
+$accordion-button-icon:         var(--rsk-accordion-btn-icon);
+$accordion-button-active-icon: $accordion-button-icon

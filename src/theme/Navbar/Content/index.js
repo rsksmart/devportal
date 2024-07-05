@@ -47,12 +47,15 @@ ${JSON.stringify(item, null, 2)}`,
 }
 function NavbarContentLayout({left, right}) {
   return (
-    <div className="navbar__inner">
-      <div className="navbar__items">{left}</div>
-      <div className="navbar__items navbar__items--right">{right}</div>
+    <div className={`container`}>
+      <div className="navbar__inner ">
+        <div className="navbar__items d-flex justify-content-between">{left}</div>
+        <div className="navbar__items navbar__items--right">{right}</div>
+      </div>
     </div>
   );
 }
+
 export default function NavbarContent() {
   const mobileSidebar = useNavbarMobileSidebar();
   const items = useNavbarItems();
@@ -63,14 +66,14 @@ export default function NavbarContent() {
       left={
         // TODO stop hardcoding items?
         <>
-          {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
           <NavbarLogo />
+          {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
         </>
       }
       right={
         // TODO stop hardcoding items?
         // Ask the user to add the respective navbar items => more flexible
-        <div className={`d-flex gap-20 align-items-center`}>
+        <div className={`d-none d-md-flex gap-20 align-items-center`}>
           {!searchBarItem && (
             <NavbarSearch>
               <SearchBar />
@@ -78,7 +81,7 @@ export default function NavbarContent() {
           )}
           <AIButton />
           <RightNavbarItems items={rightItems} />
-          <NavbarColorModeToggle className={styles.colorModeToggle} />
+          <NavbarColorModeToggle />
         </div>
       }
     />

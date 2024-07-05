@@ -8,19 +8,17 @@
   --docusaurus-collapse-button-bg-hover: rgb(255 255 255 / 10%);
 }
 
-@media (min-width: 997px) {
+@media (min-width: 768px) {
   .collapseSidebarButton {
     display: flex !important;
     //bottom: 0;
     background: none;
     border-radius: 0;
     border: none;
-    padding: 20px;
+    padding: 0 12px 12px 12px;
     position: absolute;
     top: 0;
-    right: 0;
-    margin-top: -16px;
-    margin-right: -6px;
+    right: 12px;
     &:hover, &:focus {
       color: var(--rsk-color-main);
     }

@@ -1,0 +1,18 @@
+.Qoute{
+  font: 400 1.125rem/1.2 var(--bs-body-font-family);
+  letter-spacing: 0.2px;
+
+  @media (min-width: 768px) {
+    font-size: 1.25rem;
+  }
+  footer{
+    font-size: 0.875rem;
+    letter-spacing: 0.2px;
+  }
+  & > :last-child{
+    margin-bottom: 0;
+  }
+  & > :first-child{
+    margin-top: 0;
+  }
+}

@@ -4,6 +4,8 @@ import Translate from '@docusaurus/Translate';
 import clsx from "clsx";
 
 import {useDoc} from "@docusaurus/theme-common/internal";
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+
 import EditThisPage from '@theme/EditThisPage';
 
 import IconPaste from "@theme/Icon/Paste";
@@ -13,6 +15,8 @@ import IconChangelog from "@theme/Icon/Changelog";
 import Link from '@docusaurus/Link';
 
 export default function MoreActions({editUrl}) {
+  const {siteConfig} = useDocusaurusContext();
+  const links = siteConfig?.customFields?.moreLinks || {};
 
   //TODO fix for usign outside DocProvider
   if(!editUrl) {
@@ -23,7 +27,7 @@ export default function MoreActions({editUrl}) {
   return <div className={clsx(``)}>
     <h4 className={`title-s mb-12 text-uppercase`}>
       <Translate
-        id="theme.MoreActions.title">
+        id="theme.moreLinks.title">
         More
       </Translate>
     </h4>
@@ -33,36 +37,42 @@ export default function MoreActions({editUrl}) {
           <EditThisPage editUrl={editUrl}/>
         </li>
       )}
-      <li className={`py-3`}>
-        <Link to={`#`} className={`link-base d-inline-flex gap-8 align-items-center`}>
-          <IconPaste/>
-          <Translate
-            id="theme.common.reportAnIssue"
-          >
-            Report an Issue
-          </Translate>
-        </Link>
-      </li>
-      <li className={`py-3`}>
-        <Link to={`#`} className={`link-base d-inline-flex gap-8 align-items-center`}>
-          <IconCommunity/>
-          <Translate
-            id="theme.common.joinCommunity"
-          >
-            Join the Community
-          </Translate>
-        </Link>
-      </li>
-      <li className={`py-3`}>
-        <Link to={`#`} className={`link-base d-inline-flex gap-8 align-items-center`}>
-          <IconChangelog/>
-          <Translate
-            id="theme.common.changelog"
-          >
-            Changelog
-          </Translate>
-        </Link>
-      </li>
+      {links.reportIssue && (
+        <li className={`py-3`}>
+          <Link to={links.reportIssue.url} className={`link-base d-inline-flex gap-8 align-items-center`}>
+            <IconPaste/>
+            <Translate
+              id="theme.moreLinks.reportIssue"
+            >
+              {links.reportIssue.title}
+            </Translate>
+          </Link>
+        </li>
+      )}
+      {links.joinCommunity && (
+        <li className={`py-3`}>
+          <Link to={links.joinCommunity.url} className={`link-base d-inline-flex gap-8 align-items-center`}>
+            <IconCommunity/>
+            <Translate
+              id="theme.moreLinks.joinCommunity"
+            >
+              {links.joinCommunity.title}
+            </Translate>
+          </Link>
+        </li>
+      )}
+      {links.changelog && (
+        <li className={`py-3`}>
+          <Link to={links.changelog.url} className={`link-base d-inline-flex gap-8 align-items-center`}>
+            <IconChangelog/>
+            <Translate
+              id="theme.moreLinks.changelog"
+            >
+              {links.changelog.title}
+            </Translate>
+          </Link>
+        </li>
+      )}
     </ul>
   </div>
 }

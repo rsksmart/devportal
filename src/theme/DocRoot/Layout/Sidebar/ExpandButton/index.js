@@ -22,8 +22,8 @@ export default function DocRootLayoutSidebarExpandButton({toggleSidebar}) {
       role="button"
       onKeyDown={toggleSidebar}
       onClick={toggleSidebar}>
-      <svg className={styles.expandButtonIcon} width="11" height="12" viewBox="0 0 11 12" fill="none">
-        <path d="M10 11 5 6l5-5M1 1v10" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      <svg className={styles.expandButtonIcon} width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7 17.7a1 1 0 0 0 0-1.4L13.42 12l4.3-4.3a1 1 0 0 0-1.42-1.4L10.6 12l5.7 5.7a1 1 0 0 0 1.42 0ZM8 6a1 1 0 0 1 1 1v10a1 1 0 1 1-2 0V7a1 1 0 0 1 1-1Z" fill="currentColor"/>
       </svg>
     </div>
   );

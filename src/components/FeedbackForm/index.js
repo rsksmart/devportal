@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from "react";
 import Translate from '@docusaurus/Translate';
 import Modal from 'react-bootstrap/Modal';
-import styles from './styles.module.scss';
 import {useFormspark} from "@formspark/use-formspark";
 
 function MyVerticallyCenteredModal(props) {
+  const [url, setUrl] = useState('#');
+
   const [submit, submitting] = useFormspark({
     formId: `vg6LeINWT`,
   });
@@ -22,6 +23,10 @@ function MyVerticallyCenteredModal(props) {
 
   useEffect(() => {
     setRating(props.rating);
+
+    if (window) {
+      setUrl(window.location.origin + window.location.pathname);
+    }
   }, [props.rating, props.show]);
 
   const onSubmit = async (e) => {
@@ -30,7 +35,7 @@ function MyVerticallyCenteredModal(props) {
     e.preventDefault();
     setSending(true);
     await submit(
-      {message, email, name, rating}
+      {message, email, name, rating, url}
     );
     setSubmitted(true);
     setSending(false);
@@ -56,7 +61,7 @@ function MyVerticallyCenteredModal(props) {
         </svg>
       </button>
       <Modal.Body>
-        <Modal.Title as={'h4'} id="contained-modal-title-vcenter" className={'mb-16 subtitle-2'}>
+        <Modal.Title as={'h4'} id="contained-modal-title-vcenter" className={'mb-16 subtitle-2 pe-32'}>
           Thank you for your feedback!
         </Modal.Title>
         <p>We would love to hear your thoughts and feedback so that we can improve these Docs for you and others!</p>

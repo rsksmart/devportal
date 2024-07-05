@@ -1,21 +1,25 @@
 import React from 'react';
-import clsx from 'clsx';
-import {useNavbarSecondaryMenu} from '@docusaurus/theme-common/internal';
+
 export default function NavbarMobileSidebarLayout({
   header,
+  footer,
+  search,
   primaryMenu,
   secondaryMenu,
 }) {
-  const {shown: secondaryMenuShown} = useNavbarSecondaryMenu();
+
   return (
     <div className="navbar-sidebar">
-      {header}
-      <div
-        className={clsx('navbar-sidebar__items', {
-          'navbar-sidebar__items--show-secondary': secondaryMenuShown,
-        })}>
-        <div className="navbar-sidebar__item menu">{primaryMenu}</div>
-        <div className="navbar-sidebar__item menu">{secondaryMenu}</div>
+      <div className="container d-flex flex-column align-items-stretch h-100 pb-24">
+        {header}
+        {search}
+        {primaryMenu}
+        <div className="flex-grow-1 overflow-y-auto overflow-x-hidden">
+          {secondaryMenu}
+        </div>
+        <div className="pt-32">
+          {footer}
+        </div>
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ const data = {
       color: 'orange',
       description: (
         <>
-          See the ways you can get started.
+          Bridge in/out of Rootstock.
         </>
       ),
       list: [
@@ -21,6 +21,10 @@ const data = {
           title: '2 Way Peg',
           href: '#',
         },
+        {
+          title: 'RIF on Chain',
+          href: 'https://rifonchain.com/',
+        },
       ],
 
     },
@@ -29,12 +33,20 @@ const data = {
       color: 'green',
       description: (
         <>
-          Start building and integrating DApps
+          View wallets compatible with the Rootstock platform.
         </>
       ),
       list: [
         {
-          title: 'RIF Wallet',
+          title: 'Metamask',
+          href: '#',
+        },
+        {
+          title: 'MyCrypto',
+          href: '#',
+        },
+        {
+          title: 'Bitget',
           href: '#',
         },
       ],
@@ -42,13 +54,14 @@ const data = {
     {
       title: (
         <>
-          Name <br/> Services
+          RIF Suite
         </>
       ),
       color: 'pink',
       description: (
         <>
-          See the ways you can get started.
+          Explore Open-source tools and technologies for faster, 
+          and more rewarding ways to build on Bitcoin.
         </>
       ),
       list: [
@@ -57,23 +70,23 @@ const data = {
           href: '#',
         },
         {
-          title: 'rLogin',
+          title: 'Relay',
           href: '#',
         },
       ],
     },
     {
-      title: 'Exchanges',
+      title: 'No-Code',
       color: 'yellow',
       description: (
         <>
-          Start building and integrating DApps
+          No-code platforms and tools to deploy on Rootstock.
         </>
       ),
       list: [
         {
-          title: 'Fast BTC',
-          href: '#',
+          title: 'Tools',
+          href: '/developer-tools/',
         }
       ],
     },

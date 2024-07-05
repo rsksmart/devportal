@@ -1,0 +1,38 @@
+.admonition {
+  margin: 16px 0;
+}
+
+.admonitionHeading {
+  font: 700 1.125rem /1.2 var(--bs-heading-font-family);
+  letter-spacing: -0.024em;
+}
+
+/* Heading alone without content (does not handle fragment content) */
+.admonitionHeading:not(:last-child) {
+  margin-bottom: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.admonitionHeading code {
+  text-transform: none;
+}
+
+.admonitionIcon {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.admonitionIcon svg {
+  flex-shrink: 0;
+  display: inline-flex;
+  height: 1.1em;
+  width: 1.1em;
+  fill: var(--ifm-alert-foreground-color);
+}
+
+.admonitionContent > :last-child {
+  margin-bottom: 0;
+}

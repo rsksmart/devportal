@@ -1,13 +1,11 @@
 .tocCollapsible {
-  background-color: var(--ifm-menu-color-background-active);
-  border-radius: var(--ifm-global-radius);
-  margin: 1rem 0;
+  margin: 0 0 24px;
+  border-bottom: 1px solid var(--rsk-navbar-border-color);
 }
 
 .tocCollapsibleContent {
-  border-top: 1px solid var(--ifm-color-emphasis-300);
   & > ul {
-    margin-top: 20px;
+    margin-bottom: 16px;
   }
 }
 
