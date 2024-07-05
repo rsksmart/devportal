@@ -2,13 +2,15 @@
   position: relative;
   z-index: calc(var(--ifm-z-index-fixed) + 1);
 }
-#ms-floating-button-s{
+#ms-floating-button-s, #ms-floating-button{
+  position: relative;
+  inset: initial;
   margin-left: -4px;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 4px;
-  font: 400 0.75rem/1.35 var(--bs-body-font-family);
+  font: 400 0.75rem/1.2 var(--bs-body-font-family);
   border: 1px solid var(--bs-body-color);
   border-radius: 40px;
   white-space: nowrap;
@@ -16,16 +18,27 @@
   padding: 11px 12px;
   cursor: pointer;
   letter-spacing: -0.01em;
+  .ms-w-16{
+    width: auto;
+    height: auto;
+  }
   &:hover{
     color: var(--bs-body-bg) !important;
     background-color: var(--bs-body-color) !important;
   }
   @media (max-width: 767px){
-    display: none;
+
   }
   & > :first-child{
+    &:after{
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
     transform: none;
     margin: 0;
+    padding: 0;
+    background: none !important;
   }
   *{
     transition: none;

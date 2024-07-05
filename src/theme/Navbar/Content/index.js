@@ -13,8 +13,8 @@ import NavbarSearch from '@theme/Navbar/Search';
 import isInternalUrl from '@docusaurus/isInternalUrl';
 import Link from '@docusaurus/Link';
 
-import styles from './styles.module.css';
-import AIButton from "../AIButton";
+import AIButton from "@theme/Navbar/AIButton";
+
 function useNavbarItems() {
   // TODO temporary casting until ThemeConfig type is improved
   return useThemeConfig().navbar.items;
@@ -73,13 +73,17 @@ export default function NavbarContent() {
       right={
         // TODO stop hardcoding items?
         // Ask the user to add the respective navbar items => more flexible
-        <div className={`d-none d-md-flex gap-20 align-items-center`}>
-          {!searchBarItem && (
-            <NavbarSearch>
-              <SearchBar />
-            </NavbarSearch>
-          )}
-          <AIButton />
+        <div className={`d-none d-md-flex gap-16 gap-lg-24 align-items-center`}>
+          <div className="d-flex align-items-center gap-16 me-8 me-lg-16">
+            {!searchBarItem && (
+              <NavbarSearch>
+                <SearchBar />
+              </NavbarSearch>
+            )}
+            <div>
+              <AIButton />
+            </div>
+          </div>
           <RightNavbarItems items={rightItems} />
           <NavbarColorModeToggle />
         </div>

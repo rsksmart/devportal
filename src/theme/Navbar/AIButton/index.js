@@ -25,6 +25,8 @@ export default function AIButton() {
   return (
     <MendableFloatingButton
       showPopup={false}
+      popupText={``}
+      dismissPopupAfter={0}
       cmdShortcutKey={'i'}
       icon={icon}
       botIcon={icon}
