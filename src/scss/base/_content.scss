@@ -54,7 +54,7 @@ ul{
     li + li{
       margin-top: 4px;
     }
-    li > :last-child{
+    li > :last-child:not(img){
       margin-bottom: 0;
     }
     ul, ol{
@@ -130,10 +130,13 @@ ul{
   img{
     border: 1px solid var(--rsk-image-border-color);
     border-radius: 10px;
-    max-height: 400px; //TODO test if works for all images
+    max-height: 500px; //TODO test if works for all images
     object-fit: contain;
     margin-top: 12px;
     margin-bottom: 12px;
+    @include media-breakpoint-up(md) {
+      max-height: 560px;
+    }
   }
   p > img{
     margin: 0;
@@ -142,7 +145,7 @@ ul{
     margin-top: 0;
   }
 
-  & > :last-child {
+  & > :last-child{
     margin-bottom: 0;
   }
 }
