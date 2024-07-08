@@ -19,7 +19,7 @@ export default function MoreActions({editUrl}) {
   const links = siteConfig?.customFields?.moreLinks || {};
 
   //TODO fix for usign outside DocProvider
-  if(!editUrl) {
+  if(editUrl === undefined) {
     const {metadata} = useDoc();
     editUrl = metadata.editUrl;
   }

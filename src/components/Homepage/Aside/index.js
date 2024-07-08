@@ -9,13 +9,12 @@ import MoreActions from "@theme/DocItem/MoreActions";
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Translate from '@docusaurus/Translate';
 
-export default function Aside() {
+export default function Aside({editUrl}) {
   const {siteConfig} = useDocusaurusContext();
-  const {editUrl} = siteConfig?.customFields?.homePage || {};
 
   return <div className={clsx(styles.docItemAside, `h-100 pt-40 pt-lg-0 ps-lg-24`)}>
     <div className={clsx(styles.docItemAsideInner, `d-flex flex-column gap-24 gap-lg-48 justify-content-between`)}>
-      <MoreActions editUrl={`${editUrl}/src/pages/index.js`}/>
+      <MoreActions editUrl={editUrl}/>
       <div className="d-flex d-lg-block flex-column flex-md-row align-items-md-end gap-24">
         <FeedbackForm/>
 
