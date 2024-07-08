@@ -15,6 +15,7 @@ import IconChangelog from "@theme/Icon/Changelog";
 import Link from '@docusaurus/Link';
 
 export default function MoreActions({editUrl}) {
+
   const {siteConfig} = useDocusaurusContext();
   const links = siteConfig?.customFields?.moreLinks || {};
 

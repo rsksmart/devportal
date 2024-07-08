@@ -10,10 +10,8 @@ import HomepageSectionCommunity from "/src/components/Homepage/HomepageSectionCo
 import HomepageAside from "/src/components/Homepage/Aside";
 import React from "react";
 
-
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
-  const homePageEditUrl = siteConfig?.customFields?.homePage ? `${siteConfig?.customFields?.homePage}/src/pages/index.js` : {};
 
   return (
     <Layout
@@ -29,7 +27,7 @@ export default function Home() {
             <HomepageSectionCommunity />
           </div>
           <div className="col-12 col-lg-3 col-xl-2">
-            <HomepageAside editUrl={homePageEditUrl} />
+            <HomepageAside />
           </div>
         </div>
       </main>

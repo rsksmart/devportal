@@ -10,12 +10,9 @@ import DocVersionBanner from '@theme/DocVersionBanner';
 import DocVersionBadge from '@theme/DocVersionBadge';
 import DocBreadcrumbs from '@theme/DocBreadcrumbs';
 import Heading from '@theme/Heading';
-import Aside from "/src/components/Homepage/Aside";
-
-import TitleColor from "/src/components/TitleColor";
-
-import styles from './styles.module.css';
+import HomepageAside from "/src/components/Homepage/Aside";
 import clsx from "clsx";
+
 function DocCategoryGeneratedIndexPageMetadata({categoryGeneratedIndex}) {
   return (
     <PageMetadata
@@ -56,7 +53,7 @@ function DocCategoryGeneratedIndexPageContent({categoryGeneratedIndex}) {
         </div>
       </div>
       <div className="col-3 d-none d-lg-block">
-        <Aside editUrl={null}/>
+        <HomepageAside editUrl={null}/>
       </div>
     </div>
   );
