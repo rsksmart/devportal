@@ -1,11 +1,12 @@
 .fp-title-color{
   font: 700 #{$f40}/1 var(--bs-heading-font-family);
   letter-spacing: -0.04em;
+  color: var(--rsk-title-block-color);
   @include media-breakpoint-up(lg) {
     font-size: $f56;
   }
   & > span{
-    color: var(--rsk-title-block-color);
+    color: inherit;
     padding: 0px 10px;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
@@ -16,6 +17,9 @@
 
 .fp-title-color-md{
 
+}
+.fp-title-color-xs{
+  font-size: $f24 !important;
 }
 .fp-title-color-sm{
   font-size: $f32 !important;

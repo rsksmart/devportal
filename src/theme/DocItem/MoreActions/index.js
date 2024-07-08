@@ -15,11 +15,12 @@ import IconChangelog from "@theme/Icon/Changelog";
 import Link from '@docusaurus/Link';
 
 export default function MoreActions({editUrl}) {
+
   const {siteConfig} = useDocusaurusContext();
   const links = siteConfig?.customFields?.moreLinks || {};
 
   //TODO fix for usign outside DocProvider
-  if(!editUrl) {
+  if(editUrl === undefined) {
     const {metadata} = useDoc();
     editUrl = metadata.editUrl;
   }
