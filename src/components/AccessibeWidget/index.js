@@ -16,10 +16,10 @@ export default function AccessibeWidget () {
           disableBgProcess : false,
           language         : 'en',
           position         : 'left',
-          leadColor        : '#000000',
-          triggerColor     : '#000000',
+          leadColor        : '#1A1A1A',
+          triggerColor     : '#1A1A1A',
           triggerRadius    : '50%',
-          triggerPositionX : 'right',
+          triggerPositionX : 'left',
           triggerPositionY : 'bottom',
           triggerIcon      : 'people',
           triggerSize      : 'medium',
@@ -29,8 +29,8 @@ export default function AccessibeWidget () {
             triggerSize      : 'small',
             triggerPositionX : 'right',
             triggerPositionY : 'bottom',
-            triggerOffsetX   : 10,
-            triggerOffsetY   : 10,
+            triggerOffsetX   : 16,
+            triggerOffsetY   : 16,
             triggerRadius    : '50%'
           }
         });
