@@ -1,4 +1,4 @@
-html:root{
+html:root {
   --doc-sidebar-width: 260px;
   --doc-sidebar-hidden-width: 48px;
   @include media-breakpoint-up(xl) {
@@ -6,6 +6,7 @@ html:root{
   }
 
 }
+
 html:root {
   --ifm-container-width: 1440px;
   --ifm-container-width-xl: 1440px;
@@ -258,7 +259,13 @@ html:root {
   //Accordion
   --rsk-accordion-hover-color: var(--rsk-color-main);
   --rsk-accordion-toggle-color: var(--bs-body-color);
-  --rsk-accordion-btn-icon: #{url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.06 5.53 8 8.58 4.94 5.53 4 6.47l4 4 4-4-.94-.94Z' fill='%23000'/%3E%3C/svg%3E")}
+  --rsk-accordion-btn-icon: #{url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.06 5.53 8 8.58 4.94 5.53 4 6.47l4 4 4-4-.94-.94Z' fill='%23000'/%3E%3C/svg%3E")};
+
+  //Card
+  --ifm-card-background-color: var(--bs-body-bg);
+  --ifm-card-border-color: var(--bs-body-color);
+  --ifm-card-color: var(--bs-body-color);
+  --ifm-card-border-radius: 20px;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */

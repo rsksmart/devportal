@@ -1,0 +1,9 @@
+div.theme-code-block {
+  &:hover {
+    [class*="buttonGroup" ] {
+      button {
+        opacity: 0.7;
+      }
+    }
+  }
+}
