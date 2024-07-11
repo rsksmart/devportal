@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: Tools To Build On Rootstock
-sidebar_label: Tools Overview
+sidebar_label: All Tools
 tags: [rsk, rootstock, smart contracts, developer tools, hardhat, solidity]
 description: "Explore a curated selection of smart contract development tools and languages. From the familiar Solidity to Rust or Developer Environments like Hardhat, you'll find everything you need to interact and deploy your smart contracts on Rootstock."
 ---
@@ -36,8 +36,8 @@ Explore a curated selection of smart contract development tools and languages. F
 | Pre-compiled ABIs                              | Libraries                       | [Precompiled ABIs](/node-operators/node-setup/reproducible-build)                           |
 | rLogin                                         | RIF Libraries                   | [rLogin](/developer-tools/)                                          |
 | Relay                                          | RIF Libraries                   | [RIF Relay](/developer-tools/)                                                     |
-| Hardhat                                        | Dev Environments                | [Hardhat](/developers/smart-contracts/getting-started-with-hardhat/) |
-| Foundry                                        | Dev Environments                | [Foundry](/developer-tools/) |
+| Hardhat                                        | Dev Environments                | [Hardhat](/developers/smart-contracts/hardhat/) |
+| Foundry                                        | Dev Environments                | [Foundry](/developer-tools/foundry/) |
 | Remix                                          | Dev Environments                | [Remix](/developer-tools/)                        |
 | RIF Relay SDK                                  | SDKs                            | [SDK](/developer-tools/) |
 | Rootstock Faucet                               | Faucet                          | [Faucet](/developer-tools/)                                                  |
