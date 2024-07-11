@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import FooterCTA from "../CTA";
 import FooterSocials from "../Socials";
 import FooterTagLine from "../TagLine";
+import AccessibeWidget from "/src/components/AccessibeWidget";
 export default function FooterLayout({style, links, logo, copyright}) {
 
   return (
@@ -29,6 +30,7 @@ export default function FooterLayout({style, links, logo, copyright}) {
           )}
         </div>
       </footer>
+      <AccessibeWidget />
     </>
 
   );
