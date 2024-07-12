@@ -4,6 +4,8 @@ title: Components
 
 # Components
 
+
+
 ## Heading 2
 
 Miners earn a high percentage of transaction fees from the Rootstock block they mine. This mining process is done with the same hashing power used in Bitcoin mining, and has no additional cost or impact.
@@ -296,4 +298,97 @@ title="Card title first line" description="Mauris maecenas et amet arcu urna int
   title="Card title first line"
   description="..."
 />
+```
+## Cards with filter
+
+<Filter
+values={[
+{label: 'Apps', value: 'apps'},
+{label: 'Exchanges', value: 'exchanges'},
+{label: 'Wallets', value: 'wallets'}
+]}>
+<FilterItem
+image="/img/deffiant-icon.svg"
+value="apps"
+title="Defiant"
+subtitle="app"
+color="green"
+description="Get an API key & make your first API call in minutes"
+/>
+<FilterItem
+image="/img/deffiant-icon.svg"
+value="apps"
+title="Defiant"
+subtitle="app"
+color="green"
+description="Get an API key & make your first API call in minutes"
+/>
+<FilterItem
+image="/img/deffiant-icon.svg"
+value="exchanges"
+title="Defiant"
+subtitle="exchanges"
+description="Get an API key & make your first API call in minutes"
+/>
+<FilterItem
+image="/img/deffiant-icon.svg"
+value="wallets"
+title="Defiant"
+subtitle="wallet"
+color="pink"
+linkHref="/developers/"
+linkTitle="Learn more"
+description="Get an API key & make your first API call in minutes"
+/>
+<FilterItem
+image="/img/deffiant-icon.svg"
+value="wallets"
+title="Defiant"
+subtitle="wallet"
+color="pink"
+linkHref="/developers/"
+linkTitle="Learn more"
+description="Get an API key & make your first API call in minutes"
+/>
+<FilterItem
+image="/img/deffiant-icon.svg"
+value="wallets, apps"
+title="Defiant"
+subtitle="wallet"
+color="cyan"
+linkHref="/developers/"
+linkTitle="Learn more"
+description="Get an API key & make your first API call in minutes. Get an API key & make your first API call in minutes"
+/>
+</Filter>
+
+#### Code
+
+```jsx
+<Filter
+  values={[
+    {label: 'Apps', value: 'apps'},
+    {label: 'Exchanges', value: 'exchanges'},
+    {label: 'Wallets', value: 'wallets'}
+  ]}>
+  <FilterItem
+    image="/img/deffiant-icon.svg"
+    value="apps"
+    title="Defiant"
+    subtitle="app"
+    color="green"
+    description="Get ... in minutes"
+  />
+  ...
+  <FilterItem
+    image="/img/deffiant-icon.svg"
+    value="wallets, apps"
+    title="Defiant"
+    subtitle="wallet"
+    color="cyan"
+    linkHref="/developers/"
+    linkTitle="Learn more"
+    description="Get ... in minutes"
+  />
+</Filter>
 ```

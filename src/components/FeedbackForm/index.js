@@ -116,7 +116,7 @@ function MyVerticallyCenteredModal(props) {
             </button>
 
             <button
-              className="btn-outline btn position-relative py-10"
+              className="btn position-relative py-10"
               type="submit" disabled={submitting}
             >
               <span>
