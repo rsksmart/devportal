@@ -314,31 +314,50 @@ npx http-server
 Navigate to the URL: [http://127.0.0.1:8080](http://127.0.0.1:8080) to test the code in the browser and you should get a result similar to the image below:
 ![Smart Contract Frontend](/img/guides/quickstart/hardhat/frontend.png)
 
-> - Tips: Ensure local hardhat network is running. Run `npx hardhat node` in the root directory to start the local network. See section  on [Troubleshooting and Common Errors](/guides/quickstart/hardhat/debugging-and-troubleshooting/) to fix common errors.
-> - Note: You can view and run the complete project from the [`feat/complete` branch](https://github.com/rsksmart/rootstock-quick-start-guide/tree/feat/complete). To do so, git checkout into the `feat/complete` branch, run `cd frontend`, run `npm install`, then run `npx http-server` to view and interact with the smart contract from the frontend.
 
-----
+:::tip[Tip]
+- Ensure the local hardhat network is running. Run `npx hardhat node` in the root directory to start the local network. See section  on [Troubleshooting and Common Errors](/guides/quickstart/hardhat/debugging-and-troubleshooting/) to fix common errors.
+- You can view and run the complete project from the [`feat/complete` branch](https://github.com/rsksmart/rootstock-quick-start-guide/tree/feat/complete). To do so, git checkout into the `feat/complete` branch, run `cd frontend`, run `npm install`, then run `npx http-server` to view and interact with the smart contract from the frontend.
+:::
 
 ## Resources
 
 These tools are specifically tailored for Web3 development, and they can simplify the integration of blockchain functionaity into web interfaces. Here are a few recommended tools and libraries that are popular in the Web3 space, along with brief descriptions:
 
-[](#top "collapsible")
-- RainbowKit
-  - [RainbowKit](https://www.rainbowkit.com/) is a React library offering a comprehensive wallet connection solution. It provides a beautiful, easy-to-use wallet connection interface that supports multiple wallets and networks.
-  - **Why Use It:** 
-    It is great for projects where you want a seamless and user-friendly wallet connection experience. It's easy to integrate and manage, especially in React-based applications.
-- Web3Modal
-  - [Web3Modal](https://web3modal.com/) is a JavaScript library that provides a simple, unified wallet connection modal for Web3 applications. It supports various wallet providers and can be used with different Web3 libraries.
-  - **Why Use It:** 
-    If you need to start using React or want a framework-agnostic wallet connection solution, Web3Modal is an excellent choice. It’s customizable and works well with both web3.js and ethers.js.
-- Wagmi
-  - [Wagmi](https://wagmi.sh/) is a React Hooks for Ethereum set that simplifies interactions with ethers.js. It provides hooks for wallet connection, contract interaction, balances, and more.
-  - **Why Use It:** 
-    For React developers who prefer a hooks-based approach, Wagmi offers an elegant way to integrate Ethereum functionality. It makes managing state and blockchain interactions more intuitive.
-- Moralis
-  - [Moralis](https://moralis.io/) is a fully managed backend platform for Web3 and blockchain applications. It offers a suite of tools for authentication, real-time databases, cloud functions, and syncing blockchain data.
-  - **Why Use It:** 
-    It can be a time-saver to build a more comprehensive application with backend support. It handles much of the backend complexity and lets you focus on front-end development.
-- Foundry
-  - [Foundry](https://book.getfoundry.sh) is a smart contract development toolchain, and user-friendly development environment used for writing and advanced smart contracts testing in Solidity.
+<Accordion>
+  <Accordion.Item eventKey="0">
+    <Accordion.Header as="h3">1. RainbowKit</Accordion.Header>
+    <Accordion.Body>
+      - [RainbowKit](https://www.rainbowkit.com/) is a React library offering a comprehensive wallet connection solution. It provides a beautiful, easy-to-use wallet connection interface that supports multiple wallets and networks.
+      - **Why Use It:** 
+        It is great for projects where you want a seamless and user-friendly wallet connection experience. It's easy to integrate and manage, especially in React-based applications.
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="1">
+    <Accordion.Header as="h3">2. Web3Modal</Accordion.Header>
+    <Accordion.Body>
+      - [Web3Modal](https://web3modal.com/) is a JavaScript library that provides a simple, unified wallet connection modal for Web3 applications. It supports various wallet providers and can be used with different Web3 libraries.
+      - **Why Use It:** If you need to start using React or want a framework-agnostic wallet connection solution, Web3Modal is an excellent choice. It’s customizable and works well with both web3.js and ethers.js.
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="2">
+    <Accordion.Header as="h3">3. Wagmi</Accordion.Header>
+    <Accordion.Body>
+      - [Wagmi](https://wagmi.sh/) is a React Hooks for Ethereum set that simplifies interactions with ethers.js. It provides hooks for wallet connection, contract interaction, balances, and more.
+      - **Why Use It:** For React developers who prefer a hooks-based approach, Wagmi offers an elegant way to integrate Ethereum functionality. It makes managing state and blockchain interactions more intuitive.
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="3">
+    <Accordion.Header as="h3">4. Moralis</Accordion.Header>
+    <Accordion.Body>
+      - [Moralis](https://moralis.io/) is a fully managed backend platform for Web3 and blockchain applications. It offers a suite of tools for authentication, real-time databases, cloud functions, and syncing blockchain data.
+      - **Why Use It:** It can be a time-saver to build a more comprehensive application with backend support. It handles much of the backend complexity and lets you focus on front-end development.
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="4">
+    <Accordion.Header as="h3">5. Foundry</Accordion.Header>
+    <Accordion.Body>
+        - [Foundry](https://book.getfoundry.sh) is a smart contract development toolchain, and user-friendly development environment used for writing and advanced smart contracts testing in Solidity.
+    </Accordion.Body>
+  </Accordion.Item>
+</Accordion>

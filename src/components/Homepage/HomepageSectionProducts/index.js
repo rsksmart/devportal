@@ -66,7 +66,7 @@ const data = {
       ),
       list: [
         {
-          title: 'RNS',
+          title: 'Name Service',
           href: '#',
         },
         {
@@ -76,17 +76,17 @@ const data = {
       ],
     },
     {
-      title: 'No-Code',
+      title: 'RPC API',
       color: 'yellow',
       description: (
         <>
-          No-code platforms and tools to deploy on Rootstock.
+          Deploy and interact with EVM compatible smart contracts on Rootstock using JSON RPC methods.
         </>
       ),
       list: [
         {
-          title: 'Tools',
-          href: '/developer-tools/',
+          title: 'Use the RPC API',
+          href: '/developers/rpc-api/setup/',
         }
       ],
     },

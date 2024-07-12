@@ -38,7 +38,7 @@ but does earn a reward from the merged mining.
 ### Powpeg with Bitcoin
 
 The second point of contact is the
-[Powpeg](/concepts/architecture/powpeg/),
+[Powpeg](/concepts/powpeg/),
 also known as the bridge.
 
 This component connects both networks to allow

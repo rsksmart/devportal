@@ -12,9 +12,9 @@ This guide helps to quickly get started with setting up your environment to use 
 
 ### Step 1: Run the Rootstock node
 
-You need to set up and run a Rootstock node, preferably the latest version from RSKj releases. The node can operate locally or via Docker. In either case, a [`node.conf`](https://github.com/rsksmart/rif-relay/blob/develop/docker/node.conf) file is used.
+You need to set up and run a Rootstock node, preferably the latest version from RSKj releases. The node can operate locally or via Docker. In either case, a [`node.conf`](https://github.com/rsksmart/rif-relay/blob/main/docker/node.conf) file is used.
 
-Refer to the [Rootstock Node Installation Guide](https://dev.rootstock.io/rsk/node/install/) for a detailed guide on this step.
+Refer to the [Rootstock Node Installation Guide](/node-operators/setup/installation/) for a detailed guide on this step.
 
 
 ### Step 2: Add network to Metamask
@@ -26,12 +26,12 @@ To interact with the Rootstock network, you need to add it to Metamask. Since we
 - Chain ID: 33
 - Currency symbol: tRBTC
 
-To learn more about Metatmask and how to add it to Rootstock programmatically, see [Metamask](https://dev.rootstock.io/develop/wallet/use/metamask/) and [How to add Metamask to Rootstock Programmatically](https://dev.rootstock.io/kb/rootstock-metamask/).
+To learn more about Metatmask and how to add it to Rootstock programmatically, see [Metamask](/developer-tools/wallets/metamask/) and [How to add Metamask to Rootstock Programmatically](https://dev.rootstock.io/kb/rootstock-metamask/).
 
 
 ### Step 3: Set up RIF Relay contracts
 
-To set up RIF relay contract, clone the RIF Relay Contracts Repository: https://github.com/rsksmart/rif-relay-contracts, then follow the [RIF Relay Deployment](https://dev.rootstock.io/guides/rif-relay/deployment/) guide to deploy an RIF Relay contract, enable revenue sharing, and whitelist the token by allowing it.
+To set up RIF relay contract, clone the RIF Relay Contracts Repository: https://github.com/rsksmart/rif-relay-contracts, then follow the [RIF Relay Deployment](/developers/integrate/rif-relay/deployment/) guide to deploy an RIF Relay contract, enable revenue sharing, and whitelist the token by allowing it.
 
 [](#top "collapsible")
 1. Check allowed tokens

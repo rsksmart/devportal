@@ -16,8 +16,8 @@ const content = {
       url: '/developers/quickstart/',
     },
     {
-      title: 'Explore Docs',
-      url: '/concepts/',
+      title: 'Get API Key',
+      url: '/developers/rpc-api/setup/',
     }
   ]
 };

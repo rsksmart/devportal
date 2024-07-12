@@ -10,7 +10,6 @@ RBTC is the token used to [pay for the execution](/concepts/rbtc/gas/) of transa
 See [supported wallets](/developer-tools/).
 
 <div className="btn-container">
-  <span></span>
     <a className="green" href="https://rootstock.io/rbtc/#get-rbtc">Get RBTC</a>
 </div>
 
@@ -28,7 +27,7 @@ See [supported wallets](/developer-tools/).
     </tr>
     <tr>
       <td scope="row">Circulating supply</td>
-      <td><a href="https://backend.explorer.rsk.co/circulating/circulatingSupply" target="_blank">API</a></td>
+      <td><a href="https://be.explorer.rootstock.io/circulating" target="_blank">API</a></td>
     </tr>
     <tr>
       <td scope="row">Contract Type</td>
@@ -66,7 +65,7 @@ See [supported wallets](/developer-tools/).
     </tr>
     <tr>
       <td scope="row">Circulating supply</td>
-      <td><a href="https://backend.explorer.testnet.rsk.co/circulating/circulatingSupply" target="_blank">API</a></td>
+      <td><a href="https://be.explorer.testnet.rootstock.io/circulating" target="_blank">API</a></td>
     </tr>
     <tr>
       <td scope="row">Contract Type</td>

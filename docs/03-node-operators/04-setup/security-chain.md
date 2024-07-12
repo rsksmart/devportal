@@ -66,26 +66,25 @@ The authenticity of the script `configure.sh` is checked using the `sha256sum` c
 
 Linux - Windows (bash console)
 
-[](#top "multiple-terminals")
-- Linux
-  ```bash
-  $ sha256sum --check SHA256SUMS.asc
-  Output:
-  configure.sh: OK
-  sha256sum: WARNING: 19 lines are improperly formatted
+<Tabs>
+  <TabItem value="linux" label="Linux" default>
+    ```bash
+      $ sha256sum --check SHA256SUMS.asc
+    ```
+  </TabItem>
+  <TabItem value="mac" label="Mac OSX">
+   ```bash
+    $ shasum --check SHA256SUMS.asc
   ```
-- Mac OSX
-  ```bash
-  $ shasum --check SHA256SUMS.asc
-  Output:
-  configure.sh: OK
-  sha256sum: WARNING: 19 lines are improperly formatted
-  ```
+  </TabItem>
+</Tabs>
 
 ## Run configure script to configure secure environment
 
-[](#top "multiple-terminals")
-- Linux, Mac OSX
-  ```bash
-  $ ./configure.sh
-  ```
+<Tabs>
+  <TabItem value="linux" label="Linux, Mac OSX" default>
+    ```bash
+      $ ./configure.sh
+    ```
+  </TabItem>
+</Tabs>

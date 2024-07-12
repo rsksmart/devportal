@@ -38,7 +38,7 @@ The more hashing power they provide, the more secure the network is.</p>
         Rootstock's goal is to add value and functionality to the
         bitcoin ecosystem by enabling smart-contracts,
         near instant payments, and higher-scalability.</p>
-        <p>The [Smart Bitcoin (RBTC)](/concepts/rbtc/) is the native currency in Rootstock and it is used to pay for the gas required for the execution of transactions. It is pegged 1:1 with Bitcoin, which means in Rootstock there are exactly 21M RBTC. A [Powpeg](/concepts/architecture/powpeg/) allows the [transfer of bitcoins](/concepts/rbtc/conversion/) from the Bitcoin blockchain to the Rootstock blockchain and vice-versa.</p>
+        <p>The [Smart Bitcoin (RBTC)](/concepts/rbtc/) is the native currency in Rootstock and it is used to pay for the gas required for the execution of transactions. It is pegged 1:1 with Bitcoin, which means in Rootstock there are exactly 21M RBTC. A [Powpeg](/concepts/powpeg/) allows the [transfer of bitcoins](/concepts/rbtc/conversion/) from the Bitcoin blockchain to the Rootstock blockchain and vice-versa.</p>
     </div>
 </div>
 </section>

@@ -14,7 +14,11 @@ In this guide, we will learn about Foundry and its benefits for smart contract d
 
 Forge is ideal for advanced smart contract analysis, auditing, and for fast execution of smart contract tests. 
 
-> Note: Use the [hardhat-foundry plugin](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-foundry) to have your Foundry project work alongside Hardhat. 
+:::note[hardhat-foundry plugin]
+
+Use the [hardhat-foundry plugin](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-foundry) to have your Foundry project work alongside Hardhat. 
+
+:::
 
 Here are some reason why you may prefer Foundry:
 
@@ -173,11 +177,14 @@ We will use Forge to run our script and broadcast the transactions - this can ta
 
 ```bash
 forge script script/Counter.s.sol --rpc-url $ROOTSTOCK_RPC_URL --broadcast --legacy
-```
+```   
 
-- Note:
-   - [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) is not supported or not activated on the Rootstock RPC url
-   - The `--legacy` flag is passed to use legacy transactions instead of `EIP-1559`.
+:::info[Info]
+
+- [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) is not supported or not activated on the Rootstock RPC url
+- The `--legacy` flag is passed to use legacy transactions instead of `EIP-1559`.
+
+:::
 
 The result should look like this:
 

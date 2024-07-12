@@ -3,14 +3,14 @@ sidebar_label: Smart Wallets
 sidebar_position: 600
 title: RIF Relay Smart Wallets
 tags: [rif, envelope, relay, user, guide]
-description: RIF Relay deployment process
+description: RIF Relay Smart Wallet
 ---
 
 This guide is intended to explain more about the interaction and deployment of the Smart Wallets. We will be using additional testing contracts that were included in the project, like the `UtilToken(ERC20)`. All the utils scripts are executed from the account[0] from the regtest network. 
 
 ## Prerequisites
 
-* Follow the deployment process in [Deployment Guide](/guides/rif-relay/deployment).
+* Follow the deployment process in [Deployment Guide](/developers/integrate/rif-relay/deployment).
 * The definition of the smart wallet can be found in [Architecture](/rif/relay/architecture/#smart-wallet)
 
 ## Ways to create smart wallets

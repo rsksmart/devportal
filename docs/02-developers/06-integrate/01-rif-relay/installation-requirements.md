@@ -1,8 +1,9 @@
 ---
-sidebar_label: Installation Requirements
+sidebar_label: Setup
 sidebar_position: 100
 title: RIF Relay Installation Requirements
 tags: [rif, envelope, relay, user, guide]
+description: Requirements for installing RIF Relay
 ---
 
 To set up the RIF Relay system running locally there are some tools that are required. All of these tools are open source and have their own support page. The functionality of RIF Relay does not depend on these technologies and could be updated or replaced, if necessary.

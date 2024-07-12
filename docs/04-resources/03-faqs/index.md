@@ -176,18 +176,10 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
   <Accordion.Item eventKey="8">
     <Accordion.Header as="h3">What wallets support Rootstock and RIF tokens?</Accordion.Header>
     <Accordion.Body>
-      - Rootstock is currently supported in several different software and hardware wallets. See [Wallets](/develop/wallet/) pages for more information.
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="9">
-    <Accordion.Header as="h3">What is the RIF token, and what is its purpose?</Accordion.Header>
-    <Accordion.Body>
-      ...
+      - Rootstock is currently supported in several different software and hardware wallets. See [Wallets on Rootstock](/developer-tools/wallets/) pages for more information.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
-  
-
 
 ## Rootstock Features and Functionality
 

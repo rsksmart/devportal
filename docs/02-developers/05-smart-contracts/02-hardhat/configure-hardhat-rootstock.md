@@ -9,9 +9,9 @@ tags: [getting-started, guide, smart contracts, rsk, rootstock, hardhat, blockch
 ## Prerequisites
 
 1. Rootstock-compatible accounts/address. 
-  - You can use existing accounts or create new ones. See [Account Based Addresses](/rsk/architecture/account-based/).
+  - You can use existing accounts or create new ones. See [Account Based Addresses](/concepts//account-based-addresses/).
 2. Wallet
-  - Set up a [Metamask wallet](/develop/wallet/use/metamask/) or [Liquality wallet](https://chromewebstore.google.com/detail/liquality-wallet/kpfopkelmapcoipemfendmdcghnegimn?pli=1) and get a [private key](/guides/quickstart/browser#private-keys-and-public-keys).
+  - Set up a [Metamask wallet](/developer-tools/wallets/metamask/) and get a [private key](/guides/quickstart/browser#private-keys-and-public-keys).
   
 ## Getting Started
 
@@ -32,7 +32,9 @@ To manage environment variables, install `dotenv` using the following command:
   ROOTSTOCK_TESTNET_PRIVATE_KEY="your_testnet_private_key"
 ```
 
-> Note: Depending on your desired network, using a Testnet and Mainnet private key is optional, as you're not required to have separate private keys in your environment variable.
+:::info[Info]
+Depending on your desired network, using a Testnet and Mainnet private key is optional, as you're not required to have separate private keys in your environment variable.
+:::
 
 ### Step 2: Configure Private Keys
 
@@ -49,13 +51,13 @@ To configure your `rskMainnet` and `rskTestnet` private keys, you'll need to upd
     solidity: "0.8.20",
     networks: {
       rskMainnet: {
-        url: "https://public-node.rsk.co",
+        url: "https://rpc.rootstock.io/{YOUR_APIKEY}",
         chainId: 30,
         gasPrice: 60000000,
         accounts: [process.env.ROOTSTOCK_MAINNET_PRIVATE_KEY]
       },
       rskTestnet: {
-        url: "https://public-node.testnet.rsk.co",
+        url: "https://rpc.testnet.rootstock.io/{YOUR_APIKEY}",
         chainId: 31,
         gasPrice: 60000000,
         accounts: [process.env.ROOTSTOCK_TESTNET_PRIVATE_KEY]
@@ -63,6 +65,9 @@ To configure your `rskMainnet` and `rskTestnet` private keys, you'll need to upd
     }
   };
 ```
+
+> See how to [Get an API Key from the RPC API](/developers/rpc-api/setup/)
+
 
 > Replace `"your_mainnet_private_key"` and `"your_testnet_private_key"` with your private keys. For information on how to retrieve your private keys, see [How to export an account's private key](https://support.metamask.io/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key).
 

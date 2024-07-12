@@ -239,8 +239,12 @@ In this example, the current database will be migrated from leveldb to rocksdb.
   INFO [clitool] [main]  DbMigrate started
   INFO [clitool] [main]  DbMigrate finished
 ```
-> Note: If the target database is the same as the one working on the node, the node will throw an error: **Cannot migrate to the same database, current db is X_DB and target db is X_DB**.
 
+:::tip[Tip]
+
+ If the target database is the same as the one working on the node, the node will throw an error: **Cannot migrate to the same database, current db is X_DB and target db is X_DB**.
+
+:::
 
 ## Dev-related commands
 

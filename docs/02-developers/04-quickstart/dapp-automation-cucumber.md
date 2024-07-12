@@ -89,7 +89,7 @@ const dAppURL = 'https://wallet.testnet.rollup.rif.technology/';
 // Custom network under test
 const networkConfiguration = {
  networkName: 'Rootstock',
- rpcUrl: 'https://public-node.testnet.rsk.co',
+ rpcUrl: 'https://rpc.testnet.rootstock.io/{YOUR_APIKEY}',
  chainId: '31',
  symbol: 'RBTC',
  isTestnet: true

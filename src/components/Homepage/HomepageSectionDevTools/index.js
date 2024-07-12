@@ -44,7 +44,7 @@ const data = {
       color: 'cyan',
       link: {
         title: 'Read more',
-        href: '/developers/integration-guides/',
+        href: '#',
       },
       description: (
         <>

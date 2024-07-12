@@ -23,9 +23,15 @@ To get started, follow these steps below:
 
 To initialize a Subgraph project, we need to create a subgraph on [Subgraph Studio](https://thegraph.com/studio/)⁠.
 
-Go to the Subgraph Studio and connect your wallet. Once wallet is connected, begin by clicking “Create a Subgraph”. Note: Remember to choose a clear and descriptive name for the subgraph since it can’t be edited later. 
+Go to the Subgraph Studio and connect your wallet. Once wallet is connected, begin by clicking “Create a Subgraph”. 
 
-> It is recommended to use a Title Case: “Subgraph Name Chain Name.”
+:::info[Info]
+
+Remember to choose a clear and descriptive name for the subgraph since it can’t be edited later. 
+
+It is recommended to use a Title Case: “Subgraph Name Chain Name.”
+
+:::
 
 <center>
     <img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXf8OTdwMxlKQGKzIF_kYR7NPKeh9TmWnZBYxb7ft_YbdOdx_VVtbp6PslN7N1KGUzNpIDCmaXppdrllM1cw_J4L8Na03BXOWzJTK1POCve0nkRjQYgWJ60QHAdtQ4Niy83SMM8m0F0f-N-AJj4PDqDPlA5M?key=fnI6SyFgXU9SZRNX5C5vPQ"  title="Create a Subgraph" width="50%"/>
@@ -109,7 +115,11 @@ Before you can query your subgraph, Indexers need to begin serving queries on it
     <img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXerUr-IgWjwBZvp9Idvz5hTq8AFB0n_VlXCzyDtUxKaCTANT4gkk-2O77oW-a0ZWOh3hnqQsY7zcSaLeCQin9XU1NTX1RVYOLFX9MuVxBEqcMryqgnGQKx-MbDnOWKuMoLBhgyVWQereg3cdWtCPcTQKFU?key=fnI6SyFgXU9SZRNX5C5vPQ"  title="Publish screen" width="50%"/>
 </center>
 
-> **Note:** The Graph's smart contracts are all on Arbitrum One, even though your subgraph is indexing data from Rootstock or any other supported chain. 
+:::info[Info]
+
+The Graph's smart contracts are all on Arbitrum One, even though your subgraph is indexing data from Rootstock or any other supported chain. 
+
+:::
 
 ## 3. Query Subgraph
 

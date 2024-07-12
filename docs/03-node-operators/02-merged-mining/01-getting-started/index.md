@@ -13,7 +13,7 @@ Add the Rootstock merged mining information in Bitcoin block as a commitment, th
 
 ### 1. Get the work from Rootstock node
 
-Use the [`mnr_getWork`](/develop/json-rpc-api#mnr_getwork) method from the Rootstock node's JSON-RPC API. This method returns the information of the current block for merged mining, the boundary condition to be met ("target"), and some other data.
+Use the [`mnr_getWork`](/node-operators/json-rpc/methods/) method from the Rootstock node's JSON-RPC API. This method returns the information of the current block for merged mining, the boundary condition to be met ("target"), and some other data.
 
 ### 2. Put the information for merged mining in the Bitcoin block
 

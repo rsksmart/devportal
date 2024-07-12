@@ -6,7 +6,7 @@ tags: [rif, token, erc677]
 description: "Information about the RIF token, where to obtain it, how to transfer it, and technical details on its token standard"
 ---
 
-The RIF Token allows any token holder to consume the services that are compatible with the [RIF architecture](/concepts/rif-stack/).
+The Rootstock Infrastructure Framework (RIF) Token allows any token holder to consume the services that are compatible with [RIF Tools](/concepts/rif-suite/).
 
 ## RIF (RIF Token in Mainnet)
 
@@ -36,13 +36,6 @@ The RIF Token allows any token holder to consume the services that are compatibl
         </ul>
       </td>
     </tr>
-    <!-- <tr>
-      <td scope="row">Logo</td>
-      <td>
-        <img src="/img/rif/rif-logo.png" />
-        <a href="/img/rif/rif-logo.png" target="_blank">rif-logo.png</a>
-      </td>
-    </tr> -->
   </tbody>
 </table>
 

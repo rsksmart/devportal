@@ -34,7 +34,9 @@ In this guide, you will learn:
 
 ## Getting Started
 
-> Note: The RPC API is available on Testnet and Mainnet.
+:::info[Info]
+The [RPC API](https://rpc.rootstock.io/) is available on TESTNET and MAINNET.
+:::
 
 Visit the [Rootstock RPC API](https://rpc.rootstock.io/)
 

@@ -2,8 +2,8 @@
 sidebar_label: Bitcoin Writing Contest
 sidebar_position: 3
 title: Bitcoin Writing Contest
-tags: [rootstock, workshop, pre-requisites, hackernoon, writing, tutorials, guides]
 description: "The #bitcoin Writing Contest, presented by Rootstock and HackerNoon, is now live with a total prize pool of $17,500 up for grabs! Whether you're a thought leader, a skilled writer, a talented developer, or simply passionate about blockchain technology, this contest invites you to showcase your expertise in various Bitcoin-related topics."
+tags: [rootstock, workshop, pre-requisites, hackernoon, writing, tutorials, guides]
 ---
 
 The #bitcoin Writing Contest, presented by Rootstock and HackerNoon, is now live with a total prize pool of $17,500 up for grabs! 
@@ -11,7 +11,7 @@ The #bitcoin Writing Contest, presented by Rootstock and HackerNoon, is now live
 Contest entries should showcase thought leadership, dev stack and tooling, and also creating engaging tutorials and guides in the realm of Bitcoin and Rootstock. Submit a story with the #bitcoin tag on HackerNoon. Submit a story with the `#bitcoin` tag on HackerNoon, read the [3 Steps to Enter The #bitcoin Writing Contest](https://www.contests.hackernoon.com/how-to-enter-bitcoin-writing-contest).
 
 > Looking to contribute code or contribute to the security of the Rootstock platform? 
-> - See the [Contribute](/contribute/) section for more exciting ways to contribute to Rootstock.
+> - See the [Contribute](/resources/contribute/) section for more exciting ways to contribute to Rootstock.
 
 <div class="btn-container">
   <span></span>

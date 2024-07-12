@@ -6,6 +6,8 @@ description: "Get started with creating a dApps on Rootstock using Hardhat and o
 tags: [getting-started, guide, smart contracts, rsk, rootstock, hardhat, blockchain]
 ---
 
+:::note[Before you begin]
+
 > If you're new to Web3 and Smart Contract Development, begin by exploring the [Rootstock network](/developers/blockchain-essentials/overview/). Then progress step by step to the quick start Guide with Hardhat for a comprehensive understanding of the network and getting started with writing, testing, and deploying smart contracts on Rootstock.
 
 > For your convenience, we've established a [GitHub repository](https://github.com/rsksmart/rootstock-quick-start-guide) dedicated to this guide. The [master branch](https://github.com/rsksmart/rootstock-quick-start-guide/tree/master) contains the initial project state, while the [feat/complete](https://github.com/rsksmart/rootstock-quick-start-guide/tree/feat/complete) branch features the complete project, equipped with all the necessary installations for your reference.
@@ -13,6 +15,9 @@ tags: [getting-started, guide, smart contracts, rsk, rootstock, hardhat, blockch
 > Note: This guide is optimized for Node.js version 18 or earlier. If you're using a later version, consider using a version manager like [NVM](https://github.com/nvm-sh/nvm/blob/master/README.md) to switch to a compatible version.
 
 > Need to ramp up fast and get started with Hardhat? Use the [Hardhat Starter Kit](https://github.com/rsksmart/rootstock-hardhat-starterkit) or [Wagmi Starter Kit](https://github.com/rsksmart/rsk-wagmi-starter-kit)
+:::
+
+## Navigating the Guide
 
 | Resource                                                       | Description                                                                                    |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |

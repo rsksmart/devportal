@@ -1,9 +1,9 @@
 ---
 sidebar_label: Verify Smart Contracts using the Hardhat Verify Plugin
 sidebar_position: 300
-title: How to Verify a Smart Contract using the Hardhat Verification Plugin
+title: Verify a Smart Contract using the Hardhat Verification Plugin
 description: "Configuring Hardhat Verification plugin for Rootstock"
-tags: [hardhat, tutorial, overview, guides, tokens, web3, bitcoin, rsk, peer-to-peer, blockchain, nomicfoundation/hardhat-verify, rootstock]
+tags: [hardhat, tutorial, rsk, peer-to-peer, rootstock]
 ---
 
 Smart contracts are the backbone of decentralized applications (dApps). They automate agreements and processes, but their code can be complex and prone to errors. Verifying your smart contracts is crucial to ensure they function as intended.
@@ -20,13 +20,19 @@ To follow this tutorial, you should have knowledge of the following:
 * Hardhat
 * Basic knowledge of smart contracts
 
-> A [Hardhat Starter dApp](https://github.com/rsksmart/rootstock-hardhat-starterkit) has been created with preset configuration for the Rootstock network. Clone and follow the instructions in the README to setup the project. Note: To set the `.env` variables to match the `hardhat.config.ts` file, if using the starter dApp for this tutorial.
+:::note[Hardhat Starter dApp]
+
+A [Hardhat Starter dApp](https://github.com/rsksmart/rootstock-hardhat-starterkit) has been created with preset configuration for the Rootstock network. Clone and follow the instructions in the README to setup the project. Note: To set the `.env` variables to match the `hardhat.config.ts` file, if using the starter dApp for this tutorial.
+
+:::
+
 ## What is hardhat-verify?
 
 [Hardhat](https://hardhat.org/) is a full-featured development environment for contract compilation, deployment and verification. 
 The [hardhat-verify plugin](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-verify) supports contract verification on the [Rootstock Blockscout Explorer](https://rootstock.blockscout.com/).
 
-> Note: The `hardhat-verify` plugin will be available soon on the [Rootstock Explorer](https://explorer.rootstock.io/)
+> Note: The `hardhat-verify` plugin will be available soon on the [Rootstock Explorer](https://explorer.rootstock.io/).
+
 ### Installation
 
 ```bash
@@ -126,6 +132,7 @@ const config: HardhatUserConfig = {
 
 export default config;
 ```
+
 Now, run the verify task, passing the address of the contract, 
 the network where it's deployed, and any other arguments that was used to deploy the contract:
 ```bash
@@ -135,8 +142,14 @@ or
 ```bash
 npx hardhat verify --network rskMainnet DEPLOYED_CONTRACT_ADDRESS
 ```
-> - Note: Replace `DEPLOYED_CONTRACT_ADDRESS` with the contract address. 
-> - This can be gotten from the `MockERC721.json` file containing the addresses and abi under the `deployments/network` folder.
+
+:::tip[Tip]
+
+- Replace `DEPLOYED_CONTRACT_ADDRESS` with the contract address. 
+- This can be gotten from the `MockERC721.json` file containing the addresses and abi under the `deployments/network` folder.
+
+:::
+
 **The response should look like this:**
 ```bash
 npx hardhat verify  --network rskTestnet 0x33aC0cc41B11282085ff6db7E1F3C3c757143722 

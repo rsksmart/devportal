@@ -64,10 +64,14 @@ This can be done in two ways:
 - Compiling the node with IntelliJ, add to VM options: `-Drsk.conf.file=path/to/your/file.conf`
 
 ### Using RocksDB
+  
+:::note[Important Info]
 
-- **Important Info:**
-  > - Starting from [RSKj HOP v4.2.0](https://github.com/rsksmart/rskj/releases/tag/HOP-4.2.0), RocksDB is no longer experimental. As of the most recent version, RocksDB has now been made the default storage library, replacing LevelDB. This change was made to tackle maintainability and performance issues of LevelDB.
-  > - Previously, RSKj ran using [LevelDB](https://dbdb.io/db/leveldb) by default, with the option to switch to [RocksDB](http://rocksdb.org/). Now, RocksDB is the default storage option, aiming to enable higher performance within the RSKj nodes.
+- Starting from [RSKj HOP v4.2.0](https://github.com/rsksmart/rskj/releases/tag/HOP-4.2.0), RocksDB is no longer experimental. As of the most recent version, RocksDB has now been made the default storage library, replacing LevelDB. This change was made to tackle maintainability and performance issues of LevelDB.
+- Previously, RSKj ran using [LevelDB](https://dbdb.io/db/leveldb) by default, with the option to switch to [RocksDB](http://rocksdb.org/). Now, RocksDB is the default storage option, aiming to enable higher performance within the RSKj nodes.
+
+:::
+
 
 #### Get Started
 
@@ -101,7 +105,10 @@ java -Dkeyvalue.datasource=rocksdb -jar ./rskj-core/build/libs/rskj-core-*-all.j
 
 Switching between different types of databases in your system requires you to modify configuration files, drop the existing database, and restart your node so the node will start syncing from scratch using the new db kind.
 
-> Note: Nodes that were already running on LevelDB will continue to use LevelDB, and the same applies to RocksDB. However, all nodes setup from scratch will use RocksDB by default.
+:::info[Info]
+
+Nodes that were already running on LevelDB will continue to use LevelDB, and the same applies to RocksDB. However, all nodes setup from scratch will use RocksDB by default.
+:::
 
 ### Gas Price Setting
 
@@ -119,7 +126,7 @@ If you see the following error message,
 it means that RSKj is unable to bind to a particular port number,
 because prior to this, another process has already bound to the same port number.
 
-```
+```text
 Exception in thread "UDPServer" co.rsk.net.discovery.PeerDiscoveryException: Discovery can't be started.
         at co.rsk.net.discovery.UDPServer$1.run(UDPServer.java:65)
 Caused by: java.net.BindException: Address already in use: bind
@@ -129,13 +136,15 @@ To rectify this,
 change the value of `peer.port` in the config file,
 or add a `peer.port` flag to the command when you start RSKj.
 
-
-[](#top "multiple-terminals")
-- Linux, Mac OSX
-  ```shell
-  $ java -Dpeer.port=50505 -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start
-  ```
-- Windows
-  ```windows-command-prompt
-  C:\> java -Dpeer.port=50505 -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start
-  ```
+<Tabs>
+  <TabItem value="code" label="Linux, Mac OSX" default>
+     ```shell
+      $ java -Dpeer.port=50505 -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start
+    ```
+  </TabItem>
+  <TabItem value="windows" label="Windows">
+    ```shell
+    C:\> java -Dpeer.port=50505 -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start
+    ```
+  </TabItem>
+</Tabs>
