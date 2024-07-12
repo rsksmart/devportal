@@ -4,6 +4,8 @@ title: Components
 
 # Components
 
+
+
 ## Heading 2
 
 Miners earn a high percentage of transaction fees from the Rootstock block they mine. This mining process is done with the same hashing power used in Bitcoin mining, and has no additional cost or impact.
@@ -58,10 +60,6 @@ Rootstock Addresses incorporate an optional blockchain identifier (also known as
   When we first integrated Rootstock, we had about 1,000 WAUs using the wallet. Less than eight months later, we have 12,000 WAUs. That’s 11x growth in 8 months, an average of nearly 140% growth month over month, with most users coming from the Rootstock community.
 </Quote>
 
-## Video
-
-<iframe width="949" height="534" src="https://www.youtube-nocookie.com/embed/eW9UF2aJQgs?cc_load_policy=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 ## Images
 
 ### Base image
@@ -80,6 +78,32 @@ Rootstock Addresses incorporate an optional blockchain identifier (also known as
 ```
 #### Render
 <Carousel width="370" height="260" images={['/img/concepts/rootstock-tech-stack.svg', '/img/legacy-private-key.png', '/img/metamask-gas-limit.png', '/img/add-ganache-1.png', '/img/add-ganache-2.png']} />
+
+
+## Video
+
+### YouTube video no thumbnail
+
+<Video url="https://www.youtube-nocookie.com/embed/eW9UF2aJQgs?cc_load_policy=1" />
+
+### MP4 video no thumbnail
+
+<Video url="/video/video.mp4" />
+
+### MP4 video with custom thumbnail
+
+<Video url="/video/video.mp4" thumbnail="/img/video-thumbnail.jpg" />
+
+### YouTube video with custom thumbnail
+
+<Video url="https://www.youtube-nocookie.com/embed/eW9UF2aJQgs?cc_load_policy=1" thumbnail="/img/video-thumbnail.jpg" />
+
+#### Code
+
+```jsx
+<Video url="https://www.youtube-nocookie.com/embed/eW9UF2aJQgs" thumbnail="/img/video-thumbnail.jpg" />
+```
+
 
 ## Admonitions
 
@@ -225,3 +249,146 @@ Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
   </TabItem>
 </Tabs>
 
+
+## Cards
+
+### Card with image
+
+<Card
+image="/img/electrum-wallet.png"
+title="Card title first line" description="Mauris maecenas et amet arcu urna interdum aliquet vulputate sed. Quam sit sit tincidunt vitae." link="/developers/" />
+
+#### Code
+
+```jsx
+<Card
+  image="/img/electrum-wallet.png"
+  title="Card title first line"
+  description="..."
+  link="/developers/"
+/>
+```
+
+### Card no image
+
+<Card
+title="Card title first line" description="Mauris maecenas et amet arcu urna interdum aliquet vulputate sed. Quam sit sit tincidunt vitae." link="/developers/" />
+
+#### Code
+
+```jsx
+<Card
+  title="Card title first line"
+  description="..."
+  link="/developers/"
+/>
+```
+
+### Card no link
+
+<Card
+image="/img/electrum-wallet.png"
+title="Card title first line" description="Mauris maecenas et amet arcu urna interdum aliquet vulputate sed. Quam sit sit tincidunt vitae." />
+
+#### Code
+
+```jsx
+<Card
+  image="/img/electrum-wallet.png"
+  title="Card title first line"
+  description="..."
+/>
+```
+## Cards with filter
+
+<Filter
+values={[
+{label: 'Apps', value: 'apps'},
+{label: 'Exchanges', value: 'exchanges'},
+{label: 'Wallets', value: 'wallets'}
+]}>
+<FilterItem
+image="/img/deffiant-icon.svg"
+value="apps"
+title="Defiant"
+subtitle="app"
+color="green"
+description="Get an API key & make your first API call in minutes"
+/>
+<FilterItem
+image="/img/deffiant-icon.svg"
+value="apps"
+title="Defiant"
+subtitle="app"
+color="green"
+description="Get an API key & make your first API call in minutes"
+/>
+<FilterItem
+image="/img/deffiant-icon.svg"
+value="exchanges"
+title="Defiant"
+subtitle="exchanges"
+description="Get an API key & make your first API call in minutes"
+/>
+<FilterItem
+image="/img/deffiant-icon.svg"
+value="wallets"
+title="Defiant"
+subtitle="wallet"
+color="pink"
+linkHref="/developers/"
+linkTitle="Learn more"
+description="Get an API key & make your first API call in minutes"
+/>
+<FilterItem
+image="/img/deffiant-icon.svg"
+value="wallets"
+title="Defiant"
+subtitle="wallet"
+color="pink"
+linkHref="/developers/"
+linkTitle="Learn more"
+description="Get an API key & make your first API call in minutes"
+/>
+<FilterItem
+image="/img/deffiant-icon.svg"
+value="wallets, apps"
+title="Defiant"
+subtitle="wallet"
+color="cyan"
+linkHref="/developers/"
+linkTitle="Learn more"
+description="Get an API key & make your first API call in minutes. Get an API key & make your first API call in minutes"
+/>
+</Filter>
+
+#### Code
+
+```jsx
+<Filter
+  values={[
+    {label: 'Apps', value: 'apps'},
+    {label: 'Exchanges', value: 'exchanges'},
+    {label: 'Wallets', value: 'wallets'}
+  ]}>
+  <FilterItem
+    image="/img/deffiant-icon.svg"
+    value="apps"
+    title="Defiant"
+    subtitle="app"
+    color="green"
+    description="Get ... in minutes"
+  />
+  ...
+  <FilterItem
+    image="/img/deffiant-icon.svg"
+    value="wallets, apps"
+    title="Defiant"
+    subtitle="wallet"
+    color="cyan"
+    linkHref="/developers/"
+    linkTitle="Learn more"
+    description="Get ... in minutes"
+  />
+</Filter>
+```
