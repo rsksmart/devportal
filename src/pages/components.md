@@ -60,7 +60,27 @@ Rootstock Addresses incorporate an optional blockchain identifier (also known as
 
 ## Video
 
-<iframe width="949" height="534" src="https://www.youtube-nocookie.com/embed/eW9UF2aJQgs?cc_load_policy=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+### YouTube video no thumbnail
+
+<Video url="https://www.youtube-nocookie.com/embed/eW9UF2aJQgs?cc_load_policy=1" />
+
+### MP4 video no thumbnail
+
+<Video url="/video/video.mp4" />
+
+### MP4 video with custom thumbnail
+
+<Video url="/video/video.mp4" thumbnail="/img/video-thumbnail.jpg" />
+
+### YouTube video with custom thumbnail
+
+<Video url="https://www.youtube-nocookie.com/embed/eW9UF2aJQgs?cc_load_policy=1" thumbnail="/img/video-thumbnail.jpg" />
+
+#### Code
+
+```jsx
+<Video url="https://www.youtube-nocookie.com/embed/eW9UF2aJQgs" thumbnail="/img/video-thumbnail.jpg" />
+```
 
 ## Images
 
