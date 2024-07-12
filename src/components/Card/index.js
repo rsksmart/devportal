@@ -5,7 +5,7 @@ import Link from "@docusaurus/core/lib/client/exports/Link";
 import styles from "./styles.module.scss";
 import Button from "../Button";
 
-export default function Card({index, title, description, list, color = "orange", children, className, link, icon, ...props}) {
+export default function Card({index, title, description, list, color = "orange", className, link, icon, ...props}) {
 
   return <div className={clsx(`border position-relative d-md-flex flex-md-column flex-lg-row gap-24 rounded-20 px-16 py-24 p-lg-32 h-100`, className, styles.Card)} style={{'--rsk-card-main-color' : `var(--bs-${color})`}}>
     <div className="d-flex flex-column flex-grow-1">

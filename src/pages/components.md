@@ -58,6 +58,26 @@ Rootstock Addresses incorporate an optional blockchain identifier (also known as
   When we first integrated Rootstock, we had about 1,000 WAUs using the wallet. Less than eight months later, we have 12,000 WAUs. That’s 11x growth in 8 months, an average of nearly 140% growth month over month, with most users coming from the Rootstock community.
 </Quote>
 
+## Images
+
+### Base image
+
+![Rootstock Technology Stack - High Level](/img/concepts/rootstock-tech-stack.svg)
+
+### Tall image (max height limit 400px)
+
+![Metamask gas limit](/img/metamask-gas-limit.png)
+
+## Gallery / Slider
+
+#### Code
+```jsx
+<Carousel width="370" height="260" images={['/img/concepts/rootstock-tech-stack.svg', ... , '/img/metamask-gas-limit.png']} />
+```
+#### Render
+<Carousel width="370" height="260" images={['/img/concepts/rootstock-tech-stack.svg', '/img/legacy-private-key.png', '/img/metamask-gas-limit.png', '/img/add-ganache-1.png', '/img/add-ganache-2.png']} />
+
+
 ## Video
 
 ### YouTube video no thumbnail
@@ -82,24 +102,6 @@ Rootstock Addresses incorporate an optional blockchain identifier (also known as
 <Video url="https://www.youtube-nocookie.com/embed/eW9UF2aJQgs" thumbnail="/img/video-thumbnail.jpg" />
 ```
 
-## Images
-
-### Base image
-
-![Rootstock Technology Stack - High Level](/img/concepts/rootstock-tech-stack.svg)
-
-### Tall image (max height limit 400px)
-
-![Metamask gas limit](/img/metamask-gas-limit.png)
-
-## Gallery / Slider
-
-#### Code
-```jsx
-<Carousel width="370" height="260" images={['/img/concepts/rootstock-tech-stack.svg', ... , '/img/metamask-gas-limit.png']} />
-```
-#### Render
-<Carousel width="370" height="260" images={['/img/concepts/rootstock-tech-stack.svg', '/img/legacy-private-key.png', '/img/metamask-gas-limit.png', '/img/add-ganache-1.png', '/img/add-ganache-2.png']} />
 
 ## Admonitions
 
@@ -245,3 +247,53 @@ Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
   </TabItem>
 </Tabs>
 
+
+## Cards
+
+### Card with image
+
+<Card
+image="/img/electrum-wallet.png"
+title="Card title first line" description="Mauris maecenas et amet arcu urna interdum aliquet vulputate sed. Quam sit sit tincidunt vitae." link="/developers/" />
+
+#### Code
+
+```jsx
+<Card
+  image="/img/electrum-wallet.png"
+  title="Card title first line"
+  description="..."
+  link="/developers/"
+/>
+```
+
+### Card no image
+
+<Card
+title="Card title first line" description="Mauris maecenas et amet arcu urna interdum aliquet vulputate sed. Quam sit sit tincidunt vitae." link="/developers/" />
+
+#### Code
+
+```jsx
+<Card
+  title="Card title first line"
+  description="..."
+  link="/developers/"
+/>
+```
+
+### Card no link
+
+<Card
+image="/img/electrum-wallet.png"
+title="Card title first line" description="Mauris maecenas et amet arcu urna interdum aliquet vulputate sed. Quam sit sit tincidunt vitae." />
+
+#### Code
+
+```jsx
+<Card
+  image="/img/electrum-wallet.png"
+  title="Card title first line"
+  description="..."
+/>
+```
