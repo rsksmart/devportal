@@ -6,7 +6,7 @@ description: "How to get started with writing, deploying and testing smart contr
 tags: [hardhat, quick-start, developer tools, rootstock, ethereum, smart-contracts, get-started, how-to]
 ---
 
-[Hardhat](https://hardhat.org/docs) is an Ethereum development environment for developers. It's primarily used in the development of smart contracts for the Ethereum blockchain. 
+[Hardhat](https://hardhat.org/docs) is an Ethereum development environment for developers. It's primarily used in the development of smart contracts for the Rootstock and EVM-compatible chains. 
 
 ## Key features of Hardhat
 
@@ -37,6 +37,6 @@ npm install --save-dev hardhat
 ## Related Docs
 
 - [Getting Started with Hardhat](/developers/smart-contracts/hardhat/)
-- [Getting Started with Foundry](/developer-tools/smart-contracts/foundry/)
+- [Getting Started with Foundry](/dev-tools/smart-contracts/foundry/)
 - [Github Repo](https://github.com/NomicFoundation/hardhat)
-- [Tools](/developer-tools/)
+- [Developer Tools](/dev-tools/)

@@ -237,7 +237,7 @@ See the [foundry deployment documentation](https://book.getfoundry.sh/tutorials/
 ### Related Docs
 
 - [Quick start guide with Hardhat](/developers/smart-contracts/hardhat/)
-- [Tools](/developer-tools/)
+- [Developer Tools](/dev-tools/)
 - [Foundry Project Layout](https://book.getfoundry.sh/projects/project-layout)
 - [RPC Calls Using Cast](https://book.getfoundry.sh/cast/)
 - [Foundry Configurations](https://book.getfoundry.sh/config/)

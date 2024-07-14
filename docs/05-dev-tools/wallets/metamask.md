@@ -16,10 +16,12 @@ Visit the [metamask-landing.rifos.org](https://metamask-landing.rifos.org/) tool
 <div class="video-container">
   <iframe width="949" height="534" src="https://youtube.com/embed/VyPewQoWhn0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+<!-- 
+<Video url="https://www.youtube-nocookie.com/embed/VyPewQoWhn0?cc_load_policy=1" thumbnail="/img/video-thumbnail.jpg" /> -->
 
 ## Connect with MetaMask
 
-1. Open MetaMask extension.
+1. Open the MetaMask extension.
 2. In the network selector (top right corner), choose Custom RPC.
 
   <div styles="text-align: center">
