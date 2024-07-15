@@ -17,7 +17,7 @@ const content = {
     },
     {
       title: 'Explore Docs',
-      url: '/concepts/',
+      url: '/concepts/fundamentals/',
     }
   ]
 };

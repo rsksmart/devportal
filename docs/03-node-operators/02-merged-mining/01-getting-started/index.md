@@ -13,7 +13,7 @@ Add the Rootstock merged mining information in Bitcoin block as a commitment, th
 
 ### 1. Get the work from Rootstock node
 
-Use the [`mnr_getWork`](/develop/json-rpc-api#mnr_getwork) method from the Rootstock node's JSON-RPC API. This method returns the information of the current block for merged mining, the boundary condition to be met ("target"), and some other data.
+Use the [`mnr_getWork`](/node-operators/json-rpc/methods/) method from the Rootstock node's JSON-RPC API. This method returns the information of the current block for merged mining, the boundary condition to be met ("target"), and some other data.
 
 ### 2. Put the information for merged mining in the Bitcoin block
 
@@ -51,8 +51,8 @@ Rootstock's average block time is 30 seconds, which is faster than Bitcoin's 10 
 
 ### 5. Submit Solution to Rootstock node
 
-Use the [`mnr_submitBitcoinBlockPartialMerkle`](/develop/json-rpc-api#mnr_submitbitcoinblockpartialmerkle) method from Rootstock node's JSON-RPC API. That method has optimum performance, and is preferred among other available methods.
-Other submission methods and information about the pros and cons between them can be found in the [Mining JSON-RPC API documentation](/develop/json-rpc-api).
+Use the [`mnr_submitBitcoinBlockPartialMerkle`](/node-operators/json-rpc/methods#mnr_submitbitcoinblockpartialmerkle) method from Rootstock node's JSON-RPC API. That method has optimum performance, and is preferred among other available methods.
+Other submission methods and information about the pros and cons between them can be found in the [Mining JSON-RPC API documentation](/node-operators/json-rpc).
 
 ## Influence on Bitcoin
 

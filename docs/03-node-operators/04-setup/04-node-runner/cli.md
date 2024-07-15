@@ -6,7 +6,7 @@ tags: [rsk, rskj, node, contribute]
 description: "How to compile and run an RSKj node from the command line interface."
 ---
 
-> After fulfilling the steps *Pre-requisites*, *Get the source code*, *Ensure the security chain* and *Get external dependencies* according to your operating system ([Windows](/rsk/node/contribute/windows), [Linux](/rsk/node/contribute/linux), [Mac](/rsk/node/contribute/macos)), you can compile and run a Rootstock node from command line following these steps.
+> After fulfilling the steps *Pre-requisites*, *Get the source code*, *Ensure the security chain* and *Get external dependencies* according to your operating system ([Windows](/node-operators/setup/node-runner/windows), [Linux](/node-operators/setup/node-runner/linux), [Mac](/node-operators/setup/node-runner/macos)), you can compile and run a Rootstock node from command line following these steps.
 
 ## Compiling and running the node
 
@@ -28,4 +28,4 @@ Replace:
 
 It's ready!
 
-You are on the Mainnet by default. If you want to switch the networks, read [this page](/rsk/node/configure/switch-network).
+You are on the Mainnet by default. If you want to switch the networks, read [this page](/node-operators/setup/configuration/switch-network).

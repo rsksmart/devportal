@@ -9,26 +9,26 @@ description: "Rootstock Nodes: Public nodes (Mainnet, Testnet), Versioning, RPC 
 RootstockLabs currently provides two public nodes that you can use
 for testing purposes, and you will find that information below.
 
-Alternatively, follow the [installation instructions](/rsk/node/install/),
+Alternatively, follow the [installation instructions](/node-operators/setup/installation/),
 to run your own Rootstock node or use an [alternative node provider](#rpc-node-providers).
 This is highly recommended for production environments,
 and in accordance with the bitcoiners' maxim: **Don't trust. Verify.**
 
 ### Testnet
 
-```
+```text
 https://public-node.testnet.rsk.co
 ```
 
 ### Mainnet
 
-```
+```text
 https://public-node.rsk.co
 ```
 
 ## Supported RPC methods
 
-List of supported JSON-RPC methods for each module can be found in the [JSON-RPC documentation](/rsk/node/architecture/json-rpc/).
+List of supported JSON-RPC methods for each module can be found in the [JSON-RPC documentation](/node-operators/json-rpc/).
 
 ### Example using `cURL`
 
@@ -44,7 +44,7 @@ curl https://public-node.rsk.co \
 
 ## RPC Node Providers
 
-> Note that [Rootstock public nodes](/rsk/node/architecture/json-rpc/)
+> Note that [Rootstock public nodes](/node-operators/public-nodes/)
 > do not expose WebSockets, they are HTTP only.
 > To work around this, you may either run your own Rootstock node,
-> or use a third-party node provider, such as [Getblock](/solutions/getblock/) or [NowNodes](/solutions/nownodes/).
+> or use a third-party node provider, such as [Getblock](https://getblock.io/nodes/rsk/) or [NowNodes](https://nownodes.io/nodes/rsk).

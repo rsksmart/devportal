@@ -24,9 +24,10 @@ The process of conversion utilises a [Powpeg](/concepts/powpeg/) mechanism. Thus
 - Legacy (P2PKH)
 - Segwit Compatible (P2SH-P2WPKH)
 
-> Note: On the Testnets, the token symbols are prefixed with a lowercase `t`.
-> Thus we have `BTC` and `RBTC` on the Mainnets,
-> which correspond to `tBTC` and `tRBTC` of the Testnets.
+:::info[Note]
+On the Testnets, the token symbols are prefixed with a lowercase `t`.
+Thus, we have `BTC` and `RBTC` on the Mainnets, which correspond to `tBTC` and `tRBTC` of the Testnets.
+:::
 
 ### Address verifier
 
@@ -40,7 +41,7 @@ Enter your BTC address below to verify whether it may be used to peg in from BTC
 You can try the conversion process using either options below;
 
 - Using a [ledger hardware wallet](/concepts/rbtc/conversion-with-ledger)
-- Using a [software](/concepts/rbtc/conversion-with-node-and-console)
+- Using a [software](/concepts/rbtc/conversion-with-node-console)
 
 ## Video
 
@@ -50,15 +51,22 @@ Watch this explainer video on **How to do BTC & R-BTC Conversions using the Root
   <iframe width="949" height="534" src="https://youtube.com/embed/XTpQW9Rw838" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-### Q & A
+### FAQs
 
-**1. How often does the Rootstock Federation address change?**
-
-Rootstock Federation address has changed several times since Rootstock mainnet launch.
-
-**2. Do I lose my Bitcoin if the Rootstock Federation address change during my transfer?**
-
-There is a grace period for the Rootstock Federation address change. You will still be able to lock Bitcoin and get RBTC during the grace period. However, any Bitcoin sent to the old Rootstock Federation address will be lost post to the grace period.
+<Accordion>
+  <Accordion.Item eventKey="0">
+    <Accordion.Header as="h3">How often does the Rootstock Federation address change?</Accordion.Header>
+    <Accordion.Body>
+      Rootstock Federation address has changed several times since Rootstock mainnet launch.
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="2">
+    <Accordion.Header as="h3">Do I lose my Bitcoin if the Rootstock Federation address change during my transfer?</Accordion.Header>
+    <Accordion.Body>
+      There is a grace period for the Rootstock Federation address change. You will still be able to lock Bitcoin and get RBTC during the grace period. However, any Bitcoin sent to the old Rootstock Federation address will be lost post to the grace period.
+    </Accordion.Body>
+  </Accordion.Item>
+</Accordion>
 
 ### Feedback
 

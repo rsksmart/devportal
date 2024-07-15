@@ -26,7 +26,11 @@ The `maxLogsToReturn` refers to the maximum number of logs to return.
 
 This parameter determines the maximum number of event logs that the RSKj client will return in response to an `eth_getLogs` call. By default, this value is disabled (i.e, set to 0), indicating that the RSKj client will return all event logs that match the search criteria. If the limit is defined and the call exceeds this limit, the query execution will be terminated returning an error code.
 
-> Note: Disabling the limit (`maxLogsToReturn = 0`) could lead to the inclusion of a large number of logs in the response. However, enabling the limit helps protect the node's resources and prevents malicious usages.
+:::warning[Warning]
+
+Disabling the limit (`maxLogsToReturn = 0`) could lead to the inclusion of a large number of logs in the response. However, enabling the limit helps protect the node's resources and prevents malicious usages.
+
+:::
 
 
 ## JSON-RPC Interface Limit
@@ -39,7 +43,11 @@ The `maxResponseSize` refers to the maximum JSON-RPC response size.
 
 This parameter allows you to set a limit on the maximum size of responses returned by the JSON-RPC interface. The response size is measured in bytes. By default, this value is disabled with `maxResponseSize = 0`, meaning that there is no limit imposed on the size of JSON-RPC responses.
 
-> Note: When `maxResponseSize` is enabled and set to a specific value, the JSON-RPC interface will truncate or reject responses that exceed the specified size limit.
+:::info[Info]
+
+ When `maxResponseSize` is enabled and set to a specific value, the JSON-RPC interface will truncate or reject responses that exceed the specified size limit.
+
+:::
 
 ## Configuration Usage
 
@@ -47,4 +55,8 @@ By adding these configurations to the RSKj client's configuration files, you can
 
 It is recommended to set reasonable values for these limits, considering the network's load and the available resources for the RSKj client.
 
-> Note: The configuration may vary based on the version of the RSKj client you are using and how it integrates with other components of your system. Always refer to the official RSKj documentation and relevant specifications for more precise details about the configuration.
+:::info[Info]
+
+The configuration may vary based on the version of the RSKj client you are using and how it integrates with other components of your system. Always refer to the official RSKj documentation and relevant specifications for more precise details about the configuration.
+
+:::

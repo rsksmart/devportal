@@ -37,7 +37,7 @@ Rootstock Addresses incorporate an optional blockchain identifier (also known as
 ### Ordered List
 
 1. The 2 Way Peg Application is now available on [Testnet](https://app.2wp.testnet.rootstock.io/) and [Mainnet](https://app.2wp.rootstock.io/).
-2. For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the 2 way peg app, please refer to the [2 way peg app user guide](/resources/user-guides/two-way-peg-app/).
+2. For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the 2 way peg app, please refer to the [2 way peg app user guide](/resources/user-guides/).
 3. Get information on the signatories and attestion in the [Powpeg HSM Firmware Attestation](/concepts/powpeg/hsm-firmware-attestation) section.
 
 ### Blockquote
@@ -154,7 +154,7 @@ Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
 | Flyover | Flyover is a fast and secure way for users to transfer BTC in and out of the Rootstock Ecosystem where it can be used to interact with a range of applications to send, save and spend money. |
 | RNS | RNS (RIF Name Service) replaces complicated cryptocurrency addresses with easy-to-remember nicknames, simplifying digital asset transactions. It also facilitates the integration of a Self Sovereign Identity protocol into your products, which enhances user security and flexibility. .|
 | Wallet | Bring Bitcoin DeFi to your users with RIF Wallet, an open source Bitcoin wallet with smart contract capabilities. Open-source, fully programmable and customizable.|
-| [Relay](/developers/integration-guides/rif-relay/) | RIF Relay simplifies gas fee payments by allowing users to pay transaction fees with any ERC20 token. This enables end users to transact entirely using one asset, removing complexity and improving onboarding.|
+| [Relay](/developers/integrate/rif-relay/) | RIF Relay simplifies gas fee payments by allowing users to pay transaction fees with any ERC20 token. This enables end users to transact entirely using one asset, removing complexity and improving onboarding.|
 
 
 ## Accordion

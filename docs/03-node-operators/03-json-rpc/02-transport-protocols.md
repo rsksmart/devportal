@@ -17,7 +17,7 @@ HTTP requests should be made:
 
 - to the port number specified in the config for `rpc.providers.web.http.port`
   - this is `4444` by default
-  - for [public nodes](/rsk/public-nodes/), omit the port number
+  - for [public nodes](/node-operators/public-nodes/), omit the port number
 - to the "root" route (`/`)
 - using the HTTP verb `POST`
 - specifying a `Content-Type` header of `application/json`
@@ -39,7 +39,7 @@ WebSockets connections should be established:
 
 - to the port number specified in the config for `rpc.providers.web.ws.port`
   - this is `4445` by default
-  - [public nodes](/rsk/public-nodes/) do **not** have the WebSockets transport protocol enabled
+  - [public nodes](/node-operators/public-nodes/) do **not** have the WebSockets transport protocol enabled
 - to the WebSockets route (`/websocket`)
 
 Once connected:
