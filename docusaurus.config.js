@@ -38,7 +38,7 @@ const config = {
       },
       reportIssue : {
         title: 'Report an Issue',
-        url : '#',
+        url : 'https://github.com/rsksmart/rsksmart.github.io/issues',
       },
     }
   },
@@ -193,6 +193,7 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.oneDark,
+        additionalLanguages: ['powershell', 'bash', 'javascript'],
       },
       algolia: {
         // The application ID provided by Algolia

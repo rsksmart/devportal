@@ -17,7 +17,7 @@ const data = {
       list: [
         {
           title: 'Core Concepts',
-          href: '/concepts/rootstock-overview/',
+          href: '/concepts/fundamentals/',
         },
         {
           title: 'Become a Rootstock Blockchain Developer',

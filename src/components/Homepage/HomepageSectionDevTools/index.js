@@ -44,7 +44,7 @@ const data = {
       color: 'cyan',
       link: {
         title: 'Read more',
-        href: '/developers/integration-guides/',
+        href: '/dev-tools/',
       },
       description: (
         <>
@@ -53,16 +53,15 @@ const data = {
       ),
     },
     {
-      title: 'Integration Guides',
+      title: 'SDKs and Integration Guides',
       color: 'orange',
       link: {
         title: 'Read more',
-        href: '#',
+        href: '/developers/integrate/',
       },
       description: (
         <>
-          Want to integrate Rootstock products? 
-          Explore the integration guides and starter kits to get started.
+          Get up to speed, using easy-to-set-up SDKs and Integration Guides.
         </>
       ),
     }

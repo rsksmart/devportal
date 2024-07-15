@@ -19,8 +19,9 @@ See how to set your config:
 
 &hellip; to run the node.
 
-> Remember:
-> You need to **restart** the node if you've changed any configuration option.
+:::tip[Tip]
+You need to **restart** the node if you've changed any configuration option.
+:::
 
 ### Using Ubuntu or Docker
 
@@ -28,7 +29,7 @@ Your node's config file is in `/etc/rsk`.
 Default configurations are defined there and they are the same as [these ones](https://github.com/rsksmart/artifacts/tree/master/rskj-ubuntu-installer/config).
 
 You should edit the config related with the network you are using (`mainnet.conf`, `testnet.conf`, `regtest.conf`).
-Check [here](/rsk/node/configure/reference) all the configuration options you could change.
+Check [here](/node-operators/setup/configuration/reference) all the configuration options you could change.
 
 ### Using Windows
 
@@ -43,7 +44,7 @@ You can create a file with the configuration options that you want to replace fr
 Default configurations are defined [here](https://github.com/rsksmart/rskj/tree/master/rskj-core/src/main/resources/config).
 
 The extension of the file must be `.conf`.
-Check [here](/rsk/node/configure/reference/) for all the configuration option.
+Check [/node-operators/setup/configuration/reference/](/node-operators/setup/configuration/reference/) for all the configuration option.
 
 As an example, if you want to change the default `database directory`, your config file should only contain:
 
@@ -64,10 +65,14 @@ This can be done in two ways:
 - Compiling the node with IntelliJ, add to VM options: `-Drsk.conf.file=path/to/your/file.conf`
 
 ### Using RocksDB
+  
+:::note[Important]
 
-- **Important Info:**
-  > - Starting from [RSKj HOP v4.2.0](https://github.com/rsksmart/rskj/releases/tag/HOP-4.2.0), RocksDB is no longer experimental. As of the most recent version, RocksDB has now been made the default storage library, replacing LevelDB. This change was made to tackle maintainability and performance issues of LevelDB.
-  > - Previously, RSKj ran using [LevelDB](https://dbdb.io/db/leveldb) by default, with the option to switch to [RocksDB](http://rocksdb.org/). Now, RocksDB is the default storage option, aiming to enable higher performance within the RSKj nodes.
+- Starting from [RSKj HOP v4.2.0](https://github.com/rsksmart/rskj/releases/tag/HOP-4.2.0), RocksDB is no longer experimental. As of the most recent version, RocksDB has now been made the default storage library, replacing LevelDB. This change was made to tackle maintainability and performance issues of LevelDB.
+- Previously, RSKj ran using [LevelDB](https://dbdb.io/db/leveldb) by default, with the option to switch to [RocksDB](http://rocksdb.org/). Now, RocksDB is the default storage option, aiming to enable higher performance within the RSKj nodes.
+
+:::
+
 
 #### Get Started
 
@@ -101,7 +106,10 @@ java -Dkeyvalue.datasource=rocksdb -jar ./rskj-core/build/libs/rskj-core-*-all.j
 
 Switching between different types of databases in your system requires you to modify configuration files, drop the existing database, and restart your node so the node will start syncing from scratch using the new db kind.
 
-> Note: Nodes that were already running on LevelDB will continue to use LevelDB, and the same applies to RocksDB. However, all nodes setup from scratch will use RocksDB by default.
+:::info[Info]
+
+Nodes that were already running on LevelDB will continue to use LevelDB, and the same applies to RocksDB. However, all nodes setup from scratch will use RocksDB by default.
+:::
 
 ### Gas Price Setting
 
@@ -119,7 +127,7 @@ If you see the following error message,
 it means that RSKj is unable to bind to a particular port number,
 because prior to this, another process has already bound to the same port number.
 
-```
+```text
 Exception in thread "UDPServer" co.rsk.net.discovery.PeerDiscoveryException: Discovery can't be started.
         at co.rsk.net.discovery.UDPServer$1.run(UDPServer.java:65)
 Caused by: java.net.BindException: Address already in use: bind
@@ -129,13 +137,15 @@ To rectify this,
 change the value of `peer.port` in the config file,
 or add a `peer.port` flag to the command when you start RSKj.
 
-
-[](#top "multiple-terminals")
-- Linux, Mac OSX
-  ```shell
-  $ java -Dpeer.port=50505 -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start
-  ```
-- Windows
-  ```windows-command-prompt
-  C:\> java -Dpeer.port=50505 -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start
-  ```
+<Tabs>
+  <TabItem value="code" label="Linux, Mac OSX" default>
+     ```shell
+      $ java -Dpeer.port=50505 -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start
+    ```
+  </TabItem>
+  <TabItem value="windows" label="Windows">
+    ```shell
+    C:\> java -Dpeer.port=50505 -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start
+    ```
+  </TabItem>
+</Tabs>

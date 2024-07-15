@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "targets": [
+    "ui",
+    "signer"
+  ],
+  "elements": [
+    {
+      "name": "attestation",
+      "message": "ff040f717f4151ef0078ee289281d1e8c57f19692f6d9a0c43df1332bb9c4998d32ca2e1bcf5461a34943f618cf65a00048daef726f94682afd3958261d51ab99681",
+      "signature": "3045022100991c4b67a4847aa9fb57aca6caf5ebe6baf7099bae4deb365b67a0b315ec5f0d02201a9d428761b7747f1fcdd5d6b43fe88380f00f5a26cf2decf27cd97600324bf4",
+      "signed_by": "device"
+    },
+    {
+      "name": "device",
+      "message": "02f09b406abeb18e04b2b2b5a64cd2ee6531f0a70bee63cdd9b4479386ddecc3ccd9145262e4276b76a053b38db229c50efbb77d9ab3f4d1865f7e080ec25fcff4a79687264ee8457c",
+      "signature": "3045022100804257f2754a4c590468480c9183bc550bc303696608d4c5458b4806aeacf910022014149698d45e4cf85e7a38c58415d4607cef7412522ee07e0573d4fdc58056f9",
+      "signed_by": "root"
+    },
+    {
+      "name": "ui",
+      "message": "48534d3a55493a322e312f0083a5cbfb898040ec3c98c3e2b7e3677ffac70825cd150f23459b7662b65b020ace50bab1230f8002a0bfe619482af74b338cc9e4c956add228df47e6adae1c0236dd4f674969a3cc032d73bbff7420c6da8555b577ec08d577dce20dd4370d07",
+      "signature": "3045022100c73e767b04838c1d7aa5f53f9c1a350456978b6310c02f8b137e78376d8a0ae502200d761a92a942445552351c076f4468c5f52227f789244ea9f55530bd77e3ab64",
+      "signed_by": "attestation",
+      "tweak": "97cf1ea7d78774809254f9a2aa0215e4bce1fe6b6a44c2a22946e691316d2f7b"
+    },
+    {
+      "name": "signer",
+      "message": "48534d3a5349474e45523a322e3165ed5800a8977fa60de03e3b19891ca44f22b8537a1ff2487cdbcdb03f83766d",
+      "signature": "304402202eae27d17c23d49b2966f6efa04f4385755214214005b0d33cb6e91cae1fd86d02201351685427ca6acf5cc0a1861be18b01e09c9c9a79eb78a05bdda6f0cd388ff8",
+      "signed_by": "attestation",
+      "tweak": "4230c72abfbc4f1f03909068c5d61bf9e127a08e037dc2cbe7795ca8b95169e5"
+    }
+  ]
+}

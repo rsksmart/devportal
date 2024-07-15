@@ -1,14 +1,12 @@
 import React from 'react';
-import clsx from 'clsx';
-import FooterCTA from "../CTA";
-import FooterSocials from "../Socials";
-import FooterTagLine from "../TagLine";
+
+import FooterSocials from "@theme/Footer/Socials";
+import FooterTagLine from "@theme/Footer/TagLine";
 import AccessibeWidget from "/src/components/AccessibeWidget";
 export default function FooterLayout({style, links, logo, copyright}) {
 
   return (
     <>
-      <FooterCTA />
       <footer
         className={`footer py-40`}>
         <div className="container">

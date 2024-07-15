@@ -6,7 +6,7 @@ tags: [docker, rootstock, desktop, macOS, rskj, windows, install, rsk, node, how
 description: "Install RSKj using Docker."
 ---
 
-Before installing Docker, ensure your system meets the [minimum requirements](/rsk/node/install/requirements/) before installing the Rootstock node. If you already have docker installed. See [Install RSKj using Docker](#install-rskj-using-docker).
+Before installing Docker, ensure your system meets the [minimum requirements](/node-operators/setup/requirements/) before installing the Rootstock node. If you already have docker installed. See [Install RSKj using Docker](#install-rskj-using-docker).
 
 ## Install Docker Desktop Client
 

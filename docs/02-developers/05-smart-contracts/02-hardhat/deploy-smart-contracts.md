@@ -42,11 +42,10 @@ To deploy `myToken` contract, copy the deployment script below and paste it in y
 
 ## Step 2: Run the Hardhat Network Locally
 
-> Note: You need to have sufficient RBTC in your deploying account for gas fees. See section on [Fund your account](/guides/quickstart/hardhat/configure-hardhat#step-3-fund-your-accounts).
+> Note: You need to have sufficient RBTC in your deploying account for gas fees. See section on [Fund your account](/developers/smart-contracts/hardhat/configure-hardhat#step-3-fund-your-accounts).
 
 To run the Hardhat network locally:
 
-[](#top "collapsible")
 - Start the Hardhat network
    - Hardhat comes with a built-in Ethereum network for development. Run the following command in your project's root directory to start it.
       ```shell
@@ -95,11 +94,13 @@ Token address: 0xc6EcBe0F6643825FD1AAfc03BEC999014759a279
    npx hardhat run --network rskMainnet scripts/deploy.js
 ```
 
-### Configure MetaMask
+### Configure MetaMask 
 
-[](#top "collapsible")
-- Install Metamask
-   - If you haven't already, you can use the [metamask-landing.rifos.org](https://metamask-landing.rifos.org/) tool to download/install Metamask, and add Rootstock custom network or follow the steps in [Configure Network and Token](/guides/quickstart/browser/custom-network-and-token/). 
+:::note[Install Metamask]
+
+If you haven't already, you can use the [metamask-landing.rifos.org](https://metamask-landing.rifos.org/) tool to download/install Metamask, and add Rootstock custom network or follow the steps in [Configure Network and Token](/developers/blockchain-essentials/browser#custom-network-and-token). 
+
+:::
 
 ## Step 4: Connect Remix to Rootstock Testnet (Optional)
 

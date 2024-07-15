@@ -22,7 +22,7 @@ In this section, we will go over the steps of converting BTC to RBTC using Ledge
 
 Instructions on how to do a Mainnet peg-in.
 
-**1 Get a BTC address with balance**
+### Get a BTC address with balance
 
 We recommend to use Electrum BTC wallet for connecting to
 BTC Mainnet using Ledger hardware wallet.
@@ -40,11 +40,13 @@ BTC Mainnet using Ledger hardware wallet.
   - Legacy for an account that has addresses starting with a 1
 - Go to the third tab "Receive". You will see a Bitcoin address.
 
-> Note: The Bitcoin wallet needs to be legacy (not Segwit)
-> whose public key starts with either `m` or `n`,
-> and private key starting with `p2pkh:`
+:::info[Note]
+The Bitcoin wallet needs to be legacy (not Segwit)
+whose public key starts with either `m` or `n`,
+and private key starting with `p2pkh:`
+:::
 
-**2 Find a BTC address with balance**
+### Find a BTC address with balance
 
 You will need to find the corresponding BTC address derived
 from the BTC derivation path in Electrum "Receive" tab.
@@ -54,7 +56,7 @@ from the BTC derivation path in Electrum "Receive" tab.
     [BIP 44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) **Legacy**
 - Unlock Ledger and open the **Bitcoin App**
 - To get the BTC address derived from the derivation path that you have specified. Run the following script:
-  ```
+  ```js
   const Transport = require("@ledgerhq/hw-transport-node-hid").default;
   const AppBtc = require("@ledgerhq/hw-app-btc").default;
 
@@ -78,22 +80,24 @@ from the BTC derivation path in Electrum "Receive" tab.
   })();
   ```
 - After that you should get a result similar to:
-  ```
+  ```text
   BTC Address
   12dAR91ji1xqimzdTQYHDtY....ppSR
   Derivation Path: 44'/0'/0'/0/0
   ```
 
-**This is the address that you have to use in order to do the transfer to the federation.**
+:::tip[Tip]
+This is the address that you have to use in order to do the transfer to the federation.
+:::
 
-**3 Send Bitcoin to RSK Federation address**
+### Send Bitcoin to Rootstock Federation address
 
-<div class="fade alert alert-warning show">
-Note: You need to send a minimum amount of 0.01 BTC and
+:::warning[Warning]
+You need to send a minimum amount of 0.01 BTC or maximum amount,
 not more than 10 BTC for conversion.
-</div>
+:::
 
-To get the RSK Federation address you can run the following script:
+To get the Rootstock Federation address you can run the following script:
 
 ```javascript
 const Web3 = require('web3');
@@ -125,9 +129,11 @@ Use Electrum to send BTCs to the Rootstock Federation Address. To do that:
 
 **4 Wait for BTC confirmations**
 
-To ensure the transaction, we need to wait 100 BTC confirmations, be patient :)
+To ensure the transaction, we need to wait 100 BTC confirmations, be patient :
 
-> 100 blocks \* 10 minutes/block = 1000 minutes = 16.667 hours approx.
+:::tip[Tip]
+100 blocks \* 10 minutes/block = 1000 minutes = 16.667 hours approx.
+:::
 
 **5 Get RBTC address from Ledger harware wallet**
 
@@ -168,38 +174,43 @@ Get the corresponding RBTC address from your Ledger harware wallet, following th
 
 You can check balance of RBTC address on MyCrypto or MEW setting the corresponding derivation path and selection the address.
 
-> Note: You have to wait a minimum of 100 confirmations + a minimum of 5 minutes for checking your RBTC balance
+:::info[Note]
+You have to wait a minimum of 100 confirmations + a minimum of 5 minutes for checking your RBTC balance
+:::
 
 ## RBTC to BTC conversion
 
 Instructions on how to do a Mainnet peg-out.
 
-**1 Get BTC address with Ledger hardware wallet**
+1. Get BTC address with Ledger hardware wallet
 
 If you forgot your BTC public address, you can check section **1**.
 The important thing is that the receiving is BTC address will be
 the same that it was used to send to the federation.
 
-**2 Send RBTC to RSK Bridge Contract**
+2. Send RBTC to Rootstock Bridge Contract
 
 Open MyCrypto or MEW.
 Set the corresponding derivation path and selection the address. \
 This address has to be the same as that from section **6**.
 Then do a transaction to the Bridge Contract.
 
-Bridge Contract address: `0x0000000000000000000000000000000001000006`
+> Bridge Contract address: `0x0000000000000000000000000000000001000006`
 
-> Note: The minimum amount to send in a peg-out transaction must be greater than or equals to 0.004 **RBTC** for Mainnet and the minimum amount to send in a peg-in transaction must be greater than or equals to 0.005 **BTC** for Mainnet
-> Gas Limit of the transaction needs to be manually set at 100,000 gas;
-> otherwise the transaction will fail.
-> Gas Price can be set to 0.06 gwei.
+:::info[Note]
+
+- The minimum amount to send in a peg-out transaction must be greater than or equals to 0.004 **RBTC** for Mainnet and the minimum amount to send in a peg-in transaction must be greater than or equals to 0.005 **BTC** for Mainnet.
+- Gas Limit of the transaction needs to be manually set at 100,000 gas; otherwise the transaction will fail.
+- Gas Price can be set to 0.06 gwei.
+:::
 
 ![Customize Gas in Metamask before send transaction on Rootstock](/img/concepts/metamask-gas-limit.png)
 
-**3 Check balance of BTC address**
+3. Check balance of BTC address
 
 You can either use Electrum wallet downloaded earlier or
 any Bitcoin explorer to check the balance.
 
-> Note: The release process on Bitcoin network takes
-> 4000 RSK block confirmations and at least 10 more minutes.
+:::info[Note]
+The release process on Bitcoin network takes 4000 RSK block confirmations and at least 10 more minutes.
+:::

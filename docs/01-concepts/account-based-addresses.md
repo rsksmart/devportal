@@ -2,7 +2,7 @@
 sidebar_label: Account based addresses
 title: Rootstock Accounts
 sidebar_position: 6
-tags: [rsk, rootstock, architecture, checksum, chainId, address, derivation path, eip1191, eip155, bip44, slip44]
+tags: [rsk, rootstock, architecture, checksum, chainId, address, derivation path]
 description: "EIP-1191 chainId is used in Rootstock addresses as a checksum. m/44'/137'/0'/0 is the derivation path used for BIP-44 compatible wallets."
 ---
 
@@ -10,7 +10,7 @@ Rootstock Addresses incorporate an optional blockchain identifier (also known as
 
 ## How to get an address
 
-Check out the already [integrated wallets](/developer-tools/) on Rootstock.
+Check out the already [integrated wallets](/dev-tools/wallets/) on Rootstock.
 
 ## Derivation path info
 

@@ -3,7 +3,7 @@ title: Contribute to Rootstock
 sidebar_label: Contribute
 sidebar_position: 3
 description: "An overview of different ways you can contribute to Rootstock."
-tags: [rootstock, workshop, pre-requisites]
+tags: [rootstock, rsk, contribute, open source]
 ---
 
 Are you passionate about web3, bitcoin and the Blockchain? Do you have a passion for Open Source and Web3? Do you enjoy writing, coding, bounty hunting, solving real-world problems, and eager to contribute to the future of Bitcoin and Decentralized Finance? Join the [Rootstock Discord Community](https://rootstock.io/discord) and start making contributions!
@@ -16,9 +16,24 @@ Whether you're a seasoned developer, creative writer, researcher, bug bounty hun
 
 From writing, bug bounties and open-source projects, there are various ways to participate and earn valuable incentives. 
 
+<Card
+  title="Bug Bounty Program"
+  description="RootstockLabs has created the bug bounty program to reward researchers that submit valid vulnerabilities to improve the RootstockLabs platforms security."
+  link="/resources/contribute/bug-bounty/"
+/>
 
-| Resource                                                       | Description                                                                                    |
-| ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| [Bug Bounty Program](./01-bug-bounty/) | RootstockLabs has created the bug bounty program to reward researchers that submit valid vulnerabilities to improve the RootstockLabs platforms security. |
-| [Bitcoin Writing Contest](./02-content.md) | Contribute articles, tutorials and guides about Rootstock, Bitcoin, etc.|
-| [Open Source Code](https://github.com/rsksmart) | Contribute to Rootstock's Open Source Code Repos. |
+<br></br>
+
+<Card
+  title="Writing Contests"
+  description="Contribute articles, tutorials and guides about Rootstock, Bitcoin, etc."
+  link="/resources/contribute/writing-contest/"
+/>
+
+<br></br>
+
+<Card
+  title="Open Source Code"
+  description="Contribute to Rootstock's Open Source Code Repos."
+  link="https://github.com/rsksmart"
+/>

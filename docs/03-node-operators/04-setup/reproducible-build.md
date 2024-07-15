@@ -92,7 +92,7 @@ $ docker build -t rskj/6.0.0-arrowhead .
 
 This may take several minutes to complete. What is done is:
 - Place in the RSKj repository root because we need Gradle and the project.
-- Runs the [secure chain verification process](/rsk/node/security-chain/).
+- Runs the [secure chain verification process](/node-operators/setup/security-chain/).
 - Compile a reproducible RSKj node.
 - `./gradlew clean build -x test` builds without running tests.
 
@@ -126,6 +126,6 @@ If you check inside the JAR file, you will find that the dates of the files are 
 More Resources
 ==============
 
-* [Install Rootstock Node](/rsk/node/install/)
+* [Install Rootstock Node](/node-operators/setup/installation/)
 * See [Reproducible builds](https://github.com/rsksmart/reproducible-builds/tree/master/rskj)
 * Check out the [latest rskj releases](https://github.com/rsksmart/rskj/releases)

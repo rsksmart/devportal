@@ -5,7 +5,7 @@ import {ThemeClassNames} from "@docusaurus/theme-common";
 
 export default function FooterCTA() {
   const cta = {
-    url: 'https://dev.rootstock.io/contribute/writing-contests/',
+    url: 'https://dev.rootstock.io/resources/contribute/writing-contests/',
     target : '_blank',
     title: 'Applications to the Wave IV of Grants are open! Apply now for a share of $2.5m in funding to build your next project on Rootstock',
   }

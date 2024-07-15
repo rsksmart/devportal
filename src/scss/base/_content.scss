@@ -61,17 +61,18 @@ ul{
   ol {
     list-style-type: none;
     counter-reset: items;
+    padding-left: 2.2em;
     & > li{
       counter-increment: items;
       position: relative;
       &:before {
         content: "0" counter(items);
-        font-size: 0.6em;
-        font-weight: 500;
+        //font-size: 0.6em;
+        font-weight: 400;
         letter-spacing: 0.05em;
         position: absolute;
-        left: -1.13rem;
-        top: 0.5em;
+        left: -1.8em;
+        top: 0em;
       }
       &:nth-child(n+10):before {
         content: counter(items);
