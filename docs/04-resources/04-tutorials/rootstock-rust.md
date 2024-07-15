@@ -314,7 +314,6 @@ async fn main() -> Result<()> {
 }
 ```
 
-[](#top "collapsible")
 - ERROR: deserialization error: missing field effectiveGasPrice at line 1 column 959
     - It's expected that you will encounter a missing `effectiveGasPrice` error. 
         - Kindly ignore above error. RSKj team is familiar with this error and fix would be part of new release. This error does not block the sending of a transaction. Transaction will be mined successfully. 

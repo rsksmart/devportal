@@ -417,7 +417,6 @@ the official documentation.
 
 You may encounter the following errors when trying out the application:
 
-[](#top "collapsible")
 - Error: Cannot destructure property of intermediate value as it is undefined
     > ![show-error-image](/img/resources/rootstock-metamask/cannot-destructure-property-error.png)
     > - Problem: This can occur if the user is already connected to Rootstock Mainnet or Rootstock Testnet.

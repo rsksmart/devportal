@@ -26,46 +26,49 @@ Depending on your OS, you can install Docker following the official Docker guide
 
 ## Build Container
 
-Create a ```Dockerfile``` to setup the build environment
+Create a ```Dockerfile``` to setup the build environment.
 
-[](#top "multiple-terminals")
-- Linux
-  ```shell
-  FROM ubuntu:16.04
-  RUN apt-get update -y && \
-      apt-get install -y git curl gnupg-curl openjdk-8-jdk && \
-      rm -rf /var/lib/apt/lists/* && \
-      apt-get autoremove -y && \
-      apt-get clean
-  RUN gpg --keyserver https://secchannel.rsk.co/release.asc --recv-keys 1A92D8942171AFA951A857365DECF4415E3B8FA4
-  RUN gpg --finger 1A92D8942171AFA951A857365DECF4415E3B8FA4
-  RUN git clone --single-branch --depth 1 --branch ARROWHEAD-6.0.0 https://github.com/rsksmart/rskj.git /code/rskj
-   RUN git clone https://github.com/rsksmart/reproducible-builds 
-  RUN CP /Users/{$USER}/reproducible-builds/rskj/6.0.0-arrowhead/Dockerfile  /Users/{$USER}/code/rskj
-  WORKDIR /code/rskj
-  RUN gpg --verify SHA256SUMS.asc
-  RUN sha256sum --check SHA256SUMS.asc
-  RUN ./configure.sh
-  RUN ./gradlew clean build -x test
-  ```
-- Mac OSX
-  ```terminal
-  brew update && \
-  brew install git gnupg openjdk@8 && \
-      rm -rf /var/lib/apt/lists/* && \
-      brew autoremove && \
-      brew cleanup
-  RUN gpg --keyserver https://secchannel.rsk.co/release.asc --recv-keys 1A92D8942171AFA951A857365DECF4415E3B8FA4
-  RUN gpg --finger 1A92D8942171AFA951A857365DECF4415E3B8FA4
-  RUN git clone --single-branch --depth 1 --branch ARROWHEAD-6.0.0 https://github.com/rsksmart/rskj.git ./code/rskj
-  RUN git clone https://github.com/rsksmart/reproducible-builds 
-  RUN CP /Users/{$USER}/reproducible-builds/rskj/6.0.0-arrowhead/Dockerfile  /Users/{$USER}/code/rskj
-  RUN CD /code/rskj
-  RUN gpg --verify SHA256SUMS.asc
-  RUN sha256sum --check SHA256SUMS.asc
-  RUN ./configure.sh
-  RUN ./gradlew clean build -x test   
-  ```
+<Tabs>
+  <TabItem value="linux" label="Linux" default>
+      ```bash
+        FROM ubuntu:16.04
+        RUN apt-get update -y && \
+          apt-get install -y git curl gnupg-curl openjdk-8-jdk && \
+          rm -rf /var/lib/apt/lists/* && \
+          apt-get autoremove -y && \
+          apt-get clean
+        RUN gpg --keyserver https://secchannel.rsk.co/release.asc --recv-keys 1A92D8942171AFA951A857365DECF4415E3B8FA4
+        RUN gpg --finger 1A92D8942171AFA951A857365DECF4415E3B8FA4
+        RUN git clone --single-branch --depth 1 --branch ARROWHEAD-6.0.0 https://github.com/rsksmart/rskj.git /code/rskj
+        RUN git clone https://github.com/rsksmart/reproducible-builds 
+        RUN CP /Users/{$USER}/reproducible-builds/rskj/6.0.0-arrowhead/Dockerfile  /Users/{$USER}/code/rskj
+        WORKDIR /code/rskj
+        RUN gpg --verify SHA256SUMS.asc
+        RUN sha256sum --check SHA256SUMS.asc
+        RUN ./configure.sh
+        RUN ./gradlew clean build -x test
+    ```
+  </TabItem>
+  <TabItem value="mac" label="Mac OSX">
+      ```bash
+        brew update && \
+        brew install git gnupg openjdk@8 && \
+          rm -rf /var/lib/apt/lists/* && \
+          brew autoremove && \
+          brew cleanup
+        RUN gpg --keyserver https://secchannel.rsk.co/release.asc --recv-keys 1A92D8942171AFA951A857365DECF4415E3B8FA4
+        RUN gpg --finger 1A92D8942171AFA951A857365DECF4415E3B8FA4
+        RUN git clone --single-branch --depth 1 --branch ARROWHEAD-6.0.0 https://github.com/rsksmart/rskj.git ./code/rskj
+        RUN git clone https://github.com/rsksmart/reproducible-builds 
+        RUN CP /Users/{$USER}/reproducible-builds/rskj/6.0.0-arrowhead/Dockerfile  /Users/{$USER}/code/rskj
+        RUN CD /code/rskj
+        RUN gpg --verify SHA256SUMS.asc
+        RUN sha256sum --check SHA256SUMS.asc
+        RUN ./configure.sh
+        RUN ./gradlew clean build -x test   
+      ```
+  </TabItem>
+</Tabs>
 
 **Response:**
 

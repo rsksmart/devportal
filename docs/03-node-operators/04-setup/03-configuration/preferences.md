@@ -133,13 +133,15 @@ To rectify this,
 change the value of `peer.port` in the config file,
 or add a `peer.port` flag to the command when you start RSKj.
 
-
-[](#top "multiple-terminals")
-- Linux, Mac OSX
-  ```shell
-  $ java -Dpeer.port=50505 -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start
-  ```
-- Windows
-  ```windows-command-prompt
-  C:\> java -Dpeer.port=50505 -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start
-  ```
+<Tabs>
+  <TabItem value="mac" label="Linux, Mac OSX" default>
+    ```shell
+      $ java -Dpeer.port=50505 -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start
+    ```
+  </TabItem>
+  <TabItem value="windows" label=" Windows">
+    ```shell
+      C:\> java -Dpeer.port=50505 -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start
+    ```
+  </TabItem>
+</Tabs>

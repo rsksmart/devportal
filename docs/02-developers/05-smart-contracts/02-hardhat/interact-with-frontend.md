@@ -32,7 +32,6 @@ Creating a user-friendly web interface for smart contracts on the Rootstock netw
 
 ## Create HTML File
 
-[](#top "collapsible")
 - Update HTML File
     - In the frontend directory, open the `index.html` file:
       - Copy the code snippet below and paste it in your html file:
@@ -82,7 +81,6 @@ Your `index.html` file should now look like the [`index.html` file](https://raw.
 
 ## Create JavaScript Functions
 
-[](#top "collapsible")
 - Create basic javascript function
   1. In the frontend directory, open the `app.js` file.
   2. Copy the `MyToken.json` artifact file generated when building the contracts in `/artifacts/contracts/MyToken.sol/MyToken.json`.
