@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { MendableFloatingButton } from "@mendable/search"
+import {useColorMode} from "@docusaurus/theme-common";
 
 export default function AIButton() {
 
-  const style = { accentColor: "#000000" }
+  const {colorMode} = useColorMode();
+  const [style, setStyle] = useState({ darkMode: colorMode === 'dark', accentColor: colorMode === 'dark' ? "#fff" : '#000' })
 
   const floatingButtonStyle = {
     color: "var(--bs-body-color)",
@@ -21,6 +23,10 @@ export default function AIButton() {
       <path d="M1.99999 1.00001L1 2L1.99999 2.99999L2.99998 2L1.99999 1.00001Z" fill="currentColor"/>
     </svg>
   )
+
+  useEffect(() => {
+    setStyle({ darkMode: colorMode === 'dark', accentColor: colorMode === 'dark' ? "#fff" : '#000' })
+  }, [colorMode]);
 
   return (
     <MendableFloatingButton
