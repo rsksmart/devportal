@@ -1,7 +1,7 @@
 .btn{
   --bs-btn-color: var(--bs-body-color);
   --bs-btn-bg: var(--bs-body-bg);;
-  --bs-btn-border-color: var(--bs-body-color);;
+  --bs-btn-border-color: var(--bs-body-color);
 
   --bs-btn-hover-color: var(--bs-body-bg);
   --bs-btn-hover-bg: var(--bs-body-color);
@@ -10,7 +10,6 @@
   --bs-btn-active-color: var(--bs-body-bg);
   --bs-btn-active-bg: var(--bs-body-color);
 
-  --bs-btn-focus-box-shadow: #{$btn-focus-box-shadow};
   --bs-btn-active-box-shadow: #{$btn-active-box-shadow};
 
   --bs-btn-box-shadow: 4px 4px 0 -1px var(--bs-btn-bg), 4px 4px 0 0 var(--bs-btn-border-color);
@@ -20,7 +19,7 @@
 
   letter-spacing: -0.01em;
   position: relative;
-
+  text-decoration: none !important;
   & > span, & {
     display: inline-flex;
     align-items: center;
@@ -96,10 +95,23 @@
 }
 
 .btn-outline {
-  --bs-btn-box-shadow: 4px 4px 0 -1px var(--bs-btn-bg), 4px 4px 0 0 var(--bs-btn-border-color);
-  --bs-btn-focus-box-shadow: var(--bs-btn-box-shadow);
+  --bs-btn-color: var(--bs-body-color);
+  --bs-btn-bg: var(--bs-body-bg);;
+  --bs-btn-border-color: var(--bs-body-color);
+
+  --bs-btn-hover-color: var(--bs-black);
+  --bs-btn-hover-bg: var(--rsk-color-main);
+  --bs-btn-hover-border-color: var(--rsk-color-main);
+
+  --bs-btn-active-color: var(--bs-black);
+  --bs-btn-active-bg: var(--rsk-color-main);
+  --bs-btn-active-border-color: var(--rsk-color-main);
+  --bs-btn-box-shadow: none;
+  --bs-btn-focus-box-shadow: none;
+
+  font: 700 #{$f16}/1 $font-family-base;
+  padding: 11px 15px;
   position: relative;
-  border-radius: 40px;
-  box-shadow: var(--bs-btn-box-shadow);
+  border-radius: 10px;
 }
 

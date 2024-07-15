@@ -1,0 +1,38 @@
+.VideoWrap{
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--rsk-image-border-color);
+  margin: 12px 0;
+  & > *{
+    height: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    object-fit: cover;
+    aspect-ratio: initial;
+    border: none !important;
+  }
+  img{
+    max-height: initial !important;
+  }
+  button{
+    background: rgba(0,0,0,0.4);
+    padding: 0;
+    border: none;
+    appearance: none;
+    @media (hover) {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  img, button{
+    transition: 0.2s ease-in-out;
+    transition-property: opacity, visibility, transform;
+  }
+  &[class*="active"]{
+    img, button{
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
