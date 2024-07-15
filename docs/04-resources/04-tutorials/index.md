@@ -1,12 +1,31 @@
 ---
 sidebar_position: 4
-title: Tutorials and Guides
+title: Tutorials
 sidebar_label: Tutorials
-tags: [rsk, rootstock, tutorials, tools, guides]
-description: "Explore a curated selection of tutorials to develop on Rootstock."
+tags: [rsk, rootstock, beginner, quick starts, advanced, port to rootstock, tutorials]
+description: "Tutorials and learning resources"
 ---
 
-| Resource                                                       | Description                                                                                    |
-| ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| [TheGraph](/developer-tools/thegraph/) | Easily query on-chain data through a decentralized network of indexers. |
-| [Getting Started on Rootstock using Rust](/resources/tutorials/rootstock-rust/) | This tutorial helps to get started on Rootstock using Rust by performing basic operations such as sending transactions and calling contracts using Alloy crate, similiar to ethers.|
+<Filter
+values={[
+{label: 'Beginner', value: 'beginner'},
+{label: 'Advanced', value: 'advanced'},
+{label: 'Port to Rootstock', value: 'port-dapps'}
+]}>
+<FilterItem
+value="beginner"
+title="Interact with Rootstock using Rust"
+subtitle="rust"
+color="green"
+linkHref="/resources/tutorials/rootstock-rust/" 
+description="Rust is extensively getting used on backend side of many defi applications, dApps, developer tools, indexers and bridges. This guide will help developers to start using Rust on Rootstock blockchain."
+/>
+<FilterItem
+value="beginner, advanced"
+title="Add Rootstock to Metamask Programmatically"
+subtitle="metamask"
+color="green"
+linkHref="/resources/tutorials/rootstock-metamask/" 
+description="Learn how to add and initiate a network switch on Metamask from a website."
+/>
+</Filter>

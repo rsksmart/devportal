@@ -34,7 +34,7 @@ In this guide, you will learn:
 
 ## Getting Started
 
-:::info[Info]
+:::info[Note]
 The [RPC API](https://rpc.rootstock.io/) is available on TESTNET and MAINNET.
 :::
 
@@ -109,7 +109,6 @@ Join the [Rootstock Discord](https://rootstock.io/discord) to get support or giv
 
 ## Useful Links
 
-- Supported [JSON RPC Methods](https://dev.rootstock.io/rsk/node/architecture/json-rpc/json-rpc-methods/)
-- [Quick Start Guide with Hardhat](https://dev.rootstock.io/guides/quickstart/hardhat/)
-- [RSKj for Developers](https://dev.rootstock.io/kb/rskj-for-developers/)
+- Supported [JSON RPC Methods](/concepts/node-operators/json-rpc/methods/)
+- [Quick Start Guide with Hardhat](/developers/smart-contracts/hardhat/)
 - [RBTC Faucet](https://faucet.rootstock.io/)

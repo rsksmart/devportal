@@ -14,8 +14,8 @@ This section equips you with the fundamental knowledge required to navigate the 
 
 | Resource                                                       | Description                                                                                    |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| [Rootstock Blockchain Overview](/concepts/rootstock-overview/) | Gain a comprehensive understanding of the Rootstock platform. |
-| [Rootstock Stack](/concepts/rootstock-overview/stack/) |  Learn about how Rootstock combines the security of Bitcoin PoW with Ethereum's smart contract functionality.|
+| [Rootstock Blockchain Overview](/concepts/fundamentals/) | Gain a comprehensive understanding of the Rootstock platform. |
+| [Rootstock Stack](/concepts/fundamentals/stack/) |  Learn about how Rootstock combines the security of Bitcoin PoW with Ethereum's smart contract functionality.|
 | [RBTC Token](/concepts/rbtc/) | The RBTC token fuels transactions on the Rootstock network. Converting BTC to RBTC is straightforward using various methods. Visit the RBTC section for a comprehensive list of exchanges and applications facilitating RBTC acquisition. Visit the [RBTC section](https://rootstock.io/rbtc/) for a list of exchanges and apps to get RBTC.|
 | [RIF Suite](/concepts/rif-suite/) | Learn about the Rootstock Infrastructure Framework, a comprehensive set of Open-source tools and technologies designed to streamline and incentivize development on Bitcoin.|
 | [Rootstock Security](/concepts/powpeg/security-model/) | The Rootstock platform uses a security mechanism called the [Powpeg](/concepts/powpeg/), it is based on a layered security model, called “defence-in-depth”.|
@@ -38,7 +38,7 @@ The [Node Operators](/node-operators/) section caters specifically to node miner
 
 ### Developer Tools
 
-The [tools](/developer-tools/) section curates all the essential developer tools available on Rootstock. Find comprehensive resources on tool configuration, usage guides, reference materials, and informative tutorials.
+The [tools](/dev-tools/) section curates all the essential developer tools available on Rootstock. Find comprehensive resources on tool configuration, usage guides, reference materials, and informative tutorials.
 
 ### Resources
 

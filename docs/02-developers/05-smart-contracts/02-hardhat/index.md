@@ -23,9 +23,9 @@ tags: [getting-started, guide, smart contracts, rsk, rootstock, hardhat, blockch
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | [Prerequisites](/developers/requirements/) | Learn about the tools you need to have in place to follow along with this guide.|
 | [Create a Hardhat Project](/developers/smart-contracts/hardhat/) | Learn how to set up your environment for development using Hardhat.|
-| [Configure Hardhat for Rootstock](/developers/smart-contracts/hardhat-rootstock/configure-hardhat-rootstock/) | Learn how to configure your Hardhat project for development on Rootstock testnet and mainnet.|
-| [Write Smart Contracts](/developers/smart-contracts/hardhat-rootstock/write-smart-contracts/) | Learn how to write a smart contracts.|
-| [Test Smart Contracts](/developers/smart-contracts/hardhat-rootstock/test-smart-contracts/) | Learn how to test your smart contract to ensure it's working as expected. |
-| [Deploy Smart Contracts](/developers/smart-contracts/hardhat-rootstock/deploy-smart-contracts/) | Learn how to deploy your smart contract to your local environment and the Rootstock network. |
-| [Interact with the Frontend](/developers/smart-contracts/hardhat-rootstock/interact-with-smart-contracts/) | Learn how to interact with the smart contract from the front-end application. |
-| [Debugging and Troubleshooting Tips](/developers/smart-contracts/hardhat-rootstock/troubleshooting/) | Learn about the common issues you can come across while building following this guide and how you can solve them. |
+| [Configure Hardhat for Rootstock](/developers/smart-contracts/hardhat/configure-hardhat-rootstock/) | Learn how to configure your Hardhat project for development on Rootstock testnet and mainnet.|
+| [Write Smart Contracts](/developers/smart-contracts/hardhat/write-smart-contracts/) | Learn how to write a smart contracts.|
+| [Test Smart Contracts](/developers/smart-contracts/hardhat/test-smart-contracts/) | Learn how to test your smart contract to ensure it's working as expected. |
+| [Deploy Smart Contracts](/developers/smart-contracts/hardhat/deploy-smart-contracts/) | Learn how to deploy your smart contract to your local environment and the Rootstock network. |
+| [Interact with the Frontend](/developers/smart-contracts/hardhat/interact-with-smart-contracts/) | Learn how to interact with the smart contract from the front-end application. |
+| [Debugging and Troubleshooting Tips](/developers/smart-contracts/hardhat/troubleshooting/) | Learn about the common issues you can come across while building following this guide and how you can solve them. |

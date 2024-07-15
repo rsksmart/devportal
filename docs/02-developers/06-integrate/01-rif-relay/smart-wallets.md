@@ -11,7 +11,7 @@ This guide is intended to explain more about the interaction and deployment of t
 ## Prerequisites
 
 * Follow the deployment process in [Deployment Guide](/developers/integrate/rif-relay/deployment).
-* The definition of the smart wallet can be found in [Architecture](/rif/relay/architecture/#smart-wallet)
+* The definition of the smart wallet can be found in [Architecture](/developers/integrate/rif-relay/)
 
 ## Ways to create smart wallets
 
@@ -26,7 +26,7 @@ In the [RIF Relay Contracts](https://github.com/rsksmart/rif-relay-contracts) th
 
 We need to execute the following script:
 
-```
+```shell
 npx hardhat mint --token-address <0xabc123> --amount <amount_in_wei> --receiver <0xabc123> --network regtest
 ```
 > The token contract needs to have a mint function. 

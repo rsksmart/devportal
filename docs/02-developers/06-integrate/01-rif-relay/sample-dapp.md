@@ -26,7 +26,7 @@ To interact with the Rootstock network, you need to add it to Metamask. Since we
 - Chain ID: 33
 - Currency symbol: tRBTC
 
-To learn more about Metatmask and how to add it to Rootstock programmatically, see [Metamask](/developer-tools/wallets/metamask/) and [How to add Metamask to Rootstock Programmatically](https://dev.rootstock.io/kb/rootstock-metamask/).
+To learn more about Metatmask and how to add it to Rootstock programmatically, see [Metamask](/dev-tools/wallets/metamask/) and [How to add Metamask to Rootstock Programmatically](https://dev.rootstock.io/kb/rootstock-metamask/).
 
 
 ### Step 3: Set up RIF Relay contracts
@@ -68,7 +68,7 @@ To set up RIF relay contract, clone the RIF Relay Contracts Repository: https://
 
 ### Step 4: Set up RIF Relay Server
 
-Clone the [RIF Relay Server Repository](https://github.com/rsksmart/rif-relay-server), then refer to [Run the RIF Relay Server](https://dev.rootstock.io/guides/rif-relay/deployment/#run-the-rif-relay-server) for a complete guide on setting up the RIF Relay server.
+Clone the [RIF Relay Server Repository](https://github.com/rsksmart/rif-relay-server), then refer to [Run the RIF Relay Server](/developers/integrate/rif-relay/deployment/#run-the-rif-relay-server) for a complete guide on setting up the RIF Relay server.
 
 
 ## RIF Relay Sample dApp

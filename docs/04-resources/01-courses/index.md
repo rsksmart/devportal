@@ -8,7 +8,18 @@ description: "Welcome to Rootstock Courses;  Explore learning materials and cour
 
 Explore learning materials and courses to enable you get started on building on Rootstock and RIF Technologies.
 
-| Course                                                       | Description                                                                                    |
-| ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| [Rootstock Blockchain Developer Course](https://rsk.thinkific.com/courses/blockchain-developer/) | Learn how to write, test, secure, deploy and verify smart contracts on the Rootstock blockchain network. |
-| [Rootstock User Course](https://rsk.thinkific.com/courses/blockchain-user) | Learn how to use and interact with the Rootstock blockchain network!.|
+<Card
+  image="/img/courses/welcome.jpg"
+  title="Rootstock Blockchain Developer Course"
+  description="Learn how to write, test, secure, deploy and verify smart contracts on the Rootstock blockchain network."
+  link="https://rsk.thinkific.com/courses/blockchain-developer/"
+/>
+
+<br></br>
+
+<Card
+  image="/img/courses/user-course-modules/welcome.jpg"
+  title="Rootstock User Course"
+  description="Learn how to use and interact with the Rootstock blockchain network."
+  link="https://rsk.thinkific.com/courses/blockchain-user"
+/>

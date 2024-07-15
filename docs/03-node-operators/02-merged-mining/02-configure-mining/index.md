@@ -19,8 +19,9 @@ See how to set your config:
 
 &hellip; to run the node.
 
-> Remember:
-> You need to **restart** the node if you've changed any configuration option.
+:::tip[Tip]
+You need to **restart** the node if you've changed any configuration option.
+:::
 
 ### Using Ubuntu or Docker
 
@@ -28,7 +29,7 @@ Your node's config file is in `/etc/rsk`.
 Default configurations are defined there and they are the same as [these ones](https://github.com/rsksmart/artifacts/tree/master/rskj-ubuntu-installer/config).
 
 You should edit the config related with the network you are using (`mainnet.conf`, `testnet.conf`, `regtest.conf`).
-Check [here](/rsk/node/configure/reference) all the configuration options you could change.
+Check [here](/node-operators/setup/configuration/reference) all the configuration options you could change.
 
 ### Using Windows
 
@@ -43,7 +44,7 @@ You can create a file with the configuration options that you want to replace fr
 Default configurations are defined [here](https://github.com/rsksmart/rskj/tree/master/rskj-core/src/main/resources/config).
 
 The extension of the file must be `.conf`.
-Check [here](/rsk/node/configure/reference/) for all the configuration option.
+Check [/node-operators/setup/configuration/reference/](/node-operators/setup/configuration/reference/) for all the configuration option.
 
 As an example, if you want to change the default `database directory`, your config file should only contain:
 
@@ -65,7 +66,7 @@ This can be done in two ways:
 
 ### Using RocksDB
   
-:::note[Important Info]
+:::note[Important]
 
 - Starting from [RSKj HOP v4.2.0](https://github.com/rsksmart/rskj/releases/tag/HOP-4.2.0), RocksDB is no longer experimental. As of the most recent version, RocksDB has now been made the default storage library, replacing LevelDB. This change was made to tackle maintainability and performance issues of LevelDB.
 - Previously, RSKj ran using [LevelDB](https://dbdb.io/db/leveldb) by default, with the option to switch to [RocksDB](http://rocksdb.org/). Now, RocksDB is the default storage option, aiming to enable higher performance within the RSKj nodes.

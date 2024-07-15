@@ -17,7 +17,7 @@ This way, developers enjoy expressive scenarios, targeted browser automation, an
 ## Prerequisites
 
 - Install Nodejs and NPM 
-    - See [Hackathon Dev Starter](/guides/starter-kits/hackathon-starter#quick-start-setup)
+    - See [Hackathon Dev Starter](/developers/prerequisites/hackathon-starter#quick-start-setup)
 - [Cucumber](#installing-and-configuring-cucumber)
 - Code Editor 
     - [Visual Studio Code](https://code.visualstudio.com/)
@@ -34,7 +34,7 @@ cd e2e_dapps_automation
 
 To install dependencies, run the command `npm i` in the terminal or run the `npm:install` script.
 
-Create a `.env` file inside config folder, and add your MetaMask test wallet address for testing purposes (seed & password). See [how to create a metamask wallet](/guides/quickstart/browser/install-metamask/) and [configure Metamask for rootstock](/guides/quickstart/browser/custom-network-and-token/).
+Create a `.env` file inside config folder, and add your MetaMask test wallet address for testing purposes (seed & password). See [how to create a metamask wallet](/developers/blockchain-essentials/browser#install-metamask) and [configure Metamask for rootstock](/developers/blockchain-essentials/browser#custom-network-and-token).
 
 See example: 
 
@@ -197,6 +197,6 @@ Execute `test` or `npm test` script to run the tests using chromium.
 Testing decentralized applications (dApps) is crucial for delivering a smooth user experience and ensuring the reliability of decentralized systems. Thorough testing of the frontend identifies and addresses usability issues, creating a user-friendly interface. [Cucumber](https://cucumber.io/) and [Playwright](https://playwright.dev/) form a dynamic duo in automated testing, blending behavior-driven development (BDD) and powerful browser automation capabilities. Cucumber, employing the human-readable Gherkin syntax, enables collaboration between technical and non-technical team members by describing application behavior in plain language.
 
 ## Useful Links
-- For information on other testing tools, see [Quick Start: Testing Smart Contracts](/guides/quickstart/hardhat/test-smart-contract/)
+- For information on other testing tools, see [Quick Start: Testing Smart Contracts](/developers/smart-contracts/hardhat/test-smart-contracts/)
 - [Cucumber](https://cucumber.io/)
 - [Playwright](https://playwright.dev/)

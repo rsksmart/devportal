@@ -35,11 +35,9 @@ git checkout tags/ARROWHEAD-6.0.0 -b ARROWHEAD-6.0.0
 
 *Note:* It is better to download the code into a short path.
 
-> **Important Notice: From [RSKj HOP v4.2.0](https://github.com/rsksmart/rskj/releases/), ARM CPUs on Linux OS is now supported. See [using RocksDB](/rsk/node/configure/#using-rocksdb)**.
-
 ## Ensure the security chain
 
-[Ensure the security chain](./security-chain/) of the downloaded source code.
+[Ensure the security chain](/node-operators/setup/security-chain/) of the downloaded source code.
 
 ## Get external dependencies
 

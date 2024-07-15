@@ -171,7 +171,7 @@ Instructions on how to do a Testnet peg-in.
 
 Instructions on how to do a Testnet peg-out.
 
-:::info[Info]
+:::info[Note]
 The release process on Bitcoin network takes 10 Rootstock block confirmations and at least 10 more minutes.
 :::
 

@@ -12,7 +12,7 @@ render_features: 'powpeg-hsm-attestation-frame'
 Rootstock’s (RSK) 2-way peg protocol, called “the **Powpeg**”, has matured from its inception in 2018 as a federation to now include many decentralized qualities. The new Rootstock Powpeg protects private keys stored in special purpose PowHSMs based on tamper-proof secure elements (SE). Each PowHSM runs a Rootstock node in SPV mode, and so signatures can only be commanded by chain cumulative proof of work. Security is established in the Powpeg through the simplicity of a layered design we refer to as defence-in-depth.
 
 > - The 2 Way Peg Application is now available on [Testnet](https://app.2wp.testnet.rootstock.io/) and [Mainnet](https://app.2wp.rootstock.io/). 
-> - For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the 2 way peg app, please refer to the [2 way peg app user guide](/resources/user-guides/two-way-peg-app/).
+> - For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the 2 way peg app, please refer to the [2 way peg app user guide](/resources/).
 > - Get information on the signatories and attestion in the [Powpeg HSM Firmware Attestation](/concepts/powpeg/hsm-firmware-attestation) section.
 
 ## The History of the Powpeg

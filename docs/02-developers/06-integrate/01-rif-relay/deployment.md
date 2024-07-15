@@ -61,7 +61,7 @@ The deployment summary shows two sets of Smart Wallets, each paired with its ver
     ```bash
       npx hardhat deploy --network testnet
     ```
-> Remember to configure Testnet in `hardhat.config.ts`. Existing RIF Relay contracts deployed on Testnet can be found in the [contracts section](/rif/relay/contracts).
+> Remember to configure Testnet in `hardhat.config.ts`. Existing RIF Relay contracts deployed on Testnet can be found in the [contracts section](/developers/integrate/rif-relay/contracts).
 
 #### Mainnet
 
@@ -70,11 +70,11 @@ The deployment summary shows two sets of Smart Wallets, each paired with its ver
     ```bash
       npx hardhat deploy --network mainnet
     ```
-> Ensure Mainnet is set up in `hardhat.config.ts`. Existing RIF Relay contracts deployed on Mainnet can be found in the [contracts section](/rif/relay/contracts).
+> Ensure Mainnet is set up in `hardhat.config.ts`. Existing RIF Relay contracts deployed on Mainnet can be found in the [contracts section](/developers/integrate/rif-relay/contracts).
 
 ### Revenue Sharing
 
-Revenue Sharing is an optional feature in RIF Relay that can be implemented using collector contracts. You can deploy multiple Collector contracts, but they are not included in the default Relay contract deployment. For detailed information on Collector contracts, refer to the [architecture documentation](/rif/relay/architecture/#collector).
+Revenue Sharing is an optional feature in RIF Relay that can be implemented using collector contracts. You can deploy multiple Collector contracts, but they are not included in the default Relay contract deployment. For detailed information on Collector contracts, refer to the [architecture documentation](/developers/integrate/rif-relay/architecture/#collector).
 
 Before deploying a Collector contract ensure the following:
 1. Ensure the chosen token for the Collector contract is the same as the one used for transaction fees. 
@@ -140,7 +140,7 @@ Execute the `acceptToken(address token)` function on the Relay Verifiers contrac
 - `SmartWalletDeployVerifier`
 - `SmartWalletRelayVerifier`
 
-:::info[Info]
+:::info[Note]
 This action must be performed by the contracts' owner, typically the account that conducted the deployment.
 :::
   
@@ -187,7 +187,7 @@ In the RIF Relay Contracts, execute the command:
 ```
 > The `<TOKEN_ADDRESSES>`, `<VERIFIER_ADDRESSES>` is a comma-seperated list of verifier addresses to allow the tokens for.
 
-:::info[Info]
+:::info[Note]
 The network name; regtest, testnet, or mainnet, is an optional parameter that is taken from the hardhat.config.ts file. The network name you specify must be the same as the one used to deploy the contract.
 :::
 
@@ -197,7 +197,7 @@ After setting up on-chain components, the next step is to set up off-chain compo
 Configuration of the Relay Server is streamlined using the [node-config](https://www.npmjs.com/package/config) package. For detailed advantages of this package, visit their [wiki](https://github.com/node-config/node-config/wiki).
 
 <b>The TL;DR:</b> In the `config` directory, create a file named `local.json`.
-For visual insights into how the Relay Server functions, refer to the diagrams available [here](/rif/relay/architecture/#relay-server).
+For visual insights into how the Relay Server functions, refer to the diagrams available [here](/developers/integrate/rif-relay/).
     
 #### Regtest
     
@@ -276,7 +276,7 @@ Here's an example configuration file using the off-chain components deployed on 
   }
 ```
 
-> The [contracts](https://developers.rsk.co/rif/relay/contracts/#primary-contracts) used in this setup are the primary contracts available on the Rootstock network. These primary contracts, however, do not include support for the `CustomSmartWallet`.            
+> The [contracts](/developers/integrate/rif-relay/) used in this setup are the primary contracts available on the Rootstock network. These primary contracts, however, do not include support for the `CustomSmartWallet`.            
 
 For details of each configuration key used in setting up the RIF Relay Server, refer to the [RIF Relay Server Configuration](https://github.com/rsksmart/rif-relay-server#server-configuration) documentation.
 

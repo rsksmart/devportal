@@ -6,7 +6,7 @@ tags: [rsk, rskj, node, cli]
 description: "Command Line Interface for Rootstock (RSK)"
 ---
 
-Command line (CLI) arguments are arguments specified after the `RSK start` class. See [Config Options](/rsk/node/configure/)
+Command line (CLI) arguments are arguments specified after the `RSK start` class. See [Config Options](/node-operators/setup/configuration/)
 
 > New entry points (Java classes with static public main method) have been included from the [RSK Hop Release v4.3.0](https://github.com/rsksmart/rskj/releases/).
 
@@ -466,7 +466,7 @@ Besides the parameters and flags, it's also possible to configure the node over 
 ```
 
 Most of the configurable options or settings for RSKj are available
-in "config". See [config reference](/rsk/node/configure/reference/) for more details.
+in "config". See [config reference](/node-operators/setup/configuration/reference/) for more details.
 
 ## Reference implementation
 

@@ -9,7 +9,7 @@ description: "Explore a curated selection of smart contract development tools an
 <Filter
   values={[
     {label: 'Bridges', value: 'bridge'},
-    {label: 'Starter-Kits', value: 'demos'},
+    {label: 'Starter Kits', value: 'demos'},
     {label: 'Exchanges', value: 'exchange'},
     {label: 'Wallets', value: 'wallet'},
     {label: 'Explorers', value: 'explorer'},
@@ -18,8 +18,8 @@ description: "Explore a curated selection of smart contract development tools an
     {label: 'SDKs', value: 'sdk'},
     {label: 'Faucets', value: 'faucet'},
     {label: 'Gas', value: 'gas'},
-    {label: 'Dev-Environments', value: 'dev-environment'},
-    {label: 'Code-Quality', value: 'code-quality'},
+    {label: 'Dev Environments', value: 'dev-environment'},
+    {label: 'Code Quality', value: 'code-quality'},
     {label: 'JSON-RPC', value: 'rpc'},
     {label: 'Libraries', value: 'library'},
     {label: 'No-Code', value: 'no-code'},
@@ -33,9 +33,10 @@ description: "Explore a curated selection of smart contract development tools an
     title="2 Way Peg App"
     subtitle="bridge"
     color="orange"
-    linkHref="https://app.2wp.rootstock.io/"
+    linkHref="https://app.2wp.rootstock.io/" 
+    target="_blank"
     linkTitle="Get RBTC"
-    description="Bridge Bitcoin and Rootstock using the 2 Way Peg."
+    description="Bridge Bitcoin and Rootstock using the 2 Way Peg App."
   />
 <FilterItem
     value="dev-environment, sc"
@@ -56,16 +57,16 @@ description: "Explore a curated selection of smart contract development tools an
     description="Hardhat is an Ethereum development environment for developers. It's primarily used in the development of smart contracts for the Rootstock and EVM-compatible chains."
   />
 <FilterItem
-    value="explorer"
+    value="explorer, sc"
     title="Blockscout Explorer"
     subtitle="Explorer"
     color="orange"
-    linkHref="https://rootstock.blockscout.com/"
+    linkHref="/dev-tools/explorers/blockscout/"
     linkTitle="Use the Explorer"
-    description="Rootstock Blockscout Explorer"
+    description="Blockscout is an open-source tool for exploring transactions on any EVM chain, including Rootstock."
   />
 <FilterItem
-    value="explorer"
+    value="explorer, sc"
     title="Rootstock Explorer"
     subtitle="Explorers"
     color="orange"
@@ -78,7 +79,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="RPC API"
     subtitle="json rpc"
     color="orange"
-    linkHref="/dev-tools/rpc-api/"
+    linkHref="/developers/rpc-api/"
     linkTitle="Make First API Call"
     description="The Rootstock RPC API provides a seamless and intuitive web interface for developers to interact with Rootstock nodes via JSON-RPC methods."
   />
@@ -114,7 +115,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="Rootstock Wallets"
     subtitle="wallet"
     color="orange"
-    linkHref="https://blog.rootstock.io/noticia/rootstock-wallets/"
+    linkHref="/dev-tools/wallets/"
     linkTitle="Use Wallets"
     description="View all Rootstock Wallets."
   />
@@ -195,7 +196,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="Tenderly"
     subtitle="data & analytics"
     color="orange"
-    linkHref="/dev-tools/"
+    linkHref="https://tenderly.co/"
     linkTitle="Access on-chain data"
     description="Tenderly helps developers build, monitor, and improve smart contracts by providing a set of tools to boost productivity, save time, and ensure efficient smart contracts functionality."
   />
@@ -204,7 +205,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="Thirdweb"
     subtitle="platforms"
     color="orange"
-    linkHref="/dev-tools/"
+    linkHref="https://thirdweb.com/"
     linkTitle="Use Thirdweb"
     description="Thirdweb is a Full-stack web3 development tools, production-grade infrastructure platform for developers to build on Rootstockk."
   />
@@ -357,9 +358,18 @@ description: "Explore a curated selection of smart contract development tools an
     title="Vottun"
     subtitle="infra"
     color="orange"
-    linkHref="https://www.mara.com/"
+    linkHref="https://vottun.com"
     linkTitle="Get Started"
     description="Vottun interoperable multi-blockchain architecture is built to make it easy to develop Web3 applications without the need to understand much of the underlying blockchain technology."
+  />
+<FilterItem
+    value="platform-infra"
+    title="WakeUp Labs"
+    subtitle="infra"
+    color="orange"
+    linkHref="https://platform.wakeuplabs.io"
+    linkTitle="Get Started"
+    description="WakeUp Labs is a software development studio that assists EVM-Compatible Blockchains, DAOs and traditional organizations in overcoming technical challenges and expediting product development."
   />
 <FilterItem
     value="bridge, sc"
@@ -456,7 +466,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="dApp Automation"
     subtitle="Demos"
     color="orange"
-    linkHref="/developers/quickstart/dapp-automation-cucumber"
+    linkHref="/developers/quickstart/dapp-automation-cucumber/"
     linkTitle="Use Etherspot"
     description="Learn how to automate dApp using Cucumber and Playwright."
   />

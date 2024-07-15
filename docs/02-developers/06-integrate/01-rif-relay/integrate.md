@@ -18,7 +18,7 @@ Additionally, it's important to note that not _all_ of the RIF Relay components 
 
 ### RIF Relay Smart Contracts
 
-These need to be deployed and their addresses known. For steps on how to do this, please refer to the [Contract Deployment](/guides/rif-relay/deployment/) page of this guide.
+These need to be deployed and their addresses known. For steps on how to do this, please refer to the [Contract Deployment](/developers/integrate/rif-relay/deployment/) page of this guide.
 
 ### RIF Relay Server
 
@@ -26,13 +26,13 @@ The RIF Relay Server is the off-chain component in charge of receiving transacti
 
 The RIF Relay Manager owns RIF Relay Worker accounts with funds in native coin. To relay a transaction, a Worker signs it and sends it to the RIF Relay Hub paying for the gas consumed. In the case of a happy flow, transactions will ultimately be relayed through the RIF Relay Hub, using the EIP-712 library.
 
-For more details on this, please refer to the [Architecture page](/rif/relay/architecture/).
+For more details on this, please refer to the [Architecture page](/developers/integrate/rif-relay/).
 
 Users can interact with the RIF Relay Server directly or indirectly. For the latter, a user can communicate with a RIF Relay Server through a RIF Relay Client. A RIF Relay Client knows the addresses of different RIF Relay Servers and it can send on-chain requests to any one of them. The RIF Relay Client then sends the transaction to be sponsored to the RIF Relay Server via HTTP request.
 
 In any case, you'll need to have the server installed and running. To achieve this please refer to the following guides:
-1. [RIF Relay Installation Requirements](/guides/rif-relay/installation-requirements/)
-2. [RIF Relay Deployment](/guides/rif-relay/deployment/)
+1. [RIF Relay Installation Requirements](/developers/integrate/rif-relay/installation-requirements/)
+2. [RIF Relay Deployment](/developers/integrate/rif-relay/deployment/)
 
 ### RIF Relay Client
 
@@ -78,7 +78,7 @@ After setting the configuration and the ethers provider, we can start creating i
 
 #### Account Manager
 
-The `Account Manager` manager is a singleton component from the RIF Relay Client library that helps to sign relay transactions.  This component can sign the transactions with an internal account that was previously added or using a wallet provider like [metamask](https://metamask.io/). The `Account Manager` will look first for manually added accounts and, if none is found, will try to use the provider that was [previously setup](/guides/rif-relay/integrate/#rif-relay-client).
+The `Account Manager` manager is a singleton component from the RIF Relay Client library that helps to sign relay transactions.  This component can sign the transactions with an internal account that was previously added or using a wallet provider like [metamask](https://metamask.io/). The `Account Manager` will look first for manually added accounts and, if none is found, will try to use the provider that was [previously setup](/developers/integrate/rif-relay/integrate/#rif-relay-client).
 
 The `Account Manager` accepts [Ethers V5 Wallets](https://docs.ethers.org/v5/api/signer/#Wallet) as internal accounts.  
 
@@ -103,7 +103,7 @@ Where variables are:
 
 ### Relay Transaction
 
-To relay transactions we need a smart wallet already deployed, the deployment process and definition of a smart wallet can be found [Smart Wallet](/guides/rif-relay/smart-wallets).
+To relay transactions we need a smart wallet already deployed, the deployment process and definition of a smart wallet can be found [Smart Wallet](/developers/integrate/rif-relay/smart-wallets).
 
 The steps that we must follow are:
 

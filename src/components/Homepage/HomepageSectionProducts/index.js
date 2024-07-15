@@ -39,22 +39,18 @@ const data = {
       list: [
         {
           title: 'Metamask',
-          href: '#',
+          href: '/dev-tools/wallets/metamask',
         },
         {
-          title: 'MyCrypto',
-          href: '#',
-        },
-        {
-          title: 'Bitget',
-          href: '#',
-        },
+          title: 'Wallets on Rootstock',
+          href: '/dev-tools/wallets/',
+        }
       ],
     },
     {
       title: (
         <>
-          RIF Suite
+          RIF Tools
         </>
       ),
       color: 'pink',
@@ -85,7 +81,7 @@ const data = {
       ),
       list: [
         {
-          title: 'Use the RPC API',
+          title: 'Make First API Call',
           href: '/developers/rpc-api/setup/',
         }
       ],

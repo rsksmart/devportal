@@ -61,11 +61,11 @@ The `networks.js` file contains all the configuration for the different networks
 
 ### Configure Networks
 
-Here, we will configure the networks for both [Mainnet](/concepts/rbtc/conversion/networks/mainnet/) and [Testnet](/concepts/rbtc/conversion/networks/testnet/).
+Here, we will configure the networks for both [Mainnet](/concepts/rbtc/networks#mainnet-conversion) and [Testnet](/concepts/rbtc/networks#testnet-conversion).
 
-Open the [networks.js](https://github.com/rsksmart/demo-code-snippets/blob/5cc5124fe5bddc85f09a82e49eba7591003543f0/switch-network-to-rsk/networks.js) file, or copy the code below, then paste into the network.js file. For more information on the different types of networks on Rootstock, see [Metamask installation](/wallet/use/metamask/).
+Open the [networks.js](https://github.com/rsksmart/demo-code-snippets/blob/5cc5124fe5bddc85f09a82e49eba7591003543f0/switch-network-to-rsk/networks.js) file, or copy the code below, then paste into the `network.js` file. For more information on the different types of networks on Rootstock, see [Metamask installation](/dev-tools/wallets/metamask/).
 
-```
+```js
 export const rskTestnet = {
   chainName: 'Rootstock Testnet',
   chainId: '0x1f',

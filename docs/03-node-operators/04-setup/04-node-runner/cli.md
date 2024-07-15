@@ -28,4 +28,4 @@ Replace:
 
 It's ready!
 
-You are on the Mainnet by default. If you want to switch the networks, read [this page](/rsk/node/configure/switch-network).
+You are on the Mainnet by default. If you want to switch the networks, read [this page](/node-operators/setup/configuration/switch-network).

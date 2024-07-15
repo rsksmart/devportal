@@ -1,0 +1,7 @@
+{
+    "name": "Sovryn", 
+    "bridgeIndex": 1,
+    "attestationPath": "./data/sovryn-attestation.json", 
+    "publicKeysPath": "./data/sovryn-pubkeys.json",
+    "parametersPath": "./data/version-235-mainnet-parameters.json"
+}

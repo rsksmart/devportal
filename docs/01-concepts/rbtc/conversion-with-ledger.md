@@ -40,7 +40,7 @@ BTC Mainnet using Ledger hardware wallet.
   - Legacy for an account that has addresses starting with a 1
 - Go to the third tab "Receive". You will see a Bitcoin address.
 
-:::info[Info]
+:::info[Note]
 The Bitcoin wallet needs to be legacy (not Segwit)
 whose public key starts with either `m` or `n`,
 and private key starting with `p2pkh:`
@@ -174,7 +174,7 @@ Get the corresponding RBTC address from your Ledger harware wallet, following th
 
 You can check balance of RBTC address on MyCrypto or MEW setting the corresponding derivation path and selection the address.
 
-:::info[Info]
+:::info[Note]
 You have to wait a minimum of 100 confirmations + a minimum of 5 minutes for checking your RBTC balance
 :::
 
@@ -197,7 +197,7 @@ Then do a transaction to the Bridge Contract.
 
 > Bridge Contract address: `0x0000000000000000000000000000000001000006`
 
-:::info[Info]
+:::info[Note]
 
 - The minimum amount to send in a peg-out transaction must be greater than or equals to 0.004 **RBTC** for Mainnet and the minimum amount to send in a peg-in transaction must be greater than or equals to 0.005 **BTC** for Mainnet.
 - Gas Limit of the transaction needs to be manually set at 100,000 gas; otherwise the transaction will fail.
@@ -211,6 +211,6 @@ Then do a transaction to the Bridge Contract.
 You can either use Electrum wallet downloaded earlier or
 any Bitcoin explorer to check the balance.
 
-:::info[Info]
+:::info[Note]
 The release process on Bitcoin network takes 4000 RSK block confirmations and at least 10 more minutes.
 :::

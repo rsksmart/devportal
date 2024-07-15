@@ -29,7 +29,7 @@ To set up the RIF Relay system running locally there are some tools that are req
 
 ## Getting Started with RIF Relay
 
-For a detailed step-by-step guide on getting started with RIF Relay, refer to the [Starter kit](/guides/rif-relay/starter-kit).
+For a detailed step-by-step guide on getting started with RIF Relay, refer to the [Starter kit](/developers/integrate/rif-relay/starter-kit).
 
 
 ## RIF Relay Contract Deployment Requirements
@@ -37,4 +37,4 @@ For a detailed step-by-step guide on getting started with RIF Relay, refer to th
 - Hardhat
     - We use `Hardhat` version `v2.10.2` for blockchain interactions. For details on how to install Hardhat, follow the instructions on the [Hardhat website](https://hardhat.org/hardhat-runner/docs/getting-started#installation). Use the `npx` prefix for Hardhat commands to ensure the use of the project-specific version. Verify the installation with `npx hardhat version`. For configuration, refer to `hardhat.config.ts`. Detailed usage and configuration instructions are available in [Hardhat's documentation](https://hardhat.org/docs).
 - Using Docker
-    - RIF Relay components can be deployed using Docker or locally using [Hardhat](/guides/rif-relay/installation-requirements#hardhat). A guide for the [RIF Relay Server](https://github.com/rsksmart/rif-relay-server#execute-as-a-docker-container) can be found in the repository.
+    - RIF Relay components can be deployed using Docker or locally using [Hardhat](/developers/integrate/rif-relay/installation-requirements#hardhat). A guide for the [RIF Relay Server](https://github.com/rsksmart/rif-relay-server#execute-as-a-docker-container) can be found in the repository.

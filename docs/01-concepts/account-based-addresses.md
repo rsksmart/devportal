@@ -10,7 +10,7 @@ Rootstock Addresses incorporate an optional blockchain identifier (also known as
 
 ## How to get an address
 
-Check out the already [integrated wallets](/developer-tools/) on Rootstock.
+Check out the already [integrated wallets](/dev-tools/wallets/) on Rootstock.
 
 ## Derivation path info
 

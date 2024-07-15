@@ -72,7 +72,7 @@ The Rootstock Infrastructure Framework (RIF) Token allows any token holder to co
 
 ## Wallets
 
-See [supported wallets](/developer-tools/).
+See [supported wallets](/dev-tools/wallets/).
 
 ## Technical information
 

@@ -24,10 +24,10 @@ See how to set your config:
 ### Using Ubuntu or Docker
 
 Your node's config file is in `/etc/rsk`.
-Default configurations are defined there and they are the same as [these ones](https://github.com/rsksmart/artifacts/tree/master/rskj-ubuntu-installer/config).
+Default configurations are defined there and they are the same as [the config](https://github.com/rsksmart/artifacts/tree/master/rskj-ubuntu-installer/config).
 
 You should edit the config related with the network you are using (`mainnet.conf`, `testnet.conf`, `regtest.conf`).
-Check [here](/rsk/node/configure/reference) all the configuration options you could change.
+Check [reference](/node-operators/setup/configuration/reference) all the configuration options you could change.
 
 ### Using Windows
 
@@ -39,10 +39,10 @@ For other operating systems, including Windows, please use the `-Drsk.conf.file`
 #### 1. Create a `.conf` file
 
 You can create a file with the configuration options that you want to replace from the default.
-Default configurations are defined [here](https://github.com/rsksmart/rskj/tree/master/rskj-core/src/main/resources/config).
+Default configurations are defined in the [Config](https://github.com/rsksmart/rskj/tree/master/rskj-core/src/main/resources/config).
 
 The extension of the file must be `.conf`.
-Check [here](/rsk/node/configure/reference/) for all the configuration option.
+Check [here](/node-operators/setup/configuration/reference/) for all the configuration option.
 
 As an example, if you want to change the default `database directory`, your config file should only contain:
 

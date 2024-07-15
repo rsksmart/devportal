@@ -1,0 +1,312 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700,800&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+        <link href="index.css" rel="stylesheet">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/elliptic/6.3.3/elliptic.min.js" integrity="sha512-kQvjD3pNLLs5EVzCnEqJJ/xfxeHGa/GwCBuwHdxV6NPpsieZRV7SVFtM0YMiebSuKIgFPlf7K5On5beTOwke0g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.8.0/web3.min.js" integrity="sha512-bSQ2kf76XufUYS/4XinoHLp5S4lNOyRv0/x5UJACiOMy8ueqTNwRFfUZWmWpwnczjRp9SjiF1jrXbGEim7Y0Xg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script src="certificate.js"></script>
+        <script src="attestation.js"></script>
+        <script src="bridge.js"></script>
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <div class="error-container" style="display:none;">
+            <h1>Bridge member details</h1>
+            <p>There was an error while trying to fetch the bridge member details.</p>
+        </div>
+
+        <div class="container" style="display:none;">
+            <h1 class="bm-name"></h1>
+            <h2>Bridge member details</h2>
+            
+            <hr/>
+
+            <h3>
+                Public keys
+                <button type="button" class="btn btn-outline-primary btn-sm act-pubkeys-compress">View compressed</button>
+            </h3>
+            <p class="bm-op-pubkey-container">
+                <div class="bm-op-pubkey" style="display:none;">The <span class="bm-op-pubkey-name"></span> 
+                public key is <a class="bm-op-pubkey-verify-auto-link" href="#pubkey-auto-verify">[ verify ]</a> <a class="bm-op-pubkey-verify-link" href="#pubkey-verify">[ manually verify ]</a> <br/>
+                <code class="bm-op-pubkey-value"></code></div>
+            </p>
+
+            <div id="pubkey-auto-verify" class="bm-auto-verify-bm-pubkey" style="display: none;">
+                <div class="bm-code-block"><code></code></div>
+                <button type="button" class="btn btn-outline-secondary btn-sm bm-verify-bm-pubkey-actbutton bm-verify-bm-pubkey-hide">Hide me</button>
+            </div>
+
+            <div id="pubkey-verify" class="bm-verify-bm-pubkey" style="display: none;">
+                <p>
+                    In order to verify <span class="bm-name"></span>'s <span class="bm-verify-bm-pubkey-name"></span> public key, make sure you 
+                    have <code>curl</code> installed and, in the command line, issue:
+                </p>
+                <div class="bm-code-block">
+                    <code>
+                        <span class="bm-code-block-cursor">$</span>
+                        <span class="bm-verify-bm-pubkey-curl"></span>
+                    </code>
+                </div>
+                <div class="bm-verify-bm-pubkey-detail">&nbsp;</div>
+                <p>Paste the result of the command below, then click &quot;Verify&quot;:</p>
+                <div>
+                    <textarea class="bm-verify-bm-pubkey-result" placeholder="{&quot;jsonrpc&quot;:&quot;2.0&quot;,..."></textarea>
+                </div>
+                <div class="bm-verify-bm-pubkey-error"></div>
+                <button type="button" class="btn btn-outline-secondary btn-sm bm-verify-bm-pubkey-actbutton bm-verify-bm-pubkey-verify">Verify</button>
+                <button type="button" class="btn btn-outline-secondary btn-sm bm-verify-bm-pubkey-actbutton bm-verify-bm-pubkey-hide">Hide me</button>
+            </div>
+
+            <div class="bm-verify-bm-pubkey-step2" style="display:none;">
+                <p>
+                    Parsed result for <span class="bm-name"></span>'s <span class="bm-verify-bm-pubkey-name"></span> public key:
+                </p>
+                <div class="bm-code-block">
+                    <code>
+                        <span class="bm-verify-bm-pubkey-step2-result"></span>
+                    </code>
+                </div>
+                <div class="bm-verify-bm-pubkey-step2-detail">&nbsp;</div>
+                <div class="bm-verify-bm-pubkey-step2-match">Public key <span>MATCH!</span></div>
+                <div class="bm-verify-bm-pubkey-step2-nomatch">Public key <span>MISMATCH!</span> Please try again.</div>
+                <button type="button" class="btn btn-outline-secondary btn-sm bm-verify-bm-pubkey-actbutton bm-verify-bm-pubkey-hide">Hide me</button>
+            </div>
+
+            <hr/>
+
+            <h3>powHSM</h3>
+            <p>
+                This member <b>is</b> running a powHSM device version 
+                <code class="bm-powhsm-version"></code>
+                <a href="#" target="_blank" class="see-more bm-powhsm-version-link">[See on Github]</a>.
+            </p>
+
+            <hr/>
+
+            <h4>Signer</h4>
+            <h5>Hash and parameters</h5>
+            <p>
+                This powHSM is running a Signer with hash <code class="bm-signer-hash"></code>,
+                built using the following parameters (this hash can be verified by 
+                manually building the Signer from the source code using the given parameters):
+            </p>
+            <table class="table table-striped">
+                <tr>
+                    <th>Checkpoint</th><td><code class="bm-signer-checkpoint"></code></td>
+                </tr>
+                <tr>
+                    <th>Minimum difficulty</th><td><code class="bm-signer-difficulty"></code></td>
+                </tr>
+                <tr>
+                    <th>Network</th><td><code class="bm-signer-network"></code></td>
+                </tr>
+            </table>
+            <p>
+                For instructions on how to verify the Signer hash by building the Signer 
+                with the given parameters, please read 
+                <a class="bm-build-link" target="_blank" href="#">this document</a>.
+                For details on what the Signer is and what role it plays in powHSM, please read our
+                <a class="bm-concepts-link" target="_blank" href="#">concepts section</a>.
+            </p>
+            <p>
+                
+            </p>
+
+            <h5>Public keys</h5>
+            <table class="table table-striped signer-pubkeys-tab bm-pubkey-container">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Public key</th>
+                    </tr>
+                </thead>
+                <tr class="bm-pubkey" style="display:none;">
+                    <th class="bm-pubkey-name"></th>
+                    <td class="bm-pubkey-value"></td>
+                </tr>
+            </table>
+            <p>
+                (*) These keys use a different derivation path and are now deprecated. 
+                They will be removed altogether in future versions.
+            </p>
+            <p>
+                The SHA-256 hash of the public keys shown here has been 
+                dynamically computed on your browser using the 
+                <a href="https://cryptojs.gitbook.io/docs/" target="_blank">CryptoJS</a> 
+                library. If you want to double-check this computation, you can manually
+                compute a SHA-256 of the concatenation of the underlying byte representation of
+                each of these public keys, in the order shown. For this task, you can use
+                any library or tool of your choosing. This resulting SHA-256 is present in
+                the signer attestation shown below.
+            </p>
+
+            <!-- Signer and UI attestation template -->
+            <div class="bm-att" style="display:none;">
+                <div class="container info-box">
+                    <div class="row bm-att-container">
+                        <div class="col-12 info-box-title">
+                            Message (hover for details)
+                        </div>
+                        <div class="col-12 att-msg">
+                            <code class="bm-att-msg"><span class="bm-att-msg-prefix">0x</span></code>
+                        </div>
+                        <div class="col-12 info-box-title">
+                            Message components
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 bm-att-part bm-att-msg-part-text-cnt" style="display:none;">
+                <code class="bm-att-part-text"></code>
+                <a href="#" target="_blank" class="see-more bm-att-part-link" style="display:none;"></a>
+            </div>
+            <div class="col-12 info-box-title bm-att-key-part-title" style="display:none;"></div>
+            <div class="col-12 bm-att-key-part-value" style="display:none;">
+                <code class="bm-att-key-part-value-text"></code>
+            </div>
+            <!-- End signer and UI attestation template -->
+
+            <h5>Attestation</h5>
+            <div class="bm-signer-att-container"></div>
+            <p class="bm-att-explanation">
+                The <em>signature</em> shown above is a valid signature of the given <em>message</em>
+                by the <em>signer-hash</em>-tweaked <em>attestation key</em> (shown further down).
+                This has been dynamically verified on your browser using the 
+                <a href="https://github.com/indutny/elliptic" target="_blank">Elliptic</a> library. 
+                You can manually verify the validity of said signature using any library or tool 
+                of your choosing. The validity of this signature, together with the rest of the 
+                certification chain up to the root of trust (<a href="https://www.ledger.com/" target="_blank">Ledger</a> itself), 
+                constitutes proof of this signature being generated in an authentic Ledger device running a 
+                Signer App with the given hash.
+            </p>
+            <hr/>
+
+            <h4>User Interface (UI)</h4>
+            <h5>Hash and parameters</h5>
+            <div class="bm-ui-postv3" style="display:none;">
+                <p>
+                    This powHSM is running a UI with hash <code class="bm-ui-hash"></code>,
+                    built using the following parameters (this hash can be verified by 
+                    manually building the UI from the source code using the given parameters):
+                </p>
+                <table class="table table-striped">
+                    <tr>
+                        <th>Authorized signer hash</th><td><code class="bm-ui-auth-signer-hash"></code></td>
+                    </tr>
+                    <tr>
+                        <th>Authorized signer iteration</th><td><code class="bm-ui-auth-signer-iteration"></code></td>
+                    </tr>
+                    <tr>
+                        <th>Signer authorizers file</th><td><code class="bm-ui-auth-authorizers"></code> <a href="#" target="_blank" class="see-more bm-ui-auth-authorizers-link">[See on Github]</a></td>
+                    </tr>
+                </table>
+                <p>
+                    For instructions on how to verify the UI hash by building the UI
+                    with the given parameters, please read 
+                    <a class="bm-build-link" target="_blank" href="#">this document</a>.
+                    For details on what the UI is and what role it plays in powHSM, please read our
+                    <a class="bm-concepts-link" target="_blank" href="#">concepts section</a>.
+                </p>
+            </div>
+            <div class="bm-ui-prev3" style="display:none;">
+                <p>This powHSM is running a UI with hash <code class="bm-ui-hash"></code>. This hash can be verified by manually building the UI from the source code.</p>
+                <p>
+                    For instructions on how to verify the UI hash by building the UI,
+                    please read <a class="bm-build-link" target="_blank" href="#">this document</a>.
+                    For details on what the UI is and what role it plays in powHSM, please read our
+                    <a class="bm-concepts-link" target="_blank" href="#">concepts section</a>.
+                </p>
+            </div>
+
+            <h5>Attestation</h5>
+            <div class="bm-ui-att-container"></div>
+            <p class="bm-att-explanation">
+                The <em>signature</em> shown above is a valid signature of the given <em>message</em>
+                by the <em>UI-hash</em>-tweaked <em>attestation key</em> (shown below).
+                This has been dynamically verified on your browser using the 
+                <a href="https://github.com/indutny/elliptic" target="_blank">Elliptic</a> library. 
+                You can manually verify the validity of said signature using any library or tool 
+                of your choosing. The validity of this signature, together with the rest of the 
+                certification chain up to the root of trust (<a href="https://www.ledger.com/" target="_blank">Ledger</a> itself), 
+                constitutes proof of this signature being generated in an authentic Ledger device running a 
+                UI App with the given hash.
+            </p>
+            <hr/>
+            
+            <!-- Certificate chain element template -->
+            <div class="bm-chain-element" style="display:none;">
+                <h4 class="bm-chain-element-title"></h4>
+                <div class="container info-box">
+                    <div class="row">
+                        <div class="col-12 info-box-title">
+                            Message (hover for details)
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 ">
+                            <code class="bm-chain-element-message"><span class="att-prefix">0x</span></code>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 info-box-title">
+                            Public key
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <code class="bm-chain-element-pubkey"></code>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 info-box-title bm-chain-element-signature-title"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <code class="bm-chain-element-signature"></code>
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+            </div>
+            <!-- End certificate chain element template -->
+
+            <div class="bm-chain-elements-container"></div>
+
+            <h4>Ledger public key (root of trust)</h4>
+            <div class="container info-box">
+                <div class="row">
+                    <div class="col-12 info-box-title">
+                        Public key
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <code class="bm-root-of-trust"></code>
+                        <a href="https://support.ledger.com/hc/en-us/articles/4404382029329?support=true" target="_blank" class="see-more">[See on Ledger website]</a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="bm-att-explanation">
+                In each of the <em>Attestation public key</em> and <em>Device public key</em> tables shown above, 
+                the <em>signatures</em> shown are valid signatures of the corresponding <em>messages</em>
+                by the following table's public key. In both cases, the signed <em>message</em> contains
+                the certified public key, as shown. The last table only shows the root of trust.
+                The validity of this certification chain has been dynamically verified on your browser using the 
+                <a href="https://github.com/indutny/elliptic" target="_blank">Elliptic</a> library. 
+                You can manually verify these signatures using any library or tool 
+                of your choosing. The validity of this set of signatures constitutes part of the proof of 
+                validity of both the Signer and UI attestations shown above. For more information on
+                the attestation process, see 
+                <a href="https://developers.ledger.com/docs/nano-app/bolos-features/#attestation" target="_blank">the Ledger documentation</a>.
+            </p>
+        </div>
+    </body>
+</html>

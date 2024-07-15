@@ -1,6 +1,6 @@
 ---
 sidebar_label: FAQs
-sidebar_position: 5
+sidebar_position: 6
 title: Frequently Asked Questions
 tags: [knowledgebase, rsk, faqs, help, support, rootstock]
 description: "Explore frequently asked questions about Rootstock and RIF"
@@ -91,7 +91,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
       - Some of the main differences are:
       > - **Consensus mechanism:** Rootstock uses merge-mining with Bitcoin, which means that Rootstock blocks are secured by the same miners that secure Bitcoin. Currently, more than 50% of Bitcoin hashrate is securing Rootstock. Liquid uses a federation of trusted functionaries that validate and sign blocks. Rootstock’s merge-mining is more decentralized than Liquid’s federation and provides the thermodynamic security of PoW, which Liquid does not.
       > - **Smart contract capabilities:** Rootstock supports Turing-complete smart contracts and has a virtual machine almost identical to Ethereum’s. This allows developers to use the same tools, libraries, and languages as Ethereum and port existing applications to Rootstock. Liquid has a simpler scripting system that is not Turing-complete (within a single transaction) and only supports a limited set of use cases, such as atomic swaps and multi-sig transactions.
-      > - **Peg mechanism:** Both Rootstock’s and Liquid’s two-way pegs are based on a federation of functionaries, each running a hardware security module (HSM) that participates in a multisig that protects the locked funds. Both also have emergency recovery systems. However, every Liquid withdrawal is advanced by one functionary to a user, and then the Liquid blockchain reimburses the functionary. This is known as a repayment protocol. Some or all functionaries require KYC checks. Rootstock system performs peg-outs directly to the user's Bitcoin wallet and currently does not impose KYC on peg-outs but forces the same user to be on both sides of the transfer. [Rootstock Flyover](/guides/flyover/) system provides faster peg-outs, also using a repayment system.
+      > - **Peg mechanism:** Both Rootstock’s and Liquid’s two-way pegs are based on a federation of functionaries, each running a hardware security module (HSM) that participates in a multisig that protects the locked funds. Both also have emergency recovery systems. However, every Liquid withdrawal is advanced by one functionary to a user, and then the Liquid blockchain reimburses the functionary. This is known as a repayment protocol. Some or all functionaries require KYC checks. Rootstock system performs peg-outs directly to the user's Bitcoin wallet and currently does not impose KYC on peg-outs but forces the same user to be on both sides of the transfer. [Rootstock Flyover](/developers/integrate/) system provides faster peg-outs, also using a repayment system.
       > - **Scalability:** Rootstock can achieve a higher transaction throughput than Liquid because Rootstock’s transactions are smaller, its blocks can contain more transactions, and the Rootstock blockchain has a lower average block interval. Rootstock also has several scalability proposals close to being finalized, such as parallel transaction processing.
     </Accordion.Body>
   </Accordion.Item>
@@ -164,7 +164,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     <Accordion.Body>
       - You can obtain RBTC and RIF tokens through various exchanges like Money on Chain and Oku Trade.
       - For an updated list, see [Get RBTC](https://rootstock.io/rbtc/).
-      - For [RIF tokens](https://dev.rootstock.io/rif/token/), you can use exchanges like Sovryn, Binance, Gate.io, Lbank, MEXC, Coinex, and Hotbit. Please note that you should always use the right wallet and connect to the right network. RBTC can only be sent to and from Rootstock addresses on the network. Similarly, RIF tokens can only be sent to and from addresses that support the ERC677 token standard.
+      - For [RIF tokens](/concepts/rif-suite/token/), you can use exchanges like Sovryn, Binance, Gate.io, Lbank, MEXC, Coinex, and Hotbit. Please note that you should always use the right wallet and connect to the right network. RBTC can only be sent to and from Rootstock addresses on the network. Similarly, RIF tokens can only be sent to and from addresses that support the ERC677 token standard.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="7">
@@ -176,7 +176,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
   <Accordion.Item eventKey="8">
     <Accordion.Header as="h3">What wallets support Rootstock and RIF tokens?</Accordion.Header>
     <Accordion.Body>
-      - Rootstock is currently supported in several different software and hardware wallets. See [Wallets on Rootstock](/developer-tools/wallets/) pages for more information.
+      - Rootstock is currently supported in several different software and hardware wallets. See [Wallets on Rootstock](/dev-tools/wallets/) pages for more information.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
@@ -256,7 +256,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
   <Accordion.Item eventKey="1">
     <Accordion.Header as="h3">What is RIF, and what are its goals?</Accordion.Header>
     <Accordion.Body>
-      - [Rootstock Infratstructure Framework](/rif/) (RIF) is a suite of open and decentralized infrastructure protocols that enable faster, easier, and more scalable distributed application development (dApps) within a unified environment. RIF  is built on the Rootstock smart contract network, the first general-purpose smart contract secured by the Bitcoin network. RIF  includes support for decentralized, third-party, off-chain payment networks; and easy-to-use interfaces for developers.
+      - [Rootstock Infratstructure Framework](/concepts/rif-suite/) (RIF) is a suite of open and decentralized infrastructure protocols that enable faster, easier, and more scalable distributed application development (dApps) within a unified environment. RIF  is built on the Rootstock smart contract network, the first general-purpose smart contract secured by the Bitcoin network. RIF  includes support for decentralized, third-party, off-chain payment networks; and easy-to-use interfaces for developers.
       - RIF  aims to bridge the gap between blockchain technologies and their mass-market adoption by providing developers and users access to various services across multiple crypto-economies.
     </Accordion.Body>
   </Accordion.Item>
@@ -270,7 +270,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
   <Accordion.Item eventKey="3">
     <Accordion.Header as="h3">What is RIF Name Service?</Accordion.Header>
     <Accordion.Body>
-      - [RIF Name Service](/rif/rns/guide/getting-started/) (RNS) is a protocol that enables the identification of blockchain addresses by human-readable names or aliases. It can identify other personal resources, such as payment or communication addresses, smart contracts, and Non-Fungible Tokens (NFTs).
+      - [RIF Name Service](/concepts/rif-suite/) (RNS) is a protocol that enables the identification of blockchain addresses by human-readable names or aliases. It can identify other personal resources, such as payment or communication addresses, smart contracts, and Non-Fungible Tokens (NFTs).
       - RNS makes interacting with blockchain resources easier, more user-friendly and enhances interoperability across different platforms.
       > You can learn more about RNS by visiting the [RIF website](https://rif.technology) or reading the [RIF White Paper](https://rif.technology/static/add903ce229a6f45a606cd78b028cf9e/RIF-whitepaper-V2.pdf).
     </Accordion.Body>

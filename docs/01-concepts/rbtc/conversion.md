@@ -24,7 +24,7 @@ The process of conversion utilises a [Powpeg](/concepts/powpeg/) mechanism. Thus
 - Legacy (P2PKH)
 - Segwit Compatible (P2SH-P2WPKH)
 
-:::info[Info]
+:::info[Note]
 On the Testnets, the token symbols are prefixed with a lowercase `t`.
 Thus, we have `BTC` and `RBTC` on the Mainnets, which correspond to `tBTC` and `tRBTC` of the Testnets.
 :::

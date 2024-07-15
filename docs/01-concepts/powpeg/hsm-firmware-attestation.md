@@ -11,11 +11,11 @@ To verify the Powpeg nodes, follow the HSM firmware attestation process using th
 
 ### Powpeg HSM Firmware Attestation - Sovryn
 
-<iframe class="w-100 rounded-4" src="https://dev.rootstock.io/assets/rsk/architecture/powpeg-hsm-attestation/sovryn.html" title="Sovryn" height="400"></iframe>
+<iframe class="w-100 rounded-4" src="/img/rsk/architecture/powpeg-hsm-attestation/sovryn.html" title="Sovryn" height="400"></iframe>
 
 ### Powpeg HSM Firmware Attestation - pNetwork
 
-<iframe class="w-100 rounded-4" src="https://dev.rootstock.io/assets/rsk/architecture/powpeg-hsm-attestation/pnetwork.html" title="pNetwork" height="400"></iframe>
+<iframe class="w-100 rounded-4" src="/img/rsk/architecture/powpeg-hsm-attestation/pnetwork.html" title="pNetwork" height="400"></iframe>
 
 ### Frequently Asked Questions
 

@@ -9,9 +9,9 @@ tags: [getting-started, guide, smart contracts, rsk, rootstock, hardhat, blockch
 ## Prerequisites
 
 1. Rootstock-compatible accounts/address. 
-  - You can use existing accounts or create new ones. See [Account Based Addresses](/concepts//account-based-addresses/).
+  - You can use existing accounts or create new ones. See [Account Based Addresses](/concepts/account-based-addresses/).
 2. Wallet
-  - Set up a [Metamask wallet](/developer-tools/wallets/metamask/) and get a [private key](/guides/quickstart/browser#private-keys-and-public-keys).
+  - Set up a [Metamask wallet](/dev-tools/wallets/metamask/) and get a [private key](/developers/blockchain-essentials/browser#private-keys-and-public-keys).
   
 ## Getting Started
 
@@ -32,7 +32,7 @@ To manage environment variables, install `dotenv` using the following command:
   ROOTSTOCK_TESTNET_PRIVATE_KEY="your_testnet_private_key"
 ```
 
-:::info[Info]
+:::info[Note]
 Depending on your desired network, using a Testnet and Mainnet private key is optional, as you're not required to have separate private keys in your environment variable.
 :::
 

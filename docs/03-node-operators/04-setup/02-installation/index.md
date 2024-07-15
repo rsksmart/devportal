@@ -18,4 +18,4 @@ Rootstock nodes can be installed on Ubuntu OS, Windows, Docker and Java. Here, w
 | [Ubuntu Package](/node-operators/setup/installation/ubuntu/) | Visit [Setup Node on Ubuntu](/node-operators/setup/installation/ubuntu/) for instructions on installing Rootstock Node on ubuntu systems |
 | [Java - Fat / Uber JAR](/node-operators/setup/installation/java/) | Visit [Setup Node using JAR](/node-operators/setup/installation/java/) for instructions on installing Rootstock Node on any system with Fat JAR or Uber JAR. |
 | [Docker](https://hub.docker.com/r/rsksmart/rskj) |  Visit the [Docker Hub](https://hub.docker.com/r/rsksmart/rskj) for instructions on installing Rootstock Node as a docker container on any system. |
-| [Windows](/node-operators/node-runner/windows/) | Visit [Setup Node on Windows OS](/node-operators/node-runner/windows/) |
+| [Windows](/node-operators/setup/node-runner/windows/) | Visit [Setup Node on Windows OS](/node-operators/setup/node-runner/windows/) |
