@@ -67,10 +67,10 @@
 }
 .menu__caret:before, .menu__link--sublist-caret:after {
     content: '';
-    background: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 1L4 4L1 1' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+    background: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 1L4 4L1 1' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    filter: none;
+    //filter: none;
     height: 16px;
     transform: rotate(180deg);
     width: 16px;
