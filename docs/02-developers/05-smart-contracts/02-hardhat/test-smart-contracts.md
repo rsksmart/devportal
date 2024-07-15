@@ -69,7 +69,6 @@ By following these steps, you'll have the necessary testing frameworks installed
 
 In addition to Mocha and Chai, you can use several other frameworks and approaches in your Hardhat project. Each has its unique features and benefits.
 
-[](#top "collapsible")
 - Jest - JavaScript Testing Framework
   - [Jest](https://jestjs.io/) is popular for its delightful syntax and focus on simplicity. It works well for testing both frontend and backend JavaScript applications.
 - Waffle - Ethereum Smart Contract Testing Library

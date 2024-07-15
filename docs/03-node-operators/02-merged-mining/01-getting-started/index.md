@@ -51,7 +51,7 @@ Rootstock's average block time is 30 seconds, which is faster than Bitcoin's 10 
 
 ### 5. Submit Solution to Rootstock node
 
-Use the [`mnr_submitBitcoinBlockPartialMerkle`](/node-operators/json-rpc/methods#mnr_submitbitcoinblockpartialmerkle) method from Rootstock node's JSON-RPC API. That method has optimum performance, and is preferred among other available methods.
+Use the [`mnr_submitBitcoinBlockPartialMerkle`](/node-operators/json-rpc/methods) method from Rootstock node's JSON-RPC API. That method has optimum performance, and is preferred among other available methods.
 Other submission methods and information about the pros and cons between them can be found in the [Mining JSON-RPC API documentation](/node-operators/json-rpc).
 
 ## Influence on Bitcoin

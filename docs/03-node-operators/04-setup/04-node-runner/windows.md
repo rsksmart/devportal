@@ -146,4 +146,4 @@ In order to run tests, we can simply go to the `Testing` tab where you can see a
 
 ## Any problems?
 
-Check out the [troubleshooting section](../09-troubleshooting/), hope it helps!
+Check out the [troubleshooting section](/node-operators/troubleshooting/), hope it helps!

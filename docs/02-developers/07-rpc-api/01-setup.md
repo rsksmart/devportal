@@ -109,6 +109,6 @@ Join the [Rootstock Discord](https://rootstock.io/discord) to get support or giv
 
 ## Useful Links
 
-- Supported [JSON RPC Methods](/concepts/node-operators/json-rpc/methods/)
+- Supported [JSON RPC Methods](/node-operators/json-rpc/methods/)
 - [Quick Start Guide with Hardhat](/developers/smart-contracts/hardhat/)
 - [RBTC Faucet](https://faucet.rootstock.io/)

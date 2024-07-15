@@ -1,6 +1,6 @@
 ---
 sidebar_label: Develop
-sidebar_position: 400
+sidebar_position: 600
 title: RIF Relay Develop
 tags: [rif, envelope, relay, user, guide]
 description: RIF Relay deployment process

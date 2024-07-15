@@ -1,6 +1,6 @@
 ---
 sidebar_label: RIF Relay Deployment
-sidebar_position: 300
+sidebar_position: 500
 title: RIF Relay Deployment
 tags: [rif, envelope, relay, user, guide]
 description: RIF Relay deployment process
@@ -74,7 +74,7 @@ The deployment summary shows two sets of Smart Wallets, each paired with its ver
 
 ### Revenue Sharing
 
-Revenue Sharing is an optional feature in RIF Relay that can be implemented using collector contracts. You can deploy multiple Collector contracts, but they are not included in the default Relay contract deployment. For detailed information on Collector contracts, refer to the [architecture documentation](/developers/integrate/rif-relay/architecture/#collector).
+Revenue Sharing is an optional feature in RIF Relay that can be implemented using collector contracts. You can deploy multiple Collector contracts, but they are not included in the default Relay contract deployment. For detailed information on Collector contracts, refer to the [architecture documentation](/developers/integrate/rif-relay/architecture#collector).
 
 Before deploying a Collector contract ensure the following:
 1. Ensure the chosen token for the Collector contract is the same as the one used for transaction fees. 
@@ -112,12 +112,15 @@ To deploy the Collector contract, we'll use the [RIF Relay Contract](https://git
             "tokenAddresses": ["0x1Af2844A588759D0DE58abD568ADD96BB8B3B6D8"],
             "remainderAddress": "0xc354D97642FAa06781b76Ffb6786f72cd7746C97"
           }
-          ```
-          > **Note:** The `collectorOwner`, `beneficiaries`, and `remainderAddress` are the first five accounts provided by the node in Regtest.
+        ```
+
+> **Note:** The `collectorOwner`, `beneficiaries`, and `remainderAddress` are the first five accounts provided by the node in Regtest.
+
 2. Deploy the contract:
     ```bash
       npx hardhat collector:deploy --network regtest
     ```
+
 The collector is ready and can start receiving fees.
 
 #### Testnet
@@ -197,7 +200,7 @@ After setting up on-chain components, the next step is to set up off-chain compo
 Configuration of the Relay Server is streamlined using the [node-config](https://www.npmjs.com/package/config) package. For detailed advantages of this package, visit their [wiki](https://github.com/node-config/node-config/wiki).
 
 <b>The TL;DR:</b> In the `config` directory, create a file named `local.json`.
-For visual insights into how the Relay Server functions, refer to the diagrams available [here](/developers/integrate/rif-relay/).
+For visual insights into how the Relay Server functions, refer to the diagrams available [here](/developers/integrate/rif-relay/architecture/).
     
 #### Regtest
     
@@ -276,7 +279,7 @@ Here's an example configuration file using the off-chain components deployed on 
   }
 ```
 
-> The [contracts](/developers/integrate/rif-relay/) used in this setup are the primary contracts available on the Rootstock network. These primary contracts, however, do not include support for the `CustomSmartWallet`.            
+> The [contracts](/developers/integrate/rif-relay/contracts/) used in this setup are the primary contracts available on the Rootstock network. These primary contracts, however, do not include support for the `CustomSmartWallet`.            
 
 For details of each configuration key used in setting up the RIF Relay Server, refer to the [RIF Relay Server Configuration](https://github.com/rsksmart/rif-relay-server#server-configuration) documentation.
 
@@ -341,5 +344,4 @@ The register process performs the following actions:
 The server is now ready to start processing transactions and a ready message is diplayed on the console. For more details on configuration and registration parameters, refer to the [RIF Relay Server documentation](https://github.com/rsksmart/rif-relay-server#overrides).         
 
 #### Mainnet
-
 - To run RIF Relay Server on the Rootstock Mainnet, the procedure is the same as the one on Testnet, the only difference is the configuration. Configure it to use contracts deployed on Mainnet and an RSKj node connected to Mainnet.

@@ -1,6 +1,6 @@
 ---
 sidebar_label: Smart Wallets
-sidebar_position: 600
+sidebar_position: 700
 title: RIF Relay Smart Wallets
 tags: [rif, envelope, relay, user, guide]
 description: RIF Relay Smart Wallet
@@ -11,7 +11,7 @@ This guide is intended to explain more about the interaction and deployment of t
 ## Prerequisites
 
 * Follow the deployment process in [Deployment Guide](/developers/integrate/rif-relay/deployment).
-* The definition of the smart wallet can be found in [Architecture](/developers/integrate/rif-relay/)
+* The definition of the smart wallet can be found in [Architecture](/developers/integrate/rif-relay/architecture/)
 
 ## Ways to create smart wallets
 
@@ -36,11 +36,13 @@ npx hardhat mint --token-address <0xabc123> --amount <amount_in_wei> --receiver 
 To deploy a smart wallet we need to follow some steps that will be described below:
 
 1. We need to generate the smart wallet address. As we mentioned before, the Smart Wallet is a contract-based account, therefore, we can generate as many smart wallet addresses as we want without spending gas by calling the `getSmartWalletAddress` from the relay client library. 
+
 > A Smart Wallet only needs to be deployed when we need to execute a transaction. The deployment process uses gas so, unless it's subsidized, we need to pay for it.
 
 
 At this point we should have the Relay Client object created. 
-   ```typescript
+
+```typescript
     import type {
       getSmartWalletAddress,
       UserDefinedDeployRequest,
@@ -61,12 +63,12 @@ At this point we should have the Relay Client object created.
       relayTransactionOpts
     );
 
-   ```
-   > Keep in mind that to pay any amount of token fees during the deployment, the smart wallet must receive funds first.
+```
+> Keep in mind that to pay any amount of token fees during the deployment, the smart wallet must receive funds first.
 
-   Where variables are:
+Where variables are:
 
-  * **EOA**: Externally Owned Account, the owner of the smart wallet.
-  * **INDEX**: The index that we would like to use to generate the smart wallet.
-  * **TOKEN_ADDRESS**: The token contract address that we want to use to pay for the fee.
- * **AMOUNT_OF_TOKENS_IN_WEI**: The amount that we want to pay for the fee in wei.
+* **EOA**: Externally Owned Account, the owner of the smart wallet.
+* **INDEX**: The index that we would like to use to generate the smart wallet.
+* **TOKEN_ADDRESS**: The token contract address that we want to use to pay for the fee.
+* **AMOUNT_OF_TOKENS_IN_WEI**: The amount that we want to pay for the fee in wei.

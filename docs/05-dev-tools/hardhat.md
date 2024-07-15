@@ -37,6 +37,6 @@ npm install --save-dev hardhat
 ## Related Docs
 
 - [Getting Started with Hardhat](/developers/smart-contracts/hardhat/)
-- [Getting Started with Foundry](/dev-tools/smart-contracts/foundry/)
+- [Getting Started with Foundry](/dev-tools/foundry/)
 - [Github Repo](https://github.com/NomicFoundation/hardhat)
 - [Developer Tools](/dev-tools/)

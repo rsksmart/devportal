@@ -72,7 +72,6 @@ To configure your `rskMainnet` and `rskTestnet` private keys, you'll need to upd
 > Replace `"your_mainnet_private_key"` and `"your_testnet_private_key"` with your private keys. For information on how to retrieve your private keys, see [How to export an account's private key](https://support.metamask.io/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key).
 
 ### Step 3: Fund Your Accounts
-[](#top "collapsible")
 - Mainnet
   - You'll need RBTC, which you can obtain from an exchange. See [Get RBTC using Exchanges](https://dev.rootstock.io/guides/get-crypto-on-rsk/rbtc-exchanges/).
 - Testnet

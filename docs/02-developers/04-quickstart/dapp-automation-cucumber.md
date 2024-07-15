@@ -17,7 +17,7 @@ This way, developers enjoy expressive scenarios, targeted browser automation, an
 ## Prerequisites
 
 - Install Nodejs and NPM 
-    - See [Hackathon Dev Starter](/developers/prerequisites/hackathon-starter#quick-start-setup)
+    - See [Hackathon Dev Starter](/developers/requirements/)
 - [Cucumber](#installing-and-configuring-cucumber)
 - Code Editor 
     - [Visual Studio Code](https://code.visualstudio.com/)
@@ -59,7 +59,6 @@ const metamaskPath = await prepareMetamask(
 
 [Cucumber](https://cucumber.io/) already comes as a built-in dependency in this automation framework, when installing the dependencies, just be certain to add the vscode extensions as well, which will let you handle cucumber features seamlessly.
 
-[](#top "collapsible")
 - Cuke Step Definition Generator
     - Author: Muralidharan Rajendran
     - Description: This VSCode extension aids users by generating Cucumber Glue / Step Definition snippets for selected statements, streamlining work with Cucumber JS in VS Code.
@@ -104,7 +103,6 @@ Execute `test` or `npm test` script to run the tests using chromium.
 
 ## Writing E2E Tests using Cucumber
 
-[](#top "collapsible")
 - A. Identifying test scenarios for dApps on Rootstock
     - Identifying scenarios to automate in a UI framework involves considering various factors related to your application, testing goals, and the nature of the scenarios. Here are some guidelines specific to UI automation:
         - **Frequently Executed and Stable Tests:**

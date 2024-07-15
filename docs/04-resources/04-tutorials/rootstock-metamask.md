@@ -399,7 +399,7 @@ This gives the user the option to verify
 if the network configuration options are legitimate by comparing against
 the official documentation.
 
-> - See configurations for Rootstock [Mainnet and Testnet](/wallet/use/metamask/#connect-with-metamask).
+> - See configurations for Rootstock [Mainnet and Testnet](/dev-tools/wallets/metamask/).
 
 (6) Press `Approve`
 
@@ -417,7 +417,6 @@ the official documentation.
 
 You may encounter the following errors when trying out the application:
 
-[](#top "collapsible")
 - Error: Cannot destructure property of intermediate value as it is undefined
     > ![show-error-image](/img/resources/rootstock-metamask/cannot-destructure-property-error.png)
     > - Problem: This can occur if the user is already connected to Rootstock Mainnet or Rootstock Testnet.

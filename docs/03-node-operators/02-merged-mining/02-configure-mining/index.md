@@ -8,7 +8,7 @@ description: "Setting your own config preferences, when using the Java command, 
 ## Command Line Interface
 
 The Rootstock node can be started with different
-[CLI flags](./cli/).
+[CLI flags](/node-operators/setup/configuration/cli/).
 
 ## Setting config preferences
 
@@ -66,11 +66,9 @@ This can be done in two ways:
 
 ### Using RocksDB
   
-:::note[Important]
-
+:::note[Important Notice]
 - Starting from [RSKj HOP v4.2.0](https://github.com/rsksmart/rskj/releases/tag/HOP-4.2.0), RocksDB is no longer experimental. As of the most recent version, RocksDB has now been made the default storage library, replacing LevelDB. This change was made to tackle maintainability and performance issues of LevelDB.
 - Previously, RSKj ran using [LevelDB](https://dbdb.io/db/leveldb) by default, with the option to switch to [RocksDB](http://rocksdb.org/). Now, RocksDB is the default storage option, aiming to enable higher performance within the RSKj nodes.
-
 :::
 
 

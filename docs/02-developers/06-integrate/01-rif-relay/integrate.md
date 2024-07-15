@@ -1,6 +1,6 @@
 ---
 sidebar_label: Integrations
-sidebar_position: 500
+sidebar_position: 200
 title: RIF Relay Integration
 tags: [rif, envelope, relay, user, guide]
 description: Integrating RIF Relay in a dApp
@@ -78,7 +78,7 @@ After setting the configuration and the ethers provider, we can start creating i
 
 #### Account Manager
 
-The `Account Manager` manager is a singleton component from the RIF Relay Client library that helps to sign relay transactions.  This component can sign the transactions with an internal account that was previously added or using a wallet provider like [metamask](https://metamask.io/). The `Account Manager` will look first for manually added accounts and, if none is found, will try to use the provider that was [previously setup](/developers/integrate/rif-relay/integrate/#rif-relay-client).
+The `Account Manager` manager is a singleton component from the RIF Relay Client library that helps to sign relay transactions.  This component can sign the transactions with an internal account that was previously added or using a wallet provider like [metamask](https://metamask.io/). The `Account Manager` will look first for manually added accounts and, if none is found, will try to use the provider that was [previously setup](#rif-relay-client).
 
 The `Account Manager` accepts [Ethers V5 Wallets](https://docs.ethers.org/v5/api/signer/#Wallet) as internal accounts.  
 
@@ -161,12 +161,13 @@ To obtain the verifier addresses we need to execute the command:
 To relay transactions, the Relay Server exposes an HTTP post handler to the following path `http://<SERVER_URL>/relay`. The Relay Client provides an abstraction to build and send each transaction to the available servers; although the client can simplify the interaction with the server, it's always possible to send HTTP requests to the server without using the Relay Client. 
 
 Each transaction that will be sent, needs to have the following structure:
-  ```json
+
+```json
     {
       "relayRequest": "<DEPLOY_REQUEST|RELAY_REQUEST>",
       "metadata": "<METADATA>"
     }
-  ```
+```
 
 Below we will describe each field that is required in the request. 
 
@@ -258,7 +259,6 @@ Where each key from `request` is:
   * **index**: The index from the smart wallet that we want to deploy.
   * **validUntilTime**: Transaction expiration time in seconds.
 
-
 Where each key from `relayData` is:
 
   * **gasPrice**: The gas price that will be used to relay the transaction.
@@ -278,9 +278,9 @@ Where each key from `relayData` is:
 
 Where each key is:
 
-  * **relayHubAddress**: The relay hub that will be used by the server to relay the transaction.
-  * **signature**: The relay transaction signed by the owner. After signing the transaction, it cannot be changed, since there is a on-chain validation that is part of the EIP712.
-  * **relayMaxNonce**: Relay worker nonce plus an extra gap.
+* **relayHubAddress**: The relay hub that will be used by the server to relay the transaction.
+* **signature**: The relay transaction signed by the owner. After signing the transaction, it cannot be changed, since there is a on-chain validation that is part of the EIP712.
+* **relayMaxNonce**: Relay worker nonce plus an extra gap.
 
 ### Custom worker replenish function
 

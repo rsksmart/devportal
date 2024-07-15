@@ -9,7 +9,7 @@ description: "All the different ways that you can verify RSKj: Release signing k
 
 ## Verify authenticity of RSKj source code and its binary dependencies
 
-The authenticity of the source code must be verified by checking the signature of the release tags in the official Git repository. See [Reproducible builds](../reproducible). The authenticity of the binary dependencies is verified by Gradle after following the steps below to install the necessary plugins.
+The authenticity of the source code must be verified by checking the signature of the release tags in the official Git repository. See [Reproducible builds](/node-operators/setup/reproducible-build/). The authenticity of the binary dependencies is verified by Gradle after following the steps below to install the necessary plugins.
 
 ### Download Rootstock Release Signing Key public key
 

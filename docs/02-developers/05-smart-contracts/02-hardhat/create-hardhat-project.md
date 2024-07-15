@@ -30,7 +30,6 @@ Run the following command in the project root.
 
 Here, we will verify the installation of hardhat in your project.
 
-[](#top "collapsible")
 - To verify hardhat installation:
   - The [quickstart](https://github.com/rsksmart/rootstock-quick-start-guide) repository comes with Hardhat pre-installed. To check if Hardhat is installed, execute `npx hardhat` in the `rootstock-quick-start-guide` directory.
   - `npx hardhat` not only verifies installation but also allows you to initiate a new Hardhat project if it doesn't exist. For a new project, you'll be prompted to choose from several options. To create a blank project, select **Create an empty hardhat.config.js**, or pick one of the other options to begin with a pre-set template.
