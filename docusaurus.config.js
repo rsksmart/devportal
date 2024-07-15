@@ -38,7 +38,7 @@ const config = {
       },
       reportIssue : {
         title: 'Report an Issue',
-        url : '#',
+        url : 'https://github.com/rsksmart/rsksmart.github.io/issues',
       },
     }
   },

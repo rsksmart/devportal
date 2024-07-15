@@ -6,7 +6,7 @@ tags: [ubuntu, install, rsk, rskj, node, how-to, network, requirements, mainnet]
 description: "Install RSKj on Ubuntu."
 ---
 
-Make sure your system meets the [minimum requirements](/rsk/node/install/requirements/) before installing the Rootstock nodes.
+Make sure your system meets the [minimum requirements](/node-operators/setup/requirements/) before installing the Rootstock nodes.
 
 ## Video
 <div class="video-container">
@@ -62,7 +62,7 @@ We recommend that you check that the SHA256 hash of the downloaded package file 
 
 ## After installation
 
-By default, the node connects to Mainnet. To change the network choice (Mainnet/ Testnet/ Regtest), refer to the instructions in [switching networks](/rsk/node/configure/switch-network). To change configurations for the node, refer to the instructions in [RSK Node Configuration](/rsk/node/configure).
+By default, the node connects to Mainnet. To change the network choice (Mainnet/ Testnet/ Regtest), refer to the instructions in [switching networks](/node-operators/setup/configuration/switch-network). To change configurations for the node, refer to the instructions in [Rootstock Node Configuration](/node-operators/setup/configuration/).
 
 The installer will configure your node in the following paths:
 

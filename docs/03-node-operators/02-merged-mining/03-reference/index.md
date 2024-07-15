@@ -25,6 +25,6 @@ Once the platform enters the maturity phase, we estimate the security of Rootsto
 
 ## Main features:
 
-- [REMASC consensus protocol](/rsk/architecture/mining/remasc/)
+- [REMASC consensus protocol](/node-operators/merged-mining/remasc/)
 - One-day maturity for mining reward
 - No loss of efficiency in Bitcoin mining expected from merge mining (for late mid-state switching)

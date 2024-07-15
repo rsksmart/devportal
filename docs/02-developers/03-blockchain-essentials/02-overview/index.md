@@ -13,7 +13,7 @@ Rootstock’s full technology stack is built on top of Bitcoin:
 From Rootstock smart contracts to the Rootstock Infrastructure Framework.
 The stack is designed to create a more fair and inclusive financial system.
 
-> See [The Stack](/concepts/rootstock-overview/stack/)
+> See [The Stack](/concepts/fundamentals/stack/)
 
 Bitcoin, is a store and transfer of value.
 The blockchain is secure because miners with high infrastructure and energy costs create new blocks to be added to the blockchain every 10 minutes.
@@ -32,7 +32,7 @@ Let’s briefly look at each of these areas.
 
 ## Powpeg
 
-The second point of contact is the [Powpeg](/rsk/architecture/powpeg/).
+The second point of contact is the [Powpeg](/concepts/powpeg/).
 This component connects both networks to allow the transfer of bitcoins to Rootstock,
 thereby allowing developers to interact with smart contracts.
 They pay gas using the same bitcoin, the smart bitcoin.
@@ -84,21 +84,21 @@ Thus, the smart contract/dApp development skills that you’re used to will tran
 ### Tools
 
 - [Hardhat](https://hardhat.org/docs) is an Ethereum development environment designed for professionals. It's primarily used in the development of smart contracts for the Ethereum blockchain.
-  Refer to the [Hardhat Overview](/tools/hardhat/) for an overview of how it's used on Rootstock.
+  Refer to the [Hardhat Overview](/dev-tools/hardhat/) for an overview of how it's used on Rootstock.
 
 - [Metamask](https://metamask.io/) is a browser extension cryptocurrency wallet or mobile app,
   enabling users to interact with the Rootstock blockchain,
   including sending RBTC, sending Rootstock-based tokens such as RIF,
   and interacting with smart contracts deployed to the Rootstock network.
-  See how to [configure MetaMask to connect to Rootstock](https://developers.rsk.co/wallet/use/metamask/).
+  See how to [configure MetaMask to connect to Rootstock](/dev-tools/wallets/metamask/).
 
 - [Mocha](https://mochajs.org/) is a popular JavaScript test framework running on Node.js.
-  See [Rootstock Workshop: Javascript Testing](https://developers.rsk.co/tutorials/workshop-js-testing/) to see how to use it to test your smart contracts on Rootstock.
+  See [Testing Smart Contracts](/developers/smart-contracts/hardhat/test-smart-contracts/) to see how to use it to test your smart contracts on Rootstock.
 
 - [Solidity](https://docs.soliditylang.org/) is the most popular programming language for implementing smart contracts.
   The bytecode and ABI that the Solidity compiler, `solc`, outputs can be used to deploy and interact with smart contracts on Rootstock, thanks to the compatibility between RVM and EVM.
 
-> For a comprehensive list of tools, see [Tools](../../../05-developer-tools/) section.
+> For a comprehensive list of tools, see [Dev Tools](/dev-tools/) section.
 
 ## Ethereum Compatible JSON RPC
 
@@ -119,4 +119,6 @@ On Rootstock, blocks are created every 30 seconds, to secure the execution of sm
 This does not mint any new coins in the process, but does earn a reward from the merged mining.
 Check out [mining.rsk.co](https://mining.rsk.co/) to learn more about mining.
 
-> NOTE: The time between blocks on each network listed above are approximate values.
+:::info[Note]
+The time between blocks on each network listed above are approximate values.
+:::

@@ -31,6 +31,6 @@ This section provides help on some potential issues you may run into and tips on
   > - FIX 2: Delete artifacts folder and run the `npx hardhat compile` command to generate new artifacts.
 - Error:  "GET /MyToken.json" Error (404): "Not found"
   - Check that contracts were compiled successfully, and artifacts folder was generated.
-  - Check that all the steps in [interacting with frontend](/guides/quickstart/hardhat/interact-with-frontend/) were followed sequentially.
+  - Check that all the steps in [interacting with frontend](/developers/smart-contracts/hardhat/interact-with-frontend/) were followed sequentially.
 - Error: HH601: Script scripts/deploy.js doesn't exist.
   - Ensure that you're running the `npx hardhat run --network hardhat scripts/deploy.js` command from the root directory.

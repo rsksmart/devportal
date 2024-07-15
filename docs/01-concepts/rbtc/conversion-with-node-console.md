@@ -14,14 +14,17 @@ your Rootstock (RSK) node and a command line.
 - You need a BTC Wallet properly configured using said private key.
 - _[Only for release process]_ You need an Rootstock node up and running,
   with the RPC interface enabled, and the personal and eth modules enabled
-  - See [how do I run an Rootstock Node?](/node-operators/node-setup/).
+  - See [how do I run an Rootstock Node?](/node-operators/setup/).
 
 ## BTC to RBTC conversion
 
 How to perform a peg-in.
 
-:exclamation: **Before starting:** Read
-[lock requirements](/concepts/rbtc/networks#mainnet-conversion)
+:::warning[Warning]
+
+Read the [lock requirements](/concepts/rbtc/networks#mainnet-conversion)
+
+:::
 
 1. With your Bitcoin address,
    send a BTC transaction to the Rootstock Federation Address.
@@ -40,8 +43,11 @@ How to perform a peg-in.
 
 How to perform a peg-out.
 
-:exclamation: **Before starting:** Read
-[release requirements](/concepts/rbtc/networks#rbtc-to-btc-conversion)
+:::warning[Warning]
+
+Read the [release requirements](/concepts/rbtc/networks#rbtc-to-btc-conversion)
+
+:::
 
 1. Add your obtained Rootstock private key to your Rootstock node.
    Replace `RSKConvertedPrivateKey`, `RSKNode` and `RSKNodePort`

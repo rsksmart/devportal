@@ -9,7 +9,7 @@ render_features: 'tables-with-borders'
 
 See [CLI flags](../cli/) for command line flag options.
 
-> **Important Notice: From [RSKj HOP v4.2.0](https://github.com/rsksmart/rskj/releases/), RocksDB is no longer experimental. See [using RocksDB](/rsk/node/configure/#using-rocksdb)**.
+> **Important Notice: From [RSKj HOP v4.2.0](https://github.com/rsksmart/rskj/releases/), RocksDB is no longer experimental. See [using RocksDB](/node-operators/setup/configuration#using-rocksdb)**.
 
 ## Advanced Configuration
 
@@ -230,7 +230,7 @@ Describes the configuration for the RPC protocol.
       is the list of node's domain names or IPs.
       Check [restrictions on valid host names](https://en.wikipedia.org/wiki/Hostname#Restrictions_on_valid_host_names).
     * **NOTE**: For details on how to connect over HTTP,
-      see [HTTP Transport Protocol](/rsk/node/architecture/json-rpc/#http-transport-protocol "RSK JSON-RPC - HTTP").
+      see [HTTP Transport Protocol](/node-operators/json-rpc/transport-protocols#http-transport-protocol "Rootstock JSON-RPC - HTTP").
   * `rpc.providers.web.ws`
     defines WebSocket configuration:
     * `rpc.providers.web.ws.enabled = [true/false]`
@@ -243,14 +243,14 @@ Describes the configuration for the RPC protocol.
       is the WS-RPC server listening interface.
       By default RSK uses `localhost`.
     * **NOTE**: For details on how to connect over WebSockets,
-      see [Websockets Transport Protocol](/rsk/node/architecture/json-rpc/#websockets-transport-protocol "RSK JSON-RPC - WebSockets").
+      see [Websockets Transport Protocol](/node-operators/json-rpc/transport-protocols#websockets-transport-protocol "Rootstock JSON-RPC - WebSockets").
 * `rpc.modules` lists of different RPC modules.
   If a module is not in the list and enabled,
   its RPC calls are discarded.
 
 Examples:
 
-```
+```json
 modules = [
     { name: "eth", version: "1.0", enabled: "true" },
     { name: "net", version: "1.0", enabled: "true" },
@@ -265,7 +265,7 @@ modules = [
 
 It is possible to enable/ disable particular methods in a module.
 
-```
+```shell
 {
     name: "evm",
     version: "1.0",
@@ -277,7 +277,7 @@ It is possible to enable/ disable particular methods in a module.
 }
 ```
 
-To use the [RPC miner module](/develop/json-rpc-api)
+To use the [RPC miner module](/node-operators/json-rpc/methods/)
 you must include:
 
 ```
@@ -285,14 +285,14 @@ you must include:
 ```
 
 > Important Info:
-  - RPC methods for each module can be found in the [JSON-RPC documentation](/rsk/node/architecture/json-rpc/).
-  - See the [JSON-RPC Configurable limits](/rsk/node/architecture/json-rpc#configuration-of-limits-for-json-rpc-interface)
+  - RPC methods for each module can be found in the [JSON-RPC documentation](/node-operators/json-rpc/).
+  - See the [JSON-RPC Configurable limits](/node-operators/json-rpc/configuration-limits/)
 
 ## wallet
 
 You can store your accounts on the node to use them to sign transactions. However, it is **not secure** to use a wallet in a public node.
 
-```
+```shell
 wallet {
     enabled = true
     accounts = [
@@ -325,7 +325,7 @@ Scoring is the way the node 'punishes' other nodes when bad responses are sent. 
 
 An example:
 
-```
+```shell
 scoring {
     nodes {
         number: 100
@@ -343,7 +343,7 @@ scoring {
 
 ## miner
 
-Check out [Configure RSKj node for mining](/rsk/node/configure/for-mining)
+Check out [Configure RSKj node for mining](/node-operators/merged-mining/configure-mining)
 for detailed information about the `miner` configuration.
 
 ## blockchain.config.name

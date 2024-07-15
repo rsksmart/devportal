@@ -6,7 +6,7 @@ tags: [rsk, rskj, node, config, peer, scoring]
 description: " The peer scoring system protects the RSKj node's resources from abusive or malicious peers"
 ---
 
-The main objective of the **Peer Scoring System** is to protect the [Rootstock node's](/rsk/node/) resources from abusive or malicious peers.
+The main objective of the **Peer Scoring System** is to protect the [Rootstock node's](/node-operators/setup/) resources from abusive or malicious peers.
 For this, the Rootstock's node keeps track of
 a reputation for each peer that connects to it
 and disconnects those whose current reputation
@@ -82,11 +82,11 @@ A banned peer is considered as a peer with a bad reputation.
 Therefore, it will be disconnected the next time a message is received,
 and its messages will be discarded.
 However, the action of banning a peer,
-unlike the RSK nodes’s automatic reputation tracking,
+unlike the Rootstock nodes’s automatic reputation tracking,
 is a manual action.
 
 In order to manually ban or unban a peer, this can be done by address,
-the following [RPC methods](/rsk/node/architecture/json-rpc/) should be used:
+the following [RPC methods](/node-operators/json-rpc/methods/) should be used:
 
 - `sco_banAddress(String address)`: 
     - Removes an address or block to the list of banned addresses.

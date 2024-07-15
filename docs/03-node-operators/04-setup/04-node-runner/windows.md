@@ -38,10 +38,10 @@ Then set the options as shown below:
 - Use classpath of module: `rskj-core_main`
 - JRE need to be set as: `Default (1.8 - SDK of 'rsk-core_main' module)`
 
-*Note:*
-
+:::info[Info]
 - If it isn't configured the default JDK, you have to set it in: *File -> Project Structure*.
 - If the IDE doesn't recognize the configuration options, open `rskj/rskj-core/build.gradle` and sync it from `Gradle` tab.
+:::
 
 #### Running the node
 
