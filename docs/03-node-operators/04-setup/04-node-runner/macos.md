@@ -39,7 +39,7 @@ Using the installed command-line tool Git, you need to retrieve (or clone) the R
 
 Run these commands on Git command line:
 
-```
+```shell
 git clone --recursive https://github.com/rsksmart/rskj.git
 cd rskj
 git checkout tags/ARROWHEAD-6.0.0 -b ARROWHEAD-6.0.0
@@ -49,7 +49,7 @@ git checkout tags/ARROWHEAD-6.0.0 -b ARROWHEAD-6.0.0
 
 ## Ensure the security chain
 
-[Ensure the security chain](./security-chain/) of the downloaded source code.
+[Ensure the security chain](/node-operators/setup/security-chain/) of the downloaded source code.
 
 ## Get external dependencies
 
@@ -204,4 +204,4 @@ In order to run tests, we can simply go to the `Testing` tab where you can see a
 
 ## Any problems?
 
-Check out the [troubleshooting section](../09-troubleshooting/), hope it helps!
+Check out the [troubleshooting section](/node-operators/troubleshooting/), hope it helps!

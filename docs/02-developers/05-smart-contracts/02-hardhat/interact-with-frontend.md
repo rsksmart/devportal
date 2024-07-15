@@ -316,7 +316,7 @@ Navigate to the URL: [http://127.0.0.1:8080](http://127.0.0.1:8080) to test the 
 
 
 :::tip[Tip]
-- Ensure the local hardhat network is running. Run `npx hardhat node` in the root directory to start the local network. See section  on [Troubleshooting and Common Errors](/developers/smart-contracts/hardhat/debugging-and-troubleshooting/) to fix common errors.
+- Ensure the local hardhat network is running. Run `npx hardhat node` in the root directory to start the local network. See section  on [Troubleshooting and Common Errors](/developers/smart-contracts/hardhat/troubleshooting/) to fix common errors.
 - You can view and run the complete project from the [`feat/complete` branch](https://github.com/rsksmart/rootstock-quick-start-guide/tree/feat/complete). To do so, git checkout into the `feat/complete` branch, run `cd frontend`, run `npm install`, then run `npx http-server` to view and interact with the smart contract from the frontend.
 :::
 

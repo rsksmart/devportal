@@ -42,7 +42,7 @@ To deploy `myToken` contract, copy the deployment script below and paste it in y
 
 ## Step 2: Run the Hardhat Network Locally
 
-> Note: You need to have sufficient RBTC in your deploying account for gas fees. See section on [Fund your account](/developers/smart-contracts/hardhat/configure-hardhat#step-3-fund-your-accounts).
+> Note: You need to have sufficient RBTC in your deploying account for gas fees. See section on [Fund your account](/developers/smart-contracts/hardhat/configure-hardhat-rootstock#step-3-fund-your-accounts).
 
 To run the Hardhat network locally:
 

@@ -399,7 +399,7 @@ This gives the user the option to verify
 if the network configuration options are legitimate by comparing against
 the official documentation.
 
-> - See configurations for Rootstock [Mainnet and Testnet](/wallet/use/metamask/#connect-with-metamask).
+> - See configurations for Rootstock [Mainnet and Testnet](/dev-tools/wallets/metamask/).
 
 (6) Press `Approve`
 

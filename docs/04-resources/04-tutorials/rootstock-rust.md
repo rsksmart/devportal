@@ -85,7 +85,7 @@ Next, update the `rootstock-rs/src/main.rs` file with the program below:
 
 :::info[Info]
 
-Replace `API_KEY` with your RPC API Key. To get an API_KEY, see the [RPC Docs](/tools/rpc-api/). 
+Replace `API_KEY` with your RPC API Key. To get an API_KEY, see the [RPC Docs](/developers/rpc-api/setup/). 
 
 :::
 
@@ -190,7 +190,7 @@ async fn main() -> eyre::Result<()> {
 
 :::info[Info]
 
-Replace `API_KEY` with your RPC API Key. To get an API_KEY, see the [RPC Docs](/tools/rpc-api/). Also replace RIF Testnet contract addresses with your own address as you would be required to use a private key later.
+Replace `API_KEY` with your RPC API Key. To get an API_KEY, see the [RPC Docs](/dev-tools/rpc-api/). Also replace RIF Testnet contract addresses with your own address as you would be required to use a private key later.
 
 :::
 

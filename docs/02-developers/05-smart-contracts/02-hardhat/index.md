@@ -27,5 +27,5 @@ tags: [getting-started, guide, smart contracts, rsk, rootstock, hardhat, blockch
 | [Write Smart Contracts](/developers/smart-contracts/hardhat/write-smart-contracts/) | Learn how to write a smart contracts.|
 | [Test Smart Contracts](/developers/smart-contracts/hardhat/test-smart-contracts/) | Learn how to test your smart contract to ensure it's working as expected. |
 | [Deploy Smart Contracts](/developers/smart-contracts/hardhat/deploy-smart-contracts/) | Learn how to deploy your smart contract to your local environment and the Rootstock network. |
-| [Interact with the Frontend](/developers/smart-contracts/hardhat/interact-with-smart-contracts/) | Learn how to interact with the smart contract from the front-end application. |
+| [Interact with the Frontend](/developers/smart-contracts/hardhat/interact-with-frontend/) | Learn how to interact with the smart contract from the front-end application. |
 | [Debugging and Troubleshooting Tips](/developers/smart-contracts/hardhat/troubleshooting/) | Learn about the common issues you can come across while building following this guide and how you can solve them. |

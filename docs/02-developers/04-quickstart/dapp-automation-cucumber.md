@@ -17,7 +17,7 @@ This way, developers enjoy expressive scenarios, targeted browser automation, an
 ## Prerequisites
 
 - Install Nodejs and NPM 
-    - See [Hackathon Dev Starter](/developers/prerequisites/hackathon-starter#quick-start-setup)
+    - See [Hackathon Dev Starter](/developers/requirements/)
 - [Cucumber](#installing-and-configuring-cucumber)
 - Code Editor 
     - [Visual Studio Code](https://code.visualstudio.com/)

@@ -31,4 +31,4 @@ You can see Rootstock network hashing power in the [Rootstock Stats Website](htt
 
 ## Implementation details for mining software pools
 
-Check out the [Implementation Guide](../../03-node-operators/02-merged-mining/).
+Check out the [Getting Started Implementation Guide](/node-operators/merged-mining/getting-started/).

@@ -6,7 +6,7 @@ tags: [rootstock, tools, rsk, wallets]
 description: "Learn how to connect to Rootstock with a compatible Wallet"
 ---
 
-The following wallets support [RBTC](/concepts/rbtc/) and [RIF](/concepts/rif/token) tokens.
+The following wallets support [RBTC](/concepts/rbtc/) and [RIF](/concepts/rif-suite/token) tokens.
 
 <Carousel width="370" height="260" images={['/img/rsk/wallets/logo-mycrypto.svg', '/img/rsk/wallets/metamask.svg', '/img/rsk/wallets/Edge_Primary_Logo_MintNavy.png', '/img/rsk/wallets/ledger-logo.png', '/img/rsk/wallets/trezor.png', '/img/rsk/wallets/DCent_Logo.jpg', '/img/rsk/wallets/MathWallet_Logo_Vertical_Black.png', '/img/rsk/wallets/Exodus_logo_white.png', 'https://www.myetherwallet.com/img/logo-dark.2fa0f670.png', '/img/rsk/wallets/enkrypt-logo.png', '/img/rsk/wallets/blockwallet-logo.png', '/img/rsk/wallets/tally-wallet.svg', '/img//rsk/wallets/rabby-wallet-logo.svg' ]} />
 
@@ -18,14 +18,14 @@ In the following matrix you can see the different features by wallet.
 |---|---|---|---|---| ---|
 |  [Beexo](https://beexo.com) |  ✔ |  ✔ |  ✔ | Desktop, Mobile | Rootstock (RBTC), Bitcoin |
 |  Edge | ✔  | ✔  | ❌  | Desktop, Mobile | Rootstock (RBTC), Bitcoin |
-|  [Ledger](/wallet/use/ledger) | ✔  |  ✔ | ❌  |
+|  [Ledger](https://www.ledger.com/) | ✔  |  ✔ | ❌  |
 |  [MyEtherWallet](https://www.myetherwallet.com/) | ✔  |  ✔ |  ✔  | Desktop, Android, IOS | RBTC
 |  [Trezor](https://trezor.io/trezor-suite) | ✔  |  ✔ |  ❌  |
 |  [Metamask](https://metamask.io/download) | ❌ |  ❌ | ❌  | Browser, Mobile |
 |  [Portis](https://www.portis.io/) | ✔ |  ✔ | ✔  | Desktop | Rootstock (RBTC), Bitcoin |
 |  [Rabby Wallet](https://rabby.io) | - |  - | -  | Chrome, Desktop, Mobile | 
 |  [Enkrypt](https://www.enkrypt.com/networks/rootstock-wallet/)| - |  - | -  | Chrome | Rootstock (RBTC), Bitcoin |
-|  [MyCrypto](/wallet/use/mycrypto) | - |  - | -  | Desktop | RBTC |
+|  [MyCrypto](https://mycrypto.com/) | - |  - | -  | Desktop | RBTC |
 |  [TaHo](https://taho.xyz) | - |  - | -  | Chrome | Rootstock (RBTC)
 |  [Frontier](https://www.frontier.xyz/browser-extension) | - |  - | -  | Desktop, Mobile, Chrome | Rootstock (RBTC)
 |  [Bitget](https://web3.bitget.com/en/) | - |  - | -  | Chrome, Mobile | RBTC |

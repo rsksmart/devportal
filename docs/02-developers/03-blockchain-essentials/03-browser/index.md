@@ -109,7 +109,7 @@ Now you should have a balance of tRIF, and you will be able to use RIF services 
 
 
 ### Further Reading
-- [How to configure Metamask](https://developers.rsk.co/wallet/use/metamask/)
+- [How to configure Metamask](/dev-tools/wallets/metamask/)
 - [Account based addresses on Rootstock](/concepts/account-based-addresses/) 
 - [About the RIF token](/concepts/rif-suite/token/)
 - [About the RBTC cryptocurrency](/concepts/rbtc/)

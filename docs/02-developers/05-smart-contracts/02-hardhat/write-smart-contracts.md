@@ -65,4 +65,4 @@ Compiled 6 Solidity files successfully (evm target: paris).
 
 ## Next
 
-- [Test your Smart Contract](developers/smart-contracts/hardhat/test-smart-contract/) to ensure it's working as expected.
+- [Test your Smart Contract](/developers/smart-contracts/hardhat/test-smart-contracts/) to ensure it's working as expected.

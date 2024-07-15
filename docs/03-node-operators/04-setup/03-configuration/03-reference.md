@@ -7,9 +7,11 @@ description: "Configuration reference for RSKj"
 render_features: 'tables-with-borders'
 ---
 
-See [CLI flags](../cli/) for command line flag options.
+See [CLI flags](/node-operators/setup/configuration/cli/) for command line flag options.
 
-> **Important Notice: From [RSKj HOP v4.2.0](https://github.com/rsksmart/rskj/releases/), RocksDB is no longer experimental. See [using RocksDB](/node-operators/setup/configuration#using-rocksdb)**.
+:::info[Important Notice]
+From [RSKj HOP v4.2.0](https://github.com/rsksmart/rskj/releases/), RocksDB is no longer experimental. See guide on [using RocksDB](/node-operators/merged-mining/configure-mining#using-rocksdb)
+:::
 
 ## Advanced Configuration
 
