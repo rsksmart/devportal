@@ -4,8 +4,6 @@ title: Components
 
 # Components
 
-
-
 ## Heading 2
 
 Miners earn a high percentage of transaction fees from the Rootstock block they mine. This mining process is done with the same hashing power used in Bitcoin mining, and has no additional cost or impact.
@@ -107,6 +105,8 @@ Rootstock Addresses incorporate an optional blockchain identifier (also known as
 
 ## Admonitions
 
+Based on basic [markdown syntax](https://docusaurus.io/docs/markdown-features/admonitions). Each admonition has own color and icon. There is no option to change color.
+
 :::note[Your Title **with** some _Markdown_ `syntax`!]
 
 Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
@@ -145,6 +145,46 @@ Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
 Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
 
 :::
+
+#### Code
+
+```markdown
+:::note
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::tip[Tip]
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::info[Info]
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::warning[Wwarning]
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::danger[Error]
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::success[Success]
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+```
 
 ## Tables
 
