@@ -1,4 +1,3 @@
-button::part(acsb-trigger){
-  border: 1px solid;
-  border-color: $white  !important;
+html ::part(acsb-trigger){
+  border: 1px solid $white !important;
 }
