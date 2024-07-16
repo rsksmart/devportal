@@ -78,7 +78,7 @@ To set up RIF relay contract, clone the RIF Relay Contracts Repository: https://
 
 ### Step 4: Set up RIF Relay Server
 
-Clone the [RIF Relay Server Repository](https://github.com/rsksmart/rif-relay-server), then refer to [Run the RIF Relay Server](/developers/integrate/rif-relay/deployment/#run-the-rif-relay-server) for a complete guide on setting up the RIF Relay server.
+Clone the [RIF Relay Server Repository](https://github.com/rsksmart/rif-relay-server), then refer to [Run the RIF Relay Server](/developers/integrate/rif-relay/deployment#run-the-rif-relay-server) for a complete guide on setting up the RIF Relay server.
 
 
 ## RIF Relay Sample dApp

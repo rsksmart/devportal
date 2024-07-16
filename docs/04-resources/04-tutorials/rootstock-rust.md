@@ -96,7 +96,7 @@ use eyre::Result;
 #[tokio::main]
 async fn main() -> eyre::Result<()> {
     // Set up the HTTP transport which is consumed by the RPC client.
-    let rpc_url = "https://rpc.testnet.rootstock.io/API_KEY".parse()?;
+    let rpc_url = "https://rpc.testnet.rootstock.io/{YOUR_APIKEY}".parse()?;
 
     // Create a provider with the HTTP transport using the `reqwest` crate.
     let provider = ProviderBuilder::new().on_http(rpc_url);
@@ -162,7 +162,7 @@ sol!(
 #[tokio::main]
 async fn main() -> eyre::Result<()> {
     // Set up the HTTP transport which is consumed by the RPC client.
-    let rpc_url = "https://rpc.testnet.rootstock.io/API_KEY".parse()?;
+    let rpc_url = "https://rpc.testnet.rootstock.io/{YOUR_APIKEY}".parse()?;
 
     // Create a provider with the HTTP transport using the `reqwest` crate.
     let provider = ProviderBuilder::new().on_http(rpc_url);
@@ -190,7 +190,7 @@ async fn main() -> eyre::Result<()> {
 
 :::info[Info]
 
-Replace `API_KEY` with your RPC API Key. To get an API_KEY, see the [RPC Docs](/dev-tools/rpc-api/). Also replace RIF Testnet contract addresses with your own address as you would be required to use a private key later.
+Replace `API_KEY` with your RPC API Key. To get an API_KEY, see the [RPC Docs](/developers/rpc-api/). Also replace RIF Testnet contract addresses with your own address as you would be required to use a private key later.
 
 :::
 
@@ -262,7 +262,7 @@ async fn main() -> Result<()> {
     }
     
     // Set up the HTTP transport which is consumed by the RPC client.
-    let rpc_url = "https://rpc.testnet.rootstock.io/API_KEY".parse()?;
+    let rpc_url = "https://rpc.testnet.rootstock.io/{YOUR_APIKEY}".parse()?;
 
     let signer: PrivateKeySigner = pk.parse().unwrap();
 
@@ -365,7 +365,7 @@ async fn main() -> eyre::Result<()> {
     }
 
     // Set up the HTTP transport which is consumed by the RPC client.
-    let rpc_url = "https://rpc.testnet.rootstock.io/API_KEY".parse()?;
+    let rpc_url = "https://rpc.testnet.rootstock.io/{YOUR_APIKEY}".parse()?;
 
     let signer: PrivateKeySigner = pk.parse().unwrap();
 
