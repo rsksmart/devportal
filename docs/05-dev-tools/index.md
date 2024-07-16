@@ -243,7 +243,7 @@ description: "Explore a curated selection of smart contract development tools an
     color="orange"
     linkHref="https://remix.ethereum.org/"
     linkTitle="Deploy Smart Contracts"
-    description="Remix."
+    description="Compile, Interact and Deploy Smart Contracts using Remix."
   />
 <FilterItem
     value="library, sdk, wallet, rif"

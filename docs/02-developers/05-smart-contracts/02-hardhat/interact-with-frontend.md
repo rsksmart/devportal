@@ -305,11 +305,12 @@ Your `index.html` file should now look like the [`index.html` file](https://raw.
 ### Run the frontend
 
 To run the frontend, execute a local web server to test the HTML file using the following command:
+
 ```shell
 npx http-server
 ```
 
-Navigate to the URL: [http://127.0.0.1:8080](http://127.0.0.1:8080) to test the code in the browser and you should get a result similar to the image below:
+Navigate to the URL: `http://127.0.0.1:8080` to test the code in the browser and you should get a result similar to the image below:
 ![Smart Contract Frontend](/img/guides/quickstart/hardhat/frontend.png)
 
 
