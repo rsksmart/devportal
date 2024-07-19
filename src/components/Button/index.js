@@ -1,9 +1,10 @@
-import React, {useState, useEffect} from "react";
-import Link from '@docusaurus/Link';
+import React from "react";
+import Link from '/src/components/Link';
 import clsx from "clsx";
 
 export default function Button ({variant, href, className, size, target, title, icon, stretched, children, ...props}) {
   const btnClassName = clsx(`btn`, className, size && `btn-${size}`, stretched && `stretched-link position-static`);
+  // will start with exactly one slash, and that anything else is external.
   const Icon = () => {
     return icon && (
       <svg width={16} height={16}>
@@ -15,8 +16,7 @@ export default function Button ({variant, href, className, size, target, title, 
     <Link
       href={href}
       className={btnClassName}
-      target={target || `_self`}
-      rel={target === `_blank` ? `noopener noreferrer` : null}
+      target={target}
       title={title || null}
       onClick={props.onClick}
     >
