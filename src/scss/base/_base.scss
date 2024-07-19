@@ -22,7 +22,9 @@ a, button {
   transition-property: color, background-color, border-color, opacity;
 }
 
-
+.bg-primary{
+  background-color: var(--rsk-color-main);
+}
 .bg-pink{
   background-color: var(--bs-pink);
 }
@@ -42,6 +44,6 @@ a, button {
   background-color: var(--bs-cyan);
 }
 .bg-contrast{
-  background-color: var(--rsk-contrast);
+  background-color: var(--bs-contrast);
   color: var(--rsk-contrast-color) !important;
 }

@@ -36,7 +36,7 @@ export default function Card({index, title, description, list, color = "orange",
             <ul className={`mb-0 mt-auto`}>
               {list.map((item, idx) => (
                 <li key={idx}>
-                  <Link href={item.href} target={item.target}>
+                  <Link href={item.href} target={item.target} className={`fw-bold`}>
                     {item.title}
                   </Link>
                 </li>
