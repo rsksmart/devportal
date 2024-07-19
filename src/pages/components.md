@@ -4,6 +4,23 @@ title: Components
 
 # Components
 
+
+<Tabs>
+  <TabItem value="contribute" label="Contribute to Rootstock" default>
+    Are you passionate about web3, bitcoin and the Blockchain? Do you have a passion for Open Source and Web3? Do you enjoy writing, coding, bounty hunting, solving real-world problems, and eager to contribute to the future of Bitcoin and Decentralized Finance? Join the Rootstock Discord Community and start making contributions!
+  </TabItem>
+  <TabItem value="contest" label="Contest Themes">
+    The contest welcomes submissions under the following themes:
+
+    * Thought Leadership: Explore various topics about Bitcoin, both new and old, such as Runes, what Satoshi’s writings mean to you, ordinals, layer 2 solutions, sidechains, how Bitcoin changed finance forever, and/or quality analysis about its price prediction or impact on inflation.
+    * Dev Stack and Tooling: Delve into the development stack and tooling related to building on Bitcoin, including SDKs, APIs, smart contract development frameworks, etc. Developers and makers should showcase the technical capabilities for building with Bitcoin.
+    * Tutorials and Guides: Provide step-by-step tutorials and guides on how to build applications, smart contracts, or implement specific features. Bonus points for building with Rootstock. These tutorials and guides will serve as practical guides for developers and enthusiasts looking to start building on Bitcoin.
+  </TabItem>
+  <TabItem value="requirements" label="Requirements">
+    > RSKj allows you to run a Rootstock node, crucial for local development and testing. It supports connections to Regtest (local), Testnet (testing), and Mainnet (production). Visit the [official RSKj GitHub repository](https://github.com/rsksmart/rskj) to download the latest stable release.
+  </TabItem>
+</Tabs>
+
 ## Heading 2
 
 Miners earn a high percentage of transaction fees from the Rootstock block they mine. This mining process is done with the same hashing power used in Bitcoin mining, and has no additional cost or impact.
