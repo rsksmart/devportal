@@ -24,13 +24,10 @@
 }
 
 .h0{
-  font:700 #{$f78}/0.75 $headings-font-family;
-  letter-spacing: -0.06em;
+  font:700 #{$f48}/0.84 $headings-font-family;
+  letter-spacing: -0.04em;
   @include media-breakpoint-up(md) {
-    font-size: $f120;
-  }
-  @include media-breakpoint-up(xl) {
-    font-size: $f200;
+    font-size: $f96;
   }
 }
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -65,6 +62,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .subtitle-1{
   font: 700 #{$f20}/1.2 $font-family-base;
   letter-spacing: -0.024em;
+  @include media-breakpoint-up(lg) {
+    font-style: $f28;
+  }
 }
 .subtitle-2{
   font: 400 #{$f20}/1.2 $font-family-base;
