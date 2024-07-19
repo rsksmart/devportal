@@ -8,7 +8,7 @@ const data = {
   cards: [
     {
       title: 'Get RBTC',
-      color: 'pink',
+      color: 'orange',
       link: {
         title: 'Read more',
         href: 'https://rootstock.io/rbtc/',
@@ -29,8 +29,8 @@ const data = {
       },
       description: (
         <>
-          View a repository of starter kits, 
-          sample codes and tutorials for creating, 
+          View a repository of starter kits,
+          sample codes and tutorials for creating,
           testing and deploying smart contracts on Rootstock.
         </>
       ),
@@ -54,7 +54,7 @@ const data = {
     },
     {
       title: 'SDKs and Integration Guides',
-      color: 'orange',
+      color: 'pink',
       link: {
         title: 'Read more',
         href: '/developers/integrate/',
