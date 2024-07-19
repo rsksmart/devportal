@@ -1,7 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import TitleColor from "../TitleColor";
-import Link from "@docusaurus/core/lib/client/exports/Link";
+import Link from "/src/components/Link";
 import styles from "./styles.module.scss";
 import Button from "../Button";
 
