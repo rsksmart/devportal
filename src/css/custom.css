@@ -35,6 +35,7 @@
 
   --bs-body-color: var(--bs-white);
   --bs-body-bg: var(--bs-black);
+
 }
 body .theme-doc-toc-desktop{
   position: static;
