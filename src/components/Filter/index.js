@@ -14,7 +14,7 @@ export default function Filter ({values, children, className, ...props}) {
 
   useEffect(() => {
     setitems(childItems.filter(item => {
-      const itemValues = item.props.value ? item.props.value.replace(' ', '').split(',') : [];
+      const itemValues = item.props.value ? item.props.value.replace(/ /g, '').split(',') : [];
       return selectedValue === 'all' || itemValues.includes(selectedValue)
     }))
   }, [selectedValue]);
