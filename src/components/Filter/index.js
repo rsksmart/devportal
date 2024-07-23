@@ -13,10 +13,8 @@ export default function Filter ({values, children, className, ...props}) {
   const [items, setitems] = useState(childItems);
 
   useEffect(() => {
-    console.log(selectedValue);
     setitems(childItems.filter(item => {
       const itemValues = item.props.value ? item.props.value.replace(/ /g, '').split(',') : [];
-      console.log(itemValues);
       return selectedValue === 'all' || itemValues.includes(selectedValue)
     }))
   }, [selectedValue]);
