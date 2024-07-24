@@ -13,7 +13,7 @@ values={[
 {label: 'Port to Rootstock', value: 'port-dapps'}
 ]}>
 <FilterItem
-value="beginner"
+value="beginner, port-dapps"
 title="Interact with Rootstock using Rust"
 subtitle="rust"
 color="orange"

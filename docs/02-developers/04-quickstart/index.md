@@ -72,7 +72,7 @@ values={[
     description="Easily query on-chain data through a decentralized network of indexers"
   />
 <FilterItem
-    value="sc, beginner"
+    value="sc, beginner, port-dapps"
     title="Get Started with Web3.py"
     subtitle="Web3.py"
     color="orange"
