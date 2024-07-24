@@ -2,7 +2,7 @@
 sidebar_position: 3
 title: Adding Rootstock to Metamask Programmatically
 sidebar_label: Add Rootstock to Metamask Programmatically
-tags: [rsk, rootstock, metamask, tutorials]
+tags: [rsk, rootstock, metamask, tutorials, resources, wallets]
 description: "Learn how to add and initiate a network switch on Metamask from a website."
 ---
 

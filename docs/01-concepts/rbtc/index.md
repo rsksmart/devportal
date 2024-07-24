@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: Smart Bitcoin RBTC Token on RBTC - BTC to RBTC
-tags: [mainnet, token, transactions, rbtc, gas, smart-contracts, rsk, rootstock, conversion, price, gas-price, gas-cost, smart bitcoin, bitcoin]
+tags: [mainnet, testnet, tokens, rbtc, gas, rsk, rootstock]
 sidebar_label: RBTC Token
 ---
 
@@ -9,9 +9,7 @@ RBTC is the token used to [pay for the execution](/concepts/rbtc/gas/) of transa
 
 See [supported wallets](/dev-tools/wallets/).
 
-<div className="btn-container">
-    <a className="green" href="https://rootstock.io/rbtc/#get-rbtc">Get RBTC</a>
-</div>
+[Get RBTC](https://rootstock.io/rbtc/#get-rbtc)
 
 ## RBTC (Smart Bitcoin in Mainnet)
 
@@ -37,17 +35,17 @@ See [supported wallets](/dev-tools/wallets/).
       <td scope="row">How to get</td>
       <td>
         <ul>
-            <li><a href="https://rootstock.io/rbtc/#get-rbtc" target="_blank">Get RBTC</a></li>
+            <li><a href="https://rootstock.io/rbtc/#get-rbtc" target="_blank">Exchanges and Bridges to get RBTC</a></li>
         </ul>
       </td>
     </tr>
-    <tr>
+    <!-- <tr>
       <td scope="row">Logo</td>
       <td>
         <img src="/img/rsk/RBTC-logo.png" />
         <a href="/img/rsk/RBTC-logo.png" target="_blank">RBTC</a>
       </td>
-    </tr>
+    </tr> -->
   </tbody>
 </table>
 
@@ -75,7 +73,7 @@ See [supported wallets](/dev-tools/wallets/).
       <td scope="row">How to get</td>
       <td>
         <ul>
-            <li><a href="https://faucet.rsk.co" target="_blank">Faucet</a></li>
+            <li><a href="https://faucet.rootstock.io" target="_blank">Faucet</a></li>
         </ul>
       </td>
     </tr>
