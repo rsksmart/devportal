@@ -28,4 +28,12 @@ color="orange"
 linkHref="/resources/tutorials/rootstock-metamask/" 
 description="Learn how to add and initiate a network switch on Metamask from a website."
 />
+<FilterItem
+value="beginner, advanced"
+title="dApp Automation with Cucumber and Playwright"
+subtitle="dapp-automation"
+color="orange"
+linkHref="/resources/tutorials/dapp-automation-cucumber/" 
+description="Testing decentralized applications (dApps) is crucial for delivering a smooth user experience and ensuring the reliability of decentralized systems. Cucumber and Playwright form a dynamic duo in automated testing, blending behavior-driven development (BDD) and powerful browser automation capabilities."
+/>
 </Filter>

@@ -2,7 +2,7 @@
 sidebar_position: 2
 title: Interact with Rootstock using Rust
 sidebar_label: Interact with Rootstock using Rust
-tags: [rsk, rootstock, rust, tutorials]
+tags: [rsk, rootstock, rust, tutorials, resources, smart contracts, alloy]
 description: "Rust is extensively getting used on backend side of many defi applications, dApps, developer tools, indexers and bridges. This guide will help developers to start using Rust on Rootstock blockchain."
 ---
 
