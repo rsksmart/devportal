@@ -42,7 +42,7 @@ The following detail the most commonly used configuration fields parsed by RSKj.
 - [`public.ip`](#publicip)
 - [`genesis`](#genesis)
 - [`transaction.outdated`](#transactionoutdated)
-- [`transaction.gasPriceCalculatorType`](#transactionGasPriceCalculatorType)
+- [`transaction.gasPriceCalculatorType`](#transactiongaspricecalculatortype)
 - [`play.vm`](#playvm)
 - [`hello.phrase`](#hellophrase)
 - [`details.inmemory.storage.limit`](#detailsinmemorystoragelimit)

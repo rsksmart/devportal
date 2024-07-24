@@ -47,7 +47,7 @@ Here are the supported JSON-RPC Methods.
 | `eth` | [`eth_getTransactionByBlockHashAndIndex`](#eth_gettransactionbyblockhashandindex) | YES | |
 | `eth` | [`eth_getTransactionByBlockNumberAndIndex`](#eth_gettransactionbyblocknumberandindex) | PARTIALLY | Option "pending" not yet supported. |
 | `eth` | [`eth_getTransactionReceipt`](#eth_gettransactionreceipt) | YES | |
-| `eth` | [`eth_pendingTransactions`](#eth_pendingTransactions) | YES | |
+| `eth` | [`eth_pendingTransactions`](#eth_pendingtransactions) | YES | |
 | `eth` | [`eth_getUncleByBlockHashAndIndex`](#eth_getunclebyblockhashandindex) | YES | |
 | `eth` | [`eth_getUncleByBlockNumberAndIndex`](#eth_getunclebyblocknumberandindex) | PARTIALLY | Option "pending" not yet supported. |
 | `eth` | `eth_getCompilers` | - | For security reasons, we've decided not to include compilers in node. |

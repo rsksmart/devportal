@@ -97,8 +97,7 @@ Token address: 0xc6EcBe0F6643825FD1AAfc03BEC999014759a279
 ### Configure MetaMask 
 
 :::note[Install Metamask]
-
-If you haven't already, you can use the [metamask-landing.rifos.org](https://metamask-landing.rifos.org/) tool to download/install Metamask, and add Rootstock custom network or follow the steps in [Configure Network and Token](/developers/blockchain-essentials/browser#custom-network-and-token). 
+If you haven't already, you can use the [metamask-landing.rifos.org](https://metamask-landing.rifos.org/) tool to download/install Metamask, and add Rootstock custom network or follow the steps in [Configure Network and Token](/developers/blockchain-essentials/browser). 
 
 :::
 

@@ -190,7 +190,7 @@ async fn main() -> eyre::Result<()> {
 
 :::info[Info]
 
-Replace `API_KEY` with your RPC API Key. To get an API_KEY, see the [RPC Docs](/developers/rpc-api/). Also replace RIF Testnet contract addresses with your own address as you would be required to use a private key later.
+Replace `API_KEY` with your RPC API Key. To get an API_KEY, see the [RPC Docs](/developers/rpc-api/setup/). Also replace RIF Testnet contract addresses with your own address as you would be required to use a private key later.
 
 :::
 

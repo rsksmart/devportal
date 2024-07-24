@@ -19,14 +19,15 @@ description: "Explore a curated selection of smart contract development tools an
     {label: 'Faucets', value: 'faucet'},
     {label: 'Gas', value: 'gas'},
     {label: 'Dev Environments', value: 'dev-environment'},
+    {label: 'Account Abstraction', value: 'aa'},
     {label: 'Code Quality', value: 'code-quality'},
     {label: 'JSON-RPC', value: 'rpc'},
     {label: 'Libraries', value: 'library'},
-    {label: 'No-Code', value: 'no-code'},
-    {label: 'RIF', value: 'rif'},
-    {label: 'Account Abstraction', value: 'abs'},
+    {label: 'No Code', value: 'no-code'},
+    {label: 'RIF Tools', value: 'rifp'},
     {label: 'Smart Contracts', value: 'sc'},
-    {label: 'Mining', value: 'mine'}
+    {label: 'Mining', value: 'mine'},
+    {label: 'Oracles', value: 'oracles'},
   ]}>
 <FilterItem
     value="bridge, exchange"
@@ -39,11 +40,11 @@ description: "Explore a curated selection of smart contract development tools an
     description="Bridge Bitcoin and Rootstock using the 2 Way Peg App."
   />
 <FilterItem
-    value="dev-environment, sc"
+    value="dev-environment, sc, platform-infra"
     title="Foundry"
     subtitle="Dev Environment"
     color="orange"
-    linkHref="/dev-tools/foundry/"
+    linkHref="https://dev-rootstock.vercel.app/dev-tools/foundry"
     linkTitle="Deploy Smart Contracts"
     description="Foundry is a smart contract development toolchain, and user-friendly development environment for writing and testing smart contracts in Solidity."
   />
@@ -138,13 +139,13 @@ description: "Explore a curated selection of smart contract development tools an
     description="Exchanges and Bridges to get RBTC."
   />
 <FilterItem
-    value="bridge, exchange"
+    value="bridge, exchange, rifp"
     title="RIF Exchanges"
     subtitle="Exchanges"
     color="orange"
     linkHref="https://rif.technology/rif-token/"
     linkTitle="Get RIF Tokens"
-    description="Exchanges and Bridges to get the RIF Token"
+    description="Exchanges and Bridges to get the RIF Token."
   />
 <FilterItem
     value="bridge, exchange"
@@ -156,7 +157,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Access crypto collaterized digital dollars to save, spend & send. Get RIF, USDRIF, MOC, RIF Pro, etc."
   />
 <FilterItem
-    value="bridge, exchange, rif"
+    value="bridge, exchange, rifp"
     title="Flyover"
     subtitle="bridge"
     color="orange"
@@ -228,7 +229,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Build a dApp on Rootstock using Forward Protocol's NoCode Tools."
   />
 <FilterItem
-    value="library, sdk, rif, abs"
+    value="library, sdk, rifp, abs"
     title="RIF Relay"
     subtitle="sdk"
     color="orange"
@@ -246,7 +247,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Compile, Interact and Deploy Smart Contracts using Remix."
   />
 <FilterItem
-    value="library, sdk, wallet, rif"
+    value="library, sdk, wallet, rifp"
     title="RIF Wallet"
     subtitle="sdk"
     color="orange"
@@ -279,16 +280,16 @@ description: "Explore a curated selection of smart contract development tools an
     color="orange"
     linkHref="https://faucet.rootstock.io/"
     linkTitle="Get tRBTC"
-    description="Rootstock Testnet Faucet."
+    description="Get tRBTC on the Rootstock Testnet Faucet."
   />
 <FilterItem
-    value="faucet, rif"
+    value="faucet, rifp"
     title="RIF Testnet Faucet"
     subtitle="faucet"
     color="orange"
     linkHref="https://faucet.rifos.org/"
     linkTitle="Get tRIF"
-    description="RIF Testnet Faucet"
+    description="Get tRIF on the RIF Testnet Faucet"
   />
 <FilterItem
     value="library, sc"
@@ -309,7 +310,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="A library for Interacting with the Rootstock Virtual Machine."
   />
 <FilterItem
-    value="library, sdk, rif"
+    value="library, sdk, rifp"
     title="RNS"
     subtitle="name service"
     color="orange"
@@ -336,7 +337,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Verify smart contracts on Rootstock, Sourcify enables transparent and human-readable smart contract interactions through automated Solidity contract verification, contract metadata."
   />
 <FilterItem
-    value="sc, rollups, abs, platform-infra"
+    value="sc, rollups, aa, platform-infra"
     title="Gelato"
     subtitle="infra"
     color="orange"
@@ -346,12 +347,12 @@ description: "Explore a curated selection of smart contract development tools an
   />
 <FilterItem
     value="mine, platform-infra"
-    title="Marathon Mining"
+    title="Antpool"
     subtitle="mining"
     color="orange"
-    linkHref="https://www.mara.com/"
+    linkHref="https://www.antpool.com/home"
     linkTitle="Start Mining"
-    description="Marathon Digital Holdings is a company focused on securing and supporting the development of the Bitcoin ecosystem by building one of the largest, most agile, and most sustainable bitcoin mining operations in the world."
+    description="Start mining with Antpool."
   />
 <FilterItem
     value="platform-infra"
@@ -391,19 +392,37 @@ description: "Explore a curated selection of smart contract development tools an
   />
 <FilterItem
     value="mine"
-    title="Stratum Mining"
+    title="F2Pool"
     subtitle="mining"
     color="orange"
-    linkHref="https://github.com/rsksmart/stratum"
+    linkHref="https://www.f2pool.com/"
     linkTitle="Start Mining"
     description="Mining Pool on Rootstock."
   />
 <FilterItem
     value="mine"
-    title="CKPool"
+    title="ViaBTC"
     subtitle="mining"
     color="orange"
-    linkHref="https://github.com/rsksmart/ckpool"
+    linkHref="https://www.viabtc.com/"
+    linkTitle="Start Mining"
+    description="Mining Pool on Rootstock."
+  />
+<FilterItem
+    value="mine"
+    title="Luxor"
+    subtitle="mining"
+    color="orange"
+    linkHref="https://luxor.tech/mining"
+    linkTitle="Start Mining"
+    description="Mining Pool on Rootstock."
+  />
+<FilterItem
+    value="mine"
+    title="BraiinsPool"
+    subtitle="mining"
+    color="orange"
+    linkHref="https://braiins.com/pool"
     linkTitle="Start Mining"
     description="Mining Pool on Rootstock."
   />
@@ -444,7 +463,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Rootstock Hardhat starter."
   />
 <FilterItem
-    value="demos, sdk, sc, abs"
+    value="demos, sdk, sc, aa"
     title="Account Abstraction Kit"
     subtitle="Demos"
     color="orange"
@@ -453,7 +472,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Account Abstraction Starter dApp using Etherspot."
   />
 <FilterItem
-    value="sdk, sc, abs, platform-infra"
+    value="sdk, sc, aa, platform-infra"
     title="Etherspot"
     subtitle="Account Abstraction"
     color="orange"
@@ -466,8 +485,26 @@ description: "Explore a curated selection of smart contract development tools an
     title="dApp Automation"
     subtitle="Demos"
     color="orange"
-    linkHref="/developers/quickstart/dapp-automation-cucumber/"
+    linkHref="/resources/tutorials/dapp-automation-cucumber/"
     linkTitle="Use Etherspot"
     description="Learn how to automate dApp using Cucumber and Playwright."
+  />
+<FilterItem
+    value="sc, oracles, data"
+    title="Umbrella Network"
+    subtitle="Oracles"
+    color="orange"
+    linkHref="https://umb.network/"
+    linkTitle="Access On-chain Data"
+    description="Access On-Chain data for your smart contracts on Rootstock."
+  />
+<FilterItem
+    value="sc, oracles, data"
+    title="Redstone Finance"
+    subtitle="Oracles"
+    color="orange"
+    linkHref="https://redstone.finance/"
+    linkTitle="Access On-chain Data"
+    description="Access On-Chain data for your smart contracts on Rootstock."
   />
 </Filter>
