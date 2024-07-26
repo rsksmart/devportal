@@ -3,7 +3,7 @@ sidebar_label: Using Rootstock in Browser
 sidebar_position: 300
 title: 'Using Rootstock with a Browser Extension'
 description: 'Learn how to interact with Rootstock in your web browser, how to look at Rootstock transactions, develop and deploy your very first smart contract to the Rootstock network.'
-tags: [quick-start, getting-started, guide, how-to, bitcoin, rsk, peer-to-peer, rootstock, merged-mining, blockchain, powpeg]
+tags: [quick-start, rsk, rootstock, metamask, browser wallets, dev tools]
 ---
 
 As Rootstock is a blockchain with smart contract capabilities, it is possible to build decentralised applications (dApps) with it.
@@ -14,7 +14,10 @@ These browser extensions insert a **web3 provider** object, with the Javascript 
 > Note that these browser extensions store your private keys,
 > and use them to sign transactions. So keep them secure.
 
-There are currently two well known browser extensions that you can use to interact with the Rootstock blockchain: [MetaMask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn), and [Liquality](https://chrome.google.com/webstore/detail/liquality-wallet/kpfopkelmapcoipemfendmdcghnegimn).
+:::note[Rootstock Wallets]
+There are several browser extensions that you can use to interact with the Rootstock blockchain, this includes: [MetaMask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn). For a full list of wallets, see the [Dev Tools](/dev-tools/) section.
+:::
+
 Since this is a quick start, we will not go through all of them - just MetaMask.
 
 There are some hidden complexity that we've glossed over in the content above so
@@ -56,7 +59,7 @@ When you open up MetaMask for the first time after installing it, you will be as
 If you have done this before, you can use your own seed phrase. Otherwise, let’s generate a new one!
 
 > To generate a new seed phrase, you will need to create a new wallet.
-> See above [steps](#steps) to create a new wallet.
+> See the above steps to create a new wallet.
 
 Most blockchain users operate one or more accounts, and it can be quite difficult to remember the value of cryptographic keys - those very large numbers - you’ll need superhuman memory!
 The **seed phrase** is presently the most popular method used to generate, store, remember, and recover keys for crypto wallets, and is something that is approachable for the average user.

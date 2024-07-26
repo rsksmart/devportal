@@ -49,7 +49,7 @@ values={[
     title="dApp Automation with Cucumber"
     subtitle="quickstart"
     color="orange"
-    linkHref="/developers/quickstart/dapp-automation-cucumber/"
+    linkHref="/resources/tutorials/dapp-automation-cucumber/"
     linkTitle="Use the Kit"
     description="Learn how to automate dApps using Cucumber Agile Automation Framework."
   />
@@ -70,5 +70,14 @@ values={[
     linkHref="/dev-tools/thegraph/"
     linkTitle="Get Started"
     description="Easily query on-chain data through a decentralized network of indexers"
+  />
+<FilterItem
+    value="sc, beginner, port-dapps"
+    title="Get Started with Web3.py"
+    subtitle="Web3.py"
+    color="orange"
+    linkHref="/developers/quickstart/web3-python/"
+    linkTitle="Get Started"
+    description="Get started with deploying and interacting with smart contracts on Rootstock using Web3.py."
   />
 </Filter>

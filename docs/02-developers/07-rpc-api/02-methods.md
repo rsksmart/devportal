@@ -13,7 +13,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
     - Returns a list of addresses owned by the client. Since Rootstock RPC API does not store keys, this will always return empty.
 - _Params:_ None
     ```shell
-        curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
+    curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
     --request POST \
     --header 'accept: application/json' \
     --header 'Content-Type: application/json' \
@@ -27,9 +27,9 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
     - **Example Response:**
     ```shell
     {
-        "jsonrpc": "2.0",
-        "id": 0,
-        "result": []
+    "jsonrpc": "2.0",
+    "id": 0,
+    "result": []
     }
     ```
 ## eth_blockNumber

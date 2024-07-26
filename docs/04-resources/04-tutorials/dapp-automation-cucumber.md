@@ -1,10 +1,9 @@
 ---
 sidebar_lable: dApp Automation with Cucumber
-sidebar_position: 100
+sidebar_position: 4
 title: dApp Automation with Cucumber & Playwright
-description: 'Testing decentralized applications (dApps) is crucial for delivering a smooth user experience and ensuring the reliability of decentralized systems. Thorough testing of the frontend identifies and addresses usability issues, creating a user-friendly interface. Cucumber and Playwright form a dynamic duo in automated testing, blending behavior-driven development (BDD) and powerful browser automation capabilitie.'
-tags: [knowledge-base, e2e, tests, dapp-automation, rootstock, smart contracts, dapps]
-render_features: 'collapsible'
+description: 'Testing decentralized applications (dApps) is crucial for delivering a smooth user experience and ensuring the reliability of decentralized systems. Cucumber and Playwright form a dynamic duo in automated testing, blending behavior-driven development (BDD) and powerful browser automation capabilities.'
+tags: [rsk, rootstock, tutorials, resources, tests, dapp-automation, smart contracts, dapps, cucumber, playwright]
 ---
 
 Rootstock is a blockchain platform that extends the capabilities of the Bitcoin network by incorporating smart contract functionality. Built to be EVM (Ethereum Virtual Machine) compatible, Rootstock enables developers to deploy and execute smart contracts using the same programming languages and tools as Ethereum.
@@ -34,7 +33,7 @@ cd e2e_dapps_automation
 
 To install dependencies, run the command `npm i` in the terminal or run the `npm:install` script.
 
-Create a `.env` file inside config folder, and add your MetaMask test wallet address for testing purposes (seed & password). See [how to create a metamask wallet](/developers/blockchain-essentials/browser#install-metamask) and [configure Metamask for rootstock](/developers/blockchain-essentials/browser#custom-network-and-token).
+Create a `.env` file inside config folder, and add your MetaMask test wallet address for testing purposes (seed & password). See [how to create a metamask wallet](/developers/blockchain-essentials/browser#install-metamask) and [configure Metamask for rootstock](/developers/blockchain-essentials/browser).
 
 See example: 
 

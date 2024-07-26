@@ -11,15 +11,13 @@ export default function FilterItem({value, subtitle, title, description, color =
     {image && (
       <img src={image} alt={title} className={'m-0 border-0 rounded-0'} />
     )}
-    <div className="d-flex align-items-start gap-6">
-      <TitleColor as={'h3'} size={'sm'} color={color} className={`m-0`}>
-        {title}
-      </TitleColor>
-      {subtitle && (
-        <span className={`badge text-uppercase bg-${color}`}>
+    <div className="d-flex flex-column align-items-start gap-6">
+    {subtitle && (
+        <span className={`badge text-uppercase mb-5 bg-${color}`}>
           {subtitle}
         </span>
       )}
+      <h3 className="m-0 h1">{title}</h3>
     </div>
     {description && (
       <div className={`markdown fw-medium`}>
