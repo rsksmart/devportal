@@ -5,9 +5,10 @@ export default function TitleColor ({as = "h3", color = "orange", size = "md", c
   const Tag = ['h1', 'h2', 'h3', 'h4', 'p', 'div', 'span'].includes(as) && as;
 
   return <Tag
-    className={clsx(`fp-title-color`, `fp-title-color-${size}`, className)}
+    className={clsx(`fp-title-color`, `fp-title-color-${size}`, `fp-title-color-${color}`, className)}
+    style={{'--rsk-title-block-bg' : `var(--bs-${color})`}}
   >
-    <span className={`bg-${color}`}>
+    <span>
       {children}
     </span>
   </Tag>

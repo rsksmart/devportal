@@ -20,17 +20,19 @@ html:root {
 
   --bs-pink: #{$pink-light};
   --bs-purple: #{$purple-light};
-  --bs-yellow: #{$yellow-light};
+  --bs-yellow: #{$purple-light};
   --bs-orange: #{$orange-light};
   --bs-green: #{$green-light};
-  --bs-cyan: #{$cyan-light};
+  --bs-cyan: #{$green-light};
+
+  --bs-contrast: var(--bs-black);
+  --rsk-contrast-color: var(--bs-white);
 
   --bs-border-color: #{$gray-600};
   --bs-body-bg: #{$bw};
   --bs-link-color-rgb: 230, 131, 0;
 
-  --rsk-contrast: var(--bs-black);
-  --rsk-contrast-color: var(--bs-white);
+
 
   --bs-primary: var(--bs-orange);
   --rsk-color-main: var(--bs-orange);
@@ -90,6 +92,7 @@ html:root {
   --ifm-font-weight-bold: 700;
 
   //Sidebar
+  --ifm-menu-color: var(--bs-body-color);
   --doc-sidebar-hidden-width: 40px;
   --ifm-menu-color-active: var(--rsk-color-main);
   --ifm-menu-color-background-active: none;
@@ -282,8 +285,7 @@ html:root {
 
   --bs-border-color: #{$white};
 
-
-  --rsk-contrast: var(--bs-white);
+  --bs-contrast: var(--bs-white);
   --rsk-contrast-color: var(--bs-black);
 
   --ifm-color-primary: #ff9100;
@@ -301,6 +303,7 @@ html:root {
   --bs-body-bg-rgb: 0, 0, 0;
   --bs-link-color-rgb: 255, 145, 0;
 
+  --ifm-menu-color: var(--bs-body-color);
   --ifm-navbar-link-color: var(--bs-white);
   --ifm-navbar-item-border-color: var(--bs-white);
 
