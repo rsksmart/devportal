@@ -1,0 +1,8 @@
+.title {
+  a{
+    color: inherit;
+    &:hover{
+      color: var(--rsk-color-main);
+    }
+  }
+}

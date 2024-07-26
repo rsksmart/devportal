@@ -168,7 +168,7 @@ export const FeedbackForm = () => {
       <h4 className={`title-s mb-12 text-uppercase`}>
         <Translate
           id="theme.FeedbackForm.title">
-          FEEDBACK
+          Feedback
         </Translate>
       </h4>
       <div className="d-flex">

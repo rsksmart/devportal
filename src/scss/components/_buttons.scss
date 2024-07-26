@@ -115,3 +115,7 @@
   border-radius: 10px;
 }
 
+.btn-no-shadow{
+  --bs-btn-box-shadow: none;
+  --bs-btn-focus-box-shadow: none;
+}

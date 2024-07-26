@@ -1,0 +1,13 @@
+.ThumbWrap{
+  --bs-border-color: var(--rsk-image-border-color);
+  img{
+    transition: 0.25s ease-in-out;
+  }
+  @media (hover) {
+    &:hover {
+      img{
+        transform: scale(1.02);
+      }
+    }
+  }
+}
