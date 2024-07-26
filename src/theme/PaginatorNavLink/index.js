@@ -7,8 +7,8 @@ import {findSidebarItemIndex} from '/src/_utils/hooks.js';
 import {useDocsSidebar} from "@docusaurus/theme-common/internal";
 
 export default function PaginatorNavLink(props) {
-  const {permalink, title, subLabel, isNext} = props;
-  const sidebar = useDocsSidebar();
+  const {permalink, title, subLabel, isNext, isBlog} = props;
+  const sidebar = isBlog ? null : useDocsSidebar();
 
   return (
     <Link
@@ -34,7 +34,7 @@ export default function PaginatorNavLink(props) {
         <div className={`d-flex gap-2 flex-column ${isNext ? 'text-start' : 'text-end'}`}>
           {subLabel && <div className={clsx(styles.paginatorLinkSubLabel, `caption`)}>{subLabel}</div>}
           <div className="d-flex gap-6 align-items-start">
-            <div className={`badge bg-primary mt-3`}>{findSidebarItemIndex(sidebar.items, {type:'link', href: permalink, label: title })}</div>
+            <div className={`badge bg-primary mt-3`}>{findSidebarItemIndex(sidebar?.items, {type:'link', href: permalink, label: title })}</div>
             <div className="subtitle-3">{title}</div>
           </div>
 
