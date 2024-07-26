@@ -1,7 +1,5 @@
 ---
 title: "Introducing Arrowhead 6.3.1: What You Need To Know About Rootstock’s Upcoming Patch Network Upgrade"
-description: The Rootstock community is pleased to announce the release of the latest version of the RSKj client, which is now available in the RSKj GitHub repository.
-slug: introducing-arrowhead-6-3-1
 author: Rootstock
 tags: [release]
 image: https://blog.rootstock.io/wp-content/uploads/2024/07/Arrowhead-6.3.1-Release.png

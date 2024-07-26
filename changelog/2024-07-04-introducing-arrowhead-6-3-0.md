@@ -1,7 +1,5 @@
 ---
 title: Introducing Arrowhead 6.3.0
-description: The Rootstock community is pleased to announce the release of the latest version of the RSKj client, which is now available in the RSKj GitHub repository.
-slug: introducing-arrowhead-6-3-0
 author: Rootstock
 tags: [arrowhead]
 image: https://blog.rootstock.io/wp-content/uploads/2024/07/Bitcoin-Runes-Explained-1.png
