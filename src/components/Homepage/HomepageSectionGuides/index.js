@@ -67,7 +67,7 @@ const data = {
     },
     {
       title: 'Apply for a Grant',
-      color: 'yellow',
+      color: 'pink',
       description: (
         <>
           Get funding and support to build your next dApp on Rootstock through the strategic grants program.

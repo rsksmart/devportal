@@ -8,7 +8,7 @@ const data = {
   cards: [
     {
       title: 'Discord',
-      color: 'purple',
+      color: 'cyan',
       icon: 'discord',
       link: {
         title: 'Join Discord',

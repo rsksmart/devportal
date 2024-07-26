@@ -1,21 +1,31 @@
 .fp-title-color{
   font: 700 #{$f40}/1 var(--bs-heading-font-family);
   letter-spacing: -0.04em;
-  color: var(--rsk-title-block-color);
+  color: var(--rsk-title-block-color, var(--bs-black));
   @include media-breakpoint-up(lg) {
     font-size: $f56;
   }
   & > span{
-    color: inherit;
-    padding: 0px 10px;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-    display: inline;
-    line-height: 1.4;
+    color: var(--rsk-title-block-bg);
     word-break: break-word;
   }
+  [data-theme='dark'] & {
+    & > span{
+      color: inherit;
+      padding: 0px 10px;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      display: inline;
+      line-height: 1.4;
+      word-break: break-word;
+      background-color: var(--rsk-title-block-bg, var(--bs-orange));
+    }
+  }
 }
-
+.fp-title-color-contrast{
+  --rsk-title-block-bg: var(--bs-contrast);
+  --rsk-title-block-color: var(--rsk-contrast-color);
+}
 .fp-title-color-md{
 
 }
