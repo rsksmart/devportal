@@ -1,11 +1,43 @@
 ul{
   padding-left: 18px;
 }
+
+.fs-56{
+    color: var(--bs-heading-color);
+    font-size: $f40;
+    letter-spacing: -0.04em;
+    @include media-breakpoint-up(lg) {
+      font-size: $f56;
+    }
+}
+
+.bottom-border{
+  color: var(--ifm-tabs-color);
+  display: flex;
+  font-weight: var(--ifm-font-weight-bold);
+  margin: 0;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 0 0 2px;
+  position: relative;
+  scrollbar-width: thin;
+
+  &:after{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(var(--bs-body-color-rgb), 0.2);
+    z-index: 0;
+  }
+
+}
+
 .markdown {
   h1, h2, h3, h4, h5, h6 {
     margin: 32px 0 12px;
   }
-
   & > h1:first-child, header > h1 {
     color: var(--bs-heading-color);
     -webkit-box-decoration-break: clone;

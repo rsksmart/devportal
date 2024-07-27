@@ -29,9 +29,7 @@ export default function HomepageSectionWelcome() {
         <p className={`mb-24 fs-12 fw-medium`}> {content.suptitle}</p>
       )}
       {content.title && (
-        <TitleColor as={`h1`} size={'md'} className={`mb-24`}>
-          {content.title}
-        </TitleColor>
+        <h1 className='mb-24 fs-56'>{content.title}</h1>
       )}
       {content.description && (
         <p className={`h2 mb-32`}>{content.description}</p>
