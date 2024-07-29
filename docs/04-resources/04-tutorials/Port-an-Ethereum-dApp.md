@@ -28,7 +28,7 @@ RSK’s gas fees are typically lower than those on Ethereum, averaging around $0
 
 **3. Leveraging Bitcoin Security**
 
-RSK is a sidechain of Bitcoin, which means it inherits the security of the Bitcoin network. This security model provides confidence to developers and users alike.
+Rootstock is a layer 2 on Bitcoin, which means it inherits the security of the Bitcoin network. This security model provides confidence to builders and users.
 
 # Similarities Between Ethereum and Rootstock
 
