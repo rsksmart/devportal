@@ -20,7 +20,7 @@ This guide will walk you through porting your Ethereum dApp to the RSK network u
 # Advantages of Porting Your dApp to Rootstock (RSK)
 **1. Faster Transaction Speeds**
 
-RSK makes transactions by using merge-mining with Bitcoin. This means that RSK transactions benefit from the security of the Bitcoin network while achieving faster confirmation times compared to Ethereum.
+Rootstock performs transactions by [merge-mining with Bitcoin](/concepts/merged-mining/). This means that Rootstock transactions benefit from the security of the Bitcoin network while achieving faster confirmation times compared to Ethereum.
 
 **2. Lower Gas Fees**
 
