@@ -7,7 +7,7 @@ title: Components
 ## Heading 
 Use this to organize your content and create a hierarchy for scannability. Use `Heading one` for the main title, `Heading two` for subheadings, and so on.
 
-Example
+- **Code**
 ```
 # Heading level 1
 ## Heading level 2
@@ -18,14 +18,20 @@ Example
 
 ```
 
-## Lists
-Use this to present items in a specific sequence (ordered list) or without order (unordered list).
+**Result**
+# Heading level 1
+## Heading level 2
+### Heading level 3
+#### Heading level 4
+##### Heading level 5
+###### Heading level 6
 
-Example: 
+## Lists
+Use this to present items in a specific sequence (ordered list) or without order (unordered list). 
 
 
 #### Unordered list
-Example
+- **Code**
 ```
 - The first level of the hierarchy is for *purpose*.
   This is always `44'`, as per the BIP44 specification.
@@ -39,7 +45,7 @@ Example
 - The final level of the hierarchy is for *index*: Addresses are numbered from index 0 in sequentially increasing manner. This number is used as child index in [BIP32 derivation](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki#specification-key-derivation "Hierarchical Deterministic Wallets - Key Derivation"). Public derivation is used at this level.
 
 ```
-**Result:**
+ **Result:**
 - The first level of the hierarchy is for *purpose*.
   This is always `44'`, as per the BIP44 specification.
 - The second level of the hierarchy is for the *registered coin type*.
@@ -52,13 +58,13 @@ Example
 - The final level of the hierarchy is for *index*: Addresses are numbered from index 0 in sequentially increasing manner. This number is used as child index in [BIP32 derivation](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki#specification-key-derivation "Hierarchical Deterministic Wallets - Key Derivation"). Public derivation is used at this level.
 
 #### Ordered List
-Example
+- **Code**
 ```
 1. The 2 Way Peg Application is now available on [Testnet](https://app.2wp.testnet.rootstock.io/) and [Mainnet](https://app.2wp.rootstock.io/).
 2. For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the 2 way peg app, please refer to the [2 way peg app user guide](/concepts/powpeg/).
 3. Get information on the signatories and attestion in the [Powpeg HSM Firmware Attestation](/concepts/powpeg/hsm-firmware-attestation) section.
 ```
-**Result:**
+ **Result:**
 1. The 2 Way Peg Application is now available on [Testnet](https://app.2wp.testnet.rootstock.io/) and [Mainnet](https://app.2wp.rootstock.io/).
 2. For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the 2 way peg app, please refer to the [2 way peg app user guide](/concepts/powpeg/).
 3. Get information on the signatories and attestion in the [Powpeg HSM Firmware Attestation](/concepts/powpeg/hsm-firmware-attestation) section.
@@ -66,7 +72,7 @@ Example
 ## Blockquote
 Use this to highlight quoted text, differentiating it from your own writing.
 
-Example:
+- **Code:**
 Highlighting a user testimonial or an excerpt from another source.
 ```
 > If you're new to Web3 and Smart Contract Development, begin by exploring the [Rootstock network](/developers/blockchain-essentials/overview/). Then progress step by step to the quick start Guide with Hardhat for a comprehensive understanding of the network and getting started with writing, testing, and deploying smart contracts on Rootstock.
@@ -74,9 +80,9 @@ Highlighting a user testimonial or an excerpt from another source.
 **Result:**
 > If you're new to Web3 and Smart Contract Development, begin by exploring the [Rootstock network](/developers/blockchain-essentials/overview/). Then progress step by step to the quick start Guide with Hardhat for a comprehensive understanding of the network and getting started with writing, testing, and deploying smart contracts on Rootstock.
 
-### Quote
+## Quote
 
-Example
+- **Code**
 
 ```jsx
 <Quote caption="Alex Min, Head of Marketing">
@@ -96,7 +102,8 @@ Use this to enhance understanding and visual appeal. Ensure images are relevant 
 You can add images in two ways on our doc.
 
 **Markdown image**
-Codes
+
+- **Codes**
 ```
 ![Rootstock Technology Stack - High Level](/img/concepts/rootstock-tech-stack.svg)
 
@@ -108,7 +115,7 @@ Codes
 
 **HTML image (max height limit 400px)**
 
-Codes
+- **Codes**
 ```
 <img src="/img/resources/rootstock-metamask/rootstock-hardhat-starter-kit.png"  width="800" height="600"/>
 ```
@@ -120,7 +127,7 @@ Codes
 ## Gallery/Slider
 Use this to showcase a series of images or content that benefit from a swiping or sliding interface.
 
-Code
+- **Codes**
 ```jsx
 <Carousel width="370" height="260" images={['/img/concepts/rootstock-tech-stack.svg', ... , '/img/metamask-gas-limit.png']} />
 ```
