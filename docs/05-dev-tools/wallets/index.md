@@ -8,7 +8,7 @@ description: "Learn how to connect to Rootstock with a compatible Wallet"
 
 The following wallets support [RBTC](/concepts/rbtc/) and [RIF](/concepts/rif-suite/token) tokens.
 
-<Carousel width="370" height="260" images={['/img/rsk/wallets/my-crypto.png', '/img/rsk/wallets/metamask.svg', '/img/rsk/wallets/edge-wallet-logo.png', '/img/rsk/wallets/ledger-logo.png', '/img/rsk/wallets/trezor-wallet.png', '/img/rsk/wallets/dcent-wallet.png', '/img/rsk/wallets/math-wallet.png', '/img/rsk/wallets/Exodus_logo_white.png', 'https://www.myetherwallet.com/img/logo-dark.2fa0f670.png', '/img/rsk/wallets/enkrypt-logo.png', '/img/rsk/wallets/block-wallet.png', '/img/rsk/wallets/taho.png', '/img//rsk/wallets/testtwo.png' ]} />
+<Carousel width="370" height="260" images={['/img/rsk/wallets/my-crypto.png', '/img/rsk/wallets/metamask-logo.png', '/img/rsk/wallets/edge-wallet-logo.png', '/img/rsk/wallets/ledger-logo.png', '/img/rsk/wallets/trezor-wallet.png', '/img/rsk/wallets/dcent-wallet.png', '/img/rsk/wallets/math-wallet.png', '/img/rsk/wallets/Exodus_logo_white.png', 'https://www.myetherwallet.com/img/logo-dark.2fa0f670.png', '/img/rsk/wallets/enkrypt-logo.png', '/img/rsk/wallets/block-wallet.png', '/img/rsk/wallets/taho.png', '/img//rsk/wallets/testtwo.png' ]} />
 
 ## Compatibility Matrix
 
