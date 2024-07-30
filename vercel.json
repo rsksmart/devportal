@@ -150,7 +150,6 @@
     {"source" : "/rsk/node/contribute/cli", "destination" : "/"},
     {"source" : "/rif/rns/architecture/Resolver", "destination" : "/"},
     {"source" : "/rif/relay/contracts", "destination" : "/"},
-
     {"source" : "/rif/rollup/dev-reference/sdk", "destination" : "/"},
     {"source" : "/guides/dex/features-of-a-dex", "destination" : "/"},
     {"source" : "/rsk/node/contribute/macos", "destination" : "/"},
