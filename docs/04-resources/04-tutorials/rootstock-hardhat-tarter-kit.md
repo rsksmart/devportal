@@ -7,7 +7,7 @@ tags: [rsk, rootstock, tutorials, resources, hardhat, starter kit, etherspot, dA
 ---
 
 
-Whether you’re a seasoned developer or just starting your journey into smart contract development, this kit provides a solid foundation for building decentralized applications (DApps) on the RSK network.
+Whether you’re a seasoned developer or just starting your journey into smart contract development, the hardhat starter kit provides a solid foundation for building decentralized applications (dApps) on the Rootstock network.
 
 ## What Is RSK?
 Rootstock (RSK) is fully compatible with Ethereum. It brings the power of smart contracts to Bitcoin, allowing developers to leverage Bitcoin’s security while benefiting from Ethereum’s ecosystem.
