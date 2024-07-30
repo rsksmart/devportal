@@ -5,7 +5,7 @@
     {"source" : "/guides/rif-rollup/transfer-funds-on-rif-rollup/", "destination" : "/"},
     {"source" : "/guides/rif-rollup/account-activation", "destination" : "/"},
     {"source" : "/guides/rif-rollup/transfer-funds-on-rif-rollup/withdraw-funds-rootstock/", "destination" : "/concepts/rif-suite/"},
-    {"source" : "/guides/rif-rollup/transfer-funds-on-rif-rollup/account-activation", "destination" : "/concepts/rif-suite/"},
+    {"source" : "/guides/rif-rollup/transfer-funds-on-rif-rollup/account-activation/", "destination" : "/concepts/rif-suite/"},
     {"source" : "/guides/rif-rollup/withdraw-funds-rootstock/account-activation", "destination" : "/concepts/rif-suite/"},
     {"source" : "/guides/rif-rollup/using-rif-rollup-block-explorer/", "destination" : "/"},
     {"source" : "/guides/rif-rollup/withdraw-funds-rootstock/", "destination" : "/concepts/rif-suite/"},
