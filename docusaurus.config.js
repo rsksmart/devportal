@@ -89,6 +89,9 @@ const config = {
             return items.filter((item) => !item.url.includes('/page/'));
           },
         },
+        googleTagManager: {
+          containerId: 'GTM-WTWVB2C',
+        },
       }),
     ],
   ],
