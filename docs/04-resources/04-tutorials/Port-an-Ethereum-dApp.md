@@ -24,7 +24,7 @@ Rootstock performs transactions by [merge-mining with Bitcoin](/concepts/merged-
 
 **2. Lower Gas Fees**
 
-RSK’s gas fees are typically lower than those on Ethereum, averaging around $0.052. This cost-effectiveness can be especially appealing for dApps that require frequent interactions with the blockchain.
+Rootstock’s gas fees are typically lower than Ethereum, averaging around `$0.052`. This cost-effectiveness can be especially appealing for dApps that require frequent interactions with the blockchain.
 
 **3. Leveraging Bitcoin Security**
 
