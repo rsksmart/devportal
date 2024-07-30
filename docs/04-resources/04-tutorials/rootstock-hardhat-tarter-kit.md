@@ -101,7 +101,7 @@ This section will walk you through adding Rootstock (RSK) Testnet and Mainnet RP
 There are two ways to obtain RPC URLs:
 
 #### Using Public RPC URLs:
-- Visit the [MetaMask Integration on the Rootstock Dev Portal](https://developers.rsk.co/wallet/use/metamask/). This guide provides instructions on setting up MetaMask for RSK. While following these steps, pay close attention to the sections on adding custom networks. You'll find the RPC URLs for RSK Testnet and Mainnet listed there.
+- Visit the [MetaMask Integration on the Rootstock Dev Portal](https://developers.rsk.co/wallet/use/metamask/). This guide provides instructions on setting up MetaMask for Rootstock. While following these steps, pay close attention to the sections on adding custom networks. You'll find the RPC URLs for Rootstock Testnet and Mainnet listed.
 
 #### Using Hosted RPC URLs (GetBlock):
 - Create an account at the [GetBlock website](https://getblock.io/). Once logged in, navigate to your dashboard.
