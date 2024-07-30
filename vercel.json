@@ -1,4 +1,5 @@
 {
+  "trailingSlash" : true,
   "redirects": [
     {"source" : "/guides/rif-rollup/transfer-funds-on-rif-rollup/withdraw-funds-rootstock", "destination" : "/concepts/rif-suite/"},
     {"source" : "/guides/rif-rollup/transfer-funds-on-rif-rollup/account-activation", "destination" : "/concepts/rif-suite/"},
