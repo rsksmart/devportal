@@ -86,7 +86,7 @@ To set up your environment, follow these steps:
     ```
 
 ### 4. Install Dependencies
-Before running the project, make sure you have the necessary dependencies installed. We recommend using the yarn package manager due to potential conflicts with npm packages. Run the following command to install dependencies:
+Before running the project, make sure to have the necessary dependencies installed. We recommend using the yarn package manager due to potential conflicts with npm packages. Run the following command to install dependencies:
 ```bash
 yarn
 ```
