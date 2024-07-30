@@ -157,7 +157,7 @@ hh erc721-mint --contract 0x2E027a3a05f3de6777B23397a50a60ecd04fe34C --recipient
 - `<RecipientAddress>`: Replace this with the wallet address to receive the newly minted token.
 - `<network>`: Replace this with either `rskTestnet` or `rskMainnet`, depending on the network where your contract is deployed.
 
-This command will initiate a transaction to mint a new ERC721 token and send it to the specified recipient address. 
+This command will initiate a transaction to mint a new ERC721 tokens and send it to the specified recipient address. 
 
 The output will display the transaction details:
 ```
