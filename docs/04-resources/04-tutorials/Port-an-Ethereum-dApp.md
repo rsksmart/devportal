@@ -8,7 +8,6 @@ description: "Porting an Ethereum decentralized application (dApp) to Rootstock 
 
 
 
-# Port an Ethereum dApp to Rootstock
 Porting an Ethereum decentralized application (dApp) to Rootstock (RSK) presents an exciting opportunity to leverage the benefits of the RSK network, which is a smart contract platform secured by the Bitcoin network.
 
 RSK combines Ethereum's flexibility with Bitcoin's security and scalability, offering a compelling environment for dApp development.
