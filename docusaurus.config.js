@@ -12,7 +12,7 @@ const mainNavItems = createNavItems('./docs');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  noIndex: false, // set to false to enable search engine indexing
+  noIndex: true, // set to false to enable search engine indexing
 
   title: 'Rootstock Developers Portal',
   tagline: 'Welcome to Rootstock',
@@ -88,6 +88,9 @@ const config = {
             const items = await defaultCreateSitemapItems(rest);
             return items.filter((item) => !item.url.includes('/page/'));
           },
+        },
+        googleTagManager: {
+          containerId: 'GTM-WTWVB2C',
         },
       }),
     ],
