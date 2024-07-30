@@ -43,7 +43,7 @@ Please read our [Code of Conduct]() before contributing. We are committed to fos
     - Detailed description of the proposed feature.
     - Any relevant mockups or screenshots.
 
-#### Contributing documentation
+#### Contributing
 
 1. **Fork the Repository**: Fork our repo to your GitHub account.
 2. **Clone Your Fork**: Clone your fork to your local machine.
