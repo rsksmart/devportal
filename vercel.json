@@ -57,7 +57,6 @@
     {"source" : "/rif/rns/transfer", "destination" : "/"},
     {"source" : "/rif/rns/resolvers", "destination" : "/"},
     {"source" : "/img/circles/circle-blue.png", "destination" : "/"},
-    {"source" : "/{{%20event.videoStreamUrl%20}}", "destination" : "/"},
     {"source" : "/rif/rns/reverse-suite/", "destination" : "/"},
     {"source" : "/rif/rns/architecture/rsk-registrar/fifs", "destination" : "/"},
     {"source" : "/rif/rns/set-resolver", "destination" : "/"},
