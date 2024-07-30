@@ -80,7 +80,7 @@ To get the key:
 
 ### 3. Environment Setup
 To set up your environment, follow these steps:
-1. Create a `.env` file and add your environment variables.
+1. Create a `.env` file and add environment variables.
     ```env
     VITE_WC_PROJECT_ID=Your projectid from cloud Walletconnect
     ```
