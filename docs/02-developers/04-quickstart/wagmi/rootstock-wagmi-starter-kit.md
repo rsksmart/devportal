@@ -7,7 +7,13 @@ tags: [rsk, rootstock, tutorials, resources, wagmi, starter kit, react, dApps, S
 ---
 
 
-The Rootstock Wagmi Starter Kit provides a solid foundation for developing decentralized applications (dApps) on the Rootstock blockchain. It streamlines development by leveraging the [React](https://react.dev/learn), [Wagmi](https://wagmi.sh/), and [Shadcn libraries](https://ui.shadcn.com/).
+
+
+The Rootstock Wagmi starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain. It leverages the security of Bitcoin and the flexibility of Ethereum. 
+
+The kit uses [Wagmi](https://wagmi.sh/), a React Hooks library, to simplify smart contracts and blockchain network interactions and and [Shadcn libraries](https://ui.shadcn.com/). 
+
+This starter kit is designed to help developers jump-start their dApp development journey on Rootstock.
 
 ## Features
 
@@ -303,14 +309,10 @@ An asynchronous function that handles the minting of tokens.
 
 ## Conclusion
 
-The Rootstock Wagmi Starter Kit offers a well-organized framework to build scalable dApps efficiently. Key features include:
+The Rootstock Wagmi Starter Kit simplifies development by providing pre-configured tools and a well-structured codebase. It includes Wagmi integration and RainbowKit for wallet connection, so you can concentrate on creating innovative dApp functionalities.
 
-- **Structured Folder Organization**: Clear categorization for easy navigation.
-- **Pre-configured Environment**: Ready-to-use environment settings.
-- **Reusable Components**: Comprehensive set of UI and token interaction components.
-- **Comprehensive Configurations**: Pre-configured settings for RainbowKit and WAGMI.
-- **Utilities and Constants**: Essential utilities and type definitions.
+This guide covers features, prerequisites, setup instructions, folder structure, and code explanations. You'll also have the opportunity to explore the codebase and gain an understanding of token-standard interactions (ERC-20, ERC-721, ERC-1155).
 
 ## Join the Community
 
-Building dApps can be challenging, but you’re not alone. Join our active Discord community for help, questions, and collaboration.
+Building dApps can be challenging, but you’re not alone. Join our active [Discord](http://discord.gg/rootstock) community for help, questions, and collaboration.
