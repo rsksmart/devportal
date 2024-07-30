@@ -141,4 +141,4 @@ By contributing, you agree that your contributions will be licensed under the [M
 
 ---
 
-Thank you for contributing! Together, we can make this project better for everyone.
+Thank you for contributing to Rootstock!
