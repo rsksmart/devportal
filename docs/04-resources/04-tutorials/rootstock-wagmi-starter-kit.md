@@ -70,7 +70,7 @@ cd rsk-wagmi-starter-kit
 ```
 
 ### 2. Get Project ID
-Every dApp that relies on WalletConnect now needs to obtain a projectId from [WalletConnect Cloud](https://cloud.walletconnect.com/). This is free and only takes a few minutes.
+Every dApp that relies on WalletConnect now needs to obtain a projectId from [WalletConnect Cloud](https://cloud.walletconnect.com/). This is free and only takes few minutes.
 
 To get the key:
 1. Go to this [URL](https://cloud.walletconnect.com/sign-up) and sign up.
