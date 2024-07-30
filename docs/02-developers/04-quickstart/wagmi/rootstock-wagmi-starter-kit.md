@@ -1,7 +1,7 @@
 ---
-sidebar_lable: Rootstock Wagmi Starter Kit
+sidebar_label: Quick Start using Wagmi and React Hooks
 sidebar_position: 4
-title: Rootstock Wagmi Starter Kit
+title: Deploy a Smart Contract on Rootstock using Wagmi
 description: 'The Rootstock Wagmi Starter Kit provides a solid foundation for developing decentralized applications (dApps) on the Rootstock blockchain. It streamlines development by leveraging the React, Wagmi, and Shadcn libraries.'
 tags: [rsk, rootstock, tutorials, resources, wagmi, starter kit, react, dApps, Smart Contracts]
 ---
@@ -76,23 +76,23 @@ cd rsk-wagmi-starter-kit
 ```
 
 ### 2. Get Project ID
-Every dApp that relies on WalletConnect now needs to obtain a projectId from [WalletConnect Cloud](https://cloud.walletconnect.com/). This is free and only takes a few minutes.
+Every dApp that relies on WalletConnect now needs to obtain a projectId from [WalletConnect Cloud](https://cloud.walletconnect.com/). This is free and only takes few minutes.
 
 To get the key:
 1. Go to this [URL](https://cloud.walletconnect.com/sign-up) and sign up.
 2. Create a new project by clicking on **Create Project**.
 3. Add a Name and Link to your project, select a product (AppKit or WalletKit), select **WalletKit**.
-4. Now you will see your project ID, copy it.
+4. Now you will see the project ID, copy it.
 
 ### 3. Environment Setup
 To set up your environment, follow these steps:
-1. Create a `.env` file and add your environment variables.
+1. Create a `.env` file and add environment variables.
     ```env
     VITE_WC_PROJECT_ID=Your projectid from cloud Walletconnect
     ```
 
 ### 4. Install Dependencies
-Before running the project, make sure you have the necessary dependencies installed. We recommend using the yarn package manager due to potential conflicts with npm packages. Run the following command to install dependencies:
+Before running the project, make sure to have the necessary dependencies installed. We recommend using the yarn package manager due to potential conflicts with npm packages. Run the following command to install dependencies:
 ```bash
 yarn
 ```
@@ -102,7 +102,7 @@ Now that you’ve cloned the repository and installed dependencies, it’s time 
 ```bash
 yarn dev
 ```
-This will start your Rootstock Wagmi Starter Kit locally, allowing you to develop and test your smart contracts. You can access the Vite server at [http://localhost:5173](http://localhost:5173).
+This will start the Rootstock Wagmi Starter dApp locally, allowing you to develop and test your smart contracts. You can access the Vite server at [http://localhost:5173](http://localhost:5173).
 
 ## Result
 
