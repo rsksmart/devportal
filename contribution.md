@@ -28,7 +28,7 @@ Please read our [Code of Conduct]() before contributing. We are committed to fos
 
 #### Reporting Bugs
 
-1. **Check for Existing Issues**: Before reporting a bug, please check the [issue tracker](issues) to see if it has already been reported.
+1. **Check for Existing Issues**: Before reporting a bug, please check the [issue tracker](https://github.com/rsksmart/rsksmart.github.io/issues) to see if it has already been reported.
 2. **Create a New Issue**: If your issue is not listed, create a new one. Provide as much detail as possible:
     - A clear and descriptive title.
     - Steps to reproduce the bug.
