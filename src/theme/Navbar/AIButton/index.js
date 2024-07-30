@@ -1,17 +1,23 @@
 import React, {useEffect, useState} from 'react';
-import { MendableFloatingButton } from "@mendable/search"
+import {MendableFloatingButton} from "@mendable/search"
 import {useColorMode} from "@docusaurus/theme-common";
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 export default function AIButton() {
+  const {
+    siteConfig: {customFields},
+  } = useDocusaurusContext();
+
+  const {keys} = customFields;
 
   const {colorMode} = useColorMode();
-  const [style, setStyle] = useState({ darkMode: colorMode === 'dark', accentColor: colorMode === 'dark' ? "#fff" : '#000' })
+  const [style, setStyle] = useState({darkMode: colorMode === 'dark', accentColor: colorMode === 'dark' ? "#fff" : '#000'})
 
   const floatingButtonStyle = {
     color: "var(--bs-body-color)",
     backgroundColor: "var(--bs-body-bg)",
   }
-  const ANON_KEY = `bef13e93-6ddd-4b56-a46d-6b358c02e568`
+  const ANON_KEY = keys.mendable;
 
   const icon = (
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -25,7 +31,7 @@ export default function AIButton() {
   )
 
   useEffect(() => {
-    setStyle({ darkMode: colorMode === 'dark', accentColor: colorMode === 'dark' ? "#fff" : '#000' })
+    setStyle({darkMode: colorMode === 'dark', accentColor: colorMode === 'dark' ? "#fff" : '#000'})
   }, [colorMode]);
 
   return (
