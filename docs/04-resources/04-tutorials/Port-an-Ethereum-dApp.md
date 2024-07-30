@@ -401,4 +401,4 @@ If you get an error like `IgnitionError: IGN401`, try running the command again.
 
 Visit [RSK Testnet Explorer](https://explorer.testnet.rsk.co/). Paste your contract address (`0x3570c42943697702bA582B1ae3093A15D8bc2115`) into the search bar to verify successful deployment.
 
-> If you deployed your contract on [Mainnet Explorer](https://explorer.rsk.co/).
+> If you deployed your contract on [Mainnet Explorer](https://explorer.rootstock.io/).
