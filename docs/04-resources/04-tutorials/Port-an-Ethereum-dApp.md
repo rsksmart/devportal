@@ -367,7 +367,7 @@ This TypeScript script uses Hardhat Ignition to deploy the `SimpleStorage` contr
 
 **4. Confirmation and Deployment**
 
-- Confirm the deployment to the RSK testnet by typing “yes.” 
+- Confirm the deployment to the Rootstock testnet by typing “yes.” 
 - Hardhat Ignition will resume the existing deployment (if any) and execute the deployment process. 
 - You’ll see a success message indicating that the contract was deployed.
 
