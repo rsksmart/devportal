@@ -18,6 +18,8 @@ html:root {
 
   --ifm-z-index-fixed: 200;
 
+  --bs-primary: #{$orange-light};
+  --bs-primary-rgb: 230, 131, 0;
   --bs-pink: #{$pink-light};
   --bs-purple: #{$purple-light};
   --bs-yellow: #{$purple-light};
@@ -140,29 +142,7 @@ html:root {
     --ifm-navbar-padding-horizontal: 0;
     --ifm-navbar-padding-horizontal: 0;
   }
-  //&:not(.docs-doc-page) {
-  //  --rsk-color-main: var(--bs-brand-2);
-  //}
-  //
-  //&[class*="docs-doc-id-concepts"] {
-  //  --rsk-color-main: var(--bs-brand-1);
-  //}
-  //
-  //&[class*="docs-doc-id-dev-tools"] {
-  //  --rsk-color-main: var(--bs-brand-3);
-  //}
-  //
-  //&[class*="docs-doc-id-developers"] {
-  //  --rsk-color-main: var(--bs-brand-4);
-  //}
-  //
-  //&[class*="docs-doc-id-node-operators"] {
-  //  --rsk-color-main: var(--bs-brand-5);
-  //}
-  //
-  //&[class*="docs-doc-id-resources"] {
-  //  --rsk-color-main: var(--bs-brand-6);
-  //}
+
   //Paginator
   --rsk-paginator-link-color: var(--bs-body-color);
   --rsk-paginator-link-bg: var(--bs-body-bg);
@@ -276,6 +256,9 @@ html:root {
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark']:root {
+  --bs-primary: #{$orange};
+  --bs-primary-rgb: 255, 145, 0;
+
   --bs-pink: #{$pink};
   --bs-purple: #{$purple};
   --bs-yellow: #{$yellow};
