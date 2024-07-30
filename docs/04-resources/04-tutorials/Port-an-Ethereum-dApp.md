@@ -333,7 +333,7 @@ SimpleStorage
   3 passing (286ms)
 ```
 
-### Deploying Your Contract on RSK Testnet
+### Deploying Your Contract on Rootstock Testnet
 
 **1. Ensure Sufficient Balance**
 
