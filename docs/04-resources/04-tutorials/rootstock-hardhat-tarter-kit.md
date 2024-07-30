@@ -1,5 +1,5 @@
 ---
-sidebar_lable: Rootstock Hardhat Starter Kit!
+sidebar_label: Quick Start with Hardhat
 sidebar_position: 6
 title: Rootstock Hardhat Starter Kit! 
 description: 'Whether you are a seasoned developer or just starting your journey into smart contract development, this kit provides a solid foundation for building decentralized applications (DApps) on the RSK network.'
