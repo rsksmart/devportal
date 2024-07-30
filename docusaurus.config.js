@@ -4,15 +4,16 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
+import 'dotenv/config';
+
 import {themes as prismThemes} from 'prism-react-renderer';
 import {createNavItems} from './src/_utils/utils.js';
 
 const mainNavItems = createNavItems('./docs');
 
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  noIndex: false, // set to false to enable search engine indexing
+  noIndex: true, // set to false to enable search engine indexing
 
   title: 'Rootstock Developers Portal',
   tagline: 'Welcome to Rootstock',
@@ -24,6 +25,9 @@ const config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
   customFields: {
+    keys : {
+      mendable : process.env.MENDABLE_KEY
+    },
     homePage: {
       editUrl: 'https://github.com/zgraya-digital/devportal-rootstock/tree/main/',
     },
@@ -89,10 +93,12 @@ const config = {
             return items.filter((item) => !item.url.includes('/page/'));
           },
         },
+        googleTagManager: {
+          containerId: process.env.GTM_CONTAINER_ID || 'GTM-12345',
+        },
       }),
     ],
   ],
-  //themes: ['@docusaurus/theme-search-algolia'],
 
   themeConfig:
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -207,25 +213,6 @@ const config = {
         // Optional: see doc section below
         contextualSearch: false,
 
-        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-        //externalUrlRegex: 'external\\.com|domain\\.com',
-
-        // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
-        // replaceSearchResultPathname: {
-        //   from: '/docs/', // or as RegExp: /\/docs\//
-        //   to: '/',
-        // },
-
-        // // Optional: Algolia search parameters
-        // searchParameters: {},
-        //
-        // // Optional: path for search page that enabled by default (`false` to disable it)
-        // searchPagePath: 'search',
-        //
-        // // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
-        // insights: false,
-
-        //... other Algolia params
       },
     }),
 };
