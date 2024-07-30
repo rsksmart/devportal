@@ -139,7 +139,7 @@ deploying "MockERC721" (tx: 0x9ad1dbc047b78594cf2cad105ded54c851fc0895ae69e43819
 ```
 
 ## Interacting with the Contract - Minting a Token
-Once your contract is deployed, you can interact with it using Hardhat's `erc721-mint` command. This command allows you to mint (create) new ERC721 tokens.
+On contract deployment, you can interact with it using Hardhat's `erc721-mint` command. This command allows you to mint (create) new ERC721 tokens.
 
 ### Minting a Token:
 In your terminal, run the following command, replacing the placeholders with your actual values:
