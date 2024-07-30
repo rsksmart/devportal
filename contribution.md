@@ -132,7 +132,7 @@ All PRs must include a commit message with the description of the changes made\!
 
 ### Community and Communication
 
-1. **Join Our Discussion**: Participate in discussions and If you need help, reach out to us on [discord](link).
+1. **Join the Discussion**: Participate in discussions and If you need help, reach out to us on [discord](http://discord.gg/rootstock).
 2. **Stay Updated**: Follow our updates on [social media](https://x.com/rootstocklabs).
 
 ### License
