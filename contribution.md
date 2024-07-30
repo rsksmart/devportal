@@ -50,7 +50,7 @@ Please read our [Code of Conduct]() before contributing. We are committed to fos
 1. **Fork the Repository**: Fork our repo to your GitHub account.
 2. **Clone Your Fork**: Clone your fork to your local machine.
     ```bash
-    git clone https://github.com/zgraya-digital/devportal-rootstock.git
+    git clone https://github.com/rsksmart/devportal.git
     ```
 3. **Create a Branch**: Create a new branch for your work.
     ```bash
