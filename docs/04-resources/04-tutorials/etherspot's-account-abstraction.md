@@ -1,5 +1,5 @@
 ---
-sidebar_lable: Account Abstraction with Etherspot in a Wagmi Starter Kit
+sidebar_label: Account Abstraction with Etherspot Prime SDK
 sidebar_position: 4
 title: Account Abstraction with Etherspot in a Wagmi Starter Kit
 description: 'This guide will show you how to leverage Etherspots Account Abstraction features within a Wagmi starter kit by following these steps, you will empower your users to interact with your dApp without managing private keys directly.'
