@@ -67,16 +67,21 @@ ul{
       position: relative;
       &:before {
         content: "0" counter(items);
-        //font-size: 0.6em;
         font-weight: 400;
         letter-spacing: 0.05em;
         position: absolute;
         left: -1.8em;
         top: 0em;
       }
+
       &:nth-child(n+10):before {
         content: counter(items);
       }
+    }
+  }
+  @for $i from 1 through 20 {
+    ol[start="#{$i}"] {
+      counter-reset: items ($i - 1) ;
     }
   }
   code{
