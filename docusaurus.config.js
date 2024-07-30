@@ -119,7 +119,7 @@ const config = {
           {
             to: '/',
             position: 'left',
-            activeBasePath: '/home',
+            activeBaseRegex: '^/$',
             label: 'Home',
           },
           ...mainNavItems,
