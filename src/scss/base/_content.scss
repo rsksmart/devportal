@@ -22,16 +22,6 @@ ul{
   position: relative;
   scrollbar-width: thin;
 
-  &:after{
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    width: 100%;
-    border-bottom: 1px solid rgba(var(--bs-body-color-rgb), 0.2);
-    z-index: 0;
-  }
-
 }
 
 .markdown {
