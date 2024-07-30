@@ -6,7 +6,7 @@ description: 'This guide will show you how to leverage Etherspots Account Abstra
 tags: [rsk, rootstock, tutorials, resources, wagmi, starter kit, etherspot, react, dApp, abstraction]
 ---
 
-This guide will show you how to leverage Etherspot's Account Abstraction features within a Wagmi starter kit. 
+In this guide, you will learn how to use the Etherspot Prime SDK to deploy an Account Abstraction dApp on the Rootstock network. 
 By following these steps, you'll empower your users to interact with your dApp without managing private keys directly.
 
 ## Prerequisites:
