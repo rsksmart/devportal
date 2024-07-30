@@ -5,9 +5,6 @@ html:root {
     --doc-sidebar-width: 315px;
   }
 
-}
-
-html:root {
   --ifm-container-width: 1440px;
   --ifm-container-width-xl: 1440px;
 
@@ -33,8 +30,6 @@ html:root {
   --bs-border-color: #{$gray-600};
   --bs-body-bg: #{$bw};
   --bs-link-color-rgb: 230, 131, 0;
-
-
 
   --bs-primary: var(--bs-orange);
   --rsk-color-main: var(--bs-orange);
@@ -78,7 +73,6 @@ html:root {
   --ifm-navbar-item-active-bg: var(--rsk-color-main);
   --ifm-navbar-item-active-border-color: var(--rsk-color-main);
 
-  //--ifm-navbar-padding-vertical: calc(var(--ifm-spacing-vertical) * 0.5);
   --ifm-navbar-shadow: none;
   --ifm-navbar-search-input-background-color: var(--ifm-color-emphasis-200);
   --ifm-navbar-search-input-color: var(--ifm-color-emphasis-800);
@@ -155,7 +149,7 @@ html:root {
   --rsk-title-block-color: var(--bs-black);
   --rsk-title-block-bg: var(--rsk-color-main);
 
-  //markdown
+  //Markdown
   --ifm-leading: 0.75rem;
   --ifm-code-border-radius: 8px;
   --ifm-code-padding-horizontal: 4px;
@@ -184,7 +178,7 @@ html:root {
 
   --rsk-image-border-color: #{$gray-300};
 
-  //tags
+  //Tags
   --rsk-tag-border-color: #{$gray-300};
   --rsk-tag-bg: #{$white};
   --rsk-tag-color: #{$black};
@@ -192,7 +186,7 @@ html:root {
   --rsk-tag-hover-color: #{$white};
   --rsk-tag-hover-bg: #{$black};
 
-  //breadcrumbs
+  //Breadcrumbs
   --ifm-breadcrumb-separator: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m10.47 8-4-4-.94.94L8.58 8l-3.05 3.06.94.94 4-4Z' fill='%23000'/%3E%3C/svg%3E");
   --ifm-breadcrumb-item-background-active: none;
 
@@ -200,7 +194,6 @@ html:root {
   --rsk-reading-time-color: #{$gray-500};
 
   // Admonitions
-
   --ifm-alert-background-color: inherit;
   --ifm-alert-border-color: inherit;
   --ifm-alert-border-radius: 10px;
@@ -252,9 +245,17 @@ html:root {
   --ifm-card-border-color: var(--bs-body-color);
   --ifm-card-color: var(--bs-body-color);
   --ifm-card-border-radius: 20px;
+
+  //Forms
+  --rsk-input-border-color: #{$gray-200};
+  --rsk-input-bg: #{$gray-100};
+  --rsk-input-color: var(--bs-body-color);
+  --rsk-input-placeholder-color: #{$gray-550};
+  --rsk-input-border-color-focus: var(--bs-primary);
+  --rsk-input-focus-bg: #{$gray-100};
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+
 [data-theme='dark']:root {
   --bs-primary: #{$orange};
   --bs-primary-rgb: 255, 145, 0;
@@ -317,7 +318,7 @@ html:root {
 
   --rsk-image-border-color: #{$gray-800};
 
-  //tags
+  //Tags
   --rsk-tag-border-color: #{$gray-800};
   --rsk-tag-bg: #{$black};
   --rsk-tag-color: #{$white};
@@ -333,7 +334,6 @@ html:root {
 
 
   // Admonitions
-
   --ifm-color-secondary-contrast-background: #{$gray-850};
   --ifm-color-secondary-contrast-highlight: #{$gray-750};
 
@@ -357,4 +357,12 @@ html:root {
 
   //Tabs
   --ifm-tabs-color: var(--bs-body-color);
+
+  //Forms
+  --rsk-input-border-color: #{$gray-800};
+  --rsk-input-bg: #{$gray-900};
+  --rsk-input-color: var(--bs-body-color);
+  --rsk-input-placeholder-color: #{$gray-450};
+  --rsk-input-border-color-focus: var(--bs-primary);
+  --rsk-input-focus-bg: #{$gray-900};
 }
