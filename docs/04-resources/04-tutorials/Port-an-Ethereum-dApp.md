@@ -16,7 +16,7 @@ With Rootstock (RSK), you can bridge the gap between Ethereum and Bitcoin, bring
 
 This guide will walk you through porting your Ethereum dApp to the RSK network using the Hardhat Ignition deployment tool and leveraging the compatibility between Solidity (used for RSK) and Ethereum.
 
-# Advantages of Porting Your dApp to Rootstock (RSK)
+## Advantages of Porting Your dApp to Rootstock (RSK)
 **1. Faster Transaction Speeds**
 
 Rootstock performs transactions by [merge-mining with Bitcoin](/concepts/merged-mining/). This means that Rootstock transactions benefit from the security of the Bitcoin network while achieving faster confirmation times compared to Ethereum.
