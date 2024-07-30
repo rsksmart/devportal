@@ -1,6 +1,8 @@
 ## Open Source Contribution Guide
 
-Welcome to our open source project! We're excited to have you contribute. This guide will help you understand our contribution process and ensure your contributions are well-received.
+Welcome to Rootstock! 
+
+We're excited to have you contribute to Rootstock Open Source Projects. This guide will help you understand the contribution process and ensure contributors have clear guidelines and procedures for how to contribute.
 
 All contributions are welcome, including issues, updates and tweaks, tutorials and more.
 
