@@ -76,7 +76,7 @@ To get the key:
 1. Go to this [URL](https://cloud.walletconnect.com/sign-up) and sign up.
 2. Create a new project by clicking on **Create Project**.
 3. Add a Name and Link to your project, select a product (AppKit or WalletKit), select **WalletKit**.
-4. Now you will see your project ID, copy it.
+4. Now you will see the project ID, copy it.
 
 ### 3. Environment Setup
 To set up your environment, follow these steps:
