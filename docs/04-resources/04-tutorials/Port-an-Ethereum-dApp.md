@@ -230,7 +230,7 @@ Replace `<API-KEY>` with your actual API keys obtained from the Rootstock Labs d
 
 ### Copy Ethereum Contract Code and Tests
 
-Copy this Ethereum contract and its tests to your RSK Hardhat project. Place it inside the `contracts` folder so the route would be `contracts/SimpleStorage.sol`.
+Copy this Ethereum contract and its tests to your Rootstock Hardhat project. Place it inside the `contracts` folder so the route would be `contracts/SimpleStorage.sol`.
 
 #### `SimpleStorage.sol`
 
