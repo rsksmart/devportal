@@ -136,4 +136,4 @@ Now click on `Transactions recorded` interact with the Smart Contract! Call its 
 
 - Monitor Transactions
    - Use Remix and MetaMask to monitor transaction confirmations and results.
-   - You can also use a [Rootstock Testnet Explorer](https://explorer.testnet.rsk.co/) to view transactions and contract interactions.
+   - You can also use a [Rootstock Testnet Explorer](https://explorer.testnet.rootstock.io/) to view transactions and contract interactions.

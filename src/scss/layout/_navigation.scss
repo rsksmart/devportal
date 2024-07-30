@@ -1,6 +1,5 @@
 .navbar__title{
-  font: 500 #{$f26}/0.75 var(--bs-body-font-family);
-  color: var(--bs-nav-title-color);
+  font: 500 #{$f26}/0.7 var(--bs-body-font-family);
   letter-spacing: -0.04em;
   padding-left: 12px;
   border-left: 1px solid var(--bs-body-color);
@@ -38,7 +37,6 @@
   &__link{
     font: 700 #{$f16}/1 $font-family-base;
     letter-spacing: -0.02em;
-    border: 1px solid var(--ifm-navbar-item-border-color);
     border-radius: 10px;
     @include media-breakpoint-up(lg) {
       font-size: $f18;
@@ -52,7 +50,6 @@
       color: var(--ifm-navbar-link-active-color);
       border-color: var(--ifm-navbar-item-active-border-color);
       background-color: var(--ifm-navbar-item-active-bg);
-
     }
   }
   &__brand{
@@ -61,3 +58,38 @@
     }
   }
 }
+
+.navbar__link{
+  //--ifm-navbar-item-hover-bg: var(--bs-brand-2);
+  //--ifm-navbar-item-hover-border-color: var(--bs-brand-2);
+  //
+  //&[href*="/concepts"] {
+  //  --ifm-navbar-item-hover-bg: var(--bs-brand-1);
+  //  --ifm-navbar-item-hover-border-color: var(--bs-brand-1);
+  //}
+  //
+  //&[href*="/dev-tools"] {
+  //  --ifm-navbar-item-hover-bg: var(--bs-brand-3);
+  //  --ifm-navbar-item-hover-border-color: var(--bs-brand-3);
+  //}
+  //
+  //&[href*="/developers"] {
+  //  --ifm-navbar-item-hover-bg: var(--bs-brand-4);
+  //  --ifm-navbar-item-hover-border-color: var(--bs-brand-4);
+  //}
+  //
+  //&[href*="/node-operators"] {
+  //  --ifm-navbar-item-hover-bg: var(--bs-brand-5);
+  //  --ifm-navbar-item-hover-border-color: var(--bs-brand-5);
+  //}
+  //
+  //&[href*="/resources"] {
+  //  --ifm-navbar-item-hover-bg: var(--bs-brand-6);
+  //  --ifm-navbar-item-hover-border-color: var(--bs-brand-6);
+  //}
+}
+//.navbar-sidebar{
+//  transform: translate3d(0, 0, 0);
+//  opacity: 1;
+//  visibility: visible;
+//}
