@@ -2,7 +2,7 @@
 sidebar_label: Quick Start with Hardhat
 sidebar_position: 6
 title: Rootstock Hardhat Starter Kit! 
-description: 'Whether you are a seasoned developer or just starting your journey into smart contract development, this kit provides a solid foundation for building decentralized applications (DApps) on the RSK network.'
+description: 'Whether you are a seasoned developer or just starting your journey into smart contract development, the hardhat starter kit provides a solid foundation for building decentralized applications (dApps) on the Rootstock network.'
 tags: [rsk, rootstock, tutorials, resources, wagmi, starter kit, etherspot, react, dApp, abstraction]
 ---
 
