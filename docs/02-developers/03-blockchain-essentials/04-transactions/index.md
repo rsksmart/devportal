@@ -33,8 +33,8 @@ Watch this short video demonstrating how to view an account in the block explore
   <iframe width="949" height="534" src="https://www.youtube.com/embed/p-q7NBmEqBo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-For the Rootstock Mainnet, we would go to [`explorer.rsk.co`](https://explorer.rsk.co/).
-However, since we are currently connected to the Rootstock Testnet, we go to [`explorer.testnet.rsk.co`](https://explorer.testnet.rsk.co/) instead.
+For the Rootstock Mainnet, we would go to [`explorer.rootstock.io`](https://explorer.rootstock.io/).
+However, since we are currently connected to the Rootstock Testnet, we go to [`explorer.testnet.rootstock.io`](https://explorer.testnet.rootstock.io/) instead.
 
 ## Transfer tRBTC
 

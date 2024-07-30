@@ -241,7 +241,7 @@ $(async function() {
             $(".bm-att-part-text", child).text(`${part.name}: ${part.value}`);
             if (part.special === "rsk-block") {
                 $(".bm-att-part-link", child).text("[See in Block Explorer]");
-                $(".bm-att-part-link", child).attr("href", `https://explorer.rsk.co/block/${part.value}`);
+                $(".bm-att-part-link", child).attr("href", `https://explorer.rootstock.io//block/${part.value}`);
                 $(".bm-att-part-link", child).show();
             }
             $(".bm-att-container", elem).append(child);

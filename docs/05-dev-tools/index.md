@@ -269,7 +269,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="Rootstock Stats"
     subtitle="data & analytics"
     color="orange"
-    linkHref="https://stats.rsk.co/"
+    linkHref="https://stats.rootstock.io/"
     linkTitle="View Stats"
     description="Rootstock Stats."
   />

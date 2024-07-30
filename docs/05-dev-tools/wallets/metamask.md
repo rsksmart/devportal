@@ -60,8 +60,8 @@ Visit the [metamask-landing.rifos.org](https://metamask-landing.rifos.org/) tool
     </tr>
     <tr>
       <td>Block explorer URL</td>
-      <td><a href="https://explorer.rsk.co" target="_blank">https://explorer.rsk.co</a></td>
-      <td><a href="https://explorer.testnet.rsk.co" target="_blank">https://explorer.testnet.rsk.co</a></td>
+      <td><a href="https://explorer.rootstock.io/" target="_blank">https://explorer.rootstock.io/</a></td>
+      <td><a href="https://explorer.testnet.rootstock.io/" target="_blank">https://explorer.testnet.rootstock.io/</a></td>
     </tr>
   </tbody>
 </table>
