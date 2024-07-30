@@ -34,7 +34,7 @@ const config = {
     moreLinks : {
       changelog : {
         title: 'Changelog',
-        url : '#',
+        url : '/changelog',
       },
       joinCommunity : {
         title: 'Join the Community',
@@ -61,7 +61,33 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-  plugins: ['docusaurus-plugin-sass'],
+  plugins: [
+    'docusaurus-plugin-sass',
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        blogTitle: 'Changelog',
+        blogDescription:
+          'Additions and updates to the Rootstock Ecosystem.',
+        blogSidebarCount: 'ALL',
+        blogSidebarTitle: 'Changelog',
+        showReadingTime: false,
+        /**
+         * Required for any multi-instance plugin
+         */
+        id: 'changelog',
+        /**
+         * URL route for the blog section of your site.
+         * *DO NOT* include a trailing slash.
+         */
+        routeBasePath: 'changelog',
+        /**
+         * Path to data on filesystem relative to site dir.
+         */
+        path: './changelog',
+      },
+    ],
+  ],
   presets: [
     [
       'classic',
@@ -76,7 +102,14 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/zgraya-digital/devportal-rootstock/tree/main/'
         },
-        blog: false, // Optional: disable the blog plugin
+        blog: {
+          blogSidebarTitle: 'All posts',
+          blogSidebarCount: 'ALL',
+          blogTitle: 'Changelog',
+          blogDescription:
+            'Additions and updates to the Rootstock Ecosystem.',
+        },
+
         theme: {
           customCss: ['./src/scss/app.scss'],
           // customCss: ['./src/css/custom.css']

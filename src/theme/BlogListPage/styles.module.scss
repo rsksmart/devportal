@@ -1,0 +1,7 @@
+.blogSidebar {
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+  @media (min-width: 992px) {
+    border-bottom: none;
+    border-right: 1px solid var(--ifm-toc-border-color);
+  }
+}
