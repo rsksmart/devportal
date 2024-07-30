@@ -4,23 +4,35 @@ title: Components
 
 # Components
 
-## Heading 2
+## Heading 
+Use this to organize your content and create a hierarchy for scannability. Use `Heading one` for the main title, `Heading two` for subheadings, and so on.
 
-Miners earn a high percentage of transaction fees from the Rootstock block they mine. This mining process is done with the same hashing power used in Bitcoin mining, and has no additional cost or impact.
+- **Code**
+```
+# Heading level 1
+## Heading level 2
+### Heading level 3
+#### Heading level 4
+##### Heading level 5
+###### Heading level 6
 
-### Heading 3
+```
 
-An [ERC20](https://github.com/ethereum/EIPs/issues/20)
-token transaction between a regular/non-contract address and contract are two different transactions: You should call `approve` on the token contract and then call `transferFrom` on the other contract when you want to deposit your tokens into it.
-
-#### Heading 4
-
-Rootstock Addresses incorporate an optional blockchain identifier (also known as chainId). If the chainId is not present, it is assumed the address refers to the Rootstock main network.
+**Result**
+# Heading level 1
+## Heading level 2
+### Heading level 3
+#### Heading level 4
+##### Heading level 5
+###### Heading level 6
 
 ## Lists
+Use this to present items in a specific sequence (ordered list) or without order (unordered list). 
 
-### Unordered list
 
+#### Unordered list
+- **Code**
+```
 - The first level of the hierarchy is for *purpose*.
   This is always `44'`, as per the BIP44 specification.
 - The second level of the hierarchy is for the *registered coin type*.
@@ -32,19 +44,45 @@ Rootstock Addresses incorporate an optional blockchain identifier (also known as
     specification.
 - The final level of the hierarchy is for *index*: Addresses are numbered from index 0 in sequentially increasing manner. This number is used as child index in [BIP32 derivation](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki#specification-key-derivation "Hierarchical Deterministic Wallets - Key Derivation"). Public derivation is used at this level.
 
-### Ordered List
+```
+ **Result:**
+- The first level of the hierarchy is for *purpose*.
+  This is always `44'`, as per the BIP44 specification.
+- The second level of the hierarchy is for the *registered coin type*.
+  - For Rootstock Mainnet, this should be `137'`, as per the
+    [SLIP-44](https://github.com/satoshilabs/slips/blob/master/slip-0044.md "Registered coin types for BIP-0044")
+    specification.
+  - For Rootstock Testnet, this should be `37310'`, as per the
+    [RSKIP-57](https://github.com/rsksmart/RSKIPs/blob/master/IPs/RSKIP57.md "Derivation Path for Hierarchical Deterministic Wallets")
+    specification.
+- The final level of the hierarchy is for *index*: Addresses are numbered from index 0 in sequentially increasing manner. This number is used as child index in [BIP32 derivation](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki#specification-key-derivation "Hierarchical Deterministic Wallets - Key Derivation"). Public derivation is used at this level.
 
+#### Ordered List
+- **Code**
+```
+1. The 2 Way Peg Application is now available on [Testnet](https://app.2wp.testnet.rootstock.io/) and [Mainnet](https://app.2wp.rootstock.io/).
+2. For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the 2 way peg app, please refer to the [2 way peg app user guide](/concepts/powpeg/).
+3. Get information on the signatories and attestion in the [Powpeg HSM Firmware Attestation](/concepts/powpeg/hsm-firmware-attestation) section.
+```
+ **Result:**
 1. The 2 Way Peg Application is now available on [Testnet](https://app.2wp.testnet.rootstock.io/) and [Mainnet](https://app.2wp.rootstock.io/).
 2. For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the 2 way peg app, please refer to the [2 way peg app user guide](/concepts/powpeg/).
 3. Get information on the signatories and attestion in the [Powpeg HSM Firmware Attestation](/concepts/powpeg/hsm-firmware-attestation) section.
 
-### Blockquote
+## Blockquote
+Use this to highlight quoted text, differentiating it from your own writing.
 
+- **Code:**
+Highlighting a user testimonial or an excerpt from another source.
+```
+> If you're new to Web3 and Smart Contract Development, begin by exploring the [Rootstock network](/developers/blockchain-essentials/overview/). Then progress step by step to the quick start Guide with Hardhat for a comprehensive understanding of the network and getting started with writing, testing, and deploying smart contracts on Rootstock.
+```
+**Result:**
 > If you're new to Web3 and Smart Contract Development, begin by exploring the [Rootstock network](/developers/blockchain-essentials/overview/). Then progress step by step to the quick start Guide with Hardhat for a comprehensive understanding of the network and getting started with writing, testing, and deploying smart contracts on Rootstock.
 
-### Quote
+## Quote
 
-#### Code
+- **Code**
 
 ```jsx
 <Quote caption="Alex Min, Head of Marketing">
@@ -52,60 +90,169 @@ Rootstock Addresses incorporate an optional blockchain identifier (also known as
 </Quote>
 ````
 
-#### Render
+**Result**
 
 <Quote caption="Alex Min, Head of Marketing">
   When we first integrated Rootstock, we had about 1,000 WAUs using the wallet. Less than eight months later, we have 12,000 WAUs. That’s 11x growth in 8 months, an average of nearly 140% growth month over month, with most users coming from the Rootstock community.
 </Quote>
 
 ## Images
+Use this to enhance understanding and visual appeal. Ensure images are relevant and of high quality, sizes should be width 800 and height 600.
 
-### Base image
+You can add images in two ways on our doc.
+
+**Markdown image**
+
+- **Codes**
+```
+![Rootstock Technology Stack - High Level](/img/concepts/rootstock-tech-stack.svg)
+
+```
+**Result**
 
 ![Rootstock Technology Stack - High Level](/img/concepts/rootstock-tech-stack.svg)
 
-### Tall image (max height limit 400px)
 
-![Metamask gas limit](/img/metamask-gas-limit.png)
+**HTML image (max height limit 400px)**
 
-## Gallery / Slider
+- **Codes**
+```
+<img src="/img/resources/rootstock-metamask/rootstock-hardhat-starter-kit.png"  width="800" height="600"/>
+```
+**Result**
 
-#### Code
+<img src="/img/metamask-gas-limit.png"  width="800" height="600"/>
+
+
+## Gallery/Slider
+Use this to showcase a series of images or content that benefit from a swiping or sliding interface.
+
+- **Codes**
 ```jsx
 <Carousel width="370" height="260" images={['/img/concepts/rootstock-tech-stack.svg', ... , '/img/metamask-gas-limit.png']} />
 ```
-#### Render
+**Result**
 <Carousel width="370" height="260" images={['/img/concepts/rootstock-tech-stack.svg', '/img/legacy-private-key.png', '/img/metamask-gas-limit.png', '/img/add-ganache-1.png', '/img/add-ganache-2.png']} />
 
 
 ## Video
+Use this to demonstrate functionalities, complex explanations, or walkthroughs.
 
-### YouTube video no thumbnail
+- YouTube video no thumbnail
 
-<Video url="https://www.youtube-nocookie.com/embed/eW9UF2aJQgs?cc_load_policy=1" />
+  - **Code**
+  ```
+  <Video url="https://www.youtube-nocookie.com/embed/eW9UF2aJQgs?cc_load_policy=1" />
+  ```
+  - **Result**
 
-### MP4 video no thumbnail
+  <Video url="https://www.youtube-nocookie.com/embed/eW9UF2aJQgs?cc_load_policy=1" />
 
-<Video url="/video/video.mp4" />
+- MP4 video no thumbnail
 
-### MP4 video with custom thumbnail
+  - **Code**
 
+  ```
+  <Video url="/video/video.mp4" />
+  ```
+  - **Result**
+  
+  <Video url="/video/video.mp4" />
+
+- MP4 video with custom thumbnail
+
+  - **Code**
+  ```
+  <Video url="/video/video.mp4" thumbnail="/img/video-thumbnail.jpg" />
+  ```
+  - **Result**
 <Video url="/video/video.mp4" thumbnail="/img/video-thumbnail.jpg" />
 
-### YouTube video with custom thumbnail
 
+- YouTube video with custom thumbnail
+
+  - **Code**
+
+  ```jsx
+  <Video url="https://www.youtube-nocookie.com/embed/eW9UF2aJQgs" thumbnail="/img/video-thumbnail.jpg" />
+  ```
+  - **Result**
 <Video url="https://www.youtube-nocookie.com/embed/eW9UF2aJQgs?cc_load_policy=1" thumbnail="/img/video-thumbnail.jpg" />
 
-#### Code
-
-```jsx
-<Video url="https://www.youtube-nocookie.com/embed/eW9UF2aJQgs" thumbnail="/img/video-thumbnail.jpg" />
-```
-
+  
 
 ## Admonitions
+Admonitions are a great way to emphasize important information in your documentation.
+Here are some common types of admonitions and their use cases on our doc:
 
-Based on basic [markdown syntax](https://docusaurus.io/docs/markdown-features/admonitions). Each admonition has own color and icon. There is no option to change color.
+1. **Tips:**
+   - Use case: To share helpful tips, tricks, or best practices.
+   - Example: "Tip: Optimize your code by using memoization for frequently computed values."
+
+2. **Notes:**
+   - Use case: To inform users about something important or provide additional context.
+   - Example: "Note: This feature requires an active internet connection."
+
+3. **Warnings:**
+   - Use case: To warn against potential issues, risks, or pitfalls.
+   - Example: "Warning: Modifying system files without proper backup can lead to data loss."
+
+4. **Success:**
+   - Use case: To indicate successful completion of an action or process.
+   - Example: "Success: Your payment has been processed."
+
+5. **Error:**
+   - Use case: To highlight errors, issues, or failures.
+   - Example: "Error: Invalid username or password. Please try again."
+
+6. **Info:**
+   - Use case: To provide general information or context.
+   - Example: "Info: This feature is available in the latest version of the app."
+
+
+> There is no option to change color.
+
+- **Code**
+
+```markdown
+:::note
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::tip[Tip]
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::info[Info]
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::warning[Warning]
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::danger[Error]
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::success[Success]
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+```
+
+- **Result**
 
 :::note[Your Title **with** some _Markdown_ `syntax`!]
 
@@ -128,7 +275,7 @@ Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
 
 :::
 
-:::warning[Wwarning]
+:::warning[Warning]
 
 Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
 
@@ -146,48 +293,24 @@ Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
 
 :::
 
-#### Code
 
-```markdown
-:::note
-
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
-
-:::
-
-:::tip[Tip]
-
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
-
-:::
-
-:::info[Info]
-
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
-
-:::
-
-:::warning[Wwarning]
-
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
-
-:::
-
-:::danger[Error]
-
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
-
-:::
-
-:::success[Success]
-
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
-
-:::
-```
 
 ## Tables
+Use this to present structured data with clear rows and columns for easy comparison or reference.
 
+- Code
+```
+| Product                                                      | Description                                                                                    |
+| ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| Flyover | Flyover is a fast and secure way for users to transfer BTC in and out of the Rootstock Ecosystem where it can be used to interact with a range of applications to send, save and spend money. |
+| RNS | RNS (RIF Name Service) replaces complicated cryptocurrency addresses with easy-to-remember nicknames, simplifying digital asset transactions. It also facilitates the integration of a Self Sovereign Identity protocol into your products, which enhances user security and flexibility. .|
+| Wallet | Bring Bitcoin DeFi to your users with RIF Wallet, an open source Bitcoin wallet with smart contract capabilities. Open-source, fully programmable and customizable.|
+| [Relay](/developers/integrate/rif-relay/) | RIF Relay simplifies gas fee payments by allowing users to pay transaction fees with any ERC20 token. This enables end users to transact entirely using one asset, removing complexity and improving onboarding.|
+
+
+```
+
+- **Result**
 
 | Product                                                      | Description                                                                                    |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
@@ -198,8 +321,9 @@ Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
 
 
 ## Accordion
+Use this to present collapsible sections of content, useful for long lists or frequently.
 
-#### Code
+- **Code**
 
 ```jsx
 <Accordion>
@@ -224,7 +348,7 @@ Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
 </Accordion>
 ```
 
-#### Render
+- **Result**
 
 <Accordion>
   <Accordion.Item eventKey="0">
@@ -254,8 +378,9 @@ Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
 </Accordion>
 
 ## Tabs
+Use this to present structured data with clear rows and columns for easy comparison or reference.
 
-#### Code
+- **Code**
 
 ```jsx
 <Tabs>
@@ -271,7 +396,7 @@ Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
 </Tabs>
 ```
 
-#### Render
+- **Result**
 
 <Tabs>
   <TabItem value="contribute" label="Contribute to Rootstock" default>
@@ -291,14 +416,12 @@ Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
 
 
 ## Cards
+Use this to display concise pieces of information in an organized and visually appealing way.
 
-### Card with image
+- **Card with image**
+Cards with an image and accompanying descriptive text.
 
-<Card
-image="/img/electrum-wallet.png"
-title="Card title first line" description="Mauris maecenas et amet arcu urna interdum aliquet vulputate sed. Quam sit sit tincidunt vitae." link="/developers/" />
-
-#### Code
+  - Code
 
 ```jsx
 <Card
@@ -308,39 +431,81 @@ title="Card title first line" description="Mauris maecenas et amet arcu urna int
   link="/developers/"
 />
 ```
-
-### Card no image
-
+**Result**
 <Card
+image="/img/electrum-wallet.png"
 title="Card title first line" description="Mauris maecenas et amet arcu urna interdum aliquet vulputate sed. Quam sit sit tincidunt vitae." link="/developers/" />
 
-#### Code
 
-```jsx
-<Card
+- **Card no image**
+Cards displaying textual information only.
+  - **Code**
+
+  ```jsx
+  <Card
   title="Card title first line"
   description="..."
   link="/developers/"
+  />
+  ```
+
+**Result**
+<Card
+title="Card title first line" description="Mauris maecenas et amet arcu urna interdum aliquet vulputate sed. Quam sit sit tincidunt vitae." link="/developers/" />
+
+ 
+
+
+<br/>
+- **Card no link**
+Informational cards without requiring user clicks.
+  - Code
+
+```jsx
+<Card
+  image="/img/electrum-wallet.png"
+  title="Card title first line"
+  description="..."
 />
 ```
-
-### Card no link
-
 <Card
 image="/img/electrum-wallet.png"
 title="Card title first line" description="Mauris maecenas et amet arcu urna interdum aliquet vulputate sed. Quam sit sit tincidunt vitae." />
 
-#### Code
+
+## Cards with filter
+- **Code**
 
 ```jsx
-<Card
-  image="/img/electrum-wallet.png"
-  title="Card title first line"
-  description="..."
-/>
+<Filter
+  values={[
+    {label: 'Apps', value: 'apps'},
+    {label: 'Exchanges', value: 'exchanges'},
+    {label: 'Wallets', value: 'wallets'}
+  ]}>
+  <FilterItem
+    image="/img/deffiant-icon.svg"
+    value="apps"
+    title="Defiant"
+    subtitle="app"
+    color="green"
+    description="Get ... in minutes"
+  />
+  ...
+  <FilterItem
+    image="/img/deffiant-icon.svg"
+    value="wallets, apps"
+    title="Defiant"
+    subtitle="wallet"
+    color="cyan"
+    linkHref="/developers/"
+    linkTitle="Learn more"
+    description="Get ... in minutes"
+  />
+</Filter>
 ```
-## Cards with filter
 
+**Result**
 <Filter
 values={[
 {label: 'Apps', value: 'apps'},
@@ -402,33 +567,4 @@ description="Get an API key & make your first API call in minutes. Get an API ke
 />
 </Filter>
 
-#### Code
 
-```jsx
-<Filter
-  values={[
-    {label: 'Apps', value: 'apps'},
-    {label: 'Exchanges', value: 'exchanges'},
-    {label: 'Wallets', value: 'wallets'}
-  ]}>
-  <FilterItem
-    image="/img/deffiant-icon.svg"
-    value="apps"
-    title="Defiant"
-    subtitle="app"
-    color="green"
-    description="Get ... in minutes"
-  />
-  ...
-  <FilterItem
-    image="/img/deffiant-icon.svg"
-    value="wallets, apps"
-    title="Defiant"
-    subtitle="wallet"
-    color="cyan"
-    linkHref="/developers/"
-    linkTitle="Learn more"
-    description="Get ... in minutes"
-  />
-</Filter>
-```
