@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-title: Port an Ethereum dApp to Rootstock to Rootstock
+title: Port an Ethereum dApp to Rootstock
 sidebar_label: Port an Ethereum dApp to Rootstock
 tags: [rsk, rootstock, tutorials, Port to Rootstock, Ethereum, dApp]
 description: "Porting an Ethereum decentralized application (dApp) to Rootstock (RSK) presents an exciting opportunity to leverage the benefits of the Rootstock network, a Bitcoin L2 compatible with Ethereum. This guide will walk you through porting an Ethereum dApp to the Rootstock network using the Hardhat Ignition deployment tool and leveraging the compatibility between Solidity (used for Rootstock) and Ethereum."
