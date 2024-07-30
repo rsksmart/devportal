@@ -23,7 +23,7 @@ Currently, the VM is executed by interpretation. In a future network upgrade, th
 <div class="row">
   <div class="col two-x-card">
   <div class="header-div">
-      <h2 class="zg-text-bg fs-28">Bitcoin</h2><h3 class="fp-title-color fp-title-color-sm"><span class="ml-1 zg-label bg-orange">BTC</span></h3>
+      <h2 class="zg-text-bg fs-28">Bitcoin</h2><h3 class="fp-title-color fp-title-color-sm"><span class="ml-1 zg-label">BTC</span></h3>
   </div>
     <p> Is a store and transfer of value.
 The blockchain is secure because miners
@@ -32,7 +32,7 @@ create the new blocks to be added to the blockchain every 10 minutes.
 The more hashing power they provide, the more secure the network is.</p>
   </div>
     <div class="col two-x-card">
-        <div class="header-div"><h2 class="zg-text-bg fs-28">Rootstock</h2><h3 class="fp-title-color fp-title-color-sm"><span class="ml-1 zg-label bg-pink">RBTC</span></h3></div>
+        <div class="header-div"><h2 class="zg-text-bg fs-28">Rootstock</h2><h3 class="fp-title-color fp-title-color-sm"><span class="ml-1 zg-label">RBTC</span></h3></div>
             <p> Is the first open source smart contract platform that is
         powered by the bitcoin network.
         Rootstock's goal is to add value and functionality to the
