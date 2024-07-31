@@ -36,4 +36,12 @@ color="orange"
 linkHref="/resources/tutorials/dapp-automation-cucumber/" 
 description="Testing decentralized applications (dApps) is crucial for delivering a smooth user experience and ensuring the reliability of decentralized systems. Cucumber and Playwright form a dynamic duo in automated testing, blending behavior-driven development (BDD) and powerful browser automation capabilities."
 />
+<FilterItem
+value="advanced, port-dapps"
+title="Port an Ethereum dApp to Rootstock"
+subtitle="Ethereum"
+color="orange"
+linkHref="/resources/port-to-rootstock/ethereum-dapp/" 
+description="Porting an Ethereum decentralized application (dApp) to Rootstock presents an exciting opportunity to leverage the benefits of the Rootstock network, which is a smart contract platform secured by the Bitcoin network."
+/>
 </Filter>

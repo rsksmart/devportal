@@ -2,7 +2,7 @@
 sidebar_label: Overview
 sidebar_position: 100
 title: RIF Relay - Overview
-tags: [rif, envelope, relay, integrate]
+tags: [rif, envelope, relay, integrate, integration guide]
 description: RIF Relay Overview
 ---
 

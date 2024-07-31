@@ -2,7 +2,7 @@
 sidebar_label: CLI
 sidebar_position: 300
 title: Running the RSKj Node using a CLI
-tags: [rsk, rskj, node, contribute]
+tags: [rsk, rskj, node, node operators, contribute]
 description: "How to compile and run an RSKj node from the command line interface."
 ---
 

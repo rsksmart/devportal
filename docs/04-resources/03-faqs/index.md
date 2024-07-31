@@ -2,7 +2,7 @@
 sidebar_label: FAQs
 sidebar_position: 6
 title: Frequently Asked Questions
-tags: [knowledgebase, rsk, faqs, help, support, rootstock]
+tags: [resources, rsk, faqs, help, support, rootstock]
 description: "Explore frequently asked questions about Rootstock and RIF"
 ---
 

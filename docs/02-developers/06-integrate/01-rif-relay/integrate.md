@@ -2,7 +2,7 @@
 sidebar_label: Integrations
 sidebar_position: 200
 title: RIF Relay Integration
-tags: [rif, envelope, relay, user, guide]
+tags: [rif, envelope, relay, integration guide]
 description: Integrating RIF Relay in a dApp
 ---
 

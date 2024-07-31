@@ -2,7 +2,7 @@
 sidebar_label: RIF Relay Deployment
 sidebar_position: 500
 title: RIF Relay Deployment
-tags: [rif, envelope, relay, user, guide]
+tags: [rif, envelope, relay, integration guide]
 description: RIF Relay deployment process
 ---
 

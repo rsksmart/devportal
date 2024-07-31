@@ -1,9 +1,9 @@
 ---
-sidebar_label: Getting Started with Web3.py
+sidebar_label: Using Web3.py
 sidebar_position: 200
-title:  Deploy and Interact with a Smart Contract Using Web3.py
+title:  Deploy and Interact with a Smart Contract using Web3.py
 description: 'Deploy and Interact with a Smart Contract Using Web3.py.'
-tags: [quick start, rsk, rootstock, ethereum, python, developers, smart contracts]
+tags: [quick start, rsk, rootstock, ethereum, python, web3.py, developers, smart contracts]
 ---
 
 [Web3.py](https://web3py.readthedocs.io/en/stable/) is a Python library that allows developers to interact with Ethereum-based blockchains with Python. Rootstock has an Ethereum-like API available that is fully compatible with Ethereum-style JSON-RPC invocations. Therefore, developers can leverage this compatibility and use the `Web3.py` library to interact with Rootstock similar to how developers interact with smart contracts on Ethereum.

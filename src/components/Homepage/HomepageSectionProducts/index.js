@@ -15,11 +15,11 @@ const data = {
       list: [
         {
           title: 'Flyover',
-          href: '#',
+          href: '/concepts/rif-suite/',
         },
         {
           title: '2 Way Peg',
-          href: '#',
+          href: 'https://app.2wp.rootstock.io/',
         },
         {
           title: 'RIF on Chain',
@@ -63,11 +63,11 @@ const data = {
       list: [
         {
           title: 'Name Service',
-          href: '#',
+          href: 'https://github.com/rsksmart/rns-manager-react',
         },
         {
           title: 'Relay',
-          href: '#',
+          href: '/developers/integrate/rif-relay',
         },
       ],
     },

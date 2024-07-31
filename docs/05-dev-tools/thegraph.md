@@ -3,7 +3,7 @@ sidebar_label: The Graph
 sidebar_position: 2
 title: Get Started with The Graph
 description: "Easily query on-chain data through a decentralized network of indexers"
-tags: [TheGraph, indexers, data, subgraphs, dApps, smart contracts, developers, get-started, how-to]
+tags: [TheGraph, indexers, data, subgraphs, dApps, smart contracts, developers, developer tools, get-started, how-to]
 ---
 
 Getting historical data on smart contracts can be challenging when building dApps. [The Graph](https://thegraph.com/) provides an easy way to query smart contracts data through APIs known as [subgraphs](https://thegraph.com/docs/en/developing/developer-faqs/#1-what-is-a-subgraph). Its infrastructure relies on a decentralized network of indexers, enabling dApps to achieve true decentralization.
@@ -14,6 +14,8 @@ To get started, follow these steps below:
 1. Initialize a subgraph project
 2. Deploy & Publish
 3. Query from a dApp
+   - Querying is a way to access
+4. Publish
 
 > Pricing: **All developers receive 100K free queries per month on the decentralized network**. After these free queries, you only pay based on usage at $4 for every 100K queries.
 

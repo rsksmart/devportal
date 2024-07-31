@@ -12,10 +12,9 @@ be derived with a custom derivation path (dpath) using Trezor T.
 ## Context
 
 If you made a [BTC to RBTC conversion](/concepts/rbtc/conversion-with-ledger#btc-to-rbtc-conversion) using Trezor T, you need to access your account by using a custom dpath (`44'/0'/0'/0/0` for Mainnet). With the last firmware versions, Trezor T is checking that the dpath matches with the expected one as a safety feature and this is a blocker when you intend to use a different dpath.
-You may also want to access your account with a different dpath if you made a mistake; for example, receiving RBTC at an address derived using the Ethereum dpath instead of the RSK dpath.
+You may also want to access your account with a different dpath if you made a mistake; for example, receiving RBTC at an address derived using the Ethereum dpath instead of the Rootstock dpath.
 
 In MyCrypto or MyEtherWallet you may have received this message: `"Forbidden key path"`.
-
 
 ## Solution
 

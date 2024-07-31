@@ -2,7 +2,7 @@
 title: Management API Methods
 sidebar_label: Management API Methods
 sidebar_position: 500
-tags: [rsk, rskj, node, rpc, rootstock]
+tags: [rsk, rskj, node, rpc, rpc api, node operators, rootstock]
 description: "The JSON-RPC methods supported by Rootstock nodes."
 ---
 

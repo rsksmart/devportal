@@ -3,7 +3,7 @@ title: 'Exploring Rootstock Transactions'
 sidebar_position: 400
 sidebar_label: Rootstock Transactions
 description: 'Learn how to interact with Rootstock in your web browser, how to look at Rootstock transactions, develop and deploy your very first smart contract to the Rootstock network.'
-tags: [quick-start, rsk, rootstock, transactions, browser wallets, dev tools]
+tags: [rsk, rootstock, developers, blockchain essentials, transactions, browser wallets]
 ---
 
 In the [previous section](/developers/blockchain-essentials/overview/), we set up a browser extension that is a crypto wallet, MetaMask. We connected to the Rootstock Testnet, and loaded this up with Rootstock’s cryptocurrency, RBTC, and an Rootstock-based token, RIF.
@@ -70,7 +70,7 @@ When you performed each of the transactions, you should have received notificati
 
 However, if you missed this, not to worry, you can also find this within the transaction history within MetaMask. To do so, within the main screen of MetaMask, click on the “Activity” tab. You’ll see the list of the transactions.
 
-Then you click on any transaction, and click on the arrow button beside copy button named transaction ID, this takes you to the [Testnet explorer](https://explorer.testnet.co)
+Then you click on any transaction, and click on the arrow button beside copy button named transaction ID, this takes you to the [Testnet explorer](https://explorer.testnet.rootstock.io)
 
 If you clicked on the popup notification, or if you find it within the “Activity” tab, either way, this should open up the block explorer with the selected transaction selected.
 

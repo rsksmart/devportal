@@ -12,7 +12,6 @@ values={[
 {label: 'Advanced', value: 'advanced'},
 {label: 'Hardhat', value: 'hardhat'},
 {label: 'Wagmi', value: 'wagmi'},
-{label: 'Tutorials', value: 'tutorials'},
 {label: 'Smart Contracts', value: 'sc'},
 {label: 'On-chain data', value: 'data'},
 {label: 'Port to Rootstock', value: 'port-dapps'}
@@ -31,7 +30,7 @@ values={[
     title="Hardhat Starter Kit"
     subtitle="quickstart"
     color="orange"
-    linkHref="https://github.com/rsksmart/rootstock-hardhat-starterkit"
+    linkHref="/developers/quickstart/hardhat/"
     linkTitle="Use the Kit"
     description="Smart Contract examples, Tests, Deployments and Tasks for Common ERC Standards (ERC20, ERC721, ERC1155)."
   />
@@ -40,7 +39,7 @@ values={[
     title="Account Abstraction Kit"
     subtitle="quickstart"
     color="orange"
-    linkHref="https://github.com/rsksmart/rsk-wagmi-starter-kit/tree/aa-sdk"
+    linkHref="/developers/quickstart/rootstock-etherspot/"
     linkTitle="Use the Kit"
     description="Account Abstraction Starter dApp using Etherspot."
   />
@@ -50,7 +49,7 @@ values={[
     subtitle="quickstart"
     color="orange"
     linkHref="/resources/tutorials/dapp-automation-cucumber/"
-    linkTitle="Use the Kit"
+    linkTitle="Automate dApps"
     description="Learn how to automate dApps using Cucumber Agile Automation Framework."
   />
 <FilterItem
@@ -72,7 +71,7 @@ values={[
     description="Easily query on-chain data through a decentralized network of indexers"
   />
 <FilterItem
-    value="sc, beginner, port-dapps"
+    value="sc, beginner"
     title="Get Started with Web3.py"
     subtitle="Web3.py"
     color="orange"

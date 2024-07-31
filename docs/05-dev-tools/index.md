@@ -32,7 +32,7 @@ description: "Explore a curated selection of smart contract development tools an
 <FilterItem
     value="bridge, exchange"
     title="2 Way Peg App"
-    subtitle="bridge"
+    subtitle="bridges"
     color="orange"
     linkHref="https://app.2wp.rootstock.io/" 
     target="_blank"
@@ -42,7 +42,7 @@ description: "Explore a curated selection of smart contract development tools an
 <FilterItem
     value="dev-environment, sc, platform-infra"
     title="Foundry"
-    subtitle="Dev Environment"
+    subtitle="Dev Environments"
     color="orange"
     linkHref="https://dev-rootstock.vercel.app/dev-tools/foundry"
     linkTitle="Deploy Smart Contracts"
@@ -51,7 +51,7 @@ description: "Explore a curated selection of smart contract development tools an
 <FilterItem
     value="dev-environment, sc"
     title="Hardhat"
-    subtitle="Dev Environment"
+    subtitle="Dev Environments"
     color="orange"
     linkHref="/dev-tools/hardhat/"
     linkTitle="Deploy Smart Contracts"
@@ -60,7 +60,7 @@ description: "Explore a curated selection of smart contract development tools an
 <FilterItem
     value="explorer, sc"
     title="Blockscout Explorer"
-    subtitle="Explorer"
+    subtitle="Explorers"
     color="orange"
     linkHref="/dev-tools/explorers/blockscout/"
     linkTitle="Use the Explorer"
@@ -73,7 +73,7 @@ description: "Explore a curated selection of smart contract development tools an
     color="orange"
     linkHref="https://explorer.rootstock.io/"
     linkTitle="Use the Explorer"
-    description="Rootstock Explorer"
+    description="Explore transactions, blocks, addresses, tokens, stats and interact with smart contracts on the Rootstock Explorer."
   />
 <FilterItem
     value="rpc"
@@ -105,7 +105,7 @@ description: "Explore a curated selection of smart contract development tools an
 <FilterItem
     value="wallet, sc"
     title="MetaMask"
-    subtitle="wallet"
+    subtitle="wallets"
     color="orange"
     linkHref="/dev-tools/wallets/metamask/"
     linkTitle="Use MetaMask"
@@ -114,7 +114,7 @@ description: "Explore a curated selection of smart contract development tools an
 <FilterItem
     value="wallet, sc"
     title="Rootstock Wallets"
-    subtitle="wallet"
+    subtitle="wallets"
     color="orange"
     linkHref="/dev-tools/wallets/"
     linkTitle="Use Wallets"
@@ -123,7 +123,7 @@ description: "Explore a curated selection of smart contract development tools an
 <FilterItem
     value="bridge, exchange"
     title="Sovryn Fast BTC"
-    subtitle="bridge"
+    subtitle="bridges"
     color="orange"
     linkHref="https://wiki.sovryn.com/en/sovryn-dapp/bridge"
     linkTitle="Get RBTC"
@@ -159,7 +159,7 @@ description: "Explore a curated selection of smart contract development tools an
 <FilterItem
     value="bridge, exchange, rifp"
     title="Flyover"
-    subtitle="bridge"
+    subtitle="bridges"
     color="orange"
     linkHref="https://dapp.flyover.rif.technology/"
     linkTitle="Get RBTC"
@@ -231,7 +231,7 @@ description: "Explore a curated selection of smart contract development tools an
 <FilterItem
     value="library, sdk, rifp, abs"
     title="RIF Relay"
-    subtitle="sdk"
+    subtitle="sdks"
     color="orange"
     linkHref="/developers/integrate/rif-relay/"
     linkTitle="Integrate RIF Relay"
@@ -240,7 +240,7 @@ description: "Explore a curated selection of smart contract development tools an
 <FilterItem
     value="dev-environment, sc"
     title="Remix"
-    subtitle="Dev Environment"
+    subtitle="Dev Environments"
     color="orange"
     linkHref="https://remix.ethereum.org/"
     linkTitle="Deploy Smart Contracts"
@@ -249,7 +249,7 @@ description: "Explore a curated selection of smart contract development tools an
 <FilterItem
     value="library, sdk, wallet, rifp"
     title="RIF Wallet"
-    subtitle="sdk"
+    subtitle="sdks"
     color="orange"
     linkHref="/developers/libraries/rif-wallet-libs/"
     linkTitle="Integrate RIF Wallet"
@@ -276,7 +276,7 @@ description: "Explore a curated selection of smart contract development tools an
 <FilterItem
     value="faucet"
     title="Rootstock Faucet"
-    subtitle="faucet"
+    subtitle="faucets"
     color="orange"
     linkHref="https://faucet.rootstock.io/"
     linkTitle="Get tRBTC"
@@ -285,7 +285,7 @@ description: "Explore a curated selection of smart contract development tools an
 <FilterItem
     value="faucet, rifp"
     title="RIF Testnet Faucet"
-    subtitle="faucet"
+    subtitle="faucets"
     color="orange"
     linkHref="https://faucet.rifos.org/"
     linkTitle="Get tRIF"
@@ -486,7 +486,7 @@ description: "Explore a curated selection of smart contract development tools an
     subtitle="Demos"
     color="orange"
     linkHref="/resources/tutorials/dapp-automation-cucumber/"
-    linkTitle="Use Etherspot"
+    linkTitle="Automate dApps"
     description="Learn how to automate dApp using Cucumber and Playwright."
   />
 <FilterItem

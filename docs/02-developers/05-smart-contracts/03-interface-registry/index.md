@@ -1,6 +1,6 @@
 ---
 sidebar_label: Interface Registry
-sidebar_position: 200
+sidebar_position: 300
 title: Universal Smart Contract Interface Registry
 description: "See the ERC1820 standard interface, address support and smart contract implementation"
 tags: [interface, registry, rif, rbtc, defi, decentralized, quick-start, guides, tutorial, networks, dapps, tools, rsk, rootstock, ethereum, smart-contracts, install, get-started, how-to, mainnet, testnet, contracts, wallets, web3, crypto]

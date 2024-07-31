@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 sidebar_label: Hardhat
-title: Getting Started with Hardhat
+title: Hardhat on Rootstock
 description: "How to get started with writing, deploying and testing smart contracts on Rootstock using Hardhat." 
 tags: [hardhat, quick-start, developer tools, rootstock, ethereum, smart-contracts, get-started, how-to]
 ---
