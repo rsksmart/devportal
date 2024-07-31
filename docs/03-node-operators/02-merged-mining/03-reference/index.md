@@ -4,7 +4,6 @@ sidebar_label: Reference
 title: Merged mining reference
 tags: [rsk, mining, bitcoin]
 description: "How Rootstock leverages the Bitcoin network's consensus mechanism for its own secruity, and adds additional features to prevent double spending"
-
 ---
 
 Satoshi consensus, based on proof-of-work (PoW), is the only consensus system that prevents the rewrite of blockchain history at a low cost. The academic community is advancing the knowledge and study of proof-of-stake (PoS) as an alternative, but currently PoW provides the highest proven security. Merge mining is a technique that allows Bitcoin miners to mine other cryptocurrencies simultaneously with nearly zero marginal cost. The same mining infrastructure and setup they use to mine Bitcoins is reused to mine Rootstock (RSK) simultaneously. This means that as Rootstock rewards the miners with additional transaction fees, the incentive for merged mining becomes high.

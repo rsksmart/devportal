@@ -6,7 +6,7 @@ tags: [Rootstock, security, powpeg, architecture, federation, 2-way peg]
 description: "Achieving security in a Powpegged sidechain using proofs of payment"
 ---
 
-A sidechain is an independent blockchain whose native currency is pegged to the value of another blockchain currency. The peg can be enforced by a protocol or it can be synthetic. A [2-way peg](../powpeg/) is a protocol-enforced system allowing two currencies to be exchanged freely, automatically, and without incurring in a price negotiation. In Rootstock, the asset that can be freely moved is Bitcoin. When the network where the bitcoins exist is not clear from the context, we refer to RBTC to bitcoins existing in Rootstock.
+A sidechain is an independent blockchain whose native currency is pegged to the value of another blockchain currency. The peg can be enforced by a protocol or it can be synthetic. A [2-way peg](/concepts/powpeg/) is a protocol-enforced system allowing two currencies to be exchanged freely, automatically, and without incurring in a price negotiation. In Rootstock, the asset that can be freely moved is Bitcoin. When the network where the bitcoins exist is not clear from the context, we refer to RBTC to bitcoins existing in Rootstock.
 
 In practice, when BTC is exchanged for RBTC, no currency is “transferred” between blockchains in a single transaction. The transfer operation is split into two transactions. In the first, some BTCs are locked in Bitcoin and in the second the same amount of RBTC is unlocked in Rootstock. The whole process is called peg-in. When RBTC needs to be converted back into BTC, the reverse process occurs: the RBTC gets locked again in Rootstock and the same amount of BTC is unlocked in Bitcoin. The process is called peg-out.
 

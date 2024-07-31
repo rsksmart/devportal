@@ -59,13 +59,8 @@ Visit the [metamask-landing.rifos.org](https://metamask-landing.rifos.org/) tool
     </tr>
     <tr>
       <td>Block explorer URL</td>
-<<<<<<< HEAD
-      <td><a href="https://explorer.rootstock.io" target="_blank">https://explorer.rootstock.io</a></td>
-      <td><a href="https://explorer.testnet.rootstock.io" target="_blank">https://explorer.testnet.rootstock.io</a></td>
-=======
       <td><a href="https://explorer.rootstock.io/" target="_blank">https://explorer.rootstock.io/</a></td>
       <td><a href="https://explorer.testnet.rootstock.io/" target="_blank">https://explorer.testnet.rootstock.io/</a></td>
->>>>>>> main
     </tr>
   </tbody>
 </table>
