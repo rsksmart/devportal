@@ -1,5 +1,5 @@
 {
-  "trailingSlash" : true,
+  "trailingSlash" : false,
   "redirects": [
     {"source" : "/guides/rif-rollup/", "destination" : "/"},
     {"source" : "/guides/rif-rollup/transfer-funds-on-rif-rollup/", "destination" : "/"},
