@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://dev-rootstock.vercel.app/sitemap.xml
+Sitemap: https://dev.rootstock.io/sitemap.xml
