@@ -61,17 +61,13 @@ html:root {
   --ifm-navbar-item-padding-horizontal: 20px;
   --ifm-navbar-item-padding-vertical: 17px;
 
-  --ifm-navbar-link-color: var(--bs-body-color);
-  --ifm-navbar-item-border-color: var(--bs-black);
-  --ifm-navbar-item-bg: var(--bs-body-bg);
+  --ifm-navbar-link-hover-color: var(--bs-body-bg);
+  --ifm-navbar-item-hover-bg: var(--bs-body-color);
+  --ifm-navbar-item-hover-border-color: var(--bs-body-bg);
 
-  --ifm-navbar-link-hover-color: var(--bs-black);
-  --ifm-navbar-item-hover-bg: var(--rsk-color-main);
-  --ifm-navbar-item-hover-border-color: var(--rsk-color-main);
-
-  --ifm-navbar-link-active-color: var(--bs-black);
-  --ifm-navbar-item-active-bg: var(--rsk-color-main);
-  --ifm-navbar-item-active-border-color: var(--rsk-color-main);
+  --ifm-navbar-link-active-color: var(--bs-body-bg);
+  --ifm-navbar-item-active-bg: var(--bs-body-color);
+  --ifm-navbar-item-active-border-color: var(--bs-body-bg);
 
   --ifm-navbar-shadow: none;
   --ifm-navbar-search-input-background-color: var(--ifm-color-emphasis-200);
@@ -115,6 +111,9 @@ html:root {
   //Color Mode
   --rsk-color-mode-bg: #08FFD1; //TODO: change to css var
   --rsk-color-mode-btn-bg: #09CDA9; //TODO: change to css var
+  --colormode-background: #{$gray-100};
+  --colormode-btn-bg: white;
+
 
   //Footer
   --ifm-footer-background-color: var(--bd-body-bg);
@@ -298,8 +297,10 @@ html:root {
   --docsearch-border-color: #{$gray-800};
 
   //Color Mode
-  --rsk-color-mode-bg: var(--bs-purple);
-  --rsk-color-mode-btn-bg: #7247D9;
+  --rsk-color-mode-bg: #FF9100;
+  --rsk-color-mode-btn-bg: #FF9100;
+  --colormode-background: #3d3d3d;
+  --colormode-btn-bg: black;
 
   //Aside
   --ifm-toc-border-color: rgba(var(--bs-body-color-rgb), 0.2);

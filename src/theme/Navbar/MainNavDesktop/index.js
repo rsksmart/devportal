@@ -10,7 +10,7 @@ export default function MainNavDesktop() {
   return (
     <>
       <div className="container pb-lg-60 pt-lg-28 pb-24 d-none d-md-block">
-        <div className="d-flex gap-10 flex-wrap">
+        <div className="d-flex gap-10 flex-wrap bottom-border">
           {leftItems.map((item, i) => (
             <ErrorCauseBoundary
               key={i}

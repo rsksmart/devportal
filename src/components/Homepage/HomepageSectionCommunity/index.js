@@ -42,7 +42,7 @@ const data = {
       color: 'yellow',
       link: {
         title: 'View upcoming Events',
-        href: '#',
+        href: 'https://rootstock.io/events',
         target: '_blank',
       },
       description: (

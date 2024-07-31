@@ -117,7 +117,11 @@ securing both networks with the same infrastructure and energy consumption.
 They create blocks on the bitcoin network every 10 minutes, including transfer of bitcoin from different addresses, and in the process they create new bitcoins.
 On Rootstock, blocks are created every 30 seconds, to secure the execution of smart contracts.
 This does not mint any new coins in the process, but does earn a reward from the merged mining.
+<<<<<<< HEAD
 Check out [mining.rootstock.io](https://mining.rootstock.io/) to learn more about mining.
+=======
+Check out [rootstock.io/mine-btc-with-rootstock](https://rootstock.io/mine-btc-with-rootstock/) to learn more about mining.
+>>>>>>> main
 
 :::info[Note]
 The time between blocks on each network listed above are approximate values.

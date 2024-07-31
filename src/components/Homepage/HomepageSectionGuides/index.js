@@ -75,8 +75,13 @@ const data = {
       ),
       list: [
         {
+<<<<<<< HEAD
           title: 'Refer and Earn',
           href: 'https://rootstock.io/referral/',
+=======
+          title: 'Apply now',
+          href: 'https://rootstock.io/grants/',
+>>>>>>> main
         },
       ],
     },

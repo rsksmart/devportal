@@ -22,7 +22,11 @@ The Rootstock Infrastructure Framework (RIF) Token allows any token holder to co
     </tr>
     <tr>
       <td scope="row">Contract Address</td>
+<<<<<<< HEAD
       <td><a href="http://explorer.rootstock.io/address/0x2acc95758f8b5f583470ba265eb685a8f45fc9d5" target="_blank">0x2acc95758f8b5f583470ba265eb685a8f45fc9d5</a></td>
+=======
+      <td><a href="https://explorer.rootstock.io/address/0x2acc95758f8b5f583470ba265eb685a8f45fc9d5" target="_blank">0x2acc95758f8b5f583470ba265eb685a8f45fc9d5</a></td>
+>>>>>>> main
     </tr>
     <tr>
       <td scope="row">Contract Type</td>
@@ -53,7 +57,11 @@ The Rootstock Infrastructure Framework (RIF) Token allows any token holder to co
     </tr>
     <tr>
       <td scope="row">Contract Testnet Address</td>
+<<<<<<< HEAD
       <td><a href="http://explorer.testnet.rootstock.io/address/0x19f64674D8a5b4e652319F5e239EFd3bc969a1FE" target="_blank">0x19f64674D8a5b4e652319F5e239EFd3bc969a1FE</a></td>
+=======
+      <td><a href="https://explorer.testnet.rootstock.io/address/0x19f64674d8a5b4e652319f5e239efd3bc969a1fe" target="_blank">0x19f64674D8a5b4e652319F5e239EFd3bc969a1FE</a></td>
+>>>>>>> main
     </tr>
     <tr>
       <td scope="row">Contract Type</td>

@@ -13,8 +13,8 @@ const mainNavItems = createNavItems('./docs');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  noIndex: true, // set to false to enable search engine indexing
-
+  noIndex: false, // set to false to enable search engine indexing
+  trailingSlash: true,
   title: 'Rootstock Developers Portal',
   tagline: 'Welcome to Rootstock',
   favicon: 'img/favicon.png',
