@@ -4,8 +4,7 @@
   height: 27px;
   border-radius: 90px;
   padding: 2px 3px;
-  background: var(--rsk-color-mode-bg);
-  color: var(--bs-white);
+  background: var(--colormode-background); 
 }
 
 .toggleButtonInner {
@@ -18,7 +17,7 @@
   border-radius: 50%;
   transition: background var(--ifm-transition-fast);
   transition-property: background, transform;
-  background: var(--rsk-color-mode-btn-bg, #7247D9);
+  color: var(black, white);
   box-shadow: 5px 2px 10px 0px rgba(28, 36, 48, 0.20);
 }
 [data-theme='light'] .toggleButtonInner{
