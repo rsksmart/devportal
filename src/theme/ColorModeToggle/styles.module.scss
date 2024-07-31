@@ -18,7 +18,8 @@
   transition: background var(--ifm-transition-fast);
   transition-property: background, transform;
   color: var(black, white);
-  box-shadow: 5px 2px 10px 0px rgba(28, 36, 48, 0.20);
+  background-color: var(--colormode-btn-bg);
+  box-shadow: 5px 2px 10px 0px rgba(28, 36, 48, 0.30);
 }
 [data-theme='light'] .toggleButtonInner{
   transform: translateX(25px);

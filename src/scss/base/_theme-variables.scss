@@ -112,6 +112,8 @@ html:root {
   --rsk-color-mode-bg: #08FFD1; //TODO: change to css var
   --rsk-color-mode-btn-bg: #09CDA9; //TODO: change to css var
   --colormode-background: #{$gray-100};
+  --colormode-btn-bg: white;
+
 
   //Footer
   --ifm-footer-background-color: var(--bd-body-bg);
@@ -298,6 +300,7 @@ html:root {
   --rsk-color-mode-bg: #FF9100;
   --rsk-color-mode-btn-bg: #FF9100;
   --colormode-background: #3d3d3d;
+  --colormode-btn-bg: black;
 
   //Aside
   --ifm-toc-border-color: rgba(var(--bs-body-color-rgb), 0.2);
