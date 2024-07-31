@@ -2,7 +2,7 @@
 sidebar_label: Versions
 sidebar_position: 900
 title: RIF Relay Versions
-tags: [rif, envelope, rif relay, integrate]
+tags: [rif, envelope, rif relay, integration guide]
 description: "RIF Relay Versions"
 ---
 

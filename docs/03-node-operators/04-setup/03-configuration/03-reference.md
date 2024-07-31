@@ -2,7 +2,7 @@
 sidebar_label: Reference
 sidebar_position: 300
 title: Rootstock Node Configuration Reference
-tags: [rsk, rskj, node, config, rootstock]
+tags: [rsk, rskj, node, config, rpc api, node operators, rootstock]
 description: "Configuration reference for RSKj"
 render_features: 'tables-with-borders'
 ---

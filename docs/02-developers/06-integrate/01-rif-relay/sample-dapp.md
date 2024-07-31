@@ -2,7 +2,7 @@
 sidebar_label: RIF Relay Sample dApp
 sidebar_position: 400
 title: How to use the RIF Relay Sample dApp SDK
-tags: [rif, envelope, relay, user, guide]
+tags: [rif, envelope, relay, integration guide]
 description: RIF Relay Sample dApp SDK Starter kit
 ---
 
@@ -109,7 +109,7 @@ Create a new file named `.env`  in the top directory, and add the following line
     REACT_APP_RIF_RELAY_GAS_PRICE_FACTOR_PERCENT=0
     REACT_APP_RIF_RELAY_LOOKUP_WINDOW_BLOCKS=1e5
     REACT_APP_RIF_RELAY_PREFERRED_RELAYS=http://localhost:8090
-    REACT_APP_BLOCK_EXPLORER=https://explorer.testnet.rsk.co
+    REACT_APP_BLOCK_EXPLORER=https://explorer.testnet.rootstock.io
 ```
 
 ### Run the dApp

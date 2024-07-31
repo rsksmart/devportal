@@ -7,7 +7,7 @@ sidebar_position: 305
 ---
 
 This section explains how to try the Powpeg mechanism using
-your Rootstock (RSK) node and a command line.
+your Rootstock node and a command line.
 
 ## General Requirements
 - You need to be in full control of your BTC private key.

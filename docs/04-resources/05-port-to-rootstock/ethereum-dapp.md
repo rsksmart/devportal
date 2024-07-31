@@ -1,22 +1,21 @@
 ---
-sidebar_position: 4
+sidebar_position: 2
 title: Port an Ethereum dApp to Rootstock
 sidebar_label: Port an Ethereum dApp to Rootstock
-tags: [rsk, rootstock, tutorials, Port to Rootstock, Ethereum, dApp]
+tags: [rsk, rootstock, resources, tutorials, port to rootstock, Ethereum, dApps, smart contracts]
 description: "Porting an Ethereum decentralized application (dApp) to Rootstock (RSK) presents an exciting opportunity to leverage the benefits of the Rootstock network, a Bitcoin L2 compatible with Ethereum. This guide will walk you through porting an Ethereum dApp to the Rootstock network using the Hardhat Ignition deployment tool and leveraging the compatibility between Solidity (used for Rootstock) and Ethereum."
 ---
 
+Porting an Ethereum decentralized application (dApp) to Rootstock presents an exciting opportunity to leverage the benefits of the Rootstock network, which is a smart contract platform secured by the Bitcoin network.
 
+Rootstock combines Ethereum's flexibility with Bitcoin's security and scalability, offering a compelling environment for dApp development.
 
-Porting an Ethereum decentralized application (dApp) to Rootstock (RSK) presents an exciting opportunity to leverage the benefits of the RSK network, which is a smart contract platform secured by the Bitcoin network.
+With Rootstock (RSK), you can bridge the gap between Ethereum and Bitcoin, bringing your existing Ethereum dApps to the Rootstock platform.
 
-RSK combines Ethereum's flexibility with Bitcoin's security and scalability, offering a compelling environment for dApp development.
+This guide will walk you through porting your Ethereum dApp to the RSK network using the Hardhat Ignition deployment tool and leveraging the compatibility between Solidity (used for Rootstock) and Ethereum.
 
-With Rootstock (RSK), you can bridge the gap between Ethereum and Bitcoin, bringing your existing Ethereum dApps to the RSK platform.
+## Advantages of Porting Your dApp to Rootstock
 
-This guide will walk you through porting your Ethereum dApp to the RSK network using the Hardhat Ignition deployment tool and leveraging the compatibility between Solidity (used for RSK) and Ethereum.
-
-## Advantages of Porting Your dApp to Rootstock (RSK)
 **1. Faster Transaction Speeds**
 
 Rootstock performs transactions by [merge-mining with Bitcoin](/concepts/merged-mining/). This means that Rootstock transactions benefit from the security of the Bitcoin network while achieving faster confirmation times compared to Ethereum.
@@ -33,25 +32,25 @@ Rootstock is a layer 2 on Bitcoin, which means it inherits the security of the B
 
 **1. Solidity as the Programming Language**
 
-Both Ethereum and RSK use Solidity as their primary smart contract programming language. If you’re already familiar with Solidity, transitioning to RSK should be relatively straightforward.
+Both Ethereum and Rootstock use Solidity as their primary smart contract programming language. If you’re already familiar with Solidity, transitioning to Rootstock should be relatively straightforward.
 
 **2. EVM Compatibility**
 
-RSK is compatible with the Ethereum Virtual Machine (EVM). This compatibility allows developers to reuse existing Ethereum smart contracts on RSK with minimal modifications.
+Rootstock is compatible with the Ethereum Virtual Machine (EVM). This compatibility allows developers to reuse existing Ethereum smart contracts on Rootstock with minimal modifications.
 
 # Key Differences Between Ethereum and Rootstock
 
 **1.Consensus Mechanisms**
 
-Ethereum currently uses a Proof of Stake (PoS) consensus mechanism, while RSK employs a hybrid PoW/PoS (Proof of Stake) consensus. RSK’s PoS component enhances scalability and energy efficiency.
+Ethereum currently uses a Proof of Stake (PoS) consensus mechanism, while Rootstock employs a hybrid PoW/PoS (Proof of Stake) consensus. Rootstock’s PoS component enhances scalability and energy efficiency.
 
 **2. Token Standards**
 
-While Ethereum introduced popular token standards like ERC20 (fungible tokens) and ERC721 (non-fungible tokens), RSK has its own token standard called RRC20. Understanding the differences between these standards is crucial when porting tokens.
+While Ethereum introduced popular token standards like ERC20 (fungible tokens) and ERC721 (non-fungible tokens), Rootstock has its own token standard called RRC20. Understanding the differences between these standards is crucial when porting tokens.
 
 **3. Network Fees**
 
-As mentioned earlier, RSK generally offers lower gas fees. Developers can take advantage of this cost savings when deploying and interacting with smart contracts.
+As mentioned earlier, Rootstock generally offers lower gas fees. Developers can take advantage of this cost savings when deploying and interacting with smart contracts.
 
 # Getting Started
 
@@ -61,7 +60,7 @@ Before you begin, ensure that you have the following:
 - Hardhat: Install Hardhat globally using npm: `npm i -g hardhat`
 - A basic knowledge of smart contracts and Solidity
 
-## Steps to Set Up a Hardhat Project for RSK (Rootstock)
+## Steps to Set Up a Hardhat Project for Rootstock
 1. **Create a New Project**: Create a folder for your project and navigate into it:
     ```sh
     mkdir rsk-hardhat-example
@@ -106,7 +105,7 @@ Before you begin, ensure that you have the following:
     ? Do you want to install this sample project's dependencies with npm (hardhat @nomicfoundation/hardhat-toolbox)? (Y/n) › y
     ```
 
-7. **Configure RSK Networks**: By now, your hardhat project should have four main artifacts besides the basic Node configuration:
+7. **Configure Rootstock Networks**: By now, your hardhat project should have four main artifacts besides the basic Node configuration:
     - `contracts/`
     - `ignition/modules/`
     - `test/`
@@ -115,27 +114,29 @@ Before you begin, ensure that you have the following:
   > This guide uses Hardhat version 2.22.5. For this version, the default tool for managing deployments is [Hardhat Ignition](https://hardhat.org/ignition/docs/getting-started).
 
 8. **Install Hardhat Ignition and TypeScript**
-    ```sh
-    npm install --save-dev @nomicfoundation/hardhat-ignition-ethers typescript
-    ```
 
-    At this point, your `hardhat.config.ts` should look like this:
-    ```typescript
+```sh
+  npm install --save-dev @nomicfoundation/hardhat-ignition-ethers typescript
+  ```
+
+  At this point, your `hardhat.config.ts` should look like this:
+  ```typescript
     import { HardhatUserConfig } from "hardhat/config";
     import "@nomicfoundation/hardhat-toolbox";
     import "@nomicfoundation/hardhat-ignition-ethers";
 
     const config: HardhatUserConfig = {
       solidity: "0.8.24",
-    };
+  };
 
-    export default config;
-    ```
+export default config;
+```
 
-## Configure your RSK
-To configure the RSK networks, you'll need an RPC URL for both mainnet and testnet and a Private Key of the account that will deploy the contracts.
+## Configure Rootstock Networks
 
-To get the RPCs, go to the [RPC API dashboard from Rootstock Labs](https://dashboard.rpc.rootstock.io/dashboard) create an account if you don't have one, and get an API key for RSK testnet or RSK mainnet.
+To configure the Rootstock networks, you'll need an RPC URL for both mainnet and testnet and a Private Key of the account that will deploy the contracts.
+
+To get the RPCs, go to the [RPC API dashboard from Rootstock Labs](https://dashboard.rpc.rootstock.io/dashboard) create an account if you don't have one, and get an API key for Rootstock testnet or Rootstock mainnet.
 
 
 <Tabs>
@@ -152,11 +153,9 @@ https://rpc.testnet.rootstock.io/<API-KEY>
  
 </Tabs>
 
-
-
 The next step is to retrieve your private key. If you don't know how to get the private key to your wallet, here's a [tutorial](https://support.metamask.io/managing-my-wallet/secret-recovery-phrase-and-private-keys/how-to-export-an-accounts-private-key/) on [Metamask](https://metamask.io/). 
 
-Also, if you haven't added RSK mainnet or testnet to your Metamask Wallet, you can do it by clicking the Add Rootstock or Add Rootstock Testnet buttons in the footer of [mainnet explorer](https://rootstock.blockscout.com/) or [testnet explorer](https://rootstock-testnet.blockscout.com/).
+Also, if you haven't added Rootstock mainnet or testnet to your Metamask Wallet, you can do it by clicking the Add Rootstock or Add Rootstock Testnet buttons in the footer of [mainnet explorer](https://rootstock.blockscout.com/) or [testnet explorer](https://rootstock-testnet.blockscout.com/).
 
 ### Store the RPC URLs and the Private Key
 To securely store the RPC URLs, you can use a `.env` file or the Hardhat configuration variables. For this example, you'll use the second option.
@@ -321,7 +320,7 @@ npx hardhat test
 
 The test results will show whether your contract behaves as expected. You should see something like this:
 
-```
+```s
 SimpleStorage
     Deployment
       ✔ Should deploy and initialize favoriteNumber to 0
@@ -336,7 +335,7 @@ SimpleStorage
 
 **1. Ensure Sufficient Balance**
 
-Before deploying, ensure you have enough testnet tokens (RBTC) in your wallet. If not, obtain some from the [RSK faucet](https://faucet.rootstock.io/).
+Before deploying, ensure you have enough testnet tokens (RBTC) in your wallet. If not, obtain some from the [Rootstock faucet](https://faucet.rootstock.io/).
 
 **2. Create the Deployment Script**
 
@@ -370,7 +369,7 @@ This TypeScript script uses Hardhat Ignition to deploy the `SimpleStorage` contr
 - Hardhat Ignition will resume the existing deployment (if any) and execute the deployment process. 
 - You’ll see a success message indicating that the contract was deployed.
 
-```
+```bash
 ✔ Confirm deploy to network rskTestnet (31)? … yes
 Hardhat Ignition 🚀
 

@@ -2,7 +2,7 @@
 title: Configure Verbosity
 sidebar_position: 500
 sidebar_label: Configure Verbosity
-tags: [rsk, rskj, node, config, logs]
+tags: [rsk, rskj, node, config, node operators, rootstock, logs]
 description: "Configure RSKj for desired log verbosity, finding log files, and using logback."
 ---
 

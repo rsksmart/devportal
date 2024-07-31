@@ -3,7 +3,7 @@ title: 'Exploring Rootstock Transactions'
 sidebar_position: 400
 sidebar_label: Rootstock Transactions
 description: 'Learn how to interact with Rootstock in your web browser, how to look at Rootstock transactions, develop and deploy your very first smart contract to the Rootstock network.'
-tags: [quick-start, rsk, rootstock, transactions, browser wallets, dev tools]
+tags: [rsk, rootstock, developers, blockchain essentials, transactions, browser wallets]
 ---
 
 In the [previous section](/developers/blockchain-essentials/overview/), we set up a browser extension that is a crypto wallet, MetaMask. We connected to the Rootstock Testnet, and loaded this up with Rootstock’s cryptocurrency, RBTC, and an Rootstock-based token, RIF.
@@ -33,8 +33,8 @@ Watch this short video demonstrating how to view an account in the block explore
   <iframe width="949" height="534" src="https://www.youtube.com/embed/p-q7NBmEqBo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-For the Rootstock Mainnet, we would go to [`explorer.rsk.co`](https://explorer.rsk.co/).
-However, since we are currently connected to the Rootstock Testnet, we go to [`explorer.testnet.rsk.co`](https://explorer.testnet.rsk.co/) instead.
+For the Rootstock Mainnet, we would go to [`explorer.rootstock.io`](https://explorer.rootstock.io/).
+However, since we are currently connected to the Rootstock Testnet, we go to [`explorer.testnet.rootstock.io`](https://explorer.testnet.rootstock.io/) instead.
 
 ## Transfer tRBTC
 
@@ -70,7 +70,7 @@ When you performed each of the transactions, you should have received notificati
 
 However, if you missed this, not to worry, you can also find this within the transaction history within MetaMask. To do so, within the main screen of MetaMask, click on the “Activity” tab. You’ll see the list of the transactions.
 
-Then you click on any transaction, and click on the arrow button beside copy button named transaction ID, this takes you to the [Testnet explorer](https://explorer.testnet.co)
+Then you click on any transaction, and click on the arrow button beside copy button named transaction ID, this takes you to the [Testnet explorer](https://explorer.testnet.rootstock.io)
 
 If you clicked on the popup notification, or if you find it within the “Activity” tab, either way, this should open up the block explorer with the selected transaction selected.
 

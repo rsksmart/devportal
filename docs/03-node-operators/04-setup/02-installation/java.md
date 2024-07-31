@@ -17,9 +17,7 @@ To setup a Rootstock node using Java, you need to:
 
 ## Video walkthrough
 
-<div class="video-container">
-  <iframe width="949" height="534" src="https://www.youtube-nocookie.com/embed/TxpS6WhxUiU?cc_load_policy=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<Video url="https://www.youtube-nocookie.com/embed/TxpS6WhxUiU?cc_load_policy=1" thumbnail="/img/thumbnails/install-node-java-thumbnail.png" />
 
 ## Install the node using a JAR file
 

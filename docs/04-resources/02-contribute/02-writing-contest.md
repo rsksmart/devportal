@@ -3,7 +3,7 @@ sidebar_label: Writing Contest
 sidebar_position: 3
 title: Bitcoin Writing Contest
 description: "The #bitcoin Writing Contest, presented by Rootstock and HackerNoon, is now live with a total prize pool of $17,500 up for grabs! Whether you're a thought leader, a skilled writer, a talented developer, or simply passionate about blockchain technology, this contest invites you to showcase your expertise in various Bitcoin-related topics."
-tags: [rootstock, workshop, pre-requisites, hackernoon, writing, tutorials, guides]
+tags: [rootstock, rsk, workshop, resources, hackernoon, writing, tutorials]
 ---
 
 The #bitcoin Writing Contest, presented by Rootstock and HackerNoon, is now live with a total prize pool of $17,500 up for grabs! 

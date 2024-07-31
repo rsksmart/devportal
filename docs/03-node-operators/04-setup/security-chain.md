@@ -3,7 +3,7 @@
 sidebar_label: Security Chain
 sidebar_position: 8
 title: Verify security chain of RSKj source code
-tags: [rsk, rskj, node, security, verification]
+tags: [rsk, rskj, node, security, node operators, reproducible builds, verification]
 description: "All the different ways that you can verify RSKj: Release signing key, fingerprint of the public key, SHA256SUMS.asc, binary dependencies, secure environment script"
 ---
 

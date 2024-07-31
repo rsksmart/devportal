@@ -1,6 +1,6 @@
 ---
 sidebar_label: Interface Registry
-sidebar_position: 200
+sidebar_position: 300
 title: Universal Smart Contract Interface Registry
 description: "See the ERC1820 standard interface, address support and smart contract implementation"
 tags: [interface, registry, rif, rbtc, defi, decentralized, quick-start, guides, tutorial, networks, dapps, tools, rsk, rootstock, ethereum, smart-contracts, install, get-started, how-to, mainnet, testnet, contracts, wallets, web3, crypto]
@@ -34,8 +34,8 @@ In order to enable implementations based on the ERC777 token standard,
 as well as any other smart contracts that would benefit from
 the use of a universal smart contract interface registry,
 Rootstock has deployed an implementation of the EIP1820 registry on both its
-[Mainnet](https://explorer.rsk.co/address/0x1820a4b7618bde71dce8cdc73aab6c95905fad24),
-and [Testnet](https://explorer.testnet.rsk.co/address/0x1820a4b7618bde71dce8cdc73aab6c95905fad24).
+[Mainnet](https://explorer.rootstock.io/address/0x1820a4b7618bde71dce8cdc73aab6c95905fad24),
+and [Testnet](https://explorer.testnet.rootstock.io/address/0x1820a4b7618bde71dce8cdc73aab6c95905fad24).
 
 ## Links and Information
 
@@ -47,6 +47,6 @@ Original:
 
 Rootstock:
 
-- [Rootstock Mainnet deployed EIP1820 smart contract](https://explorer.rsk.co/address/0x1820a4b7618bde71dce8cdc73aab6c95905fad24)
-- [Rootstock Testnet deployed EIP1820 smartcontract](https://explorer.testnet.rsk.co/address/0x1820a4b7618bde71dce8cdc73aab6c95905fad24)
+- [Rootstock Mainnet deployed EIP1820 smart contract](https://explorer.rootstock.io/address/0x1820a4b7618bde71dce8cdc73aab6c95905fad24)
+- [Rootstock Testnet deployed EIP1820 smartcontract](https://explorer.testnet.rootstock.io/address/0x1820a4b7618bde71dce8cdc73aab6c95905fad24)
 - Corresponding Rootstock Improvement Proposal: [RSKIP148](https://github.com/rsksmart/RSKIPs/blob/e0ac990679a2e6f476e41db0c1050132cd2b1bfc/IPs/RSKIP148.md)

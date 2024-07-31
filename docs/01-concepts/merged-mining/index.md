@@ -21,6 +21,10 @@ Every time miners find a solution, it is compared to both networks' difficulties
 
 Solution submitted to the network allows the node to build an SPV proof. If the proof is valid, it is included as part of the block that will be sent to the network.
 
+<div class="video-container">
+  <iframe width="949" height="534" src="https://youtube.com/embed/l3DkV2tkjU0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## What are the benefits?
 
 Miners earn a high percentage of transaction fees from the Rootstock block they mine. This mining process is done with the same hashing power used in Bitcoin mining, and has no additional cost or impact.

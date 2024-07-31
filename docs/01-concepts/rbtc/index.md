@@ -5,7 +5,7 @@ tags: [mainnet, testnet, tokens, rbtc, gas, rsk, rootstock]
 sidebar_label: RBTC Token
 ---
 
-RBTC is the token used to [pay for the execution](/concepts/rbtc/gas/) of transactions in Rootstock. You can [convert BTC into RBTC](conversion.md) by sending BTC through the [Powpeg](/concepts/powpeg/) (both in Testnet and Mainnet), or by using the [faucet in Testnet](https://faucet.testnet.rsk.co/), or via decentralized exchanges.
+RBTC is the token used to [pay for the execution](/concepts/rbtc/gas/) of transactions in Rootstock. You can [convert BTC into RBTC](conversion.md) by sending BTC through the [Powpeg](/concepts/powpeg/) (both in Testnet and Mainnet), or by using the [faucet in Testnet](https://faucet.testnet.rootstock.io/), or via decentralized exchanges.
 
 See [supported wallets](/dev-tools/wallets/).
 
@@ -29,7 +29,7 @@ See [supported wallets](/dev-tools/wallets/).
     </tr>
     <tr>
       <td scope="row">Contract Type</td>
-      <td>Native (<a href="https://explorer.rsk.co/address/0x0000000000000000000000000000000001000006" target="_blank">Bridge contract</a>)</td>
+      <td>Native (<a href="https://explorer.rootstock.io/address/0x0000000000000000000000000000000001000006" target="_blank">Bridge contract</a>)</td>
     </tr>
     <tr>
       <td scope="row">How to get</td>
@@ -67,7 +67,7 @@ See [supported wallets](/dev-tools/wallets/).
     </tr>
     <tr>
       <td scope="row">Contract Type</td>
-      <td>Native (<a href="https://explorer.testnet.rsk.co/address/0x0000000000000000000000000000000001000006" target="_blank">Bridge contract</a>)</td>
+      <td>Native (<a href="https://explorer.testnet.rootstock.io/address/0x0000000000000000000000000000000001000006" target="_blank">Bridge contract</a>)</td>
     </tr>
     <tr>
       <td scope="row">How to get</td>

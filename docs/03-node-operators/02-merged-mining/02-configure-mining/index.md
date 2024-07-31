@@ -1,7 +1,7 @@
 ---
 title: Configure
 sidebar_label: Configure Node for Mining
-tags: [rsk, rootstock, rskj, node, config]
+tags: [rsk, rootstock, rskj, node, node operators, config]
 description: "Setting your own config preferences, when using the Java command, Ubuntu, Azure, AWS, or Docker"
 ---
 

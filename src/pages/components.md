@@ -169,17 +169,14 @@ Use this to demonstrate functionalities, complex explanations, or walkthroughs.
 <Video url="/video/video.mp4" thumbnail="/img/video-thumbnail.jpg" />
 
 
-- YouTube video with custom thumbnail
+<Video url="https://www.youtube-nocookie.com/embed/eW9UF2aJQgs?cc_load_policy=1" thumbnail="/img/thumbnails/video-thumbnail.jpg" />
 
-  - **Code**
+#### Code
 
-  ```jsx
-  <Video url="https://www.youtube-nocookie.com/embed/eW9UF2aJQgs" thumbnail="/img/video-thumbnail.jpg" />
-  ```
-  - **Result**
-<Video url="https://www.youtube-nocookie.com/embed/eW9UF2aJQgs?cc_load_policy=1" thumbnail="/img/video-thumbnail.jpg" />
+```jsx
+<Video url="https://www.youtube-nocookie.com/embed/eW9UF2aJQgs" thumbnail="/img/thumbnails/video-thumbnail.jpg" />
+```
 
-  
 
 ## Admonitions
 Admonitions are a great way to emphasize important information in your documentation.
@@ -315,7 +312,7 @@ Use this to present structured data with clear rows and columns for easy compari
 | Product                                                      | Description                                                                                    |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | Flyover | Flyover is a fast and secure way for users to transfer BTC in and out of the Rootstock Ecosystem where it can be used to interact with a range of applications to send, save and spend money. |
-| RNS | RNS (RIF Name Service) replaces complicated cryptocurrency addresses with easy-to-remember nicknames, simplifying digital asset transactions. It also facilitates the integration of a Self Sovereign Identity protocol into your products, which enhances user security and flexibility. .|
+| RNS | RNS (RIF Name Service) replaces complicated cryptocurrency addresses with easy-to-remember nicknames, simplifying digital asset transactions. It also facilitates the integration of a Self Sovereign Identity protocol into your products, which enhances user security and flexibility.|
 | Wallet | Bring Bitcoin DeFi to your users with RIF Wallet, an open source Bitcoin wallet with smart contract capabilities. Open-source, fully programmable and customizable.|
 | [Relay](/developers/integrate/rif-relay/) | RIF Relay simplifies gas fee payments by allowing users to pay transaction fees with any ERC20 token. This enables end users to transact entirely using one asset, removing complexity and improving onboarding.|
 

@@ -16,7 +16,6 @@ Visit the [metamask-landing.rifos.org](https://metamask-landing.rifos.org/) tool
 <div class="video-container">
   <iframe width="949" height="534" src="https://youtube.com/embed/VyPewQoWhn0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<!-- <Video url="https://www.youtube-nocookie.com/embed/VyPewQoWhn0?cc_load_policy=1" thumbnail="/img/video-thumbnail.jpg" /> -->
 
 ## Connect with MetaMask
 
@@ -60,8 +59,8 @@ Visit the [metamask-landing.rifos.org](https://metamask-landing.rifos.org/) tool
     </tr>
     <tr>
       <td>Block explorer URL</td>
-      <td><a href="https://explorer.rsk.co" target="_blank">https://explorer.rsk.co</a></td>
-      <td><a href="https://explorer.testnet.rsk.co" target="_blank">https://explorer.testnet.rsk.co</a></td>
+      <td><a href="https://explorer.rootstock.io" target="_blank">https://explorer.rootstock.io</a></td>
+      <td><a href="https://explorer.testnet.rootstock.io" target="_blank">https://explorer.testnet.rootstock.io</a></td>
     </tr>
   </tbody>
 </table>
