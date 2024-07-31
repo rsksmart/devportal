@@ -67,7 +67,7 @@ const data = {
         },
         {
           title: 'Relay',
-          href: '/developers/integration-guides/rif-relay',
+          href: '/developers/integrate/rif-relay',
         },
       ],
     },
