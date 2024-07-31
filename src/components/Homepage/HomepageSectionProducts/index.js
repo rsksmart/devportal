@@ -63,11 +63,11 @@ const data = {
       list: [
         {
           title: 'Name Service',
-          href: '#',
+          href: 'https://github.com/rsksmart/rns-manager-react',
         },
         {
           title: 'Relay',
-          href: '#',
+          href: '/developers/integration-guides/rif-relay',
         },
       ],
     },
