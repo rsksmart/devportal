@@ -14,7 +14,7 @@ tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethe
 
 > Note: This guide is optimized for Node.js version 18 or earlier. If you're using a later version, consider using a version manager like [NVM](https://github.com/nvm-sh/nvm/blob/master/README.md) to switch to a compatible version.
 
-> Need to ramp up fast and get started with Hardhat? Use the [Hardhat Starter Kit](https://github.com/rsksmart/rootstock-hardhat-starterkit) or [Wagmi Starter Kit](https://github.com/rsksmart/rsk-wagmi-starter-kit)
+> Need to ramp up fast and get started with Hardhat? Use the [Hardhat Starter Kit](/developers/quickstart/hardhat) or use the [Wagmi Starter Kit](https://github.com/rsksmart/rsk-wagmi-starter-kit)
 :::
 
 ## Navigating the Guide
