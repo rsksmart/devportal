@@ -18,12 +18,10 @@ This section enables developers getting started with the Rootstock blockchain. D
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | [Hardware Requirements](/developers/requirements/) | Set up your local environment. |
 | [Blockchain Essentials](/developers/blockchain-essentials/) | Rootstock Blockchain Essentials. |
-| [Starter Kits](/developers/quickstart/) | Dive right in with step-by-step guides to get your development environment set up and deploy your first dApp.|
+| [Quick Starts](/developers/quickstart/) | Dive right in with step-by-step guides to get your development environment set up and deploy your first dApp.|
 | [Smart Contract Development](/developers/smart-contracts/) | Explore in-depth resources on building secure and scalable smart contracts on Rootstock.|
 | [Integration Guides](/developers/integrate/) | Deepen your knowledge with detailed guides and informative tutorials that cover various aspects of Rootstock development.|
 | [JSON-RPC](/developers/rpc-api/setup/) | Test your dApps on testnet in minutes before deploying to mainnet using the RPC API.|
 | [Libraries](/developers/libraries/) | Access essential tools and libraries to streamline your development process. |
-
-
 
 

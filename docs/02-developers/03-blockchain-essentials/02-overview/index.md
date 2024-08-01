@@ -81,6 +81,8 @@ If you are familiar with smart contract development or dApp development using so
 So you can use the same code, tools, and libraries when developing with Rootstock too.
 Thus, the smart contract/dApp development skills that you’re used to will transfer across quite nicely too!
 
+> See supported Solidity version in [requirements](/developers/requirements/)
+
 ### Tools
 
 - [Hardhat](https://hardhat.org/docs) is an Ethereum development environment designed for professionals. It's primarily used in the development of smart contracts for the Ethereum blockchain.

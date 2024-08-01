@@ -8,11 +8,14 @@ description: "Minimum hardware requirements for Rootstock."
 
 These are the minimum requirements that must be met to run a Rootstock node or get started with deploying a smart contract:
 
+## Solidity Version
+- Supported version: `0.8.19`
+
 ## Command Line Tools
 
 ### POSIX Compliant Shell
 
-- macOS/Linux
+- MacOS/Linux
     - Standard terminal.
 - Windows
     - Standard terminals like `cmd` or PowerShell may not support some commands. We recommended installing [Git for Windows](https://gitforwindows.org/) for Git Bash, which provides a more UNIX-like experience. Here's a [tutorial on Git Bash](https://www.atlassian.com/git/tutorials/git-bash).
