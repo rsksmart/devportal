@@ -34,7 +34,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="2 Way Peg App"
     subtitle="bridges"
     color="orange"
-    linkHref="https://app.2wp.rootstock.io/" 
+    linkHref="https://app.2wp.rootstock.io/"
     target="_blank"
     linkTitle="Get RBTC"
     description="Bridge Bitcoin and Rootstock using the 2 Way Peg App."
@@ -44,7 +44,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="Foundry"
     subtitle="Dev Environments"
     color="orange"
-    linkHref="https://dev-rootstock.vercel.app/dev-tools/foundry"
+    linkHref="https://dev.rootstock.io/dev-tools/foundry/"
     linkTitle="Deploy Smart Contracts"
     description="Foundry is a smart contract development toolchain, and user-friendly development environment for writing and testing smart contracts in Solidity."
   />

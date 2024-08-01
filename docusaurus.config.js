@@ -20,7 +20,7 @@ const config = {
   favicon: 'img/favicon.png',
 
   // Set the production url of your site here
-  url: 'https://dev-rootstock.vercel.app/',
+  url: 'https://dev.rootstock.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -29,7 +29,7 @@ const config = {
       mendable : process.env.MENDABLE_KEY
     },
     homePage: {
-      editUrl: 'https://github.com/zgraya-digital/devportal-rootstock/tree/main/',
+      editUrl: 'https://github.com/rsksmart/devportal-rootstock/tree/main/',
     },
     moreLinks : {
       changelog : {
