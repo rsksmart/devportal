@@ -100,7 +100,7 @@ const config = {
           showLastUpdateTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/zgraya-digital/devportal-rootstock/tree/main/'
+          editUrl: 'https://github.com/rsksmart/devportal-rootstock/tree/main/'
         },
         blog: {
           blogSidebarTitle: 'All posts',
