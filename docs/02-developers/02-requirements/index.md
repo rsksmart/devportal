@@ -21,7 +21,7 @@ These are the minimum requirements that must be met to run a Rootstock node or g
 
 - Using [Node Version Manager (recommended)](https://nodejs.org/en/download/package-manager#nvm)
         - **Version:** 
-            - 12 or later. 
+            - 18 or later. 
         - For installation, use [NVM install script](https://github.com/nvm-sh/nvm#install--update-script).
 - For Windows 
         -   1. Download the Node.js Installer from [Node.js Downloads](https://nodejs.org/en/download).
