@@ -2,7 +2,7 @@
 sidebar_label: Quick Starts
 sidebar_position: 4
 title: Quick Starts
-tags: [rsk, rootstock, beginner, quick starts, advanced, port to rootstock, tutorials]
+tags: [rsk, rootstock, beginner, quick starts, developers, advanced, port to rootstock, tutorials]
 description: "Quick starts, demos and starter kits to develop on Rootstock."
 ---
 
@@ -78,5 +78,14 @@ values={[
     linkHref="/developers/quickstart/web3-python/"
     linkTitle="Get Started"
     description="Get started with deploying and interacting with smart contracts on Rootstock using Web3.py."
+  />
+  <FilterItem
+    value="sc, beginner, port-dapps"
+    title="Port an Ethereum dApp to Rootstock"
+    subtitle="Port dApps"
+    color="orange"
+    linkHref="/resources/port-to-rootstock/ethereum-dapp"
+    linkTitle="Get Started"
+    description="Learn how to port an Ethereum dApp to Rootstock."
   />
 </Filter>

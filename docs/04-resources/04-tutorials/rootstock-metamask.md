@@ -18,7 +18,7 @@ Note that this functionality is important as it alerts users when they are on a 
 
 Stress here is on the ability to *switch automatically*. Typically switching to a network for the first time is very involved for the end user, involving reading documentation, and manually updating the configuration options in Metamask. This skips the need for all that, and enables a better user experience.
 
-## Requirement
+## Requirements
 
 To follow along in this tutorial, you will need the following;
 

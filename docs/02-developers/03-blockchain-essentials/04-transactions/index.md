@@ -3,7 +3,7 @@ title: 'Exploring Rootstock Transactions'
 sidebar_position: 400
 sidebar_label: Rootstock Transactions
 description: 'Learn how to interact with Rootstock in your web browser, how to look at Rootstock transactions, develop and deploy your very first smart contract to the Rootstock network.'
-tags: [rsk, rootstock, developers, blockchain essentials, transactions, browser wallets]
+tags: [quick-starts, rsk, rootstock, blockchain, browser wallets, developers, beginners]
 ---
 
 In the [previous section](/developers/blockchain-essentials/overview/), we set up a browser extension that is a crypto wallet, MetaMask. We connected to the Rootstock Testnet, and loaded this up with Rootstock’s cryptocurrency, RBTC, and an Rootstock-based token, RIF.

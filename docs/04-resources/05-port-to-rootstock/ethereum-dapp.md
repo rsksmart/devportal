@@ -28,7 +28,7 @@ Rootstock’s gas fees are typically lower than Ethereum, averaging around `$0.0
 
 Rootstock is a layer 2 on Bitcoin, which means it inherits the security of the Bitcoin network. This security model provides confidence to builders and users.
 
-# Similarities Between Ethereum and Rootstock
+## Similarities Between Ethereum and Rootstock
 
 **1. Solidity as the Programming Language**
 
@@ -38,7 +38,7 @@ Both Ethereum and Rootstock use Solidity as their primary smart contract program
 
 Rootstock is compatible with the Ethereum Virtual Machine (EVM). This compatibility allows developers to reuse existing Ethereum smart contracts on Rootstock with minimal modifications.
 
-# Key Differences Between Ethereum and Rootstock
+## Key Differences Between Ethereum and Rootstock
 
 **1.Consensus Mechanisms**
 
@@ -52,15 +52,18 @@ While Ethereum introduced popular token standards like ERC20 (fungible tokens) a
 
 As mentioned earlier, Rootstock generally offers lower gas fees. Developers can take advantage of this cost savings when deploying and interacting with smart contracts.
 
-# Getting Started
+## Getting Started
 
-## Prerequisite 
+### Prerequisites
+
 Before you begin, ensure that you have the following:
-- Node.js: Make sure you have Node.js installed. If not, you can follow the installation instructions for Windows or MacOS.
-- Hardhat: Install Hardhat globally using npm: `npm i -g hardhat`
+- Node.js: 
+  - Make sure you have Node.js installed. If not, you can follow the installation instructions for Windows or MacOS.
+- Hardhat: 
+  - Install Hardhat globally using npm: `npm i -g hardhat`
 - A basic knowledge of smart contracts and Solidity
 
-## Steps to Set Up a Hardhat Project for Rootstock
+### Steps to Set Up a Hardhat Project for Rootstock
 1. **Create a New Project**: Create a folder for your project and navigate into it:
     ```sh
     mkdir rsk-hardhat-example
@@ -132,7 +135,7 @@ Before you begin, ensure that you have the following:
 export default config;
 ```
 
-## Configure Rootstock Networks
+### Configure Rootstock Networks
 
 To configure the Rootstock networks, you'll need an RPC URL for both mainnet and testnet and a Private Key of the account that will deploy the contracts.
 
@@ -157,7 +160,7 @@ The next step is to retrieve your private key. If you don't know how to get the 
 
 Also, if you haven't added Rootstock mainnet or testnet to your Metamask Wallet, you can do it by clicking the Add Rootstock or Add Rootstock Testnet buttons in the footer of [mainnet explorer](https://rootstock.blockscout.com/) or [testnet explorer](https://rootstock-testnet.blockscout.com/).
 
-### Store the RPC URLs and the Private Key
+#### Store the RPC URLs and the Private Key
 To securely store the RPC URLs, you can use a `.env` file or the Hardhat configuration variables. For this example, you'll use the second option.
 
 To store this, type in the terminal in the project's root folder:
@@ -247,7 +250,7 @@ contract SimpleStorage {
 
 Copy this test code and create a new file named `SimpleStorage.ts` inside the `test` folder. The route will be `test/SimpleStorage.ts`.
 
-#### `SimpleStorage.ts`
+#### Update SimpleStorage.ts
 
 ```typescript
 import { loadFixture } from "@nomicfoundation/hardhat-toolbox/network-helpers";
@@ -396,7 +399,7 @@ If you get an error like `IgnitionError: IGN401`, try running the command again.
 
 > If you want to deploy your contract on mainnet, change `rskTestnet` to `rskMainnet` in the last command and make sure you have RBTC available in your wallet.
 
-### Verify Deployment
+#### Verify Deployment
 
 Visit [Rootstock Testnet Explorer](https://explorer.testnet.rootstock.io/). Paste your contract address (`0x3570c42943697702bA582B1ae3093A15D8bc2115`) into the search bar to verify successful deployment.
 

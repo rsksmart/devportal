@@ -3,7 +3,7 @@ sidebar_label: Deploy Smart Contracts
 sidebar_position: 105
 title: Deploy Smart Contracts
 description: "Learn how to deploy your Rootstock smart contract on your local environment and the Rootstock network."
-tags: [getting-started, guide, smart contracts, rsk, rootstock, hardhat, blockchain]
+tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethers]
 ---
 
 In this section, we'll deploy your token contract to your local environment and also deploy and interact with the contract on the Rootstock network.

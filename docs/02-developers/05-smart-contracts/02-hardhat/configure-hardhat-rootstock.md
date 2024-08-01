@@ -3,7 +3,7 @@ sidebar_label: Configure Hardhat for Rootstock
 sidebar_position: 102
 title: Configure Hardhat for Rootstock
 description: "Learn how to configure your Hardhat project for development on Rootstock testnet and mainnet"
-tags: [getting-started, guide, smart contracts, rsk, rootstock, hardhat, blockchain]
+tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethers]
 ---
 
 ## Prerequisites

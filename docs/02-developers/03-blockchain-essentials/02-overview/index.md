@@ -3,7 +3,7 @@ sidebar_label: Blockchain Overview
 sidebar_position: 200
 title: 'Getting Started with Rootstock (RSK) Development'
 description: 'Learn how to interact with Rootstock in your web browser, how to look at Rootstock transactions, develop and deploy your very first smart contract to the Rootstock network.'
-tags: [quick-start, rsk, rootstock, blockchain, browser wallets, dev tools]
+tags: [quick-starts, rsk, rootstock, blockchain, browser wallets, developers, beginners]
 ---
 Learn about Rootstock, how it enables smart contract on Bitcoin, and its compatibility with Ethereum and other platforms.
 
@@ -80,6 +80,8 @@ Since Rootstock’s gas price is denominated in RBTC and Ethereum’s gas price 
 If you are familiar with smart contract development or dApp development using solidity, web3, and other compatible technologies; you might be excited to know that the Rootstock Virtual Machine (RVM) is compatible with the Ethereum Virtual machine (EVM).
 So you can use the same code, tools, and libraries when developing with Rootstock too.
 Thus, the smart contract/dApp development skills that you’re used to will transfer across quite nicely too!
+
+> See supported Solidity version in [requirements](/developers/requirements/)
 
 ### Tools
 

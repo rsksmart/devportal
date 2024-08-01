@@ -3,7 +3,7 @@ sidebar_label: Test Smart Contracts
 sidebar_position: 104
 title: Test Smart Contracts
 description: "Learn how to test your Rootstock smart contract"
-tags: [getting-started, guide, smart contracts, rsk, rootstock, hardhat, blockchain]
+tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethers]
 ---
 
 In this section, you'll set up a smart contract test and test your contract using Mocha and Chai testing frameworks. See DApps Automation using [Cucumber and Playwright](/resources/tutorials/dapp-automation-cucumber/).

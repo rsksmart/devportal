@@ -68,7 +68,7 @@ const config = {
       {
         blogTitle: 'Changelog',
         blogDescription:
-          'Additions and updates to the Rootstock Ecosystem.',
+          'Stay informed about the latest product updates on Rootstock.',
         blogSidebarCount: 'ALL',
         blogSidebarTitle: 'Changelog',
         showReadingTime: false,
@@ -107,7 +107,7 @@ const config = {
           blogSidebarCount: 'ALL',
           blogTitle: 'Changelog',
           blogDescription:
-            'View important product updates to the Rootstock platform',
+            'stay informed about the latest product updates on Rootstock.',
         },
 
         theme: {

@@ -3,7 +3,7 @@ sidebar_label: Write a Smart Contract
 sidebar_position: 103
 title: Write a Smart Contract
 description: "Learn how to write a smart contract using Solidity and OpenZeppellin"
-tags: [getting-started, guide, smart contracts, rsk, rootstock, hardhat, blockchain]
+tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethers]
 ---
 
 In this section, we'll learn how to write a smart contract using the [OpenZeppelin library](https://www.openzeppelin.com/contracts) and Solidity. OpenZeppelin is widely used for its secure, community-vetted, and standardized codebase, which simplifies developing robust and secure smart contracts.
