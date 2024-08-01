@@ -15,7 +15,6 @@ export default function Home() {
 
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
       description="Rootstock is the first open source Smart Contract platform secured by the Bitcoin Network. Rootstock adds value and expand functionality to the Bitcoin ecosystem by providing smart contracts and greater scalability.">
       <main>
         <div className="row">
