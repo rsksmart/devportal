@@ -54,10 +54,13 @@ As mentioned earlier, Rootstock generally offers lower gas fees. Developers can 
 
 ## Getting Started
 
-### Prerequisite 
+### Prerequisites
+
 Before you begin, ensure that you have the following:
-- Node.js: Make sure you have Node.js installed. If not, you can follow the installation instructions for Windows or MacOS.
-- Hardhat: Install Hardhat globally using npm: `npm i -g hardhat`
+- Node.js: 
+  - Make sure you have Node.js installed. If not, you can follow the installation instructions for Windows or MacOS.
+- Hardhat: 
+  - Install Hardhat globally using npm: `npm i -g hardhat`
 - A basic knowledge of smart contracts and Solidity
 
 ### Steps to Set Up a Hardhat Project for Rootstock
