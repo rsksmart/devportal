@@ -3,7 +3,7 @@ sidebar_label: Verify Smart Contracts using the Hardhat Verify Plugin
 sidebar_position: 400
 title: Verify a Smart Contract using the Hardhat Verification Plugin
 description: "Configuring Hardhat Verification plugin for Rootstock"
-tags: [hardhat, tutorial, quick start, rsk, peer-to-peer, rootstock]
+tags: [hardhat, tutorial, developers, quick starts, rsk, rootstock]
 ---
 
 Smart contracts are the backbone of decentralized applications (dApps). They automate agreements and processes, but their code can be complex and prone to errors. Verifying your smart contracts is crucial to ensure they function as intended.

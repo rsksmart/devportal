@@ -2,7 +2,7 @@
 sidebar_label: Quick Starts
 sidebar_position: 4
 title: Quick Starts
-tags: [rsk, rootstock, beginner, quick starts, advanced, port to rootstock, tutorials]
+tags: [rsk, rootstock, beginner, quick starts, developers, advanced, port to rootstock, tutorials]
 description: "Quick starts, demos and starter kits to develop on Rootstock."
 ---
 

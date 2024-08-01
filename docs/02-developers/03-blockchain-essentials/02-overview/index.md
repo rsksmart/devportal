@@ -3,7 +3,7 @@ sidebar_label: Blockchain Overview
 sidebar_position: 200
 title: 'Getting Started with Rootstock (RSK) Development'
 description: 'Learn how to interact with Rootstock in your web browser, how to look at Rootstock transactions, develop and deploy your very first smart contract to the Rootstock network.'
-tags: [quick-start, rsk, rootstock, blockchain, browser wallets, dev tools]
+tags: [quick-starts, rsk, rootstock, blockchain, browser wallets, developers, beginners]
 ---
 Learn about Rootstock, how it enables smart contract on Bitcoin, and its compatibility with Ethereum and other platforms.
 

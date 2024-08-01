@@ -3,7 +3,7 @@ sidebar_label:  Interact with the Front-end
 sidebar_position: 106
 title:  Interact with the Front-end
 description: "Learn how to integrate your Rootstock smart contract with front-end applications."
-tags: [getting-started, guide, smart contracts, rsk, rootstock, hardhat, blockchain]
+tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethers]
 ---
 
 Creating a user-friendly web interface for smart contracts on the Rootstock network can enhance user interaction. Here, we'll focus on using `ethers.js`, a popular Ethereum library, for connecting your smart contracts to a web front-end.

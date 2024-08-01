@@ -3,7 +3,7 @@ section_position: 200
 sidebar_label: Getting Started with Foundry
 title: Getting Started with Foundry
 description: 'How to write, test, and deploy smart contracts with Foundry'
-tags: [foundry, developer tools, rootstock, testing, dApps, networks, get-started, how-to]
+tags: [rsk, foundry, developers, developer tools, rootstock, testing, dApps, smart contracts]
 ---
 
 In this guide, we will learn about Foundry and its benefits for smart contract development, how to setup your environment, create a Foundry project and execute a deployment script.

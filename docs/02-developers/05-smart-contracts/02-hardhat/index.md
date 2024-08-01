@@ -2,8 +2,8 @@
 sidebar_label: Getting Started with Hardhat
 sidebar_position: 100
 title: Getting Started with Hardhat
-description: "Get started with creating a dApps on Rootstock using Hardhat and other tools."
-tags: [getting-started, guide, smart contracts, rsk, rootstock, hardhat, blockchain]
+description: "Get started with creating a dApps on Rootstock using Hardhat."
+tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethers]
 ---
 
 :::note[Before you begin]

@@ -3,7 +3,7 @@ sidebar_label: Interface Registry
 sidebar_position: 300
 title: Universal Smart Contract Interface Registry
 description: "See the ERC1820 standard interface, address support and smart contract implementation"
-tags: [interface, registry, rif, rbtc, defi, decentralized, quick-start, guides, tutorial, networks, dapps, tools, rsk, rootstock, ethereum, smart-contracts, install, get-started, how-to, mainnet, testnet, contracts, wallets, web3, crypto]
+tags: [smart contracts, rsk, rootstock, developers, interface registry]
 ---
 
 The ERC1820 standard defines a universal registry smart contract where any address (contract or regular account) can register which interface it supports and which smart contract is responsible for its implementation.

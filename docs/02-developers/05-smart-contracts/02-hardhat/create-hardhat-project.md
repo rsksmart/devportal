@@ -3,7 +3,7 @@ sidebar_label: Create a Hardhat Project
 sidebar_position: 101
 title: Create a Hardhat Project
 description: "Learn how to set up your environment for development using Hardhat"
-tags: [getting-started, guide, smart contracts, rsk, rootstock, hardhat, blockchain]
+tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethers]
 ---
 
 In this section, you will learn how to create a hardhat project and verify hardhat installation. 

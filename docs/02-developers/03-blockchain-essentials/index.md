@@ -2,7 +2,7 @@
 sidebar_label: Blockchain Essentials
 sidebar_position: 3
 title: "Rootstock Blockchain Essentials"
-tags: [rootstock, rsk, beginner, essentials, blockchain]
+tags: [quick-starts, rsk, rootstock, blockchain, browser wallets, developers, beginners]
 description: "Learn how to interact with Rootstock in your web browser, how to look at Rootstock transactions, develop and deploy your very first smart contract to the Rootstock network."
 ---
 
