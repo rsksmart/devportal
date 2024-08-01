@@ -2,7 +2,7 @@
 title: "Introducing Arrowhead 6.3.1: What You Need To Know About Rootstock’s Upcoming Patch Network Upgrade"
 author: Rootstock
 tags: [release]
-image: https://blog.rootstock.io/wp-content/uploads/2024/07/Arrowhead-6.3.1-Release.png
+# image: https://blog.rootstock.io/wp-content/uploads/2024/07/Arrowhead-6.3.1-Release.png
 url: https://blog.rootstock.io/noticia/introducing-arrowhead-6-3-1-what-you-need-to-know-about-rootstocks-upcoming-patch-network-upgrade/
 ---
 

@@ -79,4 +79,13 @@ values={[
     linkTitle="Get Started"
     description="Get started with deploying and interacting with smart contracts on Rootstock using Web3.py."
   />
+  <FilterItem
+    value="sc, beginner, port-dapps"
+    title="Port an Ethereum dApp to Rootstock"
+    subtitle="Port dApps"
+    color="orange"
+    linkHref="/developers/resources/ethereum-dapp"
+    linkTitle="Get Started"
+    description="Learn how to port an Ethereum dApp to Rootstock."
+  />
 </Filter>
