@@ -1,8 +1,21 @@
 # Rootstock Devportal
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Rootstock's full technology stack is developed on the foundation of bitcoin. 
 
-For more information on how to use Docusaurus, please refer to the [Docusaurus Documentation](https://docusaurus.io/docs).
+This includes everything from Rootstock smart contracts to the Rootstock Infrastructure Framework. The stack aims to establish a more equitable and inclusive financial system. 
+
+Rootstock is the first open-source smart contract platform powered by the Bitcoin network. It aims to enhance the Bitcoin ecosystem by facilitating smart contracts, near-instant payments, and greater scalability.
+
+## Key Features:
+
+- **Smart Contracts on Bitcoin:** RSK Smart Contracts enable developers to build secure and scalable DeFi, NFT, and Web3 applications on the Bitcoin network.
+- **Enhanced Security:** RSK inherits Bitcoin's battle-tested security, providing a robust foundation for your decentralized projects.
+- **Interoperability:** RSK bridges the gap between Bitcoin and Ethereum, fostering innovation across ecosystems. 
+
+### Clone the Repository:
+```
+git clone https://github.com/rsksmart/devportal-rootstock.git
+```
 
 ## Requirements
 - Node 18
@@ -28,7 +41,7 @@ This command starts a local development server and opens up a browser window. Mo
 $ yarn build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+This command generates static content into the `build` directory and can be served using any static contents hosting service. Also it runs a check for broken links.
 
 ## Project Structure
 The structure of this website is based on the `docs` folder. This structure allows for a scalable and organized website, where new sections can be easily added by creating new directories in the `docs` folder.
@@ -39,33 +52,33 @@ Here's a simplified example of how it might look:
 
 ```
 /docs
-  /guide
-    index.md
-    doc1.md
-    doc2.md
-  /tutorial
-    index.md
-    doc3.md
-    doc4.md
+ /guide
+ index.md
+ doc1.md
+ doc2.md
+ /tutorial
+ index.md
+ doc3.md
+ doc4.md
 ```
 ### Main Navigation and Sidebars
-The main navigation of the website is created based on the root directories in the `/docs` folder. Each directory has its own sidebar for easy navigation.
+The main navigation of the website is created based on the root directories in the `/docs` folder. Each directory has its sidebar for easy navigation.
 
-> Root directories name must contain only a character that is a letter, a number, a dash, or an underscore. If it doesn't, the directory is ignored and won't apear in main navigation.
+> The Root directory's name must contain only a character that is a letter, a number, a dash, or an underscore. If it doesn't, the directory is ignored and won't appear in the main navigation.
 
-In this case, the main navigation of the website would have two sections: "Guide" and "Tutorial".
+In this case, the website's main navigation would have two sections: "Guide" and "Tutorial."
 
-Sidebars are created automatically based on the root directories in the `/docs` folder. Each section would have its own sidebar with links to the documents within that section. For example, the "Guide" section would have a sidebar with links to `/guide`, `/guide/doc1` and `/guide/doc2`.
+Sidebars are created automatically based on the root directories in the `/docs` folder. Each section would have its sidebar with links to the documents within that section. For example, the "Guide" section would have a sidebar with links to `/guide`, `/guide/doc1` and `/guide/doc2`.
 
 Titles of the links in the sidebar are determined by the Markdown front matter of the corresponding documents.
 
 ### Images Storage
 
-Images used in this project should be stored in the `/static/img` directory. This directory is accessible from anywhere in the project, allowing you to easily reference images in your Markdown files, JavaScript files, or CSS files.
+Images used in this project should be stored in the `/static/img` directory. This directory is accessible from anywhere in the project, allowing you to easily reference images in your Markdown, JavaScript, or CSS files.
 
-Please note that the path to the image is relative to the root of the project, not the location of the Markdown file. This means that you should always start the path with `/img/`, regardless of where the Markdown file is located.
+Please note that the path to the image is relative to the project's root, not the Markdown file's location. This means you should always start the path with `/img/`, regardless of where the Markdown file is located.
 
-For more information on how to use images in Docusaurus, please refer to the [Docusaurus Documentation](https://docusaurus.io/docs/next/markdown-features/assets).
+For more information on using images in Docusaurus, please refer to the [Docusaurus Documentation](https://docusaurus.io/docs/next/markdown-features/assets).
 
 ## Documentation file
 For details for Doc Creation, please refer to the [Create a doc](https://docusaurus.io/docs/create-doc).
@@ -112,3 +125,15 @@ module.exports = {
 By default, it set to `warn`: Docusaurus will log a warning in the console, but the build will continue.
 
 For more details on broken link detection in Docusaurus, please refer to the [Docusaurus Documentation](https://docusaurus.io/docs/next/api/docusaurus-config#onBrokenLinks).
+
+## Contributing
+We welcome contributions from the community. For detailed guidelines on how to contribute, please read our CONTRIBUTING.md file. 
+
+## Community:
+Join the vibrant Rootstock community to connect with developers, engage in discussions, and stay updated on the latest advancements: 
+- Discord: https://discord.com/invite/rootstock
+- Twitter: https://x.com/rootstocklabs
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
