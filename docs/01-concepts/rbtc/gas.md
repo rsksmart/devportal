@@ -54,6 +54,12 @@ The means by which minimum gas price is negotiated by miners is described in [RS
 web3.eth.getBlock('latest').minimumGasPrice
 ```
 
+:::tip[Gas Limit]
+
+The transaction gas limit per block is 6,800,000 units.
+
+:::
+
 Here are some practical approaches to this subject:
 
 1. Optimistic approach (not recommended):
