@@ -1,6 +1,6 @@
 ---
 sidebar_label: Hackathons 
-sidebar_position: 5
+sidebar_position: 7
 title: Hackathon and Workshop Resources
 tags: [hackathons, rsk, workshop, resources, rootstock]
 description: "Hackathon resources and tools"

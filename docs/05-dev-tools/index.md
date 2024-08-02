@@ -34,9 +34,9 @@ description: "Explore a curated selection of smart contract development tools an
     title="2 Way Peg App"
     subtitle="bridges"
     color="orange"
-    linkHref="https://app.2wp.rootstock.io/"
+    linkHref="/resources/guides/two-way-peg-app/"
     target="_blank"
-    linkTitle="Get RBTC"
+    linkTitle="Documentation"
     description="Bridge Bitcoin and Rootstock using the 2 Way Peg App."
   />
 <FilterItem
