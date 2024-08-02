@@ -108,7 +108,7 @@ Your `index.html` file should now look like the [`index.html` file](https://raw.
       const data = await response.json();
       contractABI = data.abi;
       // Place networks.json to set the network automatically with the checkNetwork() function
-      // You can set it manually instead following this guide https://dev.rootstock.io/kb/rootstock-metamask/
+      // You can set it manually instead following this guide https://dev.rootstock.io/resources/tutorials/rootstock-metamask/
       response = await fetch('networks.json');
       networks = await response.json();
     }
@@ -217,7 +217,7 @@ Your `index.html` file should now look like the [`index.html` file](https://raw.
         const data = await response.json();
         contractABI = data.abi;
         // Place networks.json to set the network automatically with the checkNetwork() function
-        // You can set it manually instead following this guide https://dev.rootstock.io/kb/rootstock-metamask/
+        // You can set it manually instead following this guide https://dev.rootstock.io/resources/tutorials/rootstock-metamask/
         response = await fetch('networks.json');
         networks = await response.json();
       }
