@@ -10,9 +10,9 @@ Porting an Ethereum decentralized application (dApp) to Rootstock presents an ex
 
 Rootstock combines Ethereum's flexibility with Bitcoin's security and scalability, offering a compelling environment for dApp development.
 
-With Rootstock (RSK), you can bridge the gap between Ethereum and Bitcoin, bringing your existing Ethereum dApps to the Rootstock platform.
+With Rootstock, you can bridge the gap between Ethereum and Bitcoin, bringing your existing Ethereum dApps to the Rootstock platform.
 
-This guide will walk you through porting your Ethereum dApp to the RSK network using the Hardhat Ignition deployment tool and leveraging the compatibility between Solidity (used for Rootstock) and Ethereum.
+This guide will walk you through porting your Ethereum dApp to the Rootstock network using the Hardhat Ignition deployment tool and leveraging the compatibility between Solidity (used for Rootstock) and Ethereum.
 
 ## Advantages of Porting Your dApp to Rootstock
 
@@ -201,7 +201,7 @@ You’ll see output similar to this:
 The configuration variable has been stored in /Users/wisdomnwokocha/Library/Preferences/hardhat-nodejs/vars.json
 ```
 
-Now, update your `hardhat.config.ts` file to include RSK network configurations. Here’s an example of how it should look:
+Now, update your `hardhat.config.ts` file to include Rootstock network configurations. Here’s an example of how it should look:
 ```typescript
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";

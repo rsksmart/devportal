@@ -38,7 +38,7 @@ Before starting the dApp, make sure to have the following prerequisites:
 - Configure Metamask to connect to the Rootstock network. Visit the [MetaMask Integration on the Rootstock Dev Portal](/dev-tools/wallets/metamask/).
 
 5. **Basic Knowledge of Hardhat:**
-- Familiarity with Hardhat's core concepts and functionalities is recommended. If you're new to Hardhat, refer to the [Rootstock Hardhat documentation's starter guide](https://dev.rootstock.io/quickstart/hardhat/).
+- Familiarity with Hardhat's core concepts and functionalities is recommended. If you're new to Hardhat, refer to the [Rootstock Hardhat documentation's starter guide](https://dev.rootstock.io/developers/quickstart/hardhat/).
 
 ## Setting Up the Sample dApp
 
