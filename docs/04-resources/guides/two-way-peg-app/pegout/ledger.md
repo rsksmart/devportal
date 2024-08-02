@@ -58,7 +58,7 @@ Step 12: Ledger Connected <br/>
 <br/>
 Step 13: Continue filling in the other fields as amount and click on the Send button
 
-Step 14: After finish the pegout transaction creation, click here to see how to see the steps to access to Bitcoin derived address in hardware wallet using [Electrum](/img/resources/two-way-peg-app/advanced-operations/#electrum-hardware-wallets)
+Step 14: After finish the pegout transaction creation, click here to see how to see the steps to access to Bitcoin derived address in hardware wallet using [Electrum](/resources/guides/two-way-peg-app/advanced-operations#electrum-hardware-wallets)
 
 ----
 

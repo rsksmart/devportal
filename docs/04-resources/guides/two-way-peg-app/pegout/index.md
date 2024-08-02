@@ -8,9 +8,9 @@ tags: [2 way peg, powpeg, peg-in, peg-out, 2way-peg, bridge, rbtc, btc, testnet,
 
 ![2 way peg app (peg-out)](/img/resources/two-way-peg-app/pegout.gif)
 
-In this section, we will learn how to perform a [peg-out](/guides/two-way-peg-app/glossary/) transaction on the 2 way peg app, to convert **RBTC to BTC**. 
+In this section, we will learn how to perform a [peg-out](/resources/guides/two-way-peg-app/glossary/) transaction on the 2 way peg app, to convert **RBTC to BTC**. 
 
-> To get started, see the [Requirements for Pegout](/guides/two-way-peg-app/prerequisites/#requirements-for-pegout) section.
+> To get started, see the [Requirements for Pegout](/resources/guides/two-way-peg-app/prerequisites/) section.
 
 We will do the following:
 

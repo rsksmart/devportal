@@ -43,7 +43,7 @@ Now, you have successfully connected your Ledger device to the Bitcoin network.
 
 ## Performing a peg-in transaction with Ledger
 
-A peg-in is the process of exchanging BTC for RBTC. See the [glossary](/img/resources/two-way-peg-app/glossary/) section for more information.
+A peg-in is the process of exchanging BTC for RBTC. See the [glossary](/resources/guides/two-way-peg-app/glossary/) section for more information.
 
 > The minimum values allowed when creating a peg-in transaction is **0.005 BTC**. 
 

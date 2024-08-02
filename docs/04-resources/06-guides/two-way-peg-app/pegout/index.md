@@ -8,16 +8,16 @@ tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 
 ![2 way peg app (peg-out)](/img/resources/two-way-peg-app/pegout.gif)
 
-In this section, we will learn how to perform a [peg-out](/guides/two-way-peg-app/glossary/) transaction on the 2 way peg app, to convert **RBTC to BTC**. 
+In this section, we will learn how to perform a [peg-out](/resources/guides/two-way-peg-app/glossary/) transaction on the 2 way peg app, to convert **RBTC to BTC**. 
 
-> To get started, see the [Requirements for Pegout](/guides/two-way-peg-app/prerequisites/#requirements-for-pegout) section.
+> To get started, see the [Requirements for Pegout](/resources/guides/two-way-peg-app/prerequisites/) section.
 
 We will do the following:
 
 1. Perform a peg-out using [Meta Mask wallet](/resources/guides/two-way-peg-app/pegout/metamask/)
 2. Perform a peg-out using [Liquality wallet](/resources/guides/two-way-peg-app/pegout/liquality/)
 3. Perform a peg-out using [Ledger+Liquality](/resources/guides/two-way-peg-app/pegout/ledger-liquality/)
-4. How to get a Bitcoin derived address in hardware wallet using [Electrum](/guides/two-way-peg-app/pegout/deriving-electrum)
+4. How to get a Bitcoin derived address in hardware wallet using [Electrum](/resources/guides/two-way-peg-app/pegout/deriving-electrum)
 5. Querying the [status of a pegout](/resources/guides/two-way-peg-app/pegout/status)
 6. [Troubleshooting and common errors](/resources/guides/two-way-peg-app/pegout/pegout-common-errors/)
 
