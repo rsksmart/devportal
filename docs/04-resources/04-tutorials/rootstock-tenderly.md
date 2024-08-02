@@ -115,6 +115,13 @@ export async function takeSnapshot() {
 }
 ```
 
+:::info[Info]
+
+The function `takeSnapshot` creates a snapshot on an EVM network using a Tenderly RPC endpoint. 
+It sends a `POST` request with JSON RPC data and returns the `snapshot ID`.
+
+:::
+
 #### Revert to snapshot
 
 To revert to snapshot, add the code below;
@@ -135,6 +142,12 @@ export async function revertToSnapshot(snapshotId: string) {
    await fetch(TENDERLY_RCP, requestOptions);
 }
 ```
+
+:::info[Info]
+
+This takes a `snapshotId` as a parameter and uses it to revert the EVM state to the specified snapshot. It constructs a `POST` request with the necessary JSON-RPC data, sends it to the Tenderly RPC endpoint, and awaits the response. Essentially, this function rolls back the EVM to a previous state captured in the snapshot.
+
+:::
 
 #### Set account balances (native token & ERC20)
 
@@ -194,5 +207,16 @@ async function overrideContractStorage() {
    ]);
 }
 ```
+
+
+:::info[Info]
+
+The above code defines an asynchronous function `overrideContractStorage` which:
+
+* Specifies the storage slot to be modified (storageSlot).
+* Encodes the storage slot and new value into `32-byte` hex strings using `ethers.AbiCoder`.
+* Uses the `tenderly_setStorageAt` RPC method to update the contract's storage at the specified slot with the new value.
+
+:::
 
 ...and that’s it, in this guide, we have successfully created a project, setup a Virtual Testnet, forked the Rootstock Mainnet by creating a simulated network that replicates the current state of the Rootstock mainnet. Learned how to integrate an existing project, leverage Snapshots, take snapshots, revert snapshot, set account balances (native token & ERC20), and override the contract storage.
