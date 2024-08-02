@@ -1,54 +1,53 @@
 ---
-sidebar_position: 1400
-sidebar_label:  Peg-in using Trezor Hardware Wallet
-title: "Performing a peg-in in using Trezor Hardware Wallet"
-description: "Here, we will learn how to perform a peg-in transaction using the Trezor Hardware Wallet."
-tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+sidebar_position: 1100
+sidebar_label:   Peg-in using Ledger Hardware Wallet
+title: "Performing a peg-in using Ledger Hardware Wallet"
+description: "Here, we will learn how to perform a peg-in transaction using the 2 way peg app."
+tags: [2 way peg, powpeg, peg-in, peg-out, 2way-peg, bridge, rbtc, btc, testnet, mainnet, trezor, liquality, leger, guide, setup, integrate, use]
 ---
 
-In this guide, we will be using performing a peg in transaction using the [2 way peg app](https://app.2wp.rootstock.io/) application.
+## Using hardware wallets
 
-## Trezor Hardware Wallet
+In this guide, we will be using the 2 way peg app on [2 way peg app - Testnet](https://app.2wp.testnet.rootstock.io/) for learning purposes, for transactions using real tokens, please use the [2 way peg app - Mainnet](https://app.2wp.rootstock.io/) application.
 
-![Connect Trezor](/img/resources/two-way-peg-app/33-connect-trezor.png)
 
-**Step 1: Connecting to a trezor wallet**
+### Ledger Hardware Wallet
 
-Plug your Trezor wallet by connecting the USB cable that comes with Trezor.
+![Connect Ledger](/img/resources/two-way-peg-app/1-connect-ledger.png)
 
-**Step 2: Export multiple addresses**
-In this step, the user is redirected to Trezor's site and needs to click on export to export the addresses. 
+> Ensure to complete the steps in [install apps](#install-apps) and [requirements](#requirements) before proceeding with this section.
 
-![Export Testnet Addresses](/img/resources/two-way-peg-app/34-export-testnet-addresses.png)
+**Step 1: Connect to a ledger wallet**
+- Plug your Ledger wallet by connecting the USB cable that comes with the Ledger.
+- Enter your pin that has already been configured in [requirements](#requirements), to unlock the Ledger.
 
-**Step 3: Enter Pin and confirm**
-Enter a pin for your Trezor, displayed on your hardware wallet. Click **confirm**.
+**Step 2: Enter Pin**
 
-![Insert Trezor Wallet Pin](/img/resources/two-way-peg-app/35-insert-trezor-wallet-pin.png)
+![Enter Pin](/img/resources/two-way-peg-app/2-enter-pin.png)
 
-![Insert Wallet Pin - Trezor](/img/resources/two-way-peg-app/35a-insert-wallet-pin-trezor.png)
+**Step 3: Choose Wallet**
 
-**Step 4: Unlock Trezor with passphrase**
+Here, we will use the Bitcoin Test wallet. For Mainnet, use the Bitcoin wallet.
 
-![Enter passphrase](/img/resources/two-way-peg-app/36-enter-passphrase.png)
+![Choose Wallet](/img/resources/two-way-peg-app/3-choose-wallet.png)
 
-Step 5:
-- Type Trezor passphrase
-- Trezor will display the message: 'Please enter your passphrase using the computer's keyboard'.
+_Note: On the Nano S ledger, whenever you want to confirm an option, click on the 2 upper buttons at the same time._
 
-![Enter Passphrase using Keyboard](/img/resources/two-way-peg-app/36a-enter-passphrase-keyboard.png)
+**Step 4: Confirm connection to Bitcoin Testnet**
 
-The user fills the passphrase, and confirms passphrase fields, using the Trezor Connect application. The user will see this screen on Trezor: "Access Hidden Wallet?".
+Once the above steps have been completed, a confirmation appears - “Bitcoin Testnet is ready”. 
 
-![Access hidden wallet notification](/img/resources/two-way-peg-app/37-access-hidden-wallet-notification.png)
+![Confirm Connection Testnet](/img/resources/two-way-peg-app/4-confirm-connection-testnet.png)
 
-![Use passphrase](/img/resources/two-way-peg-app/37a-use-passphrase.png)
+Now, you have successfully connected your Ledger device to the Bitcoin network.
 
-Now, you have successfully connected your Trezor to the Bitcoin network.
+## Performing a peg-in transaction with Ledger
 
-## Performing a peg-in transaction with Trezor
+A peg-in is the process of exchanging BTC for RBTC. See the [glossary](/img/resources/two-way-peg-app/glossary/) section for more information.
 
-![Waking Device](/img/resources/two-way-peg-app/38-waking-device.png)
+> The minimum values allowed when creating a peg-in transaction is **0.005 BTC**. 
+
+Open [2 way peg application](https://app.2wp.testnet.rootstock.io/) on Testnet.
 
 **Step 1: Select Conversion Type**
 
@@ -117,8 +116,6 @@ To enter an address, we are provided with two options:
 ![Enter address](/img/resources/two-way-peg-app/11-enter-address.png)
 
 **Tips:**
-
-> - Use the [address verifier](/developers/) to verify if an address is Rootstock-compatible and can be used to perform a peg in a transaction.
 > - Use the [Metamask-Rootstock](https://metamask-landing.rifos.org/) tool to automatically connect to Rootstock mainnet or [manually connect metamask to the Rootstock mainnet or testnet](/developers/blockchain-essentials/browser/).
 
 **Step 6a: Click on Connect Wallet**
@@ -177,6 +174,54 @@ By clicking on the **Continue** button, we can see all the transactions that wil
 Under transaction summary, we can see the **destination** and **refund** address, as well as the **Powpeg** recipient address. After confirming these details are correct, click on the **sign** button, and confirm all information on your hardware wallet.
 
 ![Sign Transaction Summry](/img/resources/two-way-peg-app/19-transaction-summary-sign.png)
+
+**Step 10: Confirm transaction in Ledger Device**
+
+Here, you can confirm or reject the transaction in your hardware wallet. Unlock ledger device to confirm the transaction.
+
+![Confirm transaction on Ledger Device](/img/resources/two-way-peg-app/20-confirm-transaction-ledger.png)
+
+**Step 11: Confirm all outputs**
+
+The user needs to review and approve all outputs, the value of the transaction and the fee of the transaction. This test transaction generates 3 outputs. 
+
+> To approve or confirm any action on the screen, press on the two buttons beside the ledger hardware device at the same time.
+
+**Review and accept output 1**
+
+![review output one](/img/resources/two-way-peg-app/21-review-output-one.jpg)
+
+![accept output one](/img/resources/two-way-peg-app/22-accept-output-one.jpg)
+
+**Review and accept the output 2**
+
+![review output two](/img/resources/two-way-peg-app/23-review-output-two.jpg)
+
+![accept output two](/img/resources/two-way-peg-app/24-accept-output-two.jpg)
+
+**Review and accept the output 3**
+
+![review output three](/img/resources/two-way-peg-app/25-review-output-three.jpg)
+
+![accept output three](/img/resources/two-way-peg-app/26-accept-output-three.jpg)
+
+**Confirm amount of test transactions**
+
+![confirm amount of test tx](/img/resources/two-way-peg-app/27-confirm-amount-test-tx.jpg)
+
+**Confirm if the fee value is the same present in the transaction summary screen**.
+
+![confirm fee value](/img/resources/two-way-peg-app/28-confirm-fee-value.jpg)
+
+**Now, confirm all transactions**
+
+![confirm transactions](/img/resources/two-way-peg-app/29-confirm-transactions.jpg)
+
+**Accept and send the transaction to be broadcasted to the network.**
+
+![accept and send](/img/resources/two-way-peg-app/30-accept-and-send.jpg)
+
+> After signing, the transaction is sent to the network to be processed, taking into account the fee value selected previously. 
 
 
 **Step 12: View transaction status**

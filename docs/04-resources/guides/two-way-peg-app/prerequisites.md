@@ -3,7 +3,7 @@ sidebar_position: 300
 sidebar_label: Prerequisites
 title: "Prerequisites"
 description: "Welcome to the overview section of the 2 way peg app documentation."
-tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [2 way peg, powpeg, peg-in, peg-out, 2way-peg, bridge, rbtc, btc, rootstock, testnet, mainnet, guide, setup, integrate, use]
 ---
 
 > **Note:** We will be using the 2 way peg app on [2-Way Peg App - Testnet](https://app.2wp.testnet.rootstock.io/) for learning purposes.
@@ -38,6 +38,7 @@ The Bitcoin testnet app does not show on Ledger live manager by default. To be a
 
 ### Get Funds
 
+[](#top "collapsible")
 - Get Testnet Tokens
     1. Go to the receive tab on Ledger live.
         <div align="left"><img width="70%" src="/img/resources/two-way-peg-app/receive-tab.png" alt="Receive tab"/></div>
@@ -58,6 +59,7 @@ The Bitcoin testnet app does not show on Ledger live manager by default. To be a
 
 To get started with the 2-way peg app, ensure you have the following:
 
+[](#top "collapsible")
 - System Requirements
     - A computer with at least Windows 8.1 (64-bit), macOS 10.10, or a Linux distribution, and an internet connection.
 - Hardware Wallets

@@ -3,7 +3,7 @@ sidebar_position: 1100
 sidebar_label:   Peg-in using Ledger Hardware Wallet
 title: "Performing a peg-in using Ledger Hardware Wallet"
 description: "Here, we will learn how to perform a peg-in transaction using the 2 way peg app."
-tags: [2 way peg, powpeg, peg-in, peg-out, 2way-peg, bridge, rbtc, btc, testnet, mainnet, trezor, liquality, leger, guide, setup, integrate, use]
+tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 ## Using hardware wallets
@@ -124,7 +124,7 @@ To enter an address, we are provided with two options:
 
 **Step 6b: Choose your preferred wallet**
 
-In this section, we will use the [Liquality wallet](/solutions/liquality/).
+In this section, we will use the Liquality wallet.
 
 ![Choose Liquality wallet](/img/resources/two-way-peg-app/13-choose-liquality-wallet.png)
 

@@ -3,7 +3,7 @@ sidebar_position: 1300
 sidebar_label:  Peg-out using Liquality and Ledger
 title: "Performing a peg-out using Liquality and Ledger"
 description: "Here, we will learn how to perform a peg-out using Liquality and Ledger."
-tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [2 way peg, powpeg, peg-in, peg-out, 2way-peg, bridge, rbtc, btc, testnet, mainnet, trezor, liquality, leger, guide, setup, integrate, use]
 ---
 
 

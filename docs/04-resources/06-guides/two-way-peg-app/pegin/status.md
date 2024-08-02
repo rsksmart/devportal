@@ -3,7 +3,7 @@ sidebar_position: 1300
 sidebar_label:  Viewing Peg-in Transaction Status
 title: "Viewing Transaction Status"
 description: "Here, we will learn how to view a transaction status on the 2 way peg app."
-tags: [2 way peg, powpeg, peg-in, peg-out, 2way-peg, bridge, rbtc, btc, testnet, mainnet, trezor, liquality, leger, guide, setup, integrate, use]
+tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 The transaction status shows the status of transactions performed using the 2 way peg application.

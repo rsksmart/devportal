@@ -3,7 +3,7 @@ sidebar_position: 1600
 sidebar_label: Supported Wallets
 title: "Supported Wallets"
 description: "See wallets which supports the two way peg app"
-tags: [2 way peg, powpeg, peg-in, peg-out, 2way-peg, bridge, rbtc, btc, rootstock, testnet, mainnet, guide, setup, integrate, use]
+tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 Here is a list of supported wallets for the 2 Way Peg App.

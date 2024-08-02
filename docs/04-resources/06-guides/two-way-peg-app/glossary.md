@@ -3,7 +3,7 @@ sidebar_position: 1500
 sidebar_label: Glossary
 title: "Glossary"
 description: "Welcome to the glossary section for the 2 way peg app documentation."
-tags: [2 way peg, powpeg, peg-in, peg-out, 2way-peg, bridge, rbtc, btc, rootstock, testnet, mainnet, guide, setup, integrate, use]
+tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 See a list of terms about/related to the 2 way peg app and their meanings.

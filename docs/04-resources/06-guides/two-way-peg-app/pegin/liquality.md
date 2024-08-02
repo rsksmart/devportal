@@ -3,7 +3,7 @@ sidebar_position: 1200
 sidebar_label:  Peg-in using Liquality Software Wallet
 title: "Performing a peg-in using Liquality Software Wallet"
 description: "Here, we will learn how to perform a peg-in transaction using the Liquality Software Wallet."
-tags: [2 way peg, powpeg, peg-in, peg-out, 2way-peg, bridge, rbtc, btc, testnet, mainnet, trezor, liquality, leger, guide, setup, integrate, use]
+tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 

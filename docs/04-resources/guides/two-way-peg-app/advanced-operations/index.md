@@ -3,7 +3,7 @@ sidebar_position: 1200
 sidebar_label: Advanced Operations 
 title: "Overview | Advanced Operations"
 description: "See how to perform advanced operations on the two way peg app"
-tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [2 way peg, powpeg, peg-in, peg-out, 2way-peg, bridge, rbtc, btc, rootstock, testnet, mainnet, guide, setup, integrate, use]
 ---
 
 This section contains detailed instructions on how to perform advanced operations on the 2 way peg app. 
