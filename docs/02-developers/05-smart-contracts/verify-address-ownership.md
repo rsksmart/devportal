@@ -78,7 +78,7 @@ MetaMask only contains network configurations to connect to Ethereum by default.
 To connect to Rootstock you will need to add Rootstock Network configurations.
 
 You have the option to manually add
-[Rootstock Mainnet network configuration to MetaMask](/wallet/use/metamask/).
+[Rootstock Mainnet network configuration to MetaMask](/dev-tools/wallets/metamask/).
 
 Alternatively, you can do this automatically,
 by visiting [identity.rifos.org](https://identity.rifos.org/),
