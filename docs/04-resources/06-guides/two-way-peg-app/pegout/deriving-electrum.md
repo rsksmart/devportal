@@ -5,6 +5,7 @@ title: "Viewing a derived bitcoin address"
 description: "Here, we will learn how to view a derived address using Electrum."
 tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
+
 ![2 way peg app (peg-out)](/img/resources/two-way-peg-app/pegout.gif)
 
 This section contains detailed instructions on how to review funds in Bitcoin after a pegout by:

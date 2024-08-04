@@ -71,8 +71,11 @@ Here, you can see the following information:
 
 ![Transaction summary completed](/img/resources/two-way-peg-app/45-transaction-summary-completed.png)
 
-> Note: In case an error occurs with this transaction, the amount will be sent back to the address indicated in the refund Bitcoin address located in your hardware wallet.
-> See the [glossary](/resources/guides/two-way-peg-app/glossary/) section for in-depth definition and explanation of these terms.
+:::danger[Error]
+
+- In case an error occurs with this transaction, the amount will be sent back to the address indicated in the refund Bitcoin address located in your hardware wallet.
+- See the [glossary](/resources/guides/two-way-peg-app/glossary/) section for in-depth definition and explanation of these terms.
+:::
 
 ### Using Blockcypher Explorer
 

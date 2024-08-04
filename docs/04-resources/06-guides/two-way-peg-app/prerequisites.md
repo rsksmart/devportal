@@ -6,10 +6,12 @@ description: "Welcome to the overview section of the 2 way peg app documentation
 tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-> **Note:** We will be using the 2 way peg app on [2-Way Peg App - Testnet](https://app.2wp.testnet.rootstock.io/) for learning purposes.
-> For transactions using **real tokens**, use the [2-Way Peg App - Mainnet](https://app.2wp.rootstock.io/) application.
+## Install Apps
 
-### Install Apps
+:::note[Using the App]
+In this guide, we will use the 2 way peg app on [2-Way Peg App - Testnet](https://app.2wp.testnet.rootstock.io/) for learning purposes.
+- Note that for transactions using **real tokens**, use the [2-Way Peg App - Mainnet](https://app.2wp.rootstock.io/) application.
+:::
 
 The Bitcoin testnet app does not show on Ledger live manager by default. To be able to see the BTC Testnet app you need to enable the developer mode in Ledger live.
 
@@ -36,7 +38,7 @@ The Bitcoin testnet app does not show on Ledger live manager by default. To be a
         - You have successfully added the Bitcoin testnet app to your account.
             <div align="left"><img width="70%" src="/img/resources/two-way-peg-app/account-added-successfully.png" alt="Account Added Successfully"/></div>
 
-### Get Funds
+## Get Funds
 
 - Get Testnet Tokens
     1. Go to the receive tab on Ledger live.
@@ -51,10 +53,15 @@ The Bitcoin testnet app does not show on Ledger live manager by default. To be a
     > _Note: You need at least **0.005 BTC** to perform a peg-in on Mainnet and Testnet. Likewise, you need at least **0.004 RBTC** to perform a peg-out on Mainnet and Testnet._
 - Get Mainnet Tokens
     - See [Get Crypto on Rootstock](/dev-tools/wallets).
-    > The 2 way peg app is available on both Mainnet and Testnet. Both applications follow the same process, for production purposes, use [Mainnet](https://app.2wp.rootstock.io/), for testing and development purposes, use the [Testnet](https://app.2wp.testnet.rootstock.io/). 
-    > See [glossary](/resources/guides/two-way-peg-app/glossary/) for explanation of these terms.
+
+:::info[Info]
+
+The 2 way peg app is available on both Mainnet and Testnet. Both applications follow the same process. For production purposes, use [Mainnet](https://app.2wp.rootstock.io/), for testing and development purposes, use the [Testnet](https://app.2wp.testnet.rootstock.io/). 
+- See [glossary](/resources/guides/two-way-peg-app/glossary/) for explanation of these terms.
+
+:::
     
-### Setup Requirements
+## Setup Requirements
 
 To get started with the 2-way peg app, ensure you have the following:
 
@@ -72,13 +79,21 @@ To get started with the 2-way peg app, ensure you have the following:
     - **Metamask Wallet (Peg-out Requirements only):**
         - For more details, see [Metamask Wallet](/dev-tools/wallets/metamask/)
     > For Peg-out requirements, ensure you have either the Liquality or Metamask wallet installed in your browser. For more information, see [Supported Browsers](/resources/guides/two-way-peg-app/advanced-operations/supported-browsers/) and [Supported Wallets](/resources/guides/two-way-peg-app/advanced-operations/supported-wallets/).
-- Funds
-    - A minimum balance of `0.005` BTC for peg-in and `0.004` RBTC for peg-out processes.
 
-> **Note:** This guide primarily uses the Ledger Nano S hardware wallet for illustration, but all models of Ledger and Trezor wallets are compatible with the 2-way peg app. If you do not have any of the listed hardware wallets, consider purchasing one from the official [Ledger](https://shop.ledger.com/products/ledger-nano-s-plus) or [Trezor](https://shop.trezor.io/) websites.
+:::info[Funds]
+
+- A minimum balance of `0.005` BTC for peg-in and `0.004` RBTC for peg-out processes.
+
+:::
 
 
-### Resources
+:::note[Note]
+
+This guide primarily uses the Ledger Nano S hardware wallet for illustration, but all models of Ledger and Trezor wallets are compatible with the 2-way peg app. If you do not have any of the listed hardware wallets, consider purchasing one from the official [Ledger](https://shop.ledger.com/products/ledger-nano-s-plus) or [Trezor](https://shop.trezor.io/) websites.
+
+:::
+
+## Resources
 
 * See the [overview section](/resources/guides/two-way-peg-app/overview/) to learn about the 2 way peg app
 * Convert [BTC to RBTC using the 2 way peg app](/resources/guides/two-way-peg-app/pegin/)

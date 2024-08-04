@@ -18,7 +18,11 @@ The 2 way peg app is a web application that fosters the interaction between the 
 
 The 2 way peg app uses a [REST API](https://en.wikipedia.org/wiki/Representational_state_transfer) and a [2 way peg api](https://github.com/rsksmart/2wp-api) as the backend, this API uses a [daemon](https://en.wikipedia.org/wiki/Daemon_(computing)) process, which is responsible for listening on blockchain transactions to update the state of peg-ins and in the future, the state of peg-outs, these state changes (tx hash, date change, last status) are stored in a mongodb database.
 
-> Currently, the 2 way peg app is available on both [Rootstock Mainnet](https://app.2wp.rootstock.io/) and [Rootstock Testnet](https://app.2wp.testnet.rootstock.io/). 
+:::info[Info]
+
+The 2 way peg app is available on both [Mainnet](https://app.2wp.rootstock.io/) and [Testnet](https://app.2wp.testnet.rootstock.io/). 
+
+:::
 
 The source code is available on github, and open source:
 - [Front end](https://github.com/rsksmart/2wp-app)
@@ -37,24 +41,23 @@ The 2 way peg app, has two primary features, they are:
 
 The 2 way peg application has lots of benefits, these include:
  
-**Simplified transactions**
+1. Simplified transactions
 
 The two way peg (peg-in and pegout) are its nature is a complex process and this app makes it simpler. Using the 2 way peg app enables you to choose where to receive the converted BTC / RBTC, which is also possible without it, but with an even higher level of complexity than a legacy peg-in and peg-out.
 
 
-**Visualization of transactions**
+2. Visualization of transactions
 
 Enables the visualization of the status of transactions on the Rootstock network
 
-**Enables communication with a user wallet (hardware and software)**
+3. Enables communication with a user wallet (hardware and software)
 
 The 2 way peg app communicates directly with the following services:
 - Trezor: Directly via usb
 - Ledger: Directly via usb and integrated with the manufacturer's application
-- Liquality: Directly through the application provided by the company
 - Metamask: Through the rLogin application. Learn more about the [rLogin application](https://github.com/rsksmart/rLogin)
 
-**Secure transactions**
+4. Secure transactions
 
 All transactions need to be confirmed via the device used by the customer, whether a hardware or software wallet, all transaction information and the appropriate signatures are generated through integration with the wallets.
 

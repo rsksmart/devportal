@@ -10,12 +10,15 @@ tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 
 In this guide, we will be using the 2 way peg app on [2 way peg app - Testnet](https://app.2wp.testnet.rootstock.io/) for learning purposes, for transactions using real tokens, please use the [2 way peg app - Mainnet](https://app.2wp.rootstock.io/) application.
 
+:::warning[Warning]
+
+Ensure to complete the steps in [prerequisites](/resources/guides/two-way-peg-app/prerequisites/) before proceeding with this section.
+
+:::
 
 ### Ledger Hardware Wallet
 
 ![Connect Ledger](/img/resources/two-way-peg-app/1-connect-ledger.png)
-
-> Ensure to complete the steps in [install apps](#install-apps) and [requirements](#requirements) before proceeding with this section.
 
 **Step 1: Connect to a ledger wallet**
 - Plug your Ledger wallet by connecting the USB cable that comes with the Ledger.
@@ -45,7 +48,9 @@ Now, you have successfully connected your Ledger device to the Bitcoin network.
 
 A peg-in is the process of exchanging BTC for RBTC. See the [glossary](/resources/guides/two-way-peg-app/glossary/) section for more information.
 
-> The minimum values allowed when creating a peg-in transaction is **0.005 BTC**. 
+:::tip[Tip]
+The minimum values allowed when creating a peg-in transaction is **0.005 BTC**. 
+:::
 
 Open [2 way peg application](https://app.2wp.testnet.rootstock.io/) on Testnet.
 
@@ -93,7 +98,9 @@ Select the account you would like to send BTC from, by clicking on the dropdown 
 
 ![Select Testnet Bitcoin Account](/img/resources/two-way-peg-app/9-select-testnet-btc-account.png)
 
-> Note that for each selected account type, we will see a corresponding balance in the 'Device account' field in transaction summary section on the right hand side of the screen.
+:::info[Info]
+For each selected account type, we will see a corresponding balance in the 'Device account' field in transaction summary section on the right hand side of the screen.
+:::
 
 **Enter Amount**
 
