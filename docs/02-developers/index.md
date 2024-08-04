@@ -10,7 +10,10 @@ Welcome to the Rootstock Developers Overview section.
 
 This section enables developers getting started with the Rootstock blockchain. Developers can install a local development environment using Hardhat, etc, create and test contracts with the libraries provided and use the libraries to build decentralized applications 
 
-> Looking to quickly test your dApp on testnet before deploying to mainnet? Use the [RPC API](https://rpc.rootstock.io/) or view the [json-rpc methods](/developers/rpc-api/methods/) available on the RPC API.
+:::info[Info]
+* Looking to quickly test your dApp on testnet before deploying to mainnet? Use the [RPC API](https://rpc.rootstock.io/) or view the [json-rpc methods](/developers/rpc-api/methods/) available on the RPC API.
+* Dive right in with [step-by-step guides](/developers/quickstart/) to get your development environment set up and deploy your first dApp.
+:::
 
 ## Navigating the Developer Section
 
