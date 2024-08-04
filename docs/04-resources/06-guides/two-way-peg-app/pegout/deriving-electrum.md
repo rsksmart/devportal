@@ -3,15 +3,16 @@ sidebar_position: 1200
 sidebar_label:  Viewing a derived bitcoin address
 title: "Viewing a derived bitcoin address"
 description: "Here, we will learn how to view a derived address using Electrum."
-tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
+
 ![2 way peg app (peg-out)](/img/resources/two-way-peg-app/pegout.gif)
 
 This section contains detailed instructions on how to review funds in Bitcoin after a pegout by:
 
-- Convert [RBTC - BTC](#converting-rbtc-to-btc)
-- Import a [key in Electrum](#import-key-in-electrum)
-- Import in Electrum if you are using [hardware wallets](#import-key-in-electrum-using-hardware-wallets)
+- Convert RBTC - BTC
+- Import a key in Electrum
+- Import in Electrum if you are using hardware wallets
 
 ## Why derive address using Electrum?
 

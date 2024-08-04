@@ -3,7 +3,7 @@ sidebar_position: 1300
 sidebar_label:  Viewing Peg-in Transaction Status
 title: "Viewing Transaction Status"
 description: "Here, we will learn how to view a transaction status on the 2 way peg app."
-tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 The transaction status shows the status of transactions performed using the 2 way peg application.
@@ -71,8 +71,11 @@ Here, you can see the following information:
 
 ![Transaction summary completed](/img/resources/two-way-peg-app/45-transaction-summary-completed.png)
 
-> Note: In case an error occurs with this transaction, the amount will be sent back to the address indicated in the refund Bitcoin address located in your hardware wallet.
-> See the [glossary](/resources/guides/two-way-peg-app/glossary/) section for in-depth definition and explanation of these terms.
+:::danger[Error]
+
+- In case an error occurs with this transaction, the amount will be sent back to the address indicated in the refund Bitcoin address located in your hardware wallet.
+- See the [glossary](/resources/guides/two-way-peg-app/glossary/) section for in-depth definition and explanation of these terms.
+:::
 
 ### Using Blockcypher Explorer
 

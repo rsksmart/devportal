@@ -3,7 +3,7 @@ sidebar_position: 1200
 sidebar_label: Advanced Operations 
 title: "Overview | Advanced Operations"
 description: "See how to perform advanced operations on the two way peg app"
-tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 This section contains detailed instructions on how to perform advanced operations on the 2 way peg app. 
@@ -11,11 +11,11 @@ This section contains detailed instructions on how to perform advanced operation
 These operations include;
 
 * How to review funds in Bitcoin after a pegout by [viewing a derived address](/resources/guides/two-way-peg-app/pegout/deriving-electrum), 
-* Convert [RBTC - BTC](#converting-rbtc-to-btc) and import a [key in Electrum](/resources/guides/two-way-peg-app/pegout/deriving-electrum#import-key-in-electrum), import in Electrum if you are using [hardware wallets](/resources/guides/two-way-peg-app/pegout/deriving-electrum#import-key-in-electrum-using-hardware-wallets)
-* Selecting [different accounts](#account-selection)
-* Viewing [advanced details](#how-to-view-advanced-details)
-* Adjusting [network fees](#adjusting-network-fees)
-* Viewing [Advanced data](#advanced-data)
+* Convert RBTC - BTC and import a [key in Electrum](/resources/guides/two-way-peg-app/pegout/deriving-electrum#import-key-in-electrum), import in Electrum if you are using [hardware wallets](/resources/guides/two-way-peg-app/pegout/deriving-electrum#import-key-in-electrum-using-hardware-wallets)
+* Selecting different accounts
+* Viewing advanced details
+* Adjusting network fees
+* Viewing Advanced data
 
 > For  more information, see [design and architecure](/resources/guides/two-way-peg-app/advanced-operations/design-architecture/), [supported addresses](/resources/guides/two-way-peg-app/advanced-operations/supported-addresses/), [supported wallets](/resources/guides/two-way-peg-app/advanced-operations/supported-wallets/), [supported browsers](/resources/guides/two-way-peg-app/advanced-operations/supported-browsers/)
 

@@ -6,7 +6,7 @@ tags: [rsk, rootstock, prerequisites, setup, requirements]
 description: "Minimum hardware requirements for Rootstock."
 ---
 
-This guide provides clear instructions for developers on the supported Solidity versions and the necessary configurations needed to ensure your smart contracts are deployed on the Rootstock network. See the [developer tools](/dev-tools/) section for a list tools to build on Rootstock.
+This guide provides clear instructions for developers on the supported Solidity versions and the necessary configurations needed to ensure your smart contracts are deployed on the Rootstock network. See the [developer tools](/dev-tools/) section for a list of tools to build on Rootstock.
 
 ## Solidity Version
 - Supported version: `0.8.19`
@@ -20,7 +20,7 @@ See how to setup the RPC API and get an [API Key](/developers/rpc-api/setup).
 
 ## Network Configuration
 
-Fill these values to connect to Rootstock Mainnet or Testnet.                           
+Fill these values to connect to the Rootstock Mainnet or Testnet.                           
 
 <table class="table">
   <thead>
@@ -61,7 +61,7 @@ Fill these values to connect to Rootstock Mainnet or Testnet.
 
 ## Contract Addresses
 
-* See the List of [Contract Addresses on Rootstock](/developers/contract-addresses)
+* See the List of [Contract Addresses on Rootstock](/developers/smart-contracts/contract-addresses)
 
 ### Derivation path
 
@@ -74,7 +74,7 @@ Testnet: m/44'/37310'/0'/0/N
 ```
 
 :::info[Info]
-See [Account based addresses](/concepts/account-based-addresses/) section for more information.
+See [Account based addresses](/concepts/account-based-addresses/) section for more information or [how to verify address ownership](/developers/smart-contracts/verify-address-ownership/).
 :::
 
 ## Installing Hardhat

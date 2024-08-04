@@ -3,7 +3,7 @@ sidebar_position: 1200
 sidebar_label:  Peg-in using Liquality Software Wallet
 title: "Performing a peg-in using Liquality Software Wallet"
 description: "Here, we will learn how to perform a peg-in transaction using the Liquality Software Wallet."
-tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 
@@ -12,7 +12,8 @@ tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 In this guide, we will be using the [2 way peg app](https://app.2wp.rootstock.io/) application for unlockcing liquality, access peg-in to use liquality, and verify if peg-in is active.
 
 :::warning[Warning]
-Liquality Wallet has been discountinued. See section on [Supported wallets](/resources/guides/two-way-peg-app/advanced-operations/supported-wallets) by the 2 Way Peg App.
+Liquality Wallet has been discountinued. 
+See section on [Supported wallets](/resources/guides/two-way-peg-app/advanced-operations/supported-wallets) by the 2 Way Peg App.
 :::
 
 ### Acessing pegin to use Liquality

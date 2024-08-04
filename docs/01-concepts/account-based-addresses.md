@@ -9,7 +9,7 @@ description: "EIP-1191 chainId is used in Rootstock addresses as a checksum. m/4
 Rootstock Addresses incorporate an optional blockchain identifier (also known as `chainId`). If the `chainId` is not present, it is assumed the address refers to the Rootstock main network.
 
 :::info[Info]
-See [contract addresses](/developers/contract-addresses) for the list of contract addressess on Rootstock.
+See [contract addresses](/developers/smart-contracts/contract-addresses) for the list of contract addressess on Rootstock or [how to verify address ownership](/developers/smart-contracts/verify-address-ownership/).
 :::
 
 ## How to get an address

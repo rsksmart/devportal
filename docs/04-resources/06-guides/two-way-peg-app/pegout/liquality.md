@@ -3,7 +3,7 @@ sidebar_position: 1500
 sidebar_label:  Peg-out using Liquality
 title: "Performing a peg-out using Liquality Wallet"
 description: "Here, we will learn how to perform a peg-out using Liquality Software Wallet."
-tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 

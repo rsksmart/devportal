@@ -3,7 +3,7 @@ sidebar_position: 1900
 sidebar_label: Peg-out using rLogin (Trezor and Ledger)
 title: "Performing a peg-out transaction using rLogin (Trezor and Ledger)"
 description: "Here, we will learn how to perform a peg-out using Trezor."
-tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 ![2 way peg app (peg-out)](/img/resources/two-way-peg-app/pegout.gif)

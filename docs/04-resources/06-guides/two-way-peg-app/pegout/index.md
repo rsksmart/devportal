@@ -3,7 +3,7 @@ sidebar_position: 1100
 sidebar_label:  Peg-out
 title: "Overview | Pegout"
 description: "Here, we will learn how to perform a peg-out transaction using the 2 way peg app."
-tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 ![2 way peg app (peg-out)](/img/resources/two-way-peg-app/pegout.gif)
