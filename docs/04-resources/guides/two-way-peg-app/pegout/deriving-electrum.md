@@ -3,7 +3,7 @@ sidebar_position: 1200
 sidebar_label:  Viewing a derived bitcoin address
 title: "Viewing a derived bitcoin address"
 description: "Here, we will learn how to view a derived address using Electrum."
-tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [2 way peg, powpeg, peg-in, peg-out, 2way-peg, bridge, rbtc, btc, testnet, mainnet, trezor, liquality, leger, guide, setup, integrate, use]
 ---
 ![2 way peg app (peg-out)](/img/resources/two-way-peg-app/pegout.gif)
 

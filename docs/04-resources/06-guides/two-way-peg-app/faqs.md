@@ -3,7 +3,7 @@ sidebar_position: 1300
 sidebar_label: FAQs
 title: "Frequently Asked Questions (FAQs)"
 description: "Frequently asked questions."
-tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 Here, you can find a list of frequently asked questions (FAQs) about the 2 way peg application.

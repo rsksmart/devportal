@@ -3,7 +3,7 @@ sidebar_position: 200
 sidebar_label: Overview
 title: "Overview"
 description: "Welcome to the overview section of the 2 way peg app documentation."
-tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 In this section, we are going to learn about the 2 way peg app, [how it works](#how-it-works), its [features](#features), and the [benefits](#why-use-the-2-way-peg-app) of using the application.

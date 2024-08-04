@@ -3,7 +3,7 @@ sidebar_position: 1400
 sidebar_label: Supported Addresses
 title: "Supported Addresses"
 description: "See supported addresses on the two way peg app"
-tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 The following address types are supported by the 2 way peg app.

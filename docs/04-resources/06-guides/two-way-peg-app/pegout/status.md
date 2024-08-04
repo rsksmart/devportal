@@ -3,7 +3,7 @@ sidebar_position: 1800
 sidebar_label:  Viewing Peg-out Transaction Status
 title: "Viewing the status of a transaction after peg-out"
 description: "Here, we will learn how to view  a transaction status after a peg-out."
-tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 The processing of a pegout transaction is made up of several dependencies, and for each dependency a processing step is added, and at each step in the process, the pegout is shown in a form on the transaction status query screen.

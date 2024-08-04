@@ -3,7 +3,7 @@ sidebar_position: 300
 sidebar_label: Prerequisites
 title: "Prerequisites"
 description: "Welcome to the overview section of the 2 way peg app documentation."
-tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 > **Note:** We will be using the 2 way peg app on [2-Way Peg App - Testnet](https://app.2wp.testnet.rootstock.io/) for learning purposes.
@@ -73,7 +73,7 @@ To get started with the 2-way peg app, ensure you have the following:
         - For more details, see [Metamask Wallet](/dev-tools/wallets/metamask/)
     > For Peg-out requirements, ensure you have either the Liquality or Metamask wallet installed in your browser. For more information, see [Supported Browsers](/resources/guides/two-way-peg-app/advanced-operations/supported-browsers/) and [Supported Wallets](/resources/guides/two-way-peg-app/advanced-operations/supported-wallets/).
 - Funds
-    - A minimum balance of 0.005 BTC for peg-in and 0.004 RBTC for peg-out processes.
+    - A minimum balance of `0.005` BTC for peg-in and `0.004` RBTC for peg-out processes.
 
 > **Note:** This guide primarily uses the Ledger Nano S hardware wallet for illustration, but all models of Ledger and Trezor wallets are compatible with the 2-way peg app. If you do not have any of the listed hardware wallets, consider purchasing one from the official [Ledger](https://shop.ledger.com/products/ledger-nano-s-plus) or [Trezor](https://shop.trezor.io/) websites.
 

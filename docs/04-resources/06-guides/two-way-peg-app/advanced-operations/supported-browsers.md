@@ -3,7 +3,7 @@ sidebar_position: 1500
 sidebar_label: Supported Browsers
 title: "Supported Browsers"
 description: "See browsers which support the two way peg app"
-tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 
