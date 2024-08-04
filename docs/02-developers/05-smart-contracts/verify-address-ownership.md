@@ -20,11 +20,11 @@ before you ask others to send you cryptocurrency or tokens at this address.
 Here we will demonstrate exactly how to do this,
 and be sure that you truly "control" a particular address.
 All you need is Chrome (web browser) and MetaMask (browser extension).
-You do not need any RBTC balance to do so!
+You do not need any RBTC balance to do so.
 
 ## Getting Started
 
-**ℹ️** Install MetaMask
+### Install MetaMask
 
 You can either use the [metamask-landing.rifos.org](https://metamask-landing.rifos.org/) tool to download/install Metamask, and add Rootstock custom network or follow the steps listed in [metamask.io](https://metamask.io/). 
 
@@ -34,7 +34,7 @@ If you are doing this for the first time,
 you will need to generate a *seed phrase*,
 and it is extremely important that you record this somewhere.
 
-**ℹ️** Enable only one Web3 browser extension
+### Enable only one Web3 browser extension
 
 If you have more than one Web3 browser extension installed,
 for example, if you have either MetaMask, Liquality or Nifty,
@@ -46,19 +46,19 @@ Verify that you only have MetaMask installed, **or**
 if you have other Web3 browser extensions,
 you should disable all of the others by clicking on the toggle buttons.
 
-> Note: The Nifty browser wallet has been discontinued. See the [Nifty Wallet)](https://developers.rsk.co/wallet/use/nifty) page for more information.
-
 ![](/img/developers/verify-address-ownership/rif-identity-metamask-disable-other-web3-extensions.png)
 
+:::info[Optional]
 
-Optional:
 For a better user experience, you may also wish to
-click on the extensions icon (jigsaw shape), and in the dropdown,
-click the pin icon next to MetaMask to ensure it is always visible.
+- Click on the extensions icon (jigsaw shape), and in the dropdown,
+- Click the pin icon next to MetaMask to ensure it is always visible.
+
+:::
 
 ![](/img/developers/verify-address-ownership/rif-identity-metamask-pin-extension-dropdown.png)
 
-**ℹ️** Unlock MetaMask
+### Unlock MetaMask
 
 After installing the extension or starting your browser,
 MetaMask should display a popup asking you to unlock the account.
@@ -72,7 +72,7 @@ instead of within a popup.
 
 ![](/img/developers/verify-address-ownership/rif-identity-metamask-unlock.png)
 
-**ℹ️** Add custom network for Rootstock
+### Add custom network for Rootstock
 
 MetaMask only contains network configurations to connect to Ethereum by default.
 To connect to Rootstock you will need to add Rootstock Network configurations.
@@ -106,7 +106,7 @@ and you have addresses inside that wallet.
 
 You're ready to verify that you can use your wallet to sign messages!
 
-**(1)** View transaction history
+### View transaction history
 
 In MetaMask, you can view your transaction history for a particular address
 by selecting the "Activity" tab in the main screen.
@@ -121,7 +121,7 @@ Let's copy the address by clicking on it.
 It is located near the top, begins with `0x`,
 and should be under a label similar to "Account 1".
 
-**(2)**  Visit block explorer
+###  Visit block explorer
 
 Let's check the address that you've just copied
 on the Rootstock block explorer.
@@ -137,7 +137,7 @@ Here you may see "Not Found".
 This does not necessarily mean that the account does not exist.
 Instead, it means that there simply are no transactions on the blockchain at this address.
 
-**(3)** Visit RIF Identity Manager
+### Visit RIF Identity Manager
 
 So far, not so good, right?
 ... Nothing we've seen thus far assures you
@@ -163,7 +163,7 @@ Select "MetaMask"
 > and you may not see MetaMask here as a result.
 > See the "before you begin" section for details.
 
-**(4)** MetaMask site connection permission
+### MetaMask site connection permission
 
 You will be presented with a popup from MetaMask,
 which essentially is asking you whether you trust RIF Identity Manager.
@@ -182,7 +182,7 @@ to see your account addresses.
 Click "Connect".
 This allows MetaMask to see your account addresses.
 
-**(5)** RIF Identity Authentication
+### RIF Identity Authentication
 
 Upon granting these permissions,
 the RIF Identity Manager DApp
@@ -214,7 +214,7 @@ When you do this, the **crucial part** happens!
 
 This is perfect for newly generated accounts!
 
-**(6)** Check the dashboard
+### Check the dashboard
 
 Once you have signed the message and it has been verified,
 you will see the dashboard for the RIF Identity Manager.

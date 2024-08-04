@@ -17,4 +17,7 @@ The Rootstock Resources section serves as a comprehensive knowledge base compris
 | [Join the Discord Community](https://discord.com/invite/rootstock) | Be a part of the Rootstock Community on Discord.|
 | [Ambassador Programs](https://rootstock.io/ambassadors-program/) | Learn about the Rootstock Ambassador Program, and how to become one.|
 | [Grants](https://rootstock.io/grants/) | Get support to build your next dApp on Rootstock through the strategic grants program.|
+| [Tutorials](/resources/tutorials/) | Tutorials on Rootstock.|
+| [Guides](/resources/guides/) | User Guides on Rootstock.|
+| [Hackathon](/resources/hackathon/) | Hackathon and Workshop Resources.|
 | [RSKIPs](https://github.com/rsksmart/RSKIPs) | Rootstock Improvement Proposals.|
