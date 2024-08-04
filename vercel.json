@@ -277,7 +277,7 @@
     {"source" : "/guides/nft/create-smart-contract/", "destination" : "/resources/tutorials/"},
     {"source" : "/rsk/node/install/requirements/", "destination" : "/node-operators/setup/installation/"},
     {"source" : "/kb/geth-attach-local-node/", "destination" : "/resources/tutorials/"},
-    {"source" : "/rsk/architecture/security/", "destination" : "/concepts/"},
+    {"source" : "/rsk/architecture/security/", "destination" : "/concepts/powpeg/security-model/"},
     {"source" : "/solutions/babelfish/", "destination" : "https://rootstock.io/ecosystem/"},
     {"source" : "/kb/create-a-collectable-token/", "destination" : "/resources/tutorials/"},
     {"source" : "/develop/json-rpc-api", "destination" : "/developers/rpc-api/setup/"},
