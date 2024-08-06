@@ -51,7 +51,7 @@ To configure your `rskMainnet` and `rskTestnet` private keys, you'll need to upd
     solidity: "0.8.20",
     networks: {
       rskMainnet: {
-        url: "https://rpc.rootstock.io/{YOUR_APIKEY}",
+        url: "https://rpc.mainnet.rootstock.io/{YOUR_APIKEY}",
         chainId: 30,
         gasPrice: 60000000,
         accounts: [process.env.ROOTSTOCK_MAINNET_PRIVATE_KEY]

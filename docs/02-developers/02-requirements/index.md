@@ -38,7 +38,7 @@ Fill these values to connect to the Rootstock Mainnet or Testnet.
     </tr>
     <tr>
       <td>RPC URL</td>
-      <td>https://rpc.rootstock.io/{YOUR_APIKEY}</td>
+      <td>https://rpc.mainnet.rootstock.io/{YOUR_APIKEY}</td>
       <td>https://rpc.testnet.rootstock.io/{YOUR_APIKEY}</td>
     </tr>
     <tr>
