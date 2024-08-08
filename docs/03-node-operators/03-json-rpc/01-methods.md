@@ -1085,6 +1085,56 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 
 Generates and returns an estimate of how much gas is necessary to allow the transaction to complete. The transaction will not be added to the blockchain. Note that the estimate may be significantly more than the amount of gas actually used by the transaction, for a variety of reasons including EVM mechanics and node performance.
 
+Note that when `eth_estimateGas` is called, the node simulates the transaction execution without broadcasting it to the network.
+The simulation runs through the entire transaction process as if it were being executed, including checking for sufficient balance, contract code execution, etc.
+During the simulation, the method calculates the exact amount of gas that would be consumed by the transaction if it were to be executed on the blockchain. The estimated gas amount is returned, helping users set an appropriate gas limit for the actual transaction.
+
+There is a difference in Rootstock compared to Ethereum, and it is that if one of the steps of the simulated transaction fails, the node will return the gas estimation needed for the transaction, while on Ethereum, the node will return an error instead of the gas estimation.
+
+You can see this behavior on the following example, where we call `eth_estimateGas` for a transaction that would be executed from an address without enough balance.
+
+Example:
+
+```js
+{
+    "jsonrpc":"2.0",
+    "method":"eth_estimateGas",
+    "params":[
+        {"from": "0xb60e8dd61c5d32be8058bb8eb970870f07233155",
+        "to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567",
+        "gas": "0x76c0",
+        "gasPrice": "0x9184e72a000",
+        "value": "0x9184e72a",
+        "data": "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675"},
+        "latest"
+    ],
+    "id":0
+}
+```
+
+Response on Rootstock:
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 0,
+    "result": "0x5498"
+}
+```
+
+Response on Ethereum:
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 0,
+    "error": {
+        "code": -32000,
+        "message": "insufficient funds for transfer"
+    }
+}
+```
+
 ##### Parameters
 
 See [eth_call](#eth_call) parameters, expect that all properties are optional. If no gas limit is specified geth uses the block gas limit from the pending block as an upper bound. As a result the returned estimate might not be enough to executed the call/transaction when the amount of gas is higher than the pending block gas limit.
