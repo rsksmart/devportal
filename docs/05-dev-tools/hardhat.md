@@ -3,7 +3,7 @@ sidebar_position: 3
 sidebar_label: Hardhat
 title: Hardhat on Rootstock
 description: "How to get started with writing, deploying and testing smart contracts on Rootstock using Hardhat." 
-tags: [hardhat, quick-start, developer tools, rootstock, ethereum, smart-contracts, get-started, how-to]
+tags: [hardhat, quick start, developer tools, rsk, rootstock, ethereum, dApps, smart contracts]
 ---
 
 [Hardhat](https://hardhat.org/docs) is an Ethereum development environment for developers. It's primarily used in the development of smart contracts for the Rootstock and EVM-compatible chains. 
@@ -24,7 +24,7 @@ tags: [hardhat, quick-start, developer tools, rootstock, ethereum, smart-contrac
 
 7. **Ethers.js and Waffle Integration:** These integrations provide a set of utilities for writing and testing smart contracts.
 
-## Install
+## Installation
 
 To install Hardhat, run the following command:
 
@@ -32,11 +32,8 @@ To install Hardhat, run the following command:
 npm install --save-dev hardhat
 ```
 
-----
-
-## Related Docs
-
+## Related Links
+- [Hardhat Starter Kit](/developers/quickstart/hardhat/)
 - [Getting Started with Hardhat](/developers/smart-contracts/hardhat/)
-- [Getting Started with Foundry](/dev-tools/foundry/)
-- [Github Repo](https://github.com/NomicFoundation/hardhat)
+- [Getting Started with Foundry](/developers/smart-contracts/hardhat/foundry/)
 - [Developer Tools](/dev-tools/)

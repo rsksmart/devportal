@@ -106,7 +106,7 @@ A **workaround** for this is to lowercase the addresses after copying them.
 - Currency may be mistakenly displayed as `ETH` within some screens of MetaMask.
   The Rootstock network uses `RBTC` as its cryptocurrency.
 - This tutorial uses [Rootstock RPC API](/developers/rpc-api/).
-  You can connect to another nodes or use the [Public Node](/node-operators/public-nodes/) by changing the RPC URL.
+  You can connect to other nodes or use the [Public Node](/node-operators/public-nodes/) by changing the RPC URL.
 - The node must enable CORS for browser-based dApps to work.
   - Please review the [configuration file reference](/node-operators/setup/configuration/) for CORS settings.
 :::

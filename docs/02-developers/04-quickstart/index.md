@@ -57,8 +57,8 @@ values={[
     title="RIF Relay Starter Kit"
     subtitle="quickstart"
     color="orange"
-    linkHref="/developers/integrate/rif-relay/"
-    linkTitle="View the demo"
+    linkHref="/developers/integrate/rif-relay/sample-dapp/"
+    linkTitle="Use Kit"
     description="Starter kit to develop on RIF Relay."
   />
 <FilterItem

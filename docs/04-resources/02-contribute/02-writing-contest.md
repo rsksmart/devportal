@@ -10,8 +10,11 @@ The #bitcoin Writing Contest, presented by Rootstock and HackerNoon, is now live
 
 Contest entries should showcase thought leadership, dev stack and tooling, and also creating engaging tutorials and guides in the realm of Bitcoin and Rootstock. Submit a story with the #bitcoin tag on HackerNoon. Submit a story with the `#bitcoin` tag on HackerNoon, read the [3 Steps to Enter The #bitcoin Writing Contest](https://www.contests.hackernoon.com/how-to-enter-bitcoin-writing-contest).
 
-> Looking to contribute code or contribute to the security of the Rootstock platform? 
-> - See the [Contribute](/resources/contribute/) section for more exciting ways to contribute to Rootstock.
+:::tip[Tip]
+
+* Looking to contribute to open source code or contribute to the security of the Rootstock platform? See the [Contribute](/resources/contribute/) section for more exciting ways to contribute to Rootstock.
+
+:::
 
 <div class="btn-container">
   <span></span>

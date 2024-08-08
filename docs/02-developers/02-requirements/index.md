@@ -9,7 +9,7 @@ description: "Minimum hardware requirements for Rootstock."
 This guide provides clear instructions for developers on the supported Solidity versions and the necessary configurations needed to ensure your smart contracts are deployed on the Rootstock network. See the [developer tools](/dev-tools/) section for a list of tools to build on Rootstock.
 
 ## Solidity Version
-- Supported version: `0.8.19`
+- Supported solc version: `0.8.19`
 
 ## Node RPC
 - Interact with Rootstock using the [RPC API](https://rpc.rootstock.io/)
@@ -77,16 +77,17 @@ Testnet: m/44'/37310'/0'/0/N
 See [Account based addresses](/concepts/account-based-addresses/) section for more information or [how to verify address ownership](/developers/smart-contracts/verify-address-ownership/).
 :::
 
-## Installing Hardhat
-```shell
-    npm install --save-dev hardhat
+## Install Hardhat
+
+```bash
+npm install --save-dev hardhat
 ```
 
-:::info[Guides]
+:::tip[Tip]
 
 - Use the [Hardhat Starter Kit](/developers/quickstart/hardhat)
 
-- Learn how to write, interact, deploy, and test smart contracts on Rootstock using [Hardhat](/developers/smart-contracts/hardhat)
+- Learn how to write, interact, deploy, and test smart contracts on Rootstock using [Hardhat](/developers/smart-contracts/hardhat) or [Foundry](/developers/smart-contracts/foundry/).
 
 :::
 
@@ -94,16 +95,20 @@ See [Account based addresses](/concepts/account-based-addresses/) section for mo
 
 ### POSIX Compliant Shell
 
-- MacOS/Linux
-    - Standard terminal.
-- Windows
-    - Standard terminals like `cmd` or PowerShell may not support some commands. We recommended installing [Git for Windows](https://gitforwindows.org/) for Git Bash, which provides a more UNIX-like experience. Here's a [tutorial on Git Bash](https://www.atlassian.com/git/tutorials/git-bash).
+<Tabs>
+  <TabItem value="windows" label="Windows">
+    Standard terminals like `cmd` or PowerShell may not support some commands. We recommended installing [Git for Windows](https://gitforwindows.org/) for Git Bash, which provides a more UNIX-like experience. Here's a [tutorial on Git Bash](https://www.atlassian.com/git/tutorials/git-bash).
+  </TabItem>
+  <TabItem value="macos" label="MacOS/Linux">
+    Standard terminal.
+  </TabItem>
+</Tabs>
 
-## Installing Node.js and NPM
+### Installing Node.js and NPM
 
 <Tabs>
   <TabItem value="nvm" label="NVM" default>
-    - 18 or later. 
+    - Node v18 or later. 
         - For installation, use [NVM install script](https://github.com/nvm-sh/nvm#install--update-script).
   </TabItem>
   <TabItem value="windows" label="Windows">
@@ -115,7 +120,7 @@ See [Account based addresses](/concepts/account-based-addresses/) section for mo
   <TabItem value="macos" label="MacOS">
     1. Install Homebrew (if not installed):
         ```bash
-            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)
         ``` 
     2. Install Node.js and npm with `brew install node` 
     3. Check versions in Terminal with `node -v` and `npm -v`
