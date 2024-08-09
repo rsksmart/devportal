@@ -5,6 +5,7 @@
   border-left: 1px solid var(--bs-body-color);
   margin-left: 8px;
   margin-top: 2px;
+  order: 3;
 }
 .navbar{
   @include media-breakpoint-down(lg) {
