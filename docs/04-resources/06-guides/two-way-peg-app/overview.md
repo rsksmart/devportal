@@ -34,8 +34,10 @@ The 2 way peg app, has two primary features, they are:
 
 - Peg-in: A conversion from BTC to RBTC. See [Glossary](/resources/guides/two-way-peg-app/glossary/) page for more explanation. 
     - **Note: The peg-in process is final and cannot be reverted**.
+    - **Native pegin transaction has 17 hours estimated time to completion**.
 
 - Peg-out: A conversion from RBTC to BTC. This current version of the 2 way peg app. See [pegout](/resources/guides/two-way-peg-app/pegout/) for more explanation.
+    - **Native pegin transaction has 34 hours estimated time to completion**.
 
 ## Why use the 2 way peg app?
 

@@ -10,9 +10,8 @@ Here is a list of supported wallets for the 2 Way Peg App.
 - Hardware wallets
     - [Ledger](/resources/guides/two-way-peg-app/pegin/ledger/)
     - [Trezor](/resources/guides/two-way-peg-app/pegin/trezor/)
-    - [Leather Hardware Wallet](https://leather.io/)
 - Software wallets
-    - [Liquality](/resources/guides/two-way-peg-app/pegin/liquality/)
+    - [Leather](/resources/guides/two-way-peg-app/pegin/leather/)
 
 :::warning[Warning]
 Liquality Wallet has been discountinued. See [alternative software wallets](/dev-tools/wallets) supported by the 2 Way Peg App.

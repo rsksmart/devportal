@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1900
-sidebar_label: Peg-out using rLogin (Trezor and Ledger)
-title: "Performing a peg-out transaction using rLogin (Trezor and Ledger)"
+sidebar_label: Peg-out using Trezor
+title: "Performing a peg-out transaction using Trezor"
 description: "Here, we will learn how to perform a peg-out using Trezor."
 tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
@@ -15,10 +15,11 @@ To perform a peg-out transaction using the Ledger device directly, follow the st
 * Step 1: Plug the Ledger device into the computer
 
 * Step 2: Access **peg-out** screen:
-![pegout screen](/img/resources/two-way-peg-app/using-hd-wallets/acessing-pegout-screen.png)
+![pegout screen](/img/resources/two-way-peg-app/pegout-button.png)
 
-* Step 3: Click on **Connect wallet** button
-![connect-wallet](/img/resources/two-way-peg-app/using-hd-wallets/connect-wallet.png)
+* Step 3: Click on **Connect wallet** button:
+
+![connect-wallet](/img/resources/two-way-peg-app/pegout-ledger-trezor-connection.png)
 
 * Step 4: Click on **Trezor** button<br/>
 ![connect-wallet](/img/resources/two-way-peg-app/using-hd-wallets/trezor.png)
