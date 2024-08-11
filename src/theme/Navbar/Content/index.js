@@ -14,6 +14,7 @@ import isInternalUrl from '@docusaurus/isInternalUrl';
 import Link from '@docusaurus/Link';
 
 import AIButton from "@theme/Navbar/AIButton";
+import LocaleDropdown from "@theme/Navbar/LocaleDropdown";
 
 function useNavbarItems() {
   // TODO temporary casting until ThemeConfig type is improved
@@ -22,7 +23,7 @@ function useNavbarItems() {
 function RightNavbarItems({items}) {
   return items?.length && (
     <div className={`d-flex gap-16 align-items-center`}>
-      {items.map((item, i) => (
+      {items.map((item, i) => item.type !== 'localeDropdown' && (
         <ErrorCauseBoundary
           key={i}
           onError={(error) =>
@@ -85,6 +86,7 @@ export default function NavbarContent() {
             </div>
           </div>
           <RightNavbarItems items={rightItems} />
+          <LocaleDropdown />
           <NavbarColorModeToggle />
         </div>
       }

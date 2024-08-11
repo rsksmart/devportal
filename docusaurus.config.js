@@ -59,7 +59,17 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'es'],
+    localeConfigs: {
+      en: {
+        label: 'ENG',
+        htmlLang: 'en-GB',
+      },
+      es: {
+        label: 'ESP',
+        htmlLang: 'es',
+      },
+    },
   },
   plugins: [
     'docusaurus-plugin-sass',
@@ -102,14 +112,7 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/rsksmart/devportal-rootstock/tree/main/'
         },
-        blog: {
-          blogSidebarTitle: 'All posts',
-          blogSidebarCount: 'ALL',
-          blogTitle: 'Changelog',
-          blogDescription:
-            'stay informed about the latest product updates on Rootstock.',
-        },
-
+        blog: false,
         theme: {
           customCss: ['./src/scss/app.scss'],
           // customCss: ['./src/css/custom.css']
@@ -174,13 +177,17 @@ const config = {
             position: 'right',
             icon: 'discord',
           },
+          {
+            position: 'right',
+            type: 'localeDropdown',
+          },
         ],
       },
       footer: {
         // style: 'dark',
         links: [
           {
-            title: 'WHITEPAPER',
+            title: 'Whitepaper',
             items: [
               {
                 label: 'Original Whitepaper',
@@ -197,7 +204,7 @@ const config = {
             ],
           },
           {
-            title: 'RESOURCES',
+            title: 'Resources',
             items: [
               {
                 label: 'Merged Mining',

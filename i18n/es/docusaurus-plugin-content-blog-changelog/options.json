@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "Registro de cambios",
+    "description": "The title for the blog used in SEO"
+  },
+  "description": {
+    "message": "Manténgase informado sobre las últimas actualizaciones de productos en Rootstock.",
+    "description": "The description for the blog used in SEO"
+  },
+  "sidebar.title": {
+    "message": "Registro de cambios",
+    "description": "The label for the left sidebar"
+  }
+}
