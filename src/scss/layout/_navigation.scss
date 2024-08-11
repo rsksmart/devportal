@@ -89,27 +89,33 @@
     }
     &:hover{
       &:after{
-        --ifm-menu-link-sublist-icon-filter: none;
+        --ifm-menu-link-sublist-icon-filter: invert(100%) sepia(94%) saturate(17%)
+        hue-rotate(223deg) brightness(104%) contrast(98%);
+        html[data-theme='dark'] &{
+          --ifm-menu-link-sublist-icon-filter: none;
+        }
       }
     }
   }
   .dropdown__menu{
     top: 100%;
+    right: auto;
+    left: 50%;
     width: fit-content;
     max-width: 10rem;
     min-width: initial;
-    transform: translateY(6px);
+    transform: translate(-50%, 6px);
     .locale-mobile &{
       top: auto;
       bottom: 100%;
       margin: 0;
-      transform: translateY(-6px);
+      transform: translate(-50%, -6px);
     }
   }
   .dropdown--hoverable:hover,
   .dropdown--show{
     .dropdown__menu {
-      transform: translateY(0px);
+      transform: translate(-50%, 0px);
     }
   }
 }
