@@ -18,12 +18,7 @@ Before starting the dApp, make sure to have the following prerequisites:
    - If you’re new to smart contracts, consider learning the basics. Understanding how smart contracts work will enhance your experience with Rootstock development.
 
 2. **Node.js and Hardhat Installed:**
-   - Ensure you have Node.js installed on your system. You can download it from the [official Node.js website](https://nodejs.org/).
-   - Install Hardhat globally using npm:
-
-     ```bash
-     npm install -g hardhat
-     ```
+   - Ensure you have Node.js installed on your system. See the [prerequisites section](/developers/requirements/#installing-nodejs-and-npm).
 
 3. **Install Hardhat Shorthand:**
 - We recommend installing `hh` autocomplete to use `hh` shorthand globally.
@@ -38,7 +33,12 @@ Before starting the dApp, make sure to have the following prerequisites:
 - Configure Metamask to connect to the Rootstock network. Visit the [MetaMask Integration on the Rootstock Dev Portal](/dev-tools/wallets/metamask/).
 
 5. **Basic Knowledge of Hardhat:**
-- Familiarity with Hardhat's core concepts and functionalities is recommended. If you're new to Hardhat, refer to the [Rootstock Hardhat documentation's starter guide](https://dev.rootstock.io/quickstart/hardhat/).
+- Familiarity with Hardhat's core concepts and functionalities is recommended. If you're new to Hardhat, refer to the [Rootstock Hardhat Guide](/developers/smart-contracts/hardhat/).
+
+:::tip[Rootstock Blockchain Developer Course]
+
+Learn how to write, test, secure, deploy and verify smart contracts on the Rootstock blockchain network. Enroll for the [Rootstock Blockchain Developer Course](/resources/courses/).
+:::
 
 ## Setting Up the Sample dApp
 

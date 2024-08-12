@@ -34,9 +34,9 @@ description: "Explore a curated selection of smart contract development tools an
     title="2 Way Peg App"
     subtitle="bridges"
     color="orange"
-    linkHref="https://app.2wp.rootstock.io/"
+    linkHref="/resources/guides/two-way-peg-app/"
     target="_blank"
-    linkTitle="Get RBTC"
+    linkTitle="Documentation"
     description="Bridge Bitcoin and Rootstock using the 2 Way Peg App."
   />
 <FilterItem
@@ -85,7 +85,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="The Rootstock RPC API provides a seamless and intuitive web interface for developers to interact with Rootstock nodes via JSON-RPC methods."
   />
 <FilterItem
-    value="rpc"
+    value="rpc, smart contracts"
     title="GetBlock"
     subtitle="json rpc"
     color="orange"
@@ -94,13 +94,22 @@ description: "Explore a curated selection of smart contract development tools an
     description="GetBlock provides instant connection to blockchain nodes including Rootstock, Bitcoin (BTC), Ethereum (ETH), among others."
   />
 <FilterItem
-    value="rpc"
+    value="rpc, smart contracts"
     title="NOWNodes"
     subtitle="json rpc"
     color="orange"
     linkHref="https://nownodes.io/nodes/rsk"
     linkTitle="Make First API Call"
     description="NOWNodes is a blockchain-as-a-service enterprise solution that lets users get access to full Nodes and blockbook Explorers via an API."
+  />
+<FilterItem
+    value="rpc, smart contracts"
+    title="dRPC"
+    subtitle="json rpc"
+    color="orange"
+    linkHref="https://drpc.org/chainlist/rootstock?utm_source=docs&utm_medium=rootstock"
+    linkTitle="Make First API Call"
+    description="dRPC provides access to a distributed network of node providers."
   />
 <FilterItem
     value="wallet, sc"
@@ -326,6 +335,15 @@ description: "Explore a curated selection of smart contract development tools an
     linkHref="https://solidityscan.com/"
     linkTitle="Secure Smart Contracts"
     description="Secure your smart contracts on Rootstock, and get accurate security audit results and detailed reports."
+  />
+<FilterItem
+    value="code-quality, testing, sc"
+    title="Slither"
+    subtitle="code quality"
+    color="orange"
+    linkHref="https://github.com/crytic/slither"
+    linkTitle="Analyse Smart Contracts"
+    description="Slither built with Solidity & Vyper static analysis framework written in Python3, enables developers to find vulnerabilities, enhance their code comprehension, and quickly prototype custom analyses."
   />
 <FilterItem
     value="code-quality, testing, sc"

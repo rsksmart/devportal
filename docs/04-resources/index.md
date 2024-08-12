@@ -6,7 +6,7 @@ tags: [rsk, rootstock, solutions, courses, guides, tutorials]
 description: "Find all the resources you need to get started on rootstock whether you're from a developer background, an open source contributor, a startup, or a just looking to learn via tutorials or courses."
 ---
 
-The Rootstock Resources section serves as a comprehensive knowledge base comprising on links to grants opportunities, events, hackathons, tutorials, community, ambassador programs, and how to contribute to Rootstock platform.
+The Rootstock Resources section serves as a comprehensive knowledge base comprising of links to grants opportunities, events, hackathons, tutorials, community, ambassador programs, and how to contribute to Rootstock platform.
 
 ## Navigating Resources
 
@@ -17,4 +17,7 @@ The Rootstock Resources section serves as a comprehensive knowledge base compris
 | [Join the Discord Community](https://discord.com/invite/rootstock) | Be a part of the Rootstock Community on Discord.|
 | [Ambassador Programs](https://rootstock.io/ambassadors-program/) | Learn about the Rootstock Ambassador Program, and how to become one.|
 | [Grants](https://rootstock.io/grants/) | Get support to build your next dApp on Rootstock through the strategic grants program.|
-| [RSKIPs](https://github.com/rsksmart/RSKIPs) | Rootstock Improvement Proposals.|
+| [Tutorials](/resources/tutorials/) | Tutorials on Rootstock.|
+| [Guides](/resources/guides/) | User Guides on Rootstock.|
+| [Hackathons](/resources/hackathon/) | Hackathon and Workshop Resources.|
+| [Rootstock Improvement Proposals (RSKIPs)](https://github.com/rsksmart/RSKIPs) | Rootstock Improvement Proposals.|

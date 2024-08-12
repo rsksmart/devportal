@@ -21,7 +21,7 @@ values={[
     title="Wagmi Starter Kit"
     subtitle="quickstart"
     color="orange"
-    linkHref="https://github.com/rsksmart/rsk-wagmi-starter-kit"
+    linkHref="/developers/quickstart/wagmi/"
     linkTitle="Use the Kit"
     description="This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Wagmi and Shadcn libraries."
   />
@@ -57,8 +57,8 @@ values={[
     title="RIF Relay Starter Kit"
     subtitle="quickstart"
     color="orange"
-    linkHref="/developers/integrate/rif-relay/"
-    linkTitle="View the demo"
+    linkHref="/developers/integrate/rif-relay/sample-dapp/"
+    linkTitle="Use Kit"
     description="Starter kit to develop on RIF Relay."
   />
 <FilterItem
@@ -80,7 +80,7 @@ values={[
     description="Get started with deploying and interacting with smart contracts on Rootstock using Web3.py."
   />
   <FilterItem
-    value="sc, beginner, port-dapps"
+    value="sc, beginner, advanced, port-dapps"
     title="Port an Ethereum dApp to Rootstock"
     subtitle="Port dApps"
     color="orange"

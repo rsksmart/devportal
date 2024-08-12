@@ -1,0 +1,6 @@
+label: 2 Way Peg App
+position: 2
+link:
+  type: generated-index
+  description: The 2 way peg is a protocol that converts BTC to RBTC and vice versa. It is secured by the powpeg, which is a unique 2-way peg system that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus.
+  slug: /resources/guides/two-way-peg-app/

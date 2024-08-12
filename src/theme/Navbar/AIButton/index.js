@@ -36,6 +36,7 @@ export default function AIButton() {
 
   return (
     <MendableFloatingButton
+      language={`en`}
       showPopup={false}
       popupText={``}
       dismissPopupAfter={0}
