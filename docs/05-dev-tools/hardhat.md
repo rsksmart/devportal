@@ -33,7 +33,7 @@ npm install --save-dev hardhat
 ```
 
 ## Related Links
-- [Hardhat Starter Kit](/developers/quickstart/hardhat/)
+- [Hardhat Starter dApp](/developers/quickstart/hardhat/)
 - [Getting Started with Hardhat](/developers/smart-contracts/hardhat/)
-- [Getting Started with Foundry](/developers/smart-contracts/hardhat/foundry/)
+- [Getting Started with Foundry](/developers/smart-contracts/foundry/)
 - [Developer Tools](/dev-tools/)

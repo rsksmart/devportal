@@ -12,7 +12,7 @@ For info on derivation paths, see [Account based addresses](/concepts/account-ba
 :::note[Note]
 - [Rootstock Contract Metadata](https://github.com/rsksmart/rsk-contract-metadata)
 - [Rootstock Testnet Contract Metadata](https://github.com/rsksmart/rsk-testnet-contract-metadata) 
-- [Rootstock Bridge - DefiLlama](https://defillama.com/bridge/rootstock-bridge)						
+- [Rootstock - DefiLlama](https://defillama.com/chain/Rootstock)						
 :::
 
 ## List of Contract Addresses

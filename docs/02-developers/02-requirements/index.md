@@ -83,7 +83,12 @@ See [Account based addresses](/concepts/account-based-addresses/) section for mo
 npm install --save-dev hardhat
 ```
 
-:::tip[Tip]
+:::tip[Recommended]
+
+- Install `hh` autocomplete to use `hh` shorthand globally.
+```bash
+npm i -g hardhat-shorthand
+```
 
 - Use the [Hardhat Starter Kit](/developers/quickstart/hardhat)
 

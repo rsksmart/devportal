@@ -21,7 +21,7 @@ values={[
     title="Wagmi Starter Kit"
     subtitle="quickstart"
     color="orange"
-    linkHref="https://github.com/rsksmart/rsk-wagmi-starter-kit"
+    linkHref="/developers/quickstart/wagmi/"
     linkTitle="Use the Kit"
     description="This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Wagmi and Shadcn libraries."
   />
