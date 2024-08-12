@@ -2,7 +2,7 @@
 sidebar_position: 5
 title: "Virtual Testnets: Use Tenderly to Fork the Rootstock Mainnet for Development"
 sidebar_label: Create Virtual Testnets on Rootstock using Tenderly
-tags: [rsk, rootstock, tenderly, tutorials, resources, smart contracts, virtual networks]
+tags: [rsk, rootstock, tenderly, tutorials, resources, smart contracts, virtual testnet, mainnet]
 description: "Tenderly's virtual testing environment allows the creation of simulated networks, managing account balances, and manipulating contract storage – all without needing to interact with the Rootstock mainnet or testnet."
 ---
 
@@ -10,7 +10,7 @@ Need a safe and efficient way to test your dApp features before deploying them o
 
 Imagine a clone of the Rootstock mainnet, where you can experiment freely without using real tokens. Virtual testnets mimic the behavior of a real blockchain, allowing you to deploy your dApps, interact with smart contracts, and debug transactions – all within a controlled setting.
 
-:::note[Tenderly Virtual Networks]
+:::note[Tenderly Virtual Testnets]
 
 Tenderly's virtual testing environment allows the creation of simulated networks, managing account balances, and manipulating contract storage – all without needing to interact with the Rootstock mainnet or testnet.
 
@@ -19,7 +19,7 @@ Tenderly's virtual testing environment allows the creation of simulated networks
 We will do the following:
 
 - Set up a Tenderly Account
-- Setup Virtual Networks
+- Setup a Virtual Test network
 - Fork the Rootstock Mainnet: Create a simulated network that replicates the current state of the Rootstock mainnet.
 - Integrating a project
 - Leverage Snapshots: Easily revert to a previous network state for more controlled testing scenarios.
@@ -38,7 +38,7 @@ We will do the following:
 
 ![Rootstock - Tenderly Dashboard](/img/resources/tenderly/01-tenderly-dashboard.png)
 
-### Setup Virtual Testnet
+### Setting up a Virtual Testnet
 
 In the left navigation, choose Virtual Testnets and click on the button “Create Virtual Testnet”.
 
@@ -55,17 +55,17 @@ Your setup should look like the one in the image below; Click Create.
 
 :::note[RPC Configuration]
 
-On Tenderly, there are two RPC configurations: Public RPC and Admin RPC. 
-The Public RPC allows standard RCP interactions with the blockchain, 
+On Tenderly, there are two RPC configurations: **Public RPC** and **Admin RPC**. 
+- The Public RPC allows standard RCP interactions with the blockchain, 
 such as deploying contracts and interacting with smart contracts. 
-The Admin RPC enables you to modify the Testnet network state, including account balances, 
+- The Admin RPC enables you to modify the Testnet network state, including account balances, 
 block numbers, and storage, to support your development requirements.
 
 :::
 
 ![Rootstock - Tenderly Dashboard](/img/resources/tenderly/03-tenderly-rpc-setup.png)
 
-## Integrate Project
+## Integrate a Project
 
 On the left menu, select Integrate to learn how to add the TestNet you just created to your project. 
 Examples are available for Hardhat, Foundry, and other frameworks. In addition to setup examples, 
