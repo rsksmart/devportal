@@ -12,17 +12,17 @@ Imagine a clone of the Rootstock mainnet, where you can experiment freely withou
 
 :::note[Tenderly Virtual Testnets]
 
-[Tenderly's](https://tenderly.co/virtual-testnets) virtual testing environment allows the creation of simulated networks, managing account balances, and manipulating contract storage – all without needing to interact with the Rootstock mainnet or testnet.
+[Tenderly's virtual testing](https://tenderly.co/virtual-testnets) environment allows the creation of simulated networks, managing account balances, and manipulating contract storage – all without needing to interact with the Rootstock mainnet or testnet.
 
 :::
 
-We will do the following:
+In this tutorial, we will do the following:
 
 - Set up a Tenderly Account
 - Setup a Virtual Test network
 - Fork the Rootstock Mainnet: Create a simulated network that replicates the current state of the Rootstock mainnet.
 - Integrating a project
-- Leverage Snapshots: Easily revert to a previous network state for more controlled testing scenarios.
+- Easily revert to a previous network state for more controlled testing scenarios by using snapshots.
 - Set account balances (native token & ERC20).
 - Override contract storage
 
@@ -87,7 +87,7 @@ require("dotenv").config();
 
 > This will enable Tenderly's features in your Hardhat project.
 
-### Leverage Snapshots for Reliable Testing
+### Leveraging Snapshots for Reliable Testing
 
 Using Tenderly's admin RPC, you can capture snapshots of your testnet's current state and revert to these snapshots as needed. This feature is particularly useful when running multiple tests that modify the testnet state. By taking a snapshot before executing a test, making changes during the test, and then reverting to the snapshot afterward, you ensure that each test starts with a clean, consistent network state. This approach enhances the reliability and repeatability of your tests.
 
