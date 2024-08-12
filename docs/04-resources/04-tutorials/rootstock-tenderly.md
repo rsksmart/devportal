@@ -87,7 +87,7 @@ require("dotenv").config();
 
 > This will enable Tenderly's features in your Hardhat project.
 
-### Leveraging Snapshots for Reliable Testing
+### Using Snapshots for Reliable Testing
 
 Using Tenderly's admin RPC, you can capture snapshots of your testnet's current state and revert to these snapshots as needed. This feature is particularly useful when running multiple tests that modify the testnet state. By taking a snapshot before executing a test, making changes during the test, and then reverting to the snapshot afterward, you ensure that each test starts with a clean, consistent network state. This approach enhances the reliability and repeatability of your tests.
 
