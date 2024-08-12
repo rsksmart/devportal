@@ -119,3 +119,17 @@
     }
   }
 }
+.dropdown__menu{
+  border: 1px solid var(--rsk-image-border-color);
+  padding: 8px;
+  box-shadow: none;
+}
+.dropdown__link{
+  background: none;
+  margin: 0;
+  padding: 4px;
+  &:hover{
+    background: none;
+    color: var(--rsk-color-main);
+  }
+}
