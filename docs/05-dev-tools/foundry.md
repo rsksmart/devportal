@@ -1,9 +1,9 @@
 ---
 section_position: 2 
 sidebar_label: Foundry
-title: Getting Started with Foundry
+title: Foundry on Rootstock
 description: 'How to write, test, and deploy smart contracts with Foundry'
-tags: [foundry, tools, rootstock, testing, dApps, networks, get-started, how-to]
+tags: [foundry, quick start, developer tools, rsk, rootstock, ethereum, dApps, smart contracts]
 ---
 
 [Foundry](https://book.getfoundry.sh) is a smart contract development toolchain, and user-friendly development environment for writing and testing smart contracts in Solidity. It manages dependencies, compiles, run tests, deploy contracts and allows for interaction with EVM-compatible chains using a command-line tool called [Forge](https://book.getfoundry.sh/forge/). 
@@ -46,7 +46,7 @@ The debugger terminal is divided into four quadrants:
    - The current memory of the EVM.
  
 
-### Related Docs
+### Resources
 
 - [Getting Started with Foundry](/developers/smart-contracts/foundry/)
 - [Getting Started with Hardhat](/developers/smart-contracts/hardhat/)
@@ -55,8 +55,3 @@ The debugger terminal is divided into four quadrants:
 - [Foundry Configurations](https://book.getfoundry.sh/config/)
 - [Solidity Scripting](https://book.getfoundry.sh/tutorials/solidity-scripting)
 - [Deploy Smart Contracts To Deterministic Addresses](https://book.getfoundry.sh/tutorials/create2-tutorial)
-- [Gas Tracking](https://book.getfoundry.sh/forge/gas-tracking)
-- [Debugging](https://book.getfoundry.sh/forge/debugger)
-- [Chisel](https://book.getfoundry.sh/chisel/)
-- [Forge - Deploy and Verify ](https://book.getfoundry.sh/forge/deploying)
-- [Forge - Advanced Testing](https://book.getfoundry.sh/forge/advanced-testing)
