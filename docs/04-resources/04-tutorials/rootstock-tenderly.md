@@ -6,13 +6,13 @@ tags: [rsk, rootstock, tenderly, tutorials, resources, smart contracts, virtual 
 description: "Tenderly's virtual testing environment allows the creation of simulated networks, managing account balances, and manipulating contract storage – all without needing to interact with the Rootstock mainnet or testnet."
 ---
 
-Need a safe and efficient way to test your dApp features before deploying them on the Rootstock mainnet? Look no further than virtual testnets! These simulated blockchain environments, offered by platforms like [Tenderly](https://tenderly.co/), provide a perfect testing ground for developers.
+Need a safe and efficient way to test your dApp features before deploying them on the Rootstock mainnet? Look no further than virtual testnets! These simulated blockchain environments, offered by platforms like [Tenderly](https://tenderly.co/), provides a perfect testing ground for developers.
 
 Imagine a clone of the Rootstock mainnet, where you can experiment freely without using real tokens. Virtual testnets mimic the behavior of a real blockchain, allowing you to deploy your dApps, interact with smart contracts, and debug transactions – all within a controlled setting.
 
 :::note[Tenderly Virtual Testnets]
 
-Tenderly's virtual testing environment allows the creation of simulated networks, managing account balances, and manipulating contract storage – all without needing to interact with the Rootstock mainnet or testnet.
+[Tenderly's](https://tenderly.co/virtual-testnets) virtual testing environment allows the creation of simulated networks, managing account balances, and manipulating contract storage – all without needing to interact with the Rootstock mainnet or testnet.
 
 :::
 
