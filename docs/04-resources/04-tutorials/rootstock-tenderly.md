@@ -78,14 +78,14 @@ which you can install by running the following command:
 npm i @tenderly/hardhat-tenderly
 ```
 
-Next, import and set up Tenderly in your `hardhat.config` file like this:
+Next, import and set up Tenderly in your `hardhat.config` file:
 
 ```js
 import * as tdly from "@tenderly/hardhat-tenderly";
 require("dotenv").config();
 ```
 
-This will enable Tenderly's features in your Hardhat project.
+> This will enable Tenderly's features in your Hardhat project.
 
 ### Leverage Snapshots for Reliable Testing
 
@@ -182,7 +182,21 @@ export async function setErc20Balance(erc20Address: string, walletAddress: strin
 
 #### Override the contract storage
 
-Tenderly allows you to override smart contract storage in the TestNet, but you need to know the memory slot of the storage variable you want to modify. To find the memory slot, follow the principles outlined in the [Layout of State Variables in Storage](https://docs.soliditylang.org/en/latest/internals/layout_in_storage.html) Other more empirical approach is to read your contract's storage slot by slot to identify the variables stored in each one. Refer to the ethers documentation on the [`getStorageAt`](https://docs.ethers.org/v5/api/providers/provider/#Provider-getStorageAt) method for guidance.
+Tenderly allows you to override smart contract storage in the TestNet, but we need to know the memory slot of the storage variable we want to modify. For [value type variables](https://docs.soliditylang.org/en/latest/types.html#value-types) like address or integer, we can just count the position of the variable in the contract.
+
+```bash
+pragma solidity ^0.8.0;
+contract SimpleStorage {
+   uint256 public value1; // Stored at slot 0
+   uint256 public value2; // Stored at slot 1
+
+
+   function setValues(uint256 _value1, uint256 _value2) public {
+       value1 = _value1;
+       value2 = _value2;
+   }
+}
+```
 
 Once you have identified the slot you need to modify, you can set a new value for that slot. Remember to convert the value to 32 bytes, as this is the memory size of a storage slot.
 
@@ -211,11 +225,7 @@ async function overrideContractStorage() {
 
 :::info[Info]
 
-The above code defines an asynchronous function `overrideContractStorage` which:
-
-* Specifies the storage slot to be modified (storageSlot).
-* Encodes the storage slot and new value into `32-byte` hex strings using `ethers.AbiCoder`.
-* Uses the `tenderly_setStorageAt` RPC method to update the contract's storage at the specified slot with the new value.
+For reference types like dynamic arrays, we need to  follow the principles outlined in the ["Layout of State Variables in Storage"](https://docs.soliditylang.org/en/latest/internals/layout_in_storage.html) to find the storage slot. Another more empirical approach is to read your contract's storage slot by slot to identify the variables stored in each slot, using for example the ethers method [getStorageAt](https://docs.ethers.org/v5/api/providers/provider/#Provider-getStorageAt).
 
 :::
 
