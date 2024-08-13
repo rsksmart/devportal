@@ -41,7 +41,7 @@ description: "Explore a curated selection of smart contract development tools an
   />
 <FilterItem
     value="bridge, exchange"
-    title="Tokenbridge"
+    title="Token Bridge"
     subtitle="bridges"
     color="orange"
     linkHref="/resources/guides/tokenbridge/"
