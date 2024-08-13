@@ -40,6 +40,16 @@ description: "Explore a curated selection of smart contract development tools an
     description="Bridge Bitcoin and Rootstock using the 2 Way Peg App."
   />
 <FilterItem
+    value="bridge, exchange"
+    title="Tokenbridge"
+    subtitle="bridges"
+    color="orange"
+    linkHref="/resources/guides/tokenbridge/"
+    target="_blank"
+    linkTitle="Documentation"
+    description="Use the Token Bridge to safely and securely move ERC20 tokens from Ethereum to Rootstock and vice-versa."
+  />
+<FilterItem
     value="dev-environment, sc, platform-infra"
     title="Foundry"
     subtitle="Dev Environments"
