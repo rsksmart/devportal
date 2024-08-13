@@ -5,7 +5,7 @@ title: Tokenbridge dApp Guide - Cross-Chain Transactions
 tags: [resources, tokenbridge, blockchain, bridges, tokens, ethereum, rootstock, rsk]
 ---
 
-This guide describes the steps to transfer tokens using the Web Interface for the Rootstock Tokenbridge dApp. Please refer to the project documentation, if you’d like to know more about how this bridge works. It is possible to test the transfer of tokens between Rootstock Testnet and Sepolia networks, or Rootstock Mainnet and Ethereum networks using the Rootstock Tokenbridge web interface.
+This guide describes the steps to transfer tokens using the Web Interface for the [Rootstock Token Bridge dApp](https://dapp.tokenbridge.rootstock.io/). Please refer to the project documentation, if you’d like to know more about how this bridge works. It is possible to test the transfer of tokens between Rootstock Testnet and Sepolia networks, or Rootstock Mainnet and Ethereum networks using the Rootstock Tokenbridge web interface.
 
 ## Prerequisites
 
