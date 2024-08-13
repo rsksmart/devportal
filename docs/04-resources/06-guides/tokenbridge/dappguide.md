@@ -1,7 +1,7 @@
 ---
 sidebar_position: 301
 sidebar_label: Token Bridge dApp Guide
-title: "Tokenbridge dApp Guide - Cross-Chain Transactions"
+title: "Token Bridge dApp Guide - Cross-Chain Transactions"
 tags: [resources, tokenbridge, blockchain, bridges, tokens, ethereum, rootstock, rsk]
 ---
 
