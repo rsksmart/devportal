@@ -318,7 +318,7 @@ Use this to present structured data with clear rows and columns for easy compari
 
 
 ## Accordion
-Use this to present collapsible sections of content, useful for long lists or frequently.
+Use this to present collapsible sections of content, useful for long lists or frequently asked questions.
 
 - **Code**
 
