@@ -1,11 +1,11 @@
 ---
 sidebar_position: 303
-sidebar_label: Interaction guide using MyCrypto
-title: Interaction guide using MyCrypto
+sidebar_label: Interact with dApp using MyCrypto
+title: Interact with dApp using MyCrypto
 tags: [resources, tokenbridge, blockchain, bridges, tokens, ethereum, rootstock, rsk]
 ---
 
-This guide describes the necessary steps to perform a token transfer between two blockchain networks, which we will refer to as **Mainchain** and **Sidechain**, through interaction with special contracts that make up a subsystem called **TokenBridge**.
+This guide describes the necessary steps to perform a token transfer between two blockchain networks, which we will refer to as **Mainchain** and **Sidechain**, through interaction with special contracts that make up a subsystem called **Token Bridge**.
 
 The test performed uses the Rootstock (with a local regtest node) and Ethereum (through the Ganache client) nodes as Mainchain and Sidechain respectively. The demonstration images to interact with both Blockchain were taken from the MyCrypto application. Alternatively, MyEtherWallet or similar can be used which will give the same results.
 

@@ -1,17 +1,17 @@
 ---
 sidebar_position: 304
-sidebar_label: Tokenbridge FAQs
-title: "Tokenbridge FAQs"
+sidebar_label: Token Bridge FAQs
+title: "Token Bridge FAQs"
 tags: [resources, tokenbridge, blockchain, bridges, tokens, ethereum, rootstock, rsk]
 ---
 
-Find a list of frequently asked questions about the Tokenbridge.
+Find a list of frequently asked questions about the Token Bridge.
 
 <Accordion>
   <Accordion.Item eventKey="0">
-    <Accordion.Header as="h3">What is the Tokenbridge?</Accordion.Header>
+    <Accordion.Header as="h3">What is the Token Bridge?</Accordion.Header>
     <Accordion.Body>
-       - The Tokenbridge is an interoperability protocol which allows users to move their own Rootstock or Ethereum ERC20 Tokens between networks in a quick and cost-efficient manner.
+       - The Token Bridge is an interoperability protocol which allows users to move their own Rootstock or Ethereum ERC20 Tokens between networks in a quick and cost-efficient manner.
         - The UI is available at:
             - Mainnet: [https://dapp.tokenbridge.rootstock.io/](https://dapp.tokenbridge.rootstock.io/)    
             - Testnet: [https://dapp.testnet.bridges.rootstock.io/](https://dapp.testnet.bridges.rootstock.io/)
@@ -52,7 +52,7 @@ Find a list of frequently asked questions about the Tokenbridge.
   <Accordion.Item eventKey="6">
     <Accordion.Header as="h3">How do I transform my original tokens to Side Tokens?</Accordion.Header>
     <Accordion.Body>
-      - The Tokenbridge will be a public dApp where users will be able to access by using Liquality Wallet or Metamask. You will be able to send your original tokens and receive an equivalent amount of Side Tokens on the other network. By toggling the network on Metamask, you’re also able to transfer the other way around, by sending Side Tokens and receive original tokens.
+      - The Token Bridge will be a public dApp where users will be able to access by using Liquality Wallet or Metamask. You will be able to send your original tokens and receive an equivalent amount of Side Tokens on the other network. By toggling the network on Metamask, you’re also able to transfer the other way around, by sending Side Tokens and receive original tokens.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="7">
@@ -94,9 +94,9 @@ Find a list of frequently asked questions about the Tokenbridge.
    <Accordion.Item eventKey="12">
     <Accordion.Header as="h3">How does the Token Bridge work?</Accordion.Header>
     <Accordion.Body>
-      - The Tokenbridge functionality is quite unique, yet simple to understand. The ratio of tokens during network transfer always remains 1:1 and behaves in the following manner:
+      - The Token Bridge functionality is quite unique, yet simple to understand. The ratio of tokens during network transfer always remains 1:1 and behaves in the following manner:
         - When original tokens are moved to the other network
-            - Original tokens are locked in the Tokenbridge smart contract
+            - Original tokens are locked in the Token Bridge smart contract
             - Side Tokens are minted and assigned to the same address that originally called the bridge
         - When Side Tokens are moved back from the other network
             - Side Tokens are burned

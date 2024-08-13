@@ -1,11 +1,11 @@
 ---
 sidebar_position: 4
-sidebar_label: Tokenbridge
-title: Rootstock Tokenbridge
+sidebar_label: Token Bridge
+title: Rootstock Token Bridge
 tags: [resources, tokenbridge, blockchain, bridges, tokens, ethereum, rootstock, rsk]
 ---
 
-Safely move your ERC20 tokens between Rootstock and Ethereum with the Tokenbridge dApp. This user-friendly interface lets you interact with the Tokenbridge contracts directly. It is available on [Mainnet](https://dapp.tokenbridge.rootstock.io/) or [Testnet](https://dapp.testnet.bridges.rootstock.io/).
+Safely move your ERC20 tokens between Rootstock and Ethereum with the Tokenbridge dApp. This user-friendly interface lets you interact with the Token Bridge contracts directly. It is available on [Mainnet](https://dapp.tokenbridge.rootstock.io/) or [Testnet](https://dapp.testnet.bridges.rootstock.io/).
 
 ## Rationale
 
