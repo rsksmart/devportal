@@ -160,6 +160,6 @@ This shows the status of your transaction, with a transaction ID and a link to c
 
 By clicking on the **See Transaction** button, the user can check the status directly in the transaction status page, by clicking in **Start Again** button the user can perform another transaction.
 
-See the [Viewing Peg-in Transaction Status](/resources/guides/two-way-peg-app/trezor/status) section for more information. 
+See the [Viewing Peg-in Transaction Status](/resources/guides/two-way-peg-app/pegin/status) section for more information. 
 
 **Now you have successfully performed a peg-in transaction using the 2 way peg application.**
