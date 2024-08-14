@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1300
-sidebar_label:  Peg-out using Liquality and Ledger
-title: "Performing a peg-out using Liquality and Ledger"
-description: "Here, we will learn how to perform a peg-out using Liquality and Ledger."
+sidebar_label:  Peg-out using Metamask and any hardware wallet
+title: "Performing a peg-out using Metamask and hardware wallet"
+description: "Here, we will learn how to perform a peg-out using Metamask and hardware wallet."
 tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
@@ -23,38 +23,33 @@ We will perform a peg-out transaction using the Ledger Hardware Wallet and Liqua
 
 ### Get started
 
-To perform a peg-out transaction using the Ledger device with Liquality, follow the steps below:
+To perform a peg-out transaction using the Ledger device with Metamask, follow the steps below:
 
-Step 1:  Plug the Ledger device into the computer
+Step 1: Open Metamask click on select account, and then in the **Add account or hardware wallet** button:
+![Add account or hardware wallet](/img/resources/two-way-peg-app/add-account-or-hdwallet.png)
 
-Step 2: Enter your pin to unlock it. See step 2 in [pegout transaction using Liquality](#performing-a-peg-out-transaction-using-liquality) for how to unlock your device.
+Step 2: Select **Add hardware wallet** option:
 
-Step 3: On the device, navigate to the TSK or RSK Test app on your Ledger device.
+![Add account or hardware wallet](/img/resources/two-way-peg-app/nn-add-account.png)
 
-Step 4: Open Liquality and select Ledger option
+Step 3: The user will be redirected to wallet selection page:
 
-![Select Ledger Option](/img/resources/two-way-peg-app/liquality/ledger-steps/1-ledger-steps.png)
+![Connect hd](/img/resources/two-way-peg-app/mm-hd-selection-page.png)
 
+To connect with a Trezor Wallet:
 
-Step 5: Choose the "RSK asset" and click on the "Connect" button
+![Choose hd wallet trezor](/img/resources/two-way-peg-app/mm-trezor-connect.png)
 
-![Connect Ledger](/img/resources/two-way-peg-app/liquality/ledger-steps/2-ledger-steps.png)
+To connect with a Ledger Wallet:
 
+![Choose hd wallet ledger](/img/resources/two-way-peg-app/mm-ledger-connect.png)
 
-Step 6: Choose the account that you want to use with Liquality
+Now you can see "Ledger" or "Trezpr" label in your Metamask accounts
 
-![Choose account](/img/resources/two-way-peg-app/liquality/ledger-steps/3-ledger-steps.png)
-
-
-Step 7: Click the "Close this Tab" button
-
-![Close tab](/img/resources/two-way-peg-app/liquality/ledger-steps/4-ledger-steps.png)
-
-Now you can see "Ledger" label in Liquality accounts
-
-![Final screen](/img/resources/two-way-peg-app/liquality/ledger-steps/5-ledger-steps.png)
+![Final screen](/img/resources/two-way-peg-app/trezor-wallet-imported-metamask.png)
 
 ----
 
 ## Next
-* See [Performing a peg-out transaction using Trezor and Ledger](/resources/guides/two-way-peg-app/pegout/trezor/)
+* See [Performing a peg-out transaction using Trezor](/resources/guides/two-way-peg-app/pegout/trezor/)
+* See [Performing a peg-out transaction using Ledger](/resources/guides/two-way-peg-app/pegout/ledger/)
