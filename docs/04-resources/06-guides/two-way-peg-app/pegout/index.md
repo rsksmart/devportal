@@ -22,7 +22,7 @@ To start using 2wp-app, you will need to connect your **RSK** wallet:
 
 We will do the following:
 
-1. Perform a peg-out using [Meta Mask wallet](/resources/guides/two-way-peg-app/pegout/metamask/)
+1. Perform a peg-out using [MetaMask wallet](/resources/guides/two-way-peg-app/pegout/metamask/)
 2. Perform a peg-out using [Ledger+Liquality](/resources/guides/two-way-peg-app/pegout/ledger-liquality/)
 3. How to get a Bitcoin derived address in hardware wallet using [Electrum](/resources/guides/two-way-peg-app/pegout/deriving-electrum)
 4. [Viewing a Transaction Status](/resources/guides/two-way-peg-app/pegout/status)

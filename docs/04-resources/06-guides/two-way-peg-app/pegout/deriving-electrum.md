@@ -28,7 +28,7 @@ During the **pegout** process, the destination address of your BTC is derived fr
 
 A derived address is the BTC address derived from the RBTC account. When using the 2 way peg app, it is important to know which address you will receive your BTCs. See [Viewing advanced details](#how-to-view-advanced-details).
 
-We will learn how to view a derived address and use [Liquality](#using-liquality) and [Metamask](#using-metamask) to get a private key. We will also learn how to [convert RBTC - BTC](#converting-btc-to-rbtc) and [Import a Key in Electrum](#import-key-in-electrum).
+We will learn how to view a derived address using [Metamask](#using-metamask) to get a private key. We will also learn how to [convert RBTC - BTC](#converting-btc-to-rbtc) and [Import a Key in Electrum](#import-key-in-electrum).
 
 ### Getting a wallet private key
 

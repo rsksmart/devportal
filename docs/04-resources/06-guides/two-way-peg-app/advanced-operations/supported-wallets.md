@@ -13,6 +13,6 @@ Here is a list of supported wallets for the 2 Way Peg App.
 - Software wallets
     - [Leather](/resources/guides/two-way-peg-app/pegin/leather/)
 
-:::warning[Warning]
-Liquality Wallet has been discountinued. See [alternative software wallets](/dev-tools/wallets) supported by the 2 Way Peg App.
+:::tip[Tip]
+See [alternative software wallets](/dev-tools/wallets/) supported by the 2 Way Peg App.
 :::

@@ -11,19 +11,19 @@ tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 
 In this guide, we will be using the [2 way peg app](https://app.2wp.rootstock.io/) application for unlockcing Leather, access peg-in to use Leather, and verify if peg-in is active.
 
-### Acessing pegin to use Liquality
+### Acessing pegin to use Leather
 
 ![leather-pegin](/img/resources/two-way-peg-app/choose-your-wallet.png)
 
 After click on **Leather** button, you will see the pegin Leather page, then the 2wp-app will connect with your Leather wallet.
 
-> NOTE: To know how to install the Liquality chrome plugin, go to [Leather Page](https://leather.io/).
+> NOTE: To know how to install the Leather chrome plugin, go to [Leather Page](https://leather.io/).
 
 ### Unlocking Leather
 
 Unlock Leather using the same password that you created in the installation.
 
-![liquality-error](/img/resources/two-way-peg-app/leather-unlock-2.png)
+![leather-error](/img/resources/two-way-peg-app/leather-unlock-2.png)
 
 ![leather-unlocking](/img/resources/two-way-peg-app/leather-unlock.png)
 
@@ -33,7 +33,7 @@ If you see the message below, it means that your Leather wallet is in the incorr
 
 ![leather-error](/img/resources/two-way-peg-app/incorrect-network-leather.png)
 
-Select the correct environment on Liquality:
+Select the correct environment on Leather:
 
 ![leather-environment](/img/resources/two-way-peg-app/change-network1.png)
 
