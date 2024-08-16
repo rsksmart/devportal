@@ -14,17 +14,24 @@ To perform a peg-out transaction using the Ledger device directly, follow the st
 
 * Step 1: Plug the Ledger device into the computer
 
-* Step 2: Access **peg-out** screen:
+* Step 2: Verify if you have enabled **Perform Safety Checks** to **PROMPT**
+
+    > - If is not enabled you will receive this error ![Trezor Error Key Path](/img/resources/two-way-peg-app/trezor-error.png) 
+    > - This video explains how to enable **Perform Safety Checks** to **PROMPT** on **Trezor Suite** [Enabling Prompt for Key Path](/img/resources/two-way-peg-app/trezor-error-fixed.mp4) 
+    <Video url="/img/resources/two-way-peg-app/trezor-error-fixed.mp4" thumbnail="/img/resources/two-way-peg-app/trezor-error.png" />
+
+
+* Step 3: Access **peg-out** screen:
 ![pegout screen](/img/resources/two-way-peg-app/pegout-button.png)
 
-* Step 3: Click on **Connect wallet** button:
+* Step 4: Click on **Connect wallet** button:
 
 ![connect-wallet](/img/resources/two-way-peg-app/pegout-ledger-trezor-connection.png)
 
-* Step 4: Click on **Trezor** button<br/>
+* Step 5: Click on **Trezor** button<br/>
 ![connect-wallet](/img/resources/two-way-peg-app/using-hd-wallets/trezor.png)
 
-* Step 5: The application will show what network you are connecting on. For this tutorial we are using **Testnet** 
+* Step 6: The application will show what network you are connecting on. For this tutorial we are using **Testnet** 
 
 <br/>
 
