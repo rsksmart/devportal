@@ -12,6 +12,12 @@ In this guide, we will be using performing a peg in transaction using the [2 way
 
 ![Connect Trezor](/img/resources/two-way-peg-app/pegin.png)
 
+## Verify if you have enabled **Perform Safety Checks** to **PROMPT**
+
+    > - If is not enabled you will receive this error ![Trezor Error Key Path](/img/resources/two-way-peg-app/trezor-error.png) 
+    > - This video explains how to enable **Perform Safety Checks** to **PROMPT** on **Trezor Suite** [Enabling Prompt for Key Path](/img/resources/two-way-peg-app/trezor-error-fixed.mp4) 
+    <Video url="/img/resources/two-way-peg-app/trezor-error-fixed.mp4" thumbnail="/img/resources/two-way-peg-app/trezor-error.png" />
+
 ## Select Trezor Wallet
 
 ![Connect Trezor](/img/resources/two-way-peg-app/wallets.png)

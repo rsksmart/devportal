@@ -96,7 +96,16 @@ Here, you can find a list of frequently asked questions (FAQs) about the 2 way p
         > - See the [Derivation details page](/resources/guides/two-way-peg-app/pegout/deriving-electrum/) 
     </Accordion.Body>
   </Accordion.Item>
+   <Accordion.Item eventKey="13">
+    <Accordion.Header as="h3">14.When using **Trezor** i'm receiving the error **Forbidden key path** ?</Accordion.Header>
+    <Accordion.Body>
+        > - The latest versions of Trezor Suite have implemented a security rule to disable its use with non-standard key paths. Therefore, the user must explicitly set **Perform Safety Checks** to **PROMPT** option in **Trezor Suite** in order to use the **Trezor wallet** in the 2wp-app application.
+        > - If is not enabled you will receive this error ![Trezor Error Key Path](/img/resources/two-way-peg-app/trezor-error.png) 
+        > - This video explains how to enable **Perform Safety Checks** to **PROMPT** on **Trezor Suite** [Enabling Prompt for Key Path](/img/resources/two-way-peg-app/trezor-error-fixed.mp4) 
+        <Video url="/img/resources/two-way-peg-app/trezor-error-fixed.mp4" thumbnail="/img/resources/two-way-peg-app/trezor-error.png" />
 
+    </Accordion.Body>
+  </Accordion.Item>
 </Accordion>
 
 
