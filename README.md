@@ -1,11 +1,5 @@
 # Rootstock Developer Portal
 
-<p align="center">
-  <a href="https://dev.rootstock.io">
-    <img alt="Rootstock-logo" src="/static/img/2_rootstock_logo_og.png" width="100" />
-  </a>
-</p>
-
 This repo contains the [Rootstock Developer Portal](https://dev.rootstock.io). The Developer Portal - Docs is the home for Rootstock documentation for end users and developers. Check out our quickstarts, tutorials, API reference, and code examples.
 
 _Start your journey to building dApps on Rootstock, see the [quick start guide](/developers/quickstart/) or see the [setup](#set-up) instructions, or the [contributing](CONTRIBUTING_DOCS.md) guide for how to contribute to Rootstock Documentation._
@@ -38,7 +32,7 @@ This command starts a local development server and opens up a browser window. Mo
 ### Production Build
 
 ```
-$ yarn build
+yarn build
 ```
 
 This command generates static content into the `build` directory and also detects broken links.
@@ -203,6 +197,30 @@ and the search functionality. The Algolia and Mendable AI Search component regul
     If this is not present, it defaults to the first 200 words in the content.
     It is a good idea to set this to include any words or phrases which
     you think a reader would search for when looking for this page.
+
+### Changelog
+
+A changelog is a file which contains a curated, chronologically ordered list of notable changes for each version of a project.
+
+[Rootstock Changelog](https://dev.rootstock.io/changelog/) provides information about the latest product updates to the RSKj node and products within the Rootstock Ecosystem.
+
+To update the changelog, see `/changelog.md` folder. Create a file with the date and title of the change. For e.g, `2024-07-04-introducing-arrowhead-6-3-0.md`. 
+
+Add the update details. See below for an example:
+
+```
+---
+title: "Introducing Arrowhead 6.3.1: What You Need To Know About Rootstock’s Upcoming Patch Network Upgrade"
+author: Rootstock
+tags: [release]
+image: https://blog.rootstock.io/wp-content/uploads/2024/07/Arrowhead-6.3.1-Release.png
+url: https://blog.rootstock.io/noticia/introducing-arrowhead-6-3-1-what-you-need-to-know-about-rootstocks-upcoming-patch-network-upgrade/
+---
+
+**Summary**: The Rootstock network will undergo a patch network upgrade on block 6,549,300. This mandatory upgrade fixes the PowPeg outage reported on June 24th; users who adhere to these changes must update their nodes to the latest version
+```
+
+> Note that usage of images or logos are optional.
 
 ### Updating RSKj
 
