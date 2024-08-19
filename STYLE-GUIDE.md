@@ -1,6 +1,8 @@
-## **Frontmatter**
+## Rootstock Style Guide
 
-Our documentation pages utilize frontmatter, a customizable set of properties that control page behavior (e.g., title, description). 
+### **Frontmatter**
+
+Rootstock documentation pages utilize frontmatter, a customizable set of properties and components that controls the page behavior (e.g., title, description, cards, filtering, etc.). 
 
 **Example:**
 
