@@ -14,6 +14,7 @@ description: "Explore a curated selection of smart contract development tools an
     {label: 'Wallets', value: 'wallet'},
     {label: 'Explorers', value: 'explorer'},
     {label: 'Platforms and Infra', value: 'platform-infra'},
+    {label: 'Cross Chain', value: 'cc'},
     {label: 'Data', value: 'data'},
     {label: 'SDKs', value: 'sdk'},
     {label: 'Faucets', value: 'faucet'},
@@ -40,7 +41,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Bridge Bitcoin and Rootstock using the 2 Way Peg App."
   />
 <FilterItem
-    value="bridge, exchange"
+    value="bridge, cc"
     title="Token Bridge"
     subtitle="bridges"
     color="orange"
@@ -167,7 +168,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Exchanges and Bridges to get the RIF Token."
   />
 <FilterItem
-    value="bridge, exchange"
+    value="exchange"
     title="RIF on Chain"
     subtitle="Exchanges"
     color="orange"
@@ -534,5 +535,14 @@ description: "Explore a curated selection of smart contract development tools an
     linkHref="https://redstone.finance/"
     linkTitle="Access On-chain Data"
     description="Access On-Chain data for your smart contracts on Rootstock."
+  />
+  <FilterItem
+    value="cc, data"
+    title="Router Protocol"
+    subtitle="Cross Chain Bridges"
+    color="orange"
+    linkHref="https://routerprotocol.com/"
+    linkTitle="Build Cross Chain dApps"
+    description="Router Protocol is a layer-1 blockchain enabling chain abstraction."
   />
 </Filter>

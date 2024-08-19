@@ -18,25 +18,33 @@ For Linux based OS (Ubuntu for example), it's recommended to install `curl` and 
 We recommend using GPG v1 to download the public key because GPG v2 encounters problems when connecting to HTTPS key servers. You can also download the key using `curl`, `wget` or a web browser but always check the fingerprint before importing it.
 
 ```bash
-$ gpg --keyserver https://secchannel.rsk.co/SUPPORT.asc --recv-keys A6DBEAC640C5A14B
+gpg --keyserver https://secchannel.rsk.co/SUPPORT.asc --recv-keys A6DBEAC640C5A14B
+```
 
+You should see the output below:
+
+```text
 Output:
-  gpg: key A6DBEAC640C5A14B: "IOV Labs Support <support@iovlabs.org>" imported
-  gpg: Total number processed: 1
-  gpg: imported: 1  (RSA: 1)
+gpg: key A6DBEAC640C5A14B: "IOV Labs Support <support@iovlabs.org>" imported
+gpg: Total number processed: 1
+gpg: imported: 1  (RSA: 1)
 ```
 
 ## Verify the fingerprint of the public key
 
 ```bash
-$ gpg --finger A6DBEAC640C5A14B
+gpg --finger A6DBEAC640C5A14B
+```
 
+The output should look like this:
+
+```text
 Output:
-  pub   rsa4096 2022-05-11 [C]
-  1DC9 1579 9132 3D23 FD37  BAA7 A6DB EAC6 40C5 A14B
-  uid   [ unknown] IOV Labs Support <support@iovlabs.org>
-  sub   rsa4096 2022-05-11 [S]
-  sub   rsa4096 2022-05-11 [E]
+pub   rsa4096 2022-05-11 [C]
+1DC9 1579 9132 3D23 FD37  BAA7 A6DB EAC6 40C5 A14B
+uid   [ unknown] IOV Labs Support <support@iovlabs.org>
+sub   rsa4096 2022-05-11 [S]
+sub   rsa4096 2022-05-11 [E]
 ```
 
 ## Verify the signature of SHA256SUMS.asc
@@ -46,16 +54,20 @@ The file`SHA256SUMS.asc` is signed with Rootstock public key and includes SHA256
 _Note: Ensure to `cd` into the [`rskj`](https://github.com/rsksmart/rskj) directory_ before executing the commands below.
 
 ```bash
-$ gpg --verify SHA256SUMS.asc 
+gpg --verify SHA256SUMS.asc 
+```
 
+The output should look like this:
+
+```text
 Output:
-  gpg: Signature made Wed May 11 10:50:48 2022 -03
-  gpg: using RSA key 1F1AA750373B90D9792DC3217997999EEA3A9079
-  gpg: Good signature from "IOV Labs Support <support@iovlabs.org>" [unknown]
-  gpg: WARNING: This key is not certified with a trusted signature!
-  gpg: There is no indication that the signature belongs to the owner.
-  Primary key fingerprint: 1DC9 1579 9132 3D23 FD37  BAA7 A6DB EAC6 40C5 A14B
-  Subkey fingerprint: 1F1A A750 373B 90D9 792D  C321 7997 999E EA3A 9079
+gpg: Signature made Wed May 11 10:50:48 2022 -03
+gpg: using RSA key 1F1AA750373B90D9792DC3217997999EEA3A9079
+gpg: Good signature from "IOV Labs Support <support@iovlabs.org>" [unknown]
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg: There is no indication that the signature belongs to the owner.
+Primary key fingerprint: 1DC9 1579 9132 3D23 FD37  BAA7 A6DB EAC6 40C5 A14B
+Subkey fingerprint: 1F1A A750 373B 90D9 792D  C321 7997 999E EA3A 9079
 ```
 
 *Note:* Learn more about [key management](https://www.gnupg.org/gph/en/manual/x334.html) here.
@@ -69,13 +81,13 @@ Linux - Windows (bash console)
 <Tabs>
   <TabItem value="linux" label="Linux" default>
     ```bash
-      $ sha256sum --check SHA256SUMS.asc
+    sha256sum --check SHA256SUMS.asc
     ```
   </TabItem>
   <TabItem value="mac" label="Mac OSX">
    ```bash
-    $ shasum --check SHA256SUMS.asc
-  ```
+  shasum --check SHA256SUMS.asc
+   ```
   </TabItem>
 </Tabs>
 
@@ -84,7 +96,7 @@ Linux - Windows (bash console)
 <Tabs>
   <TabItem value="linux" label="Linux, Mac OSX" default>
     ```bash
-      $ ./configure.sh
+    ./configure.sh
     ```
   </TabItem>
 </Tabs>

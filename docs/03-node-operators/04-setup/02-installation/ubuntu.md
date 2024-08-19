@@ -1,6 +1,6 @@
 ---
 sidebar_label: Setup node on Ubuntu
-sidebar_position: 200
+sidebar_position: 300
 title: Setup node on Ubuntu
 tags: [ubuntu, install, rsk, rskj, node, how-to, network, requirements, mainnet]
 description: "Install RSKj on Ubuntu."
