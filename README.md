@@ -15,7 +15,7 @@ _Start your journey to building dApps on Rootstock, see the [quick start guide](
 
 🚀 [Send us feedback](#issues)
 
-🚀 Join the [Join the global Rootstock community on Discord](https://rootstock.io/discord)
+🚀 Join the [Join the global Rootstock community on Discord](http://discord.gg/rootstock)
 
 > This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator. For more information on how to use Docusaurus, please refer to the [Docusaurus Documentation](https://docusaurus.io/docs).
 
@@ -31,7 +31,7 @@ Clone this repository, and run the following commands in the root directory:
 ### Local Development
 
 ```
-$ yarn start
+yarn start
 ```
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
@@ -153,7 +153,7 @@ but wish to move or rename it. All redirects are handled using `vercel.json` fil
 1. Do **not** use `git mv` to move/ rename the file
 2. Instead create a new file in the target location/ file path,
    and leave the previous one there.
-3. In the new file, copy all the contents from the previous file, add previous and new path url to `vercel.json`.
+3. In the new file, copy all the contents from the previous file, add previous and new path urls to `vercel.json`.
 
 **Why**: This is done because when a page is published at a certain URL,
 that URL may be linked to externally.
@@ -225,7 +225,7 @@ When a new version of RSKj is released:
 ## Contributing
 
 > - For changes to general content, site pages, images, etc. See the [docs folder](/docs/).
-> - For changes to the logic, or looking adding new features to the devportal. Refer to `docusaurus.config.js`, `components` folders.
+> - For changes to the logic, or looking adding new features to the devportal. Refer to `docusaurus.config.js`, `/src/components` folders.
 
 ### Issues
 
@@ -250,6 +250,4 @@ Fill it in accordingly.
 Note that **What** and **Why** sections are compulsory,
 and the **Refs** section is optional.
 
-> Note to run `yarn build` to test the build output of your branch prior to
-creating a new pull request, or pushing more commits to an existing one.
-Don't introduce any regressions!
+> Note to run `yarn build` to test the build output of your branch prior to creating a new pull request, or pushing more commits to an existing one. Don't introduce any regressions!
