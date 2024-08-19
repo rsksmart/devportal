@@ -41,7 +41,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Bridge Bitcoin and Rootstock using the 2 Way Peg App."
   />
 <FilterItem
-    value="bridge, exchange"
+    value="bridge, cc"
     title="Token Bridge"
     subtitle="bridges"
     color="orange"
