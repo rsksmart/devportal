@@ -168,7 +168,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Exchanges and Bridges to get the RIF Token."
   />
 <FilterItem
-    value="bridge, exchange"
+    value="exchange"
     title="RIF on Chain"
     subtitle="Exchanges"
     color="orange"
