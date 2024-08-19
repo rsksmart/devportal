@@ -1,14 +1,14 @@
 ---
 sidebar_label: MetaMask
 sidebar_position: 3
-title: Configure Metamask Wallet for Rootstock
+title: Configure MetaMask Wallet for Rootstock
 tags: [metamask, rootstock, tools, rsk, wallets, guides]
-description: "Learn how to connect to Rootstock with a Metamask Wallet"
+description: "Learn how to connect to Rootstock with a MetaMask Wallet"
 ---
 
 In this guide, you will learn how to download, install MetaMask, and set up custom networks.
 
-:::note[Download and Install Metamask]
+:::note[Download and Install MetaMask]
 
 Visit the [metamask-landing.rifos.org](https://metamask-landing.rifos.org/) tool to download/install Metamask, and add Rootstock custom networks or follow the steps in the video below.
 :::
