@@ -1,4 +1,4 @@
-## Contribution Guide
+## Rootstock Contribution Guide
 
 Are you passionate about web3, bitcoin and the Blockchain? Do you have a passion for Open Source and Web3? Do you enjoy writing, coding, bounty hunting, solving real-world problems, and eager to contribute to the future of Bitcoin and Decentralized Finance? Join the [Rootstock Discord Community](http://discord.gg/rootstock) and start making contributions!
 
@@ -61,5 +61,5 @@ All PRs must include a commit message with the description of the changes made\!
 ## **How to Contribute to Docs**
 - See guide on how to contribute to the [Rootstock Documentation](CONTRIBUTING_DOCS.md)
 
-## Other Ways to Contribute?
+### Looking for other ways to Contribute?
 - See the contribute page on the [Docs](https://dev.rootstock.io/resources/contribute/).
