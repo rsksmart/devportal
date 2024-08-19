@@ -1,10 +1,8 @@
-We would love you to contribute to RootstockLabs and help make it better\! We want contributing to RootstockLabs to be fun, enjoyable, and educational for anyone and everyone. 
+## Contribution Guide
+
+Are you passionate about web3, bitcoin and the Blockchain? Do you have a passion for Open Source and Web3? Do you enjoy writing, coding, bounty hunting, solving real-world problems, and eager to contribute to the future of Bitcoin and Decentralized Finance? Join the [Rootstock Discord Community](http://discord.gg/rootstock) and start making contributions!
 
 All contributions are welcome, including issues, updates and tweaks, blog posts, workshops, and more.
-
-# **Contributor Covenant Code of Conduct**
-
-Do we have this?
 
 **How to Start?**
 
@@ -55,10 +53,13 @@ All PRs must include a commit message with the description of the changes made\!
 
 ## **Setup From Source**
 
-- To set up a working development environment, fork the project [git repository](https://github.com/zgraya-digital/devportal-rootstock) and install the documentation dependencies and run the project. See [README](README.md)
+- To set up a working development environment, fork the project [git repository](https://github.com/rsksmart/devportal-rootstock) and install the documentation dependencies and run the project. See [README Documentation](README.md)
 
 ## **Documentation Style Guide**  
-- Use [Rootstock Style_Guide](STYLE-GUIDE.md)
+- See [Rootstock Style_Guide](STYLE-GUIDE.md)
 
 ## **How to Contribute to Docs**
 - See guide on how to contribute to the [Rootstock Documentation](CONTRIBUTING_DOCS.md)
+
+## Other Ways to Contribute?
+- See the contribute page on the [Docs](https://dev.rootstock.io/resources/contribute/).
