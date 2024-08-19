@@ -1,6 +1,6 @@
 ## Contributing to Rootstock Documentation
 
-![Rootstock Docs Home][/docs/static/img/docs_home.png]
+![Rootstock Docs Home][/static/img/docs_home.png]
 
 In this guide, I will outline steps to follow as a new user to our developer documentation so you can update the right content, add a new content to the right section, this will help reduce the reviewing phase with us.
 

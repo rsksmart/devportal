@@ -5,9 +5,6 @@
     <img alt="Rootstock-logo" src="/static/img/2_rootstock_logo_og.png" width="100" />
   </a>
 </p>
-<h1 align="center">
-  Rootstock Developer Portal
-</h1>
 
 This repo contains the [Rootstock Developer Portal](https://dev.rootstock.io). The Developer Portal - Docs is the home for Rootstock documentation for end users and developers. Check out our quickstarts, tutorials, API reference, and code examples.
 
@@ -65,6 +62,7 @@ Here's a simplified example of how it might look:
     doc3.md
     doc4.md
 ```
+
 ### Main Navigation and Sidebars
 
 The main navigation of the website is created based on the root directories in the `/docs` folder. Each directory has its own sidebar for easy navigation.
@@ -85,7 +83,7 @@ Please note that the path to the image is relative to the root of the project, n
 
 For more information on how to use images in Docusaurus, please refer to the [Contributing Docs](CONTRIBUTING_DOCS.md).
 
-## ### Writing original documentation
+## Writing original documentation
 
 Steps:
 1. Locate the `docs` folder
@@ -175,7 +173,7 @@ much more user friendly, and search engine friendly.
 
 When you add new documentation, you should check that a visitor
 is able to find it through *both* the navigation bar,
-and the search functionality. The Algolia and Mendable Search component regularly crawls and updates content.
+and the search functionality. The Algolia and Mendable AI Search component regularly crawls and updates content.
 
 #### Navigation menu
 
@@ -208,7 +206,7 @@ and the search functionality. The Algolia and Mendable Search component regularl
 
 ### Updating RSKj
 
-When a new version of RSKj is released:
+When a new version of Rootstock (RSKj) node is released:
 
 - Update the version numbers list in the public nodes page:
   - `/node-operators/setup/reproducible.md`
@@ -217,10 +215,11 @@ When a new version of RSKj is released:
   - `/node-operators/setup/node-runner/linux.md/`
   - `/node-operators/setup/node-runner/macos.md/`
   - `/node-operators/setup/node-runner/ubuntu.md`
-- Update the version numbers and checksums in the reproducible builds page:
+- Update the version numbers and checksums in the reproducible builds and security chain pages:
   - `/node-operators/setup/reproducible.md`
 - Update to add/ remove/ update any RPC methods, if relevant, in the RPC page
   - `/node-operators/json-rpc.md/`
+- Do a global search with the old version number so as not to miss out on other pages using the old version number.
 
 ## Contributing
 
