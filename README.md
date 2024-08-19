@@ -198,13 +198,13 @@ and the search functionality. The Algolia and Mendable AI Search component regul
     It is a good idea to set this to include any words or phrases which
     you think a reader would search for when looking for this page.
 
-### Changelog
+## Changelog
 
 A changelog is a file which contains a curated, chronologically ordered list of notable changes for each version of a project.
 
 [Rootstock Changelog](https://dev.rootstock.io/changelog/) provides information about the latest product updates to the RSKj node and products within the Rootstock Ecosystem.
 
-To update the changelog, see `/changelog.md` folder. Create a file with the date and title of the change. For e.g, `2024-07-04-introducing-arrowhead-6-3-0.md`. 
+To update the changelog or add a new article, see `/changelog.md` folder. Create a file with the date and title of the change. For e.g, `2024-07-04-introducing-arrowhead-6-3-0.md`. 
 
 Add the update details. See below for an example:
 
@@ -220,7 +220,7 @@ url: https://blog.rootstock.io/noticia/introducing-arrowhead-6-3-1-what-you-need
 **Summary**: The Rootstock network will undergo a patch network upgrade on block 6,549,300. This mandatory upgrade fixes the PowPeg outage reported on June 24th; users who adhere to these changes must update their nodes to the latest version
 ```
 
-> Note that usage of images or logos are optional.
+> Image and logo usage is optional. Currently, changelog announcements can only link externally to the [Rootstock blog](https://blog.rootstock.io) or [project repository](https://github.com/rsksmart).
 
 ### Updating RSKj
 
