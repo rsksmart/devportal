@@ -1,6 +1,6 @@
 # Rootstock Developer Portal
 
-This repo contains the [Rootstock Developer Portal](https://dev.rootstock.io). The Developer Portal - Docs is the home for Rootstock documentation for end users and developers. Check out our quickstarts, tutorials, API reference, and code examples.
+This repo contains the [Rootstock Developer Portal](https://dev.rootstock.io). The Developer Docs is the home for Rootstock documentation for end users and developers. Check out our quickstarts, tutorials, API reference, and code examples.
 
 _Start your journey to building dApps on Rootstock, see the [quick start guide](/developers/quickstart/) or see the [setup](#set-up) instructions, or the [contributing](CONTRIBUTING_DOCS.md) guide for how to contribute to Rootstock Documentation._
 
@@ -21,7 +21,7 @@ Clone this repository, and run the following commands in the root directory:
 
 ### Local Development
 
-```
+```bash
 yarn start
 ```
 
@@ -31,7 +31,7 @@ This command starts a local development server and opens up a browser window. Mo
 
 ### Production Build
 
-```
+```bash
 yarn build
 ```
 
@@ -45,7 +45,7 @@ This allows for a clear and organized structure, making it easy for users to nav
 
 Here's a simplified example of how it might look:
 
-```
+```text
 /docs
   /guide
     index.md
@@ -208,7 +208,7 @@ To update the changelog or add a new article, see `/changelog.md` folder. Create
 
 Add the update details. See below for an example:
 
-```
+```markdown
 ---
 title: "Introducing Arrowhead 6.3.1: What You Need To Know About Rootstock’s Upcoming Patch Network Upgrade"
 author: Rootstock

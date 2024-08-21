@@ -1,18 +1,59 @@
-## Rootstock Contribution Guide
+# Rootstock Contribution Guide
 
 Are you passionate about web3, bitcoin and the Blockchain? Do you have a passion for Open Source and Web3? Do you enjoy writing, coding, bounty hunting, solving real-world problems, and eager to contribute to the future of Bitcoin and Decentralized Finance? Join the [Rootstock Discord Community](http://discord.gg/rootstock) and start making contributions!
 
 All contributions are welcome, including issues, updates and tweaks, blog posts, workshops, and more.
 
-**How to Start?**
-
+## How to Contribute
 If you are worried or don’t know where to start, check out the next section that explains what kind of help we could use and where you can get involved. 
 
-You can send your questions on [Discord](http://discord.gg/rootstock), send a [Pull Request](https://github.com/rsksmart/rsksmart.github.io/pulls) or [Submit an Issue](https://github.com/rsksmart/rsksmart.github.io/issues), and a maintainer will attend to it\!
+You can send your questions on [Discord](http://discord.gg/rootstock), send a [Pull Request](https://github.com/rsksmart/rsksmart.github.io/pulls) or [Submit an Issue](https://github.com/rsksmart/rsksmart.github.io/issues), and a maintainer will attend to it.
 
-**Submit a Pull Request 🚀**
+### Reporting Bugs
 
-Branch naming convention is as following
+1. **Check for Existing Issues**: Before reporting a bug, please check the [issue tracker](https://github.com/rsksmart/rsksmart.github.io/issues) to see if it has already been reported.
+2. **Create a New Issue**: If your issue is not listed, create a new one. Provide as much detail as possible:
+    - A clear and descriptive title.
+    - Steps to reproduce the bug.
+    - Expected and actual results.
+    - Any relevant screenshots or logs.
+    - Your environment details (OS, browser, version, etc.).
+
+### Suggesting Features
+
+1. **Check for Existing Requests**: Look through the [issue tracker](issues) to see if someone else has suggested the feature.
+2. **Create a New Feature Request**: If the feature is not listed, open a new issue. Include:
+    - A clear and descriptive title.
+    - The motivation for the feature.
+    - Detailed description of the proposed feature.
+    - Any relevant mockups or screenshots.
+
+### Setup From Source
+
+1. **Fork the Repository**: Fork the repo to your GitHub account.
+2. **Clone Your Fork**: Clone your fork to your local machine.
+    ```bash
+    git clone https://github.com/rsksmart/devportal.git
+    ```
+3. **Create a Branch**: Create a new branch for your work.
+    ```bash
+    git checkout -b feature-branch
+    ```
+
+#### Development Environment Setup
+
+1. **Install Dependencies**: Install the necessary dependencies for the project.
+    ```bash
+    yarn install
+    ```
+2. **Run the Project**: Ensure everything is working by running the project.
+    ```bash
+    yarn start
+    ```
+
+### Submitting a Pull Requests 🚀
+
+Branch naming convention is as follows:
 
 `AREA-ISSUE_ID-DESCRIPTION`
 
@@ -29,7 +70,7 @@ When `AREA` can be:
 
 All PRs must include a commit message with the description of the changes made\!
 
-## **Writing Commit Messages**
+### **Writing Commit Messages**
 
 * Use the present tense ("Add feature" not "Added feature")  
 * Use the imperative mood ("Move cursor to..." not "Moves cursor to...")  
@@ -51,15 +92,30 @@ All PRs must include a commit message with the description of the changes made\!
   * ⬇️ :arrow\_down: when downgrading dependencies  
   * 👕 :shirt: when removing linter warnings
 
-## **Setup From Source**
+### Documentation Standards
 
-- To set up a working development environment, fork the project [git repository](https://github.com/rsksmart/devportal-rootstock) and install the documentation dependencies and run the project. See [README Documentation](README.md)
+1. **Follow the Style Guide**: Adhere to our coding standards.
+2. **Test**: Ensure your docs is working. by using this command `yarn build`
+3. **Locate docs folder:**  Our documentation files are located in the `/docs` directory of the repository. After cloning the repo, navigate to this directory to see the existing documentation structure.
 
-## **Documentation Style Guide**  
+### Review Process
+
+1. **Code Review**: Your PR will be reviewed by our maintainers. They may ask for changes or provide feedback.
+2. **Make Necessary Changes**: Address any feedback and update your PR.
+3. **Merge**: Once approved, your PR will be merged into the main branch.
+
+### Community and Communication
+
+1. **Join the Discussion**: Participate in discussions and If you need help, reach out to the team on [discord](http://discord.gg/rootstock).
+2. **Stay Updated**: Follow Rootstock updates on [social media](https://x.com/rootstock_io).
+
+### License
+
+By contributing, you agree that your contributions will be licensed under the [MIT License](LICENSE).
+
+## Related Docs **Documentation Style Guide**  
 - See [Rootstock Style_Guide](STYLE-GUIDE.md)
-
-## **How to Contribute to Docs**
 - See guide on how to contribute to the [Rootstock Documentation](CONTRIBUTING_DOCS.md)
+- See the contribute page on the [Docs](https://dev.rootstock.io/resources/contribute/) for other ways to contribute to Rootstock.
 
-### Looking for other ways to Contribute?
-- See the contribute page on the [Docs](https://dev.rootstock.io/resources/contribute/).
+Thank you for contributing to Rootstock!

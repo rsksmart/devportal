@@ -1,7 +1,6 @@
-## Rootstock Style Guide
+# Rootstock Style Guide
 
-### **Frontmatter**
-
+## **Frontmatter**
 Rootstock documentation pages utilize frontmatter, a customizable set of properties and components that controls the page behavior (e.g., title, description, cards, filtering, etc.). 
 
 **Example:**
@@ -40,7 +39,7 @@ render\_features: 'powpeg-hsm-attestation-frame'
 
 **Maximum Tags:** Limit tags in the front matter of your .md files to a maximum of five.
 
-**Relevance:** Ensure tags are relevant to your content. They should help users find information quickly. Example, if you are writing an article about “How to use rust in Rootstock Labs” make sure to add “rust” as a tag.
+**Relevance:** Ensure tags are relevant to your content. They should help users find information quickly. Example, if you are writing an article about “How to deploy a smart contract on Rootstock using Rust” make sure to add “rust” as a tag.
 
 **Mandatory Tags:** We have a set of mandatory tags for each section. See the table below for a list.
 
@@ -68,23 +67,17 @@ tags: concepts, rsk, rootstock
 
 ## **Accessibility Widget Features**
 
-This requires alot of coding to add it to the docs, i think we can hold on this for now.
+The Rootstock Documentation was built with accessibility in mind. It uses a robust accessibility tool called [Accessibe](https://accessibe.com/). This allows users with disabilities to customize their experience for easier navigation and information access.
 
-## **When to Use Each Component** 
+To use the accessibility features, visit the [Rootstock Docs](https://dev.rootstock.io) and click on the icon**.** at the bottom left of the screen. You can then set up your preferred accessibility features.
 
-This section will provide guidance on using various Docasaurus components effectively.
-
-Certainly\! Here’s the style guide with the code removed:
-
----
+![Accessibe](/static/img/accessibe.gif)
 
 ## **When to Use Each Component**
-
 This section provides guidance on using various Docasaurus components effectively:
 
 1. **Codeblock:**
-
-   This is used to display code snippets for developers or to illustrate specific syntax.
+This is used to display code snippets for developers or to illustrate specific syntax.
 
    * Example: 
 
@@ -95,7 +88,6 @@ function greet(name) {
 console.log(greet("World")); // Output: Hello, World!
 ```
 
-   *   
 2. **Tabs:**  
    * Use case: Organize related content with different functionalities or viewpoints.  
    * Example:
@@ -114,7 +106,6 @@ console.log(greet("World")); // Output: Hello, World!
 </Tabs>
 ```
 
-   *   
 3. **Gallery Slider:**  
    * Use case: Showcase a series of images or content that benefit from a swiping or sliding interface.  
    * Example: A documentation page for a product might use a gallery slider to display product screenshots.  
@@ -134,7 +125,6 @@ console.log(greet("World")); // Output: Hello, World!
 ###### Heading level 6
 ```
 
-   *   
 6. **List:**  
    * Use case: Present items in a specific sequence (ordered list) or without order (unordered list).  
    * Example: Ordered list for installation steps, unordered list for a set of features.  
@@ -194,7 +184,6 @@ git clone https://github.com/rsksmart/devportal.git
 ```
 
 ## **Connect with other Developers**
-
 Join the vibrant Rootstock community to connect with developers, engage in discussions, and stay updated on the latest advancements: 
 
 - **Discord: [https://discord.com/invite/rootstock](https://discord.com/invite/rootstock)**  

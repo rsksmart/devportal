@@ -1,5 +1,5 @@
 ---
-title: "Powpeg: Securing Bitcoin-Rootstock Interoperability"
+title: "Building the Most Secure, Permissionless and Uncensorable Bitcoin Peg"
 sidebar_position: 4
 sidebar_label: Powpeg
 tags: [rsk, rootstock, rbtc, btc, architecture, powpeg, 2 way peg]
@@ -7,9 +7,7 @@ description: "Transfer BTC to RBTC, and RBTC to BTC through the Powpeg."
 render_features: 'powpeg-hsm-attestation-frame'
 ---
 
-## Building the Most Secure, Permissionless and Uncensorable Bitcoin Peg
-
-Rootstock’s (RSK) 2-way peg protocol, called “the **Powpeg**”, has matured from its inception in 2018 as a federation to now include many decentralized qualities. The new Rootstock Powpeg protects private keys stored in special purpose PowHSMs based on tamper-proof secure elements (SE). Each PowHSM runs a Rootstock node in SPV mode, and so signatures can only be commanded by chain cumulative proof of work. Security is established in the Powpeg through the simplicity of a layered design we refer to as defence-in-depth.
+Rootstock’s 2-way peg protocol, called “the **Powpeg**”, has matured from its inception in 2018 as a federation to now include many decentralized qualities. The new Rootstock Powpeg protects private keys stored in special purpose PowHSMs based on tamper-proof secure elements (SE). Each PowHSM runs a Rootstock node in SPV mode, and so signatures can only be commanded by chain cumulative proof of work. Security is established in the Powpeg through the simplicity of a layered design we refer to as defence-in-depth.
 
 :::note[Info]
 
@@ -85,11 +83,10 @@ The cumulative work required by the PowHSM also works as a rate limiter or **for
 
 ## Peg-in and Peg-out Finality
 
-Since the Bitcoin blockchain and the Rootstock sidechain are not entangled in a single blockchain or in a parent-child relation as in a [syncchain](https://blog.rootstock.io/noticia/syncchain-synchronized-sidechains-for-improved-security-and-usability/), the transfers of bitcoins between them must at some point in time be considered final. If not, bitcoins locked on one side would never be able to be safely unlocked on the other. Therefore, peg-in and peg-out transactions require a high number of block confirmations. Peg-ins require 100 Bitcoin blocks (approximately 2000 RSK blocks), and peg-outs require 4000 Rootstock blocks (approximately 200 Bitcoin blocks). Transactions signed by federation nodes are considered final by Rootstock: these transactions are broadcast and assumed to be included sooner or later in the Bitcoin blockchain. Due to the need for finality, Rootstock consensus does not attempt to recover from an attack that manages to revert the blockchain deep enough to revert a final peg-in or peg-out transaction. If a huge reversal occurs, Powpeg nodes halt any future peg-out, and the malicious actors should not be able to double-spend the peg.
+Since the Bitcoin blockchain and the Rootstock sidechain are not entangled in a single blockchain or in a parent-child relation as in a [syncchain](https://blog.rootstock.io/noticia/syncchain-synchronized-sidechains-for-improved-security-and-usability/), the transfers of bitcoins between them must at some point in time be considered final. If not, bitcoins locked on one side would never be able to be safely unlocked on the other. **Therefore, peg-in and peg-out transactions require a high number of block confirmations. Peg-ins require 100 Bitcoin blocks (approximately 2000 RSK blocks), and peg-outs require 4000 Rootstock blocks (approximately 200 Bitcoin blocks)**. Transactions signed by federation nodes are considered final by Rootstock: these transactions are broadcast and assumed to be included sooner or later in the Bitcoin blockchain. Due to the need for finality, Rootstock consensus does not attempt to recover from an attack that manages to revert the blockchain deep enough to revert a final peg-in or peg-out transaction. If a huge reversal occurs, Powpeg nodes halt any future peg-out, and the malicious actors should not be able to double-spend the peg.
 
 :::note[IRIS 3.0.0]
 Since the IRIS 3.0.0 upgrade, minimum required values for peg-in and peg-out have been halved, Peg-in (BTC) minimum is now 0.005 and Peg-out (RBTC) minimum is now 0.004. Besides this minimum, the Bridge will estimate the fees required to pay for the pegout, if the remainder after paying the fees is too low (not enough to be spent in BTC) the pegout will be rejected. The funds will be reimbursed if the pegout is rejected by any of the conditions described above.
-
 :::
 
 ## Decentralization - Building a Vetocracy

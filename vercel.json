@@ -346,6 +346,7 @@
     {"source" : "/guides/two-way-peg-app/faqs/", "destination" : "/resources/guides/two-way-peg-app/faqs/"},
     {"source" : "/rif/wallet/dev-reference/troubleshooting/", "destination" : "/developers/integrate/"},
     {"source" : "/kb/the-graph-rootstock/", "destination" : "/dev-tools/thegraph/"},
+    {"source" : "/tools/thegraph/", "destination" : "/dev-tools/thegraph/"},
     {"source" : "/solutions/tenderly/", "destination" : "https://rootstock.io/ecosystem/"},
     {"source" : "/guides/full-stack-dapp-on-rsk/", "destination" : "/developers/smart-contracts/"},
     {"source" : "/rif/rns/libs/javascript/", "destination" : "/developers/integrate/"},
@@ -604,4 +605,3 @@
     {"source" : "/guides/dex/features-of-a-dex", "destination" : "https://blog.rootstock.io/noticia/features-of-a-dex/"}
   ]
 }
-
