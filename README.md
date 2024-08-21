@@ -127,7 +127,16 @@ may get a "404 Page Not Found" error.
 In this scenario, a redirect is preferred as it is
 much more user friendly, and search engine friendly.
 
-## Broken Link Detection
+## Links
+
+1. When adding links, prefer absolute links - e.g. links beginning with `/`,
+   over relative links - e.g. links beginning with `./` or `../`
+1. Run `yarn build` to identify any broken links -
+   this includes both links to other pages within devportal,
+   and links to anchor references within devportal pages,
+   however does not include links to external pages (not within devportal).
+
+### Broken Link Detection
 
 This runs tests that check whether there are any errors in the site. Uses Docusaurus provides built-in broken link detection to ensure the quality of documentation. This feature is enabled by default and can be configured in the `docusaurus.config.js` file.
 
@@ -152,15 +161,6 @@ module.exports = {
 By default, it set to `warn`: Docusaurus will log a warning in the console, but the build will continue.
 
 For more details on broken link detection in Docusaurus, please refer to the [Docusaurus Documentation](https://docusaurus.io/docs/next/api/docusaurus-config#onBrokenLinks).
-
-### Links
-
-1. When adding links, prefer absolute links - e.g. links beginning with `/`,
-   over relative links - e.g. links beginning with `./` or `../`
-1. Run `yarn build` to identify any broken links -
-   this includes both links to other pages within devportal,
-   and links to anchor references within devportal pages,
-   however does not include links to external pages (not within devportal).
 
 ### Findability
 
