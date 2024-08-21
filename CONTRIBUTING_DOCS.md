@@ -1,4 +1,4 @@
-## Contributing to Rootstock Documentation
+# Contributing to Rootstock Documentation
 
 ![Rootstock Docs Home][/static/img/docs_home.png]
 
@@ -14,7 +14,7 @@ In this guide, I will outline steps to follow as a new user to our developer doc
 
 ### **Content Placement and Categorization**
 
-### **Concepts Section**
+#### **Concepts Section**
 
 This section will cover the theoretical aspects and foundational concepts relevant to the platform or technology. The content will include:
 
@@ -26,7 +26,7 @@ This section will cover the theoretical aspects and foundational concepts releva
 * **Scalability and Performance**: Discussions on scalability strategies, performance optimization, and handling high-load scenarios.  
 * **Regulatory and Compliance**: Information on legal and regulatory considerations, compliance requirements, and industry standards.
 
-**Developers:**
+#### **Developers Section**
 
 * **New pages or items:** A dedicated "Getting Started" section within the appropriate navigation item (e.g., Developers, Node Operators) can house one-page tutorials.  
 * **Guides:** These should primarily reside under the "Developers" section.  
@@ -34,7 +34,7 @@ This section will cover the theoretical aspects and foundational concepts releva
   * **User guides:** These belong under the "Concept" section as they explain how to use the product rather than integrate with it.
 
 
-### **Node Operators Section**
+#### **Node Operators Section**
 
 This section will provide practical information for node operators, focusing on setup, maintenance, and troubleshooting. The content will include:
 
@@ -46,7 +46,7 @@ This section will provide practical information for node operators, focusing on 
 * Backup and Recovery: Procedures for backing up node data, disaster recovery plans, and restoring nodes after failures.  
 * Community and Support: Information on community forums, support channels, and how to get help from the community or official support.
 
-### **Resources Section**
+#### **Resources Section**
 
 This section will serve as a repository of useful resources, documentation, and tools for developers and node operators. The content will include:
 
@@ -58,7 +58,7 @@ This section will serve as a repository of useful resources, documentation, and 
 * Open Source Projects: Information on open-source projects, how to contribute, and where to find them.  
 * External Tools: Links to external tools and services that can aid in development, testing, and deployment.
 
-### **Devtools Section**
+#### **DevTools Section**
 
 This section will focus on development tools, with a particular emphasis on wallets and related tools. The content will include:
 
@@ -70,7 +70,7 @@ This section will focus on development tools, with a particular emphasis on wall
 * Popular Wallets: Reviews and comparisons of popular wallets, their features, and use cases.  
 * Community Tools: Information on community-developed tools and plugins that enhance wallet functionality or ease of use.
 
-### **Codebase Overview**
+#### **Codebase Overview**
 
 To contribute to our developer documentation, follow these [steps to clone](https://github.com/rsksmart/devportal-rootstock) the repository and get started.
 
@@ -88,11 +88,11 @@ Within the `/doc` folder, you will find the following directories:
 
 Add your content to the appropriate directory based on the topic it pertains to.
 
-#### **Important Notes**
+### **Important Notes**
 
 1. When adding content to the documentation, please adhere to our folder structure. Create a new folder for each piece of content, which will generate a new page. Ensure the folder names follow our numbering style for the left navigation as needed.
 
-![][image2]
+![Folder Numbering][/static/img/folder_numbering.png]
 
 2. When adding content, please ensure you:  
 * Include a filter for each new page or piece of content. Each folder should have an `index.md` file that looks similar to this.
@@ -114,13 +114,13 @@ description="Porting an Ethereum decentralized application (dApp) to Rootstock p
 
 ```
 
-### **What is a Filter?**
+#### **What is a Filter?**
 
 A filter in this context is a tool used to narrow down content based on specific criteria. For example, if you have multiple articles on our documentation, a filter can help users find content related to a specific topic, such as Ethereum and also make it easy to find
 
-![][image3]
+![Filter Component][/static/img/filter_component.png]
 
-### **Components of the Filter**
+#### **Components of the Filter**
 
 1. **Filter Tag**: `<Filter>`  
    * This is the main component that wraps around the filter options.  
@@ -128,7 +128,7 @@ A filter in this context is a tool used to narrow down content based on specific
 3. **label**: This is the text that will be displayed to users. In this case, 'From Ethereum'.  
 4. **value**: This is the internal value that the filter will use to identify the option. In this case, 'ethereum'.
 
-|                  FilterItem Property | Description |
+| FilterItem Property | Description |
 | :---- | ----- |
 | value | The unique identifier for the filter item. |
 | title | The main title or name of the filter item. |
@@ -137,17 +137,17 @@ A filter in this context is a tool used to narrow down content based on specific
 | linkHref | The hyperlink reference URL that the filter item points to. |
 | description | A detailed description of what the filter item entails or represents. |
 
-### **How to Add a Filter**
+#### **How to Add a Filter**
 
-#### **Step 1: Understand the Context**
+##### **Step 1: Understand the Context**
 
 The title of the article is "**Port a dApp from other Chains to Rootstock**". The label information is derived from this title.
 
-#### **Step 2: Create a Filter Component**
+##### **Step 2: Create a Filter Component**
 
 You need to create a `Filter` component that will hold your filter options. Each filter option will have a `label` and a `value`.
 
-#### **Step 3: Define Filter Options**
+##### **Step 3: Define Filter Options**
 
 For each option you want to add, you will create an object with `label` and `value` properties. Here’s how you can define a filter for 'From Ethereum':
 
@@ -162,4 +162,4 @@ For each option you want to add, you will create an object with `label` and `val
 * **label**: This is what users will see. It's user-friendly and descriptive.  
 * **value**: This is a more technical identifier used internally by the application.
 
-**Note:** if you follow these guidelines, you'll help maintain the quality and organization of our documentation.
+> if you follow these guidelines, you'll help maintain the quality and organization of our documentation.
