@@ -66,7 +66,7 @@ See a list of terms about/related to the 2 way peg app and their meanings.
   <Accordion.Item eventKey="9">
     <Accordion.Header as="h3">Peg-ins</Accordion.Header>
     <Accordion.Body>
-      - A conversion from BTC to RBTC. In the peg-in process, the customer sends some BTC and gets the equivalent amount in RBTC inside the Rootstock Blockchain network. The peg-in process is **final and cannot be reverted**, it requires upto **2** Bitcoin block confirmation which is approximately less than 20minutes.
+      - A conversion from BTC to RBTC. In the peg-in process, the customer sends some BTC and gets the equivalent amount in RBTC inside the Rootstock Blockchain network. The peg-in process is **final and cannot be reverted**, it requires **100** Bitcoin block confirmation which is approximately 200 Rootstock Blocks.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="10">
