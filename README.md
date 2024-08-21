@@ -162,20 +162,20 @@ By default, it set to `warn`: Docusaurus will log a warning in the console, but 
 
 For more details on broken link detection in Docusaurus, please refer to the [Docusaurus Documentation](https://docusaurus.io/docs/next/api/docusaurus-config#onBrokenLinks).
 
-### Findability
+## Findability
 
 When you add new documentation, you should check that a visitor
 is able to find it through *both* the navigation bar,
 and the search functionality. The Algolia and Mendable AI Search component regularly crawls and updates content.
 
-#### Navigation menu
+### Navigation menu
 
 - If your new pages are within a collection
   - The reader may use "previous" and "next" links to go through the pages in a sequence
   - Ensure that all pages within the collection have a value for `sidebar_position`
   - Look at `/docs/developers/smart-contracts.md` for a good example of this
 
-#### Search results
+### Search results
 
 - A reader may find your new pages through the Algolia search feature and Mendable ASK AI.
 - To maximize the quality of the search results,
