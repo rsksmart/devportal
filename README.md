@@ -110,7 +110,33 @@ For details for Doc Creation, please refer to the [Style Guide](STYLE-GUIDE.md).
 
 For a detailed description of each field, please refer to the [Docusaurus Documentation](https://docusaurus.io/docs/next/api/plugins/@docusaurus/plugin-content-docs#markdown-front-matter).
 
-## Broken Link Detection
+### Moving existing documentation
+
+This applies when you have documentation already published on the devportal,
+but wish to move or rename it. All redirects are handled using `vercel.json` file.
+
+1. Do **not** use `git mv` to move/ rename the file
+2. Instead create a new file in the target location/ file path,
+   and leave the previous one there.
+3. In the new file, copy all the contents from the previous file, add previous and new path urls to `vercel.json`.
+
+**Why**: This is done because when a page is published at a certain URL,
+that URL may be linked to externally.
+By renaming/ moving a page, the URL changes, and any external links
+may get a "404 Page Not Found" error.
+In this scenario, a redirect is preferred as it is
+much more user friendly, and search engine friendly.
+
+## Links
+
+1. When adding links, prefer absolute links - e.g. links beginning with `/`,
+   over relative links - e.g. links beginning with `./` or `../`
+1. Run `yarn build` to identify any broken links -
+   this includes both links to other pages within devportal,
+   and links to anchor references within devportal pages,
+   however does not include links to external pages (not within devportal).
+
+### Broken Link Detection
 
 This runs tests that check whether there are any errors in the site. Uses Docusaurus provides built-in broken link detection to ensure the quality of documentation. This feature is enabled by default and can be configured in the `docusaurus.config.js` file.
 
@@ -136,49 +162,22 @@ By default, it set to `warn`: Docusaurus will log a warning in the console, but 
 
 For more details on broken link detection in Docusaurus, please refer to the [Docusaurus Documentation](https://docusaurus.io/docs/next/api/docusaurus-config#onBrokenLinks).
 
-
-### Moving existing documentation
-
-This applies when you have documentation already published on the devportal,
-but wish to move or rename it. All redirects are handled using `vercel.json` file.
-
-1. Do **not** use `git mv` to move/ rename the file
-2. Instead create a new file in the target location/ file path,
-   and leave the previous one there.
-3. In the new file, copy all the contents from the previous file, add previous and new path urls to `vercel.json`.
-
-**Why**: This is done because when a page is published at a certain URL,
-that URL may be linked to externally.
-By renaming/ moving a page, the URL changes, and any external links
-may get a "404 Page Not Found" error.
-In this scenario, a redirect is preferred as it is
-much more user friendly, and search engine friendly.
-
-### Links
-
-1. When adding links, prefer absolute links - e.g. links beginning with `/`,
-   over relative links - e.g. links beginning with `./` or `../`
-1. Run `yarn build` to identify any broken links -
-   this includes both links to other pages within devportal,
-   and links to anchor references within devportal pages,
-   however does not include links to external pages (not within devportal).
-
-### Findability
+## Findability
 
 When you add new documentation, you should check that a visitor
 is able to find it through *both* the navigation bar,
 and the search functionality. The Algolia and Mendable AI Search component regularly crawls and updates content.
 
-#### Navigation menu
+### Navigation menu
 
 - If your new pages are within a collection
   - The reader may use "previous" and "next" links to go through the pages in a sequence
   - Ensure that all pages within the collection have a value for `sidebar_position`
   - Look at `/docs/developers/smart-contracts.md` for a good example of this
 
-#### Search results
+### Search results
 
-- A reader may find your new pages through the Algolia search feature or Mendable ASK AI.
+- A reader may find your new pages through the Algolia search feature and Mendable ASK AI.
 - To maximize the quality of the search results,
   ensure that you add all of the following to the front matter for each new page
   - `title`:

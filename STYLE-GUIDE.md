@@ -69,7 +69,7 @@ tags: concepts, rsk, rootstock
 
 The Rootstock Documentation was built with accessibility in mind. It uses a robust accessibility tool called [Accessibe](https://accessibe.com/). This allows users with disabilities to customize their experience for easier navigation and information access.
 
-To use the accessibility features, visit the [Rootstock Docs](https://dev.rootstock.io) and click on the icon**.** at the bottom left of the screen. You can then set up your preferred accessibility features.
+To use the accessibility features, visit the [Rootstock Docs](https://dev.rootstock.io) and click on the icon(see gif below) at the bottom left of the screen. You can then set up your preferred accessibility features.
 
 ![Accessibe](/static/img/accessibe.gif)
 
