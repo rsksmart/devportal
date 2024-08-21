@@ -1,6 +1,6 @@
 # Contributing to Rootstock Documentation
 
-![Rootstock Docs Home][/static/img/docs_home.png]
+![Rootstock Docs Home](/static/img/docs_home.png)
 
 In this guide, I will outline steps to follow as a new user to our developer documentation so you can update the right content, add a new content to the right section, this will help reduce the reviewing phase with us.
 
@@ -92,7 +92,7 @@ Add your content to the appropriate directory based on the topic it pertains to.
 
 1. When adding content to the documentation, please adhere to our folder structure. Create a new folder for each piece of content, which will generate a new page. Ensure the folder names follow our numbering style for the left navigation as needed.
 
-![Folder Numbering][/static/img/folder_numbering.png]
+![Folder Numbering](/static/img/folder_numbering.png)
 
 2. When adding content, please ensure you:  
 * Include a filter for each new page or piece of content. Each folder should have an `index.md` file that looks similar to this.
@@ -118,7 +118,7 @@ description="Porting an Ethereum decentralized application (dApp) to Rootstock p
 
 A filter in this context is a tool used to narrow down content based on specific criteria. For example, if you have multiple articles on our documentation, a filter can help users find content related to a specific topic, such as Ethereum and also make it easy to find
 
-![Filter Component][/static/img/filter_component.png]
+![Filter Component](/static/img/filter_component.png)
 
 #### **Components of the Filter**
 

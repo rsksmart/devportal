@@ -113,7 +113,7 @@ All PRs must include a commit message with the description of the changes made\!
 
 By contributing, you agree that your contributions will be licensed under the [MIT License](LICENSE).
 
-## Related Docs **Documentation Style Guide**  
+## Related Docs  
 - See [Rootstock Style_Guide](STYLE-GUIDE.md)
 - See guide on how to contribute to the [Rootstock Documentation](CONTRIBUTING_DOCS.md)
 - See the contribute page on the [Docs](https://dev.rootstock.io/resources/contribute/) for other ways to contribute to Rootstock.
