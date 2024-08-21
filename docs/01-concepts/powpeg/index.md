@@ -9,7 +9,7 @@ render_features: 'powpeg-hsm-attestation-frame'
 
 ## Building the Most Secure, Permissionless and Uncensorable Bitcoin Peg
 
-Rootstock’s (RSK) 2-way peg protocol, called “the **Powpeg**”, has matured from its inception in 2018 as a federation to now include many decentralized qualities. The new Rootstock Powpeg protects private keys stored in special purpose PowHSMs based on tamper-proof secure elements (SE). Each PowHSM runs a Rootstock node in SPV mode, and so signatures can only be commanded by chain cumulative proof of work. Security is established in the Powpeg through the simplicity of a layered design we refer to as defence-in-depth.
+Rootstock’s 2-way peg protocol, called “the **Powpeg**”, has matured from its inception in 2018 as a federation to now include many decentralized qualities. The new Rootstock Powpeg protects private keys stored in special purpose PowHSMs based on tamper-proof secure elements (SE). Each PowHSM runs a Rootstock node in SPV mode, and so signatures can only be commanded by chain cumulative proof of work. Security is established in the Powpeg through the simplicity of a layered design we refer to as defence-in-depth.
 
 :::note[Info]
 
