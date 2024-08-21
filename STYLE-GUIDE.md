@@ -71,7 +71,7 @@ The Rootstock Documentation was built with accessibility in mind. It uses a robu
 
 To use the accessibility features, visit the [Rootstock Docs](https://dev.rootstock.io) and click on the icon**.** at the bottom left of the screen. You can then set up your preferred accessibility features.
 
-<video controls src="static/img/accessibe.mp4" title="Accessibe"></video>
+![Accessibe](/static/img/accessibe.gif)
 
 ## **When to Use Each Component**
 This section provides guidance on using various Docasaurus components effectively:
