@@ -8,9 +8,9 @@ tags: [knowledge-base, defillama, protocol, rootstock, defi]
 
 <!-- ![DefiLlama](/img/resources/defillama-logo.png)  -->
 
-[DefiLlama](https://defillama.com/) is the largest Total Value Locked (TVL) aggregator in the DeFi space, relying on a team of individuals and contributors from numerous protocols to maintain its fully open-sourced data. The platform prioritizes precise data and adopts a transparent methodology.
+[DefiLlama](https://defillama.com/) is the leading aggregator for Total Value Locked (TVL) in the decentralized finance (DeFi) ecosystem. Its open-source data is maintained by a community of contributors from various protocols. DefiLlama prioritizes accuracy and transparency in its methodology.
 
-It assesses the TVL by taking into account the worth of tokens locked within the contracts of a protocol or platform. While TVL for bridge projects is included in the calculation, it does not contribute to the overall TVL of any blockchain.
+TVL is calculated by assessing the value of tokens locked in the contracts of DeFi protocols and platforms. While bridge projects are included in the calculation, their TVL does not contribute to the overall TVL of any specific blockchain.
 
 > Check out the [DefiLlama website](https://defillama.com/) and [DefiLlama docs](https://docs.llama.fi/list-your-project/readme) for more details.
 
