@@ -323,7 +323,7 @@
     {"source" : "/develop/libs/json-rpc/", "destination" : "/node-operators/json-rpc/"},
     {"source" : "/rsk/architecture/mining/implementation-guide/", "destination" : "/node-operators/merged-mining/getting-started/"},
     {"source" : "/rsk/node/install/", "destination" : "/node-operators/setup/installation/"},
-    {"source" : "/kb/defillama/", "destination" : "/resources/tutorials/"},
+    {"source" : "/kb/defillama/", "destination" : "/resources/tutorials/defillama/"},
     {"source" : "/rsk/node/troubleshooting/", "destination" : "/node-operators/troubleshooting/"},
     {"source" : "/rsk/architecture/mining/reference/", "destination" : "/node-operators/merged-mining/reference/"},
     {"source" : "/rif/rns/tools/RNS-Manager/", "destination" : "/developers/integrate/"},
