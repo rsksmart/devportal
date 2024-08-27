@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1900
-sidebar_label: Peg-out using rLogin (Trezor and Ledger)
-title: "Performing a peg-out transaction using rLogin (Trezor and Ledger)"
+sidebar_label: Peg-out using Trezor
+title: "Performing a peg-out transaction using Trezor"
 description: "Here, we will learn how to perform a peg-out using Trezor."
 tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
@@ -14,16 +14,24 @@ To perform a peg-out transaction using the Ledger device directly, follow the st
 
 * Step 1: Plug the Ledger device into the computer
 
-* Step 2: Access **peg-out** screen:
-![pegout screen](/img/resources/two-way-peg-app/using-hd-wallets/acessing-pegout-screen.png)
+* Step 2: Verify if you have enabled **Perform Safety Checks** to **PROMPT**
 
-* Step 3: Click on **Connect wallet** button
-![connect-wallet](/img/resources/two-way-peg-app/using-hd-wallets/connect-wallet.png)
+    > - If is not enabled you will receive this error ![Trezor Error Key Path](/img/resources/two-way-peg-app/trezor-error.png) 
+    > - This video explains how to enable **Perform Safety Checks** to **PROMPT** on **Trezor Suite** [Enabling Prompt for Key Path](/img/resources/two-way-peg-app/trezor-error-fixed.mp4) 
+    <Video url="/img/resources/two-way-peg-app/trezor-error-fixed.mp4" thumbnail="/img/resources/two-way-peg-app/trezor-error.png" />
 
-* Step 4: Click on **Trezor** button<br/>
+
+* Step 3: Access **peg-out** screen:
+![pegout screen](/img/resources/two-way-peg-app/pegout-button.png)
+
+* Step 4: Click on **Connect wallet** button:
+
+![connect-wallet](/img/resources/two-way-peg-app/pegout-ledger-trezor-connection.png)
+
+* Step 5: Click on **Trezor** button<br/>
 ![connect-wallet](/img/resources/two-way-peg-app/using-hd-wallets/trezor.png)
 
-* Step 5: The application will show what network you are connecting on. For this tutorial we are using **Testnet** 
+* Step 6: The application will show what network you are connecting on. For this tutorial we are using **Testnet** 
 
 <br/>
 

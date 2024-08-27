@@ -72,7 +72,7 @@ See a list of terms about/related to the 2 way peg app and their meanings.
   <Accordion.Item eventKey="10">
     <Accordion.Header as="h3">Peg-outs</Accordion.Header>
     <Accordion.Body>
-      - A conversion from RBTC to BTC. This locks RBTC on the Rootstock network and releases BTC on the Bitcoin network. Peg-outs is not supported for this current version of the 2 way peg app. This feature will come with feature releases.
+      - A conversion from RBTC to BTC. This locks RBTC on the Rootstock network and releases BTC on the Bitcoin network. 
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="11">

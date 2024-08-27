@@ -13,17 +13,17 @@ const data = {
         </>
       ),
       list: [
-        {
-          title: 'Flyover',
-          href: 'https://rif.technology/products/#flyover',
-        },
+        // {
+        //   title: 'Flyover',
+        //   href: 'https://rif.technology/products/#flyover',
+        // },
         {
           title: '2 Way Peg',
           href: 'https://app.2wp.rootstock.io/',
         },
         {
-          title: 'RIF on Chain',
-          href: 'https://rifonchain.com/',
+          title: 'Token Bridge',
+          href: 'https://dapp.tokenbridge.rootstock.io/?_gl=1*rkdc23*_gcl_au*MTYzMTg1MzQ4MC4xNzIzMTM3MTAy',
         },
       ],
 
@@ -38,7 +38,7 @@ const data = {
       ),
       list: [
         {
-          title: 'Metamask',
+          title: 'MetaMask',
           href: '/dev-tools/wallets/metamask',
         },
         {
@@ -83,6 +83,10 @@ const data = {
         {
           title: 'Make First API Call',
           href: '/developers/rpc-api/setup/',
+        },
+        {
+          title: 'View JSON RPC Methods',
+          href: '/developers/rpc-api/methods/',
         }
       ],
     },

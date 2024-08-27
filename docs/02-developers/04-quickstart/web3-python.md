@@ -10,7 +10,7 @@ tags: [quick starts, rsk, rootstock, ethereum, python, web3.py, developers, smar
 
 In this guide, you'll learn how to use the Web3.py library to deploy and interact with smart contracts on Rootstock.
 
-:::note[Interact with Rootstock using Rust]
+:::tip[Interact with Rootstock using Rust]
 See tutorial on how to [interact with Rootstock using Rust](/resources/tutorials/rootstock-rust/)
 :::
 

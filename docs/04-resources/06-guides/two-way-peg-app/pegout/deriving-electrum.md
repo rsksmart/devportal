@@ -28,38 +28,9 @@ During the **pegout** process, the destination address of your BTC is derived fr
 
 A derived address is the BTC address derived from the RBTC account. When using the 2 way peg app, it is important to know which address you will receive your BTCs. See [Viewing advanced details](#how-to-view-advanced-details).
 
-We will learn how to view a derived address and use [Liquality](#using-liquality) and [Metamask](#using-metamask) to get a private key. We will also learn how to [convert RBTC - BTC](#converting-btc-to-rbtc) and [Import a Key in Electrum](#import-key-in-electrum).
+We will learn how to view a derived address using [Metamask](#using-metamask) to get a private key. We will also learn how to [convert RBTC - BTC](#converting-btc-to-rbtc) and [Import a Key in Electrum](#import-key-in-electrum).
 
 ### Getting a wallet private key
-
-#### Using Liquality
-
-To get your wallet private key, follow the steps below:
-
-Note: To set up a Liquality or a Metamask wallet. Check here for a step by step process for how to add the Rootstock network to the Liquality browser wallet.
-
-**Step 1**: Open the Liquality wallet on your browser, you can find these in the extensions tab in your browser.
-
-**Step 2**: Check that you’re connected to the Rootstock network
-
-![liquality - connection](/img/resources/two-way-peg-app/liquality/connection.png)
-
-**Step 3**: Choose the asset you want to use for the transaction
-![liquality - assets](/img/resources/two-way-peg-app/liquality/assets.png)
-
-**Step 4**: Click on the menu by the right, and this will open up a list of options.
-
-**Step 5**: Choose the option “Export private key” in the menu
-
-![liquality - export_private_key](/img/resources/two-way-peg-app/liquality/export_private_key.png)
-
-**Step 6**: Choose “I have privacy”
-
-![liquality - privacy](/img/resources/two-way-peg-app/liquality/privacy.png)
-
-**Step 7**: Fill out wallet password and check “I understand the risk and have privacy”
-
-**Step 8**: Copy the private key and click on “Done”
 
 #### Using Metamask
 

@@ -31,20 +31,10 @@ To select an account to send BTC from, click on **Select the account** as shown 
 
 > Note: Your hardware wallet must be connected to view this section of the 2 way peg app.
 
-![Bitcoin account to send from](/img/resources/two-way-peg-app/51-bitcoin-account-to-send-from.png)
+![Bitcoin account to send from](/img/resources/two-way-peg-app/select-btc-account.png)
 
 Choose the address you want to send TBTC from. See the [getting funds](/resources/guides/two-way-peg-app/prerequisites#get-funds) section for how to get BTC or TBTC.
-
-## How to view advanced details
-
-To view advanced details, click on the plus icon as shown in the image below;
-
-![View advanced details](/img/resources/two-way-peg-app/52-view-advanced-details.png)
-
-Here you can find a long string of numbers called an unsigned raw tx.
-
-![Advanced data](/img/resources/two-way-peg-app/53-advanced-data.png)
-
+ 
 ### Advanced data
 
 **Unsigned raw tx**
@@ -59,19 +49,19 @@ There are three options to choose from when deciding on which fee rate to use wh
 
 A slow transaction is less expensive and will take longer to confirm.
 
-![Slow transaction](/img/resources/two-way-peg-app/54-slow-transaction.png)
+![Slow transaction](/img/resources/two-way-peg-app/pegin-tx-slow.png)
 
 **Average**
 
 This is also known as normal, here, the transaction is priced at an average rate and will take an average time to confirm.
 
-![Average transaction](/img/resources/two-way-peg-app/55-average-transaction.png)
+![Average transaction](/img/resources/two-way-peg-app/select-pegin-fee.png)
 
 **Fast**
 
 A fast transaction is the most expensive but the transaction confirms at the quickest time possible.
 
-![Fast transaction](/img/resources/two-way-peg-app/56-fast-transaction.png)
+![Fast transaction](/img/resources/two-way-peg-app/pegin-tx-fast.png)
 
 > The type of fee to be selected depends on several variables, like network speed, time, and amount the user is willing to spend on a single transaction.
 

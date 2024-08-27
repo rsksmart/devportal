@@ -1,14 +1,14 @@
 ---
 sidebar_label: MetaMask
 sidebar_position: 3
-title: Configure Metamask Wallet for Rootstock
+title: Configure MetaMask Wallet for Rootstock
 tags: [metamask, rootstock, tools, rsk, wallets, guides]
-description: "Learn how to connect to Rootstock with a Metamask Wallet"
+description: "Learn how to connect to Rootstock with a MetaMask Wallet"
 ---
 
 In this guide, you will learn how to download, install MetaMask, and set up custom networks.
 
-:::note[Download and Install Metamask]
+:::note[Download and Install MetaMask]
 
 Visit the [metamask-landing.rifos.org](https://metamask-landing.rifos.org/) tool to download/install Metamask, and add Rootstock custom networks or follow the steps in the video below.
 :::
@@ -106,7 +106,7 @@ A **workaround** for this is to lowercase the addresses after copying them.
 - Currency may be mistakenly displayed as `ETH` within some screens of MetaMask.
   The Rootstock network uses `RBTC` as its cryptocurrency.
 - This tutorial uses [Rootstock RPC API](/developers/rpc-api/).
-  You can connect to another nodes or use the [Public Node](/node-operators/public-nodes/) by changing the RPC URL.
+  You can connect to other nodes or use the [Public Node](/node-operators/public-nodes/) by changing the RPC URL.
 - The node must enable CORS for browser-based dApps to work.
   - Please review the [configuration file reference](/node-operators/setup/configuration/) for CORS settings.
 :::

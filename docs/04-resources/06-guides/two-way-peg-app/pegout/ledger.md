@@ -27,11 +27,13 @@ Step 2: Enter your pin to unlock it
 
 Step 3: On the device, navigate to the TRSK or RSK Test app on your Ledger device
 ​
-Step 4: Access **peg-out** screen:
-![pegout screen](/img/resources/two-way-peg-app/using-hd-wallets/acessing-pegout-screen.png)
 
-Step 5: Click on **Connect wallet** button
-![connect-wallet](/img/resources/two-way-peg-app/using-hd-wallets/connect-wallet.png)
+Step 4: Access **peg-out** screen:
+
+![pegout screen](/img/resources/two-way-peg-app/pegout-button.png)
+
+Step 5: Choose Ledger option:
+![connect-wallet](/img/resources/two-way-peg-app/pegout-ledger-trezor-connection.png)
 
 Step 6: Click on **Ledger** button <br/>
 ![connect-wallet](/img/resources/two-way-peg-app/using-hd-wallets/ledger.png)

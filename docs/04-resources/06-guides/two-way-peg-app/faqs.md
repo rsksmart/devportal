@@ -61,7 +61,53 @@ Here, you can find a list of frequently asked questions (FAQs) about the 2 way p
        > - See [supported wallets](/resources/guides/two-way-peg-app/advanced-operations/supported-wallets/).
     </Accordion.Body>
   </Accordion.Item>
+  <Accordion.Item eventKey="8">
+    <Accordion.Header as="h3">9. How long does it take for a native pegin transaction to complete?</Accordion.Header>
+    <Accordion.Body>
+        > - native pegin needs 17 hours to be completed
+        > - ![Read popup info](/img/resources/two-way-peg-app/pegin-popup.png)
+    </Accordion.Body>
+  </Accordion.Item>
+    <Accordion.Item eventKey="9">
+    <Accordion.Header as="h3">10. How long does it take for a native pegout transaction to complete?</Accordion.Header>
+    <Accordion.Body>
+        > - native pegin needs 34 hours to be completed
+        > - ![Read popup info](/img/resources/two-way-peg-app/pegin-popup.png)
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="10">
+    <Accordion.Header as="h3">11. What are the min and max for pegin transaction?</Accordion.Header>
+    <Accordion.Body>
+        > -   The minimum values allowed when creating a peg-in transaction is 0.005 BTC.
+        > -   The maximum values allowed when creating a peg-in transaction is 10 BTC.
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="11">
+    <Accordion.Header as="h3">12. What are the min and max for pegout transaction?</Accordion.Header>
+    <Accordion.Body>
+        > -   The minimum values allowed when creating a peg-in transaction is 0.004 RBTC.
+        > -   The maximum values allowed when creating a peg-in transaction is 10 RBTC.
+    </Accordion.Body>
+  </Accordion.Item>
+    <Accordion.Item eventKey="12">
+    <Accordion.Header as="h3">13.After making a native pegout, to which address will I receive my BTCs?</Accordion.Header>
+    <Accordion.Body>
+        > - During the pegout process, the destination address of your BTC is derived from your signature, this enables one to know which address will receive the BTCs.
+        > - See the [Derivation details page](/resources/guides/two-way-peg-app/pegout/deriving-electrum/) 
+    </Accordion.Body>
+  </Accordion.Item>
+   <Accordion.Item eventKey="13">
+    <Accordion.Header as="h3">14.When using **Trezor** i'm receiving the error **Forbidden key path** ?</Accordion.Header>
+    <Accordion.Body>
+        > - The latest versions of Trezor Suite have implemented a security rule to disable its use with non-standard key paths. Therefore, the user must explicitly set **Perform Safety Checks** to **PROMPT** option in **Trezor Suite** in order to use the **Trezor wallet** in the 2wp-app application.
+        > - If is not enabled you will receive this error ![Trezor Error Key Path](/img/resources/two-way-peg-app/trezor-error.png) 
+        > - This video explains how to enable **Perform Safety Checks** to **PROMPT** on **Trezor Suite** [Enabling Prompt for Key Path](/img/resources/two-way-peg-app/trezor-error-fixed.mp4) 
+        <Video url="/img/resources/two-way-peg-app/trezor-error-fixed.mp4" thumbnail="/img/resources/two-way-peg-app/trezor-error.png" />
+
+    </Accordion.Body>
+  </Accordion.Item>
 </Accordion>
+
 
 ----
 

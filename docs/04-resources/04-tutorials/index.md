@@ -44,4 +44,20 @@ color="orange"
 linkHref="/resources/port-to-rootstock/ethereum-dapp/" 
 description="Porting an Ethereum decentralized application (dApp) to Rootstock presents an exciting opportunity to leverage the benefits of the Rootstock network, which is a smart contract platform secured by the Bitcoin network."
 />
+<FilterItem
+value="advanced"
+title="Virtual Testnets on Rootstock using Tenderly"
+subtitle="Tenderly"
+color="orange"
+linkHref="/resources/tutorials/rootstock-tenderly/" 
+description="Tenderly's virtual testing environment allows the creation of simulated networks, managing account balances, and manipulating contract storage – all without needing to interact with the Rootstock mainnet or testnet."
+/>
+<FilterItem
+value="advanced"
+title="Add a Protocol To DefiLlama"
+subtitle="defillama"
+color="orange"
+linkHref="/resources/tutorials/defillama/" 
+description="DefiLlama is the largest TVL aggregator for DeFi. Learn how to list a DeFi project and write an SDK adapter to add a Protocol to DefiLlama."
+/>
 </Filter>

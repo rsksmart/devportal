@@ -14,6 +14,7 @@ description: "Explore a curated selection of smart contract development tools an
     {label: 'Wallets', value: 'wallet'},
     {label: 'Explorers', value: 'explorer'},
     {label: 'Platforms and Infra', value: 'platform-infra'},
+    {label: 'Cross Chain', value: 'cc'},
     {label: 'Data', value: 'data'},
     {label: 'SDKs', value: 'sdk'},
     {label: 'Faucets', value: 'faucet'},
@@ -38,6 +39,16 @@ description: "Explore a curated selection of smart contract development tools an
     target="_blank"
     linkTitle="Documentation"
     description="Bridge Bitcoin and Rootstock using the 2 Way Peg App."
+  />
+<FilterItem
+    value="bridge, cc"
+    title="Token Bridge"
+    subtitle="bridges"
+    color="orange"
+    linkHref="/resources/guides/tokenbridge/"
+    target="_blank"
+    linkTitle="Documentation"
+    description="Use the Token Bridge to safely and securely move ERC20 tokens from Ethereum to Rootstock and vice-versa."
   />
 <FilterItem
     value="dev-environment, sc, platform-infra"
@@ -85,7 +96,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="The Rootstock RPC API provides a seamless and intuitive web interface for developers to interact with Rootstock nodes via JSON-RPC methods."
   />
 <FilterItem
-    value="rpc"
+    value="rpc, smart contracts"
     title="GetBlock"
     subtitle="json rpc"
     color="orange"
@@ -94,13 +105,22 @@ description: "Explore a curated selection of smart contract development tools an
     description="GetBlock provides instant connection to blockchain nodes including Rootstock, Bitcoin (BTC), Ethereum (ETH), among others."
   />
 <FilterItem
-    value="rpc"
+    value="rpc, smart contracts"
     title="NOWNodes"
     subtitle="json rpc"
     color="orange"
     linkHref="https://nownodes.io/nodes/rsk"
     linkTitle="Make First API Call"
     description="NOWNodes is a blockchain-as-a-service enterprise solution that lets users get access to full Nodes and blockbook Explorers via an API."
+  />
+<FilterItem
+    value="rpc, smart contracts"
+    title="dRPC"
+    subtitle="json rpc"
+    color="orange"
+    linkHref="https://drpc.org/chainlist/rootstock?utm_source=docs&utm_medium=rootstock"
+    linkTitle="Make First API Call"
+    description="dRPC provides access to a distributed network of node providers."
   />
 <FilterItem
     value="wallet, sc"
@@ -148,7 +168,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Exchanges and Bridges to get the RIF Token."
   />
 <FilterItem
-    value="bridge, exchange"
+    value="exchange"
     title="RIF on Chain"
     subtitle="Exchanges"
     color="orange"
@@ -329,6 +349,15 @@ description: "Explore a curated selection of smart contract development tools an
   />
 <FilterItem
     value="code-quality, testing, sc"
+    title="Slither"
+    subtitle="code quality"
+    color="orange"
+    linkHref="https://github.com/crytic/slither"
+    linkTitle="Analyse Smart Contracts"
+    description="Slither built with Solidity & Vyper static analysis framework written in Python3, enables developers to find vulnerabilities, enhance their code comprehension, and quickly prototype custom analyses."
+  />
+<FilterItem
+    value="code-quality, testing, sc"
     title="Sourcify"
     subtitle="code quality"
     color="orange"
@@ -506,5 +535,14 @@ description: "Explore a curated selection of smart contract development tools an
     linkHref="https://redstone.finance/"
     linkTitle="Access On-chain Data"
     description="Access On-Chain data for your smart contracts on Rootstock."
+  />
+  <FilterItem
+    value="cc, data"
+    title="Router Protocol"
+    subtitle="Cross Chain Bridges"
+    color="orange"
+    linkHref="https://routerprotocol.com/"
+    linkTitle="Build Cross Chain dApps"
+    description="Router Protocol is a layer-1 blockchain enabling chain abstraction."
   />
 </Filter>
