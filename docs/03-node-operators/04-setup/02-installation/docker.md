@@ -6,7 +6,7 @@ tags: [docker, rootstock, desktop, macOS, rskj, windows, install, rsk, node, how
 description: "Install RSKj using Docker."
 ---
 
-Before installing Docker, ensure your system meets the [minimum requirements](/node-operators/setup/requirements/) before installing the Rootstock node (RSKj). 
+Before installing Docker, ensure your system meets the [minimum requirements](/node-operators/setup/requirements/) before installing the Rootstock node (RSKj).
 If you already have docker installed. See how to [Install the RSKj node using Docker](#install-rskj-using-docker).
 
 ## Install Docker Desktop Client
@@ -14,6 +14,7 @@ If you already have docker installed. See how to [Install the RSKj node using Do
 [Docker Desktop](https://www.docker.com/products/docker-desktop/) provides an easy and fast way for running containerized applications on various operating systems.
 
 
+````mdx-code-block
 <Tabs>
   <TabItem value="mac" label="Mac OSX, Windows" default>
     - [Download](https://www.docker.com/products/docker-desktop) and install
@@ -25,6 +26,7 @@ If you already have docker installed. See how to [Install the RSKj node using Do
    - Note that you will need to use `sudo` for all docker commands, by default. To avoid this [additional steps](https://docs.docker.com/install/linux/linux-postinstall/) are required.
   </TabItem>
 </Tabs>
+````
 
 :::tip[For Mac M1 / M2 (Apple Chips) using x86 based software]
 

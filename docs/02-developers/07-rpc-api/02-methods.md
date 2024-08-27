@@ -58,7 +58,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
     ```
 ## eth_call
 - Executes a new message call immediately without creating a transaction on the blockchain.
-- _Params:_ 
+- _Params:_
     - `transaction`: object, the transaction call object which contains the following fields:
         - **from:** String, the address from which the transaction is sent
         - **to:** String, required, the address to which the transaction is addressed
@@ -69,7 +69,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
     - `blockNumber`: String, required. The number of the block (in hex) from which the number of transactions is required, OR one of the following block tags:
         -   **latest:** the most recent block the client has available.
          -   **earliest:** the lowest numbered block the client has available.
-        -   **pending:** A sample next block built by the client on top of latest and containing the set of transactions usually taken from a local mempool. Intuitively, you can think of these as blocks that have not been mined yet. 
+        -   **pending:** A sample next block built by the client on top of latest and containing the set of transactions usually taken from a local mempool. Intuitively, you can think of these as blocks that have not been mined yet.
 - **Example:**
     ```shell
         curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
@@ -79,12 +79,12 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
         --data '{
             "jsonrpc":"2.0",
             "method":"eth_call",
-            "params":[{"from": "0xb60e8dd61c5d32be8058bb8eb970870f07233155", 
-                "to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567", 
-                "gas": "0x76c0", 
-                "gasPrice": "0x9184e72a000", 
-                "value": "0x9184e72a", 
-                "data": "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675"}, 
+            "params":[{"from": "0xb60e8dd61c5d32be8058bb8eb970870f07233155",
+                "to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567",
+                "gas": "0x76c0",
+                "gasPrice": "0x9184e72a000",
+                "value": "0x9184e72a",
+                "data": "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675"},
                 "latest"
         ],
             "id":0
@@ -128,7 +128,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
     ```
 ## eth_estimateGas
 - _Method:_
-    - Generates and returns an estimate of how much gas is necessary to allow the transaction to complete. The transaction will not be added to the blockchain. 
+    - Generates and returns an estimate of how much gas is necessary to allow the transaction to complete. The transaction will not be added to the blockchain.
 - _Params:_
     - **transaction:** object, the transaction call object which contains the following fields:
         - **from:** String, the address from which the transaction is sent
@@ -140,7 +140,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
     - `blockNumber`: String, optional. The number of the block (in hex) from which the number of transactions is required, OR one of the following block tags:
         - **latest:** the most recent block the client has available.
         - **earliest:** the lowest numbered block the client has available.
-        - **pending:** A sample next block built by the client on top of latest and containing the set of transactions usually taken from local mempool. Intuitively, you can think of these as blocks that have not been mined yet. 
+        - **pending:** A sample next block built by the client on top of latest and containing the set of transactions usually taken from local mempool. Intuitively, you can think of these as blocks that have not been mined yet.
 - **Example:**
     ```shell
         curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
@@ -150,12 +150,12 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
         --data '{
             "jsonrpc":"2.0",
             "method":"eth_estimateGas",
-            "params":[{"from": "0xb60e8dd61c5d32be8058bb8eb970870f07233155", 
-                "to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567", 
-                "gas": "0x76c0", 
-                "gasPrice": "0x9184e72a000", 
-                "value": "0x9184e72a", 
-                "data": "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675"}, 
+            "params":[{"from": "0xb60e8dd61c5d32be8058bb8eb970870f07233155",
+                "to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567",
+                "gas": "0x76c0",
+                "gasPrice": "0x9184e72a000",
+                "value": "0x9184e72a",
+                "data": "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675"},
                 "latest"
         ],
             "id":0
@@ -203,7 +203,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
         - **Block:** String: optional, either the hexadecimal value of a **blockNumber**, OR a blockHash, OR one of the following block tags:
             - **Latest:** the most recent block the client has available.
             - **Earliest:** the lowest numbered block the client has available.
-            - **Pending:** A sample next block built by the client on top of latest and containing the set of transactions usually taken from local mempool. Intuitively, you can think of these as blocks that have not been mined yet. 
+            - **Pending:** A sample next block built by the client on top of latest and containing the set of transactions usually taken from local mempool. Intuitively, you can think of these as blocks that have not been mined yet.
             - if not specified, it will return the balance at the latest block available.
 - Example request by `blockNumber`:
         ```shell
@@ -215,7 +215,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
             "jsonrpc":"2.0",
             "method":"eth_getBalance",
             "params":[
-        "0x1fab9a0e24ffc209b01faa5a61ad4366982d0b7f", 
+        "0x1fab9a0e24ffc209b01faa5a61ad4366982d0b7f",
         "latest"],
             "id":0
         }'
@@ -281,7 +281,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
     - Returns information about a block by `blockHash`.
 - _Params:_
     - **Block:** String: required, the hash of a block.
-    - **Option:** Boolean, optional. 
+    - **Option:** Boolean, optional.
     - **false:** returns only the hashes of the transactions (default)
     - **true:** returns the full transactions objects
 - _Returns:_
@@ -304,11 +304,11 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
         - **timestamp:** The unix timestamp for when the block was collated.
         - **transactions:** Array of transaction objects - please see eth_getTransactionByHash for exact shape.
         - **uncles:** Array of uncle hashes.
-        - **minimumGasPrice:** Minimum gas price a transaction should have in order to be included in that block. 
-        - **bitcoinMergedMiningHeader:** It is the Bitcoin block header of the block that was used for merged mining the RSK block. 
+        - **minimumGasPrice:** Minimum gas price a transaction should have in order to be included in that block.
+        - **bitcoinMergedMiningHeader:** It is the Bitcoin block header of the block that was used for merged mining the RSK block.
         - **bitcoinMergedMiningCoinbaseTransaction:** It is the coinbase transaction of the Bitcoin block that was used for merged mining the RSK block.
         - **bitcoinMergedMiningMerkleProof:** It is the Merkle proof that links the Bitcoin block's Merkle root with the coinbase transaction.
-        - **hashForMergedMining:** It is a hash that is calculated from various fields in the RSK block header. 
+        - **hashForMergedMining:** It is a hash that is calculated from various fields in the RSK block header.
         - **paidFees:**  It represents the total amount of fees paid by all transactions included in the block.
         - **cumulativeDifficulty:** It represents the total difficulty of the chain up to the current block.
 - **Example Request:**
@@ -321,11 +321,11 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
             "jsonrpc":"2.0",
             "method":"eth_getBlockByHash",
             "params":[
-        "0xcca8612942582f1a890231a25245174d6947b7e2e990adf74e84c035c52b104f", 
+        "0xcca8612942582f1a890231a25245174d6947b7e2e990adf74e84c035c52b104f",
         false],
              "id":0
         }'
-    ``` 
+    ```
 - Example Response:
     ```shell
         {
@@ -375,7 +375,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
         - latest: the most recent block the client has available.
         - earliest: the lowest numbered block the client has available.
         - pending: A sample next block built by the client on top of latest and containing the set of transactions usually taken from a local mempool. Intuitively, you can think of these as blocks that have not been mined yet.
-    - Option: Boolean, optional. 
+    - Option: Boolean, optional.
         - false: returns only the hashes of the transactions (default)
         - true: returns the full transactions object
 - Returns:
@@ -398,11 +398,11 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
     - timestamp - The unix timestamp for when the block was collated.
     - transactions - Array of transaction objects - please see eth_getTransactionByHash for exact shape.
     - uncles - Array of uncle hashes.
-    - minimumGasPrice: minimum gas price a transaction should have in order to be included in that block. 
-    - bitcoinMergedMiningHeader:  It is the Bitcoin block header of the block that was used for merged mining the RSK block. 
+    - minimumGasPrice: minimum gas price a transaction should have in order to be included in that block.
+    - bitcoinMergedMiningHeader:  It is the Bitcoin block header of the block that was used for merged mining the RSK block.
     - bitcoinMergedMiningCoinbaseTransaction:  It is the coinbase transaction of the Bitcoin block that was used for merged mining the RSK block.
     - bitcoinMergedMiningMerkleProof: It is the Merkle proof that links the Bitcoin block's Merkle root with the coinbase transaction.
-    - hashForMergedMining: It is a hash that is calculated from various fields in the RSK block header. 
+    - hashForMergedMining: It is a hash that is calculated from various fields in the RSK block header.
     - paidFees:  It represents the total amount of fees paid by all transactions included in the block.
      - cumulativeDifficulty: It represents the total difficulty of the chain up to the current block.
 - **Example Request:**
@@ -415,7 +415,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
             "jsonrpc":"2.0",
             "method":"eth_getBlockByNumber",
             "params":[
-        "0xfcea", 
+        "0xfcea",
         false
         ],
             "id":0
@@ -467,7 +467,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
     - Block: String, required, either the hexadecimal value of a blockNumber, OR a blockHash, OR one of the following block tags:
         - latest: the most recent block the client has available.
         - earliest: the lowest numbered block the client has available.
-        - pending: A sample next block built by the client on top of latest and containing the set of transactions usually taken from a local mempool. Intuitively, you can think of these as blocks that have not been mined yet. 
+        - pending: A sample next block built by the client on top of latest and containing the set of transactions usually taken from a local mempool. Intuitively, you can think of these as blocks that have not been mined yet.
 - **Example Request:**
     ```shell
         curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
@@ -478,7 +478,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
             "jsonrpc":"2.0",
             "method":"eth_getCode",
             "params":[
-        "0xebea27d994371cd0cb9896ae4c926bc5221f6317", 
+        "0xebea27d994371cd0cb9896ae4c926bc5221f6317",
         "latest"
         ],
             "id":0
@@ -505,12 +505,12 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
         - either the hexadecimal value of a blockNumber, OR one of the following block tags:
             - **latest:** the most recent block the client has available.
             - **earliest:** the lowest numbered block the client has available.
-            - **pending:** A sample next block built by the client on top of latest and containing the set of transactions usually taken from local mempool. Intuitively, you can think of these as blocks that have not been mined yet. 
+            - **pending:** A sample next block built by the client on top of latest and containing the set of transactions usually taken from local mempool. Intuitively, you can think of these as blocks that have not been mined yet.
     - `toBlock`: String, optional.
             - either the hexadecimal value of a blockNumber, OR one of the following block tags:
             - **latest:** the most recent block the client has available.
             - **earliest:** the lowest numbered block the client has available.
-            - **pending:** A sample next block built by the client on top of latest and containing the set of transactions usually taken from local mempool. Intuitively, you can think of these as blocks that have not been mined yet. 
+            - **pending:** A sample next block built by the client on top of latest and containing the set of transactions usually taken from local mempool. Intuitively, you can think of these as blocks that have not been mined yet.
     - _topics_: Array of 32 bytes DATA topics, optional. The required topic to filter.
 - _Returns:_
     - **log objects:** An array of log objects, or an empty array if nothing has changed since last poll. Log objects contain the following keys and their values:
@@ -524,8 +524,8 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
         - **topics:** An array of 0 to 4 indexed log arguments, each 32 bytes. In solidity the first topic is the hash of the signature of the event (e.g. Deposit(address,bytes32,uint256)), except when you declared the event with the anonymous specifier.
 - Constraints:
     - You can make `eth_getLogs` requests on any block range with a cap of:
-        - 10K logs in the response 
-        - OR a 2K block range with no cap on logs in the response 
+        - 10K logs in the response
+        - OR a 2K block range with no cap on logs in the response
         - Note that it can be filtered either by blockHash OR (fromBlock and toBlock), but not both.
         - If `fromBlock`, `toBlock`, or `blockHash` are not specified, the query will return the logs corresponding to the latest block
 - Example request by blockHash:
@@ -547,7 +547,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
         {
             "jsonrpc": "2.0",
             "id": 0,
-            "result": [ 
+            "result": [
                 {
                 {
                     "address": "0x0000000000000000000000000000000001000008",
@@ -647,7 +647,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
     - **Block:** String: required, either the hexadecimal value of a **blockNumber**, OR a blockHash, OR one of the following block tags:
         - **Latest:** the most recent block the client has available.
         - **Earliest:** the lowest numbered block the client has available.
-        - **Pending:** A sample next block built by the client on top of latest and containing the set of transactions usually taken from a local mempool. Intuitively, you can think of these as blocks that have not been mined yet. 
+        - **Pending:** A sample next block built by the client on top of latest and containing the set of transactions usually taken from a local mempool. Intuitively, you can think of these as blocks that have not been mined yet.
 - Example request:
     ```shell
         curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
@@ -658,7 +658,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
             "jsonrpc":"2.0",
             "method":"eth_getStorageAt",
             "params":[
-        "0x295a70b2de5e3953354a6a8344e616ed314d7251","0x0" 
+        "0x295a70b2de5e3953354a6a8344e616ed314d7251","0x0"
         "latest"],
             "id":0
         }'
@@ -740,7 +740,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
     - _Block_: String: optional, either the hexadecimal value of a `blockNumber`, OR a `blockHash`, OR one of the following block tags:
         - `latest`: the most recent block the client has available.
         - `earliest`: the lowest numbered block the client has available.
-        - `pending`: A sample next block built by the client on top of latest and containing the set of transactions usually taken from local mempool. Intuitively, you can think of these as blocks that have not been mined yet. 
+        - `pending`: A sample next block built by the client on top of latest and containing the set of transactions usually taken from local mempool. Intuitively, you can think of these as blocks that have not been mined yet.
         - if not specified, it will return the balance at the latest block available.
 - **Returns:**
     - **transaction count:** A hexadecimal equivalent of the integer representing the number of transactions sent from the given address.
@@ -859,7 +859,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
     - `blockNumber`: String, required. The number of the block (in hex) from which the number of transactions is required, OR one of the following block tags:
         - **latest:** the most recent block the client has available.
         - **earliest:** the lowest numbered block the client has available.
-        - **pending:** A sample next block built by the client on top of latest and containing the set of transactions usually taken from local mempool. Intuitively, you can think of these as blocks that have not been mined yet. 
+        - **pending:** A sample next block built by the client on top of latest and containing the set of transactions usually taken from local mempool. Intuitively, you can think of these as blocks that have not been mined yet.
 - **Example**
     ```shell
         curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
@@ -935,7 +935,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
     - `blockNumber`: String, required. The number of the block (in hex) from which the number of transactions is required, OR one of the following block tags:
         - **latest:** the most recent block the client has available.
         - **earliest:** the lowest numbered block the client has available.
-        - **pending:** A sample next block built by the client on top of latest and containing the set of transactions usually taken from local mempool. Intuitively, you can think of these as blocks that have not been mined yet. 
+        - **pending:** A sample next block built by the client on top of latest and containing the set of transactions usually taken from local mempool. Intuitively, you can think of these as blocks that have not been mined yet.
         - **index:** String, required. The position number of the transaction (in Hex).
 - Example:
     ```shell
@@ -1013,7 +1013,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
     - `blockNumber`: String, required. The number of the block (in hex) from which the number of transactions is required, OR one of the following block tags:
         - **latest:** the most recent block the client has available.
         - **earliest:** the lowest numbered block the client has available.
-        - **pending:** A sample next block built by the client on top of latest and containing the set of transactions usually taken from local mempool. Intuitively, you can think of these as blocks that have not been mined yet. 
+        - **pending:** A sample next block built by the client on top of latest and containing the set of transactions usually taken from local mempool. Intuitively, you can think of these as blocks that have not been mined yet.
 - **Example:**
     ```shell
         curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
@@ -1069,7 +1069,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
 - _Params:_
      - `transactionData`: Required, the signed transaction data (typically signed with a library, using your private key). Use `eth_getTransactionReceipt` to get the contract address, after the transaction was mined, when you created a contract.
 - **Example:**
-        ```shell
+    ```shell
         curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
         --request POST \
         --header 'accept: application/json' \
@@ -1082,7 +1082,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
         ],
             "id":0
         }'
-        ```
+    ```
 - **Example Response:**
         ```shell
         {
@@ -1095,7 +1095,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
 - _Method:_ `net_version`
     - Returns the number of the network, in decimal value.
 - _Params:_ None
-- **Responses:** 
+- **Responses:**
     - `31` -> Rootstock Testnet
     - `30` -> Rootstock Mainnet
 - **Example:**
@@ -1124,7 +1124,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
     - Returns the current client version.
 - _Params:_ None
 - **Example:**
-        ```shell
+    ```shell
         curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
         --request POST \
         --header 'accept: application/json' \
@@ -1135,7 +1135,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
             "params":[],
             "id":0
         }'
-        ```
+    ```
 - **Example Response:**
     ```shell
         {
@@ -1147,7 +1147,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
 ## web3_sha3
 - _Method:_ `web3_sha3`
     - Returns Keccak-256 (not the standardized SHA3-256) hash of the given data.
-- _Params:_ 
+- _Params:_
     - `data`: Required, string: The data in hexadecimal form to convert into a SHA3 hash
 - **Example:**
     ```shell

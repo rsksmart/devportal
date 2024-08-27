@@ -6,6 +6,7 @@ tags: [rsk, rootstock, beginner, quick starts, developers, advanced, port to roo
 description: "Quick starts, demos and starter kits to develop on Rootstock."
 ---
 
+````mdx-code-block
 <Filter
 values={[
 {label: 'Beginner', value: 'beginner'},
@@ -89,3 +90,4 @@ values={[
     description="Learn how to port an Ethereum dApp to Rootstock."
   />
 </Filter>
+````

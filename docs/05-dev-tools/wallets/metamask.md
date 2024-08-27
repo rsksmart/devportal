@@ -23,10 +23,10 @@ Visit the [metamask-landing.rifos.org](https://metamask-landing.rifos.org/) tool
 2. In the network selector (top right corner), choose Custom RPC.
 
   <div styles="text-align: center">
-    <img class="metamask-screenshot" src="/img/tools/metamask/metamask.png"></img>
+    <img class="metamask-screenshot" src="/img/tools/metamask/metamask.png" />
   </div>
 
-3. Fill with these values to connect to Rootstock Mainnet or Testnet                            
+3. Fill with these values to connect to Rootstock Mainnet or Testnet
 
 <table class="table">
   <thead>

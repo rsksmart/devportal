@@ -18,6 +18,7 @@ The minimum amount of Bitcoin to convert is **0.005 BTC** for Mainnet.
 
 Instructions on how to do a Mainnet peg-in.
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">1. Get a BTC address with balance</Accordion.Header>
@@ -69,11 +70,13 @@ Instructions on how to do a Mainnet peg-in.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 ### RBTC to BTC conversion
 
 Instructions on how to do a Mainnet peg-out.
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">1. Get BTC address with RBTC private key</Accordion.Header>
@@ -97,6 +100,7 @@ Instructions on how to do a Mainnet peg-out.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 ## Testnet Conversion
 
@@ -110,6 +114,7 @@ The minimum amount of Bitcoin to convert is **0.005 tBTC** for Testnet.
 
 Instructions on how to do a Testnet peg-in.
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">1. Connect a wallet to Bitcoin Testnet</Accordion.Header>
@@ -164,6 +169,7 @@ Instructions on how to do a Testnet peg-in.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 ### tRBTC to tBTC conversion
 
@@ -173,6 +179,7 @@ Instructions on how to do a Testnet peg-out.
 The release process on Bitcoin network takes 10 Rootstock block confirmations and at least 10 more minutes.
 :::
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">1. Get tBTC address with tRBTC private key</Accordion.Header>
@@ -198,3 +205,4 @@ The release process on Bitcoin network takes 10 Rootstock block confirmations an
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````

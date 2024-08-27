@@ -20,7 +20,7 @@ See how to setup the RPC API and get an [API Key](/developers/rpc-api/setup).
 
 ## Network Configuration
 
-Fill these values to connect to the Rootstock Mainnet or Testnet.                           
+Fill these values to connect to the Rootstock Mainnet or Testnet.
 
 <table class="table">
   <thead>
@@ -100,6 +100,7 @@ npm i -g hardhat-shorthand
 
 ### POSIX Compliant Shell
 
+````mdx-code-block
 <Tabs>
   <TabItem value="windows" label="Windows">
     Standard terminals like `cmd` or PowerShell may not support some commands. We recommended installing [Git for Windows](https://gitforwindows.org/) for Git Bash, which provides a more UNIX-like experience. Here's a [tutorial on Git Bash](https://www.atlassian.com/git/tutorials/git-bash).
@@ -108,26 +109,28 @@ npm i -g hardhat-shorthand
     Standard terminal.
   </TabItem>
 </Tabs>
+````
 
 ### Installing Node.js and NPM
 
+````mdx-code-block
 <Tabs>
   <TabItem value="nvm" label="NVM" default>
-    - Node v18 or later. 
+    - Node v18 or later.
         - For installation, use [NVM install script](https://github.com/nvm-sh/nvm#install--update-script).
   </TabItem>
   <TabItem value="windows" label="Windows">
     1. Download the Node.js Installer from [Node.js Downloads](https://nodejs.org/en/download).
     2. Run the installer and follow the on-screen instructions.
-    3. Open Command Prompt or PowerShell and check versions with `node -v` and `npm -v`. 
+    3. Open Command Prompt or PowerShell and check versions with `node -v` and `npm -v`.
         - See Posix Compliant Shell.
   </TabItem>
   <TabItem value="macos" label="MacOS">
     1. Install Homebrew (if not installed):
         ```bash
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)
-        ``` 
-    2. Install Node.js and npm with `brew install node` 
+        ```
+    2. Install Node.js and npm with `brew install node`
     3. Check versions in Terminal with `node -v` and `npm -v`
   </TabItem>
   <TabItem value="linux" label="Linux">
@@ -137,6 +140,7 @@ npm i -g hardhat-shorthand
       4. Check versions in the terminal with `node -v` and `npm -v`
   </TabItem>
 </Tabs>
+````
 
 ## Optional Setup
 

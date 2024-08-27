@@ -16,7 +16,7 @@ See tutorial on how to [interact with Rootstock using Rust](/resources/tutorials
 
 ## Prerequisites
 
-- A testnet account with tRBTC funds. 
+- A testnet account with tRBTC funds.
     - [Get tRBTC](https://faucet.rootstock.io/).
 - An API KEY from the [Rootstock RPC Service](https://rpc.rootstock.io/).
 - Set up the project
@@ -70,7 +70,7 @@ add the following variables to the file:
 Replace `YOUR_APIKEY` with the API key from your dashboard.
 
 ```bash
-# get this YOUR_APIKEY from the Rootstock RPC Service. 
+# get this YOUR_APIKEY from the Rootstock RPC Service.
 RPC_PROVIDER_APIKEY = '{YOUR_APIKEY}'
 
 # this is the private key of the account from which you will deploy the contract
@@ -82,7 +82,7 @@ ACCOUNT_PRIVATE_KEY = '{YOUR_PRIVATE_KEY}'
 
 ### Write the smart contract
 
-The contract to be compiled and deployed in the next section is a simple contract that stores a message, and will allow for setting different messages by sending a transaction. 
+The contract to be compiled and deployed in the next section is a simple contract that stores a message, and will allow for setting different messages by sending a transaction.
 
 You can get started by creating a file for the contract:
 
@@ -189,7 +189,7 @@ account_from = {
 ```
 
 4. Create a contract instance using the `web3.eth.contract` function and passing in the ABI and bytecode of the contract
-5. Set the [gas price strategy](https://web3py.readthedocs.io/en/stable/gas_price.html#gas-price) using the `web3.eth.set_gas_price_strategy` function, which will allow us to fetch the gasPrice from the RPC Provider. This is important because otherwise the Web3 library will attempt to use `eth_maxPriorityFeePerGas` and `eth_feeHistory` RPC methods, which are only supported by post-London Ethereum nodes. 
+5. Set the [gas price strategy](https://web3py.readthedocs.io/en/stable/gas_price.html#gas-price) using the `web3.eth.set_gas_price_strategy` function, which will allow us to fetch the gasPrice from the RPC Provider. This is important because otherwise the Web3 library will attempt to use `eth_maxPriorityFeePerGas` and `eth_feeHistory` RPC methods, which are only supported by post-London Ethereum nodes.
 6. Build a constructor transaction using the contract instance. You will then use the `build_transaction` function to pass in the transaction information including the `from` address and the `nonce` for the sender. To get the `nonce` you can use the `web3.eth.get_transaction_count` function
 7. Sign the transaction using the `web3.eth.account.sign_transaction` function and pass in the constructor transaction and the `private_key` of the sender
 8. Using the signed transaction, you can then send it using the `web3.eth.send_raw_transaction` function and wait for the transaction receipt by using the `web3.eth.wait_for_transaction_receipt` function
@@ -317,7 +317,7 @@ python getMessage.py
 
 ### Write data to the contract (Write Methods)
 
-Write methods are the type of interaction that modify the contract's storage (change variables), meaning a transaction needs to be signed and sent. In this section, you'll create the script to change the text stored in the Greeter contract. 
+Write methods are the type of interaction that modify the contract's storage (change variables), meaning a transaction needs to be signed and sent. In this section, you'll create the script to change the text stored in the Greeter contract.
 
 To get started, you can create a file for the script and name it `setMessage.py`:
 
@@ -331,7 +331,7 @@ Open the `setMessage.py` file and take the following steps to create the script:
 2. Set up the Web3 provider
 3. Define the `account_from` variable, including the `private_key`, and the `contract_address` of the deployed contract. The private key is required to sign the transaction. Note: This is for example purposes only. Never store your private keys in your code
 4. Create a contract instance using the `web3.eth.contract` function and passing in the ABI and address of the deployed contract
-5. Set the gas price strategy using the `web3.eth.set_gas_price_strategy` function, which will allow us to fetch the gasPrice from the RPC Provider. This is important because otherwise the Web3 library will attempt to use `eth_maxPriorityFeePerGas` and `eth_feeHistory` RPC methods, which are only supported by post-London Ethereum nodes. 
+5. Set the gas price strategy using the `web3.eth.set_gas_price_strategy` function, which will allow us to fetch the gasPrice from the RPC Provider. This is important because otherwise the Web3 library will attempt to use `eth_maxPriorityFeePerGas` and `eth_feeHistory` RPC methods, which are only supported by post-London Ethereum nodes.
 6. Build the `setGreeting` transaction using the contract instance and passing in the new message. You'll then use the `build_transaction` function to pass in the transaction information including the `from` address and the `nonce` for the sender. To get the `nonce` you can use the `web3.eth.get_transaction_count` function
 7. Sign the transaction using the `web3.eth.account.sign_transaction` function and pass in the `setGreeting` transaction and the `private_key` of the sender
 8. Using the signed transaction, you can then send it using the `web3.eth.send_raw_transaction` function and wait for the transaction receipt by using the `web3.eth.wait_for_transaction_receipt` function
@@ -386,7 +386,7 @@ txn_receipt = web3.eth.wait_for_transaction_receipt(txn_hash)
 print(f"Transaction successful with hash: { txn_receipt.transactionHash.hex() }")
 ```
 
-If successful, the transaction hash will be displayed in the terminal. 
+If successful, the transaction hash will be displayed in the terminal.
 
 ```python
 python setMessage.py
@@ -538,10 +538,11 @@ Transaction successful with hash: 0x79ab8be672b0218d31f81876c34321ee7b08e6a4ec8b
 
 ## Summary
 
-In this guide, we learnt how to use the Web3.py library to deploy, interact with a smart contract and send transactions on Rootstock. 
+In this guide, we learnt how to use the Web3.py library to deploy, interact with a smart contract and send transactions on Rootstock.
 
 ## Troubleshooting
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">1. Error message: eth_sendTransaction method does not exist</Accordion.Header>
@@ -550,8 +551,8 @@ In this guide, we learnt how to use the Web3.py library to deploy, interact with
         ```bash
             web3.exceptions.MethodUnavailable: {'code': -32601, 'message': 'The method eth_sendTransaction does not exist/is not available. See available methods at https://dev.rootstock.io/developers/rpc-api/methods'}
         ```
-        - Note: The cause of the error on the deployment is that the Web3.py module is set to use the private keys of the RPC provider (Hosted Keys), which is a legacy way to use accounts, and is not supported by modern RPC providers, as they do not store private keys. 
-        - Methods like `web3.eth.send_transaction` do not work with RPC providers, because they rely on a node state and all modern nodes are stateless, which underneath make JSON-RPC calls to methods like  `eth_accounts` and `eth_sendTransaction`. You must always use local private keys when working with nodes hosted by someone else.  
+        - Note: The cause of the error on the deployment is that the Web3.py module is set to use the private keys of the RPC provider (Hosted Keys), which is a legacy way to use accounts, and is not supported by modern RPC providers, as they do not store private keys.
+        - Methods like `web3.eth.send_transaction` do not work with RPC providers, because they rely on a node state and all modern nodes are stateless, which underneath make JSON-RPC calls to methods like  `eth_accounts` and `eth_sendTransaction`. You must always use local private keys when working with nodes hosted by someone else.
         - If unfamiliar, note that you can [export your private keys from Metamask](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) and other wallets. Remember to never share your private keys, and do not put it on your code or repository.
         - In order to successfully deploy the contract, the developer needs to set up Web3.py to use his Local Private Keys, and to build and pre-sign the transaction before sending it, so the module uses `eth_sendRawTransaction` instead.
         - To allow Web3.py to use the local keys, we have to use the Signing middleware to add the Private Key to the signing keychain.
@@ -612,6 +613,7 @@ In this guide, we learnt how to use the Web3.py library to deploy, interact with
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 #### Resources
 - [Web3.py: Gas Price Strategy](https://web3py.readthedocs.io/en/stable/gas_price.html#gas-price)

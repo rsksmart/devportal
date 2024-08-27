@@ -10,6 +10,7 @@ This section explains how to solve some known or frequently encountered issues.
 
 If what you need is not in this section, **contact us** without hesitation through the [Rootstock Community on Discord](https://rootstock.io/discord). We will be happy to help you!
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">Discovery can't be started</Accordion.Header>
@@ -90,7 +91,7 @@ If what you need is not in this section, **contact us** without hesitation throu
   <Accordion.Item eventKey="6">
     <Accordion.Header as="h3">DbMigrate: Migrate between databases</Accordion.Header>
     <Accordion.Body>
-       - This tool allows the user to migrate between different supported databases such as `rocksdb` and `leveldb`. 
+       - This tool allows the user to migrate between different supported databases such as `rocksdb` and `leveldb`.
         - How to use
            - To use the `DbMigrate` tool to migrate between databases, we will need a tool class and CLI arguments.
         - The tool class is: `co.rsk.cli.tools.DbMigrate`
@@ -116,5 +117,6 @@ If what you need is not in this section, **contact us** without hesitation throu
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 

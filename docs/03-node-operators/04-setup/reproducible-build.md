@@ -33,6 +33,7 @@ See how to [Setup and Run RSKj using Java](/node-operators/setup/installation/ja
 
 Create a ```Dockerfile``` to setup the build environment.
 
+````mdx-code-block
 <Tabs>
   <TabItem value="linux" label="Linux" default>
       ```bash
@@ -45,7 +46,7 @@ Create a ```Dockerfile``` to setup the build environment.
         gpg --keyserver https://secchannel.rsk.co/release.asc --recv-keys 1A92D8942171AFA951A857365DECF4415E3B8FA4
         gpg --finger 1A92D8942171AFA951A857365DECF4415E3B8FA4
         git clone --single-branch --depth 1 --branch ARROWHEAD-6.3.1 https://github.com/rsksmart/rskj.git /code/rskj
-        git clone https://github.com/rsksmart/reproducible-builds 
+        git clone https://github.com/rsksmart/reproducible-builds
         CP /Users/{$USER}/reproducible-builds/rskj/6.3.1-arrowhead/Dockerfile  /Users/{$USER}/code/rskj
         WORKDIR /code/rskj
         gpg --verify SHA256SUMS.asc
@@ -64,20 +65,21 @@ Create a ```Dockerfile``` to setup the build environment.
         gpg --keyserver https://secchannel.rsk.co/release.asc --recv-keys 1A92D8942171AFA951A857365DECF4415E3B8FA4
         gpg --finger 1A92D8942171AFA951A857365DECF4415E3B8FA4
         git clone --single-branch --depth 1 --branch ARROWHEAD-6.3.1 https://github.com/rsksmart/rskj.git ./code/rskj
-        git clone https://github.com/rsksmart/reproducible-builds 
+        git clone https://github.com/rsksmart/reproducible-builds
         CP /Users/{$USER}/reproducible-builds/rskj/6.3.1-arrowhead/Dockerfile  /Users/{$USER}/code/rskj
         cd /code/rskj
         gpg --verify SHA256SUMS.asc
         sha256sum --check SHA256SUMS.asc
         ./configure.sh
-        ./gradlew clean build -x test   
+        ./gradlew clean build -x test
       ```
   </TabItem>
 </Tabs>
+````
 
 **Response:**
 
-You should get the following as the final response, 
+You should get the following as the final response,
 after running the above steps:
 
 ```bash
@@ -96,7 +98,7 @@ If you are not familiar with Docker or the ```Dockerfile``` format: what this do
 To create a reproducible build, run the command below in the same directory:
 
 ```bash
-docker build -t rskj/6.3.1-arrowhead .     
+docker build -t rskj/6.3.1-arrowhead .
 ```
 
 :::danger[Error]

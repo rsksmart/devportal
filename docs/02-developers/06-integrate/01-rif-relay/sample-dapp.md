@@ -35,6 +35,7 @@ To learn more about Metatmask and how to add it to Rootstock programmatically, s
 
 To set up RIF relay contract, clone the RIF Relay Contracts Repository: https://github.com/rsksmart/rif-relay-contracts, then follow the [RIF Relay Deployment](/developers/integrate/rif-relay/deployment/) guide to deploy an RIF Relay contract, enable revenue sharing, and whitelist the token by allowing it.
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">Check allowed tokens</Accordion.Header>
@@ -68,13 +69,14 @@ To set up RIF relay contract, clone the RIF Relay Contracts Repository: https://
             --token-address 0x6f217dEd6c86A57f1211F464302e6fA544045B4f \
             --amount 10000000000000000000 \
             --receiver <wallet-address> \
-            --network regtest 
+            --network regtest
             ```
         - Import the minted token into the wallet.
         - To see the token in the wallet, click on “import tokens”, and then paste the token address.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 ### Step 4: Set up RIF Relay Server
 
@@ -97,7 +99,7 @@ This sample dApp shows you how to send transactions to the Rootstock blockchain 
 - Configure environment variables
 
 Create a new file named `.env`  in the top directory, and add the following lines in it (with the contract addresses generated when we deployed the contracts) in the **Set up RIF Relay Contracts** section above:
-        
+
 ```bash
     REACT_APP_CONTRACTS_RELAY_HUB=0x463F29B11503e198f6EbeC9903b4e5AaEddf6D29
     REACT_APP_CONTRACTS_DEPLOY_VERIFIER=0x14f6504A7ca4e574868cf8b49e85187d3Da9FA70

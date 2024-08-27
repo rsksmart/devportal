@@ -11,7 +11,7 @@ Creating a user-friendly web interface for smart contracts on the Rootstock netw
 ## Project Setup
 
 1. Create a new folder called `frontend` and navigate to the directory:
-    
+
 ```shell
   mkdir frontend
   cd frontend
@@ -323,12 +323,13 @@ Navigate to the URL: `http://127.0.0.1:8080` to test the code in the browser and
 
 These tools are specifically tailored for Web3 development, and they can simplify the integration of blockchain functionaity into web interfaces. Here are a few recommended tools and libraries that are popular in the Web3 space, along with brief descriptions:
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">1. RainbowKit</Accordion.Header>
     <Accordion.Body>
       - [RainbowKit](https://www.rainbowkit.com/) is a React library offering a comprehensive wallet connection solution. It provides a beautiful, easy-to-use wallet connection interface that supports multiple wallets and networks.
-      - **Why Use It:** 
+      - **Why Use It:**
         It is great for projects where you want a seamless and user-friendly wallet connection experience. It's easy to integrate and manage, especially in React-based applications.
     </Accordion.Body>
   </Accordion.Item>
@@ -360,3 +361,4 @@ These tools are specifically tailored for Web3 development, and they can simplif
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````

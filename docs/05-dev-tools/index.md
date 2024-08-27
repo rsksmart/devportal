@@ -6,6 +6,7 @@ tags: [rsk, rootstock, tools, developer tools]
 description: "Explore a curated selection of smart contract development tools and languages. From the familiar Solidity to Rust or Developer Environments like Hardhat, you'll find everything you need to interact and deploy your smart contracts on Rootstock."
 ---
 
+````mdx-code-block
 <Filter
   values={[
     {label: 'Bridges', value: 'bridge'},
@@ -546,3 +547,4 @@ description: "Explore a curated selection of smart contract development tools an
     description="Router Protocol is a layer-1 blockchain enabling chain abstraction."
   />
 </Filter>
+````

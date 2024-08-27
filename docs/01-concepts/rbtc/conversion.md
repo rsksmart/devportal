@@ -53,6 +53,7 @@ Watch this explainer video on **How to do BTC & R-BTC Conversions using the Root
 
 ### FAQs
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">How often does the Rootstock Federation address change?</Accordion.Header>
@@ -67,6 +68,7 @@ Watch this explainer video on **How to do BTC & R-BTC Conversions using the Root
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 ### Feedback
 

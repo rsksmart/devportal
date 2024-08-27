@@ -10,6 +10,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
 
 ## About Rootstock
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">What is Rootstock?</Accordion.Header>
@@ -71,9 +72,11 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 ## Rootstock vs Other Platforms
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="1">
     <Accordion.Header as="h3">How is Rootstock different from Stacks?</Accordion.Header>
@@ -98,7 +101,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
   <Accordion.Item eventKey="10">
     <Accordion.Header as="h3">How is Rootstock different from drivechains?</Accordion.Header>
     <Accordion.Body>
-      - A drivechain is a special sidechain with a specific type of two-way-peg called “hashrate escrow.” This peg mechanism gives most Bitcoin miners control of sidechain withdrawals but incentivizes miners to be honest and not abuse their powers. To achieve this, miners publicly confirm or reject withdrawals during a long period that can last 3 months. During this period, the community can detect cheaters that confirm invalid withdrawals. The peg is secure as long as there are strong long-term incentives for the honest majority of miners not to cheat. Rootstock, on the contrary, does not rely on monetary incentives. It uses a federation of PowHSM devices, and the tamper-proof devices vote on withdrawals. At the same time, each device enforces the same type of “hashrate escrow” but with a much-reduced timeframe of days. Therefore both Drivechains and Rootstock require the miner hashrate to support every withdrawal. 
+      - A drivechain is a special sidechain with a specific type of two-way-peg called “hashrate escrow.” This peg mechanism gives most Bitcoin miners control of sidechain withdrawals but incentivizes miners to be honest and not abuse their powers. To achieve this, miners publicly confirm or reject withdrawals during a long period that can last 3 months. During this period, the community can detect cheaters that confirm invalid withdrawals. The peg is secure as long as there are strong long-term incentives for the honest majority of miners not to cheat. Rootstock, on the contrary, does not rely on monetary incentives. It uses a federation of PowHSM devices, and the tamper-proof devices vote on withdrawals. At the same time, each device enforces the same type of “hashrate escrow” but with a much-reduced timeframe of days. Therefore both Drivechains and Rootstock require the miner hashrate to support every withdrawal.
       - Drivechains are promising but not currently available as they require a soft-fork in Bitcoin, which has been historically considered controversial and may never be performed. While drivechains may provide greater decentralization, the drivechain peg mechanism has never been tested, so the drivechain peg security is still uncertain.
     </Accordion.Body>
   </Accordion.Item>
@@ -120,10 +123,12 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
-      
+````
+
 
 ## Rootstock and RIF Token
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="1">
     <Accordion.Header as="h3">What is the RIF token, and what is its purpose?</Accordion.Header>
@@ -180,9 +185,11 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 ## Rootstock Features and Functionality
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="1">
     <Accordion.Header as="h3">What is merged mining, and how does it secure the Rootstock network?</Accordion.Header>
@@ -248,10 +255,12 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 
 ## Rootstock and RIF Services
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="1">
     <Accordion.Header as="h3">What is RIF, and what are its goals?</Accordion.Header>
@@ -305,10 +314,12 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 
 ## Rootstock Security and Scalability
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="1">
     <Accordion.Header as="h3">What is the PowPeg Federation, and what is its role in the two-way peg?</Accordion.Header>
@@ -337,3 +348,4 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
