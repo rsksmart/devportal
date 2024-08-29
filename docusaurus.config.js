@@ -29,7 +29,7 @@ const config = {
       mendable : process.env.MENDABLE_KEY
     },
     homePage: {
-      editUrl: 'https://github.com/rsksmart/devportal-rootstock/tree/main/',
+      editUrl: 'https://github.com/rsksmart/devportal/tree/main/',
     },
     moreLinks : {
       changelog : {
@@ -100,7 +100,7 @@ const config = {
           showLastUpdateTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/rsksmart/devportal-rootstock/tree/main/'
+          editUrl: 'https://github.com/rsksmart/devportal/tree/main/'
         },
         blog: {
           blogSidebarTitle: 'All posts',
