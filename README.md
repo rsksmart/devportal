@@ -2,7 +2,7 @@
 
 This repo contains the [Rootstock Developer Portal](https://dev.rootstock.io). The Developer Docs is the home for Rootstock documentation for end users and developers. Check out our quickstarts, tutorials, API reference, and code examples.
 
-_Start your journey to building dApps on Rootstock, see the [quick start guide](/developers/quickstart/) or see the [setup](#set-up) instructions, or the [contributing](CONTRIBUTING_DOCS.md) guide for how to contribute to Rootstock Documentation._
+_Start your journey to building dApps on Rootstock, see the [quick start guide](./docs/02-developers/04-quickstart/index.md) or see the [setup](#set-up) instructions, or the [contributing](CONTRIBUTING_DOCS.md) guide for how to contribute to Rootstock Documentation._
 
 🚀 [Send us feedback](#issues)
 
@@ -246,7 +246,7 @@ When a new version of Rootstock (RSKj) node is released:
 ### Issues
 
 We encourage you to
-[report issues](https://github.com/rsksmart/rsksmart.github.io/issues).
+[report issues](https://github.com/rsksmart/devportal/issues).
 When you open an issue, you should be given the option to choose a category.
 Choose the most appropriate one.
 
@@ -258,7 +258,7 @@ and the **Refs** section is optional.
 ### Pull Requests
 
 You can also contribute to the Developer's portal by sending a
-[PR](https://github.com/rsksmart/rsksmart.github.io/pulls).
+[PR](https://github.com/rsksmart/devportal/pulls).
 
 When you open a pull request,
 the description should be automatically populated from a template.
