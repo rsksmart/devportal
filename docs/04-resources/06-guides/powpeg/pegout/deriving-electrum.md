@@ -6,7 +6,7 @@ description: "Here, we will learn how to view a derived address using Electrum."
 tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-![2 way peg app (peg-out)](/img/resources/two-way-peg-app/pegout.gif)
+![PowPeg (peg-out)](/img/resources/powpeg/pegout.gif)
 
 This section contains detailed instructions on how to review funds in Bitcoin after a pegout by:
 
@@ -26,7 +26,7 @@ During the **pegout** process, the destination address of your BTC is derived fr
 
 ## How to view a derived address
 
-A derived address is the BTC address derived from the RBTC account. When using the 2 way peg app, it is important to know which address you will receive your BTCs. See [Viewing advanced details](#how-to-view-advanced-details).
+A derived address is the BTC address derived from the RBTC account. When using the PowPeg, it is important to know which address you will receive your BTCs. See [Viewing advanced details](#how-to-view-advanced-details).
 
 We will learn how to view a derived address using [Metamask](#using-metamask) to get a private key. We will also learn how to [convert RBTC - BTC](#converting-btc-to-rbtc) and [Import a Key in Electrum](#import-key-in-electrum).
 
@@ -40,19 +40,19 @@ We will learn how to view a derived address using [Metamask](#using-metamask) to
 
 **Step 3**: Choose “Account details”
 
-![metamask - privacy](/img/resources/two-way-peg-app/metamask/account_details.png)
+![metamask - privacy](/img/resources/powpeg/metamask/account_details.png)
 
 **Step 4**: Then click on the “Export private key” button
 
-![metamask - export_private_key](/img/resources/two-way-peg-app/metamask/export_private_key.png)
+![metamask - export_private_key](/img/resources/powpeg/metamask/export_private_key.png)
 
 **Step 5**: Fill out wallet password and click on “Confirm”
 
-![metamask - fill_wallet_password](/img/resources/two-way-peg-app/metamask/fill_wallet_password.png)
+![metamask - fill_wallet_password](/img/resources/powpeg/metamask/fill_wallet_password.png)
 
 **Step 6**: Copy the private key and click on “Done”
 
-![metamask - copy_assets](/img/resources/two-way-peg-app/metamask/copy_assets.png)
+![metamask - copy_assets](/img/resources/powpeg/metamask/copy_assets.png)
 
 ### Converting RBTC to BTC
 
@@ -89,7 +89,7 @@ Step 5: Open the file in your browser
 Step 6: Open the generated application and add your private key and convert to WIF,
 as shown in the image below:
 
-![browser - open_browser](/img/resources/two-way-peg-app/other/open_browser.png)
+![browser - open_browser](/img/resources/powpeg/other/open_browser.png)
 
 #### Using LearnMeABitcoin
 
@@ -99,7 +99,7 @@ Follow the steps below to get started;
 
 Step 1: Visit the url: [https://learnmeabitcoin.com/technical/wif](https://learnmeabitcoin.com/technical/wif)
 
-![metamask - WIF](/img/resources/two-way-peg-app/other/wif.png)
+![metamask - WIF](/img/resources/powpeg/other/wif.png)
 
 > You will find the [Ruby](https://www.ruby-lang.org/en/) code and a tool to convert the private key into a WIF.
 
@@ -158,7 +158,7 @@ Step 5: Fill out the WIF value of the private key and click on “Next” button
 
 Step 6: Create a new wallet password and click on the “Next” button
 
-![electrum - new](/img/resources/two-way-peg-app/other/electrum.png)
+![electrum - new](/img/resources/powpeg/other/electrum.png)
 
 > In this screen, you will see the address to receive the BTC funds.
 
@@ -183,21 +183,21 @@ Step 3: Fill out the name in “Wallet” field and click on “Next” button
 
 Step 4: Select “Standard wallet” option and click on “Next” button
 
-![wallet - electrum](/img/resources/two-way-peg-app/using-hd-wallets/electrum-hdw-1.png)
+![wallet - electrum](/img/resources/powpeg/using-hd-wallets/electrum-hdw-1.png)
 
 Step 4: Select “Use a hardware device” option and click on “Next” button
 
-![wallet - electrum-hardware-device](/img/resources/two-way-peg-app/using-hd-wallets/electrum-hdw-2.png)
+![wallet - electrum-hardware-device](/img/resources/powpeg/using-hd-wallets/electrum-hdw-2.png)
 
 Step 5: Select the hardware wallet and click on “Next” button
 
 > NOTE: The follow screen is an example of usage the Trezor Hardware Wallet
 
-![wallet - electrum-hardware-device-trezor](/img/resources/two-way-peg-app/using-hd-wallets/electrum-hdw-3.png)
+![wallet - electrum-hardware-device-trezor](/img/resources/powpeg/using-hd-wallets/electrum-hdw-3.png)
 
 > NOTE: The follow screen is an example of usage the Ledger Hardware Wallet
 
-![wallet - electrum-hardware-device-ledger](/img/resources/two-way-peg-app/using-hd-wallets/electrum-hdw-4.png)
+![wallet - electrum-hardware-device-ledger](/img/resources/powpeg/using-hd-wallets/electrum-hdw-4.png)
 
 Step 6: Select “legacy (p2pkh)” option, fill out a custom derivation path field and click on “Next” button
 
@@ -206,20 +206,20 @@ Custom derivation path:
 Mainnet: m/44'/137'/0'
 ```
 
-![wallet - electrum-derivation-pathx](/img/resources/two-way-peg-app/using-hd-wallets/electrum-hdw-5.png)
+![wallet - electrum-derivation-pathx](/img/resources/powpeg/using-hd-wallets/electrum-hdw-5.png)
 
 > NOTE: Testnet: m/44'/37310'/0'
 
-![wallet - electrum-derivation-legacy](/img/resources/two-way-peg-app/using-hd-wallets/electrum-hdw-6.png)
+![wallet - electrum-derivation-legacy](/img/resources/powpeg/using-hd-wallets/electrum-hdw-6.png)
 
 > IMPORTANT: For Ledger it is necessary to approve the custom derivation path in the device
 
-![wallet - electrum-ledger-confirmation](/img/resources/two-way-peg-app/using-hd-wallets/electrum-hdw-7.png)
+![wallet - electrum-ledger-confirmation](/img/resources/powpeg/using-hd-wallets/electrum-hdw-7.png)
 
 Step 7:  Check “Encrypt wallet file” option and click on “Next” button
 
-![wallet - electrum-encrypt](/img/resources/two-way-peg-app/using-hd-wallets/electrum-hdw-8.png)
+![wallet - electrum-encrypt](/img/resources/powpeg/using-hd-wallets/electrum-hdw-8.png)
 
 Step 8: Finally in Electrum go to “Addresses” tab and you can see your funds
 
-![wallet - electrum-show-funds](/img/resources/two-way-peg-app/using-hd-wallets/electrum-hdw-9.png)
+![wallet - electrum-show-funds](/img/resources/powpeg/using-hd-wallets/electrum-hdw-9.png)

@@ -9,8 +9,8 @@ tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ## Install Apps
 
 :::note[Using the App]
-In this guide, we will use the 2 way peg app on [2-Way Peg App - Testnet](https://app.2wp.testnet.rootstock.io/) for learning purposes.
-- Note that for transactions using **real tokens**, use the [2-Way Peg App - Mainnet](https://app.2wp.rootstock.io/) application.
+In this guide, we will use the 2 way peg app on [2-Way Peg App - Testnet](https://powpeg.testnet.rootstock.io/) for learning purposes.
+- Note that for transactions using **real tokens**, use the [2-Way Peg App - Mainnet](https://powpeg.rootstock.io/) application.
 :::
 
 The Bitcoin testnet app does not show on Ledger live manager by default. To be able to see the BTC Testnet app you need to enable the developer mode in Ledger live.
@@ -19,34 +19,34 @@ The Bitcoin testnet app does not show on Ledger live manager by default. To be a
     1. Connect your ledger hardware device and unlock it.
     2. Open Ledger live, click on Manager and open settings. 
     3. Navigate to the experimental features menu and enable developer mode. This will show developer and testnet apps in the manager.
-         <div align="left"><img width="70%" src="/img/resources/two-way-peg-app/install-apps-settings.png" alt="Install Apps Settings"/></div>
+         <div align="left"><img width="70%" src="/img/resources/powpeg/install-apps-settings.png" alt="Install Apps Settings"/></div>
     4. Go to Ledger live manager and search for Bitcoin testnet app
     5. Click on install to install the Bitcoin Testnet application. To use the testnet app you also need the main Bitcoin app. So install both the apps to your device.
-        <div align="left"><img width="70%" src="/img/resources/two-way-peg-app/install-bitcoin-test.png" alt="Install bitcoin test"/></div>
+        <div align="left"><img width="70%" src="/img/resources/powpeg/install-bitcoin-test.png" alt="Install bitcoin test"/></div>
 - Get Testnet address
     - On your ledger device, you’ll find all the apps installed on your device. The Bitcoin app to be used on Mainnet, and Bitcoin Test app to be used on Testnet. To start using testnet, we need the testnet address, to get this address:
         1. Open the Bitcoin test app on your ledger device. You will see a “Bitcoin Testnet is ready” screen
         2. In the ledger live app, go to accounts tab, click on add account.
-            <div align="left"><img width="70%" src="/img/resources/two-way-peg-app/add-account.png" alt="Add Account"/></div>
+            <div align="left"><img width="70%" src="/img/resources/powpeg/add-account.png" alt="Add Account"/></div>
         3. Search testnet and select Bitcoin Testnet (BTC). Click on Continue
-            <div align="left"><img width="70%" src="/img/resources/two-way-peg-app/add-accounts.png" alt="Add Account 2"/></div>
+            <div align="left"><img width="70%" src="/img/resources/powpeg/add-accounts.png" alt="Add Account 2"/></div>
         4. Approve the Bitcoin Test app on your hardware wallet device
         5. On the next screen choose the address format (Native SegWit / SegWit).
         6. Click on **Add Account**:
-            <div align="left"><img width="70%" src="/img/resources/two-way-peg-app/add-account-3.png" alt="Add Accounts 3"/></div>
-        > Note: See [supported addresses](/resources/guides/two-way-peg-app/advanced-operations/supported-wallets/) for the types of addresses supported by the 2 way peg app.
+            <div align="left"><img width="70%" src="/img/resources/powpeg/add-account-3.png" alt="Add Accounts 3"/></div>
+        > Note: See [supported addresses](/resources/guides/powpeg/advanced-operations/supported-wallets/) for the types of addresses supported by the 2 way peg app.
         - You have successfully added the Bitcoin testnet app to your account.
-            <div align="left"><img width="70%" src="/img/resources/two-way-peg-app/account-added-successfully.png" alt="Account Added Successfully"/></div>
+            <div align="left"><img width="70%" src="/img/resources/powpeg/account-added-successfully.png" alt="Account Added Successfully"/></div>
 
 ## Get Funds
 
 - Get Testnet Tokens
     1. Go to the receive tab on Ledger live.
-        <div align="left"><img width="70%" src="/img/resources/two-way-peg-app/receive-tab.png" alt="Receive tab"/></div>
+        <div align="left"><img width="70%" src="/img/resources/powpeg/receive-tab.png" alt="Receive tab"/></div>
     2. Select Bitcoin testnet and click on continue. 
-        <div align="left"><img width="70%" src="/img/resources/two-way-peg-app/receive-tab-select-bitcoin-testnet.png" alt="Receive Tab - Select Bitcoin Testnet"/></div>
+        <div align="left"><img width="70%" src="/img/resources/powpeg/receive-tab-select-bitcoin-testnet.png" alt="Receive Tab - Select Bitcoin Testnet"/></div>
     3. Copy BTC Testnet address
-        <div align="left"><img width="70%" src="/img/resources/two-way-peg-app/copy-btc-testnet-address.png" alt="Copy BTC Testnet Address"/></div>
+        <div align="left"><img width="70%" src="/img/resources/powpeg/copy-btc-testnet-address.png" alt="Copy BTC Testnet Address"/></div>
     4. Use the following faucet to receive testnet tokens:
         - Open [Coinfaucet](https://coinfaucet.eu/en/btc-testnet/)
         - Paste the address into the field and click on Get Bitcoins. 
@@ -56,8 +56,8 @@ The Bitcoin testnet app does not show on Ledger live manager by default. To be a
 
 :::info[Info]
 
-The 2 way peg app is available on both Mainnet and Testnet. Both applications follow the same process. For production purposes, use [Mainnet](https://app.2wp.rootstock.io/), for testing and development purposes, use the [Testnet](https://app.2wp.testnet.rootstock.io/). 
-- See [glossary](/resources/guides/two-way-peg-app/glossary/) for explanation of these terms.
+The 2 way peg app is available on both Mainnet and Testnet. Both applications follow the same process. For production purposes, use [Mainnet](https://powpeg.rootstock.io/), for testing and development purposes, use the [Testnet](https://powpeg.testnet.rootstock.io/). 
+- See [glossary](/resources/guides/powpeg/glossary/) for explanation of these terms.
 
 :::
     
@@ -78,7 +78,7 @@ To get started with the 2-way peg app, ensure you have the following:
         - Setup the Liquality software wallet by visiting [Liquality's website](https://www.liquality.io/).
     - **Metamask Wallet (Peg-out Requirements only):**
         - For more details, see [Metamask Wallet](/dev-tools/wallets/metamask/)
-    > For Peg-out requirements, ensure you have either the Liquality or Metamask wallet installed in your browser. For more information, see [Supported Browsers](/resources/guides/two-way-peg-app/advanced-operations/supported-browsers/) and [Supported Wallets](/resources/guides/two-way-peg-app/advanced-operations/supported-wallets/).
+    > For Peg-out requirements, ensure you have either the Liquality or Metamask wallet installed in your browser. For more information, see [Supported Browsers](/resources/guides/powpeg/advanced-operations/supported-browsers/) and [Supported Wallets](/resources/guides/powpeg/advanced-operations/supported-wallets/).
 
 :::info[Funds]
 
@@ -95,9 +95,9 @@ This guide primarily uses the Ledger Nano S hardware wallet for illustration, bu
 
 ## Resources
 
-* See the [overview section](/resources/guides/two-way-peg-app/overview/) to learn about the 2 way peg app
-* Convert [BTC to RBTC using the 2 way peg app](/resources/guides/two-way-peg-app/pegin/)
-* 2 way peg app frontend [repo](https://github.com/rsksmart/2wp-app)
-* 2 way peg app backend [repo](https://github.com/rsksmart/2wp-api)
+* See the [overview section](/resources/guides/powpeg/overview/) to learn about the 2 way peg app
+* Convert [BTC to RBTC using the 2 way peg app](/resources/guides/powpeg/pegin/)
+* PowPeg frontend [repo](https://github.com/rsksmart/2wp-app)
+* PowPeg backend [repo](https://github.com/rsksmart/2wp-api)
 * [Rootstock Testnet Faucet](https://faucet.rootstock.io/)
-* [Design architecture](/resources/guides/two-way-peg-app/advanced-operations/design-architecture/)
+* [Design architecture](/resources/guides/powpeg/advanced-operations/design-architecture/)

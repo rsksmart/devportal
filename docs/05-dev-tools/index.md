@@ -32,13 +32,13 @@ description: "Explore a curated selection of smart contract development tools an
   ]}>
 <FilterItem
     value="bridge, exchange"
-    title="2 Way Peg App"
+    title="PowPeg"
     subtitle="bridges"
     color="orange"
-    linkHref="/resources/guides/two-way-peg-app/"
+    linkHref="/resources/guides/powpeg/"
     target="_blank"
     linkTitle="Documentation"
-    description="Bridge Bitcoin and Rootstock using the 2 Way Peg App."
+    description="Bridge Bitcoin and Rootstock using the PowPeg."
   />
 <FilterItem
     value="bridge, cc"

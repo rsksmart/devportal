@@ -2,17 +2,17 @@
 sidebar_position: 1500
 sidebar_label: Glossary
 title: "Glossary"
-description: "Welcome to the glossary section for the 2 way peg app documentation."
+description: "Welcome to the glossary section for the PowPeg documentation."
 tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-See a list of terms about/related to the 2 way peg app and their meanings.
+See a list of terms about/related to the PowPeg and their meanings.
 
 <Accordion>
   <Accordion.Item eventKey="0">
-    <Accordion.Header as="h3">What is the 2 way peg app?</Accordion.Header>
+    <Accordion.Header as="h3">What is the PowPeg?</Accordion.Header>
     <Accordion.Body>
-       - The [2 way peg app](https://app.2wp.rootstock.io/) is a frontend application developed in Vue.js and typescript. The or 2 way peg app is a web application that fosters the interaction between the bitcoin blockchain and the Rootstock network for faster exchange of BTC and RBTC. See the [github repo](https://github.com/rsksmart/2wp-app).
+       - The [PowPeg](https://powpeg.rootstock.io/) is a frontend application developed in Vue.js and typescript. The PowPeg is a web application that fosters the interaction between the bitcoin blockchain and the Rootstock network for faster exchange of BTC and RBTC. See the [github repo](https://github.com/rsksmart/2wp-app).
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">

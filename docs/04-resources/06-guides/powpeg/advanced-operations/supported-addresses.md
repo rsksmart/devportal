@@ -2,11 +2,11 @@
 sidebar_position: 1400
 sidebar_label: Supported Addresses
 title: "Supported Addresses"
-description: "See supported addresses on the two way peg app"
+description: "See supported addresses on the PowPeg"
 tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-The following address types are supported by the 2 way peg app.
+The following address types are supported by the PowPeg.
 
 - Segwit:
 A SegWit address starts with the number 3 and has more elaborated functionality than a legacy address. Types include P2SH-P2WPKH and P2SH-P2WSH.

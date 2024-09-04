@@ -2,34 +2,34 @@
 sidebar_position: 1300
 sidebar_label:  Viewing Peg-in Transaction Status
 title: "Viewing Transaction Status"
-description: "Here, we will learn how to view a transaction status on the 2 way peg app."
+description: "Here, we will learn how to view a transaction status on the PowPeg."
 tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-The transaction status shows the status of transactions performed using the 2 way peg application.
+The transaction status shows the status of transactions performed using the PowPeg.
 
 There are two ways to view the transaction status.
 
-1. Using the Transaction status page on the 2 way peg application.
+1. Using the Transaction status page on the PowPeg.
 2. View a transaction using Blockcypher Explorer
 
 ### Using the transaction status page
 
-To view a transaction status using the 2 way peg application, we will do the following steps;
+To view a transaction status using the PowPeg, we will do the following steps;
 
 **Step 1: Go to the homepage**
 
-Visit: [2 way peg](https://app.2wp.rootstock.io/). 
+Visit: [2 way peg](https://powpeg.rootstock.io/). 
 
 Click on transaction status.
 
-![Transaction status](/img/resources/two-way-peg-app/first-page.png)
+![Transaction status](/img/resources/powpeg/first-page.png)
 
 **Step 2: Enter Transaction ID**
 
 Copy the transaction ID derived in [Step 12: Performing a Pegin transaction with Ledger](#performing-a-peg-in-transaction-with-ledger), paste into the field as shown below, click on enter or click on the search icon or click on Enter.
 
-![Transaction status field](/img/resources/two-way-peg-app/transaction-status-field.png)
+![Transaction status field](/img/resources/powpeg/transaction-status-field.png)
 
 **Step 3: View transaction status**
 
@@ -38,7 +38,7 @@ This shows what stage the transaction is in, the transaction performed was a peg
 Click on the **refresh** button by scrolling down on the page below to view the updated status.
 
 
-![Transaction status update](/img/resources/two-way-peg-app/transaction-status-pegin.png)
+![Transaction status update](/img/resources/powpeg/transaction-status-pegin.png)
 
 
 **Step 4: View transaction summary**
@@ -59,7 +59,7 @@ Here, you can see the following information:
 
 :::danger[Error]
 - In case an error occurs with this transaction, the amount will be sent back to the refund Bitcoin address.
-- See the [glossary](/resources/guides/two-way-peg-app/glossary/) section for in-depth definition and explanation of these terms.
+- See the [glossary](/resources/guides/powpeg/glossary/) section for in-depth definition and explanation of these terms.
 :::
 
 ### Using Block Explorer
