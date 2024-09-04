@@ -135,9 +135,9 @@ To ensure the transaction, we need to wait 100 BTC confirmations, be patient :
 100 blocks \* 10 minutes/block = 1000 minutes = 16.667 hours approx.
 :::
 
-**5 Get RBTC address from Ledger harware wallet**
+**5 Get RBTC address from Ledger hardware wallet**
 
-Get the corresponding RBTC address from your Ledger harware wallet, following these steps:
+Get the corresponding RBTC address from your Ledger hardware wallet, following these steps:
 
 - Connect and unlock your Ledger device.
 - Open the RSK app.
@@ -166,7 +166,7 @@ Get the corresponding RBTC address from your Ledger harware wallet, following th
     })();
 
   ```
-- Go to MyCrypto and connect to Ledger harware wallet.
+- Go to MyCrypto and connect to Ledger hardware wallet.
 - Select **Custom** Address and put the derivation path `m/44'/0'/0'/0`.
   Then choose the address that you got from the previous step.
 
