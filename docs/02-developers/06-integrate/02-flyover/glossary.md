@@ -1,6 +1,6 @@
 ---
 sidebar_label: Glossary
-sidebar_position: 140
+sidebar_position: 300
 title: Glossary
 tags: [rsk, rootstock, rif, flyover, integrate, integration guide, rbtc, powpeg]
 description: The PowPeg is a user-friendly interface for the conversion of BTC to RBTC and vice versa. It is secured by the powpeg protocol, which is a unique 2-way peg system that allows users to natively transfer bitcoins from the Bitcoin blockchain to the Rootstock blockchain and vice versa, creating a token called RBTC that is pegged to the value of Bitcoin.
@@ -55,7 +55,7 @@ See a list of terms about/related to the Flyover and their meanings.
    <Accordion.Item eventKey="7">
     <Accordion.Header as="h3">Liquidity Provider Server</Accordion.Header>
     <Accordion.Body>
-      - A Liquidity Provider Server (LPS) acts as a crucial component of the Flyover protocol by managing liquidity between the Bitcoin and Rootstock networks. Interacting directly with the [Liquidity Bridge Contract (LBC)](https://github.com/rsksmart/liquidity-bridge-contract), the LP server fulfills requests for token swaps by holding reserves of both BTC and RBTC. It executes complex operations such as collateral management, fund transfers, and fee adjustments.
+      - A Liquidity Provider Server (LPS) acts as a key component of the Flyover protocol by managing liquidity between the Bitcoin and Rootstock networks. Interacting directly with the [Liquidity Bridge Contract (LBC)](https://github.com/rsksmart/liquidity-bridge-contract), the LP server fulfills requests for token swaps by holding reserves of both BTC and RBTC. It executes complex operations such as collateral management, fund transfers, and fee adjustments.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>

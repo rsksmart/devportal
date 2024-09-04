@@ -55,5 +55,5 @@ See the [minimum security requirements](https://github.com/rsksmart/liquidity-pr
 - [Flyover SDK](https://github.com/rsksmart/unified-bridges-sdk/tree/main/packages/flyover-sdk)
 - [Liquidity Provider Server](https://github.com/rsksmart/liquidity-provider-server?tab=readme-ov-file)
 - [Liquidity Bridge Contract](https://github.com/rsksmart/liquidity-bridge-contract)
-- [Flyover Mainnet Contract Address](https://explorer.rootstock.io/address/0xaa9caf1e3967600578727f975f283446a3da6612)
-- [Flyover Testnet Contract Address](https://explorer.testnet.rootstock.io/address/0xc2a630c053d12d63d32b025082f6ba268db18300)
+- [Flyover LBC Mainnet Contract Address](https://explorer.rootstock.io/address/0xaa9caf1e3967600578727f975f283446a3da6612)
+- [Flyover LBC Testnet Contract Address](https://explorer.testnet.rootstock.io/address/0xc2a630c053d12d63d32b025082f6ba268db18300)

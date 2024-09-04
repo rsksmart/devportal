@@ -70,7 +70,7 @@ For more information, see [LP Onboarding](/developers/integrate/flyover/LP/) sec
 
 Flyover is integrated in the [PowPeg](http://powpeg.rootstock.io) which provides a user-friendly UI for Bitcoiners to use the native Rootstock PowPeg to Peg in and out, as well as to easily perform trust-minimized BTC and RBTC transfers between Bitcoin and Rootstock using Flyover. See section on [Using the PowPeg](/developers/integrate/flyover/powpeg/) to learn about how you can convert BTC - RBTC and vice versa.
 
-## Comp Table
+## Flyover Comp Table
 
 | Features | With Flyover | Without Flyover |
 | --- | --- | --- |
@@ -86,5 +86,5 @@ Flyover is integrated in the [PowPeg](http://powpeg.rootstock.io) which provides
 - [Flyover SDK](https://github.com/rsksmart/unified-bridges-sdk/tree/main/packages/flyover-sdk)
 - [Liquidity Provider Server](https://github.com/rsksmart/liquidity-provider-server?tab=readme-ov-file)
 - [Liquidity Bridge Contract](https://github.com/rsksmart/liquidity-bridge-contract)
-- [Flyover Mainnet Contract Address](https://explorer.rootstock.io/address/0xaa9caf1e3967600578727f975f283446a3da6612)
-- [Flyover Testnet Contract Address](https://explorer.testnet.rootstock.io/address/0xc2a630c053d12d63d32b025082f6ba268db18300)
+- [Flyover LBC Mainnet Contract Address](https://explorer.rootstock.io/address/0xaa9caf1e3967600578727f975f283446a3da6612)
+- [Flyover LBC Testnet Contract Address](https://explorer.testnet.rootstock.io/address/0xc2a630c053d12d63d32b025082f6ba268db18300)
