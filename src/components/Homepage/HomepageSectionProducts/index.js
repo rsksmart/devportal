@@ -13,10 +13,10 @@ const data = {
         </>
       ),
       list: [
-        // {
-        //   title: 'Flyover',
-        //   href: 'https://rif.technology/products/#flyover',
-        // },
+        {
+          title: 'RBTC Flyover',
+          href: '/developers/integrate/flyover/',
+        },
         {
           title: '2 Way Peg',
           href: 'https://app.2wp.rootstock.io/',
