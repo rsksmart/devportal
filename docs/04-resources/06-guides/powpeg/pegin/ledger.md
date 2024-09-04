@@ -18,7 +18,7 @@ Ensure to complete the steps in [prerequisites](/resources/guides/powpeg/prerequ
 
 ### Ledger Hardware Wallet
 
-![Choose Pegin Option](/img/resources/PowPeg/pegin.png)
+![Choose Pegin Option](/img/resources/powpeg/pegin.png)
 
 ![Connect Ledger](/img/resources/powpeg/connect-your-ledger.png)
 
