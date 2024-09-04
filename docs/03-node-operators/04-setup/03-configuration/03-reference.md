@@ -75,7 +75,7 @@ Describes how your node peers with other nodes.
 
   |  | `peer.port` |
   | - | - |
-  | Regtest | 30305 |
+  | Regtest | 50501 |
   | Testnet | 50505 |
   | Mainnet | 5050 |
 * `peer.connection.timeout = number (seconds)`
@@ -90,14 +90,13 @@ Describes how your node peers with other nodes.
   is the number of the network to connect to.
   It's important to maintain these numbers.
   It identifies the network you are going to connect to.
-  For a Regtest private network, you should always use the same
-  (not necessarily 34567).
+  For a Regtest private network, you should always use the same id.
   RSK networks IDs:
 
   |  | `peer.networkId` |
   | - | - |
-  | Regtest | 34567 |
-  | Testnet | 779 |
+  | Regtest | 7771 |
+  | Testnet | 8100 |
   | Mainnet | 775 |
 * `peer.maxActivePeers = int`
   is the max number of active peers that your node will maintain.
@@ -382,7 +381,7 @@ or an absolute path to a file within the filesystem may be used.
 |  | `genesis` |
 | - | - |
 | Regtest | rsk-dev.json |
-| Testnet | bamboo-testnet.json |
+| Testnet | orchid-testnet.json |
 | Mainnet | rsk-mainnet.json |
 | Custom | /home/username/rskj_config/genesis.json |
 
