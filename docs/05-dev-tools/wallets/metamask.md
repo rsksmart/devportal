@@ -44,8 +44,8 @@ Visit the [metamask-landing.rifos.org](https://metamask-landing.rifos.org/) tool
     </tr>
     <tr>
       <td>RPC URL</td>
-      <td>https://rpc.mainnet.rootstock.io/{YOUR_APIKEY}</td>
-      <td>https://rpc.testnet.rootstock.io/{YOUR_APIKEY}</td>
+      <td>https://public-node.rsk.co</td>
+      <td>https://public-node.testnet.rsk.co</td>
     </tr>
     <tr>
       <td>ChainID</td>
