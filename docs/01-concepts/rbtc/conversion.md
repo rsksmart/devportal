@@ -2,7 +2,7 @@
 title: "RBTC Conversion: Peg in and Peg Out"
 sidebar_label: Peg In & Out
 tags: [rsk, rootstock, rbtc, conversion, peg, 2-way, peg-in, peg-out, federation, powpeg]
-description: 'Converting RBTC to BTC (peg-in) and BTC to RBTC (peg-out), for both Mainnet and Testnet.'
+description: 'Converting RBTC to BTC (peg-out) and BTC to RBTC (peg-in), for both Mainnet and Testnet.'
 sidebar_position: 301
 ---
 
