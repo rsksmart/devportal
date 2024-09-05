@@ -216,7 +216,7 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
 		"method":"eth_getBalance",
 		"params":[
 	"0x1fab9a0e24ffc209b01faa5a61ad4366982d0b7f", 
-	"latest"
+	"0x6444bb"
 	],
 		"id":0
 	}'
