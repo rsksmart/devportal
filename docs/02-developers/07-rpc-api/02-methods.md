@@ -206,20 +206,21 @@ Find below a list of methods available on the RPC API. See [how to setup the RPC
             - **Pending:** A sample next block built by the client on top of latest and containing the set of transactions usually taken from local mempool. Intuitively, you can think of these as blocks that have not been mined yet. 
             - if not specified, it will return the balance at the latest block available.
 - Example request by `blockNumber`:
-        ```shell
-        curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
-        --request POST \
-        --header 'accept: application/json' \
-        --header 'Content-Type: application/json' \
-        --data '{
-            "jsonrpc":"2.0",
-            "method":"eth_getBalance",
-            "params":[
-        "0x1fab9a0e24ffc209b01faa5a61ad4366982d0b7f", 
-        "latest"],
-            "id":0
-        }'
-        ```
+```shell
+	curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
+	--request POST \
+	--header 'accept: application/json' \
+	--header 'Content-Type: application/json' \
+	--data '{
+		"jsonrpc":"2.0",
+		"method":"eth_getBalance",
+		"params":[
+	"0x1fab9a0e24ffc209b01faa5a61ad4366982d0b7f", 
+	"latest"
+	],
+		"id":0
+	}'
+	```
 - Example Response:
     ```shell
     {
