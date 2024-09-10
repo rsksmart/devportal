@@ -1,10 +1,20 @@
 ---
 sidebar_label: Blockchain Overview
 sidebar_position: 200
-title: 'Getting Started with Rootstock (RSK) Development'
-description: 'Learn how to interact with Rootstock in your web browser, how to look at Rootstock transactions, develop and deploy your very first smart contract to the Rootstock network.'
-tags: [quick-starts, rsk, rootstock, blockchain, browser wallets, developers, beginners]
+title: "Getting Started with Rootstock (RSK) Development"
+description: "Learn how to interact with Rootstock in your web browser, how to look at Rootstock transactions, develop and deploy your very first smart contract to the Rootstock network."
+tags:
+  [
+    quick-starts,
+    rsk,
+    rootstock,
+    blockchain,
+    browser wallets,
+    developers,
+    beginners,
+  ]
 ---
+
 Learn about Rootstock, how it enables smart contract on Bitcoin, and its compatibility with Ethereum and other platforms.
 
 ## What is Rootstock?
@@ -21,7 +31,7 @@ The more hashing power they provide, the more secure the network is.
 Rootstock is the first open source smart contract platform that is powered by the bitcoin network.
 Rootstock’s goal is to add value and functionality to the bitcoin ecosystem by enabling smart-contracts,
 near instant payments, and higher-scalability.
-RIF  is an all-in-one suite of open and decentralized infrastructure applications and services that enable faster,
+RIF is an all-in-one suite of open and decentralized infrastructure applications and services that enable faster,
 easier and scalable development of distributed applications (dApps) within a unified blockchain environment.
 
 Rootstock is connected to Bitcoin in terms of how its blocks are mined,
