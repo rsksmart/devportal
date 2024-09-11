@@ -6,7 +6,7 @@ tags: [rsk, rootstock, rif, flyover, integrate, integration guide, rbtc, powpeg]
 description: The RBTC Flyover enables fast, trust-minimized onboarding of users into the Rootstock ecosystem from Bitcoin with less friction. It improves the usability for bitcoiners and integrators to interact with the Rootstock ecosystem via the Powpeg and Flyover SDK.  
 ---
 
-The [RBTC Flyover](https://github.com/rsksmart/unified-bridges-sdk/tree/main/packages/flyover-sdk) enables fast, trust-minimized onboarding of users into the Rootstock ecosystem from Bitcoin with less friction. It improves the usability for bitcoiners and integrators to interact with the Rootstock ecosystem via the Powpeg and Flyover SDK.  
+The [RBTC Flyover](https://github.com/rsksmart/unified-bridges-sdk/tree/main/packages/flyover-sdk) enables fast, trust-minimized onboarding of users into the Rootstock ecosystem from Bitcoin with less friction. It improves the usability for bitcoiners and integrators to interact with the Rootstock ecosystem via the Powpeg and Flyover SDK. See the [Comparison between the PowPeg and RBTC Flyover](/developers/integrate/flyover/powpeg-vs-flyover/)
 
 Its main goal is to accelerate getting into Rootstock from Bitcoin by significantly reducing the wait times associated with the current PowPeg time. Developers, integrators or Liquidity Providers (LP) looking to provide RBTC access, Cross-chain swaps, and access to liquidity pools can integrate the Flyover SDK. Visit the [ LP integration section](/developers/integrate/flyover/LP/) to get started.
 
@@ -70,16 +70,6 @@ For more information, see [LP Onboarding](/developers/integrate/flyover/LP/) sec
 
 Flyover is integrated in the [PowPeg](http://powpeg.rootstock.io) which provides a user-friendly UI for Bitcoiners to use the native Rootstock PowPeg to Peg in and out, as well as to easily perform trust-minimized BTC and RBTC transfers between Bitcoin and Rootstock using Flyover. See section on [Using the PowPeg](/developers/integrate/flyover/powpeg/) to learn about how you can convert BTC - RBTC and vice versa.
 
-## Flyover Comp Table
-
-| Features | With Flyover | Without Flyover |
-| --- | --- | --- |
-| Improved User Experience | Seamlessly bridge Bitcoin (BTC) and Rootstock Bitcoin (RBTC) implemented in the PowPeg. | NA
-| Fast peg-ins and peg-outs | 2 Bitcoin block confirmations (~20 minutes) | 100 Bitcoin block confirmations (~7 hours). |
-| Pools (Intermediaries) | Trustless pool of liquidity providers | Uses the native PowPeg mechanism to manage peg ins and peg outs. |
-| Security | Same security guarantees as the native PowPeg. | Also relies on the native PowPeg security. |
-| Easy integration | Flyover provides Powerful toolkits for developers via our SDK covering developers and LPs | Limited customization options |
-| Base Template to  fast-track build | SDK provides a base layer for developers and LP’s to build swaps and manage liquidity reducing build-to-deployment time | No SDK template support |
 
 ## Resources
 - [Release Notes](https://github.com/rsksmart/unified-bridges-sdk/releases)
