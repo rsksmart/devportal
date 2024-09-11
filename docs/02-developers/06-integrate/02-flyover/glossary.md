@@ -16,9 +16,15 @@ See a list of terms about/related to the Flyover and their meanings.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
-    <Accordion.Header as="h3">PowPeg</Accordion.Header>
+    <Accordion.Header as="h3">PowPeg App</Accordion.Header>
     <Accordion.Body>
-      - The Rootstock powpeg is a a user-friendly interface developed by Rootstock that allows users to interact with both the traditional PowPeg and the faster Flyover system for Bitcoin-Rootstock transfers. It uses the traditional powpeg protocol that allows users to natively transfer bitcoins from the Bitcoin blockchain to the Rootstock blockchain and vice versa, creating a token called RBTC that is pegged to the value of Bitcoin. The Rootstock PowPeg works by locking bitcoins in a multi-signature address on the Bitcoin side and releasing an equivalent amount of RBTC on the Rootstock side. The reverse process is also possible by burning RBTC on the Rootstock side and unlocking bitcoins on the Bitcoin side, Therefore, native peg-in and native peg-out transactions require a high number of block confirmations. Peg-ins require 100 Bitcoin blocks (approximately 16 hours), and peg-outs require 4000 Rootstock blocks (approximately 33 hours).
+      - The PowPeg app is a a user-friendly interface developed by Rootstock that allows users to interact with both the traditional PowPeg protocol and the faster Flyover system for Bitcoin-Rootstock transfers. It uses the traditional powpeg protocol that allows users to natively transfer bitcoins from the Bitcoin blockchain to the Rootstock blockchain and vice versa, creating a token called RBTC that is pegged to the value of Bitcoin.
+    </Accordion.Body>
+  </Accordion.Item>
+    <Accordion.Item eventKey="2">
+    <Accordion.Header as="h3">PowPeg Protocol</Accordion.Header>
+    <Accordion.Body>
+      - The PowPeg protocol works by locking bitcoins in a multi-signature address on the Bitcoin side and releasing an equivalent amount of RBTC on the Rootstock side. The reverse process is also possible by burning RBTC on the Rootstock side and unlocking bitcoins on the Bitcoin side, Therefore, native peg-in and native peg-out transactions require a high number of block confirmations. Peg-ins require 100 Bitcoin blocks (approximately 16 hours), and peg-outs require 4000 Rootstock blocks (approximately 33 hours). Read more about [how the PowPeg Protocol works](/concepts/powpeg/).
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">
