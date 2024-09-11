@@ -91,7 +91,7 @@ During the simulation, the method calculates the exact amount of gas that would 
 
 There is a difference in Rootstock compared to Ethereum, and it is that if one of the steps of the simulated transaction fails, the node will return the gas estimation needed for the transaction, while on Ethereum, the node will return an error instead of the gas estimation.
 
-You can see this behavior on the following example, where we call `eth_estimateGas` for a transaction that would be executed from an address without enough balance.
+You can see this behavior in the following example, where a call for `eth_estimateGas` on a transaction that would be executed from an address without enough balance.
 
 Example:
 
