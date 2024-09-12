@@ -18,7 +18,7 @@ This guide details the necessary hardware and software requirements for developi
 
 <Card
   title="Rootstock Hackathon Cheatsheet"
-  description="The Rootstock Dev Cheatsheet is a concise reference guide for developers aiming to deploy decentralized applications (dApps) on the Rootstock network."
+  description="The Rootstock Hackathon Cheatsheet is a concise reference guide for developers aiming to deploy decentralized applications (dApps) on the Rootstock network."
   link="https://cheatography.com/devrelrootstock/cheat-sheets/rootstock-dev/"
 />
 
