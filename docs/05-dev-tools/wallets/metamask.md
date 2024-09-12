@@ -65,11 +65,6 @@ Visit the [metamask-landing.rifos.org](https://metamask-landing.rifos.org/) tool
   </tbody>
 </table>
 
-:::tip[Get RPC API Key]
-
-Visit the [RPC API Docs](/developers/rpc-api/) to sign up and get an API Key.
-:::
-
 Now MetaMask is ready to use with Rootstock!
 
 ## Next Steps
