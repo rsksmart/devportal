@@ -8,6 +8,12 @@ description: "Minimum hardware requirements for Rootstock."
 
 This guide provides clear instructions for developers on the supported Solidity versions and the necessary configurations needed to ensure your smart contracts are deployed on the Rootstock network. See the [developer tools](/dev-tools/) section for a list of tools to build on Rootstock.
 
+:::tip[Hackathon Info]
+
+Participating in a Rootstock hackathon or Workshop? View the [Hackathon Resources](/resources/hackathon/) section.
+
+:::
+
 ## Solidity Version
 - Supported solc version: `0.8.29`
 
