@@ -9,7 +9,7 @@ tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 
 ## Using Leather Software wallet to perform a peg-in
 
-In this guide, we will be using the [PowPeg](https://powpeg.rootstock.io/) application for unlockcing Leather, access peg-in to use Leather, and verify if peg-in is active.
+In this guide, we will be using the [PowPeg](https://powpeg.rootstock.io/) application for unlocking Leather, access peg-in to use Leather, and verify if peg-in is active.
 
 ### Acessing pegin to use Leather
 

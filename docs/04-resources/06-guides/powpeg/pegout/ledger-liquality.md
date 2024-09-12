@@ -7,7 +7,7 @@ tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 
-![PowPeg (peg-out)](/img/resources/powpeg/pegout.gif)
+![PowPeg app (peg-out)](/img/resources/powpeg/pegout.gif)
 
 ## Performing a peg-out transaction using Ledger and Liquality
 

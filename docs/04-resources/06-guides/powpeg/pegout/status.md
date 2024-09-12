@@ -6,13 +6,13 @@ description: "Here, we will learn how to view  a transaction status after a peg-
 tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-### Using the transaction status page
+## Using the transaction status page
 
 To view a transaction status using the PowPeg application, we will do the following steps;
 
 **Step 1: Go to the homepage**
 
-Visit: [PowPeg](https://powpeg.rootstock.io/). 
+Visit the [PowPeg App](https://powpeg.rootstock.io/). 
 
 Click on transaction status.
 
@@ -55,6 +55,6 @@ Click on the **refresh** button by scrolling down on the page below to view the 
 :::
 
 
-### Using Block Explorer
+## Using Block Explorer
 
 To view transactions status using Block Explorer, you can click on the open windonw icon, or copy transaction ID and paste in your prefered block explorer.

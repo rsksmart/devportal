@@ -2,21 +2,21 @@
 sidebar_position: 1100
 sidebar_label:  Peg-out
 title: "Overview | Peg-out"
-description: "Here, we will learn how to perform a peg-out transaction using the PowPeg."
+description: "Here, we will learn how to perform a peg-out transaction using the PowPeg App."
 tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-![2 way peg app (peg-out)](/img/resources/powpeg/pegout.gif)
+![PowPeg app (peg-out)](/img/resources/powpeg/pegout.gif)
 
-In this section, we will learn how to perform a [peg-out](/resources/guides/powpeg/glossary/) transaction on the 2 way peg app, to convert **RBTC to BTC**. 
+In this section, we will learn how to perform a [peg-out](/resources/guides/powpeg/glossary/) transaction on the PowPeg app, to convert **RBTC to BTC**. 
 
-To start using PowPeg, you will need to connect your **RSK** wallet:
+To start using PowPeg app, you will need to connect your **RSK** wallet:
 
 1. Connect your wallet:
-![2 way peg app (connect-your-wallet)](/img/resources/powpeg/connectyourwallet.png)
+![PowPeg (connect-your-wallet)](/img/resources/powpeg/connectyourwallet.png)
 
 2. Once connected your will see your address and your balance:
-![2 way peg app (wallet-connected)](/img/resources/powpeg/walletconnected.png)
+![PowPeg app (wallet-connected)](/img/resources/powpeg/walletconnected.png)
 
 > To get started, see the [Requirements for Pegout](/resources/guides/powpeg/prerequisites/) section.
 
@@ -31,13 +31,13 @@ We will do the following:
 ----
 
 ## Next
-* Convert [BTC - RBTC using the 2 way peg app](/resources/guides/powpeg/pegin/).
+* Convert [BTC - RBTC using the PowPeg app](/resources/guides/powpeg/pegin/).
 * View [Advanced Operations](/resources/guides/powpeg/advanced-operations/).
 
 ----
 
 ## Resources
-* 2 way peg app frontend [repo](https://github.com/rsksmart/2wp-app)
-* 2 way peg app backend [repo](https://github.com/rsksmart/2wp-api)
+* PowPeg app frontend [repo](https://github.com/rsksmart/2wp-app)
+* PowPeg app backend [repo](https://github.com/rsksmart/2wp-api)
 * [Rootstock Testnet Faucet](https://faucet.rootstock.io/)
 * [Design architecture](/resources/guides/powpeg/advanced-operations/design-architecture/)

@@ -6,7 +6,7 @@ description: "Here, we will learn how to view a derived address using Electrum."
 tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-![PowPeg (peg-out)](/img/resources/powpeg/pegout.gif)
+![PowPeg app (peg-out)](/img/resources/powpeg/pegout.gif)
 
 This section contains detailed instructions on how to review funds in Bitcoin after a pegout by:
 
@@ -26,7 +26,7 @@ During the **pegout** process, the destination address of your BTC is derived fr
 
 ## How to view a derived address
 
-A derived address is the BTC address derived from the RBTC account. When using the PowPeg, it is important to know which address you will receive your BTCs. See [Viewing advanced details](#how-to-view-advanced-details).
+A derived address is the BTC address derived from the RBTC account. When using the PowPeg app, it is important to know which address you will receive your BTCs. See [Viewing advanced details](#how-to-view-advanced-details).
 
 We will learn how to view a derived address using [Metamask](#using-metamask) to get a private key. We will also learn how to [convert RBTC - BTC](#converting-btc-to-rbtc) and [Import a Key in Electrum](#import-key-in-electrum).
 

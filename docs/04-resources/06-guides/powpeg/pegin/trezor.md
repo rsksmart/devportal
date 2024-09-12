@@ -6,7 +6,7 @@ description: "Here, we will learn how to perform a peg-in transaction using the 
 tags: [2 Way Peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-In this guide, we will be using performing a peg in transaction using the [PowPeg](https://powpeg.rootstock.io/) application.
+In this guide, we will be performing a peg in transaction using the [PowPeg app](https://powpeg.rootstock.io/) application.
 
 ## Access Pegin Page
 
@@ -168,4 +168,4 @@ By clicking on the **See Transaction** button, the user can check the status dir
 
 See the [Viewing Peg-in Transaction Status](/resources/guides/powpeg/pegin/status) section for more information. 
 
-**Now you have successfully performed a peg-in transaction using the PowPeg.**
+**Now you have successfully performed a peg-in transaction using the PowPeg app.**

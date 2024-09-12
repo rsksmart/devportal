@@ -2,7 +2,7 @@
 sidebar_position: 1100
 sidebar_label:   Peg-in using Ledger Hardware Wallet
 title: "Performing a peg-in using Ledger Hardware Wallet"
-description: "Here, we will learn how to perform a peg-in transaction using the PowPeg."
+description: "Here, we will learn how to perform a peg-in transaction using the PowPeg App."
 tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 

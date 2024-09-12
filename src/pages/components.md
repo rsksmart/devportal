@@ -60,13 +60,13 @@ Use this to present items in a specific sequence (ordered list) or without order
 #### Ordered List
 - **Code**
 ```
-1. The 2 Way Peg Application is now available on [Testnet](https://powpeg.testnet.rootstock.io/) and [Mainnet](https://powpeg.rootstock.io/).
-2. For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the 2 way peg app, please refer to the [2 way peg app user guide](/concepts/powpeg/).
+1. The PowPeg Application is now available on [Testnet](https://powpeg.testnet.rootstock.io/) and [Mainnet](https://powpeg.rootstock.io/).
+2. For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the PowPeg app, please refer to the [PowPeg app user guide](/concepts/powpeg/).
 3. Get information on the signatories and attestion in the [Powpeg HSM Firmware Attestation](/concepts/powpeg/hsm-firmware-attestation) section.
 ```
  **Result:**
-1. The 2 Way Peg Application is now available on [Testnet](https://powpeg.testnet.rootstock.io/) and [Mainnet](https://powpeg.rootstock.io/).
-2. For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the 2 way peg app, please refer to the [2 way peg app user guide](/concepts/powpeg/).
+1. The PowPeg Application is now available on [Testnet](https://powpeg.testnet.rootstock.io/) and [Mainnet](https://powpeg.rootstock.io/).
+2. For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the PowPeg app, please refer to the [PowPeg app user guide](/concepts/powpeg/).
 3. Get information on the signatories and attestion in the [Powpeg HSM Firmware Attestation](/concepts/powpeg/hsm-firmware-attestation) section.
 
 ## Blockquote

@@ -2,15 +2,15 @@
 sidebar_position: 300
 sidebar_label: Prerequisites
 title: "Prerequisites"
-description: "Welcome to the overview section of the 2 way peg app documentation."
+description: "Welcome to the overview section of the PowPeg App documentation."
 tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 ## Install Apps
 
-:::note[Using the App]
-In this guide, we will use the 2 way peg app on [2-Way Peg App - Testnet](https://powpeg.testnet.rootstock.io/) for learning purposes.
-- Note that for transactions using **real tokens**, use the [2-Way Peg App - Mainnet](https://powpeg.rootstock.io/) application.
+:::note[Using the PowPeg App]
+In this guide, we will use the [PowPeg App - Testnet](https://powpeg.testnet.rootstock.io/) for learning purposes.
+- Note that for transactions using **real tokens**, use the [PowPeg App - Mainnet](https://powpeg.rootstock.io/) application.
 :::
 
 The Bitcoin testnet app does not show on Ledger live manager by default. To be able to see the BTC Testnet app you need to enable the developer mode in Ledger live.
@@ -34,7 +34,7 @@ The Bitcoin testnet app does not show on Ledger live manager by default. To be a
         5. On the next screen choose the address format (Native SegWit / SegWit).
         6. Click on **Add Account**:
             <div align="left"><img width="70%" src="/img/resources/powpeg/add-account-3.png" alt="Add Accounts 3"/></div>
-        > Note: See [supported addresses](/resources/guides/powpeg/advanced-operations/supported-wallets/) for the types of addresses supported by the 2 way peg app.
+        > Note: See [supported addresses](/resources/guides/powpeg/advanced-operations/supported-wallets/) for the types of addresses supported by the PowPeg app.
         - You have successfully added the Bitcoin testnet app to your account.
             <div align="left"><img width="70%" src="/img/resources/powpeg/account-added-successfully.png" alt="Account Added Successfully"/></div>
 
@@ -56,7 +56,7 @@ The Bitcoin testnet app does not show on Ledger live manager by default. To be a
 
 :::info[Info]
 
-The 2 way peg app is available on both Mainnet and Testnet. Both applications follow the same process. For production purposes, use [Mainnet](https://powpeg.rootstock.io/), for testing and development purposes, use the [Testnet](https://powpeg.testnet.rootstock.io/). 
+The PowPeg app is available on both Mainnet and Testnet. Both applications follow the same process. For production purposes, use [Mainnet](https://powpeg.rootstock.io/), for testing and development purposes, use the [Testnet](https://powpeg.testnet.rootstock.io/). 
 - See [glossary](/resources/guides/powpeg/glossary/) for explanation of these terms.
 
 :::
@@ -89,15 +89,15 @@ To get started with the 2-way peg app, ensure you have the following:
 
 :::note[Note]
 
-This guide primarily uses the Ledger Nano S hardware wallet for illustration, but all models of Ledger and Trezor wallets are compatible with the 2-way peg app. If you do not have any of the listed hardware wallets, consider purchasing one from the official [Ledger](https://shop.ledger.com/products/ledger-nano-s-plus) or [Trezor](https://shop.trezor.io/) websites.
+This guide primarily uses the Ledger Nano S hardware wallet for illustration, but all models of Ledger and Trezor wallets are compatible with the PowPeg app. If you do not have any of the listed hardware wallets, consider purchasing one from the official [Ledger](https://shop.ledger.com/products/ledger-nano-s-plus) or [Trezor](https://shop.trezor.io/) websites.
 
 :::
 
 ## Resources
 
-* See the [overview section](/resources/guides/powpeg/overview/) to learn about the 2 way peg app
-* Convert [BTC to RBTC using the 2 way peg app](/resources/guides/powpeg/pegin/)
-* PowPeg frontend [repo](https://github.com/rsksmart/2wp-app)
-* PowPeg backend [repo](https://github.com/rsksmart/2wp-api)
+* See the [overview section](/resources/guides/powpeg/overview/) to learn about the PowPeg app
+* Convert [BTC to RBTC using the PowPeg app](/resources/guides/powpeg/pegin/)
+* PowPeg app frontend [repo](https://github.com/rsksmart/2wp-app)
+* PowPeg app backend [repo](https://github.com/rsksmart/2wp-api)
 * [Rootstock Testnet Faucet](https://faucet.rootstock.io/)
 * [Design architecture](/resources/guides/powpeg/advanced-operations/design-architecture/)

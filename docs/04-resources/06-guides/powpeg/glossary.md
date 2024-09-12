@@ -2,15 +2,15 @@
 sidebar_position: 1500
 sidebar_label: Glossary
 title: "Glossary"
-description: "Welcome to the glossary section for the PowPeg documentation."
+description: "Welcome to the glossary section for the PowPeg App documentation."
 tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-See a list of terms about/related to the PowPeg and their meanings.
+See a list of terms about/related to the PowPeg app and their meanings.
 
 <Accordion>
   <Accordion.Item eventKey="0">
-    <Accordion.Header as="h3">What is the PowPeg?</Accordion.Header>
+    <Accordion.Header as="h3">What is the PowPeg app?</Accordion.Header>
     <Accordion.Body>
        - The [PowPeg](https://powpeg.rootstock.io/) is a frontend application developed in Vue.js and typescript. The PowPeg is a web application that fosters the interaction between the bitcoin blockchain and the Rootstock network for faster exchange of BTC and RBTC. See the [github repo](https://github.com/rsksmart/2wp-app).
     </Accordion.Body>
@@ -82,9 +82,9 @@ See a list of terms about/related to the PowPeg and their meanings.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="12">
-    <Accordion.Header as="h3">Powpeg</Accordion.Header>
+    <Accordion.Header as="h3">What's the Powpeg Protocol?</Accordion.Header>
     <Accordion.Body>
-      - The powpeg is a unique 2-way peg system that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus. Read more about the [Powpeg](/concepts/powpeg/).
+      - The powpeg protocol is a unique 2-way peg system that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus. Read more about the [Powpeg](/concepts/powpeg/).
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="13">

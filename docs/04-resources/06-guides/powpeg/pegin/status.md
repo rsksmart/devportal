@@ -2,20 +2,20 @@
 sidebar_position: 1300
 sidebar_label:  Viewing Peg-in Transaction Status
 title: "Viewing Transaction Status"
-description: "Here, we will learn how to view a transaction status on the PowPeg."
+description: "Here, we will learn how to view a transaction status on the PowPeg App."
 tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-The transaction status shows the status of transactions performed using the PowPeg.
+The transaction status shows the status of transactions performed using the PowPeg app.
 
 There are two ways to view the transaction status.
 
-1. Using the Transaction status page on the PowPeg.
+1. Using the Transaction status page on the PowPeg app.
 2. View a transaction using Blockcypher Explorer
 
 ### Using the transaction status page
 
-To view a transaction status using the PowPeg, we will do the following steps;
+To view a transaction status using the PowPeg app, we will do the following steps;
 
 **Step 1: Go to the homepage**
 

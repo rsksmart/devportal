@@ -1,6 +1,6 @@
-label: PowPeg
+label: PowPeg App
 position: 2
 link:
   type: generated-index
-  description: The PowPeg is a protocol that converts BTC to RBTC and vice versa. It is secured by the powpeg, which is a unique PowPeg system that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus.
+  description: The PowPeg application converts BTC to RBTC and vice versa. It is secured by the powpeg protocol, which is a unique PowPeg system that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus.
   slug: /resources/guides/powpeg/

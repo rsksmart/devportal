@@ -7,13 +7,13 @@ tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 
-![PowPeg (peg-out)](/img/resources/powpeg/pegout.gif)
+![PowPeg app (peg-out)](/img/resources/powpeg/pegout.gif)
 
 ## Performing a peg-out transaction using MetaMask
 ​
 **Step 1: Select conversion type**
 
-To perform a peg-out, open  the [PowPeg - Testnet](https://powpeg.testnet.rootstock.io/) in your browser.
+To perform a peg-out, open  the [PowPeg app - Testnet](https://powpeg.testnet.rootstock.io/) in your browser.
 
 **Step 2: Choose the RBTC - BTC conversion type**
 
