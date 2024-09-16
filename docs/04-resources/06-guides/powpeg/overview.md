@@ -8,6 +8,17 @@ tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 
 In this section, we are going to learn about the PowPeg app, [how it works](#how-it-works), its [features](#features), and the [benefits](#why-use-the-powpeg) of using the application.
 
+:::info[Notice: Name Change to PowPeg App]
+
+Effective September 03rd, 2024, the 2 Way Peg App has been officially renamed to PowPeg App, this name change reflects Rootstock's commitment to providing a more intuitive and engaging experience for users. 
+
+**Note that the previous address still works, redirecting users to the new one.**
+
+The app is available at [https://powpeg.rootstock.io/](https://powpeg.rootstock.io/)
+
+If you have any questions or concerns, please don't hesitate to [contact support](https://discord.com/channels/842021106956238848/1123675841369489438).
+:::
+
 > To get started, see the [prerequisites](/resources/guides/powpeg/prerequisites/) section.
 
 The [PowPeg](https://powpeg.rootstock.io/) is an application that converts BTC to RBTC and vice versa. It is secured by the powpeg protocol, which is a unique protocol that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus. See the history of the [PowPeg](/concepts/powpeg/).
