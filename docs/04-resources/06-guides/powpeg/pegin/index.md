@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1000
-sidebar_label:   Pegin
-title: "Overview | Pegin"
+sidebar_label:   Peg-in
+title: "Overview | Peg-in"
 description: "Here, we will learn how to perform a peg-in transaction using the PowPeg App."
 tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
