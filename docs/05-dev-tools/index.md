@@ -181,7 +181,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="Flyover"
     subtitle="bridges"
     color="orange"
-    linkHref="https://dapp.flyover.rif.technology/"
+    linkHref="/developers/integrate/flyover/"
     linkTitle="Get RBTC"
     description="The Flyover protocol performs fast peg-ins and peg-outs between Bitcoin and Rootstock networks."
   />

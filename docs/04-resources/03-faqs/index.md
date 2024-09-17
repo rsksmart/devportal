@@ -291,10 +291,10 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="6">
-    <Accordion.Header as="h3">What is RIF Flyover?</Accordion.Header>
+    <Accordion.Header as="h3">What is RBTC Flyover?</Accordion.Header>
     <Accordion.Body>
-      - RIF Flyover is a protocol that provides a fast and secure way for users to transfer Bitcoin (BTC) in and out of the Rootstock Ecosystem. Once the BTC is in the Rootstock Ecosystem, it can interact with various applications to send, save, and spend money.
-      - RIF Flyover enables users to earn interest, access loans, hedge against inflation, and more, all in a decentralized and censorship-resistant way. It essentially turns Bitcoin from a simple store of value into a fully decentralized financial system. This makes it easier to onboard customers into DeFi on Bitcoin.
+      - [RBTC Flyover](/developers/integrate/flyover/) is a protocol that provides a fast and secure way for users to transfer Bitcoin (BTC) in and out of the Rootstock Ecosystem. Once the BTC is in the Rootstock Ecosystem, it can interact with various applications to send, save, and spend money.
+      - RBTC Flyover enables users to earn interest, access loans, hedge against inflation, and more, all in a decentralized and censorship-resistant way. It essentially turns Bitcoin from a simple store of value into a fully decentralized financial system. This makes it easier to onboard customers into DeFi on Bitcoin.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="7">
