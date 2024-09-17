@@ -3,13 +3,13 @@ sidebar_position: 1200
 sidebar_label:  Peg-in using Leather Software Wallet
 title: "Performing a peg-in using Leather Software Wallet"
 description: "Here, we will learn how to perform a peg-in transaction using the Leather Software Wallet."
-tags: [2 way peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 
 ## Using Leather Software wallet to perform a peg-in
 
-In this guide, we will be using the [PowPeg](https://powpeg.rootstock.io/) application for unlocking Leather, access peg-in to use Leather, and verify if peg-in is active.
+In this guide, we will be using the [PowPeg App](https://powpeg.rootstock.io/) for unlocking Leather, access peg-in to use Leather, and verify if peg-in is active.
 
 ### Acessing pegin to use Leather
 
@@ -112,4 +112,4 @@ By clicking on the **See Transaction** button, the user can check the status dir
 
 See the [Viewing Peg-in Transaction Status](/resources/guides/powpeg/pegin/status) section for more information. 
 
-**Now you have successfully performed a peg-in transaction using the PowPeg.**
+**Now you have successfully performed a peg-in transaction using the PowPeg App.**

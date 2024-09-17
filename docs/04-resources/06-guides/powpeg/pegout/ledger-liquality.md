@@ -3,11 +3,11 @@ sidebar_position: 1300
 sidebar_label:  Peg-out using Metamask and any hardware wallet
 title: "Performing a peg-out using Metamask and hardware wallet"
 description: "Here, we will learn how to perform a peg-out using Metamask and hardware wallet."
-tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 
-![PowPeg app (peg-out)](/img/resources/powpeg/pegout.gif)
+![PowPeg App (peg-out)](/img/resources/powpeg/pegout.gif)
 
 ## Performing a peg-out transaction using Ledger and Liquality
 

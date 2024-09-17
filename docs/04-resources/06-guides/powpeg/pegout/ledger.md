@@ -3,14 +3,14 @@ sidebar_position: 1400
 sidebar_label:  Peg-out using Ledger
 title: "Performing a peg-out using Ledger Hardware Wallet"
 description: "Here, we will learn how to perform a peg-out using Ledger Hardware Wallet."
-tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-![PowPeg app (peg-out)](/img/resources/powpeg/pegout.gif)
+![PowPeg App (peg-out)](/img/resources/powpeg/pegout.gif)
 
 ## Performing a peg-out transaction using rLogin(Trezor and Ledger)
 
-​> - Note that we will be using the PowPeg  app on [Testnet](https://powpeg.testnet.rootstock.io/) for learning purposes.
+​> - Note that we will be using the PowPeg  App on [Testnet](https://powpeg.testnet.rootstock.io/) for learning purposes.
 > - For transactions using **real tokens**, use the [Mainnet](https://powpeg.rootstock.io/) application.
 > - We're using Ledger Nano and Trezor One hardware wallets on this tutorial.
 > - To use Ledger hardware wallet to create a **peg-in** see [How to perform a peg-in transaction using Ledger](/resources/guides/powpeg/pegin/ledger/)
@@ -25,7 +25,7 @@ Step 1:  Plug the Ledger device into the computer
 
 Step 2: Enter your pin to unlock it
 
-Step 3: On the device, navigate to the TRSK or RSK Test app on your Ledger device
+Step 3: On the device, navigate to the TRSK or RSK Test App on your Ledger device
 ​
 
 Step 4: Access **peg-out** screen:
@@ -72,7 +72,7 @@ Step 14: After finish the pegout transaction creation, click here to see how to 
 ----
 
 ## Resources
-* PowPeg app frontend [repo](https://github.com/rsksmart/2wp-app)
-* PowPeg app backend [repo](https://github.com/rsksmart/2wp-api)
+* PowPeg App frontend [repo](https://github.com/rsksmart/2wp-app)
+* PowPeg App backend [repo](https://github.com/rsksmart/2wp-api)
 * [Rootstock Testnet Faucet](https://faucet.rootstock.io/)
 * [Design architecture](/resources/guides/powpeg/advanced-operations/design-architecture/)

@@ -3,14 +3,14 @@ sidebar_position: 1300
 sidebar_label: FAQs
 title: "Frequently Asked Questions (FAQs)"
 description: "Frequently asked questions about the PowPeg App."
-tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-Here, you can find a list of frequently asked questions (FAQs) about the PowPeg application.
+Here, you can find a list of frequently asked questions (FAQs) about the PowPeg App.
 
 <Accordion>
   <Accordion.Item eventKey="0">
-    <Accordion.Header as="h3">1. What are the requirements to use PowPeg app?</Accordion.Header>
+    <Accordion.Header as="h3">1. What are the requirements to use PowPeg App?</Accordion.Header>
     <Accordion.Body>
       - To know more about the requirements, see [prerequisites](/resources/guides/powpeg/prerequisites/)
     </Accordion.Body>
@@ -22,7 +22,7 @@ Here, you can find a list of frequently asked questions (FAQs) about the PowPeg 
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">
-    <Accordion.Header as="h3">3. How do I derive a BTC private key after sending RBTC through the PowPeg app?</Accordion.Header>
+    <Accordion.Header as="h3">3. How do I derive a BTC private key after sending RBTC through the PowPeg App?</Accordion.Header>
     <Accordion.Body>
       - See section on [deriving electrum](/resources/guides/powpeg/pegout/deriving-electrum#getting-a-wallet-private-key) for how to export a private key.
     </Accordion.Body>
@@ -48,14 +48,14 @@ Here, you can find a list of frequently asked questions (FAQs) about the PowPeg 
     </Accordion.Body>
   </Accordion.Item>
 <Accordion.Item eventKey="6">
-    <Accordion.Header as="h3">7. What are the supported browsers to use PowPeg app?</Accordion.Header>
+    <Accordion.Header as="h3">7. What are the supported browsers to use PowPeg App?</Accordion.Header>
     <Accordion.Body>
         > - To know more about the supported browsers
         > - See the [supported browsers](/resources/guides/powpeg/advanced-operations/supported-browsers/).
     </Accordion.Body>
   </Accordion.Item>
 <Accordion.Item eventKey="7">
-    <Accordion.Header as="h3">8. What are the supported wallets to use PowPeg app?</Accordion.Header>
+    <Accordion.Header as="h3">8. What are the supported wallets to use PowPeg App?</Accordion.Header>
     <Accordion.Body>
        > - To know more about the requirements;
        > - See [supported wallets](/resources/guides/powpeg/advanced-operations/supported-wallets/).

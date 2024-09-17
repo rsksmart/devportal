@@ -3,12 +3,12 @@ sidebar_position: 1800
 sidebar_label:  Viewing Peg-out Transaction Status
 title: "Viewing the status of a transaction after peg-out"
 description: "Here, we will learn how to view  a transaction status after a peg-out."
-tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 ## Using the transaction status page
 
-To view a transaction status using the PowPeg application, we will do the following steps;
+To view a transaction status using the PowPeg App, we will do the following steps;
 
 **Step 1: Go to the homepage**
 

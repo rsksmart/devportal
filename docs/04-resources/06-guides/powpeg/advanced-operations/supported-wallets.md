@@ -3,7 +3,7 @@ sidebar_position: 1600
 sidebar_label: Supported Wallets
 title: "Supported Wallets"
 description: "See wallets which supports the PowPeg App"
-tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 Here is a list of supported wallets for the PowPeg App.
@@ -14,5 +14,5 @@ Here is a list of supported wallets for the PowPeg App.
     - [Leather](/resources/guides/powpeg/pegin/leather/)
 
 :::tip[Tip]
-See [alternative software wallets](/dev-tools/wallets/) supported by the PowPeg app.
+See [alternative software wallets](/dev-tools/wallets/) supported by the PowPeg App.
 :::

@@ -3,10 +3,10 @@ sidebar_position: 1200
 sidebar_label:  Viewing a derived bitcoin address
 title: "Viewing a derived bitcoin address"
 description: "Here, we will learn how to view a derived address using Electrum."
-tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-![PowPeg app (peg-out)](/img/resources/powpeg/pegout.gif)
+![PowPeg App (peg-out)](/img/resources/powpeg/pegout.gif)
 
 This section contains detailed instructions on how to review funds in Bitcoin after a pegout by:
 
@@ -70,8 +70,8 @@ Step 2: Follow the steps explained in the [README](https://github.com/rsksmart/u
 
 Step 3: Install webpack using the code below;
 
-    ```
-        javascript     npm install webpack@4.46.0 -g     npm i webpack-cli@3.3.12 -g     npm install     webpack
+    ```js
+    javascript     npm install webpack@4.46.0 -g     npm i webpack-cli@3.3.12 -g     npm install     webpack
     ```
 
 [Optional] you will need npm to install webpack:

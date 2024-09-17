@@ -7,13 +7,13 @@ tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 
-![PowPeg app (peg-out)](/img/resources/powpeg/pegout.gif)
+![PowPeg App (peg-out)](/img/resources/powpeg/pegout.gif)
 
 ## Performing a peg-out transaction using MetaMask
 ​
 **Step 1: Select conversion type**
 
-To perform a peg-out, open  the [PowPeg app - Testnet](https://powpeg.testnet.rootstock.io/) in your browser.
+To perform a peg-out, open  the [PowPeg App - Testnet](https://powpeg.testnet.rootstock.io/) in your browser.
 
 **Step 2: Choose the RBTC - BTC conversion type**
 
@@ -51,7 +51,7 @@ or click 'Use max available balance' if you want to send all the RBTC you have.
 **Step 5 (Opttional) : Verify your Bitcoin destination address**
 
 ​
-Click 'Get Bitcoin destination address'. Click 'Generate' first in 2-Way Peg App and then in MetaMask.
+Click 'Get Bitcoin destination address'. Click 'Generate' first in PowPeg App and then in MetaMask.
 ​
 ![Click get bitcoin destination address](/img/resources/powpeg/opttional1.png)
 
@@ -71,7 +71,7 @@ After signing, you will be able to know the derived Bitcoin address where you wi
 **Step 6: Send transaction**
 
 
-Confirm the information, click 'Send' in 2-Way Peg App and then  click 'Confirm' in MetaMask.
+Confirm the information, click 'Send' in PowPeg App and then  click 'Confirm' in MetaMask.
 ​
 ![Click to send pegout transaction](/img/resources/powpeg/pegout-min-and-max-values.png)
 

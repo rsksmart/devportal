@@ -3,10 +3,10 @@ sidebar_position: 1200
 sidebar_label: Advanced Operations 
 title: "Overview | Advanced Operations"
 description: "See how to perform advanced operations on the PowPeg App"
-tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-This section contains detailed instructions on how to perform advanced operations on the PowPeg app. 
+This section contains detailed instructions on how to perform advanced operations on the PowPeg App. 
 
 These operations include;
 
@@ -25,7 +25,7 @@ These operations include;
 
 ### Pegin:
 
-There are three types of accounts on the PowPeg app. See [supported addresses](/resources/guides/powpeg/advanced-operations/supported-addresses/) section for examples of these types of addresses.
+There are three types of accounts on the PowPeg App. See [supported addresses](/resources/guides/powpeg/advanced-operations/supported-addresses/) section for examples of these types of addresses.
 
 To select an account to send BTC from, click on **Select the account** as shown in the image below. This loads the balance for all the addresses in your hardware wallet.
 
@@ -68,7 +68,7 @@ A fast transaction is the most expensive but the transaction confirms at the qui
 ----
 
 ## Resources
-* PowPeg app frontend [repo](https://github.com/rsksmart/2wp-app)
-* PowPeg app backend [repo](https://github.com/rsksmart/2wp-api)
+* PowPeg App frontend [repo](https://github.com/rsksmart/2wp-app)
+* PowPeg App backend [repo](https://github.com/rsksmart/2wp-api)
 * [Rootstock Testnet Faucet](https://faucet.rootstock.io/)
 * [Design architecture](/resources/guides/powpeg/advanced-operations/design-architecture/)

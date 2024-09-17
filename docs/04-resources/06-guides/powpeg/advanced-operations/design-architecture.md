@@ -3,26 +3,26 @@ sidebar_position: 1300
 sidebar_label: Design and Architecture
 title: "Design and Architecture"
 description: "Two way peg design and architecture."
-tags: [2 Way Peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-The [PowPeg](https://powpeg.rootstock.io/) is an application to convert BTC to RBTC and vice versa. It is secured by the powpeg protocol, which is a unique 2-way peg system that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus. See the history of the [PowPeg Protocol](/concepts/powpeg/).
+The [PowPeg App](https://powpeg.rootstock.io/) is converts BTC to RBTC and vice versa. It is secured by the powpeg protocol, which is a unique 2-way peg system that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus. See the history of the [PowPeg Protocol](/concepts/powpeg/).
 
-In this section, we will cover the design and architecture used in building the PowPeg app. It comprises of a [web interface](#high-level) built with Vue.js, a [backend application](#components) built with Node.js, and made to run via [containers](#containers).
+In this section, we will cover the design and architecture used in building the PowPeg App. It comprises of a [web interface](#high-level) built with Vue.js, a [backend application](#components) built with Node.js, and made to run via [containers](#containers).
 
 ## High level
 
 The solution is a web interface, which integrates with a REST API, which in turn communicates with internal services such as the blockchain node and databases. In addition, a daemon/worker will be created that will be responsible for obtaining data from the blockchain and changing the status of the transaction.
 
-This diagram shows the architecture of the PowPeg app, a Customer (Person) refers to someone who owns BTC or RBTC who wishes to use the PowPeg app to send a transaction.
+This diagram shows the architecture of the PowPeg App, a Customer (Person) refers to someone who owns BTC or RBTC who wishes to use the PowPeg App to send a transaction.
 
 ![High level diagram - Customer](/img/resources/powpeg/57-high-level-diagram.png)
 
 ## Components
 
-The front-end application of the PowPeg app is developed using Vue.js. The backend application is developed using Nodejs containing a restful API Service and a Daemon service. The API is responsible to serve the data to the front-end, and the Daemon service is responsible for listening for transactions on-chain and updates the database.
+The front-end application of the PowPeg is developed using Vue.js. The backend application is developed using Nodejs containing a restful API Service and a Daemon service. The API is responsible to serve the data to the front-end, and the Daemon service is responsible for listening for transactions on-chain and updates the database.
 
-![Frontend Application - PowPeg](/img/resources/powpeg/58-frontend-application-diagram.png)
+![Front-end Application - PowPeg](/img/resources/powpeg/58-frontend-application-diagram.png)
 
 ## Containers
 

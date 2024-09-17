@@ -3,7 +3,7 @@ sidebar_position: 1900
 sidebar_label: Peg-out using Trezor
 title: "Performing a peg-out transaction using Trezor"
 description: "Here, we will learn how to perform a peg-out using Trezor."
-tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 ![PowPeg app (peg-out)](/img/resources/powpeg/pegout.gif)

@@ -3,12 +3,12 @@ sidebar_position: 1100
 sidebar_label:   Peg-in using Ledger Hardware Wallet
 title: "Performing a peg-in using Ledger Hardware Wallet"
 description: "Here, we will learn how to perform a peg-in transaction using the PowPeg App."
-tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 ## Using hardware wallets
 
-In this guide, we will be using the PowPeg on [PowPeg - Testnet](https://powpeg.testnet.rootstock.io/) for learning purposes, for transactions using real tokens, please use the [PowPeg - Mainnet](https://powpeg.rootstock.io/) application.
+In this guide, we will be using the PowPeg on [PowPeg - Testnet](https://powpeg.testnet.rootstock.io/) for learning purposes, for transactions using real tokens, please use the [PowPeg - Mainnet](https://powpeg.rootstock.io/) App.
 
 :::warning[Warning]
 
@@ -76,11 +76,11 @@ The pop up shown in the image below describes the duration of the peg-in process
 
 > Click the checkbox - “Don’t show again” to turn off this pop-up in the future or close temporarily.
 
-**Step 4: Connect to the app**
+**Step 4: Connect to the App**
 
-Click **Continue** to connect to the PowPeg.
+Click **Continue** to connect to the PowPeg App.
 
-![Connect to the app](/img/resources/powpeg/connect-ledger.png)
+![Connect to the App](/img/resources/powpeg/connect-ledger.png)
 
 ![Confirm your Ledger wallet](/img/resources/powpeg/connect-ledger2.png)
 

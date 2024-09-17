@@ -3,10 +3,10 @@ sidebar_position: 1400
 sidebar_label:  Peg-in using Trezor Hardware Wallet
 title: "Performing a peg-in in using Trezor Hardware Wallet"
 description: "Here, we will learn how to perform a peg-in transaction using the Trezor Hardware Wallet."
-tags: [2 Way Peg, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-In this guide, we will be performing a peg in transaction using the [PowPeg app](https://powpeg.rootstock.io/) application.
+In this guide, we will be performing a peg in transaction using the [PowPeg App](https://powpeg.rootstock.io/).
 
 ## Access Pegin Page
 
@@ -69,11 +69,11 @@ Now, you have successfully connected your Trezor to the Bitcoin network.
 
 ## Performing a peg-in transaction with Trezor
  
-**Step 1: Connect to the app**
+**Step 1: Connect to the App**
 
-Click **Continue** to connect to the PowPeg.
+Click **Continue** to connect to the PowPeg App.
 
-![Connect to the app](/img/resources/powpeg/pegin-trezor-connection.png)
+![Connect to the App](/img/resources/powpeg/pegin-trezor-connection.png)
 
 The PowPeg shows the pop-up with the connected usb ledger devices, if your device is not visible, unplug the usb device and plug in again, unlock with a pin and click **Retry** or go back to the [connect ledger wallet](#ledger-hardware-wallet) section.
 
@@ -168,4 +168,4 @@ By clicking on the **See Transaction** button, the user can check the status dir
 
 See the [Viewing Peg-in Transaction Status](/resources/guides/powpeg/pegin/status) section for more information. 
 
-**Now you have successfully performed a peg-in transaction using the PowPeg app.**
+**Now you have successfully performed a peg-in transaction using the PowPeg App.**

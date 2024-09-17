@@ -3,14 +3,14 @@ sidebar_position: 1000
 sidebar_label:   Peg-in
 title: "Overview | Peg-in"
 description: "Here, we will learn how to perform a peg-in transaction using the PowPeg App."
-tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 ![PowPeg (peg-out)](/img/resources/powpeg/pegin.gif)
 
 In this section, we will learn how to perform a [peg-in](/resources/guides/powpeg/glossary/) transaction using the PowPeg app, to convert **BTC to RBTC** (peg-in). 
 
-To start using PowPeg app, you will need to connect your **RSK** wallet:
+To start using PowPeg App, you will need to connect your **RSK** wallet:
 
 1. Connect your wallet:
 ![PowPeg (connect-your-wallet)](/img/resources/powpeg/connectyourwallet.png)
@@ -35,7 +35,7 @@ We will do the following:
 ----
 
 ## Resources
-* PowPeg app frontend [repo](https://github.com/rsksmart/2wp-app)
-* PowPeg app backend [repo](https://github.com/rsksmart/2wp-api)
+* PowPeg App frontend [repo](https://github.com/rsksmart/2wp-app)
+* PowPeg App backend [repo](https://github.com/rsksmart/2wp-api)
 * [Rootstock Testnet Faucet](https://faucet.rootstock.io/)
 * [Design architecture](/resources/guides/powpeg/advanced-operations/design-architecture/)
