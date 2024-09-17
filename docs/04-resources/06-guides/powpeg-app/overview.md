@@ -21,9 +21,9 @@ If you have any questions or concerns, please don't hesitate to [contact support
 
 > To get started, see the [prerequisites](/resources/guides/powpeg-app/prerequisites/) section.
 
-The [PowPeg](https://powpeg.rootstock.io/) is an application that converts BTC to RBTC and vice versa. It is secured by the powpeg protocol, which is a unique protocol that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus. See the history of the [PowPeg Protocol](/concepts/powpeg/).
+The [PowPeg App](https://powpeg.rootstock.io/) converts BTC to RBTC and vice versa. It is secured by the PowPeg protocol, which is a unique protocol that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus. See the history of the [PowPeg](/concepts/powpeg/).
 
-The PowPeg is a web application that fosters the interaction between the bitcoin blockchain and the Rootstock network for easier exchange of BTC and RBTC. It provides a way to visualize the status of transactions, communicate with a user wallet (both hardware wallets and software wallets), while also providing the highest possible level of security for transactions.
+The PowPeg App is a web application that fosters the interaction between the bitcoin blockchain and the Rootstock network for easier exchange of BTC and RBTC. It provides a way to visualize the status of transactions, communicate with a user wallet (both hardware wallets and software wallets), while also providing the highest possible level of security for transactions.
 
 ## How it Works
 
