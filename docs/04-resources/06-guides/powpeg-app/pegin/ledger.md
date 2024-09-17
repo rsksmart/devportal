@@ -2,25 +2,25 @@
 sidebar_position: 1100
 sidebar_label:   Peg-in using Ledger Hardware Wallet
 title: "Performing a peg-in using Ledger Hardware Wallet"
-description: "Here, we will learn how to perform a peg-in transaction using the 2 way peg app."
-tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+description: "Here, we will learn how to perform a peg-in transaction using the PowPeg App."
+tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
 ## Using hardware wallets
 
-In this guide, we will be using the 2 way peg app on [2 way peg app - Testnet](https://app.2wp.testnet.rootstock.io/) for learning purposes, for transactions using real tokens, please use the [2 way peg app - Mainnet](https://app.2wp.rootstock.io/) application.
+In this guide, we will be using the PowPeg on [PowPeg - Testnet](https://powpeg.testnet.rootstock.io/) for learning purposes, for transactions using real tokens, please use the [PowPeg - Mainnet](https://powpeg.rootstock.io/) App.
 
 :::warning[Warning]
 
-Ensure to complete the steps in [prerequisites](/resources/guides/two-way-peg-app/prerequisites/) before proceeding with this section.
+Ensure to complete the steps in [prerequisites](/resources/guides/powpeg-app/prerequisites/) before proceeding with this section.
 
 :::
 
 ### Ledger Hardware Wallet
 
-![Choose Pegin Option](/img/resources/two-way-peg-app/pegin.png)
+![Choose Pegin Option](/img/resources/powpeg/pegin.png)
 
-![Connect Ledger](/img/resources/two-way-peg-app/connect-your-ledger.png)
+![Connect Ledger](/img/resources/powpeg/connect-your-ledger.png)
 
 **Step 1: Connect to a ledger wallet**
 - Plug your Ledger wallet by connecting the USB cable that comes with the Ledger.
@@ -28,13 +28,13 @@ Ensure to complete the steps in [prerequisites](/resources/guides/two-way-peg-ap
 
 **Step 2: Enter Pin**
 
-![Enter Pin](/img/resources/two-way-peg-app/2-enter-pin.png)
+![Enter Pin](/img/resources/powpeg/2-enter-pin.png)
 
 **Step 3: Choose Wallet**
 
 Here, we will use the Bitcoin Test wallet. For Mainnet, use the Bitcoin wallet.
 
-![Choose Wallet](/img/resources/two-way-peg-app/3-choose-wallet.png)
+![Choose Wallet](/img/resources/powpeg/3-choose-wallet.png)
 
 _Note: On the Nano S ledger, whenever you want to confirm an option, click on the 2 upper buttons at the same time._
 
@@ -42,55 +42,55 @@ _Note: On the Nano S ledger, whenever you want to confirm an option, click on th
 
 Once the above steps have been completed, a confirmation appears - “Bitcoin Testnet is ready”. 
 
-![Confirm Connection Testnet](/img/resources/two-way-peg-app/4-confirm-connection-testnet.png)
+![Confirm Connection Testnet](/img/resources/powpeg/4-confirm-connection-testnet.png)
 
 Now, you have successfully connected your Ledger device to the Bitcoin network.
 
 ## Performing a peg-in transaction with Ledger
 
-A peg-in is the process of exchanging BTC for RBTC. See the [glossary](/resources/guides/two-way-peg-app/glossary/) section for more information.
+A peg-in is the process of exchanging BTC for RBTC. See the [glossary](/resources/guides/powpeg-app/glossary/) section for more information.
 
 :::tip[Tip]
 The minimum values allowed when creating a peg-in transaction is **0.005 BTC**. 
 :::
 
-Open [2 way peg application](https://app.2wp.testnet.rootstock.io/) on Testnet.
+Open [PowPeg](https://powpeg.testnet.rootstock.io/) on Testnet.
 
 **Step 1: Select Conversion Type**
 
 Since we are performing a peg-in, choose the BTC - RBTC conversion type, as shown in the image below;
 
-![Select Conversion Type](/img/resources/two-way-peg-app/pegin.png)
+![Select Conversion Type](/img/resources/powpeg/pegin.png)
 
 **Step 2: Choose Hardware Wallet**
 
-Here, we are using the ledger hardware wallet to interact with the 2 way peg app. Select your hardware wallet, ensure your device is already connected by inserting your pin into the Ledger device before clicking the Ledger option in the 2 way peg app. See the [connect to a ledger wallet](#ledger-hardware-wallet) section. 
+Here, we are using the ledger hardware wallet to interact with the PowPeg. Select your hardware wallet, ensure your device is already connected by inserting your pin into the Ledger device before clicking the Ledger option in the PowPeg. See the [connect to a ledger wallet](#ledger-hardware-wallet) section. 
 
-![Choose Hardware wallet](/img/resources/two-way-peg-app/choose-your-wallet.png)
+![Choose Hardware wallet](/img/resources/powpeg/choose-your-wallet.png)
 
 **Step 3: Read pop up information**
 
 The pop up shown in the image below describes the duration of the peg-in process which requires at least 100 confirmations on the Bitcoin network, this gives an estimate of around 17 hours in total. It also describes the three main steps involved which is; connecting to the hardware wallet, sending a signed transaction to the BTC network until the corresponding RBTC value is made available in the destination wallet and a receipt for this transaction.
 
-![Read popup info](/img/resources/two-way-peg-app/pegin-popup.png)
+![Read popup info](/img/resources/powpeg/pegin-popup.png)
 
 > Click the checkbox - “Don’t show again” to turn off this pop-up in the future or close temporarily.
 
-**Step 4: Connect to the app**
+**Step 4: Connect to the App**
 
-Click **Continue** to connect to the 2 way peg application.
+Click **Continue** to connect to the PowPeg App.
 
-![Connect to the app](/img/resources/two-way-peg-app/connect-ledger.png)
+![Connect to the App](/img/resources/powpeg/connect-ledger.png)
 
-![Confirm your Ledger wallet](/img/resources/two-way-peg-app/connect-ledger2.png)
+![Confirm your Ledger wallet](/img/resources/powpeg/connect-ledger2.png)
 
-The 2 way peg app shows the pop-up with the connected usb ledger devices, if your device is not visible, unplug the usb device and plug in again, unlock with a pin and click **Retry** or go back to the [connect ledger wallet](#ledger-hardware-wallet) section.
+The PowPeg shows the pop-up with the connected usb ledger devices, if your device is not visible, unplug the usb device and plug in again, unlock with a pin and click **Retry** or go back to the [connect ledger wallet](#ledger-hardware-wallet) section.
 
-![Connect device error](/img/resources/two-way-peg-app/error-connecting-ledger.png)
+![Connect device error](/img/resources/powpeg/error-connecting-ledger.png)
 
-To confirm successful connection to the 2 way peg app, you will be directed to the screen below, where we will perform a Peg-in transaction. 
+To confirm successful connection to the PowPeg, you will be directed to the screen below, where we will perform a Peg-in transaction. 
 
-![Peg-in screen](/img/resources/two-way-peg-app/pegin-screen.png)
+![Peg-in screen](/img/resources/powpeg/pegin-screen.png)
 
 > - The balance of the accounts in your hardware wallet will be loaded, and this shows the balance of 3 different types of accounts: segwit, legacy, native segwit. See the [supported addresses](#supported-addresses) for the meaning of these types of accounts.
 
@@ -100,19 +100,19 @@ To confirm successful connection to the 2 way peg app, you will be directed to t
 
 Select the account you would like to send BTC from, by clicking on the dropdown as shown in the image below. 
 
-![Select Testnet Bitcoin Account](/img/resources/two-way-peg-app/select-btc-account.png)
+![Select Testnet Bitcoin Account](/img/resources/powpeg/select-btc-account.png)
 
 :::info[Info]
 For each selected account type, we will see a corresponding balance.ente
 :::
 
-![Bitcoin Account Selected](/img/resources/two-way-peg-app/account-selected-pegin-ledger.png)
+![Bitcoin Account Selected](/img/resources/powpeg/account-selected-pegin-ledger.png)
 
 **Enter Amount**
 
 After selecting the account you will like to send BTC from, the next step is to enter an amount you would like to send. The amount entered appears in the BTC field, and you can see the corresponding amount in USD under transaction summary.
 
-![Enter Amount](/img/resources/two-way-peg-app/enter-amount.png)
+![Enter Amount](/img/resources/powpeg/enter-amount.png)
 
 > - The minimum amount to send to perform a pegin operation is **0.005 BTC**, any amount less than this throws an error message: **“You cannot send that amount of BTC, you can only send a minimum of 0.005 BTC”**.
 > - The minimum amount to send to perform a pegout operation is **0.004 RBTC**, any amount less than this throws an error message: **“You cannot send that amount of BTC, you can only send a minimum of 0.005 BTC”**.
@@ -127,7 +127,7 @@ To enter an address, we are provided with two options:
 - (1) Your connected Rootstock address. See [Account based addresses](/concepts/account-based-addresses/) 
 - (2) Connect to a software wallet. E.g, Metamask. Here, the address is automatically filled in by the account that is connected to your metamask wallet.
 
-![Enter address](/img/resources/two-way-peg-app/ledger-pegin-destination-address.png)
+![Enter address](/img/resources/powpeg/ledger-pegin-destination-address.png)
 
 **Step 6a: Add a custom address**
 
@@ -137,9 +137,9 @@ Also you can input a custom Rootstock address, different than the connected addr
 
 Here, we can select the fee that will be used for this transaction, this is set on default to average.
 
-![Select Transaction Fee](/img/resources/two-way-peg-app/select-pegin-fee.png)
+![Select Transaction Fee](/img/resources/powpeg/select-pegin-fee.png)
 
-> - The transaction fee is not part of the amount you’re sending via the 2 way peg app, it will only be used for the correct processing of the transaction on the Bitcoin network. Also see the different types of fees (slow, average, fast) and their corresponding cost in TBTC and USD, depending on preference, you can choose any of those three. See the [adjusting network fees](/resources/guides/two-way-peg-app/advanced-operations#adjusting-network-fees) section for more information. 
+> - The transaction fee is not part of the amount you’re sending via the PowPeg, it will only be used for the correct processing of the transaction on the Bitcoin network. Also see the different types of fees (slow, average, fast) and their corresponding cost in TBTC and USD, depending on preference, you can choose any of those three. See the [adjusting network fees](/resources/guides/powpeg-app/advanced-operations#adjusting-network-fees) section for more information. 
 > - The time for each type of fee per transaction may vary depending on the number of transactions on the network and the fees charged at the time.
 
 **Step 8: View transaction summary**
@@ -153,18 +153,18 @@ In this section, we can confirm the selected values:
 - Amount to send
 - Value to receive
 
-![Review Transaction](/img/resources/two-way-peg-app/ledger-pegin-review-details.png)
+![Review Transaction](/img/resources/powpeg/ledger-pegin-review-details.png)
 
 > - In the instance of an error on this transaction, the amount will be sent to the address indicated in the **refund Bitcoin address** located in your hardware wallet.
-> - See the [glossary](/resources/guides/two-way-peg-app/glossary/) section for the meaning of these values.
+> - See the [glossary](/resources/guides/powpeg-app/glossary/) section for the meaning of these values.
 
-![Review Summary](/img/resources/two-way-peg-app/ledger-pegin-review-summary.png)
+![Review Summary](/img/resources/powpeg/ledger-pegin-review-summary.png)
 
 **Step 9: Confirm and sign transaction**
 
 By clicking on the **Confirm** button, we can see all the transactions that will be made, their corresponding inputs and outputs, and the network fees that will be charged, all this information must be confirmed on your hardware wallet screen.
 
-![View transaction summary](/img/resources/two-way-peg-app/ledger-pegin-confirm-and-send-transaction.png)
+![View transaction summary](/img/resources/powpeg/ledger-pegin-confirm-and-send-transaction.png)
 
 **Step 10: Send transaction in Ledger Device**
 
@@ -176,37 +176,37 @@ The user needs to review and approve all outputs, the value of the transaction a
 
 **Review and accept output 1**
 
-![review output one](/img/resources/two-way-peg-app/21-review-output-one.jpg)
+![review output one](/img/resources/powpeg/21-review-output-one.jpg)
 
-![accept output one](/img/resources/two-way-peg-app/22-accept-output-one.jpg)
+![accept output one](/img/resources/powpeg/22-accept-output-one.jpg)
 
 **Review and accept the output 2**
 
-![review output two](/img/resources/two-way-peg-app/23-review-output-two.jpg)
+![review output two](/img/resources/powpeg/23-review-output-two.jpg)
 
-![accept output two](/img/resources/two-way-peg-app/24-accept-output-two.jpg)
+![accept output two](/img/resources/powpeg/24-accept-output-two.jpg)
 
 **Review and accept the output 3**
 
-![review output three](/img/resources/two-way-peg-app/25-review-output-three.jpg)
+![review output three](/img/resources/powpeg/25-review-output-three.jpg)
 
-![accept output three](/img/resources/two-way-peg-app/26-accept-output-three.jpg)
+![accept output three](/img/resources/powpeg/26-accept-output-three.jpg)
 
 **Confirm amount of test transactions**
 
-![confirm amount of test tx](/img/resources/two-way-peg-app/27-confirm-amount-test-tx.jpg)
+![confirm amount of test tx](/img/resources/powpeg/27-confirm-amount-test-tx.jpg)
 
 **Confirm if the fee value is the same present in the transaction summary screen**.
 
-![confirm fee value](/img/resources/two-way-peg-app/28-confirm-fee-value.jpg)
+![confirm fee value](/img/resources/powpeg/28-confirm-fee-value.jpg)
 
 **Now, confirm all transactions**
 
-![confirm transactions](/img/resources/two-way-peg-app/29-confirm-transactions.jpg)
+![confirm transactions](/img/resources/powpeg/29-confirm-transactions.jpg)
 
 **Accept and send the transaction to be broadcasted to the network.**
 
-![accept and send](/img/resources/two-way-peg-app/30-accept-and-send.jpg)
+![accept and send](/img/resources/powpeg/30-accept-and-send.jpg)
 
 > After signing, the transaction is sent to the network to be processed, taking into account the fee value selected previously. 
 
@@ -214,10 +214,10 @@ The user needs to review and approve all outputs, the value of the transaction a
 
 This shows the status of your transaction, with a transaction ID and a link to check the transaction on the explorer. 
 
-![view transaction status](/img/resources/two-way-peg-app/ledger-pegin-tx-finished.png)
+![view transaction status](/img/resources/powpeg/ledger-pegin-tx-finished.png)
 
 By clicking on the **See Transaction** button, the user can check the status directly in the transaction status page, by clicking in **Start Again** button the user can perform another transaction.
 
-See the [Viewing Peg-in Transaction Status](/resources/guides/two-way-peg-app/pegin/status) section for more information. 
+See the [Viewing Peg-in Transaction Status](/resources/guides/powpeg-app/pegin/status) section for more information. 
 
-**Now you have successfully performed a peg-in transaction using the 2 way peg application.**
+**Now you have successfully performed a peg-in transaction using the PowPeg.**
