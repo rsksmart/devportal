@@ -60,14 +60,14 @@ Use this to present items in a specific sequence (ordered list) or without order
 #### Ordered List
 - **Code**
 ```
-1. The PowPeg Application is now available on [Testnet](https://powpeg.testnet.rootstock.io/) and [Mainnet](https://powpeg.rootstock.io/).
-2. For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the PowPeg app, please refer to the [PowPeg app user guide](/concepts/powpeg/).
-3. Get information on the signatories and attestion in the [Powpeg HSM Firmware Attestation](/concepts/powpeg/hsm-firmware-attestation) section.
+1. The PowPeg App is now available on [Testnet](https://powpeg.testnet.rootstock.io/) and [Mainnet](https://powpeg.rootstock.io/).
+2. For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the PowPeg App, please refer to the [PowPeg App user guide](/concepts/powpeg/).
+3. Get information on the signatories and attestion in the [Powpeg Protocol HSM Firmware Attestation](/concepts/powpeg/hsm-firmware-attestation) section.
 ```
  **Result:**
-1. The PowPeg Application is now available on [Testnet](https://powpeg.testnet.rootstock.io/) and [Mainnet](https://powpeg.rootstock.io/).
-2. For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the PowPeg app, please refer to the [PowPeg app user guide](/concepts/powpeg/).
-3. Get information on the signatories and attestion in the [Powpeg HSM Firmware Attestation](/concepts/powpeg/hsm-firmware-attestation) section.
+1. The PowPeg App is now available on [Testnet](https://powpeg.testnet.rootstock.io/) and [Mainnet](https://powpeg.rootstock.io/).
+2. For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the PowPeg App, please refer to the [PowPeg App user guide](/concepts/powpeg/).
+3. Get information on the signatories and attestion in the [PowPeg Protocol HSM Firmware Attestation](/concepts/powpeg/hsm-firmware-attestation) section.
 
 ## Blockquote
 Use this to highlight quoted text, differentiating it from your own writing.
@@ -255,7 +255,7 @@ Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
 
 Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
 
-[The Smart Bitcoin (RBTC)](#) is the native currency in Rootstock and it is used to pay for the gas required for the execution of transactions. It is pegged 1:1 with Bitcoin, which means in Rootstock there are exactly 21M RBTC. A Powpeg allows the transfer of bitcoins from the Bitcoin blockchain to the Rootstock blockchain and vice-versa
+[The Smart Bitcoin (RBTC)](#) is the native currency in Rootstock and it is used to pay for the gas required for the execution of transactions. It is pegged 1:1 with Bitcoin, which means in Rootstock there are exactly 21M RBTC. A PowPeg App allows the transfer of bitcoins from the Bitcoin blockchain to the Rootstock blockchain and vice-versa
 make test
 
 :::

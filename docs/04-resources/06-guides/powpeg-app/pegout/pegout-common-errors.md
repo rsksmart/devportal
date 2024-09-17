@@ -15,4 +15,4 @@ You may encounter the following errors when trying out the application:
 * PowPeg App frontend [repo](https://github.com/rsksmart/2wp-app)
 * PowPeg App backend [repo](https://github.com/rsksmart/2wp-api)
 * [Rootstock Testnet Faucet](https://faucet.rootstock.io/)
-* [Design architecture](/resources/guides/powpeg/advanced-operations/design-architecture/)
+* [Design architecture](/resources/guides/powpeg-app/advanced-operations/design-architecture/)

@@ -12,7 +12,7 @@ In this guide, we will be using the PowPeg on [PowPeg - Testnet](https://powpeg.
 
 :::warning[Warning]
 
-Ensure to complete the steps in [prerequisites](/resources/guides/powpeg/prerequisites/) before proceeding with this section.
+Ensure to complete the steps in [prerequisites](/resources/guides/powpeg-app/prerequisites/) before proceeding with this section.
 
 :::
 
@@ -48,7 +48,7 @@ Now, you have successfully connected your Ledger device to the Bitcoin network.
 
 ## Performing a peg-in transaction with Ledger
 
-A peg-in is the process of exchanging BTC for RBTC. See the [glossary](/resources/guides/powpeg/glossary/) section for more information.
+A peg-in is the process of exchanging BTC for RBTC. See the [glossary](/resources/guides/powpeg-app/glossary/) section for more information.
 
 :::tip[Tip]
 The minimum values allowed when creating a peg-in transaction is **0.005 BTC**. 
@@ -139,7 +139,7 @@ Here, we can select the fee that will be used for this transaction, this is set 
 
 ![Select Transaction Fee](/img/resources/powpeg/select-pegin-fee.png)
 
-> - The transaction fee is not part of the amount you’re sending via the PowPeg, it will only be used for the correct processing of the transaction on the Bitcoin network. Also see the different types of fees (slow, average, fast) and their corresponding cost in TBTC and USD, depending on preference, you can choose any of those three. See the [adjusting network fees](/resources/guides/powpeg/advanced-operations#adjusting-network-fees) section for more information. 
+> - The transaction fee is not part of the amount you’re sending via the PowPeg, it will only be used for the correct processing of the transaction on the Bitcoin network. Also see the different types of fees (slow, average, fast) and their corresponding cost in TBTC and USD, depending on preference, you can choose any of those three. See the [adjusting network fees](/resources/guides/powpeg-app/advanced-operations#adjusting-network-fees) section for more information. 
 > - The time for each type of fee per transaction may vary depending on the number of transactions on the network and the fees charged at the time.
 
 **Step 8: View transaction summary**
@@ -156,7 +156,7 @@ In this section, we can confirm the selected values:
 ![Review Transaction](/img/resources/powpeg/ledger-pegin-review-details.png)
 
 > - In the instance of an error on this transaction, the amount will be sent to the address indicated in the **refund Bitcoin address** located in your hardware wallet.
-> - See the [glossary](/resources/guides/powpeg/glossary/) section for the meaning of these values.
+> - See the [glossary](/resources/guides/powpeg-app/glossary/) section for the meaning of these values.
 
 ![Review Summary](/img/resources/powpeg/ledger-pegin-review-summary.png)
 
@@ -218,6 +218,6 @@ This shows the status of your transaction, with a transaction ID and a link to c
 
 By clicking on the **See Transaction** button, the user can check the status directly in the transaction status page, by clicking in **Start Again** button the user can perform another transaction.
 
-See the [Viewing Peg-in Transaction Status](/resources/guides/powpeg/pegin/status) section for more information. 
+See the [Viewing Peg-in Transaction Status](/resources/guides/powpeg-app/pegin/status) section for more information. 
 
 **Now you have successfully performed a peg-in transaction using the PowPeg.**

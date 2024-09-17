@@ -66,4 +66,4 @@ To perform a peg-out transaction using the Ledger device directly, follow the st
 
 * Step 13: Continue filling in the other fields as amount and click on the Send button
 
-* Step 14: After finish the pegout transaction creation, click here to see how to see the steps to access to Bitcoin derived address in hardware wallet using [Electrum](/resources/guides/powpeg/pegout/deriving-electrum)
+* Step 14: After finish the pegout transaction creation, click here to see how to see the steps to access to Bitcoin derived address in hardware wallet using [Electrum](/resources/guides/powpeg-app/pegout/deriving-electrum)

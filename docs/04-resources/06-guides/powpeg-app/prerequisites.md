@@ -34,7 +34,7 @@ The Bitcoin testnet app does not show on Ledger live manager by default. To be a
         5. On the next screen choose the address format (Native SegWit / SegWit).
         6. Click on **Add Account**:
             <div align="left"><img width="70%" src="/img/resources/powpeg/add-account-3.png" alt="Add Accounts 3"/></div>
-        > Note: See [supported addresses](/resources/guides/powpeg/advanced-operations/supported-wallets/) for the types of addresses supported by the PowPeg App.
+        > Note: See [supported addresses](/resources/guides/powpeg-app/advanced-operations/supported-wallets/) for the types of addresses supported by the PowPeg App.
         - You have successfully added the Bitcoin testnet app to your account.
             <div align="left"><img width="70%" src="/img/resources/powpeg/account-added-successfully.png" alt="Account Added Successfully"/></div>
 
@@ -57,7 +57,7 @@ The Bitcoin testnet app does not show on Ledger live manager by default. To be a
 :::info[Info]
 
 The PowPeg App is available on both Mainnet and Testnet. Both applications follow the same process. For production purposes, use [Mainnet](https://powpeg.rootstock.io/), for testing and development purposes, use the [Testnet](https://powpeg.testnet.rootstock.io/). 
-- See [glossary](/resources/guides/powpeg/glossary/) for explanation of these terms.
+- See [glossary](/resources/guides/powpeg-app/glossary/) for explanation of these terms.
 
 :::
     
@@ -78,7 +78,7 @@ To get started with the 2-way peg app, ensure you have the following:
         - Setup the Liquality software wallet by visiting [Liquality's website](https://www.liquality.io/).
     - **Metamask Wallet (Peg-out Requirements only):**
         - For more details, see [Metamask Wallet](/dev-tools/wallets/metamask/)
-    > For Peg-out requirements, ensure you have either the Liquality or Metamask wallet installed in your browser. For more information, see [Supported Browsers](/resources/guides/powpeg/advanced-operations/supported-browsers/) and [Supported Wallets](/resources/guides/powpeg/advanced-operations/supported-wallets/).
+    > For Peg-out requirements, ensure you have either the Liquality or Metamask wallet installed in your browser. For more information, see [Supported Browsers](/resources/guides/powpeg-app/advanced-operations/supported-browsers/) and [Supported Wallets](/resources/guides/powpeg-app/advanced-operations/supported-wallets/).
 
 :::info[Funds]
 
@@ -95,9 +95,9 @@ This guide primarily uses the Ledger Nano S hardware wallet for illustration, bu
 
 ## Resources
 
-* See the [overview section](/resources/guides/powpeg/overview/) to learn about the PowPeg App
-* Convert [BTC to RBTC using the PowPeg App](/resources/guides/powpeg/pegin/)
+* See the [overview section](/resources/guides/powpeg-app/overview/) to learn about the PowPeg App
+* Convert [BTC to RBTC using the PowPeg App](/resources/guides/powpeg-app/pegin/)
 * PowPeg App frontend [repo](https://github.com/rsksmart/2wp-app)
 * PowPeg App backend [repo](https://github.com/rsksmart/2wp-api)
 * [Rootstock Testnet Faucet](https://faucet.rootstock.io/)
-* [Design architecture](/resources/guides/powpeg/advanced-operations/design-architecture/)
+* [Design architecture](/resources/guides/powpeg-app/advanced-operations/design-architecture/)

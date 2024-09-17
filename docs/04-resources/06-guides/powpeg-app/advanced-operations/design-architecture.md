@@ -20,7 +20,7 @@ This diagram shows the architecture of the PowPeg App, a Customer (Person) refer
 
 ## Components
 
-The front-end application of the PowPeg is developed using Vue.js. The backend application is developed using Nodejs containing a restful API Service and a Daemon service. The API is responsible to serve the data to the front-end, and the Daemon service is responsible for listening for transactions on-chain and updates the database.
+The PowPeg App frontend is developed using Vue.js. The backend application is developed using Nodejs containing a restful API Service and a Daemon service. The API is responsible to serve the data to the front-end, and the Daemon service is responsible for listening for transactions on-chain and updates the database.
 
 ![Front-end Application - PowPeg](/img/resources/powpeg/58-frontend-application-diagram.png)
 

@@ -65,7 +65,7 @@ After signing, you will be able to know the derived Bitcoin address where you wi
 ​
 ![Derived address](/img/resources/powpeg/optional3.png)
 
-> For more details on derived addresses. See the [advanced operations](/resources/guides/powpeg/pegout/deriving-electrum) section.
+> For more details on derived addresses. See the [advanced operations](/resources/guides/powpeg-app/pegout/deriving-electrum) section.
 
 ​
 **Step 6: Send transaction**
@@ -85,4 +85,4 @@ See final screen as shown in the image below;
 
 By clicking on the **See Transaction** button, the user can check the status directly in the transaction status page, by clicking in **Start Again** button the user can perform another transaction.
 
-See the [Viewing Peg-out Transaction Status](/resources/guides/powpeg/pegout/status) section for more information.
+See the [Viewing Peg-out Transaction Status](/resources/guides/powpeg-app/pegout/status) section for more information.

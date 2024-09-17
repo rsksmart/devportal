@@ -19,7 +19,7 @@ The app is available at [https://powpeg.rootstock.io/](https://powpeg.rootstock.
 If you have any questions or concerns, please don't hesitate to [contact support](https://discord.com/channels/842021106956238848/1123675841369489438).
 :::
 
-> To get started, see the [prerequisites](/resources/guides/powpeg/prerequisites/) section.
+> To get started, see the [prerequisites](/resources/guides/powpeg-app/prerequisites/) section.
 
 The [PowPeg](https://powpeg.rootstock.io/) is an application that converts BTC to RBTC and vice versa. It is secured by the powpeg protocol, which is a unique protocol that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus. See the history of the [PowPeg Protocol](/concepts/powpeg/).
 
@@ -43,11 +43,11 @@ The source code is available on github, and open source:
 
 The PowPeg App, has two primary features, they are:
 
-- Peg-in: A conversion from BTC to RBTC. See [Glossary](/resources/guides/powpeg/glossary/) page for more explanation. 
+- Peg-in: A conversion from BTC to RBTC. See [Glossary](/resources/guides/powpeg-app/glossary/) page for more explanation. 
     - **Note: The peg-in process is final and cannot be reverted**.
     - **Native pegin transaction has 17 hours estimated time to completion**.
 
-- Peg-out: A conversion from RBTC to BTC. This current version of the PowPeg. See [pegout](/resources/guides/powpeg/pegout/) for more explanation.
+- Peg-out: A conversion from RBTC to BTC. This current version of the PowPeg. See [pegout](/resources/guides/powpeg-app/pegout/) for more explanation.
     - **Native pegin transaction has 34 hours estimated time to completion**.
 
 ## Why use the PowPeg App?
@@ -56,7 +56,7 @@ The PowPeg App has lots of benefits, these include:
  
 1. Simplified transactions
 
-The PowPeg App (peg-in and peg-out) are its nature is a complex process and this app makes it simpler. Using the PowPeg enables you to choose where to receive the converted BTC / RBTC, which is also possible without it, but with an even higher level of complexity than a legacy peg-in and peg-out.
+The PowPeg App (peg-in and peg-out) are its nature is a complex process and this app makes it simpler. Using the PowPeg App enables you to choose where to receive the converted BTC / RBTC, which is also possible without it, but with an even higher level of complexity than a legacy peg-in and peg-out.
 
 
 2. Visualization of transactions
@@ -78,6 +78,6 @@ All transactions need to be confirmed via the device used by the customer, wheth
 
 ## Next
 
-* Convert [BTC to RBTC using the PowPeg App](/resources/guides/powpeg/pegin/).
-* Convert [RBTC to BTC using the PowPeg App](/resources/guides/powpeg/pegout/).
-* View [Advanced Operations](/resources/guides/powpeg/advanced-operations/)
+* Convert [BTC to RBTC using the PowPeg App](/resources/guides/powpeg-app/pegin/).
+* Convert [RBTC to BTC using the PowPeg App](/resources/guides/powpeg-app/pegout/).
+* View [Advanced Operations](/resources/guides/powpeg-app/advanced-operations/)

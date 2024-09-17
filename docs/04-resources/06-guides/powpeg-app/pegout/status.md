@@ -51,7 +51,7 @@ Click on the **refresh** button by scrolling down on the page below to view the 
 
 :::danger[Error]
 - In case an error occurs with this transaction, the amount will be sent back to the refund Bitcoin address.
-- See the [glossary](/resources/guides/powpeg/glossary/) section for in-depth definition and explanation of these terms.
+- See the [glossary](/resources/guides/powpeg-app/glossary/) section for in-depth definition and explanation of these terms.
 :::
 
 

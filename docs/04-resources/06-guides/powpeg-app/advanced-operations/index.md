@@ -10,14 +10,14 @@ This section contains detailed instructions on how to perform advanced operation
 
 These operations include;
 
-* How to review funds in Bitcoin after a pegout by [viewing a derived address](/resources/guides/powpeg/pegout/deriving-electrum), 
-* Convert RBTC - BTC and import a [key in Electrum](/resources/guides/powpeg/pegout/deriving-electrum#import-key-in-electrum), import in Electrum if you are using [hardware wallets](/resources/guides/powpeg/pegout/deriving-electrum#import-key-in-electrum-using-hardware-wallets)
+* How to review funds in Bitcoin after a pegout by [viewing a derived address](/resources/guides/powpeg-app/pegout/deriving-electrum), 
+* Convert RBTC - BTC and import a [key in Electrum](/resources/guides/powpeg-app/pegout/deriving-electrum#import-key-in-electrum), import in Electrum if you are using [hardware wallets](/resources/guides/powpeg-app/pegout/deriving-electrum#import-key-in-electrum-using-hardware-wallets)
 * Selecting different accounts
 * Viewing advanced details
 * Adjusting network fees
 * Viewing Advanced data
 
-> For  more information, see [design and architecure](/resources/guides/powpeg/advanced-operations/design-architecture/), [supported addresses](/resources/guides/powpeg/advanced-operations/supported-addresses/), [supported wallets](/resources/guides/powpeg/advanced-operations/supported-wallets/), [supported browsers](/resources/guides/powpeg/advanced-operations/supported-browsers/)
+> For  more information, see [design and architecure](/resources/guides/powpeg-app/advanced-operations/design-architecture/), [supported addresses](/resources/guides/powpeg-app/advanced-operations/supported-addresses/), [supported wallets](/resources/guides/powpeg-app/advanced-operations/supported-wallets/), [supported browsers](/resources/guides/powpeg-app/advanced-operations/supported-browsers/)
 
 --- 
 
@@ -25,15 +25,15 @@ These operations include;
 
 ### Pegin:
 
-There are three types of accounts on the PowPeg App. See [supported addresses](/resources/guides/powpeg/advanced-operations/supported-addresses/) section for examples of these types of addresses.
+There are three types of accounts on the PowPeg App. See [supported addresses](/resources/guides/powpeg-app/advanced-operations/supported-addresses/) section for examples of these types of addresses.
 
 To select an account to send BTC from, click on **Select the account** as shown in the image below. This loads the balance for all the addresses in your hardware wallet.
 
-> Note: Your hardware wallet must be connected to view this section of the PowPeg.
+> Note: Your hardware wallet must be connected to view this section of the PowPeg App.
 
 ![Bitcoin account to send from](/img/resources/powpeg/select-btc-account.png)
 
-Choose the address you want to send TBTC from. See the [getting funds](/resources/guides/powpeg/prerequisites#get-funds) section for how to get BTC or TBTC.
+Choose the address you want to send TBTC from. See the [getting funds](/resources/guides/powpeg-app/prerequisites#get-funds) section for how to get BTC or TBTC.
  
 ### Advanced data
 
@@ -71,4 +71,4 @@ A fast transaction is the most expensive but the transaction confirms at the qui
 * PowPeg App frontend [repo](https://github.com/rsksmart/2wp-app)
 * PowPeg App backend [repo](https://github.com/rsksmart/2wp-api)
 * [Rootstock Testnet Faucet](https://faucet.rootstock.io/)
-* [Design architecture](/resources/guides/powpeg/advanced-operations/design-architecture/)
+* [Design architecture](/resources/guides/powpeg-app/advanced-operations/design-architecture/)

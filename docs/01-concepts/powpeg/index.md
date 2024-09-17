@@ -1,9 +1,9 @@
 ---
 title: "Building the Most Secure, Permissionless and Uncensorable Bitcoin Peg"
 sidebar_position: 4
-sidebar_label: PowPeg
+sidebar_label: PowPeg Protocol
 tags: [rsk, rootstock, rbtc, btc, architecture, powpeg protocol, powpeg app]
-description: "Transfer BTC to RBTC, and RBTC to BTC through the PowPeg."
+description: "Transfer BTC to RBTC, and RBTC to BTC through the PowPeg Protocol."
 render_features: 'powpeg-hsm-attestation-frame'
 ---
 
@@ -11,23 +11,23 @@ Rootstock’s **PowPeg** protocol, has matured from its inception in 2018 as a f
 
 :::note[Info]
 - The PowPeg App is available on [Testnet](https://powpeg.testnet.rootstock.io/) and [Mainnet](https://powpeg.rootstock.io/). 
-- For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the PowPeg, please refer to the [PowPeg user guide](/resources/guides/powpeg/).
+- For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the PowPeg, please refer to the [PowPeg user guide](/resources/guides/powpeg-app/).
 - Get information on the signatories and attestion in the [PowPeg HSM Firmware Attestation](/concepts/powpeg/hsm-firmware-attestation) section.
 :::
 
-## The History of the PowPeg
+## The History of the PowPeg Protocol
 
 Two blockchains with distinct block formats can communicate in a fully decentralized manner if each one can evaluate the other blockchain’s consensus rules, and if cross-chain messages are not censored for long periods of time. Currently, only platforms with “Turing-complete” smart contracts can evaluate other blockchain consensus rules. Bitcoin, for better or for worse, lacks the ability to unlock coins over arbitrary predicates. Therefore, when Rootstock was created, it had to use the only existing technology in Bitcoin to distribute trust among parties: multi-signatures. With a multi-signature it is possible to give a group of notaries the task to protect locked bitcoins, tolerating a certain amount of malicious, hacked or unavailable parties.
 
 When the Rootstock genesis block was mined, the Rootstock Federation, an autonomous set of functionaries aimed at protecting the multi-signature, was born. The federation was controlled by the Rootstock Bridge, an unstoppable smart-contract running on Rootstock, and has been successfully working since its creation. In 2020 the Rootstock community decided it was time for the Rootstock peg to grow, both in security and in censorship resistance, evolving from a federated system to the PowPeg. The PowPeg is a unique 2-way peg system that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus. The set of functionaries still exists, but their role is mainly to keep their hardware and nodes connected and alive at all times; they do not directly control the Bitcoin multisig private keys. See [PowPeg HSM Firmware Attestation](/concepts/powpeg/hsm-firmware-attestation)
 
-## The PowPeg in Rootstock
+## The PowPeg Protocol in Rootstock
 
 The Rootstock researchers and developers strategy when designing the PowPeg differs from the one adopted by other teams that have built 2-way peg protocols. The Rootstock PowPeg is based on a layered security model, a practice we call “**defence-in-depth**”. Most other pegs rely on a single all-encompassing cryptographic protocol that solves a multi-party custody problem in an intricate way. These complex cryptographic protocols are delicate and very few entities can audit them thoroughly. Often these types of protocols become compromised, resulting in a sudden loss of security for users.
 
 Other recent 2-way peg designs focus on crypto-economic incentives that take advantage of high collateralization in a new token. However, using a different token for the core sidechain functionality is not aligned with Bitcoin values. The Rootstock PowPeg bridge, instead, relies on multiple defences, or layers, with each layer relatively simple to understand and test. This defence-in-depth approach is what has allowed Rootstock to grow from genesis to the current state without major problems, and without downtime. Since there is no collateral, the Rootstock PowPeg members are incentivized to participate by receiving a small portion of Rootstock transaction fees that is automatically channeled to them. As seen in the Ethereum ecosystem, transaction fees can eventually provide a sustained income for miners and sometimes [even higher](https://coinmetrics.io/ethereums-defi-evolution-how-defi-is-fueling-ethereums-growth/) than the blockchain subsidy.
 
-## PowPeg Functionaries
+## PowPeg Protocol Functionaries
 
 Functionaries participating in the Rootstock PowPeg keep specialized hardware called **PowHSMs** active and connected to special types of Rootstock full nodes (the “PowPeg Node”). A PowHSM is an external tamper-proof device that creates and protects one of the private keys required for the Bitcoin multi-signature protocol, only signing transactions proven valid by enough cumulative work. The PowPeg node is designed to have maximal connectivity and to communicate information about the Rootstock blockchain, specifically cumulative work, to the PowHSM.
 
@@ -43,7 +43,7 @@ Economic actors such as merchants and exchanges, interact with the Rootstock Pow
 
 Normally the chain with the highest chain work is the network’s best chain. In the history of Bitcoin there was only a single [unintended network fork](https://bitcoinmagazine.com/articles/bitcoin-network-shaken-by-blockchain-fork-1363144448) where one branch was invalid according to pre-established consensus rules. The fork length was 24 blocks. Therefore, in order to prevent intended or unintended invalid forks, the Bridge is designed to wait for 100 confirmations before confirming a peg-in transaction.
 
-## Peg-in/Peg-out and Other Properties of Rootstock PowPeg
+## Peg-in/Peg-out and Other Properties of Rootstock PowPeg Protocol
 
 We use the now standardized terms peg-in for the process that transfers bitcoins to the sidechain, and peg-out to the process that returns them back to Bitcoin. Performing a peg-in is as easy as sending the bitcoins to the PowPeg address and informing the Bridge about the Bitcoin transaction. The PowPeg functionaries provide a “watch tower” service on behalf of users and inform the Bridge of any peg-in as well.
 

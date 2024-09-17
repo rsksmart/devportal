@@ -14,12 +14,12 @@ tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 The Liquality Wallet is a browser extension for accessing Bitcoin, Rootstock, and Ethereum applications. 
 
 :::warning[Warning]
-Liquality Wallet has been discountinued. See section on [Supported wallets](/resources/guides/powpeg/advanced-operations/supported-wallets) by the PowPeg.
+Liquality Wallet has been discountinued. See section on [Supported wallets](/resources/guides/powpeg-app/advanced-operations/supported-wallets) by the PowPeg.
 :::
 
 We will perform a peg-out transaction using the Ledger Hardware Wallet and Liquality.
 
-> See [How to perform a peg-in transaction using Ledger](/resources/guides/powpeg/pegin/ledger/)
+> See [How to perform a peg-in transaction using Ledger](/resources/guides/powpeg-app/pegin/ledger/)
 
 ### Get started
 
@@ -51,5 +51,5 @@ Now you can see "Ledger" or "Trezpr" label in your Metamask accounts
 ----
 
 ## Next
-* See [Performing a peg-out transaction using Trezor](/resources/guides/powpeg/pegout/trezor/)
-* See [Performing a peg-out transaction using Ledger](/resources/guides/powpeg/pegout/ledger/)
+* See [Performing a peg-out transaction using Trezor](/resources/guides/powpeg-app/pegout/trezor/)
+* See [Performing a peg-out transaction using Ledger](/resources/guides/powpeg-app/pegout/ledger/)

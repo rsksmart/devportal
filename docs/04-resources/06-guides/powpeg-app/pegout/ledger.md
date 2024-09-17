@@ -13,8 +13,8 @@ tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ​> - Note that we will be using the PowPeg  App on [Testnet](https://powpeg.testnet.rootstock.io/) for learning purposes.
 > - For transactions using **real tokens**, use the [Mainnet](https://powpeg.rootstock.io/) application.
 > - We're using Ledger Nano and Trezor One hardware wallets on this tutorial.
-> - To use Ledger hardware wallet to create a **peg-in** see [How to perform a peg-in transaction using Ledger](/resources/guides/powpeg/pegin/ledger/)
-> - To use Trezor hardware wallet to create a **peg-in** see [How to perform a peg-in transaction using Trezor](/resources/guides/powpeg/pegin/trezor/)
+> - To use Ledger hardware wallet to create a **peg-in** see [How to perform a peg-in transaction using Ledger](/resources/guides/powpeg-app/pegin/ledger/)
+> - To use Trezor hardware wallet to create a **peg-in** see [How to perform a peg-in transaction using Trezor](/resources/guides/powpeg-app/pegin/trezor/)
 
 
 ### Get started with Ledger
@@ -60,13 +60,13 @@ Step 12: Ledger Connected <br/>
 <br/>
 Step 13: Continue filling in the other fields as amount and click on the Send button
 
-Step 14: After finish the pegout transaction creation, click here to see how to see the steps to access to Bitcoin derived address in hardware wallet using [Electrum](/resources/guides/powpeg/advanced-operations#electrum-hardware-wallets)
+Step 14: After finish the pegout transaction creation, click here to see how to see the steps to access to Bitcoin derived address in hardware wallet using [Electrum](/resources/guides/powpeg-app/advanced-operations#electrum-hardware-wallets)
 
 ----
 
 ## Next
 
-* See [Performing a peg-out transaction using Ledger and Liquality](/resources/guides/powpeg/pegout/ledger-liquality/)
+* See [Performing a peg-out transaction using Ledger and Liquality](/resources/guides/powpeg-app/pegout/ledger-liquality/)
 
 
 ----
@@ -75,4 +75,4 @@ Step 14: After finish the pegout transaction creation, click here to see how to 
 * PowPeg App frontend [repo](https://github.com/rsksmart/2wp-app)
 * PowPeg App backend [repo](https://github.com/rsksmart/2wp-api)
 * [Rootstock Testnet Faucet](https://faucet.rootstock.io/)
-* [Design architecture](/resources/guides/powpeg/advanced-operations/design-architecture/)
+* [Design architecture](/resources/guides/powpeg-app/advanced-operations/design-architecture/)

@@ -96,7 +96,7 @@ In this section, we can confirm the selected values:
 ![Review Transaction](/img/resources/powpeg/ledger-pegin-review-details.png)
 
 > - In the instance of an error on this transaction, the amount will be sent to the address indicated in the **refund Bitcoin address** located in your hardware wallet.
-> - See the [glossary](/resources/guides/powpeg/glossary/) section for the meaning of these values.
+> - See the [glossary](/resources/guides/powpeg-app/glossary/) section for the meaning of these values.
 
 **Step 6: Confirm the Transaction**
 
@@ -110,6 +110,6 @@ This shows the status of your transaction, with a transaction ID and a link to c
 
 By clicking on the **See Transaction** button, the user can check the status directly in the transaction status page, by clicking in **Start Again** button the user can perform another transaction.
 
-See the [Viewing Peg-in Transaction Status](/resources/guides/powpeg/pegin/status) section for more information. 
+See the [Viewing Peg-in Transaction Status](/resources/guides/powpeg-app/pegin/status) section for more information. 
 
 **Now you have successfully performed a peg-in transaction using the PowPeg App.**

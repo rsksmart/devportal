@@ -35,10 +35,10 @@ description: "Explore a curated selection of smart contract development tools an
     title="PowPeg"
     subtitle="bridges"
     color="orange"
-    linkHref="/resources/guides/powpeg/"
+    linkHref="/resources/guides/powpeg-app/"
     target="_blank"
     linkTitle="Documentation"
-    description="Bridge Bitcoin and Rootstock using the PowPeg."
+    description="Bridge Bitcoin and Rootstock using the PowPeg App."
   />
 <FilterItem
     value="bridge, cc"
