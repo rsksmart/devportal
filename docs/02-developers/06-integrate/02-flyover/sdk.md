@@ -21,7 +21,7 @@ The following are the minimum requirements and dependencies required for integra
 
 :::tip[Tip]
 
-To set up a Rootstock node. Read the [Installation Guide](/node-operators/setup/installation/) for different operating systems or use the [Reproducible build](/node-operators/setup/reproducible-build/). 
+To set up a Rootstock node (RSKj). Read the [Installation Guide](/node-operators/setup/installation/) for different operating systems or use the [Reproducible build](/node-operators/setup/reproducible-build/). 
 
 :::
 

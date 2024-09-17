@@ -19,7 +19,7 @@ Its main goal is to accelerate getting into Rootstock from Bitcoin by significan
 :::info[Flyover SDK]
 
 The [Flyover SDK](https://github.com/rsksmart/unified-bridges-sdk/tree/main/packages/flyover-sdk) is currently available on Mainnet and Testnet. 
-To convert RBTC to BTC and vice versa, use the Powpeg.
+To convert RBTC to BTC and vice versa, use the PowPeg App.
 
 :::
 
@@ -68,7 +68,7 @@ For more information, see [LP Onboarding](/developers/integrate/flyover/LP/) sec
 
 ### Converting BTC to RBTC - General Users
 
-Flyover is integrated in the [PowPeg](http://powpeg.rootstock.io) app which provides a user-friendly UI for Bitcoiners to use the native Rootstock PowPeg to Peg in and out, as well as to easily perform trust-minimized BTC and RBTC transfers between Bitcoin and Rootstock using Flyover. See section on [Using the PowPeg](/developers/integrate/flyover/powpeg/) to learn about how you can convert BTC - RBTC and vice versa.
+Flyover is integrated in the [PowPeg App](http://powpeg.rootstock.io) which provides a user-friendly UI for Bitcoiners to use the native Rootstock PowPeg protocol to Peg in and out, as well as to easily perform trust-minimized BTC and RBTC transfers between Bitcoin and Rootstock using Flyover. See section on [Using the PowPeg App](/developers/integrate/flyover/powpeg/) to learn about how you can convert BTC - RBTC and vice versa.
 
 
 ## Resources
