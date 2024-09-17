@@ -3,30 +3,30 @@ sidebar_position: 1800
 sidebar_label:  Viewing Peg-out Transaction Status
 title: "Viewing the status of a transaction after peg-out"
 description: "Here, we will learn how to view  a transaction status after a peg-out."
-tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-### Using the transaction status page
+## Using the transaction status page
 
-To view a transaction status using the 2 way peg application, we will do the following steps;
+To view a transaction status using the PowPeg App, we will do the following steps;
 
 **Step 1: Go to the homepage**
 
-Visit: [2 way peg](https://app.2wp.rootstock.io/). 
+Visit the [PowPeg App](https://powpeg.rootstock.io/). 
 
 Click on transaction status.
 
-![Transaction status](/img/resources/two-way-peg-app/first-page.png)
+![Transaction status](/img/resources/powpeg/first-page.png)
 
 The processing of a pegout transaction is made up of several dependencies, and for each dependency a processing step is added, and at each step in the process, the pegout is shown in a form on the transaction status query screen.
 
-After finish a pegout you can search for the current status in the [status page](https://app.2wp.rootstock.io/status)
+After finish a pegout you can search for the current status in the [status page](https://powpeg.rootstock.io/status)
 
 **Step 2: Enter Transaction ID**
 
 Copy the transaction ID derived in [Step 12: Performing a Pegout transaction with Ledger](#performing-a-peg-in-transaction-with-ledger), paste into the field as shown below, click on enter or click on the search icon or click on Enter.
 
-![Transaction status field](/img/resources/two-way-peg-app/transaction-status-field.png)
+![Transaction status field](/img/resources/powpeg/transaction-status-field.png)
 
 **Step 3: View transaction status**
 
@@ -35,11 +35,11 @@ This shows what stage the transaction is in, the transaction performed was a peg
 Click on the **refresh** button by scrolling down on the page below to view the updated status.
 
 
-![Transaction status update](/img/resources/two-way-peg-app/transaction-status-pegout.png)
+![Transaction status update](/img/resources/powpeg/transaction-status-pegout.png)
 
 **Rootstock Side**
 - Recipient Address: The address when you will receive the funds
-- Transaction ID: Rootstock Transaction hassh
+- Transaction ID: Rootstock Transaction hash
 - Fee: Rootstock Network fee
 - You will receive: The amount that you will receive in Recipient Address
 **Bitcoin Side:**
@@ -51,10 +51,10 @@ Click on the **refresh** button by scrolling down on the page below to view the 
 
 :::danger[Error]
 - In case an error occurs with this transaction, the amount will be sent back to the refund Bitcoin address.
-- See the [glossary](/resources/guides/two-way-peg-app/glossary/) section for in-depth definition and explanation of these terms.
+- See the [glossary](/resources/guides/powpeg-app/glossary/) section for in-depth definition and explanation of these terms.
 :::
 
 
-### Using Block Explorer
+## Using Block Explorer
 
 To view transactions status using Block Explorer, you can click on the open windonw icon, or copy transaction ID and paste in your prefered block explorer.

@@ -18,8 +18,8 @@ const data = {
           href: '/developers/integrate/flyover/',
         },
         {
-          title: '2 Way Peg',
-          href: 'https://app.2wp.rootstock.io/',
+          title: 'PowPeg',
+          href: 'https://powpeg.rootstock.io/',
         },
         {
           title: 'Token Bridge',

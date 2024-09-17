@@ -2,17 +2,17 @@
 sidebar_position: 1500
 sidebar_label: Glossary
 title: "Glossary"
-description: "Welcome to the glossary section for the 2 way peg app documentation."
-tags: [2 way peg app, powpeg, peg-in, peg-out, bridge, rsk, rootstock]
+description: "Welcome to the glossary section for the PowPeg App documentation."
+tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-See a list of terms about/related to the 2 way peg app and their meanings.
+See a list of terms about/related to the PowPeg App and their meanings.
 
 <Accordion>
   <Accordion.Item eventKey="0">
-    <Accordion.Header as="h3">What is the 2 way peg app?</Accordion.Header>
+    <Accordion.Header as="h3">What is the PowPeg App?</Accordion.Header>
     <Accordion.Body>
-       - The [2 way peg app](https://app.2wp.rootstock.io/) is a frontend application developed in Vue.js and typescript. The or 2 way peg app is a web application that fosters the interaction between the bitcoin blockchain and the Rootstock network for faster exchange of BTC and RBTC. See the [github repo](https://github.com/rsksmart/2wp-app).
+       - The [PowPeg](https://powpeg.rootstock.io/) App is a web application that fosters the interaction between the bitcoin blockchain and the Rootstock network for faster exchange of BTC and RBTC. See the [github repo](https://github.com/rsksmart/2wp-app).
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
@@ -82,9 +82,9 @@ See a list of terms about/related to the 2 way peg app and their meanings.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="12">
-    <Accordion.Header as="h3">Powpeg</Accordion.Header>
+    <Accordion.Header as="h3">What's the PowPeg Protocol?</Accordion.Header>
     <Accordion.Body>
-      - The powpeg is a unique 2-way peg system that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus. Read more about the [Powpeg](/concepts/powpeg/).
+      - The powpeg protocol is a unique 2-way peg system that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus. Read more about the [Powpeg](/concepts/powpeg/).
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="13">
@@ -102,7 +102,7 @@ See a list of terms about/related to the 2 way peg app and their meanings.
   <Accordion.Item eventKey="15">
     <Accordion.Header as="h3">Testnet</Accordion.Header>
     <Accordion.Body>
-      - This is a testing network used for testing and development purposes, assets on the Testnet have zero value, funds used in this network are called Test tokens (tRBTC), they can be gotten through a faucet that dispenses tokens. These tokens are utility tokens that are required to operate certain DApps. Developers of those DApps also need to test them on the Testnet, and hence these are provided as a convenience for them. The Rootstock network provides a cryptocurrency faucet. The tRBTC faucet provides the cryptocurrency required to pay for gas fees on the Rootstock Testnet. See how to get tRBTC using the [Rootstock Faucet](https://faucet.rootstock.io/).
+      - This is a testing network used for testing and development purposes, assets on the Testnet have zero value, funds used in this network are called Test tokens (tRBTC), they can be gotten through a faucet that dispenses tokens. These tokens are utility tokens that are required to operate certain dApps. Developers of those dApps also need to test them on the Testnet, and hence these are provided as a convenience for them. The Rootstock network provides a cryptocurrency faucet. The tRBTC faucet provides the cryptocurrency required to pay for gas fees on the Rootstock Testnet. See how to get tRBTC using the [Rootstock Faucet](https://faucet.rootstock.io/).
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="16">

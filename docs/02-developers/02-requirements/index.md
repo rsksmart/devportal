@@ -8,8 +8,14 @@ description: "Minimum hardware requirements for Rootstock."
 
 This guide provides clear instructions for developers on the supported Solidity versions and the necessary configurations needed to ensure your smart contracts are deployed on the Rootstock network. See the [developer tools](/dev-tools/) section for a list of tools to build on Rootstock.
 
+:::tip[Hackathon Info]
+
+Participating in a Rootstock hackathon or Workshop? View the [Hackathon Resources](/resources/hackathon/) section.
+
+:::
+
 ## Solidity Version
-- Supported solc version: `0.8.19`
+- Supported solc version: `0.8.20`
 
 ## Node RPC
 - Interact with Rootstock using the [RPC API](https://rpc.rootstock.io/)
@@ -18,46 +24,11 @@ This guide provides clear instructions for developers on the supported Solidity 
 See how to setup the RPC API and get an [API Key](/developers/rpc-api/setup).
 :::
 
-## Network Configuration
+## Connecting to a Wallet
 
-Fill these values to connect to the Rootstock Mainnet or Testnet.                           
+Fill these values to connect to the Rootstock Mainnet or Testnet in MetaMask.                           
 
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Field</th>
-      <th scope="col">Rootstock Mainnet</th>
-      <th scope="col">Rootstock Testnet</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Network Name</td>
-      <td>Rootstock Mainnet</td>
-      <td>Rootstock Testnet</td>
-    </tr>
-    <tr>
-      <td>RPC URL</td>
-      <td>https://rpc.mainnet.rootstock.io/{YOUR_APIKEY}</td>
-      <td>https://rpc.testnet.rootstock.io/{YOUR_APIKEY}</td>
-    </tr>
-    <tr>
-      <td>ChainID</td>
-      <td>30</td>
-      <td>31</td>
-    </tr>
-    <tr>
-      <td>Symbol</td>
-      <td>RBTC</td>
-      <td>tRBTC</td>
-    </tr>
-    <tr>
-      <td>Block explorer URL</td>
-      <td><a href="https://explorer.rootstock.io/" target="_blank">https://explorer.rootstock.io/</a></td>
-      <td><a href="https://explorer.testnet.rootstock.io/" target="_blank">https://explorer.testnet.rootstock.io/</a></td>
-    </tr>
-  </tbody>
-</table>
+- See [Configure MetaMask Wallet for Rootstock](/dev-tools/wallets/metamask/)
 
 ## Contract Addresses
 

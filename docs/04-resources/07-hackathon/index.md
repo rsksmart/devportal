@@ -6,12 +6,20 @@ tags: [hackathons, rsk, workshop, resources, rootstock]
 description: "Hackathon resources and tools"
 ---
 
-This guide details the necessary hardware and software requirements for developing on the Rootstock blockchain. It includes setup instructions for essential tools such as Java, Node.js, Hardhat, and RSKj, ensuring developers have a clear path to prepare their environment for Rootstock projects, whether for local development, testing, or deployment.
+This guide details the necessary hardware and software requirements for developing on the Rootstock blockchain. It includes setup instructions for essential tools such as Java, Node.js, Hardhat, and RSKj, ensuring developers have a clear path to prepare their environment for Rootstock projects, whether for local development, testing, or deployment. For IRL hackathons and events, download the [Hackathon Cheatsheet PDF with QR Codes](/rootstock-cheatsheet.pdf).
 
 <Card
   title="Prerequisites"
   description="Prerequisites for developing on Rootstock."
   link="/developers/requirements/"
+/>
+
+<br></br>
+
+<Card
+  title="Rootstock Hackathon Cheatsheet"
+  description="The Rootstock Hackathon Cheatsheet is a concise reference guide for developers aiming to deploy decentralized applications (dApps) on the Rootstock network."
+  link="https://cheatography.com/devrelrootstock/cheat-sheets/rootstock-dev/"
 />
 
 <br></br>
