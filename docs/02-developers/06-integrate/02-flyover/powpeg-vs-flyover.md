@@ -1,6 +1,6 @@
 ---
 sidebar_label: Comparison of PowPeg and RBTC Flyover
-sidebar_position: 320
+sidebar_position: 105
 title: Comparison of PowPeg and RBTC Flyover
 tags: [rsk, rootstock, rif, flyover, integrate, integration guide, rbtc, powpeg]
 description: The PowPeg is a user-friendly interface for the conversion of BTC to RBTC and vice versa. It is secured by the powpeg protocol, which is a unique 2-way peg system that allows users to natively transfer bitcoins from the Bitcoin blockchain to the Rootstock blockchain and vice versa, creating a token called RBTC that is pegged to the value of Bitcoin.
