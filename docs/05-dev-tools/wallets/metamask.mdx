@@ -1,16 +1,18 @@
 ---
-sidebar_label: MetaMask
+sidebar_label: Configure MetaMask
 sidebar_position: 3
 title: Configure MetaMask Wallet for Rootstock
 tags: [metamask, rootstock, tools, rsk, wallets, guides]
-description: "Learn how to connect to Rootstock with a MetaMask Wallet"
+description: "Learn the different ways to set up and connect to Rootstock network using a MetaMask Wallet"
 ---
 
 import WrappedAddNetworkButtons from "/src/components/AddNetworkButtons";
 
-In this guide, you will learn how to set up Rootstock on Metamask.
+In this guide, you will learn the different ways to set up and connect to Rootstock network using MetaMask.
 
-## Option 1: Add Rootstock Network to MetaMask Automatically
+## Option 1: Add Rootstock Networks to MetaMask Automatically
+
+> Ideal for general users looking to automatically add the Rootstock network to their MetaMask wallet.
 
 1. Install MetaMask on your browser from the oficial website: [https://metamask.io/download/](https://metamask.io/download/)
 2. Click on the buttons below to add Rootstock Mainnet and Rootstock Testnet
@@ -46,7 +48,9 @@ In this guide, you will learn how to set up Rootstock on Metamask.
   </div>
 </div>
 
-## Option 2: Add Rootstock Network to MetaMask Manually
+## Option 2: Add Rootstock Networks to MetaMask Manually
+
+> Ideal for both developers and general users looking to manually add the Rootstock network to their MetaMask wallet.
 
 1. Install Metamask on your browser from the oficial website: [https://metamask.io/download/](https://metamask.io/download/)
 2. Open the MetaMask extension.
@@ -54,15 +58,12 @@ In this guide, you will learn how to set up Rootstock on Metamask.
 
 {" "}
 
-<div styles="text-align: center">
-  <img class="metamask-screenshot" src="/img/metamask/metamask-1.png"></img>
-</div>
+<img class="metamask-screenshot" src="/img/metamask/metamask-1.png" width="800" height="600"></img>
 
 {" "}
 
-<div styles="text-align: center">
-  <img class="metamask-screenshot" src="/img/metamask/metamask-2.png"></img>
-</div>
+
+<img class="metamask-screenshot" src="/img/metamask/metamask-2.png" width="800" height="600"></img>
 
 4. Click on Add Network Manually
 
@@ -115,9 +116,16 @@ In this guide, you will learn how to set up Rootstock on Metamask.
   </tbody>
 </table>
 
-<div styles="text-align: center">
-  <img class="metamask-screenshot" src="/img/metamask/metamask-3b.png"></img>
-</div>
+
+<img class="metamask-screenshot" src="/img/metamask/metamask-3b.png" width="800" height="600"></img>
+
+## Option 3: Add Rootstock Networks to MetaMask Programmatically
+
+> Ideal for developers looking to initiate a network switch on MetaMask from a website or dApp. 
+See how to [Connect Rootstock to Metamask Programmatically](/resources/tutorials/rootstock-metamask/).
+
+
+## Watch the Video Explainer
 
 <div class="video-container">
   <iframe
@@ -130,20 +138,7 @@ In this guide, you will learn how to set up Rootstock on Metamask.
   ></iframe>
 </div>
 
-Now MetaMask is ready to use with Rootstock!
-
-## Next Steps
-
-Try out the Rootstock Testnet:
-
-- [Get test RBTC](https://faucet.rootstock.io)
-- [Get test RIF tokens](https://faucet.rifos.org)
-
-If you would like to know more about the values used in the
-custom network configuration above, check out
-[account based addresses on Rootstock](/concepts/account-based-addresses/).
-
-### Limitations
+## Limitations
 
 MetaMask does not yet fully comply with the technical specifications
 of [account based addresses on Rootstock](/concepts/account-based-addresses/).
@@ -169,8 +164,16 @@ A **workaround** for this is to lowercase the addresses after copying them.
 - This tutorial uses the Public Nodes as RPC. You can connect to other nodes or use the [Rootstock RPC API](/developers/rpc-api/).
 - The node must enable CORS for browser-based dApps to work.
   - Please review the [configuration file reference](/node-operators/setup/configuration/) for CORS settings.
-    :::
+:::
 
-## Useful Resources
+## Next Steps
 
-- [Connect Rootstock to Metamask Programmatically](/resources/tutorials/rootstock-metamask/)
+Deploy a dApp on Rootstock or try out the Rootstock Testnet:
+
+- [Get test RBTC](https://faucet.rootstock.io)
+- [Get test RIF tokens](https://faucet.rifos.org)
+- View the [Quick Starts](/developers/quickstart/)
+
+If you would like to know more about the values used in the
+custom network configuration above, check out
+[account based addresses on Rootstock](/concepts/account-based-addresses/).
