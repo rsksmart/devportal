@@ -245,8 +245,17 @@ description: "Explore a curated selection of smart contract development tools an
     subtitle="no-code"
     color="orange"
     linkHref="https://forwardprotocol.io/"
-    linkTitle="Build a NoCode dApp"
-    description="Build a dApp on Rootstock using Forward Protocol's NoCode Tools."
+    linkTitle="Build a no-code dApp"
+    description="Build a dApp on Rootstock using Forward Protocol's no-code tools."
+  />
+<FilterItem
+    value="no-code, platform-infra, sc"
+    title="CryptoDO"
+    subtitle="no-code"
+    color="orange"
+    linkHref="https://www.cryptodo.app/"
+    linkTitle="Build a no-code Multichain dApp"
+    description="CryptoDo is a multichain, no-code web3 solution builder for businesses."
   />
 <FilterItem
     value="library, sdk, rifp, abs"
@@ -334,7 +343,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="RNS"
     subtitle="name service"
     color="orange"
-    linkHref="https://rif.technology/products/#rns"
+    linkHref="https://rns.rifos.org/"
     linkTitle="Register a Domain Name"
     description="RNS provides an architecture which enables the identification of blockchain addresses by human-readable names."
   />
