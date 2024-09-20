@@ -18,12 +18,12 @@ const data = {
           href: '/developers/integrate/flyover/',
         },
         {
-          title: 'PowPeg',
-          href: 'https://powpeg.rootstock.io/',
+          title: 'PowPeg App',
+          href: 'https://powpeg.rootstock.io',
         },
         {
           title: 'Token Bridge',
-          href: 'https://dapp.tokenbridge.rootstock.io/?_gl=1*rkdc23*_gcl_au*MTYzMTg1MzQ4MC4xNzIzMTM3MTAy',
+          href: 'https://dapp.tokenbridge.rootstock.io',
         },
       ],
 
@@ -63,7 +63,7 @@ const data = {
       list: [
         {
           title: 'Name Service',
-          href: 'https://github.com/rsksmart/rns-manager-react',
+          href: 'https://rns.rifos.org/',
         },
         {
           title: 'Relay',

@@ -6,7 +6,7 @@ tags: [rif, token, erc677]
 description: "Information about the RIF token, where to obtain it, how to transfer it, and technical details on its token standard"
 ---
 
-The Rootstock Infrastructure Framework (RIF) Token allows any token holder to consume the services that are compatible with [RIF Tools](/concepts/rif-suite/).
+The Rootstock Infrastructure Framework (RIF) Token allows any token holder to consume the services that are compatible with [RIF Products and Services](/concepts/rif-suite/). It is also the governance token of the [Rootstock Collective](https://rootstockcollective.xyz/) - stRIF, a token created by [staking RIF tokens](#strif-rif-token-in-dao). stRIF tokens represent voting power within the DAO, enabling token holders to participate in governance decisions like grant allocations and changes to the system. For more information, read the [Rootstock Collective Whitepaper](https://wiki.rootstockcollective.xyz/2c6e3b87b49f4c1e9225b713e1b49538?v=819168fca4964319896c19e8299a8ea0).
 
 ## RIF (RIF Token in Mainnet)
 
@@ -29,10 +29,10 @@ The Rootstock Infrastructure Framework (RIF) Token allows any token holder to co
       <td>ERC677</td>
     </tr>
     <tr>
-      <td scope="row">How to get</td>
+      <td scope="row">How to Get</td>
       <td>
         <ul>
-            <li><a href="#exchanges" target="_blank">Exchanges</a></li>
+            <li><a href="https://rif.technology/rif-token/" target="_blank">Exchanges</a></li>
         </ul>
       </td>
     </tr>
@@ -60,10 +60,51 @@ The Rootstock Infrastructure Framework (RIF) Token allows any token holder to co
       <td>ERC677</td>
     </tr>
     <tr>
-      <td scope="row">How to get</td>
+      <td scope="row">How to Get</td>
       <td>
         <ul>
             <li><a href="https://faucet.rifos.org/" target="_blank">Faucet</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## stRIF (RIF Token in DAO)
+
+The stRIF tokens give you voting rights and participation in the DAO's governance and decision-making process. To acquire stRIF tokens, you need to stake RIF tokens in the governance system dApp. RIF tokens can be purchased through [various exchanges](https://wiki.rootstockcollective.xyz/Token-Resources-e3f89008a96e4dcab3037ff7861d9d8a), and once staked, an equivalent amount of stRIF is issued for governance participation.
+
+<table class="table">
+  <tbody>
+    <tr>
+      <td scope="row">Token Name</td>
+      <td><a href="https://wiki.rootstockcollective.xyz/2c6e3b87b49f4c1e9225b713e1b49538?v=819168fca4964319896c19e8299a8ea0" target="_blank">stRIF</a></td>
+    </tr>
+    <tr>
+      <td scope="row">Total Supply</td>
+      <td>5,587,672.181 stRIF</td>
+    </tr>
+    <tr>
+      <td scope="row">Contract Address</td>
+      <td><a href="https://rootstock.blockscout.com/token/0x5db91e24BD32059584bbDb831A901f1199f3d459?tab=contract" target="_blank">0x5db91e24BD32059584bbDb831A901f1199f3d459</a></td>
+    </tr>
+    <tr>
+      <td scope="row">Contract Type</td>
+      <td>ERC1967Proxy</td>
+    </tr>
+    <tr>
+      <td scope="row">How to Get</td>
+      <td>
+        <ul>
+            <li><a href="https://rif.technology/rif-token/" target="_blank">Exchanges</a></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td scope="row">How to Stake</td>
+      <td>
+        <ul>
+            <li><a href="http://app.rootstockcollective.xyz/" target="_blank">Get Started</a></li>
         </ul>
       </td>
     </tr>
