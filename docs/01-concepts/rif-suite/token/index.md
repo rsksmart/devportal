@@ -85,7 +85,7 @@ The stRIF tokens give you voting rights and participation in the DAO's governanc
       <td>5,587,672.181 stRIF</td>
     </tr>
     <tr>
-      <td scope="row">Contract Testnet Address</td>
+      <td scope="row">Contract Address</td>
       <td><a href="https://rootstock.blockscout.com/token/0x5db91e24BD32059584bbDb831A901f1199f3d459?tab=contract" target="_blank">0x5db91e24BD32059584bbDb831A901f1199f3d459</a></td>
     </tr>
     <tr>
