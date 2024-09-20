@@ -32,7 +32,7 @@ The Rootstock Infrastructure Framework (RIF) Token allows any token holder to co
       <td scope="row">How to get</td>
       <td>
         <ul>
-            <li><a href="#exchanges" target="_blank">Exchanges</a></li>
+            <li><a href="https://rif.technology/rif-token/" target="_blank">Exchanges</a></li>
         </ul>
       </td>
     </tr>
@@ -64,6 +64,47 @@ The Rootstock Infrastructure Framework (RIF) Token allows any token holder to co
       <td>
         <ul>
             <li><a href="https://faucet.rifos.org/" target="_blank">Faucet</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## stRIF (RIF Token in DAO)
+
+The stRIF tokens give you voting rights and participation in the DAO’s governance and decision-making process. To acquire stRIF tokens, you need to stake RIF tokens in the governance system dApp. RIF tokens can be purchased through [various exchanges](https://wiki.rootstockcollective.xyz/Token-Resources-e3f89008a96e4dcab3037ff7861d9d8a), and once staked, an equivalent amount of stRIF is issued for governance participation.
+
+<table class="table">
+  <tbody>
+    <tr>
+      <td scope="row">Token Name</td>
+      <td>stRIF</td>
+    </tr>
+    <tr>
+      <td scope="row">Total Supply</td>
+      <td>1,000,000,000 stRIF</td>
+    </tr>
+    <tr>
+      <td scope="row">Contract Testnet Address</td>
+      <td><a href="https://explorer.testnet.rootstock.io/address/0x19f64674d8a5b4e652319f5e239efd3bc969a1fe" target="_blank">0x19f64674D8a5b4e652319F5e239EFd3bc969a1FE</a></td>
+    </tr>
+    <tr>
+      <td scope="row">Contract Type</td>
+      <td>ERC677</td>
+    </tr>
+    <tr>
+      <td scope="row">How to get</td>
+      <td>
+        <ul>
+            <li><a href="https://rif.technology/rif-token/" target="_blank">Exchanges</a></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td scope="row">How to stake</td>
+      <td>
+        <ul>
+            <li><a href="http://app.rootstockcollective.xyz/" target="_blank">Connect Wallet</a></li>
         </ul>
       </td>
     </tr>
