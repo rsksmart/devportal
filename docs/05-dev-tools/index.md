@@ -32,7 +32,7 @@ description: "Explore a curated selection of smart contract development tools an
   ]}>
 <FilterItem
     value="bridge, exchange"
-    title="PowPeg"
+    title="PowPeg App"
     subtitle="bridges"
     color="orange"
     linkHref="/resources/guides/powpeg-app/"
@@ -178,7 +178,7 @@ description: "Explore a curated selection of smart contract development tools an
   />
 <FilterItem
     value="bridge, exchange, rifp"
-    title="Flyover"
+    title="RBTC Flyover"
     subtitle="bridges"
     color="orange"
     linkHref="/developers/integrate/flyover/"
