@@ -29,7 +29,7 @@ The Rootstock Infrastructure Framework (RIF) Token allows any token holder to co
       <td>ERC677</td>
     </tr>
     <tr>
-      <td scope="row">How to get</td>
+      <td scope="row">How to Get</td>
       <td>
         <ul>
             <li><a href="https://rif.technology/rif-token/" target="_blank">Exchanges</a></li>
@@ -60,7 +60,7 @@ The Rootstock Infrastructure Framework (RIF) Token allows any token holder to co
       <td>ERC677</td>
     </tr>
     <tr>
-      <td scope="row">How to get</td>
+      <td scope="row">How to Get</td>
       <td>
         <ul>
             <li><a href="https://faucet.rifos.org/" target="_blank">Faucet</a></li>
@@ -82,18 +82,18 @@ The stRIF tokens give you voting rights and participation in the DAO's governanc
     </tr>
     <tr>
       <td scope="row">Total Supply</td>
-      <td>1,000,000,000 stRIF</td>
+      <td>5,587,672.181 stRIF</td>
     </tr>
     <tr>
       <td scope="row">Contract Testnet Address</td>
-      <td><a href="https://explorer.testnet.rootstock.io/address/0x19f64674d8a5b4e652319f5e239efd3bc969a1fe" target="_blank">0x19f64674D8a5b4e652319F5e239EFd3bc969a1FE</a></td>
+      <td><a href="https://rootstock.blockscout.com/token/0x5db91e24BD32059584bbDb831A901f1199f3d459?tab=contract" target="_blank">0x5db91e24BD32059584bbDb831A901f1199f3d459</a></td>
     </tr>
     <tr>
       <td scope="row">Contract Type</td>
-      <td>ERC677</td>
+      <td>ERC1967Proxy</td>
     </tr>
     <tr>
-      <td scope="row">How to get</td>
+      <td scope="row">How to Get</td>
       <td>
         <ul>
             <li><a href="https://rif.technology/rif-token/" target="_blank">Exchanges</a></li>
@@ -101,10 +101,10 @@ The stRIF tokens give you voting rights and participation in the DAO's governanc
       </td>
     </tr>
     <tr>
-      <td scope="row">How to stake</td>
+      <td scope="row">How to Stake</td>
       <td>
         <ul>
-            <li><a href="http://app.rootstockcollective.xyz/" target="_blank">Connect Wallet</a></li>
+            <li><a href="http://app.rootstockcollective.xyz/" target="_blank">Get Started</a></li>
         </ul>
       </td>
     </tr>
