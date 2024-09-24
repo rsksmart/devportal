@@ -1,0 +1,29 @@
+name: Crowdin Sync
+
+on:
+  push:
+    branches:
+      - main  # Adjust the branch as needed
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Crowdin CLI
+        run: |
+          curl -s https://api.crowdin.com/downloads/cli/v3/crowdin-cli.zip -o crowdin-cli.zip
+          unzip crowdin-cli.zip -d crowdin-cli
+          sudo mv crowdin-cli/crowdin /usr/local/bin/
+
+      - name: Crowdin Sync
+        run: |
+          crowdin upload sources \
+            --project-id 683600 \
+            --token ${{ secrets.CROWDIN_API_TOKEN }} \
+            --preserve-hierarchy true \
+            --files 'i18n/en/**/*:/i18n/%two_letters_code%/**/%original_file_name%' \
+            --files 'docs/**/*:/i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/**/%original_file_name%' \
+            --files 'changelog/**/*:/i18n/%two_letters_code%/docusaurus-plugin-content-blog-changelog/**/%original_file_name%'
