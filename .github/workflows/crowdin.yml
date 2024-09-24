@@ -21,6 +21,7 @@ jobs:
           curl -s https://downloads.crowdin.com/cli/v3/crowdin-cli.zip -o crowdin-cli.zip
           unzip crowdin-cli.zip -d crowdin-cli
           sudo mv crowdin-cli/3.15.0/crowdin /usr/local/bin/
+          sudo chmod +x /usr/local/bin/crowdin  # <-- Add this line to make the binary executable
 
       - name: Crowdin Sync
         run: |
