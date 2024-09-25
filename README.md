@@ -2,11 +2,11 @@
 
 This repo contains the [Rootstock Developer Portal](https://dev.rootstock.io). The Developer Docs is the home for Rootstock documentation for end users and developers. Check out our quickstarts, tutorials, API reference, and code examples.
 
-_Start your journey to building dApps on Rootstock, see the [quick start guide](./docs/02-developers/04-quickstart/index.md) or see the [setup](#set-up) instructions, or the [contributing](CONTRIBUTING_DOCS.md) guide for how to contribute to Rootstock Documentation._
+_Start your journey to building dApps on Rootstock, see the [Quick Start Guide](./docs/02-developers/04-quickstart/index.md) or see the [setup](#set-up) instructions, or the [contributing](CONTRIBUTING_DOCS.md) guide for how to contribute to Rootstock Documentation._
 
 🚀 [Send us feedback](#issues)
 
-🚀 Join the [Join the global Rootstock community on Discord](http://discord.gg/rootstock)
+🚀 Join the [global Rootstock community on Discord](http://discord.gg/rootstock)
 
 > This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator. For more information on how to use Docusaurus, please refer to the [Docusaurus Documentation](https://docusaurus.io/docs).
 
@@ -61,7 +61,7 @@ Here's a simplified example of how it might look:
 
 The main navigation of the website is created based on the root directories in the `/docs` folder. Each directory has its own sidebar for easy navigation.
 
-> Root directories name must contain only a character that is a letter, a number, a dash, or an underscore. If it doesn't, the directory is ignored and won't apear in main navigation.
+> Root directories name must contain only a character that is a letter, a number, a dash, or an underscore. If it doesn't, the directory is ignored and won't appear in main navigation.
 
 In this case, the main navigation of the website would have two sections: "Guide" and "Tutorial".
 
@@ -82,7 +82,7 @@ For more information on how to use images in Docusaurus, please refer to the [Co
 Steps:
 1. Locate the `docs` folder
 2. Create a markdown file in the section you wish to add the docs.
-3. Add `title`, `aidebar_label`, `tags`, `description`, and `sidebar_position` attributes
+3. Add `title`, `sidebar_label`, `tags`, `description`, and `sidebar_position` attributes
    to the front matter as appropriate - see below for more details.
 4. If the new page is within a collection, and it is named `index.md`, add a `section_title`, `menu_title`. Ensure that you set a `permalink` attribute in the front matter, with a trailing `/`.
 
