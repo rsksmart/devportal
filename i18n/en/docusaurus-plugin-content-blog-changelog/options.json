@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "Changelog",
+    "description": "The title for the blog used in SEO"
+  },
+  "description": {
+    "message": "Stay informed about the latest product updates on Rootstock.",
+    "description": "The description for the blog used in SEO"
+  },
+  "sidebar.title": {
+    "message": "Changelog",
+    "description": "The label for the left sidebar"
+  }
+}
