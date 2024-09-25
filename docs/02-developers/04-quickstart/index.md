@@ -66,7 +66,7 @@ values={[
     title="Get Started with The Graph"
     subtitle="quickstart"
     color="orange"
-    linkHref="/dev-tools/thegraph/"
+    linkHref="/dev-tools/data/thegraph/"
     linkTitle="Get Started"
     description="Easily query on-chain data through a decentralized network of indexers"
   />

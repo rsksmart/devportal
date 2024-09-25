@@ -146,7 +146,7 @@ Thus, the smart contract/dApp development skills that you’re used to will tran
 ### Tools
 
 - [Hardhat](https://hardhat.org/docs) is an Ethereum development environment designed for professionals. It's primarily used in the development of smart contracts for the Ethereum blockchain.
-  Refer to the [Hardhat Overview](/dev-tools/hardhat/) for an overview of how it's used on Rootstock.
+  Refer to the [Hardhat Overview](/dev-tools/environments/hardhat/) for an overview of how it's used on Rootstock.
 
 - [Metamask](https://metamask.io/) is a browser extension cryptocurrency wallet or mobile app,
   enabling users to interact with the Rootstock blockchain,

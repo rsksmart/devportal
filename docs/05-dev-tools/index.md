@@ -64,7 +64,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="Hardhat"
     subtitle="Dev Environments"
     color="orange"
-    linkHref="/dev-tools/hardhat/"
+    linkHref="/dev-tools/environments/hardhat/"
     linkTitle="Deploy Smart Contracts"
     description="Hardhat is an Ethereum development environment for developers. It's primarily used in the development of smart contracts for the Rootstock and EVM-compatible chains."
   />
@@ -190,7 +190,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="The Graph"
     subtitle="data & analytics"
     color="orange"
-    linkHref="/dev-tools/thegraph/"
+    linkHref="/dev-tools/data/thegraph/"
     linkTitle="Access on-chain data"
     description="Get historical data on smart contracts when building dApps."
   />

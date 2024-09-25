@@ -1,59 +1,23 @@
 ---
-sidebar_position: 3
-sidebar_label: Rootstock Explorers
-title: Overview of the Rootstock Explorer
-tags: [overview, explorer, rootstock, smart contracts, transactions, developer tools]
-description: Explore transaction
+sidebar_position: 4
+sidebar_label: Explorers
+title: Explorers
+description: "How to get started with writing, deploying and testing smart contracts on Rootstock using Hardhat." 
+tags: [hardhat, quick start, developer tools, rsk, rootstock, ethereum, dApps, smart contracts]
 ---
 
-You can browse the overview of Rootstock on the [explorer page](https://explorer.rootstock.io/) as shown below.
+## Explorers 
 
-<div align="center"><img width="100%" src="/img/tools/explorer/explorer1.png" alt="overview of explorer"/></div>
+Here's a list of Blockchain explorers on Rootstock.
 
-## Switch between Tabs
+### Rootstock Explorer
 
-If you want to view some specific information, you can jump through the tab bar below.
+The [Rootstock Explorer](https://explorer.rootstock.io/) provides a UI for exploring and verifying transactions, blocks, addresses, tokens, stats, and interacting with smart contracts.
 
-<div align="center"><img width="100%" src="/img/tools/explorer/explorer2.png" alt="tab of explorer"/></div>
+### Blockscout Explorer
 
-## Search for some information you want
+[Blockscout](https://rootstock.blockscout.com/) is a robust open-source tool for exploring transactions on any EVM blockchain, including Rootstock, the leading Bitcoin sidechain1. With Blockscout, you can access in-depth information, verify and interact with smart contracts, create and manage your account, view advanced statistics, and more.
 
-* You can search for the information you want by entering the address, block number or tx hash in the search box.
+### 3xpl
 
-<div align="center"><img width="100%" src="/img/tools/explorer/explorer3.png" alt="search box"/></div>
-
-## Last Block Information
-
-The next section is a panel about the last block.
-
-* You can see the block number, address, the total number of transactions, and the duration in turn.
-
-* Click on the number link and you can jump to the detailed page of this block.
-
-* Especially,you can copy the address code by clicking the icon over the string.
-
-<div align="center"><img width="100%" src="/img/tools/explorer/explorer4.png" alt="panel of last block"/></div>
-
-## Last Block Transactions
-
-The line graph below shows the transaction density.
-
-<div align="center"><img width="100%" src="/img/tools/explorer/explorer5.png" alt="line graph of transactions"/></div>
-
-## List of Blocks
-
-All the items in this list are the basic information of a block.
-
-* Click the link in the title location to update the list.
-
-* Click the **see all blocks** to display the full list.
-
-<div align="center"><img width="100%" src="/img/tools/explorer/explorer6.png" alt="list of blocks"/></div>
-
-## List of Transactions
-
-All the items in this list are the basic information of a transaction.
-
-* Click the **see all transactions** to display the full list.
-
-<div align="center"><img width="100%" src="/img/tools/explorer/explorer7.png" alt="list of transactions"/></div>
+[3xpl](https://3xpl.com/rootstock) 3xpl (short for 3xplor3r) is a super-fast, universal explorer for most popular public blockchains. It offers an easy-to-understand block explorer interface for ordinary crypto users, as well as lots of professional features for developers and analysts.

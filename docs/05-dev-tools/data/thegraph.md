@@ -1,6 +1,6 @@
 ---
 sidebar_label: The Graph
-sidebar_position: 2
+sidebar_position: 3
 title: Get Started with The Graph
 description: "Easily query on-chain data through a decentralized network of indexers"
 tags: [TheGraph, indexers, data, subgraphs, dApps, smart contracts, developers, developer tools, get-started, how-to]
