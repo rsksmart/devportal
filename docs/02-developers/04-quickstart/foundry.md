@@ -1,12 +1,12 @@
 ---
-sidebar_label: Using Hardhat
-sidebar_position: 400
-title: Rootstock Hardhat Starter dApp
-description: 'Whether you are a seasoned developer or just starting your journey into smart contract development, the hardhat starter kit provides a solid foundation for building decentralized applications (dApps) on the Rootstock network.'
-tags: [rsk, rootstock, tutorials, developers, hardhat, quick starts, dApps, smart contracts]
+sidebar_label: Using Foundry
+sidebar_position: 500
+title: Rootstock Foundry Starter kit
+description: 'Whether you are a seasoned developer or just starting your journey into smart contract development, the foundry starter kit provides a solid foundation for building decentralized applications (dApps) on the Rootstock network.'
+tags: [rsk, rootstock, tutorials, developers, foundry, quick starts, dApps, smart contracts]
 ---
 
-Whether you’re a seasoned developer or just starting your journey into smart contract development, the hardhat starter kit provides a solid foundation for building decentralized applications (dApps) on the Rootstock network.
+Whether you’re a seasoned developer or just starting your journey into smart contract development, the foundry starter kit provides a solid foundation for building decentralized applications (dApps) on the Rootstock network.
 
 Rootstock is fully EVM (Ethereum Virtual Machine) compatible. It brings the power of smart contracts to Bitcoin, allowing developers to leverage Bitcoin’s security while benefiting from Ethereum’s ecosystem.
 
@@ -17,16 +17,20 @@ Before starting the dApp, make sure to have the following prerequisites:
 1. **Familiarity with Smart Contracts:**
    - If you’re new to smart contracts, consider learning the basics. Understanding how smart contracts work will enhance your experience with Rootstock development.
 
-2. **Node.js and Hardhat Installed:**
-   - Ensure you have Node.js installed on your system. See the [prerequisites section](/developers/requirements/#installing-nodejs-and-npm).
+2. **Foundry installation using [Foundryup](https://book.getfoundry.sh/getting-started/installation#using-foundryup):**
+- This installing information is taken from the official [Foundry documentation](https://book.getfoundry.sh/getting-started/installation#using-foundryup), in case you need to go in detail.
+- Foundryup is the official installer for the Foundry toolchain. You can learn more about it [here](https://github.com/foundry-rs/foundry/blob/master/foundryup/README.md).
+- If you encounter any issues during installation, refer to the Foundryup [FAQ](https://book.getfoundry.sh/faq.html) for assistance.
+- Precompiled binaries can be downloaded from the Foundry [GitHub releases page](https://github.com/foundry-rs/foundry/releases). For easier management, we recommend using Foundryup.
 
-3. **Install Hardhat Shorthand:**
-- We recommend installing `hh` autocomplete to use `hh` shorthand globally.
+To install Foundry in your system, run the following command:
+```bash
+curl -L https://foundry.paradigm.xyz | bash
+```
+This will install Foundryup. Simply follow the on-screen instructions, and the ```foundryup``` command will become available in your CLI.
 
-     ```bash
-     npm i -g hardhat-shorthand
-     ```
-- For more details, refer to their [official guide](https://hardhat.org/guides/shorthand.html).
+Running ```foundryup``` will automatically install the latest (nightly) versions of the ```precompiled binaries```: ```forge```, ```cast```, ```anvil```, and ```chisel```. For additional options, such as installing a specific version or commit, run ```foundryup --help```.
+
 
 4. **Metamask Setup with Rootstock:**
 - Install the Metamask browser extension if you haven’t already.
