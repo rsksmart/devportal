@@ -114,41 +114,42 @@ Copy only the input value (curly braces included), see [verifying contract on th
 Here’s the example code of an input value:
 
 ```solidity
-    {"language": "Solidity",
-       "sources": {
-           "contracts/Storage.sol": {
-               "content": "// SPDX-License-Identifier: GPL-3.0\n\npragma solidity >=0.8.2 <0.9.0;\n\n/**\n * @title Storage\n * @dev Store & retrieve value in a variable\n * @custom:dev-run-script ./scripts/deploy_with_ethers.ts\n */\ncontract Storage {\n\n    uint256 number;\n\n    /**\n     * @dev Store value in variable\n     * @param num value to store\n     */\n    function store(uint256 num) public {\n        number = num;\n    }\n\n    /**\n     * @dev Return value \n     * @return value of 'number'\n     */\n    function retrieve() public view returns (uint256){\n        return number;\n    }\n}"
-           }
-       },
-       "settings": {
-           "optimizer": {
-               "enabled": false,
-               "runs": 200
-           },
-           "outputSelection": {
-               "*": {
-                   "": [
-                       "ast"
-                   ],
-                   "*": [
-                       "abi",
-                       "metadata",
-                       "devdoc",
-                       "userdoc",
-                       "storageLayout",
-                       "evm.legacyAssembly",
-                       "evm.bytecode",
-                       "evm.deployedBytecode",
-                       "evm.methodIdentifiers",
-                       "evm.gasEstimates",
-                       "evm.assembly"
-                   ]
-               }
-           },
-           "remappings": [],
-           "evmVersion": "paris"
-       }
-   }
+{
+		"language": "Solidity",
+		"sources": {
+			"contracts/Storage.sol": {
+				"content": "// SPDX-License-Identifier: GPL-3.0\n\npragma solidity >=0.8.2 <0.9.0;\n\n/**\n * @title Storage\n * @dev Store & retrieve value in a variable\n * @custom:dev-run-script ./scripts/deploy_with_ethers.ts\n */\ncontract Storage {\n\n    uint256 number;\n\n    /**\n     * @dev Store value in variable\n     * @param num value to store\n     */\n    function store(uint256 num) public {\n        number = num;\n    }\n\n    /**\n     * @dev Return value \n     * @return value of 'number'\n     */\n    function retrieve() public view returns (uint256){\n        return number;\n    }\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": [],
+			"evmVersion": "paris"
+		}
+	}
 ```
 
 * Enter the Contract name, this can be found in the Contract declaration.
