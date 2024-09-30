@@ -114,7 +114,7 @@ Copy only the input value (curly braces included), see [verifying contract on th
 Here’s the example code of an input value:
 
 ```solidity
-{
+    {
 		"language": "Solidity",
 		"sources": {
 			"contracts/Storage.sol": {
