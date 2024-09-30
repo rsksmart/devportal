@@ -15,7 +15,7 @@ Participating in a Rootstock hackathon or Workshop? View the [Hackathon Resource
 :::
 
 ## Solidity Version
-- Supported solc version: `0.8.20`
+- Supported solc version: `0.8.19`
 
 ## Node RPC
 - Interact with Rootstock using the [RPC API](https://rpc.rootstock.io/)
