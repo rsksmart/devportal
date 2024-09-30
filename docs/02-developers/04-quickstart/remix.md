@@ -51,19 +51,19 @@ Current [supported solidity version](https://dev.rootstock.io/developers/require
 
 ![Remix - Solidity Compiler](/img/developers/quickstart/4-remix.png)
 
-Return to File explorer and right click on the contract you want to deploy, and click on **Compile Storage.sol**. 
+Return to File explorer and right click on the contract you want to deploy, and click on **Compile Storage.sol**. Note that you can also compile the contract by clicking the Compiler Options button in the left menu, and clicking `Compile (currentFileOpenInEditor).sol`
 
 ![Compile Solidity Contract](/img/developers/quickstart/5-remix.png)
 
-If successful, you will see a checkmark (highlighted as selected), this is necessary so that in the next step the compiled contracts can be detected for deployment.
+If successful, you will see a green checkmark (highlighted as selected), this is necessary so that in the next step the compiled contracts can be detected for deployment.
 
 ![Compile Solidity Contract Button](/img/developers/quickstart/5a-remix.png)
 
 ## Deploying the Contract
 
-In the left menu, click on **Deploy and run transactions**. Ensure the Environment and Account are correctly set as explained in the first step. Under Contract, ensure your contract is selected. Click on Deploy and it will ask you to sign a transaction in Metamask.
+In the left menu, click on **Deploy and run transactions**. Under Contract, ensure the contract is selected. Click on Deploy and MetaMask will then prompt you to sign the deploy transaction.
 
-> If the contract had any constructor arguments, those inputs would appear next to the Deploy button for you to fill them.
+> Ensure the Environment and Account are correctly set as explained in the previous step. If the contract had any constructor arguments, those inputs would appear next to the Deploy button for you to fill them.
 
 ![Deploy and Run Transactions](/img/developers/quickstart/6-remix.png)
 
@@ -81,7 +81,7 @@ As shown in the previous step after deploying the contract, you can expand the d
 
 ## Verifying the Contract on Rootstock Explorer
 
-Go back to Remix file explorer and go to `contracts -> artifacts -> build-info`. In this folder there will be a json file containing the information of the compilation process. You’ll need this in order to verify the contract on the [Rootstock Testnet Explorer](https://explorer.testnet.rootstock.io/). Copy the whole content of the input attribute (just the value; what’s inside the curly brackets) and paste it in a separate json file in your computer or code editor.
+To verify the deployed contract on the explorer, go back to Remix file explorer and go to `contracts -> artifacts -> build-info`. In this folder there will be a json file containing the information of the compilation process. You’ll need this in order to verify the contract on the [Rootstock Testnet Explorer](https://explorer.testnet.rootstock.io/). Copy the whole content of the input attribute, i.e what’s inside the curly braces. For e.g, if input value contains `{ value1: 1, value2: 2 }`, file format should be: `{ value1: 1, value2: 2 }`, and paste it in a separate json file in your computer or code editor.
 
 ![deployed contract artifact](/img/developers/quickstart/9-remix.png)
 
@@ -97,19 +97,21 @@ Click on the Code tab and click the button to **Verify Contract**.
 
 ![View Contract Address - Rootstock Testnet Explorer](/img/developers/quickstart/12-remix.png)
 
+![View Verify Explorer Details](/img/developers/quickstart/18-remix.png)
+
 Select **Standard JSON Input** as the verification method and fill the form:
 
 1. Standard JSON input: In the standard JSON input, upload the file you created from the build info of the contract.
 2. Contract name: The name of the contract which you declared it with. Remember that it’s important the file of the contract has the same matching name as the standard-json-input.json. Now, click on add file to upload.
 3. Compiler: This is the compiler version the contract has been compiled with. For example 
-Constructor arguments: The constructor arguments of the contract, if any. If you don’t know the arguments at first, continue with the process and the explorer will suggest the ones to use.
+Constructor arguments: The constructor arguments of the contract, if any. If you don’t know the arguments at first, continue with the process and the explorer will attempt to identify the constructor arguments from the bytecode and suggest them, if possible.
 4. ABI encoded arguments: if the arguments provided are ABI encoded, check this option.
 
-> Copy only the information inside the input code block {}, paste the code into a file named `standard-json-input.json` and click on add file:
+Copy only the information inside the input curly braces {}, see [verifying contract on the explorer](#verifying-the-contract-on-rootstock-explorer) and paste the code into a file named `standard-json-input.json`, then click on add file:
 
 ![Input Block - Rootstock Testnet Explorer](/img/developers/quickstart/13-remix.png)
 
-Here’s the example code block within the curly brackets:
+Here’s the example code inside the input curly braces `{}`:
 
 ```solidity
  "language": "Solidity",
@@ -149,7 +151,13 @@ Here’s the example code block within the curly brackets:
    }
 ```
 
-* Enter a Contract name, this can be found in the Contract `Storage`. 
+* Enter the Contract name, this can be found in the Contract declaration.
+
+```solidity
+contract Storage {
+  // code
+} 
+```
 * Select the compiler version, note to use the same compiler version used when compiling the contracts on Remix.
 
 At the bottom, below the form, click on the **verify** button and wait for the verification attempt to finish. If successfull, you’ll see a success screen.
@@ -158,18 +166,23 @@ At the bottom, below the form, click on the **verify** button and wait for the v
 
 ![Verify Contract Success - Rootstock Testnet Explorer](/img/developers/quickstart/15-remix.png)
 
-Visit [https://explorer.testnet.rootstock.io/address/0x1362ab9e72513807ce6c4c26250d7214ea98b783?__ctab=Code](https://explorer.testnet.rootstock.io/address/0x1362ab9e72513807ce6c4c26250d7214ea98b783?__ctab=Code), and you’ll see all the solidity code of the contract and its dependencies.
+You can view all the solidity code of the contract and its dependencies.
 
 ![View Verified Contract - Rootstock Testnet Explorer](/img/developers/quickstart/16-remix.png)
 
+Congratulations, we have successfully compiled, deployed, interacted and verified a smart contract using Remix and the Rootstock Explorer.
+
 ## Troubleshooting
 
-Error: Missing contract verifier data,
-A: Ensure to refresh your tab and verify the contract again.
-
-![Missing Contract Verifier Data - Rootstock Testnet Explorer](/img/developers/quickstart/17-remix.png)
-
-Congratulations, we have successfully compiled, interacted and verified a smart contract on the Rootstock Explorer.
+<Accordion>
+  <Accordion.Item eventKey="0">
+    <Accordion.Header as="h3">Error: Missing contract verifier data</Accordion.Header>
+    <Accordion.Body>
+      FIX: Ensure to refresh your tab and verify the contract again.
+      ![Missing Contract Verifier Data - Rootstock Testnet Explorer](/img/developers/quickstart/17-remix.png)
+    </Accordion.Body>
+  </Accordion.Item>
+</Accordion>
 
 ## Resources
 * [Getting Started with Wagmi](/developers/quickstart/wagmi/)
