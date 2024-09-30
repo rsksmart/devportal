@@ -81,7 +81,7 @@ As shown in the previous step after deploying the contract, you can expand the d
 
 ## Verifying the Contract on Rootstock Explorer
 
-To verify the deployed contract on the explorer, go back to Remix file explorer and go to `contracts -> artifacts -> build-info`. In this folder there will be a json file containing the information of the compilation process. You’ll need this in order to verify the contract on the [Rootstock Testnet Explorer](https://explorer.testnet.rootstock.io/). Copy the whole content of the input attribute, i.e what’s inside the curly braces. For e.g, if input value contains `{ value1: 1, value2: 2 }`, file format should be: `{ value1: 1, value2: 2 }`, and paste it in a separate json file in your computer or code editor.
+To verify the deployed contract on the explorer, go back to Remix file explorer and go to `contracts -> artifacts -> build-info`. In this folder there will be a json file containing the information of the compilation process. You’ll need this in order to verify the contract on the [Rootstock Testnet Explorer](https://explorer.testnet.rootstock.io/). Copy the value of the input attribute and save it as a json file in your computer.
 
 ![deployed contract artifact](/img/developers/quickstart/9-remix.png)
 
@@ -107,11 +107,11 @@ Select **Standard JSON Input** as the verification method and fill the form:
 Constructor arguments: The constructor arguments of the contract, if any. If you don’t know the arguments at first, continue with the process and the explorer will attempt to identify the constructor arguments from the bytecode and suggest them, if possible.
 4. ABI encoded arguments: if the arguments provided are ABI encoded, check this option.
 
-Copy only the information inside the input curly braces {}, see [verifying contract on the explorer](#verifying-the-contract-on-rootstock-explorer) and paste the code into a file named `standard-json-input.json`, then click on add file:
+Copy only the input value (curly braces included {}), see [verifying contract on the explorer](#verifying-the-contract-on-rootstock-explorer) and paste the code into a file named `standard-json-input.json`, then click on add file:
 
 ![Input Block - Rootstock Testnet Explorer](/img/developers/quickstart/13-remix.png)
 
-Here’s the example code inside the input curly braces `{}`:
+Here’s the example code of an input value::
 
 ```solidity
  "language": "Solidity",
