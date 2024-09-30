@@ -11,13 +11,13 @@ values={[
 {label: 'Beginner', value: 'beginner'},
 {label: 'Advanced', value: 'advanced'},
 {label: 'Hardhat', value: 'hardhat'},
+{label: 'Remix', value: 'remix'},
 {label: 'Wagmi', value: 'wagmi'},
-{label: 'Smart Contracts', value: 'sc'},
 {label: 'On-chain data', value: 'data'},
 {label: 'Port to Rootstock', value: 'port-dapps'}
 ]}>
 <FilterItem
-    value="wagmi, sc, beginner"
+    value="wagmi, beginner"
     title="Wagmi Starter Kit"
     subtitle="quickstart"
     color="orange"
@@ -26,7 +26,7 @@ values={[
     description="This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Wagmi and Shadcn libraries."
   />
 <FilterItem
-    value="hardhat, sc, beginner"
+    value="hardhat, beginner"
     title="Hardhat Starter Kit"
     subtitle="quickstart"
     color="orange"
@@ -45,6 +45,7 @@ values={[
   />
 <FilterItem
     value="wagmi, sc, advanced"
+    value="wagmi, advanced"
     title="Account Abstraction Kit"
     subtitle="quickstart"
     color="orange"
@@ -53,7 +54,7 @@ values={[
     description="Account Abstraction Starter dApp using Etherspot."
   />
 <FilterItem
-    value="sc, advanced"
+    value="advanced"
     title="dApp Automation with Cucumber"
     subtitle="quickstart"
     color="orange"
@@ -62,7 +63,7 @@ values={[
     description="Learn how to automate dApps using Cucumber Agile Automation Framework."
   />
 <FilterItem
-    value="sc, advanced"
+    value="advanced"
     title="RIF Relay Starter Kit"
     subtitle="quickstart"
     color="orange"
@@ -71,7 +72,7 @@ values={[
     description="Starter kit to develop on RIF Relay."
   />
 <FilterItem
-    value="sc, data, advanced"
+    value="data, advanced"
     title="Get Started with The Graph"
     subtitle="quickstart"
     color="orange"
@@ -80,7 +81,7 @@ values={[
     description="Easily query on-chain data through a decentralized network of indexers"
   />
 <FilterItem
-    value="sc, beginner"
+    value="beginner"
     title="Get Started with Web3.py"
     subtitle="Web3.py"
     color="orange"
@@ -89,12 +90,21 @@ values={[
     description="Get started with deploying and interacting with smart contracts on Rootstock using Web3.py."
   />
   <FilterItem
-    value="sc, beginner, advanced, port-dapps"
+    value="beginner, advanced, port-dapps"
     title="Port an Ethereum dApp to Rootstock"
     subtitle="Port dApps"
     color="orange"
     linkHref="/resources/port-to-rootstock/ethereum-dapp"
     linkTitle="Get Started"
     description="Learn how to port an Ethereum dApp to Rootstock."
+  />
+    <FilterItem
+    value="beginner, remix"
+    title="Deploy, Interact and Verify Smart Contracts using Remix and Rootstock Explorer"
+    subtitle="Remix"
+    color="orange"
+    linkHref="/developers/quickstart/remix/"
+    linkTitle="Use Remix"
+    description="In this guide, we will use the Remix IDE to write, compile, deploy, interact and verify a smart contract on the Rootstock Explorer."
   />
 </Filter>
