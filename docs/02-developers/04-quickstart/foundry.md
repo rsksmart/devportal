@@ -147,7 +147,7 @@ ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
 Total Paid: 0. ETH (106719 gas * avg 0 gwei)
 ```
 
-## Interacting with the Contract - Minting a Token
+## Interacting with the Contract
 If the contract is already deployed, then you can interact with it using ```cast``` this command allows you to interact with the contract, in this case, read the balance of an account.
 
 ### Reading the Balance of an Account

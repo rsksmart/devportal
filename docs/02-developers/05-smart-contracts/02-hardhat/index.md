@@ -22,7 +22,7 @@ tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethe
 | Resource                                                       | Description                                                                                    |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | [Prerequisites](/developers/requirements/) | Learn about the tools you need to have in place to follow along with this guide.|
-| [Create a Hardhat Project](/developers/smart-contracts/hardhat/) | Learn how to set up your environment for development using Hardhat.|
+| [Create a Hardhat Project](/developers/smart-contracts/hardhat/create-hardhat-project) | Learn how to set up your environment for development using Hardhat.|
 | [Configure Hardhat for Rootstock](/developers/smart-contracts/hardhat/configure-hardhat-rootstock/) | Learn how to configure your Hardhat project for development on Rootstock testnet and mainnet.|
 | [Write Smart Contracts](/developers/smart-contracts/hardhat/write-smart-contracts/) | Learn how to write a smart contracts.|
 | [Test Smart Contracts](/developers/smart-contracts/hardhat/test-smart-contracts/) | Learn how to test your smart contract to ensure it's working as expected. |

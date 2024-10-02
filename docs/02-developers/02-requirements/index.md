@@ -67,6 +67,23 @@ npm i -g hardhat-shorthand
 
 :::
 
+## Install Foundry
+:::note[Development Environments]
+You don't need to use both development environments (Hardhat and Foundry) together, you can use your favorite one.
+:::
+
+To install Foundry in your system, run the following command:
+```bash
+curl -L https://foundry.paradigm.xyz | bash
+```
+This will install Foundryup. Simply follow the on-screen instructions, and the ```foundryup``` command will become available in your CLI.
+
+Running ```foundryup``` will automatically install the latest (nightly) versions of the ```precompiled binaries```: ```forge```, ```cast```, ```anvil```, and ```chisel```. For additional options, such as installing a specific version or commit, run ```foundryup --help```.
+
+:::note[Windows Users]
+If you’re using Windows, you’ll need to install and use [Git BASH](https://gitforwindows.org/) or [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) as your terminal, since Foundryup currently doesn’t support Powershell or Command Prompt (Cmd).
+:::
+
 ## Command Line Tools
 
 ### POSIX Compliant Shell
