@@ -116,7 +116,7 @@ Ran 1 test suite in 143.90ms (8.73ms CPU time): 2 tests passed, 0 failed, 0 skip
 **_NOTE: If you need additional tests, or want to go deep on this step, visit the [Foundry Tests Documentation](https://book.getfoundry.sh/forge/tests)._** 
 
 ## Deploying an ERC20 Token Contract
-This section deploys an ERC20 token contract (fungible token) on the Rootstock network. This contract is located at ```src/Erc20Token.sol``` file, it uses the script located at ```script/Deploy.s.sol``` for this operation.
+This section deploys an ERC20 token contract (fungible token) on the Rootstock network. This contract is located at `src/Erc20Token.sol` file, it uses the script located at `script/Deploy.s.sol` for this operation.
 
 Run the following command, replacing `https://public-node.testnet.rsk.co` with either `rskTestnet` or `rskMainnet` rpc url if you have, depending on your desired deployment environment:
 
