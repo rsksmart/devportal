@@ -127,7 +127,7 @@ forge script script/Deploy.s.sol --rpc-url https://public-node.testnet.rsk.co --
 - You can remove the `--broadcast` flag if you wan to simulate the transaction without broadcasting it.
 :::
 
-> If you get an error like `Transaction dropped from the mempool: <tx-id>` or the ```transaction not completed```, check the tx-id in the explorer. The tx may have went successful but the error is still in the logs. Here are the [mainnet](https://explorer.rootstock.io/) and [testnet](https://explorer.testnet.rootstock.io/) explorers.
+> If you encounter an error such as `Transaction dropped from the mempool: <tx-id>` or `transaction not completed`, check the `tx-id` in the explorer. The transaction may have been successful but the error is still within the logs. See the [mainnet](https://explorer.rootstock.io/) and [testnet](https://explorer.testnet.rootstock.io/) explorers for more info.
 
 > Also you can see the transaction registry locally, by checking the folder ```broadcast/Deploy.s.sol/``` and opening the file called ```run-latest.json```, if you check the fields, there is one called ```contractAddress``` which contains the new address deployed for our ERC20 smart contract.
 
