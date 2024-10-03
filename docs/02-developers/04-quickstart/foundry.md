@@ -31,7 +31,9 @@ This will install Foundryup. Follow the on-screen instructions, and the `foundry
 
 Running `foundryup` automatically installs the latest (nightly) versions of the precompiled binaries: `forge`, `cast`, `anvil`, and `chisel`. For additional options, such as installing a specific version or commit, run `foundryup --help`.
 
-**_NOTE: If you’re using Windows, you’ll need to install and use [Git BASH](https://gitforwindows.org/) or [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) as your terminal, since Foundryup currently doesn’t support Powershell or Command Prompt (Cmd)._** 
+:::info[Using Windows]
+If you’re using Windows, you’ll need to install and use [Git BASH](https://gitforwindows.org/) or [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) as your terminal, since Foundryup currently doesn’t support Powershell or Command Prompt (Cmd).
+:::
 
 3. **Basic Knowledge of Foundry:**
 - Familiarity with Foundry's core concepts and functionalities is recommended. If you're new to Foundry, refer to the [Rootstock Foundry Guide](/developers/smart-contracts/foundry/).
