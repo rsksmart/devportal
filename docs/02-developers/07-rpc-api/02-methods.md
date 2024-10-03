@@ -294,12 +294,13 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
 --header 'accept: application/json' \
 --header 'Content-Type: application/json' \
 --data '{
-"jsonrpc":"2.0",
-"method":"eth_getBalance",
-"params":[
-"0x1fab9a0e24ffc209b01faa5a61ad4366982d0b7f",
-"latest"],
-"id":0
+	"jsonrpc":"2.0",
+	"method":"eth_getBalance",
+	"params":[
+	"0x1fab9a0e24ffc209b01faa5a61ad4366982d0b7f", 
+	"0x6444bb"
+	],
+	"id":0
 }'
 ```
 
