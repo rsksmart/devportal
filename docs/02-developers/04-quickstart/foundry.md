@@ -127,7 +127,7 @@ forge script script/Deploy.s.sol --rpc-url https://public-node.testnet.rsk.co --
 
 - [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) is not supported or not activated on the Rootstock RPC url
 - The `--legacy` flag is passed to use legacy transactions instead of `EIP-1559`.
-- You can remove the `--broadcast` flag if you wan to simulate the transaction without broadcasting it.
+- You can remove the `--broadcast` flag if you want to simulate the transaction without broadcasting it.
 :::
 
 > If you encounter an error such as `Transaction dropped from the mempool: <tx-id>` or `transaction not completed`, check the `tx-id` in the explorer. The transaction may have been successful but the error is still within the logs. See the [mainnet](https://explorer.rootstock.io/) and [testnet](https://explorer.testnet.rootstock.io/) explorers for more info.
