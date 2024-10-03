@@ -19,7 +19,7 @@ Before starting the dApp, make sure to have the following prerequisites:
 
 2. **Foundry installation using [Foundryup](https://book.getfoundry.sh/getting-started/installation#using-foundryup):**
 - To install, visit the official [Foundry documentation](https://book.getfoundry.sh/getting-started/installation#using-foundryup), for more information.
-- Foundryup is the official installer for the Foundry toolchain. You can learn more about it [here](https://github.com/foundry-rs/foundry/blob/master/foundryup/README.md).
+- Foundryup is the official installer for the Foundry toolchain. You can learn more about it in the [Foundryup README](https://github.com/foundry-rs/foundry/blob/master/foundryup/README.md).
 - If you encounter any issues during installation, refer to the Foundryup [FAQ](https://book.getfoundry.sh/faq.html) for assistance.
 - Precompiled binaries can be downloaded from the Foundry [GitHub releases page](https://github.com/foundry-rs/foundry/releases). For easier management, we recommend using Foundryup.
 
