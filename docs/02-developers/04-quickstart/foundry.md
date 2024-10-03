@@ -150,7 +150,7 @@ Total Paid: 0. ETH (106719 gas * avg 0 gwei)
 ```
 
 ## Interacting with the Contract - Minting a Token
-If the contract is already deployed, then you can interact with it using ```cast``` this command allows you to interact with the contract, in this case, read the balance of an account.
+If the contract is already deployed, then you can interact with it using `cast` this command allows you to interact with the contract, in this case, read the balance of an account.
 
 ### Reading the Balance of an Account
 In your terminal, run the following command, replacing the placeholders with actual values:
