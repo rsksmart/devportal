@@ -87,7 +87,10 @@ After obtaining the RPC URLs, create a file named `.env` in your project's root 
 ```
 PRIVATE_KEY: Your private key (e.g., from your Metamask account details).
 ```
-**_NOTE: Make sure the private key you paste, starts with 0x, if does not contain it, please put 0x before your private key. (0x123...)_** 
+:::tip[Tip]
+Ensure the private key copied starts with `0x123...`
+:::
+
 
 ## Running tests to an ERC20 Token Contract
 This section runs tests on an ERC20 token contract (fungible token), this is done according to the script located at ```test/Erc20Token.t.sol```. It does test deployment, minting, and transfer of tokens.
