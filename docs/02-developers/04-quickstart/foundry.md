@@ -18,7 +18,7 @@ Before starting the dApp, make sure to have the following prerequisites:
    - If you’re new to smart contracts, consider learning the basics. Understanding how smart contracts work will enhance your experience with Rootstock development.
 
 2. **Foundry installation using [Foundryup](https://book.getfoundry.sh/getting-started/installation#using-foundryup):**
-- This installing information is taken from the official [Foundry documentation](https://book.getfoundry.sh/getting-started/installation#using-foundryup), in case you need to go in detail.
+- To install, visit the official [Foundry documentation](https://book.getfoundry.sh/getting-started/installation#using-foundryup), for more information.
 - Foundryup is the official installer for the Foundry toolchain. You can learn more about it [here](https://github.com/foundry-rs/foundry/blob/master/foundryup/README.md).
 - If you encounter any issues during installation, refer to the Foundryup [FAQ](https://book.getfoundry.sh/faq.html) for assistance.
 - Precompiled binaries can be downloaded from the Foundry [GitHub releases page](https://github.com/foundry-rs/foundry/releases). For easier management, we recommend using Foundryup.
