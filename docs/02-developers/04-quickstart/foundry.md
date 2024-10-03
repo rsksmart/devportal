@@ -165,4 +165,4 @@ The result should look like this:
 
 ## Final Comments
 
-Explore and be curious about the folders and files of this starter kit. You'll learn how to import `.env` variables for deploying smart contracts, test smart contracts with solidity. Feel free to customize this starter kit to suit your project’s needs. Happy coding!
+You can explore the folders and files within the starter kit and customize the kit to suit your project’s needs. You can also learn how to import `.env` variables for deploying smart contracts, test smart contracts with solidity, etc.
