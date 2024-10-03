@@ -75,7 +75,7 @@ There are two ways to obtain RPC URLs:
 
 #### Using Public RPC URLs
 
-- Visit the [MetaMask Integration on the Rootstock Dev Portal](/dev-tools/wallets/metamask/). This guide provides instructions on setting up MetaMask for Rootstock. While following these steps, pay close attention to the sections on adding custom networks. You'll find the RPC URLs for Rootstock Testnet and Mainnet listed.
+- Visit the [MetaMask Integration on the Rootstock DevPortal](/dev-tools/wallets/metamask/). This guide provides instructions on setting up MetaMask for Rootstock. While following these steps, pay close attention to the sections on adding custom networks. You'll find the RPC URLs for Rootstock Testnet and Mainnet listed.
 
 #### Using RPC API
 - Create an account at the [Rootstock RPC API](https://rpc.rootstock.io/). Once logged in, navigate to your dashboard and copy the API Key. 
