@@ -67,7 +67,7 @@ Install all required dependencies using forge:
 forge install OpenZeppelin/openzeppelin-contracts
 ```
 
-### Obtain Rootstock Testnet and Mainnet RPC URLs
+### Add Rootstock Testnet and Mainnet RPC URLs
 
 This section will walk you through adding Rootstock Testnet and Mainnet RPC URLs to your development environment. These URLs are essential for connecting your application to the Rootstock network and interacting with smart contracts.
 
