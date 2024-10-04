@@ -90,27 +90,20 @@ The design of the RIF Name Service is shaped by specific goals:
 
 ## Elements of the RNS
 
-RNS has three major components:
+RNS has four major components:
 
-- **The RNS Registry**, which is specification for a tree structured name space and data associated with the names.
+| **Component**    | **Description**                                                                                                                                                                                                                               | **Specs** |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
+| **RNS Registry**  | The RNS Registry is a specification for a tree-structured namespace and the data associated with the names. Conceptually, each node and leaf in the domain name space tree represents a set of information. Query operations attempt to extract specific types of information from a particular set. A query specifies the domain name of interest and the type of resource information desired. | [Specs](./specs/registry)  |
+| **RNS Resolvers** | RNS Resolvers are contracts that provide information from a name in response to client requests. Resolvers must answer a query directly or use referrals to other resolvers. Typically, a resolver is a contract's public function that is directly accessible to user programs or other contracts. No specific protocol is required between the resolver and the user program. | [Specs](./specs/resolver)  |
+| **RNS Registrar** | The RNS Registrar is a critical component within the RIF Name Service, managing the registration of `.rsk` domain names. This contract has the authority to register names in the RSK Owner contract, ensuring that new domain registrations are handled securely and efficiently. | [Specs](./specs/registrar)  |
+| **Renewer**       | The Renewer is a contract designed to facilitate the renewal of names registered in the Node Owner. It is equipped with permissions to renew these names and provides flexibility in how the renewal is executed.                                                     
 
-  Conceptually, each node and leaf of the domain name space tree names a set of information, and query operations are attempts to extract specific types of information from a particular set. A query names the domain name of interest and describes the type of resource information that is desired.
-
-  [Specs](./specs/registry)
-
-- **RNS Resolvers** are contracts that provide information from a name in response to client requests.
-
-  Resolvers must be able to answer a query directly, or pursue the query using referrals to other resolvers. A resolver will typically be a contract's public function that is directly accessible to user programs or other contracts; hence no protocol is necessary between the resolver and the user program.
-
-  [Specs](./specs/resolver)
-
-- **RNS Registrar** is a critical component within the RIF Name Service, responsible for managing the registration of `.rsk` domain names. This contract is granted the authority to register names in the RSK Owner contract, ensuring that new domain registrations are handled securely and efficiently.
-[Specs](./specs/registrar)
-
-These three components roughly correspond to the three layers or views of the domain system:
+These fours components roughly correspond to the four layers or views of the domain system:
 - From the user's point of view, the domain system is accessed through a simple resolution operation. The domain space consists of a single tree and the user can request information from any section of the tree.
 - From the resolver's point of view, the domain system is composed of an unknown number of names. Each name has a corresponding resolver that provides information for a set of resolution types directly.
 - From the registry's point of view, the domain system consists of a hierarchical tree where each leaf has an owner (contract or account) and an associated resolver that provides information of the name.
+- From the **renewal's point of view**, the domain system ensures continued ownership through renewal processes, facilitating the payment of fees for name renewals via supported methods like ERC-20 or ERC-677.
 
 
 ## Guidelines on use

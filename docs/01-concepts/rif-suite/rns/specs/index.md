@@ -25,7 +25,7 @@ For simplicity, a valid RNS domain is defined as follows:
 - All labels must be alphanumeric and lower case
 - All labels and the TLD are delimited by `.`
 
-The reference implementation for RNS domain validation can be found in `rns.js`
+The reference implementation for RNS domain validation can be found in [RNS SDK](https://www.npmjs.com/package/@rsksmart/rns-sdk)
 
 - AVAILABLE_TLDS in src/constants.ts
 - isValidDomain and isValidLabel in src/utils.ts
