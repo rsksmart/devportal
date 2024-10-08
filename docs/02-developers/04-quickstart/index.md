@@ -14,6 +14,7 @@ values={[
 {label: 'Remix', value: 'remix'},
 {label: 'Wagmi', value: 'wagmi'},
 {label: 'On-chain data', value: 'data'},
+{label: 'Ape', value: 'ape'},
 {label: 'Port to Rootstock', value: 'port-dapps'}
 ]}>
 <FilterItem
@@ -88,7 +89,7 @@ values={[
     linkTitle="Get Started"
     description="Learn how to port an Ethereum dApp to Rootstock."
   />
-    <FilterItem
+  <FilterItem
     value="beginner, remix"
     title="Deploy, Interact and Verify Smart Contracts using Remix and Rootstock Explorer"
     subtitle="Remix"
@@ -96,5 +97,14 @@ values={[
     linkHref="/developers/quickstart/remix/"
     linkTitle="Use Remix"
     description="In this guide, we will use the Remix IDE to write, compile, deploy, interact and verify a smart contract on the Rootstock Explorer."
+  />
+  <FilterItem
+    value="beginner, ape, advanced"
+    title="Getting Started with Apeworx"
+    subtitle="Ape"
+    color="orange"
+    linkHref="/developers/quickstart/ape/"
+    linkTitle="Use Ape"
+    description="Learn how to compile, deploy, and intereact with smart contracts with Ape on Rootstock"
   />
 </Filter>
