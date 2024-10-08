@@ -54,7 +54,7 @@ Run the following command locally:
 npm install -g @graphprotocol/graph-cli
 ```
 
-> You must have at least v0.76.0 to deploy subgraphs on Rootstock mainnet.
+> You must have at least v0.85.0 to deploy subgraphs on Rootstock mainnet and testnet.
 
 
 ### Initialize a Subgraph⁠
