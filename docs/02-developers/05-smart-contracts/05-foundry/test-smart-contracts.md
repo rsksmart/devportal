@@ -1,7 +1,7 @@
 ---
 sidebar_label: Test Smart Contract
 sidebar_position: 104
-title: Test Smart Contract
+title: Testing Smart Contracts using Foundry
 description: "Learn how to test your Rootstock smart contract"
 tags: [guides, developers, smart contracts, rsk, rootstock, foundry, dApps, ethers]
 ---
