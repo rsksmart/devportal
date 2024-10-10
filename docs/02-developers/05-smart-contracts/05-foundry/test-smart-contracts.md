@@ -1,15 +1,15 @@
 ---
 sidebar_label: Test Smart Contract
 sidebar_position: 104
-title: Test Smart Contract
-description: "Learn how to test your Rootstock smart contract"
+title: Testing Smart Contracts using Foundry
+description: "Learn how to test your Rootstock smart contract using Foundry"
 tags: [guides, developers, smart contracts, rsk, rootstock, foundry, dApps, ethers]
 ---
 
 In this section, you'll set up a smart contract test and test it using `forge`.
 
 ### Step 1: Test Script
-You will see a directory called `test` in the root of your project. This is where you will see/write your tests. The demo `counter.sol` comes with a test script `counter.t.sol`, which contains:
+You will see a directory called `test` in the root of your project. This is where you can view/write your tests. The demo `counter.sol` comes with a test script `counter.t.sol`, which contains:
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED

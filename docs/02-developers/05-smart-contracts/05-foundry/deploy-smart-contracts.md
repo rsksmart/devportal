@@ -6,10 +6,10 @@ description: "Learn how to deploy your Rootstock smart contract using forge."
 tags: [guides, developers, smart contracts, rsk, rootstock, foundry, dApps]
 ---
 
-In this section, you'll deploy `counter` smart contract to the Rootstock network using Foundry.
+In this section, you'll deploy a `counter` smart contract to the Rootstock network using Foundry.
 
 ## Step 1: Deployment Script
-You will see a directory called `deploy` in the root of your project. This is where you will see/write your deployment scripts. The demo `counter.sol` comes with a deployment script `counter.s.sol`, which contains:
+You will see a directory called `deploy` in the root of your project. This is where you can view/write your deployment scripts. The demo `counter.sol` comes with a deployment script `counter.s.sol`, which contains:
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
