@@ -18,6 +18,9 @@ The `.env` file should follow this format:
 ROOTSTOCK_RPC_URL=https://rpc.testnet.rootstock.io/{YOUR_APIKEY}
 PRIVATE_KEY=0x...
 ```
+:::info[Info]
+* To obtain a Rootstock Rpc Url, visit the [RPC API DASHBOARD](https://rpc.rootstock.io/), create an account and get your testnet or mainnet rpc url.
+:::
 
 At the root of the project, run:
 
