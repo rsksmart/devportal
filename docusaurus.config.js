@@ -239,7 +239,7 @@ const config = {
         appId: 'WAFPQL14PU',
 
         // Public API key: it is safe to commit it
-        apiKey: '4da8ccafcd04d9c5efd1601a60658bce',
+        apiKey: '78aa26683ec349ff7e4a7c2d723e4cb7',
 
         indexName: 'dev-rootstock',
 
