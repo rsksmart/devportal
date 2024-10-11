@@ -120,7 +120,7 @@ Ran 1 test suite in 143.90ms (8.73ms CPU time): 2 tests passed, 0 failed, 0 skip
 ## Deploying an ERC20 Token Contract
 This section deploys an ERC20 token contract (fungible token) on the Rootstock network. This contract is located at `src/Erc20Token.sol` file, it uses the script located at `script/Deploy.s.sol` for this operation.
 
-Run the following command, replacing `https://public-node.testnet.rsk.co` with either `rskTestnet` or `rskMainnet` rpc url if you have, depending on your desired deployment environment:
+Run the following command, replacing `https://public-node.testnet.rsk.co` with either `rskTestnet` or `rskMainnet` rpc url if you have the testnet and mainnet environments configured for your desired deployment environment, for this guide, we will use the public node url:
 
 ```bash
 forge script script/Deploy.s.sol --rpc-url https://public-node.testnet.rsk.co --broadcast --legacy
