@@ -36,6 +36,16 @@ values={[
     description="Smart Contract examples, Tests, Deployments and Tasks for Common ERC Standards (ERC20, ERC721, ERC1155)."
   />
 <FilterItem
+    value="foundry, sc, beginner"
+    title="Foundry Starter Kit"
+    subtitle="quickstart"
+    color="orange"
+    linkHref="/developers/quickstart/foundry/"
+    linkTitle="Use the Kit"
+    description="Smart Contract examples, Tests, Deployments and Tasks for Common ERC Standards (ERC20, ERC721, ERC1155)."
+  />
+<FilterItem
+    value="wagmi, sc, advanced"
     value="wagmi, advanced"
     title="Account Abstraction Kit"
     subtitle="quickstart"

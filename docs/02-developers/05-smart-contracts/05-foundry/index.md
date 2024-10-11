@@ -1,193 +1,27 @@
 ---
-section_position: 200 
 sidebar_label: Getting Started with Foundry
+section_position: 200 
 title: Getting Started with Foundry
 description: 'How to write, test, and deploy smart contracts with Foundry'
 tags: [rsk, foundry, developers, developer tools, rootstock, testing, dApps, smart contracts]
 ---
 
-In this guide, we will learn about Foundry and its benefits for smart contract development, how to setup your environment, create a Foundry project and execute a deployment script.
+:::note[Before you begin]
 
-## Prerequisites
+> If you're new to Web3 and Smart Contract Development, begin by exploring the [Rootstock network](/developers/blockchain-essentials/overview/). Then progress step by step to the [quick start Guide with Foundry](/developers/quickstart/foundry/) for a comprehensive understanding of the network and getting started with writing, testing, and deploying smart contracts on Rootstock.
 
-To get started with Foundry, ensure the following tools are installed:
-- The [Rust](https://rust-lang.org/) Compiler
-- Cargo Package Manager
-
-> For an easy installation of the above tools, use the [rustup installer](https://rustup.rs).
-
-## Installation
-
-To install, use Foundryup. Foundryup is the Foundry toolchain installer. You can find more information in the [Foundry README](https://github.com/foundry-rs/foundry/blob/master/foundryup/README.md).
-
-```bash
-curl -L https://foundry.paradigm.xyz | bash
-```
-
-Running foundryup by itself will install the latest (nightly) precompiled binaries: `forge`, `cast`, `anvil`, and `chisel`.
-
-> Visit the [installation guides](https://book.getfoundry.sh/getting-started/installation) for more information.
-
-## Create a foundry project
-
-To start a new project with Foundry, use [forge init](https://book.getfoundry.sh/reference/forge/forge-init.html).
-
-```bash
-forge init hello_foundry
-```
-
-> See more details on how to [create a new project](https://book.getfoundry.sh/projects/creating-a-new-project) using the Foundry guide.
-
-## Write your first contract
-
-Let’s view the file structure for a default foundry project:
-
-```bash
-$ cd hello_foundry
-$ tree . -d -L 1
-.
-├── lib
-├── script
-├── src
-└── test
-
-4 directories
-```
-
-The `src` directory contains counter smart contract with test written in the `test` directory. Now, let's build the foundry project.
-
-```bash
-forge build
-```
-
-And then run tests.
-
-```bash
-forge test
-```
-
-## Deploy contract on the Rootstock
-
-To deploy the counter contract on Rootstock mainnet or testnet, further configure Foundry by setting up a Rootstock RPC url and a private key of an account that’s funded with tRBTC. 
-
-### Environment Configuration
-
-Once you have an account with a private key, create a `.env` file in the root of the foundry project and add the variables. 
-
-Foundry automatically loads a `.env` file present in the project directory.
-
-The `.env` file should follow this format:
-
-```bash
-ROOTSTOCK_RPC_URL=https://rpc.testnet.rootstock.io/{YOUR_APIKEY}
-PRIVATE_KEY=0x...
-```
-
-At the root of the project, run:
-
-```bash
-# To load the variables in the .env file
-source .env
-```
-
-### Modify Deployment Script
-
-Modify the deployment counter deploy script in the `scripts` directory to use the private key by modifying the run method, see below example:
-
-```solidity
-// SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
-
-import {Script, console} from "forge-std/Script.sol";
-
-import "../src/Counter.sol";
-
-
-contract CounterScript is Script {
-    function setUp() public {}
-
-    function run() public {
-        vm.startBroadcast(vm.envUint("PRIVATE_KEY"));
-
-        new Counter();
-
-        vm.stopBroadcast();
-
-    }
-}
-
-```
-
-By default, scripts are executed by calling the function named `run` at the entrypoint.
-
-```solidity
-uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
-```
-
-> - CAUTION: Be cautious when exposing private keys in a `.env` file and loading them into programs. 
-   > - This is only recommended for use with non-privileged deployers or for local / test setups.
-
-When calling `vm.startBroadcast()`, the contract creation will be recorded by Forge, and we can broadcast the transaction to deploy the contract on-chain.
-
-### Execute the deployment script
-
-We will use Forge to run our script and broadcast the transactions - this can take a little while, since Forge also waits for the transaction receipts. 
-
-```bash
-forge script script/Counter.s.sol --rpc-url $ROOTSTOCK_RPC_URL --broadcast --legacy
-```   
-
-:::info[Info]
-
-- [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) is not supported or not activated on the Rootstock RPC url
-- The `--legacy` flag is passed to use legacy transactions instead of `EIP-1559`.
-
+> Note: This guide is optimized for Node.js version 18 or earlier. If you're using a later version, consider using a version manager like [NVM](https://github.com/nvm-sh/nvm/blob/master/README.md) to switch to a compatible version.
 :::
 
-The result should look like this:
+## Navigating the Guide
 
-```bash
-[⠰] Compiling...
-No files changed, compilation skipped
-Script ran successfully.
-
-== Logs ==
-  Counter: 
-
-## Setting up 1 EVM.
-
-==========================
-
-Chain 31
-
-Estimated gas price: 0.065164 gwei
-
-Estimated total gas used for script: 138734
-
-Estimated amount required: 0.000009040462376 ETH
-
-==========================
-##
-Sending transactions [0 - 0].
-⠁ [00:00:00] [###############################################################################################################################################] 1/1 txes (0.0s)##
-Waiting for receipts.
-⠉ [00:00:25] [###########################################################################################################################################] 1/1 receipts (0.0s)
-##### 31
-✅  [Success]Hash: 0x015de35ffae94f491d4630f2aec84c49ae8170d5ecf3f4c1cdc8718bc4a00052
-Contract Address: 0x64B24E046259042e16a337Be4648CeAAF8Eb72C6
-Block: 5071408
-Gas Used: 106719
-
-==========================
-
-ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
-Total Paid: 0. ETH (106719 gas * avg 0 gwei)
-
-Transactions saved to: /hello_foundry/broadcast/Counter.s.sol/31/run-latest.json
-
-Sensitive values saved to: /hello_foundry/cache/Counter.s.sol/31/run-latest.json
-```
-
-> The broadcast directory will be updated automatically with the latest output of the deployment. 
-
-> See the [foundry deployment documentation](https://book.getfoundry.sh/tutorials/solidity-scripting#deploying-our-contract).
+| Resource                                                       | Description                                                                                    |
+| ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| [Prerequisites](/developers/requirements/) | Learn about the tools you need to have in place to follow along with this guide.|
+| [Create a Foundry Project](/developers/smart-contracts/foundry/create-foundry-project/) | Learn how to set up your environment for development using Foundry.|
+| [Configure Foundry for Rootstock](/developers/smart-contracts/foundry/configure-foundry-rootstock/) | Learn how to configure your Foundry project for development on Rootstock testnet and mainnet.|
+| [Smart Contract](/developers/smart-contracts/foundry/smart-contracts/) | Check foundry demo smart contract.|
+| [Test Smart Contract](/developers/smart-contracts/foundry/test-smart-contracts/) | Learn how to test your smart contract using `forge`. |
+| [Deploy Smart Contract](/developers/smart-contracts/foundry/deploy-smart-contracts/) | Learn how to deploy your smart contract using `forge`. |
+| [Interact with Smart Contract](/developers/smart-contracts/foundry/interact-with-contract/) | Learn how to interact with your smart contract using `cast`. |
+| [Debugging and Troubleshooting Tips](/developers/smart-contracts/foundry/troubleshooting/) | Learn about the common issues you can come across while building following this guide and how you can solve them. |
