@@ -14,16 +14,81 @@ For IRL hackathons and events, download the [Hackathon Cheatsheet PDF with QR Co
 
 
 
+
+
 ## Prerequisites
 
-To effectively use the Quickstart Kits and guides on this page, you should have:
+This guide is designed to help both beginners and experienced developers get started with building on Rootstock. The content is organized to help you find what you need based on your skill level.
 
-1. **Basic Knowledge of Blockchain Technology**: Familiarity with blockchain concepts, smart contracts, and decentralized applications (dApps) will help you understand the content more easily.
-2. **Experience with Web3 Development Tools**: Knowledge of development tools and libraries such as Hardhat, **Web3.js**, and **Remix IDE** is recommended for working with smart contracts and interacting with decentralized networks.
-3. **Programming Skills**: Proficiency in programming languages such as **JavaScript (React), Solidity**, and **Python (for Web3.py)** will be beneficial for building and deploying dApps.
-4. **Understanding of ERC Standards**: Familiarity with common Ethereum Request for Comments (ERC) standards like **ERC20, ERC721, and ERC1155** will help you work with token contracts.
-5. **Version Control with Git**: Basic experience with Git and GitHub for managing project files and collaborating on code.
-6. **Knowledge of Account Abstraction and Automation Frameworks (Optional)**: For specific kits, understanding account abstraction concepts and automation frameworks like **Cucumber** can be advantageous.
+<Tabs>
+  <TabItem value="beginners" label="Beginners" default>
+    
+    <p>If you're new to blockchain development, start here! We've outlined the essential skills and tools you'll need to begin your journey.</p>
+
+    <ol>
+      <li>
+        <strong>Basic Programming Knowledge</strong><br />
+        Familiarity with programming languages like <strong>JavaScript</strong> or <strong>Python</strong> will be helpful, even if you're new to blockchain development.
+      </li>
+      <li>
+        <strong>Understanding Blockchain Basics</strong><br />
+        Learn about <strong>blockchain technology</strong>, <strong>smart contracts</strong>, and <strong>dApps</strong> before diving in. We recommend starting with introductory resources on <a href="#">blockchain concepts</a>.
+      </li>
+      <li>
+        <strong>Intro to Web3 Development Tools</strong><br />
+        While not strictly necessary to start, getting a basic understanding of tools like <strong>Remix IDE</strong> for smart contract development will make your journey smoother. We have beginner-friendly tutorials available <a href="/developers/quickstart/remix/">here</a>.
+      </li>
+      <li>
+        <strong>Version Control with Git</strong> <em>(Optional)</em><br />
+        Learning basic <strong>Git</strong> and <strong>GitHub</strong> skills can help you manage projects and collaborate with others.
+      </li>
+    </ol>
+    <p>Start building your first dApp using hardhat <a href="/developers/quickstart/hardhat/">Quickstart Guide for Beginners</a>.</p>
+  </TabItem>
+
+  <TabItem value="experienced" label="Experienced Developers">
+    
+    <p>If you already have a background in blockchain or Web3 development, you can dive straight into more advanced topics and leverage the tools available on Rootstock.</p>
+
+    <ol>
+      <li>
+        <strong>Solid Knowledge of Blockchain and Smart Contracts</strong><br />
+        You should be comfortable with <strong>blockchain principles</strong> and <strong>decentralized networks</strong>.
+      </li>
+      <li>
+        <strong>Experience with Web3 Development Tools</strong><br />
+        Tools like <strong>Hardhat</strong>, <strong>Web3.js</strong>, and <strong>Remix IDE</strong> should be part of your existing toolkit.
+      </li>
+      <li>
+        <strong>Advanced Programming Skills</strong><br />
+        Proficiency in <strong>Solidity</strong> and other Web3-related programming languages (like <strong>JavaScript/React</strong> or <strong>Python/Web3.py</strong>) will be beneficial.
+      </li>
+      <li>
+        <strong>Familiarity with ERC Standards</strong><br />
+        Understanding <strong>ERC20</strong>, <strong>ERC721</strong>, and <strong>ERC1155</strong> standards for token contracts will be valuable.
+      </li>
+      <li>
+        <strong>Advanced Topics</strong> <em>(Optional)</em><br />
+        Knowledge of <strong>account abstraction</strong>, <strong>automation frameworks</strong> like <strong>Cucumber</strong>, and other advanced Web3 concepts can help you explore more sophisticated solutions.
+      </li>
+    </ol>
+    <p>Access our <a href="#">Quickstart Guide for Experienced Developers</a> to get started.</p>
+  </TabItem>
+</Tabs>
+
+
+
+## Tools to Speed Up Your Development
+
+These tools will make it easy for you to build on Rootstock:
+
+- **[Remix IDE](/developers/quickstart/remix/)**: An integrated development environment tailored for smart contract development.
+- **[Hardhat](/developers/quickstart/hardhat/)**: A flexible development environment for building and deploying smart contracts.
+- **[Web3.py](/developers/quickstart/web3-python/)**: JavaScript and Python libraries for interacting with the Ethereum blockchain.
+- **[RSK Explorer](https://explorer.testnet.rootstock.io/)**: A blockchain explorer to view transaction details on the Rootstock network.
+- **[RPC API](/developers/rpc-api/)**: The RPC API provides a seamless and intuitive web interface for developers to interact with Rootstock nodes via JSON-RPC methods.
+
+Explore the [full list of tools and libraries](/dev-tools/) available on Rootstock.
 
 :::tip[Prerequisites page]
 
