@@ -120,7 +120,6 @@ The Wallet Import Format (WIF) key is the encoded version of your Bitcoin privat
   1. After running `npm run generate`, you will get both the Taproot address and the WIF key as part of the output.  
   2. Copy the WIF key and paste it into this variable.
 
-#### 
 
    
 :::note[Note]
