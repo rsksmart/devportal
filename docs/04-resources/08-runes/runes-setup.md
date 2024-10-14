@@ -173,7 +173,7 @@ http://localhost:3000
 
    * Once connected, your wallet address will appear on the platform, indicating that your MetaMask wallet is successfully linked.
 
-## **Mint Runes on Rootstock**
+## Mint Runes on Rootstock
 
 After logging in, follow the steps below to mint a new rune.
 
