@@ -70,9 +70,9 @@ The Rootstock Infrastructure Framework (RIF) Token allows any token holder to co
   </tbody>
 </table>
 
-## stRIF (RIF Token in DAO)
+## stRIF (Staked RIF Token in teh RootstockCollective DAO)
 
-The stRIF tokens give you voting rights and participation in the DAO's governance and decision-making process. To acquire stRIF tokens, you need to stake RIF tokens in the governance system dApp. RIF tokens can be purchased through [various exchanges](https://wiki.rootstockcollective.xyz/Token-Resources-e3f89008a96e4dcab3037ff7861d9d8a), and once staked, an equivalent amount of stRIF is issued for governance participation.
+The stRIF tokens give you voting rights and participation in the RootstockCollective DAO's governance and decision-making process. To acquire stRIF tokens, you need to stake RIF tokens in the governance system dApp. RIF tokens can be purchased through [various exchanges](https://wiki.rootstockcollective.xyz/Token-Resources-e3f89008a96e4dcab3037ff7861d9d8a), and once staked, an equivalent amount of stRIF is issued for governance participation.
 
 <table class="table">
   <tbody>
@@ -82,29 +82,21 @@ The stRIF tokens give you voting rights and participation in the DAO's governanc
     </tr>
     <tr>
       <td scope="row">Total Supply</td>
-      <td>5,587,672.181 stRIF</td>
+      <td>Varies and will increase and decrease as RIF is staked and unstaked.</td>
     </tr>
     <tr>
       <td scope="row">Contract Address</td>
       <td><a href="https://rootstock.blockscout.com/token/0x5db91e24BD32059584bbDb831A901f1199f3d459?tab=contract" target="_blank">0x5db91e24BD32059584bbDb831A901f1199f3d459</a></td>
     </tr>
     <tr>
-      <td scope="row">Contract Type</td>
-      <td>ERC1967Proxy</td>
+      <td scope="row">Contract Types</td>
+      <td>ERC20, ERC677, ERC1967Proxy</td>
     </tr>
     <tr>
       <td scope="row">How to Get</td>
       <td>
         <ul>
-            <li><a href="https://rif.technology/rif-token/" target="_blank">Exchanges</a></li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td scope="row">How to Stake</td>
-      <td>
-        <ul>
-            <li><a href="http://app.rootstockcollective.xyz/" target="_blank">Get Started</a></li>
+            <li><a href="http://app.rootstockcollective.xyz/" target="_blank">Stake your RIF on the RootstockCollective dApp to get stRIF</a></li>
         </ul>
       </td>
     </tr>
