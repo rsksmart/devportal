@@ -52,7 +52,7 @@ This guide is designed to help both beginners and experienced developers get sta
 
     <ol>
       <li>
-        <strong>Solid Knowledge of Blockchain and Smart Contracts</strong><br />
+        <strong>Knowledge of Blockchain and Smart Contracts</strong><br />
         You should be comfortable with <strong>blockchain principles</strong> and <strong>decentralized networks</strong>.
       </li>
       <li>
@@ -60,7 +60,7 @@ This guide is designed to help both beginners and experienced developers get sta
         Tools like <strong>Hardhat</strong>, <strong>Web3.js</strong>, and <strong>Remix IDE</strong> should be part of your existing toolkit.
       </li>
       <li>
-        <strong>Advanced Programming Skills</strong><br />
+        <strong>Basic Programming Skills</strong><br />
         Proficiency in <strong>Solidity</strong> and other Web3-related programming languages (like <strong>JavaScript/React</strong> or <strong>Python/Web3.py</strong>) will be beneficial.
       </li>
       <li>
