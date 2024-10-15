@@ -62,7 +62,7 @@ cd rootstock-foundry-starterkit
 Install all required dependencies using forge:
 
 ```bash
-forge install OpenZeppelin/openzeppelin-contracts
+forge install openzeppelin-contracts-05=OpenZeppelin/openzeppelin-contracts@v2.5.0 openzeppelin-contracts-06=OpenZeppelin/openzeppelin-contracts@v3.4.0 openzeppelin-contracts-08=OpenZeppelin/openzeppelin-contracts@v4.8.3 --no-commit
 ```
 
 ### Obtain Rootstock Testnet and Mainnet RPC URLs
@@ -81,7 +81,7 @@ There are two ways to obtain RPC URLs:
 
 ### Adding environment variables to your project
 
-After obtaining the RPC URLs, create a file named `.env` in your project's root directory (important: this file should not be committed to version control). Add the necessary environment variables to the `.env` file:
+After obtaining the RPC URLs, create a file named `.env` in your project's root directory `/.env` at the same level of `.env.example` file (important: this file should not be committed to version control). Add the next environment variable to the `.env` file:
 ```
 PRIVATE_KEY: Your private key (e.g., from your Metamask account details).
 ```
