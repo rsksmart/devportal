@@ -70,9 +70,9 @@ The Rootstock Infrastructure Framework (RIF) Token allows any token holder to co
   </tbody>
 </table>
 
-## stRIF (Staked RIF Token in teh RootstockCollective DAO)
+## stRIF (Staked RIF Token in the RootstockCollective DAO)
 
-The stRIF tokens give you voting rights and participation in the RootstockCollective DAO's governance and decision-making process. To acquire stRIF tokens, you need to stake RIF tokens in the governance system dApp. RIF tokens can be purchased through [various exchanges](https://wiki.rootstockcollective.xyz/Token-Resources-e3f89008a96e4dcab3037ff7861d9d8a), and once staked, an equivalent amount of stRIF is issued for governance participation.
+The stRIF tokens give you voting rights and participation in the RootstockCollective DAO's governance and decision-making process they are pegged 1:1 with RIF. To acquire stRIF tokens, you need to stake RIF tokens in the [governance system dApp](https://app.rootstockcollective.xyz). RIF tokens can be purchased through [various exchanges](https://wiki.rootstockcollective.xyz/Token-Resources-e3f89008a96e4dcab3037ff7861d9d8a), and once staked, an equivalent amount of stRIF is issued for governance participation.
 
 <table class="table">
   <tbody>
