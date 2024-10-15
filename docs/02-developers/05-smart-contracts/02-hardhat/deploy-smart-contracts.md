@@ -3,7 +3,8 @@ sidebar_label: Deploy Smart Contracts
 sidebar_position: 105
 title: Deploy Smart Contracts
 description: "Learn how to deploy your Rootstock smart contract on your local environment and the Rootstock network."
-tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethers]
+tags:
+  [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethers]
 ---
 
 In this section, we'll deploy your token contract to your local environment and also deploy and interact with the contract on the Rootstock network.
@@ -19,25 +20,25 @@ To configure your deployment file:
 ```
 
 - In the scripts directory, open the `deploy.js` deployment file:
-    
+
 To deploy `myToken` contract, copy the deployment script below and paste it in your deployment file or see the [`deploy.js` file](https://raw.githubusercontent.com/rsksmart/rootstock-quick-start-guide/feat/complete/scripts/deploy.js) on GitHub.
-      
+
 ```js
-   async function main() {
-   const [deployer] = await ethers.getSigners();
+async function main() {
+  const [deployer] = await ethers.getSigners();
 
-   console.log("Deploying contracts with the account:", deployer.address);
+  console.log("Deploying contracts with the account:", deployer.address);
 
-   const MyToken = await ethers.getContractFactory("MyToken");
-   const myToken = await MyToken.deploy(1000);
+  const MyToken = await ethers.getContractFactory("MyToken");
+  const myToken = await MyToken.deploy(1000);
 
-   console.log("Token address:", myToken.address);
-   }
+  console.log("Token address:", myToken.address);
+}
 
-   main().catch((error) => {
-   console.error(error);
-      process.exitCode = 1;
-   });
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});
 ```
 
 ## Step 2: Run the Hardhat Network Locally
@@ -47,26 +48,28 @@ To deploy `myToken` contract, copy the deployment script below and paste it in y
 To run the Hardhat network locally:
 
 - Start the Hardhat network
-   - Hardhat comes with a built-in Ethereum network for development. Run the following command in your project's root directory to start it.
-      ```shell
-      npx hardhat node
-      ```
-      This command will start a local blockchain network and display a list of available accounts and private keys:
-      ![Rootstock Node Running](/img/guides/quickstart/hardhat/run-node.png)
+  - Hardhat comes with a built-in Ethereum network for development. Run the following command in your project's root directory to start it.
+    ```shell
+    npx hardhat node
+    ```
+    This command will start a local blockchain network and display a list of available accounts and private keys:
+    ![Rootstock Node Running](/img/guides/quickstart/hardhat/run-node.png)
 - Deploy your contract to the local network
-   - Deploy your contract to the local Hardhat network, in another terminal or command prompt, run the command below in the root directory:
-      ```shell
-      npx hardhat run --network hardhat scripts/deploy.js
-      ```
 
-      This should give a result similar to the following:
-      
-      ```shell
-      npx hardhat run --network hardhat scripts/deploy.js
+  - Deploy your contract to the local Hardhat network, in another terminal or command prompt, run the command below in the root directory:
 
-      Deploying contracts with the account: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
-      Token address: 0x5FbDB2315678afecb367f032d93F642f64180aa3
-      ```
+    ```shell
+    npx hardhat run --network hardhat scripts/deploy.js
+    ```
+
+    This should give a result similar to the following:
+
+    ```shell
+    npx hardhat run --network hardhat scripts/deploy.js
+
+    Deploying contracts with the account: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+    Token address: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+    ```
 
 ## Step 3: Deploy Your Contract on Rootstock Network
 
@@ -83,7 +86,7 @@ To deploy to the Rootstock Testnet, run:
 This should return the following:
 
 ```shell
-% npx hardhat run --network rskTestnet scripts/deploy.js 
+% npx hardhat run --network rskTestnet scripts/deploy.js
 Deploying contracts with the account: 0xA210D04d707f6beBF914Cb1a57199Aebe7B40380
 Token address: 0xc6EcBe0F6643825FD1AAfc03BEC999014759a279
 ```
@@ -94,46 +97,70 @@ Token address: 0xc6EcBe0F6643825FD1AAfc03BEC999014759a279
    npx hardhat run --network rskMainnet scripts/deploy.js
 ```
 
-### Configure MetaMask 
+### Configure MetaMask
 
 :::note[Install Metamask]
-If you haven't already, you can use the [metamask-landing.rifos.org](https://metamask-landing.rifos.org/) tool to download/install Metamask, and add Rootstock custom network or follow the steps in [Configure Network and Token](/developers/blockchain-essentials/browser). 
+If you haven't already, you can use the [metamask-landing.rifos.org](https://metamask-landing.rifos.org/) tool to download/install Metamask, and add Rootstock custom network or follow the steps in [Configure Network and Token](/developers/blockchain-essentials/browser).
 
 :::
 
-## Step 4: Connect Remix to Rootstock Testnet (Optional)
+## Step 4: Interact with your deployed contract
 
-1. Open Remix IDE
+To interact with your deployed contract, you can create an interaction script using JavaScript/TypeScript and the [Ethers.js](https://docs.ethers.org/v5/) library.
 
-   - Go to [Remix IDE](https://remix.ethereum.org/) in your browser.
+- Create a `interact.js` file in the `scripts` directory:
 
-2. Connect MetaMask to Remix:
+```
+   touch scripts/interact.js
+```
 
-   - In Remix, go to the **Deploy & run transactions** plugin.
-   - In the **Environment** dropdown, select **Injected Provider**.
-   - This will connect to MetaMask. Make sure MetaMask is on the `RSK Testnet` network that you configured earlier.
+- Paste the following code in the `interact.js` file:
 
-### Interact with the Deployed Contract on Remix
+```js
+const hre = require("hardhat");
 
-To interact with your deployed contract on Rootstock network:
+async function main() {
+  try {
+    // Get the ContractFactory of your MyToken contract
+    const MyToken = await hre.ethers.getContractFactory("MyToken");
 
-- Load Your Deployed Contract
-   - Import the `myToken.sol` file into remix and compile.
+    // Connect to the deployed contract
+    const contractAddress = "0x543ba9FC0ade6f222BD8C7Bf50a0CD9923Faf569"; // Replace with your deployed contract address
+    const contract = await MyToken.attach(contractAddress);
 
-![Import Solidity File and Compile](/img/guides/quickstart/hardhat/compile-contract-remix.png)
+    // Retrieve the balance of an account
+    const account = "0x28eb8D29e4713E211D1dDab19dF3de16086BB8fa";
+    const balance = await contract.balanceOf(account);
 
-- Once compiled, you should see the checkmark and solidiity file loaded into Remix. 
+    // Retrieve the symbol of the token
+    const symbol = await contract.symbol();
 
-![Successful Compile](/img/guides/quickstart/hardhat/successful-compile-remix.png)
+    console.log(
+      `Balance of ${account} account: ${balance.toString()} ${symbol}`
+    );
+  } catch (error) {
+    console.error(error);
+    process.exit(1);
+  }
+}
 
-- Choose `Deploy and Run Transactions` and in `Environment`, Choose "Injected Provider - Metamask". 
+main();
+```
 
-This loads the Metamask wallet.
+- And run the interaction script. This is how you can do it on testnet:
 
-![Deploy and Run Transactions](/img/guides/quickstart/hardhat/deploy-and-run-tx-remix.png)
+```
+   npx hardhat run scripts/interact.js --network rskTestnet
+```
 
-Now click on `Transactions recorded` interact with the Smart Contract! Call its functions, send transactions, and observe the results. Ensure you have enough tRBTC in your MetaMask wallet for transaction fees.
+- And this is how you can do it on mainnet:
 
-- Monitor Transactions
-   - Use Remix and MetaMask to monitor transaction confirmations and results.
-   - You can also use a [Rootstock Testnet Explorer](https://explorer.testnet.rootstock.io/) to view transactions and contract interactions.
+```
+   npx hardhat run scripts/interact.js --network rskMainnet
+```
+
+- The expected output by running the interaction script is:
+
+```
+   Balance of 0x28eb8D29e4713E211D1dDab19dF3de16086BB8fa account: 1000 MTK
+```
