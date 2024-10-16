@@ -210,7 +210,7 @@ After logging in, follow the steps below to mint a new rune.
 12. **Log Out**:  
 * If you're done, click the **"Logout"** button at the top right of the screen to securely end your session.
 
-### **Bridge Your Rune to BTC**
+### Bridge Runes to BTC
 
 <img src="/img/resources/runes/bridge-runes.png"/>
 
