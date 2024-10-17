@@ -2,6 +2,7 @@ import React from 'react';
 // Import the original mapper
 import MDXComponents from '@theme-original/MDXComponents';
 import Carousel from '/src/components/Carousel';
+import CarouselItem from '/src/components/Carousel/CarouselItem';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Accordion from 'react-bootstrap/Accordion';
@@ -19,5 +20,5 @@ export default {
   ...MDXComponents,
   // Map the "<Highlight>" tag to our Highlight component
   // `Highlight` will receive all props that were passed to `<Highlight>` in MDX
-  Carousel, Tabs, TabItem, Accordion, Card, Quote, Video, Filter, FilterItem, Button, CardsGrid, CardsGridItem
+  Carousel, CarouselItem, Tabs, TabItem, Accordion, Card, Quote, Video, Filter, FilterItem, Button, CardsGrid, CardsGridItem
 };

@@ -127,13 +127,35 @@ You can add images in two ways on our doc.
 ## Gallery/Slider
 Use this to showcase a series of images or content that benefit from a swiping or sliding interface.
 
-- **Codes**
+- **Code**
 ```jsx
 <Carousel width="370" height="260" images={['/img/concepts/rootstock-tech-stack.svg', ... , '/img/metamask-gas-limit.png']} />
 ```
 **Result**
 <Carousel width="370" height="260" images={['/img/concepts/rootstock-tech-stack.svg', '/img/legacy-private-key.png', '/img/metamask-gas-limit.png', '/img/add-ganache-1.png', '/img/add-ganache-2.png']} />
 
+## Gallery/Slider images with links.
+
+- **Code**
+```jsx
+<Carousel width="370" height="260" >
+  <CarouselItem image="/img/concepts/rootstock-tech-stack.svg" href="/resources" />
+  <CarouselItem image="/img/legacy-private-key.png" href="https://rootstock.io" target="_blank" />
+  <CarouselItem image="/img/metamask-gas-limit.png" href="/dev-tools" />
+  <CarouselItem image="/img/add-ganache-1.png" />
+  <CarouselItem image="/img/add-ganache-2.png" href="/developers" />
+</Carousel>
+
+```
+**Result**
+
+<Carousel width="370" height="260" >
+<CarouselItem image="/img/concepts/rootstock-tech-stack.svg" href="/resources" />
+<CarouselItem image="/img/legacy-private-key.png" href="https://rootstock.io" target="_blank" />
+<CarouselItem image="/img/metamask-gas-limit.png" href="/dev-tools" />
+<CarouselItem image="/img/add-ganache-1.png" />
+<CarouselItem image="/img/add-ganache-2.png" href="/developers" />
+</Carousel>
 
 ## Video
 Use this to demonstrate functionalities, complex explanations, or walkthroughs.
