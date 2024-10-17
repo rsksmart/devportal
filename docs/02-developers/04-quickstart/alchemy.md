@@ -28,11 +28,11 @@ Before you start using the Alchemy RPC API to interact with the Rootstock networ
 - dApp Developers looking to interact with the Rootstock nodes.
 
 ## Features
-### Easy Setup:
+**Easy Setup:**
 - Create an API key effortlessly to initiate development.
 - Make the First API call in minutes.
 
-### API Key Authentication:
+**API Key Authentication:**
 - Provides secure authentication for decentralized applications (dApps).
 - Limits API requests on a daily or monthly basis.
 
@@ -68,7 +68,7 @@ The next screen will display the services available for the Rootstock network, i
 ![Alchemy - App information](/img/developers/quickstart/5-alchemy.png)
 
 #### Set up Tab:
-In the `Setup` tab you will see different options for using the rpc node, depending on the ***method***, ***language*** and ***SDK*** you need to use for it.
+In the `Set up` tab you will see different options for using the rpc node, depending on the ***method***, ***language*** and ***SDK*** you need to use for it.
 
 By default, the dashboard shows an example for the `get latest block` call on `Javascript` and `viem`.
 
