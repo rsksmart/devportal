@@ -125,3 +125,12 @@ In this tab, you will find the Rootstock card, where you can copy the RPC url yo
 
 #### Settings Tab
 In this tab you find different configuration options of your app, like advanced config, allow list, JWT keys, or delete your app from the **Alchemy** dashboard. 
+
+## Final Comments
+
+The use of RPC API is an important part of the frontend and backend interaction with the blockchain. Alchemy is a poweful platform which contains a lot of tools that can be used for developers to create their code faster.
+
+## Useful Links
+
+- [Alchemy Dashboard](https://www.alchemy.com/)
+- [Rootstock RPC API Service](/developers/smart-contracts/foundry/)
