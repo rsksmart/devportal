@@ -18,7 +18,7 @@ In this guide, you will learn:
     <a class="green" href="http://rpc.rootstock.io/">Use the RPC API</a>
 </div>
 
-## Who is it for?
+## Who Is It For?
 
 *  dApp Developers looking to interact with the Rootstock nodes
 
@@ -44,7 +44,7 @@ Visit the [Rootstock RPC API](https://rpc.rootstock.io/)
     <img width="50%" src="/img/tools/rpc-api/01-rpc-api-landing.png" alt="RPC API Landing Page"/>
 </div>
 
-### Get a FREE account
+### Get A FREE Account
 
 To create an account, click on _Sign up_
 
@@ -52,7 +52,7 @@ To create an account, click on _Sign up_
     <img width="50%" src="/img/tools/rpc-api/02-sign-up.png" alt="RPC API Sign Up"/>
 </div>
 
-### Get an API Key
+### Get An API Key
 
 To get an API key:
 
@@ -68,7 +68,7 @@ Choose a name to identify your `apikey`, and the Network (either `Testnet` or `M
     <img width="50%" src="/img/tools/rpc-api/04-create-api-key.png" alt="Create API key"/>
 </div>
 
-### Make first API Call
+### Make First API Call
 
 Click on the newly created `apikey` to get the details:
 
