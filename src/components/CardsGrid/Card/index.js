@@ -4,7 +4,7 @@ import Button from "/src/components/Button";
 
 import styles from "./styles.module.scss";
 
-export default function FilterItem({value, subtitle, title, description, color = "orange", className, linkHref, linkTitle, image, ...props}) {
+export default function Card({value, subtitle, title, description, color = "orange", className, linkHref, linkTitle, image, ...props}) {
 
   return <div className={clsx(`border position-relative d-flex flex-column align-items-start gap-16 gap-lg-24 rounded-20 px-16 py-24 p-lg-24`, className, styles.Card)} style={{'--rsk-card-main-color' : `var(--bs-${color})`}}>
     {image && (

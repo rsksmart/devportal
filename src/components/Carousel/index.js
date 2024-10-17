@@ -4,9 +4,9 @@ import {Splide, SplideSlide, SplideTrack} from '@splidejs/react-splide';
 import Button from "/src/components/Button";
 import styles from './styles.module.scss';
 
-export default function Carousel({images = [], width = 370, height = 206, className, ...props}) {
+export default function Carousel({images = [], width = 370, height = 206, className, children, ...props}) {
 
-  return images?.length > 0 && (
+  return (
     <Splide hasTrack={ false }
             className={clsx(className, styles.Carousel)}
             options={
@@ -30,10 +30,13 @@ export default function Carousel({images = [], width = 370, height = 206, classN
       <SplideTrack>
         {images.map((src, index) => (
             <SplideSlide key={index}>
-              <img src={src} alt={`Image ${index + 1}`} width={width} height={height}/>
+              <div className="slide-wrap">
+                <img src={src} alt={`Image ${index + 1}`} width={width} height={height}/>
+              </div>
             </SplideSlide>
           )
         )}
+        {children}
       </SplideTrack>
       <div className="splide__arrows justify-content-end d-flex gap-24 align-items-center pt-32">
         <Button className="splide__arrow splide__arrow--prev py-3 px-28" size={'sm'}>

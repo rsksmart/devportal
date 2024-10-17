@@ -4,7 +4,7 @@ title: Components
 
 # Components
 
-## Heading 
+## Heading
 Use this to organize your content and create a hierarchy for scannability. Use `Heading one` for the main title, `Heading two` for subheadings, and so on.
 
 - **Code**
@@ -27,7 +27,7 @@ Use this to organize your content and create a hierarchy for scannability. Use `
 ###### Heading level 6
 
 ## Lists
-Use this to present items in a specific sequence (ordered list) or without order (unordered list). 
+Use this to present items in a specific sequence (ordered list) or without order (unordered list).
 
 
 #### Unordered list
@@ -127,13 +127,35 @@ You can add images in two ways on our doc.
 ## Gallery/Slider
 Use this to showcase a series of images or content that benefit from a swiping or sliding interface.
 
-- **Codes**
+- **Code**
 ```jsx
 <Carousel width="370" height="260" images={['/img/concepts/rootstock-tech-stack.svg', ... , '/img/metamask-gas-limit.png']} />
 ```
 **Result**
 <Carousel width="370" height="260" images={['/img/concepts/rootstock-tech-stack.svg', '/img/legacy-private-key.png', '/img/metamask-gas-limit.png', '/img/add-ganache-1.png', '/img/add-ganache-2.png']} />
 
+## Gallery/Slider images with links.
+
+- **Code**
+```jsx
+<Carousel width="370" height="260" >
+  <CarouselItem image="/img/concepts/rootstock-tech-stack.svg" href="/resources" />
+  <CarouselItem image="/img/legacy-private-key.png" href="https://rootstock.io" target="_blank" />
+  <CarouselItem image="/img/metamask-gas-limit.png" href="/dev-tools" />
+  <CarouselItem image="/img/add-ganache-1.png" />
+  <CarouselItem image="/img/add-ganache-2.png" href="/developers" />
+</Carousel>
+
+```
+**Result**
+
+<Carousel width="370" height="260" >
+<CarouselItem image="/img/concepts/rootstock-tech-stack.svg" href="/resources" />
+<CarouselItem image="/img/legacy-private-key.png" href="https://rootstock.io" target="_blank" />
+<CarouselItem image="/img/metamask-gas-limit.png" href="/dev-tools" />
+<CarouselItem image="/img/add-ganache-1.png" />
+<CarouselItem image="/img/add-ganache-2.png" href="/developers" />
+</Carousel>
 
 ## Video
 Use this to demonstrate functionalities, complex explanations, or walkthroughs.
@@ -156,7 +178,7 @@ Use this to demonstrate functionalities, complex explanations, or walkthroughs.
   <Video url="/video/video.mp4" />
   ```
   - **Result**
-  
+
   <Video url="/video/video.mp4" />
 
 - MP4 video with custom thumbnail
@@ -450,7 +472,7 @@ Cards displaying textual information only.
 <Card
 title="Card title first line" description="Mauris maecenas et amet arcu urna interdum aliquet vulputate sed. Quam sit sit tincidunt vitae." link="/developers/" />
 
- 
+
 
 
 <br/>
@@ -563,5 +585,96 @@ linkTitle="Learn more"
 description="Get an API key & make your first API call in minutes. Get an API key & make your first API call in minutes"
 />
 </Filter>
+
+
+## Grid of Cards no filter
+- **Code**
+
+```jsx
+<CardsGrid>
+  <CardsGridItem
+    image="/img/deffiant-icon.svg"
+    title="Defiant"
+    subtitle="app"
+    color="green"
+    description="Get ... in minutes"
+  />
+  ...
+  <CardsGridItem
+    image="/img/deffiant-icon.svg"
+    title="Defiant"
+    subtitle="wallet"
+    color="cyan"
+    linkHref="/developers/"
+    linkTitle="Learn more"
+    description="Get ... in minutes"
+  />
+</CardsGrid>
+```
+
+**Result**
+<CardsGrid>
+<CardsGridItem
+image="/img/deffiant-icon.svg"
+title="Defiant"
+subtitle="app"
+color="green"
+description="Get an API key & make your first API call in minutes"
+/>
+<CardsGridItem
+image="/img/deffiant-icon.svg"
+title="Defiant"
+subtitle="app"
+color="green"
+description="Get an API key & make your first API call in minutes"
+/>
+<CardsGridItem
+image="/img/deffiant-icon.svg"
+title="Defiant"
+subtitle="exchanges"
+description="Get an API key & make your first API call in minutes"
+/>
+<CardsGridItem
+image="/img/deffiant-icon.svg"
+title="Defiant"
+subtitle="wallet"
+color="pink"
+linkHref="/developers/"
+linkTitle="Learn more"
+description="Get an API key & make your first API call in minutes"
+/>
+<CardsGridItem
+image="/img/deffiant-icon.svg"
+title="Defiant"
+subtitle="wallet"
+color="pink"
+linkHref="/developers/"
+linkTitle="Learn more"
+description="Get an API key & make your first API call in minutes"
+/>
+<CardsGridItem
+image="/img/deffiant-icon.svg"
+title="Defiant"
+subtitle="wallet"
+color="cyan"
+linkHref="/developers/"
+linkTitle="Learn more"
+description="Get an API key & make your first API call in minutes. Get an API key & make your first API call in minutes"
+/>
+</CardsGrid>
+
+
+## Buttons
+- **Code**
+
+```jsx
+<Button href="/dev-tools/">Default Button</Button>
+<Button size="sm" href="/developers/">Small Button</Button>
+<Button size="lg" href="/resources/">Large Button</Button>
+```
+Default <Button href="/dev-tools/">Default Button</Button>, small <Button size="sm" href="/developers/">Small Button</Button>, and large <Button size="lg" href="/resources/">Large Button</Button> buttons for different use cases.
+
+
+
 
 
