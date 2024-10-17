@@ -564,6 +564,84 @@ description="Get an API key & make your first API call in minutes. Get an API ke
 />
 </Filter>
 
+
+## Grid of Cards no filter
+- **Code**
+
+```jsx
+<CardsGrid>
+  <CardsGridItem
+    image="/img/deffiant-icon.svg"
+    title="Defiant"
+    subtitle="app"
+    color="green"
+    description="Get ... in minutes"
+  />
+  ...
+  <CardsGridItem
+    image="/img/deffiant-icon.svg"
+    title="Defiant"
+    subtitle="wallet"
+    color="cyan"
+    linkHref="/developers/"
+    linkTitle="Learn more"
+    description="Get ... in minutes"
+  />
+</CardsGrid>
+```
+
+**Result**
+<CardsGrid>
+<CardsGridItem
+image="/img/deffiant-icon.svg"
+title="Defiant"
+subtitle="app"
+color="green"
+description="Get an API key & make your first API call in minutes"
+/>
+<CardsGridItem
+image="/img/deffiant-icon.svg"
+title="Defiant"
+subtitle="app"
+color="green"
+description="Get an API key & make your first API call in minutes"
+/>
+<CardsGridItem
+image="/img/deffiant-icon.svg"
+title="Defiant"
+subtitle="exchanges"
+description="Get an API key & make your first API call in minutes"
+/>
+<CardsGridItem
+image="/img/deffiant-icon.svg"
+title="Defiant"
+subtitle="wallet"
+color="pink"
+linkHref="/developers/"
+linkTitle="Learn more"
+description="Get an API key & make your first API call in minutes"
+/>
+<CardsGridItem
+image="/img/deffiant-icon.svg"
+title="Defiant"
+subtitle="wallet"
+color="pink"
+linkHref="/developers/"
+linkTitle="Learn more"
+description="Get an API key & make your first API call in minutes"
+/>
+<CardsGridItem
+image="/img/deffiant-icon.svg"
+title="Defiant"
+subtitle="wallet"
+color="cyan"
+linkHref="/developers/"
+linkTitle="Learn more"
+description="Get an API key & make your first API call in minutes. Get an API key & make your first API call in minutes"
+/>
+</CardsGrid>
+
+
 ## Buttons
 - **Code**
 
