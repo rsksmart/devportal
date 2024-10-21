@@ -2,20 +2,18 @@
 sidebar_position: 1
 title: Introduction to Runes 
 sidebar_label: Introduction to Runes
-tags: [rsk, rootstock, resources, tutorials, port to rootstock, Ethereum, dApps, smart contracts]
-description: "The Rootstock Runes Mock Bridge opens up exciting opportunities for developers to build Runes-focused applications within the Rootstock ecosystem. This bridge introduces three core solutions:
-1. Mock Bridge,
-2. Marketplace,
-3. Giveaway Engine"
+tags: [rsk, rootstock, resources, tutorials, runes, nft, Ethereum, dApps, smart contracts]
+description: "The Rootstock Runes Mock Bridge opens up exciting opportunities for developers to build Runes-focused applications within the Rootstock ecosystem. This bridge introduces three core solutions: Mock Bridge, Marketplace, Giveaway Engine"
 ---
 
 The Rootstock Runes Mock Bridge opens up exciting opportunities for developers to build Runes-focused applications within the Rootstock ecosystem. This bridge introduces three core solutions:
 
-| **Component**         | **Description**                                                             |
-|-----------------------|-----------------------------------------------------------------------------|
-| **Mock Bridge**       | Facilitates transferring Runes between different blockchain networks.       |
-| **Marketplace**       | A platform for trading and exchanging Runes tokens.                        |
-| **Giveaway Engine**   | A system for distributing tokens in a structured or promotional manner.    |
+| **Component**         | **Description**                                                             | **Repo**                                                |
+|-----------------------|-----------------------------------------------------------------------------|---------------------------------------------------------|
+| **Mock Bridge**       | Facilitates transferring Runes between different blockchain networks.       | [Link](https://github.com/rsksmart/rsk-runes)           |
+| **Marketplace**       | A platform for trading and exchanging Runes tokens.                         | N/A                                                     |
+| **Giveaway Engine**   | A system for distributing tokens in a structured or promotional manner.      | [Link](https://github.com/rsksmart/airdrop-ui.git)      |
+
 
 
 These tools allow developers to create diverse Runes-based applications, further expanding the Rootstock ecosystem and promoting innovation.

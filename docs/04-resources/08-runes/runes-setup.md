@@ -21,7 +21,7 @@ Before getting started with the Runes Mock Bridge, ensure you have the following
 4. **Rootstock Account**  
    You'll need an account on the[RPC API Dashboard](https://dashboard.rpc.rootstock.io/login). This will allow you to create API keys for interacting with the Rootstock blockchain via RPC.  
 5. **Local Copy of `bc-runes-js` Package**  
-   Clone the [`bc-runes-js`](https://github.com/IOVgomezdn/bc-runes-js) package to your local environment. This package is necessary for generating a Taproot address and Wallet Import Format (WIF) key, which are required for the bridge.
+   Clone the [`bc-runes-js`](https://github.com/rsksmart/bc-runes-js) package to your local environment. This package is necessary for generating a Taproot address and Wallet Import Format (WIF) key, which are required for the bridge.
 
 Once these prerequisites are in place, you'll be ready to proceed with setting up and using the Runes Mock Bridge effectively.
 
@@ -91,10 +91,10 @@ This variable is used to specify the address of your deployed ERC-1155 contract,
 
 #### **6\. `NEXT_PUBLIC_TAPROOT_ADDRESS='your taproot address'`**
 
-Taproot addresses are used for Bitcoin transactions with improved privacy and flexibility. The Runes Mock Bridge requires a Taproot address for interacting with Bitcoin's taproot transactions.
+Taproot addresses are used for Bitcoin transactions with improved privacy and flexibility. The [Runes Mock Bridge](https://github.com/rsksmart/rsk-runes) requires a Taproot address for interacting with Bitcoin's taproot transactions.
 
 * You can generate a Taproot address using a special package we’ve created. Follow these steps:  
-  1. Clone the repository from [bc-runes-js](https://github.com/IOVgomezdn/bc-runes-js.git).  
+  1. Clone the repository from [bc-runes-js](https://github.com/rsksmart/bc-runes-js.git).  
   2. Run `npm install` to install all the required dependencies.  
   3. Run `npm run generate-address` to generate the Taproot address.  
 * Once generated, copy the Taproot address from the output and paste it into this variable.
