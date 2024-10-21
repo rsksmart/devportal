@@ -8,12 +8,19 @@ description: "The Rootstock Runes Mock Bridge opens up exciting opportunities fo
 
 The Rootstock Runes Mock Bridge opens up exciting opportunities for developers to build Runes-focused applications within the Rootstock ecosystem. This bridge introduces three core solutions:
 
-| **Component**         | **Description**                                                             | **Repo**                                                |
-|-----------------------|-----------------------------------------------------------------------------|---------------------------------------------------------|
-| **Mock Bridge**       | Facilitates transferring Runes between different blockchain networks.       | [Link](https://github.com/rsksmart/rsk-runes)           |
-| **Marketplace**       | A platform for trading and exchanging Runes tokens.                         | N/A                                                     |
-| **Giveaway Engine**   | A system for distributing tokens in a structured or promotional manner.      | [Link](https://github.com/rsksmart/airdrop-ui.git)      |
+Here’s the table in a list format in Markdown:
 
+- **Mock Bridge**  
+  - Description: Facilitates transferring Runes between different blockchain networks.  
+  - Repo: [Link](https://github.com/rsksmart/rsk-runes)
+
+- **Marketplace**  
+  - Description: A platform for trading and exchanging Runes tokens.  
+  - Repo: N/A
+
+- **Giveaway Engine**  
+  - Description: A system for distributing tokens in a structured or promotional manner.  
+  - Repo: [Link](https://github.com/rsksmart/airdrop-ui.git)
 
 
 These tools allow developers to create diverse Runes-based applications, further expanding the Rootstock ecosystem and promoting innovation.
