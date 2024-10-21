@@ -53,7 +53,7 @@ This guide is designed to help both beginners and experienced developers get sta
     <ol>
       <li>
         <strong>Knowledge of Blockchain and Smart Contracts</strong><br />
-        You should be comfortable with <strong>blockchain principles</strong> and <strong>decentralized networks</strong>.
+        You should be comfortable with <strong>[blockchain principles](https://rsk.thinkific.com/courses/blockchain-developer)</strong> and <strong>decentralized networks</strong>.
       </li>
       <li>
         <strong>Experience with Web3 Development Tools</strong><br />
@@ -72,10 +72,10 @@ This guide is designed to help both beginners and experienced developers get sta
         Knowledge of <strong>account abstraction</strong>, <strong>automation frameworks</strong> like <strong>Cucumber</strong>, and other advanced Web3 concepts can help you explore more sophisticated solutions.
       </li>
     </ol>
-    <p>Access our <a href="#">Quickstart Guide for Experienced Developers</a> to get started.</p>
+   
+ <p>Access our [Guide for Experienced Developers](/developers/quickstart/) to get started.</p>
   </TabItem>
 </Tabs>
-
 
 
 ## Tools to Speed Up Your Development
@@ -104,14 +104,6 @@ For more information on specific requirements for developing on Rootstock, Visit
 />
 
 <br></br>
-
-<Card
-  title="Starter Kits"
-  description="Starter Kits for easy Rootstock Development."
-  link="/developers/quickstart/"
-/>
-
-<br/>
 
 ## Starter Kits
 
