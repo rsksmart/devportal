@@ -9,7 +9,7 @@ tags: [guides, developers, smart contracts, rsk, rootstock, foundry, dApps]
 In this section, you'll deploy a `counter` smart contract to the Rootstock network using Foundry.
 
 ## Step 1: Deployment Script
-You will see a directory called `deploy` in the root of your project. This is where you can view/write your deployment scripts. The demo `counter.sol` comes with a deployment script `counter.s.sol`, which contains:
+You will see a directory called `deploy` in the root of your project. This is where you can view/write your deployment scripts. The demo `counter.sol` comes with a deployment script `counter.s.sol`, please copy the following code into the file:
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -30,15 +30,18 @@ contract CounterScript is Script {
   }
 }
 ```
+:::info[Info]
+- Demo comes with Foundry's default sender, in this script we are using the sender's private key to deploy the contract ```vm.envUint("PRIVATE_KEY")```.
+:::
 ## Step 2: Deploy Your Contract on Rootstock Network
 Run the following command, replacing `https://public-node.testnet.rsk.co` with either `rskTestnet` or `rskMainnet` rpc url if you have, depending on your desired deployment environment:
 
 ```bash
-forge script script/Deploy.s.sol --rpc-url https://public-node.testnet.rsk.co --broadcast --legacy
+forge script script/Counter.s.sol --rpc-url https://public-node.testnet.rsk.co --broadcast --legacy --evm-version london
 ```
 :::info[Info]
-
 - [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) is not supported or not activated on the Rootstock RPC url
+- To avoid Foundry's compatibility issues, we are using the `--evm-version london` flag.
 - The `--legacy` flag is passed to use legacy transactions instead of `EIP-1559`.
 - You can remove the `--broadcast` flag if you wan to simulate the transaction without broadcasting it.
 :::
