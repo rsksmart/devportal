@@ -90,7 +90,7 @@ After obtaining the RPC URLs, create a file named `.env` in your project's root 
 PRIVATE_KEY: Your private key (e.g., from your Metamask account details).
 ```
 :::tip[Tip]
-Ensure the private key copied starts with `0x123...`
+Ensure the private key copied starts with `0x...`
 :::
 
 
@@ -123,11 +123,12 @@ This section deploys an ERC20 token contract (fungible token) on the Rootstock n
 Run the following command, replacing `https://public-node.testnet.rsk.co` with either `rskTestnet` or `rskMainnet` rpc url if you have the testnet and mainnet environments configured for your desired deployment environment, for this guide, we will use the public node url:
 
 ```bash
-forge script script/Deploy.s.sol --rpc-url https://public-node.testnet.rsk.co --broadcast --legacy
+forge script script/Deploy.s.sol --rpc-url https://public-node.testnet.rsk.co --broadcast --legacy --evm-version london
 ```
 :::info[Info]
 
-- [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) is not supported or not activated on the Rootstock RPC url
+- [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) is not supported or not activated on the Rootstock RPC url.
+- To avoid Foundry's compatibility issues, we are using the `--evm-version london` flag.
 - The `--legacy` flag is passed to use legacy transactions instead of `EIP-1559`.
 - You can remove the `--broadcast` flag if you want to simulate the transaction without broadcasting it.
 :::
