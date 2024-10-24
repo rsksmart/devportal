@@ -85,7 +85,7 @@ These tools will make it easy for you to build on Rootstock:
 - **[Remix IDE](/developers/quickstart/remix/)**: An integrated development environment tailored for smart contract development.
 - **[Hardhat](/developers/quickstart/hardhat/)**: A flexible development environment for building and deploying smart contracts.
 - **[Web3.py](/developers/quickstart/web3-python/)**: JavaScript and Python libraries for interacting with the Ethereum blockchain.
-- **[RSK Explorer](https://explorer.testnet.rootstock.io/)**: A blockchain explorer to view transaction details on the Rootstock network.
+- **[Rootstock Explorer](https://explorer.testnet.rootstock.io/)**: A blockchain explorer to view transaction details on the Rootstock network.
 - **[RPC API](/developers/rpc-api/)**: The RPC API provides a seamless and intuitive web interface for developers to interact with Rootstock nodes via JSON-RPC methods.
 
 Explore the [full list of tools and libraries](/dev-tools/) available on Rootstock.
