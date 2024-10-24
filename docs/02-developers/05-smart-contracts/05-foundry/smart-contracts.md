@@ -22,18 +22,6 @@ $ tree . -d -L 1
 4 directories
 ```
 
-The `src` directory contains counter smart contract with test written in the `test` directory. Now, let's build the foundry project.
-
-```bash
-forge build
-```
-
-And then run tests.
-
-```bash
-forge test
-```
-
 ## Demo smart contract
 In the `src` folder, you will find a simple smart contract called `counter.sol`. Which contains a simple counter contract.
 

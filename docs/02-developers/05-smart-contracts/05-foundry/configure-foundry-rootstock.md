@@ -19,6 +19,7 @@ ROOTSTOCK_RPC_URL=https://rpc.testnet.rootstock.io/{YOUR_APIKEY}
 PRIVATE_KEY=0x...
 ```
 :::info[Info]
+* Your PRIVATE_KEY has to be formatted correctly, so it has to start with `0x`.
 * To obtain a Rootstock Rpc Url, visit the [RPC API DASHBOARD](https://rpc.rootstock.io/), create an account and get your testnet or mainnet rpc url.
 :::
 
