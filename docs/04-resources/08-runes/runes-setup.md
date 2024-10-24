@@ -71,8 +71,6 @@ This value remains constant and doesn't need to be changed, as it will always po
 
 This is the URL for the **Rootstock Testnet Explorer**, where you can track transactions related to the Rootstock network.
 
-* **Note:** 
-
 :::note[Note]
 Like the Blockstream explorer URL, this value is also constant and doesn't need to be changed. It is set to the correct Rootstock testnet explorer.
 :::
