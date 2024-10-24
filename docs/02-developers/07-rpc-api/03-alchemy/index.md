@@ -14,7 +14,6 @@ In this guide you will learn:
 - How to create an **Alchemy** project to make your first API call.
 - View some options to interact with the node RPC with the **Alchemy** sdk and tools.
 
-
 ## Prerequisites
 
 Before you start this guide, make sure you have the following:
@@ -28,11 +27,11 @@ Before you start this guide, make sure you have the following:
 - Developers looking to interact with the Rootstock nodes.
 
 ## Features
-### Easy Setup:
+### Easy Setup
 - Create an API key effortlessly to initiate development.
 - Make your first API call in minutes.
 
-### API Key Authentication:
+### API Key Authentication
 - Provides secure authentication for decentralized applications (dApps).
 - Limits API requests on a daily or monthly basis.
 
@@ -67,7 +66,7 @@ The next screen will display the services available for the Rootstock network, i
 
 ![Alchemy - App information](/img/developers/quickstart/5-alchemy.png)
 
-#### Set Up Tab:
+#### Set Up Tab
 In the `Setup` tab you will see different options for using the rpc node, depending on the ***Method***, ***Language*** and ***SDK*** you need to use for it.
 
 By default, the dashboard shows an example for the `get latest block` call on `Javascript` and `Viem`.
@@ -90,7 +89,7 @@ console.log(block);
 
 However, you will have different language options available for the rpc call, included `CLI` (command line interface).
 
-#### Language Options:
+#### Language Options
 - **CLI (Command Line Interface):** No SDK options are available with this choice.
 - **JavaScript:** You can choose from ***Viem***, ***Ethers.js***, or ***Fetch*** as your SDK options.
 - **TypeScript:** Only the ***Viem*** SDK option is available for selection.
@@ -108,7 +107,8 @@ curl -X POST https://rootstock-mainnet.g.alchemy.com/v2/<API_KEY>\
   "id": 1
 }'
 ```
-And the response should be something like this:
+
+And the response should look like this:
 ```json
 {"jsonrpc":"2.0","id":1,"result":{"number":"0x67a9c4","hash":"0xe3d0d2b47eb0a06f04cea614355a6ba10935c62596e188e3d27dcafb7ddc746f","parentHash":"0x140a94c77bc08077133d874405252b4463bcbfe500cc7a9e48f4626cdfd91104","sha3Uncles":"0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347","logsBloom":"0x00000000000000000000101000000000000080000040000000000000000000000020400000010000000000000000001000002000000000000008800000000000000000000000000000000000000008000000000000000001000000000000000000000000000000000040000000000000000000000000000000000000020000000001000000000081000000000004000000000000000000000000000020000000000000000200100020000000000000000180000000000080001000020000000000000001000000000000000000008000000030000000000000200000100000000000000000000000002004000880000000000400000000000000200010000200" …
 ```
@@ -126,11 +126,9 @@ In this tab, you will find the Rootstock card, where you can copy the RPC url yo
 #### Settings Tab
 In this tab you find different configuration options of your app, like advanced config, allow list, JWT keys, or delete your app from the **Alchemy** dashboard. 
 
-## Final Comments
-
+## Conclusion
 The use of RPC API is an important part of the frontend and backend interaction with the blockchain. Alchemy is a poweful platform which contains a lot of tools that can be used for developers to create their code faster.
 
 ## Useful Links
-
 - [Alchemy Dashboard](https://www.alchemy.com/)
 - [Rootstock RPC API Service](/developers/smart-contracts/foundry/)
