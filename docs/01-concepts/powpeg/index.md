@@ -13,6 +13,7 @@ Rootstock’s **PowPeg** protocol, has matured from its inception in 2018 as a f
 - The PowPeg App is available on [Testnet](https://powpeg.testnet.rootstock.io/) and [Mainnet](https://powpeg.rootstock.io/). 
 - For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the PowPeg, please refer to the [PowPeg user guide](/resources/guides/powpeg-app/).
 - Get information on the signatories and attestion in the [PowPeg HSM Firmware Attestation](/concepts/powpeg/hsm-firmware-attestation) section.
+- Read [Introducing Fast Mode: Getting RBTC via the PowPeg, but Faster](https://blog.rootstock.io/noticia/get-rbtc-fast-mode/) to learn about the difference between Native Mode and Fast Modes when using the PowPeg.
 :::
 
 ## The History of the PowPeg Protocol

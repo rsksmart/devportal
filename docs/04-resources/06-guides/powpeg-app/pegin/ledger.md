@@ -72,6 +72,8 @@ Here, we are using the ledger hardware wallet to interact with the PowPeg. Selec
 
 The pop up shown in the image below describes the duration of the peg-in process which requires at least 100 confirmations on the Bitcoin network, this gives an estimate of around 17 hours in total. It also describes the three main steps involved which is; connecting to the hardware wallet, sending a signed transaction to the BTC network until the corresponding RBTC value is made available in the destination wallet and a receipt for this transaction.
 
+> Note: Using fast mode, pegin time has been significantly reduced to ~20 mins.
+
 ![Read popup info](/img/resources/powpeg/pegin-popup.png)
 
 > Click the checkbox - “Don’t show again” to turn off this pop-up in the future or close temporarily.
