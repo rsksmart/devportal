@@ -25,6 +25,7 @@
     "@mdx-js/react": "^3.0.0",
     "@mendable/search": "^0.0.206",
     "@splidejs/react-splide": "^0.7.12",
+    "badge-maker": "^4.1.0",
     "bootstrap": "5.3.3",
     "clsx": "^2.0.0",
     "docusaurus-plugin-sass": "^0.2.5",

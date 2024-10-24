@@ -4,7 +4,7 @@ title: Components
 
 # Components
 
-## Heading 
+## Heading
 Use this to organize your content and create a hierarchy for scannability. Use `Heading one` for the main title, `Heading two` for subheadings, and so on.
 
 - **Code**
@@ -27,7 +27,7 @@ Use this to organize your content and create a hierarchy for scannability. Use `
 ###### Heading level 6
 
 ## Lists
-Use this to present items in a specific sequence (ordered list) or without order (unordered list). 
+Use this to present items in a specific sequence (ordered list) or without order (unordered list).
 
 
 #### Unordered list
@@ -156,7 +156,7 @@ Use this to demonstrate functionalities, complex explanations, or walkthroughs.
   <Video url="/video/video.mp4" />
   ```
   - **Result**
-  
+
   <Video url="/video/video.mp4" />
 
 - MP4 video with custom thumbnail
@@ -450,7 +450,7 @@ Cards displaying textual information only.
 <Card
 title="Card title first line" description="Mauris maecenas et amet arcu urna interdum aliquet vulputate sed. Quam sit sit tincidunt vitae." link="/developers/" />
 
- 
+
 
 
 <br/>
