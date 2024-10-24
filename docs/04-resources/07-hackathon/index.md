@@ -92,7 +92,7 @@ Explore the [full list of tools and libraries](/dev-tools/) available on Rootsto
 
 :::tip[Prerequisites page]
 
-For more information on specific requirements for developing on Rootstock, Visit the [Prerequisites page](/developers/requirements/") page.
+For more information on specific requirements for developing on Rootstock, Visit the [Prerequisites page](/developers/requirements/) page.
 
 :::
 
