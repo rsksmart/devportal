@@ -19,7 +19,7 @@ The features of the Bitcoin Solidity Helper library include:
 2. Bitcoin transaction hashing: This calculates the cryptographic hash of a Bitcoin transaction, ensuring its authenticity and integrity. It receives a raw tx and returns its hash.
 3. Bitcoin transaction output script validation: This verifies the validity and type of output scripts within a Bitcoin transaction, allowing for specific data extraction. It receives a raw output script, validates that it is from a specific type and returns a result. E.g. receive a raw null-data script and return the embedded data in it
 4. Bitcoin address generation: is able to generate Bitcoin the address from a specific script and also to validate if a given address was generated from a script or not.
-Bitcoin address validation: This checks if a Bitcoin address conforms to a particular type or format. It validates if a Bitcoin address is of a given type or not.
+5. Bitcoin address validation: This checks if a Bitcoin address conforms to a particular type or format. It validates if a Bitcoin address is of a given type or not.
 
 ## Prerequisites
 * Knowledge of Solidity and how to write smart contracts.
@@ -99,7 +99,7 @@ Then the user is able to perform any validation:
 require(expectedValue <= outputs[0].value, "incorrect amount");
 ```
 
-:::info[Important]
+:::info[Info]
 The value field of the output structure is in satoshis.
 :::
 
