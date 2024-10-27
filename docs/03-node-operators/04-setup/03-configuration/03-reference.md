@@ -352,7 +352,12 @@ for detailed information about the `miner` configuration.
 
 The `stableGasPrice` feature allows miners to set a predictable gas price for transactions, establishing a minimum rate that is less affected by market volatility and better aligned with fiat currency values like USD or EUR. This enhances cost management and improves overall transaction efficiency.
 
-**Example**
+The source configuration supports two methods: ETH_CALL and HTTP_GET.
+
+- **ETH_CALL**: This method retrieves the gas price directly from a specified smart contract, allowing for real-time adjustments based on the contract's logic.
+- **HTTP_GET**: This method fetches gas price data from an external API, providing flexibility to pull market data from trusted sources.
+
+**Example of ETH_CALL**
 ```plaintext
 stableGasPrice {
     enabled = true
@@ -374,6 +379,25 @@ stableGasPrice {
 - **Source**: Gets the gas price from a specific smart contract
 - **Minimum Gas Price**: Ensures the miner uses a baseline price to avoid setting it too low
 - **Refresh Rate**: Updates the gas price
+
+**Example of HTTP_GET**
+```plaintext
+stableGasPrice {
+    enabled = true
+
+    source {
+        method = "HTTP_GET"
+        params {
+            url = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd"
+            jsonPath = "/bitcoin/usd"
+            timeout = 5 seconds
+        }
+    }
+
+    minStableGasPrice = 476190000000 # Minimum gas price
+    refreshRate = 6 hours          # How often to check for updates
+}
+```
 
 ## blockchain.config.name
 
