@@ -152,7 +152,7 @@ ul{
     }
   }
 
-  img{
+  img:not([src*="shields.io"]){
     border: 1px solid var(--rsk-image-border-color);
     border-radius: 10px;
     max-height: 500px; //TODO test if works for all images

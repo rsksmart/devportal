@@ -4,6 +4,14 @@ title: Components
 
 # Components
 
+![Static Badge](https://img.shields.io/badge/any_text-you_like-blue)
+![Static Badge](https://img.shields.io/badge/build-passing-brightgreen)
+[![Netlify](https://img.shields.io/badge/WP-%2300555.svg?logo=wordpress&logoColor=#00C7B7)](#)
+
+<Badge title="Rootstock Dev Portal" color="pink" />
+<Badge title="Rootstock Dev Portal" href="https://rootstock.io/" color="purple" />
+<Badge title="Rootstock Dev Portal" href="https://rootstock.io/" color="8A2BE2" label="Dev label 2" labelColor="blue" logo="bitcoin" />
+
 ## Heading
 Use this to organize your content and create a hierarchy for scannability. Use `Heading one` for the main title, `Heading two` for subheadings, and so on.
 
