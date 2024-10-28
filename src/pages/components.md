@@ -8,7 +8,9 @@ title: Components
 ![Static Badge](https://img.shields.io/badge/build-passing-brightgreen)
 [![Netlify](https://img.shields.io/badge/WP-%2300555.svg?logo=wordpress&logoColor=#00C7B7)](#)
 
+<Badge title="Rootstock Dev Portal" />
 <Badge title="Rootstock Dev Portal" color="pink" />
+<Badge version="2.0" />
 <Badge title="Rootstock Dev Portal" href="https://rootstock.io/" color="purple" />
 <Badge title="Rootstock Dev Portal" href="https://rootstock.io/" color="8A2BE2" label="Dev label 2" labelColor="blue" logo="bitcoin" />
 
