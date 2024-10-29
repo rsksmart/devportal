@@ -1,14 +1,14 @@
 ---
 sidebar_label: RPC API
 sidebar_position: 5
-title: Get your RPC API Key to interact with Rootstock
+title: Interact with Rootstock via JSON-RPC
 tags: [faucet, Rootstock, testnet, address, wallet, tools, alchemy, rpc, api]
 description: "RPC API services for interacting with Rootstock network"
 ---
 
-Get started with the RPC API service to interact with Rootstock nodes.
+Get started interacting with Rootstock with using JSON-RPC methods with different service providers.
 
-| Resource                                                       | Description                                                                                    |
+| Provider                                                       | Description                                                                                    |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| [Rootstock API KEY Service](/developers/rpc-api-service/rootstock/) | Get started with creating a dApps on Rootstock using Hardhat. |
-| [Alchemy-Rootstock API KEY service](/developers/smart-contracts/foundry/) | How to write, test, and deploy smart contracts with Foundry |
+| [Rootstock RPC Service](/developers/rpc-api/rootstock/) | Interact with Rootstock using the Rootstock RPC Service. |
+| [Alchemy RPC Service](/developers/rpc-api/alchemy/) | Interact with Rootstock using the Alchemy RPC Service. |

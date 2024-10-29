@@ -1,47 +1,23 @@
 ---
 sidebar_label: Getting Started
-sidebar_position: 100
-title: Getting Started with the RPC API
+sidebar_position: 101
+title: Getting Started with the Rootstock RPC Service
 tags: [faucet, Rootstock, testnet, address, wallet, tools]
-description: "Get started with the RPC API service to interact with Rootstock nodes."
+description: "Get started with the Rootstock RPC Service to interact with Rootstock nodes."
 ---
 
-The [RPC API](http://rpc.rootstock.io/) provides a seamless and intuitive web interface for developers to interact with [Rootstock nodes](/node-operators/setup/) via [JSON-RPC](/node-operators/json-rpc/methods/) methods. It aims to address the challenges faced by developers when trying to access critical information like logs, transactions, and balances through RPC, which can significantly impact the timely development of dApps on the Rootstock blockchain.
 
-In this guide, you will learn: 
-
-- How to create an account and [make your first API call](#getting-started)
-- View a list of [JSON-RPC methods](/node-operators/json-rpc/methods/) available. 
-
-<div class="btn-container">
-  <span></span>
-    <a class="green" href="http://rpc.rootstock.io/">Use the RPC API</a>
-</div>
-
-## Who Is It For?
-
-*  dApp Developers looking to interact with the Rootstock nodes
-
-## Features
-
-**Easy Setup:**
-- Create an API key effortlessly to initiate development.
-- Make the First API call in minutes.
-
-**API Key Authentication:**
-- Provides secure authentication for decentralized applications (dApps).
-- Limits API requests on a daily or monthly basis.
 
 ## Getting Started
 
 :::info[Note]
-The [RPC API](https://rpc.rootstock.io/) is available on TESTNET and MAINNET.
+The [Rootstock RPC Service](https://rpc.rootstock.io/) is available on TESTNET and MAINNET.
 :::
 
-Visit the [Rootstock RPC API](https://rpc.rootstock.io/)
+Visit the [Rootstock RPC Service](https://rpc.rootstock.io/)
 
 <div align="center">
-    <img width="50%" src="/img/tools/rpc-api/01-rpc-api-landing.png" alt="RPC API Landing Page"/>
+    <img width="50%" src="/img/tools/rpc-api/01-rpc-api-landing.png" alt="RPC Service Landing Page"/>
 </div>
 
 ### Get A FREE Account
@@ -49,7 +25,7 @@ Visit the [Rootstock RPC API](https://rpc.rootstock.io/)
 To create an account, click on _Sign up_
 
 <div align="center">
-    <img width="50%" src="/img/tools/rpc-api/02-sign-up.png" alt="RPC API Sign Up"/>
+    <img width="50%" src="/img/tools/rpc-api/02-sign-up.png" alt="RPC Service Sign Up"/>
 </div>
 
 ### Get An API Key
