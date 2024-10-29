@@ -1,5 +1,5 @@
 ---
-sidebar_position: 200
+sidebar_position: 310
 title: Ethereum Attestation Service
 sidebar_label: Overview
 description: "Ethereum Attestation Service (EAS) is an open-source infrastructure public good for making attestations onchain or offchain. Learn how to use it on Rootstock."
