@@ -1,17 +1,17 @@
 ---
-sidebar_label: RPC API Methods
-sidebar_position: 200
-title: RPC API Methods
+sidebar_label: Rootstock RPC API Methods
+sidebar_position: 102
+title: Rootstock RPC API Methods
 tags: [faucet, Rootstock, rpc api, testnet, address, wallet, tools]
 description: "Easily create, interact and deploy EVM compatible smart contracts using a robust set of JSON RPC methods available through the RPC API."
 ---
 
-Find below a list of methods available on the RPC API. See [how to setup the RPC API](/developers/rpc-api/setup/).
+Find below a list of methods available on the Rootstock RPC Service. See [how to setup the Rootstock RPC Service](/developers/rpc-api/rootstock/setup/).
 
 ## eth_accounts
 
 - _Method:_ `eth_accounts`
-  - Returns a list of addresses owned by the client. Since Rootstock RPC API does not store keys, this will always return empty.
+  - Returns a list of addresses owned by the client. Since Rootstock RPC Service does not store keys, this will always return empty.
 - _Params:_ None
 
 ```shell
