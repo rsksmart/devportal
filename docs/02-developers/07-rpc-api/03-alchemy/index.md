@@ -1,12 +1,12 @@
 ---
-sidebar_label: Alchemy RPC API
+sidebar_label: Rootstock - Alchemy RPC Provider
 sidebar_position: 300
-title: Rootstock - Alchemy RPC Service
-description: 'Short guide to interact with the Rootstock network by using Alchemy RPC service.'
+title: Rootstock - Alchemy RPC Provider
+description: 'Guide to interacting with the Rootstock network using Alchemy.'
 tags: [rsk, rootstock, tutorials, developers, alchemy, quick starts, dApps, smart contracts, rpc]
 ---
 
-This guide provides a step-to-step for developers to interact with Rootstock network with the [Alchemy RPC Provider Service](https://www.alchemy.com/). 
+A step-to-step guide for developers to interact with Rootstock network with the [Alchemy RPC Provider](https://www.alchemy.com/). 
 
 It aims to address the challenges faced by developers when trying to access critical information like logs, transactions, and balances through RPC, which can significantly impact the timely development of dApps on the Rootstock blockchain.
 
@@ -27,6 +27,7 @@ Before you start this guide, make sure you have the following:
 - Developers looking to interact with the Rootstock nodes.
 
 ## Features
+
 ### Easy Setup
 - Create an API key effortlessly to initiate development.
 - Make your first API call in minutes.

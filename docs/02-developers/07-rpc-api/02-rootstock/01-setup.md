@@ -1,20 +1,18 @@
 ---
-sidebar_label: Getting Started
+sidebar_label: Getting Started with the Rootstock RPC API
 sidebar_position: 101
-title: Getting Started with the Rootstock RPC Service
+title: Getting Started with the Rootstock RPC API
 tags: [faucet, Rootstock, testnet, address, wallet, tools]
 description: "Get started with the Rootstock RPC Service to interact with Rootstock nodes."
 ---
 
-
-
 ## Getting Started
 
 :::info[Note]
-The [Rootstock RPC Service](https://rpc.rootstock.io/) is available on TESTNET and MAINNET.
+The [Rootstock RPC API](https://rpc.rootstock.io/) is available on TESTNET and MAINNET.
 :::
 
-Visit the [Rootstock RPC Service](https://rpc.rootstock.io/)
+Visit the [Rootstock RPC API](https://rpc.rootstock.io/)
 
 <div align="center">
     <img width="50%" src="/img/tools/rpc-api/01-rpc-api-landing.png" alt="RPC Service Landing Page"/>

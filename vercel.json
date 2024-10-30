@@ -632,6 +632,8 @@
     {"source" : "/guides/dex/dex-vs-cex", "destination" : "https://blog.rootstock.io/noticia/dex-vs-cex/"},
     {"source" : "/guides/get-crypto-on-rsk/cryptocurrency-vs-token", "destination" : "https://blog.rootstock.io/noticia/cryptocurrency-vs-token/"},
     {"source" : "/guides/stablecoin/stablecoin-vs-digital-assets", "destination" : "https://blog.rootstock.io/noticia/stablecoin-vs-digital-asset/"},
-    {"source" : "/guides/dex/features-of-a-dex", "destination" : "https://blog.rootstock.io/noticia/features-of-a-dex/"}
+    {"source" : "/guides/dex/features-of-a-dex", "destination" : "https://blog.rootstock.io/noticia/features-of-a-dex/"},
+    {"source" : "/developers/quickstart/alchemy/", "destination" : "/developers/rpc-api/alchemy/"},
+    {"source" : "/developers/rpc-api/setup/", "destination" : "/developers/rpc-api/rootstock/setup/"}
   ]
 }

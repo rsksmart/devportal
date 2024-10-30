@@ -89,7 +89,7 @@ export const rskMainnet = {
 };
 ```
 
-> See how to [Get an API Key from the RPC API](/developers/rpc-api/setup/)
+> See how to [Get an API Key from the RPC API](/developers/rpc-api/rootstock/setup/)
 
 See full configuration on [GitHub](https://github.com/rsksmart/demo-code-snippets/blob/5cc5124fe5bddc85f09a82e49eba7591003543f0/switch-network-to-rsk/networks.js).
 

@@ -1,7 +1,7 @@
 ---
-sidebar_label: Rootstock RPC Service Methods
+sidebar_label: Rootstock RPC API Methods
 sidebar_position: 102
-title: Rootstock RPC Service Methods
+title: Rootstock RPC API Methods
 tags: [faucet, Rootstock, rpc api, testnet, address, wallet, tools]
 description: "Easily create, interact and deploy EVM compatible smart contracts using a robust set of JSON RPC methods available through the RPC API."
 ---
