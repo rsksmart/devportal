@@ -1,18 +1,18 @@
 ---
 sidebar_position: 3
-title: Runes Contract Explanation walk through
-sidebar_label: Runes Contract Explanation walk through
+title: Mock Bridge Contract - Walkthrough
+sidebar_label: Mock Bridge Contract - Walkthrough
 tags: [rsk, rootstock, resources, tutorials,  setup, Runes, dApps, smart contracts, Remix IDE, MetaMask]
 description: "The Rootstock Runes Mock Bridge setup page shows you how to getting building your runes, by first cloning our project and testing it locally."
 ---
 
-### **1\. Understanding the Contract Structure**
+### **1\. Understanding the Mock Bridge Contract Structure**
 
-This contract defines a new token type, **RuneToken**, based on the **ERC-1155 standard**. It also uses the **Ownable** contract, which restricts certain functions to the contract's owner.
+The [Mock bridge contract](https://github.com/rsksmart/rsk-runes/tree/main/contracts) defines a new token type, **RuneToken**, based on the **ERC-1155 standard**. It also uses the **Ownable** contract, which restricts certain functions to the contract's owner.
 
 #### **Key Imports:**
 
-```
+```plaintext
 import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
@@ -44,7 +44,7 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 
 ### **2\. The Constructor**
 
-```
+```js
 constructor(address initialOwner) ERC1155("") Ownable(initialOwner) {}
 ```
 
@@ -63,7 +63,7 @@ This function returns the URI for a given token ID. The URI typically points to 
 
 ### **4\. Minting Fungible Tokens**
 
-```
+```js
 function mintFungible(
     string memory tokenURI,
     string memory runeName,
@@ -90,7 +90,7 @@ This function allows the owner of the contract to mint fungible tokens.
 
 ### **5\. Minting Non-Fungible Tokens (NFTs)**
 
-```
+```js
 function mintNonFungible(
     string memory tokenURI,
     string memory runeName,
@@ -110,7 +110,7 @@ This function is similar to `mintFungible` but for minting non-fungible tokens. 
 
 ### **6\. Minting More Tokens**
 
-```
+```js
 function mintMore(
     string memory runeName,
     address receiver
@@ -131,7 +131,7 @@ This function allows the contract owner to mint additional tokens of an existing
 
 #### **Freezing Tokens:**
 
-```
+```js
 function freezeTokens(string memory runeName, uint256 amount, address owner) external onlyOwner {
     // Function logic here
 }
@@ -143,7 +143,7 @@ function freezeTokens(string memory runeName, uint256 amount, address owner) ext
 
 #### **Unfreezing Tokens:**
 
-```
+```js
 function unfreezeTokens(string memory runeName, uint256 amount, address owner) external onlyOwner {
     // Function logic here
 }
@@ -156,7 +156,7 @@ function unfreezeTokens(string memory runeName, uint256 amount, address owner) e
 
 #### **Get Token Information:**
 
-```
+```js
 function getTokenInfo(uint256 tokenId, address holder) public view returns (TokenInfo memory) {
     // Function logic here
 }
@@ -168,7 +168,7 @@ function getTokenInfo(uint256 tokenId, address holder) public view returns (Toke
 
 #### **Get Tokens Owned by a User:**
 
-```
+```js
 function getUserTokens(address user) public view returns (uint256[] memory) {
     return _userTokens[user];
 }
@@ -180,7 +180,7 @@ function getUserTokens(address user) public view returns (uint256[] memory) {
 
 ERC1155 includes transfer functions (`safeTransferFrom` and `safeBatchTransferFrom`). These are overridden in this contract to take into account frozen tokens.
 
-```
+```js
 function safeTransferFrom(
     address from,
     address to,
@@ -197,7 +197,7 @@ This ensures that users cannot transfer frozen tokens. The contract checks that 
 
 ### **10\. Overriding `balanceOf` to Consider Frozen Tokens**
 
-```
+```js
 function balanceOf(address account, uint256 tokenId) public view override returns (uint256) {
     uint256 totalBalance = super.balanceOf(account, tokenId);
     uint256 frozenBalance = _frozenTokens[tokenId][account];
