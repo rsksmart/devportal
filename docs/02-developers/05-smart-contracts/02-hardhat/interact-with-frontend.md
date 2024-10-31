@@ -1,327 +1,440 @@
 ---
-sidebar_label:  Interact with the Front-end
+sidebar_label: Interact with the Front-end
 sidebar_position: 106
-title:  Interact with the Front-end
+title: Interact with the Front-end
 description: "Learn how to integrate your Rootstock smart contract with front-end applications."
-tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethers]
+tags:
+  [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, wagmi]
 ---
 
-Creating a user-friendly web interface for smart contracts on the Rootstock network can enhance user interaction. Here, we'll focus on using `ethers.js`, a popular Ethereum library, for connecting your smart contracts to a web front-end.
+Creating a user-friendly web interface for smart contracts on the Rootstock network enhances user interaction. Here, we'll focus on using [Wagmi](https://wagmi.sh/) and [RainbowKit](https://www.rainbowkit.com/), some popular libraries for connecting your smart contracts to a web front-end.
 
 ## Project Setup
 
-1. Create a new folder called `frontend` and navigate to the directory:
-    
-```shell
-  mkdir frontend
-  cd frontend
-```
-> Note: If you use the quick start repo on `master`, there's already a frontend folder. You can `cd` into the frontend directory.
+1. Create a new web project. In this case, we'll be using [Next.js](https://nextjs.org/) as our web framework.
 
-2. In the frontend directory, initialize a Node.js Project:
+   ```shell
+   npx create-next-app@latest
+   ```
 
-```shell
-  npm init -y
-```
+2. Go to the root of your Next.js project and, using your preferred package manager, install these dependencies:
 
-3. Install Ethers.js:
+   ```shell
+   yarn add @rainbow-me/rainbowkit wagmi viem@2.x @tanstack/react-query
+   ```
 
-```shell
-  npm install --save ethers
-```
+3. Create an `.env` file at the root of your project and add the following content. You can get your Wallet Connet ID from [WalletConnect Dashboard](https://cloud.reown.com/sign-in).
 
-## Create HTML File
+   ```shell
+   touch .env.local
+   echo "NEXT_PUBLIC_WC_PROJECT_ID=<YOUR_PROJECT_ID>" >> .env.local
+   ```
 
-- Update HTML File
-    - In the frontend directory, open the `index.html` file:
-      - Copy the code snippet below and paste it in your html file:
-        ```html
-        <!DOCTYPE html>
-        <html lang="en">
+4. Create a `providers.tsx` file inside the `app` directory and add the following content:
 
-        <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Web3 App with Ethers.js</title>
-        </head>
+   ```tsx
+   "use client";
 
-        <body>
-        </body>
+   import {
+     getDefaultConfig,
+     RainbowKitProvider,
+   } from "@rainbow-me/rainbowkit";
+   import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+   import { WagmiProvider } from "wagmi";
+   import { rootstock, rootstockTestnet } from "wagmi/chains";
 
-        </html>
-        ```
-- Import Ethers
-   - To import the Ethers library to interact with the wallet to the network, copy the code snippet below and paste it in the `<head>` section of your html file:
-      ```html
-        <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"></script>
-      ```
-- Create HTML elements inside the body
-  1. Create a button to trigger the function for connecting the wallet.
-  2. Create a button to trigger the function to get balance.
-  3. Create a div element to show the answer for the address connected.
-  4. Create a div element to show the answer for wallet balance.
-      ```html
-      <body>
-        <div>
-          <h1>Connect to Rootstock Network</h1>
-          <button id="connectButton">Connect Wallet</button>
-          <button id="getBalanceButton" disabled>Get MTK Balance</button>
-          <div id="walletAddress"></div>
-          <div id="walletBalance"></div>
-        </div>
-      </body>
-      ```
-- Import javascript file
-  - Finally, to import the javascript library that we will create in a further step, copy the code snippet below and paste it in the `<body>` section of your html file::
-    ```html
-      <script src="app.js"></script>
-    ```
+   const config = getDefaultConfig({
+     appName: "Rootstock Wagmi Starter",
+     projectId: process.env.NEXT_PUBLIC_WC_PROJECT_ID as string,
+     chains: [rootstockTestnet, rootstock],
+     ssr: true,
+   });
 
-Your `index.html` file should now look like the [`index.html` file](https://raw.githubusercontent.com/rsksmart/rootstock-quick-start-guide/feat/complete/frontend/index.html) on GitHub.
+   const queryClient = new QueryClient();
 
-## Create JavaScript Functions
+   export default function Providers({
+     children,
+   }: {
+     children: React.ReactNode;
+   }) {
+     return (
+       <WagmiProvider config={config}>
+         <QueryClientProvider client={queryClient}>
+           <RainbowKitProvider>{children}</RainbowKitProvider>
+         </QueryClientProvider>
+       </WagmiProvider>
+     );
+   }
+   ```
 
-- Create basic javascript function
-  1. In the frontend directory, open the `app.js` file.
-  2. Copy the `MyToken.json` artifact file generated when building the contracts in `/artifacts/contracts/MyToken.sol/MyToken.json`.
-  3. Copy the `networks.json` file. [You can get the file from this link](https://github.com/jesus-iov/rootstock-quick-start-guide/blob/5cf8c1d2e50d967be9cfc653a045ca614c3c32aa/frontend/networks.json).
-  4. Create the function to wait until the DOM is loaded, instance the HTML elements (buttons and divs), and declare some variables:
-      ```js
-      document.addEventListener('DOMContentLoaded', function () {
-        // Instantiating HTML elements
-        const connectButton = document.getElementById('connectButton');
-        const getBalanceButton = document.getElementById('getBalanceButton');
-        const walletAddressDiv = document.getElementById('walletAddress');
-        const walletBalanceDiv = document.getElementById('walletBalance');
-        // Instantiating variables
-        let provider, account, myTokenContract;
-        let contractABI = [];
-        let networks = {};
-        const contractAddress = 'Replace with your contract\'s address'; // E.g. 0xa6fb392538BaC56e03a900BFDE22e76C05fb5122
-      });
-      ```
-- Add a function that fetches the ABI and stores it in a variable
-    ```js
-    async function fetchExternalFiles() {
-      // Place MyToken.json generated in artifacts after compiling the contracts
-      let response = await fetch('MyToken.json');
-      const data = await response.json();
-      contractABI = data.abi;
-      // Place networks.json to set the network automatically with the checkNetwork() function
-      // You can set it manually instead following this guide https://dev.rootstock.io/resources/tutorials/rootstock-metamask/
-      response = await fetch('networks.json');
-      networks = await response.json();
-    }
-    ```
-- Add a function that checks the wallet is connected to the Rootstock network
-    ```js
-    async function checkNetwork() {
-      try {
-        // Make sure Metamask is installed
-        if (!window.ethereum){
-          alert('Please install Metamask!');
-          return;
-        }
-        // Switch network
-        await window.ethereum.request({
-          method: 'wallet_switchEthereumChain',
-          params: [{ chainId: networks.rskTestnet.chainId }],
-        });
-      } catch (error) {
-        // This error code indicates that the chain has not been added to Metamask
-        if (error.code === 4902) {
-          // Trying to add new chain to Metamask
-          await window.ethereum.request({
-            method: 'wallet_addEthereumChain',
-            params: [networks.rskTestnet],
-          });
-        } else {
-          // Rethrow all other errors
-          throw error;
-        }
-      }
-    }
-    ```
-- Call the fetchABI function that loads the ABI and connects the wallet to the network
-    ```js
-    // Get the required data and set the events
-    fetchExternalFiles().then(() => {
-      // Connect button event
-      connectButton.addEventListener('click', async function () {
-        // Check the network is set properly
-        await checkNetwork();
-        if (typeof window.ethereum !== 'undefined') {
-          try {
-            // Get the account from Metamask
-            const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-            account = accounts[0];
-            // Update the front with the account address
-            walletAddressDiv.innerHTML = `Connected account: ${account}`;
-            // Get the network provider
-            provider = new ethers.providers.Web3Provider(window.ethereum);
-            // Get the signer for network interaction
-            signer = provider.getSigner();
-            // Activates the getBalanceButton
-            connectButton.disabled = true;
-            getBalanceButton.disabled = false;
-          } catch (error) {
-            console.error("Error connecting to MetaMask", error);
-            walletAddressDiv.innerHTML = `Error: ${error.message}`;
-          }
-        } else {
-          walletAddressDiv.innerHTML = 'Please install MetaMask!';
-        }
-      });
-    ```
-- Add a function responding to the click event on the get balance button.
-    ```js
-    // Get balance button event
-    getBalanceButton.addEventListener('click', async function () {
-      // Verify contractAddress is a valid address
-      if (!ethers.utils.isAddress(contractAddress)){
-        alert('Please verify that contractAddress is set');
-        return;
-      }
-      // Instantiate the contract
-      myTokenContract = new ethers.Contract(contractAddress, contractABI, signer);
-      // Check if the contract is instatiated properly
-      if (myTokenContract) {
-        // Obtains the user balance
-        const balance = await myTokenContract.balanceOf(account);
-        // Show the user balance
-        walletBalanceDiv.innerHTML = `MyToken Balance: ${balance} MTK`;
-      }
-    });
-    ```
-- View the Complete Code
-  - [GitHub Link](https://raw.githubusercontent.com/rsksmart/rootstock-quick-start-guide/feat/complete/frontend/app.js)
-    ```js
-    document.addEventListener('DOMContentLoaded', function () {
-      // Instantiating HTML elements
-      const connectButton = document.getElementById('connectButton');
-      const getBalanceButton = document.getElementById('getBalanceButton');
-      const walletAddressDiv = document.getElementById('walletAddress');
-      const walletBalanceDiv = document.getElementById('walletBalance');
-      // Instantiating variables
-      let provider, account, myTokenContract;
-      let contractABI = [];
-      let networks = {};
-      const contractAddress = 'Replace with your contract\'s address'; // E.g. 0xa6fb392538BaC56e03a900BFDE22e76C05fb5122
+5. And now import and use the `Providers` component to wrap your application in the `layout.tsx` file inside the `app` directory:
 
-      /**
-    * Load data from external JSON files
-    */
-      async function fetchExternalFiles() {
-        // Place MyToken.json generated in artifacts after compiling the contracts
-        let response = await fetch('MyToken.json');
-        const data = await response.json();
-        contractABI = data.abi;
-        // Place networks.json to set the network automatically with the checkNetwork() function
-        // You can set it manually instead following this guide https://dev.rootstock.io/resources/tutorials/rootstock-metamask/
-        response = await fetch('networks.json');
-        networks = await response.json();
-      }
+   ```tsx
+   import type { Metadata } from "next";
+   import "./globals.css";
+   import localFont from "next/font/local";
+   import Providers from "./providers";
+   import "@rainbow-me/rainbowkit/styles.css";
 
-      /**
-    * Check and set network automatically in case it is not already done
-    */
-      async function checkNetwork() {
-        try {
-          // Make sure Metamask is installed
-          if (!window.ethereum){
-            alert('Please install Metamask!');
-            return;
-          }
-          // Switch network
-          await window.ethereum.request({
-            method: 'wallet_switchEthereumChain',
-            params: [{ chainId: networks.rskTestnet.chainId }],
-          });
-        } catch (error) {
-          // This error code indicates that the chain has not been added to Metamask
-          if (error.code === 4902) {
-            // Trying to add new chain to Metamask
-            await window.ethereum.request({
-              method: 'wallet_addEthereumChain',
-              params: [networks.rskTestnet],
-            });
-          } else {
-            // Rethrow all other errors
-            throw error;
-          }
-        }
-      }
+   export const metadata: Metadata = {
+     title: "Rootstock Wagmi Starter",
+     description:
+       "Interact with contracts on Rootstock Network with Wagmi and RainbowKit",
+   };
 
-      // Get the required data and set the events
-      fetchExternalFiles().then(() => {
-        // Connect button event
-        connectButton.addEventListener('click', async function () {
-          // Check the network is set properly
-          await checkNetwork();
-          if (typeof window.ethereum !== 'undefined') {
-            try {
-              // Get the account from Metamask
-              const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-              account = accounts[0];
-              // Update the front with the account address
-              walletAddressDiv.innerHTML = `Connected account: ${account}`;
-              // Get the network provider
-              provider = new ethers.providers.Web3Provider(window.ethereum);
-              // Get the signer for network interaction
-              signer = provider.getSigner();
-              // Activates the getBalanceButton
-              connectButton.disabled = true;
-              getBalanceButton.disabled = false;
-            } catch (error) {
-              console.error("Error connecting to MetaMask", error);
-              walletAddressDiv.innerHTML = `Error: ${error.message}`;
-            }
-          } else {
-            walletAddressDiv.innerHTML = 'Please install MetaMask!';
-          }
-        });
+   const geistSans = localFont({
+     src: "./fonts/GeistVF.woff",
+     variable: "--font-geist-sans",
+     weight: "100 900",
+   });
+   const geistMono = localFont({
+     src: "./fonts/GeistMonoVF.woff",
+     variable: "--font-geist-mono",
+     weight: "100 900",
+   });
 
-        // Get balance button event
-        getBalanceButton.addEventListener('click', async function () {
-          // Verify contractAddress is a valid address
-          if (!ethers.utils.isAddress(contractAddress)){
-            alert('Please verify that contractAddress is set');
-            return;
-          }
-          // Instantiate the contract
-          myTokenContract = new ethers.Contract(contractAddress, contractABI, signer);
-          // Check if the contract is instatiated properly
-          if (myTokenContract) {
-            // Obtains the user balance
-            const balance = await myTokenContract.balanceOf(account);
-            // Show the user balance
-            walletBalanceDiv.innerHTML = `MyToken Balance: ${balance} MTK`;
-          }
-        });
-      });
-    });
-    ```
+   export default function RootLayout({
+     children,
+   }: Readonly<{
+     children: React.ReactNode;
+   }>) {
+     return (
+       <html lang="en">
+         <body
+           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+         >
+           <Providers>{children}</Providers>
+         </body>
+       </html>
+     );
+   }
+   ```
 
-### Run the frontend
+6. Finally, start the web server.
 
-To run the frontend, execute a local web server to test the HTML file using the following command:
+   ```
+   yarn dev
+   ```
 
-```shell
-npx http-server
-```
+If everything went well, you should be able to access your web app by navigating to `http://localhost:3000` in your browser.
 
-Navigate to the URL: `http://127.0.0.1:8080` to test the code in the browser and you should get a result similar to the image below:
-![Smart Contract Frontend](/img/guides/quickstart/hardhat/frontend.png)
+### Congrats!
 
+You're all set up. Let's get to the smart contract interaction.
 
-:::tip[Tip]
-- Ensure the local hardhat network is running. Run `npx hardhat node` in the root directory to start the local network. See section  on [Troubleshooting and Common Errors](/developers/smart-contracts/hardhat/troubleshooting/) to fix common errors.
-- You can view and run the complete project from the [`feat/complete` branch](https://github.com/rsksmart/rootstock-quick-start-guide/tree/feat/complete). To do so, git checkout into the `feat/complete` branch, run `cd frontend`, run `npm install`, then run `npx http-server` to view and interact with the smart contract from the frontend.
-:::
+## Call Smart Contract using Connect Button and Wagmi hooks
+
+We're going to be editing the `page.tsx` file inside the `app` directory. Follow these steps to interact with the smart contract:
+
+1. Delete the default content and add the `<ConnectButton />` component to check if it's working fine.
+
+   ```tsx
+   import { ConnectButton } from "@rainbow-me/rainbowkit";
+
+   export default function Home() {
+     return (
+       <main className="flex flex-col justify-center items-center min-h-screen">
+         <ConnectButton /> <!-- RainbowKit Connect Button component  -->
+       </main>
+     );
+   }
+   ```
+
+   And you should see something like this in the browser:
+
+   ![Connect Button](/img/guides/quickstart/hardhat/connect-button.png)
+
+   Please try connecting your wallet.
+
+2. Now we're going to use our first hook from Wagmi to check if a user wallet is connected and, if so, get the connected address. The hook is `useAccount` and is used like this:
+
+   ```tsx
+   const {
+     address, // Connected address
+     isConnected, // true if a wallet is connected
+   } = useAccount();
+   ```
+
+   > **Note:** As we're using react hooks in a Next.js project, don't forget to add the `'use client'` directive at the top of your `page.tsx` file.
+
+   Now that we know if a wallet is connected, we can add some conditional rendering content and show the connected address.
+
+   ```tsx
+   {
+     isConnected && <p>Connected address: {address}</p>;
+   }
+   ```
+
+   So the full code on the `page.tsx` file should be something like this:
+
+   ```tsx
+   "use client";
+
+   import { ConnectButton } from "@rainbow-me/rainbowkit";
+   import { useAccount } from "wagmi";
+
+   export default function Home() {
+     const { isConnected, address } = useAccount();
+
+     return (
+       <main className="flex flex-col justify-center items-center min-h-screen gap-3">
+         <ConnectButton />
+
+         {isConnected && <p>Connected address: {address}</p>}
+       </main>
+     );
+   }
+   ```
+
+   And the browser should look something like this:
+
+   ![Connected Address](/img/guides/quickstart/hardhat/connect-button.png)
+
+3. We're now going to make our first read from the blockchain. The hook we're using for that is `useReadContract` and is used like this:
+
+   ```tsx
+   const {
+     data: balance, // Retrieved data from the function
+     isLoading, // Check if the data is still being fetched
+     error, // Check if an error occurred
+   } = useReadContract({
+     address: "<YOUR_CONTRACT_ADDRESS>", // Your deployed contract address
+     abi: [
+       // Contract abi
+     ],
+     functionName: "balanceOf", // The name of the function you want to call
+     args: [address], // Function arguments if they are required
+   });
+   ```
+
+   Given this, we need to bring the contract abi that should be available at the **Hardhat project** we've been working on. Once you compile a contract, a file is generated at `artifacts/contracts/YourContract.sol/YourContract.json` which contains the abi of the contract.
+
+   In this case, we're going to copy the abi array and paste it in a new file called `MyContractAbi.ts` inside a new `assets` folder. the file should look like this:
+
+   ```ts
+   // assets/MyContractAbi.ts
+
+   export const abi = [
+     {
+       inputs: [
+         {
+           internalType: "uint256",
+           name: "initialSupply",
+           type: "uint256",
+         },
+       ],
+       stateMutability: "nonpayable",
+       type: "constructor",
+     },
+    ...
+   ];
+   ```
+
+   Now, lets compose our `useReadContract` hook with our contract information and show the balance of the connected address:
+
+   ```ts
+   "use client";
+
+   import { abi } from "@/assets/MyTokenAbi";
+   import { ConnectButton } from "@rainbow-me/rainbowkit";
+   import { useAccount, useReadContract } from "wagmi";
+
+   const CONTRACT_ADDRESS = "0x543ba9fc0ade6f222bd8c7bf50a0cd9923faf569"; // Replace with your contract address
+
+   export default function Home() {
+     const { isConnected, address } = useAccount();
+     const {
+       data: balance,
+       isLoading,
+       error,
+     } = useReadContract({
+       // Once the component is mounted, useReadContract is called
+       address: CONTRACT_ADDRESS,
+       abi,
+       functionName: "balanceOf",
+       args: [address], // Replace with the address you want to check
+     });
+
+     return (
+       <main className="flex flex-col justify-center items-center min-h-screen gap-3">
+         <ConnectButton />
+
+         {isConnected && (
+           <>
+             <p>Connected address: {address}</p>
+             <p>
+               <span className="font-bold">Balance:</span>{" "}
+               {
+                 isLoading // Check if the data is still being fetched
+                   ? "Loading..."
+                   : error // Check if there was an error
+                   ? "Error retrieving balance"
+                   : balance?.toString() // If the data is ready, display the balance
+               }
+             </p>
+           </>
+         )}
+       </main>
+     );
+   }
+   ```
+
+   And the browser should look something like this:
+
+   ![Balance of](/img/guides/quickstart/hardhat/balance-of.png)
+
+   ### Well done!
+
+   You made your first read from the Rootstock blockchain in a web application. Now let's move on to the writing.
+
+4. The hook we're using for calling a write function is `useWriteContract`. When calling write functions, I recommend mixing the hook with another wagmi tool called `waitForTransactionReceipt`. Later in the article we'll see why it is important and how to use it. For now, this is how you use `useWriteContract` hook.
+
+   ```tsx
+   const {
+     writeContractAsync, // The callable asynchronous function
+   } = useWriteContract();
+   ```
+
+   And the `writeContractAsync` function is called very similar to the `useReadContract` hook:
+
+   ```tsx
+   const hash = await writeContractAsync({
+     address: CONTRACT_ADDRESS, // Your deployed contract address
+     abi, // Contract abi
+     functionName: "mint", // The name of the function you want to call
+     args: [address, amount], // Function arguments if they are required
+   });
+   ```
+
+   The `writeContractAsync` function returns a hash that enables the `waitForTransactionReceipt` power. The `waitForTransactionReceipt` function allows you to wait until the transaction is confirmed the number of times you specify. You can call it like this:
+
+   ```tsx
+   await waitForTransactionReceipt(
+     config, // the wagmi config
+     {
+       hash, // the transaction hash
+       confirmations: 1, // the number of confirmations to wait for
+     }
+   );
+   ```
+
+   > **Note:** Sometimes getting the wagmi config can be a bit tricky. You can get it very easily using the `useConfig` hook. In the next section we'll see how to do it.
+
+   So, now that we have all things needed, we're creating a button that will allow us to transfer tokens. For now, we'll fix the token amount to 10 and the address, but you can modify this starter kit as you can, your imagination is the limit. Your code should look something like this:
+
+   ```tsx
+   "use client";
+
+   import { abi } from "@/assets/MyTokenAbi";
+   import { ConnectButton } from "@rainbow-me/rainbowkit";
+   import { useState } from "react";
+   import {
+     useAccount,
+     useConfig,
+     useReadContract,
+     useWriteContract,
+   } from "wagmi";
+   import { waitForTransactionReceipt } from "wagmi/actions";
+
+   const CONTRACT_ADDRESS = "0x543ba9fc0ade6f222bd8c7bf50a0cd9923faf569";
+
+   export default function Home() {
+     const [loading, setLoading] = useState(false); // Add loading state
+     const config = useConfig(); // Get the wagmi config
+     const { isConnected, address } = useAccount();
+     const {
+       data: balance,
+       isLoading,
+       error,
+       refetch,
+     } = useReadContract({
+       address: CONTRACT_ADDRESS,
+       abi,
+       functionName: "balanceOf",
+       args: [address],
+     });
+
+     const { writeContractAsync } = useWriteContract(); // get the callable write contract function
+
+     async function handleTransfer() {
+       try {
+         setLoading(true);
+
+         const hash = await writeContractAsync({
+           address: CONTRACT_ADDRESS,
+           abi,
+           functionName: "transfer",
+           args: ["0x4913AbCD40a9455a28134b4ccc37f4f95225e593", 10], // Replace with the address and amount you want to transfer
+         });
+
+         await waitForTransactionReceipt(config, {
+           hash,
+           confirmations: 1,
+         });
+
+         refetch(); // Refetch the balance after transfer
+       } catch (error) {
+         alert("Error transferring MTK. Look at the console.");
+         console.error(error);
+       } finally {
+         setLoading(false);
+       }
+     }
+
+     return (
+       <main className="flex flex-col justify-center items-center min-h-screen gap-3">
+         <ConnectButton />
+
+         {isConnected && (
+           <>
+             <p>Connected address: {address}</p>
+             <p>
+               <span className="font-bold">Balance:</span>{" "}
+               {isLoading
+                 ? "Loading..."
+                 : error
+                 ? "Error retrieving balance"
+                 : balance?.toString()}
+             </p>
+             <button
+               className="bg-blue-500 hover:bg-blue-700 disabled:pointer-events-none disabled:opacity-60 text-white font-bold py-2 px-4 rounded"
+               disabled={loading} // Disable the button if transaction is in progress
+               onClick={handleTransfer}
+             >
+               {loading
+                 ? "Transferring..." /* Display "Transferring..." if transaction is in progress */
+                 : "Transfer MTK"}
+             </button>
+           </>
+         )}
+       </main>
+     );
+   }
+   ```
+
+   > **Note:** Please make sure you have available tokens in your wallet before transferring. Otherwise, you'll get an error.
+
+   Note that we retrieved the `refetch` function from the `useReadContract` hook. This allows us to refetch the balance after the transfer. Also, there is shown how to use the `useConfig` hook to get the wagmi config.
+
+   By now, the page should look something like this:
+
+   ![Write Contract](/img/guides/quickstart/hardhat/write-contract.png)
+
+   When transferring, the button should look something like this:
+
+   ![Transferring](/img/guides/quickstart/hardhat/transferring.png)
+
+   And when the transfer is complete, the balace should update immediately:
+
+   ![Transfer complete](/img/guides/quickstart/hardhat/transfer-complete.png)
+
+   ### Well done!
+
+   You just made created a dApp that allows you to send write/read transactions to the Rootstock blockchain!
 
 ## Resources
 
-These tools are specifically tailored for Web3 development, and they can simplify the integration of blockchain functionaity into web interfaces. Here are a few recommended tools and libraries that are popular in the Web3 space, along with brief descriptions:
+These tools are specifically designed to make Web3 development smoother, particularly for integrating blockchain functionalities into web applications. Below is a list of key libraries and tools that were used in the article, with brief explanations:
 
 <Accordion>
   <Accordion.Item eventKey="0">
@@ -332,31 +445,19 @@ These tools are specifically tailored for Web3 development, and they can simplif
         It is great for projects where you want a seamless and user-friendly wallet connection experience. It's easy to integrate and manage, especially in React-based applications.
     </Accordion.Body>
   </Accordion.Item>
-  <Accordion.Item eventKey="1">
-    <Accordion.Header as="h3">2. Web3Modal</Accordion.Header>
-    <Accordion.Body>
-      - [Web3Modal](https://web3modal.com/) is a JavaScript library that provides a simple, unified wallet connection modal for Web3 applications. It supports various wallet providers and can be used with different Web3 libraries.
-      - **Why Use It:** If you need to start using React or want a framework-agnostic wallet connection solution, Web3Modal is an excellent choice. It’s customizable and works well with both web3.js and ethers.js.
-    </Accordion.Body>
-  </Accordion.Item>
+  
   <Accordion.Item eventKey="2">
-    <Accordion.Header as="h3">3. Wagmi</Accordion.Header>
+    <Accordion.Header as="h3">2. Wagmi</Accordion.Header>
     <Accordion.Body>
-      - [Wagmi](https://wagmi.sh/) is a React Hooks for Ethereum set that simplifies interactions with ethers.js. It provides hooks for wallet connection, contract interaction, balances, and more.
+      - [Wagmi](https://wagmi.sh/) is a set of React Hooks for Ethereum that simplifies interactions with ethers.js. It provides hooks for wallet connection, contract interaction, balances, and more.
       - **Why Use It:** For React developers who prefer a hooks-based approach, Wagmi offers an elegant way to integrate Ethereum functionality. It makes managing state and blockchain interactions more intuitive.
     </Accordion.Body>
   </Accordion.Item>
-  <Accordion.Item eventKey="3">
-    <Accordion.Header as="h3">4. Moralis</Accordion.Header>
-    <Accordion.Body>
-      - [Moralis](https://moralis.io/) is a fully managed backend platform for Web3 and blockchain applications. It offers a suite of tools for authentication, real-time databases, cloud functions, and syncing blockchain data.
-      - **Why Use It:** It can be a time-saver to build a more comprehensive application with backend support. It handles much of the backend complexity and lets you focus on front-end development.
-    </Accordion.Body>
-  </Accordion.Item>
   <Accordion.Item eventKey="4">
-    <Accordion.Header as="h3">5. Foundry</Accordion.Header>
+    <Accordion.Header as="h3">3. Viem</Accordion.Header>
     <Accordion.Body>
-        - [Foundry](https://book.getfoundry.sh) is a smart contract development toolchain, and user-friendly development environment used for writing and advanced smart contracts testing in Solidity.
+        -[Viem](https://viem.sh/) is a TypeScript-first library built for working with Ethereum and other blockchain networks. It focuses on performance, developer experience, and extensibility, making it a powerful tool for interacting with smart contracts and building Web3 apps.
+        - **Why Use It:** Viem enhances development speed by providing efficient utilities and a modern approach to handling blockchain interactions. It pairs well with Wagmi and other Web3 libraries.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>

@@ -627,6 +627,97 @@ Detailed option description you can find [here](https://shields.io/badges/static
 <Shield title="Developers" color="orange" />
 <Shield title="Dogecoin" color="C2A633" />
 
+## Grid of Cards no filter
+- **Code**
+
+```jsx
+<CardsGrid>
+  <CardsGridItem
+    image="/img/deffiant-icon.svg"
+    title="Defiant"
+    subtitle="app"
+    color="green"
+    description="Get ... in minutes"
+  />
+  ...
+  <CardsGridItem
+    image="/img/deffiant-icon.svg"
+    title="Defiant"
+    subtitle="wallet"
+    color="cyan"
+    linkHref="/developers/"
+    linkTitle="Learn more"
+    description="Get ... in minutes"
+  />
+</CardsGrid>
+```
+
+**Result**
+<CardsGrid>
+<CardsGridItem
+image="/img/deffiant-icon.svg"
+title="Defiant"
+subtitle="app"
+color="green"
+description="Get an API key & make your first API call in minutes"
+/>
+<CardsGridItem
+image="/img/deffiant-icon.svg"
+title="Defiant"
+subtitle="app"
+color="green"
+description="Get an API key & make your first API call in minutes"
+/>
+<CardsGridItem
+image="/img/deffiant-icon.svg"
+title="Defiant"
+subtitle="exchanges"
+description="Get an API key & make your first API call in minutes"
+/>
+<CardsGridItem
+image="/img/deffiant-icon.svg"
+title="Defiant"
+subtitle="wallet"
+color="pink"
+linkHref="/developers/"
+linkTitle="Learn more"
+description="Get an API key & make your first API call in minutes"
+/>
+<CardsGridItem
+image="/img/deffiant-icon.svg"
+title="Defiant"
+subtitle="wallet"
+color="pink"
+linkHref="/developers/"
+linkTitle="Learn more"
+description="Get an API key & make your first API call in minutes"
+/>
+<CardsGridItem
+image="/img/deffiant-icon.svg"
+title="Defiant"
+subtitle="wallet"
+color="cyan"
+linkHref="/developers/"
+linkTitle="Learn more"
+description="Get an API key & make your first API call in minutes. Get an API key & make your first API call in minutes"
+/>
+</CardsGrid>
+
+
+## Buttons
+- **Code**
+
+```jsx
+<Button href="/dev-tools/">Default Button</Button>
+<Button size="sm" href="/developers/">Small Button</Button>
+<Button size="lg" href="/resources/">Large Button</Button>
+```
+Default <Button href="/dev-tools/">Default Button</Button>, small <Button size="sm" href="/developers/">Small Button</Button>, and large <Button size="lg" href="/resources/">Large Button</Button> buttons for different use cases.
+
+
+
+
+
 #### Tooltip, logo and link
 Available logo options you can find [here](https://github.com/inttter/md-badges).
 - **Code**

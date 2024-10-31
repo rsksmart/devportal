@@ -1,6 +1,5 @@
 import React from "react";
 import clsx from "clsx";
-import TitleColor from "/src/components/TitleColor";
 import Button from "/src/components/Button";
 
 import styles from "./styles.module.scss";
