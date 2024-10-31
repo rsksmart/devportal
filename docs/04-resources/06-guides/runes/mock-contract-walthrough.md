@@ -1,16 +1,15 @@
 ---
 sidebar_position: 3
-title: Mock Bridge Contract - Walkthrough
-sidebar_label: Mock Bridge Contract - Walkthrough
+title: Understanding the Mock Bridge Contract Structure
+sidebar_label: Understanding the Mock Bridge Contract Structure
 tags: [rsk, rootstock, resources, tutorials,  setup, Runes, dApps, smart contracts, Remix IDE, MetaMask]
 description: "The Rootstock Runes Mock Bridge setup page shows you how to getting building your runes, by first cloning our project and testing it locally."
 ---
 
-### **1\. Understanding the Mock Bridge Contract Structure**
 
 The [Mock bridge contract](https://github.com/rsksmart/rsk-runes/tree/main/contracts) defines a new token type, **RuneToken**, based on the **ERC-1155 standard**. It also uses the **Ownable** contract, which restricts certain functions to the contract's owner.
 
-#### **Key Imports:**
+## **Key Imports:**
 
 ```plaintext
 import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
@@ -22,27 +21,25 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 * **Ownable**: This contract standard restricts certain actions to only the contract's owner (the one who deployed it or someone assigned as the owner).  
 * **Strings**: A utility library for working with string conversions.
 
-### **Main Components of the Contract**
+## **Main Components of the Contract**
 
-#### **Events:**
+### **Events:**
 
 * `TokensFrozen`: Emits an event when tokens are frozen for a specific account.  
 * `TokensUnfrozen`: Emits an event when tokens are unfrozen.
 
-#### **Data Structures:**
+### **Data Structures:**
 
 * **Balance**: Holds the account and balance of a token.  
 * **TokenInfo**: Contains details about a token, such as its URI ( **Uniform Resource Identifier**), name, symbol, maximum supply, current supply, default minting amount, and balance.
 
-#### **Mappings:**
+### **Mappings:**
 
 * `_tokenInfos`: Stores the information about each token, keyed by the token ID.  
 * `_userTokens`: Tracks all tokens held by a user.  
-* `_frozenTokens`: Keeps track of how many tokens are frozen for each user.
+* `_frozenTokens`: Keeps track of how many tokens are frozen for each user. 
 
-### 
-
-### **2\. The Constructor**
+## **2\. The Constructor**
 
 ```js
 constructor(address initialOwner) ERC1155("") Ownable(initialOwner) {}
@@ -51,7 +48,7 @@ constructor(address initialOwner) ERC1155("") Ownable(initialOwner) {}
 * **ERC1155 ("")**: This calls the ERC1155 constructor, but the URI is set as an empty string initially.  
 * **Ownable (initialOwner)**: The `Ownable` contract is initialized with the `initialOwner` as the owner of the contract, allowing only this address to perform certain actions (e.g., minting).
 
-### **3\. The `uri` Function**
+## **3\. The `uri` Function**
 
 ```
 function uri(uint256 tokenId) public view override returns (string memory) {
@@ -61,7 +58,7 @@ function uri(uint256 tokenId) public view override returns (string memory) {
 
 This function returns the URI for a given token ID. The URI typically points to a metadata file that contains additional details about the token (e.g., images, descriptions).
 
-### **4\. Minting Fungible Tokens**
+## **4\. Minting Fungible Tokens**
 
 ```js
 function mintFungible(
@@ -79,7 +76,7 @@ function mintFungible(
 
 This function allows the owner of the contract to mint fungible tokens.
 
-#### **Steps Involved:**
+### **Steps Involved:**
 
 1. **Check max supply**: Ensure that the initial supply is not greater than the maximum allowed supply.  
 2. **Generate a token ID**: A unique token ID is created by hashing the `runeName` using `keccak256`.  
@@ -88,7 +85,7 @@ This function allows the owner of the contract to mint fungible tokens.
 5. **Mint the token**: Mint the specified amount (`initialSupply`) to the `receiver` address.  
 6. **Track ownership**: Add the minted token to the user's list of owned tokens using `_addUserToken`.
 
-### **5\. Minting Non-Fungible Tokens (NFTs)**
+## **5\. Minting Non-Fungible Tokens (NFTs)**
 
 ```js
 function mintNonFungible(
@@ -103,12 +100,12 @@ function mintNonFungible(
 
 This function is similar to `mintFungible` but for minting non-fungible tokens. A non-fungible token is a unique token, meaning only one exists.
 
-#### **Key Differences:**
+### **Key Differences:**
 
 * **Max Supply** is always `1` for non-fungible tokens.  
 * **Current Supply** is also set to `1`.
 
-### **6\. Minting More Tokens**
+## **6\. Minting More Tokens**
 
 ```js
 function mintMore(
@@ -121,15 +118,15 @@ function mintMore(
 
 This function allows the contract owner to mint additional tokens of an existing fungible token, as long as the new supply doesn’t exceed the maximum supply.
 
-#### **Key Steps:**
+### **Key Steps:**
 
 1. **Check token existence**: Ensure the token exists by checking its `maxSupply`.  
 2. **Check supply limits**: Ensure the current supply plus the new minting amount doesn’t exceed the max supply.  
 3. **Mint tokens**: Mint more tokens to the `receiver`.
 
-### **7\. Token Freezing and Unfreezing**
+## **7\. Token Freezing and Unfreezing**
 
-#### **Freezing Tokens:**
+### **Freezing Tokens:**
 
 ```js
 function freezeTokens(string memory runeName, uint256 amount, address owner) external onlyOwner {
@@ -141,7 +138,7 @@ function freezeTokens(string memory runeName, uint256 amount, address owner) ext
 * The function ensures that the account has sufficient tokens to freeze.  
 * The frozen amount is added to `_frozenTokens`.
 
-#### **Unfreezing Tokens:**
+### **Unfreezing Tokens:**
 
 ```js
 function unfreezeTokens(string memory runeName, uint256 amount, address owner) external onlyOwner {
@@ -152,9 +149,9 @@ function unfreezeTokens(string memory runeName, uint256 amount, address owner) e
 * This function unfreezes the tokens, allowing the user to transfer them again.  
 * The frozen amount is reduced from `_frozenTokens`.
 
-### **8\. Token Information Queries**
+## **8\. Token Information Queries**
 
-#### **Get Token Information:**
+### **Get Token Information:**
 
 ```js
 function getTokenInfo(uint256 tokenId, address holder) public view returns (TokenInfo memory) {
@@ -166,7 +163,7 @@ function getTokenInfo(uint256 tokenId, address holder) public view returns (Toke
 * It can also include the token balance of a specific `holder` if the `holder` address is provided.
 
 
-#### **Get Tokens Owned by a User:**
+### **Get Tokens Owned by a User:**
 
 ```js
 function getUserTokens(address user) public view returns (uint256[] memory) {
@@ -176,7 +173,7 @@ function getUserTokens(address user) public view returns (uint256[] memory) {
 
 * This function returns a list of all token IDs owned by a specific user.
 
-### **9\. Token Transfer Functions with Freezing Consideration**
+## **9\. Token Transfer Functions with Freezing Consideration**
 
 ERC1155 includes transfer functions (`safeTransferFrom` and `safeBatchTransferFrom`). These are overridden in this contract to take into account frozen tokens.
 
@@ -195,7 +192,7 @@ function safeTransferFrom(
 
 This ensures that users cannot transfer frozen tokens. The contract checks that the unlocked balance (total balance minus frozen balance) is sufficient before allowing transfers.
 
-### **10\. Overriding `balanceOf` to Consider Frozen Tokens**
+## **10\. Overriding `balanceOf` to Consider Frozen Tokens**
 
 ```js
 function balanceOf(address account, uint256 tokenId) public view override returns (uint256) {
@@ -240,8 +237,6 @@ To deploy the Runes smart contract using Remix IDE, follow these steps in detail
 <img src="/img/resources/runes/Paste-RemixIDE.png"/>
 
 4. Click on the **Save** icon (the disk icon) to save the file.
-
-### 
 
 ### **Step 4: Compile the Smart Contract**
 

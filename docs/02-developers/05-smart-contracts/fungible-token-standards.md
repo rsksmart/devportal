@@ -2,7 +2,7 @@
 sidebar_position: 900
 sidebar_label: Fungible Token Standards
 title: Ethereum Fungible Tokens Standard ERC1363, ERC223, ERC677 
-description: 'Best practices for Smart Contract Development on Rootstock'
+description: 'What is ERC20, and are there others like it? How do they work on Rootstock?'
 tags: [rsk, rootstock, smart contracts, dApps, tokens, fungible-tokens]
 ---
 
