@@ -1,13 +1,19 @@
 import React from 'react'
+import {useEffect, useState} from 'react'
 import Link from '/src/components/Link'
 import clsx from 'clsx'
+import { Tooltip } from 'react-tooltip'
+import { useColorMode } from '@docusaurus/theme-common'
 
+
+function generateUniqueId(prefix = 'id') {
+  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
+}
 export const badgeSrc = ({ title, color, logo, logoColor, label, labelColor, version }) => {
-
   if (version) {
     title = version
-    label = 'version'
-    color = 'blue'
+    label = label ?? 'version'
+    color = color ?? 'blue'
   }
 
   let encodedTitle = title ? title.replace(/-/g, '--').replace(/_/g, '__').replace(/ /g, '_') : ''
@@ -16,6 +22,9 @@ export const badgeSrc = ({ title, color, logo, logoColor, label, labelColor, ver
     pink: '#FF70E0',
     purple: '#9E75FF',
     green: '#78C700',
+    orange: '#FF9100',
+    cyan: '#08FFD1',
+    yellow: '#DEFF1A'
   }
 
   color = colorsMatch[color] || color
@@ -40,11 +49,30 @@ function Tag ({ children, href, ...props }) {
   )
 }
 
-export default function ShieldsBadge ({ title, color, href, label, labelColor, logo, logoColor, version, ...props }) {
+export default function ShieldsBadge ({ title, color, href, label, labelColor, logo, logoColor, version, tooltip = null, ...props }) {
 
   const src = badgeSrc({ title, color, logo, logoColor, label, labelColor, version })
 
-  return src && <Tag href={href || null} {...props} className={`position-relative z-0 d-inline-flex`}>
-    <img src={src} alt={label ?? name} {...props} />
-  </Tag>
+  const tooltipId = tooltip ? generateUniqueId('tooltip') : null;
+
+  const {colorMode} = useColorMode();
+  const [toolTipColor, setTooltipColor] = useState('light');
+
+  useEffect(() => {
+    if (tooltip) {
+      setTooltipColor(colorMode === 'light' ? 'dark' : 'light');
+    }
+  }, [colorMode]);
+
+  return src && <>
+    <Tag href={href || null} {...props} className={`d-inline-flex align-bottom`}
+         data-tooltip-id={tooltip && tooltipId}
+         data-tooltip-content={tooltip}
+    >
+      <img src={src} alt={label ?? name} {...props} />
+      {tooltip && (
+        <Tooltip id={tooltipId} opacity={0.95} variant={toolTipColor} className="px-8 py-4"/>
+      )}
+    </Tag>
+  </>
 }
