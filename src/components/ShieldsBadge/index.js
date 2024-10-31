@@ -1,10 +1,8 @@
 import React from 'react'
 import {useEffect, useState} from 'react'
-import Link from '/src/components/Link'
-import clsx from 'clsx'
 import { Tooltip } from 'react-tooltip'
 import { useColorMode } from '@docusaurus/theme-common'
-
+import Link from '/src/components/Link';
 
 function generateUniqueId(prefix = 'id') {
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
@@ -45,7 +43,7 @@ function Tag ({ children, href, ...props }) {
       {children}
     </Link>
   ) : (
-    <div {...props}>{children}</div>
+    <span {...props}>{children}</span>
   )
 }
 
@@ -69,9 +67,9 @@ export default function ShieldsBadge ({ title, color, href, label, labelColor, l
          data-tooltip-id={tooltip && tooltipId}
          data-tooltip-content={tooltip}
     >
-      <img src={src} alt={label ?? name} {...props} />
+      <img src={src} alt={title || ''} {...props} />
       {tooltip && (
-        <Tooltip id={tooltipId} opacity={0.95} variant={toolTipColor} className="px-8 py-4 fs-12"/>
+        <Tooltip id={tooltipId} opacity={0.95} wrapper={"span"} variant={toolTipColor} className="px-8 py-4 fs-12"/>
       )}
     </Tag>
   </>

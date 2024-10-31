@@ -680,9 +680,10 @@ Detailed option description you can find [here](https://shields.io/badges/static
 - **Render**
 
 <Shield label="any text" title="you like" color="blue" />
-<Shield title="Badge with tooltip" tooltip="Hello from Rootstock"/>
+<Shield title="Badge with tooltip" tooltip="Hello from Rootstock" />
 <Shield title="Rootstock Dev Portal" color="pink" />
 <Shield label="build" title="passing" color="green" />
+
 
 #### Version badge
 
