@@ -564,69 +564,6 @@ description="Get an API key & make your first API call in minutes. Get an API ke
 />
 </Filter>
 
-## Badges
-Badges <Shield label="any text" title="you like" color="blue" /> <Shield label="build" title="passing" color="green" /> based on [shields.io](https://shields.io/)
-
-Available options:
-```jsx
-<Shield label="any text" //badge left part
-        labelColor="blue" //text, hex or rgb values
-        title="you like" //badge right part or main text
-        color="blue" //brand colors (pink, purple, green, orange) or any hex or rgb values
-        tooltip="Hello from Rootstock" //tooltip text
-        href="https://rootstock.io/" //link
-        version="1.0.1" //version number (use blue color by default)
-        logo="bitcoin" //logo name
-        logoColor="black" //logo color
-/>
-```
-Detailed option description you can find [here](https://shields.io/badges/static-badge)
-
-- **Code**
-```jsx
-<Shield label="any text" title="you like" color="blue" />
-<Shield title="Badge with tooltip" tooltip="Hello from Rootstock"/>
-<Shield title="Rootstock Dev Portal" color="pink" />
-<Shield label="build" title="passing" color="green" />
-```
-- **Render**
-
-<Shield label="any text" title="you like" color="blue" />
-<Shield title="Badge with tooltip" tooltip="Hello from Rootstock"/>
-<Shield title="Rootstock Dev Portal" color="pink" />
-<Shield label="build" title="passing" color="green" />
-
-#### Version badge
-
-- **Code**
-```jsx
-<Shield version="2.0" /> //default color is blue
-<Shield version="1.0.1" color="purple" /> //you can change color
-```
-- **Render**
-
-<Shield version="2.0" />
-<Shield version="1.0.1" color="purple" />
-
-#### Colors
-
-- **Code**
-```jsx
-<Shield title="Rootstock Dev Portal" color="purple" />
-<Shield title="Node Operators" color="pink" />
-<Shield title="Concepts" color="green" />
-<Shield title="Developers" color="orange" />
-<Shield title="Dogecoin" color="C2A633" />
-```
-
-- **Render**
-
-<Shield title="Rootstock Dev Portal" color="purple" />
-<Shield title="Node Operators" color="pink" />
-<Shield title="Concepts" color="green" />
-<Shield title="Developers" color="orange" />
-<Shield title="Dogecoin" color="C2A633" />
-
 ## Grid of Cards no filter
 - **Code**
 
@@ -715,8 +652,70 @@ description="Get an API key & make your first API call in minutes. Get an API ke
 Default <Button href="/dev-tools/">Default Button</Button>, small <Button size="sm" href="/developers/">Small Button</Button>, and large <Button size="lg" href="/resources/">Large Button</Button> buttons for different use cases.
 
 
+## Badges
+Badges <Shield label="any text" title="you like" color="blue" /> <Shield label="build" title="passing" color="green" /> based on [shields.io](https://shields.io/)
 
+Available options:
+```jsx
+<Shield label="any text" //badge left part
+        labelColor="blue" //text, hex or rgb values
+        title="you like" //badge right part or main text
+        color="blue" //brand colors (pink, purple, green, orange) or any hex or rgb values
+        tooltip="Hello from Rootstock" //tooltip text
+        href="https://rootstock.io/" //link
+        version="1.0.1" //version number (use blue color by default)
+        logo="bitcoin" //logo name
+        logoColor="black" //logo color
+/>
+```
+Detailed option description you can find [here](https://shields.io/badges/static-badge)
 
+- **Code**
+```jsx
+<Shield label="any text" title="you like" color="blue" />
+<Shield title="Badge with tooltip" tooltip="Hello from Rootstock"/>
+<Shield title="Rootstock Dev Portal" color="pink" />
+<Shield label="build" title="passing" color="green" />
+```
+- **Render**
+
+<Shield label="any text" title="you like" color="blue" />
+<Shield title="Badge with tooltip" tooltip="Hello from Rootstock"/>
+<Shield title="Rootstock Dev Portal" color="pink" />
+<Shield label="build" title="passing" color="green" />
+
+#### Version badge
+
+- **Code**
+```jsx
+<Shield version="2.0" /> //default color is blue
+<Shield version="1.0.1" color="purple" /> //you can change color
+```
+- **Render**
+
+<Shield version="2.0" />
+<Shield version="1.0.1" color="purple" />
+
+#### Colors
+
+Brand colors (pink, purple, green, orange) or any text colors, hex or rgb values
+
+- **Code**
+```jsx
+<Shield title="Rootstock Dev Portal" color="purple" />
+<Shield title="Node Operators" color="pink" />
+<Shield title="Concepts" color="green" />
+<Shield title="Developers" color="orange" />
+<Shield title="Dogecoin" color="C2A633" />
+```
+
+- **Render**
+
+<Shield title="Rootstock Dev Portal" color="purple" />
+<Shield title="Node Operators" color="pink" />
+<Shield title="Concepts" color="green" />
+<Shield title="Developers" color="orange" />
+<Shield title="Dogecoin" color="C2A633" />
 
 #### Tooltip, logo and link
 Available logo options you can find [here](https://github.com/inttter/md-badges).

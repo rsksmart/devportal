@@ -71,7 +71,7 @@ export default function ShieldsBadge ({ title, color, href, label, labelColor, l
     >
       <img src={src} alt={label ?? name} {...props} />
       {tooltip && (
-        <Tooltip id={tooltipId} opacity={0.95} variant={toolTipColor} className="px-8 py-4"/>
+        <Tooltip id={tooltipId} opacity={0.95} variant={toolTipColor} className="px-8 py-4 fs-12"/>
       )}
     </Tag>
   </>
