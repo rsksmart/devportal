@@ -1,14 +1,14 @@
 ---
-sidebar_label: Using Hardhat
+sidebar_label: Rootstock Hardhat Starter Kit
 sidebar_position: 400
-title: Rootstock Hardhat Starter dApp
+title: Rootstock Hardhat Starter Kit
 description: 'Whether you are a seasoned developer or just starting your journey into smart contract development, the hardhat starter kit provides a solid foundation for building decentralized applications (dApps) on the Rootstock network.'
 tags: [rsk, rootstock, tutorials, developers, hardhat, quick starts, dApps, smart contracts]
 ---
 
 Whether you’re a seasoned developer or just starting your journey into smart contract development, the hardhat starter kit provides a solid foundation for building decentralized applications (dApps) on the Rootstock network.
 
-Rootstock is fully compatible with Ethereum. It brings the power of smart contracts to Bitcoin, allowing developers to leverage Bitcoin’s security while benefiting from Ethereum’s ecosystem.
+Rootstock is fully EVM (Ethereum Virtual Machine) compatible. It brings the power of smart contracts to Bitcoin, allowing developers to leverage Bitcoin’s security while benefiting from Ethereum’s ecosystem.
 
 ## Prerequisites
 

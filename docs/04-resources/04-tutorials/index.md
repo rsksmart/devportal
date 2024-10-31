@@ -21,6 +21,14 @@ linkHref="/resources/tutorials/rootstock-rust/"
 description="Rust is extensively getting used on backend side of many defi applications, dApps, developer tools, indexers and bridges. This guide will help developers to start using Rust on Rootstock blockchain."
 />
 <FilterItem
+value="beginner"
+title="Deploy, Interact and Verify Smart Contracts using Remix and Rootstock Explorer"
+subtitle="Remix"
+color="orange"
+linkHref="/developers/quickstart/remix/" 
+description="In this guide, we will use the Remix IDE to write, compile, deploy, interact and verify a smart contract on the Rootstock Explorer."
+/>
+<FilterItem
 value="beginner, advanced"
 title="Add Rootstock to Metamask Programmatically"
 subtitle="metamask"
