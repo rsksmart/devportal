@@ -48,8 +48,8 @@ const config = {
         title: 'Request an Article',
         form : {
           id : '5qQ40ScPu',
-          title : 'Request an Article',
-          description : 'Please provide a detailed description of the article you would like to see on the Devportal.',
+          title : 'Request a New Article',
+          description : 'Looking for information we haven’t covered? Fill out the form below to request a new article, and we’ll consider it in future updates.',
         }
       },
     }
