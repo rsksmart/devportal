@@ -44,6 +44,14 @@ const config = {
         title: 'Report an Issue',
         url : 'https://github.com/rsksmart/devportal/issues',
       },
+      requestArticle : {
+        title: 'Request an Article',
+        form : {
+          id : '5qQ40ScPu',
+          title : 'Request an Article',
+          description : 'Please provide a detailed description of the article you would like to see on the Devportal.',
+        }
+      },
     }
   },
   // GitHub pages deployment config.
