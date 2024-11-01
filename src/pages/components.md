@@ -672,7 +672,7 @@ Detailed option description you can find [here](https://shields.io/badges/static
 
 - **Code**
 ```jsx
-<Shield label="any text" title="you like" color="blue" />
+<Shield label="any text" title="you like" tooltip="Hello from Rootstock" color="blue" />
 <Shield title="Badge with tooltip" tooltip="Hello from Rootstock"/>
 <Shield title="Rootstock Dev Portal" color="pink" />
 <Shield label="build" title="passing" color="green" />

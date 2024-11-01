@@ -1,31 +1,56 @@
 ---
 sidebar_position: 5
-sidebar_label: Cross Chain Bridges
-title: Cross Chain Bridges
+sidebar_label: Cross Chain
+title: Cross Chain - Bridging between Blockchains
 description: "How to get started with writing, deploying and testing smart contracts on Rootstock using Hardhat." 
-tags: [hardhat, quick start, developer tools, rsk, rootstock, ethereum, dApps, smart contracts]
+tags: [cross chain, bridges, developer tools, rsk, rootstock, ethereum, dApps, smart contracts]
 ---
 
-## Router Protocol
+Imagine different islands, each with its own unique economy and currency. To trade with each other, these islands need bridges to connect them. In the world of blockchain, these islands are different blockchains, and the bridges are cross-chain bridges.
 
-Router Protocol is a layer-1 blockchain enabling chain abstraction.
+## Why do we need cross-chain bridges?
 
-## Chainport
+* Seamless Asset Movement: Just like you can move money between different bank accounts, cross-chain bridges allow you to move your digital assets (like cryptocurrencies or NFTs) between different blockchains.
+* Expanded Opportunities: By connecting different blockchains, you can access a wider range of financial services, decentralized applications (dApps), and investment opportunities.
 
-Chainport is a cross-chain bridge integrated with Rootstock.
+## How do cross-chain bridges work?
 
-## Wormhole
+* Lock and Mint: When you want to move assets from one blockchain (let's call it Chain A) to another (Chain B), the bridge locks your assets on Chain A and mints a corresponding amount of wrapped assets on Chain B.
+* Transfer and Burn: You can then transfer these wrapped assets on Chain B. Once you're ready to move them back to Chain A, the bridge burns the wrapped assets on Chain B and releases your original assets on Chain A.
 
-Wormhole provides access to all the information you need to develop secure multichain applications powered by Wormhole on Rootstock.
+## Bridging Solutions on Rootstock
 
-## Tokenbridge
-
-Safely move your ERC20 tokens between Rootstock and Ethereum with the Tokenbridge dApp. This user-friendly interface lets you interact with the Token Bridge contracts directly. It is available on [Mainnet](https://dapp.tokenbridge.rootstock.io/) or [Testnet](https://dapp.testnet.bridges.rootstock.io/).
-
-## PowPeg App
-
-The [PowPeg App](https://powpeg.rootstock.io/) converts BTC to RBTC and vice versa. It is secured by the [PowPeg protocol](/concepts/powpeg/), which is a unique protocol that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus.
-
-It is a web application that fosters the interaction between the bitcoin blockchain and the Rootstock network for easier exchange of BTC and RBTC. It also provides a way to visualize the status of transactions, communicate with a user wallet (both hardware wallets and software wallets), while also providing the highest possible level of security for transactions.
-
-Get started with the [PowPeg App](/resources/guides/powpeg-app/)
+<CardsGrid>
+  <CardsGridItem
+    title="Token Bridge"
+    subtitle="cross-chain"
+    color="green"
+    description="Token Bridge dApp allow for easy movement your ERC-20 tokens (tokens on the Ethereum network) between Ethereum and Rootstock using the user-friendly Tokenbridge dApp."
+    linkHref="/resources/guides/tokenbridge/"
+    linkTitle="Start Bridging"
+  />
+   <CardsGridItem
+    title="PowPeg App"
+    subtitle="cross-chain"
+    color="green"
+    description="Convert BTC to RBTC and vice versa. It is secured by the PowPeg protocol, which is a unique protocol that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus."
+    linkHref="/resources/guides/tokenbridge/"
+    linkTitle="Start Bridging"
+  />
+  <CardsGridItem
+    title="Router Protocol"
+    subtitle="cross-chain"
+    color="green"
+    description="Router Protocol enables communication and interaction between different networks (Layer 1) regardless of their underlying technology."
+    linkHref="https://powpeg.rootstock.io/"
+    linkTitle="Start Bridging"
+  />
+  <CardsGridItem
+    title="Wormhole"
+    subtitle="cross-chain"
+    color="green"
+    description="Wormhole provides developers with all the resources and tools they need to create dApps that leverage the power of multiple blockchains, including Rootstock."
+    linkHref="https://wormhole.com/docs/build/start-building/supported-networks/evm/#rootstock"
+    linkTitle="Start Bridging"
+  />
+</CardsGrid>

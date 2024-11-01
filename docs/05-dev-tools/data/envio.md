@@ -6,7 +6,9 @@ description: "Easily query on-chain data through a decentralized network of inde
 tags: [Envio, indexers, data, subgraphs, dApps, smart contracts, developers, developer tools, get-started, how-to]
 ---
 
-[Envio](https://envio.dev/) is a feature-rich indexing solution that provides developers with a seamless and efficient way to index and aggregate real-time or historical blockchain data for Rootstock, and **other EVM chains**. The indexed data is easily accessible through custom [GraphQL](https://graphql.org/) queries, giving developers the flexibility and power to retrieve specific information. See [Getting started with Envio](/dev-tools/data/envio/)
+[Envio](https://envio.dev/) is a feature-rich indexing solution that provides developers with a seamless and efficient way to index and aggregate real-time or historical blockchain data for Rootstock, and **other EVM chains**. The indexed data is easily accessible through custom [GraphQL](https://graphql.org/) queries, giving developers the flexibility and power to retrieve specific information. See [Getting started with Envio](/dev-tools/data/envio/).
+
+Available on: <Shield title="mainnet" color="orange" />
 
 Developers can choose whether they want to start from a template (e.g. Blank, ERC-20, etc.), or use the Contract Import feature: 
 
@@ -14,17 +16,15 @@ Developers can choose whether they want to start from a template (e.g. Blank, ER
 
 The following are the prerequisite packages required for Envio:
 
-* [Node.js](http://node.js) (use[ v18](https://nodejs.org/download/release/v18.18.0/) or newer)
-* [pnpm](https://pnpm.io/installation) (use v8 or newer)
+* [Node.js](http://node.js) <Shield version="18" /> or newer
+* [pnpm](https://pnpm.io/installation) <Shield version="8" /> or newer
 * [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
 Docker is required specifically for running the Envio indexer locally.
 
-
 ## Installation
 
 You can install Envio by running the command below:
-
 
 ```bash
 npm i -g envio

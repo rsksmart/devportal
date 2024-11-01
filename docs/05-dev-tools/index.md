@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Developer Tools
+title: Developer Tooling and Infrastructure
 sidebar_label: All Tools
 tags: [rsk, rootstock, tools, developer tools]
 description: "Explore a curated selection of smart contract development tools and languages. From the familiar Solidity to Rust or Developer Environments like Hardhat, you'll find everything you need to interact and deploy your smart contracts on Rootstock."
@@ -64,7 +64,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="Hardhat"
     subtitle="Dev Environments"
     color="orange"
-    linkHref="/dev-tools/environments/hardhat/"
+    linkHref="/dev-tools/dev-environments/hardhat/"
     linkTitle="Deploy Smart Contracts"
     description="Hardhat is an Ethereum development environment for developers. It's primarily used in the development of smart contracts for the Rootstock and EVM-compatible chains."
   />

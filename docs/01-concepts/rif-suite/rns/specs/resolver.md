@@ -12,9 +12,9 @@ Resolvers MUST specify a fallback function that throws.
 
 Resolvers must implement ERC-165 interface detection standard. supportsInterface method must return if the interfaceID queried is simply equal to the signature hash of the function that resolves the desired resource record.
 
-Currently standardized resolver interfaces are specified below.
+<!-- Currently standardized resolver interfaces are specified below.
 
-> Check out [definitive resolver](/rif/rns/architecture/definitive-resolver) for implementation details.
+> Check out [definitive resolver](/rif/rns/architecture/definitive-resolver) for implementation details. -->
 
 
 ### Contract address

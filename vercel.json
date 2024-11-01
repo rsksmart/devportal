@@ -634,6 +634,8 @@
     {"source" : "/guides/stablecoin/stablecoin-vs-digital-assets", "destination" : "https://blog.rootstock.io/noticia/stablecoin-vs-digital-asset/"},
     {"source" : "/guides/dex/features-of-a-dex", "destination" : "https://blog.rootstock.io/noticia/features-of-a-dex/"},
     {"source" : "/developers/quickstart/alchemy/", "destination" : "/developers/rpc-api/alchemy/"},
-    {"source" : "/developers/rpc-api/setup/", "destination" : "/developers/rpc-api/rootstock/setup/"}
+    {"source" : "/developers/rpc-api/setup/", "destination" : "/developers/rpc-api/rootstock/setup/"},
+    {"source" : "/developers/smart-contracts/eas/", "destination" : "/dev-tools/attestations/eas/"},
+    {"source" : "/developers/smart-contracts/eas/overview/", "destination" : "/dev-tools/attestations/eas/"}
   ]
 }

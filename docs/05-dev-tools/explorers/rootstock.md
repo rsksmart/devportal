@@ -1,12 +1,14 @@
 ---
 sidebar_position: 3
-sidebar_label: Rootstock Explorers
-title: Overview of the Rootstock Explorer
+sidebar_label: Rootstock Explorer
+title: Get Started with the Rootstock Explorer
 tags: [overview, explorer, rootstock, smart contracts, transactions, developer tools]
 description: Explore transaction
 ---
 
 You can browse the overview of Rootstock on the [explorer page](https://explorer.rootstock.io/) as shown below.
+
+Available on: <Shield label="mainnet" title="testnet" tooltip="Available on both Mainnet and Testnet" href="https://explorer.testnet.rootstock.io/" color="orange" />
 
 <div align="center"><img width="100%" src="/img/tools/explorer/explorer1.png" alt="overview of explorer"/></div>
 
