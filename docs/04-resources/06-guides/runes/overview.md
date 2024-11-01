@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
-title: Introduction to Runes 
-sidebar_label: Introduction to Runes
+title: Overview of Runes on Rootstock
+sidebar_label: Overview of Runes on Rootstock
 tags: [rsk, rootstock, resources, tutorials, runes, nft, Ethereum, dApps, smart contracts]
 description: "The Rootstock Runes Mock Bridge opens up exciting opportunities for developers to build Runes-focused applications within the Rootstock ecosystem. This bridge introduces three core solutions: Mock Bridge, Marketplace, Giveaway Engine"
 ---
@@ -40,11 +40,11 @@ You will gain an understanding of Bitcoin Runes, including how they operate on t
 
 By the end of this article, you will be able to build and deploy the Runes Mock Bridge and connect it to a frontend, equipping you with the foundational knowledge and technical skills necessary to start building innovative applications using Bitcoin Runes within the Rootstock ecosystem.
 
-### **Who Is This Guide For?**
+## **Who Is This Guide For?**
 
 This guide is aimed at developers interested in working with Bitcoin Runes, particularly within the Rootstock ecosystem. You’ll need some basic knowledge of blockchain technology, Bitcoin, and Ethereum, but we’ll also provide step-by-step instructions for setting up your environment.
 
-### **Understanding Bitcoin Runes**
+## **Understanding Bitcoin Runes**
 
 **What Are Runes?**  
 Bitcoin Runes is a protocol for creating fungible tokens directly on the blockchain. Developed by Casey Rodarmor, the mind behind Ordinals, Runes offers a more efficient way to issue tokens. 
@@ -96,7 +96,7 @@ A diagram can help visualize this process.
 
 This simplified flow shows how UTXOs and OP\_RETURN work together to track Rune transactions.
 
-### **Why Use Bitcoin Runes?**
+## **Why Use Bitcoin Runes?**
 
 By using these features of Bitcoin, Runes allow token creation and management without needing a separate blockchain. This makes them secure (since they rely on Bitcoin’s strong security) and simple, as they use the same underlying transaction system that Bitcoin already uses.
 

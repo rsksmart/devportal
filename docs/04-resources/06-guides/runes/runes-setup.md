@@ -1,14 +1,12 @@
 ---
 sidebar_position: 2
-title: Runes Setup
-sidebar_label: Runes Setup
+title: How to setup your first Runes Project
+sidebar_label: How to setup your first Runes Project
 tags: [rsk, rootstock, resources, tutorials,  setup, Runes, dApps, smart contracts, Remix IDE, MetaMask]
 description: "The Rootstock Runes Mock Bridge setup page shows you how to getting building your runes, by first cloning our project and testing it locally."
 ---
 
-
-
-### **Prerequisites**
+## **Prerequisites**
 
 Before getting started with the Runes Mock Bridge, ensure you have the following prerequisites in place:
 
@@ -25,9 +23,9 @@ Before getting started with the Runes Mock Bridge, ensure you have the following
 
 Once these prerequisites are in place, you'll be ready to proceed with setting up and using the Runes Mock Bridge effectively.
 
-### **Setting Up the `.env` File for the Runes Mock Bridge**
+## **Setting Up the `.env` File for the Runes Mock Bridge**
 
-```
+```plaintext
 NEXT_PUBLIC_APP_PK='your-private-key'
 NEXT_PUBLIC_RPC_URL='your rsk rpc url'
 NEXT_PUBLIC_EXPLORER_URL=https://blockstream.info/testnet/tx
@@ -41,7 +39,7 @@ To run the **Runes Mock Bridge** effectively, you'll need to set up the environm
 
 Here's a detailed guide on what each environment variable means, how to get them, and how to set up your `.env` file correctly.
 
-#### **1\. `NEXT_PUBLIC_APP_PK='your-private-key'`**
+### **1\. `NEXT_PUBLIC_APP_PK='your-private-key'`**
 
 This is the private key for your application, which is essential for signing transactions or interacting with the blockchain via the Runes Mock Bridge
 
@@ -52,14 +50,14 @@ This is the private key for your application, which is essential for signing tra
 * You can obtain your private key from your wallet. Typically, you will export the private key from the wallet software you're using (like MetaMask or any other supported wallet).  
 * Follow a detailed tutorial specific to your wallet on how to extract your private key, and then input it here.
 
-#### **2\. `NEXT_PUBLIC_RPC_URL='your RSK RPC URL'`**
+### **2\. `NEXT_PUBLIC_RPC_URL='your RSK RPC URL'`**
 
 The Remote Procedure Call (RPC) URL is how your Runes Mock Bridge interacts with the Rootstock (RSK) blockchain.
 
 * To get the RSK RPC URL, go to the[RPC API Dashboard](https://dashboard.rpc.rootstock.io/login) and log in. After logging in, you can create an API key that will give you access to the RPC URL.  
 * Once the key is generated, you can use it to set up this variable, which allows your bridge to communicate with the blockchain.
 
-#### **3\. `NEXT_PUBLIC_EXPLORER_URL=https://blockstream.info/testnet/tx`**
+### **3\. `NEXT_PUBLIC_EXPLORER_URL=https://blockstream.info/testnet/tx`**
 
 This is the URL for the **Bitcoin Testnet Explorer** provided by Blockstream, where you can track Bitcoin testnet transactions.
 
@@ -67,7 +65,7 @@ This is the URL for the **Bitcoin Testnet Explorer** provided by Blockstream, wh
 This value remains constant and doesn't need to be changed, as it will always point to the Bitcoin testnet explorer.
 :::
 
-#### **4\. `NEXT_PUBLIC_RSK_EXPLORER_URL=https://explorer.testnet.rootstock.io/tx`**
+### **4\. `NEXT_PUBLIC_RSK_EXPLORER_URL=https://explorer.testnet.rootstock.io/tx`**
 
 This is the URL for the **Rootstock Testnet Explorer**, where you can track transactions related to the Rootstock network.
 
@@ -75,7 +73,7 @@ This is the URL for the **Rootstock Testnet Explorer**, where you can track tran
 Like the Blockstream explorer URL, this value is also constant and doesn't need to be changed. It is set to the correct Rootstock testnet explorer.
 :::
 
-#### **5\. `NEXT_PUBLIC_CONTRACT_ADDRESS='your ERC-1155 contract address'`**
+### **5\. `NEXT_PUBLIC_CONTRACT_ADDRESS='your ERC-1155 contract address'`**
 
 :::info[Important]
 The RuneToken implementation used is not a standard ERC-1155 contract. It includes custom functions to freeze tokens transferred from Rootstock to Bitcoin. To ensure compatibility, please use the same (or an improved) version of the smart contract available in this repository: [RuneToken.sol](https://github.com/rsksmart/rsk-runes/blob/main/contracts/RuneToken.sol) and deploy it.
@@ -87,7 +85,7 @@ This variable is used to specify the address of your deployed ERC-1155 contract,
 * You need to deploy your ERC-1155 contract using Remix IDE or a similar tool. Once the deployment is complete, you will get the contract address.  
 * Copy the contract address from Remix IDE after deployment and paste it into this variable.
 
-#### **6\. `NEXT_PUBLIC_TAPROOT_ADDRESS='your taproot address'`**
+### **6\. `NEXT_PUBLIC_TAPROOT_ADDRESS='your taproot address'`**
 
 Taproot addresses are used for Bitcoin transactions with improved privacy and flexibility. The [Runes Mock Bridge](https://github.com/rsksmart/rsk-runes) requires a Taproot address for interacting with Bitcoin's taproot transactions.
 
@@ -110,7 +108,7 @@ No WIF set, generating new random address
 ```
 > you can generate multiple taproot address
 
-#### **7\. `NEXT_PUBLIC_WIF='your WIF key'`**
+### **7\. `NEXT_PUBLIC_WIF='your WIF key'`**
 
 The Wallet Import Format (WIF) key is the encoded version of your Bitcoin private key, which is necessary for signing Bitcoin transactions on the testnet.
 
@@ -118,8 +116,6 @@ The Wallet Import Format (WIF) key is the encoded version of your Bitcoin privat
   1. After running `npm run generate`, you will get both the Taproot address and the WIF key as part of the output.  
   2. Copy the WIF key and paste it into this variable.
 
-
-   
 :::note[Note]
 **Security:** Ensure that the `.env` file is kept private and not exposed in public repositories or shared with unauthorized people. This file contains sensitive information such as your private keys, which could be exploited if leaked.
 
@@ -131,14 +127,14 @@ The Wallet Import Format (WIF) key is the encoded version of your Bitcoin privat
 
 To clone and run the Runes Mock Bridge project locally, follow these steps:
 
-#### **1\. Clone the Repository:**
+### **1\. Clone the Repository:**
 
-```
+```bash
 git clone https://github.com/rsksmart/rsk-runes.git
 cd rsk-runes
 ```
 
-#### **2\. Install Dependencies:**
+### **2\. Install Dependencies:**
 
 Use either `yarn` or `npm` to install the necessary dependencies:
 
@@ -148,11 +144,11 @@ or
 npm install
 ```
 
-#### **3\. Access the Application:**
+### **3\. Access the Application:**
 
 Once the installation is complete, start the development server and access the application in your browser by visiting:
 
-```
+```text
 http://localhost:3000
 ```
 <img src="/img/resources/runes/runes-ui.png"/>
