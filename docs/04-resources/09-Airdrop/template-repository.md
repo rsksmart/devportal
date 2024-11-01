@@ -7,7 +7,11 @@ tags: [rsk, rootstock, resources, tutorials, runes, nft, Ethereum, dApps, smart 
 description: "The repository consists of multiple smart contracts that work around a core logic contract called AirdropManager.sol which manages the logic for the different airdrops inside.Each contract has a specific role, and they interact with one another to manage airdrops effectively."
 ---
 
-The repository consists of multiple smart contracts that work around a core logic contract called AirdropManager.sol which manages the logic for the different airdrops inside.Each contract has a specific role, and they interact with one another to manage airdrops effectively.
+
+This repository contains multiple smart contracts designed to facilitate and manage airdrops efficiently. At the center of the codebase is `AirdropManager.sol`, the core logic contract responsible for handling various airdrop functions. 
+
+Each supporting contract is assigned a distinct role, working in together with `AirdropManager.sol` to coordinate and execute airdrop processes smoothly. The following sections provide a detailed breakdown of the codebase. 
+
 
 <Accordion>
   <Accordion.Item eventKey="0">
@@ -784,7 +788,5 @@ function mintBatch(address to, uint256[] memory ids, uint256[] memory amounts, b
 </Accordion>
 
 
-# Test
-**Complete Codebase**  
-[https://github.com/rsksmart/airdrop-template/tree/main/contracts](https://github.com/rsksmart/airdrop-template/tree/main/contracts)  
-It is private at the moment, so this will block the publishing stage.
+## Complete Codebase 
+> [https://github.com/rsksmart/airdrop-template/tree/main/contracts](https://github.com/rsksmart/airdrop-template/tree/main/contracts)  
