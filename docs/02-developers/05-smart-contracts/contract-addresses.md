@@ -27,3 +27,4 @@ For info on derivation paths, see [Account based addresses](/concepts/account-ba
 |  BTCX |  [BTCX](https://moneyonchain.com/btcx-leveraged-bitcoin/) |  | Rootstock | [0xf773b5...](https://explorer.rootstock.io/address/0xf773b590af754d597770937fa8ea7abdf2668370) |
 |  RIFX |  [RIFX](https://rif.moneyonchain.com/metrics) |  | Rootstock | [0xcff3fca...](https://explorer.rootstock.io/address/0xcff3fcaec2352c672c38d77cb1a064b7d50ce7e1) |
 |  WRBTC |  Wrapped RBTC | ERC20  | Rootstock | [0x542FDA3...](https://rootstock.blockscout.com/token/0x542FDA317318eBf1d3DeAF76E0B632741a7e677d) |
+|  stRIF |  Staked RIF in RootstockCollective DAO | ERC20  | Rootstock | [0x5db91e2...](https://rootstock.blockscout.com/token/0x5db91e24BD32059584bbDb831A901f1199f3d459?tab=contract) |
