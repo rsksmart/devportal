@@ -32,6 +32,7 @@
     "react": "^18.0.0",
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18.0.0",
+    "react-tooltip": "^5.28.0",
     "sass": "^1.77.3"
   },
   "devDependencies": {

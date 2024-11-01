@@ -32,7 +32,6 @@ ul{
     color: var(--bs-heading-color);
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
-    display: inline;
     font-size: $f40;
     letter-spacing: -0.04em;
     margin: 0;
@@ -152,7 +151,7 @@ ul{
     }
   }
 
-  img{
+  img:not([src*="shields.io"]){
     border: 1px solid var(--rsk-image-border-color);
     border-radius: 10px;
     max-height: 500px; //TODO test if works for all images

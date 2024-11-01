@@ -127,35 +127,13 @@ You can add images in two ways on our doc.
 ## Gallery/Slider
 Use this to showcase a series of images or content that benefit from a swiping or sliding interface.
 
-- **Code**
+- **Codes**
 ```jsx
 <Carousel width="370" height="260" images={['/img/concepts/rootstock-tech-stack.svg', ... , '/img/metamask-gas-limit.png']} />
 ```
 **Result**
 <Carousel width="370" height="260" images={['/img/concepts/rootstock-tech-stack.svg', '/img/legacy-private-key.png', '/img/metamask-gas-limit.png', '/img/add-ganache-1.png', '/img/add-ganache-2.png']} />
 
-## Gallery/Slider images with links.
-
-- **Code**
-```jsx
-<Carousel width="370" height="260" >
-  <CarouselItem image="/img/concepts/rootstock-tech-stack.svg" href="/resources" />
-  <CarouselItem image="/img/legacy-private-key.png" href="https://rootstock.io" target="_blank" />
-  <CarouselItem image="/img/metamask-gas-limit.png" href="/dev-tools" />
-  <CarouselItem image="/img/add-ganache-1.png" />
-  <CarouselItem image="/img/add-ganache-2.png" href="/developers" />
-</Carousel>
-
-```
-**Result**
-
-<Carousel width="370" height="260" >
-<CarouselItem image="/img/concepts/rootstock-tech-stack.svg" href="/resources" />
-<CarouselItem image="/img/legacy-private-key.png" href="https://rootstock.io" target="_blank" />
-<CarouselItem image="/img/metamask-gas-limit.png" href="/dev-tools" />
-<CarouselItem image="/img/add-ganache-1.png" />
-<CarouselItem image="/img/add-ganache-2.png" href="/developers" />
-</Carousel>
 
 ## Video
 Use this to demonstrate functionalities, complex explanations, or walkthroughs.
@@ -586,7 +564,6 @@ description="Get an API key & make your first API call in minutes. Get an API ke
 />
 </Filter>
 
-
 ## Grid of Cards no filter
 - **Code**
 
@@ -675,6 +652,83 @@ description="Get an API key & make your first API call in minutes. Get an API ke
 Default <Button href="/dev-tools/">Default Button</Button>, small <Button size="sm" href="/developers/">Small Button</Button>, and large <Button size="lg" href="/resources/">Large Button</Button> buttons for different use cases.
 
 
+## Badges
+Badges <Shield label="any text" title="you like" color="blue" /> <Shield label="build" title="passing" color="green" /> based on [shields.io](https://shields.io/)
+
+Available options:
+```jsx
+<Shield label="any text" //badge left part
+        labelColor="blue" //text, hex or rgb values
+        title="you like" //badge right part or main text
+        color="blue" //brand colors (pink, purple, green, orange) or any hex or rgb values
+        tooltip="Hello from Rootstock" //tooltip text
+        href="https://rootstock.io/" //link
+        version="1.0.1" //version number (use blue color by default)
+        logo="bitcoin" //logo name
+        logoColor="black" //logo color
+/>
+```
+Detailed option description you can find [here](https://shields.io/badges/static-badge)
+
+- **Code**
+```jsx
+<Shield label="any text" title="you like" color="blue" />
+<Shield title="Badge with tooltip" tooltip="Hello from Rootstock"/>
+<Shield title="Rootstock Dev Portal" color="pink" />
+<Shield label="build" title="passing" color="green" />
+```
+- **Render**
+
+<Shield label="any text" title="you like" color="blue" />
+<Shield title="Badge with tooltip" tooltip="Hello from Rootstock" />
+<Shield title="Rootstock Dev Portal" color="pink" />
+<Shield label="build" title="passing" color="green" />
 
 
+#### Version badge
 
+- **Code**
+```jsx
+<Shield version="2.0" /> //default color is blue
+<Shield version="1.0.1" color="purple" /> //you can change color
+```
+- **Render**
+
+<Shield version="2.0" />
+<Shield version="1.0.1" color="purple" />
+
+#### Colors
+
+Brand colors (pink, purple, green, orange) or any text colors, hex or rgb values
+
+- **Code**
+```jsx
+<Shield title="Rootstock Dev Portal" color="purple" />
+<Shield title="Node Operators" color="pink" />
+<Shield title="Concepts" color="green" />
+<Shield title="Developers" color="orange" />
+<Shield title="Dogecoin" color="C2A633" />
+```
+
+- **Render**
+
+<Shield title="Rootstock Dev Portal" color="purple" />
+<Shield title="Node Operators" color="pink" />
+<Shield title="Concepts" color="green" />
+<Shield title="Developers" color="orange" />
+<Shield title="Dogecoin" color="C2A633" />
+
+#### Tooltip, logo and link
+Available logo options you can find [here](https://github.com/inttter/md-badges).
+- **Code**
+```jsx
+<Shield title="Badge with link and tooltip" tooltip="Badge with link and tooltip" href="https://rootstock.io/" color="purple" />
+<Shield title="Badge with logo" href="https://bitcoin.org/" color="gray" label="Bitcoin" labelColor="f7931a" logo="bitcoin" />
+<Shield color="F3B724" title="Zcash" logo="zcash" logoColor="black" />
+```
+
+- **Render**
+
+<Shield title="Badge with link and tooltip" tooltip="Badge with link and tooltip" href="https://rootstock.io/" color="purple" />
+<Shield title="Badge with logo" href="https://bitcoin.org/" color="gray" label="Bitcoin" labelColor="f7931a" logo="bitcoin" />
+<Shield color="F3B724" title="Zcash" logo="zcash" logoColor="black" />
