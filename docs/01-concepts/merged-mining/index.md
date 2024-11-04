@@ -8,7 +8,7 @@ description: "How merge mining Rootstock with Bitcoin works, and its benefits."
 
 [Merged mining](https://rootstock.io/mine-btc-with-rootstock/) is the process that allows Rootstock blockchain to be mined simultaneously with Bitcoin blockchain. This can be done because both chains use the same proof-of-work (PoW) algorithm, double SHA-256.
 
-[Get Started](/node-operators/merged-mining/getting-started/)
+<Button href="/node-operators/merged-mining/getting-started/">Get Started</Button>
 
 ## How it works
 

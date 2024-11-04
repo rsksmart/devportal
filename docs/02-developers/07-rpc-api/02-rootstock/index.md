@@ -13,10 +13,7 @@ In this guide, you will learn:
 - How to create an account and [make your first API call](/developers/rpc-api/rootstock/setup/)
 - View a list of [JSON-RPC methods](/developers/rpc-api/rootstock/methods/) available on the Rootstock RPC Service. 
 
-<div class="btn-container">
-  <span></span>
-    <a class="green" href="https://rpc.rootstock.io/">Use the RPC Service</a>
-</div>
+<Button href="https://rpc.rootstock.io/">Use the Rootstock RPC API</Button>
 
 ## Who Is It For?
 

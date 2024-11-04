@@ -25,7 +25,7 @@ Several node provider services are available for Rootstock
     subtitle="node-rpc"
     color="cyan"
     description="The RPC API provides a seamless and intuitive web interface for developers to interact with Rootstock nodes via JSON-RPC methods"
-    linkHref="http://rpc.rootstock.io/"
+    linkHref="/developers/rpc-api/rootstock/"
     linkTitle="Make First API Call"
   />
   <CardsGridItem
