@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 3
 sidebar_label: Node Providers
 title: Node Providers
 description: "Building dApps on Rootstock involves interacting with the blockchain network. See available node rpc providers on Rootstock." 

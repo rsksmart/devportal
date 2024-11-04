@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 8
 sidebar_label: Explorers
 title: Explorers on Rootstock
 description: "Blockchain explorers are a special type of software that connect to a blockchain network, and display the data from an immutable public ledger. Find block explorers for viewing transactions, blocks, addresses and verifying smart contracts on Rootstock." 

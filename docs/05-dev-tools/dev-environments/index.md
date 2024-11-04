@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 10
 sidebar_label: Dev Environments
 title: Dev Environments
 description: "Dev Environments provide a complete set of tools for writing, testing, and deploying your smart contracts on Rootstock." 

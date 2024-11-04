@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 5
 sidebar_label: Data Indexers
 title: Data Indexing
 description: "Data indexers act like librarians for blockchain data, organizing and storing information in a way that's easy to access. This makes it easier for dApps to get the data needed, which in turn makes dApps faster and more efficient. Explore data indexers on Rootstock." 
