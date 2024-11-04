@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
-sidebar_label: Node Providers
-title: Node Providers
+sidebar_label: RPC Node Providers
+title: RPC Node Providers
 description: "Building dApps on Rootstock involves interacting with the blockchain network. See available node rpc providers on Rootstock." 
 tags: [hardhat, quick start, developer tools, rsk, rootstock, ethereum, dApps, smart contracts]
 ---
@@ -14,12 +14,12 @@ Imagine a vast library filled with information about everything happening on the
 
 ## How Node Providers Work
 
-* Full Nodes: Node providers run full nodes, which download and store the entire history of the Rootstock blockchain.
-* API Access: They offer an interface (API) that developers can use to communicate with these nodes and request specific data. This eliminates the need for developers to download the entire blockchain themselves, saving time and resources.
+* Full Nodes: Node providers operate by running full nodes on the Rootstock blockchain. These full nodes download and store the complete history of the blockchain, enabling them to verify transactions and maintain a consistent view of the network.  To interact with these full nodes, developers and applications utilize a remote procedure call (RPC) mechanism, specifically the JSON-RPC protocol. This protocol allows remote communication with the node, enabling the submission of requests and the receipt of responses.
+* API Access: Node providers like the Rootstock RPC API, Alchemy, GetBlock, NOWNodes, dRPC, etc offer an interface (API) that developers can use to communicate with these nodes and request specific data. This eliminates the need for developers to download the entire blockchain themselves, saving time and resources.
 
-## RPC Service Providers on Rootstock
+## RPC Node Providers on Rootstock
 
-Several node rpc provider services are available on Rootstock. 
+Here you can find a list of rpc node providers on Rootstock. 
 
 <CardsGrid>
   <CardsGridItem
