@@ -8,7 +8,7 @@ tags: [etherspot, account abstraction, developer tools, rsk, rootstock, ethereum
 
 Etherspot is an Account Abstraction infrastructure designed to help developers create a seamless web3 user experience for users interacting with their dApps.
 
-Available on: <Shield label="mainnet" title="testnet" tooltip="Available on both Mainnet and Testnet" color="orange" />
+Supported on: <Shield label="mainnet" title="testnet" tooltip="Available on Mainnet and Testnet" color="orange" />
 
 ## Features
 

@@ -8,8 +8,6 @@ description: Explore transaction
 
 You can browse the overview of Rootstock on the [explorer page](https://explorer.rootstock.io/) as shown below.
 
-Available on: <Shield label="mainnet" title="testnet" tooltip="Available on both Mainnet and Testnet" href="https://explorer.testnet.rootstock.io/" color="orange" />
-
 <div align="center"><img width="100%" src="/img/tools/explorer/rootstock/explorer1.png" alt="overview of explorer"/></div>
 
 ## Switch between Tabs

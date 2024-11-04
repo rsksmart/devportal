@@ -8,9 +8,7 @@ tags: [TheGraph, indexers, data, subgraphs, dApps, smart contracts, developers, 
 
 Getting historical data on smart contracts can be challenging when building dApps. [The Graph](https://thegraph.com/) provides an easy way to query smart contracts data through APIs known as [subgraphs](https://thegraph.com/docs/en/developing/developer-faqs/#1-what-is-a-subgraph). Its infrastructure relies on a decentralized network of indexers, enabling dApps to achieve true decentralization.
 
-Available on: <Shield label="mainnet" title="testnet" tooltip="Available on both Mainnet and Testnet" color="orange" />
-
-These subgraphs only take a few minutes to set up and get running.
+These subgraphs only take a few minutes to set up and get running and is supported on: <Shield label="mainnet" title="testnet" tooltip="Supported on Mainnet and Testnet" color="orange" />.
 
 To get started, follow these steps below:
 1. Initialize a subgraph project

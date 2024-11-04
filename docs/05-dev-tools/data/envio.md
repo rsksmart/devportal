@@ -6,11 +6,11 @@ description: "Easily query on-chain data through a decentralized network of inde
 tags: [Envio, indexers, data, subgraphs, dApps, smart contracts, developers, developer tools, get-started, how-to]
 ---
 
-[Envio](https://envio.dev/) is a feature-rich indexing solution that provides developers with a seamless and efficient way to index and aggregate real-time or historical blockchain data for Rootstock, and **other EVM chains**. The indexed data is easily accessible through custom [GraphQL](https://graphql.org/) queries, giving developers the flexibility and power to retrieve specific information. See [Getting started with Envio](/dev-tools/data/envio/).
+[Envio](https://envio.dev/) is a feature-rich indexing solution that provides developers with a seamless and efficient way to index and aggregate real-time or historical blockchain data for Rootstock, and **other EVM chains**. The indexed data is easily accessible through custom [GraphQL](https://graphql.org/) queries, giving developers the flexibility and power to retrieve specific information. Envio is currently supported on: <Shield title="mainnet" color="orange" />.
 
-Available on: <Shield title="mainnet" color="orange" />
+Developers can choose whether they want to start from a template (e.g. Blank, ERC-20, etc.), or use the Contract Import feature.
 
-Developers can choose whether they want to start from a template (e.g. Blank, ERC-20, etc.), or use the Contract Import feature: 
+<Button size="sm" href="/dev-tools/data/envio/">Getting started with Envio</Button>
 
 ## Prerequisites
 

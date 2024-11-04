@@ -10,7 +10,7 @@ tags: [rsk, rootstock, guides, EAS, Attestation, Ethereum]
 
 EAS is a foundational layer that empowers anyone to make attestations about anything. By creating a decentralized ledger of verifiable claims, we can revolutionize traditional finance, build decentralized reputation systems, voting mechanisms, governance frameworks, social media platforms, supply chain tracking systems, knowledge graphs, and lots more.
 
-Available on: <Shield label="mainnet" title="testnet" tooltip="Available on both Mainnet and Testnet" color="orange" />
+Supported on: <Shield label="mainnet" title="testnet" tooltip="Available on Mainnet and Testnet" color="orange" />
 
 ## How EAS is integrated with Rootstock
 
