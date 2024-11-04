@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 sidebar_label: Account Abstraction
 title: Account Abstraction on Rootstock
 description: "Create smarter accounts that give users a seamless web3 experience" 

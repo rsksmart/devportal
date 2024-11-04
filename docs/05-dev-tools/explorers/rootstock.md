@@ -10,19 +10,19 @@ You can browse the overview of Rootstock on the [explorer page](https://explorer
 
 Available on: <Shield label="mainnet" title="testnet" tooltip="Available on both Mainnet and Testnet" href="https://explorer.testnet.rootstock.io/" color="orange" />
 
-<div align="center"><img width="100%" src="/img/tools/explorer/explorer1.png" alt="overview of explorer"/></div>
+<div align="center"><img width="100%" src="/img/tools/explorer/rootstock/explorer1.png" alt="overview of explorer"/></div>
 
 ## Switch between Tabs
 
 If you want to view some specific information, you can jump through the tab bar below.
 
-<div align="center"><img width="100%" src="/img/tools/explorer/explorer2.png" alt="tab of explorer"/></div>
+<div align="center"><img width="100%" src="/img/tools/explorer/rootstock/explorer2.png" alt="tab of explorer"/></div>
 
 ## Search for some information you want
 
 * You can search for the information you want by entering the address, block number or tx hash in the search box.
 
-<div align="center"><img width="100%" src="/img/tools/explorer/explorer3.png" alt="search box"/></div>
+<div align="center"><img width="100%" src="/img/tools/explorer/rootstock/explorer3.png" alt="search box"/></div>
 
 ## Last Block Information
 
@@ -34,13 +34,13 @@ The next section is a panel about the last block.
 
 * Especially,you can copy the address code by clicking the icon over the string.
 
-<div align="center"><img width="100%" src="/img/tools/explorer/explorer4.png" alt="panel of last block"/></div>
+<div align="center"><img width="100%" src="/img/tools/explorer/rootstock/explorer4.png" alt="panel of last block"/></div>
 
 ## Last Block Transactions
 
 The line graph below shows the transaction density.
 
-<div align="center"><img width="100%" src="/img/tools/explorer/explorer5.png" alt="line graph of transactions"/></div>
+<div align="center"><img width="100%" src="/img/tools/explorer/rootstock/explorer5.png" alt="line graph of transactions"/></div>
 
 ## List of Blocks
 
@@ -50,7 +50,7 @@ All the items in this list are the basic information of a block.
 
 * Click the **see all blocks** to display the full list.
 
-<div align="center"><img width="100%" src="/img/tools/explorer/explorer6.png" alt="list of blocks"/></div>
+<div align="center"><img width="100%" src="/img/tools/explorer/rootstock/explorer6.png" alt="list of blocks"/></div>
 
 ## List of Transactions
 
@@ -58,4 +58,4 @@ All the items in this list are the basic information of a transaction.
 
 * Click the **see all transactions** to display the full list.
 
-<div align="center"><img width="100%" src="/img/tools/explorer/explorer7.png" alt="list of transactions"/></div>
+<div align="center"><img width="100%" src="/img/tools/explorer/rootstock/explorer7.png" alt="list of transactions"/></div>

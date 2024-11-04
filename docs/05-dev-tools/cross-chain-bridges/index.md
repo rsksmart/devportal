@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-sidebar_label: Cross Chain
+sidebar_label: Cross Chain Bridges
 title: Cross Chain - Bridging between Blockchains
 description: "Explore cross-chain bridging solutions on Rootstock." 
 tags: [cross chain, bridges, developer tools, rsk, rootstock, ethereum, dApps, smart contracts]

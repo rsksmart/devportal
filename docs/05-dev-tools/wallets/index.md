@@ -1,6 +1,6 @@
 ---
 sidebar_label: Wallets
-sidebar_position: 3
+sidebar_position: 2
 title: Wallets compatible with Rootstock
 tags: [rootstock, tools, rsk, wallets]
 description: "Learn how to connect to Rootstock with a compatible Wallet"
