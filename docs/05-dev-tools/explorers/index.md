@@ -14,7 +14,7 @@ Since it is open and transparent, there is nothing stopping multiple block explo
 To understand how block explorers work, read the complete guide on [exploring blockchain transactions](/developers/blockchain-essentials/transactions/)
 :::
 
-Here are available block explorers for viewing transactions, blocks, addresses and verifying smart contracts on Rootstock.
+## Explorers on Rootstock
 
 <CardsGrid>
   <CardsGridItem

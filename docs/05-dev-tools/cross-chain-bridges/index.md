@@ -6,7 +6,7 @@ description: "Explore cross-chain bridging solutions on Rootstock."
 tags: [cross chain, bridges, developer tools, rsk, rootstock, ethereum, dApps, smart contracts]
 ---
 
-Imagine different islands, each with its own unique economy and currency. To trade with each other, these islands need bridges to connect them. In the world of blockchain, these islands are different blockchains, and the bridges are cross-chain bridges.
+Imagine different islands, each with its own unique economy and currency. To trade with each other, these islands need bridges to connect them. In the world of blockchain, these islands are different blockchains, and the bridges are called cross-chain bridges.
 
 ## Why do we need cross-chain bridges?
 
