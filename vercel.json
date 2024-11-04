@@ -355,6 +355,7 @@
     {"source" : "/rif/wallet/dev-reference/troubleshooting/", "destination" : "/developers/integrate/"},
     {"source" : "/kb/the-graph-rootstock/", "destination" : "/dev-tools/thegraph/"},
     {"source" : "/tools/thegraph/", "destination" : "/dev-tools/thegraph/"},
+    {"source" : "/dev-tools/thegraph/", "destination" : "/dev-tools/data/thegraph/"},
     {"source" : "/solutions/tenderly/", "destination" : "https://rootstock.io/ecosystem/"},
     {"source" : "/guides/full-stack-dapp-on-rsk/", "destination" : "/developers/smart-contracts/"},
     {"source" : "/rif/rns/libs/javascript/", "destination" : "/developers/integrate/"},
