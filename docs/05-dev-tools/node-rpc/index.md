@@ -17,7 +17,9 @@ Imagine a vast library filled with information about everything happening on the
 * Full Nodes: Node providers run full nodes, which download and store the entire history of the Rootstock blockchain.
 * API Access: They offer an interface (API) that developers can use to communicate with these nodes and request specific data. This eliminates the need for developers to download the entire blockchain themselves, saving time and resources.
 
-Several node provider services are available for Rootstock
+## RPC Service Providers on Rootstock
+
+Several node rpc provider services are available on Rootstock. 
 
 <CardsGrid>
   <CardsGridItem
@@ -39,7 +41,7 @@ Several node provider services are available for Rootstock
    <CardsGridItem
     title="NOWNodes"
     subtitle="node-rpc"
-    color="green"
+    color="cyan"
     description="NOWNodes is a blockchain-as-a-service enterprise solution that lets users get access to full Nodes and blockbook Explorers via an API."
     linkHref="https://nownodes.io/nodes/rsk"
     linkTitle="Make First API Call"
@@ -47,7 +49,7 @@ Several node provider services are available for Rootstock
     <CardsGridItem
     title="dRPC"
     subtitle="node-rpc"
-    color="green"
+    color="cyan"
     description="dRPC provides access to a distributed network of node providers."
     linkHref="https://drpc.org/chainlist/rootstock?utm_source=docs&utm_medium=rootstock"
     linkTitle="Make First API Call"
@@ -55,7 +57,7 @@ Several node provider services are available for Rootstock
     <CardsGridItem
     title="Alchemy"
     subtitle="node-rpc"
-    color="green"
+    color="cyan"
     description="Powerful APIs, SDKs, and tools to build and scale your web3 app with ease."
     linkHref="/developers/rpc-api/alchemy/"
     linkTitle="Make First API Call"
