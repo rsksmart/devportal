@@ -53,4 +53,12 @@ Imagine different islands, each with its own unique economy and currency. To tra
     linkHref="https://wormhole.com/docs/build/start-building/supported-networks/evm/#rootstock"
     linkTitle="Start Bridging"
   />
+  <CardsGridItem
+    title="Hyperlane Bridge"
+    subtitle="cross-chain"
+    color="green"
+    description="Build dApps that seamlessly communicates between Rootstock to other EVM-compatible chains."
+    linkHref="/resources/tutorials/hyperlane-bridge/"
+    linkTitle="Start Bridging"
+  />
 </CardsGrid>
