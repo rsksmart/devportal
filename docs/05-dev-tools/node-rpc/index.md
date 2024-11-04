@@ -57,7 +57,7 @@ Several node provider services are available for Rootstock
     subtitle="node-rpc"
     color="green"
     description="Powerful APIs, SDKs, and tools to build and scale your web3 app with ease."
-    linkHref="https://www.alchemy.com/rootstock/"
+    linkHref="/developers/rpc-api/alchemy/"
     linkTitle="Make First API Call"
   />
 </CardsGrid>
