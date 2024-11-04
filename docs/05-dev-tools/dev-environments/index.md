@@ -2,8 +2,8 @@
 sidebar_position: 2
 sidebar_label: Dev Environments
 title: Dev Environments
-description: "How to get started with writing, deploying and testing smart contracts on Rootstock using Hardhat." 
-tags: [hardhat, quick start, developer tools, rsk, rootstock, ethereum, dApps, smart contracts]
+description: "Dev Environments provide a complete set of tools for writing, testing, and deploying your smart contracts on Rootstock." 
+tags: [hardhat, remix, foundry, developer tools, rsk, rootstock, ethereum, dApps, smart contracts]
 ---
 
 Dev Environments provide a complete set of tools for writing, testing, and deploying your smart contracts on Rootstock. 
@@ -13,6 +13,8 @@ Some benefits of using a dev environment:
 * Streamlined Workflow: No need to cobble together tools from different sources – everything you need is in one place.
 * Efficiency: Dev environments automate repetitive tasks, saving you time and effort.
 * Error Reduction: Built-in features can help you catch bugs in your code before deployment.
+
+Here are supported dev environments for building and deploying smart contracts on Rootstock.
 
 <CardsGrid>
   <CardsGridItem

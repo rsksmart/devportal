@@ -2,7 +2,7 @@
 sidebar_position: 4
 sidebar_label: Remix
 title: Remix on Rootstock
-description: "How to get started with writing, deploying and testing smart contracts on Rootstock using Remix." 
+description: "Learn about Remix, benefits and why you should write and deploy smart contracts on Rootstock using Remix." 
 tags: [remix, quick start, developer tools, rsk, rootstock, ethereum, dApps, smart contracts]
 ---
 

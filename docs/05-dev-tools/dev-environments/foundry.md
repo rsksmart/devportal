@@ -2,7 +2,7 @@
 section_position: 2 
 sidebar_label: Foundry
 title: Foundry on Rootstock
-description: 'How to write, test, and deploy smart contracts with Foundry'
+description: 'Learn about Foundry, benefits and why you should write and deploy smart contracts on Rootstock using Foundry.'
 tags: [foundry, quick start, developer tools, rsk, rootstock, ethereum, dApps, smart contracts]
 ---
 

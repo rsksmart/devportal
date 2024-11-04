@@ -20,5 +20,4 @@ Use Covalent if you need:
 * Broad and deep multi-chain data at scale
 * Enterprise-grade performance
 
-
 <Button size="lg" href="https://www.covalenthq.com/platform/?utm_source=rootstock&utm_medium=partner-docs">Sign up to start building on Rootstock</Button>

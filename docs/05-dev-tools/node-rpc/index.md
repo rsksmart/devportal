@@ -2,15 +2,15 @@
 sidebar_position: 8
 sidebar_label: Node Providers
 title: Node Providers
-description: "How to get started with writing, deploying and testing smart contracts on Rootstock using Hardhat." 
+description: "Building dApps on Rootstock involves interacting with the blockchain network. See available node rpc providers on Rootstock." 
 tags: [hardhat, quick start, developer tools, rsk, rootstock, ethereum, dApps, smart contracts]
 ---
 
-Building dApps on Rootstock involves interacting with the blockchain network.  But how do you access this network? That's where node providers come in.  Think of them as gateways to the blockchain.
+Building dApps on Rootstock involves interacting with the blockchain network. But how do you access this network? That's where node providers come in. Think of them as gateways to the blockchain.
 
 ## What are Node Providers?
 
-Imagine a vast library filled with information about everything happening on the Rootstock network. Node providers maintain copies of this information, allowing developers to connect and retrieve essential details.  These details can include transaction history, account balances, and smart contract data.
+Imagine a vast library filled with information about everything happening on the Rootstock network. Node providers maintain copies of this information, allowing developers to connect and retrieve essential details. These details can include transaction history, account balances, and smart contract data.
 
 ## How Node Providers Work
 

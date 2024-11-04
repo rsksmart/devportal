@@ -2,17 +2,19 @@
 sidebar_position: 5
 sidebar_label: Data Indexers
 title: Data Indexing
-description: "How to get started with writing, deploying and testing smart contracts on Rootstock using Hardhat." 
+description: "Data indexers act like librarians for blockchain data, organizing and storing information in a way that's easy to access. This makes it easier for dApps to get the data needed, which in turn makes dApps faster and more efficient. Explore data indexers on Rootstock." 
 tags: [hardhat, quick start, developer tools, rsk, rootstock, ethereum, dApps, smart contracts]
 ---
 
-Data indexers act like librarians for blockchain data, organizing and storing information in a way that's easy to access. This makes it easier for dApps to get the data they need, which in turn makes dApps faster and more efficient.
+Data indexers act like librarians for blockchain data, organizing and storing information in a way that's easy to access. This makes it easier for dApps to get the data needed, which in turn makes dApps faster and more efficient.
 
 ## Why are data indexers important?
 
 * Speed: Indexers provide pre-organized data, saving time and resources.
-* Performance: They help dApps work smoothly, especially when dealing with a lot of data.
-* Scalability: Indexers allow dApps to handle more users and data without slowing down.
+* Performance: They help dApps work efficiently, especially when dealing with a lot of data.
+* Scalability: Indexers allow dApps to handle more users and data.
+
+## Data Indexers on Rootstock
 
 <CardsGrid>
   <CardsGridItem

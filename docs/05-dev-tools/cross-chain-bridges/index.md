@@ -2,7 +2,7 @@
 sidebar_position: 5
 sidebar_label: Cross Chain
 title: Cross Chain - Bridging between Blockchains
-description: "How to get started with writing, deploying and testing smart contracts on Rootstock using Hardhat." 
+description: "Explore cross-chain bridging solutions on Rootstock." 
 tags: [cross chain, bridges, developer tools, rsk, rootstock, ethereum, dApps, smart contracts]
 ---
 
@@ -18,7 +18,7 @@ Imagine different islands, each with its own unique economy and currency. To tra
 * Lock and Mint: When you want to move assets from one blockchain (let's call it Chain A) to another (Chain B), the bridge locks your assets on Chain A and mints a corresponding amount of wrapped assets on Chain B.
 * Transfer and Burn: You can then transfer these wrapped assets on Chain B. Once you're ready to move them back to Chain A, the bridge burns the wrapped assets on Chain B and releases your original assets on Chain A.
 
-## Bridging Solutions on Rootstock
+## Cross-Chain Bridging Solutions on Rootstock
 
 <CardsGrid>
   <CardsGridItem

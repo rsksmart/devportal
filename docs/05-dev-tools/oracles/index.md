@@ -1,8 +1,8 @@
 ---
 sidebar_position: 10
 sidebar_label: Oracles
-title: Oracles
-description: "How to get started with writing, deploying and testing smart contracts on Rootstock using Hardhat." 
+title: Oracles | Accessing on-chain data on Rootstock
+description: "Oracles act as bridges, securely bringing external data onto the Rootstock blockchain for dApps to utilize." 
 tags: [hardhat, quick start, developer tools, rsk, rootstock, ethereum, dApps, smart contracts]
 ---
 
@@ -13,6 +13,8 @@ Oracles act as bridges, securely bringing external data onto the Rootstock block
 * Data Collection: Oracles retrieve the data from reliable sources (weather APIs, stock exchanges).
 * Verification: Multiple oracles within the network verify the data for accuracy and security.
 * Delivery: The verified data is then delivered to the dApp.
+
+## Oracles on Rootstock
 
 <CardsGrid>
   <CardsGridItem

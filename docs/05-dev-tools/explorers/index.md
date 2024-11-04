@@ -2,11 +2,19 @@
 sidebar_position: 4
 sidebar_label: Explorers
 title: Explorers on Rootstock
-description: "How to get started with writing, deploying and testing smart contracts on Rootstock using Hardhat." 
+description: "Blockchain explorers are a special type of software that connect to a blockchain network, and display the data from an immutable public ledger. Find block explorers for viewing transactions, blocks, addresses and verifying smart contracts on Rootstock." 
 tags: [hardhat, quick start, developer tools, rsk, rootstock, ethereum, dApps, smart contracts]
 ---
 
-Blockchain explorers are powerful tools that allow you to dive deep into the world of blockchain activity. They function like search engines for blockchains, letting you explore transactions, blocks, addresses, tokens, and even interact with smart contracts.
+Blockchain explorers are a special type of software that connect to a blockchain network, and display the data from an immutable public ledger.
+
+Since it is open and transparent, there is nothing stopping multiple block explorers from displaying the data in a single blockchain. This is certainly true for Rootstock, and there are multiple block explorers. Think of it like a search engine but for the blockchains, it allows for exploring transactions, blocks, addresses, tokens, and even interacting with smart contracts.
+
+:::info[Info]
+To understand how block explorers work, read the complete guide on [exploring blockchain transactions](/developers/blockchain-essentials/transactions/)
+:::
+
+Here are available block explorers for viewing transactions, blocks, addresses and verifying smart contracts on Rootstock.
 
 <CardsGrid>
   <CardsGridItem

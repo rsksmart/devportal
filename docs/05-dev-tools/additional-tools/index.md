@@ -2,7 +2,7 @@
 sidebar_position: 13
 sidebar_label: General Tools
 title: General Tools
-description: "How to get started with writing, deploying and testing smart contracts on Rootstock using Hardhat." 
+description: "General tools to build on Rootstock" 
 tags: [hardhat, quick start, developer tools, rsk, rootstock, ethereum, dApps, smart contracts]
 ---
 
@@ -25,8 +25,9 @@ To acquire RBTC or RIF, you can use various methods:
 
 To ensure the quality and security of your smart contracts, consider using these tools:
 
-* Sourcify: Verify and document your Solidity contracts to enhance transparency and readability.
-* Slither: Identify potential vulnerabilities and optimize your codebase for efficiency and security.
+* [Sourcify](https://sourcify.dev/): Verify smart contracts on Rootstock, Sourcify enables transparent and human-readable smart contract interactions through automated Solidity contract verification, contract metadata.
+* [Slither](https://github.com/crytic/slither): Slither built with Solidity & Vyper static analysis framework written in Python3, enables developers to find vulnerabilities, enhance their code comprehension, and quickly prototype custom analyses.
+* [SolidityScan](https://solidityscan.com/): Secure your smart contracts on Rootstock, and get accurate security audit results and detailed reports.
 
 ## dApp Testing
 
