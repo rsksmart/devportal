@@ -91,9 +91,18 @@ description: "Explore a curated selection of smart contract development tools an
     title="RPC API"
     subtitle="json rpc"
     color="orange"
-    linkHref="/developers/rpc-api/"
+    linkHref="/developers/rpc-api/rootstock/"
     linkTitle="Make First API Call"
     description="The Rootstock RPC API provides a seamless and intuitive web interface for developers to interact with Rootstock nodes via JSON-RPC methods."
+  />
+<FilterItem
+    value="rpc"
+    title="Alchemy"
+    subtitle="json rpc"
+    color="orange"
+    linkHref="/developers/rpc-api/alchemy/"
+    linkTitle="Make First API Call"
+    description="Powerful APIs, SDKs, and tools to build and scale your web3 app with ease."
   />
 <FilterItem
     value="rpc, smart contracts"
