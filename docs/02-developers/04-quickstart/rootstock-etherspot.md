@@ -140,6 +140,6 @@ Configures the SDK with the specified bundler provider.
 
 ## Resources
 
-- [Rootstock Account Abstraction Starter Kit](https://github.com/wagmi-dev/wagmi-starter-kit.git)
+- [Rootstock Account Abstraction Starter Kit](https://github.com/rsksmart/rsk-wagmi-starter-kit/tree/aa-sdk)
 - [Using Prime SDK Examples](https://etherspot.fyi/prime-sdk/examples/intro)
 - [Etherspot Prime SDK Repo](https://github.com/etherspot/etherspot-prime-sdk/)

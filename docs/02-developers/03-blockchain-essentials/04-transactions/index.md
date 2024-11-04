@@ -6,9 +6,13 @@ description: 'Learn how to interact with Rootstock in your web browser, how to l
 tags: [quick-starts, rsk, rootstock, blockchain, browser wallets, developers, beginners]
 ---
 
-In the [previous section](/developers/blockchain-essentials/overview/), we set up a browser extension that is a crypto wallet, MetaMask. We connected to the Rootstock Testnet, and loaded this up with Rootstock’s cryptocurrency, RBTC, and an Rootstock-based token, RIF.
+In the previous section on [blockchain overview](/developers/blockchain-essentials/overview/), we set up a browser extension that is a crypto wallet, MetaMask. We connected to the Rootstock Testnet, and loaded this up with Rootstock’s cryptocurrency, RBTC, and an Rootstock-based token, RIF.
 
-> Note, if you are yet to do the above, we encourage you to go back and complete that step first. See: [Using Rootstock in the browser](/developers/blockchain-essentials/browser/).
+:::note[Using Rootstock in the browser]
+
+If you are yet to do the above, we encourage you to go back and complete that step first. See: [Using Rootstock in the browser](/developers/blockchain-essentials/browser/).
+
+:::
 
 ## Block Explorer
 

@@ -1,7 +1,7 @@
 ---
-sidebar_position: 310
+sidebar_position: 100
 title: Ethereum Attestation Service
-sidebar_label: Overview
+sidebar_label: Ethereum Attestation Service
 description: "Ethereum Attestation Service (EAS) is an open-source infrastructure public good for making attestations onchain or offchain. Learn how to use it on Rootstock."
 tags: [rsk, rootstock, guides, EAS, Attestation, Ethereum]
 ---
@@ -9,6 +9,8 @@ tags: [rsk, rootstock, guides, EAS, Attestation, Ethereum]
 [Ethereum Attestation Service (EAS)](https://attest.org/) is an open-source infrastructure public good for making attestations onchain or offchain.
 
 EAS is a foundational layer that empowers anyone to make attestations about anything. By creating a decentralized ledger of verifiable claims, we can revolutionize traditional finance, build decentralized reputation systems, voting mechanisms, governance frameworks, social media platforms, supply chain tracking systems, knowledge graphs, and lots more.
+
+Supported on: <Shield label="mainnet" title="testnet" tooltip="Available on Mainnet and Testnet" color="orange" />
 
 ## How EAS is integrated with Rootstock
 
@@ -67,6 +69,6 @@ Find the deployed EAS contracts on Rootstock Mainnet and Tesnet:
 - [EAS](https://attest.org/)
 - [Core Concepts](https://docs.attest.org/docs/category/core-concepts)
 - [How EAS Works](https://docs.attest.org/docs/core--concepts/how-eas-works)
-- [Use Cases](https://docs.attest.org/docs/quick--start/use-cases-overview)]
+- [Use Cases](https://docs.attest.org/docs/quick--start/use-cases-overview)
 - [EAS Docs](https://docs.attest.org/docs/welcome)
 - [EAS Github](https://github.com/ethereum-attestation-service)

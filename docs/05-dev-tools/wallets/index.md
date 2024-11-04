@@ -1,5 +1,5 @@
 ---
-sidebar_label: Rootstock Wallets
+sidebar_label: Wallets
 sidebar_position: 2
 title: Wallets compatible with Rootstock
 tags: [rootstock, tools, rsk, wallets]
@@ -35,7 +35,7 @@ In the following matrix you can see the different features by wallet.
 |  [Ledger](https://www.ledger.com/) | ✔  |  ✔ | ❌  |
 |  [MyEtherWallet](https://www.myetherwallet.com/) | ✔  |  ✔ |  ✔  | Desktop, Android, IOS | RBTC
 |  [Trezor](https://trezor.io/trezor-suite) | ✔  |  ✔ |  ❌  |
-|  [Metamask](https://metamask.io/download) | ❌ |  ❌ | ❌  | Browser, Mobile |
+|  [Metamask](/dev-tools/wallets/metamask) | ❌ |  ❌ | ❌  | Browser, Mobile |
 |  [Portis](https://www.portis.io/) | ✔ |  ✔ | ✔  | Desktop | Rootstock (RBTC), Bitcoin |
 |  [Rabby Wallet](https://rabby.io) | - |  - | -  | Chrome, Desktop, Mobile | 
 |  [Enkrypt](https://www.enkrypt.com/networks/rootstock-wallet/)| - |  - | -  | Chrome | Rootstock (RBTC), Bitcoin |

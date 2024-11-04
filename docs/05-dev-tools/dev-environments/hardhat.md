@@ -2,7 +2,7 @@
 sidebar_position: 3
 sidebar_label: Hardhat
 title: Hardhat on Rootstock
-description: "How to get started with writing, deploying and testing smart contracts on Rootstock using Hardhat." 
+description: "Hardhat is an Ethereum development environment for developers. It's primarily used in the development of smart contracts for the Rootstock and EVM-compatible chains." 
 tags: [hardhat, quick start, developer tools, rsk, rootstock, ethereum, dApps, smart contracts]
 ---
 
