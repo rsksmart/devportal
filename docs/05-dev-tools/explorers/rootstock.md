@@ -6,23 +6,25 @@ tags: [overview, explorer, rootstock, smart contracts, transactions, developer t
 description: Explore transaction
 ---
 
-You can browse the overview of Rootstock on the [explorer page](https://explorer.rootstock.io/) as shown below.
+The [Rootstock Explorer](https://explorer.rootstock.io/) provides a UI for exploring and verifying transactions, blocks, addresses, tokens, stats, and interacting with smart contracts.
 
 <div align="center"><img width="100%" src="/img/tools/explorer/rootstock/explorer1.png" alt="overview of explorer"/></div>
 
-## Switch between Tabs
+## Getting Started
+
+### Switch between Tabs
 
 If you want to view some specific information, you can jump through the tab bar below.
 
 <div align="center"><img width="100%" src="/img/tools/explorer/rootstock/explorer2.png" alt="tab of explorer"/></div>
 
-## Search for some information you want
+### Search for some information you want
 
 * You can search for the information you want by entering the address, block number or tx hash in the search box.
 
 <div align="center"><img width="100%" src="/img/tools/explorer/rootstock/explorer3.png" alt="search box"/></div>
 
-## Last Block Information
+### Last Block Information
 
 The next section is a panel about the last block.
 
@@ -34,13 +36,13 @@ The next section is a panel about the last block.
 
 <div align="center"><img width="100%" src="/img/tools/explorer/rootstock/explorer4.png" alt="panel of last block"/></div>
 
-## Last Block Transactions
+### Last Block Transactions
 
 The line graph below shows the transaction density.
 
 <div align="center"><img width="100%" src="/img/tools/explorer/rootstock/explorer5.png" alt="line graph of transactions"/></div>
 
-## List of Blocks
+### List of Blocks
 
 All the items in this list are the basic information of a block.
 
@@ -50,7 +52,7 @@ All the items in this list are the basic information of a block.
 
 <div align="center"><img width="100%" src="/img/tools/explorer/rootstock/explorer6.png" alt="list of blocks"/></div>
 
-## List of Transactions
+### List of Transactions
 
 All the items in this list are the basic information of a transaction.
 

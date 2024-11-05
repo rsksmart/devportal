@@ -13,15 +13,15 @@
 
 ## Testing
 
-* Describe how you tested the changes to ensure they are correct and do not introduce new issues.
+* Describe how you tested the changes to ensure they are correct and do not introduce new issues. See how to test build outputs and broken links in [README.md](/README.md) using the `yarn build`command.
 
 ## Checklist
 
-[ ] I have read and understood the contributing guidelines.
-[ ] I have followed the style guide and formatting guidelines.
-[ ] I have added appropriate comments to explain the changes.
-[ ] I have tested my changes thoroughly.
+- [ ] I have read and understood the contributing guidelines.
+- [ ] I have followed the style guide and formatting guidelines.
+- [ ] I have added appropriate comments to explain the changes.
+- [ ] I have tested my changes thoroughly.
 
-## Additional Notes
+## Refs
 
-* If there are any specific considerations or concerns, please mention them here.
+* Related links to issues, tickets, etc.
