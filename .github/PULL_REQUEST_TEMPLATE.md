@@ -13,7 +13,7 @@
 
 ## Testing
 
-* Describe how you tested the changes to ensure they are correct and do not introduce new issues.
+* Describe how you tested the changes to ensure they are correct and do not introduce new issues. See how to test build outputs and broken links in README using the `yarn build`command.
 
 ## Checklist
 
@@ -22,6 +22,6 @@
 [ ] I have added appropriate comments to explain the changes.
 [ ] I have tested my changes thoroughly.
 
-## Additional Notes
+## Refs
 
-* If there are any specific considerations or concerns, please mention them here.
+* Related links to issues, tickets, etc.
