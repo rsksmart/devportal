@@ -81,6 +81,10 @@ As shown in the previous step after deploying the contract, you can expand the d
 
 ## Verifying the Contract on Rootstock Explorer
 
+Smart contracts are the backbone of decentralized applications (dApps). They automate agreements and processes, but their code can be complex and prone to errors. Verifying your smart contracts is crucial to ensure they function as intended.
+
+The [Rootstock Explorer](https://explorer.rootstock.io/) provides a UI for exploring and verifying transactions, blocks, addresses, tokens, stats, and interacting with smart contracts. 
+
 To verify the deployed contract on the explorer, go back to Remix file explorer and go to `contracts -> artifacts -> build-info`. In this folder there will be a json file containing the information of the compilation process. You’ll need this in order to verify the contract on the [Rootstock Testnet Explorer](https://explorer.testnet.rootstock.io/). Copy the value of the input attribute and save it as a json file in your computer.
 
 ![deployed contract artifact](/img/developers/quickstart/9-remix.png)
