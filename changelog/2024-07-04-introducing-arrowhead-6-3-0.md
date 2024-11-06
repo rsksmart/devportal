@@ -1,7 +1,7 @@
 ---
 title: Introducing Arrowhead 6.3.0
 author: Rootstock
-tags: [arrowhead]
+tags: [release, arrowhead]
 # image: https://blog.rootstock.io/wp-content/uploads/2024/07/Bitcoin-Runes-Explained-1.png
 url: https://blog.rootstock.io/noticia/introducing-arrowhead-6-3-0/
 ---

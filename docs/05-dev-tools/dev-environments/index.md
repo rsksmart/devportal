@@ -33,10 +33,18 @@ Here are supported dev environments for building and deploying smart contracts o
     linkHref="/dev-tools/dev-environments/foundry/"
     linkTitle="Get Started"
   />
+  <CardsGridItem
+    title="Gelato"
+    subtitle="dev-environments"
+    color="cyan"
+    description="Deploy production-grade & fully-serviced L2 rollups on Rootstock, natively integrated with tools like oracles, bridges, data indexers and Account Abstraction."
+    linkHref="/dev-tools/dev-environments/gelato/"
+    linkTitle="Get Started"
+  />
    <CardsGridItem
     title="Remix"
     subtitle="dev-environments"
-    color="green"
+    color="cyan"
     description="Remix is an online web tool. It is an IDE (Integrated Development Environment) used to write, compile, deploy and debug Solidity code. It can be connected with Metamask and used to deploy smart contracts to both the Rootstock Testnet and Mainnet."
     linkHref="/dev-tools/dev-environments/remix/"
     linkTitle="Get Started"

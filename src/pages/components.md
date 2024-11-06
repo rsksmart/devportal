@@ -651,7 +651,6 @@ description="Get an API key & make your first API call in minutes. Get an API ke
 ```
 Default <Button href="/dev-tools/">Default Button</Button>, small <Button size="sm" href="/developers/">Small Button</Button>, and large <Button size="lg" href="/resources/">Large Button</Button> buttons for different use cases.
 
-
 ## Badges
 Badges <Shield label="any text" title="you like" color="blue" /> <Shield label="build" title="passing" color="green" /> based on [shields.io](https://shields.io/)
 

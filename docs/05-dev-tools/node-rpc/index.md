@@ -31,6 +31,14 @@ Here you can find a list of rpc node providers on Rootstock.
     linkTitle="Make First API Call"
   />
   <CardsGridItem
+    title="Alchemy"
+    subtitle="node-rpc"
+    color="cyan"
+    description="Powerful APIs, SDKs, and tools to build and scale your web3 app with ease."
+    linkHref="/developers/rpc-api/alchemy/"
+    linkTitle="Make First API Call"
+  />
+  <CardsGridItem
     title="GetBlock"
     subtitle="node-rpc"
     color="cyan"
@@ -52,14 +60,6 @@ Here you can find a list of rpc node providers on Rootstock.
     color="cyan"
     description="dRPC provides access to a distributed network of node providers."
     linkHref="https://drpc.org/chainlist/rootstock?utm_source=docs&utm_medium=rootstock"
-    linkTitle="Make First API Call"
-  />
-    <CardsGridItem
-    title="Alchemy"
-    subtitle="node-rpc"
-    color="cyan"
-    description="Powerful APIs, SDKs, and tools to build and scale your web3 app with ease."
-    linkHref="/developers/rpc-api/alchemy/"
     linkTitle="Make First API Call"
   />
 </CardsGrid>
