@@ -17,9 +17,9 @@ Whether you're a seasoned developer, creative writer, researcher, bug bounty hun
 From writing, bug bounties and open-source projects, there are various ways to participate and earn valuable incentives. 
 
 <Card
-  title="Bug Bounty Program"
-  description="RootstockLabs has created the bug bounty program to reward researchers that submit valid vulnerabilities to improve the RootstockLabs platforms security."
-  link="/resources/contribute/bug-bounty/"
+  title="Hacktivator Program"
+  description="Contribute to Rootstock's Open Source Repos via code, content, etc and earn rewards."
+  link="/resources/contribute/hacktivator-program/"
 />
 
 <br></br>
@@ -33,7 +33,7 @@ From writing, bug bounties and open-source projects, there are various ways to p
 <br></br>
 
 <Card
-  title="Open Source Code"
-  description="Contribute to Rootstock's Open Source Code Repos."
-  link="https://github.com/rsksmart"
+  title="Bug Bounty Program"
+  description="RootstockLabs has created the bug bounty program to reward researchers that submit valid vulnerabilities to improve the RootstockLabs platforms security."
+  link="/resources/contribute/bug-bounty/"
 />
