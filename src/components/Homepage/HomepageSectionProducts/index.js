@@ -76,17 +76,17 @@ const data = {
       color: 'yellow',
       description: (
         <>
-          Deploy and interact with EVM compatible smart contracts on Rootstock using JSON RPC methods.
+          Deploy and interact with EVM compatible smart contracts on Rootstock using JSON RPC methods using the Rootstock RPC API.
         </>
       ),
       list: [
         {
           title: 'Make First API Call',
-          href: '/developers/rpc-api/setup/',
+          href: '/developers/rpc-api/rootstock/setup/',
         },
         {
           title: 'View JSON RPC Methods',
-          href: '/developers/rpc-api/methods/',
+          href: '/developers/rpc-api/rootstock/methods/',
         }
       ],
     },

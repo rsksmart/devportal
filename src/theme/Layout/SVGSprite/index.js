@@ -74,6 +74,9 @@ export default function SVGSprite() {
         <symbol viewBox="0 0 16 16" fill="none" id="icon-link-external">
           <path fillRule="evenodd" clipRule="evenodd" d="M3.33333 3.33333V12.6667H12.6667V8H14V14H2V2H8V3.33333H3.33333ZM9.33333 3.33333V2H14V6.66667H12.6667V4.27333L6.11333 10.8267L5.17333 9.88667L11.7267 3.33333H9.33333Z" fill="currentColor"/>
         </symbol>
+        <symbol id="icon-arrow-top" viewBox="0 0 16 16" fill="none">
+          <path d="M7.33 14.67V3.88L4.27 6.93 3.33 6 8 1.33 12.67 6l-.94.95-3.06-3.07v10.79H7.33Z" fill="currentColor"/>
+        </symbol>
 
       </defs>
     </svg>

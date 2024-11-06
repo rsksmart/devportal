@@ -8,7 +8,7 @@ tags: [rootstock, rsk, contribute, open source]
 
 Are you passionate about web3, bitcoin and the Blockchain? Do you have a passion for Open Source and Web3? Do you enjoy writing, coding, bounty hunting, solving real-world problems, and eager to contribute to the future of Bitcoin and Decentralized Finance? Join the [Rootstock Discord Community](https://rootstock.io/discord) and start making contributions!
 
-## Who is it for?
+## Who Is It For?
 
 Whether you're a seasoned developer, creative writer, researcher, bug bounty hunter, or simply enthusiastic about blockchain, the program welcomes contributors from all backgrounds.
 

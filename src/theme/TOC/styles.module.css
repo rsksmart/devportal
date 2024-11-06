@@ -1,7 +1,9 @@
-.tableOfContents {
-
+@media (min-width: 997px) {
+  .tableOfContents {
+    max-height: 40svh;
+    overflow: auto;
+  }
 }
-
 @media (max-width: 996px) {
   .tableOfContents {
     display: none;

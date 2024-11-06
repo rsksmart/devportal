@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Developer Tools
+title: Developer Tooling and Infrastructure
 sidebar_label: All Tools
 tags: [rsk, rootstock, tools, developer tools]
 description: "Explore a curated selection of smart contract development tools and languages. From the familiar Solidity to Rust or Developer Environments like Hardhat, you'll find everything you need to interact and deploy your smart contracts on Rootstock."
@@ -64,7 +64,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="Hardhat"
     subtitle="Dev Environments"
     color="orange"
-    linkHref="/dev-tools/hardhat/"
+    linkHref="/dev-tools/dev-environments/hardhat/"
     linkTitle="Deploy Smart Contracts"
     description="Hardhat is an Ethereum development environment for developers. It's primarily used in the development of smart contracts for the Rootstock and EVM-compatible chains."
   />
@@ -91,9 +91,18 @@ description: "Explore a curated selection of smart contract development tools an
     title="RPC API"
     subtitle="json rpc"
     color="orange"
-    linkHref="/developers/rpc-api/"
+    linkHref="/developers/rpc-api/rootstock/"
     linkTitle="Make First API Call"
     description="The Rootstock RPC API provides a seamless and intuitive web interface for developers to interact with Rootstock nodes via JSON-RPC methods."
+  />
+<FilterItem
+    value="rpc"
+    title="Alchemy"
+    subtitle="json rpc"
+    color="orange"
+    linkHref="/developers/rpc-api/alchemy/"
+    linkTitle="Make First API Call"
+    description="Powerful APIs, SDKs, and tools to build and scale your web3 app with ease."
   />
 <FilterItem
     value="rpc, smart contracts"
@@ -190,7 +199,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="The Graph"
     subtitle="data & analytics"
     color="orange"
-    linkHref="/dev-tools/thegraph/"
+    linkHref="/dev-tools/data/thegraph/"
     linkTitle="Access on-chain data"
     description="Get historical data on smart contracts when building dApps."
   />
