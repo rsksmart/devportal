@@ -11,6 +11,12 @@ To setup a Rootstock node using Java, you need to:
 - Ensure your system meets the [minimum requirements](/node-operators/setup/requirements/) for installing the Rootstock node.
 - Install [Java 17 JDK](https://www.java.com/download/).
 
+:::warning[Important]
+
+Starting with v6.4.0, the minimum supported Java LTS version is Java 17. Previous Java versions will no longer be supported.
+
+:::
+
 :::tip[For Mac M1 / M2 (Apple Chips) using x86 based software]
 
 - Ensure you have `Rosetta` installed. This is typically pre-installed on recent macOS versions.
@@ -38,13 +44,13 @@ cd ~/rskj-node-jar
 mv ~/Downloads/rskj-core-6.4.0-ARROWHEAD-all.jar SHA256SUMS.asc /Users/{user}/rskj-node-jar/
 ```
 
-### Configuration
+<!-- ### Configuration
 1. **Create Config Directory**: Create another directory inside `~/rskj-node-jar/config`
 ```jsx
   mkdir config
 ```
 2. **Download Config File**: Get `node.conf` from [here](https://github.com/rsksmart/rif-relay/blob/main/docker/node.conf).
-3. **Move Config File**: Move the `node.conf` file to the `config` directory.
+3. **Move Config File**: Move the `node.conf` file to the `config` directory. -->
 
 ### Run the Node
 
@@ -130,7 +136,7 @@ After starting the node, if there's no output, this means it's running correctly
 Output:
 
 ```shell
-{"jsonrpc":"2.0","id":67,"result":"RskJ/6.4.0/Mac OS X/Java17/ARROWHEAD-..."}
+{"jsonrpc":"2.0","id":67,"result":"RskJ/6.4.0/Mac OS X/Java21/ARROWHEAD-e016b25"}
 ```
 
 2. To check the block number:
@@ -150,7 +156,7 @@ Output:
 
 Output:
 ```jsx
-{"jsonrpc":"2.0","id":1,"result":"0x0"}
+{"jsonrpc":"2.0","id":1,"result":"0x3710"}
 ```
 
 :::success[Success]

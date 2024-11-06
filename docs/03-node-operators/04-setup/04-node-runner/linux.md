@@ -21,6 +21,13 @@ Recommended IDEs:
 - [IntelliJ IDEA Community](https://www.jetbrains.com/idea/download/#section=linux)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
+
+:::warning[Important]
+
+Starting with v6.4.0, the minimum supported Java LTS version is Java 17. Previous Java versions will no longer be supported.
+
+:::
+
 ## Get the source code
 
 Using the installed command-line tool Git, you need to retrieve (or clone) the RSKj Github source code from [here](https://github.com/rsksmart/rskj).
@@ -87,10 +94,6 @@ Then set the options as shown below:
 - Working directory: `/path-to-code/rskJ`
 - Use classpath of module: `rskj-core_main`
 - JRE need to be set as: `Default (1.8 - SDK of 'rsk-core_main' module)`
-
-**Important**
-
-Starting with v6.4.0, the minimum supported Java LTS version is Java 17. Previous Java versions will no longer be supported.
 
 #### Running the node
 
