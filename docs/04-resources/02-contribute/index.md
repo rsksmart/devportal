@@ -18,7 +18,7 @@ From writing, bug bounties and open-source projects, there are various ways to p
 
 <Card
   title="Hacktivator Program"
-  description="Contribute to Rootstock's Open Source Repos via code, content, etc and earn rewards."
+  description="This program is designed for developers who want to contribute to the Rootstock ecosystem and receive rewards for their valuable contributions."
   link="/resources/contribute/hacktivator-program/"
 />
 
