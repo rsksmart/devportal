@@ -260,9 +260,9 @@ Submitting your contributions is easy! Just follow these steps:
   * A link to your submission (e.g., PR, GitHub for code, or written/video blogs/tutorial links).
 3. Review: Your submission will be reviewed by experts. You may be asked to make revisions or provide more information.
 
-:::success[T&C]
-
 This program is your chance to make a meaningful impact on Rootstock while earning rewards. Ready to contribute? Submit your work and be a part of the Rootstock developer community! 🌍
+
+:::success[T&C]
 
 By participating in this program, you acknowledge that you have read, understood, and agree to abide by all aspects of the program and its terms and conditions. If you do not agree with any part or all of the program and/or its terms and conditions, please refrain from joining or submitting contributions, as your participation will be construed as your full acceptance of these terms.
 
