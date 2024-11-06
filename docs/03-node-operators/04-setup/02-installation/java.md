@@ -9,12 +9,12 @@ description: "Install RSKj using Java."
 To setup a Rootstock node using Java, you need to:
 
 - Ensure your system meets the [minimum requirements](/node-operators/setup/requirements/) for installing the Rootstock node.
-- Install [Java 8 JDK](https://www.java.com/download/).
+- Install [Java 17 JDK](https://www.java.com/download/).
 
 :::tip[For Mac M1 / M2 (Apple Chips) using x86 based software]
 
 - Ensure you have `Rosetta` installed. This is typically pre-installed on recent macOS versions.
-- Download an x86 JDK build, such as [Azul Zulu 11 (x86)](https://www.azul.com/downloads/?version=java-11-lts&os=macos&package=jdk), to ensure compatibility with x86 based software.
+- Download an x86 JDK build, such as [Azul Zulu 17 (x86)](https://www.azul.com/downloads/?version=java-17-lts&os=macos&package=jdk#zulu), to ensure compatibility with x86 based software.
 
 :::
 
@@ -35,7 +35,7 @@ cd ~/rskj-node-jar
 ```
 3. **Move the JAR**: Move or copy the just downloaded jar file to your directory.
 ```jsx
-mv ~/Downloads/rskj-core-6.3.1-ARROWHEAD-all.jar SHA256SUMS.asc /Users/{user}/rskj-node-jar/
+mv ~/Downloads/rskj-core-6.4.0-ARROWHEAD-all.jar SHA256SUMS.asc /Users/{user}/rskj-node-jar/
 ```
 
 ### Configuration
@@ -63,7 +63,7 @@ mv ~/Downloads/rskj-core-6.3.1-ARROWHEAD-all.jar SHA256SUMS.asc /Users/{user}/rs
 
 :::tip[Tip]
 
-Replace `<PATH-TO-THE-RSKJ-JAR>` with the actual path to your JAR file. For example, `C:/RskjCode/rskj-core-6.3.1-ARROWHEAD-all.jar`.
+Replace `<PATH-TO-THE-RSKJ-JAR>` with the actual path to your JAR file. For example, `C:/RskjCode/rskj-core-6.4.0-ARROWHEAD-all.jar`.
 :::
 
 ## Using Import Sync
@@ -130,7 +130,7 @@ After starting the node, if there's no output, this means it's running correctly
 Output:
 
 ```shell
-{"jsonrpc":"2.0","id":67,"result":"RskJ/6.3.1/Mac OS X/Java1.8/ARROWHEAD-202f1c5"}
+{"jsonrpc":"2.0","id":67,"result":"RskJ/6.4.0/Mac OS X/Java17/ARROWHEAD-..."}
 ```
 
 2. To check the block number:
@@ -176,5 +176,5 @@ To change networks on the RSKj node, use the following commands:
     ```
 
 :::tip[Tip]
-Replace `<PATH-TO-THE-RSKJ-FATJAR>` with the actual path to your jar file. For example: `C:/RskjCode/rskj-core-6.3.1-ARROWHEAD-all.jar`.
+Replace `<PATH-TO-THE-RSKJ-FATJAR>` with the actual path to your jar file. For example: `C:/RskjCode/rskj-core-6.4.0-ARROWHEAD-all.jar`.
 :::

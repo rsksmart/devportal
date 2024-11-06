@@ -12,6 +12,11 @@ This is a deterministic build process used to build Rootstock node JAR file. It 
 
 It's highly recommended to follow the steps by yourself to avoid contamination of the process.
 
+**Important**
+
+Starting with v6.4.0, the minimum supported Java LTS version is Java 17. Previous Java versions will no longer be supported. The following example is showing instructions
+for v6.3.1, and thus uses jdk 8, this must be replaced by jdk 17 for v6.4.0 and up.
+
 ## Install Docker
 
 Depending on your OS, you can install Docker following the official Docker guide:
