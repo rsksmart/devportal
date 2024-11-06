@@ -1,7 +1,7 @@
 ---
 title: "Introducing Arrowhead 6.4.0"
 author: Rootstock
-tags: [release]
+tags: [release, arrowhead]
 url: https://blog.rootstock.io/noticia/arrowhead-6-4-0-introducing-fiat-stable-minimum-gas-price/
 ---
 
