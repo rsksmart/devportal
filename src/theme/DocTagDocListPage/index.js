@@ -134,11 +134,11 @@ function DocTagDocListPageContent ({ tag, title }) {
                 <use xlinkHref="#icon-arrow-l"/>
               </svg>
               <span className="visually-hidden">
-                    <Translate
-                      id="theme.common.back">
-                      Back
-                    </Translate>
-                  </span>
+                <Translate
+                  id="theme.common.back">
+                  Back
+                </Translate>
+              </span>
             </Button>
 
             <Heading as="h1" className="m-0">{title}</Heading>
@@ -147,21 +147,21 @@ function DocTagDocListPageContent ({ tag, title }) {
           {tag.description && <p>{tag.description}</p>}
         </header>
         <SearchBar onSearch={handleSearch}/>
-          {filteredItems.length > 0 ? (
-            <section className="border-top border-gray-600">
-              {filteredItems.map((doc) => (
-                <DocItem key={doc.id} doc={doc} searchQuery={query}/>
-              ))}
-            </section>
-          ) : (
-            <p key="no-results">
-              <Translate
-                id="theme.SearchPage.noResultsText"
-                description="The paragraph for empty search result">
-                No results were found
-              </Translate>
-            </p>
-          )}
+        {filteredItems.length > 0 ? (
+          <section className="border-top border-gray-600">
+            {filteredItems.map((doc) => (
+              <DocItem key={doc.id} doc={doc} searchQuery={query}/>
+            ))}
+          </section>
+        ) : (
+          <p>
+            <Translate
+              id="theme.SearchPage.noResultsText"
+              description="The paragraph for empty search result">
+              No results were found
+            </Translate>
+          </p>
+        )}
       </main>
     </HtmlClassNameProvider>
   )

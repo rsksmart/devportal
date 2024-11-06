@@ -1,4 +1,3 @@
-.searchQueryInput,
 .searchVersionInput {
   border-radius: var(--ifm-global-radius);
   border: 2px solid var(--ifm-toc-border-color);
@@ -11,14 +10,9 @@
   transition: border var(--ifm-transition-fast) ease;
 }
 
-.searchQueryInput:focus,
 .searchVersionInput:focus {
   border-color: var(--docsearch-primary-color);
   outline: none;
-}
-
-.searchQueryInput::placeholder {
-  color: var(--docsearch-muted-color);
 }
 
 .searchResultsColumn {
@@ -34,25 +28,26 @@
   fill: var(--ifm-font-color-base);
 }
 
-.searchResultItem {
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--ifm-toc-border-color);
+.searchResultItemSummary{
+  em{
+    font-style: normal;
+  }
 }
-
 .searchResultItemHeading {
-  font-weight: 400;
-  margin-bottom: 0;
+  em{
+    font-style: normal;
+  }
 }
 
 .searchResultItemPath {
-  font-size: 0.8rem;
   color: var(--ifm-color-content-secondary);
   --ifm-breadcrumb-separator-size-multiplier: 1;
-}
-
-.searchResultItemSummary {
-  margin: 0.5rem 0 0;
-  font-style: italic;
+  em{
+    font-style: normal;
+  }
+  [class*="breadcrumbs__item"]:after{
+    filter: var(--ifm-breadcrumb-separator-filter);
+  }
 }
 
 @media only screen and (max-width: 996px) {
