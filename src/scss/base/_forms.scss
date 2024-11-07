@@ -44,6 +44,15 @@ label {
     box-shadow: none;
     background: var(--rsk-input-focus-bg, #1A1A1A);
   }
+
+  &--xl{
+    --rsk-input-focus-bg: var(--bs-body-bg);
+    --rsk-input-bg: var(--bs-body-bg);
+    font: 400 #{$f20}/1.2 $font-family-base;
+    padding: 14px 24px;
+    border-radius: 28px;
+    letter-spacing: 0.01em;
+  }
 }
 
 .form-select {
