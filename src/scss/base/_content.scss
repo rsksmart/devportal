@@ -162,8 +162,11 @@ ul{
       max-height: 560px;
     }
   }
-  p > img{
-    margin: 0;
+  p > img:first-child{
+    margin-top: 0;
+  }
+  p > img:last-child{
+    margin-bottom: 0;
   }
   & > :first-child {
     margin-top: 0;

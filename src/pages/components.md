@@ -731,3 +731,50 @@ Available logo options you can find [here](https://github.com/inttter/md-badges)
 <Shield title="Badge with link and tooltip" tooltip="Badge with link and tooltip" href="https://rootstock.io/" color="purple" />
 <Shield title="Badge with logo" href="https://bitcoin.org/" color="gray" label="Bitcoin" labelColor="f7931a" logo="bitcoin" />
 <Shield color="F3B724" title="Zcash" logo="zcash" logoColor="black" />
+
+## Steps component
+
+The Steps component is a structured guide that breaks down complex tasks into clear, sequential steps. Each step includes a title, and detailed instructions.
+
+- **Code**
+
+```jsx
+<Steps>
+  <Step title="Intro">
+    // any md content
+  </Step>
+  <Step title="Preparing the Environment">
+    // any md content
+  </Step>
+  <Step title="Setting Up the Project">
+    // any md content
+  </Step>
+</Steps>
+````
+
+**Result**
+
+<Steps>
+
+<Step title="Intro" >
+  ![Rootstock Technology Stack - High Level](/img/concepts/rootstock-tech-stack.svg)
+</Step>
+
+<Step title="Preparing the Environment" >
+Before starting, ensure you have all necessary tools and resources. Begin by setting up a clean workspace, gathering any required materials, and organizing the tools you’ll need. This step will help you work efficiently without interruptions.
+- **Install Required Software**: Make sure all necessary software is installed on your computer. This might include a code editor, development environment, or any project-specific applications.
+- **Check Dependencies**: Review the documentation for any dependencies required. Having these pre-installed can save you troubleshooting time later.
+- **Create a Backup**: If you’re working with existing data, create a backup to prevent data loss in case of errors.
+</Step>
+
+<Step title="Setting Up the Project">
+With your environment prepared, start by initializing your project. Follow these instructions carefully to avoid setup issues later on.
+
+- **Clone the Repository**: If you’re working from an existing repository, clone it to your local machine using the following command: `git clone [repository-url]`.
+- **Install Project Dependencies**: Run `npm install` or `yarn install` to install all project dependencies. This ensures you have all the necessary libraries and tools.
+- **Configure Environment Variables**: Create a `.env` file in the root directory and add all necessary environment variables. Refer to the project documentation for required variables.
+- **Run Initial Setup Script**: Many projects have setup scripts to streamline the configuration process. Check the project’s README file for any specific setup commands.
+
+By following these steps, you should now have a basic project setup and be ready to start development.
+</Step>
+</Steps>

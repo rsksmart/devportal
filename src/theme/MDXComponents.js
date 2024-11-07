@@ -16,10 +16,13 @@ import Button from "/src/components/Button";
 import CardsGrid from "/src/components/CardsGrid";
 import CardsGridItem from "/src/components/CardsGrid/Card";
 
+import Steps from "/src/components/Steps";
+import Step from "/src/components/Steps/Step";
+
 export default {
   // Re-use the default mapping
   ...MDXComponents,
   // Map the "<Highlight>" tag to our Highlight component
   // `Highlight` will receive all props that were passed to `<Highlight>` in MDX
-  Carousel, CarouselItem, Tabs, TabItem, Accordion, Card, Quote, Video, Filter, FilterItem, Button, CardsGrid, CardsGridItem, Shield
+  Carousel, CarouselItem, Tabs, TabItem, Accordion, Card, Quote, Video, Filter, FilterItem, Button, CardsGrid, CardsGridItem, Shield, Steps, Step
 };

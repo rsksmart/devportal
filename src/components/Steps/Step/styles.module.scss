@@ -1,0 +1,20 @@
+.Step{
+  counter-increment: step-counter;
+  --bs-border-color: var(--rsk-step-border-color, #BFBFBF);
+}
+.StepHeader{
+  &:before{
+    content: counter(step-counter);
+    font: 500 1.25rem/1 var(--bs-body-font-family);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 42px;
+    text-align: center;
+    border: 1px solid var(--rsk-step-border-color, #BFBFBF);
+    background-color: var(--rsk-step-bg-color, #F2F2F2);
+    border-radius: 28px;
+    min-height: 28px;
+    color: var(--bs-body-color);
+  }
+}
