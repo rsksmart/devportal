@@ -3,7 +3,7 @@ sidebar_label: Hacktivator Program
 sidebar_position: 2
 title: 🌱 Rootstock Hacktivator Program 💻
 description: "The Rootstock Developer Contributor Program allows developers to contribute to Rootstock by contributing code or creating educational content. You get to support the platform at your own pace, and every eligible contribution is rewarded in RIF based on its impact and complexity."
-tags: [rootstock, rsk, code, resources, content, developer contributor program, writing]
+tags: [rootstock, rsk, code, resources, content, hacktivator program, writing, rewards]
 ---
 
 Welcome to the Rootstock Hacktivator Program! This program is designed for developers who want to contribute to the Rootstock ecosystem and receive rewards for their valuable contributions.
