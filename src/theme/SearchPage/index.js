@@ -313,7 +313,7 @@ function SearchPageContent () {
         <meta property="robots" content="noindex, follow"/>
       </Head>
 
-      <div className="container margin-vert--lg">
+      <main>
         <Heading as="h1" className="mb-24">
           {searchResultState.totalResults} {getTitle()}
         </Heading>
@@ -397,7 +397,7 @@ function SearchPageContent () {
         </div>
 
         {searchResultState.items.length > 0 ? (
-          <main className="d-grid gap-44">
+          <div className="d-grid gap-44">
             {searchResultState.items.map(
               ({ breadcrumbs, items }, i) => (
 
@@ -446,7 +446,7 @@ function SearchPageContent () {
 
               )
             )}
-          </main>
+          </div>
         ) : (
           [
             searchQuery && !searchResultState.loading && (
@@ -473,7 +473,7 @@ function SearchPageContent () {
             </Translate>
           </div>
         )}
-      </div>
+      </main>
     </Layout>
   )
 }
