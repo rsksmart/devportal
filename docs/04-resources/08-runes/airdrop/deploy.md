@@ -6,7 +6,7 @@ tags: [rsk, rootstock, resources, tutorials, runes, nft, Ethereum, dApps, smart 
 description: "This guide will walk you through deploying the Airdrop Machine smart contract using Remix IDE. The Airdrop Machine is designed to distribute tokens across multiple addresses, supporting both standard and Merkle tree-based airdrops. 
 "
 ---
-This guide will walk you through deploying the Airdrop Machine smart contract using Remix IDE. The Airdrop Machine is designed to distribute tokens across multiple addresses, supporting both standard and Merkle tree-based airdrops. 
+This section will walk you through deploying the Airdrop Machine smart contract using Remix IDE. The Airdrop Machine is designed to distribute tokens across multiple addresses, supporting both standard and Merkle tree-based airdrops. 
 
 By following these instructions, you'll learn how to clone the necessary repository, prepare the contracts, and deploy them in Remix IDE.
 
