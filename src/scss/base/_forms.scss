@@ -46,8 +46,9 @@ label {
   }
 
   &--xl{
+    --rsk-input-focus-bg: var(--bs-body-bg);
+    --rsk-input-bg: var(--bs-body-bg);
     font: 400 #{$f20}/1.2 $font-family-base;
-    background: var(--bs-body-bg);
     padding: 14px 24px;
     border-radius: 28px;
     letter-spacing: 0.01em;
