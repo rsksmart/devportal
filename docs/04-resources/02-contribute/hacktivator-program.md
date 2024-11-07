@@ -252,7 +252,7 @@ Each verified and approved code contribution that becomes a Qualified Contributi
 
 The reward range provided for each option will be used based on the level of contribution to the project to qualify. That is, if the Contributor meets only the minimum required to qualify, they will be assigned the minimum rewards for each option. However, the more the Contributor adds to their contribution and chosen option, the greater the rewards they may receive (up to the maximum cap established for each option).
 
-## 📤 Developer Submission Process:
+## 📤 Developer Submission Process
 
 Submitting your contributions is easy! Just follow these steps:
 
