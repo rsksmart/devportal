@@ -109,6 +109,10 @@ Developers are encouraged to leverage reference projects to make meaningful cont
 
 #### 👉 Code Contributions Criteria:
 
+For a comprehensive overview of the evaluation and reward system for code contributions, including detailed criteria for complexity, project impact, tests, and documentation, please refer to [Evaluation Criteria for Code Contributions](https://docs.google.com/document/d/1vWYWdWxSXUcTxNS_OlRikfEwmPSXgw3iDsQ-UAqheMw/edit) and the terms and conditions of the program [LINK]. These criteria outline how contributions, ranging from simple fixes to advanced features or external integrations, will be assessed and rewarded, ensuring a balanced and fair approach to valuing developer participation and impact. This document covers everything from optimizing performance to integrating external APIs, with rewards adjusted based on the value and complexity of each contribution.
+
+#### 👉 Code Contributions Rewards:
+
 Each verified and approved code contribution that becomes a Qualified Contribution (as defined in the program's terms and conditions) will be entitled to receive the following rewards, under the established process:
   * Contribution Option A → 50 - 300 USD
   * Contribution Option B & C → 300 - 700 USD
@@ -141,7 +145,7 @@ You can contribute to the Rootstock platform by creating one of the following ty
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">
-    <Accordion.Header as="h3">3. UTechnical Documentation on Rootstock Docs</Accordion.Header>
+    <Accordion.Header as="h3">3. Technical Documentation on Rootstock Docs</Accordion.Header>
     <Accordion.Body>
       * Definition: In-depth documentation and detailed explanations of Rootstock's underlying technology, protocols, and architecture intended for a technical audience.
       * Purpose: To provide comprehensive technical information, promote transparency, and assist developers in understanding complex aspects of Rootstock.
@@ -228,12 +232,15 @@ Your contributions can cover any of the following Rootstock themes:
 * Content must help other developers navigate and work with Rootstock, deploy smart contracts, use compatible tools, SDKs, and libraries, and or integrate protocols on Rootstock.
 * Contributions for Rootstock Technical documentation should be submitted as a PR directly on the [DevPortal Repo](https://github.com/rsksmart/devportal/pulls), and the PR link should be submitted via the [Google form](https://forms.gle/aF9pFMfRyoygfzJWA). Ensure to use the label **“hacktivator-program”** on the PR and properly describe your PR using the template.
 
+:::note[More info about the guidelines]
 
-> For a comprehensive overview of the guidelines, evaluation, and reward system for content contributions, including detailed criteria for depth, completeness, technical accuracy, educational value, and innovation, please refer to the [Educational Content Evaluation Criteria & Guidelines](https://docs.google.com/document/d/1vA3QK8ZNv5Fgegb0Jv2f03IVIREePDi4lrFE1vsfK7c/edit) and the terms and conditions of the program  [LINK]. These criteria outline how contributions, ranging from technical documentation, written or video guides or tutorials will be assessed and rewarded, ensuring a balanced and fair approach to valuing content quality and impact. This document covers everything from word count appropriateness and inclusion of code examples to technical correctness and relevance to the Rootstock ecosystem, with rewards adjusted based on the value and complexity of each contribution.
+For a comprehensive overview of the guidelines, evaluation, and reward system for content contributions, including detailed criteria for depth, completeness, technical accuracy, educational value, and innovation, please refer to the [Educational Content Evaluation Criteria & Guidelines](https://docs.google.com/document/d/1vA3QK8ZNv5Fgegb0Jv2f03IVIREePDi4lrFE1vsfK7c/edit) and the terms and conditions of the program  [LINK]. These criteria outline how contributions, ranging from technical documentation, written or video guides or tutorials will be assessed and rewarded, ensuring a balanced and fair approach to valuing content quality and impact. This document covers everything from word count appropriateness and inclusion of code examples to technical correctness and relevance to the Rootstock ecosystem, with rewards adjusted based on the value and complexity of each contribution.
 
-#### 👉 Guidelines when publishing:
+👉 Guidelines when publishing:
 * Follow the [Rootstock Style Guide](https://github.com/rsksmart/devportal/blob/main/STYLE-GUIDE.md)
-* See [Contributing to Rootstock Documentation](https://github.com/rsksmart/devportal/blob/main/CONTRIBUTING_DOCS.md) and [Contributor Guidelines](https://github.com/rsksmart/devportal/blob/main/CONTRIBUTING.md)
+* See [Contributing to Rootstock Documentation](https://github.com/rsksmart/devportal/blob/main/CONTRIBUTING_DOCS.md) and [Rootstock Contributor Guidelines](https://github.com/rsksmart/devportal/blob/main/CONTRIBUTING.md)
+
+:::
 
 #### 👉 Educational Content Rewards:
 
