@@ -642,6 +642,7 @@ description="Get an API key & make your first API call in minutes. Get an API ke
 
 
 ## Buttons
+By deffault, button acts as inline element.
 - **Code**
 
 ```jsx
@@ -650,6 +651,26 @@ description="Get an API key & make your first API call in minutes. Get an API ke
 <Button size="lg" href="/resources/">Large Button</Button>
 ```
 Default <Button href="/dev-tools/">Default Button</Button>, small <Button size="sm" href="/developers/">Small Button</Button>, and large <Button size="lg" href="/resources/">Large Button</Button> buttons for different use cases.
+
+#### Align Button
+You can align the button to the left, center, or right. With align option button acts as a block element.
+
+- **Code**
+
+```jsx
+<Button href="/resources/" align="left">Left aligned Button</Button>
+<Button href="/resources/" align="center">Centered Button</Button>
+<Button href="/resources/" align="right">Right align Button</Button>
+```
+- **Render**
+
+<Button href="/resources/" align="left">Left aligned Button</Button>
+
+
+<Button href="/resources/" align="center">Centered Button</Button>
+
+
+<Button href="/resources/" align="right">Right aligned Button</Button>
 
 ## Badges
 Badges <Shield label="any text" title="you like" color="blue" /> <Shield label="build" title="passing" color="green" /> based on [shields.io](https://shields.io/)

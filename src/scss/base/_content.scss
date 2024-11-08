@@ -168,6 +168,11 @@ ul{
   p > img:last-child{
     margin-bottom: 0;
   }
+
+  .btn.w-fit + .btn.w-fit{
+    margin-top: 12px;
+  }
+
   & > :first-child {
     margin-top: 0;
   }
