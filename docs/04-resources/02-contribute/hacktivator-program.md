@@ -113,9 +113,9 @@ For a comprehensive overview of the evaluation and reward system for code contri
 #### 👉 Code Contributions Rewards
 
 Each verified and approved code contribution that becomes a Qualified Contribution (as defined in the program's terms and conditions above) will be entitled to receive the following rewards, under the established process:
-  * Contribution Option A → 50 - 300 USD
-  * Contribution Option B & C → 300 - 700 USD
-  * Contribution Option D, E, F & G → 700 - 1000 USD 
+* **Contribution Option A** → 50 - 300 USD
+* **Contribution Option B & C** → 300 - 700 USD
+* **Contribution Option D, E, F & G** → 700 - 1000 USD 
 
 The reward range provided for each option will be used based on the level of contribution to the project to qualify. That is, if the Contributor meets only the minimum required to qualify, they will be assigned the minimum rewards for each option. However, the more the Contributor adds to their contribution and chosen option, the greater the rewards they may receive (up to the maximum cap established for each option).
 
