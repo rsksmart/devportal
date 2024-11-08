@@ -240,10 +240,10 @@ For a comprehensive overview of the guidelines, evaluation, and reward system fo
 #### 👉 Educational Content Rewards:
 
 Each verified and approved code contribution that becomes a Qualified Contribution (as defined in the program's terms and conditions) will be entitled to receive the following rewards, under the established process:
-* Blog Post Contribution: 50 - 250 USD
-* Written Guides or Tutorials Contribution: 250 - 500 USD
-* Technical Content Contribution: 500 - 700 USD 
-* Video Guides or Tutorials Contribution: 700 - 1000 USD
+* **Blog Post Contribution:** 50 - 250 USD
+* **Written Guides or Tutorials Contribution:** 250 - 500 USD
+* **Technical Content Contribution:** 500 - 700 USD 
+* **Video Guides or Tutorials Contribution:** 700 - 1000 USD
 
 The reward range provided for each option will be used based on the level of contribution to the project to qualify. That is, if the Contributor meets only the minimum required to qualify, they will be assigned the minimum rewards for each option. However, the more the Contributor adds to their contribution and chosen option, the greater the rewards they may receive (up to the maximum cap established for each option).
 
