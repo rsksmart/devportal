@@ -130,7 +130,9 @@ ul{
   }
 
   table{
-    display: table;
+    @include media-breakpoint-up(lg) {
+      display: table;
+    }
     &, tbody{
       width: 100%;
     }
@@ -138,6 +140,9 @@ ul{
       border-width:0 0 1px;
       & > :last-child{
         margin-bottom: 0;
+      }
+      @include media-breakpoint-down(lg) {
+        min-width: 120px;
       }
     }
     tr{
