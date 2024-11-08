@@ -13,10 +13,10 @@ Welcome to the Rootstock Hacktivator Program! This program is designed for devel
 The Rootstock Hacktivator Program allows developers to evolve to Rootstock by contributing code or creating educational content. You get to support the platform at your own pace, and every eligible contribution will be rewarded based on its impact and value.
 
 ## ✔️ General Contribution Criteria
-* Quality: Contributions must be valuable to the Rootstock ecosystem, whether improving functionality, enhancing usability, or educating developers and community members.
-* Originality: All work should be original and created by you. Translations or adaptations should remain true to the source material.
-* Relevance: Contributions must directly benefit Rootstock’s developer community and ecosystem.
-* Accuracy: Code, tutorials, and other technical content must be precise and technically correct.
+* **Quality:** Contributions must be valuable to the Rootstock ecosystem, whether improving functionality, enhancing usability, or educating developers and community members.
+* **Originality:** All work should be original and created by you. Translations or adaptations should remain true to the source material.
+* **Relevance:** Contributions must directly benefit Rootstock’s developer community and ecosystem.
+* **Accuracy:** Code, tutorials, and other technical content must be precise and technically correct.
 
 ## 🎁 Rewards Per Category
 
