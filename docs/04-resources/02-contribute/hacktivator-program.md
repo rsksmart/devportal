@@ -8,6 +8,8 @@ tags: [rootstock, rsk, code, resources, content, hacktivator program, writing, r
 
 Welcome to the Rootstock Hacktivator Program! This program is designed for developers who want to contribute to the Rootstock ecosystem and receive rewards for their valuable contributions.
 
+<Button size="lg" href="https://forms.gle/aF9pFMfRyoygfzJWA">Submit Your Work</Button>
+
 ## 🌟 What is it?
 
 The Rootstock Hacktivator Program allows developers to evolve to Rootstock by contributing code or creating educational content. You get to support the platform at your own pace, and every eligible contribution will be rewarded based on its impact and value.
@@ -72,7 +74,7 @@ Developers are encouraged to leverage reference projects to make meaningful cont
   <Accordion.Item eventKey="3">
     <Accordion.Header as="h3">4. Meme Token Launchpad</Accordion.Header>
     <Accordion.Body>
-      The [Meme Token Launchpad](ttps://github.com/rsksmart/meme-token-launch) is an easy-to-use tool that simplifies the process of creating and launching your own ERC-1155/ERC-20 tokens. It caters to both experienced developers and newcomers by allowing users to define token parameters like name and ticker, and even store images via IPFS. Integrated with Etherspot for gasless deployment, it makes token creation more accessible by eliminating the complexities and costs associated with fees. For more details, see the [Meme Token Repo](https://github.com/rsksmart/meme-token-launch).
+      The [Meme Token Launchpad](https://github.com/rsksmart/meme-token-launch) is an easy-to-use tool that simplifies the process of creating and launching your own ERC-1155/ERC-20 tokens. It caters to both experienced developers and newcomers by allowing users to define token parameters like name and ticker, and even store images via IPFS. Integrated with Etherspot for gasless deployment, it makes token creation more accessible by eliminating the complexities and costs associated with fees. For more details, see the [Meme Token Repo](https://github.com/rsksmart/meme-token-launch).
 
       **Contribution Ideas:**
         * Additional Minting Parameters: Implement extra minting options.
@@ -104,13 +106,13 @@ Developers are encouraged to leverage reference projects to make meaningful cont
   </Accordion.Item>
 </Accordion>
 
-#### 👉 Code Contributions Criteria:
+#### 👉 Code Contributions Criteria
 
 For a comprehensive overview of the evaluation and reward system for code contributions, including detailed criteria for complexity, project impact, tests, and documentation, please refer to [Evaluation Criteria for Code Contributions](https://docs.google.com/document/d/1vWYWdWxSXUcTxNS_OlRikfEwmPSXgw3iDsQ-UAqheMw/edit) and the [terms and conditions of the program](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?usp=sharing). These criteria outline how contributions, ranging from simple fixes to advanced features or external integrations, will be assessed and rewarded, ensuring a balanced and fair approach to valuing developer participation and impact. This document covers everything from optimizing performance to integrating external APIs, with rewards adjusted based on the value and complexity of each contribution.
 
-#### 👉 Code Contributions Rewards:
+#### 👉 Code Contributions Rewards
 
-Each verified and approved code contribution that becomes a Qualified Contribution (as defined in the program's [terms and conditions](#-code-contributions-criteria)) will be entitled to receive the following rewards, under the established process:
+Each verified and approved code contribution that becomes a Qualified Contribution (as defined in the program's terms and conditions above) will be entitled to receive the following rewards, under the established process:
   * Contribution Option A → 50 - 300 USD
   * Contribution Option B & C → 300 - 700 USD
   * Contribution Option D, E, F & G → 700 - 1000 USD 
@@ -261,6 +263,10 @@ Submitting your contributions is easy! Just follow these steps:
 3. Review: Your submission will be reviewed by experts. You may be asked to make revisions or provide more information.
 
 This program is your chance to make a meaningful impact on Rootstock while earning rewards. Ready to contribute? Submit your work and be a part of the Rootstock developer community! 🌍
+
+<Button size="lg" href="https://forms.gle/aF9pFMfRyoygfzJWA">Submit Your Work</Button>
+
+<br></br>
 
 :::success[T&C]
 
