@@ -41,5 +41,13 @@ Data indexers act like librarians for blockchain data, organizing and storing in
     linkHref="/dev-tools/data/covalent/"
     linkTitle="Get Started"
   />
+  <CardsGridItem
+    title="Goldsky"
+    subtitle="data indexers"
+    color="green"
+    description="Goldsky is a data indexer that offers high-performance subgraph hosting and realtime data on Rootstock."
+    linkHref="/dev-tools/data/goldsky/"
+    linkTitle="Get Started"
+  />
 </CardsGrid>
 
