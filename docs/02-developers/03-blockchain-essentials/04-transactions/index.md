@@ -90,9 +90,7 @@ You will notice that this transaction has a zero amount, but it does emit some e
 
 So far we have checked out individual addresses and transactions. These are very detailed and specific information. What if you were after the big picture instead? A bird’s eye view of the Rootstock blockchain as a whole?
 
-For this, we will not use the Rootstock Block explorer, and instead use the Rootstock Stats page.
+For this, we will not use the Rootstock Block explorer, and instead use the [Rootstock Stats](https://stats.rootstock.io) page.
 
-[Rootstock Stats](https://stats.rootstock.io)
-]
 Here, we can see some very important numbers such as the average block duration, and the merged mining hash rate - and several other important technical indicators of the Rootstock network.
 A key indicator to look for is the average block time, which should be approximately 33s. Another key indicator to look for is the percentage of the Bitcoin network’s hash rate that is merge mining Rootstock.
