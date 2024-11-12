@@ -5259,6 +5259,13 @@ jsonfile@^6.0.1:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
+katex@^0.16.11:
+  version "0.16.11"
+  resolved "https://registry.yarnpkg.com/katex/-/katex-0.16.11.tgz#4bc84d5584f996abece5f01c6ad11304276a33f5"
+  integrity sha512-RQrI8rlHY92OLf3rho/Ts8i/XvjgguEjOkO1BEXcU3N8BqPpSzBNwV/G0Ukr+P/l3ivvJUE/Fa/CwbS6HesGNQ==
+  dependencies:
+    commander "^8.3.0"
+
 keyv@^4.5.3:
   version "4.5.4"
   resolved "https://registry.yarnpkg.com/keyv/-/keyv-4.5.4.tgz#a879a99e29452f942439f2a405e3af8b31d4de93"
