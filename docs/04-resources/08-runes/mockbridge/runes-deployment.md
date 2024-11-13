@@ -6,7 +6,7 @@ tags: [rsk, rootstock, resources, tutorials,  deploy, Runes, dApps, smart contra
 description: "The Rootstock Runes Mock Bridge deployment page shows you how to compile and deploy runes on RemixIDE"
 ---
 
-To deploy the Runes smart contract using Remix IDE, follow these steps in detail:
+To deploy the Runes smart contract using Remix IDE, follow the steps below:
 
 ### **Step 1: Access Remix IDE**
 
