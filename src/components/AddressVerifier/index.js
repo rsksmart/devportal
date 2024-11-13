@@ -61,7 +61,7 @@ export default function AddressVerifier () {
   return (
     <form className="pegin-address-verifier" onSubmit={checkAddress}>
       <div className="d-flex flex-column gap-12 align-items-start flex-md-row align-items-md-center">
-        <input type="text" className="form-control form-control--xl" required={true} ref={inputRef}/>
+        <input type="text" className="form-control form-control--xl" required={true} ref={inputRef} maxLength={150} placeholder="Enter your BTC address"/>
         <div className="d-flex gap-12">
           <button type="submit" className="btn">Check</button>
           <button type="reset" className="btn" onClick={clearForm}>Clear</button>
