@@ -19,7 +19,7 @@ git clone https://github.com/rsksmart/airdrop-template.git
 
 This repository contains all the smart contract code you need to deploy the Airdrop Machine. You’ll use this code to get the smart contract address required for your project.
 
-> Basic knowledge of deploying and testing smart contracts in Remix IDE is required. If you’re unfamiliar, please refer to the [Remix Quickstart Guide](https://dev.rootstock.io/developers/quickstart/remix/) for a detailed tutorial.
+> Basic knowledge of deploying and testing smart contracts in Remix IDE is required. If you’re unfamiliar, please refer to the [Remix Quickstart Guide](/developers/quickstart/remix/) for a detailed tutorial.
 
 ## **Step 2: Prepare the Contracts for Remix IDE**
 

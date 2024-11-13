@@ -8,7 +8,7 @@ description: "This shows you steps to set up your airdrop giveaway machine"
 
 ## **Prerequisite**
 
-Before going further in this tutorial, it's essential to have the following foundational knowledge and tools in place:
+Before going further in this guide, it's essential to have the following foundational knowledge and tools in place:
 
 1. **Familiarity with Remix IDE:**  
    * Understanding how to navigate and utilize Remix IDE is crucial. This includes knowledge of its features, such as the Solidity compiler, file management, and debugging tools. Being comfortable with the IDE will enable you to write, test, and deploy smart contracts efficiently.  
