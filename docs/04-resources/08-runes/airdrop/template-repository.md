@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 title: Overview of the Airdrop Template Repository
-sidebar_label: Template Repository
+sidebar_label: Airdrop Machine Template Repository
 
 tags: [rsk, rootstock, resources, tutorials, runes, nft, Ethereum, dApps, smart contracts, airdrop]
 description: "The repository consists of multiple smart contracts that work around a core logic contract called AirdropManager.sol which manages the logic for the different airdrops inside.Each contract has a specific role, and they interact with one another to manage airdrops effectively."
