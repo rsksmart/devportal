@@ -8,55 +8,41 @@ description: "Information about the RIF token, where to obtain it, how to transf
 
 RNS provides an architecture which enables the identification of blockchain addresses by human-readable names.
 
-<form class="form" id="frm-rns-search">
-  <div class="form-group">
-    <div class="input-group">
-      <input type="text" id="txt-rns-name" class="form-control" placeholder="find your domain" />
-      <div class="input-group-append">
-        <span class="input-group-text">.rsk</span>
-      </div>
-      <div class="input-group-append">
-        <button class="btn btn-rns-register">Register!</button>
-      </div>
-    </div>
-  </div>
-</form>
+<RNSDomainSearch />
 
-<div class="container the-stack">
-  <div class="row rif_blue_text">
-    <div class="col">
-      <div class="rns-index-box">
-        <a href="try-rns">Try the service</a>
-        <br />
-        <br />
-        <p>Register a domain in the Testnet, for free.</p>
-      </div>
-    </div>
-    <div class="col">
-      <div class="rns-index-box">
-        <a href="./integrate">Integrate with RNS</a>
-        <br />
-        <br />
-        <p>Easy guides on how to integrate RNS in your solution.</p>
-      </div>
+<div className="row rif_blue_text">
+  <div className="col">
+    <div className="rns-index-box">
+      <a href="try-rns">Try the service</a>
+      <br />
+      <br />
+      <p>Register a domain in the Testnet, for free.</p>
     </div>
   </div>
-  <div class="row rif_blue_text">
-    <div class="col">
-      <div class="rns-index-box">
-        <a href="run-locally">Develop on top of RNS</a>
-        <br />
-        <br />
-        <p>Deploy RNS suite in your local development environment</p>
-      </div>
+  <div className="col">
+    <div className="rns-index-box">
+      <a href="./integrate">Integrate with RNS</a>
+      <br />
+      <br />
+      <p>Easy guides on how to integrate RNS in your solution.</p>
     </div>
-    <div class="col">
-      <div class="rns-index-box">
-        <a href="libs">Use the libraries</a>
-        <br />
-        <br />
-        <p>Use simple libraries to interact with RNS service.</p>
-      </div>
+  </div>
+</div>
+<div className="row rif_blue_text">
+  <div className="col">
+    <div className="rns-index-box">
+      <a href="run-locally">Develop on top of RNS</a>
+      <br />
+      <br />
+      <p>Deploy RNS suite in your local development environment</p>
+    </div>
+  </div>
+  <div className="col">
+    <div className="rns-index-box">
+      <a href="libs">Use the libraries</a>
+      <br />
+      <br />
+      <p>Use simple libraries to interact with RNS service.</p>
     </div>
   </div>
 </div>
@@ -97,7 +83,7 @@ RNS has four major components:
 | **RNS Registry**  | The RNS Registry is a specification for a tree-structured namespace and the data associated with the names. Conceptually, each node and leaf in the domain name space tree represents a set of information. Query operations attempt to extract specific types of information from a particular set. A query specifies the domain name of interest and the type of resource information desired. | [Specs](./specs/registry)  |
 | **RNS Resolvers** | RNS Resolvers are contracts that provide information from a name in response to client requests. Resolvers must answer a query directly or use referrals to other resolvers. Typically, a resolver is a contract's public function that is directly accessible to user programs or other contracts. No specific protocol is required between the resolver and the user program. | [Specs](./specs/resolver)  |
 | **RNS Registrar** | The RNS Registrar is a critical component within the RIF Name Service, managing the registration of `.rsk` domain names. This contract has the authority to register names in the RSK Owner contract, ensuring that new domain registrations are handled securely and efficiently. | [Specs](./specs/registrar)  |
-| **Renewer**       | The Renewer is a contract designed to facilitate the renewal of names registered in the Node Owner. It is equipped with permissions to renew these names and provides flexibility in how the renewal is executed.                                                     
+| **Renewer**       | The Renewer is a contract designed to facilitate the renewal of names registered in the Node Owner. It is equipped with permissions to renew these names and provides flexibility in how the renewal is executed.
 
 These fours components roughly correspond to the four layers or views of the domain system:
 - From the user's point of view, the domain system is accessed through a simple resolution operation. The domain space consists of a single tree and the user can request information from any section of the tree.

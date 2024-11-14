@@ -22,10 +22,10 @@
             <p>There was an error while trying to fetch the bridge member details.</p>
         </div>
 
-        <div class="container" style="display:none;">
+        <div class="container-xl" style="display:none;">
             <h1 class="bm-name"></h1>
             <h2>Bridge member details</h2>
-            
+
             <hr/>
 
             <h3>
@@ -33,7 +33,7 @@
                 <button type="button" class="btn btn-outline-primary btn-sm act-pubkeys-compress">View compressed</button>
             </h3>
             <p class="bm-op-pubkey-container">
-                <div class="bm-op-pubkey" style="display:none;">The <span class="bm-op-pubkey-name"></span> 
+                <div class="bm-op-pubkey" style="display:none;">The <span class="bm-op-pubkey-name"></span>
                 public key is <a class="bm-op-pubkey-verify-auto-link" href="#pubkey-auto-verify">[ verify ]</a> <a class="bm-op-pubkey-verify-link" href="#pubkey-verify">[ manually verify ]</a> <br/>
                 <code class="bm-op-pubkey-value"></code></div>
             </p>
@@ -45,7 +45,7 @@
 
             <div id="pubkey-verify" class="bm-verify-bm-pubkey" style="display: none;">
                 <p>
-                    In order to verify <span class="bm-name"></span>'s <span class="bm-verify-bm-pubkey-name"></span> public key, make sure you 
+                    In order to verify <span class="bm-name"></span>'s <span class="bm-verify-bm-pubkey-name"></span> public key, make sure you
                     have <code>curl</code> installed and, in the command line, issue:
                 </p>
                 <div class="bm-code-block">
@@ -83,7 +83,7 @@
 
             <h3>powHSM</h3>
             <p>
-                This member <b>is</b> running a powHSM device version 
+                This member <b>is</b> running a powHSM device version
                 <code class="bm-powhsm-version"></code>
                 <a href="#" target="_blank" class="see-more bm-powhsm-version-link">[See on Github]</a>.
             </p>
@@ -94,7 +94,7 @@
             <h5>Hash and parameters</h5>
             <p>
                 This powHSM is running a Signer with hash <code class="bm-signer-hash"></code>,
-                built using the following parameters (this hash can be verified by 
+                built using the following parameters (this hash can be verified by
                 manually building the Signer from the source code using the given parameters):
             </p>
             <table class="table table-striped">
@@ -109,14 +109,14 @@
                 </tr>
             </table>
             <p>
-                For instructions on how to verify the Signer hash by building the Signer 
-                with the given parameters, please read 
+                For instructions on how to verify the Signer hash by building the Signer
+                with the given parameters, please read
                 <a class="bm-build-link" target="_blank" href="#">this document</a>.
                 For details on what the Signer is and what role it plays in powHSM, please read our
                 <a class="bm-concepts-link" target="_blank" href="#">concepts section</a>.
             </p>
             <p>
-                
+
             </p>
 
             <h5>Public keys</h5>
@@ -133,13 +133,13 @@
                 </tr>
             </table>
             <p>
-                (*) These keys use a different derivation path and are now deprecated. 
+                (*) These keys use a different derivation path and are now deprecated.
                 They will be removed altogether in future versions.
             </p>
             <p>
-                The SHA-256 hash of the public keys shown here has been 
-                dynamically computed on your browser using the 
-                <a href="https://cryptojs.gitbook.io/docs/" target="_blank">CryptoJS</a> 
+                The SHA-256 hash of the public keys shown here has been
+                dynamically computed on your browser using the
+                <a href="https://cryptojs.gitbook.io/docs/" target="_blank">CryptoJS</a>
                 library. If you want to double-check this computation, you can manually
                 compute a SHA-256 of the concatenation of the underlying byte representation of
                 each of these public keys, in the order shown. For this task, you can use
@@ -149,7 +149,7 @@
 
             <!-- Signer and UI attestation template -->
             <div class="bm-att" style="display:none;">
-                <div class="container info-box">
+                <div class="container-xl info-box">
                     <div class="row bm-att-container">
                         <div class="col-12 info-box-title">
                             Message (hover for details)
@@ -178,12 +178,12 @@
             <p class="bm-att-explanation">
                 The <em>signature</em> shown above is a valid signature of the given <em>message</em>
                 by the <em>signer-hash</em>-tweaked <em>attestation key</em> (shown further down).
-                This has been dynamically verified on your browser using the 
-                <a href="https://github.com/indutny/elliptic" target="_blank">Elliptic</a> library. 
-                You can manually verify the validity of said signature using any library or tool 
-                of your choosing. The validity of this signature, together with the rest of the 
-                certification chain up to the root of trust (<a href="https://www.ledger.com/" target="_blank">Ledger</a> itself), 
-                constitutes proof of this signature being generated in an authentic Ledger device running a 
+                This has been dynamically verified on your browser using the
+                <a href="https://github.com/indutny/elliptic" target="_blank">Elliptic</a> library.
+                You can manually verify the validity of said signature using any library or tool
+                of your choosing. The validity of this signature, together with the rest of the
+                certification chain up to the root of trust (<a href="https://www.ledger.com/" target="_blank">Ledger</a> itself),
+                constitutes proof of this signature being generated in an authentic Ledger device running a
                 Signer App with the given hash.
             </p>
             <hr/>
@@ -193,7 +193,7 @@
             <div class="bm-ui-postv3" style="display:none;">
                 <p>
                     This powHSM is running a UI with hash <code class="bm-ui-hash"></code>,
-                    built using the following parameters (this hash can be verified by 
+                    built using the following parameters (this hash can be verified by
                     manually building the UI from the source code using the given parameters):
                 </p>
                 <table class="table table-striped">
@@ -209,7 +209,7 @@
                 </table>
                 <p>
                     For instructions on how to verify the UI hash by building the UI
-                    with the given parameters, please read 
+                    with the given parameters, please read
                     <a class="bm-build-link" target="_blank" href="#">this document</a>.
                     For details on what the UI is and what role it plays in powHSM, please read our
                     <a class="bm-concepts-link" target="_blank" href="#">concepts section</a>.
@@ -230,20 +230,20 @@
             <p class="bm-att-explanation">
                 The <em>signature</em> shown above is a valid signature of the given <em>message</em>
                 by the <em>UI-hash</em>-tweaked <em>attestation key</em> (shown below).
-                This has been dynamically verified on your browser using the 
-                <a href="https://github.com/indutny/elliptic" target="_blank">Elliptic</a> library. 
-                You can manually verify the validity of said signature using any library or tool 
-                of your choosing. The validity of this signature, together with the rest of the 
-                certification chain up to the root of trust (<a href="https://www.ledger.com/" target="_blank">Ledger</a> itself), 
-                constitutes proof of this signature being generated in an authentic Ledger device running a 
+                This has been dynamically verified on your browser using the
+                <a href="https://github.com/indutny/elliptic" target="_blank">Elliptic</a> library.
+                You can manually verify the validity of said signature using any library or tool
+                of your choosing. The validity of this signature, together with the rest of the
+                certification chain up to the root of trust (<a href="https://www.ledger.com/" target="_blank">Ledger</a> itself),
+                constitutes proof of this signature being generated in an authentic Ledger device running a
                 UI App with the given hash.
             </p>
             <hr/>
-            
+
             <!-- Certificate chain element template -->
             <div class="bm-chain-element" style="display:none;">
                 <h4 class="bm-chain-element-title"></h4>
-                <div class="container info-box">
+                <div class="container-xl info-box">
                     <div class="row">
                         <div class="col-12 info-box-title">
                             Message (hover for details)
@@ -280,7 +280,7 @@
             <div class="bm-chain-elements-container"></div>
 
             <h4>Ledger public key (root of trust)</h4>
-            <div class="container info-box">
+            <div class="container-xl info-box">
                 <div class="row">
                     <div class="col-12 info-box-title">
                         Public key
@@ -295,16 +295,16 @@
             </div>
 
             <p class="bm-att-explanation">
-                In each of the <em>Attestation public key</em> and <em>Device public key</em> tables shown above, 
+                In each of the <em>Attestation public key</em> and <em>Device public key</em> tables shown above,
                 the <em>signatures</em> shown are valid signatures of the corresponding <em>messages</em>
                 by the following table's public key. In both cases, the signed <em>message</em> contains
                 the certified public key, as shown. The last table only shows the root of trust.
-                The validity of this certification chain has been dynamically verified on your browser using the 
-                <a href="https://github.com/indutny/elliptic" target="_blank">Elliptic</a> library. 
-                You can manually verify these signatures using any library or tool 
-                of your choosing. The validity of this set of signatures constitutes part of the proof of 
+                The validity of this certification chain has been dynamically verified on your browser using the
+                <a href="https://github.com/indutny/elliptic" target="_blank">Elliptic</a> library.
+                You can manually verify these signatures using any library or tool
+                of your choosing. The validity of this set of signatures constitutes part of the proof of
                 validity of both the Signer and UI attestations shown above. For more information on
-                the attestation process, see 
+                the attestation process, see
                 <a href="https://developers.ledger.com/docs/nano-app/bolos-features/#attestation" target="_blank">the Ledger documentation</a>.
             </p>
         </div>
