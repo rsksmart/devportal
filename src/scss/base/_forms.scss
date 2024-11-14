@@ -54,7 +54,9 @@ label {
     letter-spacing: 0.01em;
   }
 }
-
+.input-group-text{
+  border-color: var(--rsk-input-border-color, #3D3D3D);
+}
 .form-select {
   --bs-form-select-bg-img: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.59 8.295L12 12.875L7.41 8.295L6 9.705L12 15.705L18 9.705L16.59 8.295Z' fill='black'/%3E%3C/svg%3E%0A");
 

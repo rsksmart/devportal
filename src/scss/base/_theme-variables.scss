@@ -255,6 +255,8 @@ html:root {
   --rsk-input-border-color-focus: var(--bs-primary);
   --rsk-input-focus-bg: #{$gray-100};
 
+  --bs-tertiary-bg: #{$gray-100};
+
   //Highlight
   --bs-highlight-bg: #{$yellow};
 
@@ -376,6 +378,7 @@ html:root {
   --rsk-input-placeholder-color: #{$gray-450};
   --rsk-input-border-color-focus: var(--bs-primary);
   --rsk-input-focus-bg: #{$gray-900};
+  --bs-tertiary-bg: #{$gray-850};
 
   //Steps component
   --rsk-step-border-color: #{$gray-600};
