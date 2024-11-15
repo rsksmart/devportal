@@ -1,7 +1,7 @@
 ---
 sidebar_position: 202
-title:  Setup the Airdrop Giveaway Machine
-sidebar_label: Setup Airdrop Machine
+title:  Setup Airdrop Giveaway Machine
+sidebar_label: Setup Airdrop Giveaway Machine
 tags: [rsk, rootstock, resources, tutorials, runes, nft, Ethereum, dApps, smart contracts, airdrop]
 description: "This shows you steps to setup your airdrop giveaway machine."
 ---
@@ -53,7 +53,7 @@ This variable specifies the address of the Airdrop Manager smart contract. To en
 
 :::info[Info]
 
-For detailed instructions on obtaining the Airdrop Manager address, please refer to the [Deploy](docs/04-resources/09-Airdrop/deploy.md) section
+For detailed instructions on obtaining the Airdrop Manager address, please refer to the [Deployment](/resources/guides/runes-rootstock/airdrop-giveaway-machine/deploy-airdrop-machine.md) section.
 
 :::
 
