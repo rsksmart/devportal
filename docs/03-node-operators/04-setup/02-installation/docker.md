@@ -29,7 +29,7 @@ If you already have docker installed. See how to [Install the RSKj node using Do
 :::tip[For Mac M1 / M2 (Apple Chips) using x86 based software]
 
 - Ensure you have `Rosetta` installed. This is typically pre-installed on recent macOS versions.
-- Download an x86 JDK build, such as [Azul Zulu 11 (x86)](https://www.azul.com/downloads/?version=java-11-lts&os=macos&package=jdk), to ensure compatibility with x86 based software.
+- Download an x86 JDK build, such as [Azul Zulu 17 (x86)](https://www.azul.com/downloads/?version=java-17-lts&os=macos&package=jdk#zulu), to ensure compatibility with x86 based software.
 
 :::
 

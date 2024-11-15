@@ -83,12 +83,8 @@ Find a list of frequently asked questions about the Token Bridge.
    <Accordion.Item eventKey="11">
     <Accordion.Header as="h3">How many confirmations are required to convert the original tokens to Side tokens and vice-versa?</Accordion.Header>
     <Accordion.Body>
-      - Confirmations depends on the amount being crossed:
-        - Small amounts needs 60 confirmations on the Rootstock Mainnet, and 120 confirmations on the Ethereum Mainnet. 
-        - Medium amounts needs 120 confirmations on the Rootstock Mainnet, and 240 confirmations on the Ethereum Mainnet.
-        - Large amounts needs 2880 confirmations on the Rootstock Mainnet, and 5760 confirmations on the Ethereum Mainnet.
-        - > Note that the values of small, medium, and large amount are defined per token basis, and may change over time.
-        - > You can see these amounts defined in the [Token List](https://dapp.testnet.bridges.rootstock.io/list).
+      - Confirmations depends on the amount being crossed. See the [Troubleshooting guide](/resources/guides/tokenbridge/troubleshooting/) for more information.
+      - You can see these amounts defined in the [Token List](https://dapp.testnet.bridges.rootstock.io/list).
     </Accordion.Body>
   </Accordion.Item>
    <Accordion.Item eventKey="12">

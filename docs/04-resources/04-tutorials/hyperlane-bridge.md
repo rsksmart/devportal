@@ -3,16 +3,12 @@ sidebar_position: 300
 title: Run Hyperlane Bridge on Rootstock
 sidebar_label: Hyperlane Bridge
 tags: [hyperlane, rootstock, tutorials, rsk, blockchain, interoperability, cross chain bridge, defi]
-description: "Hyperlane is the open interoperability framework to connect anywhere onchain."
+description: "Hyperlane is the open interoperability framework to connect anywhere onchain. Build dApps that seamlessly communicates between Rootstock to other EVM-compatible chains."
 ---
-
-## What is Hyperlane?
 
 [Hyperlane](https://www.hyperlane.xyz/) is the first universal and permissionless interoperability layer built for the modular blockchain stack.
 
-Deploying Hyperlane on Rootstock, allows to build seamless communication from Rootstock to any other chain on which Hyperlane has been deployed. 
-
-> This tutorial guides you through the process of setting up Hyperlane on the Rootstock blockchain to create seamless asset bridging between Rootstock and other compatible chains. You will learn how to install Hyperlane, configure custom chains, deploy contracts, and run validator and relayer nodes.
+This tutorial guides you through the process of setting up Hyperlane on the Rootstock blockchain to create seamless asset bridging between Rootstock and other compatible chains. You will learn how to install Hyperlane, configure custom chains, deploy contracts, and run validator and relayer nodes.
 
 Some example dApps that can be developed using Hyperlane bridge:
 

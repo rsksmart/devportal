@@ -21,7 +21,7 @@ Participating in a Rootstock hackathon or Workshop? View the [Hackathon Resource
 - Interact with Rootstock using the [RPC API](https://rpc.rootstock.io/)
 
 :::tip[Get an API Key]
-See how to setup the RPC API and get an [API Key](/developers/rpc-api/setup).
+See how to setup the RPC API and get an [API Key](/developers/rpc-api/rootstock/setup/).
 :::
 
 ## Connecting to a Wallet

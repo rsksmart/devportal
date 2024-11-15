@@ -1,0 +1,6 @@
+label: Smart Contracts Development
+position: 5
+link:
+  type: generated-index
+  slug: /developers/smart-contracts/
+  description: Get started with deploying dApps on Rootstock using Hardhat, Wagmi, Remix and other EVM-compatible tools.

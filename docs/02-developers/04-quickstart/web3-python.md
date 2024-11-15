@@ -1,5 +1,5 @@
 ---
-sidebar_label: Using Web3.py
+sidebar_label: Deploy and Interact with a Smart Contract using Web3.py
 sidebar_position: 200
 title:  Deploy and Interact with a Smart Contract using Web3.py
 description: 'Deploy and Interact with a Smart Contract Using Web3.py.'

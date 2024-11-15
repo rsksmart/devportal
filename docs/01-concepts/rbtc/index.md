@@ -9,7 +9,7 @@ RBTC is the token used to [pay for the execution](/concepts/rbtc/gas/) of transa
 
 See [supported wallets](/dev-tools/wallets/).
 
-[Get RBTC](https://rootstock.io/rbtc/#get-rbtc)
+<Button href="https://rootstock.io/rbtc/#get-rbtc">Get RBTC</Button>
 
 ## RBTC (Smart Bitcoin in Mainnet)
 

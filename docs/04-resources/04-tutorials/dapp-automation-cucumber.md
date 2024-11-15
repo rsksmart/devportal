@@ -10,8 +10,8 @@ Rootstock is a blockchain platform that extends the capabilities of the Bitcoin 
 
 This guide aim to introduce you to an [agile automation framework](https://github.com/rsksmart/e2e_dapps_automation) designed exclusively for decentralized applications (dApps) automation and E2E testing. 
 
-This solution seamlessly brings together Cucumber's user-friendly behavior-driven development, Playwright's precise browser automation, and the tailored DApp testing capabilities of Synpress. With Cucumber's Gherkin syntax, teams collaboratively define DApp behaviors. Playwright, customized for Chrome, adds finesse to browser automation. Synpress, in its Playwright version, effortlessly integrates with MetaMask (more software wallets to come) for thorough DApp testing. 
-This way, developers enjoy expressive scenarios, targeted browser automation, and specialized DApp testing features.
+This solution seamlessly brings together Cucumber's user-friendly behavior-driven development, Playwright's precise browser automation, and the tailored dApp testing capabilities of Synpress. With Cucumber's Gherkin syntax, teams collaboratively define DApp behaviors. Playwright, customized for Chrome, adds finesse to browser automation. Synpress, in its Playwright version, effortlessly integrates with MetaMask (more software wallets to come) for thorough dApp testing. 
+This way, developers enjoy expressive scenarios, targeted browser automation, and specialized dApp testing features.
 
 ## Prerequisites
 

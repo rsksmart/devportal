@@ -8,7 +8,7 @@ async function getBridgeMember() {
     return $.getJSON(`data/${member}.json`);
 }
 
-async function resolveBridgeMember({ attestationPath, publicKeysPath, parametersPath, ...rest }) { 
+async function resolveBridgeMember({ attestationPath, publicKeysPath, parametersPath, ...rest }) {
     const result = {
         ...rest,
         attestation: await $.getJSON(attestationPath),
@@ -127,7 +127,7 @@ $(async function() {
     try {
         const bridgeMember = await resolveBridgeMember(await getBridgeMember());
         let elem, child;
-        
+
         // Member name and powHSM version
         $(".bm-name").text(bridgeMember.name);
         $(".bm-powhsm-version").text(bridgeMember.parameters.tag);
@@ -141,9 +141,9 @@ $(async function() {
             $(".bm-op-pubkey-value", elem).text(`0x${pubKey.value}`);
             $(".bm-op-pubkey-value", elem).data("txt-uncompressed", `0x${pubKey.value}`);
             $(".bm-op-pubkey-value", elem).data("txt-compressed", `0x${pubKey.valueCompressed}`);
-            $(".bm-op-pubkey-verify-auto-link", elem).on("click", 
+            $(".bm-op-pubkey-verify-auto-link", elem).on("click",
                 () => runAutoVerificationFor(bridgeMember.bridgeIndex, pubKey.name.toLowerCase(), pubKey.valueCompressed));
-            $(".bm-op-pubkey-verify-link", elem).on("click", 
+            $(".bm-op-pubkey-verify-link", elem).on("click",
                 () => showVerificationDetailsFor(bridgeMember.bridgeIndex, pubKey.name.toLowerCase(), pubKey.valueCompressed));
             $(".bm-op-pubkey-container").append(elem);
         });
@@ -167,7 +167,7 @@ $(async function() {
             $(".bm-ui-auth-signer-iteration").text(bridgeMember.parameters.iteration);
             $(".bm-ui-auth-authorizers").text(bridgeMember.parameters.authorizers);
             $(".bm-ui-auth-authorizers-link").attr(
-                "href", 
+                "href",
                 `https://github.com/rsksmart/rsk-powhsm/blob/${bridgeMember.parameters.tag}/ledger/src/ui/src/signer_authorization_signers/${bridgeMember.parameters.authorizers}.h`);
             $(".bm-ui-postv3").show();
         } else {
@@ -329,7 +329,7 @@ $(async function() {
         $(".bm-verify-bm-pubkey-verify").click(finishVerification);
 
         // Show main container
-        $(".container").show();
+        $(".container, .container-xl").show();
     } catch (e) {
         console.error("Error while trying to fetch bridge member info");
         console.error(e);

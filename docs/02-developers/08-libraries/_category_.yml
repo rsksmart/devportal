@@ -3,3 +3,4 @@ position: 8
 link:
   type: generated-index
   slug: /developers/libraries/
+  description: "Libraries for Rootstock Integration."

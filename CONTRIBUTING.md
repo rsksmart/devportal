@@ -7,11 +7,11 @@ All contributions are welcome, including issues, updates and tweaks, blog posts,
 ## How to Contribute
 If you are worried or don’t know where to start, check out the next section that explains what kind of help we could use and where you can get involved. 
 
-You can send your questions on [Discord](http://discord.gg/rootstock), send a [Pull Request](https://github.com/rsksmart/rsksmart.github.io/pulls) or [Submit an Issue](https://github.com/rsksmart/rsksmart.github.io/issues), and a maintainer will attend to it.
+You can send your questions on [Discord](http://discord.gg/rootstock), send a [Pull Request](https://github.com/rsksmart/devportal/pulls) or [Submit an Issue](https://github.com/rsksmart/devportal/issues/new/choose), and a maintainer will attend to it.
 
 ### Reporting Bugs
 
-1. **Check for Existing Issues**: Before reporting a bug, please check the [issue tracker](https://github.com/rsksmart/rsksmart.github.io/issues) to see if it has already been reported.
+1. **Check for Existing Issues**: Before reporting a bug, please check the [issue tracker](https://github.com/rsksmart/devportal/issues/) to see if it has already been reported.
 2. **Create a New Issue**: If your issue is not listed, create a new one. Provide as much detail as possible:
     - A clear and descriptive title.
     - Steps to reproduce the bug.
@@ -21,7 +21,7 @@ You can send your questions on [Discord](http://discord.gg/rootstock), send a [P
 
 ### Suggesting Features
 
-1. **Check for Existing Requests**: Look through the [issue tracker](issues) to see if someone else has suggested the feature.
+1. **Check for Existing Requests**: Look through the [issue tracker](https://github.com/rsksmart/devportal/issues/) to see if someone else has suggested the feature.
 2. **Create a New Feature Request**: If the feature is not listed, open a new issue. Include:
     - A clear and descriptive title.
     - The motivation for the feature.
