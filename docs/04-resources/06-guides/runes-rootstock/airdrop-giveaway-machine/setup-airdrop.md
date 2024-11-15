@@ -1,5 +1,5 @@
 ---
-sidebar_position: 202
+sidebar_position: 203
 title:  Setup Your Own Airdrop Giveaway Machine
 sidebar_label: Setup Your Own Airdrop Giveaway Machine
 tags: [rsk, rootstock, resources, tutorials, runes, nft, Ethereum, dApps, smart contracts, airdrop]
