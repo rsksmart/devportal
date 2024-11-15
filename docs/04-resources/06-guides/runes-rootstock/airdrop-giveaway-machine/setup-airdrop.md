@@ -17,7 +17,7 @@ Before going further in this guide, it's essential to have the following foundat
 3. **Git Installation:**  
    * Ensure that Git is installed on your machine. Familiarity with Git will help you manage version control effectively, collaborate with others, and track changes to your code.
 
-#### **Installation**
+### **Installation**
 
 To install and run the Runes giveaway machine Airdrop claim locally, follow these steps:
 
@@ -43,7 +43,7 @@ NEXT_PUBLIC_RPC_URL=<your_rpc_url>
 NEXT_PUBLIC_EXPLORER=<your_blockchain_explorer>
 ```
 
-### Explanation with added context for each environment variable:
+## Explanation with added context for each environment variable
 
 ```
 NEXT_PUBLIC_AIRDROP_MANAGER_ADDRESS=<your_airdrop_manager_address>
@@ -89,7 +89,7 @@ npm run dev
 
 Once installed, this project can be used to claim airdrops via a decentralized application, adding another layer of utility to the Bitcoin ecosystem.
 
-## **Frontend Integration Guide**
+## Interacting with the Frontend
 
 Once you have the application running locally, follow these steps to interact with the airdrop functionality:
 
