@@ -41,7 +41,7 @@ A distributed, immutable digital ledger that records transactions across a netwo
 
 A token standard for Bitcoin, similar to ERC20 on Ethereum, enabling the creation of fungible tokens on the Bitcoin network.
 
-[**Bridge**](https://dev.rootstock.io/resources/guides/tokenbridge/): 
+[**Bridge**](/resources/guides/tokenbridge/): 
 
 This is a protocol allowing assets to be transferred between different blockchain networks, facilitating cross-chain interoperability. On **Rootstock**, two primary cross-chain bridging solutions support these asset transfers. The **Token Bridge dApp** allows for simple movement of ERC-20 tokens between Ethereum and Rootstock, providing an easy and intuitive way to bridge assets. The **PowPeg App** enables BTC to RBTC conversions and vice versa, leveraging Bitcoin’s hashrate to securely lock and manage assets in the cross-chain process.
 
@@ -51,7 +51,7 @@ This is a protocol allowing assets to be transferred between different blockchai
 
 A text-based user interface that allows developers to interact with software by typing commands. Rootstock offers CLI tools for interacting with the blockchain and managing smart contracts.
 
-[**Cucumber**](https://dev.rootstock.io/resources/tutorials/dapp-automation-cucumber/#prerequisites): 
+[**Cucumber**](/resources/tutorials/dapp-automation-cucumber/#prerequisites): 
 
 This is a software tool that supports Behavior-Driven Development (BDD), enabling developers to write automated tests in plain language.
 
@@ -99,7 +99,7 @@ This is a user-controlled blockchain account secured by private keys. Unlike sma
 
 This is a decentralized blockchain platform that facilitates the creation and execution of smart contracts and decentralized applications (dApps). It allows developers to build applications that operate on a peer-to-peer network, enabling trustless transactions and automated processes without the need for intermediaries. 
 
-[**Etherspot**](https://dev.rootstock.io/developers/quickstart/rootstock-etherspot/): 
+[**Etherspot**](/developers/quickstart/rootstock-etherspot/): 
 
 A smart contract wallet platform that simplifies blockchain interactions and provides account abstraction features.
 
@@ -132,7 +132,7 @@ This is the unit used to measure the amount of computational work needed to perf
 
 ## H
 
-[**Hardhat**](https://dev.rootstock.io/developers/smart-contracts/hardhat/write-smart-contracts/): 
+[**Hardhat**](/developers/smart-contracts/hardhat/write-smart-contracts/): 
 
 This is a development environment for building, testing, and deploying Ethereum smart contracts. It provides tools that simplify the development process, allowing developers to write and test their code efficiently. In the context of Rootstock, Hardhat can be used to create and manage smart contracts, making it easier to integrate with the Rootstock network.
 
@@ -150,7 +150,7 @@ The ability of different blockchain networks to interact and share data, enablin
 
 ## J
 
-[**JSON RPC**](https://dev.rootstock.io/node-operators/json-rpc/): 
+[**JSON RPC**](/node-operators/json-rpc/): 
 
 This is a protocol that allows for making remote procedure calls using JSON (JavaScript Object Notation). It is widely used to interact with blockchain nodes, enabling applications to send commands and receive responses over the network. This protocol facilitates communication between clients and servers in a standardized way, making it easier for developers to build applications that interact with blockchain technology. 
 
@@ -196,7 +196,11 @@ This is a computer that participates in the blockchain network by validating tra
 
 This is a tool that maps complex blockchain addresses to human-readable names, making transactions easier. It enables users to send assets using simple names instead of lengthy addresses, simplifying blockchain interactions.
 
-**Node**
+[**Node:**](/node-operators/)
+A computer that participates in a blockchain network by validating, storing, and sharing data.
+
+* **Full Node:** Stores the entire blockchain and independently verifies transactions and blocks.
+* **Light Node:** Stores only partial data (e.g., block headers) and relies on full nodes for verification. Nodes are essential for maintaining the network's security and decentralization.
 
 ## O
 
@@ -218,7 +222,7 @@ These are services that fetch external data for use in smart contracts, allowing
 
 ## P
 
-[**PowPeg**](https://dev.rootstock.io/resources/guides/powpeg-app/): 
+[**PowPeg**](/resources/guides/two-way-peg-app/): 
 
 This facilitates the conversion of Bitcoin (BTC) to Rootstock Bitcoin (RBTC) and vice versa. It operates under the PowPeg protocol, which secures locked bitcoins by leveraging the same Bitcoin hash rate that establishes consensus on the Bitcoin network. This unique mechanism ensures the integrity and security of asset transfers between the two currencies.
 
@@ -270,7 +274,7 @@ This enables external applications to interact with blockchain nodes, providing 
 
 This is self-executing code deployed on a blockchain that automatically enforces and executes agreements based on predefined conditions. These contracts eliminate the need for intermediaries, enhancing efficiency and trust in transactions by ensuring that once conditions are met, actions are carried out automatically. 
 
-[**Starter-Kit**:](https://dev.rootstock.io/developers/quickstart/):
+[**Starter-Kit**:](/developers/quickstart/)
 
 This is a template or boilerplate project that provides developers with the basic structure and essential tools needed to begin building a dApp. It simplifies the development process by offering pre-configured settings, libraries, and examples, allowing developers to focus on their application’s unique features instead of starting from scratch.
 
@@ -306,7 +310,7 @@ These are operations that alter the state of the blockchain. This includes activ
 
 ## W
 
-[**Wallet**](https://dev.rootstock.io/dev-tools/wallets/): 
+[**Wallet**](/dev-tools/wallets/): 
 
 This is software that manages cryptocurrency private keys, enabling users to store, send, and receive cryptocurrencies securely. It facilitates interactions with blockchain networks, allowing users to access their digital assets and execute transactions.
 
