@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 title: Deploy Runes Mock Bridge Smart Contract
-sidebar_label: Deploy
+sidebar_label: Deploy Runes Mock Bridge
 tags: [rsk, rootstock, resources, tutorials,  deploy, Runes, dApps, smart contracts, Remix IDE, MetaMask]
 description: "The Rootstock Runes Mock Bridge deployment page shows you how to compile and deploy runes on RemixIDE"
 ---

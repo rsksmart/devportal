@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: Runes Mock Bridge Setup
-sidebar_label: Setup
+sidebar_label: Setup Runes Mock Bridge
 tags: [rsk, rootstock, resources, tutorials,  setup, Runes, dApps, smart contracts, Remix IDE, MetaMask]
 description: "The Rootstock Runes Mock Bridge setup page shows you how to getting building your runes, by first cloning our project and testing it locally."
 ---
