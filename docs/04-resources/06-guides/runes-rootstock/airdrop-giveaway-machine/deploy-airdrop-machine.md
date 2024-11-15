@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 203
 title: Deploying the Airdrop Machine Smart Contract Using Remix IDE
 sidebar_label: Deploy Airdrop Machine
 tags: [rsk, rootstock, resources, tutorials, runes, nft, Ethereum, dApps, smart contracts, airdrop]
