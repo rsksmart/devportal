@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 201
 title: Introduction to Airdrops on Bitcoin
 sidebar_label: Introduction
 tags: [rsk, rootstock, resources, tutorials, runes, nft, Ethereum, dApps, smart contracts, airdrop]

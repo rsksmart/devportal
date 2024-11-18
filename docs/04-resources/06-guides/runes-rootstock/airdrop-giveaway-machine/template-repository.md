@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 202
 title: Overview of the Airdrop Template Repository
 sidebar_label: Airdrop Machine Template Repository
 
