@@ -99,16 +99,17 @@ export default function Filter ({ values, children, className, disableSearch, di
           ))}
         </ul>
         <div className="d-flex justify-content-between gap-8 align-self-stretch align-self-md-start">
-          <button onClick={clearFilters} className="btn btn-no-shadow d-md-none">
-            Clear all filters
-            <svg width={16} height={16}>
-              <use xlinkHref="#icon-close-circle"></use>
-            </svg>
-          </button>
-
           {values.length > 4 && (
             <button onClick={toggleShowMore} className="btn btn-no-shadow">
               {showMore ? `Show less` : `Show ${collapsedItemCount} more`}
+            </button>
+          )}
+          {selectedValues.length > 0 && (
+            <button onClick={clearFilters} className="btn btn-no-shadow d-md-none">
+              Clear all filters
+              <svg width={16} height={16}>
+                <use xlinkHref="#icon-close-circle"></use>
+              </svg>
             </button>
           )}
         </div>
