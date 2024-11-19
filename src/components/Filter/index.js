@@ -73,7 +73,40 @@ export default function Filter ({ values, children, className, disableSearch, di
 
   return (
     <div className={clsx(``, className)} {...props}>
-      <div className="mb-16 mb-md-12 d-flex flex-column flex-md-row justify-content-md-between gap-12 align-items-start">
+      {(!disableSearch || selectedValues.length > 0) && (
+        <div className="d-flex flex-column gap-12 flex-md-row mb-24 align-items-start align-items-md-stretch">
+          {!disableSearch && (
+            <div className="position-relative flex-grow-1 align-self-stretch">
+              <svg width="20" height="20" className="text-body opacity-75 position-absolute z-1 start-0 top-50 translate-middle-y ms-16 pe-none">
+                <use xlinkHref="#icon-search"></use>
+              </svg>
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Enter search query (more than 2 characters)"
+                className="form-control px-48"
+              />
+              {searchQuery.length > 0 && (
+                <button onClick={clearSearch} type="button" className={clsx(styles.SearchClearBtn, 'btn-blank d-flex text-body position-absolute end-0 top-50 translate-middle-y p-16 z-1')}>
+                  <svg width={16} height={16}>
+                    <use xlinkHref="#icon-close"/>
+                  </svg>
+                </button>
+              )}
+            </div>
+          )}
+          {selectedValues.length > 0 && (
+            <button onClick={clearFilters} className="btn btn-no-shadow d-none d-md-flex">
+              Clear all filters
+              <svg width={16} height={16}>
+                <use xlinkHref="#icon-close-circle"></use>
+              </svg>
+            </button>
+          )}
+        </div>
+      )}
+      <div className="mb-32 d-flex flex-column flex-md-row justify-content-md-between gap-12 align-items-start">
         <ul
           role="tablist"
           aria-orientation="horizontal"
@@ -115,39 +148,7 @@ export default function Filter ({ values, children, className, disableSearch, di
         </div>
       </div>
 
-      {(!disableSearch || selectedValues.length > 0) && (
-        <div className="d-flex flex-column gap-12 flex-md-row mb-32 align-items-start align-items-md-stretch">
-          {!disableSearch && (
-            <div className="position-relative flex-grow-1 align-self-stretch">
-              <svg width="20" height="20" className="text-body opacity-75 position-absolute z-1 start-0 top-50 translate-middle-y ms-16 pe-none">
-                <use xlinkHref="#icon-search"></use>
-              </svg>
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Enter search query (more than 2 characters)"
-                className="form-control px-48"
-              />
-              {searchQuery.length > 0 && (
-                <button onClick={clearSearch} type="button" className={clsx(styles.SearchClearBtn, 'btn-blank d-flex text-body position-absolute end-0 top-50 translate-middle-y p-16 z-1')}>
-                  <svg width={16} height={16}>
-                    <use xlinkHref="#icon-close"/>
-                  </svg>
-                </button>
-              )}
-            </div>
-          )}
-          {selectedValues.length > 0 && (
-            <button onClick={clearFilters} className="btn btn-no-shadow d-none d-md-flex">
-              Clear all filters
-              <svg width={16} height={16}>
-                <use xlinkHref="#icon-close-circle"></use>
-              </svg>
-            </button>
-          )}
-        </div>
-      )}
+
       <div className={clsx(styles.FilterGrid)}>
         {items.length > 0 ? <>
             {items.map((tabItem, i) =>
