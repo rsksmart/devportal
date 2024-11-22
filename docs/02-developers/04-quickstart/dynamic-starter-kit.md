@@ -48,17 +48,18 @@ Message signing lets users prove their identity or authorize actions without exp
 
 5. **Rootstock Testnet Support**
 
-This project is preconfigured for the **Rootstock Testnet**, which allows developers to test Web3 features without spending real assets. Rootstock is an EVM-compatible blockchain with the security of Bitcoin, offering a realistic environment for development. By building on the testnet, developers can ensure their dApp is ready for deployment to the mainnet. This provides a risk-free space to experiment with blockchain features, making it ideal for early-stage development and testing.
+This project is preconfigured for the **Rootstock Testnet**, which allows developers to test dApps without spending real assets. By building on the testnet, developers can ensure their dApp is ready for deployment to the mainnet. This provides a risk-free space to experiment with blockchain features, making it ideal for early-stage development and testing.
 
 ## **Prerequisites**
 
-This project leverages some key libraries to handle server-side rendering, Web3 interactions, and blockchain contract communication. 
+This project leverages key libraries to handle server-side rendering, Web3 interactions, and blockchain contract communication. 
 
 Before starting the project, make sure you have these essential tools installed on your computer:
 
 1. **Node.js**:  
    * You’ll need Node.js, version **19.x** or later. Node.js allows you to run JavaScript on the server, which is required for building and running modern web applications.  
      [Download Node.js here](https://nodejs.org/) if you haven't installed it yet.  
+
 2. **Bun** or **Yarn** (recommended for Next.js projects):  
    * **Bun** (version **1.1.x** or later): A fast JavaScript runtime and package manager.  
      See how to [Download Bun](https://bun.sh/).
@@ -75,11 +76,11 @@ Before starting the project, make sure you have these essential tools installed 
 
 5. **Viem**:
 
-    * `viem` provides an easy way  to interact with smart contracts on the Rootstock blockchain.  
+    * `viem` provides an easy way to interact with smart contracts on the Rootstock blockchain.  
     This library will be used to connect to Rootstock and make contract calls.
 
 :::warning[Warning]
-This is a starter kit designed for hackathons and rapid prototyping. It is intended for educational and experimental purposes only. Use it at your own risk, and ensure thorough testing before deploying in production environments.
+This is a starter kit designed for rapid prototyping. It is intended for educational and experimental purposes only. Use it at your own risk, and ensure thorough testing before deploying in production environments.
 
 :::
 
@@ -89,7 +90,7 @@ This is a starter kit designed for hackathons and rapid prototyping. It is inten
   <Step title=" Clone the Repository">
    Clone the repository to use the starter kit locally.
 
-```
+```bash
 git clone https://github.com/RookieCol/rootstock-dynamic
 cd rootstock-dynamic
 ```
@@ -136,7 +137,7 @@ An Environment ID is needed to configure and secure your application. Here’s h
    <Step title="Set Up Environment Variables">
    Create a `.env.local` file in the project’s root directory to store environment variables.
 
-```
+```bash
 mv .env.local.example .env.local
 ```
 
@@ -144,7 +145,7 @@ Setting up the `.env.local` file is critical for securely storing your environme
 
 Open the `.env.local` file and add your environment ID for Dynamic.
 
-```
+```bash
 NEXT_PUBLIC_DYNAMIC_ENVIRONMENT_ID=YOUR_ENVIRONMENT_ID
 ```
   </Step>
@@ -185,14 +186,14 @@ Visit [http://localhost:3000](http://localhost:3000) in your browser to view you
   </Step>
   <Step title="Check Token Balances">
    
-   The [`Balances`](https://github.com/RookieCol/rootstock-dynamic/blob/main/components/Balances.tsx) component fetches and displays the wallet's token balances, supporting multiple tokens like rBTC, tRIF, and DOC. 
+   The [`Balances`](https://github.com/RookieCol/rootstock-dynamic/blob/main/components/Balances.tsx) component fetches and displays the wallet's token balances, supporting multiple tokens like RBTC, tRIF, and DOC. 
   </Step>
   <Step title="Send Tokens">
    Through the [`Transfer`](https://github.com/RookieCol/rootstock-dynamic/blob/main/components/Transfer.tsx) component, users can transfer tokens directly within the dApp. It includes fields to specify the recipient address and token amount, along with secure hooks to initiate the transfer.
 
    **Features:**
 
-   * **Dropdown**: Select a token from available options (**rBTC, tRIF, and DOC**)  
+   * **Dropdown**: Select a token from available options (**RBTC, tRIF, and DOC**)  
    * **Input Fields**:
 
       - **Amount:** Enter the amount to send.
@@ -206,12 +207,9 @@ Visit [http://localhost:3000](http://localhost:3000) in your browser to view you
   </Step>
 </Steps>
 <br/>
-The **Dynamic Starter Kit for Rootstock** helps developers quickly add Web3 features to a **Next.js** app. Using **wagmi** hooks, it makes it easy to connect wallets, view token balances, transfer tokens, and sign messages, all within the app.
 
-With **Dynamic’s embedded wallet**, users can interact with the app without needing separate wallet apps, which makes onboarding easier. 
+By the end of this guide, you’ve learned how to integrate Web3 features into a **Next.js** app using the **Dynamic Starter Kit for Rootstock**. With **wagmi hooks**, you can easily connect wallets, manage token balances, send tokens, and sign messages directly within your application.
 
-This kit supports popular wallets like **MetaMask** and **WalletConnect** for a smooth login experience. Preconfigured for the Rootstock Testnet, it lets developers test blockchain features safely without real assets. 
-
-Developers can easily get started by cloning the repository, setting up environment variables, and running the app locally.
+You’ve also seen how **Dynamic’s embedded wallet** simplifies the user experience by eliminating the need for external wallet apps. This integration makes Web3 more accessible, especially for newcomers to blockchain. With support for popular wallets like **MetaMask** and **WalletConnect**, and preconfiguration for the **Rootstock Testnet**, you now have a secure, user-friendly foundation to build and test your Web3 applications.
 
 You can view the complete project and code on [Github](https://github.com/rsksmart/rootstock-dynamic).
