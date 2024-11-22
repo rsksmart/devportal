@@ -3,7 +3,7 @@ section_position: 400
 sidebar_label: Rootstock Dynamic Starter Kit
 title: Dynamic Starter Kit
 description: 'How to compile, deploy,Dynamic Starter Kit, Rootstock'
-tags: [rsk, ape, apeworx, developers, developer tools, tRBTC, rootstock, testing, dApps, smart contracts]
+tags: [rsk, Dynamic, developers, Kit, rootstock, Starter, dApps, smart contracts]
 ---
 
 The Rootstock Dynamic Starter Kit uses the `wagmi` library for faster integration of Web3 features into a Next.js application. Using `wagmi` hooks, you can connect to wallets, retrieve balances, transfer tokens, and sign messages. 
