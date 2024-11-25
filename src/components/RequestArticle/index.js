@@ -24,7 +24,7 @@ export const RequestArticle = ({label, form}) => {
 
       <ModalFormSpark
         show={modalShow}
-        form={form}
+        form={{...form, type : "request-article"}}
         onHide={() => setModalShow(false)}
       />
     </>

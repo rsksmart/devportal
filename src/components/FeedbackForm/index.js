@@ -50,7 +50,7 @@ export const FeedbackForm = () => {
       <ModalFormSpark
         show={modalShow}
         rating={rating}
-        form={{id: 'vg6LeINWT', title: 'Thank you for your feedback!', description: 'We would love to hear your thoughts and feedback so that we can improve these Docs for you and others!'}}
+        form={{id: 'vg6LeINWT', title: 'Thank you for your feedback!', description: 'We would love to hear your thoughts and feedback so that we can improve these Docs for you and others!', type: 'feedback'}}
         onHide={() => setModalShow(false)}
       />
     </div>
