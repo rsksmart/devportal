@@ -112,7 +112,7 @@ cd rootstock-dynamic
 </Tabs>
 
   </Step>
-  <Step title="Get Environment Variables from Dynamics">
+  <Step title="Get Environment Variables from Dynamic">
 
   :::note
 Create a FREE account on Dynamic and login to your Dashboard. Then obtain your `ENVIRONMENT_ID` from the [Dynamic dashboard](https://app.dynamic.xyz/dashboard/overview). 
