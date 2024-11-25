@@ -6,27 +6,23 @@ tags: [faucet, Rootstock, testnet, address, wallet, tools]
 description: "Get started with the Rootstock RPC Service to interact with Rootstock nodes."
 ---
 
-## Getting Started
-
-:::info[Note]
-The [Rootstock RPC API](https://rpc.rootstock.io/) is available on TESTNET and MAINNET.
-:::
-
-Visit the [Rootstock RPC API](https://rpc.rootstock.io/)
-
 <div align="center">
     <img width="50%" src="/img/tools/rpc-api/01-rpc-api-landing.png" alt="RPC Service Landing Page"/>
 </div>
 
-### Get A FREE Account
+:::info[Info]
+The [Rootstock RPC API](https://rpc.rootstock.io/)  is available on <Shield label="mainnet" title="testnet" tooltip="Supported on Mainnet and Testnet" color="orange" />
+:::
 
-To create an account, click on _Sign up_
+## Get A FREE Account
+
+Visit the [Rootstock RPC API](https://rpc.rootstock.io/) to create a **free** account, and click on _Sign up_
 
 <div align="center">
     <img width="50%" src="/img/tools/rpc-api/02-sign-up.png" alt="RPC Service Sign Up"/>
 </div>
 
-### Get An API Key
+## Get An API Key
 
 To get an API key:
 
@@ -42,7 +38,7 @@ Choose a name to identify your `apikey`, and the Network (either `Testnet` or `M
     <img width="50%" src="/img/tools/rpc-api/04-create-api-key.png" alt="Create API key"/>
 </div>
 
-### Make First API Call
+## Make First API Call
 
 Click on the newly created `apikey` to get the details:
 
@@ -56,7 +52,7 @@ You can make your first api call by using one of the provided examples, or simpl
     <img width="50%" src="/img/tools/rpc-api/06-connect-api.png" alt="Connect API"/>
 </div>
 
-#### Example Request
+### Example Request
 
 ```shell
 curl --location --request POST 'https://rpc.testnet.rootstock.io/<your-apikey>' \

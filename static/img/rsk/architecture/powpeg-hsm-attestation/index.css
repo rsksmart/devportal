@@ -164,3 +164,7 @@ div.info-box div.info-box-title {
 .bm-verify-bm-pubkey p, .bm-verify-bm-pubkey-step2 p {
     margin-bottom: 0.25rem;
 }
+table{
+  display: block;
+  overflow-x: auto;
+}

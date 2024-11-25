@@ -7,6 +7,7 @@ import clsx from "clsx";
 import {FeedbackForm} from "/src/components/FeedbackForm";
 
 import Translate from '@docusaurus/Translate';
+import { ToTopButton } from '../../components/ToTopButton'
 
 export default function BlogAside({editUrl}){
   return <div className={clsx(styles.docItemAside, `h-100 pt-40 pt-lg-0 ps-lg-24`)}>
@@ -27,6 +28,7 @@ export default function BlogAside({editUrl}){
       <div className={`flex-grow-1 position-relative d-none d-lg-flex flex-column`}>
         <div className={clsx(styles.docItemAsideBottom, 'position-sticky mt-auto')}>
           <ShareButtons/>
+          <ToTopButton className="mt-24"/>
         </div>
       </div>
     </div>

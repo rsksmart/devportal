@@ -69,6 +69,9 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+  clientModules:[
+    '/src/clientModules/renderEquations.js'
+  ],
   plugins: [
     'docusaurus-plugin-sass',
     [
@@ -155,7 +158,7 @@ const config = {
         respectPrefersColorScheme: false,
       },
       // Replace with your project's social card
-      image: 'img/og.jpg',
+      image: 'img/og.png',
       navbar: {
         title: 'Docs',
         logo: {

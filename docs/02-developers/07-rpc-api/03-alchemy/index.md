@@ -23,6 +23,8 @@ Before you start this guide, make sure you have the following:
 - Ensure you have a development environment set up for interacting with blockchain nodes. 
 - Basic programming knowledge of ***JavaScript***, ***Python***, or other supported languages to make `API calls`. And familiarity with making ***HTTP*** requests and handling ***JSON*** responses.
 
+<Button href="https://www.alchemy.com/rootstock/">Use the Alchemy RPC Service</Button>
+
 ## Who Is It For?
 - Developers looking to interact with the Rootstock nodes.
 

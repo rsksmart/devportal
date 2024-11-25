@@ -42,6 +42,8 @@ html:root {
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
+  --ifm-color-content-secondary: #{$gray-600};
+
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
   //Search
@@ -252,6 +254,15 @@ html:root {
   --rsk-input-placeholder-color: #{$gray-550};
   --rsk-input-border-color-focus: var(--bs-primary);
   --rsk-input-focus-bg: #{$gray-100};
+
+  --bs-tertiary-bg: #{$gray-100};
+
+  //Highlight
+  --bs-highlight-bg: #{$yellow};
+
+  //Steps component
+  --rsk-step-border-color: #{$gray-250};
+  --rsk-step-bg-color: #{$gray-50};
 }
 
 
@@ -278,6 +289,7 @@ html:root {
   --ifm-color-primary-light: #29d5b0;
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-content-secondary: #{$gray-500};
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
   --bs-body-color: var(--bs-white);
@@ -366,4 +378,9 @@ html:root {
   --rsk-input-placeholder-color: #{$gray-450};
   --rsk-input-border-color-focus: var(--bs-primary);
   --rsk-input-focus-bg: #{$gray-900};
+  --bs-tertiary-bg: #{$gray-850};
+
+  //Steps component
+  --rsk-step-border-color: #{$gray-600};
+  --rsk-step-bg-color: #{$gray-850};
 }

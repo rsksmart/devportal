@@ -36,7 +36,7 @@ Then set the options as shown below:
 - Main Class: `co.rsk.Start`
 - Working directory: `/path/to/code/rskJ`
 - Use classpath of module: `rskj-core_main`
-- JRE need to be set as: `Default (1.8 - SDK of 'rsk-core_main' module)`
+- JRE need to be set as: `Default (17 - SDK of 'rsk-core_main' module)`
 
 :::info[Info]
 - If it isn't configured the default JDK, you have to set it in: *File -> Project Structure*.
