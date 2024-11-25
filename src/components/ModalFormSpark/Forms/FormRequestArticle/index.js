@@ -16,7 +16,6 @@ export const FormRequestArticle = (props) => {
     publicationLocation: '',
     why: '',
     otherInformation: '',
-    submitIssue: '',
   }
 
   const [formData, setFormData] = useState(initFormData)
@@ -78,15 +77,16 @@ export const FormRequestArticle = (props) => {
         <textarea className="form-control" name="why" placeholder={`Why / Reason for Request`} required={true} rows={3} maxLength={500}
                   value={formData.why} onChange={handleInputChange}
         />
-        <input type="text" className="form-control" name={`publicationLocation`} required={false} placeholder={`Publication location`} maxLength={100}
+        <input type="text" className="form-control" name={`publicationLocation`} required={false} placeholder={`Publication location (E.g, DevPortal, Blog)`} maxLength={100}
                value={formData.publicationLocation} onChange={handleInputChange}
         />
         <textarea className="form-control" name="otherInformation" placeholder={`Any other information`} required={false} rows={3} maxLength={500}
                   value={formData.otherInformation} onChange={handleInputChange}
         />
-        <input type="text" className="form-control" name={`submitIssue`} required={false} placeholder={`Submit an Issue / Pull Request`} maxLength={100}
-               value={formData.submitIssue} onChange={handleInputChange}
-        />
+        <div className="markdown mt-4">
+          <p className="mb-4 fw-bold">Are you a technical contributor?</p>
+          <p><a href="https://github.com/rsksmart/devportal" target="_blank" rel="noreferrer">Submit a Pull Request</a> or an Issue</p>
+        </div>
       </div>
 
       <div className={`d-flex justify-content-between align-items-center`}>
