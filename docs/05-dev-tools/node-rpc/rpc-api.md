@@ -2,11 +2,10 @@
 sidebar_position: 5
 title: RPC API
 sidebar_label: RPC API
-tags: [rsk, rootstock, resources, tutorials,  setup, Runes, dApps, smart contracts, RPC, API, RPC API]
-description: ""
+tags: [rsk, rootstock, resources, tutorials,  setup, dApps, protocol, RPC, API, ]
+description: "Remote Procedure Call (RPC) is a protocol that allows a program to execute procedures (functions) on a remote server as if they were local calls."
 ---  
-
-## What is RPC?  
+ 
 Remote Procedure Call (RPC) is a protocol that allows a program to execute procedures (functions) on a remote server as if they were local calls. This eliminates the need for developers to handle low-level network communication.  
 
 ### How Our API Works  

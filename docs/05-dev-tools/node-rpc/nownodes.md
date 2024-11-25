@@ -2,8 +2,9 @@
 sidebar_position: 4
 title: NowNodes
 sidebar_label: NowNodes
-tags: [rsk, rootstock, resources, tutorials,  setup, Runes, dApps, smart contracts, RPC, API, RPC API]
-description: ""
+tags: [rsk, rootstock, resources, tutorials,  setup, dApps, BaaS, API, Nodes, NowNodes]
+description: "
+NowNodes is a Blockchain-as-a-Service (BaaS) platform offering API access to over 50 blockchain networks. It allows developers to connect to full nodes and explore blockchains with minimal setup. "
 ---
 
 NowNodes is a Blockchain-as-a-Service (BaaS) platform offering API access to over 50 blockchain networks. It allows developers to connect to full nodes and explore blockchains with minimal setup.  

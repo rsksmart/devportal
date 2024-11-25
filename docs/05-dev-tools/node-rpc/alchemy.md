@@ -2,8 +2,8 @@
 sidebar_position: 1
 title: Alchemy
 sidebar_label: Alchemy
-tags: [rsk, rootstock, resources, tutorials,  setup, Runes, dApps, smart contracts, RPC, API, RPC API]
-description: ""
+tags: [rsk, rootstock, resources, tutorials,  Blockchains, JSON-RPC, WebSockets, Alchemy, RPC, API, RPC API]
+description: "Alchemy is a leading blockchain developer platform that simplifies the process of building Web3 applications. It provides robust APIs for interacting with blockchains like Ethereum, Polygon, and more."
 ---
 
 Alchemy is a leading blockchain developer platform that simplifies the process of building Web3 applications. It provides robust APIs for interacting with blockchains like Ethereum, Polygon, and more.

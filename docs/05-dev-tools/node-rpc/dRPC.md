@@ -2,9 +2,8 @@
 sidebar_position: 2
 title: dRPC
 sidebar_label: dRPC
-tags: [rsk, rootstock, resources, tutorials,  setup, dRPC, dApps, smart contracts, RPC, API]
-description: "
-dRPC is a next-generation RPC platform that simplifies and optimizes communication with blockchain nodes. Built for Web3, dRPC provides low-latency, high-reliability access to blockchain data and operations."
+tags: [rsk, rootstock, resources, tutorials,  setup, dRPC, dApps, BaaS, RPC, API]
+description: "dRPC is a next-generation RPC platform that simplifies and optimizes communication with blockchain nodes. Built for Web3, dRPC provides low-latency, high-reliability access to blockchain data and operations."
 ---
 
 dRPC is a next-generation RPC platform that simplifies and optimizes communication with blockchain nodes. Built for Web3, dRPC provides low-latency, high-reliability access to blockchain data and operations.  
@@ -96,7 +95,7 @@ The `result` field contains the balance in Wei (smallest Ether unit).
 :::note[Info]
 
  To learn more about the dRPC connection with Rootstock, including code snippets, RPC endpoints, and a step-by-step guide on adding Rootstock Mainnet to MetaMask using dRPC,  click the button below:
- 
+
 <Button href="https://drpc.org/chainlist/rootstock?utm_source=docs&utm_medium=rootstock" align="left">Rootstock dRPC Website</Button>
 
 :::

@@ -2,8 +2,8 @@
 sidebar_position: 3
 title: GetBlock
 sidebar_label: getBlock
-tags: [rsk, rootstock, resources, tutorials,  setup, Runes, dApps, smart contracts, RPC, API, RPC API]
-description: ""
+tags: [rsk, rootstock, resources, tutorials,  setup, BaaS, API, getBlock]
+description: "GetBlock is a Blockchain-as-a-Service platform providing API access to full blockchain nodes. It allows developers to interact with blockchains using JSON-RPC, REST, and WebSocket protocols. "
 ---
 
 GetBlock is a Blockchain-as-a-Service platform providing API access to full blockchain nodes. It allows developers to interact with blockchains using JSON-RPC, REST, and WebSocket protocols.  
