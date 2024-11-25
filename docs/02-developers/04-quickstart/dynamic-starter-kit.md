@@ -210,6 +210,6 @@ Visit [http://localhost:3000](http://localhost:3000) in your browser to view you
 
 By the end of this guide, you’ve learned how to integrate Web3 features into a **Next.js** app using the **Dynamic Starter Kit for Rootstock**. With **wagmi hooks**, you can easily connect wallets, manage token balances, send tokens, and sign messages directly within your application.
 
-You’ve also seen how **Dynamic’s embedded wallet** simplifies the user experience by eliminating the need for external wallet apps. This integration makes Web3 more accessible, especially for newcomers to blockchain. With support for popular wallets like **MetaMask** and **WalletConnect**, and preconfiguration for the **Rootstock Testnet**, you now have a secure, user-friendly foundation to build and test your Web3 applications.
+You’ve also seen how **Dynamic’s embedded wallet** simplifies the user experience by eliminating the need for external wallet apps. This integration makes Web3 more accessible, especially for beginners to the blockchain. With support for popular wallets like **MetaMask** and **WalletConnect**, and pre-configuration for the **Rootstock Testnet**, you now have a secure, user-friendly foundation to build and test your Web3 applications.
 
 You can view the complete project and code on [Github](https://github.com/rsksmart/rootstock-dynamic).
