@@ -2,28 +2,15 @@ import React, { useEffect, useState } from 'react'
 import { useFormspark } from '@formspark/use-formspark'
 
 export const FormRequestArticle = (props) => {
-  // const [url, setUrl] = useState('#')
-
   const { form } = props
 
   const [submit, submitting] = useFormspark({
     formId: form?.id || ``,
   })
 
-  // const [email, setEmail] = useState('')
-  // const [name, setName] = useState('')
-  //
-  // const [requestType, setRequestType] = useState('tutorial')
-  // const [title, setTitle] = useState('')
-  // const [why, setWhy] = useState('')
-  // const [otherInformation, setOtherInformation] = useState('')
-  // const [submitIssue, setSubmitIssue] = useState('')
-
   const requestTypes = ['Tutorial', 'Guide', 'Video', 'Image']
 
   const initFormData = {
-    // name: '',
-    // email: '',
     requestType: requestTypes[0],
     title: '',
     publicationLocation: '',
@@ -61,8 +48,6 @@ export const FormRequestArticle = (props) => {
 
     e.preventDefault()
     setSending(true)
-    // let query = { message, email, name, url }
-
 
     await submit(formData)
     setSubmitted(true);
@@ -87,12 +72,6 @@ export const FormRequestArticle = (props) => {
           ))}
         </div>
       )}
-        {/*<input type="text" className="form-control" name={`name`} required={true} placeholder={`Name`} maxLength={50}*/}
-        {/*       value={formData.name} onChange={handleInputChange}*/}
-        {/*/>*/}
-        {/*<input type="email" className="form-control" name={`email`} required={true} placeholder={`Email`} maxLength={100}*/}
-        {/*       value={formData.email} onChange={handleInputChange}*/}
-        {/*/>*/}
         <input type="text" className="form-control" name={`title`} required={true} placeholder={`Title`} maxLength={100}
                value={formData.title} onChange={handleInputChange}
         />
