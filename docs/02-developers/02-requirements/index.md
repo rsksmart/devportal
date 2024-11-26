@@ -7,8 +7,6 @@ description: "Minimum hardware requirements for Rootstock."
 ---
 
 This guide provides clear instructions for developers on the supported Solidity versions and the necessary configurations needed to ensure your smart contracts are deployed on the Rootstock network. 
-
-
  
 :::tip[Hackathons & Workshops]
 
@@ -66,7 +64,7 @@ Set up your wallet to connect with Rootstock networks:
 
 - **MetaMask Integration:**  
   - Configure MetaMask with the necessary values to connect to the Rootstock Mainnet or Testnet.  
-  - Refer to the [MetaMask Wallet Configuration](#configure-metamask-wallet) guide for detailed steps.  
+  - Refer to the [MetaMask Wallet Configuration](/dev-tools/wallets/metamask/) guide for detailed steps.  
 
 - **Derivation Paths:**  
   - Use these paths for BIP-44-compatible wallets:  
