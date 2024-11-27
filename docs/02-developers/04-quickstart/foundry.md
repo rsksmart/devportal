@@ -1,10 +1,15 @@
 ---
-sidebar_label: Foundry
+sidebar_label: Rootstock Foundry Starter kit
 sidebar_position: 500
 title: Rootstock Foundry Starter kit
 description: 'Whether you are a seasoned developer or just starting your journey into smart contract development, the foundry starter kit provides a solid foundation for building decentralized applications (dApps) on the Rootstock network.'
 tags: [rsk, rootstock, tutorials, developers, foundry, quick starts, dApps, smart contracts]
 ---
+
+:::info[Note]
+You can add your suggestion on the [Foundry Starter Kit Repository](https://github.com/rsksmart/rootstock-foundry-starterkit.git)
+:::
+
 # Rootstock Foundry Starter Kit
 
 Whether you’re a seasoned developer or just starting your journey into smart contract development, the foundry starter kit provides a solid foundation for building decentralized applications (dApps) on the Rootstock network.
@@ -18,7 +23,7 @@ In this tutorial, you'll learn how to set up your Foundry development environmen
 Before starting the dApp, make sure to have the following prerequisites:
 
 1. **Familiarity with Smart Contracts:**
-   - If you’re new to smart contracts, consider learning the basics. Understanding how smart contracts work will enhance your experience with Rootstock development.
+   - If you’re new to smart contracts, consider learning the basics. Understanding how smart contracts work will enhance your experience with developing on Rootstock.
 
 2. **Foundry installation using [Foundryup](https://book.getfoundry.sh/getting-started/installation#using-foundryup):**
 - To install, visit the official [Foundry documentation](https://book.getfoundry.sh/getting-started/installation#using-foundryup), for more information.
