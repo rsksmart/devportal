@@ -475,6 +475,8 @@ title="Card title first line" description="Mauris maecenas et amet arcu urna int
 
 ```jsx
 <Filter
+  disableSearch={false} //optional. set true to hide search bar
+  disableUpdateHash={false} //optional. set true to disable updating url hash on filter change
   values={[
     {label: 'Apps', value: 'apps'},
     {label: 'Exchanges', value: 'exchanges'},
