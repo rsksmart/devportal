@@ -223,7 +223,7 @@ Your contributions can cover any of the following Rootstock themes:
 #### 👉 Educational Content Criteria & Guidelines:
 
 * Educational content should be targeted towards developers looking to build on Rootstock or understand its integration with Bitcoin.
-* Blogs, tutorials (written or video), and developer guides should be original content created after the program launch on November 11th (not previously published elsewhere), accurate, and provide actionable insights. Please share your content via Google Drive by providing the URL.
+* Blogs, tutorials (written or video), and developer guides should be original content created after the program launch on November 11th (not previously published elsewhere), is accurate, and provides actionable insights. Please share your content via Google Drive by providing the URL on the submission form (link below).
 * Content must help other developers navigate and work with Rootstock, deploy smart contracts, use compatible tools, SDKs, and libraries, and or integrate protocols on Rootstock.
 * Contributions for Rootstock Technical documentation should be submitted as a Pull Request (PR) directly on the [DevPortal Repo](https://github.com/rsksmart/devportal/pulls), and the PR link should be submitted via the [Google form](https://forms.gle/aF9pFMfRyoygfzJWA). Ensure to use the label **“hacktivator-program”** on the PR and properly describe your PR using the template.
 
