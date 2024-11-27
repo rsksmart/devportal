@@ -1,5 +1,5 @@
 ---
-sidebar_label: Rootstock Wagmi Starter Kit
+sidebar_label: Wagmi
 sidebar_position: 300
 title: Rootstock Wagmi Starter Kit
 description: 'The Rootstock Wagmi Starter Kit provides a solid foundation for developing decentralized applications (dApps) on the Rootstock blockchain. It streamlines development by leveraging the React, Wagmi, and Shadcn libraries.'

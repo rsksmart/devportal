@@ -1,5 +1,5 @@
 ---
-sidebar_label: Account Abstraction using Etherspot Prime SDK
+sidebar_label: AA with Etherspot
 sidebar_position: 600
 title: Account Abstraction using Etherspot Prime SDK
 description: 'In this guide, you will learn how to use the Etherspot Prime SDK to deploy an Account Abstraction dApp on the Rootstock network. By following these steps, you will empower your users to interact with your dApp without managing private keys directly.'

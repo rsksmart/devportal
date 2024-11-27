@@ -14,6 +14,7 @@
 ## Testing
 
 * Describe how you tested the changes to ensure they are correct and do not introduce new issues. See how to test build outputs and broken links in [README.md](/README.md) using the `yarn build`command.
+* Use N/A, if not applicable
 
 ## Checklist
 
