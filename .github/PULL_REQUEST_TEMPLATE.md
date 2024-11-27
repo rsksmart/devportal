@@ -18,10 +18,10 @@
 
 ## Checklist
 
-- [ ] I have read and understood the contributing guidelines.
-- [ ] I have followed the style guide and formatting guidelines.
-- [ ] I have added appropriate comments to explain the changes.
-- [ ] I have tested my changes thoroughly.
+- [] I have read and understood the contributing guidelines.
+- [] I have followed the style guide and formatting guidelines.
+- [] I have added appropriate comments to explain the changes.
+- [] I have tested my changes thoroughly.
 
 ## Refs
 
