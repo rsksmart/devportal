@@ -1,14 +1,20 @@
 ---
-sidebar_label: Foundry
+sidebar_label: Rootstock Foundry Starter kit
 sidebar_position: 500
 title: Rootstock Foundry Starter kit
 description: 'Whether you are a seasoned developer or just starting your journey into smart contract development, the foundry starter kit provides a solid foundation for building decentralized applications (dApps) on the Rootstock network.'
 tags: [rsk, rootstock, tutorials, developers, foundry, quick starts, dApps, smart contracts]
 ---
 
+:::info[Note]
+You can add your suggestion on the [Foundry Starter Kit Repository](https://github.com/rsksmart/rootstock-foundry-starterkit.git)
+:::
+
+# Rootstock Foundry Starter Kit
+
 Whether you’re a seasoned developer or just starting your journey into smart contract development, the foundry starter kit provides a solid foundation for building decentralized applications (dApps) on the Rootstock network.
 
-Rootstock is fully EVM (Ethereum Virtual Machine) compatible. It brings the power of smart contracts to Bitcoin, allowing developers to leverage Bitcoin’s security while benefiting from Ethereum’s ecosystem.
+Rootstock is fully EVM (Ethereum Virtual Machine) compatible. It brings the power of smart contracts to Bitcoin, allowing developers to leverage Bitcoin’s security while benefiting from Ethereum’s ecosystem. T.
 
 In this tutorial, you'll learn how to set up your Foundry development environment, connect to a Rootstock network, write and test smart contracts, deploy them to the Rootstock blockchain, and interact with them. We'll guide you through every step, from installation to minting your first token.
 
