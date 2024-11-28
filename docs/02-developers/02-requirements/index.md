@@ -55,7 +55,7 @@ Set up the necessary software for a seamless development experience:
     ```bash
     curl -L https://foundry.paradigm.xyz | bash
     ```  
-  - Run `foundryup` to install tools like `forge`, `cast`, and `anvil`.  
+  - Run `foundryup` to install tools like `forge`, `cast`, `chisel` and `anvil`.  
 </Step>
 
 <Step title="Wallet Configuration:">
