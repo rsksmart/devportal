@@ -44,6 +44,14 @@ const config = {
         title: 'Report an Issue',
         url : 'https://github.com/rsksmart/devportal/issues',
       },
+      requestArticle : {
+        title: 'Request an Article',
+        form : {
+          id : '5qQ40ScPu',
+          title : 'Request a New Article',
+          description : 'Looking for information we haven’t covered? Fill out the form below to request a new article, and we’ll consider it in future updates.',
+        }
+      },
     }
   },
   // GitHub pages deployment config.
@@ -61,6 +69,9 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+  clientModules:[
+    '/src/clientModules/renderEquations.js'
+  ],
   plugins: [
     'docusaurus-plugin-sass',
     [
@@ -147,7 +158,7 @@ const config = {
         respectPrefersColorScheme: false,
       },
       // Replace with your project's social card
-      image: 'img/og.jpg',
+      image: 'img/og.png',
       navbar: {
         title: 'Docs',
         logo: {

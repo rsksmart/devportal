@@ -39,6 +39,8 @@ The Rootstock Infrastructure Framework (RIF) Token allows any token holder to co
   </tbody>
 </table>
 
+<Button href="https://rif.technology/rif-token/">Get RIF on Exchanges</Button>
+
 ## tRIF (RIF Token in Testnet)
 
 <table class="table">
@@ -69,6 +71,8 @@ The Rootstock Infrastructure Framework (RIF) Token allows any token holder to co
     </tr>
   </tbody>
 </table>
+
+<Button href="https://faucet.rifos.org/">Get tRIF in Testnet</Button>
 
 ## stRIF (Staked RIF Token in the RootstockCollective DAO)
 

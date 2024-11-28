@@ -14,9 +14,19 @@ values={[
 {label: 'Remix', value: 'remix'},
 {label: 'Wagmi', value: 'wagmi'},
 {label: 'On-chain data', value: 'data'},
+{label: 'RPC API', value: 'rpc'},
 {label: 'Ape', value: 'ape'},
 {label: 'Port to Rootstock', value: 'port-dapps'}
 ]}>
+<FilterItem
+    value="dynamic, wagmi, advanced"
+    title="Dynamic Starter Kit"
+    subtitle="quickstart"
+    color="orange"
+    linkHref="/developers/quickstart/dynamic/"
+    linkTitle="Use the Kit"
+    description="The Dynamic Starter Kit uses the Wagmi library for faster integration of Web3 features into a Next.js application."
+  />
 <FilterItem
     value="wagmi, beginner"
     title="Wagmi Starter Kit"
@@ -52,7 +62,7 @@ values={[
     color="orange"
     linkHref="/developers/quickstart/rootstock-etherspot/"
     linkTitle="Use the Kit"
-    description="Account Abstraction Starter dApp using Etherspot."
+    description="Account Abstraction Starter Kit using Etherspot."
   />
 <FilterItem
     value="advanced"
@@ -77,7 +87,7 @@ values={[
     title="Get Started with The Graph"
     subtitle="quickstart"
     color="orange"
-    linkHref="/dev-tools/thegraph/"
+    linkHref="/dev-tools/data/thegraph/"
     linkTitle="Get Started"
     description="Easily query on-chain data through a decentralized network of indexers"
   />
@@ -116,5 +126,23 @@ values={[
     linkHref="/developers/quickstart/ape/"
     linkTitle="Use Ape"
     description="Learn how to compile, deploy, and intereact with smart contracts with Ape on Rootstock"
+  />
+  <FilterItem
+    value="beginner, rpc"
+    title="Get Started with Rootstock RPC API"
+    subtitle="RPC API"
+    color="orange"
+    linkHref="/developers/rpc-api/rootstock/setup/"
+    linkTitle="Use the RPC API"
+    description="The Rootstock RPC Service provides a seamless and intuitive web interface for developers to interact with Rootstock nodes via JSON-RPC methods."
+  />
+    <FilterItem
+    value="beginner, rpc"
+    title="Get Started with Alchemy"
+    subtitle="RPC API"
+    color="orange"
+    linkHref="/developers/rpc-api/alchemy/"
+    linkTitle="Use the RPC API"
+    description="A step-to-step guide for developers to interact with Rootstock network with the Alchemy RPC Provider Service."
   />
 </Filter>

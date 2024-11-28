@@ -1,58 +1,28 @@
 ---
-sidebar_label: Getting Started
-sidebar_position: 100
-title: Getting Started with the RPC API
+sidebar_label: Getting Started with the Rootstock RPC API
+sidebar_position: 101
+title: Getting Started with the Rootstock RPC API
 tags: [faucet, Rootstock, testnet, address, wallet, tools]
-description: "Get started with the RPC API service to interact with Rootstock nodes."
+description: "Get started with the Rootstock RPC Service to interact with Rootstock nodes."
 ---
 
-The [RPC API](http://rpc.rootstock.io/) provides a seamless and intuitive web interface for developers to interact with [Rootstock nodes](/node-operators/setup/) via [JSON-RPC](/node-operators/json-rpc/methods/) methods. It aims to address the challenges faced by developers when trying to access critical information like logs, transactions, and balances through RPC, which can significantly impact the timely development of dApps on the Rootstock blockchain.
-
-In this guide, you will learn: 
-
-- How to create an account and [make your first API call](#getting-started)
-- View a list of [JSON-RPC methods](/node-operators/json-rpc/methods/) available. 
-
-<div class="btn-container">
-  <span></span>
-    <a class="green" href="http://rpc.rootstock.io/">Use the RPC API</a>
+<div align="center">
+    <img width="50%" src="/img/tools/rpc-api/01-rpc-api-landing.png" alt="RPC Service Landing Page"/>
 </div>
 
-## Who Is It For?
-
-*  dApp Developers looking to interact with the Rootstock nodes
-
-## Features
-
-**Easy Setup:**
-- Create an API key effortlessly to initiate development.
-- Make the First API call in minutes.
-
-**API Key Authentication:**
-- Provides secure authentication for decentralized applications (dApps).
-- Limits API requests on a daily or monthly basis.
-
-## Getting Started
-
-:::info[Note]
-The [RPC API](https://rpc.rootstock.io/) is available on TESTNET and MAINNET.
+:::info[Info]
+The [Rootstock RPC API](https://rpc.rootstock.io/)  is available on <Shield label="mainnet" title="testnet" tooltip="Supported on Mainnet and Testnet" color="orange" />
 :::
 
-Visit the [Rootstock RPC API](https://rpc.rootstock.io/)
+## Get A FREE Account
+
+Visit the [Rootstock RPC API](https://rpc.rootstock.io/) to create a **free** account, and click on _Sign up_
 
 <div align="center">
-    <img width="50%" src="/img/tools/rpc-api/01-rpc-api-landing.png" alt="RPC API Landing Page"/>
+    <img width="50%" src="/img/tools/rpc-api/02-sign-up.png" alt="RPC Service Sign Up"/>
 </div>
 
-### Get A FREE Account
-
-To create an account, click on _Sign up_
-
-<div align="center">
-    <img width="50%" src="/img/tools/rpc-api/02-sign-up.png" alt="RPC API Sign Up"/>
-</div>
-
-### Get An API Key
+## Get An API Key
 
 To get an API key:
 
@@ -68,7 +38,7 @@ Choose a name to identify your `apikey`, and the Network (either `Testnet` or `M
     <img width="50%" src="/img/tools/rpc-api/04-create-api-key.png" alt="Create API key"/>
 </div>
 
-### Make First API Call
+## Make First API Call
 
 Click on the newly created `apikey` to get the details:
 
@@ -82,7 +52,7 @@ You can make your first api call by using one of the provided examples, or simpl
     <img width="50%" src="/img/tools/rpc-api/06-connect-api.png" alt="Connect API"/>
 </div>
 
-#### Example Request
+### Example Request
 
 ```shell
 curl --location --request POST 'https://rpc.testnet.rootstock.io/<your-apikey>' \
