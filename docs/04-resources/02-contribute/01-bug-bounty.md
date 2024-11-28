@@ -12,7 +12,7 @@ RootstockLabs has created the bug bounty program to reward researchers that subm
     <a class="green" href="https://hackerone.com/rootstocklabs">Visit the Bug Bounty Program Page on Hackerone</a>
 </div>
 
-### Service Level Agreement (SLA)
+### Service Level Agreement (SLA) TEST
 
 RootstockLabs aims to meet the following SLAs for hackers participating in our program:
 
