@@ -35,10 +35,15 @@ Developers are encouraged to leverage reference projects to make meaningful cont
       The [Rootstock CLI](https://github.com/rsksmart/rsk-cli) is a command-line interface designed to simplify the process of building on the Rootstock platform, catering to both seasoned web3 developers and those transitioning from web2. In its initial iteration, the CLI offers essential features that streamline development by making it easier to interact with the network. Whether you're creating wallets, checking balances, sending transactions, or deploying contracts, the Rootstock CLI simplifies these tasks, allowing you to focus more on building your applications and less on managing infrastructure. For more details, see the [CLI Repo](https://github.com/rsksmart/rsk-cli) and the [NPM Package](https://www.npmjs.com/package/@rsksmart/rsk-cli).
 
       **Contribution Ideas:**
+
         A. Check Balances: Implement features to easily check balances for any address on Rootstock.
+
         B. Transfer Any Token:  Enable to transfer any token on the Rootstock network, ensuring compatibility with major token standards (e.g., ERC-20, ERC-721) for a seamless user experience
+
         C. Send Transactions: Simplify sending transactions with built-in commands.
+
         D. Transactions history:  Show the transactions history from the current wallet
+
         E. Address Book: Add an address book feature for frequently used addresses, with easy labeling and optional encryption for secure storage.
     </Accordion.Body>
   </Accordion.Item>
@@ -48,11 +53,17 @@ Developers are encouraged to leverage reference projects to make meaningful cont
       The [Voting Scoreboard](https://github.com/rsksmart/rootstock-scoreboard) is a tool that demonstrates how ERC-20 tokens can be used for voting, complete with a leaderboard to track community engagement and top participants. While it's not a full production tool but rather a reference project, it's ideal for developers or project creators looking to easily integrate voting mechanisms into their ecosystems and monitor engagement, making it perfect for promotional campaigns or gauging interest in a project through on-chain participation. For more details, see the [Voting Scoreboard Repo](https://github.com/rsksmart/rootstock-scoreboard).
 
       **Contribution Ideas:**
+
         A. ERC-20 Token Voting: Set up ERC-20 tokens for voting, allowing users to vote on proposals or choices within a project.
+
         B. Leaderboard Display: Track voter participation making it easy to highlight the most engaged community members.
+
         C. On-Chain Identity Integration: Incorporate RNS domains or other on-chain identities for personalized leaderboards.
+
         D. Graphical Representations: Add charts or graphs to visualize leaders' positions over time.
+
         E. Positional Changes: Display how participants' rankings shift daily or weekly, providing transparency in voting dynamics.
+
         F. Countdown Timer: Include a countdown feature to indicate when the voting period ends, creating a sense of urgency for participants.
     </Accordion.Body>
   </Accordion.Item>
@@ -62,12 +73,19 @@ Developers are encouraged to leverage reference projects to make meaningful cont
       The Giveaway Engine is a demo project that offers developers a blueprint for setting up airdrops and token giveaways on the Rootstock network. While it's not a production-ready tool, it serves as a technical reference for distributing tokens like RUNES (once bridged to Rootstock as ERC-20 or ERC-1155 tokens) or any general ERC-20 / ERC-1155 tokens. This engine provides an example path for engaging communities and building excitement around projects through token distribution. For more details, see the [Airdrop Template](https://github.com/rsksmart/airdrop-template) and the [Airdrop UI](https://github.com/rsksmart/airdrop-ui).
 
       **Contribution Ideas:**
+
         A. Set Up a Token Airdrop: Implement airdrops of ERC-20 tokens or RUNES.
+
         B. Staking-Based Eligibility: Add rules to reward users who have staked tokens in another protocol, encouraging broader ecosystem participation.
+
         C. On-Chain Activity: Create rules to distribute tokens based on on-chain actions like interacting with a contract or voting on a proposal.
+
         D. Holdings-Based Eligibility: Reward users based on the number of tokens they hold, incentivizing loyalty and long-term engagement.
+
         E. RNS Domain Criteria: Airdrop tokens to users who own specific RNS domains, adding a unique layer to community interaction.
+
         F. Add New Different Rewards System: Introduce a new reward system such as a random or tiered reward system
+
         G. Time-Limited Airdrops and Expirations: Implement time-sensitive giveaways where unclaimed rewards are redistributed, creating urgency and encouraging immediate engagement.
     </Accordion.Body>
   </Accordion.Item>
@@ -77,10 +95,15 @@ Developers are encouraged to leverage reference projects to make meaningful cont
       The [Meme Token Launchpad](https://github.com/rsksmart/meme-token-launch) is an easy-to-use tool that simplifies the process of creating and launching your own ERC-1155/ERC-20 tokens. It caters to both experienced developers and newcomers by allowing users to define token parameters like name and ticker, and even store images via IPFS. Integrated with Etherspot for gasless deployment, it makes token creation more accessible by eliminating the complexities and costs associated with fees. For more details, see the [Meme Token Repo](https://github.com/rsksmart/meme-token-launch).
 
       **Contribution Ideas:**
+      
         A. Additional Minting Parameters: Implement extra minting options.
+
         B. Burn Mechanisms: Define and implement token burn mechanisms to increase scarcity or reward holders.
+
         C. Pump Fun Platform: Build a platform to showcase and hype newly launched tokens, creating an engaging environment for degens and creators.
+
         D. Token Vesting and Timelock: Allow users to set vesting schedules or timelocks for tokens, which is useful for founders, early investors, or community rewards.
+
         E. Governance Integration:  Include options to create governance tokens or add voting modules, enabling users to set up DAOs or community-driven projects directly.
     </Accordion.Body>
   </Accordion.Item>
@@ -90,17 +113,25 @@ Developers are encouraged to leverage reference projects to make meaningful cont
       This section introduces support for additional programming languages, enhancing accessibility and usability for developers across various backgrounds. Built on the EVM-compatible Rootstock blockchain, the SDKs offer powerful libraries and services in languages like **Rust**, **Python** and **Go**. Each language-specific SDK provides essential tools and utilities for token management, transaction handling, eligibility checks, and more, catering to diverse needs. These multi-language expansions are designed to broaden developer engagement and simplify integrations across multiple environments, solidifying the SDKs as versatile, cross-platform resources.
 
       **Contribution Ideas: Rust**
+
         A. Transaction Processing Library:  Build a library in Rust to handle token transfers, deploy contracts, and execute transactions for ERC-20 and ERC-1155 standards, leveraging Rust's speed and security.
+
         B. Crypto Wallet Library:  Develop a lightweight wallet in Rust, with support for private key management, signing, and ECDSA cryptography, designed for integration with desktop and server applications.
 
       **Contribution Ideas: Python**
+
         A. Airdrop Eligibility Analyzer:  Create a Python library that checks eligibility criteria (e.g., RNS domains owned, on-chain activity) for airdrops, connecting easily to databases or analytics pipelines.
+
         B. Data Visualization for Token Metrics:  Develop a tool using Python’s data libraries (like Pandas and Matplotlib) to visualize token distribution, transfer patterns, and airdrop impacts.
+
         C. Smart Contract Event Scraper:  Build a Python script to capture and parse smart contract events from the blockchain, storing relevant data for user interaction tracking or analytics.
 
       **Contribution Ideas: Go**
+
         A. Backend for Airdrop and Giveaway Engine:  Use Go to build a high-performance backend that handles token distribution, logging, and eligibility checking for the Giveaway Engine.
+
         B. Token Management Microservices:  Create microservices for token-related operations, such as minting, burning, and transferring, allowing applications to call specific functions as needed.
+
         C. Network Listener for Events:  Implement an event listener in Go to monitor smart contracts for token-related events, ideal for notifications or automated actions.
     </Accordion.Body>
   </Accordion.Item>
@@ -168,8 +199,11 @@ Your contributions can cover any of the following Rootstock themes:
       Writing, testing and deploying smart contracts on the Rootstock network.
 
       **Contribution Ideas:**
+
         A. Step-by-step guides on creating various types of smart contracts (e.g., tokens, DeFi, wallets, swaps, RWAs, NFTs, Runes, Ordinals, indexing, interoperability).
+
         B. Explaining Rootstock's unique features and how they can be utilized in smart contract development.
+
         C. Debugging and troubleshooting common issues in smart contract development.
     </Accordion.Body>
   </Accordion.Item>
@@ -179,8 +213,11 @@ Your contributions can cover any of the following Rootstock themes:
       Demonstrating how to use and integrate tools with Rootstock-compatible tools and libraries.
       
       **Contribution Ideas:**
+
         A. Explaining the concept of a sidechain and how Rootstock utilizes it.
+
         B. Step-by-step guides on integrating wallets, SDKs, or APIs with Rootstock applications.
+
         C. Step-by-step guides on using ecosystem dApps - refer to the “Building DeFi on Bitcoin” series on the Rootstock blog.
     </Accordion.Body>
   </Accordion.Item>
@@ -190,9 +227,13 @@ Your contributions can cover any of the following Rootstock themes:
       Sharing real-world examples of Rootstock applications and use cases.
       
       **Contribution Ideas:** 
+
         A. Building cross-platform or no-code dApps (e.g., mobile app development using Flutter, etc).
+
         B. Showcasing real-world applications on Rootstock.
+
         C. Building cross-chain applications, data indexing, etc., using partner tools and integrations.
+
         D. Porting dApps to Rootstock from other ecosystems
     </Accordion.Body>
   </Accordion.Item>
@@ -202,8 +243,11 @@ Your contributions can cover any of the following Rootstock themes:
       Introducing and explaining various tools and libraries that can be used for Rootstock development.
       
       **Contribution Ideas:**
+
         A. Tutorials on using popular development environments (e.g., Remix, Hardhat, Slither, Viem).
+
         B. Explaining the use of testing frameworks and libraries for smart contract testing.
+
         C. Demonstrating how to use debugging tools to identify and fix issues in Rootstock applications.
     </Accordion.Body>
   </Accordion.Item>
@@ -213,8 +257,11 @@ Your contributions can cover any of the following Rootstock themes:
       Expanding into more complex aspects of Rootstock development and sharing best practices.
 
       **Contribution Ideas:** 
+
         A. Exploring complex concepts and how they enhance scalability on Rootstock.
+
         B. Discussing security considerations in smart contract development and best practices to avoid vulnerabilities.
+
         C. Exploring advanced topics like decentralized finance (DeFi), Runes, Ordinals, BITVMX, and their potential applications on Rootstock.
     </Accordion.Body>
   </Accordion.Item>
