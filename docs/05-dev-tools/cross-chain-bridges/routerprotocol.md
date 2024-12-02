@@ -2,7 +2,7 @@
 sidebar_position: 3
 sidebar_label: Router Protocol
 title: Router Protocol
-description: "Explore cross-chain bridging solutions on Rootstock." 
+description: "Router Protocol enables developers to seamlessly interact with multiple blockchain networks, facilitating cross-chain transactions and decentralized finance (DeFi) solutions. " 
 tags: [cross chain, bridges, developer tools, rsk, testnet, rootstock, ethereum, dApps, smart contracts]
 ---
 

@@ -2,7 +2,7 @@
 sidebar_position: 5
 sidebar_label: Wormhole
 title: Wormhole
-description: "Explore cross-chain bridging solutions on Rootstock." 
+description: "Wormhole provides a suite of tools to simplify cross-chain integration for developers. Whether you’re building user-friendly interfaces, leveraging on-chain data, or facilitating asset transfers, Wormhole’s solutions empower developers to create intuitive, scalable applications." 
 tags: [Wormhole, bridges, developer tools, rsk, testnet, rootstock, ethereum, dApps, smart contracts]
 ---
 

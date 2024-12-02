@@ -2,7 +2,7 @@
 sidebar_position: 2
 sidebar_label: PowPeg
 title:  PowPeg App
-description: "Explore cross-chain bridging solutions on Rootstock." 
+description: "The PowPeg App, formerly the 2 Way Peg App, allows users to convert BTC to RBTC and vice versa." 
 tags: [powpeg, bridges, developer tools, rsk, testnet, rootstock, ethereum, dApps, smart contracts]
 ---
 
