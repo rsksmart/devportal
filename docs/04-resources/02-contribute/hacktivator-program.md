@@ -95,7 +95,7 @@ Developers are encouraged to leverage reference projects to make meaningful cont
       The [Meme Token Launchpad](https://github.com/rsksmart/meme-token-launch) is an easy-to-use tool that simplifies the process of creating and launching your own ERC-1155/ERC-20 tokens. It caters to both experienced developers and newcomers by allowing users to define token parameters like name and ticker, and even store images via IPFS. Integrated with Etherspot for gasless deployment, it makes token creation more accessible by eliminating the complexities and costs associated with fees. For more details, see the [Meme Token Repo](https://github.com/rsksmart/meme-token-launch).
 
       **Contribution Ideas:**
-      
+
         A. Additional Minting Parameters: Implement extra minting options.
 
         B. Burn Mechanisms: Define and implement token burn mechanisms to increase scarcity or reward holders.
@@ -112,11 +112,14 @@ Developers are encouraged to leverage reference projects to make meaningful cont
     <Accordion.Body>
       This section introduces support for additional programming languages, enhancing accessibility and usability for developers across various backgrounds. Built on the EVM-compatible Rootstock blockchain, the SDKs offer powerful libraries and services in languages like **Rust**, **Python** and **Go**. Each language-specific SDK provides essential tools and utilities for token management, transaction handling, eligibility checks, and more, catering to diverse needs. These multi-language expansions are designed to broaden developer engagement and simplify integrations across multiple environments, solidifying the SDKs as versatile, cross-platform resources.
 
+      <b/>
       **Contribution Ideas: Rust**
 
         A. Transaction Processing Library:  Build a library in Rust to handle token transfers, deploy contracts, and execute transactions for ERC-20 and ERC-1155 standards, leveraging Rust's speed and security.
 
         B. Crypto Wallet Library:  Develop a lightweight wallet in Rust, with support for private key management, signing, and ECDSA cryptography, designed for integration with desktop and server applications.
+
+      <b/>
 
       **Contribution Ideas: Python**
 
@@ -126,6 +129,7 @@ Developers are encouraged to leverage reference projects to make meaningful cont
 
         C. Smart Contract Event Scraper:  Build a Python script to capture and parse smart contract events from the blockchain, storing relevant data for user interaction tracking or analytics.
 
+      <b/>
       **Contribution Ideas: Go**
 
         A. Backend for Airdrop and Giveaway Engine:  Use Go to build a high-performance backend that handles token distribution, logging, and eligibility checking for the Giveaway Engine.
@@ -199,12 +203,9 @@ Your contributions can cover any of the following Rootstock themes:
       Writing, testing and deploying smart contracts on the Rootstock network.
 
       **Contribution Ideas:**
-
-        A. Step-by-step guides on creating various types of smart contracts (e.g., tokens, DeFi, wallets, swaps, RWAs, NFTs, Runes, Ordinals, indexing, interoperability).
-
-        B. Explaining Rootstock's unique features and how they can be utilized in smart contract development.
-
-        C. Debugging and troubleshooting common issues in smart contract development.
+        * Step-by-step guides on creating various types of smart contracts (e.g., tokens, DeFi, wallets, swaps, RWAs, NFTs, Runes, Ordinals, indexing, interoperability).
+        * Explaining Rootstock's unique features and how they can be utilized in smart contract development.
+        * Debugging and troubleshooting common issues in smart contract development.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
@@ -213,12 +214,9 @@ Your contributions can cover any of the following Rootstock themes:
       Demonstrating how to use and integrate tools with Rootstock-compatible tools and libraries.
       
       **Contribution Ideas:**
-
-        A. Explaining the concept of a sidechain and how Rootstock utilizes it.
-
-        B. Step-by-step guides on integrating wallets, SDKs, or APIs with Rootstock applications.
-
-        C. Step-by-step guides on using ecosystem dApps - refer to the “Building DeFi on Bitcoin” series on the Rootstock blog.
+        * Explaining the concept of a sidechain and how Rootstock utilizes it.
+        * Step-by-step guides on integrating wallets, SDKs, or APIs with Rootstock applications.
+        * Step-by-step guides on using ecosystem dApps - refer to the “Building DeFi on Bitcoin” series on the Rootstock blog.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">
@@ -227,14 +225,10 @@ Your contributions can cover any of the following Rootstock themes:
       Sharing real-world examples of Rootstock applications and use cases.
       
       **Contribution Ideas:** 
-
-        A. Building cross-platform or no-code dApps (e.g., mobile app development using Flutter, etc).
-
-        B. Showcasing real-world applications on Rootstock.
-
-        C. Building cross-chain applications, data indexing, etc., using partner tools and integrations.
-
-        D. Porting dApps to Rootstock from other ecosystems
+        * Building cross-platform or no-code dApps (e.g., mobile app development using Flutter, etc).
+        * Showcasing real-world applications on Rootstock.
+        * Building cross-chain applications, data indexing, etc., using partner tools and integrations.
+        * Porting dApps to Rootstock from other ecosystems
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="3">
@@ -243,12 +237,9 @@ Your contributions can cover any of the following Rootstock themes:
       Introducing and explaining various tools and libraries that can be used for Rootstock development.
       
       **Contribution Ideas:**
-
-        A. Tutorials on using popular development environments (e.g., Remix, Hardhat, Slither, Viem).
-
-        B. Explaining the use of testing frameworks and libraries for smart contract testing.
-
-        C. Demonstrating how to use debugging tools to identify and fix issues in Rootstock applications.
+        * Tutorials on using popular development environments (e.g., Remix, Hardhat, Slither, Viem).
+        * Explaining the use of testing frameworks and libraries for smart contract testing.
+        * Demonstrating how to use debugging tools to identify and fix issues in Rootstock applications.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="4">
@@ -257,12 +248,9 @@ Your contributions can cover any of the following Rootstock themes:
       Expanding into more complex aspects of Rootstock development and sharing best practices.
 
       **Contribution Ideas:** 
-
-        A. Exploring complex concepts and how they enhance scalability on Rootstock.
-
-        B. Discussing security considerations in smart contract development and best practices to avoid vulnerabilities.
-
-        C. Exploring advanced topics like decentralized finance (DeFi), Runes, Ordinals, BITVMX, and their potential applications on Rootstock.
+        * Exploring complex concepts and how they enhance scalability on Rootstock.
+        * Discussing security considerations in smart contract development and best practices to avoid vulnerabilities.
+        * Exploring advanced topics like decentralized finance (DeFi), Runes, Ordinals, BITVMX, and their potential applications on Rootstock.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
