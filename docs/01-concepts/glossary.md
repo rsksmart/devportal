@@ -1,10 +1,11 @@
 ---
 sidebar_position: 1.5
-title: Glossary 
+title: Rootstock Glossary | Key Terms and Definitions
 sidebar_label: Rootstock Glossary
-tags: [rsk, rootstock, solutions, courses, guides, tutorials, glossary]
+tags: [rsk, rootstock, developer tools, courses, guides, tutorials, glossary]
 description: "This glossary contains key terms and definitions to help you better understand the technologies and concepts related to Rootstock."
 ---
+
 This glossary contains key terms and definitions to help you better understand the technologies and concepts related to Rootstock. 
 
 Whether you're building on the Rootstock platform or simply exploring, these definitions will provide clarity on essential terms commonly used in the Rootstock Ecosystem.
@@ -13,33 +14,47 @@ Whether you're building on the Rootstock platform or simply exploring, these def
 
 **Accounts:** 
 
-In blockchain, accounts store digital assets and are identified by addresses. They can be managed by individuals or programs, enabling users to send and receive assets, interact with applications, and participate in network activities. 
+In blockchain, accounts store digital assets and are identified by addresses. 
+They can be managed by individuals or programs, enabling users to send and receive assets, 
+interact with applications, and participate in network activities. See [Account Based Addresses](/concepts/account-based-addresses/) for more information.
 
 **Account Abstraction:**
 
-A blockchain feature that allows user accounts to have programmable transaction validation rules, making them more flexible than traditional EOA (Externally Owned Accounts). This enables features like social recovery and batched transactions. 
+A blockchain feature that allows user accounts to have programmable transaction validation rules, 
+making them more flexible than traditional EOA (Externally Owned Accounts). 
+This enables features like social recovery and batched transactions. 
+
 <Button size="sm" href="/developers/quickstart/rootstock-etherspot/">Try Account Abstraction</Button>
+
+<br/>
 <br/>
 
- **API (Application Programming Interface):**
+**API (Application Programming Interface):**
 
-A set of tools and protocols that allow software applications to interact with each other. APIs are commonly used for enabling integrations with external systems.
+A set of tools and protocols that allow software applications to interact with each other. 
+APIs are commonly used for enabling integrations with external systems.
 
 ## **B**
 
 **Bitcoin (BTC)**: 
 
-The first and most well-known cryptocurrency, created by Satoshi Nakamoto. It operates on a decentralized network using proof-of-work consensus.
+The first and most well-known cryptocurrency, created by Satoshi Nakamoto. 
+It operates on a decentralized network using proof-of-work consensus.
 
 **Bitcoin Runes**: 
 
-This is a protocol for creating fungible tokens directly on the blockchain. Developed by Casey Rodarmor, the mind behind Ordinals, Runes offers a more efficient way to issue tokens. 
+This is a protocol for creating fungible tokens directly on the blockchain. Developed by Casey Rodarmor, 
+the mind behind Ordinals, Runes offers a more efficient way to issue tokens. 
+
 <Button size="sm" href="/resources/guides/runes/">Try Bitcoin Runes on Rootstock</Button>
+
+<br/>
 <br/>
 
 **Blockchain**: 
 
-A distributed, immutable digital ledger that records transactions across a network of computers. Each block contains a list of transactions and is linked to the previous block, forming a chain.
+A distributed, immutable digital ledger that records transactions across a network of computers. 
+Each block contains a list of transactions and is linked to the previous block, forming a chain.
 
 **BRC20**: 
 
@@ -47,10 +62,10 @@ A token standard for Bitcoin, similar to ERC20 on Ethereum, enabling the creatio
 
 **Bridge**: 
 
-This is a protocol allowing assets to be transferred between different blockchain networks, facilitating cross-chain interoperability. On **Rootstock**, two primary cross-chain bridging solutions support these asset transfers. 
+This is a protocol allowing assets to be transferred between different blockchain networks, facilitating cross-chain interoperability. 
+On **Rootstock**, two primary cross-chain bridging solutions support these asset transfers. 
 
-The **Token Bridge dApp** allows for simple movement of ERC-20 tokens between Ethereum and Rootstock, providing an easy and intuitive way to bridge assets. The **PowPeg App** enables BTC to RBTC conversions and vice versa, leveraging Bitcoin’s hashrate to securely lock and manage assets in the cross-chain process.
-<Button size="sm" href="/resources/guides/tokenbridge/">Learn about TokenBridge </Button>
+<Button size="sm" href="/dev-tools/cross-chain-bridges/">View Bridges on Rootstock</Button>
 <br/>
 
 ## **C**
@@ -62,7 +77,9 @@ A text-based user interface that allows developers to interact with software by 
 **Cucumber**: 
 
 This is a software tool that supports Behavior-Driven Development (BDD), enabling developers to write automated tests in plain language.
+
 <Button size="sm" href="/resources/tutorials/dapp-automation-cucumber/#prerequisites">Try Cucumber</Button>
+<br/>
 <br/>
 
 **Cryptocurrency:** 
@@ -95,15 +112,18 @@ ERC1155 is a token standard on Ethereum that allows for both fungible and non-fu
 
 **ERC20**: 
 
-ERC20 is a widely-used token standard on the Ethereum blockchain that defines the basic functionalities for fungible tokens, including transfer and allowance mechanisms. 
+ERC20 is a widely-used token standard on the Ethereum blockchain that defines the basic functionalities for fungible tokens,
+ including transfer and allowance mechanisms. 
 
 **ERC721**: 
 
-ERC721 is a token standard for non-fungible tokens (NFTs) on Ethereum, where each token is unique. This standard enables the ownership and transfer of distinct digital assets, fostering a market for collectibles and digital art.
+ERC721 is a token standard for non-fungible tokens (NFTs) on Ethereum, where each token is unique. 
+This standard enables the ownership and transfer of distinct digital assets, fostering a market for collectibles and digital art.
 
 **EOA (Externally Owned Account):** 
 
-This is a user-controlled blockchain account secured by private keys. Unlike smart contracts, which are self-operating programs, EOAs allow individuals to manage assets directly and initiate transactions.
+This is a user-controlled blockchain account secured by private keys. 
+Unlike smart contracts, which are self-operating programs, EOAs allow individuals to manage assets directly and initiate transactions.
 
 **Ethereum**: 
 
@@ -112,7 +132,9 @@ This is a decentralized blockchain platform that facilitates the creation and ex
 **Etherspot**: 
 
 A smart contract wallet platform that simplifies blockchain interactions and provides account abstraction features.
-<Button size="sm" href="/developers/quickstart/rootstock-etherspot/">Try Etherspot</Button>
+
+<Button size="sm" href="/developers/quickstart/rootstock-etherspot/">Try Etherspot SDK</Button>
+<br/>
 <br/>
 
 
@@ -122,12 +144,13 @@ The EVM is a decentralized runtime environment that enables the execution of sma
 
 **EVM Compatible**: 
 
-This term refers to blockchains designed to execute Ethereum smart contracts and adhere to the Ethereum Virtual Machine (EVM) specifications. EVM-compatible blockchains support the same programming interfaces, enabling developers to deploy their existing Ethereum applications without major modifications. 
+This term refers to blockchains designed to execute Ethereum smart contracts and adhere to the Ethereum Virtual Machine (EVM) specifications. 
+EVM-compatible blockchains support the same programming interfaces, enabling developers to deploy their existing Ethereum applications without major modifications. 
 
 **Explorer**: 
 
-This is a tool for viewing blockchain data such as transactions, addresses, and smart contracts on both <Button size="sm" href="https://explorer.rootstock.io/">Mainnet</Button>
-   the live network with real assets and <Button size="sm" href="http://explorer.testnet.rootstock.io">Testnet</Button> a testing network with no real monetary value. It provides transparency by letting users track the activity and status of these elements in real-time across the network.
+This is a tool for viewing blockchain data such as transactions, addresses, and smart contracts on both [Mainnet](https://explorer.rootstock.io/) -
+the live network with real assets and [Testnet](https://explorer.testnet.rootstock.io) - a testing network with no real monetary value. It provides transparency by letting users track the activity and status of these elements in real-time across the network.
 
 
 **Exchange:**  
@@ -137,8 +160,10 @@ This is a platform where users can trade cryptocurrencies and other digital asse
 
 **Faucet**: 
 
-This is a tool that distributes small amounts of cryptocurrency for testing purposes on test networks, allowing developers and users to experiment without financial risk. In the context of Rootstock, faucets can be used to obtain test RBTC, enabling developers to test their applications in a realistic environment. This practice is crucial for ensuring that dApps function correctly before deployment on the mainnet.
-<Button size="sm" href="https://faucet.rootstock.io/">Get RBTC Faucet</Button>
+This is a tool that distributes small amounts of cryptocurrency for testing purposes on test networks, allowing developers and users to experiment without financial risk. In the context of Rootstock, faucets can be used to obtain test RBTC (tRBTC), enabling developers to test their applications in a realistic environment. This practice is crucial for ensuring that dApps function correctly before deployment on the mainnet.
+
+<Button size="sm" href="https://faucet.rootstock.io/">Get tRBTC</Button>
+<br/>
 <br/>
 
 ## G
@@ -152,7 +177,9 @@ This is the unit used to measure the amount of computational work needed to perf
 **Hardhat**: 
 
 This is a development environment for building, testing, and deploying Ethereum smart contracts. It provides tools that simplify the development process, allowing developers to write and test their code efficiently. In the context of Rootstock, Hardhat can be used to create and manage smart contracts, making it easier to integrate with the Rootstock network.
+
 <Button size="sm" href="/developers/smart-contracts/hardhat/write-smart-contracts/">Try Hardhat</Button>
+<br/>
 <br/>
 
 **Hash rate:** 
@@ -172,7 +199,9 @@ The ability of different blockchain networks to interact and share data, enablin
 **JSON RPC**: 
 
 This is a protocol that allows for making remote procedure calls using JSON (JavaScript Object Notation). It is widely used to interact with blockchain nodes, enabling applications to send commands and receive responses over the network. This protocol facilitates communication between clients and servers in a standardized way, making it easier for developers to build applications that interact with blockchain technology. 
+
 <Button size="sm" href="/node-operators/json-rpc/">Learn about JSON RPC</Button>
+<br/>
 <br/>
 
 ## L
@@ -222,7 +251,9 @@ A computer that participates in a blockchain network by validating, storing, and
 
 * **Full Node:** Stores the entire blockchain and independently verifies transactions and blocks.
 * **Light Node:** Stores only partial data (e.g., block headers) and relies on full nodes for verification. Nodes are essential for maintaining the network's security and decentralization.
+
 <Button size="sm" href="/node-operators/">Learn about Rootstock Node</Button>
+<br/>
 <br/>
 
 ## O
@@ -248,7 +279,9 @@ These are services that fetch external data for use in smart contracts, allowing
 **PowPeg**: 
 
 This facilitates the conversion of Bitcoin (BTC) to Rootstock Bitcoin (RBTC) and vice versa. It operates under the PowPeg protocol, which secures locked bitcoins by leveraging the same Bitcoin hash rate that establishes consensus on the Bitcoin network. This unique mechanism ensures the integrity and security of asset transfers between the two currencies.
+
 <Button size="sm" href="/resources/guides/powpeg-app/">Try PowPeg</Button>
+<br/>
 <br/>
 
 **Private Key:** 
@@ -259,17 +292,19 @@ A unique code granting access to a blockchain account. It must remain secret, as
 
 **RBTC**: 
 
-This is the native cryptocurrency of the Rootstock network, designed to be pegged to Bitcoin. This ensures that RBTC maintains a value equivalent to Bitcoin, allowing seamless interactions between both networks.
+[RBTC](/concepts/rbtc/) is the native cryptocurrency of the Rootstock network, designed to be pegged 1:1 to Bitcoin. This ensures that RBTC maintains a value equivalent to Bitcoin, allowing seamless interactions between both networks.
 
 **Remix IDE**: 
 
 This is a browser-based integrated development environment for developing, testing, and deploying Ethereum smart contracts. It provides a user-friendly interface and powerful tools to assist developers in their smart contract development processes.
+
 <Button size="sm" href="/developers/quickstart/remix/">Try Remix IDE on Rootstock</Button>
+<br/>
 <br/>
 
 **RIF (Rootstock Infrastructure Framework)**: 
 
-This is a suite of open and decentralized infrastructure protocols that facilitate the development of distributed applications (dApps) within a unified environment. RIF OS simplifies access to various blockchain services, promoting scalable and efficient development across multiple crypto-economies.
+[RIF](/concepts/rif-suite/token/) a suite of open and decentralized infrastructure protocols that facilitate the development of distributed applications (dApps) within a unified environment. RIF OS simplifies access to various blockchain services, promoting scalable and efficient development across multiple crypto-economies.
 
 **rLogin**: 
 
@@ -277,23 +312,35 @@ This is a tool that enables users to log into applications using their preferred
 
 **RNS (Rootstock Name Service):** 
 
-This is a system that allows for easy-to-remember names in place of complex blockchain addresses. This simplifies transactions, making it user-friendly to send and receive assets on blockchain platforms.
+[RNS](/concepts/rif-suite/rns/) is a system that allows for easy-to-remember names in place of complex blockchain addresses. This simplifies transactions, making it user-friendly to send and receive assets on blockchain platforms.
 
 **Rootstock**: 
 
-This is a smart contract platform that is merge-mined with Bitcoin and is EVM-compatible. This allows developers to create and deploy smart contracts while benefiting from Bitcoin's security.
+Rootstock is the first and longest-lasting Bitcoin sidechain. It is the only layer 2 solution that combines the security of Bitcoin's proof of work with Ethereum's smart contract capabilities. The platform is open-source, EVM-compatible, and secured by over 60% of Bitcoin’s hashing power, This robust security model empowers developers to build trustless, innovative dApps within a thriving ecosystem.
+
+<Button size="sm" href="https://rsk.thinkific.com/courses/blockchain-user">Enroll for the Rootstock User Course</Button>
+<br/>
+<br/>
 
 **RVM:** 
 
-The runtime environment where smart contracts execute is known as the virtual machine, which processes instructions in blockchain transactions to enable automation and support decentralized applications. The Rootstock Virtual Machine (RVM) is fully compatible with the Ethereum Virtual Machine (EVM) at the opcode level, allowing Ethereum smart contracts to run seamlessly on the Rootstock network. This compatibility supports a broad range of Ethereum-based applications and tools on Rootstock, promoting interoperability and ease of migration for developers familiar with the Ethereum ecosystem.
+The runtime environment where smart contracts execute is known as the virtual machine, which processes instructions in blockchain transactions to enable automation and support decentralized applications. The Rootstock Virtual Machine (RVM) is fully compatible with the Ethereum Virtual Machine (EVM) at the opcode level, allowing Ethereum smart contracts to run seamlessly on the Rootstock network. This compatibility supports a broad range of Ethereum-based applications and tools on Rootstock, promoting interoperability and ease of migration for developers familiar with the Ethereum ecosystem. See the [Differences between Rootstock and Ethereum](/developers/blockchain-essentials/overview/#differences-with-rootstock-and-ethereum)
 
 **RSKIP (Rootstock Improvement Proposal):** 
 
-A community-driven proposal for protocol enhancements, similar to other blockchain networks. They allow users and developers to suggest new features or improvements to the network’s code.
+A community-driven proposal for protocol enhancements, similar to other blockchain networks. They allow users and developers to suggest new features or improvements to the network’s code. 
+
+<Button size="sm" href="https://github.com/rsksmart/RSKIPs">View the RSKIPs</Button>
+<br/>
+<br/>
 
 **RPC (Remote Procedure Call):** 
 
-This enables external applications to interact with blockchain nodes, providing an interface for retrieving data, submitting transactions, and monitoring network activity.
+This enables external applications to interact with blockchain nodes, providing an interface for retrieving data, submitting transactions, and monitoring network activity. 
+
+<Button size="sm" href="https://rpc.rootstock.io/">View the RPC API</Button>
+<br/>
+<br/>
 
 ## S
 
@@ -301,15 +348,21 @@ This enables external applications to interact with blockchain nodes, providing 
 
 This is self-executing code deployed on a blockchain that automatically enforces and executes agreements based on predefined conditions. These contracts eliminate the need for intermediaries, enhancing efficiency and trust in transactions by ensuring that once conditions are met, actions are carried out automatically. 
 
-**Starter-Kit**:
+**Starter Kit**:
 
 This is a template or boilerplate project that provides developers with the basic structure and essential tools needed to begin building a dApp. It simplifies the development process by offering pre-configured settings, libraries, and examples, allowing developers to focus on their application’s unique features instead of starting from scratch.
-<Button size="sm" href="/developers/quickstart/">Rootstock Startekit Templates</Button>
+
+<Button size="sm" href="/developers/quickstart/">Rootstock Starter Kit Templates</Button>
+<br/>
 <br/>
 
 **Solidity**: 
 
 This is the primary programming language for writing smart contracts on Ethereum and EVM-compatible blockchains. It is a statically typed, high-level language that enables developers to create complex smart contracts and dApps.
+
+<Button size="sm" href="https://rsk.thinkific.com/courses/blockchain-developer/">Enroll for Blockchain Developer Course</Button>
+<br/>
+<br/>
 
 **Stablecoin:** 
 
@@ -329,6 +382,10 @@ This is a tokenized version of Bitcoin that allows developers to test blockchain
 
 This is a version of a blockchain network specifically designed for testing purposes. In this environment, transactions do not hold any real monetary value, allowing developers to experiment with new features and smart contracts without risking actual assets. This setup helps identify bugs and optimize functionality before deploying on the mainnet.
 
+<Button size="sm" href="https://faucet.rootstock.io/">Get tRBTC</Button>
+<br/>
+<br/>
+
 **Token**: 
 
 This is a digital asset created and managed through smart contracts on a blockchain. It represents ownership or access to a specific asset or service, and can be fungible (like ERC20 tokens) or non-fungible (like ERC721 NFTs). 
@@ -342,7 +399,9 @@ These are operations that alter the state of the blockchain. This includes activ
 **Wallet**: 
 
 This is software that manages cryptocurrency private keys, enabling users to store, send, and receive cryptocurrencies securely. It facilitates interactions with blockchain networks, allowing users to access their digital assets and execute transactions.
-<Button size="sm" href="/dev-tools/wallets/">Learn about Wallet</Button>
+
+<Button size="sm" href="/dev-tools/wallets/">Learn about Wallets</Button>
+<br/>
 <br/>
 
 **Web3.js**: 
