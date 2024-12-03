@@ -127,11 +127,11 @@ Unlike smart contracts, which are self-operating programs, EOAs allow individual
 
 **Ethereum**: 
 
-This is a decentralized blockchain platform that facilitates the creation and execution of smart contracts and decentralized applications (dApps). It allows developers to build applications that operate on a peer-to-peer network, enabling trustless transactions and automated processes without the need for intermediaries. 
+[Ethereum](https://ethereum.org/en/) is a decentralized blockchain platform that facilitates the creation and execution of smart contracts and decentralized applications (dApps). It allows developers to build applications that operate on a peer-to-peer network, enabling trustless transactions and automated processes without the need for intermediaries. 
 
 **Etherspot**: 
 
-A smart contract wallet platform that simplifies blockchain interactions and provides account abstraction features.
+Etherspot is an Account Abstraction infrastructure designed to help developers create a seamless web3 user experience for users interacting with their dApps.
 
 <Button size="sm" href="/developers/quickstart/rootstock-etherspot/">Try Etherspot SDK</Button>
 <br/>
@@ -140,7 +140,7 @@ A smart contract wallet platform that simplifies blockchain interactions and pro
 
 **EVM (Ethereum Virtual Machine)**: 
 
-The EVM is a decentralized runtime environment that enables the execution of smart contracts on Ethereum and EVM-compatible blockchains. It provides the necessary infrastructure for developers to deploy applications, ensuring that they run consistently across different nodes in the network.
+The [EVM](https://ethereum.org/en/) is a decentralized runtime environment that enables the execution of smart contracts on Ethereum and EVM-compatible blockchains. It provides the necessary infrastructure for developers to deploy applications, ensuring that they run consistently across different nodes in the network.
 
 **EVM Compatible**: 
 
