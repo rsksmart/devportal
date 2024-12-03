@@ -52,7 +52,12 @@ const config = {
           description : 'Looking for information we haven’t covered? Fill out the form below to request a new article, and we’ll consider it in future updates.',
         }
       },
-    }
+    },
+    news: [
+      {title: 'Rootstock Hacktivator Program is Live! Contribute and Earn Rewards!', url: 'https://dev.rootstock.io/resources/contribute/hacktivator-program/'},
+      {title: 'Contribute and Earn Rewards!', url: '/changelog'},
+      {title: 'Rootstock News', url: '/changelog'},
+    ]
   },
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
