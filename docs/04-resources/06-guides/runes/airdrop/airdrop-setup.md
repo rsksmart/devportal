@@ -53,7 +53,7 @@ This variable specifies the address of the Airdrop Manager smart contract. To en
 
 :::info[Info]
 
-For detailed instructions on obtaining the Airdrop Manager address, please refer to the [Deploy](docs/04-resources/09-Airdrop/deploy.md) section
+For detailed instructions on obtaining the Airdrop Manager address, please refer to the [Deploy](/resources/guides/runes/airdrop/deploy/) section
 
 :::
 
