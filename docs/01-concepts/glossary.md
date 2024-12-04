@@ -200,7 +200,7 @@ The ability of different blockchain networks to interact and share data, enablin
 
 This is a protocol that allows for making remote procedure calls using JSON (JavaScript Object Notation). It is widely used to interact with blockchain nodes, enabling applications to send commands and receive responses over the network. This protocol facilitates communication between clients and servers in a standardized way, making it easier for developers to build applications that interact with blockchain technology. 
 
-<Button size="sm" href="/node-operators/json-rpc/">Learn about JSON RPC</Button>
+<Button size="sm" href="/node-operators/json-rpc/methods/">View JSON RPC Methods</Button>
 <br/>
 <br/>
 
