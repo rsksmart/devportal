@@ -16,7 +16,6 @@ Alchemy is a leading blockchain developer platform that simplifies the process o
 
 ## Supported Blockchains
 Alchemy supports multiple blockchains, including Rootstock:
-- Polygon
 - Optimism
 - Arbitrum
 
