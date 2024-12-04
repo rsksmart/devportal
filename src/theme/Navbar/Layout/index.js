@@ -9,7 +9,7 @@ import {translate} from '@docusaurus/Translate';
 import NavbarMobileSidebar from '@theme/Navbar/MobileSidebar';
 import styles from './styles.module.css';
 import MainNavDesktop from "../MainNavDesktop";
-import NewsLine from '../../../components/NewsLine'
+import NewsLine from '/src/components/NewsLine'
 
 function NavbarBackdrop(props) {
   return (
