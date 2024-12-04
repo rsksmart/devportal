@@ -59,14 +59,14 @@ The Rootstock network is innovating in the account abstraction space, here are s
     linkHref="/dev-tools/account-abstraction/etherspot/"
     linkTitle="Build with Etherspot"
   />
-  <!-- <CardsGridItem
-    title="Gelato"
+  <CardsGridItem
+    title="Reown"
     subtitle="account abstraction"
     color="green"
-    description="Deploy production-grade & fully-serviced L2 rollups on Rootstock, natively integrated with tools like oracles, bridges, data indexers and Account Abstraction. It is supported on Mainnet."
-    linkHref="/dev-tools/dev-environments/gelato/"
-    linkTitle="Build with Gelato"
-  /> -->
+    description="Reown (prev. known as WalletConnect) gives developers the tools to build user experiences that make digital ownership effortless, intuitive, and secure."
+    linkHref="/dev-tools/account-abstraction/reown/"
+    linkTitle="Build with Reown"
+  />
 </CardsGrid>
 
 
