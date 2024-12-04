@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useLayoutEffect } from 'react'
 import clsx from 'clsx'
 import styles from './styles.module.scss'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
@@ -7,9 +7,7 @@ import Link from '/src/components/Link'
 export default function NewsLine () {
   const { siteConfig } = useDocusaurusContext()
   const news = siteConfig?.customFields?.newsHighlight || []
-  const [isClosed, setIsClosed] = useState(() => {
-    return sessionStorage.getItem('DevportalNewsLineClosed') === 'true'
-  })
+  const [isClosed, setIsClosed] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
   let lastScrollTop = 0
 
@@ -20,7 +18,9 @@ export default function NewsLine () {
   const truncateTitle = (title, maxLength) => {
     return title.length > maxLength ? `${title.substring(0, maxLength)}...` : title
   }
-  useEffect(() => {
+  useLayoutEffect(() => {
+    if (!window) return;
+    setIsClosed(sessionStorage.getItem('DevportalNewsLineClosed') === 'true')
     const handleScroll = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop
       if (scrollTop > lastScrollTop) {
@@ -35,7 +35,7 @@ export default function NewsLine () {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [])
+  }, [isClosed])
 
   return (news?.length > 0 && !isClosed) && (
     <div className={clsx(styles.NewsLineWrap, { [styles.hidden]: !isVisible })}>
