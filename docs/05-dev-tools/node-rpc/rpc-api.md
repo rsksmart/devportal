@@ -9,7 +9,7 @@ description: "Remote Procedure Call (RPC) is a protocol that allows a program to
 Remote Procedure Call (RPC) is a protocol that allows a program to execute procedures (functions) on a remote server as if they were local calls. This eliminates the need for developers to handle low-level network communication.  
 
 ### How Our API Works  
-Our API uses the JSON-RPC protocol, a lightweight, text-based standard for defining procedures and their parameters. This makes it easy to communicate with the API using JSON-formatted requests and receive structured responses.  
+Rootstock RPC API uses the JSON-RPC protocol, a lightweight, text-based standard for defining procedures and their parameters. This makes it easy to communicate with the API using JSON-formatted requests and receive structured responses.  
 
 ### Use Cases  
 - Building integrations for your product or service.  
