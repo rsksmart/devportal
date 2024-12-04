@@ -46,7 +46,7 @@ It operates on a decentralized network using proof-of-work consensus.
 This is a protocol for creating fungible tokens directly on the blockchain. Developed by Casey Rodarmor, 
 the mind behind Ordinals, Runes offers a more efficient way to issue tokens. 
 
-<Button size="sm" href="/resources/guides/runes/">Try Bitcoin Runes on Rootstock</Button>
+<Button size="sm" href="/resources/guides/runes-rootstock/">Try Bitcoin Runes on Rootstock</Button>
 
 <br/>
 <br/>
