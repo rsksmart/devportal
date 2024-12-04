@@ -2,16 +2,14 @@ import React from 'react';
 import clsx from 'clsx';
 import {ErrorCauseBoundary, useThemeConfig} from '@docusaurus/theme-common';
 import {
-  splitNavbarItems,
   useHideableNavbar,
   useNavbarMobileSidebar,
 } from '@docusaurus/theme-common/internal';
 import {translate} from '@docusaurus/Translate';
 import NavbarMobileSidebar from '@theme/Navbar/MobileSidebar';
 import styles from './styles.module.css';
-import NavbarItem from "@theme/NavbarItem";
 import MainNavDesktop from "../MainNavDesktop";
-import useBrokenLinks from "@docusaurus/core/lib/client/exports/useBrokenLinks";
+import NewsLine from '/src/components/NewsLine'
 
 function NavbarBackdrop(props) {
   return (
@@ -28,7 +26,7 @@ export default function NavbarLayout({children}) {
   } = useThemeConfig();
   const mobileSidebar = useNavbarMobileSidebar();
   const {navbarRef, isNavbarVisible} = useHideableNavbar(hideOnScroll);
-  
+
   return (
     <>
       <nav
@@ -55,6 +53,7 @@ export default function NavbarLayout({children}) {
         <NavbarBackdrop onClick={mobileSidebar.toggle} />
         <NavbarMobileSidebar />
       </nav>
+      <NewsLine />
       <MainNavDesktop />
     </>
   );

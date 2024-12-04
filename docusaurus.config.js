@@ -52,7 +52,13 @@ const config = {
           description : 'Looking for information we haven’t covered? Fill out the form below to request a new article, and we’ll consider it in future updates.',
         }
       },
-    }
+    },
+    newsHighlight : [
+      {
+        title : '📣 Rootstock Hacktivator Program is Live! Contribute and Earn Rewards!',
+        url : '/resources/contribute/hacktivator-program/'
+      }
+    ]
   },
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
