@@ -9,7 +9,7 @@ Web3 onboarding often faces challenges due to complex wallet setups, unfamiliari
     title="Reown"
     subtitle="User Onboarding"
     color="green"
-    description="Reown gives developers the tools to build user experiences that make digital ownership effortless, intuitive, and secure."
+    description="Reown (prev. known as WalletConnect) gives developers the tools to build user experiences that make digital ownership effortless, intuitive, and secure."
     linkHref="/dev-tools/user-onboarding/reown/"
     linkTitle="Build with Reown"
   />
