@@ -19,6 +19,15 @@ values={[
 {label: 'Port to Rootstock', value: 'port-dapps'}
 ]}>
 <FilterItem
+    value="dynamic, wagmi, advanced"
+    title="Dynamic Starter Kit"
+    subtitle="quickstart"
+    color="orange"
+    linkHref="/developers/quickstart/dynamic/"
+    linkTitle="Use the Kit"
+    description="The Dynamic Starter Kit uses the Wagmi library for faster integration of Web3 features into a Next.js application."
+  />
+<FilterItem
     value="wagmi, beginner"
     title="Wagmi Starter Kit"
     subtitle="quickstart"
@@ -53,7 +62,7 @@ values={[
     color="orange"
     linkHref="/developers/quickstart/rootstock-etherspot/"
     linkTitle="Use the Kit"
-    description="Account Abstraction Starter dApp using Etherspot."
+    description="Account Abstraction Starter Kit using Etherspot."
   />
 <FilterItem
     value="advanced"

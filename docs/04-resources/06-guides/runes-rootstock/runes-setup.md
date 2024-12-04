@@ -6,9 +6,7 @@ tags: [rsk, rootstock, resources, tutorials,  setup, Runes, dApps, smart contrac
 description: "The Rootstock Runes Mock Bridge setup page shows you how to getting building your runes, by first cloning our project and testing it locally."
 ---
 
-## **Prerequisites**
-
-Before getting started with the Runes Mock Bridge, ensure you have the following prerequisites in place:
+Before getting started with the Runes Mock Bridge Project, ensure to setup the following:
 
 1. **Familiarity with Remix IDE**  
    You should have a basic understanding of how to use Remix IDE, an online platform for writing, compiling, and deploying Solidity smart contracts.  

@@ -1,6 +1,6 @@
 ---
 section_position: 400
-sidebar_label: Getting Started with Ape
+sidebar_label: Ape
 title: Getting Started with Ape
 description: 'How to compile, deploy, and intereact with smart contracts with Ape on Rootstock'
 tags: [rsk, ape, apeworx, developers, developer tools, tRBTC, rootstock, testing, dApps, smart contracts]

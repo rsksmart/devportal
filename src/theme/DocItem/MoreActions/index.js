@@ -13,6 +13,7 @@ import IconCommunity from "@theme/Icon/Community";
 import IconChangelog from "@theme/Icon/Changelog";
 
 import Link from '@docusaurus/Link';
+import { RequestArticle } from '../../../components/RequestArticle'
 
 export default function MoreActions({editUrl}) {
 
@@ -72,6 +73,11 @@ export default function MoreActions({editUrl}) {
               {links.changelog.title}
             </Translate>
           </Link>
+        </li>
+      )}
+      {links?.requestArticle && links.requestArticle?.form?.id && (
+        <li className={`py-3`}>
+          <RequestArticle label={links.requestArticle.title} form={links.requestArticle.form} />
         </li>
       )}
     </ul>

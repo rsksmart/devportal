@@ -1,5 +1,5 @@
 ---
-sidebar_label: Deploy, Interact and Verify Smart Contracts using Remix and Rootstock Explorer
+sidebar_label: Remix
 sidebar_position: 600
 title: Deploy, Interact and Verify Smart Contracts using Remix and Rootstock Explorer
 description: 'In this guide, we will use the Remix IDE to write, compile, deploy, interact and verify a smart contract on the Rootstock Explorer.'

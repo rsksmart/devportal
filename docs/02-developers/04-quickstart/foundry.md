@@ -1,10 +1,16 @@
 ---
-sidebar_label: Rootstock Foundry Starter kit
+sidebar_label: Foundry
 sidebar_position: 500
 title: Rootstock Foundry Starter kit
 description: 'Whether you are a seasoned developer or just starting your journey into smart contract development, the foundry starter kit provides a solid foundation for building decentralized applications (dApps) on the Rootstock network.'
 tags: [rsk, rootstock, tutorials, developers, foundry, quick starts, dApps, smart contracts]
 ---
+
+:::info[Note]
+If you wish to suggest changes on this document, please open a PR on the [Foundry Starter Kit Repository](https://github.com/rsksmart/rootstock-foundry-starterkit.git)
+:::
+
+# Rootstock Foundry Starter Kit
 
 Whether you’re a seasoned developer or just starting your journey into smart contract development, the foundry starter kit provides a solid foundation for building decentralized applications (dApps) on the Rootstock network.
 
@@ -20,7 +26,7 @@ Before starting the dApp, make sure to have the following prerequisites:
    - If you’re new to smart contracts, consider learning the basics. Understanding how smart contracts work will enhance your experience with Rootstock development.
 
 2. **Foundry installation using [Foundryup](https://book.getfoundry.sh/getting-started/installation#using-foundryup):**
-- To install, visit the official [Foundry documentation](https://book.getfoundry.sh/getting-started/installation#using-foundryup), for more information.
+- To install, visit the official [Foundry documentation](https://book.getfoundry.sh/getting-started/installation#using-foundryup) for more information.
 - Foundryup is the official installer for the Foundry toolchain. You can learn more about it in the [Foundryup README](https://github.com/foundry-rs/foundry/blob/master/foundryup/README.md).
 - If you encounter any issues during installation, refer to the Foundryup [FAQ](https://book.getfoundry.sh/faq.html) for assistance.
 - Precompiled binaries can be downloaded from the Foundry [GitHub releases page](https://github.com/foundry-rs/foundry/releases). For easier management, we recommend using Foundryup.

@@ -639,6 +639,7 @@
     {"source" : "/developers/quickstart/alchemy/", "destination" : "/developers/rpc-api/alchemy/"},
     {"source" : "/developers/rpc-api/setup/", "destination" : "/developers/rpc-api/rootstock/setup/"},
     {"source" : "/developers/smart-contracts/eas/", "destination" : "/dev-tools/attestations/eas/"},
-    {"source" : "/developers/smart-contracts/eas/overview/", "destination" : "/dev-tools/attestations/eas/"}
+    {"source" : "/developers/smart-contracts/eas/overview/", "destination" : "/dev-tools/attestations/eas/"},
+    {"source" : "/developers/quickstart/dynamic-starter-kit/", "destination" : "/developers/quickstart/dynamic/"}
   ]
 }

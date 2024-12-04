@@ -1,11 +1,11 @@
 ---
-sidebar_position: 3
+sidebar_position: 204
 title: Deploying the Airdrop Machine Smart Contract Using Remix IDE
-sidebar_label: Deploy Airdrop Machine
+sidebar_label: Deploy Airdrop Giveaway Machine
 tags: [rsk, rootstock, resources, tutorials, runes, nft, Ethereum, dApps, smart contracts, airdrop]
-description: "This guide will walk you through deploying the Airdrop Machine smart contract using Remix IDE. The Airdrop Machine is designed to distribute tokens across multiple addresses, supporting both standard and Merkle tree-based airdrops. 
-"
+description: "This guide will walk you through deploying the Airdrop Machine smart contract using Remix IDE. The Airdrop Machine is designed to distribute tokens across multiple addresses, supporting both standard and Merkle tree-based airdrops."
 ---
+
 This section will walk you through deploying the Airdrop Machine smart contract using Remix IDE. The Airdrop Machine is designed to distribute tokens across multiple addresses, supporting both standard and [Merkle tree-based](https://www.investopedia.com/terms/m/merkle-tree.asp) airdrops. 
 
 By following these instructions, you'll learn how to clone the necessary repository, prepare the contracts, and deploy them in Remix IDE.
@@ -13,7 +13,8 @@ By following these instructions, you'll learn how to clone the necessary reposit
 ## **Step 1: Clone the Repository**
 
 Clone the Airdrop template repository from the link below:
-```
+
+```bash
 git clone https://github.com/rsksmart/airdrop-template.git
 ```
 
