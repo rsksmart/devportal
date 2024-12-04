@@ -53,10 +53,11 @@ const config = {
         }
       },
     },
-    news: [
-      {title: 'Rootstock Hacktivator Program is Live! Contribute and Earn Rewards!', url: 'https://dev.rootstock.io/resources/contribute/hacktivator-program/'},
-      {title: 'Contribute and Earn Rewards!', url: '/changelog'},
-      {title: 'Rootstock News', url: '/changelog'},
+    newsHighlight : [
+      {
+        title : '📣 Rootstock Hacktivator Program is Live! Contribute and Earn Rewards!',
+        url : '/resources/contribute/hacktivator-program/'
+      }
     ]
   },
   // GitHub pages deployment config.

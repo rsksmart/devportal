@@ -1,27 +1,60 @@
-import React from "react";
-import clsx from "clsx";
-import styles from './styles.module.scss';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import React, { useState, useEffect } from 'react'
+import clsx from 'clsx'
+import styles from './styles.module.scss'
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import Link from '/src/components/Link'
 
 export default function NewsLine () {
-  const {siteConfig} = useDocusaurusContext();
-  const news = siteConfig?.customFields?.news || [];
+  const { siteConfig } = useDocusaurusContext()
+  const news = siteConfig?.customFields?.newsHighlight || []
+  const [isClosed, setIsClosed] = useState(() => {
+    return sessionStorage.getItem('DevportalNewsLineClosed') === 'true'
+  })
+  const [isVisible, setIsVisible] = useState(true)
+  let lastScrollTop = 0
 
-  return news?.length > 0 && <div
-    className={clsx(`py-10 px-32 border-top border-bottom d-flex align-items-center justify-content-center gap-12 bg-black`, styles.NewsLine)}
-  >
-    <div class="d-flex align-items-center justify-content-center gap-12">
-      {news.map((item, index) => (
-        <Link key={index} href={item.url} className={clsx(`d-flex fs-14 gap-16 align-items-center link-base`)}>
-          {item.title}
-        </Link>
-      ))}
+  const handleClose = () => {
+    setIsClosed(true)
+    sessionStorage.setItem('DevportalNewsLineClosed', 'true')
+  }
+  const truncateTitle = (title, maxLength) => {
+    return title.length > maxLength ? `${title.substring(0, maxLength)}...` : title
+  }
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+      if (scrollTop > lastScrollTop) {
+        setIsVisible(false)
+      } else {
+        setIsVisible(true)
+      }
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+  return (news?.length > 0 && !isClosed) && (
+    <div className={clsx(styles.NewsLineWrap, { [styles.hidden]: !isVisible })}>
+      <div className={clsx(`py-10`, styles.NewsLine)}>
+        <div className="container d-flex align-self-start align-items-md-center gap-8">
+          <div className="d-flex flex-column flex-wrap flex-md-row align-items-md-center justify-content-md-center gap-8 column-gap-lg-16 flex-grow-1">
+            {news.slice(0, 4).map((item, index) => (
+              <Link key={index} href={item.url} className={clsx(`d-flex fs-14 gap-16 align-items-center link-base`)}>
+                {truncateTitle(item.title, 150)}
+              </Link>
+            ))}
+          </div>
+          <button className="btn-blank d-flex" onClick={handleClose} aria-label="Close">
+            <svg width="16" height="16">
+              <use xlinkHref="#icon-close-circle"/>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
-    <button className="btn-blank d-flex">
-      <svg width="24" height="24">
-        <use xlinkHref="#icon-close-circle"></use>
-      </svg>
-    </button>
-  </div>
+  )
 }
