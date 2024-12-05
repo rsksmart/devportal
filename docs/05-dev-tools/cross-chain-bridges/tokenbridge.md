@@ -19,7 +19,7 @@ This decentralized application (dApp) provides a user-friendly interface for int
 
 > The Token Bridge supports transactions on both the <Shield label="Mainnet" title="Testnet" color="green" />, making it versatile for developers and users.
 
-## **Get Started Today**
+## **Get Started**
 Visit the [Rootstock Token Bridge dApp](https://dapp.tokenbridge.rootstock.io/) and begin transferring your ERC-20 tokens. 
 
 For developers and technical details <Button size="sm" href="/resources/guides/tokenbridge/">Try Token Bridge </Button> 
