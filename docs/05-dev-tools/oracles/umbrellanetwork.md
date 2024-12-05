@@ -9,7 +9,7 @@ tags: [Umbrella Network , developer tools, rsk, rootstock, ethereum, dApps, smar
 
 Umbrella Network provides decentralized and scalable oracles designed for high-performance blockchain applications. 
 
-The platform combines a decentralized architecture with seamless integration options to deliver reliable data feeds. It is compatible with 12 major blockchains, including Ethereum, BNB Chain, Polygon, and Solana, ensuring extensive support for various blockchain projects.
+The platform combines a decentralized architecture with seamless integration options to deliver reliable data feeds. It is compatible with 12 major blockchains, including Rootstock, Ethereum, BNB Chain, ensuring extensive support for various blockchain projects.
 
 Umbrella Network offers data feeds for thousands of cryptocurrencies, crypto options, stocks, and real-world assets. Below is an overview of its interactive API documentation structure:
 
