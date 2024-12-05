@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 sidebar_label: Token Bridge
-title: Token Bridges
+title: Token Bridge
 description: "The Rootstock Token Bridge is an interoperability solution that allows you to transfer ERC-20 tokens seamlessly between Ethereum and Rootstock networks. " 
 tags: [token bridge, bridges, developer tools, testnet, rsk, rootstock, ethereum, dApps, smart contracts]
 ---
