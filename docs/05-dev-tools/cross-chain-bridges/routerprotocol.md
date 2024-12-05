@@ -18,7 +18,7 @@ The **Crosstalk Framework** enables easy cross-chain communication and interoper
 - **Smart Contracts**: Handle cross-chain logic, including state synchronization and the execution of NFT transfers.  
 - **Router Infrastructure**: Serves as the central hub for communication, transaction routing, and data relaying across networks.  
 
-#### **2. Fee Management**  
+### **2. Fee Management**  
 Effective fee management is a critical feature of the Crosstalk Framework, ensuring transparent and efficient handling of transaction costs:  
 - **Fee Payer Account**: Each dApp integrates a designated fee payer account on the Router Chain to handle fees for cross-chain requests. This account, configurable per chain, can be updated at any time to adapt to changes.  
 - **Gas Considerations**:  
