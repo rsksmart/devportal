@@ -9,7 +9,7 @@ tags: [powpeg, bridges, developer tools, rsk, testnet, rootstock, ethereum, dApp
 The PowPeg App, formerly the 2 Way Peg App, allows users to convert BTC to RBTC and vice versa. It is secured by the PowPeg protocol, a unique system that safeguards locked bitcoins using the same Bitcoin hash rate that establishes consensus.
 
 
-### Transaction Types
+## Transaction Types
 
 - **Peg-in**: Convert BTC into RBTC by locking Bitcoin in a secure multi-signature wallet. After confirmation, an equivalent amount of RBTC is issued on the Rootstock blockchain.
 - **Peg-out**: Exchange RBTC back into BTC by burning RBTC on Rootstock and unlocking the corresponding BTC for transfer.
