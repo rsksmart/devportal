@@ -6,7 +6,7 @@ description: "CryptoDo is designed to simplify blockchain development for everyo
 tags: [CryptoDo, developer tools, testnet, rsk, testnet, rootstock, ethereum, dApps, smart contracts]
 ---
 
-CryptoDo is designed to simplify blockchain development for everyone, whether you're an experienced developer or new to the web3 space. Here's how to get started with creating your blockchain-based applications using CryptoDo:
+CryptoDo is designed to simplify blockchain development for everyone, whether you're an experienced developer or new to the web3 space. Here's how to get started with creating your blockchain-based applications using CryptoDo.
 
 ## Getting Started with CryptoDo
 
