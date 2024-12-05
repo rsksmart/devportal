@@ -26,7 +26,8 @@ const config = {
   baseUrl: '/',
   customFields: {
     keys : {
-      mendable : process.env.MENDABLE_KEY
+      mendable : process.env.MENDABLE_KEY,
+      cookbook : process.env.COOKBOOK_PUBLIC_API_KEY,
     },
     homePage: {
       editUrl: 'https://github.com/rsksmart/devportal/tree/main/',

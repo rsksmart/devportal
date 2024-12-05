@@ -15,6 +15,8 @@ import LayoutProvider from '@theme/Layout/Provider';
 import ErrorPageContent from '@theme/ErrorPageContent';
 import styles from './styles.module.css';
 import SVGSprite from "./SVGSprite";
+import AskCookbook from '../Navbar/AskCookbook/index';
+
 export default function Layout(props) {
   const {
     children,
@@ -49,6 +51,7 @@ export default function Layout(props) {
 
       {!noFooter && <Footer />}
       <SVGSprite />
+      <AskCookbook />
     </LayoutProvider>
   );
 }
