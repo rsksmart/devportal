@@ -2,7 +2,7 @@
 sidebar_position: 2
 sidebar_label: Umbrella Network
 title: Umbrella Network
-description: "Umbrella Network provides decentralized and scalable oracles designed for high-performance blockchain applications. " 
+description: "Umbrella Network provides decentralized and scalable oracles designed for high-performance blockchain applications." 
 tags: [Umbrella Network, developer tools, rsk, rootstock, ethereum, dApps, smart contracts, testnet, Oracles]
 ---
 
