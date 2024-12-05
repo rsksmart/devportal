@@ -29,7 +29,7 @@ Effective fee management is a critical feature of the Crosstalk Framework, ensur
   - This ensures the transaction on the destination chain has adequate funds for successful execution.  
 
 
-#### **3. Additional Security Modules (ASM)**  
+### **3. Additional Security Modules (ASM)**  
 To ensure robust security, the Crosstalk Framework incorporates Additional Security Modules (ASM), offering:  
 - **Fraud Detection**: Proactively detects and mitigates suspicious activities to protect the integrity of cross-chain interactions.  
 - **Fail-Safe Mechanisms**: Automatically pauses or cancels operations when potential security threats are identified, safeguarding user transactions.  
