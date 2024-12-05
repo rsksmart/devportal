@@ -12,7 +12,7 @@ Router Protocol enables developers to seamlessly interact with multiple blockcha
 
 This section introduces the foundational elements and architecture of the **Crosstalk Framework**, providing insights into its structure and critical features.  
 
-#### **1. High-Level Architecture**  
+### **1. High-Level Architecture**  
 The **Crosstalk Framework** enables easy cross-chain communication and interoperability across multiple blockchain networks. Its architecture consists of the following core components:  
 - **Message Relayers**: Facilitate secure data and transaction transfers between different blockchain ecosystems.  
 - **Smart Contracts**: Handle cross-chain logic, including state synchronization and the execution of NFT transfers.  
