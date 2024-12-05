@@ -2,7 +2,7 @@
 sidebar_position: 1
 sidebar_label: Hyperlane Bridge
 title: Hyperlane Bridge
-description: "Hyperlane is a permissionless interoperability protocol that facilitates easy communication and asset transfers between blockchain networks. " 
+description: "Hyperlane is a permissionless interoperability protocol that facilitates easy communication and asset transfers between blockchain networks." 
 tags: [cross chain, hyperlane bridge, developer tools, rsk, rootstock, testnet, ethereum, dApps, smart contracts]
 ---
 
