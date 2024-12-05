@@ -2,7 +2,7 @@
 sidebar_position: 1
 sidebar_label: Redstone Finance
 title: Redstone Finance
-description: "RedStone Finance offers modular, cross-chain Oracle solutions tailored for DeFi applications." 
+description: "RedStone Finance offers modular, cross-chain oracle solutions tailored for DeFi applications." 
 tags: [Finance, redStone, developer tools, rsk, rootstock, ethereum, Oracles, testnet]
 ---
 
