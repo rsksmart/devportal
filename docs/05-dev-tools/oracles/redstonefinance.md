@@ -7,7 +7,7 @@ tags: [Finance, redStone, developer tools, rsk, rootstock, ethereum, Oracles, te
 ---
 
 
-RedStone Finance offers modular, cross-chain Oracle solutions tailored for DeFi applications. With compatibility across EVM and non-EVM ecosystems such as Rootstock, RedStone empowers developers to access accurate, real-time, and customizable data feeds for diverse use cases such as DEX pricing, yield-bearing collaterals, and staking protocols. 
+RedStone Finance offers modular, cross-chain Oracle solutions tailored for DeFi applications. With compatibility across EVM and non-EVM ecosystems such as Rootstock, RedStone empowers developers to access accurate, real-time, and customizable data feeds for diverse use cases such as DEX pricing, yield-bearing collaterals, and staking protocols. <Shield label="Mainnet" title="Testnet" tooltip="This is avaiable on both Mainnet and Testnet" color="blue" />
 
 The system emphasizes scalability, cost-efficiency, and flexibility, leveraging technologies like Arweave for data archiving.
 
@@ -25,10 +25,7 @@ The system emphasizes scalability, cost-efficiency, and flexibility, leveraging 
 
 3. **Supported Chains**:
    RedStone operates across 
-   - Ethereum, 
-   - Avalanche, 
-   - Polygon, 
-   - StarkNet, 
+   - Rootstock 
    And other chains, ensuring seamless integration for diverse blockchain ecosystems.
 
 For more information and advanced features, visit the <Shield title="RedStone documentation" tooltip="This is the official RedStone documentation" href="https://docs.redstone.finance" color="orange" />
