@@ -1,3 +1,7 @@
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/rsksmart/devportal/badge)](https://scorecard.dev/viewer/?uri=github.com/rsksmart/devportal)
+[![CodeQL](https://github.com/rsksmart/rskj/workflows/CodeQL/badge.svg)](https://github.com/rsksmart/devportal/actions?query=workflow%3ACodeQL)
+<img src="rootstock-logo.png" alt="RSK Logo" style="width:100%; height: auto;" />
+
 # Rootstock Developer Portal
 
 This repo contains the [Rootstock Developer Portal](https://dev.rootstock.io). The Developer Docs is the home for Rootstock documentation for end users and developers. Check out our quickstarts, tutorials, API reference, and code examples.
