@@ -3,7 +3,7 @@ sidebar_position: 102
 sidebar_label: Reown
 title: Account Abstraction using Reown
 description: "Reown gives developers the tools to build user experiences that make digital ownership effortless, intuitive, and secure." 
-tags: [reown, account abstraction, developer tools, rootstock, ethereum, dApps, wallets, solana, wallet connections, wallet infrastructure]
+tags: [reown, account abstraction, developer tools, rootstock, ethereum, dApps, wallets, wallet connections, wallet infrastructure]
 ---
 
 
