@@ -63,7 +63,7 @@ The Rootstock network is innovating in the account abstraction space, here are s
     title="Reown"
     subtitle="account abstraction"
     color="green"
-    description="Reown (prev. known as WalletConnect) gives developers the tools to build user experiences that make digital ownership effortless, intuitive, and secure."
+    description="Reown (prev. known as WalletConnect) provides developers with the tools to build user experiences that make digital ownership effortless, intuitive, and secure."
     linkHref="/dev-tools/account-abstraction/reown/"
     linkTitle="Build with Reown"
   />
