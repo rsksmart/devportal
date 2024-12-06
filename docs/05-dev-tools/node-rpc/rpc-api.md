@@ -31,7 +31,7 @@ JSON-RPC is a remote procedure call protocol encoded in JSON. It’s simple, sta
 
  To learn more about the Rootstock RPC API, including how to use it, features,  click the button below:
  
-<Button href="https://dev.rootstock.io/developers/rpc-api/rootstock/" align="left">Rootstock getBlock Website</Button>
+<Button href="https://dev.rootstock.io/developers/rpc-api/rootstock/" align="left">Rootstock RPC API Guide</Button>
 
 :::
 
