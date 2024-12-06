@@ -6,9 +6,13 @@ description: 'Learn how to interact with Rootstock in your web browser, how to l
 tags: [quick-starts, rsk, rootstock, blockchain, browser wallets, developers, beginners]
 ---
 
-In the [previous section](/developers/blockchain-essentials/overview/), we set up a browser extension that is a crypto wallet, MetaMask. We connected to the Rootstock Testnet, and loaded this up with Rootstock’s cryptocurrency, RBTC, and an Rootstock-based token, RIF.
+In the previous section on [blockchain overview](/developers/blockchain-essentials/overview/), we set up a browser extension that is a crypto wallet, MetaMask. We connected to the Rootstock Testnet, and loaded this up with Rootstock’s cryptocurrency, RBTC, and an Rootstock-based token, RIF.
 
-> Note, if you are yet to do the above, we encourage you to go back and complete that step first. See: [Using Rootstock in the browser](/developers/blockchain-essentials/browser/).
+:::note[Using Rootstock in the browser]
+
+If you are yet to do the above, we encourage you to go back and complete that step first. See: [Using Rootstock in the browser](/developers/blockchain-essentials/browser/).
+
+:::
 
 ## Block Explorer
 
@@ -86,9 +90,7 @@ You will notice that this transaction has a zero amount, but it does emit some e
 
 So far we have checked out individual addresses and transactions. These are very detailed and specific information. What if you were after the big picture instead? A bird’s eye view of the Rootstock blockchain as a whole?
 
-For this, we will not use the Rootstock Block explorer, and instead use the Rootstock Stats page.
+For this, we will not use the Rootstock Block explorer, and instead use the [Rootstock Stats](https://stats.rootstock.io) page.
 
-[Rootstock Stats](https://stats.rootstock.io)
-]
 Here, we can see some very important numbers such as the average block duration, and the merged mining hash rate - and several other important technical indicators of the Rootstock network.
 A key indicator to look for is the average block time, which should be approximately 33s. Another key indicator to look for is the percentage of the Bitcoin network’s hash rate that is merge mining Rootstock.

@@ -81,3 +81,6 @@ If the version to be installed is not defined in the command line, the version w
 | 5.3.0-fingerroot | FINGERROOT-5.3.0 |
 | 5.4.0-fingerroot | FINGERROOT-5.4.0 |
 | 6.0.0-ARROWHEAD | ARROWHEAD-6.0.0 |
+| 6.3.0-ARROWHEAD | ARROWHEAD-6.3.0 |
+| 6.3.1-ARROWHEAD | ARROWHEAD-6.3.1 |
+| 6.4.0-ARROWHEAD | ARROWHEAD-6.4.0 |

@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import Card from "/src/components/Card";
 
 const data = {
-  title: 'Browse by Dev Tools',
+  title: 'Browse by DevTools',
   description: null,
   cards: [
     {
@@ -15,7 +15,7 @@ const data = {
       },
       description: (
         <>
-          Explore the various ways to get RBTC using the 2 Way Peg App, On/Off Ramps, or Exchanges.
+          Explore the various ways to get RBTC using the PowPeg App, On/Off Ramps, or Exchanges.
         </>
       ),
 

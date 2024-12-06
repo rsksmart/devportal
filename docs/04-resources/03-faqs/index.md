@@ -27,7 +27,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
   <Accordion.Item eventKey="2">
     <Accordion.Header as="h3">What is the purpose of Rootstock?</Accordion.Header>
     <Accordion.Body>
-      Rootstock's primary purpose is to enable Bitcoin users to create and execute smart contracts, thereby extending the functionality and use cases of the Bitcoin network. Rootstock achieves this by using a two-way peg system that allows users to send Bitcoin directly to the Rootstock chain, where they become convertible to Rootstock's native cryptocurrency, RBTC. This RBTC can then be used within the Rootstock network to interact with smart contracts and dApps.
+      Rootstock's primary purpose is to enable Bitcoin users to create and execute smart contracts, thereby extending the functionality and use cases of the Bitcoin network. Rootstock achieves this by using a 2 way peg system that allows users to send Bitcoin directly to the Rootstock chain, where they become convertible to Rootstock's native cryptocurrency, RBTC. This RBTC can then be used within the Rootstock network to interact with smart contracts and dApps.
       - In addition to smart contract functionality, Rootstock also focuses on providing solutions for faster transactions and higher scalability, two of the main challenges in the Bitcoin network. It also supports merged mining, allowing Bitcoin miners to mine both Bitcoin and RBTC simultaneously without additional computational resources.
       - Furthermore, Rootstock is also home to the RIF (Rootstock Infrastructure Framework), which provides a range of open and decentralized infrastructure services, including payments, storage, and communications, that enable faster, easier, and scalable development of distributed applications (dApps).
       - Finally, the purpose of Rootstock is to enhance the Bitcoin ecosystem by adding smart contract functionality and more without compromising the features that make Bitcoin unique such as security and decentralization.
@@ -54,7 +54,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     <Accordion.Item eventKey="5">
     <Accordion.Header as="h3">What is the current state of the Rootstock project?</Accordion.Header>
     <Accordion.Body>
-      - As of March 2024, the latest released version of Rootstock is the [Arrowhead v6.0.0](https://github.com/rsksmart/rskj/releases), an update that is mainly focused on bringing Ethereum compatibility enhancements to the Rootstock virtual machine, along with notable improvements and performance optimization in the 2-way peg protocol. Read more [Arrowhead 6.0.0: What You Need To Know About Rootstock’s Upcoming Network Upgrade](https://blog.rootstock.io/noticia/arrowhead-6-0-0/)
+      - As of March 2024, the latest released version of Rootstock is the [Arrowhead v6.0.0](https://github.com/rsksmart/rskj/releases), an update that is mainly focused on bringing Ethereum compatibility enhancements to the Rootstock virtual machine, along with notable improvements and performance optimization in the PowPeg protocol. Read more [Arrowhead 6.0.0: What You Need To Know About Rootstock’s Upcoming Network Upgrade](https://blog.rootstock.io/noticia/arrowhead-6-0-0/)
       - Live statistics about the entire Rootstock network are available at Rootstock Stats, and all the necessary source codes can be found at the Rootstock GitHub organization: [github.com/rsksmart](https://github.com/rsksmart).
     </Accordion.Body>
   </Accordion.Item>
@@ -84,7 +84,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
       > - **Philosophy:** Rootstock is a Bitcoin sidechain highly incentive-aligned with the Bitcoin ecosystem participants. It allows  Bitcoin miners to earn additional transaction fees and allows Bitcoiners to transact in Bitcoin cheaply. The fact that Rootstock's native currency is RBTC also reinforces this alliance. Stacks has its token (STX) to pay transaction fees, and as of February 2024, it doesn’t have any mechanism for transactions in Bitcoin. Therefore, Stacks is not a Bitcoin sidechain but a separate blockchain (or “altcoin”) using Bitcoin to achieve consensus.
       > - **Consensus Mechanism:** Rootstock uses merge-mining with Bitcoin, which means that Rootstock blocks are secured by the same miners that secure Bitcoin. Currently, more than 50% of Bitcoin’s hash rate is securing Rootstock. The core idea of merge-mining dates back to 2010 and was proposed by Satoshi Nakamoto  It was first put into production by Namecoin in 2011. Merged mining has been battle-tested in many blockchains, such as Litecoin, for almost a decade. Rootstock uses a variant of merged mining called DECOR, which is specifically designed for Rootstock's needs. Instead of relying on proven consensus protocols, Stacks was launched with a new consensus protocol called proof-or-burn but changed its consensus several times, the last time to PoX. Soon, it will switch again to the upgrade, as the previous consensus protocols were complex and presented flaws. These unexpected incentives allowed some Bitcoin miners to get an unfair share of Stacks subsidy and had hard scalability limitations regarding block time. Making things worse, the soundness of the new protocol is not proven, and it will be tested in production.
       > - **Smart Contract Capabilities:** The Rootstock VM is highly compatible with the EVM (Ethereum virtual machine) and with the Ethereum web3 standard. Most Ethereum applications can be ported to Roostock with a few configuration changes. Solidity is the main language used to program the EVM. It compiles a high-level language that [resembles C++ or Java](https://docs.soliditylang.org/en/latest/language-influences.html) into EVM opcodes.  Over the years, Solidity became a de-facto standard for contract development, providing a rich toolchain that includes compilation, testing, and security analysis tools. There are also thousands of online tutorials, libraries, and examples. Almost on the opposite side of the design decision spectrum, Stacks uses the Clarity programming language to code smart contracts. Clarity is a new LISP-like language that is only used by Stacks. Clarity is interpreted on-chain and not compiled, slows execution and limits scalability while providing more transparency. While interesting in theory, the transparency argument was rendered moot in practice as users of rootstock and Ethereum have gotten used to checking the availability and correctness of source code using automated tools that check its matching with the deployed code. A new ClarityWASM was announced in a planned upgrade to cope with the scalability problem of Stacks, but this upgrade still doesn’t provide direct  EVM compatibility.
-      > - Peg mechanism: Rootstock two-way peg is based on a federation of functionaries, each running a hardware security module (the PowHSM) that participates in a multi-sig that protects the locked funds. Hundreds of millions of USD in bitcoins are currently secured by Rootstock peg. Stacks doesn’t have a peg to Bitcoin that allows it to transfer bitcoins back and forth. A planned upgrade is supposed to add a collateralized two-way peg to Bitcoin.
+      > - Peg mechanism: Rootstock 2 way peg is based on a federation of functionaries, each running a hardware security module (the PowHSM) that participates in a multi-sig that protects the locked funds. Hundreds of millions of USD in bitcoins are currently secured by Rootstock peg. Stacks doesn’t have a peg to Bitcoin that allows it to transfer bitcoins back and forth. A planned upgrade is supposed to add a collateralized 2 way peg to Bitcoin.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="9">
@@ -94,14 +94,14 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
       - Some of the main differences are:
       > - **Consensus mechanism:** Rootstock uses merge-mining with Bitcoin, which means that Rootstock blocks are secured by the same miners that secure Bitcoin. Currently, more than 50% of Bitcoin hashrate is securing Rootstock. Liquid uses a federation of trusted functionaries that validate and sign blocks. Rootstock’s merge-mining is more decentralized than Liquid’s federation and provides the thermodynamic security of PoW, which Liquid does not.
       > - **Smart contract capabilities:** Rootstock supports Turing-complete smart contracts and has a virtual machine almost identical to Ethereum’s. This allows developers to use the same tools, libraries, and languages as Ethereum and port existing applications to Rootstock. Liquid has a simpler scripting system that is not Turing-complete (within a single transaction) and only supports a limited set of use cases, such as atomic swaps and multi-sig transactions.
-      > - **Peg mechanism:** Both Rootstock’s and Liquid’s two-way pegs are based on a federation of functionaries, each running a hardware security module (HSM) that participates in a multisig that protects the locked funds. Both also have emergency recovery systems. However, every Liquid withdrawal is advanced by one functionary to a user, and then the Liquid blockchain reimburses the functionary. This is known as a repayment protocol. Some or all functionaries require KYC checks. Rootstock system performs peg-outs directly to the user's Bitcoin wallet and currently does not impose KYC on peg-outs but forces the same user to be on both sides of the transfer. [Rootstock Flyover](/developers/integrate/) system provides faster peg-outs, also using a repayment system.
+      > - **Peg mechanism:** Both Rootstock’s and Liquid’s 2 way pegs are based on a federation of functionaries, each running a hardware security module (HSM) that participates in a multisig that protects the locked funds. Both also have emergency recovery systems. However, every Liquid withdrawal is advanced by one functionary to a user, and then the Liquid blockchain reimburses the functionary. This is known as a repayment protocol. Some or all functionaries require KYC checks. Rootstock system performs peg-outs directly to the user's Bitcoin wallet and currently does not impose KYC on peg-outs but forces the same user to be on both sides of the transfer. [Rootstock Flyover](/developers/integrate/) system provides faster peg-outs, also using a repayment system.
       > - **Scalability:** Rootstock can achieve a higher transaction throughput than Liquid because Rootstock’s transactions are smaller, its blocks can contain more transactions, and the Rootstock blockchain has a lower average block interval. Rootstock also has several scalability proposals close to being finalized, such as parallel transaction processing.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="10">
     <Accordion.Header as="h3">How is Rootstock different from drivechains?</Accordion.Header>
     <Accordion.Body>
-      - A drivechain is a special sidechain with a specific type of two-way-peg called “hashrate escrow.” This peg mechanism gives most Bitcoin miners control of sidechain withdrawals but incentivizes miners to be honest and not abuse their powers. To achieve this, miners publicly confirm or reject withdrawals during a long period that can last 3 months. During this period, the community can detect cheaters that confirm invalid withdrawals. The peg is secure as long as there are strong long-term incentives for the honest majority of miners not to cheat. Rootstock, on the contrary, does not rely on monetary incentives. It uses a federation of PowHSM devices, and the tamper-proof devices vote on withdrawals. At the same time, each device enforces the same type of “hashrate escrow” but with a much-reduced timeframe of days. Therefore both Drivechains and Rootstock require the miner hashrate to support every withdrawal.
+      - A drivechain is a special sidechain with a specific type of 2 way peg called “hashrate escrow.” This peg mechanism gives most Bitcoin miners control of sidechain withdrawals but incentivizes miners to be honest and not abuse their powers. To achieve this, miners publicly confirm or reject withdrawals during a long period that can last 3 months. During this period, the community can detect cheaters that confirm invalid withdrawals. The peg is secure as long as there are strong long-term incentives for the honest majority of miners not to cheat. Rootstock, on the contrary, does not rely on monetary incentives. It uses a federation of PowHSM devices, and the tamper-proof devices vote on withdrawals. At the same time, each device enforces the same type of “hashrate escrow” but with a much-reduced timeframe of days. Therefore both Drivechains and Rootstock require the miner hashrate to support every withdrawal.
       - Drivechains are promising but not currently available as they require a soft-fork in Bitcoin, which has been historically considered controversial and may never be performed. While drivechains may provide greater decentralization, the drivechain peg mechanism has never been tested, so the drivechain peg security is still uncertain.
     </Accordion.Body>
   </Accordion.Item>
@@ -109,7 +109,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     <Accordion.Header as="h3">How is Rootstock different from Lightning?</Accordion.Header>
     <Accordion.Body>
       - Rootstock and Lightning are both layer-2 solutions that aim to improve the scalability and functionality of Bitcoin, but they have different approaches and trade-offs. Some of the main differences are:
-      > - **Architecture:** Rootstock is a sidechain connected to the Bitcoin mainchain through a two-way peg mechanism, allowing users to lock and unlock bitcoins on both chains. Lightning is a network of payment channels built on the Bitcoin mainchain, allowing users to send and receive bitcoins off-chain.
+      > - **Architecture:** Rootstock is a sidechain connected to the Bitcoin mainchain through a 2 way peg mechanism, allowing users to lock and unlock bitcoins on both chains. Lightning is a network of payment channels built on the Bitcoin mainchain, allowing users to send and receive bitcoins off-chain.
       > - **Smart contracts:** Rootstock supports Turing-complete smart contracts and is compatible with the Ethereum Virtual Machine, which enables a wide range of decentralized applications and use cases on the Bitcoin network. Lightning only supports simple scripts, and transactions mainly focus on fast and cheap payments.
       > - **Security and Liveness:** Rootstock is secured by merge-mining with Bitcoin, which means that Rootstock blocks are validated by the same miners and hash power as Bitcoin. The Bitcoin mainchain, the ultimate arbiter and enforcer of the payment channel, secures Lightning. Rootstock has greater liveness guarantees than Lightning. Lightning requires the cooperation of the parties sharing the payment channels and the existence of channel paths to destination addresses for payments to succeed. Rootstock blocks are always being produced, and as long as the Rootstock gas price specified in a transaction is adequate, transactions always get confirmed. Lightning security relies on parties checking their channels occasionally to avoid malicious closures. Rootstock security does not require the users to be active online or monitor their wallets continuously.
     </Accordion.Body>
@@ -131,28 +131,34 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
 ````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="1">
-    <Accordion.Header as="h3">What is the RIF token, and what is its purpose?</Accordion.Header>
-    <Accordion.Body>
-      - The RIF token is a utility token that powers the Rootstock Infrastructure Framework (RIF), a set of open-source, decentralized tools and technologies that make it easy to build accessible DeFi products and services on the blockchain. It is designed to enable and facilitate the wide range of decentralized services available on the RIF platform. The RIF token is the means of access for all RIF protocols, such as RIF Wallet, RNS, and third-party-developed infrastructure services. Also, any other apps that might be deployed on RIF’s framework that agree to accept RIF Tokens as a means of accessing/consuming the service or app, such as RIF on Chain, the stablecoin protocol underpinning USDRIF. See the [RIF Whitepaper](https://rif.technology/static/add903ce229a6f45a606cd78b028cf9e/RIF-whitepaper-V2.pdf) for more details.
-    </Accordion.Body>
-  </Accordion.Item>
-   <Accordion.Item eventKey="2">
     <Accordion.Header as="h3">What is the RBTC token, and what is its purpose?</Accordion.Header>
     <Accordion.Body>
-      - The RIF token is a utility token that powers the Rootstock Infrastructure Framework (RIF), a set of open-source, decentralized tools and technologies that make it easy to build accessible DeFi products and services on the blockchain. It is designed to enable and facilitate the wide range of decentralized services available on the RIF platform. The RIF token is the means of access for all RIF protocols, such as RIF Wallet, RNS, and third-party-developed infrastructure services. Also, any other apps that might be deployed on RIF’s framework that agree to accept RIF Tokens as a means of accessing/consuming the service or app, such as RIF on Chain, the stablecoin protocol underpinning USDRIF. See the [RIF Whitepaper](https://rif.technology/static/add903ce229a6f45a606cd78b028cf9e/RIF-whitepaper-V2.pdf) for more details.
-    </Accordion.Body>
-  </Accordion.Item>
-   <Accordion.Item eventKey="3">
-    <Accordion.Header as="h3">What is the RIF token, and what is its purpose?</Accordion.Header>
-    <Accordion.Body>
-      - The RIF token is a utility token that powers the Rootstock Infrastructure Framework (RIF), a set of open-source, decentralized tools and technologies that make it easy to build accessible DeFi products and services on the blockchain. It is designed to enable and facilitate the wide range of decentralized services available on the RIF platform. The RIF token is the means of access for all RIF protocols, such as RIF Wallet, RNS, and third-party-developed infrastructure services. Also, any other apps that might be deployed on RIF’s framework that agree to accept RIF Tokens as a means of accessing/consuming the service or app, such as RIF on Chain, the stablecoin protocol underpinning USDRIF. See the [RIF Whitepaper](https://rif.technology/static/add903ce229a6f45a606cd78b028cf9e/RIF-whitepaper-V2.pdf) for more details.
-    </Accordion.Body>
-  </Accordion.Item>
-     <Accordion.Item eventKey="4">
-    <Accordion.Header as="h3">What is the RBTC token, and what is its purpose?</Accordion.Header>
-    <Accordion.Body>
-      - Smart Bitcoin (RBTC) is the native token of the Rootstock network. RBTC is pegged 1:1 to BTC, enabling Bitcoin transactions on the Rootstock and networks. It can be converted to and from BTC through the PowPeg.
+      - Smart Bitcoin (RBTC) is the native token of the Rootstock network. RBTC is pegged 1:1 to BTC, enabling Bitcoin transactions on the Rootstock and networks. It can be converted to and from BTC through the PowPeg protocol.
       - RBTC is used as gas to pay for executing transactions and smart contracts on the Rootstock network, rewarding miners and nodes, enabling interoperability among Bitcoin-based applications, and supporting the development of new solutions such as RIF Products.
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="2">
+    <Accordion.Header as="h3">What is the RIF token, and what is its purpose?</Accordion.Header>
+    <Accordion.Body>
+      - The RIF token is a utility token that powers the Rootstock Infrastructure Framework (RIF), a set of open-source, decentralized tools and technologies that make it easy to build accessible DeFi products and services on the blockchain. It is designed to enable and facilitate the wide range of decentralized services available on the RIF platform. The RIF token is the means of access for all RIF protocols, such as RIF Wallet, RNS, and third-party-developed infrastructure services. Also, any other apps that might be deployed on RIF’s framework that agree to accept RIF Tokens as a means of accessing/consuming the service or app, such as RIF on Chain, the stablecoin protocol underpinning USDRIF. See the [RIF Whitepaper](https://rif.technology/static/add903ce229a6f45a606cd78b028cf9e/RIF-whitepaper-V2.pdf) for more details.
+      - The RIF Token is also the governance token for the Rootstock Collective - stRIF, a token created by [staking RIF tokens](https://rif.technology/rif-token/). stRIF tokens represent voting power within the DAO, enabling token holders to participate in governance decisions like grant allocations and changes to the system. [RBTC, native Rootstock token](https://rootstock.io/rbtc/#get-rbtc), is used as a gas token.
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="3">
+    <Accordion.Header as="h3">What is the Rootstock Collective?</Accordion.Header>
+    <Accordion.Body>
+      - [Rootstock Collective](https://rootstockcollective.xyz/), or The Collective, is a DAO (Decentralized Autonomous Organization) designed to develop the Rootstock ecosystem by empowering and rewarding builders and users of Rootstock, and RIF token holders. As a merged-mined Bitcoin sidechain, Rootstock’s heartbeat is inextricably linked to Bitcoin. With blocks separated by seconds, instead of minutes, the Rootstock network ‘beats’ a lot faster, and serves as a scaling solution for Bitcoin. On Rootstock, developers are able to build rich, EVM-compatible, web3 apps – and they can do this using Bitcoin as the native currency, in the form of RBTC.
+      - View the [Rootstock Collective Whitepaper](https://wiki.rootstockcollective.xyz/2c6e3b87b49f4c1e9225b713e1b49538?v=819168fca4964319896c19e8299a8ea0) or read the [Rootstock Collective Whitepaper FAQs](https://wiki.rootstockcollective.xyz/RootstockCollective-FAQ-1031ca6b0b02808c95d3dcb5a0074f4b).
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="4">
+    <Accordion.Header as="h3">What can I join the Rootstock Collective?</Accordion.Header>
+    <Accordion.Body>
+      To join Rootstock Collective, you will need to have RIF tokens, and then stake them into stRIF governance tokens. These stRIF tokens give you voting rights and participation in the DAO’s governance and decision-making process. You can become part of the Rootstock Collective in three steps:
+        * Install [MetaMask and add Rootstock](/dev-tools/wallets/metamask/)
+        * Get RBTC
+        * Get RIF
+        * Connect wallet to [http://app.rootstockcollective.xyz/](http://app.rootstockcollective.xyz/) and stake RIF.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="5">
@@ -160,7 +166,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     <Accordion.Body>
       - The RIF token is different from RBTC in the following ways:
       > - **Purpose:** RBTC is the native token of the Rootstock network used to maintain a one-to-one relationship with Bitcoin. It is also used as gas to pay for smart contract execution and transaction fees on the network. RIF is a utility token used to access the services of the RIF  protocols.
-      > - **Portability:** RBTC is pegged 1:1 to BTC and can be converted to and from BTC using the 2-way peg mechanism. RIF is an ERC20-compatible token that can be transferred across smart contract platforms.
+      > - **Portability:** RBTC is pegged 1:1 to BTC and can be converted to and from BTC using the 2 Way Peg mechanism. RIF is an ERC20-compatible token that can be transferred across smart contract platforms.
       > - **Supply:** RBTC has the same supply as BTC, which is capped at 21 million. RIF has a fixed supply of 1 billion tokens, which were pre-mined and distributed according to a token sale and an allocation plan.
     </Accordion.Body>
   </Accordion.Item>
@@ -173,12 +179,6 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="7">
-    <Accordion.Header as="h3">How does the peg work?</Accordion.Header>
-    <Accordion.Body>
-      - The Rootstock peg has several modes to accomplish transfers: version 1, version 2, and flyover. The version 1 protocol is quite simple. When a Bitcoin user wants to use the 2-Way Peg, he sends a peg-in transaction to a multisig wallet whose funds are secured by the PowPeg. The same public key associated with Bitcoin addresses related to the source bitcoins in a peg-in transaction is used on the Rootstock chain to obtain the destination address where the Smart Bitcoins are received. Although both Bitcoin and Rootstock's public and private keys are similar, each blockchain encodes the address in a different format. This means that the addresses on both blockchains are different but can be proven to belong to the same person.
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="8">
     <Accordion.Header as="h3">What wallets support Rootstock and RIF tokens?</Accordion.Header>
     <Accordion.Body>
       - Rootstock is currently supported in several different software and hardware wallets. See [Wallets on Rootstock](/dev-tools/wallets/) pages for more information.
@@ -248,12 +248,6 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
       - Rootstock addresses are similar to Ethereum addresses. To avoid situations where users mistakenly send funds to Ethereum addresses or vice versa, Rootstock uses an address checksum mechanism that distinguishes between chains. This is currently in use in almost all Ethereum-like networks. Although this is not enforced in the node itself, it’s important to consider it at the client level (e.g., wallets). The checksum mechanism is described in the [RSKIP-60](https://github.com/rsksmart/RSKIPs/blob/master/IPs/RSKIP60.md) Rootstock Improvement Proposal.
     </Accordion.Body>
   </Accordion.Item>
-  <Accordion.Item eventKey="10">
-    <Accordion.Header as="h3">What is the RIF token, and what is its purpose?</Accordion.Header>
-    <Accordion.Body>
-      ...
-    </Accordion.Body>
-  </Accordion.Item>
 </Accordion>
 ````
 
@@ -265,15 +259,16 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
   <Accordion.Item eventKey="1">
     <Accordion.Header as="h3">What is RIF, and what are its goals?</Accordion.Header>
     <Accordion.Body>
-      - [Rootstock Infratstructure Framework](/concepts/rif-suite/) (RIF) is a suite of open and decentralized infrastructure protocols that enable faster, easier, and more scalable distributed application development (dApps) within a unified environment. RIF  is built on the Rootstock smart contract network, the first general-purpose smart contract secured by the Bitcoin network. RIF  includes support for decentralized, third-party, off-chain payment networks; and easy-to-use interfaces for developers.
-      - RIF  aims to bridge the gap between blockchain technologies and their mass-market adoption by providing developers and users access to various services across multiple crypto-economies.
+      - [Rootstock Infrastructure Framework](/concepts/rif-suite/) (RIF) is a suite of open and decentralized infrastructure protocols that enable faster, easier, and more scalable distributed application development (dApps) within a unified environment. RIF  is built on the Rootstock smart contract network, the first general-purpose smart contract secured by the Bitcoin network. RIF  includes support for decentralized, third-party, off-chain payment networks; and easy-to-use interfaces for developers.
+      - RIF aims to bridge the gap between blockchain technologies and their mass-market adoption by providing developers and users access to various services across multiple crypto-economies.
+      -  The RIF Token is the governance token for the Rootstock Collective - stRIF, a token created by [staking RIF tokens](https://rif.technology/rif-token/). stRIF tokens represent voting power within the DAO, enabling token holders to participate in governance decisions like grant allocations and changes to the system. [RBTC, native Rootstock token](https://rootstock.io/rbtc/#get-rbtc), is used as a gas token.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">
     <Accordion.Header as="h3">What exactly is the value proposition of RIF?</Accordion.Header>
     <Accordion.Body>
       - RIF is a service layer built on the Rootstock blockchain, offering open, decentralized tools and technologies. With RIF, developers can create scalable DeFi products quickly and easily.
-      - RIF token is the native token of the RIF ecosystem. It is a utility asset used to interact with RIF products and services.
+      - RIF token is the native token of the RIF ecosystem and also the governance token (stRIF) for the Rootstock Collective (DAO). It is a utility asset used to interact with RIF products and services. Read the [RIF Whitepaper](https://rif.technology/static/add903ce229a6f45a606cd78b028cf9e/RIF-whitepaper-V2.pdf).
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="3">
@@ -290,7 +285,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
       - Anyone registering a domain in RNS can sell the domain directly or using a third-party secondary market.
     </Accordion.Body>
   </Accordion.Item>
-  <Accordion.Item eventKey="5">
+  <!-- <Accordion.Item eventKey="5">
     <Accordion.Header as="h3">What is RIF Rollup? How does RIF Rollup L2 Solution scale Payments on Rootstock?</Accordion.Header>
     <Accordion.Body>
       - RIF Rollup is a trustless protocol for fast, scalable, low-cost payments on Rootstock. ZkRollup Technology powers it and is a fork of the Zero Knowledge zkSync Lite (v1) developed by Matter Labs. Its current functionality and scope include low gas transfers of RBTC and ERC20 tokens on the Rootstock network.
@@ -298,12 +293,11 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
       - Here's how it works:
       > A group of layer 2 transactions are included in a Rollup block. State changes associated with all layer 2 transactions are communicated to layer 1 using transaction call data. In case of some irrecoverable failure of the rollup system, data availability permits users to reconstruct the layer 2 state and recover locked assets from the rollup contract. For each Rollup block, a SNARK (a family of cryptographic proof systems) is generated to prove the validity of every single transaction in the Rollup block. Once the proof is generated, it can be verified using the Rollup contract on layer 1.
     </Accordion.Body>
-  </Accordion.Item>
+  </Accordion.Item> -->
   <Accordion.Item eventKey="6">
-    <Accordion.Header as="h3">What is RIF Flyover?</Accordion.Header>
+    <Accordion.Header as="h3">What is RBTC Flyover?</Accordion.Header>
     <Accordion.Body>
-      - RIF Flyover is a protocol that provides a fast and secure way for users to transfer Bitcoin (BTC) in and out of the Rootstock Ecosystem. Once the BTC is in the Rootstock Ecosystem, it can interact with various applications to send, save, and spend money.
-      - RIF Flyover enables users to earn interest, access loans, hedge against inflation, and more, all in a decentralized and censorship-resistant way. It essentially turns Bitcoin from a simple store of value into a fully decentralized financial system. This makes it easier to onboard customers into DeFi on Bitcoin.
+      - The [RBTC Flyover](/developers/integrate/flyover/) is an innovative protocol built on top of the Rootstock network that significantly speeds up the process of transferring Bitcoin (BTC) to Rootstock Bitcoin (RBTC). It achieves this by leveraging a pool of liquidity providers who hold both BTC and RBTC, enabling near-instantaneous transfers with minimal confirmations.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="7">
@@ -322,12 +316,18 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
 ````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="1">
-    <Accordion.Header as="h3">What is the PowPeg Federation, and what is its role in the two-way peg?</Accordion.Header>
+    <Accordion.Header as="h3">What is the PowPeg Federation, and what is its role in the PowPeg?</Accordion.Header>
     <Accordion.Body>
-      - The PowPeg Federation is a group of functionaries that run specialized hardware called PowHSMs to facilitate the transfer of bitcoins between the main chain and the side chain and protect the bitcoins locked in the two-way peg between Rootstock and Bitcoin. The PowPeg Federation does not directly control the private keys of the Bitcoin multisig but only signs transactions that are proven valid by enough cumulative work. The PowPeg Federation also provides a watch tower service to inform the Rootstock Bridge smart contract about peg-in transactions. The PowPeg Federation's role is to keep their hardware and nodes connected and alive at all times and to audit the changes in the PowHSM, the Powpeg node, and the communication between them.
+      - The PowPeg Federation is a group of functionaries that run specialized hardware called PowHSMs to facilitate the transfer of bitcoins between the main chain and the side chain and protect the bitcoins locked in the 2 way peg between Rootstock and Bitcoin. The PowPeg Federation does not directly control the private keys of the Bitcoin multisig but only signs transactions that are proven valid by enough cumulative work. The PowPeg Federation also provides a watch tower service to inform the Rootstock Bridge smart contract about peg-in transactions. The PowPeg Federation's role is to keep their hardware and nodes connected and alive at all times and to audit the changes in the PowHSM, the PowPeg node, and the communication between them.
     </Accordion.Body>
   </Accordion.Item>
-  <Accordion.Item eventKey="2">
+    <Accordion.Item eventKey="2">
+    <Accordion.Header as="h3">How does the PowPeg work?</Accordion.Header>
+    <Accordion.Body>
+      - The Rootstock peg has several modes to accomplish transfers: version 1, version 2, and the RBTC flyover. The version 1 protocol is quite simple. When a Bitcoin user wants to use the PowPeg, he sends a peg-in transaction to a multisig wallet whose funds are secured by the PowPeg. The same public key associated with Bitcoin addresses related to the source bitcoins in a peg-in transaction is used on the Rootstock chain to obtain the destination address where the Smart Bitcoins are received. Although both Bitcoin and Rootstock's public and private keys are similar, each blockchain encodes the address in a different format. This means that the addresses on both blockchains are different but can be proven to belong to the same person.
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="3">
     <Accordion.Header as="h3">What is the Armadillo monitoring system?</Accordion.Header>
     <Accordion.Body>
       > - How does it protect the Rootstock network from malicious miners?
@@ -335,16 +335,16 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
       - The Armadillo system protects the Rootstock network from malicious miners by providing timely and accurate information to the nodes and the community. The Rootstock nodes can use the Armadillo data to adjust their security parameters and reject blocks that are not sufficiently visible. The community can use the Armadillo data to monitor the network's health and take actions to mitigate the risk of an attack.
     </Accordion.Body>
   </Accordion.Item>
-  <Accordion.Item eventKey="3">
+  <Accordion.Item eventKey="4">
     <Accordion.Header as="h3">What is the Rootstock virtual machine, and how is it compatible with Ethereum?</Accordion.Header>
     <Accordion.Body>
       - The Rootstock virtual machine (RVM) is the core of the Rootstock smart contract platform. The RVM is a forked version of the Ethereum virtual machine (EVM), meaning it can execute the same bytecode and opcodes as the EVM. The RVM is compatible with Ethereum smart contracts and the tools used to deploy and interact with them, such as Solidity, Hardhat, Foundry, Remix, etc. The RVM also has features such as native support for Bitcoin opcodes, precompiled contracts for elliptic curve cryptography, and a performance improvement pipeline.
     </Accordion.Body>
   </Accordion.Item>
-  <Accordion.Item eventKey="4">
-    <Accordion.Header as="h3">What is the Rootstock two-way peg, and how does it work?</Accordion.Header>
+  <Accordion.Item eventKey="5">
+    <Accordion.Header as="h3">What is the Rootstock PowPeg, and how does it work?</Accordion.Header>
     <Accordion.Body>
-      - The Rootstock two-way peg is a protocol that allows users to transfer bitcoins from the Bitcoin blockchain to the Rootstock blockchain and back, creating a token called RBTC that is pegged to the value of Bitcoin. The Rootstock two-way peg works by locking bitcoins in a multi-signature address on the Bitcoin side and releasing an equivalent amount of RBTC on the Rootstock side. The reverse process is also possible by burning RBTC on the Rootstock side and unlocking bitcoins on the Bitcoin side. A group of reputable organizations controls the multi-signature address called the PowPeg Federation, which uses special hardware devices called PowHSMs to protect private keys and validate transactions. The PowHSMs only sign transactions approved by both the Rootstock and Bitcoin networks using a proof-of-work mechanism. This way, the Rootstock two-way peg ensures high security and decentralization for the peg-in and peg-out transactions.
+      - The Rootstock 2 way peg is a protocol that allows users to transfer bitcoins from the Bitcoin blockchain to the Rootstock blockchain and back, creating a token called RBTC that is pegged to the value of Bitcoin. The Rootstock 2 way peg works by locking bitcoins in a multi-signature address on the Bitcoin side and releasing an equivalent amount of RBTC on the Rootstock side. The reverse process is also possible by burning RBTC on the Rootstock side and unlocking bitcoins on the Bitcoin side. A group of reputable organizations controls the multi-signature address called the PowPeg Federation, which uses special hardware devices called PowHSMs to protect private keys and validate transactions. The PowHSMs only sign transactions approved by both the Rootstock and Bitcoin networks using a proof-of-work mechanism. This way, the Rootstock 2 way peg ensures high security and decentralization for the peg-in and peg-out transactions.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>

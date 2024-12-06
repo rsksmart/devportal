@@ -22,6 +22,14 @@ linkHref="/resources/tutorials/rootstock-rust/"
 description="Rust is extensively getting used on backend side of many defi applications, dApps, developer tools, indexers and bridges. This guide will help developers to start using Rust on Rootstock blockchain."
 />
 <FilterItem
+value="beginner"
+title="Deploy, Interact and Verify Smart Contracts using Remix and Rootstock Explorer"
+subtitle="Remix"
+color="orange"
+linkHref="/developers/quickstart/remix/"
+description="In this guide, we will use the Remix IDE to write, compile, deploy, interact and verify a smart contract on the Rootstock Explorer."
+/>
+<FilterItem
 value="beginner, advanced"
 title="Add Rootstock to Metamask Programmatically"
 subtitle="metamask"
@@ -60,6 +68,14 @@ subtitle="defillama"
 color="orange"
 linkHref="/resources/tutorials/defillama/"
 description="DefiLlama is the largest TVL aggregator for DeFi. Learn how to list a DeFi project and write an SDK adapter to add a Protocol to DefiLlama."
+/>
+<FilterItem
+value="advanced"
+title="Run Hyperlane Bridge on Rootstock"
+subtitle="hyperlane"
+color="orange"
+linkHref="/resources/tutorials/hyperlane-bridge/"
+description="Hyperlane is the first universal and permissionless interoperability layer built for the modular blockchain stack. Learn how to run Hyperlane on Rootstock blockchain."
 />
 </Filter>
 ````

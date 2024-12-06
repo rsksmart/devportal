@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {ShareButtons} from "/src/components/ShareButtons";
+import { ToTopButton } from '/src/components/ToTopButton'
 
 import styles from './styles.module.scss';
 import clsx from "clsx";
@@ -38,6 +39,7 @@ export default function Aside({editUrl}){
       <div className={`flex-grow-1 position-relative d-none d-lg-flex flex-column`}>
         <div className={clsx(styles.docItemAsideBottom, 'position-sticky mt-auto')}>
           <ShareButtons/>
+          <ToTopButton className="mt-24"/>
         </div>
       </div>
     </div>

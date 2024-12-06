@@ -1,5 +1,5 @@
 ---
-sidebar_position: 300
+sidebar_position: 700
 sidebar_label: Verify address ownership
 title: 'Verify Address Ownership with Metamask Wallet'
 description: 'Confirm that you own an Rootstock address using RIF Identity Manager'

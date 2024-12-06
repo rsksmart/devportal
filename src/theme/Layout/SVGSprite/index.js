@@ -74,7 +74,20 @@ export default function SVGSprite() {
         <symbol viewBox="0 0 16 16" fill="none" id="icon-link-external">
           <path fillRule="evenodd" clipRule="evenodd" d="M3.33333 3.33333V12.6667H12.6667V8H14V14H2V2H8V3.33333H3.33333ZM9.33333 3.33333V2H14V6.66667H12.6667V4.27333L6.11333 10.8267L5.17333 9.88667L11.7267 3.33333H9.33333Z" fill="currentColor"/>
         </symbol>
-
+        <symbol id="icon-arrow-top" viewBox="0 0 16 16" fill="none">
+          <path d="M7.33 14.67V3.88L4.27 6.93 3.33 6 8 1.33 12.67 6l-.94.95-3.06-3.07v10.79H7.33Z" fill="currentColor"/>
+        </symbol>
+        <symbol id="icon-doc" viewBox="0 0 24 24" fill="none">
+          <path fill="currentColor" d="m19.27 6.97-5.24-5.25a.68.68 0 0 0-.53-.22H6c-.83 0-1.5.67-1.5 1.5v18c0 .82.67 1.5 1.5 1.5h12c.82 0 1.5-.68 1.5-1.5V7.5a.68.68 0 0 0-.23-.53ZM13.5 3.3l4.2 4.2h-4.2V3.3ZM18 21H6V3h6v4.5c0 .82.68 1.5 1.5 1.5H18v12Z"/>
+          <path fill="currentColor" d="M16.5 16.5h-9V18h9v-1.5ZM16.5 12h-9v1.5h9V12Z"/>
+        </symbol>
+        <symbol id="icon-search" viewBox="0 0 20 20" fill="none">
+          <path d="m18.63 17.28-4.15-4.15a.4.4 0 0 0-.29-.12h-.45a7.1 7.1 0 1 0-.73.73v.45c0 .11.04.21.12.3l4.15 4.14c.16.16.42.16.58 0l.77-.77a.41.41 0 0 0 0-.58ZM8.36 13.83a5.47 5.47 0 1 1 0-10.94 5.47 5.47 0 0 1 0 10.94Z" fill="currentColor"/>
+        </symbol>
+        <symbol id="icon-close" viewBox="0 0 16 16" fill="none">
+          <path fillRule="evenodd" clipRule="evenodd" d="M12.86 13.8 2.2 3.14l.94-.94L13.8 12.86l-.94.94Z" fill="currentColor"/>
+          <path fillRule="evenodd" clipRule="evenodd" d="M2.2 12.86 12.86 2.2l.94.94L3.14 13.8l-.94-.94Z" fill="currentColor"/>
+        </symbol>
       </defs>
     </svg>
   );

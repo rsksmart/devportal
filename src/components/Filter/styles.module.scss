@@ -5,3 +5,9 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.SearchClearBtn{
+  opacity: 0.5;
+  &:hover{
+    opacity: 1;
+  }
+}

@@ -46,7 +46,7 @@ const data = {
       ],
     },
     {
-      title: 'Become a Node Miner',
+      title: 'Become a Merged Miner',
       color: 'green',
       description: (
         <>

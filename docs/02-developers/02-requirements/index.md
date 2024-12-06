@@ -1,119 +1,136 @@
 ---
-sidebar_label: Development Prerequisites
+sidebar_label: Rootstock Development Prerequisites
 sidebar_position: 2
-title: Prerequisites
+title: Rootstock Development Prerequisites
 tags: [rsk, rootstock, prerequisites, setup, requirements]
 description: "Minimum hardware requirements for Rootstock."
 ---
 
-This guide provides clear instructions for developers on the supported Solidity versions and the necessary configurations needed to ensure your smart contracts are deployed on the Rootstock network. See the [developer tools](/dev-tools/) section for a list of tools to build on Rootstock.
+This guide provides clear instructions for developers on the supported Solidity versions and the necessary configurations needed to ensure your smart contracts are deployed on the Rootstock network.
 
-## Solidity Version
-- Supported solc version: `0.8.19`
+:::tip[Hackathons & Workshops]
 
-## Node RPC
-- Interact with Rootstock using the [RPC API](https://rpc.rootstock.io/)
+- Participating in a Rootstock Hackathon or Workshop?
+- Visit the [Hackathon Resources](/resources/hackathon/)  section for details.
 
-:::tip[Get an API Key]
-See how to setup the RPC API and get an [API Key](/developers/rpc-api/setup).
+- **Resources:**
+  - Explore the [Developer Tools](/dev-tools/) section for a full list of tools and resources.
+
+````mdx-code-block
 :::
+<Steps>
+ <Step title="Software Requirements:">
 
-## Network Configuration
 
-Fill these values to connect to the Rootstock Mainnet or Testnet.
 
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Field</th>
-      <th scope="col">Rootstock Mainnet</th>
-      <th scope="col">Rootstock Testnet</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Network Name</td>
-      <td>Rootstock Mainnet</td>
-      <td>Rootstock Testnet</td>
-    </tr>
-    <tr>
-      <td>RPC URL</td>
-      <td>https://rpc.mainnet.rootstock.io/{YOUR_APIKEY}</td>
-      <td>https://rpc.testnet.rootstock.io/{YOUR_APIKEY}</td>
-    </tr>
-    <tr>
-      <td>ChainID</td>
-      <td>30</td>
-      <td>31</td>
-    </tr>
-    <tr>
-      <td>Symbol</td>
-      <td>RBTC</td>
-      <td>tRBTC</td>
-    </tr>
-    <tr>
-      <td>Block explorer URL</td>
-      <td><a href="https://explorer.rootstock.io/" target="_blank">https://explorer.rootstock.io/</a></td>
-      <td><a href="https://explorer.testnet.rootstock.io/" target="_blank">https://explorer.testnet.rootstock.io/</a></td>
-    </tr>
-  </tbody>
-</table>
+Set up the necessary software for a seamless development experience:
 
-## Contract Addresses
+- **Solidity Version:**
+  - Supported compiler version: **`solc 0.8.19`**.
+  - Use compatible versions to avoid deployment errors.
 
-* See the List of [Contract Addresses on Rootstock](/developers/smart-contracts/contract-addresses)
+- **Node RPC Access:**
+  - Interact with Rootstock using its RPC API.
+  - [Get an API Key](/developers/rpc-api/rootstock/setup/) and configure it in your applications.
 
-### Derivation path
+- **Hardhat:**
+  - Install Hardhat to streamline contract development and testing:
+    ```bash
+    npm install --save-dev hardhat
+    ```
+    :::tip[Recommended]
+    For added convenience, install shorthand globally
+    - Install `hh` autocomplete to use `hh` shorthand globally.
+    ```bash
+    npm i -g hardhat-shorthand
+    ```
 
-When using [BIP-44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki "Multi-Account Hierarchy for Deterministic Wallets")-compatible
-wallet software, you will need to specify a derivation path.
+    - Use the [Hardhat Starter Kit](/developers/quickstart/hardhat)
 
-```text
-Mainnet: m/44'/137'/0'/0/N
-Testnet: m/44'/37310'/0'/0/N
-```
+    - Learn how to write, interact, deploy, and test smart contracts on Rootstock using [Hardhat](/developers/smart-contracts/hardhat) or [Foundry](/developers/smart-contracts/foundry/).
 
+     :::
+
+- **Foundry (Optional):**
+  - Install Foundry as an alternative to Hardhat for building, deploying, and testing contracts:
+    ```bash
+    curl -L https://foundry.paradigm.xyz | bash
+    ```
+  - Run `foundryup` to install tools like `forge`, `cast`, `chisel` and `anvil`.
+</Step>
+
+<Step title="Wallet Configuration:">
+
+Set up your wallet to connect with Rootstock networks:
+
+- **MetaMask Integration:**
+  - Configure MetaMask with the necessary values to connect to the Rootstock Mainnet or Testnet.
+  - Refer to the [MetaMask Wallet Configuration](/dev-tools/wallets/metamask/) guide for detailed steps.
+
+- **Derivation Paths:**
+  - Use these paths for BIP-44-compatible wallets:
+    - **Mainnet:** `m/44'/137'/0'/0/N`
+    - **Testnet:** `m/44'/37310'/0'/0/N`
+
+ *See the [Account-Based Addresses](#account-based-addresses) section for guidance on address verification.*
 :::info[Info]
 See [Account based addresses](/concepts/account-based-addresses/) section for more information or [how to verify address ownership](/developers/smart-contracts/verify-address-ownership/).
 :::
 
-## Install Hardhat
+</Step>
 
-```bash
-npm install --save-dev hardhat
-```
+<Step title="Contract Addresses">
 
-:::tip[Recommended]
+Understand and reference key contract addresses for development:
+- Access the full list of **[Rootstock Contract Addresses](#contract-addresses)**.
 
-- Install `hh` autocomplete to use `hh` shorthand globally.
-```bash
-npm i -g hardhat-shorthand
-```
+</Step>
 
-- Use the [Hardhat Starter Kit](/developers/quickstart/hardhat)
+<Step title="Development Environments:">
 
-- Learn how to write, interact, deploy, and test smart contracts on Rootstock using [Hardhat](/developers/smart-contracts/hardhat) or [Foundry](/developers/smart-contracts/foundry/).
+Choose one of the following environments to build and deploy your contracts:
 
+- **Hardhat:**
+  - A popular framework for managing smart contract development and testing.
+  - Use the [Hardhat Starter Kit](#hardhat-starter-kit) to jumpstart your project.
+
+- **Foundry:**
+  - A lightweight, fast alternative to Hardhat.
+  - Install and manage using `foundryup`.
+
+
+:::note[Development Environments]
+Learn how to write, interact, deploy, and test smart contracts on Rootstock using [Hardhat](/developers/smart-contracts/hardhat) or [Foundry](/developers/smart-contracts/foundry/).
+
+💡 *You don’t need to use both  (Hardhat and Foundry); pick the one that suits your workflow.*
 :::
+</Step>
 
-## Command Line Tools
+<Step title="Command Line Tools">
 
-### POSIX Compliant Shell
+Boost productivity with these CLI tools:
 
-````mdx-code-block
+> POSIX Compliant Shell
+
+
 <Tabs>
   <TabItem value="windows" label="Windows">
-    Standard terminals like `cmd` or PowerShell may not support some commands. We recommended installing [Git for Windows](https://gitforwindows.org/) for Git Bash, which provides a more UNIX-like experience. Here's a [tutorial on Git Bash](https://www.atlassian.com/git/tutorials/git-bash).
+    Standard terminals like `cmd` or PowerShell may not support some commands. We recommended installing [Git for Windows](https://gitforwindows.org/) for Git Bash, which provides a more UNIX-like experience.
+
+    Here's a [tutorial on Git Bash](https://www.atlassian.com/git/tutorials/git-bash).
   </TabItem>
-  <TabItem value="macos" label="MacOS/Linux">
+  <TabItem value="macos" label="MacOS">
+    Standard terminal.
+  </TabItem>
+  <TabItem value="Linux" label="Linux">
     Standard terminal.
   </TabItem>
 </Tabs>
-````
+
 
 ### Installing Node.js and NPM
 
-````mdx-code-block
+
 <Tabs>
   <TabItem value="nvm" label="NVM" default>
     - Node v18 or later.
@@ -140,9 +157,7 @@ npm i -g hardhat-shorthand
       4. Check versions in the terminal with `node -v` and `npm -v`
   </TabItem>
 </Tabs>
+
+  </Step>
+</Steps>
 ````
-
-## Optional Setup
-
-- [Foundry](/developers/smart-contracts/foundry)
-- [Remix](https://remix.ethereum.org/)

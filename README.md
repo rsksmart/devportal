@@ -1,12 +1,16 @@
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/rsksmart/devportal/badge)](https://scorecard.dev/viewer/?uri=github.com/rsksmart/devportal)
+[![CodeQL](https://github.com/rsksmart/rskj/workflows/CodeQL/badge.svg)](https://github.com/rsksmart/devportal/actions?query=workflow%3ACodeQL)
+<img src="rootstock-logo.png" alt="RSK Logo" style="width:100%; height: auto;" />
+
 # Rootstock Developer Portal
 
 This repo contains the [Rootstock Developer Portal](https://dev.rootstock.io). The Developer Docs is the home for Rootstock documentation for end users and developers. Check out our quickstarts, tutorials, API reference, and code examples.
 
-_Start your journey to building dApps on Rootstock, see the [quick start guide](/developers/quickstart/) or see the [setup](#set-up) instructions, or the [contributing](CONTRIBUTING_DOCS.md) guide for how to contribute to Rootstock Documentation._
+_Start your journey to building dApps on Rootstock, see the [Quick Start Guide](./docs/02-developers/04-quickstart/index.md) or see the [setup](#set-up) instructions, or the [contributing](CONTRIBUTING_DOCS.md) guide for how to contribute to Rootstock Documentation._
 
 🚀 [Send us feedback](#issues)
 
-🚀 Join the [Join the global Rootstock community on Discord](http://discord.gg/rootstock)
+🚀 Join the [global Rootstock community on Discord](http://discord.gg/rootstock)
 
 > This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator. For more information on how to use Docusaurus, please refer to the [Docusaurus Documentation](https://docusaurus.io/docs).
 
@@ -61,7 +65,7 @@ Here's a simplified example of how it might look:
 
 The main navigation of the website is created based on the root directories in the `/docs` folder. Each directory has its own sidebar for easy navigation.
 
-> Root directories name must contain only a character that is a letter, a number, a dash, or an underscore. If it doesn't, the directory is ignored and won't apear in main navigation.
+> Root directories name must contain only a character that is a letter, a number, a dash, or an underscore. If it doesn't, the directory is ignored and won't appear in main navigation.
 
 In this case, the main navigation of the website would have two sections: "Guide" and "Tutorial".
 
@@ -82,7 +86,7 @@ For more information on how to use images in Docusaurus, please refer to the [Co
 Steps:
 1. Locate the `docs` folder
 2. Create a markdown file in the section you wish to add the docs.
-3. Add `title`, `aidebar_label`, `tags`, `description`, and `sidebar_position` attributes
+3. Add `title`, `sidebar_label`, `tags`, `description`, and `sidebar_position` attributes
    to the front matter as appropriate - see below for more details.
 4. If the new page is within a collection, and it is named `index.md`, add a `section_title`, `menu_title`. Ensure that you set a `permalink` attribute in the front matter, with a trailing `/`.
 
@@ -246,24 +250,24 @@ When a new version of Rootstock (RSKj) node is released:
 ### Issues
 
 We encourage you to
-[report issues](https://github.com/rsksmart/rsksmart.github.io/issues).
+[report issues](https://github.com/rsksmart/devportal/issues).
 When you open an issue, you should be given the option to choose a category.
 Choose the most appropriate one.
 
 Next, the description should be automatically populated from a template.
 Fill it in accordingly.
-Note that **What** and **Why** sections are compulsory,
-and the **Refs** section is optional.
+Note that **Describe the bug**, **Reproduce**, **Device Type**, and **Screenshots** sections are compulsory,
+and the **Addditional Contest** section is optional.
 
-### Pull Requests
+### Pull Requests (PR)
 
 You can also contribute to the Developer's portal by sending a
-[PR](https://github.com/rsksmart/rsksmart.github.io/pulls).
+[PR](https://github.com/rsksmart/devportal/pulls).
 
 When you open a pull request,
 the description should be automatically populated from a template.
 Fill it in accordingly.
-Note that **What** and **Why** sections are compulsory,
-and the **Refs** section is optional.
+Note that **Title** and **Description**, **screenshot**, and **checklist** sections are compulsory,
+and the **testing**, and **Refs** sections are optional.
 
 > Note to run `yarn build` to test the build output of your branch prior to creating a new pull request, or pushing more commits to an existing one. Don't introduce any regressions!

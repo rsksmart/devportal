@@ -29,7 +29,7 @@ const config = {
       mendable : process.env.MENDABLE_KEY
     },
     homePage: {
-      editUrl: 'https://github.com/rsksmart/devportal-rootstock/tree/main/',
+      editUrl: 'https://github.com/rsksmart/devportal/tree/main/',
     },
     moreLinks : {
       changelog : {
@@ -42,9 +42,23 @@ const config = {
       },
       reportIssue : {
         title: 'Report an Issue',
-        url : 'https://github.com/rsksmart/rsksmart.github.io/issues',
+        url : 'https://github.com/rsksmart/devportal/issues',
       },
-    }
+      requestArticle : {
+        title: 'Request an Article',
+        form : {
+          id : '5qQ40ScPu',
+          title : 'Request a New Article',
+          description : 'Looking for information we haven’t covered? Fill out the form below to request a new article, and we’ll consider it in future updates.',
+        }
+      },
+    },
+    newsHighlight : [
+      {
+        title : '📣 Rootstock Hacktivator Program is Live! Contribute and Earn Rewards!',
+        url : '/resources/contribute/hacktivator-program/'
+      }
+    ]
   },
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -71,6 +85,9 @@ const config = {
       },
     },
   },
+  clientModules:[
+    '/src/clientModules/renderEquations.js'
+  ],
   plugins: [
     'docusaurus-plugin-sass',
     [
@@ -110,7 +127,7 @@ const config = {
           showLastUpdateTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/rsksmart/devportal-rootstock/tree/main/'
+          editUrl: 'https://github.com/rsksmart/devportal/tree/main/'
         },
         blog: false,
         theme: {
@@ -150,7 +167,7 @@ const config = {
         respectPrefersColorScheme: false,
       },
       // Replace with your project's social card
-      image: 'img/og.jpg',
+      image: 'img/og.png',
       navbar: {
         title: 'Docs',
         logo: {
@@ -246,7 +263,7 @@ const config = {
         appId: 'WAFPQL14PU',
 
         // Public API key: it is safe to commit it
-        apiKey: '4da8ccafcd04d9c5efd1601a60658bce',
+        apiKey: '78aa26683ec349ff7e4a7c2d723e4cb7',
 
         indexName: 'dev-rootstock',
 

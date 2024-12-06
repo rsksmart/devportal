@@ -13,17 +13,17 @@ const data = {
         </>
       ),
       list: [
-        // {
-        //   title: 'Flyover',
-        //   href: 'https://rif.technology/products/#flyover',
-        // },
         {
-          title: '2 Way Peg',
-          href: 'https://app.2wp.rootstock.io/',
+          title: 'RBTC Flyover',
+          href: '/developers/integrate/flyover/',
+        },
+        {
+          title: 'PowPeg App',
+          href: 'https://powpeg.rootstock.io',
         },
         {
           title: 'Token Bridge',
-          href: 'https://dapp.tokenbridge.rootstock.io/?_gl=1*rkdc23*_gcl_au*MTYzMTg1MzQ4MC4xNzIzMTM3MTAy',
+          href: 'https://dapp.tokenbridge.rootstock.io',
         },
       ],
 
@@ -63,7 +63,7 @@ const data = {
       list: [
         {
           title: 'Name Service',
-          href: 'https://github.com/rsksmart/rns-manager-react',
+          href: 'https://rns.rifos.org/',
         },
         {
           title: 'Relay',
@@ -76,17 +76,17 @@ const data = {
       color: 'yellow',
       description: (
         <>
-          Deploy and interact with EVM compatible smart contracts on Rootstock using JSON RPC methods.
+          Deploy and interact with EVM compatible smart contracts on Rootstock using JSON RPC methods using the Rootstock RPC API.
         </>
       ),
       list: [
         {
           title: 'Make First API Call',
-          href: '/developers/rpc-api/setup/',
+          href: '/developers/rpc-api/rootstock/setup/',
         },
         {
           title: 'View JSON RPC Methods',
-          href: '/developers/rpc-api/methods/',
+          href: '/developers/rpc-api/rootstock/methods/',
         }
       ],
     },
