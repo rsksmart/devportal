@@ -6,7 +6,6 @@ description: "Reown gives developers the tools to build user experiences that ma
 tags: [reown, account abstraction, developer tools, rootstock, ethereum, dApps, wallets, solana, wallet connections, wallet infrastructure]
 ---
 
-# Reown (prev. known as WalletConnect)
 
 **[Reown](https://reown.com/?utm_source=rootstock&utm_medium=docs&utm_campaign=backlinks)** gives developers the tools to build user experiences that make digital ownership effortless, intuitive, and secure.
 
