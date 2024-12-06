@@ -9,7 +9,7 @@ tags: [reown, account abstraction, developer tools, rootstock, ethereum, dApps, 
 
 **[Reown](https://reown.com/?utm_source=rootstock&utm_medium=docs&utm_campaign=backlinks)** gives developers the tools to build user experiences that make digital ownership effortless, intuitive, and secure.
 
-### AppKit
+## AppKit
 
 AppKit is a powerful, free, and fully open-source SDK for developers looking to integrate wallet connections and other Web3 functionalities into their apps on any EVM and non-EVM chain. In just a few simple steps, you can provide your users with seamless wallet access, one-click authentication, social logins, and notifications—streamlining their experience while enabling advanced features like on-ramp functionality, in-app token swaps and smart accounts.
 
