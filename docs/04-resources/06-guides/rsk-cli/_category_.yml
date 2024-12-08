@@ -1,0 +1,6 @@
+label: RSK CLI
+position: 1
+link:
+  type: generated-index
+  description: The rsk-cli tool enables users to manage wallets, check balances, send transactions, verify smart contracts and interact with smart contracts on the Rootstock blockchain - a Bitcoin sidechain designed for smart contracts. It supports both mainnet and testnet environments.
+  slug: /resources/guides/rsk-cli/
