@@ -211,7 +211,7 @@ if __name__ == "__main__":
    - Use a higher gas limit (3,000,000) for Rootstock
    - We double the gas price to ensure the transaction goes through
 3. **Transaction Type**:
-   - RSK works best with legacy transactions (using `gasPrice` instead of EIP-1559 parameters)
+   - Rootstock is optimized for legacy transactions, utilizing `gasPrice` rather than EIP-1559 parameters.
 
 ## Running the Deployment
 
