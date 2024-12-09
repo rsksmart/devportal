@@ -204,7 +204,7 @@ if __name__ == "__main__":
     main()
 ```
 
-## Key Points About RSK Deployment
+## Notable Info when Deploying on Rootstock
 
 1. **Chain ID**: RSK testnet uses chain ID 31
 2. **Gas Settings**:
