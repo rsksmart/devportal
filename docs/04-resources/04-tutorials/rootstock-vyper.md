@@ -134,7 +134,7 @@ def store(new_number: uint256):
 
 ## Deployment Script
 
-Here's our Python script to deploy the contract (`deploy_favorites_unsafe.py`):
+Here's a Python script to deploy the contract (`deploy_favorites_unsafe.py`):
 
 ```python
 from web3 import Web3
