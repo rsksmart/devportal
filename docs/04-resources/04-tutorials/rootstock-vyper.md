@@ -81,7 +81,7 @@ python hello.py # for pip/python
 
 ## Setup Environment
 
-First, let's set up our Python environment and install the necessary packages:
+To set up our Python environment and install the necessary packages, we will do the following:
 
 ```bash
 # Create and activate virtual environment
