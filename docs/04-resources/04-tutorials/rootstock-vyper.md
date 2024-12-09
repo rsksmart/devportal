@@ -114,7 +114,7 @@ Before deploying, you'll need some testnet RBTC:
 
 ## The Smart Contract
 
-Here's our simple Vyper contract (`favorites.vy`):
+Here's a simple Vyper contract (`favorites.vy`):
 
 ```python
 # @version ^0.3.7
