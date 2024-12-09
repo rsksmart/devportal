@@ -23,7 +23,9 @@ This guide demonstrates how to deploy smart contracts written in Vyper to the Ro
 - **Lower Fees**: Benefit from low transaction fees on Rootstock
 - **Scalability**: Handle a higher volume of transactions without congestion
 
-We'll walk through creating a simple Vyper contract and deploying it to RSK's testnet, covering everything from environment setup to handling RSK-specific configurations. Whether you're an experienced Ethereum developer looking to expand to Bitcoin-based smart contracts, or just starting your blockchain journey, this guide will help you get up and running with RSK.
+We'll walk through creating a simple Vyper contract and deploying it to the Rootstock testnet, covering everything from environment setup to handling Rootstock-specific network configurations. 
+
+Whether you're an experienced Ethereum developer looking to expand to Bitcoin-based smart contracts, or just starting your blockchain journey, this guide will help you get up and running with Vyper Contracts on Rootstock.
 
 ## Prerequisites
 
