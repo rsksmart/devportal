@@ -94,7 +94,7 @@ pip install python-dotenv web3 vyper
 
 ## Configuration
 
-Create a `.env` file in your project root with your configuration:
+Create a `.env` file in the project root and specify your custom configuration:
 
 ```env
 RPC_URL="https://rpc.testnet.rootstock.io/[YOUR-API-KEY]"
