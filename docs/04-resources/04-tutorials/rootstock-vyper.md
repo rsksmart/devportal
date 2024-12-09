@@ -46,7 +46,7 @@ echo "source $HOME/.zshenv >> $HOME/.zprofile"
 - Python 3.x
 - A text editor
 - Basic understanding of smart contracts and Python
-- RSK testnet RBTC (will show you how to get this)
+- [Rootstock testnet RBTC](https://faucet.rootstock.io/)
 
 ## Installation
 
