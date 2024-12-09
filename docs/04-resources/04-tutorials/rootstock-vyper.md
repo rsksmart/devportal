@@ -16,7 +16,9 @@ tags:
   - developers
 ---
 
-This guide demonstrates how to deploy smart contracts written in Vyper to the Rootstock testnet using Python and Web3.py. Rootstock is a layer 2 solution that combines the security of Bitcoin's proof of work with Ethereum's smart contract capabilities. The platform is open-source, EVM-compatible, and secured by over 60% of Bitcoin’s hashing power, offering unique advantages for developers:
+Rootstock is a layer 2 solution that combines the security of Bitcoin's proof of work with Ethereum's smart contract capabilities. The platform is open-source, EVM-compatible, and secured by over 60% of Bitcoin’s hashing power, offering unique advantages for developers.
+
+This guide demonstrates how to deploy smart contracts written in Vyper to the Rootstock testnet using Python and Web3.py. 
 
 - **Bitcoin Compatibility**: Deploy smart contracts while leveraging Bitcoin's security and network effects
 - **EVM Compatibility**: Use familiar Ethereum tools and practices while building on Bitcoin
