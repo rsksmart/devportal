@@ -30,7 +30,7 @@ Whether you're an experienced Ethereum developer looking to expand to Bitcoin-ba
 ## Prerequisites
 
 - [uv](https://docs.astral.sh/uv/)
-  - You'll know you've done it right if you can run `uv --version` and see a version number.
+  - To confirm installation, run `uv --version`, it should return a version number.
 - [git](https://git-scm.com/)
   - To confirm installation, run `git --version`, it should return a version number.
   - Helpful shortcut:
