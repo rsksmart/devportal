@@ -14,7 +14,7 @@ values={[
 ]}>
 <FilterItem
 value="beginner, advanced"
-title="Deploy a Vyper Smart Contract on RootStock"
+title="Deploy a Vyper Smart Contract on Rootstock"
 subtitle="Vyper"
 color="orange"
 linkHref="/resources/tutorials/rootstock-vyper/"
