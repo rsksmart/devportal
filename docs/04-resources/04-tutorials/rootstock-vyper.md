@@ -107,7 +107,7 @@ THIS IS ONLY FOR TESTING - TYPICALLY YOU SHOULD NEVER SHARE YOUR PRIVATE KEY.
 
 Before deploying, you'll need some testnet RBTC:
 
-1. Go to the RSK faucet: https://faucet.rsk.co/
+1. Go to the Rootstock faucet: https://faucet.rootstock.io/
 2. Enter your wallet address
 3. Complete the captcha and request funds
 4. Wait a few minutes for the transaction to be confirmed
