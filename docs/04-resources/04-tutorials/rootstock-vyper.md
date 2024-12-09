@@ -20,7 +20,7 @@ This guide demonstrates how to deploy smart contracts written in Vyper to the Ro
 
 - **Bitcoin Compatibility**: Deploy smart contracts while leveraging Bitcoin's security and network effects
 - **EVM Compatibility**: Use familiar Ethereum tools and practices while building on Bitcoin
-- **Lower Fees**: Benefit from RSK's cost-effective transaction fees
+- **Lower Fees**: Benefit from low transaction fees on Rootstock
 - **Scalability**: Enjoy higher transaction throughput compared to the Bitcoin mainnet
 
 We'll walk through creating a simple Vyper contract and deploying it to RSK's testnet, covering everything from environment setup to handling RSK-specific configurations. Whether you're an experienced Ethereum developer looking to expand to Bitcoin-based smart contracts, or just starting your blockchain journey, this guide will help you get up and running with RSK.
