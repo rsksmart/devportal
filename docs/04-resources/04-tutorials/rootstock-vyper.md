@@ -208,7 +208,7 @@ if __name__ == "__main__":
 
 1. **Chain ID**: RSK testnet uses chain ID 31
 2. **Gas Settings**:
-   - We use a higher gas limit (3,000,000) for RSK
+   - Use a higher gas limit (3,000,000) for Rootstock
    - We double the gas price to ensure the transaction goes through
 3. **Transaction Type**:
    - RSK works best with legacy transactions (using `gasPrice` instead of EIP-1559 parameters)
