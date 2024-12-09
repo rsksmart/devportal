@@ -53,7 +53,7 @@ git clone https://github.com/EdwinLiavaa/Web3py-Vyper-RootStock.git
 cd Web3py-Vyper-RootStock
 ```
 
-### uv
+### Syncing uv
 
 ```bash
 uv sync
