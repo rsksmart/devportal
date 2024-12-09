@@ -30,7 +30,7 @@ We'll walk through creating a simple Vyper contract and deploying it to RSK's te
 - [uv](https://docs.astral.sh/uv/)
   - You'll know you've done it right if you can run `uv --version` and see a version number.
 - [git](https://git-scm.com/)
-  - You'll know you've done it right if you can run `git --version` and see a version number.
+  - To confirm installation, run `git --version`, it should return a version number.
   - Helpful shortcut:
 
 ```bash
