@@ -3,7 +3,7 @@ sidebar_position: 1.5
 title: Glossary | Key Terms and Definitions
 sidebar_label: Glossary
 tags: [rsk, rootstock, developer tools, courses, guides, tutorials, glossary]
-description: "This glossary contains key terms and definitions to help you better understand the technologies and concepts related to Rootstock."
+description: "This glossary provides essential definitions for key terms related to Rootstock and blockchain technology."
 ---
 
 This glossary contains key terms and definitions to help you better understand the technologies and concepts related to Rootstock. 
