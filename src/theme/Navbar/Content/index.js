@@ -81,9 +81,9 @@ export default function NavbarContent() {
                 <SearchBar />
               </NavbarSearch>
             )}
-            <div>
+            {/* <div>
               <AIButton />
-            </div>
+            </div> */}
           </div>
           <RightNavbarItems items={rightItems} />
           <LocaleDropdown />

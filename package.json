@@ -19,6 +19,7 @@
     "crowdin": "crowdin"
   },
   "dependencies": {
+    "@cookbookdev/docsbot": "^4.24.7",
     "@crowdin/cli": "4",
     "@docusaurus/core": "3.4.0",
     "@docusaurus/plugin-google-tag-manager": "3.4.0",
