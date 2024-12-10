@@ -1,23 +1,29 @@
 ---
-sidebar_label: "Vyper Smart Contract on Rootstock"
-sidebar_position: 100
-title: "Deploying a Vyper Smart Contract to Rootstock Testnet using Python"
-description: "This guide walks through the process of deploying a smart contract to the Rootstock testnet using Python and Web3.py. We'll be deploying a simple Vyper contract that demonstrates how to interact with the Rootstock network."
-tags: [rsk, rootstock, developers, vyper, quickstart, python, Smart Contracts]
+sidebar_label: Vyper Smart Contract on RootStock
+sidebar_position: 7
+title: Deploying a Vyper Smart Contract to RootStock (RSK) Testnet using Python
+description: "This guide walks through the process of deploying a smart contract to the RootStock (RSK) testnet using Python and Web3.py. We'll be deploying a simple Vyper contract that demonstrates how to interact with the RSK network."
+tags: 
+  - rsk
+  - rootstock
+  - tutorials
+  - resources
+  - tests
+  - web3py
+  - vyper
+  - smart contracts
+  - python
+  - developers
 ---
 
-Rootstock is a layer 2 solution that combines the security of Bitcoin's proof of work with Ethereum's smart contract capabilities. The platform is open-source, EVM-compatible, and secured by over 60% of Bitcoin’s hashing power, offering unique advantages for developers.
-
-This guide demonstrates how to deploy smart contracts written in Vyper to the Rootstock testnet using Python and Web3.py.
+This guide demonstrates how to deploy smart contracts written in Vyper to the RootStock (RSK) testnet using Python and Web3.py. RSK is a groundbreaking smart contract platform that's merge-mined with Bitcoin, offering unique advantages for developers:
 
 - **Bitcoin Compatibility**: Deploy smart contracts while leveraging Bitcoin's security and network effects
 - **EVM Compatibility**: Use familiar Ethereum tools and practices while building on Bitcoin
 - **Lower Fees**: Benefit from low transaction fees on Rootstock
 - **Scalability**: Handle a higher volume of transactions without congestion
 
-We'll walk through creating a simple Vyper contract and deploying it to the Rootstock testnet, covering everything from environment setup to handling Rootstock-specific network configurations.
-
-Whether you're an experienced Ethereum developer looking to expand to Bitcoin-based smart contracts, or just starting your blockchain journey, this guide will help you get up and running with Vyper Contracts on Rootstock.
+We'll walk through creating a simple Vyper contract and deploying it to RSK's testnet, covering everything from environment setup to handling RSK-specific configurations. Whether you're an experienced Ethereum developer looking to expand to Bitcoin-based smart contracts, or just starting your blockchain journey, this guide will help you get up and running with RSK.
 
 ## Prerequisites
 
@@ -35,58 +41,10 @@ echo "source $HOME/.bashrc >> $HOME/.bash_profile"
 echo "source $HOME/.zshenv >> $HOME/.zprofile"
 ```
 
-## Installing Python
-
-### Installing Python on Windows
-
-1. Visit the [Python downloads page](https://www.python.org/downloads/)
-2. Click on the "Download Python 3.12.x" button
-3. Run the downloaded installer
-4. Important: Check the box that says "Add Python 3.12 to PATH"
-5. Click "Install Now"
-6. Once installation is complete, open Command Prompt and verify the installation:
-```bash
-python --version
-```
-
-### Installing Python on Mac
-
-1. Visit [python.org](https://www.python.org/downloads/)
-2. Under Downloads, go to macOS and download the latest Python 3.12 release
-3. Click the link for the **Python 3.12.x macOS 64-bit universal2 installer**
-4. Open the installer file and agree to the license agreement
-5. Click **Continue**, then **Install**
-6. Once complete, open Terminal and verify the installation:
-```bash
-python3 --version
-# or
-python --version
-```
-
-### Installing Python on Linux
-
-Most Linux distributions come with Python pre-installed. To verify, open Terminal and run:
-```bash
-python3 --version
-```
-
-If Python is not installed, you can install it using your distribution's package manager:
-
-For Ubuntu/Debian:
-```bash
-sudo apt update
-sudo apt install python3
-```
-
-For Fedora:
-```bash
-sudo dnf install python3
-```
-
-For Arch Linux:
-```bash
-sudo pacman -S python
-```
+- Python 3.x
+- A text editor
+- Basic understanding of smart contracts and Python
+- RSK testnet RBTC (will show you how to get this)
 
 ## Installation
 

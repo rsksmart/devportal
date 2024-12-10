@@ -13,6 +13,14 @@ values={[
 {label: 'Port to Rootstock', value: 'port-dapps'}
 ]}>
 <FilterItem
+value="beginner, advanced"
+title="Deploy a Vyper Smart Contract on Rootstock"
+subtitle="Vyper"
+color="orange"
+linkHref="/resources/tutorials/rootstock-vyper/"
+description="This guide walks through the process of deploying a smart contract to the Rootstock testnet using Python and Web3.py. We'll be deploying a simple Vyper contract that demonstrates how to interact with the Rootstock network."
+/>
+<FilterItem
 value="beginner, port-dapps"
 title="Interact with Rootstock using Rust"
 subtitle="rust"
