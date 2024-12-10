@@ -21,7 +21,7 @@ Cada vez que los mineros encuentran una solución, se compara con las dificultad
 
 - La solución satisface la dificultad de la red Bitcoin. Por lo tanto, un bloque es ensamblado y enviado a la red. La referencia de minería combinada de Rootstock será incluida e ignorada por la red Bitcoin. Dado que la dificultad de red de Rootstock es menor que la de Bitcoin, esta solución también funcionará para Rootstock y podrá ser enviada a la red.
 - La solución no satisface la dificultad de la red Bitcoin, pero sí la de la red Rootstock. En consecuencia, la solución se enviará a la red Rootstock, pero no a la red Bitcoin.
-- La solución sólo satisface la dificultad del pool, que es muchas veces inferior a la dificultad de red de Bitcoin o Rootstock, y no se somete a ninguna red.
+- La solución solo satisface la dificultad del pool, que es muchas veces inferior a la dificultad de red de Bitcoin o Rootstock, y no se somete a ninguna red.
 
 La solución enviada a la red permite al nodo construir una prueba SPV. Si la prueba es válida, se incluye como parte del bloque que se enviará a la red.
 

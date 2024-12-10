@@ -1,20 +1,20 @@
 ---
-sidebar_label: Fundamentos de los portainjertos
+sidebar_label: Fundamentos de Rootstock
 sidebar_position: 2
-title: Fundamentos de los portainjertos
+title: Fundamentos de Rootstock
 tags:
   - rsk
-  - portainjertos
+  - rootstock
   - principiante
   - conceptos
 description: Rootstock es la primera y más duradera cadena lateral de Bitcoin. Es la única solución de capa 2 que combina la seguridad de la prueba de trabajo de Bitcoin con las capacidades de contrato inteligente de Ethereum.
 ---
 
-## ¿Qué es el portainjertos?
+## ¿Qué es Rootstock?
 
-Rootstock es la primera y más duradera cadena lateral de Bitcoin. Es la única solución de capa 2 que combina la seguridad de la prueba de trabajo de Bitcoin con las capacidades de contrato inteligente de Ethereum. La plataforma es de código abierto, compatible con EVM y asegurada por más del 60% de la potencia de hashing de Bitcoin, lo que la convierte en la puerta de entrada a un vibrante ecosistema de dApps que sigue evolucionando para convertirse en totalmente fiable.
+Rootstock es la primera y más duradera cadena lateral de Bitcoin. Es la única solución de capa 2 que combina la seguridad de la prueba de trabajo de Bitcoin con las capacidades de contrato inteligente de Ethereum. La plataforma es de código abierto, compatible con EVM y asegurada por más del 60% de la potencia de hashing de Bitcoin, lo que la convierte en la puerta de entrada a un vibrante ecosistema de dApps que sigue evolucionando para convertirse en totalmente trustless.
 
-Véase la [Pila de rizomas](/conceptos/fundamentos/pila/).
+Véase la [Rootstock Stack](/concepts/fundamentals/stack/).
 
 ## ¿Qué relación tiene Rootstock con bitcoin?
 
@@ -37,11 +37,11 @@ pero sí obtiene una recompensa de la minería fusionada.
 
 > Consulte [https://rootstock.io/mine-btc-with-rootstock/](https://rootstock.io/mine-btc-with-rootstock/) para obtener más información sobre la minería.
 
-### Powpeg con Bitcoin
+### PowPeg con Bitcoin
 
 El segundo punto de contacto es el
-[Powpeg](/conceptos/powpeg/),
-también conocido como el puente.
+[Powpeg](/concepts/powpeg/),
+también conocido como el bridge.
 
 Este componente conecta ambas redes para permitir a
 la transferencia de bitcoins a Rootstock,

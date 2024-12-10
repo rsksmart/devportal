@@ -10,7 +10,7 @@ tags:
   - curso
   - portainjertos
   - programa de embajadores
-description: Bienvenido a los cursos de Rootstock; Explore los materiales de aprendizaje y los cursos que le permitirán iniciarse en la construcción con Rootstock y RIF Technologies.
+description: Bienvenido a los cursos Rootstock; Explora materiales de aprendizaje y cursos para empezar a construir sobre Rootstock y RIF Technologies.
 ---
 
 Explore el material didáctico y los cursos que le permitirán empezar a trabajar con Rootstock y RIF Technologies.

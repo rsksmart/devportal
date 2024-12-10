@@ -1,12 +1,12 @@
 ---
 sidebar_label: Ficha RIF
 sidebar_position: 400
-title: "Token RIF: Potenciando las aplicaciones descentralizadas"
+title: "RIF Token: Potenciando las aplicaciones descentralizadas"
 tags:
   - rif
   - ficha
   - erc677
-description: Información sobre el token RIF, dónde obtenerlo, cómo transferirlo y detalles técnicos sobre su estándar de token
+description: Información sobre el RIF token, dónde obtenerlo, cómo transferirlo y detalles técnicos sobre su estándar de token
 ---
 
 El token Rootstock Infrastructure Framework (RIF) permite a cualquier poseedor de tokens consumir los servicios compatibles con [RIF Tools](/concepts/rif-suite/).
@@ -55,7 +55,7 @@ El token Rootstock Infrastructure Framework (RIF) permite a cualquier poseedor d
       <td>1.000.000.000 tRIF</td>
     </tr>
     <tr>
-      <td scope="row">Contrato Dirección Testnet</td>
+      <td scope="row">Dirección de Contrato Testnet</td>
       <td><a href="https://explorer.testnet.rootstock.io/address/0x19f64674d8a5b4e652319f5e239efd3bc969a1fe" target="_blank">0x19f64674D8a5b4e652319F5e239EFd3bc969a1FE</a></td>
     </tr>
     <tr>
@@ -93,18 +93,18 @@ Una transferencia de tokens ERC677 será igual que una transferencia ERC20. Por 
 
 - Aprobar y transferir:
   ```js
-  function aprobar(dirección _spender, uint256 _valor) public returns (bool)
-  function transfer(dirección _a, uint256 _valor) public returns (bool)
+  function aprobar(address _spender, uint256 _value) public returns (bool)
+  function transfer(address _to, uint256 _value) public returns (bool)
   ```
 
 - Transferir y llamar:
 
   ```js
-  function transfer(dirección _a, uint256 _valor, bytes datos)
+  function transfer(address _to, uint256 _value, bytes data)
   ```
 
   **Parámetros**
 
   - `_to: address`: Dirección del contrato.
-  - `_valor: uint256`: Cantidad de tokens RIF a enviar.
+  - `_value: uint256`: Cantidad de RIF tokens a enviar.
   - `datos: bytes`: Firma de 4 bytes de la función a ejecutar, seguida de los parámetros de la función a ejecutar con codificados como matriz de bytes.

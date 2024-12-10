@@ -8,7 +8,7 @@
     "description": "The alt text of navbar logo"
   },
   "item.label.Home": {
-    "message": "Hogar",
+    "message": "Inicio",
     "description": "Navbar item with label Home"
   },
   "item.label. Concepts": {
@@ -20,7 +20,7 @@
     "description": "Navbar item with label  Developers"
   },
   "item.label. Node Operators": {
-    "message": " Operadores de nodos",
+    "message": " Operadores de nodo",
     "description": "Navbar item with label  Node Operators"
   },
   "item.label. Resources": {
@@ -28,7 +28,7 @@
     "description": "Navbar item with label  Resources"
   },
   "item.label. Dev Tools": {
-    "message": " Dev Tools",
+    "message": " Herramientas de desarrollo",
     "description": "Navbar item with label  Dev Tools"
   },
   "item.label.GitHub": {
@@ -36,7 +36,7 @@
     "description": "Navbar item with label GitHub"
   },
   "item.label.Discord": {
-    "message": "Discord",
+    "message": "Discordia",
     "description": "Navbar item with label Discord"
   }
 }

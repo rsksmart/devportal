@@ -1,12 +1,12 @@
 ---
-section_label: La pila
-title: Pila de portainjertos
-sidebar_label: La pila
+section_label: Stack
+title: Rootstock Stack
+sidebar_label: Stack
 sidebar_position: 200
 tags:
   - rsk
-  - portainjertos
-  - pila
+  - rootstock
+  - stack
   - arquitectura
 description: Descubra cómo Rootstock combina la seguridad de Bitcoin PoW con la funcionalidad de contratos inteligentes de Ethereum para crear dApps en Bitcoin y también cómo las herramientas y tecnologías de código abierto de RIF están diseñadas para agilizar e incentivar el desarrollo en Bitcoin.
 ---
@@ -18,11 +18,11 @@ Actualmente, la VM se ejecuta mediante interpretación. En una futura actualizac
 ## Características principales:
 
 - Máquina virtual independiente, altamente compatible con EVM a nivel de opcode.
-- Ejecute DApps de Ethereum con la seguridad de la red Bitcoin
-- Canal de mejora del rendimiento documentado en numerosos RSKIP creados por la comunidad Rootstock
-  - Véanse las [Propuestas de mejora de portainjertos](https://github.com/rsksmart/RSKIPs).
+- Ejecute DApps de Ethereum con la seguridad de la red de Bitcoin
+- Canal de mejora del rendimiento documentado en numerosos RSKIP creados por la comunidad de Rootstock
+  - Véanse las [Rootstock Improvement Proposals](https://github.com/rsksmart/RSKIPs).
 
-Pila tecnológica del patrón - Alto nivel](/img/concepts/rootstock-tech-stack.svg)
+Rootstock Technology Stack - Alto nivel](/img/concepts/rootstock-tech-stack.svg)
 
 <section>
 <div class="row">
@@ -32,18 +32,18 @@ Pila tecnológica del patrón - Alto nivel](/img/concepts/rootstock-tech-stack.s
   </div>
     <p> Es un almacén y transferencia de valor.
 La blockchain es segura porque los mineros
-con elevados costes de infraestructura y energía
+con elevados costos de infraestructura y energía
 crean los nuevos bloques que se añaden a la blockchain cada 10 minutos.
 Cuanta más potencia de hashing proporcionen, más segura será la red.</p>
   </div>
     <div class="col two-x-card">
-        <div class="header-div"><h2 class="zg-text-bg fs-28">Portainjerto</h2><h3 class="fp-title-color fp-title-color-sm"><span class="ml-1 zg-label">RBTC</span></h3></div>
-            <p> Es la primera plataforma de contratos inteligentes de código abierto
+        <div class="header-div"><h2 class="zg-text-bg fs-28">Rootstock</h2><h3 class="fp-title-color fp-title-color-sm"><span class="ml-1 zg-label">RBTC</span></h3></div>
+            <p> Es la primera plataforma de contratos inteligentes open source
         impulsada por la red bitcoin.
-        El objetivo de Rootstock es añadir valor y funcionalidad al ecosistema bitcoin de
-        permitiendo contratos inteligentes,
+        El objetivo de Rootstock es añadir valor y funcionalidad al 
+        ecosistema bitcoin permitiendo contratos inteligentes,
         pagos casi instantáneos y una mayor escalabilidad.</p>
-        <p>El [Smart Bitcoin (RBTC)](/concepts/rbtc/) es la moneda nativa de Rootstock y se utiliza para pagar el gas necesario para la ejecución de las transacciones. Está vinculado 1:1 con Bitcoin, lo que significa que en Rootstock hay exactamente 21M de RBTC. Un [Powpeg](/conceptos/powpeg/) permite la [transferencia de bitcoins](/conceptos/rbtc/conversión/) de la blockchain de Bitcoin a la blockchain de Rootstock y viceversa.</p>
+        <p>El [Smart Bitcoin (RBTC)](/conceptos/rbtc/) es la moneda nativa de Rootstock y se utiliza para pagar el gas necesario para la ejecución de las transacciones. Está vinculado 1:1 con Bitcoin, lo que significa que en Rootstock hay exactamente 21M de RBTC. Un [Powpeg](/conceptos/powpeg/) permite la [transferencia de bitcoins](/conceptos/rbtc/conversión/) de la blockchain de Bitcoin a la blockchain de Rootstock y viceversa.</p>
     </div>
 </div>
 </section>

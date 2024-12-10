@@ -1,18 +1,18 @@
 {
   "version.label": {
-    "message": "Next",
+    "message": "Siguiente",
     "description": "The label for version current"
   },
   "sidebar.01ConceptsSidebar.category.Rootstock Fundamentals": {
-    "message": "Rootstock Fundamentals",
+    "message": "Fundamentos de los portainjertos",
     "description": "The label for category Rootstock Fundamentals in sidebar 01ConceptsSidebar"
   },
   "sidebar.01ConceptsSidebar.category.RBTC Token": {
-    "message": "RBTC Token",
+    "message": "Ficha RBTC",
     "description": "The label for category RBTC Token in sidebar 01ConceptsSidebar"
   },
   "sidebar.01ConceptsSidebar.category.RIF Suite": {
-    "message": "RIF Suite",
+    "message": "Suite RIF",
     "description": "The label for category RIF Suite in sidebar 01ConceptsSidebar"
   },
   "sidebar.01ConceptsSidebar.category.Powpeg": {
@@ -20,55 +20,55 @@
     "description": "The label for category Powpeg in sidebar 01ConceptsSidebar"
   },
   "sidebar.02DevelopersSidebar.category.Blockchain Essentials": {
-    "message": "Blockchain Essentials",
+    "message": "Fundamentos de Blockchain",
     "description": "The label for category Blockchain Essentials in sidebar 02DevelopersSidebar"
   },
   "sidebar.02DevelopersSidebar.category.Quick Starts": {
-    "message": "Quick Starts",
+    "message": "Arranques rápidos",
     "description": "The label for category Quick Starts in sidebar 02DevelopersSidebar"
   },
   "sidebar.02DevelopersSidebar.category.Smart Contracts Development": {
-    "message": "Smart Contracts Development",
+    "message": "Desarrollo de contratos inteligentes",
     "description": "The label for category Smart Contracts Development in sidebar 02DevelopersSidebar"
   },
   "sidebar.02DevelopersSidebar.category.Getting Started with Hardhat": {
-    "message": "Getting Started with Hardhat",
+    "message": "Primeros pasos con el casco",
     "description": "The label for category Getting Started with Hardhat in sidebar 02DevelopersSidebar"
   },
   "sidebar.02DevelopersSidebar.category.RPC API": {
-    "message": "RPC API",
+    "message": "API RPC",
     "description": "The label for category RPC API in sidebar 02DevelopersSidebar"
   },
   "sidebar.02DevelopersSidebar.category.Integration Guides": {
-    "message": "Integration Guides",
+    "message": "Guías de integración",
     "description": "The label for category Integration Guides in sidebar 02DevelopersSidebar"
   },
   "sidebar.02DevelopersSidebar.category.RIF Relay": {
-    "message": "RIF Relay",
+    "message": "Relé RIF",
     "description": "The label for category RIF Relay in sidebar 02DevelopersSidebar"
   },
   "sidebar.02DevelopersSidebar.category.Libraries": {
-    "message": "Libraries",
+    "message": "Bibliotecas",
     "description": "The label for category Libraries in sidebar 02DevelopersSidebar"
   },
   "sidebar.03NodeOperatorsSidebar.category.Node Setup": {
-    "message": "Node Setup",
+    "message": "Configuración del nodo",
     "description": "The label for category Node Setup in sidebar 03NodeOperatorsSidebar"
   },
   "sidebar.03NodeOperatorsSidebar.category.Node Installation": {
-    "message": "Node Installation",
+    "message": "Instalación de nodos",
     "description": "The label for category Node Installation in sidebar 03NodeOperatorsSidebar"
   },
   "sidebar.03NodeOperatorsSidebar.category.Configure the node": {
-    "message": "Configure the node",
+    "message": "Configurar el nodo",
     "description": "The label for category Configure the node in sidebar 03NodeOperatorsSidebar"
   },
   "sidebar.03NodeOperatorsSidebar.category.Node Runners": {
-    "message": "Node Runners",
+    "message": "Ejecutadores de Nodo",
     "description": "The label for category Node Runners in sidebar 03NodeOperatorsSidebar"
   },
   "sidebar.03NodeOperatorsSidebar.category.Merged Mining": {
-    "message": "Merged Mining",
+    "message": "Minería fusionada",
     "description": "The label for category Merged Mining in sidebar 03NodeOperatorsSidebar"
   },
   "sidebar.03NodeOperatorsSidebar.category.JSON RPC": {
@@ -76,31 +76,31 @@
     "description": "The label for category JSON RPC in sidebar 03NodeOperatorsSidebar"
   },
   "sidebar.03NodeOperatorsSidebar.category.Maintenance": {
-    "message": "Maintenance",
+    "message": "Mantenimiento",
     "description": "The label for category Maintenance in sidebar 03NodeOperatorsSidebar"
   },
   "sidebar.04ResourcesSidebar.category.Contribute": {
-    "message": "Contribute",
+    "message": "Contribuir",
     "description": "The label for category Contribute in sidebar 04ResourcesSidebar"
   },
   "sidebar.04ResourcesSidebar.category.Tutorials": {
-    "message": "Tutorials",
+    "message": "Tutoriales",
     "description": "The label for category Tutorials in sidebar 04ResourcesSidebar"
   },
   "sidebar.04ResourcesSidebar.category.Port to Rootstock": {
-    "message": "Port to Rootstock",
+    "message": "Puerto a Portainjerto",
     "description": "The label for category Port to Rootstock in sidebar 04ResourcesSidebar"
   },
   "sidebar.04ResourcesSidebar.category.Guides": {
-    "message": "Guides",
+    "message": "Guías",
     "description": "The label for category Guides in sidebar 04ResourcesSidebar"
   },
   "sidebar.04ResourcesSidebar.category.2 Way Peg App": {
-    "message": "2 Way Peg App",
+    "message": "Aplicación 2 Way Peg",
     "description": "The label for category 2 Way Peg App in sidebar 04ResourcesSidebar"
   },
   "sidebar.04ResourcesSidebar.category.2 Way Peg App.link.generated-index.description": {
-    "message": "The 2 way peg is a protocol that converts BTC to RBTC and vice versa. It is secured by the powpeg, which is a unique 2-way peg system that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus.",
+    "message": "El 2 way peg es un protocolo que convierte BTC en RBTC y viceversa. Está asegurado por el powpeg, que es un sistema único de 2 way peg que asegura los bitcoins bloqueados con el mismo hashrate de Bitcoin que establece el consenso.",
     "description": "The generated-index page description for category 2 Way Peg App in sidebar 04ResourcesSidebar"
   },
   "sidebar.04ResourcesSidebar.category.Peg-in": {
@@ -112,15 +112,19 @@
     "description": "The label for category Peg-out in sidebar 04ResourcesSidebar"
   },
   "sidebar.04ResourcesSidebar.category.Advanced Operations": {
-    "message": "Advanced Operations",
+    "message": "Operaciones avanzadas",
     "description": "The label for category Advanced Operations in sidebar 04ResourcesSidebar"
   },
+  "sidebar.04ResourcesSidebar.category.Token Bridge": {
+    "message": "Token Bridge",
+    "description": "The label for category Token Bridge in sidebar 04ResourcesSidebar"
+  },
   "sidebar.05DevToolsSidebar.category.Rootstock Wallets": {
-    "message": "Rootstock Wallets",
+    "message": "Carteras de Rootstock",
     "description": "The label for category Rootstock Wallets in sidebar 05DevToolsSidebar"
   },
   "sidebar.05DevToolsSidebar.category.Rootstock Explorers": {
-    "message": "Rootstock Explorers",
+    "message": "Exploradores de portainjertos",
     "description": "The label for category Rootstock Explorers in sidebar 05DevToolsSidebar"
   }
 }

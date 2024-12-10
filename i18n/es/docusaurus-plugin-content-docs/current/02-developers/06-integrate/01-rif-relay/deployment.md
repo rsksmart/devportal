@@ -183,7 +183,7 @@ En los Contratos de relevo RIF, ejecute el comando:
   npx hardhat allow-tokens --network testnet --token-list <TOKEN_ADDRESSES>
 ```
 
-> \<TOKEN_ADDRESSES> es una lista separada por comas de las direcciones de tokens que se permitirán en los verificadores disponibles. El script `allowTokens` utilizará la red Testnet configurada en el `hardhat.config.ts`, esta red deberá utilizar la cuenta que desplegó los contratos.
+> `<TOKEN_ADDRESSES>` es una lista separada por comas de las direcciones de tokens que se permitirán en los verificadores disponibles. El script `allowTokens` utilizará la red Testnet configurada en el `hardhat.config.ts`, esta red deberá utilizar la cuenta que desplegó los contratos.
 > También puedes modificar los tokens permitidos para verificadores específicos usando la opción `--verifier-list` de la siguiente manera:
 
 ```js
@@ -200,7 +200,7 @@ En los Contratos de relevo RIF, ejecute el comando:
   npx hardhat allow-tokens --network mainnet --token-list <TOKEN_ADDRESSES>
 ```
 
-> \<TOKEN_ADDRESSES> es una lista separada por comas de las direcciones de tokens que se permitirán en los verificadores disponibles. El script `allowTokens` utilizará la red Mainnet configurada en `hardhat.config.ts`, esta red deberá utilizar la cuenta que realizó el despliegue de los contratos.
+> `<TOKEN_ADDRESSES>` es una lista separada por comas de las direcciones de tokens que se permitirán en los verificadores disponibles. El script `allowTokens` utilizará la red Mainnet configurada en `hardhat.config.ts`, esta red deberá utilizar la cuenta que realizó el despliegue de los contratos.
 > También puedes modificar los tokens permitidos sólo para verificadores específicos usando la opción `--verifier-list` de la siguiente manera:
 
 ```js
