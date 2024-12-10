@@ -97,11 +97,15 @@ cd Web3py-Vyper-RootStock
 
 ### Syncing uv
 
+uv sync is a fast package management command that downloads and installs your project's Python dependencies while creating a lockfile for reproducible installations.
+
 ```bash
 uv sync
 ```
 
 ### pip/python
+
+The pip/python section creates a virtual environment (python -m venv ./venv), activates it (source ./venv/bin/activate), and installs the project dependencies from requirements.txt (pip install -r requirements.txt).
 
 ```bash
 python -m venv ./venv
@@ -110,6 +114,8 @@ pip install -r requirements.txt
 ```
 
 ## Quickstart
+
+Both uv run hello.py and python hello.py will run the script and output "Hello from web3py-Vyper-RootStock!", with UV being preferred for faster, modern projects and pip for traditional Python setups.
 
 ```bash
 uv run hello.py # for UV
