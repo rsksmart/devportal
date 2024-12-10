@@ -3,17 +3,7 @@ sidebar_label: "Vyper Smart Contract on Rootstock"
 sidebar_position: 100
 title: "Deploying a Vyper Smart Contract to Rootstock Testnet using Python"
 description: "This guide walks through the process of deploying a smart contract to the Rootstock testnet using Python and Web3.py. We'll be deploying a simple Vyper contract that demonstrates how to interact with the Rootstock network."
-tags: 
-  - rsk
-  - rootstock
-  - beginner
-  - quick starts
-  - advanced
-  - port to rootstock
-  - web3py
-  - vyper
-  - python
-
+tags: [rsk, rootstock, developers, vyper, quickstart, python, Smart Contracts]
 ---
 
 Rootstock is a layer 2 solution that combines the security of Bitcoin's proof of work with Ethereum's smart contract capabilities. The platform is open-source, EVM-compatible, and secured by over 60% of Bitcoin’s hashing power, offering unique advantages for developers.
