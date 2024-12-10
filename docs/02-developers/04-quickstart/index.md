@@ -18,6 +18,15 @@ values={[
 {label: 'Port to Rootstock', value: 'port-dapps'}
 ]}>
 <FilterItem
+    value="beginner, Advanced"
+    title="Vyper Starter Kit"
+    subtitle="quickstart"
+    color="orange"
+    linkHref="/developers/quickstart/vyper/"
+    linkTitle="Use the Kit"
+    description="This starter kit walks through the process of deploying a smart contract to the Rootstock testnet using Python and Web3.py."
+  />
+<FilterItem
     value="wagmi, beginner"
     title="Wagmi Starter Kit"
     subtitle="quickstart"
