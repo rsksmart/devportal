@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Button from "../Button";
 import clsx from "clsx";
+import Translate from '@docusaurus/Translate';
 
 export const ShareButtons = ({className}) => {
   const [showTip, setShowTip] = useState(false);
@@ -77,8 +78,15 @@ export const ShareButtons = ({className}) => {
                 copyLink(e);
               }}
       >
-        Copy page link
-        {showTip && (<span className={`position-absolute top-100 end-0 mt-6 text-body`}>Copied!</span>)}
+        <Translate
+          id="theme.common.copyPageLink">
+          Copy page link
+        </Translate>
+        {showTip && (<span className={`position-absolute top-100 end-0 mt-6 text-body`}>
+          <Translate id="theme.common.copyPageLinkMsg">
+            Copied!
+          </Translate>
+        </span>)}
       </Button>
     </div>
 )

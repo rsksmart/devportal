@@ -1,68 +1,55 @@
-import clsx from 'clsx';
-
 import Card from "/src/components/Card";
+import Translate from "@docusaurus/core/lib/client/exports/Translate";
 
 const data = {
-  title: 'Browse by DevTools',
+  title: <Translate>Browse by DevTools</Translate>,
   description: null,
   cards: [
     {
-      title: 'Get RBTC',
+      title: <Translate>Get RBTC</Translate>,
       color: 'orange',
       link: {
-        title: 'Read more',
+        title: <Translate>Read more</Translate>,
         href: 'https://rootstock.io/rbtc/',
       },
       description: (
-        <>
-          Explore the various ways to get RBTC using the PowPeg App, On/Off Ramps, or Exchanges.
-        </>
+        <Translate>Explore the various ways to get RBTC using the PowPeg App, On/Off Ramps, or Exchanges.</Translate>
       ),
 
     },
     {
-      title: 'Quick Starts',
+      title: <Translate>Quick Starts</Translate>,
       color: 'yellow',
       link: {
-        title: 'Read more',
+        title: <Translate>Read more</Translate>,
         href: '/developers/quickstart/',
       },
       description: (
-        <>
-          View a repository of starter kits,
-          sample codes and tutorials for creating,
-          testing and deploying smart contracts on Rootstock.
-        </>
+        <Translate>View a repository of starter kits, sample codes and tutorials for creating, testing and deploying smart contracts on Rootstock.</Translate>
       ),
     },
     {
       title: (
-        <>
-          EVM-compatible <br/> Tools
-        </>
+        <>EVM-compatible<br/>Tools</>
       ),
       color: 'cyan',
       link: {
-        title: 'Read more',
+        title: <Translate>Read more</Translate>,
         href: '/dev-tools/',
       },
       description: (
-        <>
-          Build and deploy faster with EVM-compatible tools and guides on Rootstock.
-        </>
+        <Translate>Build and deploy faster with EVM-compatible tools and guides on Rootstock.</Translate>
       ),
     },
     {
-      title: 'SDKs and Integration Guides',
+      title: <Translate>SDKs and Integration Guides</Translate>,
       color: 'pink',
       link: {
-        title: 'Read more',
+        title: <Translate>Read more</Translate>,
         href: '/developers/integrate/',
       },
       description: (
-        <>
-          Get up to speed, using easy-to-set-up SDKs and Integration Guides.
-        </>
+        <Translate>Get up to speed, using easy-to-set-up SDKs and Integration Guides.</Translate>
       ),
     }
   ]

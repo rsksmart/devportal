@@ -1,54 +1,47 @@
-import clsx from 'clsx';
-
 import Card from "/src/components/Card";
+import Translate from "@docusaurus/core/lib/client/exports/Translate";
 
 const data = {
-  title: 'Connect with the Community',
+  title: <Translate>Connect with the Community'</Translate>,
   description: null,
   cards: [
     {
-      title: 'Discord',
+      title: <Translate>Discord</Translate>,
       color: 'cyan',
       icon: 'discord',
       link: {
-        title: 'Join Discord',
+        title: <Translate>Join Discord</Translate>,
         href: 'https://discord.com/invite/rootstock',
         target: '_blank',
       },
       description: (
-        <>
-          Join the Rootstock<br/> Developer Community on Discord.
-        </>
+        <>Join the Rootstock<br/> Developer Community on Discord.</>
       ),
 
     },
     {
-      title: 'GitHub',
+      title: <Translate>GitHub</Translate>,
       color: 'contrast',
       icon: 'github',
       link: {
-        title: 'Star on Github',
+        title: <Translate>Star on Github</Translate>,
         href: 'https://github.com/rsksmart/devportal',
         target: '_blank',
       },
       description: (
-        <>
-          Explore open source tools, smart contracts and starter kits for deploying and integrating your dApps.
-        </>
+        <Translate>Explore open source tools, smart contracts and starter kits for deploying and integrating your dApps.</Translate>
       ),
     },
     {
-      title: 'Stay Connected',
+      title: <Translate>Stay Connected</Translate>,
       color: 'yellow',
       link: {
-        title: 'View upcoming Events',
+        title: <Translate>View upcoming Events</Translate>,
         href: 'https://rootstock.io/events',
         target: '_blank',
       },
       description: (
-        <>
-          View upcoming events, community calls,<br/> webinars, and meetups happening<br/> around the world.
-        </>
+        <>View upcoming events, community calls,<br/> webinars, and meetups happening<br/> around the world.</>
       ),
     },
   ]
