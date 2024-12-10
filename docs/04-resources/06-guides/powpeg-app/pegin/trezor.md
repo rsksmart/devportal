@@ -20,7 +20,7 @@ In this guide, we will be performing a peg in transaction using the [PowPeg App]
 
 ## Select Trezor Wallet
 
-![Connect Trezor](/img/resources/powpeg/wallets.png)
+![Connect Trezor](/img/resources/powpeg/pegin-wallets.png)
 
 ## Trezor Hardware Wallet
 
@@ -83,9 +83,16 @@ The PowPeg shows the pop-up with the connected usb ledger devices, if your devic
 
 To confirm successful connection to the PowPeg, you will be directed to the screen below, where we will perform a Peg-in transaction. 
 
-![Peg-in screen](/img/resources/powpeg/pegin-transaction-page.png)
+![Peg-in screen](/img/resources/powpeg/4-confirm-connection-testnet.png)
 
 > - The balance of the accounts in your hardware wallet will be loaded, and this shows the balance of 3 different types of accounts: segwit, legacy, native segwit. See the [supported addresses](#supported-addresses) for the meaning of these types of accounts.
+
+**Choose Account**
+
+Select the account you would like to send BTC from, by clicking on the dropdown as shown in the image below. 
+
+![Select Testnet Bitcoin Account](/img/resources/powpeg/select-btc-account.png)
+
 
 **Step 5: Sending a transaction**
 
@@ -95,7 +102,11 @@ Select the account you would like to send BTC from, by clicking on the dropdown 
 
 ![Select Testnet Bitcoin Account](/img/resources/powpeg/select-btc-account.png)
 
-> Note that for each selected account type, we will see a corresponding balance.
+:::info[Info]
+For each selected account type, we will see a corresponding balance.ente
+:::
+
+![Bitcoin Account Selected](/img/resources/powpeg/account-selected-pegin-ledger.png)
 
 **Enter Amount**
 
@@ -126,6 +137,9 @@ To enter an address, we are provided with two options:
 **Step 6a: Add a custom address**
 
 Also you can input a custom Rootstock address, different than the connected address.
+
+Paste destination address:
+![Paste address](/img/resources/powpeg/ledger-pegin-paste-destination-address.png)
  
 **Step 7: Select Transaction Fee**
 
@@ -136,29 +150,28 @@ Here, we can select the fee that will be used for this transaction, this is set 
 > - The transaction fee is not part of the amount you’re sending via the PowPeg, it will only be used for the correct processing of the transaction on the Bitcoin network. Also see the different types of fees (slow, average, fast) and their corresponding cost in TBTC and USD, depending on preference, you can choose any of those three. See the [adjusting network fees](/resources/guides/powpeg-app/advanced-operations#adjusting-network-fees) section for more information. 
 > - The time for each type of fee per transaction may vary depending on the number of transactions on the network and the fees charged at the time.
 
-**Step 8: View transaction summary**
+**Step 8: Select Mode**
 
-In this section, we can confirm the selected values:
+In this section, we will see 2 options, Fast Mode and Native Mode:
+- Fast Mode uses [Flyover Protocol](/developers/integrate/flyover/) to search for quotes, is faster than Native Mode, is provided by an Liquidity Provider, which in turn charges a fee for the service, called a provider fee.
 
-- Destination Address
-- Estimated time
-- BTC fee (Network fee)
-- Provider fee (always zero for this option)
-- Amount to send
-- Value to receive
+![Fast mode option](/img/resources/powpeg/fast-pegin-review-details.png)
 
-![Review Transaction](/img/resources/powpeg/ledger-pegin-review-details.png)
+- Native Mode uses [PowPeg Protocol](/concepts/powpeg/) that is decentralized, permissionless and uncensorable protocol created by Rootstock Labs, generally is slower than Fast mode and the user needs to pay only the network fees.
+
+![Native mode option](/img/resources/powpeg/native-pegin-review-details.png)
+
+- Value to receive: The estimated amount to receive when transaction finishes.
+- Total Fee (Network & Provider): The total fee paid, network fee (BTC Fee) + provider fee (not applied).
 
 > - In the instance of an error on this transaction, the amount will be sent to the address indicated in the **refund Bitcoin address** located in your hardware wallet.
 > - See the [glossary](/resources/guides/powpeg-app/glossary/) section for the meaning of these values.
 
-![Review Summary](/img/resources/powpeg/ledger-pegin-review-summary.png)
+**Step 9: Confirm and sign transaction**
 
+By clicking on the **Send** button, we can see all the transactions that will be made, their corresponding inputs and outputs, and the network fees that will be charged, all this information must be confirmed on your hardware wallet screen.
 
-**Step 9: Accept and send the transaction to be broadcasted to the network.**
-
-
-> After signing, the transaction is sent to the network to be processed, taking into account the fee value selected previously. 
+![View transaction summary](/img/resources/powpeg/ledger-pegin-confirm-and-send-transaction.png)
 
 **Step 10: View transaction status**
 
