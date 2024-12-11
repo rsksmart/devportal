@@ -305,7 +305,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
   * Click the **Connect Wallet** button in the top-right corner.  
   * Choose your Web3 wallet `(e.g., MetaMask)` and connect it to the Rootstock network.  
-  * Make sure your wallet is funded with some governance for voting and RBTC tokens to cover transaction fees.
+  * Make sure your wallet is funded with some governance tokens for voting and RBTC tokens to cover transaction fees.
 
 </Step>
 <Step title="Explore the Teams">
