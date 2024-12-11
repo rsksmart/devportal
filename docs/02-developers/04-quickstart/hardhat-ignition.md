@@ -3,7 +3,7 @@ sidebar_label: Hardhat Ignition
 sidebar_position: 400
 title: Rootstock Hardhat Ignition Starter Kit
 description: 'This guide is designed to help you deploy smart contracts on the Rootstock blockchain, with a focus on using Hardhat Ignition. 
-While standard Hardhat guides cover general Rootstock development, this guide specifically showcases how Hardhat Ignition can make deployment more efficient by enabling programmatic and declarative approaches tailored for Rootstock. '
+While standard Hardhat guides cover general Rootstock development, this guide specifically showcases how Hardhat Ignition can make deployment more efficient by enabling programmatic and declarative approaches tailored for Rootstock.'
 tags: [rsk, rootstock, hardhat Ignition, starter kit, mainnet, testnet, developers, hardhat, quick starts, dApps, smart contracts]
 ---
 
