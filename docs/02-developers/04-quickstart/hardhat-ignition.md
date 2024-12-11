@@ -1,6 +1,6 @@
 ---
 sidebar_label: Hardhat Ignition
-sidebar_position: 400
+sidebar_position: 401
 title: Rootstock Hardhat Ignition Starter Kit
 description: 'This guide is designed to help you deploy smart contracts on the Rootstock blockchain, with a focus on using Hardhat Ignition. 
 While standard Hardhat guides cover general Rootstock development, this guide specifically showcases how Hardhat Ignition can make deployment more efficient by enabling programmatic and declarative approaches tailored for Rootstock.'
@@ -278,7 +278,7 @@ npx hardhat ignition deploy --network rskTestnet ignition/modules/Box.ts
 :::
 
 
-### **What Happens When You Run This Command?** 
+### **Results of Running This Command** 
 
 1. **Reads Configuration**
 
