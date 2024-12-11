@@ -6,11 +6,23 @@ tags: [Governance Voting Dashboard, rootstock, tutorials, rsk, ERC20, blockchain
 description: "This project is a Governance Voting Dashboard built on the Rootstock blockchain. It allows users to create and vote for teams using governance tokens (ERC20 tokens). "
 ---
 
-This project is a **Governance Voting Dashboard** built on the **Rootstock blockchain**. It allows users to create and vote for teams using governance tokens [ERC20 tokens](http://localhost:3000/concepts/glossary/#e). 
+This project is a **Governance Voting Dashboard** built on the **Rootstock blockchain**. It allows users to create and vote for teams using governance tokens [ERC20 tokens](/concepts/glossary/#e). 
 
 The voting is managed by a smart contract, making it decentralized and transparent. Each team has a unique name, a governance token, and a leader, and users can vote by transferring tokens to their preferred teams.
 
 The dashboard is designed for token-based voting, where votes are reflected in a team's score. Higher scores indicate more community support for that team.
+
+## Prerequisites
+
+Before you begin your journey into deploying smart contracts on the Rootstock blockchain, ensure you have the following essential tools set up:
+
+-  **Node.js**
+
+You will need Node.js installed on your machine to run the project locally. [Download](https://nodejs.org/en/download/package-manager) the latest LTS version, which is recommended for most users.
+
+- **Web3 Wallet (Metamask)**
+
+A Web3 wallet is required for signing transactions and interacting with the Rootstock network. This wallet will enable you to manage your cryptocurrencies and deploy your smart contracts securely.
 
 ## Features
 
@@ -113,17 +125,7 @@ function addTeam(string memory teamName, address memeTokenAddress, address teamL
   ```
 :::
 
-## Prerequisites
 
-Before you begin your journey into deploying smart contracts on the Rootstock blockchain, ensure you have the following essential tools set up:
-
--  **Node.js**
-
-You will need Node.js installed on your machine to run the project locally. [Download](https://nodejs.org/en/download/package-manager) the latest LTS version, which is recommended for most users.
-
-- **Web3 Wallet (Metamask)**
-
-A Web3 wallet is required for signing transactions and interacting with the Rootstock network. This wallet will enable you to manage your cryptocurrencies and deploy your smart contracts securely.
 
 ## **Getting Started**
 
@@ -362,9 +364,11 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 ## Conclusion
 
-This guide provides a comprehensive walkthrough for building and deploying a Governance Voting Dashboard, a Next.js application that integrates with the Rootstock Network to facilitate decentralized voting using governance tokens (ERC20). 
+Following this guide, you can build and deploy a fully functional Governance Voting Dashboard that supports decentralized decision-making on the Rootstock Network. 
 
-The dApp allows users to create teams, cast votes using tokens, and manage proposals seamlessly.The frontend interaction enhances user engagement and streamers the voting process. 
+This dApp enables users to create teams, manage proposals, and cast votes using governance tokens (ERC20). 
 
-Users can easily create teams through an intuitive interface, where they input team details and invite members. This functionality is crucial for organizing voting groups, ensuring all stakeholders can participate effectively.
+The dApp simplifies the voting process and enhances user engagement with an intuitive interface and smooth interactions.
+
+Whether you're a developer looking to learn or a project leader aiming to implement decentralized governance, this guide equips you with all the tools and knowledge needed to succeed. Start building your dApp today and unlock the potential of transparent and efficient governance!
 
