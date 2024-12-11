@@ -298,7 +298,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 
 
-## **Interacting with the Frontend**
+## Interacting with the Frontend
 
 <Steps>
 <Step title="Connect Your Wallet">
