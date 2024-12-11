@@ -314,7 +314,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
   <figcaption>Explore the Teams (fig 4.)</figcaption>
  </figure>
 
- * Browse through the list of teams in the **Teams List** section.  
+ * Explore the list of teams in the **Teams List** section.
  * For each team, you can view:  
    - **Logo**: Visual representation or meme associated with the team.  
    - **Team Name**: Helps identify each team uniquely.  
