@@ -208,7 +208,7 @@ npx hardhat test
 
 3. If everything is okay, you’ll see green checkmarks or messages saying the tests passed.
 
-```
+```text
 Generating typings for: 2 artifacts in dir: typechain-types for target: ethers-v6
 Successfully generated 8 typings!
 Compiled 2 Solidity files successfully (evm target: paris).
