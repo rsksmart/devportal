@@ -1,11 +1,11 @@
 ---
 sidebar_position: 5
-sidebar_label: RSK CLI Interact with Verified Smart Contracts
-title: RSK CLI Interact with Verified Smart Contracts
+sidebar_label: Rootstock-CLI Interact with Verified Smart Contracts
+title: Rootstock-CLI Interact with Verified Smart Contracts
 description: "The contract command allows you to interact with a verified smart contract on the Rootstock blockchain. 
 
 This command lists all available read-only functions within the contract, allowing you to call these functions to view data without altering the contract's state. " 
-tags: [RSK CLI, guides, mainnet, testnet, rsk, rootstock, dApps, smart contracts, solidity]
+tags: [Rootstock-CLI, guides, mainnet, testnet, rsk, rootstock, dApps, smart contracts, solidity]
 ---
 
 The contract command allows you to interact with a verified smart contract on the Rootstock blockchain. 

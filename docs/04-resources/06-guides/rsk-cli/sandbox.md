@@ -3,7 +3,7 @@ sidebar_position: 6
 sidebar_label: Try the RSK CLI on Replit
 title: Try the RSK CLI on Replit
 description: "You can try out the RSK CLI in an online sandbox environment like Replit without needing to set up everything locally" 
-tags: [RSK CLI, guides, mainnet, testnet, rsk, rootstock, dApps, smart contracts, solidity]
+tags: [Rootstock-CLI, RSK CLI guides, mainnet, testnet, rsk, rootstock, dApps, smart contracts, solidity]
 ---
 
 You can try out the RSK CLI in an online sandbox environment like Replit without needing to set up everything locally. Follow these steps to get started:

@@ -1,18 +1,18 @@
 ---
 sidebar_position: 2
-sidebar_label: CLI Commands on RSK CLI
-title: CLI Commands on RSK CLI
-description: "The RSK CLI (Command Line Interface) lets you manage your Rootstock wallet directly from the terminal. Create, manage, and fund your wallet with RBTC (Rootstock Bitcoin) easily and securely." 
-tags: [RSK CLI commands, guides, mainnet, testnet, rsk, rootstock, dApps, smart contracts, solidity]
+sidebar_label: CLI Commands on Rootstock-CLI
+title: CLI Commands on Rootstock-CLI
+description: "The Rootstock-CLI  (Command Line Interface) lets you manage your Rootstock wallet directly from the terminal. Create, manage, and fund your wallet with RBTC (Rootstock Bitcoin) easily and securely." 
+tags: [Rootstock-CLI  commands, guides, mainnet, testnet, rsk, rootstock, dApps, smart contracts, solidity]
 ---
 
-The **RSK CLI (Command Line Interface)** lets you manage your Rootstock wallet directly from the terminal. Create, manage, and fund your wallet with **RBTC (Rootstock Bitcoin)** easily and securely.
+The **Rootstock-CLI  (Command Line Interface)** lets you manage your Rootstock wallet directly from the terminal. Create, manage, and fund your wallet with **RBTC (Rootstock Bitcoin)** easily and securely.
 
-With the RSK CLI, managing your wallet is simple. You can view saved wallets, switch between them, update wallet names, or delete wallets safely. Its user-friendly design ensures easy handling of all wallet tasks quickly and confidently from the terminal.
+With the Rootstock-CLI , managing your wallet is simple. You can view saved wallets, switch between them, update wallet names, or delete wallets safely. Its user-friendly design ensures easy handling of all wallet tasks quickly and confidently from the terminal.
 
 ## Managing Your Wallet
 
-To begin managing your wallet using RSK CLI, run the following command in your terminal:
+To begin managing your wallet using Rootstock-CLI, run the following command in your terminal:
 
 ```
 rsk-cli wallet
@@ -126,7 +126,7 @@ You’ll then be asked to create a password to encrypt the wallet, similar to wh
 
 -  Press the Enter key to select this option.
 
--  After selecting "List saved wallets", you will see an output similar to the following on your terminal:
+-  After selecting `List saved wallets`, you will see an output similar to the following on your terminal:
 
 ```
 📜 Saved wallets (1):
@@ -179,7 +179,7 @@ You’ll then be asked to create a password to encrypt the wallet, similar to wh
 
 - Press the Enter key to select this option.
 
--  After selecting "Switch wallets," you will see an output similar to the following on your terminal:
+-  After selecting `Switch wallets`, you will see an output similar to the following on your terminal:
 
 ```
 ? 🔁 Select the wallet you want to switch to: (Use arrow keys) 
@@ -188,7 +188,7 @@ You’ll then be asked to create a password to encrypt the wallet, similar to wh
 ```
 
 - Use the arrow keys to scroll through the list of available wallets.  
-- Highlight the wallet you want to switch to (e.g., tyhge).  
+- Highlight the wallet you want to switch to (e.g., `tyhge`).  
 - Press Enter to confirm your selection.
 
  After selecting a wallet, you will see a confirmation similar to this:
@@ -239,7 +239,7 @@ If you attempt to switch wallets but only have one wallet saved, you will receiv
   tyhge
 ```
 
-- Use the **arrow keys** to highlight the wallet you want to rename (e.g., iktesty).  
+- Use the **arrow keys** to highlight the wallet you want to rename (e.g., `iktesty`).  
 - Press **Enter** to confirm your selection.  
 - After selecting the wallet, you will be prompted to enter a new name:
 
@@ -379,7 +379,7 @@ Click on the **Transaction Hash** button to view the transaction details on the 
 
 ## Checking Your Wallet Balance
 
-The balance command in the RSK CLI allows for viewing the amount of RBTC in your wallet on the Rootstock network. This command supports both Mainnet (live network) and Testnet (testing network). Always make sure to use the correct network to avoid any confusion.
+The balance command in the Rootstock-CLI allows for viewing the amount of RBTC in your wallet on the Rootstock network. This command supports both Mainnet (live network) and Testnet (testing network). Always make sure to use the correct network to avoid any confusion.
 
   
 <Tabs>

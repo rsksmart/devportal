@@ -1,9 +1,9 @@
 ---
 sidebar_position: 3
-sidebar_label: Deploy Smart Contract via RSK CLI
-title: RSK CLI Deploy
+sidebar_label: Deploy Smart Contract via Rootstock-CLI 
+title: Rootstock-CLI Deploy
 description: "The rsk-cli enables you to deploy your smart contract" 
-tags: [RSK CLI, deploy, guides, mainnet, testnet, rsk, rootstock, dApps, smart contracts, solidity]
+tags: [Rootstock-CLI, deploy, guides, mainnet, testnet, rsk, rootstock, dApps, smart contracts, solidity]
 ---
 
 ### **Step 1: Set Up Your Hardhat Project**
