@@ -241,7 +241,7 @@ Compiled 2 Solidity files successfully (evm target: paris).
   12 passing (1s)
 
 ```
-  </Step>
+ </Step>
    <Step title="Deploy the Smart Contract">
     The following command is used to deploy a smart contract to the Rootstock Testnet:
 
