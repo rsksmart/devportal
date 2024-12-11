@@ -12,7 +12,7 @@ The voting is managed by a smart contract, making it decentralized and transpare
 
 The dashboard is designed for token-based voting, where votes are reflected in a team's score. Higher scores indicate more community support for that team.
 
-## Features Overview
+## Features
 
 1. **Create Teams**  
    Users can establish teams by providing:  
