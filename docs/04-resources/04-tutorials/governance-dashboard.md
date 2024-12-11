@@ -148,7 +148,7 @@ npm install
 
 Create a .env file in the project root directory and populate it with the required environment variables as listed above.
 
-#### **Required Environment Variables**
+### Environment Variables
 
 Set the following environment variables in your .env file to ensure the project functions correctly:
 
