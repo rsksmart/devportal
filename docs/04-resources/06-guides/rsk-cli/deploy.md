@@ -33,7 +33,7 @@ npx hardhat
 ### **Step 2: Add and Compile Your Smart Contract**
 
 1. **Create the Smart Contract**:  
-   * Inside the contracts folder, create a new Solidity file (e.g., ContactInfo.sol) and write your smart contract code.
+   * Inside the contracts folder, create a new Solidity file (e.g., ContactInfo.sol), then copy and paste the code below.
 
 ```
 // SPDX-License-Identifier: MIT
