@@ -5,6 +5,7 @@ sidebar_label: Glossary
 tags: [rsk, rootstock, developer tools, courses, guides, tutorials, glossary]
 description: "This glossary contains key terms and definitions to help you better understand the technologies and concepts related to Rootstock."
 ---
+# Glossary | Key Terms and Definitions
 
 This glossary contains key terms and definitions to help you better understand the technologies and concepts related to Rootstock. 
 
