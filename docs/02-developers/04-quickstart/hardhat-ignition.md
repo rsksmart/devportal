@@ -48,6 +48,12 @@ npm -v
 
    * This is like an access point that connects your computer to the Rootstock blockchain. You can use the Testnet (for testing) or Mainnet (for real transactions).
 
+:::warning[Before running these command]
+
+- If you find the `deployments` and `artifacts` folder inside the ignition directory, delete it.
+
+:::
+
 ## Getting Started
 
 <Steps>
@@ -357,8 +363,10 @@ The output includes the deployed contract's address, which you can use to intera
 
 :::warning[Troubleshooting]
 
-- **Reconciliation failed:** If you encounter this error, delete the ignition folder and artifacts folder, because they may have stored your previous deployment 
+1. **Reconciliation failed:** If you encounter this error, delete the ignition folder and artifacts folder, because they may have stored your previous deployment 
 
+**Error**
+- `First`.
 ```
 [ BoxModule ] reconciliation failed ⛔
 
@@ -369,9 +377,12 @@ BoxModule#Box:
 
 Consider modifying your module to remove the inconsistencies with deployed futures.
 ```
-
- - **Gas Fees**: If deployment fails, ensure your wallet has enough funds. Use the faucet for test tokens.  
- - **Incorrect URLs**: Double-check your .env file for the correct RPC URLs.  
- - **Compile Errors**: Review your smart contract code for mistakes.
+- `Second`.
+```
+IgnitionError: IGN401: Error while executing BoxModule#Box: all the transactions of its network interaction 1 were dropped. Please try rerunning Hardhat Ignition.
+```
+ 2. **Gas Fees**: If deployment fails, ensure your wallet has enough funds. Use the faucet for test tokens.  
+ 3. **Incorrect URLs**: Double-check your .env file for the correct RPC URLs.  
+ 4. **Compile Errors**: Review your smart contract code for mistakes.
 
 :::
