@@ -175,7 +175,7 @@ This is the unit used to measure the amount of computational work needed to perf
 
 # H
 
-Hardhat: 
+## Hardhat 
 
 This is a development environment for building, testing, and deploying Ethereum smart contracts. It provides tools that simplify the development process, allowing developers to write and test their code efficiently. In the context of Rootstock, Hardhat can be used to create and manage smart contracts, making it easier to integrate with the Rootstock network.
 
