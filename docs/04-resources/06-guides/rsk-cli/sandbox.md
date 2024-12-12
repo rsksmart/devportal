@@ -49,6 +49,6 @@ You can try out the RSK CLI in an online sandbox environment like Replit without
       <figcaption>Interact with Rootstock CLI on Replit (fig 3.)</figcaption>
     </figure>
 
-     You should now see the CLI interface running in the Replit terminal. From here, you can use the CLI commands to test various functionalities like creating a wallet, switching wallets, and executing `read/write` functions.
+     You should see the CLI interface running in the Replit terminal. Here you can use the CLI commands to test various functionalities like creating a wallet, switching wallets, and executing `read/write` functions.
   </Step>
  </Steps>
