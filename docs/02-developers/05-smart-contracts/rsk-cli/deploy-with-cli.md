@@ -6,9 +6,9 @@ description: "The rsk-cli enables you to deploy your smart contract"
 tags: [Rootstock-CLI, deploy, guides, mainnet, testnet, rsk, rootstock, dApps, smart contracts, solidity]
 ---
 
-### **Step 1: Set Up Your Hardhat Project**
-
-1. **Create a New Hardhat Project**:
+<Steps>
+  <Step title="Set Up Your Hardhat Project">
+    1. **Create a New Hardhat Project**:
 
 Open your terminal and create a new project using Hardhat. You can initialize your Hardhat project by running: 
 
@@ -29,11 +29,10 @@ npx hardhat
 ├── package.json
 └── node_modules/
 ```
-
-### **Step 2: Add and Compile Your Smart Contract**
-
-1. **Create the Smart Contract**:  
-   * Inside the contracts folder, create a new Solidity file (e.g., ContactInfo.sol), then copy and paste the code below.
+  </Step>
+  <Step title="Add and Compile Your Smart Contract">
+    1. **Create the Smart Contract**:  
+   * Inside the contracts folder, create a new Solidity file (e.g., `ContactInfo.sol`) and write your smart contract code.
 
 ```
 // SPDX-License-Identifier: MIT
@@ -105,35 +104,35 @@ This command compiles the project, generating an artifacts folder that contains 
 └── tsconfig.json
 ```
 
-###
- **Explore the Artifacts Folder**:  
+:::info[Explore the Artifacts Folder] 
   * Inside the artifacts folder, you’ll find two subfolders:  
     * `build-info`  
     * `contracts`  
+  :::
   > **Note**: Ensure that the contract’s file name matches the contract’s name in the Solidity code.  
 - **Locate the ABI and Bytecode**:  
  
     :::info[Info]
 
-     * **ABI**: The Application Binary Interface (ABI) defines the functions, events, and types in the contract, enabling interaction with it.  
-     * **Bytecode**: The bytecode is the compiled code that will run on the Ethereum Virtual Machine (EVM). This code is deployed to the blockchain.  
+     * `ABI`: The Application Binary Interface (ABI) defines the functions, events, and types in the contract, enabling interaction with it.  
+     * `Bytecode`: The bytecode is the compiled code that will run on the Ethereum Virtual Machine (EVM). This code is deployed to the blockchain.  
 
     :::
 
-  * Inside the contracts folder, open your contract’s folder (**ContactInfo** in this case). You will see two files:  
+  * Open your contract’s folder (`ContactInfo` in this case). You will see two files:  
     * `ContactInfo.dbg.json`  
     * `ContactInfo.json`  
    
  
 - **Copy the ABI and Bytecode**:  
-  * Open the ContactInfo.json file. Locate and copy the abi and bytecode, which will be used for deployment.
+  * Open the `ContactInfo.json` file. Locate and copy the abi and bytecode, which will be used for deployment.
 
 <figure>
 <img src="/img/guides/rsk-cli/artifacts-folder.png" alt="Hardhat Artifacts Folder"/>
   <figcaption>Hardhat Artifacts Folder (fig 1.)</figcaption>
 </figure>
 
- Save the ABI and bytecode in a new folder. You can name the folder anything, but for this tutorial, you will call it file. Inside this folder:
+To proceed, save the ABI and bytecode in a new folder. You can choose any name for the folder, but for this tutorial, we'll use 'file' as an example. Inside this folder:
 
 > * Save the ABI as `abi.json`.  
 > * Save the bytecode as `bytecode.bin` (make sure to copy the bytecode without quotes).
@@ -148,9 +147,9 @@ For the bytecode, we use `.bin` to indicate it’s a binary file containing the 
    └── bytecode.bin
 ```
 
-### **Step 3: Deploy Your Smart Contract**
-
-The `deploy` command allows you to deploy a smart contract on the Rootstock blockchain. This command supports deployment on both the mainnet and testnet.
+  </Step>
+  <Step title="Deploy Your Smart Contract">
+    The `deploy` command allows you to deploy a smart contract on the Rootstock blockchain. This command supports deployment on both the mainnet and testnet.
 
 > Now that you have your contract’s ABI and bytecode, you’re ready to deploy it.
 
@@ -172,7 +171,6 @@ The `deploy` command allows you to deploy a smart contract on the Rootstock bloc
    * Testnet is used for testing purposes, so developers often use it to verify contracts in a non-production environment before deploying them on the mainnet.  
 
    * **Example:** If verifying on testnet, use `--testnet`.
-
 :::
  
 
@@ -221,3 +219,7 @@ You should see a similar response to this:
 📍 Contract Address: 0x4edd891c2e988e6145fe3e418c652ee33ebab9ae
 🔗 View on Explorer: https://explorer.testnet.rootstock.io/address/0x4edd891c2e988e6145fe3e418c652ee33ebab9ae
 ```
+  </Step>
+</Steps>
+
+

@@ -10,7 +10,7 @@ To verify a smart contract on the Rootstock-CLI, the `rsk-cli` verify command al
 
 The `rsk-cli` verify command enables the verification of a smart contract on Rootstock's mainnet or testnet by providing the contract code, address, and other metadata through a JSON file. 
 
-Smart Contract Verification on Rootstock's blockchain allows users to confirm that the compiled bytecode on the blockchain matches the source code.
+Verification on Rootstock's blockchain allows users to confirm that the compiled bytecode on the blockchain matches the source code.
 
 
 <Tabs>
