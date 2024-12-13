@@ -10,7 +10,9 @@ In this guide, we will be performing a peg in transaction using the [PowPeg App]
 
 ## Access Pegin Page
 
-![Connect Trezor](/img/resources/powpeg/pegin.png)
+<center>
+    <img src="/img/resources/powpeg/pegin.png"  title="Connect Trezor" width="50%"/>
+</center>
 
 ## Verify if you have enabled **Perform Safety Checks** to **PROMPT**
 
@@ -42,30 +44,44 @@ Plug your Trezor wallet by connecting the USB cable that comes with Trezor.
 **Step 2: Export multiple addresses**
 In this step, the user is redirected to Trezor's site and needs to click on export to export the addresses. 
 
-![Export Testnet Addresses](/img/resources/powpeg/34-export-testnet-addresses.png)
+<center>
+    <img src="/img/resources/powpeg/34-export-testnet-addresses.png"  title="Export Testnet Addresses" width="50%"/>
+</center>
 
 **Step 3: Enter Pin and confirm**
 Enter a pin for your Trezor, displayed on your hardware wallet. Click **confirm**.
 
-![Insert Trezor Wallet Pin](/img/resources/powpeg/35-insert-trezor-wallet-pin.png)
+<center>
+    <img src="/img/resources/powpeg/35-insert-trezor-wallet-pin.png"  title="Insert Trezor Wallet Pin" width="50%"/>
+</center>
 
-![Insert Wallet Pin - Trezor](/img/resources/powpeg/35a-insert-wallet-pin-trezor.png)
+<center>
+    <img src="/img/resources/powpeg/35a-insert-wallet-pin-trezor.png"  title="Insert Wallet Pin - Trezor" width="50%"/>
+</center>
 
 **Step 4: Unlock Trezor with passphrase**
 
-![Enter passphrase](/img/resources/powpeg/36-enter-passphrase.png)
+<center>
+    <img src="/img/resources/powpeg/36-enter-passphrase.png"  title="Enter passphrase" width="50%"/>
+</center>
 
 Step 5:
 - Type Trezor passphrase
 - Trezor will display the message: 'Please enter your passphrase using the computer's keyboard'.
 
-![Enter Passphrase using Keyboard](/img/resources/powpeg/36a-enter-passphrase-keyboard.png)
+<center>
+    <img src="/img/resources/powpeg/36a-enter-passphrase-keyboard.png"  title="Enter Passphrase using Keyboard" width="50%"/>
+</center>
 
 The user fills the passphrase, and confirms passphrase fields, using the Trezor Connect application. The user will see this screen on Trezor: "Access Hidden Wallet?".
 
-![Access hidden wallet notification](/img/resources/powpeg/37-access-hidden-wallet-notification.png)
+<center>
+    <img src="/img/resources/powpeg/37-access-hidden-wallet-notification.png"  title="Access hidden wallet notification" width="50%"/>
+</center>
 
-![Use passphrase](/img/resources/powpeg/37a-use-passphrase.png)
+<center>
+    <img src="/img/resources/powpeg/37a-use-passphrase.png"  title="Use passphrase" width="50%"/>
+</center>
 
 Now, you have successfully connected your Trezor to the Bitcoin network.
 
@@ -83,7 +99,9 @@ The PowPeg shows the pop-up with the connected usb ledger devices, if your devic
 
 To confirm successful connection to the PowPeg, you will be directed to the screen below, where we will perform a Peg-in transaction. 
 
-![Peg-in screen](/img/resources/powpeg/4-confirm-connection-testnet.png)
+<center>
+    <img src="/img/resources/powpeg/4-confirm-connection-testnet.png"  title="Peg-in screen" width="50%"/>
+</center>
 
 > - The balance of the accounts in your hardware wallet will be loaded, and this shows the balance of 3 different types of accounts: segwit, legacy, native segwit. See the [supported addresses](#supported-addresses) for the meaning of these types of accounts.
 
@@ -92,7 +110,6 @@ To confirm successful connection to the PowPeg, you will be directed to the scre
 Select the account you would like to send BTC from, by clicking on the dropdown as shown in the image below. 
 
 ![Select Testnet Bitcoin Account](/img/resources/powpeg/select-btc-account.png)
-
 
 **Step 5: Sending a transaction**
 
@@ -106,7 +123,9 @@ Select the account you would like to send BTC from, by clicking on the dropdown 
 For each selected account type, we will see a corresponding balance.ente
 :::
 
-![Bitcoin Account Selected](/img/resources/powpeg/account-selected-pegin-ledger.png)
+<center>
+    <img src="/img/resources/powpeg/account-selected-pegin-ledger.png"  title="Bitcoin Account Selected" width="50%"/>
+</center>
 
 **Enter Amount**
 
