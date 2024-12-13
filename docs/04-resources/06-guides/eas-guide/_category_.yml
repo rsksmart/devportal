@@ -1,0 +1,6 @@
+label: Ethereum Attestation Service
+position: 2
+link:
+  type: generated-index
+  description: The PowPeg App fka 2 way peg app converts BTC to RBTC and vice versa. It is secured by the powpeg protocol, which is a unique PowPeg system that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus.
+  slug: /resources/guides/eas-guide/
