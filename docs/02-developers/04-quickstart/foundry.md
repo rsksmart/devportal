@@ -10,6 +10,7 @@ tags: [rsk, rootstock, tutorials, developers, foundry, quick starts, dApps, smar
 If you wish to suggest changes on this document, please open a PR on the [Foundry Starter Kit Repository](https://github.com/rsksmart/rootstock-foundry-starterkit.git)
 :::
 
+
 # Rootstock Foundry Starter Kit
 
 Whether you’re a seasoned developer or just starting your journey into smart contract development, the foundry starter kit provides a solid foundation for building decentralized applications (dApps) on the Rootstock network.
