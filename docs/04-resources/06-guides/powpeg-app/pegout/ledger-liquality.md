@@ -6,7 +6,6 @@ description: "Here, we will learn how to perform a peg-out using Metamask and ha
 tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-
 ![PowPeg App (peg-out)](/img/resources/powpeg/pegout.gif)
 
 ## Performing a peg-out transaction using Ledger and Liquality
@@ -50,7 +49,6 @@ To connect with a Ledger Wallet:
 ![Choose hd wallet ledger](/img/resources/powpeg/mm-ledger-connect.png)
 
 Now you can see "Ledger" or "Trezpr" label in your Metamask accounts
-
 
 <center>
     <img src="/img/resources/powpeg/trezor-wallet-imported-metamask.png"  title="Final screen" width="100%"/>
