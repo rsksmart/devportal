@@ -109,7 +109,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="GetBlock"
     subtitle="json rpc"
     color="orange"
-    linkHref="https://getblock.io/nodes/rsk/"
+    linkHref="/dev-tools/node-rpc/getblock/"
     linkTitle="Make First API Call"
     description="GetBlock provides instant connection to blockchain nodes including Rootstock, Bitcoin (BTC), Ethereum (ETH), among others."
   />
@@ -118,7 +118,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="NOWNodes"
     subtitle="json rpc"
     color="orange"
-    linkHref="https://nownodes.io/nodes/rsk"
+    linkHref="/dev-tools/node-rpc/nownodes/"
     linkTitle="Make First API Call"
     description="NOWNodes is a blockchain-as-a-service enterprise solution that lets users get access to full Nodes and blockbook Explorers via an API."
   />
@@ -127,7 +127,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="dRPC"
     subtitle="json rpc"
     color="orange"
-    linkHref="https://drpc.org/chainlist/rootstock?utm_source=docs&utm_medium=rootstock"
+    linkHref="/dev-tools/node-rpc/drpc/"
     linkTitle="Make First API Call"
     description="dRPC provides access to a distributed network of node providers."
   />
@@ -136,7 +136,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="Blast API"
     subtitle="json rpc"
     color="orange"
-    linkHref="https://blastapi.io/"
+    linkHref="/dev-tools/node-rpc/blast-api/"
     linkTitle="Make First API Call"
     description="Blast API is a Blockchain-optimized cloud infrastructure for low-latency, cost-effective RPC services."
   />

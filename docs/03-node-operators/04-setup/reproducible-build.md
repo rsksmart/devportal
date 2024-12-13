@@ -14,7 +14,7 @@ It's highly recommended to follow the steps by yourself to avoid contamination o
 
 :::warning[Important]
 
-Starting with [v6.4.0](/changelog/2024-11-05-introducing-arrowhead-6.4.0.md), the minimum supported Java LTS version is Java 17. Previous Java versions will no longer be supported. The following example for Linux OS is showing instructions for v6.3.1, and thus uses jdk 8, this must be replaced by jdk 17 for v6.4.0 and up.
+Starting with [v6.4.0](/changelog/), the minimum supported Java LTS version is Java 17. Previous Java versions will no longer be supported. The following example for Linux OS is showing instructions for v6.3.1, and thus uses jdk 8, this must be replaced by jdk 17 for v6.4.0 and up.
 
 :::
 
