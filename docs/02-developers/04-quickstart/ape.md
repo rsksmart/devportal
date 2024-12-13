@@ -14,7 +14,7 @@ In this guide, we will learn about the [Ape Framework](https://apeworx.io/framew
 To get started with Ape, ensure the following tools are installed:
 - Linux or macOS
 - Python 3.9 up to 3.12
-- Windows: Install Windows Subsystem Linux [(WSL](https://learn.microsoft.com/en-us/windows/wsl/install))
+- Windows: Install Windows Subsystem Linux [(WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
 - Check the python version in a terminal with python3 --version.
 
 ## Create a Ape project
