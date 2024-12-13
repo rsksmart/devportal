@@ -24,7 +24,9 @@ Unlock Leather using the same password that you created in the installation.
 
 ![leather-error](/img/resources/powpeg/leather-unlock-2.png)
 
-![leather-unlocking](/img/resources/powpeg/leather-unlock.png)
+<center>
+    <img src="/img/resources/powpeg/leather-unlock.png"  title="leather unlocking" width="50%"/>
+</center>
 
 ### Using Correct Network on Leather
 
@@ -34,9 +36,13 @@ If you see the message below, it means that your Leather wallet is in the incorr
 
 Select the correct environment on Leather:
 
-![leather-environment](/img/resources/powpeg/change-network1.png)
+<center>
+    <img src="/img/resources/powpeg/change-network1.png"  title="leather environment" width="50%"/>
+</center>
 
-![leather-environment-2](/img/resources/powpeg/change-network2.png)
+<center>
+    <img src="/img/resources/powpeg/change-network2.png"  title="leather environment 2" width="50%"/>
+</center>
 
 ### Verifying if the plugin is active
 
@@ -46,9 +52,13 @@ If you see the message below, it means that your Leather wallet is not enabled, 
 
 Go to chrome (manage extensions)[chrome://extensions/] and active your Leather wallet
 
-![leather-not-activated](/img/resources/powpeg/enable-leather.png)
+<center>
+    <img src="/img/resources/powpeg/enable-leather.png"  title="leather not activated" width="50%"/>
+</center>
 
-![leather-not-activated](/img/resources/powpeg/enable-leather2.png)
+<center>
+    <img src="/img/resources/powpeg/enable-leather2.png"  title="leather not activated" width="50%"/>
+</center>
 
 **Step 1: Creatting a transaction**
 
