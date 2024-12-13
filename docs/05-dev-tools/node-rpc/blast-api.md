@@ -12,7 +12,7 @@ Blast API is a Blockchain-optimized cloud infrastructure for low-latency, cost-e
 
 <Steps>
   <Step title="Sign Up and Get an API Key">
-   - Create an account at [Blast API](https://blastapi.io/login).  
+   - Create an account on [Blast API](https://blastapi.io/login).  
    - Generate your API key from the dashboard.  
 
   </Step>
