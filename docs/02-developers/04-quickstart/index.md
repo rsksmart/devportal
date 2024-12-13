@@ -46,6 +46,15 @@ values={[
     description="Smart Contract examples, Tests, Deployments and Tasks for Common ERC Standards (ERC20, ERC721, ERC1155)."
   />
 <FilterItem
+    value="hardhat, beginner"
+    title="Hardhat Ignition Starter Kit"
+    subtitle="quickstart"
+    color="orange"
+    linkHref="/developers/quickstart/hardhat-ignition/"
+    linkTitle="Use the Kit"
+    description="This guide is designed to help you deploy smart contracts on the Rootstock blockchain, with a focus on using Hardhat Ignition."
+  />
+<FilterItem
     value="foundry, sc, beginner"
     title="Foundry Starter Kit"
     subtitle="quickstart"
