@@ -117,4 +117,17 @@ See a list of terms about/related to the PowPeg App and their meanings.
       - This comprises of the BTC amount + transaction fee selected.
     </Accordion.Body>
   </Accordion.Item>
+     <Accordion.Item eventKey="18">
+    <Accordion.Header as="h3">Flyover transactions</Accordion.Header>
+    <Accordion.Body>
+      - Click [here](/developers/integrate/flyover/) to know more about flyover transactions.
+    </Accordion.Body>
+  </Accordion.Item>
+   <Accordion.Item eventKey="19">
+    <Accordion.Header as="h3">What is the PowPeg App testnet</Accordion.Header>
+    <Accordion.Body>
+      - Click [here to open PowPeg](https://powpeg.testnet.rootstock.io/) on Testnet.
+    </Accordion.Body>
+  </Accordion.Item>
+
 </Accordion>

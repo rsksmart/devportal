@@ -13,7 +13,7 @@ To setup a Rootstock node using Java, you need to:
 
 :::warning[Important]
 
-Starting with [v6.4.0](/changelog/2024-11-05-introducing-arrowhead-6.4.0/), the minimum supported Java LTS version is Java 17. Previous Java versions will no longer be supported.
+Starting with [v6.4.0](/changelog/), the minimum supported Java LTS version is Java 17. Previous Java versions will no longer be supported.
 
 :::
 
@@ -182,5 +182,5 @@ To change networks on the RSKj node, use the following commands:
     ```
 
 :::tip[Tip]
-Replace `<PATH-TO-THE-RSKJ-FATJAR>` with the actual path to your jar file. For example: `C:/RskjCode/rskj-core-6.4.0-ARROWHEAD-all.jar`.
+Replace `<PATH-TO-THE-RSKJ-FATJAR>` with the actual path to your jar file. For example: `C:/RskjCode/rskj-core-6.5.0-ARROWHEAD-all.jar`.
 :::

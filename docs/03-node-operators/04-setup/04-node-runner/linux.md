@@ -24,7 +24,7 @@ Recommended IDEs:
 
 :::warning[Important]
 
-Starting with [v6.4.0](/changelog/2024-11-05-introducing-arrowhead-6.4.0/), the minimum supported Java LTS version is Java 17. Previous Java versions will no longer be supported.
+Starting with [v6.4.0](/changelog/), the minimum supported Java LTS version is Java 17. Previous Java versions will no longer be supported.
 
 :::
 

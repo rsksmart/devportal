@@ -48,11 +48,15 @@ We will learn how to view a derived address using [Metamask](#using-metamask) to
 
 **Step 5**: Fill out wallet password and click on “Confirm”
 
-![metamask - fill_wallet_password](/img/resources/powpeg/metamask/fill_wallet_password.png)
+<center>
+    <img src="/img/resources/powpeg/metamask/fill_wallet_password.png"  title="metamask - fill_wallet_password" width="50%"/>
+</center>
 
-**Step 6**: Copy the private key and click on “Done”
+**Step 6**: Copy the private key and click on “Done”.
 
-![metamask - copy_assets](/img/resources/powpeg/metamask/copy_assets.png)
+<center>
+    <img src="/img/resources/powpeg/metamask/copy_assets.png"  title="metamask - copy_assets" width="50%"/>
+</center>
 
 ### Converting RBTC to BTC
 
@@ -99,7 +103,9 @@ Follow the steps below to get started;
 
 Step 1: Visit the url: [https://learnmeabitcoin.com/technical/wif](https://learnmeabitcoin.com/technical/wif)
 
-![metamask - WIF](/img/resources/powpeg/other/wif.png)
+<center>
+    <img src="/img/resources/powpeg/other/wif.png"  title="metamask - WIF" width="100%"/>
+</center>
 
 > You will find the [Ruby](https://www.ruby-lang.org/en/) code and a tool to convert the private key into a WIF.
 
@@ -133,8 +139,6 @@ puts wif
 
 ## Import key in Electrum
 
----
-
 [Electrum](https://electrum.org/#download) is used to verify a derived address, this address will then be used to receive and verify the converted funds (RBTC - BTC) when the pegout process is finished.
 
 Step 1: Download Electrum for your OS from the [website](https://electrum.org/#download).
@@ -158,7 +162,10 @@ Step 5: Fill out the WIF value of the private key and click on “Next” button
 
 Step 6: Create a new wallet password and click on the “Next” button
 
-![electrum - new](/img/resources/powpeg/other/electrum.png)
+
+<center>
+    <img src="/img/resources/powpeg/other/electrum.png"  title="electrum - new" width="100%"/>
+</center>
 
 > In this screen, you will see the address to receive the BTC funds.
 
@@ -183,43 +190,61 @@ Step 3: Fill out the name in “Wallet” field and click on “Next” button
 
 Step 4: Select “Standard wallet” option and click on “Next” button
 
-![wallet - electrum](/img/resources/powpeg/using-hd-wallets/electrum-hdw-1.png)
+<center>
+    <img src="/img/resources/powpeg/using-hd-wallets/electrum-hdw-1.png"  title="wallet - electrum" width="100%"/>
+</center>
 
 Step 4: Select “Use a hardware device” option and click on “Next” button
 
-![wallet - electrum-hardware-device](/img/resources/powpeg/using-hd-wallets/electrum-hdw-2.png)
+<center>
+    <img src="/img/resources/powpeg/using-hd-wallets/electrum-hdw-2.png"  title="wallet - electrum-hardware-device" width="100%"/>
+</center>
 
 Step 5: Select the hardware wallet and click on “Next” button
 
 > NOTE: The follow screen is an example of usage the Trezor Hardware Wallet
 
-![wallet - electrum-hardware-device-trezor](/img/resources/powpeg/using-hd-wallets/electrum-hdw-3.png)
+<center>
+    <img src="/img/resources/powpeg/using-hd-wallets/electrum-hdw-3.png"  title="wallet - electrum-hardware-device-trezor" width="100%"/>
+</center>
 
 > NOTE: The follow screen is an example of usage the Ledger Hardware Wallet
 
-![wallet - electrum-hardware-device-ledger](/img/resources/powpeg/using-hd-wallets/electrum-hdw-4.png)
+<center>
+    <img src="/img/resources/powpeg/using-hd-wallets/electrum-hdw-4.png"  title="wallet - electrum-hardware-device-ledger" width="100%"/>
+</center>
 
 Step 6: Select “legacy (p2pkh)” option, fill out a custom derivation path field and click on “Next” button
 
-```
+```text
 Custom derivation path:
 Mainnet: m/44'/137'/0'
 ```
 
-![wallet - electrum-derivation-pathx](/img/resources/powpeg/using-hd-wallets/electrum-hdw-5.png)
+<center>
+    <img src="/img/resources/powpeg/using-hd-wallets/electrum-hdw-5.png"  title="wallet - electrum-derivation-pathx" width="100%"/>
+</center>
 
 > NOTE: Testnet: m/44'/37310'/0'
 
-![wallet - electrum-derivation-legacy](/img/resources/powpeg/using-hd-wallets/electrum-hdw-6.png)
+<center>
+    <img src="/img/resources/powpeg/using-hd-wallets/electrum-hdw-6.png"  title="wallet - electrum-derivation-legacy" width="100%"/>
+</center>
 
 > IMPORTANT: For Ledger it is necessary to approve the custom derivation path in the device
 
-![wallet - electrum-ledger-confirmation](/img/resources/powpeg/using-hd-wallets/electrum-hdw-7.png)
+<center>
+    <img src="/img/resources/powpeg/using-hd-wallets/electrum-hdw-7.png"  title="wallet - electrum-ledger-confirmation" width="100%"/>
+</center>
 
 Step 7:  Check “Encrypt wallet file” option and click on “Next” button
 
-![wallet - electrum-encrypt](/img/resources/powpeg/using-hd-wallets/electrum-hdw-8.png)
+<center>
+    <img src="/img/resources/powpeg/using-hd-wallets/electrum-hdw-8.png"  title="wallet - electrum-encrypt" width="100%"/>
+</center>
 
 Step 8: Finally in Electrum go to “Addresses” tab and you can see your funds
 
-![wallet - electrum-show-funds](/img/resources/powpeg/using-hd-wallets/electrum-hdw-9.png)
+<center>
+    <img src="/img/resources/powpeg/using-hd-wallets/electrum-hdw-9.png"  title="wallet - electrum-show-funds" width="100%"/>
+</center>
