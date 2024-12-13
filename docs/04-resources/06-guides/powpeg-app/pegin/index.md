@@ -45,4 +45,6 @@ We will do the following:
 * PowPeg App frontend [repo](https://github.com/rsksmart/2wp-app)
 * PowPeg App backend [repo](https://github.com/rsksmart/2wp-api)
 * [Rootstock Testnet Faucet](https://faucet.rootstock.io/)
+* [Thirdweb Faucet](https://thirdweb.com/rootstock-testnet) 
+* [Blast Faucet](https://blastapi.io/faucets/rootstock-testnet)
 * [Design architecture](/resources/guides/powpeg-app/advanced-operations/design-architecture/)

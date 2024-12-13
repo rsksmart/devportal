@@ -16,6 +16,7 @@ This section equips you with the fundamental knowledge required to navigate the 
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | [Rootstock Blockchain Overview](/concepts/fundamentals/) | Gain a comprehensive understanding of the Rootstock platform. |
 | [Rootstock Stack](/concepts/fundamentals/stack/) |  Learn about how Rootstock combines the security of Bitcoin PoW with Ethereum's smart contract functionality.|
+| [Glossary](/concepts/glossary/) |  This glossary provides essential definitions for key terms related to Rootstock and blockchain technology.|
 | [RBTC Token](/concepts/rbtc/) | The RBTC token fuels transactions on the Rootstock network. Converting BTC to RBTC is straightforward using various methods. Visit the RBTC section for a comprehensive list of exchanges and applications facilitating RBTC acquisition. Visit the [RBTC section](https://rootstock.io/rbtc/) for a list of exchanges and apps to get RBTC.|
 | [RIF Suite](/concepts/rif-suite/) | Learn about the Rootstock Infrastructure Framework, a comprehensive set of Open-source tools and technologies designed to streamline and incentivize development on Bitcoin.|
 | [Rootstock Security](/concepts/powpeg/security-model/) | The Rootstock platform uses a security mechanism called the [Powpeg](/concepts/powpeg/), it is based on a layered security model, called “defence-in-depth”.|

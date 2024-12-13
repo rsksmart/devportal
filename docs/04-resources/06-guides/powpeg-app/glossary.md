@@ -102,7 +102,7 @@ See a list of terms about/related to the PowPeg App and their meanings.
   <Accordion.Item eventKey="15">
     <Accordion.Header as="h3">Testnet</Accordion.Header>
     <Accordion.Body>
-      - This is a testing network used for testing and development purposes, assets on the Testnet have zero value, funds used in this network are called Test tokens (tRBTC), they can be gotten through a faucet that dispenses tokens. These tokens are utility tokens that are required to operate certain dApps. Developers of those dApps also need to test them on the Testnet, and hence these are provided as a convenience for them. The Rootstock network provides a cryptocurrency faucet. The tRBTC faucet provides the cryptocurrency required to pay for gas fees on the Rootstock Testnet. See how to get tRBTC using the [Rootstock Faucet](https://faucet.rootstock.io/).
+      - This is a testing network used for testing and development purposes, assets on the Testnet have zero value, funds used in this network are called Test tokens (tRBTC), they can be gotten through a faucet that dispenses tokens. These tokens are utility tokens that are required to operate certain dApps. Developers of those dApps also need to test them on the Testnet, and hence these are provided as a convenience for them. The Rootstock network provides a cryptocurrency faucet. The tRBTC faucet provides the cryptocurrency required to pay for gas fees on the Rootstock Testnet. See how to get tRBTC using the [Rootstock Faucet](https://faucet.rootstock.io/). Additional faucet options include; [Thirdweb](https://thirdweb.com/rootstock-testnet) and [Blast](https://blastapi.io/faucets/rootstock-testnet) Faucets.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="16">

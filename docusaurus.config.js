@@ -56,8 +56,8 @@ const config = {
     },
     newsHighlight : [
       {
-        title : '📣 Rootstock Hacktivator Program is Live! Contribute and Earn Rewards!',
-        url : '/resources/contribute/hacktivator-program/'
+        title : '📣 Rootstock Hacktivator is Live! Contribute and Earn Rewards!',
+        url : '/resources/contribute/hacktivator/'
       }
     ]
   },
