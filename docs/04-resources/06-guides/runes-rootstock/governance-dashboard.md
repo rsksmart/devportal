@@ -1,9 +1,9 @@
 ---
 sidebar_position: 300
-title: Create a Governance Voting Dashboard
-sidebar_label: Create a Governance Voting Dashboard
+title: Build and Deploy a Governance Voting Dashboard on Rootstock
+sidebar_label: Build and Deploy a Governance Voting Dashboard on Rootstock
 tags: [Governance Voting Dashboard, rootstock, tutorials, rsk, ERC20, blockchain, defi]
-description: "This project is a Governance Voting Dashboard built on the Rootstock blockchain. It allows users to create and vote for teams using governance tokens (ERC20 tokens). "
+description: "This project is a Governance Voting Dashboard built on the Rootstock blockchain. It allows users to create and vote for teams using governance tokens (ERC20 tokens)."
 ---
 
 This project is a **Governance Voting Dashboard** built on the **Rootstock blockchain**. It allows users to create and vote for teams using governance tokens [ERC20 tokens](/concepts/glossary/#e). 
