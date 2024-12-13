@@ -1,18 +1,18 @@
 ---
-sidebar_label: Hacktivator Program
+sidebar_label: Hacktivator
 sidebar_position: 2
-title: 🌱 Rootstock Hacktivator Program 💻
-description: "The Rootstock Hacktivator Program allows developers to evolve to Rootstock by contributing code or creating educational content. You get to support the platform at your own pace, and every eligible contribution will be rewarded based on its impact and value."
-tags: [rootstock, rsk, code, resources, content, hacktivator program, writing, rewards]
+title: 🌱 Rootstock Hacktivator 💻
+description: "Rootstock Hacktivator allows developers to evolve to Rootstock by contributing code or creating educational content. You get to support the platform at your own pace, and every eligible contribution will be rewarded based on its impact and value."
+tags: [rootstock, rsk, code, resources, content, hacktivator, writing, rewards]
 ---
 
-Welcome to the Rootstock Hacktivator Program! This program is designed for developers who want to contribute to the Rootstock ecosystem and receive rewards for their valuable contributions.
+Welcome to the Rootstock Hacktivator! Designed for developers who want to contribute to the Rootstock ecosystem and receive rewards for their valuable contributions.
 
 <Button size="lg" href="https://forms.gle/aF9pFMfRyoygfzJWA">Submit Your Work</Button>
 
 ## 🌟 What is it?
 
-The Rootstock Hacktivator Program allows developers to evolve to Rootstock by contributing code or creating educational content. You get to support the platform at your own pace, and every eligible contribution will be rewarded based on its impact and value.
+Rootstock Hacktivator allows developers to evolve to Rootstock by contributing code or creating educational content. You get to support the platform at your own pace, and every eligible contribution will be rewarded based on its impact and value.
 
 ## ✔️ General Contribution Criteria
 * **Quality:** Contributions must be valuable to the Rootstock ecosystem, whether improving functionality, enhancing usability, or educating developers and community members.
@@ -22,7 +22,7 @@ The Rootstock Hacktivator Program allows developers to evolve to Rootstock by co
 
 ## 🎁 Rewards Per Category
 
-Eligible contributions will be rewarded as set out in the program’s terms and conditions, and based on the value and impact they bring to the Rootstock developer community, following the specifications below for each category.
+Eligible contributions will be rewarded as set out in the hacktivator's terms and conditions, and based on the value and impact they bring to the Rootstock developer community, following the specifications below for each category.
 
 ### Category 1: Code Contributions 🛠️
 
@@ -143,11 +143,11 @@ Developers are encouraged to leverage reference projects to make meaningful cont
 
 #### 👉 Code Contributions Criteria
 
-For a comprehensive overview of the evaluation and reward system for code contributions, including detailed criteria for complexity, project impact, tests, and documentation, please refer to [Evaluation Criteria for Code Contributions](https://docs.google.com/document/d/1vWYWdWxSXUcTxNS_OlRikfEwmPSXgw3iDsQ-UAqheMw/edit) and the [terms and conditions of the program](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?usp=sharing). These criteria outline how contributions, ranging from simple fixes to advanced features or external integrations, will be assessed and rewarded, ensuring a balanced and fair approach to valuing developer participation and impact. This document covers everything from optimizing performance to integrating external APIs, with rewards adjusted based on the value and complexity of each contribution.
+For a comprehensive overview of the evaluation and reward system for code contributions, including detailed criteria for complexity, project impact, tests, and documentation, please refer to [Evaluation Criteria for Code Contributions](https://docs.google.com/document/d/1vWYWdWxSXUcTxNS_OlRikfEwmPSXgw3iDsQ-UAqheMw/edit) and the [terms and conditions of the hacktivator](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?usp=sharing). These criteria outline how contributions, ranging from simple fixes to advanced features or external integrations, will be assessed and rewarded, ensuring a balanced and fair approach to valuing developer participation and impact. This document covers everything from optimizing performance to integrating external APIs, with rewards adjusted based on the value and complexity of each contribution.
 
 #### 👉 Code Contributions Rewards
 
-Each verified and approved code contribution that becomes a Qualified Contribution (as defined in the program's terms and conditions above) will be entitled to receive the following rewards, under the established process:
+Each verified and approved code contribution that becomes a Qualified Contribution (as defined in the Hacktivator's terms and conditions above) will be entitled to receive the following rewards, under the established process:
 * **Contribution Option A** → 50 - 300 USD
 * **Contribution Option B & C** → 300 - 700 USD
 * **Contribution Option D, E, F & G** → 700 - 1000 USD 
@@ -257,14 +257,14 @@ Your contributions can cover any of the following Rootstock themes:
 
 #### 👉 Educational Content Criteria & Guidelines:
 
-* Blogs, tutorials (written or video), and technical documentation should be original content created after the program launch on November 11th **(not previously published elsewhere)**, is accurate, and provides actionable insights. Please share your content via Google Drive by providing the URL on the submission form (link below).
+* Blogs, tutorials (written or video), and technical documentation should be original content created after the hacktivator launch on November 11th **(not previously published elsewhere)**, is accurate, and provides actionable insights. Please share your content via Google Drive by providing the URL on the submission form (link below).
 * Educational content should be targeted towards developers looking to build on Rootstock or understand its integration with Bitcoin.
 * Content must help other developers navigate and work with Rootstock, deploy smart contracts, use compatible tools, SDKs, and libraries, and or integrate protocols on Rootstock.
-* Contributions for Rootstock Technical documentation should be submitted as a Pull Request (PR) directly on the [DevPortal Repo](https://github.com/rsksmart/devportal/pulls), and the PR link should be submitted via the [Google form](https://forms.gle/aF9pFMfRyoygfzJWA). Ensure to use the label **“hacktivator-program”** on the PR and properly describe your PR using the template.
+* Contributions for Rootstock Technical documentation should be submitted as a Pull Request (PR) directly on the [DevPortal Repo](https://github.com/rsksmart/devportal/pulls), and the PR link should be submitted via the [Google form](https://forms.gle/aF9pFMfRyoygfzJWA). Ensure to use the label **“hacktivator”** on the PR and properly describe your PR using the template.
 
 :::note[More info about the guidelines]
 
-For a comprehensive overview of the guidelines, evaluation, and reward system for content contributions, including detailed criteria for depth, completeness, technical accuracy, educational value, and innovation, please refer to the [Educational Content Evaluation Criteria & Guidelines](https://docs.google.com/document/d/1vA3QK8ZNv5Fgegb0Jv2f03IVIREePDi4lrFE1vsfK7c/edit) and the [terms and conditions of the program](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?usp=sharing). These criteria outline how contributions, ranging from technical documentation, written or video guides or tutorials will be assessed and rewarded, ensuring a balanced and fair approach to valuing content quality and impact. This document covers everything from word count appropriateness and inclusion of code examples to technical correctness and relevance to the Rootstock ecosystem, with rewards adjusted based on the value and complexity of each contribution.
+For a comprehensive overview of the guidelines, evaluation, and reward system for content contributions, including detailed criteria for depth, completeness, technical accuracy, educational value, and innovation, please refer to the [Educational Content Evaluation Criteria & Guidelines](https://docs.google.com/document/d/1vA3QK8ZNv5Fgegb0Jv2f03IVIREePDi4lrFE1vsfK7c/edit) and the [terms and conditions of the Hactivator](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?usp=sharing). These criteria outline how contributions, ranging from technical documentation, written or video guides or tutorials will be assessed and rewarded, ensuring a balanced and fair approach to valuing content quality and impact. This document covers everything from word count appropriateness and inclusion of code examples to technical correctness and relevance to the Rootstock ecosystem, with rewards adjusted based on the value and complexity of each contribution.
 
 👉 Guidelines when publishing:
 * Follow the [Rootstock Style Guide](https://github.com/rsksmart/devportal/blob/main/STYLE-GUIDE.md)
@@ -274,7 +274,7 @@ For a comprehensive overview of the guidelines, evaluation, and reward system fo
 
 #### 👉 Educational Content Rewards:
 
-Each verified and approved code contribution that becomes a Qualified Contribution (as defined in the program's terms and conditions) will be entitled to receive the following rewards, under the established process:
+Each verified and approved code contribution that becomes a Qualified Contribution (as defined in the Hactivator's terms and conditions) will be entitled to receive the following rewards, under the established process:
 * **Blog Post Contribution:** 50 - 250 USD
 * **Written Guides or Tutorials Contribution:** 250 - 500 USD
 * **Technical Content Contribution:** 500 - 700 USD 
@@ -297,7 +297,7 @@ Submitting your contributions is easy! Just follow these steps:
   * A link to your submission (e.g., PR, GitHub for code, or written/video blogs/tutorial links).
 3. Review: Your submission will be reviewed by experts. You may be asked to make revisions or provide more information.
 
-This program is your chance to make a meaningful impact on Rootstock while earning rewards. Ready to contribute? Submit your work and be a part of the Rootstock developer community! 🌍
+This is your chance to make a meaningful impact on Rootstock while earning rewards. Ready to contribute? Submit your work and be a part of the Rootstock developer community! 🌍
 
 <Button size="lg" href="https://forms.gle/aF9pFMfRyoygfzJWA">Submit Your Work</Button>
 
@@ -305,7 +305,7 @@ This program is your chance to make a meaningful impact on Rootstock while earni
 
 :::success[T&C]
 
-By participating in this program, you acknowledge that you have read, understood, and agree to abide by all aspects of the program and its [terms and conditions](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?usp=sharing). If you do not agree with any part or all of the program and/or its terms and conditions, please refrain from joining or submitting contributions, as your participation will be construed as your full acceptance of these terms.
+By participating in the hacktivator, you acknowledge that you have read, understood, and agree to abide by all aspects of the program and its [terms and conditions](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?usp=sharing). If you do not agree with any part or all of the program and/or its terms and conditions, please refrain from joining or submitting contributions, as your participation will be construed as your full acceptance of these terms.
 
 :::
 

@@ -91,6 +91,13 @@ This is currently zero, which means that we cannot send any transactions to the 
 
 Now you should have a balance of tRBTC, and you will be able to send transactions on the Rootstock Testnet!
 
+:::info[Additional Faucet Options (Please note these faucets may have daily limits)]
+
+* Use [Thirdweb Faucet](https://thirdweb.com/rootstock-testnet): This faucet offers a convenient way to get free test RBTC tokens for development and testing. Its max daily token allocation is `0.01` tRBTC.
+* Use [Blast Faucet](https://blastapi.io/faucets/rootstock-testnet): This faucet offers a convenient way to get free test RBTC tokens for development and testing. It has a higher max daily token allocation of `0.1` tRBTC.
+
+:::
+
 ## Configure Custom Token for tRIF
 
 The Rootstock Infrastructure Framework (RIF) includes multiple services for decentralised applications.

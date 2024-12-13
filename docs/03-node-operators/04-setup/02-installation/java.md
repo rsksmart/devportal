@@ -13,7 +13,7 @@ To setup a Rootstock node using Java, you need to:
 
 :::warning[Important]
 
-Starting with v6.4.0, the minimum supported Java LTS version is Java 17. Previous Java versions will no longer be supported.
+Starting with [v6.4.0](/changelog/2024-11-05-introducing-arrowhead-6.4.0/), the minimum supported Java LTS version is Java 17. Previous Java versions will no longer be supported.
 
 :::
 
@@ -41,7 +41,7 @@ cd ~/rskj-node-jar
 ```
 3. **Move the JAR**: Move or copy the just downloaded jar file to your directory.
 ```jsx
-mv ~/Downloads/rskj-core-6.4.0-ARROWHEAD-all.jar SHA256SUMS.asc /Users/{user}/rskj-node-jar/
+mv ~/Downloads/rskj-core-6.5.0-ARROWHEAD-all.jar SHA256SUMS.asc /Users/{user}/rskj-node-jar/
 ```
 
 <!-- ### Configuration
@@ -69,7 +69,7 @@ mv ~/Downloads/rskj-core-6.4.0-ARROWHEAD-all.jar SHA256SUMS.asc /Users/{user}/rs
 
 :::tip[Tip]
 
-Replace `<PATH-TO-THE-RSKJ-JAR>` with the actual path to your JAR file. For example, `C:/RskjCode/rskj-core-6.4.0-ARROWHEAD-all.jar`.
+Replace `<PATH-TO-THE-RSKJ-JAR>` with the actual path to your JAR file. For example, `C:/RskjCode/rskj-core-6.5.0-ARROWHEAD-all.jar`.
 :::
 
 ## Using Import Sync
@@ -136,7 +136,7 @@ After starting the node, if there's no output, this means it's running correctly
 Output:
 
 ```shell
-{"jsonrpc":"2.0","id":67,"result":"RskJ/6.4.0/Mac OS X/Java21/ARROWHEAD-e016b25"}
+{"jsonrpc":"2.0","id":67,"result":"RskJ/6.5.0/Mac OS X/Java21/ARROWHEAD-e016b25"}
 ```
 
 2. To check the block number:
