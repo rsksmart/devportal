@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1300
-sidebar_label:  Peg-out using Metamask and any hardware wallet
-title: "Performing a peg-out using Metamask and hardware wallet"
+sidebar_label:  Peg-out using Ledger and any software wallet
+title: "Performing a peg-out using ledger and software wallet"
 description: "Here, we will learn how to perform a peg-out using Metamask and hardware wallet."
 tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
@@ -26,11 +26,16 @@ We will perform a peg-out transaction using the Ledger Hardware Wallet and Liqua
 To perform a peg-out transaction using the Ledger device with Metamask, follow the steps below:
 
 Step 1: Open Metamask click on select account, and then in the **Add account or hardware wallet** button:
-![Add account or hardware wallet](/img/resources/powpeg/add-account-or-hdwallet.png)
+
+<center>
+    <img src="/img/resources/powpeg/add-account-or-hdwallet.png"  title="Add account or hardware wallet" width="100%"/>
+</center>
 
 Step 2: Select **Add hardware wallet** option:
 
-![Add account or hardware wallet](/img/resources/powpeg/nn-add-account.png)
+<center>
+    <img src="/img/resources/powpeg/nn-add-account.png"  title="Add account or hardware wallet" width="100%"/>
+</center>
 
 Step 3: The user will be redirected to wallet selection page:
 
@@ -46,7 +51,10 @@ To connect with a Ledger Wallet:
 
 Now you can see "Ledger" or "Trezpr" label in your Metamask accounts
 
-![Final screen](/img/resources/powpeg/trezor-wallet-imported-metamask.png)
+
+<center>
+    <img src="/img/resources/powpeg/trezor-wallet-imported-metamask.png"  title="Final screen" width="100%"/>
+</center>
 
 ----
 

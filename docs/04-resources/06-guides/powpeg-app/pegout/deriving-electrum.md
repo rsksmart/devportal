@@ -245,7 +245,6 @@ Step 7:  Check “Encrypt wallet file” option and click on “Next” button
 
 Step 8: Finally in Electrum go to “Addresses” tab and you can see your funds
 
-
 <center>
     <img src="/img/resources/powpeg/using-hd-wallets/electrum-hdw-9.png"  title="wallet - electrum-show-funds" width="100%"/>
 </center>
