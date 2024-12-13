@@ -21,7 +21,6 @@ This guide provides clear instructions for developers on the supported Solidity 
  <Step title="Software Requirements:">
    
 
- 
 Set up the necessary software for a seamless development experience:  
 
 - **Solidity Version:**  

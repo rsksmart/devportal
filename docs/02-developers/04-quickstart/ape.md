@@ -99,7 +99,7 @@ If you do not want to see your mnemonic, select `n`. Alternatively, use the `--h
 
 :::warning[Warning]
 
-Don't forget to add funds to the account generated. To get tRBTC, use the [Rootstock Faucet](https://faucet.rootstock.io/).
+Don't forget to add funds to the account generated. To get tRBTC, use the [Rootstock Faucet](https://faucet.rootstock.io/). Additional faucet options include; [Thirdweb](https://thirdweb.com/rootstock-testnet) and [Blast](https://blastapi.io/faucets/rootstock-testnet) Faucets.
 
 To import an existing account check [Importing Existing Accounts](https://docs.apeworx.io/ape/stable/userguides/accounts.html#importing-existing-accounts) documentation.
 
