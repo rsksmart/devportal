@@ -93,7 +93,7 @@ There are two ways to obtain RPC URLs:
 
 After obtaining the RPC URLs, create a file named `.env` in your project's root directory `/.env` at the same level of `.env.example` file (important: this file should not be committed to version control). Add the next environment variable to the `.env` file:
 ```
-PRIVATE_KEY: Your private key (e.g., from your Metamask account details).
+PRIVATE_KEY= Your private key (e.g., from your Metamask account details).
 ```
 :::tip[Tip]
 Ensure the private key copied starts with `0x...`
