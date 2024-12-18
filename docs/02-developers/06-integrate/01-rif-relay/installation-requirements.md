@@ -2,9 +2,10 @@
 sidebar_label: Setup
 sidebar_position: 300
 title: RIF Relay Installation Requirements
+description: 'Requirements for installing RIF Relay.'
 tags: [rif, envelope, relay, user, guide]
-description: Requirements for installing RIF Relay
 ---
+
 
 To set up the RIF Relay system running locally there are some tools that are required. All of these tools are open source and have their own support page. The functionality of RIF Relay does not depend on these technologies and could be updated or replaced, if necessary.
 
@@ -40,3 +41,5 @@ For a detailed step-by-step guide on getting started with RIF Relay, refer to th
 ### Using Docker
 
 - RIF Relay components can be deployed using Docker or locally using [Hardhat](#hardhat). A guide for the [RIF Relay Server](https://github.com/rsksmart/rif-relay-server#execute-as-a-docker-container) can be found in the repository.
+
+test
