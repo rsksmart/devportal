@@ -2,10 +2,15 @@
 sidebar_label: Overview
 sidebar_position: 100
 title: RIF Relay - Overview
+description: 'RIF Relay Overview.'
 tags: [rif, envelope, relay, integrate, integration guide]
-description: RIF Relay Overview
 ---
 
+:::info[Note]
+If you wish to suggest changes on this document, please open a PR on the [Rif Relay Repository](https://github.com/rsksmart/rif-relay.git)
+:::
+
+# RIF Relay
 Most blockchains have native cryptocurrency to pay for transaction fees and gas consumption; this simple design has many benefits. First, to bootstrap an economy, the native cryptocurrency model creates an initial demand for it. Second, it simplifies the interaction between users and miners because it forces them to use the same means of payment. Third, it reduces the complexity of the consensus rules. Finally, it provides Denial of Service (DoS) protection to the network as full nodes can pay what the miners expect to include a received transaction. This way nodes can decide to propagate a transaction or not, preventing the free consumption of network bandwidth, and stop spam transactions.
 
 Cryptocurrencies tend to be associated with volatility and to counter measure this fact, Stablecoins were introduced. Stablecoins bridge the worlds of cryptocurrency and everyday fiat currency because their prices are pegged to a reserve asset like the U.S. dollar or gold.
@@ -15,3 +20,4 @@ But with the advent of Decentralized Finance (DeFi), several stable coins have b
 With this in mind, the main goal of the RIF Relay Project is to **provide the Rootstock (RSK) ecosystem with the means to allow blockchain applications and end-users (wallet-apps) to transact without needing RBTC**. The system should allow Rootstock (RSK) users to pay transaction fees with methods of payment (i.e., tokens) other than RBTC while maintaining their accounts as transaction senders.
 
 RIF Relay takes its inspiration from the [Gas Station Network (GSN) project](https://github.com/opengsn/gsn). GSN is a decentralized system that improves dApp usability without sacrificing security. In a nutshell, GSN abstracts away gas (used to pay transaction fees) to minimize onboarding and UX friction for dApps. With GSN, "gasless clients" can interact with smart contracts paying for gas with tokens instead of native-currency.
+
