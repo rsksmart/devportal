@@ -1,347 +1,158 @@
 ---
-sidebar_label: RIF Relay Deployment
-sidebar_position: 500
-title: RIF Relay Deployment
+sidebar_label: RIF Relay Sample dApp
+sidebar_position: 400
+title: How to use the RIF Relay Sample dApp SDK >> transformed/sample-dapp.md
+echo description: RIF Relay Sample dApp SDK Starter kit. >> transformed/sample-dapp.md
+echo tags: [rif, envelope, relay, integration guide] >> transformed/sample-dapp.md
+echo --- >> transformed/sample-dapp.md
+echo  >> transformed/sample-dapp.md
+cat temp_sample-dapp.md >> transformed/sample-dapp.md
+# Clean up temporary file
+rm temp_sample-dapp.md
+cp transformed/sample-dapp.md devportal/docs/02-developers/06-integrate/01-rif-relay/sample-dapp.md
+
+# Process deployment section
+TEMP_FILE=temp_deployment.md
+TRANSFORMED_FILE=transformed/deployment.md
+# Remove the unwanted first lines from section (title)
+tail -n +1 docs/deployment.md > temp_sample-dapp.md
+echo --- > transformed/sample-dapp.md
+echo sidebar_label: RIF Relay Deployment >> transformed/sample-dapp.md
+echo sidebar_position: 500 >> transformed/sample-dapp.md
+echo title: RIF Relay Deployment
+description: 'RIF Relay deployment process.'
 tags: [rif, envelope, relay, integration guide]
-description: RIF Relay deployment process
 ---
 
-## Set Up RIF Relay Contracts and Server
+# How to use the RIF Relay Sample dApp SDK
 
-### Deploy Contracts
+## Getting Started
 
-Start by deploying on-chain components. All tools needed are in the [RIF Relay Contract repository](https://github.com/rsksmart/rif-relay-contracts)
+This guide helps to quickly get started with setting up your environment to use RIF Relay and also use the sample dApp to test relay services.
 
-#### Regtest
+### Step 1: Run the Rootstock node
 
-1. Clone the Repository:
-  ```bash
-    git clone https://github.com/rsksmart/rif-relay-contracts
-  ```
-2. Navigate to the directory and install dependencies:
-  ```bash
-    cd rif-relay-contracts
-    npm install
-  ```
-3. Deploy the contract:
-  ```bash
-    npx hardhat deploy --network regtest
-  ```
+You need to set up and run a Rootstock node, preferably the latest version from RSKj releases. The node can operate locally or via Docker. In either case, a [`node.conf`](https://github.com/rsksmart/rif-relay/blob/main/docker/node.conf) file is used.
 
-> This uses the Regtest configuration from `hardhat.config.ts`.
-
-After deployment, you'll see a summary of the deployed contracts. This summary includes the on-chain components essential for RIF Relay, and additional contracts for testing and validation purposes.
-    ```text
-      ┌───────────────────────────────────────┬──────────────────────────────────────────────┐
-      │             (index)                   │                    Values                    │
-      ├───────────────────────────────────────┼──────────────────────────────────────────────┤
-      │            Penalizer                  │ '0x77045E71a7A2c50903d88e564cD72fab11e82051' │
-      │            RelayHub                   │ '0xDA7Ce79725418F4F6E13Bf5F520C89Cec5f6A974' │
-      │           SmartWallet                 │ '0x83C5541A6c8D2dBAD642f385d8d06Ca9B6C731ee' │
-      │       SmartWalletFactory              │ '0xE0825f57Dd05Ef62FF731c27222A86E104CC4Cad' │
-      │         DeployVerifier                │ '0x73ec81da0C72DD112e06c09A6ec03B5544d26F05' │
-      │          RelayVerifier                │ '0x03F23ae1917722d5A27a2Ea0Bcc98725a2a2a49a' │
-      │        CustomSmartWallet              │ '0x1eD614cd3443EFd9c70F04b6d777aed947A4b0c4' │
-      │    CustomSmartWalletFactory           │ '0x5159345aaB821172e795d56274D0f5FDFdC6aBD9' │
-      │ CustomSmartWalletDeployVerifier       │ '0x7557fcE0BbFAe81a9508FF469D481f2c72a8B5f3' │
-      │ CustomSmartWalletRelayVerifier        │ '0x0e19674ebc2c2B6Df3e7a1417c49b50235c61924' │
-      │      NativeHolderSmartWallet          │ '0x4aC9422c7720eF71Cb219B006aB363Ab54BB4183' │
-      │    NativeHolderSmartWalletFactory     │ '0xBaDb31cAf5B95edd785446B76219b60fB1f07233' │
-      │ NativeHolderSmartWalletDeployVerifier │ '0xAe59e767768c6c25d64619Ee1c498Fd7D83e3c24' │
-      │ NativeHolderSmartWalletRelayVerifier  │ '0x5897E84216220663F306676458Afc7bf2A6A3C52' │
-      │            UtilToken                  │ '0x1Af2844A588759D0DE58abD568ADD96BB8B3B6D8' │
-      │         VersionRegistry               │ '0x8901a2Bbf639bFD21A97004BA4D7aE2BD00B8DA8' │
-      └───────────────────────────────────────┴──────────────────────────────────────────────┘
-      ```
-The deployment summary shows two sets of Smart Wallets, each paired with its verifiers. This is because the verifier is used for both deployment and transaction validation. For testing purposes, the focus will be on using these Smart Wallet Contracts.
-
-#### Testnet
-1. Ensure your account is funded. You can get funds from the [tRBTC Faucet](https://faucet.rootstock.io/). Additional faucet options include; [Thirdweb](https://thirdweb.com/rootstock-testnet) and [Blast](https://blastapi.io/faucets/rootstock-testnet) Faucets.
-2. Deploy on Testnet:
-    ```bash
-      npx hardhat deploy --network testnet
-    ```
-> Remember to configure Testnet in `hardhat.config.ts`. Existing RIF Relay contracts deployed on Testnet can be found in the [contracts section](/developers/integrate/rif-relay/contracts).
-
-#### Mainnet
-
-1. Ensure your account is funded.
-2. Deploy on Mainnet:
-    ```bash
-      npx hardhat deploy --network mainnet
-    ```
-> Ensure Mainnet is set up in `hardhat.config.ts`. Existing RIF Relay contracts deployed on Mainnet can be found in the [contracts section](/developers/integrate/rif-relay/contracts).
-
-### Revenue Sharing
-
-Revenue Sharing is an optional feature in RIF Relay that can be implemented using collector contracts. You can deploy multiple Collector contracts, but they are not included in the default Relay contract deployment. For detailed information on Collector contracts, refer to the [architecture documentation](/developers/integrate/rif-relay/architecture#collector).
-
-Before deploying a Collector contract ensure the following:
-1. Ensure the chosen token for the Collector contract is the same as the one used for transaction fees. 
-    > **Note:** You cannot retrieve any other tokens other than the one set during Collector deployment.
-2. Select an appropriate owner for the Collector contract. This owner doesn't have to be the deployer but must have the authority to execute the withdraw function, or else the revenue funds will be locked in the contract.
-3. Set up partners and their share percentages, ensuring the total adds up to 100%. Incorrectly sent tokens to an inaccessible address without a private key from the beneficiary will be lost. For an example of a structurally valid revenue shares definition see [sample configuration](https://github.com/rsksmart/rif-relay-contracts/blob/master/deploy-collector.input.sample.json).
+Refer to the [Rootstock Node Installation Guide](/node-operators/setup/installation/) for a detailed guide on this step.
 
 
-#### Regtest
+### Step 2: Add network to Metamask
 
-To deploy the Collector contract, we'll use the [RIF Relay Contract](https://github.com/rsksmart/).
+To interact with the Rootstock network, you need to add it to Metamask. Since we're using the node on `--regtest mode`, follow the Metatmask guide on [How to add a custom network RPC](https://support.metamask.io/hc/en-us/articles/360043227612-How-to-add-a-custom-network-RPC) and add the Rootstock RegTest  Network to Metamask with the following data:
 
-1. Create a configuration file named `deploy-collector.input.json` with the required structure:
-      ```json
-          {
-            "collectorOwner": "0xCD2a3d9F938E13CD947Ec05AbC7FE734Df8DD826",
-            "partners": [
-                {
-                  "beneficiary": "0x7986b3DF570230288501EEa3D890bd66948C9B79",
-                  "share": 20
-                },
-                {
-                  "beneficiary": "0x0a3aA774752ec2042c46548456c094A76C7F3a79",
-                  "share": 35
-                },
-                {
-                  "beneficiary": "0xCF7CDBbB5F7BA79d3ffe74A0bBA13FC0295F6036",
-                  "share": 13
-                },
-                {
-                  "beneficiary": "0x39B12C05E8503356E3a7DF0B7B33efA4c054C409",
-                  "share": 32
-                }
-            ],
-            "tokenAddresses": ["0x1Af2844A588759D0DE58abD568ADD96BB8B3B6D8"],
-            "remainderAddress": "0xc354D97642FAa06781b76Ffb6786f72cd7746C97"
-          }
+```text
+- Network name: RSK regtest
+- New RPC URL: http://127.0.0.1:4444
+- Chain ID: 33
+- Currency symbol: tRBTC
+```
+
+To learn more about Metatmask and how to add it to Rootstock programmatically, see [Metamask](/dev-tools/wallets/metamask/) and [How to add Metamask to Rootstock Programmatically](/resources/tutorials/rootstock-metamask/).
+
+
+### Step 3: Set up RIF Relay contracts
+
+To set up RIF relay contract, clone the RIF Relay Contracts Repository: https://github.com/rsksmart/rif-relay-contracts, then follow the [RIF Relay Deployment](/developers/integrate/rif-relay/deployment/) guide to deploy an RIF Relay contract, enable revenue sharing, and whitelist the token by allowing it.
+
+<Accordion>
+  <Accordion.Item eventKey="0">
+    <Accordion.Header as="h3">Check allowed tokens</Accordion.Header>
+    <Accordion.Body>
+       ```bash
+        npx hardhat allowed-tokens --network regtest
+       ```
+        Response:
+        ```bash
+            rif-relay-contracts % npx hardhat allowed-tokens --network regtest
+            deployVerifier [ '0x6f217dEd6c86A57f1211F464302e6fA544045B4f' ]
+            relayVerifier [ '0x6f217dEd6c86A57f1211F464302e6fA544045B4f' ]
+            customDeployVerifier [ '0x6f217dEd6c86A57f1211F464302e6fA544045B4f' ]
+            customRelayVerifier [ '0x6f217dEd6c86A57f1211F464302e6fA544045B4f' ]
+            nativeHolderDeployVerifier [ '0x6f217dEd6c86A57f1211F464302e6fA544045B4f' ]
+            nativeHolderRelayVerifier [ '0x6f217dEd6c86A57f1211F464302e6fA544045B4f' ]
         ```
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="1">
+    <Accordion.Header as="h3">Mint token</Accordion.Header>
+    <Accordion.Body>
+        - To mint new units of the `UtilToken` into the Metamask wallet address:
+        - Go to the Metamask wallet, and copy the wallet address:
+        - Execute the command to mint the token, where:
+            - `--token-address` → this is the address for `UtilToken`
+            - `--amount` → quantity to be minted
+            - `--receiver` → wallet address
+            ```bash
+            npx hardhat mint \
+            --token-address 0x6f217dEd6c86A57f1211F464302e6fA544045B4f \
+            --amount 10000000000000000000 \
+            --receiver <wallet-address> \
+            --network regtest 
+            ```
+        - Import the minted token into the wallet.
+        - To see the token in the wallet, click on “import tokens”, and then paste the token address.
+    </Accordion.Body>
+  </Accordion.Item>
+</Accordion>
 
-> **Note:** The `collectorOwner`, `beneficiaries`, and `remainderAddress` are the first five accounts provided by the node in Regtest.
+### Step 4: Set up RIF Relay Server
 
-2. Deploy the contract:
-    ```bash
-      npx hardhat collector:deploy --network regtest
-    ```
+Clone the [RIF Relay Server Repository](https://github.com/rsksmart/rif-relay-server), then refer to [Run the RIF Relay Server](/developers/integrate/rif-relay/deployment#run-the-rif-relay-server) for a complete guide on setting up the RIF Relay server.
 
-The collector is ready and can start receiving fees.
 
-#### Testnet
+## RIF Relay Sample dApp
 
-Using the configuration file you created in the regtest section, run this command to deploy the contract: 
-  ```js
-    npx hardhat collector:deploy --network testnet
-  ```
-#### Mainnet
+This sample dApp shows you how to send transactions to the Rootstock blockchain using the [RIF Relay Sample dApp SDK](https://github.com/rsksmart/rif-relay-sample-dapp). You'll need to connect the dApp with MetaMask for signing transactions with the account managing your Smart Wallets.
 
-Using the configuration file you created in the regtest section, run this command to deploy the contract: 
-```js
-  npx hardhat collector:deploy --network mainnet
-```
-
-### Allow Tokens
-
-RIF Relay only accepts whitelisted tokens, primarily to ensure only tokens of value to the operator are accepted. To whitelist a token:
-Execute the `acceptToken(address token)` function on the Relay Verifiers contracts, which include:
-- `SmartWalletDeployVerifier`
-- `SmartWalletRelayVerifier`
-
-:::info[Note]
-This action must be performed by the contracts' owner, typically the account that conducted the deployment.
-:::
-  
-#### Regtest
-
-In the RIF Relay Contracts, execute this command:
-
-```js
-  npx hardhat allow-tokens --network regtest --token-list <TOKEN_ADDRESSES>
-```
-
-> `<TOKEN_ADDRESSES>` is a comma-separated list of the token addresses to be allowed on the available verifiers. The `allowTokens` uses the first account (referred to as account[0]) as the owner of the contracts. This is important because only the account owner can allow tokens.
-
-#### Testnet
-
-In the RIF Relay Contracts, execute the command:
-  
-  ```js
-    npx hardhat allow-tokens --network testnet --token-list <TOKEN_ADDRESSES>
-  ```
-
-> `<TOKEN_ADDRESSES>` is a comma-separated list of the token addresses to be allowed on the available verifiers. The `allowTokens` script will use the Testnet network configured in the `hardhat.config.ts`, this network will be required to use the account that deployed the contracts.
-> You can also modify the allowed tokens for specific verifiers only by using the `--verifier-list` option as follows:
-  
-```js
-  npx hardhat allow-tokens --network testnet --token-list <TOKEN_ADDRESSES> --verifier-list <VERIFIER_ADRESSES>
-```
-
-> The `<TOKEN_ADDRESSES>`, `<VERIFIER_ADDRESSES>` is a comma-seperated list of verifier addresses to allow the tokens for.
-
-#### Mainnet
-
-In the RIF Relay Contracts, execute the command:
-
-```js
-  npx hardhat allow-tokens --network mainnet --token-list <TOKEN_ADDRESSES>
-```
-
-> `<TOKEN_ADDRESSES>` is a comma-separated list of the token addresses to be allowed on the available verifiers. The `allowTokens` script will use the Mainnet network configured in `hardhat.config.ts`, this network will be required to use the account that did the deployment of the contracts.
-> You can also modify the allowed tokens for specific verifiers only by using the `--verifier-list` option as follows:
-
-```js
-  npx hardhat allow-tokens --network testnet --token-list <TOKEN_ADDRESSES> --verifier-list <VERIFIER_ADRESSES>
-```
-> The `<TOKEN_ADDRESSES>`, `<VERIFIER_ADDRESSES>` is a comma-seperated list of verifier addresses to allow the tokens for.
-
-:::info[Note]
-The network name; regtest, testnet, or mainnet, is an optional parameter that is taken from the hardhat.config.ts file. The network name you specify must be the same as the one used to deploy the contract.
-:::
-
-### Run the RIF Relay Server
-
-After setting up on-chain components, the next step is to set up off-chain components, using the [RIF Relay Server](https://github.com/rsksmart/rif-relay-server). 
-Configuration of the Relay Server is streamlined using the [node-config](https://www.npmjs.com/package/config) package. For detailed advantages of this package, visit their [wiki](https://github.com/node-config/node-config/wiki).
-
-<b>The TL;DR:</b> In the `config` directory, create a file named `local.json`.
-For visual insights into how the Relay Server functions, refer to the diagrams available [here](/developers/integrate/rif-relay/architecture/).
-    
-#### Regtest
-    
-Here's a configuration example for setting up the RSKj node locally with the contracts deployed in Regtest:
-
-```json
-{
-    "app": {
-      "url": "http://127.0.0.1",
-      "port": 8090,
-      "devMode": true,
-      "logLevel": 1,
-      "workdir": "./enveloping/environment/",
-  },
-    "blockchain": {
-      "rskNodeUrl": "http://127.0.0.1:4444",
-    },
-    "contracts": {
-      "relayHubAddress": "0xDA7Ce79725418F4F6E13Bf5F520C89Cec5f6A974",
-      "relayVerifierAddress": "0x03F23ae1917722d5A27a2Ea0Bcc98725a2a2a49a",
-      "deployVerifierAddress": "0x73ec81da0C72DD112e06c09A6ec03B5544d26F05"
-    }
-}
-  ```
-> **Note:** Relay and Deploy verifiers use the contracts from the Smart Wallet section in the summary.
-
-The meaning of each key can be found in [RIF Relay Server Configuration](https://github.com/rsksmart/rif-relay-server#server-configuration)
-
-To start the server, run the following command:
-
-```js
-  npm run start
-```
-
-> By default, the server uses the `default.json5` file in the config directory. Depending on the profile in `NODE_ENV`, the values in the `default.json5` file is overriden.
-
-At this point the server should be running and ready to start processing transactions, however, you still need to register the off-chain components in the Relay Hub.
-
-To enable the server for transaction processing, you must register the off-chain components in the Relay Hub. This step requires the server to be active. To register the components, in a different terminal window, execute the following command:
-
-```js
-  npm run register
-```
-
-The register process performs the following actions:
-- Stakes the Relay Manager
-- Adds the Relay Worker
-- Registers the Relay Server
-
-The server is now ready to start processing transactions and a `ready` message is diplayed on the console. For more details on configuration and registration parameters, refer to the [RIF Relay Server documentation](https://github.com/rsksmart/rif-relay-server#overrides).
-
-#### Testnet
-
-Here's an example configuration file using the off-chain components deployed on the Rootstock Testnet (https://rpc.testnet.rootstock.io/{YOUR_APIKEY}). 
-
-> **Important:** Due to specific modules enabled in the RSKj nodes, the RIF Relay Server cannot connect to the public nodes.            
-        
-```json
-  {
-    "app": {
-    "url": "https://backend.dev.relay.rifcomputing.net",
-    "port": 8090,
-    "devMode": true,
-    "logLevel": 1,
-    "feePercentage": "0",
-    "workdir": "/srv/app/environment"
-    },
-    "blockchain": {
-      "rskNodeUrl": "http://172.17.0.1:4444"
-    },
-    "contracts": {
-      "relayHubAddress": "0xAd525463961399793f8716b0D85133ff7503a7C2",
-      "relayVerifierAddress": "0xB86c972Ff212838C4c396199B27a0DBe45560df8",
-      "deployVerifierAddress": "0xc67f193Bb1D64F13FD49E2da6586a2F417e56b16"
-    }
-  }
-```
-
-> The [contracts](/developers/integrate/rif-relay/contracts/) used in this setup are the primary contracts available on the Rootstock network. These primary contracts, however, do not include support for the `CustomSmartWallet`.            
-
-For details of each configuration key used in setting up the RIF Relay Server, refer to the [RIF Relay Server Configuration](https://github.com/rsksmart/rif-relay-server#server-configuration) documentation.
-
-To start the server, execute the following command:
-
-```js
-  npm run start
-```
-> By default, the server uses the `default.json5` file in the config directory. Depending on the profile in `NODE_ENV`, the values in the `default.json5` file is overriden. Therefore you need to setup the `NODE_ENV` environment to `testnet`.
-
-At this point, the server should be running and ready to start processing transactions; however, you still need to register the off-chain components in the Relay Hub. For the registration process, the Relay Manager and Worker must have funds.           
-
-To get the addresses, this requires the server to be active. In a different terminal window, execute the following command:
+### Clone SDK repository and install dependencies
 
 ```bash
-  curl http://<SERVER_URL>/chain-info
+    # clone repository
+    git clone https://github.com/rsksmart/relaying-services-sdk-dapp
+    cd relaying-services-sdk-dapp
+    # install dependencies
+    npm install --force
 ```
+- Configure environment variables
 
-```json
-{
-  "relayWorkerAddress": "0xabf898bd73b746298462915ca91623f5630f2462",
-  "relayManagerAddress": "0xa71d65cbe28689e9358407f87e0b4481161c7e57",
-  "relayHubAddress": "0xe90592939fE8bb6017A8a533264a5894B41aF7d5",
-  "feesReceiver": "0x52D107bB12d83EbCBFb4A6Ad0ec866Bb69FdB5Db",
-  "minGasPrice": "6000000000",
-  "chainId": "31",
-  "networkId": "31",
-  "ready": false,
-  "version": "2.0.1"
-}
-```
-
-1. Send an arbitrary amount of tRBTC, 0.001 tRBTC for example, to the Worker and Manager.
-2. Now execute the register command.
-
-```js
-  npm run register
-```
+Create a new file named `.env`  in the top directory, and add the following lines in it (with the contract addresses generated when we deployed the contracts) in the **Set up RIF Relay Contracts** section above:
         
-Here's an example of the `register.json5`
+```bash
+    REACT_APP_CONTRACTS_RELAY_HUB=0x463F29B11503e198f6EbeC9903b4e5AaEddf6D29
+    REACT_APP_CONTRACTS_DEPLOY_VERIFIER=0x14f6504A7ca4e574868cf8b49e85187d3Da9FA70
+    REACT_APP_CONTRACTS_RELAY_VERIFIER=0xA66939ac57893C2E65425a5D66099Bc20C76D4CD
+    REACT_APP_CONTRACTS_SMART_WALLET_FACTORY=0x79bbC6403708C6578B0896bF1d1a91D2BB2AAa1c
+    REACT_APP_CONTRACTS_SMART_WALLET=0x987c1f13d417F7E04d852B44badc883E4E9782e1
 
-```json
-  {
-    "register": {
-    "stake": "REGISTER_STAKE",
-    "funds": "REGISTER_FUNDS",
-    "mnemonic": "REGISTER_MNEMONIC",
-    "privateKey": "REGISTER_PRIVATE_KEY",
-    "hub": "REGISTER_HUB_ADDRESS",
-    "gasPrice": "REGISTER_GAS_PRICE",
-    "relayUrl": "REGISTER_RELAY_URL",
-    "unstakeDelay": "REGISTER_UNSTAKE_DELAY"
-    }
-  }
+    REACT_APP_RIF_RELAY_CHAIN_ID=33
+    REACT_APP_RIF_RELAY_GAS_PRICE_FACTOR_PERCENT=0
+    REACT_APP_RIF_RELAY_LOOKUP_WINDOW_BLOCKS=1e5
+    REACT_APP_RIF_RELAY_PREFERRED_RELAYS=http://localhost:8090
+<<<<<<< HEAD
+    REACT_APP_BLOCK_EXPLORER=https://explorer.testnet.rootstock.io
+=======
+    REACT_APP_BLOCK_EXPLORER=https://explorer.testnet.rootstock.io/
+>>>>>>> main
 ```
 
-The register process performs the following actions:
-- Stakes the Relay Manager
-- Adds the Relay Worker
-- Registers the Relay Server
+### Run the dApp
 
-The server is now ready to start processing transactions and a ready message is diplayed on the console. For more details on configuration and registration parameters, refer to the [RIF Relay Server documentation](https://github.com/rsksmart/rif-relay-server#overrides).         
+```bash
+    # run app in regtest environment
+    ENV_VALUE="regtest" npm run start
+```
+![Run the dApp](/img/rif-relay/starter-kit/run-the-dapp.png)
 
-#### Mainnet
-- To run RIF Relay Server on the Rootstock Mainnet, the procedure is the same as the one on Testnet, the only difference is the configuration. Configure it to use contracts deployed on Mainnet and an RSKj node connected to Mainnet.
+- Connect metamask wallet for signing
+
+![Connect Metamask Wallet](/img/rif-relay/starter-kit/connect-metamask-wallet.png)
+- Create a new smart wallet
+
+![Create a new Smart Wallet](/img/rif-relay/starter-kit/create-smart-wallet.png)
+
+- Mint tokens to the wallet
+    - For commands to mint token, See step 6 in the Set up RIF Relay contracts section above.
+![Mint Tokens](/img/rif-relay/starter-kit/mint-tokens.png)
+- Transfer to different addresses, using TKN for transfer fees payment, instead of RBTC
+![Transfer using TKN](/img/rif-relay/starter-kit/transfer-using-tkn.png)

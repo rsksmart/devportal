@@ -1,66 +1,94 @@
 ---
-sidebar_label: Versions
-sidebar_position: 900
-title: RIF Relay Versions
+sidebar_label: Smart Wallets
+sidebar_position: 800
+title: RIF Relay Smart Wallets >> transformed/smart-wallets.md
+echo description: RIF Relay Smart Wallets. >> transformed/smart-wallets.md
+echo tags: [rif, envelope, relay, user, guide] >> transformed/smart-wallets.md
+echo --- >> transformed/smart-wallets.md
+echo  >> transformed/smart-wallets.md
+cat temp_smart-wallets.md >> transformed/smart-wallets.md
+# Clean up temporary file
+rm temp_smart-wallets.md
+cp transformed/smart-wallets.md devportal/docs/02-developers/06-integrate/01-rif-relay/smart-wallets.md
+
+# Process versions section
+TEMP_FILE=temp_versions.md
+TRANSFORMED_FILE=transformed/versions.md
+# Remove the unwanted first lines from section (title)
+tail -n +1 docs/versions.md > temp_smart-wallets.md
+echo --- > transformed/smart-wallets.md
+echo sidebar_label: Versions >> transformed/smart-wallets.md
+echo sidebar_position: 900 >> transformed/smart-wallets.md
+echo title: RIF Relay Versions
+description: 'RIF Relay Versions.'
 tags: [rif, envelope, rif relay, integration guide]
-description: "RIF Relay Versions"
 ---
 
+# RIF Relay Smart Wallets
 
-The first iteration of RIF Relay was based on the great work done by the [Gas Station Network team](https://www.opengsn.org/).
+This guide is intended to explain more about the interaction and deployment of the Smart Wallets. We will be using additional testing contracts that were included in the project, like the `UtilToken(ERC20)`. All the utils scripts are executed from the account[0] from the regtest network. 
 
-## Version 0.1
+## Prerequisites
 
-RIF Relay V0.1 started as a fork of GSN with two goals in mind:
+* Follow the deployment process in [Deployment Guide](/developers/integrate/rif-relay/deployment).
+* The definition of the smart wallet can be found in [Architecture](/developers/integrate/rif-relay/architecture/)
 
-- Be compatible with existing and future smart contracts without requiring such contracts to be adapted to work with RIF Relay.
-- Be as cost effective as possible.
+## Ways to create smart wallets
 
-## Version 0.2
+There are **two ways** to create a Smart Wallet:
 
-### Overview
+1. **Regular transaction:** The Requester (or another account on behalf of the Requester) calls the Proxy Factory asking to get a new Smart Wallet. Therefore the Proxy Factory creates a proxy to the SmartWallet code, delegating the ownership to the Requester.
+2. **Sponsored:** It needs to go through the RIF Relay process, which is described in detail below. The requester asks a third party to pay for the Smart Wallet deployment, and the requester pays in tokens for that (or free if it is subsidized by the third-party, a.k.a, Sponsor).
 
-RIF Relay V0.2 is a redesign of GSN. It reduces gas costs and simplifies the interaction between the different contracts that are part of the system. It achieves this by:
+## Send funds
 
-- Securely deploying counterfactual Smart Wallet proxies for each user account: this eliminates the need for relying on `_msgSender()` and `_msgData()` functions, making existing and future contracts compatible with RIF Relay without any modification.
-- Allowing relayers to receive tokens in a worker address under their control and decide what to do with funds later on.
-- Reducing gas costs by optimizing the GSN architecture.
+In the [RIF Relay Contracts](https://github.com/rsksmart/rif-relay-contracts) there is a script that would help us to mint ERC20 tokens.
 
-Our main objective is to provide the Rootstock (RSK) ecosystem with the means to enable blockchain applications and end-users (wallet-apps) to pay for transaction fees using tokens (e.g. RIF tokens), and thereby remove the need to acquire RBTC in advance.
+We need to execute the following script:
 
-It is important to recall that - as a security measure - V0.1 contracts deployed on Mainnet have limits on the staked amounts to operate; these limits were removed in V0.2.
+```shell
+npx hardhat mint --token-address <0xabc123> --amount <amount_in_wei> --receiver <0xabc123> --network regtest
+```
+> The token contract needs to have a mint function. 
 
-### Details
+## Deploy a Smart Wallet
 
-* RelayHub contract no longer receives payments, the payment for the service (in tokens) is now sent directly to the worker relaying the transaction on behalf of the user.
-* RelayHub contract now handles relay manager staking.
-* Gas estimation improvements:
-    * Gas overhead removed from RelayHub; there are no more validations against hardcoded values.
-    * The gas and token gas fields from the request can now be left undefined, and in that case, they will automatically be estimated by the RIF Relay Client.
-    * The maximum gas estimation in the RIF Relay Server is more precise now.
-    * A new utility function is available to estimate the maximum gas a relay transaction would consume, based in a linear fit estimation. This can be used in applications that don't want to sign a payload each time they need an approximation of the cost of relaying the transaction.
-* Paymaster verifications are done off-chain to optimize gas costs, thus the paymasters are now called Verifiers and they are not part of the on-chain relay flow nor do they handle payments at all.
-* Gas cost optimization.
-* Security issues.
+To deploy a smart wallet we need to follow some steps that will be described below:
+
+1. We need to generate the smart wallet address. As we mentioned before, the Smart Wallet is a contract-based account, therefore, we can generate as many smart wallet addresses as we want without spending gas by calling the `getSmartWalletAddress` from the relay client library. 
+
+> A Smart Wallet only needs to be deployed when we need to execute a transaction. The deployment process uses gas so, unless it's subsidized, we need to pay for it.
 
 
-## Version 1
+At this point we should have the Relay Client object created. 
 
-### Overview
+```typescript
+    import type {
+      getSmartWalletAddress,
+      UserDefinedDeployRequest,
+    } from '@rsksmart/rif-relay-client';
 
-Including a revenue-sharing mechanism to the RIF Relay service doesn't introduce a price penalty to the RIF Relay users. We modified the address used to receive the payment (in tokens) for a successful transaction relay (or deploy).
+    const smartWalletAddress = await getSmartWalletAddress(<EOA>, <INDEX>);
 
-In V0.2 implementation, the RelayRequest and the DeployRequest include a relayWorker attribute to identify which account paid for the gas. The RIF Relay SmartWallet pays directly to this account the number of tokens negotiated for the Relay (or Deploy) service. In V1 The relayWorker attribute was removed from the RelayRequest and DeployRequest. A new attribute called feesReceiver was implemented and configured in the RelayServer
+    const relayTransactionOpts: UserDefinedDeployRequest = {
+      request: {
+        from: <EOA>,
+        tokenContract: <TOKEN_ADDRESS>,
+        tokenAmount: <AMOUNT_OF_TOKENS_IN_WEI>,
+        index: <INDEX>,
+      },
+    };
 
-This change did not alter the current relay flow, keeping its cost as it is today, and also introduced the flexibility to implement any revenue-sharing strategy needed.
+    const transaction = await relayClient.relayTransaction(
+      relayTransactionOpts
+    );
 
-* The feesReceiver could be the worker or MultSig contract. 
-* The SmartWallet will pay to the feesReceiver. The feesReceiver will hold the funds of each user payment.
-* Upon payment from the SmartWallet, the feesReceiver will not perform any distribution logic to avoid increasing the cost of the relay service for the user.
-* With this approach, no changes in the relay flow are required, and thus the introduction of a revenue-sharing mechanism will not impact the price of the relay service.
-* The relevant participants will form part of the MultiSig contract.
-    *  The MultiSig contract specify how much of the funds collected go to each participant (e.g., the relayServer operator, the wallet provider, and the liquidity provider could be the participants).
-    *   At a later time, an off-chain process will trigger the distribution process from the contract. This process can invoke the distribution function once per week, month, or when the funds in the contract surpass a certain threshold.
-    *  The participants can modify the sharing parameters (e.g., the percentages used for the distribution among the participants) if they agree on the particular changes.
-    * Multiple Revenue Sharing Strategies can exist, ideally one per group of participants.
+```
+> Keep in mind that to pay any amount of token fees during the deployment, the smart wallet must receive funds first.
 
+Where variables are:
+
+* **EOA**: Externally Owned Account, the owner of the smart wallet.
+* **INDEX**: The index that we would like to use to generate the smart wallet.
+* **TOKEN_ADDRESS**: The token contract address that we want to use to pay for the fee.
+* **AMOUNT_OF_TOKENS_IN_WEI**: The amount that we want to pay for the fee in wei.
