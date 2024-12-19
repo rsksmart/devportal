@@ -2,9 +2,10 @@
 sidebar_label: Architecture
 sidebar_position: 980
 title: RIF Relay - Architecture
+description: RIF Relay Architeture.
 tags: [rif, envelope, relay, integrate]
-description: RIF Relay Architeture
 ---
+
 
 The RIF Relay system is designed to achieve transaction sponsorship at a low cost. The cost of the relay service provided by the “sponsors” is agreed upon among the parties off-chain. The low cost of transactions on Rootstock (RSK) contributes to keeping overall service costs low as well.
 
