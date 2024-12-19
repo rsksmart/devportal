@@ -2,9 +2,10 @@
 sidebar_label: RIF Relay Sample dApp
 sidebar_position: 400
 title: How to use the RIF Relay Sample dApp SDK
+description: RIF Relay Sample dApp SDK Starter kit.
 tags: [rif, envelope, relay, integration guide]
-description: RIF Relay Sample dApp SDK Starter kit
 ---
+
 
 ## Getting Started
 

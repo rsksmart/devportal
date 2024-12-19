@@ -2,9 +2,10 @@
 sidebar_label: Contracts
 sidebar_position: 700
 title: RIF Relay - Contracts
+description: RIF Relay Contracts.
 tags: [rif, envelope, relay, integrate]
-description: RIF Relay Contracts
 ---
+
 
 ## Mainnet
 
