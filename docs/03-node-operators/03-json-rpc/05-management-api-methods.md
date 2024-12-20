@@ -32,8 +32,8 @@ description: "The JSON-RPC methods supported by Rootstock nodes."
 | `debug_startGoTrace` | NO | |
 | `debug_stopGoTrace` | NO | |
 | `debug_traceBlock` | NO | |
-| `debug_traceBlockByNumber` | NO | |
-| `debug_traceBlockByHash` | NO | |
+| `debug_traceBlockByNumber` | YES | |
+| `debug_traceBlockByHash` | YES | |
 | `debug_traceBlockFromFile` | NO | |
 | `debug_traceTransaction` | YES | |
 | `debug_vmodule` | NO | |
