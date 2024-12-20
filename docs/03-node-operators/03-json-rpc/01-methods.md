@@ -1089,7 +1089,8 @@ Note that when `eth_estimateGas` is called, the node simulates the transaction e
 The simulation runs through the entire transaction process as if it were being executed, including checking for sufficient balance, contract code execution, etc.
 During the simulation, the method calculates the exact amount of gas that would be consumed by the transaction if it were to be executed on the blockchain. The estimated gas amount is returned, helping users set an appropriate gas limit for the actual transaction.
 
-There is a difference in Rootstock compared to Ethereum, and it is that if one of the steps of the simulated transaction fails, the node will return the gas estimation needed for the transaction, while on Ethereum, the node will return an error instead of the gas estimation.
+There is a difference in Rootstock compared to Ethereum, and it is that if one of the steps of the simulated transaction fails, the node will return the gas estimation needed for the transaction, while on Ethereum, the node will return an error instead of the gas estimation. Starting with Arrowhead 6.4.0 this is
+not valid anymore.
 
 You can see this behavior on the following example, where we call `eth_estimateGas` for a transaction that would be executed from an address without enough balance.
 
