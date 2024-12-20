@@ -2,9 +2,10 @@
 sidebar_label: RIF Relay Deployment
 sidebar_position: 500
 title: RIF Relay Deployment
+description: RIF Relay deployment process.
 tags: [rif, envelope, relay, integration guide]
-description: RIF Relay deployment process
 ---
+
 
 ## Set Up RIF Relay Contracts and Server
 
