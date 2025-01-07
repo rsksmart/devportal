@@ -75,4 +75,4 @@ To configure your `rskMainnet` and `rskTestnet` private keys, you'll need to upd
 - Mainnet
   - You'll need RBTC, which you can obtain from an exchange. See [Get RBTC using Exchanges](https://rootstock.io/rbtc/).
 - Testnet
-  - You can get tRBTC from the [Rootstock Faucet](https://faucet.rootstock.io/).
+  - You can get tRBTC from the [Rootstock Faucet](https://faucet.rootstock.io/). Additional faucet options include; [Thirdweb](https://thirdweb.com/rootstock-testnet) and [Blast](https://blastapi.io/faucets/rootstock-testnet) Faucets.

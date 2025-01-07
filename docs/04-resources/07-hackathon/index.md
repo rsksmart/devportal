@@ -87,6 +87,7 @@ These tools will make it easy for you to build on Rootstock:
 - **[Web3.py](/developers/quickstart/web3-python/)**: JavaScript and Python libraries for interacting with the Ethereum blockchain.
 - **[Rootstock Explorer](https://explorer.testnet.rootstock.io/)**: A blockchain explorer to view transaction details on the Rootstock network.
 - **[RPC API](/developers/rpc-api/)**: The RPC API provides a seamless and intuitive web interface for developers to interact with Rootstock nodes via JSON-RPC methods.
+- **[Faucets](/dev-tools/additional-tools/#faucets)**: Get test RBTC tokens for development and testing.
 
 Explore the [full list of tools and libraries](/dev-tools/) available on Rootstock.
 

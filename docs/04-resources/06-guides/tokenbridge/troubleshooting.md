@@ -5,10 +5,6 @@ description: 'Having issues crossing your tokens on the token bridge? See the tr
 tags: [resources, tokenbridge, blockchain, bridges, tokens, ethereum, rootstock, rsk]
 ---
 
-See the [Token Bridge FAQs](https://dev.rootstock.io/resources/guides/tokenbridge/faq/)
-
-Visit the [Mainnet Token Bridge](https://dapp.tokenbridge.rootstock.io/) or the [Testnet Token Bridge](https://dapp.testnet.bridges.rootstock.io/)
-
 <!-- <div class="rsk-token-bridge-support">
   <div class="rsk-token-bridge-support-input-area">
     <div>
@@ -43,6 +39,30 @@ Visit the [Mainnet Token Bridge](https://dapp.tokenbridge.rootstock.io/) or the 
 > Note that what follows below are generic troubleshooting queries.
 > To see more specific information, use the form above. -->
 
+## Crossing tokens on Mainnet
+
+View the [Token Bridge FAQs](https://dev.rootstock.io/resources/guides/tokenbridge/faq/)
+
+Find the min/max values for [crossing tokens on Mainnet](https://dapp.tokenbridge.rootstock.io/) using the Tokenbridge.
+
+| Cross Token | Network | Amount | \# of Block Confirmations | Min Amount  | Max Amount |
+| :---- | :---- | :---- | :---- | :---- | :---- |
+| LINK → rLINK | ETHEREUM | 0 100 LINK 1000 LINK | 120 240 5,760 | 0 LINK | 25000 LINK |
+| DAI → rDAI | ETHEREUM |  0  10000 DAI  100000 DAI | 120 240 5760 | 10 DAI | 2500000 DAI |
+| USDT → rUSDT | ETHEREUM | 0 1000000 10000000 | 120 240 5760 | 1000 USDT | 250000000 USDT |
+| USDC → rUSDC | ETHEREUM | 0 1000000 10000000 | 120 240 5760 | 1000 USDC | 250000000 USDC |
+
+## Crossing Tokens on Testnet
+
+Find the min/max values for [crossing tokens on Testnet](https://dapp.testnet.bridges.rootstock.io/) using the Tokenbridge.
+
+| Cross Token | Network | Amount | \# of Block Confirmations | Min Amount  | Max Amount |
+| :---- | :---- | :---- | :---- | :---- | :---- |
+| LINK → rLINK | Sepolia | 0 100 LINK 1000 LINK | 120 240 5,760 | 0 LINK | 25000 LINK |
+| DAI → rDAI | Sepolia |  0  10000 DAI  100000 DAI | 120 240 5760 | 10 DAI | 2500000 DAI |
+| USDT → rUSDT | Sepolia | 0 1000000 10000000 | 120 240 5760 | 1000 USDT | 250000000 USDT |
+| USDC → rUSDC | Sepolia | 0 1000000 10000000 | 120 240 5760 | 1000 USDC | 250000000 USDC |
+
 ## Transferred tokens from Ethereum, and after 24 hours have not received tokens on Rootstock
 
 **Network:** ETH to Rootstock
@@ -57,7 +77,7 @@ Visit the [Mainnet Token Bridge](https://dapp.tokenbridge.rootstock.io/) or the 
 
 **When:** Current Block - Transaction Block Number > 5760
 
-**Answer:**  Look in the [Rootstock Explorer](https://explorer.rootstock.io/) at the SAME ADDRESS on Rootstock. If you do not see the correct balance in the tokens tab, please share your Transaction Hash in the **#token-bridge** channel on Rootstock Discord (go to [Discord Community](https://rootstock.io/discord) to join.
+**Answer:**  Look in the [Rootstock Explorer](https://explorer.rootstock.io/) at the SAME ADDRESS on Rootstock. If you do not see the correct balance in the tokens tab, please share your Transaction Hash in the **#token-bridge** channel on Rootstock Discord, visit the [Discord Community](https://rootstock.io/discord) to join.
 
 ## Transferred tokens from Rootstock, and after 24 hours have not received tokens on Ethereum
 
@@ -73,7 +93,7 @@ Visit the [Mainnet Token Bridge](https://dapp.tokenbridge.rootstock.io/) or the 
 
 **When:** Current Block - Transaction Block Number > 2880
 
-**Answer:**  Look in [Etherscan](https://etherscan.io/) at the SAME ADDRESS on Rootstock. If you do not see the correct balance in the tokens tab, please share your Transaction Hash in the **#token-bridge** channel on Rootstock Discord (go to [ Discord Community](https://rootstock.io/discord) to join).
+**Answer:**  Look in [Etherscan](https://etherscan.io/) at the SAME ADDRESS on Rootstock. If you do not see the correct balance in the tokens tab, please share your Transaction Hash in the **#token-bridge** channel on Rootstock Discord, visit the [ Discord Community](https://rootstock.io/discord) to join.
 
 ## Transferred tokens from Ethereum to Rootstock, but do not see them in my wallet
 
@@ -81,7 +101,7 @@ Visit the [Mainnet Token Bridge](https://dapp.tokenbridge.rootstock.io/) or the 
 
 **When:** always
 
-**Answer:**  Rootstock has a different derivation path (m/44’/137’/0’/0) from Ethereum (m/44’/60’/0’/0). Software wwallets respects this convention. Copy your mnemonic or private key and use Metamask and add Rootstock as custom network, to get the same address as ethereum.
+**Answer:**  Rootstock has a different derivation path (m/44’/137’/0’/0) from Ethereum (m/44’/60’/0’/0). Software wallets respects this convention. Copy your mnemonic or private key and use Metamask and add Rootstock as custom network, to get the same address as ethereum.
 
 ## Transferred tokens from Rootstock to Ethereum, but do not see them in my wallet
 
@@ -101,11 +121,7 @@ Visit the [Mainnet Token Bridge](https://dapp.tokenbridge.rootstock.io/) or the 
 
 ## Why can't I choose the address?
 
-**Network:** Both
-
-**When:** always
-
-**Answer:**  Currently, it uses the token bridge always sends tokens to the same address on the other blockchain network, and so the sender and the receiver will always have the same address. You will have the option to send to another address in the next version.
+**Answer:** The current version of the token bridge allows for choosing the delivery address on the [Token Bridge UI](https://dapp.tokenbridge.rootstock.io/).
 
 ## Metamask threw an error
 
@@ -117,11 +133,7 @@ Visit the [Mainnet Token Bridge](https://dapp.tokenbridge.rootstock.io/) or the 
 
 ## I don't see my transaction on the Token Bridge list
 
-**Network:** N/A
-
-**When:** always
-
-**Answer:**  The list is stored in the local cache, so it’s not shared across devices, and it's erased if you clear your browser cookies and temporary files. You can be sure that if the transaction is mined the tokens will cross no matter what the list says. If this is not the reason why it is not there please let us know in the `#token-bridge` channel on Rootstock Discord (go to [Discord Community](https://rootstock.io/discord) to join).
+**Answer:** In the current Token Bridge version, transaction lists are fetched directly from an API. If a transaction is missing from the list, it's likely due to a synchronization issue on our end.. If this is not the reason why it is not there please let us know in the #token-bridge channel on Rootstock Discord (go to Discord Community to join). If this is not the reason why it is not there please let us know in the `#token-bridge` channel on Rootstock Discord (go to [Discord Community](https://rootstock.io/discord) to join).
 
 ## I used the Sovryn Token Bridge
 

@@ -24,7 +24,7 @@ Recommended IDEs:
 
 :::warning[Important]
 
-Starting with v6.4.0, the minimum supported Java LTS version is Java 17. Previous Java versions will no longer be supported.
+Starting with [v6.4.0](/changelog/), the minimum supported Java LTS version is Java 17. Previous Java versions will no longer be supported.
 
 :::
 
@@ -37,7 +37,7 @@ Run these commands in the terminal:
 ```shell
 git clone --recursive https://github.com/rsksmart/rskj.git
 cd rskj
-git checkout tags/ARROWHEAD-6.4.0 -b ARROWHEAD-6.4.0
+git checkout tags/ARROWHEAD-6.5.0 -b ARROWHEAD-6.5.0
 ```
 
 *Note:* It is better to download the code into a short path.
