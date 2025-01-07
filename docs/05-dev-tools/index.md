@@ -194,6 +194,15 @@ description: "Explore a curated selection of smart contract development tools an
     linkTitle="Get Started"
     description="Access crypto collaterized digital dollars to save, spend & send. Get RIF, USDRIF, MOC, RIF Pro, etc."
   />
+   <FilterItem
+    value="rsk-cli, sdk"
+    title="RSK CLI"
+    subtitle="RSK CLI"
+    color="orange"
+    linkHref="/dev-tools/rsk-cli/"
+    linkTitle="Getting started with RSK CLI"
+    description="The rsk-cli tool enables users to manage wallets, check balances, send transactions, verify smart contracts and interact with smart contracts on the Rootstock blockchain - a Bitcoin sidechain designed for smart contracts. It supports both mainnet and testnet environments."
+  />
 <FilterItem
     value="bridge, exchange, rifp"
     title="RBTC Flyover"
@@ -248,6 +257,7 @@ description: "Explore a curated selection of smart contract development tools an
     linkTitle="Use Thirdweb"
     description="Thirdweb is a Full-stack web3 development tools, production-grade infrastructure platform for developers to build on Rootstockk."
   />
+ 
 <FilterItem
     value="platform-infra, sc"
     title="useDApp"
