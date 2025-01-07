@@ -15,12 +15,12 @@ Verification on Rootstock's blockchain allows users to confirm that the compiled
 
 <Tabs>
   <TabItem value="contribute" label="Mainnet" default>
-    ```
+    ```shell
 rsk-cli verify --json <path_to_json> --address <address> --name <contract_name> --decodedArgs <arg1> <arg2> ...
 ```
   </TabItem>
   <TabItem value="contest" label="Testnet">
-   ```
+   ```shell
 rsk-cli verify --testnet --json <path_to_json> --address <address> --name <contract_name> --decodedArgs <arg1> <arg2> ...
 ```
   </TabItem>
@@ -44,7 +44,7 @@ rsk-cli verify --testnet --json <path_to_json> --address <address> --name <contr
    - **Example:** If your JSON file is named `fb7b3667b850d874bffe750e005d2477.json` and it is usually in the `build-info` folder under the `artifacts folder`, you would use `--json .artifacts/build-info/fb7b3667b850d874bffe750e005d2477.json`.
   
 
-   ```
+   ```json
    ├── artifacts
    │   └── build-info
    │       └── fb7b3667b850d874bffe750e00...
@@ -90,19 +90,19 @@ rsk-cli verify --testnet --json <path_to_json> --address <address> --name <contr
 
 To verify the same contract on the testnet:
 
-```
+```shell
 rsk-cli verify --testnet --json artifacts/build-info/fb7b3667b850d874bffe750e005d2477.json --address 0x4edd891c2e988e6145fe3e418c652ee33ebab9ae --name ContactInfo    
 ```
 
 With constructor arguments:
 
-```
+```shell
 rsk-cli verify --testnet --json ./contract.json --address 0x1234567890abcdef1234567890abcdef12345678 --name MyToken --decodedArgs 0xabcdef1234567890abcdef1234567890abcdef12 1000
 ```
 
 The response below was obtained from the command without a constructor.
 
-```                                  
+```shell                                  
 🔧 Initializing verification on testnet...
 📄 Reading JSON Standard Input from artifacts/build-info/fb7b3667b850d874bffe750e005d2477.json...
 🔎 Verifying contract ContactInfo deployed at 0x4edd891c2e988e6145fe3e418c652ee33ebab9ae..

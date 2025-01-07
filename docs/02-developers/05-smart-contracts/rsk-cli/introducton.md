@@ -83,7 +83,7 @@ Before using rsk-cli, you need the following:
 
 Verify the installation by running:
 
-```
+```shell
 node -v
 npm -v
 ```
@@ -101,7 +101,7 @@ Once these prerequisites are met, proceed to install and use rsk-cli.
 
 To install the tool, use Node.js's package manager npm:
 
-```
+```shell
 npm i -g @rsksmart/rsk-cli
 ```
 

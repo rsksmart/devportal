@@ -24,12 +24,12 @@ This command lists all available read-only functions within the contract, allowi
 To use this command:
 <Tabs>
   <TabItem value="contribute" label="Mainnet" default>
-    ```
+    ```shell
 rsk-cli contract --address <address>
 ```
   </TabItem>
   <TabItem value="contest" label="Testnet">
-   ```
+   ```shell
 rsk-cli contract --address <address> --testnet
 ```
   </TabItem>
@@ -44,7 +44,7 @@ This command will then display a list of all accessible read functions, making i
 
 Example command 
 
-```
+```shell
 rsk-cli contract --address 0x4edd891c2e988e6145fe3e418c652ee33ebab9ae --testnet
 ```
 
@@ -55,7 +55,7 @@ In this example:
 
 After running the command, you will see a response like this:
 
-```
+```json
 🔧 Initializing interaction on testnet...
 🔎 Checking if contract 0x4edd891c2e988e6145fe3e418c652ee33ebab9ae is verified...
 ? Select a read function to call: (Use arrow keys)
@@ -68,14 +68,14 @@ After running the command, you will see a response like this:
 
 For example, if you select name, you'll see:
 
-```
+```shell
 ? Select a read function to call: name
 📜 You selected: name
 ```
 
 2. View the response**: After selecting a function, rsk-cli will call the function on the contract and display the result.
 
-```
+```shell
 ✅ Function name called successfully!
 ✔ 🔧 Result: [Function output here]
 🔗 View on Explorer: https://explorer.testnet.rootstock.io/address/0x4edd891c2e988e6145fe3e418c652ee33ebab9ae
@@ -108,12 +108,12 @@ The bridge command allows you to interact with the RSK bridge contract on the Ro
 To start using the bridge command, open your terminal and use the following command:
 <Tabs>
   <TabItem value="contribute" label="Mainnet" default>
-  ```
+  ```shell
 rsk-cli bridge
 ```
   </TabItem>
   <TabItem value="contest" label="Testnet">
- ```
+ ```shell
 rsk-cli bridge --testnet
 ```
   </TabItem>
@@ -123,13 +123,13 @@ rsk-cli bridge --testnet
 
 - Once you select either the Mainnet or Testnet, you will see the following message:
 
-```
+```shell
 🔧 Initializing bridge for testnet...
 ```
 
 - You will then be prompted to choose the type of function you want to call:
 
-```
+```shell
 ? Select the type of function you want to call: (Use arrow keys)
 ❯ read
   write
@@ -139,7 +139,7 @@ rsk-cli bridge --testnet
    - Use the **arrow keys** to highlight your choice and press **Enter**.  
 - If you select **read**, you will see a list of available read functions:
 
-```
+```shell
 ? Select a read function to call:
 ❯ getBtcBlockchainBestChainHeight
   getStateForBtcReleaseClient
@@ -153,7 +153,7 @@ rsk-cli bridge --testnet
 - Use the **arrow keys** to choose the read function you want to use (e.g., `getBtcBlockchainBestChainHeight`) and press **Enter**.  
 - Response after executing a read function:
 
-```
+```shell
 ✅ Function getBtcBlockchainBestChainHeight called successfully!
 ✔ 🔧 Result: 3500401
 🔗 View on Explorer: https://explorer.testnet.rootstock.io/address/0x0000000000000000000000000000000001000006
@@ -166,7 +166,7 @@ The result shows the output of the function, along with a link to view details o
   <TabItem value="contest" label="Selecting a Write Function">
   If you select **write**, you will be presented with a list of write functions:
 
-```
+```shell
 ? Select a write function to call: (Use arrow keys)
 ❯ registerBtcTransaction
   registerBtcCoinbaseTransaction
@@ -178,25 +178,25 @@ Use the **arrow keys** to highlight your choice (e.g., registerBtcTransaction) a
 - Once a write function is selected, you will need to provide the required arguments:  
 - Enter the appropriate value for the tx argument and press **Enter**.
 
-```
+```shell
 ? Enter the value for argument tx (bytes):
 ```
 
 - Enter the height value and press **Enter**.
 
-```
+```shell
 ? Enter the value for argument height (int256): 334
 ```
 
 - Enter the pmt () value and press **Enter**.
 
-```
+```shell
 ? Enter the value for argument pmt (bytes): 345
 ```
 
 To confirm the write operation, you will be prompted to enter your wallet password:
 
-```
+```shell
 ? Enter your password to decrypt the wallet: *****
 ```
 
