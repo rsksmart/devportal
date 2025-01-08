@@ -195,13 +195,13 @@ description: "Explore a curated selection of smart contract development tools an
     description="Access crypto collaterized digital dollars to save, spend & send. Get RIF, USDRIF, MOC, RIF Pro, etc."
   />
    <FilterItem
-    value="rsk-cli, sdk"
+    value="sdk"
     title="RSK CLI"
-    subtitle="RSK CLI"
+    subtitle="smart contract developement"
     color="orange"
-    linkHref="/dev-tools/rsk-cli/"
+    linkHref="/developers/smart-contracts/rsk-cli/"
     linkTitle="Getting started with RSK CLI"
-    description="The rsk-cli tool enables users to manage wallets, check balances, send transactions, verify smart contracts and interact with smart contracts on the Rootstock blockchain - a Bitcoin sidechain designed for smart contracts. It supports both mainnet and testnet environments."
+    description="The rsk-cli tool or sdk enables users to manage wallets, check balances, send transactions, verify smart contracts and interact with smart contracts on the Rootstock blockchain - a Bitcoin sidechain designed for smart contracts. It supports both mainnet and testnet environments."
   />
 <FilterItem
     value="bridge, exchange, rifp"
