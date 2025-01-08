@@ -6,19 +6,19 @@ description: "Smart Contract Development tools help developers create, deploy, a
 tags: [rsk-cli, developer tools, rsk, rootstock, blockchain, dApps,mainnet, testnet, smart contracts, development]
 ---
 
-**Smart Contract Development** enables developers to harness the power of the Rootstock blockchain to create decentralized applications that are secure, transparent, and efficient.
+**Smart Contract Development** enables developers to harness the power of the **Rootstock** blockchain to create decentralized applications that are secure, transparent, and efficient.
 
 ## What is Smart Contract Development?
 
-Smart Contract Development involves designing, deploying, and managing contracts that run on the blockchain. These contracts automate transactions, enforce agreements, and power dApps by removing intermediaries.
+[Smart Contract Development](/developers/smart-contracts/) involves designing, deploying, and managing contracts that run on the blockchain. These contracts automate transactions, enforce agreements, and power dApps by removing intermediaries.
 
 ## How Smart Contracts Work
 
 * **Creation:** Developers write the contract code using programming languages like `Solidity`, defining the rules and logic.  
-* **Deployment:** The contract is deployed to the Rootstock blockchain, where it becomes immutable and accessible.  
+* **Deployment:** The contract is deployed to the **Rootstock** blockchain, where it becomes immutable and accessible.  
 * **Execution:** Once deployed, smart contracts execute automatically when the predefined conditions are met, ensuring trust and transparency.  
 
-## RSK CLI
+## Smart Contract Development tools on Rootstock 
 
 <CardsGrid>
   <CardsGridItem
