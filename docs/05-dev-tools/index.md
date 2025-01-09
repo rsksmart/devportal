@@ -109,7 +109,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="GetBlock"
     subtitle="json rpc"
     color="orange"
-    linkHref="https://getblock.io/nodes/rsk/"
+    linkHref="/dev-tools/node-rpc/getblock/"
     linkTitle="Make First API Call"
     description="GetBlock provides instant connection to blockchain nodes including Rootstock, Bitcoin (BTC), Ethereum (ETH), among others."
   />
@@ -118,7 +118,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="NOWNodes"
     subtitle="json rpc"
     color="orange"
-    linkHref="https://nownodes.io/nodes/rsk"
+    linkHref="/dev-tools/node-rpc/nownodes/"
     linkTitle="Make First API Call"
     description="NOWNodes is a blockchain-as-a-service enterprise solution that lets users get access to full Nodes and blockbook Explorers via an API."
   />
@@ -127,9 +127,18 @@ description: "Explore a curated selection of smart contract development tools an
     title="dRPC"
     subtitle="json rpc"
     color="orange"
-    linkHref="https://drpc.org/chainlist/rootstock?utm_source=docs&utm_medium=rootstock"
+    linkHref="/dev-tools/node-rpc/drpc/"
     linkTitle="Make First API Call"
     description="dRPC provides access to a distributed network of node providers."
+  />
+<FilterItem
+    value="rpc"
+    title="Blast API"
+    subtitle="json rpc"
+    color="orange"
+    linkHref="/dev-tools/node-rpc/blast-api/"
+    linkTitle="Make First API Call"
+    description="Blast API is a Blockchain-optimized cloud infrastructure for low-latency, cost-effective RPC services."
   />
 <FilterItem
     value="wallet, sc"
@@ -185,6 +194,15 @@ description: "Explore a curated selection of smart contract development tools an
     linkTitle="Get Started"
     description="Access crypto collaterized digital dollars to save, spend & send. Get RIF, USDRIF, MOC, RIF Pro, etc."
   />
+   <FilterItem
+    value="sdk"
+    title="RSK CLI"
+    subtitle="smart contract developement"
+    color="orange"
+    linkHref="/developers/smart-contracts/rsk-cli/"
+    linkTitle="Getting started with RSK CLI"
+    description="The rsk-cli tool or sdk enables users to manage wallets, check balances, send transactions, verify smart contracts and interact with smart contracts on the Rootstock blockchain - a Bitcoin sidechain designed for smart contracts. It supports both mainnet and testnet environments."
+  />
 <FilterItem
     value="bridge, exchange, rifp"
     title="RBTC Flyover"
@@ -239,6 +257,7 @@ description: "Explore a curated selection of smart contract development tools an
     linkTitle="Use Thirdweb"
     description="Thirdweb is a Full-stack web3 development tools, production-grade infrastructure platform for developers to build on Rootstockk."
   />
+ 
 <FilterItem
     value="platform-infra, sc"
     title="useDApp"
@@ -328,6 +347,24 @@ description: "Explore a curated selection of smart contract development tools an
     linkHref="https://faucet.rifos.org/"
     linkTitle="Get tRIF"
     description="Get tRIF on the RIF Testnet Faucet"
+  />
+<FilterItem
+    value="faucet"
+    title="Blast Faucet"
+    subtitle="faucets"
+    color="orange"
+    linkHref="https://blastapi.io/faucets/rootstock-testnet"
+    linkTitle="Get tRBTC"
+    description="This faucet offers a convenient way to get free test RBTC tokens for development and testing. It has a higher max daily token allocation of `0.1` tRBTC."
+  />
+<FilterItem
+    value="faucet"
+    title="Thirdweb Faucet"
+    subtitle="faucets"
+    color="orange"
+    linkHref="https://thirdweb.com/rootstock-testnet"
+    linkTitle="Get tRBTC"
+    description="This faucet offers a convenient way to get free test RBTC tokens for development and testing. Its max daily token allocation is `0.01` tRBTC."
   />
 <FilterItem
     value="library, sc"

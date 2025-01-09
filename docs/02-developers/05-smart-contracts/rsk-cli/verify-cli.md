@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
-sidebar_label: Verify Smart Contract on Rootstock CLI
-title: Verify Smart Contract on Rootstock CLI  
+sidebar_label: Verify Smart Contracts on Rootstock CLI
+title: Verify Smart Contracts on Rootstock CLI  
 description: "The Rootstock CLI (rsk-cli) tool enables users to manage wallets, check balances, send transactions, verify smart contracts and interact with smart contracts on the Rootstock blockchain - a Bitcoin sidechain designed for smart contracts. It supports both mainnet and testnet environments." 
 tags: [Rootstock CLI, developer tools, guides, rsk, rootstock, dApps, smart contracts, solidity, dev-environments]
 ---
@@ -11,7 +11,6 @@ To verify a smart contract on the Rootstock CLI, the `rsk-cli` verify command al
 The `rsk-cli` verify command enables the verification of a smart contract on Rootstock's mainnet or testnet by providing the contract code, address, and other metadata through a JSON file. 
 
 Verification on Rootstock's blockchain allows users to confirm that the compiled bytecode on the blockchain matches the source code.
-
 
 <Tabs>
   <TabItem value="contribute" label="Mainnet" default>

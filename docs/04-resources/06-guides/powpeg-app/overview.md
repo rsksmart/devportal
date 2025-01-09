@@ -43,12 +43,16 @@ The source code is available on github, and open source:
 
 The PowPeg App, has two primary features, they are:
 
-- Peg-in: A conversion from BTC to RBTC. See [Glossary](/resources/guides/powpeg-app/glossary/) page for more explanation. 
+- Peg-in: A conversion from BTC to RBTC. See [pegin](/resources/guides/powpeg-app/pegin/) for more explanation.
     - **Note: The peg-in process is final and cannot be reverted**.
     - **Native pegin transaction has 17 hours estimated time to completion**.
+    - **Flyover pegin transaction time to completion, deppends on the Liquidity Provider conditions**.
+    - See [Glossary](/resources/guides/powpeg-app/glossary/) page for more explanation. 
 
 - Peg-out: A conversion from RBTC to BTC. This current version of the PowPeg. See [pegout](/resources/guides/powpeg-app/pegout/) for more explanation.
-    - **Native pegin transaction has 34 hours estimated time to completion**.
+    - **Native pegout transaction has 34 hours estimated time to completion**.
+    - **Flyover pegout transaction time to completion, deppends on the Liquidity Provider conditions**.
+    - See [Glossary](/resources/guides/powpeg-app/glossary/) page for more explanation. 
 
 ## Why use the PowPeg App?
 
@@ -81,3 +85,4 @@ All transactions need to be confirmed via the device used by the customer, wheth
 * Convert [BTC to RBTC using the PowPeg App](/resources/guides/powpeg-app/pegin/).
 * Convert [RBTC to BTC using the PowPeg App](/resources/guides/powpeg-app/pegout/).
 * View [Advanced Operations](/resources/guides/powpeg-app/advanced-operations/)
+* Comparing [PowPeg and Flyover](/developers/integrate/flyover/powpeg-vs-flyover/).

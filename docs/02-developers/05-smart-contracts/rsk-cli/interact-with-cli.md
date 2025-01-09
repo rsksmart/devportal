@@ -1,10 +1,8 @@
 ---
 sidebar_position: 5
-sidebar_label: Rootstock CLI Interact with Verified Smart Contracts
-title: Rootstock CLI Interact with Verified Smart Contracts
-description: "The contract command allows you to interact with a verified smart contract on the Rootstock blockchain. 
-
-This command lists all available read-only functions within the contract, allowing you to call these functions to view data without altering the contract's state. " 
+sidebar_label: Interact with Smart Contracts using the Rootstock CLI
+title: Rootstock CLI | Interact with Verified Smart Contracts
+description: "The contract command allows you to interact with a verified smart contract on the Rootstock blockchain. This command lists all available read-only functions within the contract, allowing you to call these functions to view data without altering the contract's state. " 
 tags: [Rootstock CLI, developer tools, guides, rsk, rootstock, dApps, smart contracts, solidity, dev-environments]
 ---
 
@@ -24,19 +22,17 @@ This command lists all available read-only functions within the contract, allowi
 To use this command:
 <Tabs>
   <TabItem value="contribute" label="Mainnet" default>
-    ```
+    ```shell
 rsk-cli contract --address <address>
 ```
   </TabItem>
   <TabItem value="contest" label="Testnet">
-   ```
+   ```shell
 rsk-cli contract --address <address> --testnet
 ```
   </TabItem>
  
 </Tabs>
-
-
 
 Replace `<address\>` with the contract's address deployed, which is the one shown in the response of the deployed smart contract
 
@@ -108,12 +104,12 @@ The bridge command allows you to interact with the RSK bridge contract on the Ro
 To start using the bridge command, open your terminal and use the following command:
 <Tabs>
   <TabItem value="contribute" label="Mainnet" default>
-  ```
+  ```shell
 rsk-cli bridge
 ```
   </TabItem>
   <TabItem value="contest" label="Testnet">
- ```
+ ```shell
 rsk-cli bridge --testnet
 ```
   </TabItem>

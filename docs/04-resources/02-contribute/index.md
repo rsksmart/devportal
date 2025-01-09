@@ -18,8 +18,8 @@ From writing, bug bounties and open-source projects, there are various ways to p
 
 <Card
   title="Hacktivator Program"
-  description="The Rootstock Hacktivator Program allows developers to evolve to Rootstock by contributing code or creating educational content. You get to support the platform at your own pace, and every eligible contribution will be rewarded based on its impact and value."
-  link="/resources/contribute/hacktivator-program/"
+  description="Rootstock Hacktivator allows developers to evolve to Rootstock by contributing code or creating educational content. You get to support the platform at your own pace, and every eligible contribution will be rewarded based on its impact and value."
+  link="/resources/contribute/hacktivator/"
 />
 
 <br></br>

@@ -14,7 +14,7 @@ It's highly recommended to follow the steps by yourself to avoid contamination o
 
 :::warning[Important]
 
-Starting with v6.4.0, the minimum supported Java LTS version is Java 17. Previous Java versions will no longer be supported. The following example for Linux OS is showing instructions for v6.3.1, and thus uses jdk 8, this must be replaced by jdk 17 for v6.4.0 and up.
+Starting with [v6.4.0](/changelog/), the minimum supported Java LTS version is Java 17. Previous Java versions will no longer be supported. The following example for Linux OS is showing instructions for v6.3.1, and thus uses jdk 8, this must be replaced by jdk 17 for v6.4.0 and up.
 
 :::
 
@@ -50,9 +50,9 @@ Create a ```Dockerfile``` to setup the build environment.
           apt-get clean
         gpg --keyserver https://secchannel.rsk.co/release.asc --recv-keys 1A92D8942171AFA951A857365DECF4415E3B8FA4
         gpg --finger 1A92D8942171AFA951A857365DECF4415E3B8FA4
-        git clone --single-branch --depth 1 --branch ARROWHEAD-6.4.0 https://github.com/rsksmart/rskj.git /code/rskj
+        git clone --single-branch --depth 1 --branch ARROWHEAD-6.5.0 https://github.com/rsksmart/rskj.git /code/rskj
         git clone https://github.com/rsksmart/reproducible-builds 
-        CP /Users/{$USER}/reproducible-builds/rskj/6.4.0-arrowhead/Dockerfile  /Users/{$USER}/code/rskj
+        CP /Users/{$USER}/reproducible-builds/rskj/6.5.0-arrowhead/Dockerfile  /Users/{$USER}/code/rskj
         WORKDIR /code/rskj
         gpg --verify SHA256SUMS.asc
         sha256sum --check SHA256SUMS.asc
@@ -69,10 +69,10 @@ Create a ```Dockerfile``` to setup the build environment.
           brew cleanup
         gpg --keyserver https://secchannel.rsk.co/release.asc --recv-keys 1A92D8942171AFA951A857365DECF4415E3B8FA4
         gpg --finger 1A92D8942171AFA951A857365DECF4415E3B8FA4
-        git clone --single-branch --depth 1 --branch ARROWHEAD-6.4.0 https://github.com/rsksmart/rskj.git ./code/rskj
+        git clone --single-branch --depth 1 --branch ARROWHEAD-6.5.0 https://github.com/rsksmart/rskj.git ./code/rskj
         git clone https://github.com/rsksmart/reproducible-builds 
-        CP /Users/{$USER}/reproducible-builds/rskj/6.4.0-arrowhead/Dockerfile  /Users/{$USER}/code/rskj
-        cd /code/rskj
+        CP /Users/{$USER}/reproducible-builds/rskj/6.5.0-arrowhead/Dockerfile  /Users/{$USER}/code/rskj
+        cd ./code/rskj
         gpg --verify SHA256SUMS.asc
         sha256sum --check SHA256SUMS.asc
         ./configure.sh
@@ -106,7 +106,7 @@ If you are not familiar with Docker or the ```Dockerfile``` format: what this do
 To create a reproducible build, run the command below in the same directory:
 
 ```bash
-docker build -t rskj/6.4.0-arrowhead .     
+docker build -t rskj/6.5.0-arrowhead .     
 ```
 
 :::danger[Error]
@@ -127,7 +127,7 @@ This may take several minutes to complete. What is done is:
 The last step of the build prints the `sha256sum` of the files, to obtain `SHA-256` checksums, run the following command in the same directory as shown above:
 
 ```bash
-docker run --rm rskj/6.4.0-arrowhead sh -c 'sha256sum * | grep -v javadoc.jar'
+docker run --rm rskj/6.5.0-arrowhead sh -c 'sha256sum * | grep -v javadoc.jar'
 ```
 
 ## Check Results
@@ -137,11 +137,11 @@ After running the build process, a JAR file will be created in ```/rskj/rskj-cor
 You can check the SHA256 sum of the result file and compare it to the one published by Rootstock for that version.
 
 ```bash
-269c6416759ff8979e6bc6a6b1ae96ab95705f1c397df06b160a9f2070a373ce  rskj-core-6.4.0-ARROWHEAD-all.jar
-cb4ecbcf4654d97177389f5505764e3cc9ef5b5f87f7aca2956151c71416d315  rskj-core-6.4.0-ARROWHEAD-sources.jar
-bbc0fc1bb7e865c9e11eb78317db32592c9b7dfd8a6818890729af5827a66237  rskj-core-6.4.0-ARROWHEAD.jar
-fabf8af48c167d42d290e9fa44f80b76b96cd403b56c4c87f8df23fd0ea3c9f0  rskj-core-6.4.0-ARROWHEAD.module
-6dbc8153d510d4e910759e2e76cf40f9c0635185f66aa612dac4b2c8a60d0c63  rskj-core-6.4.0-ARROWHEAD.pom
+294f99ec76befa7d9ef18eca28d0c884ceb463ce855ef23ddb7a476e551ba191  rskj-core-6.5.0-ARROWHEAD-all.jar
+ec4ea3143fb95fbf878b24c8d00ebe5994c4586ecf92930743b26dc77395c17a  rskj-core-6.5.0-ARROWHEAD-sources.jar
+7721f59632d9ff825b0bb23cf52fa3eff347852068a03d792ce18d0deae547ae  rskj-core-6.5.0-ARROWHEAD.jar
+16283f4aebbf5b5b35c63f098d81fb0d2aeb5e9fc3be51128ab300333127077f  rskj-core-6.5.0-ARROWHEAD.module
+ee4f7e684044302e3819f8c50d9b85af5b3391d14e6ed6110b98e8387a1b2837  rskj-core-6.5.0-ARROWHEAD.pom
 ```
 
 For SHA256 sum of older versions check the [releases page](https://github.com/rsksmart/rskj/releases).

@@ -15,7 +15,7 @@ In this section, we will go over the steps of converting BTC to RBTC using Ledge
   [Ledger Live](https://www.ledger.com/ledger-live)
   and review this tutorial:
 - You need to have [Electrum](https://electrum.org/).
-  Install it and [configure it to be used with Ledger](https://support.ledgerwallet.com/hc/en-us/articles/115005161925-Set-up-and-use-Electrum).
+  Install it and [configure it to be used with Ledger](https://support.ledger.com/article/115005161925-zd).
 - Node >= 10.16.0
 
 ## BTC to RBTC conversion
@@ -28,7 +28,7 @@ We recommend to use Electrum BTC wallet for connecting to
 BTC Mainnet using Ledger hardware wallet.
 
 - Download the wallet from
-  [Electrum Website](https://bitzuma.com/posts/a-beginners-guide-to-the-electrum-bitcoin-wallet/)
+  [Electrum Website](https://coingate.com/blog/post/setup-electrum-guide)
 - Install Electrum
 - Connect and unlock your Ledger device.
 - Open the Bitcoin app

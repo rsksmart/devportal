@@ -88,7 +88,7 @@ The password you enter will encrypt your wallet, adding an extra layer of securi
 
 Once you’ve entered the password, you’ll see a message confirming the secure storage of your wallet:
 
-```
+```shell
 💾 Wallet saved securely at /Users/your_username/Documents/Rootstock/rsk-cli/rootstock-wallet.json
 ```
 
@@ -104,7 +104,7 @@ If you already have a wallet and want to import it, select the "Insert your priv
 
 Once entered, the system will validate the private key and display the associated wallet address:
 
-```
+```shell
 ✅ Wallet validated successfully!
 📄 Address: 0x05BFa711ef4B2f40855C4E73bA96a8Da86a4be9F
 ```
@@ -329,7 +329,7 @@ You will see a list of wallets reflecting the updated name:
 
 > If only one wallet is saved, you cannot delete it because the system does not allow deleting the current wallet.
 
-```
+```shell
 ❌ No other wallets available to delete.
 ```
   </Step>
@@ -458,8 +458,7 @@ rsk-cli transfer --address 0xRecipientAddress --value 0.001
 
 **Expected Output:**
 
-```
-
+```shell
 📄 Wallet Address: 0xcfEa49816A22fa49524e1d62FDF8f0F938b1FE5C
 🎯 Recipient Address: 0x05BFa711ef4B2f40855C4E73bA96a8Da86a4be9F
 💵 Amount to Transfer: 0.001 RBTC

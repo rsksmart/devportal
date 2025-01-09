@@ -178,7 +178,7 @@ For the bytecode, we use `.bin` to indicate it’s a binary file containing the 
   <TabItem value="contribute" label="Mainnet" default>
     Use the following command to deploy to the Rootstock mainnet:
 
-```
+```shell
 rsk-cli deploy --abi <path_to_abi> --bytecode <path_to_bytecode> --args <arg1> <arg2> ...
 ```
   </TabItem>

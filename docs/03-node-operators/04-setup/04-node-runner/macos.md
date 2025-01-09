@@ -42,7 +42,7 @@ Run these commands on Git command line:
 ```shell
 git clone --recursive https://github.com/rsksmart/rskj.git
 cd rskj
-git checkout tags/ARROWHEAD-6.4.0 -b ARROWHEAD-6.4.0
+git checkout tags/ARROWHEAD-6.5.0 -b ARROWHEAD-6.5.0
 ```
 
 *Note:* It is better to download the code into a short path.

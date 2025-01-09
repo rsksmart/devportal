@@ -84,3 +84,5 @@ If the version to be installed is not defined in the command line, the version w
 | 6.3.0-ARROWHEAD | ARROWHEAD-6.3.0 |
 | 6.3.1-ARROWHEAD | ARROWHEAD-6.3.1 |
 | 6.4.0-ARROWHEAD | ARROWHEAD-6.4.0 |
+| 6.5.0-ARROWHEAD | ARROWHEAD-6.5.0 |
+
