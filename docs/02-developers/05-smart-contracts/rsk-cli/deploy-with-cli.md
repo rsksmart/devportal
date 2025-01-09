@@ -1,8 +1,8 @@
 ---
 sidebar_position: 3
-sidebar_label: Deploy Smart Contract via Rootstock CLI 
-title: Rootstock CLI Deploy
-description: "The Rootstock CLI enables you to deploy your smart contract" 
+sidebar_label: Deploy Smart Contracts using the Rootstock CLI 
+title: Deploy a Smart Contract using the Rootstock CLI 
+description: "The Rootstock CLI enables faster deployment of smart contracts to the Rootstock network." 
 tags: [Rootstock CLI, developer tools, guides, rsk, rootstock, dApps, smart contracts, solidity, dev-environments]
 ---
 
@@ -10,7 +10,7 @@ tags: [Rootstock CLI, developer tools, guides, rsk, rootstock, dApps, smart cont
   <Step title="Set Up Your Hardhat Project">
     1. **Create a New Hardhat Project**:
 
-Open your terminal and create a new project using Hardhat. You can initialize your Hardhat project by running: 
+Open the terminal and create a new project using Hardhat. You can initialize your Hardhat project by running: 
 
 ```bash
 npx hardhat
