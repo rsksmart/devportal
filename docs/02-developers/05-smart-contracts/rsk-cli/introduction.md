@@ -1,19 +1,18 @@
 ---
 sidebar_position: 1
-sidebar_label: Overview of Rootstock-CLI 
-title: Overview of Rootstock-CLI  
-description: "The rsk-cli tool enables users to manage wallets, check balances, send transactions, verify smart contracts and interact with smart contracts on the Rootstock blockchain - a Bitcoin sidechain designed for smart contracts. It supports both mainnet and testnet environments." 
-tags: [Rootstock-CLI, guides, mainnet, testnet, rsk, rootstock, dApps, smart contracts, solidity]
+sidebar_label: Overview of Rootstock CLI 
+title: Overview of Rootstock CLI  
+description: "The Rootstock CLI tool enables users to manage wallets, check balances, send transactions, verify smart contracts and interact with smart contracts on the Rootstock blockchain - a Bitcoin sidechain designed for smart contracts. It supports both mainnet and testnet environments." 
+tags: [Rootstock CLI, developer tools, guides, rsk, rootstock, dApps, smart contracts, solidity, dev-environments]
 ---
 
-The `rsk-cli` tool enables users to manage wallets, check balances, send transactions, verify smart contracts, and interact with smart contracts on the Rootstock blockchain—a Bitcoin sidechain designed for smart contracts. 
+The Rootstock CLI (rsk-cli) tool enables users to manage wallets, check balances, send transactions, verify smart contracts, and interact with smart contracts on the Rootstock blockchain—a Bitcoin sidechain designed for smart contracts. 
 
 It supports both mainnet and testnet environments. Additionally, the tool provides bridge interaction features, allowing users to seamlessly transfer assets between Rootstock and Bitcoin (or other supported blockchains) via integrated bridge protocols.
 
-The **Rootstock-CLI (Command Line Interface)** allows you to interact with your Rootstock wallet directly from the terminal, giving you control over creating, managing, and funding your wallet with RBTC (Smart Bitcoin). 
+The CLI allows you to interact with your Rootstock wallet directly from the terminal, giving you control over creating, managing, and funding your wallet with RBTC (Smart Bitcoin). 
 
-In this guide, we will explore how to use the Rootstock-CLI to create a wallet, manage it securely, and add funds to it.
-
+In this guide, we will explore how to use the Rootstock CLI to create a wallet, manage it securely, and add funds to it.
 
 ## Key Features  
 
@@ -73,9 +72,7 @@ In this guide, we will explore how to use the Rootstock-CLI to create a wallet, 
 </Accordion>
 
 
-
-
-## **Prerequisites:**
+## Prerequisites
 
 Before using rsk-cli, you need the following:
 
@@ -83,7 +80,7 @@ Before using rsk-cli, you need the following:
 
 Verify the installation by running:
 
-```
+```bash
 node -v
 npm -v
 ```
@@ -101,7 +98,7 @@ Once these prerequisites are met, proceed to install and use rsk-cli.
 
 To install the tool, use Node.js's package manager npm:
 
-```
+```bash
 npm i -g @rsksmart/rsk-cli
 ```
 

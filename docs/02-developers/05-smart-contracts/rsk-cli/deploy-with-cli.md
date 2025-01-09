@@ -1,9 +1,9 @@
 ---
 sidebar_position: 3
-sidebar_label: Deploy Smart Contract via Rootstock-CLI 
-title: Rootstock-CLI Deploy
-description: "The rsk-cli enables you to deploy your smart contract" 
-tags: [Rootstock-CLI, deploy, guides, mainnet, testnet, rsk, rootstock, dApps, smart contracts, solidity]
+sidebar_label: Deploy Smart Contract via Rootstock CLI 
+title: Rootstock CLI Deploy
+description: "The Rootstock CLI enables you to deploy your smart contract" 
+tags: [Rootstock CLI, developer tools, guides, rsk, rootstock, dApps, smart contracts, solidity, dev-environments]
 ---
 
 <Steps>
@@ -12,14 +12,14 @@ tags: [Rootstock-CLI, deploy, guides, mainnet, testnet, rsk, rootstock, dApps, s
 
 Open your terminal and create a new project using Hardhat. You can initialize your Hardhat project by running: 
 
-```
+```bash
 npx hardhat
 ```
 
 2. **Project Structure**:  
    * After creating the project, your folder structure will look something like this:
 
-```
+```text
 ├── contracts
 │   └── YourSmartContract.sol
 ├── scripts
@@ -29,12 +29,12 @@ npx hardhat
 ├── package.json
 └── node_modules/
 ```
-  </Step>
+</Step>
   <Step title="Add and Compile Your Smart Contract">
     1. **Create the Smart Contract**:  
    * Inside the contracts folder, create a new Solidity file (e.g., `ContactInfo.sol`) and write your smart contract code.
 
-```
+```bash
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
@@ -65,13 +65,13 @@ contract ContactInfo {
 
 Run the following command to compile your smart contract:
 
-```
+```bash
 npx hardhat compile
 ```
 
 You should see a response similar to this:
 
-```
+```bash
 Generating typings for: 2 artifacts in dir: typechain-types for target: ethers-v6
 Successfully generated 8 typings!
 Compiled 2 Solidity files successfully (evm target: paris).
@@ -79,7 +79,7 @@ Compiled 2 Solidity files successfully (evm target: paris).
 
 This command compiles the project, generating an artifacts folder that contains the compiled data, including the ABI and bytecode for your contract.
 
-```
+```text
 ├── artifacts
 │   ├── build-info
 │   │   └── f5da7ce57199502ee2303fea40...
@@ -141,7 +141,7 @@ You will use `.json` for the ABI file because the ABI is structured in JSON form
 
 For the bytecode, we use `.bin` to indicate it’s a binary file containing the compiled code in hexadecimal format. This file is used directly for deployment, as it represents the actual code that will be executed on the blockchain.
 
-```
+```text
 ├── files
    ├── abi.json  
    └── bytecode.bin
@@ -185,13 +185,13 @@ rsk-cli deploy --abi <path_to_abi> --bytecode <path_to_bytecode> --args <arg1> <
   <TabItem value="contest" label="Testnet">
    For testnet deployment, use this command:
 
-```
+```bash
 rsk-cli deploy --testnet --abi <path_to_abi> --bytecode <path_to_bytecode> --args <arg1> <arg2> ...
 ```
 
 This is a sample command to deploy a sample smart contract using the testnet
 
-```
+```bash
 rsk-cli deploy --testnet --abi files/abi.json --bytecode files/bytecode.bin 
 ```
   </TabItem>
@@ -207,7 +207,7 @@ After running this command, you will prompted to enter the password of your wall
 
 You should see a similar response to this:
 
-```
+```bash
 🔧 Initializing ViemProvider for testnet...
 ? Enter your password to decrypt the wallet: **********
 🔑 Wallet account: 0x05BFa711ef4B2f40855C4E73bA96a8Da86a4be9F

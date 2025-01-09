@@ -1,11 +1,11 @@
 ---
 sidebar_position: 5
-sidebar_label: Rootstock-CLI Interact with Verified Smart Contracts
-title: Rootstock-CLI Interact with Verified Smart Contracts
+sidebar_label: Rootstock CLI Interact with Verified Smart Contracts
+title: Rootstock CLI Interact with Verified Smart Contracts
 description: "The contract command allows you to interact with a verified smart contract on the Rootstock blockchain. 
 
 This command lists all available read-only functions within the contract, allowing you to call these functions to view data without altering the contract's state. " 
-tags: [Rootstock-CLI, guides, mainnet, testnet, rsk, rootstock, dApps, smart contracts, solidity]
+tags: [Rootstock CLI, developer tools, guides, rsk, rootstock, dApps, smart contracts, solidity, dev-environments]
 ---
 
 The contract command allows you to interact with a verified smart contract on the Rootstock blockchain. 
@@ -44,7 +44,7 @@ This command will then display a list of all accessible read functions, making i
 
 Example command 
 
-```
+```bash
 rsk-cli contract --address 0x4edd891c2e988e6145fe3e418c652ee33ebab9ae --testnet
 ```
 
@@ -55,7 +55,7 @@ In this example:
 
 After running the command, you will see a response like this:
 
-```
+```text
 🔧 Initializing interaction on testnet...
 🔎 Checking if contract 0x4edd891c2e988e6145fe3e418c652ee33ebab9ae is verified...
 ? Select a read function to call: (Use arrow keys)
@@ -68,14 +68,14 @@ After running the command, you will see a response like this:
 
 For example, if you select name, you'll see:
 
-```
+```text
 ? Select a read function to call: name
 📜 You selected: name
 ```
 
 2. View the response**: After selecting a function, rsk-cli will call the function on the contract and display the result.
 
-```
+```bash
 ✅ Function name called successfully!
 ✔ 🔧 Result: [Function output here]
 🔗 View on Explorer: https://explorer.testnet.rootstock.io/address/0x4edd891c2e988e6145fe3e418c652ee33ebab9ae
@@ -123,13 +123,13 @@ rsk-cli bridge --testnet
 
 - Once you select either the Mainnet or Testnet, you will see the following message:
 
-```
+```text
 🔧 Initializing bridge for testnet...
 ```
 
 - You will then be prompted to choose the type of function you want to call:
 
-```
+```text
 ? Select the type of function you want to call: (Use arrow keys)
 ❯ read
   write
@@ -139,7 +139,7 @@ rsk-cli bridge --testnet
    - Use the **arrow keys** to highlight your choice and press **Enter**.  
 - If you select **read**, you will see a list of available read functions:
 
-```
+```text
 ? Select a read function to call:
 ❯ getBtcBlockchainBestChainHeight
   getStateForBtcReleaseClient
@@ -153,7 +153,7 @@ rsk-cli bridge --testnet
 - Use the **arrow keys** to choose the read function you want to use (e.g., `getBtcBlockchainBestChainHeight`) and press **Enter**.  
 - Response after executing a read function:
 
-```
+```bash
 ✅ Function getBtcBlockchainBestChainHeight called successfully!
 ✔ 🔧 Result: 3500401
 🔗 View on Explorer: https://explorer.testnet.rootstock.io/address/0x0000000000000000000000000000000001000006
@@ -161,12 +161,12 @@ rsk-cli bridge --testnet
 
 The result shows the output of the function, along with a link to view details on the blockchain explorer.
 
-  </TabItem>
+</TabItem>
 
   <TabItem value="contest" label="Selecting a Write Function">
   If you select **write**, you will be presented with a list of write functions:
 
-```
+```bash
 ? Select a write function to call: (Use arrow keys)
 ❯ registerBtcTransaction
   registerBtcCoinbaseTransaction
@@ -178,25 +178,25 @@ Use the **arrow keys** to highlight your choice (e.g., registerBtcTransaction) a
 - Once a write function is selected, you will need to provide the required arguments:  
 - Enter the appropriate value for the tx argument and press **Enter**.
 
-```
+```bash
 ? Enter the value for argument tx (bytes):
 ```
 
 - Enter the height value and press **Enter**.
 
-```
+```bash
 ? Enter the value for argument height (int256): 334
 ```
 
 - Enter the pmt () value and press **Enter**.
 
-```
+```bash
 ? Enter the value for argument pmt (bytes): 345
 ```
 
 To confirm the write operation, you will be prompted to enter your wallet password:
 
-```
+```bash
 ? Enter your password to decrypt the wallet: *****
 ```
 

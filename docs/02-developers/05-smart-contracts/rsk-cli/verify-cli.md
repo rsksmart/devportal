@@ -1,12 +1,12 @@
 ---
 sidebar_position: 4
-sidebar_label: Verify Smart Contract on Rootstock-CLI
-title: Verify Smart Contract on Rootstock-CLI  
-description: "The rsk-cli tool enables users to manage wallets, check balances, send transactions, verify smart contracts and interact with smart contracts on the Rootstock blockchain - a Bitcoin sidechain designed for smart contracts. It supports both mainnet and testnet environments." 
-tags: [Rootstock-CLI, guides, mainnet, testnet, rsk, rootstock, dApps, smart contracts, solidity]
+sidebar_label: Verify Smart Contract on Rootstock CLI
+title: Verify Smart Contract on Rootstock CLI  
+description: "The Rootstock CLI (rsk-cli) tool enables users to manage wallets, check balances, send transactions, verify smart contracts and interact with smart contracts on the Rootstock blockchain - a Bitcoin sidechain designed for smart contracts. It supports both mainnet and testnet environments." 
+tags: [Rootstock CLI, developer tools, guides, rsk, rootstock, dApps, smart contracts, solidity, dev-environments]
 ---
 
-To verify a smart contract on the Rootstock-CLI, the `rsk-cli` verify command allows developers to submit their contract source code and other information to the Rootstock Explorer API. 
+To verify a smart contract on the Rootstock CLI, the `rsk-cli` verify command allows developers to submit their contract source code and other information to the Rootstock Explorer API. 
 
 The `rsk-cli` verify command enables the verification of a smart contract on Rootstock's mainnet or testnet by providing the contract code, address, and other metadata through a JSON file. 
 
@@ -16,13 +16,14 @@ Verification on Rootstock's blockchain allows users to confirm that the compiled
 <Tabs>
   <TabItem value="contribute" label="Mainnet" default>
     ```
-rsk-cli verify --json <path_to_json> --address <address> --name <contract_name> --decodedArgs <arg1> <arg2> ...
-```
+      rsk-cli verify --json <path_to_json> --address <address> --name <contract_name> --decodedArgs <arg1> <arg2> ...
+    ```
   </TabItem>
   <TabItem value="contest" label="Testnet">
-   ```
-rsk-cli verify --testnet --json <path_to_json> --address <address> --name <contract_name> --decodedArgs <arg1> <arg2> ...
-```
+    
+    ```
+    rsk-cli verify --testnet --json <path_to_json> --address <address> --name <contract_name> --decodedArgs <arg1> <arg2> ...
+    ```
   </TabItem>
  
 </Tabs>
@@ -44,7 +45,7 @@ rsk-cli verify --testnet --json <path_to_json> --address <address> --name <contr
    - **Example:** If your JSON file is named `fb7b3667b850d874bffe750e005d2477.json` and it is usually in the `build-info` folder under the `artifacts folder`, you would use `--json .artifacts/build-info/fb7b3667b850d874bffe750e005d2477.json`.
   
 
-   ```
+   ```text
    ├── artifacts
    │   └── build-info
    │       └── fb7b3667b850d874bffe750e00...
@@ -90,19 +91,19 @@ rsk-cli verify --testnet --json <path_to_json> --address <address> --name <contr
 
 To verify the same contract on the testnet:
 
-```
+```bash
 rsk-cli verify --testnet --json artifacts/build-info/fb7b3667b850d874bffe750e005d2477.json --address 0x4edd891c2e988e6145fe3e418c652ee33ebab9ae --name ContactInfo    
 ```
 
 With constructor arguments:
 
-```
+```bash
 rsk-cli verify --testnet --json ./contract.json --address 0x1234567890abcdef1234567890abcdef12345678 --name MyToken --decodedArgs 0xabcdef1234567890abcdef1234567890abcdef12 1000
 ```
 
 The response below was obtained from the command without a constructor.
 
-```                                  
+```bash                                  
 🔧 Initializing verification on testnet...
 📄 Reading JSON Standard Input from artifacts/build-info/fb7b3667b850d874bffe750e005d2477.json...
 🔎 Verifying contract ContactInfo deployed at 0x4edd891c2e988e6145fe3e418c652ee33ebab9ae..
