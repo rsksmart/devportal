@@ -2,9 +2,10 @@
 sidebar_label: Gas Costs
 sidebar_position: 950
 title: RIF Relay - Gas Costs
+description: RIF Relay Gas Costs.
 tags: [rif, envelope, relay, integrate]
-description: RIF Relay Gas Costs
 ---
+
 
 The overhead gas cost is the extra amount of gas required to process the relay call requested by the user. Let's call **X** the gas consumed by the destination contract method call, and **Y** the total gas consumed by the relay call, then the relay call cost (i.e. overhead gas cost) is: **Z = Y - X**.
 

@@ -2,9 +2,10 @@
 sidebar_label: Develop
 sidebar_position: 600
 title: RIF Relay Develop
+description: RIF Relay deployment process.
 tags: [rif, envelope, relay, user, guide]
-description: RIF Relay deployment process
 ---
+
 
 ## Initializing the project
 
