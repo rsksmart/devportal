@@ -20,7 +20,7 @@
     "@cookbookdev/docsbot": "^4.24.7",
     "@docusaurus/core": "3.4.0",
     "@docusaurus/plugin-google-tag-manager": "^3.4.0",
-    "@docusaurus/preset-classic": "3.4.0",
+    "@docusaurus/preset-classic": "3.7.0",
     "@docusaurus/theme-search-algolia": "^3.4.0",
     "@formspark/use-formspark": "^0.1.39",
     "@mdx-js/react": "^3.0.0",
