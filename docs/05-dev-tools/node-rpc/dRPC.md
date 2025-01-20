@@ -32,7 +32,7 @@ dRPC supports various blockchain networks, including:
 
 <Steps>
   <Step title="Sign Up and Get an API Key">
-   - Create an account on [dRPC.io](https://www.drpc.io).  
+   - Create an account on [dRPC.org](https://www.drpc.org).  
    - Generate your API key from the dashboard.  
 
   </Step>
@@ -40,11 +40,11 @@ dRPC supports various blockchain networks, including:
    Use the base URL for the desired blockchain network:  
    - **Ethereum Mainnet:**  
   ```
-  https://eth-mainnet.drpc.io/YOUR_API_KEY
+  https://eth-mainnet.drpc.org/YOUR_API_KEY
   ```  
    - **Binance Smart Chain Testnet:**  
   ```
-  https://bsc-testnet.drpc.io/YOUR_API_KEY
+  https://bsc-testnet.drpc.org/YOUR_API_KEY
   ```  
   </Step>
   <Step title="Example API Call">
@@ -69,7 +69,7 @@ dRPC supports various blockchain networks, including:
   </Step>
   <Step title="Use the Ethereum Mainnet endpoint as an example: ">
      ```bash
-   https://eth-mainnet.drpc.io/YOUR_API_KEY
+   https://eth-mainnet.drpc.org/YOUR_API_KEY
    ```  
   </Step>
   <Step title="Send the following JSON-RPC request:">
@@ -129,5 +129,5 @@ Subscribe to live events like new blocks or logs:
 ### REST Endpoints  
 For developers preferring REST over JSON-RPC, dRPC offers RESTful APIs for common operations:  
 ```
-GET https://eth-mainnet.drpc.io/v1/account/0xYourEthereumAddress/balance
+GET https://eth-mainnet.drpc.org/v1/account/0xYourEthereumAddress/balance
 ```  

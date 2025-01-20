@@ -13,6 +13,10 @@ Whether you're building on the Rootstock platform or simply exploring, these def
 
 # A
 
+## ABI (Application Binary Interface)
+The Application Binary Interface (ABI) defines the interface between two binary program modules, typically between a smart contract and the external applications that interact with it. On the blockchain, an ABI specifies the functions and parameters called on a smart contract and the data exchange structure. It is essential for interacting with smart contracts programmatically.
+
+
 ## Accounts 
 
 In blockchain, accounts store digital assets and are identified by addresses. 
