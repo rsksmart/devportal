@@ -32,7 +32,7 @@ dRPC supports various blockchain networks, including:
 
 <Steps>
   <Step title="Sign Up and Get an API Key">
-   - Create an account on [dRPC.io](https://www.drpc.org).  
+   - Create an account on [dRPC.org](https://www.drpc.org).  
    - Generate your API key from the dashboard.  
 
   </Step>
