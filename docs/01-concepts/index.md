@@ -29,7 +29,7 @@ Ready to embark on your Rootstock development journey? Explore these sections ta
 
 ### Developers
 
-The [Developers](/developers/) section provides all the neccessary guides and information for building secure and scalable dApps on Bitcoin with Rootstock. Leverage your existing knowledge of Solidity and tools like Rust, Hardhat, and Wagmi to deploy and scale your dApps on the pioneering layer 2 solution that combines the best of Bitcoin security and Ethereum Smart Contract capabilities.
+The [Developers](/developers/) section provides all the necessary guides and information for building secure and scalable dApps on Bitcoin with Rootstock. Leverage your existing knowledge of Solidity and tools like Rust, Hardhat, and Wagmi to deploy and scale your dApps on the pioneering layer 2 solution that combines the best of Bitcoin security and Ethereum Smart Contract capabilities.
 
 ### Node Operators
 
