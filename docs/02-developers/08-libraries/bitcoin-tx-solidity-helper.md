@@ -31,7 +31,7 @@ The features of the Bitcoin Solidity Helper library include:
 ## Versioning
 Current version is ![npm version](https://img.shields.io/npm/v/@rsksmart/btc-transaction-solidity-helper.svg)
 
-To check the NPM package, please check [Bitcoin Solidity Helper NPM Package.](https://www.npmjs.com/.package/@rsksmart/btc-transaction-solidity-helper)
+To check the NPM package, please check [Bitcoin Solidity Helper NPM Package.](https://www.npmjs.com/package/@rsksmart/btc-transaction-solidity-helper)
 
 ## Prerequisites
 * Knowledge of Solidity and how to write smart contracts.
