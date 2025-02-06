@@ -5,41 +5,7 @@ description: 'Having issues crossing your tokens on the token bridge? See the tr
 tags: [resources, tokenbridge, blockchain, bridges, tokens, ethereum, rootstock, rsk]
 ---
 
-<!-- <div class="rsk-token-bridge-support">
-  <div class="rsk-token-bridge-support-input-area">
-    <div>
-      <label>Transaction Hash</label>
-      <br />
-      <input name="txHash" id="rsk-token-bridge-support-txHash" type="text" />
-    </div>
-    <div>
-      <label>Crossing from</label>
-      <br />
-      <select name="fromNetwork" id="rsk-token-bridge-support-fromNetwork">
-        <option value="ethereum-mainnet">Ethereum to Rootstock</option>
-        <option value="rsk-mainnet">Rootstock to Ethereum</option>
-      </select>
-    </div>
-    <div>
-      <label>Wallet</label>
-      <br />
-      <select name="walletName" id="rsk-token-bridge-support-walletName">
-        <option value="metamask">MetaMask</option>
-        <option value="liquality">Liquality</option>
-      </select>
-    </div>
-    <div>
-      <button id="rsk-token-bridge-support-check-button">Check &hellip;</button>
-    </div>
-  </div>
-  <div class="rsk-token-bridge-support-output-area">
-  </div>
-</div>
-
-> Note that what follows below are generic troubleshooting queries.
-> To see more specific information, use the form above. -->
-
-## Crossing tokens on Mainnet
+## Crossing Tokens on Mainnet
 
 View the [Token Bridge FAQs](https://dev.rootstock.io/resources/guides/tokenbridge/faq/)
 
@@ -47,10 +13,10 @@ Find the min/max values for [crossing tokens on Mainnet](https://dapp.tokenbridg
 
 | Cross Token | Network | Amount | \# of Block Confirmations | Min Amount  | Max Amount |
 | :---- | :---- | :---- | :---- | :---- | :---- |
-| LINK → rLINK | ETHEREUM | 0 100 LINK 1000 LINK | 120 240 5,760 | 0 LINK | 25000 LINK |
-| DAI → rDAI | ETHEREUM |  0  10000 DAI  100000 DAI | 120 240 5760 | 10 DAI | 2500000 DAI |
-| USDT → rUSDT | ETHEREUM | 0 1000000 10000000 | 120 240 5760 | 1000 USDT | 250000000 USDT |
-| USDC → rUSDC | ETHEREUM | 0 1000000 10000000 | 120 240 5760 | 1000 USDC | 250000000 USDC |
+| LINK → rLINK | ETHEREUM | 0 <br/> 100 LINK <br/> 1000 LINK <br/> | 120 <br/> 240 <br/> 5,760 | 0 LINK | 25000 LINK |
+| DAI → rDAI | ETHEREUM |  0  <br/> 10000 DAI <br/> 100000 DAI <br/> | 120 <br/> 240 <br/> 5760 | 10 DAI | 2500000 DAI |
+| USDT → rUSDT | ETHEREUM | 0 <br/> 1000000 USDT <br/> 10000000 USDT <br/> | 120 <br/> <br/> 240 <br/> <br/> 5760 | 1000 USDT | 250000000 USDT |
+| USDC → rUSDC | ETHEREUM | 0 <br/> 1000000 <br/> 10000000 | 120 <br/> <br/> 240 <br/> <br/> 5760 | 1000 USDC | 250000000 USDC |
 
 ## Crossing Tokens on Testnet
 
@@ -58,10 +24,10 @@ Find the min/max values for [crossing tokens on Testnet](https://dapp.testnet.br
 
 | Cross Token | Network | Amount | \# of Block Confirmations | Min Amount  | Max Amount |
 | :---- | :---- | :---- | :---- | :---- | :---- |
-| LINK → rLINK | Sepolia | 0 100 LINK 1000 LINK | 120 240 5,760 | 0 LINK | 25000 LINK |
-| DAI → rDAI | Sepolia |  0  10000 DAI  100000 DAI | 120 240 5760 | 10 DAI | 2500000 DAI |
-| USDT → rUSDT | Sepolia | 0 1000000 10000000 | 120 240 5760 | 1000 USDT | 250000000 USDT |
-| USDC → rUSDC | Sepolia | 0 1000000 10000000 | 120 240 5760 | 1000 USDC | 250000000 USDC |
+| LINK → rLINK | Sepolia | 0 <br/> 100 LINK <br/> 1000 LINK | 120 <br/> 240 <br/> 5,760 | 0 LINK | 2,5000 LINK |
+| DAI → rDAI | Sepolia   | 0 <br/> 10,000 DAI <br/> 100,000 DAI | 120 <br/> 240 <br/> 5,760 | 10 DAI | 2,500,000 DAI |
+| USDT → rUSDT | Sepolia | 0 <br/> 1,000,000 USDT <br/> 10,000,000 USDT | 120 <br/> <br/> 240 <br/> <br/> 5,760 | 1000 USDT | 250,000,000 USDT |
+| USDC → rUSDC | Sepolia | 0 <br/> 1,000,000 USDC <br/> 10,000,000 USDC | 120 <br/> <br/> 240 <br/> <br/> 5,760 | 1000 USDC | 250,000,000 USDC |
 
 ## Transferred tokens from Ethereum, and after 24 hours have not received tokens on Rootstock
 

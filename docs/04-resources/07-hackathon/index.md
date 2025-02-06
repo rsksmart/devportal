@@ -12,10 +12,6 @@ It includes setup instructions for essential tools such as Java, Node.js, Hardha
 
 For IRL hackathons and events, download the [Hackathon Cheatsheet PDF with QR Codes](/rootstock-cheatsheet.pdf).
 
-
-
-
-
 ## Prerequisites
 
 This guide is designed to help both beginners and experienced developers get started with building on Rootstock. The content is organized to help you find what you need based on your skill level.
