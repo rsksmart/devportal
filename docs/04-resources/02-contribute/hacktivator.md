@@ -36,15 +36,15 @@ Developers are encouraged to leverage reference projects to make meaningful cont
 
       **Contribution Ideas:**
 
-        A. Check Balances: Implement features to easily check balances for any address on Rootstock.
+        * Check Balances: Implement features to easily check balances for any address on Rootstock.
 
-        B. Transfer Any Token:  Enable to transfer any token on the Rootstock network, ensuring compatibility with major token standards (e.g., ERC-20, ERC-721) for a seamless user experience
+        * Transfer Any Token:  Enable to transfer any token on the Rootstock network, ensuring compatibility with major token standards (e.g., ERC-20, ERC-721) for a seamless user experience
 
-        C. Send Transactions: Simplify sending transactions with built-in commands.
+        * Send Transactions: Simplify sending transactions with built-in commands.
 
-        D. Transactions history:  Show the transactions history from the current wallet
+        * Transactions history:  Show the transactions history from the current wallet
 
-        E. Address Book: Add an address book feature for frequently used addresses, with easy labeling and optional encryption for secure storage.
+        * Address Book: Add an address book feature for frequently used addresses, with easy labeling and optional encryption for secure storage.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
@@ -54,17 +54,17 @@ Developers are encouraged to leverage reference projects to make meaningful cont
 
       **Contribution Ideas:**
 
-        A. ERC-20 Token Voting: Set up ERC-20 tokens for voting, allowing users to vote on proposals or choices within a project.
+        * ERC-20 Token Voting: Set up ERC-20 tokens for voting, allowing users to vote on proposals or choices within a project.
 
-        B. Leaderboard Display: Track voter participation making it easy to highlight the most engaged community members.
+        * Leaderboard Display: Track voter participation making it easy to highlight the most engaged community members.
 
-        C. On-Chain Identity Integration: Incorporate RNS domains or other on-chain identities for personalized leaderboards.
+        * On-Chain Identity Integration: Incorporate RNS domains or other on-chain identities for personalized leaderboards.
 
-        D. Graphical Representations: Add charts or graphs to visualize leaders' positions over time.
+        * Graphical Representations: Add charts or graphs to visualize leaders' positions over time.
 
-        E. Positional Changes: Display how participants' rankings shift daily or weekly, providing transparency in voting dynamics.
+        * Positional Changes: Display how participants' rankings shift daily or weekly, providing transparency in voting dynamics.
 
-        F. Countdown Timer: Include a countdown feature to indicate when the voting period ends, creating a sense of urgency for participants.
+        * Countdown Timer: Include a countdown feature to indicate when the voting period ends, creating a sense of urgency for participants.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">
@@ -74,19 +74,19 @@ Developers are encouraged to leverage reference projects to make meaningful cont
 
       **Contribution Ideas:**
 
-        A. Set Up a Token Airdrop: Implement airdrops of ERC-20 tokens or RUNES.
+        * Set Up a Token Airdrop: Implement airdrops of ERC-20 tokens or RUNES.
 
-        B. Staking-Based Eligibility: Add rules to reward users who have staked tokens in another protocol, encouraging broader ecosystem participation.
+        * Staking-Based Eligibility: Add rules to reward users who have staked tokens in another protocol, encouraging broader ecosystem participation.
 
-        C. On-Chain Activity: Create rules to distribute tokens based on on-chain actions like interacting with a contract or voting on a proposal.
+        * On-Chain Activity: Create rules to distribute tokens based on on-chain actions like interacting with a contract or voting on a proposal.
 
-        D. Holdings-Based Eligibility: Reward users based on the number of tokens they hold, incentivizing loyalty and long-term engagement.
+        * Holdings-Based Eligibility: Reward users based on the number of tokens they hold, incentivizing loyalty and long-term engagement.
 
-        E. RNS Domain Criteria: Airdrop tokens to users who own specific RNS domains, adding a unique layer to community interaction.
+        * RNS Domain Criteria: Airdrop tokens to users who own specific RNS domains, adding a unique layer to community interaction.
 
-        F. Add New Different Rewards System: Introduce a new reward system such as a random or tiered reward system
+        * Add New Different Rewards System: Introduce a new reward system such as a random or tiered reward system
 
-        G. Time-Limited Airdrops and Expirations: Implement time-sensitive giveaways where unclaimed rewards are redistributed, creating urgency and encouraging immediate engagement.
+        * Time-Limited Airdrops and Expirations: Implement time-sensitive giveaways where unclaimed rewards are redistributed, creating urgency and encouraging immediate engagement.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="3">
@@ -96,15 +96,15 @@ Developers are encouraged to leverage reference projects to make meaningful cont
 
       **Contribution Ideas:**
 
-        A. Additional Minting Parameters: Implement extra minting options.
+        * Additional Minting Parameters: Implement extra minting options.
 
-        B. Burn Mechanisms: Define and implement token burn mechanisms to increase scarcity or reward holders.
+        * Burn Mechanisms: Define and implement token burn mechanisms to increase scarcity or reward holders.
 
-        C. Pump Fun Platform: Build a platform to showcase and hype newly launched tokens, creating an engaging environment for degens and creators.
+        * Pump Fun Platform: Build a platform to showcase and hype newly launched tokens, creating an engaging environment for degens and creators.
 
-        D. Token Vesting and Timelock: Allow users to set vesting schedules or timelocks for tokens, which is useful for founders, early investors, or community rewards.
+        * Token Vesting and Timelock: Allow users to set vesting schedules or timelocks for tokens, which is useful for founders, early investors, or community rewards.
 
-        E. Governance Integration:  Include options to create governance tokens or add voting modules, enabling users to set up DAOs or community-driven projects directly.
+        * Governance Integration:  Include options to create governance tokens or add voting modules, enabling users to set up DAOs or community-driven projects directly.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="4">
@@ -115,28 +115,28 @@ Developers are encouraged to leverage reference projects to make meaningful cont
       <b/>
       **Contribution Ideas: Rust**
 
-        A. Transaction Processing Library:  Build a library in Rust to handle token transfers, deploy contracts, and execute transactions for ERC-20 and ERC-1155 standards, leveraging Rust's speed and security.
+        * Transaction Processing Library:  Build a library in Rust to handle token transfers, deploy contracts, and execute transactions for ERC-20 and ERC-1155 standards, leveraging Rust's speed and security.
 
-        B. Crypto Wallet Library:  Develop a lightweight wallet in Rust, with support for private key management, signing, and ECDSA cryptography, designed for integration with desktop and server applications.
+        * Crypto Wallet Library:  Develop a lightweight wallet in Rust, with support for private key management, signing, and ECDSA cryptography, designed for integration with desktop and server applications.
 
       <b/>
 
       **Contribution Ideas: Python**
 
-        A. Airdrop Eligibility Analyzer:  Create a Python library that checks eligibility criteria (e.g., RNS domains owned, on-chain activity) for airdrops, connecting easily to databases or analytics pipelines.
+        * Airdrop Eligibility Analyzer:  Create a Python library that checks eligibility criteria (e.g., RNS domains owned, on-chain activity) for airdrops, connecting easily to databases or analytics pipelines.
 
-        B. Data Visualization for Token Metrics:  Develop a tool using Python’s data libraries (like Pandas and Matplotlib) to visualize token distribution, transfer patterns, and airdrop impacts.
+        * Data Visualization for Token Metrics:  Develop a tool using Python’s data libraries (like Pandas and Matplotlib) to visualize token distribution, transfer patterns, and airdrop impacts.
 
-        C. Smart Contract Event Scraper:  Build a Python script to capture and parse smart contract events from the blockchain, storing relevant data for user interaction tracking or analytics.
+        * Smart Contract Event Scraper:  Build a Python script to capture and parse smart contract events from the blockchain, storing relevant data for user interaction tracking or analytics.
 
       <b/>
       **Contribution Ideas: Go**
 
-        A. Backend for Airdrop and Giveaway Engine:  Use Go to build a high-performance backend that handles token distribution, logging, and eligibility checking for the Giveaway Engine.
+        * Backend for Airdrop and Giveaway Engine:  Use Go to build a high-performance backend that handles token distribution, logging, and eligibility checking for the Giveaway Engine.
 
-        B. Token Management Microservices:  Create microservices for token-related operations, such as minting, burning, and transferring, allowing applications to call specific functions as needed.
+        * Token Management Microservices:  Create microservices for token-related operations, such as minting, burning, and transferring, allowing applications to call specific functions as needed.
 
-        C. Network Listener for Events:  Implement an event listener in Go to monitor smart contracts for token-related events, ideal for notifications or automated actions.
+        * Network Listener for Events:  Implement an event listener in Go to monitor smart contracts for token-related events, ideal for notifications or automated actions.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
@@ -148,11 +148,17 @@ For a comprehensive overview of the evaluation and reward system for code contri
 #### 👉 Code Contributions Rewards
 
 Each verified and approved code contribution that becomes a Qualified Contribution (as defined in the Hacktivator's terms and conditions above) will be entitled to receive the following rewards, under the established process:
-* **Contribution Option A** → 50 - 300 USD
-* **Contribution Option B & C** → 300 - 700 USD
-* **Contribution Option D, E, F & G** → 700 - 1000 USD 
 
-The reward range provided for each option will be used based on the level of contribution to the project to qualify. That is, if the Contributor meets only the minimum required to qualify, they will be assigned the minimum rewards for each option. However, the more the Contributor adds to their contribution and chosen option, the greater the rewards they may receive (up to the maximum cap established for each option).
+* **Level 1 —> 50 - 150 USD**
+  * **Basic Contribution (Low Complexity):** Minor documentation or style fixes (e.g., correcting typos, adding a missing comment explaining a function’s purpose).
+* **Level 2 —> 150 - 300 USD**
+  * Small Improvements (Medium-Low Complexity): Refactors or optimizations that don’t change functionality but improve code efficiency or readability.
+* **Level 3 —> 300 - 700 USD**
+  * **New Feature or Significant Improvement (Medium-High Complexity):** Implementing a simple new feature or enhancing existing functionality.
+* **Level 4 —> 700 - 1000 USD**
+  * **Complex or Innovative Contribution (High Complexity):** Large-scale features or critical changes requiring coordination across multiple components (e.g., API integration or system architecture changes).
+
+> The reward range provided for each option will be used based on the level of contribution to the project to qualify. That is, if the Contributor meets only the minimum required to qualify, they will be assigned the minimum rewards for each option. However, the more the Contributor adds to their contribution and chosen option, the greater the rewards they may receive (up to the maximum cap established for each option).
 
 
 ### Category 2: Educational Content 📝
@@ -261,6 +267,7 @@ Your contributions can cover any of the following Rootstock themes:
 * Educational content should be targeted towards developers looking to build on Rootstock or understand its integration with Bitcoin.
 * Content must help other developers navigate and work with Rootstock, deploy smart contracts, use compatible tools, SDKs, and libraries, and or integrate protocols on Rootstock.
 * Contributions for Rootstock Technical documentation should be submitted as a Pull Request (PR) directly on the [DevPortal Repo](https://github.com/rsksmart/devportal/pulls), and the PR link should be submitted via the [Google form](https://forms.gle/aF9pFMfRyoygfzJWA). Ensure to use the label **“hacktivator”** on the PR and properly describe your PR using the template.
+* After approval, the contributor must publish their educational content on the [Rootstock Community blog](https://rootstock.hashnode.dev/) to qualify for rewards. They will be invited as a collaborator to do so, and the contribution will only be eligible for rewards once successfully published.
 
 :::note[More info about the guidelines]
 
