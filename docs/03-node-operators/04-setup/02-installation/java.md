@@ -41,7 +41,7 @@ cd ~/rskj-node-jar
 ```
 3. **Move the JAR**: Move or copy the just downloaded jar file to your directory.
 ```jsx
-mv ~/Downloads/rskj-core-6.5.0-ARROWHEAD-all.jar SHA256SUMS.asc /Users/{user}/rskj-node-jar/
+mv ~/Downloads/rskj-core-7.0.0-LOVELL-all.jar SHA256SUMS.asc /Users/{user}/rskj-node-jar/
 ```
 
 <!-- ### Configuration
@@ -69,7 +69,7 @@ mv ~/Downloads/rskj-core-6.5.0-ARROWHEAD-all.jar SHA256SUMS.asc /Users/{user}/rs
 
 :::tip[Tip]
 
-Replace `<PATH-TO-THE-RSKJ-JAR>` with the actual path to your JAR file. For example, `C:/RskjCode/rskj-core-6.5.0-ARROWHEAD-all.jar`.
+Replace `<PATH-TO-THE-RSKJ-JAR>` with the actual path to your JAR file. For example, `C:/RskjCode/rskj-core-7.0.0-LOVELL-all.jar`.
 :::
 
 ## Using Import Sync
@@ -115,7 +115,7 @@ Replace `<PATH-TO-THE-RSKJ-JAR>` with your JAR file path. For configuration deta
 
 :::info[Info]
 
-After starting the node, if there's no output, this means it's running correctly. 
+After starting the node, if there's no output, this means it's running correctly.
 :::
 
 1. To confirm, open a new console tab (it is important you do not close this tab or interrupt the process) and test the node's RPC server. A sample cURL request:
@@ -182,5 +182,5 @@ To change networks on the RSKj node, use the following commands:
     ```
 
 :::tip[Tip]
-Replace `<PATH-TO-THE-RSKJ-FATJAR>` with the actual path to your jar file. For example: `C:/RskjCode/rskj-core-6.5.0-ARROWHEAD-all.jar`.
+Replace `<PATH-TO-THE-RSKJ-FATJAR>` with the actual path to your jar file. For example: `C:/RskjCode/rskj-core-7.0.0-LOVELL-all.jar`.
 :::

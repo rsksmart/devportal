@@ -53,7 +53,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     <Accordion.Item eventKey="5">
     <Accordion.Header as="h3">What is the current state of the Rootstock project?</Accordion.Header>
     <Accordion.Body>
-      - As of March 2024, the latest released version of Rootstock is the [Arrowhead v6.0.0](https://github.com/rsksmart/rskj/releases), an update that is mainly focused on bringing Ethereum compatibility enhancements to the Rootstock virtual machine, along with notable improvements and performance optimization in the PowPeg protocol. Read more [Arrowhead 6.0.0: What You Need To Know About Rootstock’s Upcoming Network Upgrade](https://blog.rootstock.io/noticia/arrowhead-6-0-0/)
+      - As of February 2025, the latest released version of Rootstock is the [Lovell v7.0.0](https://github.com/rsksmart/rskj/releases), an update that is mainly focused on bringing Ethereum compatibility enhancements to the Rootstock virtual machine, along with notable improvements and performance optimization in the PowPeg protocol. Read more [Introducing Lovell 7.0.0: What You Need To Know About Rootstock’s Upcoming Network Upgrade](https://blog.rootstock.io/noticia/introducing-lovell-7-0-0/)
       - Live statistics about the entire Rootstock network are available at Rootstock Stats, and all the necessary source codes can be found at the Rootstock GitHub organization: [github.com/rsksmart](https://github.com/rsksmart).
     </Accordion.Body>
   </Accordion.Item>
@@ -98,7 +98,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
   <Accordion.Item eventKey="10">
     <Accordion.Header as="h3">How is Rootstock different from drivechains?</Accordion.Header>
     <Accordion.Body>
-      - A drivechain is a special sidechain with a specific type of 2 way peg called “hashrate escrow.” This peg mechanism gives most Bitcoin miners control of sidechain withdrawals but incentivizes miners to be honest and not abuse their powers. To achieve this, miners publicly confirm or reject withdrawals during a long period that can last 3 months. During this period, the community can detect cheaters that confirm invalid withdrawals. The peg is secure as long as there are strong long-term incentives for the honest majority of miners not to cheat. Rootstock, on the contrary, does not rely on monetary incentives. It uses a federation of PowHSM devices, and the tamper-proof devices vote on withdrawals. At the same time, each device enforces the same type of “hashrate escrow” but with a much-reduced timeframe of days. Therefore both Drivechains and Rootstock require the miner hashrate to support every withdrawal. 
+      - A drivechain is a special sidechain with a specific type of 2 way peg called “hashrate escrow.” This peg mechanism gives most Bitcoin miners control of sidechain withdrawals but incentivizes miners to be honest and not abuse their powers. To achieve this, miners publicly confirm or reject withdrawals during a long period that can last 3 months. During this period, the community can detect cheaters that confirm invalid withdrawals. The peg is secure as long as there are strong long-term incentives for the honest majority of miners not to cheat. Rootstock, on the contrary, does not rely on monetary incentives. It uses a federation of PowHSM devices, and the tamper-proof devices vote on withdrawals. At the same time, each device enforces the same type of “hashrate escrow” but with a much-reduced timeframe of days. Therefore both Drivechains and Rootstock require the miner hashrate to support every withdrawal.
       - Drivechains are promising but not currently available as they require a soft-fork in Bitcoin, which has been historically considered controversial and may never be performed. While drivechains may provide greater decentralization, the drivechain peg mechanism has never been tested, so the drivechain peg security is still uncertain.
     </Accordion.Body>
   </Accordion.Item>
@@ -120,7 +120,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
-      
+
 
 ## Rootstock and RIF Token
 
