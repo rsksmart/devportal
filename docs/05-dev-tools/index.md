@@ -30,6 +30,15 @@ description: "Explore a curated selection of smart contract development tools an
     {label: 'Mining', value: 'mine'},
     {label: 'Oracles', value: 'oracles'},
   ]}>
+  <FilterItem
+    value="gas"
+    title="Gas Network API"
+    subtitle="gas"
+    color="orange"
+    linkHref="https://docs.blocknative.com/gas-prediction/gas-platform"
+    linkTitle="Gas Network API"
+    description="The Gas Price API gives you the gas price needed to have a certain probability to qualify for inclusion in the next block."
+  />
 <FilterItem
     value="bridge, exchange"
     title="PowPeg App"
