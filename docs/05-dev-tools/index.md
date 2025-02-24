@@ -29,6 +29,7 @@ description: "Explore a curated selection of smart contract development tools an
     {label: 'Smart Contracts', value: 'sc'},
     {label: 'Mining', value: 'mine'},
     {label: 'Oracles', value: 'oracles'},
+    {label: 'Attestations', value: 'attest'},
   ]}>
 <FilterItem
     value="bridge, exchange"
@@ -626,5 +627,14 @@ description: "Explore a curated selection of smart contract development tools an
     linkHref="https://routerprotocol.com/"
     linkTitle="Build Cross Chain dApps"
     description="Router Protocol is a layer-1 blockchain enabling chain abstraction."
+  />
+  <FilterItem
+    value="attest"
+    title="Ethereum Attestation Service (EAS)"
+    subtitle="Attestations"
+    color="orange"
+    linkHref="/dev-tools/attestations/eas/"
+    linkTitle="Attest Now"
+    description="Ethereum Attestation Service (EAS) is a system that allows individuals and organizations to create verifiable claims or proofs about specific events, actions, or data, either on-chain (on the blockchain) or off-chain (outside the blockchain but linked to it). Learn how to use it on Rootstock."
   />
 </Filter>
