@@ -63,7 +63,7 @@ Use the following base URLs for API requests:
 
  To learn more about the NowNodes connection with Rootstock  click the button below:
  
-<Button href="https://nownodes.io/nodes/rsk" align="left">NOWNode Website</Button>
+<Button href="https://nownodes.io/nodes/rsk" align="left">Rootstock NOWNode Website</Button>
 
 :::
 

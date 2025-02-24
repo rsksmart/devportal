@@ -72,7 +72,7 @@ GetBlock supports these protocols for interacting with blockchain nodes:
 
  To learn more about the getBlock connection with Rootstock, including code snippets, RPC endpoints,  click the button below:
  
-<Button href="https://getblock.io/nodes/rsk/" align="left">Rootstock getBlock Website</Button>
+<Button href="https://getblock.io/nodes/rsk/" align="left">Rootstock GetBlock Website</Button>
 
 :::
 
