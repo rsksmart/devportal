@@ -3,7 +3,7 @@ sidebar_position: 1
 title: How to Run EAS DevTool Locally
 sidebar_label: How to Run EAS DevTool Locally
 tags: [rsk, rootstock, resources, mainnet, testnet, tutorials, Attestations, Indexing Service, EAS Devtool, Ethereum, dApps, smart contracts]
-description: "Ethereum Attestation Service (EAS) is a system that allows individuals and organizations to create verifiable claims or proofs about specific events, actions, or data, either on-chain (on the blockchain) or off-chain (outside the blockchain but linked to it)."
+description: "This guide explores the challenges of attestation, why EAS is a great choice for developers, and provides a step-by-step tutorial on using the EAS Devtool and Indexing Service on Rootstock."
 ---
 
 Attestations are fundamental in blockchain technology, allowing entities to establish credibility and trust. However, traditional attestation methods face numerous challenges, including fragmentation, difficulty in managing schemas, and lack of intuitive tools for end-users. 
