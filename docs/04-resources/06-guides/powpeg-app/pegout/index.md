@@ -16,7 +16,10 @@ To start using PowPeg App, you will need to connect your **RSK** wallet:
 ![PowPeg (connect-your-wallet)](/img/resources/powpeg/connectyourwallet.png)
 
 2. Once connected your will see your address and your balance:
-![PowPeg App (wallet-connected)](/img/resources/powpeg/walletconnected.png)
+
+<center>
+    <img src="/img/resources/powpeg/walletconnected.png"  title="PowPeg App (wallet-connected" width="50%"/>
+</center>
 
 > To get started, see the [Requirements for Pegout](/resources/guides/powpeg-app/prerequisites/) section.
 

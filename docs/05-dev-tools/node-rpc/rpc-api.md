@@ -2,20 +2,19 @@
 sidebar_position: 5
 title: RPC API
 sidebar_label: RPC API
-tags: [rsk, rootstock, resources, tutorials,  setup, dApps, protocol, RPC, API, ]
+tags: [rsk, rootstock, resources, tutorials,  setup, dApps, protocol, RPC API]
 description: "Remote Procedure Call (RPC) is a protocol that allows a program to execute procedures (functions) on a remote server as if they were local calls."
 ---  
  
 Remote Procedure Call (RPC) is a protocol that allows a program to execute procedures (functions) on a remote server as if they were local calls. This eliminates the need for developers to handle low-level network communication.  
 
-### How Our API Works  
+## How Rootstock RPC API Works  
 Rootstock RPC API uses the JSON-RPC protocol, a lightweight, text-based standard for defining procedures and their parameters. This makes it easy to communicate with the API using JSON-formatted requests and receive structured responses.  
 
-### Use Cases  
+## Use Cases  
 - Building integrations for your product or service.  
 - Automating workflows with server-side commands.  
 - Extending your application’s capabilities with remote functions.  
-
 
 ## **JSON-RPC Overview**  
 
@@ -31,7 +30,7 @@ JSON-RPC is a remote procedure call protocol encoded in JSON. It’s simple, sta
 
  To learn more about the Rootstock RPC API, including how to use it, features,  click the button below:
  
-<Button href="https://dev.rootstock.io/developers/rpc-api/rootstock/" align="left">Rootstock RPC API Guide</Button>
+<Button href="/developers/rpc-api/rootstock/" align="left">Rootstock RPC API Guide</Button>
 
 :::
 

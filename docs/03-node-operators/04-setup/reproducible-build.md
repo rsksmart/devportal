@@ -14,7 +14,7 @@ It's highly recommended to follow the steps by yourself to avoid contamination o
 
 :::warning[Important]
 
-Starting with v6.4.0, the minimum supported Java LTS version is Java 17. Previous Java versions will no longer be supported. The following example for Linux OS is showing instructions for v6.3.1, and thus uses jdk 8, this must be replaced by jdk 17 for v6.4.0 and up.
+Starting with [v6.4.0](/changelog/), the minimum supported Java LTS version is Java 17. Previous Java versions will no longer be supported. The following example for Linux OS is showing instructions for v6.3.1, and thus uses jdk 8, this must be replaced by jdk 17 for v6.4.0 and up.
 
 :::
 
@@ -50,9 +50,9 @@ Create a ```Dockerfile``` to setup the build environment.
           apt-get clean
         gpg --keyserver https://secchannel.rsk.co/release.asc --recv-keys 1A92D8942171AFA951A857365DECF4415E3B8FA4
         gpg --finger 1A92D8942171AFA951A857365DECF4415E3B8FA4
-        git clone --single-branch --depth 1 --branch ARROWHEAD-6.4.0 https://github.com/rsksmart/rskj.git /code/rskj
-        git clone https://github.com/rsksmart/reproducible-builds 
-        CP /Users/{$USER}/reproducible-builds/rskj/6.4.0-arrowhead/Dockerfile  /Users/{$USER}/code/rskj
+        git clone --single-branch --depth 1 --branch LOVELL-7.0.0 https://github.com/rsksmart/rskj.git /code/rskj
+        git clone https://github.com/rsksmart/reproducible-builds
+        CP /Users/{$USER}/reproducible-builds/rskj/7.0.0-lovell/Dockerfile  /Users/{$USER}/code/rskj
         WORKDIR /code/rskj
         gpg --verify SHA256SUMS.asc
         sha256sum --check SHA256SUMS.asc
@@ -69,21 +69,21 @@ Create a ```Dockerfile``` to setup the build environment.
           brew cleanup
         gpg --keyserver https://secchannel.rsk.co/release.asc --recv-keys 1A92D8942171AFA951A857365DECF4415E3B8FA4
         gpg --finger 1A92D8942171AFA951A857365DECF4415E3B8FA4
-        git clone --single-branch --depth 1 --branch ARROWHEAD-6.4.0 https://github.com/rsksmart/rskj.git ./code/rskj
-        git clone https://github.com/rsksmart/reproducible-builds 
-        CP /Users/{$USER}/reproducible-builds/rskj/6.4.0-arrowhead/Dockerfile  /Users/{$USER}/code/rskj
-        cd /code/rskj
+        git clone --single-branch --depth 1 --branch LOVELL-7.0.0 https://github.com/rsksmart/rskj.git ./code/rskj
+        git clone https://github.com/rsksmart/reproducible-builds
+        CP /Users/{$USER}/reproducible-builds/rskj/7.0.0-lovell/Dockerfile  /Users/{$USER}/code/rskj
+        cd ./code/rskj
         gpg --verify SHA256SUMS.asc
         sha256sum --check SHA256SUMS.asc
         ./configure.sh
-        ./gradlew clean build -x test   
+        ./gradlew clean build -x test
       ```
   </TabItem>
 </Tabs>
 
 **Response:**
 
-You should get the following as the final response, 
+You should get the following as the final response,
 after running the above steps:
 
 ```bash
@@ -106,7 +106,7 @@ If you are not familiar with Docker or the ```Dockerfile``` format: what this do
 To create a reproducible build, run the command below in the same directory:
 
 ```bash
-docker build -t rskj/6.4.0-arrowhead .     
+docker build -t rskj/7.0.0-lovell .
 ```
 
 :::danger[Error]
@@ -127,7 +127,7 @@ This may take several minutes to complete. What is done is:
 The last step of the build prints the `sha256sum` of the files, to obtain `SHA-256` checksums, run the following command in the same directory as shown above:
 
 ```bash
-docker run --rm rskj/6.4.0-arrowhead sh -c 'sha256sum * | grep -v javadoc.jar'
+docker run --rm rskj/7.0.0-lovell sh -c 'sha256sum * | grep -v javadoc.jar'
 ```
 
 ## Check Results
@@ -137,11 +137,11 @@ After running the build process, a JAR file will be created in ```/rskj/rskj-cor
 You can check the SHA256 sum of the result file and compare it to the one published by Rootstock for that version.
 
 ```bash
-269c6416759ff8979e6bc6a6b1ae96ab95705f1c397df06b160a9f2070a373ce  rskj-core-6.4.0-ARROWHEAD-all.jar
-cb4ecbcf4654d97177389f5505764e3cc9ef5b5f87f7aca2956151c71416d315  rskj-core-6.4.0-ARROWHEAD-sources.jar
-bbc0fc1bb7e865c9e11eb78317db32592c9b7dfd8a6818890729af5827a66237  rskj-core-6.4.0-ARROWHEAD.jar
-fabf8af48c167d42d290e9fa44f80b76b96cd403b56c4c87f8df23fd0ea3c9f0  rskj-core-6.4.0-ARROWHEAD.module
-6dbc8153d510d4e910759e2e76cf40f9c0635185f66aa612dac4b2c8a60d0c63  rskj-core-6.4.0-ARROWHEAD.pom
+604b75665d9750da216ddc9849cb2276a06192321b3c6829685600e1f2d534fb  rskj-core-7.0.0-LOVELL-all.jar
+05fb616708088a6c65326c01d7e79b2c332d5f2ca83246c9075f65e5fa2781fe  rskj-core-7.0.0-LOVELL-sources.jar
+8d131bbc8d1d346ec4a91ce4eb9db59f6c7649bb7698b11bc1abbaf33f75caaa  rskj-core-7.0.0-LOVELL.jar
+e85d0783b39ef93fda5f98588f7e4ae5d57784096ce9b3a1f43eb3d99a49d275  rskj-core-7.0.0-LOVELL.module
+d651adc77b82046a976bf5c7e858b741443bc8ffa8372b8e5bac9b92dc8c294d  rskj-core-7.0.0-LOVELL.pom
 ```
 
 For SHA256 sum of older versions check the [releases page](https://github.com/rsksmart/rskj/releases).

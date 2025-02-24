@@ -1,10 +1,17 @@
 ---
-title: How to Handle Bitcoin Transactions in Solidity
-tags: [rif, rootstock, solidity, bitcoin, smart contracts, libraries, bitcoin transactions]
 sidebar_label: Bitcoin Transaction Solidity Helper Library
 sidebar_position: 300
-description: "This guide demonstrates to a developer how to handle Bitcoin transactions in a Solidity Smart contract, we will also learn how to parse transactions, hash transactions and validate scripts for bitcoin transactions"
+title: How to Handle Bitcoin Transactions in Solidity
+description: 'This guide demonstrates to a developer how to handle Bitcoin transactions in a Solidity Smart contract, we will also learn how to parse transactions, hash transactions and validate scripts for bitcoin transactions.'
+tags: [rif, rootstock, solidity, bitcoin, smart contracts, libraries, bitcoin transactions]
 ---
+
+:::info[Note]
+If you wish to suggest changes on this document, please open a PR on the [Bitcoin Transaction Solidity Helper](https://github.com/rsksmart/btc-transaction-solidity-helper.git)
+:::
+
+
+# BTC Transaction Solidity Helper
 
 Bitcoin, a decentralized digital currency, serves as both a store of value and a means of transferring wealth. Its security is rooted in the blockchain, a distributed ledger maintained by a network of miners. These miners expend significant computational power and energy to create new blocks, which are added to the blockchain every 10 minutes. The more hashing power contributed by miners, the more secure the network becomes. [Learn more about Bitcoin](https://developer.bitcoin.org/index.html).
 
@@ -17,13 +24,18 @@ The [Bitcoin Solidity helper library](https://github.com/rsksmart/btc-transactio
 The features of the Bitcoin Solidity Helper library include:
 1. Bitcoin transaction output parsing: This accurately extracts and organizes transaction outputs from raw Bitcoin transactions. It is able to receive a raw tx and return an array of structures with the tx outputs.
 2. Bitcoin transaction hashing: This calculates the cryptographic hash of a Bitcoin transaction, ensuring its authenticity and integrity. It receives a raw tx and returns its hash.
-3. Bitcoin transaction output script validation: This verifies the validity and type of output scripts within a Bitcoin transaction, allowing for specific data extraction. It receives a raw output script, validates that it is from a specific type and returns a result. E.g. receive a raw null-data script and return the embedded data in it
+3. Bitcoin transaction output script validation: This verifies the validity and type of output scripts within a Bitcoin transaction, allowing for specific data extraction. It receives a raw output script, validates that it is from a specific type and returns a result. E.g. receive a raw null-data script and return the embedded data in it.
 4. Bitcoin address generation: is able to generate Bitcoin the address from a specific script and also to validate if a given address was generated from a script or not.
 5. Bitcoin address validation: This checks if a Bitcoin address conforms to a particular type or format. It validates if a Bitcoin address is of a given type or not.
 
+## Versioning
+Current version is ![npm version](https://img.shields.io/npm/v/@rsksmart/btc-transaction-solidity-helper.svg)
+
+To check the NPM package, please check [Bitcoin Solidity Helper NPM Package.](https://www.npmjs.com/package/@rsksmart/btc-transaction-solidity-helper)
+
 ## Prerequisites
 * Knowledge of Solidity and how to write smart contracts.
-* [Bitcoin Solidity Helper Package](https://github.com/rsksmart/btc-transaction-solidity-helper/pkgs/npm/btc-transaction-solidity-helper)
+* [Bitcoin Solidity Helper Package.](https://github.com/rsksmart/btc-transaction-solidity-helper/pkgs/npm/btc-transaction-solidity-helper)
 
 ## Setup
 To setup the Solidity helper library in your project, run the following npm command:
@@ -103,6 +115,7 @@ require(expectedValue <= outputs[0].value, "incorrect amount");
 The value field of the output structure is in satoshis.
 :::
 
+
 ## Hashing Transactions
 The hash algorithm used in the Bitcoin Network is just the `SHA256(SHA256())` of the serialized transaction. The library exposes one function that will apply this hash algorithm to any byte array passed to it, making it easy to calculate the transaction id of any raw transaction present in the contract.
 
@@ -128,12 +141,13 @@ uint confirmations = bridge.getBtcTransactionConfirmations(
 require(confirmations > expectedConfirmations, "not enough confirmations");
 ```
 
-Read more about the [bridge functionality](https://github.com/rsksmart/rskj/blob/master/rskj-core/src/main/java/co/rsk/peg/BridgeSupport.java)
+Read more about the [bridge functionality.](https://github.com/rsksmart/rskj/blob/master/rskj-core/src/main/java/co/rsk/peg/BridgeSupport.java)
 
 ## Script Validation for Bitcoin Transaction Output
 In the Bitcoin network, when a user wants to send funds to another, the user creates a transaction and adds an output with the value that it wants to send. The other user doesn’t “receive” this amount directly, instead, we call receiving to the ability of providing the proper input to the output script so it returns `true`:
 
 <Quote caption="Bitcoin Script Documentation">
+
   A transaction is valid if nothing in the combined script triggers failure and the top stack item is True (non-zero) when the script exits. Read more info in [Bitcoin Script](https://en.bitcoin.it/wiki/Script)
 </Quote>
 
@@ -163,6 +177,13 @@ bytes memory btcTxDestination = BtcUtils.outputScriptToAddress(
 ## Conclusion
 Congratulations, we have successfully learnt how to use the Solidity Helper library to parse, hash, and validate scripts within Bitcoin transactions. By using this library, developers can gain valuable insights into Bitcoin transaction data and build more sophisticated smart contract dApps on Rootstock.
 
+### Future features
 **Some future enhancements to the library includes:**
 * Transaction Input Parsing: The ability to extract and analyze transaction input data to receive a raw tx and return an array of structs with the tx inputs.
 * Transaction Creation: Utilities to facilitate the creation of raw Bitcoin transactions within smart contracts.
+
+## Contribution Guidelines
+* Please refer to the Rootstock Contribution Guidelines for more information on how to contribute to this project.
+
+## License:
+MIT License - Copyright (c) 2023 Rootstock.

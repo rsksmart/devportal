@@ -15,7 +15,7 @@ In this section, we will go over the steps of converting BTC to RBTC using Ledge
   [Ledger Live](https://www.ledger.com/ledger-live)
   and review this tutorial:
 - You need to have [Electrum](https://electrum.org/).
-  Install it and [configure it to be used with Ledger](https://support.ledgerwallet.com/hc/en-us/articles/115005161925-Set-up-and-use-Electrum).
+  Install it and [configure it to be used with Ledger](https://support.ledger.com/article/115005161925-zd).
 - Node >= 10.16.0
 
 ## BTC to RBTC conversion
@@ -28,7 +28,7 @@ We recommend to use Electrum BTC wallet for connecting to
 BTC Mainnet using Ledger hardware wallet.
 
 - Download the wallet from
-  [Electrum Website](https://bitzuma.com/posts/a-beginners-guide-to-the-electrum-bitcoin-wallet/)
+  [Electrum Website](https://coingate.com/blog/post/setup-electrum-guide)
 - Install Electrum
 - Connect and unlock your Ledger device.
 - Open the Bitcoin app
@@ -129,7 +129,7 @@ Use Electrum to send BTCs to the Rootstock Federation Address. To do that:
 
 **4 Wait for BTC confirmations**
 
-To ensure the transaction, we need to wait 100 BTC confirmations, be patient :
+To ensure the transaction, we need to wait for 100 BTC confirmations, be patient :
 
 :::tip[Tip]
 100 blocks \* 10 minutes/block = 1000 minutes = 16.667 hours approx.
@@ -137,7 +137,7 @@ To ensure the transaction, we need to wait 100 BTC confirmations, be patient :
 
 **5 Get RBTC address from Ledger hardware wallet**
 
-Get the corresponding RBTC address from your Ledger hardware wallet, following these steps:
+Get the corresponding RBTC address from your Ledger hardware wallet, by following these steps:
 
 - Connect and unlock your Ledger device.
 - Open the RSK app.
@@ -172,10 +172,10 @@ Get the corresponding RBTC address from your Ledger hardware wallet, following t
 
 **6 Check RBTC balance**
 
-You can check balance of RBTC address on MyCrypto or MEW setting the corresponding derivation path and selection the address.
+You can check balance of RBTC address on MyCrypto or MEW setting the corresponding derivation path and selecting the address.
 
 :::info[Note]
-You have to wait a minimum of 100 confirmations + a minimum of 5 minutes for checking your RBTC balance
+You have to wait a minimum of 100 confirmations + a minimum of 5 minutes to check your RBTC balance
 :::
 
 ## RBTC to BTC conversion
@@ -185,13 +185,13 @@ Instructions on how to do a Mainnet peg-out.
 1. Get BTC address with Ledger hardware wallet
 
 If you forgot your BTC public address, you can check section **1**.
-The important thing is that the receiving is BTC address will be
+The important thing is that the receiving BTC address will be
 the same that it was used to send to the federation.
 
 2. Send RBTC to Rootstock Bridge Contract
 
 Open MyCrypto or MEW.
-Set the corresponding derivation path and selection the address. \
+Set the corresponding derivation path and select the address. \
 This address has to be the same as that from section **6**.
 Then do a transaction to the Bridge Contract.
 
@@ -199,7 +199,7 @@ Then do a transaction to the Bridge Contract.
 
 :::info[Note]
 
-- The minimum amount to send in a peg-out transaction must be greater than or equals to 0.004 **RBTC** for Mainnet and the minimum amount to send in a peg-in transaction must be greater than or equals to 0.005 **BTC** for Mainnet.
+- The minimum amount to send in a peg-out transaction must be greater than or equal to 0.004 **RBTC** for Mainnet and the minimum amount to send in a peg-in transaction must be greater than or equal to 0.005 **BTC** for Mainnet.
 - Gas Limit of the transaction needs to be manually set at 100,000 gas; otherwise the transaction will fail.
 - Gas Price can be set to 0.06 gwei.
 :::

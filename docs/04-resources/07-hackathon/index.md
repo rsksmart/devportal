@@ -12,10 +12,6 @@ It includes setup instructions for essential tools such as Java, Node.js, Hardha
 
 For IRL hackathons and events, download the [Hackathon Cheatsheet PDF with QR Codes](/rootstock-cheatsheet.pdf).
 
-
-
-
-
 ## Prerequisites
 
 This guide is designed to help both beginners and experienced developers get started with building on Rootstock. The content is organized to help you find what you need based on your skill level.
@@ -87,6 +83,7 @@ These tools will make it easy for you to build on Rootstock:
 - **[Web3.py](/developers/quickstart/web3-python/)**: JavaScript and Python libraries for interacting with the Ethereum blockchain.
 - **[Rootstock Explorer](https://explorer.testnet.rootstock.io/)**: A blockchain explorer to view transaction details on the Rootstock network.
 - **[RPC API](/developers/rpc-api/)**: The RPC API provides a seamless and intuitive web interface for developers to interact with Rootstock nodes via JSON-RPC methods.
+- **[Faucets](/dev-tools/additional-tools/#faucets)**: Get test RBTC tokens for development and testing.
 
 Explore the [full list of tools and libraries](/dev-tools/) available on Rootstock.
 

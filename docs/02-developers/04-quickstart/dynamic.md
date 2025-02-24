@@ -1,5 +1,5 @@
 ---
-section_position: 700
+section_position: 103
 sidebar_label: Dynamic
 title: Dynamic Starter Kit
 description: "The Rootstock Dynamic Starter Kit uses the wagmi library for faster integration of Web3 features into a Next.js application. It uses Wagmi hooks, ability to connect to wallets, retrieve balances, transfer tokens, and sign messages."
@@ -12,10 +12,9 @@ At the end of this guide, you’ll know how to set up and configure a Next.js pr
 
 Using Dynamic embedded wallet feature in your dApps  simplifies the onboarding experience for your users by abstracting lower-level blockchain interactions, so you can focus on the application layer.
 
-
 :::note
-For more details on Dynamic Embedded Wallets, refer to the official [Dynamic Embedded Wallets Documentation](https://www.dynamic.xyz/features/embedded-wallets).
-
+For more details on Dynamic Embedded Wallets, 
+refer to the official [Dynamic Embedded Wallets Documentation](https://www.dynamic.xyz/features/embedded-wallets).
 :::
 
 ## **What is Dynamic?**

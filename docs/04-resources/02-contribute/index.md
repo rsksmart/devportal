@@ -17,9 +17,9 @@ Whether you're a seasoned developer, creative writer, researcher, bug bounty hun
 From writing, bug bounties and open-source projects, there are various ways to participate and earn valuable incentives. 
 
 <Card
-  title="Hacktivator Program"
-  description="The Rootstock Hacktivator Program allows developers to evolve to Rootstock by contributing code or creating educational content. You get to support the platform at your own pace, and every eligible contribution will be rewarded based on its impact and value."
-  link="/resources/contribute/hacktivator-program/"
+  title="Rootstock Hacktivator"
+  description="Rootstock Hacktivator allows developers to evolve to Rootstock by contributing code or creating educational content. You get to support the platform at your own pace, and every eligible contribution will be rewarded based on its impact and value."
+  link="/resources/contribute/hacktivator/"
 />
 
 <br></br>

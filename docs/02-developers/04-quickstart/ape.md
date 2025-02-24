@@ -1,5 +1,5 @@
 ---
-section_position: 400
+section_position: 100
 sidebar_label: Ape
 title: Getting Started with Ape
 description: 'How to compile, deploy, and intereact with smart contracts with Ape on Rootstock'
@@ -14,7 +14,7 @@ In this guide, we will learn about the [Ape Framework](https://apeworx.io/framew
 To get started with Ape, ensure the following tools are installed:
 - Linux or macOS
 - Python 3.9 up to 3.12
-- Windows: Install Windows Subsystem Linux [(WSL](https://learn.microsoft.com/en-us/windows/wsl/install))
+- Windows: Install Windows Subsystem Linux [(WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
 - Check the python version in a terminal with python3 --version.
 
 ## Create a Ape project
@@ -99,7 +99,7 @@ If you do not want to see your mnemonic, select `n`. Alternatively, use the `--h
 
 :::warning[Warning]
 
-Don't forget to add funds to the account generated. To get tRBTC, use the [Rootstock Faucet](https://faucet.rootstock.io/).
+Don't forget to add funds to the account generated. To get tRBTC, use the [Rootstock Faucet](https://faucet.rootstock.io/). Additional faucet options include; [Thirdweb](https://thirdweb.com/rootstock-testnet) and [Blast](https://blastapi.io/faucets/rootstock-testnet) Faucets.
 
 To import an existing account check [Importing Existing Accounts](https://docs.apeworx.io/ape/stable/userguides/accounts.html#importing-existing-accounts) documentation.
 
