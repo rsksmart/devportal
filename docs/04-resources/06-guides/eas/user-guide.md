@@ -1,19 +1,20 @@
 ---
 sidebar_position: 2
-title: How to Navigate EAS Dashboard Guide
-sidebar_label: How to Navigate EAS Dashboard Guide
+title: Navigating the EAS Dashboard
+sidebar_label: EAS Dashboard
 tags: [rsk, rootstock, resources, mainnet, testnet, tutorials, Attestations, Indexing Service, EAS Devtool, Ethereum, dApps, smart contracts]
 description: "This guide explains how to navigate the provided interface, connect your wallet, create an EAS Schema, and explore attestations in detail."
 ---
+
+This guide explains how to navigate the provided interface, connect your wallet, create an EAS Schema, and explore attestations in detail.
+
+## Getting Started
 
 <figure>
 <img src="/img/guides/EAS/EAS-devtool-dash.png" alt="EAS Dashboard on DevTool"/>
   <figcaption>EAS Dashboard on DevTool  (fig 1.)</figcaption>
 </figure>
 
-This guide explains how to navigate the provided interface, connect your wallet, create an EAS Schema, and explore attestations in detail.
-
-## Getting Started
 <Steps>
   <Step title="Connecting Your Wallet">
     1. **Locate the "Connect Wallet" Button**:  
@@ -104,10 +105,11 @@ This guide explains how to navigate the provided interface, connect your wallet,
 
 
   </Step>
-   <Step title="Attesting to a Schema">
+
+<Step title="Attesting to a Schema">
    Attesting to a schema allows you to associate specific data with an address based on the schema's structure. 
 
-#### **Initiating the Attestation**
+### **Initiating the Attestation**
 
 1. **Click "Attest this Schema"**:  
    * Located at the bottom of the schema details page (visible in the first screenshot).  
@@ -125,7 +127,7 @@ This guide explains how to navigate the provided interface, connect your wallet,
   <figcaption>Attest To Schema  (fig 6.)</figcaption>
 </figure>
 
-#### **Completing the Attestation**
+### **Completing the Attestation**
 
 1. **Fill in the Details**:  
    * Enter the **Recipient Address** and all required values for the schema fields.  
@@ -136,7 +138,7 @@ This guide explains how to navigate the provided interface, connect your wallet,
    * **Close Button**:  
      * If you wish to cancel the process, click the **Close** button to exit the modal without submitting.
 
-#### **Processing the Attestation**
+### **Processing the Attestation**
 
 1. **On Submission**:  
    * After clicking **Attest**, the attestation will be sent to the blockchain for processing.  
@@ -144,7 +146,7 @@ This guide explains how to navigate the provided interface, connect your wallet,
 2. **Confirmation**:  
    * After a few minutes, the attestation will be confirmed on the blockchain.
 
-#### **Viewing the Completed Attestation**
+### **Viewing the Completed Attestation**
 
 <figure>
 <img src="/img/guides/EAS/frontend-guide/completed-attestation.png" alt="Viewing the Completed Attestation"/>

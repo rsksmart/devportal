@@ -3,17 +3,18 @@ sidebar_position: 1
 title: How to Run EAS DevTool Locally
 sidebar_label: How to Run EAS DevTool Locally
 tags: [rsk, rootstock, resources, mainnet, testnet, tutorials, Attestations, Indexing Service, EAS Devtool, Ethereum, dApps, smart contracts]
-description: "Attestations are fundamental in blockchain technology, allowing entities to establish credibility and trust. However, traditional attestation methods face numerous challenges, including fragmentation, difficulty in managing schemas, and lack of intuitive tools for end-users. "
+description: "Ethereum Attestation Service (EAS) is a system that allows individuals and organizations to create verifiable claims or proofs about specific events, actions, or data, either on-chain (on the blockchain) or off-chain (outside the blockchain but linked to it)."
 ---
 
 Attestations are fundamental in blockchain technology, allowing entities to establish credibility and trust. However, traditional attestation methods face numerous challenges, including fragmentation, difficulty in managing schemas, and lack of intuitive tools for end-users. 
 
-The **Ethereum Attestation Service (EAS)** aims to solve these issues by providing a streamlined protocol for creating and managing attestations. On the Rootstock blockchain, the EAS Devtool enhances usability, making it easier for developers to interact with attestations.
+The **Ethereum Attestation Service (EAS)** aims to solve these issues by providing a streamlined protocol for creating and managing attestations on Rootstock. The EAS Devtool enhances usability, making it easier for developers to interact with attestations.
 
-This guide explores the challenges of attestation, why EAS is a great choice for developers, and provides a step-by-step tutorial on using the EAS Devtool and Indexing Service.
+This guide explores the challenges of attestation, why EAS is a great choice for developers, and provides a step-by-step tutorial on using the EAS Devtool and Indexing Service on Rootstock.
 
 ## What is EAS 
-Ethereum Attestation Service (EAS) is a system that allows individuals and organizations to create verifiable claims or proofs about specific events, actions, or data, either on-chain (on the blockchain) or off-chain (outside the blockchain but linked to it). 
+
+[Ethereum Attestation Service (EAS)](https://attest.org/) is a system that allows individuals and organizations to create verifiable claims or proofs about specific events, actions, or data, either on-chain (on the blockchain) or off-chain (outside the blockchain but linked to it). 
 
 These claims can be about anything, like proving someone's identity, verifying ownership, or confirming that an agreement has been fulfilled.
 
@@ -21,7 +22,7 @@ Making these claims or proofs publicly verifiable and tamper-proof helps build t
 
 :::info[Info]
 
-EAS is an open-source platform, meaning anyone can use it or contribute to its development. It operates as a public good for the Ethereum ecosystem. 
+[EAS](https://attest.org/) is an open-source platform, meaning anyone can use it or contribute to its development. It operates as a public good for the Ethereum ecosystem. 
 
 :::
 
@@ -73,7 +74,7 @@ The Indexing Service acts as the backbone of the EAS ecosystem, providing the da
 
 Let’s explore why this step is essential and understand what each component does.
 
-#### What is the EAS Indexing Service?
+### What is the EAS Indexing Service?
 
 The EAS Indexing Service is responsible for:
 
@@ -89,36 +90,36 @@ Before you start using the **EAS React Tool** (Devtool), it's crucial to set up 
 The EAS Indexing Service enables efficient data fetching for attestations. Here’s how to set it up:
 
 :::
+
 <Steps>
   <Step title="Clone the Repository">
+    ```shell
+      git clone https://github.com/rsksmart/eas-indexing-service.git
+      cd eas-indexing-service
     ```
-git clone https://github.com/rsksmart/eas-indexing-service.git
-cd eas-indexing-service
-```
   </Step>
-  <Step title="Configure Environment Variables">
+
+<Step title="Configure Environment Variables">
     
 Create a `.env` file in the root directory with the following content:
 
-```
-DATABASE_URL=postgresql://user:password@localhost:5432/eas-sepolia
-INFURA_API_KEY=
-INFURA_IPFS_USER=
-INFURA_IPFS_PASS=
-ALCHEMY_ARBITRUM_API_KEY=
-ALCHEMY_SEPOLIA_API_KEY=
-ALCHEMY_OPTIMISM_GOERLI_API_KEY=
-ROOTSTOCK_TESTNET_API_KEY=
-BATCH_SIZE= # How many blocks to fetch at once (some providers have limits)
+```text
+  DATABASE_URL=postgresql://user:password@localhost:5432/eas-sepolia
+  INFURA_API_KEY=
+  INFURA_IPFS_USER=
+  INFURA_IPFS_PASS=
+  ALCHEMY_ARBITRUM_API_KEY=
+  ALCHEMY_SEPOLIA_API_KEY=
+  ALCHEMY_OPTIMISM_GOERLI_API_KEY=
+  ROOTSTOCK_TESTNET_API_KEY=
+  BATCH_SIZE= # How many blocks to fetch at once (some providers have limits)
 
-# Rootstock Tesnet
-CHAIN_ID=31
-
+  # Rootstock Tesnet
+  CHAIN_ID=31
 ```
 
 
 :::info[Explanation of Each Variable:]
-
 
 1. `DATABASE_URL`:  
    * Specifies the connection details for your PostgreSQL database.  
@@ -153,15 +154,16 @@ CHAIN_ID=31
      * `31` corresponds to the Rootstock Testnet.
 
 :::
-  </Step>
-  <Step title="Install Dependencies">
+</Step>
+  
+<Step title="Install Dependencies">
     The `yarn install` command is used to download and set up all the necessary packages and dependencies required for the EAS Indexing Service to function properly. 
 
 These dependencies are listed in the project's package.json file and are essential for the service's operation.
 
-```
-yarn install
-```
+  ```shell
+  yarn install
+  ```
   </Step>
    <Step title="Set Up Prisma">
     
@@ -172,8 +174,8 @@ The generated Prisma client is essential for the Indexing Service to communicate
 * The Indexing Service won't be able to store or retrieve indexed attestation data.  
 * You may encounter runtime errors when the service tries to perform database operations.
 
-```
-SKIP_PRISMA_VERSION_CHECK=true npx prisma generate
+```text
+  SKIP_PRISMA_VERSION_CHECK=true npx prisma generate
 ```
 
 :::info[Breakdown of the Command]
@@ -194,7 +196,7 @@ SKIP_PRISMA_VERSION_CHECK=true npx prisma generate
 
 Start Docker Before Running `docker-compose`
 
-Before executing the `docker-compose up -d` command, make sure Docker is running on your system. You can do this by:
+Before executing the `docker-compose up -d` command, ensure Docker is running on your system. You can do this by:
 
 1. **Using the Command Line**:  
    * Start Docker manually by running the appropriate command for your operating system:  
@@ -202,8 +204,8 @@ Before executing the `docker-compose up -d` command, make sure Docker is running
 
 If Docker is installed as a service, you may need to start it using:
 
-```
-sudo systemctl start docker
+```shell
+  sudo systemctl start docker
 ```
 
 Or simply run Docker Desktop.
@@ -241,7 +243,7 @@ docker-compose up -d
 
 Expected output:
 
-```
+```shell
  ✔ Network eas-indexing-service_default  Created                                                                                                 0.0s 
  ✔ Container eas-postgres                Started                                                                                                 0.5s 
  ✔ Container eas_indexer_container       Started    
@@ -249,7 +251,7 @@ Expected output:
 
 If you modify project files, rebuild Docker containers:
 
-```
+```shell
 docker-compose build
 docker-compose up -d
 ```
@@ -267,8 +269,7 @@ If everything is set up correctly, you should see a similar output when you chec
 </Steps>
 
 
-
-# Setting Up the EAS Devtool
+## Setting Up the EAS Devtool
 
 The EAS React Tool is a user-facing platform that leverages the data provided by the Indexing Service to:
 
@@ -282,24 +283,26 @@ The EAS React Tool is a user-facing platform that leverages the data provided by
 git clone https://github.com/rsksmart/EAS-devtool.git
 cd EAS-devtool
 ```
-  </Step>
-  <Step title="Install Dependencies">
+</Step>
+
+<Step title="Install Dependencies">
     The `yarn install/npm install` command is used to download and set up all the necessary packages and dependencies required for the EAS Devtool to function properly. 
 
 These dependencies are listed in the project's `package.json` file and are essential for the service's operation.
 
+```shell
+  npm install
+  # or
+  yarn install
 ```
-npm install
-# or
-yarn install
-```
-  </Step>
-  <Step title="Run the Devtool">
+</Step>
+  
+<Step title="Run the Devtool">
+    ```shell
+      npm run dev
+      # or
+      yarn dev
     ```
-npm run dev
-# or
-yarn dev
-```
 
 This launches the EAS Devtool, allowing you to manage and view attestations in a centralized platform.
 
@@ -310,12 +313,12 @@ Expected output:
   <figcaption>EAS Dashboard on DevTool  (fig 3.)</figcaption>
 </figure>
 
-  </Step>
+</Step>
 </Steps>
 
 
 :::info[Info]
 
-Once you've set up and run the `EAS DevTool` locally, you can proceed to explore its **[dashboard](/resources/guides/eas-guide/eas-userguide/)** and functionality in detail. The following guide will walk you through navigating the `EAS Dashboard`, connecting your `wallet`, and managing `schemas` and `attestations`.
+Once you've set up and run the `EAS DevTool` locally, you can proceed to explore its **[dashboard](/resources/guides/eas/user-guide/)** and functionality in detail. The following guide will walk you through navigating the `EAS Dashboard`, connecting your `wallet`, and managing `schemas` and `attestations`.
 
 :::
