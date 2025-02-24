@@ -15,7 +15,6 @@ values={[
 {label: 'Wagmi', value: 'wagmi'},
 {label: 'On-chain data', value: 'data'},
 {label: 'RPC API', value: 'rpc'},
-{label: 'Ape', value: 'ape'},
 {label: 'Port to Rootstock', value: 'port-dapps'}
 ]}>
 <FilterItem
@@ -26,6 +25,15 @@ values={[
     linkHref="/developers/quickstart/dynamic/"
     linkTitle="Use the Kit"
     description="The Dynamic Starter Kit uses the Wagmi library for faster integration of Web3 features into a Next.js application."
+  />
+  <FilterItem
+    value="beginner, web3auth, advanced"
+    title="Web3Auth Starter Kit"
+    subtitle="web3auth"
+    color="orange"
+    linkHref="/developers/quickstart/web3auth/"
+    linkTitle="Get Started"
+    description="A step-to-step guide for developers to build and deploy passwordless dApps on Rootstock using Web3Auth and Wagmi."
   />
 <FilterItem
     value="wagmi, beginner"
@@ -128,7 +136,7 @@ values={[
     description="In this guide, we will use the Remix IDE to write, compile, deploy, interact and verify a smart contract on the Rootstock Explorer."
   />
   <FilterItem
-    value="beginner, ape, advanced"
+    value="beginner, advanced"
     title="Getting Started with Apeworx"
     subtitle="Ape"
     color="orange"
