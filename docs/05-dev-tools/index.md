@@ -533,7 +533,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="Wagmi Starter Kit"
     subtitle="Demos"
     color="orange"
-    linkHref="https://github.com/rsksmart/rsk-wagmi-starter-kit"
+    linkHref="/developers/quickstart/wagmi/"
     linkTitle="Use the Kit"
     description="This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Wagmi and Shadcn libraries."
   />
@@ -542,16 +542,25 @@ description: "Explore a curated selection of smart contract development tools an
     title="Hardhat Starter Kit"
     subtitle="Demos"
     color="orange"
-    linkHref="https://github.com/rsksmart/rootstock-hardhat-starterkit"
+    linkHref="/developers/quickstart/hardhat/"
     linkTitle="Use the Kit"
-    description="Rootstock Hardhat starter."
+    description="Rootstock Hardhat Starter Kit."
+  />
+<FilterItem
+    value="demos, sc"
+    title="Web3Auth Starter Kit"
+    subtitle="Demos"
+    color="orange"
+    linkHref="/developers/quickstart/web3auth/"
+    linkTitle="Use the Kit"
+    description="Rootstock Web3Auth Starter Kit."
   />
 <FilterItem
     value="demos, sdk, sc, aa"
     title="Account Abstraction Kit"
     subtitle="Demos"
     color="orange"
-    linkHref="https://github.com/rsksmart/rsk-wagmi-starter-kit/tree/aa-sdk"
+    linkHref="/developers/quickstart/rootstock-etherspot/"
     linkTitle="Use the Kit"
     description="Account Abstraction Starter dApp using Etherspot."
   />
