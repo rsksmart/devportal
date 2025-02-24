@@ -43,7 +43,7 @@ Here you can find a list of rpc node providers on Rootstock.
     subtitle="node-rpc"
     color="cyan"
     description="GetBlock provides instant connection to blockchain nodes including Rootstock, Bitcoin (BTC), Ethereum (ETH), among others."
-    linkHref="https://getblock.io/nodes/rsk/"
+    linkHref="/dev-tools/node-rpc/getblock/"
     linkTitle="Make First API Call"
   />
    <CardsGridItem
@@ -51,7 +51,7 @@ Here you can find a list of rpc node providers on Rootstock.
     subtitle="node-rpc"
     color="cyan"
     description="NOWNodes is a blockchain-as-a-service enterprise solution that lets users get access to full Nodes and blockbook Explorers via an API."
-    linkHref="https://nownodes.io/nodes/rsk"
+    linkHref="/dev-tools/node-rpc/nownodes/"
     linkTitle="Make First API Call"
   />
 <CardsGridItem
@@ -59,7 +59,7 @@ Here you can find a list of rpc node providers on Rootstock.
     subtitle="node-rpc"
     color="cyan"
     description="dRPC provides access to a distributed network of node providers."
-    linkHref="https://drpc.org/chainlist/rootstock?utm_source=docs&utm_medium=rootstock"
+    linkHref="/dev-tools/node-rpc/drpc/"
     linkTitle="Make First API Call"
   />
 <CardsGridItem

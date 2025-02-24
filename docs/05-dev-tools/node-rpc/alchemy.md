@@ -50,6 +50,6 @@ Alchemy supports multiple blockchains, including Rootstock:
  
  click the button below:
  
-<Button href="https://dev.rootstock.io/developers/rpc-api/rootstock/" align="left">Rootstock getBlock Website</Button>
+<Button href="/developers/rpc-api/alchemy/" align="left">Alchemy Website</Button>
 
 :::
