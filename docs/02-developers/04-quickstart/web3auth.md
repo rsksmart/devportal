@@ -8,10 +8,9 @@ tags: [rsk, rootstock, developers, web3auth, wagmi, quickstart, dApps, Smart Con
 
 The [blockchain trilemma](https://www.coinbase.com/en-gb/learn/crypto-glossary/what-is-the-blockchain-trilemma) states that a blockchain can only optimally achieve two out of three desirable properties: decentralization, security, and scalability. This inherent limitation often translates into challenges for dApp developers and, more importantly, for users. It complicates user onboarding (setting up wallets and acquiring cryptocurrency), makes interactions cumbersome (managing wallets and transaction fees), raises security concerns (protecting private keys), and can lead to slow performance due to transaction speeds and fees which directly impacts the user experience of dApps.
 
-Rootstock has partnered with Web3Auth bridges this gap by offering a streamlined Single Factor Authentication (SFA) solution that simplifies user onboarding and wallet connections on Rootstock. 
-Whether you're developing a decentralized application (dApp) for experienced crypto users or beginners new to blockchain, Web3Auth makes user interactions intuitive and secure.
+Web3Auth bridges this gap by offering a streamlined Single Factor Authentication (SFA) solution that simplifies user onboarding and wallet connections on Rootstock. Whether you're developing a decentralized application (dApp) for experienced crypto users or beginners new to blockchain, Web3Auth makes user interactions intuitive and secure.
 
-By the end of this guide, you will learn how to set up a Next.js project by cloning the sample dApp repository, use the sample dApp to integrate the Web3Auth SDK in your dApp and configure your dApp for Rootstock.
+By the end of this guide, you will learn how to use the starter kit to integrate Web3Auth and configure your dApp for Rootstock.
 
 ## Who is this guide for?
 
@@ -34,7 +33,7 @@ Web3Auth enhances the dApp experience:
 
 ## Prerequisites
 
-Before getting started, ensure to have the following installed:
+Before getting started, ensure to have the following tools installed:
 
 1. Node.js
     * Install **Node.js** (version **19.x** or later recommended).
