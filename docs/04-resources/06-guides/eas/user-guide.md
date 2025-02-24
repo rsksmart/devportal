@@ -2,7 +2,7 @@
 sidebar_position: 2
 title: Navigating the EAS Dashboard
 sidebar_label: EAS Dashboard
-tags: [rsk, rootstock, resources, mainnet, testnet, tutorials, Attestations, Indexing Service, EAS Devtool, Ethereum, dApps, smart contracts]
+tags: [rsk, rootstock, guides, EAS, Attestation, Ethereum]
 description: "This guide explains how to navigate the provided interface, connect your wallet, create an EAS Schema, and explore attestations in detail."
 ---
 

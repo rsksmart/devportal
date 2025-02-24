@@ -2,7 +2,7 @@
 sidebar_position: 1
 title: How to Run EAS DevTool Locally
 sidebar_label: How to Run EAS DevTool Locally
-tags: [rsk, rootstock, resources, mainnet, testnet, tutorials, Attestations, Indexing Service, EAS Devtool, Ethereum, dApps, smart contracts]
+tags: [rsk, rootstock, guides, EAS, Attestation, Ethereum]
 description: "This guide explores the challenges of attestation, why EAS is a great choice for developers, and provides a step-by-step tutorial on using the EAS Devtool and Indexing Service on Rootstock."
 ---
 

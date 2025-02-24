@@ -2,11 +2,11 @@
 sidebar_position: 100
 title: Ethereum Attestation Service
 sidebar_label: Ethereum Attestation Service
-description: "Ethereum Attestation Service (EAS) is an open-source infrastructure public good for making attestations onchain or offchain. Learn how to use it on Rootstock."
+description: "Ethereum Attestation Service (EAS) is a system that allows individuals and organizations to create verifiable claims or proofs about specific events, actions, or data, either on-chain (on the blockchain) or off-chain (outside the blockchain but linked to it). Learn how to use it on Rootstock."
 tags: [rsk, rootstock, guides, EAS, Attestation, Ethereum]
 ---
 
-[Ethereum Attestation Service (EAS)](https://attest.org/) is an open-source infrastructure public good for making attestations onchain or offchain.
+[Ethereum Attestation Service (EAS)](/resources/guides/eas/) is an open-source infrastructure public good for making attestations onchain or offchain.
 
 EAS is a foundational layer that empowers anyone to make attestations about anything. By creating a decentralized ledger of verifiable claims, we can revolutionize traditional finance, build decentralized reputation systems, voting mechanisms, governance frameworks, social media platforms, supply chain tracking systems, knowledge graphs, and lots more.
 
@@ -24,6 +24,8 @@ EAS runs on two [smart contracts](https://docs.attest.org/docs/core--concepts/ho
 
 :::info[Info]
 
+For developers, see guide on [How to Run EAS DevTool Locally](/resources/guides/eas/overview/).
+
 Schemas can be registered for a wide range of use cases, and attestations can be made both on-chain and off-chain. For more complex scenarios, you can incorporate a resolver contract into the Schema. This enables on-chain verification of attestation data and the ability to attach payments to attestations.
 :::
 
@@ -37,6 +39,11 @@ Find the open-source repositories
 - [EAS SDK](https://github.com/ethereum-attestation-service/eas-sdk): See the latest version of the SDK Library.
 - [EAS Indexing Service](https://github.com/rsksmart/eas-indexing-service): See how we index attestation data. Added support for Rootstock Testnet and Mainnet.
 - [EAS Explorer](https://github.com/rsksmart/EAS-devtool): Alternative Explorer UI to display attestations.
+
+:::info[Info]
+
+For developers, see guide on [How to Run EAS DevTool Locally](/resources/guides/eas/overview/).
+:::
 
 ## EAS Contracts
 
@@ -66,9 +73,6 @@ Find the deployed EAS contracts on Rootstock Mainnet and Tesnet:
 
 
 ## Useful Resources
-- [EAS](https://attest.org/)
-- [Core Concepts](https://docs.attest.org/docs/category/core-concepts)
-- [How EAS Works](https://docs.attest.org/docs/core--concepts/how-eas-works)
-- [Use Cases](https://docs.attest.org/docs/quick--start/use-cases-overview)
-- [EAS Docs](https://docs.attest.org/docs/welcome)
+- [How to Run EAS DevTool Locally](/resources/guides/eas/overview/)
+- [Navigating the EAS Dashboard](/resources/guides/eas/user-guide/)
 - [EAS Github](https://github.com/ethereum-attestation-service)
