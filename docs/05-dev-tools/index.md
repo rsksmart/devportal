@@ -553,7 +553,25 @@ description: "Explore a curated selection of smart contract development tools an
     color="orange"
     linkHref="/developers/quickstart/web3auth/"
     linkTitle="Use the Kit"
-    description="Rootstock Web3Auth Starter Kit."
+    description="Build Passwordless dApps on Rootstock using the Rootstock Web3Auth Starter Kit."
+  />
+<FilterItem
+    value="demos, sc"
+    title="Dynamic Starter Kit"
+    subtitle="Demos"
+    color="orange"
+    linkHref="/developers/quickstart/dynamic/"
+    linkTitle="Use the Kit"
+    description="Rootstock Dynamic Starter Kit."
+  />
+<FilterItem
+    value="demos, sc"
+    title="Hardhat Ignition Starter Kit"
+    subtitle="Demos"
+    color="orange"
+    linkHref="/developers/quickstart/hardhat-ignition/"
+    linkTitle="Use the Kit"
+    description="Rootstock Hardhat Ignition Starter Kit."
   />
 <FilterItem
     value="demos, sdk, sc, aa"

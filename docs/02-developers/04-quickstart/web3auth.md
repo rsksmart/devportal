@@ -1,7 +1,7 @@
 ---
 sidebar_label: Web3Auth
 sidebar_position: 108
-title: Build Passwordless dApps on Rootstock using Web3Auth
+title: Rootstock Web3Auth Starter Kit
 description: "A step-to-step guide for developers to build and deploy passwordless dApps on Rootstock using Web3Auth and Wagmi starter dApp."
 tags: [rsk, rootstock, developers, web3auth, wagmi, quickstart, dApps, Smart Contracts]
 ---
