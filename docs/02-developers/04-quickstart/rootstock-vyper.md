@@ -1,23 +1,21 @@
 ---
-sidebar_label: "Vyper Smart Contract on Rootstock"
-sidebar_position: 100
-title: "Deploying a Vyper Smart Contract to Rootstock Testnet using Python"
-description: "This guide walks through the process of deploying a smart contract to the Rootstock testnet using Python and Web3.py. We'll be deploying a simple Vyper contract that demonstrates how to interact with the Rootstock network."
+sidebar_label: "Vyper"
+sidebar_position: 106
+title: "Rootstock Vyper Starter Kit"
+description: "This guide walks through the process of deploying smart contracts to the Rootstock testnet using Python and Web3.py. We'll deploy a simple Vyper contract that demonstrates how to interact with the Rootstock network."
 tags: [rsk, rootstock, developers, vyper, quickstart, python, Smart Contracts]
 ---
 
-Rootstock is a layer 2 solution that combines the security of Bitcoin's proof of work with Ethereum's smart contract capabilities. The platform is open-source, EVM-compatible, and secured by over 60% of Bitcoin’s hashing power, offering unique advantages for developers.
+Rootstock is a layer 2 solution that combines the security of Bitcoin's proof of work with Ethereum's smart contract capabilities. The platform is open-source, EVM-compatible, and secured by over 60% of Bitcoin’s hashing power, offering unique advantages for developers looking to build on Bitcoin. Some of these advantages include:
 
-This guide demonstrates how to deploy smart contracts written in Vyper to the Rootstock testnet using Python and Web3.py.
-
-- **Bitcoin Compatibility**: Deploy smart contracts while leveraging Bitcoin's security and network effects
+- **Bitcoin Compatibility**: Deploy smart contracts while leveraging Bitcoin's network security
 - **EVM Compatibility**: Use familiar Ethereum tools and practices while building on Bitcoin
 - **Lower Fees**: Benefit from low transaction fees on Rootstock
 - **Scalability**: Handle a higher volume of transactions without congestion
 
-We'll walk through creating a simple Vyper contract and deploying it to the Rootstock testnet, covering everything from environment setup to handling Rootstock-specific network configurations.
+This guide demonstrates how to deploy smart contracts written in Vyper to the Rootstock testnet using Python and Web3.py. We'll walk through creating a simple Vyper contract and deploying it to the Rootstock testnet, we will setup the environment, and handle Rootstock-specific network configurations.
 
-Whether you're an experienced Ethereum developer looking to expand to Bitcoin-based smart contracts, or just starting your blockchain journey, this guide will help you get up and running with Vyper Contracts on Rootstock.
+Whether you're an experienced Ethereum developer looking to deploy smart contracts on Bitcoin (Rootstock), or just starting your blockchain journey, this guide will help you get up and running with deploying Vyper Smart Contracts on the Rootstock network.
 
 ## Prerequisites
 
@@ -25,97 +23,97 @@ Whether you're an experienced Ethereum developer looking to expand to Bitcoin-ba
   - To confirm installation, run `uv --version`, it should return a version number.
 - [git](https://git-scm.com/)
   - To confirm installation, run `git --version`, it should return a version number.
-  - Helpful shortcut:
+  - Helpful shortcuts:
+    <Tabs>
+      <TabItem value="bash" label="Bash" default>
+        echo "source $HOME/.bashrc >> $HOME/.bash_profile"
+      </TabItem>
+      <TabItem value="zsh" label="ZSH">
+        echo "source $HOME/.zshenv >> $HOME/.zprofile"
+      </TabItem>
+    </Tabs>
+
+## Install Python
+
+<Tabs>
+  <TabItem value="Windows" label="Windows" default>
+    1. Visit the [Python downloads page](https://www.python.org/downloads/)
+    2. Click on the "Download Python 3.12.x" button
+    3. Run the downloaded installer
+    4. Important: Check the box that says "Add Python 3.12 to PATH"
+    5. Click "Install Now"
+    6. Once installation is complete, open Command Prompt and verify the installation:
+        ```bash
+        python --version
+        ```
+  </TabItem>
+  <TabItem value="MacOS" label="macOS">
+    1. Visit [python.org](https://www.python.org/downloads/)
+    2. Under Downloads, go to macOS and download the latest Python 3.12 release
+    3. Click the link for the **Python 3.12.x macOS 64-bit universal2 installer**
+    4. Open the installer file and agree to the license agreement
+    5. Click **Continue**, then **Install**
+    6. Once complete, open Terminal and verify the installation:
+        ```bash
+        python3 --version
+        # or
+        python --version
+        ```
+  </TabItem>
+  <TabItem value="Linux" label="Linux">
+    Most Linux distributions come with Python pre-installed. To verify, open Terminal and run:
+    ```bash
+    python3 --version
+    ```
+
+    If Python is not installed, you can install it using your distribution's package manager:
+
+    For Ubuntu/Debian:
+    ```bash
+    sudo apt update
+    sudo apt install python3
+    ```
+
+    For Fedora:
+    ```bash
+    sudo dnf install python3
+    ```
+
+    For Arch Linux:
+    ```bash
+    sudo pacman -S python
+    ```
+  </TabItem>
+</Tabs>
+
+
+## Install the Vyper Starter Kit
 
 ```bash
-# For bash
-echo "source $HOME/.bashrc >> $HOME/.bash_profile"
-
-# For zsh
-echo "source $HOME/.zshenv >> $HOME/.zprofile"
-```
-
-## Installing Python
-
-### Installing Python on Windows
-
-1. Visit the [Python downloads page](https://www.python.org/downloads/)
-2. Click on the "Download Python 3.12.x" button
-3. Run the downloaded installer
-4. Important: Check the box that says "Add Python 3.12 to PATH"
-5. Click "Install Now"
-6. Once installation is complete, open Command Prompt and verify the installation:
-```bash
-python --version
-```
-
-### Installing Python on Mac
-
-1. Visit [python.org](https://www.python.org/downloads/)
-2. Under Downloads, go to macOS and download the latest Python 3.12 release
-3. Click the link for the **Python 3.12.x macOS 64-bit universal2 installer**
-4. Open the installer file and agree to the license agreement
-5. Click **Continue**, then **Install**
-6. Once complete, open Terminal and verify the installation:
-```bash
-python3 --version
-# or
-python --version
-```
-
-### Installing Python on Linux
-
-Most Linux distributions come with Python pre-installed. To verify, open Terminal and run:
-```bash
-python3 --version
-```
-
-If Python is not installed, you can install it using your distribution's package manager:
-
-For Ubuntu/Debian:
-```bash
-sudo apt update
-sudo apt install python3
-```
-
-For Fedora:
-```bash
-sudo dnf install python3
-```
-
-For Arch Linux:
-```bash
-sudo pacman -S python
-```
-
-## Installation
-
-```bash
-git clone https://github.com/EdwinLiavaa/Web3py-Vyper-RootStock.git
-cd Web3py-Vyper-RootStock
+git clone https://github.com/rsksmart/rootstock-vyper.git
+cd rootstock-vyper
 ```
 
 ### Syncing uv
 
-uv sync is a fast package management command that downloads and installs your project's Python dependencies while creating a lockfile for reproducible installations.
-
 ```bash
 uv sync
 ```
+> `uv sync` is a fast package management command that downloads and installs your project's Python dependencies while creating a lockfile for reproducible installations.
 
-### pip/python
-
-The pip/python section creates a virtual environment (python -m venv ./venv), activates it (source ./venv/bin/activate), and installs the project dependencies from requirements.txt (pip install -r requirements.txt).
+### Pip/python
 
 ```bash
 python -m venv ./venv
 source ./venv/bin/activate
 pip install -r requirements.txt
 ```
+> The pip/python creates a virtual environment (python -m venv ./venv), activates it (source ./venv/bin/activate), and installs the project dependencies from requirements.txt (pip install -r requirements.txt).
 
-## Quickstart
 
-Both uv run hello.py and python hello.py will run the script and output "Hello from web3py-Vyper-RootStock!", with UV being preferred for faster, modern projects and pip for traditional Python setups.
+## Starting a basic script
+
+Both `uv run hello.py` and `python hello.py` will run the script and output "Hello from web3py-Vyper-RootStock!", with UV being preferred for faster, modern projects and pip for traditional Python setups.
 
 ```bash
 uv run hello.py # for UV
@@ -123,7 +121,7 @@ uv run hello.py # for UV
 python hello.py # for pip/python
 ```
 
-## Setup Environment
+## Setting up the Python Environment
 
 To set up our Python environment and install the necessary packages, we will do the following:
 
@@ -136,27 +134,32 @@ source .venv/bin/activate
 pip install python-dotenv web3 vyper
 ```
 
-## Configuration
+## Configure Environment Variables
 
 Create a `.env` file in the project root and specify your custom configuration:
 
-```env
+```text
 RPC_URL="https://rpc.testnet.rootstock.io/[YOUR-API-KEY]"
-PRIVATE_KEY="your-private-key"  # Never commit your real private key!
+PRIVATE_KEY="your-private-key" 
 MY_ADDRESS="your-wallet-address"
 ```
-THIS IS ONLY FOR TESTING - TYPICALLY YOU SHOULD NEVER SHARE YOUR PRIVATE KEY.
 
-## Get Testnet RBTC
+:::warning[Warning]
 
-Before deploying, you'll need some testnet RBTC:
+THIS KEY IS ONLY FOR TESTING - TYPICALLY YOU SHOULD NEVER SHARE YOUR PRIVATE KEY.
 
-1. Go to the Rootstock faucet: https://faucet.rootstock.io/
+:::
+
+## Getting Test RBTC
+
+Before deploying, you'll need some tRBTC:
+
+1. Visit the [Rootstock faucet](https://faucet.rootstock.io/)
 2. Enter your wallet address
 3. Complete the captcha and request funds
 4. Wait a few minutes for the transaction to be confirmed
 
-## The Smart Contract
+## Writing the Smart Contract
 
 Here's a simple Vyper contract (`favorites.vy`):
 
@@ -199,7 +202,7 @@ def main():
             favorites_code, output_formats=["bytecode", "abi"]
         )
 
-    chain_id = 31  # RSK testnet chain ID
+    chain_id = 31  # Rootstock testnet chain ID
 
     print("Getting environment variables...")
     my_address = os.getenv("MY_ADDRESS")
@@ -232,7 +235,7 @@ def main():
             "chainId": chain_id,
             "from": my_address,
             "nonce": nonce,
-            "gas": 3000000,  # Higher gas limit for RSK
+            "gas": 3000000,  # Higher gas limit for Rootstock
             "gasPrice": w3.eth.gas_price * 2,  # Double the gas price to ensure transaction goes through
         }
     )
@@ -248,32 +251,51 @@ if __name__ == "__main__":
     main()
 ```
 
-## Notable Info when Deploying on Rootstock
-
-1. **Chain ID**: RSK testnet uses chain ID 31
+:::tip[Considerations when deploying smart contracts on Rootstock]
+1. **Chain ID**: Rootstock testnet uses chain ID: 31
 2. **Gas Settings**:
-   - Use a higher gas limit (3,000,000) for Rootstock
-   - We double the gas price to ensure the transaction goes through
+   - Use a higher gas limit (e.g, 3,000,000) for Rootstock
+   - The gas price is multiplied to ensure the transaction is successful. Read more about [Gas on Rootstock](/developers/blockchain-essentials/overview/#gas-differences).
 3. **Transaction Type**:
    - Rootstock is optimized for legacy transactions, utilizing `gasPrice` rather than EIP-1559 parameters.
+:::
 
-## Running the Deployment
+## Running the deployment script
 
-Execute the deployment script:
+To execute the deployment script, run the following command:
 
-For Linux Users:
+<Tabs>
+  <TabItem value="Linux" label="Linux" default>
+    ```bash
+    python deploy_favorites_unsafe.py
+    ```
+  </TabItem>
+  <TabItem value="Windows" label="Windows">
+   ```bash
+    python3 deploy_favorites_unsafe.py
+    ```
+  </TabItem>
+</Tabs>
 
-```bash
-python deploy_favorites_unsafe.py
-```
+## Troubleshooting
 
-For Windows Users:
+:::danger[ModuleNotFoundError: No module named 'web3']
+
+Error:
 
 ```bash
 python3 deploy_favorites_unsafe.py
+Traceback (most recent call last):
+File "/{User}/rootstock-vyper/deploy_favorites_unsafe.py", line 1, in
+from web3 import Web3
+ModuleNotFoundError: No module named 'web3'
 ```
 
-## Useful Links
+> Fix: The error occurs because the web3 package is not installed in your virtual environment. To fix it, you should run pip install web3 or pip install -r requirements.txt while your virtual environment is activated to install all required dependencies.
 
-The boilerplate used in this project was adopted from the Cyfrin Updraft Python and Viper Starter Kit:
-- [Cyfrin Updraft @cyfrinupdraft](https://updraft.cyfrin.io/courses/intermediate-python-vyper-smart-contract-development)
+:::
+
+
+:::info[Credit]
+This project's boilerplate originates from the [Cyfrin Updraft @cyfrinupdraft](https://updraft.cyfrin.io/courses/intermediate-python-vyper-smart-contract-development) Python and Viper Starter Kit, developed by [@EdwinLiavaa](https://github.com/EdwinLiavaa) during the [Rootstock Hacktivator](/resources/contribute/hacktivator/).
+:::

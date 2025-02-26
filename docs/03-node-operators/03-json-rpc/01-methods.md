@@ -1089,7 +1089,19 @@ Note that when `eth_estimateGas` is called, the node simulates the transaction e
 The simulation runs through the entire transaction process as if it were being executed, including checking for sufficient balance, contract code execution, etc.
 During the simulation, the method calculates the exact amount of gas that would be consumed by the transaction if it were to be executed on the blockchain. The estimated gas amount is returned, helping users set an appropriate gas limit for the actual transaction.
 
-There is a difference in Rootstock compared to Ethereum, and it is that if one of the steps of the simulated transaction fails, the node will return the gas estimation needed for the transaction, while on Ethereum, the node will return an error instead of the gas estimation.
+:::info[Info]
+
+**Prior to Arrowhead 6.5.0**, there was a difference in Rootstock compared to Ethereum:
+
+- If one of the steps of the simulated transaction fails, the node would return the gas estimation needed for the transaction
+- On Ethereum, the node would return an error instead of the gas estimation. 
+
+**Starting with Arrowhead 6.5.0:**
+
+- Rootstock will behave same way as Ethereum's behavior for simulated transaction failures.
+- If a simulated transaction step fails, the node will now return an error, mirroring Ethereum's response.
+
+:::
 
 You can see this behavior on the following example, where we call `eth_estimateGas` for a transaction that would be executed from an address without enough balance.
 
@@ -1432,6 +1444,7 @@ params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"];
 - `contractAddress `: `DATA`, 20 Bytes - The contract address created, if the transaction was a contract creation, otherwise `null`.
 - `logs`: `Array` - Array of log objects, which this transaction generated.
 - `logsBloom`: `DATA`, 256 Bytes - Bloom filter for light clients to quickly retrieve related logs.
+- `effectiveGasPrice`: `QUANTITY` - The actual value per gas deducted on the transaction.
 
 It also returns _either_ :
 
@@ -1460,7 +1473,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
          // logs as returned by getFilterLogs, etc.
      }, ...],
      logsBloom: "0x00...0", // 256 byte bloom filter
-     status: '0x1'
+     status: '0x1',
+     effectiveGasPrice: '0x64' // 100
   }
 }
 ```

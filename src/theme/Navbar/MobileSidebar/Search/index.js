@@ -3,7 +3,6 @@ import React from 'react';
 import NavbarSearch from "@theme/Navbar/Search";
 import SearchBar from "@theme/SearchBar";
 import {useThemeConfig} from "@docusaurus/theme-common";
-import AIButton from "@theme/Navbar/AIButton";
 
 export default function NavbarMobileSidebarSearch() {
   const items = useThemeConfig().navbar.items;
@@ -16,7 +15,6 @@ export default function NavbarMobileSidebarSearch() {
             <SearchBar />
           </NavbarSearch>
         )}
-        <AIButton />
       </div>
     )
 }

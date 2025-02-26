@@ -15,11 +15,18 @@ First of all, you will need to install:
 |Dependency        | Details|
 |------------- |-------------|
 |[Git for Linux](https://git-scm.com/download/linux)| Download this Git command line tool|
-|[Java 8 JDK](http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html) | Follow the steps to install Java. To check if installation went correctly, check the version with command: `java-version`. Then, as admin, modify `/etc/enviroment` adding `JAVA_HOME="/usr/lib/jvm/java-8-oracle"`|
+|[Java 17 JDK](https://docs.oracle.com/en/java/javase/17/install/installation-jdk-linux-platforms.html) | Follow the steps to install Java. To check if installation went correctly, check the version with command: `java-version`. Then, as admin, modify `/etc/enviroment` adding the correct `JAVA_HOME`|
 
 Recommended IDEs:
 - [IntelliJ IDEA Community](https://www.jetbrains.com/idea/download/#section=linux)
 - [Visual Studio Code](https://code.visualstudio.com/)
+
+
+:::warning[Important]
+
+Starting with [v6.4.0](/changelog/), the minimum supported Java LTS version is Java 17. Previous Java versions will no longer be supported.
+
+:::
 
 ## Get the source code
 
@@ -30,7 +37,7 @@ Run these commands in the terminal:
 ```shell
 git clone --recursive https://github.com/rsksmart/rskj.git
 cd rskj
-git checkout tags/ARROWHEAD-6.0.0 -b ARROWHEAD-6.0.0
+git checkout tags/LOVELL-7.0.0 -b LOVELL-7.0.0
 ```
 
 *Note:* It is better to download the code into a short path.
@@ -52,7 +59,7 @@ This will download and set important components (e.g. Gradle Wrapper).
 
 ## IntelliJ IDEA setup
 
-### Compiling the node 
+### Compiling the node
 
 Now, you can launch IntelliJ IDEA:
 

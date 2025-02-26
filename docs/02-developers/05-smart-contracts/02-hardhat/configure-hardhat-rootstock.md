@@ -66,7 +66,7 @@ To configure your `rskMainnet` and `rskTestnet` private keys, you'll need to upd
   };
 ```
 
-> See how to [Get an API Key from the RPC API](/developers/rpc-api/setup/)
+> See how to [Get an API Key from the RPC API](/developers/rpc-api/rootstock/setup/)
 
 
 > Replace `"your_mainnet_private_key"` and `"your_testnet_private_key"` with your private keys. For information on how to retrieve your private keys, see [How to export an account's private key](https://support.metamask.io/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key).
@@ -75,4 +75,4 @@ To configure your `rskMainnet` and `rskTestnet` private keys, you'll need to upd
 - Mainnet
   - You'll need RBTC, which you can obtain from an exchange. See [Get RBTC using Exchanges](https://rootstock.io/rbtc/).
 - Testnet
-  - You can get tRBTC from the [Rootstock Faucet](https://faucet.rootstock.io/).
+  - You can get tRBTC from the [Rootstock Faucet](https://faucet.rootstock.io/). Additional faucet options include; [Thirdweb](https://thirdweb.com/rootstock-testnet) and [Blast](https://blastapi.io/faucets/rootstock-testnet) Faucets.

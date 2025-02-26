@@ -32,7 +32,6 @@ ul{
     color: var(--bs-heading-color);
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
-    display: inline;
     font-size: $f40;
     letter-spacing: -0.04em;
     margin: 0;
@@ -131,7 +130,9 @@ ul{
   }
 
   table{
-    display: table;
+    @include media-breakpoint-up(lg) {
+      display: table;
+    }
     &, tbody{
       width: 100%;
     }
@@ -139,6 +140,9 @@ ul{
       border-width:0 0 1px;
       & > :last-child{
         margin-bottom: 0;
+      }
+      @include media-breakpoint-down(lg) {
+        min-width: 120px;
       }
     }
     tr{
@@ -152,7 +156,7 @@ ul{
     }
   }
 
-  img{
+  img:not([src*="shields.io"]){
     border: 1px solid var(--rsk-image-border-color);
     border-radius: 10px;
     max-height: 500px; //TODO test if works for all images
@@ -163,9 +167,17 @@ ul{
       max-height: 560px;
     }
   }
-  p > img{
-    margin: 0;
+  p > img:first-child{
+    margin-top: 0;
   }
+  p > img:last-child{
+    margin-bottom: 0;
+  }
+
+  .btn.w-fit + .btn.w-fit{
+    margin-top: 12px;
+  }
+
   & > :first-child {
     margin-top: 0;
   }
@@ -178,4 +190,7 @@ code{
   color: var(--ifm-code-color);
   border: none;
   border-radius: 4px;
+}
+mark, .mark{
+  padding: 0 0.15em;
 }

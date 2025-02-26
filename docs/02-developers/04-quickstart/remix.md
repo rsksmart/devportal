@@ -1,6 +1,6 @@
 ---
-sidebar_label: Using Remix and Rootstock Explorer
-sidebar_position: 600
+sidebar_label: Remix
+sidebar_position: 105
 title: Deploy, Interact and Verify Smart Contracts using Remix and Rootstock Explorer
 description: 'In this guide, we will use the Remix IDE to write, compile, deploy, interact and verify a smart contract on the Rootstock Explorer.'
 tags: [rsk, rootstock, developers, quick starts, rootstock explorer, dApps, remix]
@@ -80,6 +80,10 @@ If deployment is successful, it will appear under **Deployed/Unpinned Contracts*
 As shown in the previous step after deploying the contract, you can expand the desired contract and interact with it, calling the available functions by entering the required arguments, if any. Once entered the arguments, click on the method name and, in the event that it’s a writing method, Metamask will prompt you to sign the transaction. If the method is read only, it will show the return value under the method name.
 
 ## Verifying the Contract on Rootstock Explorer
+
+Smart contracts are the backbone of decentralized applications (dApps). They automate agreements and processes, but their code can be complex and prone to errors. Verifying your smart contracts is crucial to ensure they function as intended.
+
+The [Rootstock Explorer](https://explorer.rootstock.io/) provides a UI for exploring and verifying transactions, blocks, addresses, tokens, stats, and interacting with smart contracts. 
 
 To verify the deployed contract on the explorer, go back to Remix file explorer and go to `contracts -> artifacts -> build-info`. In this folder there will be a json file containing the information of the compilation process. You’ll need this in order to verify the contract on the [Rootstock Testnet Explorer](https://explorer.testnet.rootstock.io/). Copy the value of the input attribute and save it as a json file in your computer.
 

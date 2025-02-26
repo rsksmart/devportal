@@ -6,14 +6,13 @@ description: "Here, we will learn how to perform a peg-in transaction using the 
 tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-
 ## Using Leather Software wallet to perform a peg-in
 
 In this guide, we will be using the [PowPeg App](https://powpeg.rootstock.io/) for unlocking Leather, access peg-in to use Leather, and verify if peg-in is active.
 
 ### Acessing pegin to use Leather
 
-![leather-pegin](/img/resources/powpeg/choose-your-wallet.png)
+![leather-pegin](/img/resources/powpeg/pegin-wallets.png)
 
 After click on **Leather** button, you will see the pegin Leather page, then the PowPeg will connect with your Leather wallet.
 
@@ -25,7 +24,9 @@ Unlock Leather using the same password that you created in the installation.
 
 ![leather-error](/img/resources/powpeg/leather-unlock-2.png)
 
-![leather-unlocking](/img/resources/powpeg/leather-unlock.png)
+<center>
+    <img src="/img/resources/powpeg/leather-unlock.png"  title="leather unlocking" width="50%"/>
+</center>
 
 ### Using Correct Network on Leather
 
@@ -35,9 +36,13 @@ If you see the message below, it means that your Leather wallet is in the incorr
 
 Select the correct environment on Leather:
 
-![leather-environment](/img/resources/powpeg/change-network1.png)
+<center>
+    <img src="/img/resources/powpeg/change-network1.png"  title="leather environment" width="50%"/>
+</center>
 
-![leather-environment-2](/img/resources/powpeg/change-network2.png)
+<center>
+    <img src="/img/resources/powpeg/change-network2.png"  title="leather environment 2" width="50%"/>
+</center>
 
 ### Verifying if the plugin is active
 
@@ -47,9 +52,13 @@ If you see the message below, it means that your Leather wallet is not enabled, 
 
 Go to chrome (manage extensions)[chrome://extensions/] and active your Leather wallet
 
-![leather-not-activated](/img/resources/powpeg/enable-leather.png)
+<center>
+    <img src="/img/resources/powpeg/enable-leather.png"  title="leather not activated" width="50%"/>
+</center>
 
-![leather-not-activated](/img/resources/powpeg/enable-leather2.png)
+<center>
+    <img src="/img/resources/powpeg/enable-leather2.png"  title="leather not activated" width="50%"/>
+</center>
 
 **Step 1: Creatting a transaction**
 
@@ -82,18 +91,19 @@ Also you can input a custom Rootstock address, different than the connected addr
 
 Here, we can select the fee that will be used for this transaction, this is set on default to average.
 
-**Step 5: View transaction summary**
+**Step 5: Select Mode**
 
-In this section, we can confirm the selected values:
+In this section, we will see 2 options, Fast Mode and Native Mode:
+- Fast Mode uses [Flyover Protocol](/developers/integrate/flyover/) to search for quotes, is faster than Native Mode, is provided by an Liquidity Provider, which in turn charges a fee for the service, called a provider fee.
 
-- Destination Address
-- Estimated time
-- BTC fee (Network fee)
-- Provider fee (always zero for this option)
-- Amount to send
-- Value to receive
+![Fast mode option](/img/resources/powpeg/fast-pegin-review-details.png)
 
-![Review Transaction](/img/resources/powpeg/ledger-pegin-review-details.png)
+- Native Mode uses [PowPeg Protocol](/concepts/powpeg/) that is decentralized, permissionless and uncensorable protocol created by Rootstock Labs, generally is slower than Fast mode and the user needs to pay only the network fees.
+
+![Native mode option](/img/resources/powpeg/native-pegin-review-details.png)
+
+- Value to receive: The estimated amount to receive when transaction finishes.
+- Total Fee (Network & Provider): The total fee paid, network fee (BTC Fee) + provider fee (not applied).
 
 > - In the instance of an error on this transaction, the amount will be sent to the address indicated in the **refund Bitcoin address** located in your hardware wallet.
 > - See the [glossary](/resources/guides/powpeg-app/glossary/) section for the meaning of these values.

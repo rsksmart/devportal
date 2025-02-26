@@ -16,6 +16,7 @@ This section equips you with the fundamental knowledge required to navigate the 
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | [Rootstock Blockchain Overview](/concepts/fundamentals/) | Gain a comprehensive understanding of the Rootstock platform. |
 | [Rootstock Stack](/concepts/fundamentals/stack/) |  Learn about how Rootstock combines the security of Bitcoin PoW with Ethereum's smart contract functionality.|
+| [Glossary](/concepts/glossary/) |  This glossary provides essential definitions for key terms related to Rootstock and blockchain technology.|
 | [RBTC Token](/concepts/rbtc/) | The RBTC token fuels transactions on the Rootstock network. Converting BTC to RBTC is straightforward using various methods. Visit the RBTC section for a comprehensive list of exchanges and applications facilitating RBTC acquisition. Visit the [RBTC section](https://rootstock.io/rbtc/) for a list of exchanges and apps to get RBTC.|
 | [RIF Suite](/concepts/rif-suite/) | Learn about the Rootstock Infrastructure Framework, a comprehensive set of Open-source tools and technologies designed to streamline and incentivize development on Bitcoin.|
 | [Rootstock Security](/concepts/powpeg/security-model/) | The Rootstock platform uses a security mechanism called the [Powpeg](/concepts/powpeg/), it is based on a layered security model, called “defence-in-depth”.|
@@ -28,7 +29,7 @@ Ready to embark on your Rootstock development journey? Explore these sections ta
 
 ### Developers
 
-The [Developers](/developers/) section provides all the neccessary guides and information for building secure and scalable dApps on Bitcoin with Rootstock. Leverage your existing knowledge of Solidity and tools like Rust, Hardhat, and Wagmi to deploy and scale your dApps on the pioneering layer 2 solution that combines the best of Bitcoin security and Ethereum Smart Contract capabilities.
+The [Developers](/developers/) section provides all the necessary guides and information for building secure and scalable dApps on Bitcoin with Rootstock. Leverage your existing knowledge of Solidity and tools like Rust, Hardhat, and Wagmi to deploy and scale your dApps on the pioneering layer 2 solution that combines the best of Bitcoin security and Ethereum Smart Contract capabilities.
 
 ### Node Operators
 

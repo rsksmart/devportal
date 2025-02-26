@@ -88,6 +88,7 @@
     {"source" : "/rif/wallet/user-guide/registering-a-username/", "destination" : "/developers/integrate/"},
     {"source" : "/guides/rif-relay/deployment", "destination" : "/developers/integrate/rif-relay/deployment/"},
     {"source" : "/tools/foundry/", "destination" : "/dev-tools/foundry/"},
+    {"source" : "/dev-tools/foundry/", "destination" : "/dev-tools/dev-environments/foundry/"},
     {"source" : "/rif/rns/libs/javascript/Advanced-usage", "destination" : "/developers/integrate/"},
     {"source" : "/rif/rns/operations/migrate-from-auction", "destination" : "/developers/integrate/"},
     {"source" : "/rif/rns/integrate/integrate-addr-resolution", "destination" : "/developers/integrate/"},
@@ -247,7 +248,7 @@
     {"source" : "/solutions/moneyonchain/", "destination" : "https://rootstock.io/ecosystem/"},
     {"source" : "/kb/hardhat-setup-on-rsk/", "destination" : "/developers/quickstart/"},
     {"source" : "/solutions/sovryn/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/kb/remix-and-metamask-with-rsk-testnet/", "destination" : "/resources/tutorials/"},
+    {"source" : "/kb/remix-and-metamask-with-rsk-testnet/", "destination" : "/developers/quickstart/remix/"},
     {"source" : "/rsk/architecture/account-based/", "destination" : "/concepts/account-based-addresses/"},
     {"source" : "/tools/tokenbridge/faq/", "destination" : "/resources/guides/tokenbridge/faq/"},
     {"source" : "/rsk/architecture/mining/", "destination" : "/concepts/merged-mining/"},
@@ -355,6 +356,7 @@
     {"source" : "/rif/wallet/dev-reference/troubleshooting/", "destination" : "/developers/integrate/"},
     {"source" : "/kb/the-graph-rootstock/", "destination" : "/dev-tools/thegraph/"},
     {"source" : "/tools/thegraph/", "destination" : "/dev-tools/thegraph/"},
+    {"source" : "/dev-tools/thegraph/", "destination" : "/dev-tools/data/thegraph/"},
     {"source" : "/solutions/tenderly/", "destination" : "https://rootstock.io/ecosystem/"},
     {"source" : "/guides/full-stack-dapp-on-rsk/", "destination" : "/developers/smart-contracts/"},
     {"source" : "/rif/rns/libs/javascript/", "destination" : "/developers/integrate/"},
@@ -612,6 +614,7 @@
     {"source" : "/rif/rns/try-rns/", "destination" : "/developers/integrate/"},
     {"source" : "/guides/rif-relay/installation-requirements/", "destination" : "/developers/integrate/rif-relay/installation-requirements/"},
     {"source" : "/tools/hardhat/", "destination" : "/dev-tools/hardhat/"},
+    {"source" : "/dev-tools/hardhat/", "destination" : "/dev-tools/dev-environments/hardhat/"},
     {"source" : "/courses/user-course/", "destination" : "/resources/courses/"},
     {"source" : "/assets/files/mining-config/miner2.conf", "destination" : "/node-operators/merged-mining/configure-mining/"},
     {"source" : "/rsk/node/install", "destination" : "/node-operators/setup/installation/"},
@@ -632,6 +635,12 @@
     {"source" : "/guides/dex/dex-vs-cex", "destination" : "https://blog.rootstock.io/noticia/dex-vs-cex/"},
     {"source" : "/guides/get-crypto-on-rsk/cryptocurrency-vs-token", "destination" : "https://blog.rootstock.io/noticia/cryptocurrency-vs-token/"},
     {"source" : "/guides/stablecoin/stablecoin-vs-digital-assets", "destination" : "https://blog.rootstock.io/noticia/stablecoin-vs-digital-asset/"},
-    {"source" : "/guides/dex/features-of-a-dex", "destination" : "https://blog.rootstock.io/noticia/features-of-a-dex/"}
+    {"source" : "/guides/dex/features-of-a-dex", "destination" : "https://blog.rootstock.io/noticia/features-of-a-dex/"},
+    {"source" : "/developers/quickstart/alchemy/", "destination" : "/developers/rpc-api/alchemy/"},
+    {"source" : "/developers/rpc-api/setup/", "destination" : "/developers/rpc-api/rootstock/setup/"},
+    {"source" : "/developers/smart-contracts/eas/", "destination" : "/dev-tools/attestations/eas/"},
+    {"source" : "/developers/smart-contracts/eas/overview/", "destination" : "/dev-tools/attestations/eas/"},
+    {"source" : "/developers/quickstart/dynamic-starter-kit/", "destination" : "/developers/quickstart/dynamic/"},
+    {"source" : "/resources/contribute/hacktivator-program/", "destination" : "/resources/contribute/hacktivator/"}
   ]
 }

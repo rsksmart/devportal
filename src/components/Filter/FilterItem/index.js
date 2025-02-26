@@ -1,6 +1,5 @@
 import React from "react";
 import clsx from "clsx";
-import TitleColor from "/src/components/TitleColor";
 import Button from "/src/components/Button";
 
 import styles from "./styles.module.scss";
@@ -17,12 +16,10 @@ export default function FilterItem({value, subtitle, title, description, color =
           {subtitle}
         </span>
       )}
-      <h3 className="m-0 h1">{title}</h3>
+      <h3 className="m-0 h1" dangerouslySetInnerHTML={{__html:title}}></h3>
     </div>
     {description && (
-      <div className={`markdown fw-medium`}>
-        {description}
-      </div>
+      <div className={`markdown fw-medium`} dangerouslySetInnerHTML={{__html:description}}></div>
     )}
     {linkHref && (
       <Button href={linkHref} stretched={true} className={clsx('mt-auto', !linkTitle && 'py-6 px-20')}>

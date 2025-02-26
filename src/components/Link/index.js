@@ -12,6 +12,7 @@ export default function Link ({href, className, target, title, children, ...prop
       rel={(!isInternal || target === `_blank`) ? `noopener noreferrer` : null}
       title={title || null}
       onClick={props.onClick}
+      {...props}
     >
       {children}
     </LinkDoc>

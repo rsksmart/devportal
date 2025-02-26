@@ -12,6 +12,12 @@ This is a deterministic build process used to build Rootstock node JAR file. It 
 
 It's highly recommended to follow the steps by yourself to avoid contamination of the process.
 
+:::warning[Important]
+
+Starting with [v6.4.0](/changelog/), the minimum supported Java LTS version is Java 17. Previous Java versions will no longer be supported. The following example for Linux OS is showing instructions for v6.3.1, and thus uses jdk 8, this must be replaced by jdk 17 for v6.4.0 and up.
+
+:::
+
 ## Install Docker
 
 Depending on your OS, you can install Docker following the official Docker guide:
@@ -44,9 +50,9 @@ Create a ```Dockerfile``` to setup the build environment.
           apt-get clean
         gpg --keyserver https://secchannel.rsk.co/release.asc --recv-keys 1A92D8942171AFA951A857365DECF4415E3B8FA4
         gpg --finger 1A92D8942171AFA951A857365DECF4415E3B8FA4
-        git clone --single-branch --depth 1 --branch ARROWHEAD-6.3.1 https://github.com/rsksmart/rskj.git /code/rskj
-        git clone https://github.com/rsksmart/reproducible-builds 
-        CP /Users/{$USER}/reproducible-builds/rskj/6.3.1-arrowhead/Dockerfile  /Users/{$USER}/code/rskj
+        git clone --single-branch --depth 1 --branch LOVELL-7.0.0 https://github.com/rsksmart/rskj.git /code/rskj
+        git clone https://github.com/rsksmart/reproducible-builds
+        CP /Users/{$USER}/reproducible-builds/rskj/7.0.0-lovell/Dockerfile  /Users/{$USER}/code/rskj
         WORKDIR /code/rskj
         gpg --verify SHA256SUMS.asc
         sha256sum --check SHA256SUMS.asc
@@ -63,21 +69,21 @@ Create a ```Dockerfile``` to setup the build environment.
           brew cleanup
         gpg --keyserver https://secchannel.rsk.co/release.asc --recv-keys 1A92D8942171AFA951A857365DECF4415E3B8FA4
         gpg --finger 1A92D8942171AFA951A857365DECF4415E3B8FA4
-        git clone --single-branch --depth 1 --branch ARROWHEAD-6.3.1 https://github.com/rsksmart/rskj.git ./code/rskj
-        git clone https://github.com/rsksmart/reproducible-builds 
-        CP /Users/{$USER}/reproducible-builds/rskj/6.3.1-arrowhead/Dockerfile  /Users/{$USER}/code/rskj
-        cd /code/rskj
+        git clone --single-branch --depth 1 --branch LOVELL-7.0.0 https://github.com/rsksmart/rskj.git ./code/rskj
+        git clone https://github.com/rsksmart/reproducible-builds
+        CP /Users/{$USER}/reproducible-builds/rskj/7.0.0-lovell/Dockerfile  /Users/{$USER}/code/rskj
+        cd ./code/rskj
         gpg --verify SHA256SUMS.asc
         sha256sum --check SHA256SUMS.asc
         ./configure.sh
-        ./gradlew clean build -x test   
+        ./gradlew clean build -x test
       ```
   </TabItem>
 </Tabs>
 
 **Response:**
 
-You should get the following as the final response, 
+You should get the following as the final response,
 after running the above steps:
 
 ```bash
@@ -85,8 +91,12 @@ BUILD SUCCESSFUL in 55s
 14 actionable tasks: 13 executed, 1 up-to-date
 ```
 
+:::tip[command not found: sha256sum]
+
 If you get the error: zsh: command not found: sha256sum
-> Run the command  `brew install coreutils`
+
+Run the command  `brew install coreutils`
+:::
 
 If you are not familiar with Docker or the ```Dockerfile``` format: what this does is use the Ubuntu 16.04 base image and install ```git```, ```curl```, ```gnupg-curl``` and ```openjdk-8-jdk```, required for building the Rootstock node.
 
@@ -96,12 +106,12 @@ If you are not familiar with Docker or the ```Dockerfile``` format: what this do
 To create a reproducible build, run the command below in the same directory:
 
 ```bash
-docker build -t rskj/6.3.1-arrowhead .     
+docker build -t rskj/7.0.0-lovell .
 ```
 
 :::danger[Error]
 
-if you run into any problems, ensure you're running the commands on the right folder and also ensure docker daemon is running is updated to the recent version.
+if you run into any problems, ensure you're running the commands on the right folder and also ensure docker daemon is running is updated to the recent version.  See how to [Setup node on Docker](/node-operators/setup/installation/docker/)
 
 :::
 
@@ -117,7 +127,7 @@ This may take several minutes to complete. What is done is:
 The last step of the build prints the `sha256sum` of the files, to obtain `SHA-256` checksums, run the following command in the same directory as shown above:
 
 ```bash
-docker run --rm rskj/6.3.1-arrowhead sh -c 'sha256sum * | grep -v javadoc.jar'
+docker run --rm rskj/7.0.0-lovell sh -c 'sha256sum * | grep -v javadoc.jar'
 ```
 
 ## Check Results
@@ -127,11 +137,11 @@ After running the build process, a JAR file will be created in ```/rskj/rskj-cor
 You can check the SHA256 sum of the result file and compare it to the one published by Rootstock for that version.
 
 ```bash
-27f088e5c7535974203bc77711a1e9bbaa258cd7e5d69cd368d8ca5529b38115  rskj-core-6.3.1-ARROWHEAD-all.jar
-101e35cbaef4c3997432e561417f208f93e5121c52be506bcf2bf22357855bb8  rskj-core-6.3.1-ARROWHEAD-sources.jar
-9e29606d4bd71dd0458ec3eaa61ab4003d6aecad4bf5a5a40cc32d8d6535de75  rskj-core-6.3.1-ARROWHEAD.jar
-bb31e2e2b14f9a15f6c7ca2595a7817860334f38f5d7c6e146306275834b7564  rskj-core-6.3.1-ARROWHEAD.module
-ad539153c8bb8d09307c4a77c9a8af062531241f6a5155c2cd21f0892da27b18  rskj-core-6.3.1-ARROWHEAD.pom
+604b75665d9750da216ddc9849cb2276a06192321b3c6829685600e1f2d534fb  rskj-core-7.0.0-LOVELL-all.jar
+05fb616708088a6c65326c01d7e79b2c332d5f2ca83246c9075f65e5fa2781fe  rskj-core-7.0.0-LOVELL-sources.jar
+8d131bbc8d1d346ec4a91ce4eb9db59f6c7649bb7698b11bc1abbaf33f75caaa  rskj-core-7.0.0-LOVELL.jar
+e85d0783b39ef93fda5f98588f7e4ae5d57784096ce9b3a1f43eb3d99a49d275  rskj-core-7.0.0-LOVELL.module
+d651adc77b82046a976bf5c7e858b741443bc8ffa8372b8e5bac9b92dc8c294d  rskj-core-7.0.0-LOVELL.pom
 ```
 
 For SHA256 sum of older versions check the [releases page](https://github.com/rsksmart/rskj/releases).

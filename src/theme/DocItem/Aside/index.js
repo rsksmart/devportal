@@ -12,6 +12,7 @@ import MoreActions from "@theme/DocItem/MoreActions";
 
 import clsx from "clsx";
 import styles from './styles.module.scss';
+import { ToTopButton } from '../../../components/ToTopButton'
 
 const DocTOCDesktop = () => {
 	const {frontMatter, toc} = useDoc();
@@ -32,6 +33,7 @@ export default function DocItemAside() {
 			<div className={`flex-grow-1 position-relative d-flex flex-column`}>
 				<div className={clsx(styles.docItemAsideBottom, 'position-sticky mt-auto')}>
 					<ShareButtons />
+          <ToTopButton className="mt-24"/>
 				</div>
 			</div>
  		</div>

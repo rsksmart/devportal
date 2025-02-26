@@ -1,6 +1,5 @@
 import React from 'react';
 import clsx from 'clsx';
-import Link from '@docusaurus/Link';
 import {
   findFirstSidebarItemLink,
   useDocById,
@@ -8,9 +7,8 @@ import {
 import {usePluralForm} from '@docusaurus/theme-common';
 import isInternalUrl from '@docusaurus/isInternalUrl';
 import {translate} from '@docusaurus/Translate';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
-import TitleColor from "../../components/TitleColor";
+import Button from "../../components/Button";
+
 function useCategoryItemsPlural() {
   const {selectMessage} = usePluralForm();
   return (count) =>
@@ -27,32 +25,41 @@ function useCategoryItemsPlural() {
       ),
     );
 }
-function CardContainer({href, children}) {
+function CardContainer({children}) {
   return (
-    <Link
-      href={href}
-      className={clsx('card px-16 py-24 p-lg-32', styles.cardContainer)}>
+    <div
+      className={clsx('border position-relative d-flex flex-column align-items-start rounded-20 px-16 py-24 p-lg-32 h-100')}>
       {children}
-    </Link>
+    </div>
   );
 }
 function CardLayout({href, icon, title, description}) {
   return (
-    <CardContainer href={href}>
-      <TitleColor as={'h3'} size={'xs'} color={'orange'} className={`mb-16 text--truncate`}>
+    <CardContainer>
+      <h3 className={`h2 m-0 mb-12 mb-md-18`}>
         {title}
-      </TitleColor>
+      </h3>
 
       {description && (
-        <p
-          className={clsx('text--truncate', styles.cardDescription)}
-          title={description}>
-          {description}
-        </p>
+        <div className={`markdown fs-16 flex-grow-1`}>
+          <p
+            title={description}>
+            {description}
+          </p>
+        </div>
+      )}
+
+      {href && (
+        <Button href={href} stretched={true} className={`mt-24 py-6 px-20`} ariaLabel={title}>
+          <svg width="16" height="16">
+            <use xlinkHref="#icon-arrow-r"></use>
+          </svg>
+        </Button>
       )}
     </CardContainer>
   );
 }
+
 function CardCategory({item}) {
   const href = findFirstSidebarItemLink(item);
   const categoryItemsPlural = useCategoryItemsPlural();

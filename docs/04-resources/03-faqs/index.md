@@ -28,7 +28,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     <Accordion.Body>
       Rootstock's primary purpose is to enable Bitcoin users to create and execute smart contracts, thereby extending the functionality and use cases of the Bitcoin network. Rootstock achieves this by using a 2 way peg system that allows users to send Bitcoin directly to the Rootstock chain, where they become convertible to Rootstock's native cryptocurrency, RBTC. This RBTC can then be used within the Rootstock network to interact with smart contracts and dApps.
       - In addition to smart contract functionality, Rootstock also focuses on providing solutions for faster transactions and higher scalability, two of the main challenges in the Bitcoin network. It also supports merged mining, allowing Bitcoin miners to mine both Bitcoin and RBTC simultaneously without additional computational resources.
-      - Furthermore, Rootstock is also home to the RIF (Rootstock Infrastructure Framework), which provides a range of open and decentralized infrastructure services, including payments, storage, and communications, that enable faster, easier, and scalable development of distributed applications (dApps).
+      - Furthermore, Rootstock is also home to the RIF (Rootstock Infrastructure Framework) which makes it easier, faster and more rewarding to build on Bitcoin. It also enables governance on [RootstockCollective DAO](https://rootstockcollective.xyz/).
       - Finally, the purpose of Rootstock is to enhance the Bitcoin ecosystem by adding smart contract functionality and more without compromising the features that make Bitcoin unique such as security and decentralization.
     </Accordion.Body>
   </Accordion.Item>
@@ -53,7 +53,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     <Accordion.Item eventKey="5">
     <Accordion.Header as="h3">What is the current state of the Rootstock project?</Accordion.Header>
     <Accordion.Body>
-      - As of March 2024, the latest released version of Rootstock is the [Arrowhead v6.0.0](https://github.com/rsksmart/rskj/releases), an update that is mainly focused on bringing Ethereum compatibility enhancements to the Rootstock virtual machine, along with notable improvements and performance optimization in the PowPeg protocol. Read more [Arrowhead 6.0.0: What You Need To Know About Rootstock’s Upcoming Network Upgrade](https://blog.rootstock.io/noticia/arrowhead-6-0-0/)
+      - As of February 2025, the latest released version of Rootstock is the [Lovell v7.0.0](https://github.com/rsksmart/rskj/releases), an update that is mainly focused on bringing Ethereum compatibility enhancements to the Rootstock virtual machine, along with notable improvements and performance optimization in the PowPeg protocol. Read more [Introducing Lovell 7.0.0: What You Need To Know About Rootstock’s Upcoming Network Upgrade](https://blog.rootstock.io/noticia/introducing-lovell-7-0-0/)
       - Live statistics about the entire Rootstock network are available at Rootstock Stats, and all the necessary source codes can be found at the Rootstock GitHub organization: [github.com/rsksmart](https://github.com/rsksmart).
     </Accordion.Body>
   </Accordion.Item>
@@ -98,7 +98,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
   <Accordion.Item eventKey="10">
     <Accordion.Header as="h3">How is Rootstock different from drivechains?</Accordion.Header>
     <Accordion.Body>
-      - A drivechain is a special sidechain with a specific type of 2 way peg called “hashrate escrow.” This peg mechanism gives most Bitcoin miners control of sidechain withdrawals but incentivizes miners to be honest and not abuse their powers. To achieve this, miners publicly confirm or reject withdrawals during a long period that can last 3 months. During this period, the community can detect cheaters that confirm invalid withdrawals. The peg is secure as long as there are strong long-term incentives for the honest majority of miners not to cheat. Rootstock, on the contrary, does not rely on monetary incentives. It uses a federation of PowHSM devices, and the tamper-proof devices vote on withdrawals. At the same time, each device enforces the same type of “hashrate escrow” but with a much-reduced timeframe of days. Therefore both Drivechains and Rootstock require the miner hashrate to support every withdrawal. 
+      - A drivechain is a special sidechain with a specific type of 2 way peg called “hashrate escrow.” This peg mechanism gives most Bitcoin miners control of sidechain withdrawals but incentivizes miners to be honest and not abuse their powers. To achieve this, miners publicly confirm or reject withdrawals during a long period that can last 3 months. During this period, the community can detect cheaters that confirm invalid withdrawals. The peg is secure as long as there are strong long-term incentives for the honest majority of miners not to cheat. Rootstock, on the contrary, does not rely on monetary incentives. It uses a federation of PowHSM devices, and the tamper-proof devices vote on withdrawals. At the same time, each device enforces the same type of “hashrate escrow” but with a much-reduced timeframe of days. Therefore both Drivechains and Rootstock require the miner hashrate to support every withdrawal.
       - Drivechains are promising but not currently available as they require a soft-fork in Bitcoin, which has been historically considered controversial and may never be performed. While drivechains may provide greater decentralization, the drivechain peg mechanism has never been tested, so the drivechain peg security is still uncertain.
     </Accordion.Body>
   </Accordion.Item>
@@ -120,7 +120,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
-      
+
 
 ## Rootstock and RIF Token
 
@@ -135,8 +135,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
   <Accordion.Item eventKey="2">
     <Accordion.Header as="h3">What is the RIF token, and what is its purpose?</Accordion.Header>
     <Accordion.Body>
-      - The RIF token is a utility token that powers the Rootstock Infrastructure Framework (RIF), a set of open-source, decentralized tools and technologies that make it easy to build accessible DeFi products and services on the blockchain. It is designed to enable and facilitate the wide range of decentralized services available on the RIF platform. The RIF token is the means of access for all RIF protocols, such as RIF Wallet, RNS, and third-party-developed infrastructure services. Also, any other apps that might be deployed on RIF’s framework that agree to accept RIF Tokens as a means of accessing/consuming the service or app, such as RIF on Chain, the stablecoin protocol underpinning USDRIF. See the [RIF Whitepaper](https://rif.technology/static/add903ce229a6f45a606cd78b028cf9e/RIF-whitepaper-V2.pdf) for more details.
-      - The RIF Token is also the governance token for the Rootstock Collective - stRIF, a token created by [staking RIF tokens](https://rif.technology/rif-token/). stRIF tokens represent voting power within the DAO, enabling token holders to participate in governance decisions like grant allocations and changes to the system. [RBTC, native Rootstock token](https://rootstock.io/rbtc/#get-rbtc), is used as a gas token.
+      - The RIF (Rootstock Infrastructure Framework) token makes it easier, faster and more rewarding to build on Bitcoin. It also enables governance on [RootstockCollective DAO](https://rootstockcollective.xyz/). By staking RIF, users can mint stRIF; the governance token of the RootstockCollective used for voting, proposal creation, and rewards allocation. For more information, read the [Rootstock Collective Whitepaper](https://wiki.rootstockcollective.xyz/).
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="3">
@@ -252,14 +251,14 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     <Accordion.Body>
       - [Rootstock Infrastructure Framework](/concepts/rif-suite/) (RIF) is a suite of open and decentralized infrastructure protocols that enable faster, easier, and more scalable distributed application development (dApps) within a unified environment. RIF  is built on the Rootstock smart contract network, the first general-purpose smart contract secured by the Bitcoin network. RIF  includes support for decentralized, third-party, off-chain payment networks; and easy-to-use interfaces for developers.
       - RIF aims to bridge the gap between blockchain technologies and their mass-market adoption by providing developers and users access to various services across multiple crypto-economies.
-      -  The RIF Token is the governance token for the Rootstock Collective - stRIF, a token created by [staking RIF tokens](https://rif.technology/rif-token/). stRIF tokens represent voting power within the DAO, enabling token holders to participate in governance decisions like grant allocations and changes to the system. [RBTC, native Rootstock token](https://rootstock.io/rbtc/#get-rbtc), is used as a gas token.
+      -  The RIF (Rootstock Infrastructure Framework) token makes it easier, faster and more rewarding to build on Bitcoin. It also enables governance on [RootstockCollective DAO](https://rootstockcollective.xyz/). By staking RIF, users can mint stRIF; the governance token of the RootstockCollective used for voting, proposal creation, and rewards allocation. For more information, read the [Rootstock Collective Whitepaper](https://wiki.rootstockcollective.xyz/).
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">
     <Accordion.Header as="h3">What exactly is the value proposition of RIF?</Accordion.Header>
     <Accordion.Body>
       - RIF is a service layer built on the Rootstock blockchain, offering open, decentralized tools and technologies. With RIF, developers can create scalable DeFi products quickly and easily.
-      - RIF token is the native token of the RIF ecosystem and also the governance token (stRIF) for the Rootstock Collective (DAO). It is a utility asset used to interact with RIF products and services. Read the [RIF Whitepaper](https://rif.technology/static/add903ce229a6f45a606cd78b028cf9e/RIF-whitepaper-V2.pdf).
+      - The RIF (Rootstock Infrastructure Framework) token makes it easier, faster and more rewarding to build on Bitcoin. It also enables governance on [RootstockCollective DAO](https://rootstockcollective.xyz/). By staking RIF, users can mint stRIF; the governance token of the RootstockCollective used for voting, proposal creation, and rewards allocation. For more information, read the [Rootstock Collective Whitepaper](https://wiki.rootstockcollective.xyz/).
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="3">

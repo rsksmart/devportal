@@ -8,7 +8,7 @@ tags: [rootstock, rsk, contribute, open source]
 
 Are you passionate about web3, bitcoin and the Blockchain? Do you have a passion for Open Source and Web3? Do you enjoy writing, coding, bounty hunting, solving real-world problems, and eager to contribute to the future of Bitcoin and Decentralized Finance? Join the [Rootstock Discord Community](https://rootstock.io/discord) and start making contributions!
 
-## Who is it for?
+## Who Is It For?
 
 Whether you're a seasoned developer, creative writer, researcher, bug bounty hunter, or simply enthusiastic about blockchain, the program welcomes contributors from all backgrounds.
 
@@ -17,9 +17,9 @@ Whether you're a seasoned developer, creative writer, researcher, bug bounty hun
 From writing, bug bounties and open-source projects, there are various ways to participate and earn valuable incentives. 
 
 <Card
-  title="Bug Bounty Program"
-  description="RootstockLabs has created the bug bounty program to reward researchers that submit valid vulnerabilities to improve the RootstockLabs platforms security."
-  link="/resources/contribute/bug-bounty/"
+  title="Rootstock Hacktivator"
+  description="Rootstock Hacktivator allows developers to evolve to Rootstock by contributing code or creating educational content. You get to support the platform at your own pace, and every eligible contribution will be rewarded based on its impact and value."
+  link="/resources/contribute/hacktivator/"
 />
 
 <br></br>
@@ -33,7 +33,7 @@ From writing, bug bounties and open-source projects, there are various ways to p
 <br></br>
 
 <Card
-  title="Open Source Code"
-  description="Contribute to Rootstock's Open Source Code Repos."
-  link="https://github.com/rsksmart"
+  title="Bug Bounty Program"
+  description="RootstockLabs has created the bug bounty program to reward researchers that submit valid vulnerabilities to improve the RootstockLabs platforms security."
+  link="/resources/contribute/bug-bounty/"
 />

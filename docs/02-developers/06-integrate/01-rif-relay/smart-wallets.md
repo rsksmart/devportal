@@ -1,10 +1,11 @@
 ---
 sidebar_label: Smart Wallets
-sidebar_position: 700
+sidebar_position: 800
 title: RIF Relay Smart Wallets
+description: RIF Relay Smart Wallets.
 tags: [rif, envelope, relay, user, guide]
-description: RIF Relay Smart Wallet
 ---
+
 
 This guide is intended to explain more about the interaction and deployment of the Smart Wallets. We will be using additional testing contracts that were included in the project, like the `UtilToken(ERC20)`. All the utils scripts are executed from the account[0] from the regtest network. 
 

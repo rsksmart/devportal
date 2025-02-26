@@ -1,3 +1,7 @@
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/rsksmart/devportal/badge)](https://scorecard.dev/viewer/?uri=github.com/rsksmart/devportal)
+[![CodeQL](https://github.com/rsksmart/rskj/workflows/CodeQL/badge.svg)](https://github.com/rsksmart/devportal/actions?query=workflow%3ACodeQL)
+<img src="rootstock-logo.png" alt="RSK Logo" style="width:100%; height: auto;" />
+
 # Rootstock Developer Portal
 
 This repo contains the [Rootstock Developer Portal](https://dev.rootstock.io). The Developer Docs is the home for Rootstock documentation for end users and developers. Check out our quickstarts, tutorials, API reference, and code examples.
@@ -252,10 +256,10 @@ Choose the most appropriate one.
 
 Next, the description should be automatically populated from a template.
 Fill it in accordingly.
-Note that **What** and **Why** sections are compulsory,
-and the **Refs** section is optional.
+Note that **Describe the bug**, **Reproduce**, **Device Type**, and **Screenshots** sections are compulsory,
+and the **Addditional Contest** section is optional.
 
-### Pull Requests
+### Pull Requests (PR)
 
 You can also contribute to the Developer's portal by sending a
 [PR](https://github.com/rsksmart/devportal/pulls).
@@ -263,7 +267,7 @@ You can also contribute to the Developer's portal by sending a
 When you open a pull request,
 the description should be automatically populated from a template.
 Fill it in accordingly.
-Note that **What** and **Why** sections are compulsory,
-and the **Refs** section is optional.
+Note that **Title** and **Description**, **screenshot**, and **checklist** sections are compulsory,
+and the **testing**, and **Refs** sections are optional.
 
 > Note to run `yarn build` to test the build output of your branch prior to creating a new pull request, or pushing more commits to an existing one. Don't introduce any regressions!

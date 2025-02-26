@@ -1,0 +1,38 @@
+.NewsLine {
+  background: var(--bs-body-bg);
+  border: 1px solid var(--bs-body-color);
+  border-width: 1px 0;
+
+  @media (max-width: 996.98px) {
+    border-width: 0 0 1px;
+  }
+}
+
+.NewsLineWrap {
+  position: sticky;
+  top: 88px;
+  z-index: calc(var(--ifm-z-index-fixed) - 1);
+  transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+
+  @media (max-width: 996.98px) {
+    top: 73px;
+    margin-top: -24px;
+    margin-bottom: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    [class*="container"] {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  @media (max-width: 767.98px) {
+    top: 54px;
+    margin-top: -16px;
+    margin-bottom: 24px;
+  }
+
+  &.hidden {
+    transform: translateY(-102%);
+  }
+}

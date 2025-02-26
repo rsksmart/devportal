@@ -89,7 +89,19 @@ Note that when `eth_estimateGas` is called, the node simulates the transaction e
 The simulation runs through the entire transaction process as if it were being executed, including checking for sufficient balance, contract code execution, etc.
 During the simulation, the method calculates the exact amount of gas that would be consumed by the transaction if it were to be executed on the blockchain. The estimated gas amount is returned, helping users set an appropriate gas limit for the actual transaction.
 
-There is a difference in Rootstock compared to Ethereum, and it is that if one of the steps of the simulated transaction fails, the node will return the gas estimation needed for the transaction, while on Ethereum, the node will return an error instead of the gas estimation.
+:::info[Info]
+
+**Prior to Arrowhead 6.5.0**, there was a difference in Rootstock compared to Ethereum:
+
+- If one of the steps of the simulated transaction fails, the node would return the gas estimation needed for the transaction
+- On Ethereum, the node would return an error instead of the gas estimation. 
+
+**Starting with Arrowhead 6.5.0:**
+
+- Rootstock will behave same way as Ethereum's behavior for simulated transaction failures.
+- If a simulated transaction step fails, the node will now return an error, mirroring Ethereum's response.
+
+:::
 
 You can see this behavior in the following example, where a call for `eth_estimateGas` on a transaction that would be executed from an address without enough balance.
 
@@ -146,7 +158,7 @@ Thus, the smart contract/dApp development skills that you’re used to will tran
 ### Tools
 
 - [Hardhat](https://hardhat.org/docs) is an Ethereum development environment designed for professionals. It's primarily used in the development of smart contracts for the Ethereum blockchain.
-  Refer to the [Hardhat Overview](/dev-tools/hardhat/) for an overview of how it's used on Rootstock.
+  Refer to the [Hardhat Guides](/dev-tools/dev-environments/hardhat/) for guides on how to use Hardhat on Rootstock.
 
 - [Metamask](https://metamask.io/) is a browser extension cryptocurrency wallet or mobile app,
   enabling users to interact with the Rootstock blockchain,

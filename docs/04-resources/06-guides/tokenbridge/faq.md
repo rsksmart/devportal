@@ -64,14 +64,13 @@ Find a list of frequently asked questions about the Token Bridge.
   <Accordion.Item eventKey="8">
     <Accordion.Header as="h3">Is there a limit on how many tokens can be bridged over?</Accordion.Header>
     <Accordion.Body>
-      - There is no limit on the total. Hypothetically, the entire circulating supply can be bridged, though this is unlikely happen as there will be strong use cases to use the tokens on either network.
-      - However, there is a minimum and maximum amount per transaction and daily quotas. You can see them on [https://dapp.tokenbridge.rootstock.io/](https://dapp.tokenbridge.rootstock.io/)
+      - Visit the [token crossing limit page](/resources/guides/tokenbridge/troubleshooting/) to view the min/max values.
     </Accordion.Body>
   </Accordion.Item>
    <Accordion.Item eventKey="9">
     <Accordion.Header as="h3">Can any token be bridged over?</Accordion.Header>
     <Accordion.Body>
-      - Only whitelisted tokens can cross the bridge, this curated list is used to avoid malicious contracts and DDoS attacks.
+      - Only whitelisted tokens can cross the bridge, this curated list is used to avoid malicious contracts and DDoS attacks. See the [list of supported tokens](/resources/guides/tokenbridge/troubleshooting/)
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="10">
@@ -83,12 +82,8 @@ Find a list of frequently asked questions about the Token Bridge.
    <Accordion.Item eventKey="11">
     <Accordion.Header as="h3">How many confirmations are required to convert the original tokens to Side tokens and vice-versa?</Accordion.Header>
     <Accordion.Body>
-      - Confirmations depends on the amount being crossed:
-        - Small amounts needs 60 confirmations on the Rootstock Mainnet, and 120 confirmations on the Ethereum Mainnet. 
-        - Medium amounts needs 120 confirmations on the Rootstock Mainnet, and 240 confirmations on the Ethereum Mainnet.
-        - Large amounts needs 2880 confirmations on the Rootstock Mainnet, and 5760 confirmations on the Ethereum Mainnet.
-        - > Note that the values of small, medium, and large amount are defined per token basis, and may change over time.
-        - > You can see these amounts defined in the [Token List](https://dapp.testnet.bridges.rootstock.io/list).
+      - Confirmations depends on the amount being crossed. See the [Troubleshooting guide](/resources/guides/tokenbridge/troubleshooting/) for more information.
+      - You can see these amounts defined in the [Token List](https://dapp.testnet.bridges.rootstock.io/list).
     </Accordion.Body>
   </Accordion.Item>
    <Accordion.Item eventKey="12">

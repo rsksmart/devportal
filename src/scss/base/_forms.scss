@@ -44,12 +44,29 @@ label {
     box-shadow: none;
     background: var(--rsk-input-focus-bg, #1A1A1A);
   }
-}
 
+  &--xl{
+    --rsk-input-focus-bg: var(--bs-body-bg);
+    --rsk-input-bg: var(--bs-body-bg);
+    font: 400 #{$f20}/1.2 $font-family-base;
+    padding: 14px 24px;
+    border-radius: 28px;
+    letter-spacing: 0.01em;
+  }
+}
+.input-group-text{
+  border-color: var(--rsk-input-border-color, #3D3D3D);
+}
 .form-select {
   --bs-form-select-bg-img: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.59 8.295L12 12.875L7.41 8.295L6 9.705L12 15.705L18 9.705L16.59 8.295Z' fill='black'/%3E%3C/svg%3E%0A");
 
   [data-theme='dark'] & {
     --bs-form-select-bg-img: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.59 8.295L12 12.875L7.41 8.295L6 9.705L12 15.705L18 9.705L16.59 8.295Z' fill='white'/%3E%3C/svg%3E%0A");
+  }
+}
+.form-check-input:checked[type=radio]{
+  --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23000'/%3e%3c/svg%3e");
+  [data-theme='dark']:root & {
+    --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
   }
 }

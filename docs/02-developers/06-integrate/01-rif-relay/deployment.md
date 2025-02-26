@@ -2,9 +2,10 @@
 sidebar_label: RIF Relay Deployment
 sidebar_position: 500
 title: RIF Relay Deployment
+description: RIF Relay deployment process.
 tags: [rif, envelope, relay, integration guide]
-description: RIF Relay deployment process
 ---
+
 
 ## Set Up RIF Relay Contracts and Server
 
@@ -56,7 +57,7 @@ After deployment, you'll see a summary of the deployed contracts. This summary i
 The deployment summary shows two sets of Smart Wallets, each paired with its verifiers. This is because the verifier is used for both deployment and transaction validation. For testing purposes, the focus will be on using these Smart Wallet Contracts.
 
 #### Testnet
-1. Ensure your account is funded. You can get funds from the [tRBTC Faucet](https://faucet.rootstock.io/).
+1. Ensure your account is funded. You can get funds from the [tRBTC Faucet](https://faucet.rootstock.io/). Additional faucet options include; [Thirdweb](https://thirdweb.com/rootstock-testnet) and [Blast](https://blastapi.io/faucets/rootstock-testnet) Faucets.
 2. Deploy on Testnet:
     ```bash
       npx hardhat deploy --network testnet

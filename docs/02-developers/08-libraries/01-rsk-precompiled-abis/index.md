@@ -58,26 +58,32 @@ If the version to be installed is not defined in the command line, the version w
 
 ## Versioning table
 
-| Package Version | Rootstock version   |
-|-----------------|---------------|
-| 1.0.0-ORCHID    | ORCHID-0.6.2  |
-| 2.0.0-WASABI    | WASABI-1.0.0  |
-| 2.0.1-WASABI    | WASABI-1.0.0  |
-| 3.0.0-PAPYRUS   | PAPYRUS-2.0.0 |
-| 3.0.0-PAPYRUS   | PAPYRUS-2.2.0 |
-| 3.0.0-IRIS      | IRIS-3.0.0    |
-| 3.1.0-IRIS      | IRIS-3.1.0    |
-| 3.2.0-IRIS      | IRIS-3.2.0    |
-| 3.3.0-IRIS      | IRIS-3.3.0    |
-| 4.0.0-HOP       | HOP-4.0.0    |
-| 4.1.0-HOP       | HOP-4.1.0    |
-| 4.1.1-HOP       | HOP-4.1.1    |
-| 4.2.0-HOP       | HOP-4.2.0    |
-| 4.3.0-HOP       | HOP-4.3.0    |
-| 4.4.0-HOP       | HOP-4.4.0    |
-| 5.0.0-fingerroot | FINGERROOT-5.0.0 |
-| 5.1.0-fingerroot | FINGERROOT-5.1.0 |
-| 5.2.0-fingerroot | FINGERROOT-5.2.0 |
-| 5.3.0-fingerroot | FINGERROOT-5.3.0 |
-| 5.4.0-fingerroot | FINGERROOT-5.4.0 |
-| 6.0.0-ARROWHEAD | ARROWHEAD-6.0.0 |
+| Package Version  | Rootstock version |
+|------------------|-------------------|
+| 1.0.0-ORCHID     | ORCHID-0.6.2      |
+| 2.0.0-WASABI     | WASABI-1.0.0      |
+| 2.0.1-WASABI     | WASABI-1.0.0      |
+| 3.0.0-PAPYRUS    | PAPYRUS-2.0.0     |
+| 3.0.0-PAPYRUS    | PAPYRUS-2.2.0     |
+| 3.0.0-IRIS       | IRIS-3.0.0        |
+| 3.1.0-IRIS       | IRIS-3.1.0        |
+| 3.2.0-IRIS       | IRIS-3.2.0        |
+| 3.3.0-IRIS       | IRIS-3.3.0        |
+| 4.0.0-HOP        | HOP-4.0.0         |
+| 4.1.0-HOP        | HOP-4.1.0         |
+| 4.1.1-HOP        | HOP-4.1.1         |
+| 4.2.0-HOP        | HOP-4.2.0         |
+| 4.3.0-HOP        | HOP-4.3.0         |
+| 4.4.0-HOP        | HOP-4.4.0         |
+| 5.0.0-fingerroot | FINGERROOT-5.0.0  |
+| 5.1.0-fingerroot | FINGERROOT-5.1.0  |
+| 5.2.0-fingerroot | FINGERROOT-5.2.0  |
+| 5.3.0-fingerroot | FINGERROOT-5.3.0  |
+| 5.4.0-fingerroot | FINGERROOT-5.4.0  |
+| 6.0.0-ARROWHEAD  | ARROWHEAD-6.0.0   |
+| 6.3.0-ARROWHEAD  | ARROWHEAD-6.3.0   |
+| 6.3.1-ARROWHEAD  | ARROWHEAD-6.3.1   |
+| 6.4.0-ARROWHEAD  | ARROWHEAD-6.4.0   |
+| 6.5.0-ARROWHEAD  | ARROWHEAD-6.5.0   |
+| 6.5.1-ARROWHEAD  | ARROWHEAD-6.5.1   |
+| 7.0.0-LOVELL     | LOVELL-7.0.0      |

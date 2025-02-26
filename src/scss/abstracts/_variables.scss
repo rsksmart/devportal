@@ -562,3 +562,7 @@ $form-select-font-size-lg:        $input-font-size-lg;
 $form-select-border-radius-lg:    $input-border-radius-lg;
 
 $form-select-transition:          $input-transition;
+
+$form-check-input-checked-bg-color:     #{'var(--bs-body-bg)'};
+$form-check-input-checked-border-color: #{'var(--bs-body-color)'};
+$form-check-input-focus-box-shadow: 0 0 0 0.20rem rgba(var(--bs-body-color-rgb), 0.15)

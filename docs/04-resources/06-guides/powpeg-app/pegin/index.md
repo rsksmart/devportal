@@ -12,17 +12,24 @@ In this section, we will learn how to perform a [peg-in](/resources/guides/powpe
 
 To start using PowPeg App, you will need to connect your **RSK** wallet:
 
-1. Connect your wallet:
-![PowPeg (connect-your-wallet)](/img/resources/powpeg/connectyourwallet.png)
+1. Click on Pegin option:
 
-2. Once connected your will see your address and your balance:
-![PowPeg (wallet-connected)](/img/resources/powpeg/walletconnected.png)
+![PowPeg (click-pegin-option)](/img/resources/powpeg/pegin.png)
+
+2. Select your wallet:
+- Trezor hardware wallet
+- Ledger hardware wallet
+- Leather software wallet (chrome plugin)
+- Xverse software wallet (chrome plugin)
+- Enkrypt software wallet (chrome plugin)
+
+![PowPeg (supported-wallets-pegin)](/img/resources/powpeg/pegin-wallets.png)
 
 To get started, see the [Requirements for Pegin](/resources/guides/powpeg-app/prerequisites/) section.
 
 We will do the following:
 
-1. [Set up environment](/resources/guides/powpeg-app/prerequisites/)
+1. For developers: [Set up environment](/resources/guides/powpeg-app/prerequisites/)
 2. Perform a peg-in (BTC - RBTC) transaction using [Ledger Hardware Wallet](/resources/guides/powpeg-app/pegin/ledger/)
 3. Perform a peg-in (BTC - RBTC) transaction using [Trezor Hardware Wallet](/resources/guides/powpeg-app/pegin/ledger/)
 4. [View a transaction status](/resources/guides/powpeg-app/pegin/status/).
@@ -38,4 +45,6 @@ We will do the following:
 * PowPeg App frontend [repo](https://github.com/rsksmart/2wp-app)
 * PowPeg App backend [repo](https://github.com/rsksmart/2wp-api)
 * [Rootstock Testnet Faucet](https://faucet.rootstock.io/)
+* [Thirdweb Faucet](https://thirdweb.com/rootstock-testnet) 
+* [Blast Faucet](https://blastapi.io/faucets/rootstock-testnet)
 * [Design architecture](/resources/guides/powpeg-app/advanced-operations/design-architecture/)

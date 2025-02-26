@@ -15,7 +15,7 @@ First of all, you will need to install:
 |Dependency        | Details|
 |------------- |-------------|
 |[Git for Mac](https://git-scm.com/download/mac)| Download this Git command line tool|
-|[Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) | Follow the steps to install Java. To check if installation went correctly, check the version with command: `java -version`.|
+|[Java 17 JDK](https://docs.oracle.com/en/java/javase/17/install/installation-jdk-linux-platforms.html) | Follow the steps to install Java. To check if installation went correctly, check the version with command: `java -version`.|
 
 Recommended IDEs:
 - [IntelliJ IDEA Community](https://www.jetbrains.com/idea/download/#section=linux)
@@ -42,7 +42,7 @@ Run these commands on Git command line:
 ```shell
 git clone --recursive https://github.com/rsksmart/rskj.git
 cd rskj
-git checkout tags/ARROWHEAD-6.0.0 -b ARROWHEAD-6.0.0
+git checkout tags/LOVELL-7.0.0 -b LOVELL-7.0.0
 ```
 
 *Note:* It is better to download the code into a short path.
@@ -64,7 +64,7 @@ This will download and set important components (e.g. Gradle Wrapper).
 
 ## IntelliJ IDEA setup
 
-### Compiling the node 
+### Compiling the node
 
 Now, you can launch IntelliJ IDEA.
 When IntelliJ IDEA is launched you should have a window with different options.
@@ -90,7 +90,7 @@ Then set the options as shown below:
 - Main Class: `co.rsk.Start`
 - Working directory: `/path-to-code/rskJ`
 - Use classpath of module: `rskj-core_main`
-- JRE need to be set as: `Default (1.8 - SDK of 'rsk-core_main' module)`
+- JRE need to be set as: `Default (17 - SDK of 'rsk-core_main' module)`
 
 #### Running the node
 

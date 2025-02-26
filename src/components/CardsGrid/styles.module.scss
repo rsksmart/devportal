@@ -1,0 +1,7 @@
+.CardsGrid{
+  display: grid;
+  gap: 16px;
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

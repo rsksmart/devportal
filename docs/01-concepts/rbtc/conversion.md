@@ -33,6 +33,8 @@ Thus, we have `BTC` and `RBTC` on the Mainnets, which correspond to `tBTC` and `
 
 Enter your BTC address below to verify whether it may be used to peg in from BTC to RBTC.
 
+<AddressVerifier />
+
 ## User Guide
 
 - [Mainnet Guide](/concepts/rbtc/networks#mainnet-conversion)
@@ -47,9 +49,7 @@ You can try the conversion process using either options below;
 
 Watch this explainer video on **How to do BTC & R-BTC Conversions using the Rootstock Powpeg**.
 
-<div class="video-container">
-  <iframe width="949" height="534" src="https://youtube.com/embed/XTpQW9Rw838" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<iframe width="949" height="534" src="https://youtube.com/embed/XTpQW9Rw838" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
 ### FAQs
 

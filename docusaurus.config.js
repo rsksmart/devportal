@@ -26,7 +26,8 @@ const config = {
   baseUrl: '/',
   customFields: {
     keys : {
-      mendable : process.env.MENDABLE_KEY
+      mendable : process.env.MENDABLE_KEY,
+      cookbook : process.env.COOKBOOK_PUBLIC_API_KEY,
     },
     homePage: {
       editUrl: 'https://github.com/rsksmart/devportal/tree/main/',
@@ -44,7 +45,21 @@ const config = {
         title: 'Report an Issue',
         url : 'https://github.com/rsksmart/devportal/issues',
       },
-    }
+      requestArticle : {
+        title: 'Request an Article',
+        form : {
+          id : '5qQ40ScPu',
+          title : 'Request a New Article',
+          description : 'Looking for information we haven’t covered? Fill out the form below to request a new article, and we’ll consider it in future updates.',
+        }
+      },
+    },
+    newsHighlight : [
+      {
+        title : '📣 Rootstock Hacktivator is Live! Contribute and Earn Rewards!',
+        url : '/resources/contribute/hacktivator/'
+      }
+    ]
   },
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -61,6 +76,9 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+  clientModules:[
+    '/src/clientModules/renderEquations.js'
+  ],
   plugins: [
     'docusaurus-plugin-sass',
     [
@@ -147,7 +165,7 @@ const config = {
         respectPrefersColorScheme: false,
       },
       // Replace with your project's social card
-      image: 'img/og.jpg',
+      image: 'img/og.png',
       navbar: {
         title: 'Docs',
         logo: {
