@@ -281,8 +281,6 @@ To execute the deployment script, run the following command:
 
 :::danger[ModuleNotFoundError: No module named 'web3']
 
-Error:
-
 ```bash
 python3 deploy_favorites_unsafe.py
 Traceback (most recent call last):
