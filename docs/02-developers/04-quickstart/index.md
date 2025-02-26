@@ -18,6 +18,15 @@ values={[
 {label: 'Port to Rootstock', value: 'port-dapps'}
 ]}>
 <FilterItem
+    value="beginner, Advanced"
+    title="Vyper Starter Kit"
+    subtitle="quickstart"
+    color="orange"
+    linkHref="/developers/quickstart/rootstock-vyper/"
+    linkTitle="Use the Kit"
+    description="The Rootstock Vyper Starter Kit demonstrates how to deploy smart contracts written in Vyper to the Rootstock network."
+  />
+  <FilterItem
     value="dynamic, wagmi, advanced"
     title="Dynamic Starter Kit"
     subtitle="quickstart"
