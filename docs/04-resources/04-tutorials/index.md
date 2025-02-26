@@ -18,7 +18,7 @@ title="Deploy a Vyper Smart Contract on Rootstock"
 subtitle="Vyper"
 color="orange"
 linkHref="/developers/quickstart/rootstock-vyper/"
-description="This guide walks through the process of deploying a smart contract to the Rootstock testnet using Python and Web3.py. We'll be deploying a simple Vyper contract that demonstrates how to interact with the Rootstock network."
+description="The Vyper Starter Kit tutorial demonstrates how to deploy smart contracts written in Vyper to the Rootstock testnet using Python and Web3.py. We'll create a simple Vyper contract and deploy it to the Rootstock network, set up the environment, and configure the network for Rootstock."
 />
 <FilterItem
 value="beginner, port-dapps"

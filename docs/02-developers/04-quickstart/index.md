@@ -24,7 +24,7 @@ values={[
     color="orange"
     linkHref="/developers/quickstart/rootstock-vyper/"
     linkTitle="Use the Kit"
-    description="This guide walks through the process of deploying a smart contract to the Rootstock testnet using Python and Web3.py. We'll deploy a simple Vyper contract that demonstrates how to interact with the Rootstock network."
+    description="The Rootstock Vyper Starter Kit demonstrates how to deploy smart contracts written in Vyper to the Rootstock network."
   />
   <FilterItem
     value="dynamic, wagmi, advanced"

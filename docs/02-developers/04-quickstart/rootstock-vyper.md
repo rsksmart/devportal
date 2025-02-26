@@ -2,18 +2,18 @@
 sidebar_label: "Vyper"
 sidebar_position: 106
 title: "Rootstock Vyper Starter Kit"
-description: "This guide walks through the process of deploying smart contracts to the Rootstock testnet using Python and Web3.py. We'll deploy a simple Vyper contract that demonstrates how to interact with the Rootstock network."
+description: "The Rootstock Vyper Starter Kit guide demonstrates how to deploy smart contracts written in Vyper to the Rootstock testnet using Python and Web3.py. We'll create a simple Vyper contract and deploy it to the Rootstock network, set up the environment, and configure the network for Rootstock."
 tags: [rsk, rootstock, developers, vyper, quickstart, python, Smart Contracts]
 ---
 
-Rootstock is a layer 2 solution that combines the security of Bitcoin's proof of work with Ethereum's smart contract capabilities. The platform is open-source, EVM-compatible, and secured by over 60% of Bitcoin’s hashing power, offering unique advantages for developers looking to build on Bitcoin. Some of these advantages include:
+Rootstock is a layer 2 solution that combines the security of Bitcoin's proof of work with Ethereum's smart contract capabilities. The platform is open-source, EVM-compatible, and secured by over 60% of Bitcoin’s hashing power, offering unique benefits for developers looking to build and deploy dApps on Bitcoin. Some of these benefits include:
 
 - **Bitcoin Compatibility**: Deploy smart contracts while leveraging Bitcoin's network security
 - **EVM Compatibility**: Use familiar Ethereum tools and practices while building on Bitcoin
 - **Lower Fees**: Benefit from low transaction fees on Rootstock
 - **Scalability**: Handle a higher volume of transactions without congestion
 
-This guide demonstrates how to deploy smart contracts written in Vyper to the Rootstock testnet using Python and Web3.py. We'll walk through creating a simple Vyper contract and deploying it to the Rootstock testnet, we will setup the environment, and handle Rootstock-specific network configurations.
+This guide demonstrates how to deploy smart contracts written in Vyper to the Rootstock testnet using Python and Web3.py. We'll create a simple Vyper contract and deploy it to the Rootstock network, set up the environment, and configure the network for Rootstock.
 
 Whether you're an experienced Ethereum developer looking to deploy smart contracts on Bitcoin (Rootstock), or just starting your blockchain journey, this guide will help you get up and running with deploying Vyper Smart Contracts on the Rootstock network.
 
