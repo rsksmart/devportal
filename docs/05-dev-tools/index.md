@@ -83,9 +83,27 @@ description: "Explore a curated selection of smart contract development tools an
     title="Rootstock Explorer"
     subtitle="Explorers"
     color="orange"
-    linkHref="https://explorer.rootstock.io/"
+    linkHref="/dev-tools/explorers/rootstock/"
     linkTitle="Use the Explorer"
     description="Explore transactions, blocks, addresses, tokens, stats and interact with smart contracts on the Rootstock Explorer."
+  />
+<FilterItem
+    value="explorer, sc"
+    title="Rootstock Blockchair"
+    subtitle="Explorers"
+    color="orange"
+    linkHref="/dev-tools/explorers/blockchair/"
+    linkTitle="Use the Explorer"
+    description="Blockchair explorer is a blockchain search and analytics engine for Rootstock and 40+ chains. It incorporates a multitude of different blockchains into one search engine."
+  />
+<FilterItem
+    value="explorer, sc"
+    title="3xpl"
+    subtitle="Explorers"
+    color="orange"
+    linkHref="/dev-tools/explorers/3xpl/"
+    linkTitle="Use the Explorer"
+    description="3xpl (short for 3xplor3r) is a super-fast, universal explorer for Rootstock. It offers an easy-to-understand block explorer interface for beginner crypto users, as well as lots of professional features for developers and analysts."
   />
 <FilterItem
     value="rpc"
@@ -315,12 +333,12 @@ description: "Explore a curated selection of smart contract development tools an
   />
 <FilterItem
     value="gas"
-    title="Gas Station"
+    title="Blocknative Gas Price API"
     subtitle="gas"
     color="orange"
-    linkHref="https://rskgasstation.info/?AspxAutoDetectCookieSupport=1"
-    linkTitle="View Gas Price"
-    description="Rootstock Gas Station."
+    linkHref="/dev-tools/gas/blocknative/"
+    linkTitle="Gas Price API"
+    description="Accurate next block gas price estimation."
   />
 <FilterItem
     value="data"
