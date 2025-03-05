@@ -12,14 +12,6 @@ To track and manage gas costs, you can use tools like the Rootstock Gas Station 
 
 <CardsGrid>
   <CardsGridItem
-    title="Rootstock Gas Station"
-    subtitle="gas"
-    color="green"
-    description="Estimate gas fees for your transactions on the Rootstock network."
-    linkHref="https://rskgasstation.info/"
-    linkTitle="Get Started"
-  />
-  <CardsGridItem
     title="Blocknative Gas Price API"
     subtitle="gas"
     color="green"

@@ -13,7 +13,7 @@ tags: [hardhat, quick start, developer tools, rsk, rootstock, ethereum, dApps, s
 * [Thirdweb Faucet](https://thirdweb.com/rootstock-testnet): Get free test RBTC tokens for development and testing.
 * [Blast Faucet](https://blastapi.io/faucets/rootstock-testnet): Get free test RBTC tokens for development and testing.
 
-## Gas Fees
+## Gas
 * See the [gas](/dev-tools/gas/) section for more information.
 
 ## Exchanges - Getting RBTC

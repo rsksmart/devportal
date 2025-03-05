@@ -333,15 +333,6 @@ description: "Explore a curated selection of smart contract development tools an
   />
 <FilterItem
     value="gas"
-    title="Gas Station"
-    subtitle="gas"
-    color="orange"
-    linkHref="https://rskgasstation.info/?AspxAutoDetectCookieSupport=1"
-    linkTitle="View Gas Price"
-    description="Rootstock Gas Station."
-  />
-<FilterItem
-    value="gas"
     title="Blocknative Gas Price API"
     subtitle="gas"
     color="orange"
