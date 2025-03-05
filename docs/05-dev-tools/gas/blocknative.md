@@ -12,7 +12,8 @@ Supported on: <Shield title="mainnet" tooltip="Available on Mainnet" color="oran
 
 ## Key Features
 
-Accurate Gas Price Predictions: Harness Blocknative’s real-time global mempool data and advanced statistical models to deliver precise gas estimates for next-block or next-ten-second confirmations.
+**Accurate Gas Price Predictions:**
+* Harness Blocknative’s real-time global mempool data and advanced statistical models to deliver precise gas estimates for next-block or next-ten-second confirmations.
 
 > Need a high probability of being confirmed at the expense of spending extra gas? Use the 99% probability prediction. Don't mind if the transaction takes longer to confirm? Use the 50% probability prediction.
 
@@ -20,6 +21,13 @@ Accurate Gas Price Predictions: Harness Blocknative’s real-time global mempool
 
 ### How to Sign Up
 [Request an API key](https://www.blocknative.com/request-api-key) by filling in the form. A valid Blocknative API key is `OPTIONAL` in the Authorization Header of every request.
+
+:::tip[Tip]
+
+A free API key is recommended for more generous rate limits and future features.
+
+:::
+
 
 ### Set Up the Application
 
@@ -39,7 +47,7 @@ You should get the following response:
 
 ## Integration process on Rootstock network
 
-To integrate the gas network API in your application, view example cURL requests below:
+To integrate the gas price API in your application, here are example `cURL` requests to get block prices for a default network, and set the confidence levels:
 
 **Example request:**
 
@@ -56,6 +64,8 @@ curl -H 'Authorization: optional-apikey-here' 'https://api.blocknative.com/gaspr
 ```bash
 curl -H 'Authorization: optional-apikey-here' 'https://api.blocknative.com/gasprices/blockprices?chainid=30'
 ```
+> This returns a range of confidence intervals for gas prices needed to qualify a transaction for inclusion in the next block or next ∼10 seconds, depending on the chain. The order of confidence intervals is subject to change.
+
 
 **Example custom confidence level request**
 
@@ -120,6 +130,8 @@ curl -H 'Authorization: optional-apikey-here' 'https://api.blocknative.com/gaspr
   ]
 }
 ```
+
+For more information on setting rate limits, API endpoints available, visit the [gas price API docs](https://docs.blocknative.com/gas-prediction/gas-platform).
 
 ## Developer Resources
 - [Gas Network Docs](https://docs.blocknative.com/gas-prediction/gas-platform)
