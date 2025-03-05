@@ -33,12 +33,20 @@ To understand how block explorers work, read the complete guide on [exploring bl
     linkHref="/dev-tools/explorers/blockscout/"
     linkTitle="Use the Explorer"
   />
-   <CardsGridItem
+  <CardsGridItem
     title="3xpl"
     subtitle="explorers"
     color="cyan"
     description="3xpl (short for 3xplor3r) is a super-fast, universal explorer for most popular public blockchains. It offers an easy-to-understand block explorer interface for ordinary crypto users, as well as lots of professional features for developers and analysts."
-    linkHref="https://3xpl.com/rootstock"
+    linkHref="/dev-tools/explorers/3xpl/"
+    linkTitle="Use the Explorer"
+  />
+  <CardsGridItem
+    title="Blockchair"
+    subtitle="explorers"
+    color="cyan"
+    description="Blockchair explorer is a blockchain search and analytics engine for Rootstock and 40+ chains. It incorporates a multitude of different blockchains into one search engine. It focuses on making blockchain data understandable and accessible for a wide and varied audience, interested in both blockchain and crypto, while maintaining and securing the privacy of users."
+    linkHref="/dev-tools/explorers/blockchair/"
     linkTitle="Use the Explorer"
   />
 </CardsGrid>

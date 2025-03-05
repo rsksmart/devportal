@@ -1,5 +1,5 @@
 ---
-sidebar_position: 14
+sidebar_position: 15
 sidebar_label: General Tools
 title: General Tools
 description: "General tools to build on Rootstock" 
@@ -14,7 +14,7 @@ tags: [hardhat, quick start, developer tools, rsk, rootstock, ethereum, dApps, s
 * [Blast Faucet](https://blastapi.io/faucets/rootstock-testnet): Get free test RBTC tokens for development and testing.
 
 ## Gas Fees
-* [Rootstock Gas Station](https://rskgasstation.info/?AspxAutoDetectCookieSupport=1): Estimate gas fees for your transactions on the Rootstock network.
+* See the [gas](/dev-tools/gas/) section for more information.
 
 ## Exchanges - Getting RBTC
 

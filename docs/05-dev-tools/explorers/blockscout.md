@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-sidebar_label: Blockscout Explorer
+sidebar_label: Blockscout
 title: Get Started with Rootstock Blockscout Explorer
 tags: [rsk, explorer, rootstock, Blockscout, smart contracts, transactions, tools]
 ---
