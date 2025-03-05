@@ -55,7 +55,7 @@ To integrate the gas price API in your application, here are example `cURL` requ
 curl -H 'Authorization: optional-apikey-here' 'https://api.blocknative.com/gasprices/blockprices'
 ```
 
-**Or without the optional apikey;*
+**Without the optional apikey:**
 
 `curl 'https://api.blocknative.com/gasprices/blockprices'`
 
