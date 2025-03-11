@@ -6,7 +6,7 @@ description: "A developers guide to building Token-Gated NFT Minting dApps on Ro
 tags: [knowledge-base, thirdweb, rootstockcollective, rootstock, tokengating, content, NFT minting]
 ---
 
-In this guide, we’ll build a token-gated platform using **Thirdweb(https://thirdweb.com/)** and **[RootstockCollective](https://rootstockcollective.xyz/)**, showing how to integrate Web3 wallets authentication, use Thirdweb to mint NFT drops, verify token balances, and enable NFT minting. We'll use the **Thirdweb SDK** to handle key actions like connecting wallets, check token holdings, and mint NFTs. We’ll use **Thirdweb’s UI components** to manage media rendering and user interactions with blockchain transactions.
+In this guide, we’ll build a token-gated platform using **[Thirdweb](https://thirdweb.com/)** and **[RootstockCollective](https://rootstockcollective.xyz/)**, showing how to integrate Web3 wallets authentication, use Thirdweb to mint NFT drops, verify token balances, and enable NFT minting. We'll use the **Thirdweb SDK** to handle key actions like connecting wallets, check token holdings, and mint NFTs. We’ll use **Thirdweb’s UI components** to manage media rendering and user interactions with blockchain transactions.
 
 This guide will also demonstrate how token ownership can be used to control access. We’ll use **stRIF**, the governance token of the **RootstockCollective**, to determine which NFTs users can mint. Holding **stRIF** will enable members to mint unique collectibles based on the amount of stRIF tokens they hold, they will be granted access to mint two ERC-721 collections: **Rooties** (Level 1) and **Legends** (Level 2). This ensures that only engaged community members can participate, creating an exclusive and verifiable experience.
 
@@ -15,7 +15,7 @@ This guide will also demonstrate how token ownership can be used to control acce
 1. Understand Token-gating, Tokenization
 2. Set up the development environment
 3. **Implement Web3 authentication** with Sign-In With Ethereum (SIWE) using Thirdweb Auth.
-4. **Create a token-gating mechanism** to verify ERC-20 (stRIF) balances using Thirdweb extensions.
+4. **Create a token-gating mechanism** to verify ERC-20 (stRIF) balances using Thirdweb.
 5. Create and Mint NFT drops using Thirdweb platform 
 6. **Deploy smart contracts** for stRIF, *Rooties* (ERC-721), and *Legends* (ERC-721).
 7. **Integrate NFT minting functionality** using Thirdweb’s prebuilt React components.
