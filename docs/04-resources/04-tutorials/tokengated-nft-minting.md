@@ -23,11 +23,14 @@ This guide will also demonstrate how token ownership can be used to control acce
 
 ## Prerequisites
 
-* Node 18.6 or higher
-* [Bun](https://bun.sh/docs/installation) or pnpm
+* Node v18+
+* [Bun](https://bun.sh/docs/installation) package manager
     ```shell
     bun install
     ```
+* MetaMask or a compatible Web3 wallet
+* Thirdweb account. [Create an account](http://thirdweb.com).
+
 > Bun is used in this article but you could use your preferred package manager.
 
 ## Understanding Tokenization & Token-Gating
@@ -42,15 +45,29 @@ Token-Gating leverages this by granting exclusive access based on token ownershi
 
 ## Getting Started
 
-With a solid understanding of token-gating and how we'll use Thirdweb and RootstockCollective to build an NFT minting dApp, let's begin.
-
-**Clone the RootstockCollective rewards sample repository**.
+**Clone the RootstockCollective rewards sample repository** and open in code editor.
 
 ```bash
 git clone https://github.com/rsksmart/rootstock-collective-rewards.git
 ```
 
-To run the project, rename `.env.example` to `.env.local` and configure the required credentials. This includes a **Client ID** from the Thirdweb dashboard for authentication, a **Secret Key** for secure server-side operations, an **Authentication Domain** to define where logins are processed, and an **Admin Wallet Private Key** for deploying contracts and managing admin tasks. Use `process.env` in Next.js to safely access these variables within your application.
+### Create a Project on Thirdweb
+
+Visit the [Thirdweb dashboard](http://thirdweb.com) to sign up and create your project, set up authentication and generate the required Client ID and Secret Key.
+
+Once signed in, navigate to **"Create Project"** and add a project name and allow domains.
+
+![Thirdweb - Create Project](/img/resources/tutorials/tokengating-nft-minting/01-thirdweb-create-project.png)
+
+For this mock project, you will need to allow all domains since requests will be made through localhost. In the future, you can restrict access to only your app’s domain.
+
+![Thirdweb - Set Project Name](/img/resources/tutorials/tokengating-nft-minting/02-thirdweb-set-project-name.png)
+
+Now you will be able to able to copy the necessary credentials for this project, note the admin wallet could be any wallet, including metamask or others.
+
+![Thirdweb - Save Project Secrets](/img/resources/tutorials/tokengating-nft-minting/03-thirdweb-set-project-secrets.png)
+
+### Add Environment Variables
 
 ```shell
 # Required: Client ID from thirdweb dashboard
@@ -75,27 +92,15 @@ NEXT_PUBLIC_THIRDWEB_AUTH_DOMAIN=localhost:3000
 THIRDWEB_ADMIN_PRIVATE_KEY=your_private_key_here
 ```
 
+### Run the Project
+
+To run the project, rename `.env.example` to `.env.local` and configure the required credentials. This includes getting a **Client ID** from the Thirdweb dashboard for authentication, a **Secret Key** for secure server-side operations, an **Authentication Domain** to define where logins are processed, and an **Web3 Wallet Private Key** for deploying contracts and managing admin tasks. Use `process.env` in Next.js to safely access these variables within your application.
+
 To run the project:
 
 ```shell
 bun run dev
 ```
-
-### Create a Project on Thirdweb
-
-Visit the [Thirdweb dashboard](http://thirdweb.com) to sign up and create your project, set up authentication and generate the required Client ID and Secret Key.
-
-Once signed in, navigate to **"Create Project"** and add a project name and allow domains.
-
-![Thirdweb - Create Project](/img/resources/tutorials/tokengating-nft-minting/01-thirdweb-create-project.png)
-
-For this mock project, you will need to allow all domains since requests will be made through localhost. In the future, you can restrict access to only your app’s domain.
-
-![Thirdweb - Set Project Name](/img/resources/tutorials/tokengating-nft-minting/02-thirdweb-set-project-name.png)
-
-Now you will be able to able to copy the necessary credentials for this project, note the admin wallet could be any wallet, including metamask or others.
-
-![Thirdweb - Save Project Secrets](/img/resources/tutorials/tokengating-nft-minting/03-thirdweb-set-project-secrets.png)
 
 ## Implement Web3 authentication
 
@@ -125,7 +130,7 @@ export const thirdwebAuth = createAuth({
 
 ### II. Define Auth Logic
 
-Define the authentication logic in **`src/app/actions/auth.ts`**.
+Define the authentication logic in `src/app/actions/auth.ts`.
 
 - `generatePayload`: Creates a signable message for authentication.
 - `login`: Verifies the signed message and stores a session token (JWT) in cookies.
@@ -174,7 +179,7 @@ export async function logout() {
 
 ### III. Connect Auth to Frontend
 
-Connect the authentication to the frontend in **`src/app/components/LoginButton.tsx`**.
+Connect the authentication to the frontend in `src/app/components/LoginButton.tsx`.
 
 This component extends Thirdweb’s `ConnectButton` to handle authentication. It automatically connects wallets and checks session status, ensuring users stay logged in without needing to sign in repeatedly. The button manages login, logout, and verifies if a user is authenticated based on their wallet signature.
 
@@ -256,14 +261,14 @@ To deploy the governance token, navigate to the Contracts section on the Thirdwe
 
 :::tip[💡 Explanation of Key Contracts]
 
-📍 stRIF **Mock Token Contract Address:** [0xdF80......7254](https://rootstock-testnet.blockscout.com/address/0xdF80EA040959962AD484A18edF791c6b23a07254)
-This is the mock stRIF governance token used in this guide. It will be created and deployed using Thirdweb.
+📍 stRIF **Mock Token Contract Address:** [0xdF80......7254](https://rootstock-testnet.blockscout.com/address/0xdF80EA040959962AD484A18edF791c6b23a07254):
+  * This is the mock stRIF governance token used in this guide. It will be created and deployed using Thirdweb.
 
-📍 RootieTokenGating **Contract Address:** [0xCDce......00c5](https://rootstock-testnet.blockscout.com/address/0xCDceE0e2dc6fb158A6dea2B614D21e04d5CF00c5)
-The Rootie Collection is the first membership tier, allowing users to join the DAO and access basic benefits. It’s the gateway to becoming an active participant.
+📍 RootieTokenGating **Contract Address:** [0xCDce......00c5](https://rootstock-testnet.blockscout.com/address/0xCDceE0e2dc6fb158A6dea2B614D21e04d5CF00c5):
+  * The Rootie Collection is the first membership tier, allowing users to join the DAO and access basic benefits. It’s the gateway to becoming an active participant.
 
-📍 LegendTokenGating **Contract Address:** [0xe2F5......cD49](https://thirdweb.com/rootstock-testnet/0xe2F55fE86fdCa4279D4b90c0653Dad086687cD49)
-The Legend Collection is reserved for top contributors, granting advanced perks and exclusive rights within the DAO. Think of it as a badge of honor for high-impact members.
+📍 LegendTokenGating **Contract Address:** [0xe2F5......cD49](https://thirdweb.com/rootstock-testnet/0xe2F55fE86fdCa4279D4b90c0653Dad086687cD49):
+  * The Legend Collection is reserved for top contributors, granting advanced perks and exclusive rights within the DAO. Think of it as a badge of honor for high-impact members.
 
 With Thirdweb’s contract tools, we skip the complexity of manual deployment and focus on building. Now, let’s take a look at how these tokens fit into our broader platform architecture.
 
