@@ -12,7 +12,7 @@ This guide will also demonstrate how token ownership can be used to control acce
 
 ## What we’ll cover
 
-1. Understand Token-gating, Tokenization
+1. Understanding Tokenization and Token-gating 
 2. Set up the development environment
 3. **Implement Web3 authentication** with Sign-In With Ethereum (SIWE) using Thirdweb Auth.
 4. **Create a token-gating mechanism** to verify ERC-20 (stRIF) balances using Thirdweb.
@@ -30,11 +30,11 @@ This guide will also demonstrate how token ownership can be used to control acce
     ```
 > Bun is used in this article but you could use your preferred package manager.
 
-## Understanding Tokenization & Token-gating
+## Understanding Tokenization & Token-Gating
 
 Tokenization refers to the process of converting real-world assets into digital tokens on a blockchain. These tokens can represent anything of value—real estate, art, commodities, or even financial instruments—and make them tradable, divisible, and accessible globally. 
 
-Token-gating leverages this by granting exclusive access based on token ownership, it provides a way to restrict access based on a user’s token holdings, ensuring that only eligible users can interact with certain features or content. This method, common in dApps, governance (DAOs) and NFT platforms, enables communities to reward loyalty and manage privileges transparently. Token-gating moves access control from central authorities to on-chain proof of ownership, linking digital asset value to real-world utility.
+Token-Gating leverages this by granting exclusive access based on token ownership, it provides a way to restrict access based on a user’s token holdings, ensuring that only eligible users can interact with certain features or content. This method, common in dApps, governance (DAOs) and NFT platforms, enables communities to reward loyalty and manage privileges transparently. Token-gating moves access control from central authorities to on-chain proof of ownership, linking digital asset value to real-world utility.
 
 [RootstockCollective, or The Collective](https://rootstockcollective.xyz/), is a DAO (Decentralized Autonomous Organization) designed to develop the Rootstock ecosystem by empowering and rewarding builders and users of Rootstock, and RIF token holders. Members of the RootstockCollective gain access exclusive voting rights and participation in the DAO’s governance and decision-making process on Rootstock.
 
