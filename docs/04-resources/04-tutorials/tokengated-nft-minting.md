@@ -1,12 +1,12 @@
 ---
 sidebar_position: 7
 title: Build a Token-Gated NFT Minting dApp with Thirdweb and RootstockCollective
-sidebar_label: Build a Token-gated dApp on Rootstock
+sidebar_label: Build a Token-Gated dApp on Rootstock
 description: "A developers guide to building Token-Gated NFT Minting dApps on Rootstock using Thirdweb & RootstockCollective."
-tags: [knowledge-base, thirdweb, rootstockcollective, rootstock, tokengating, content, NFT minting]
+tags: [knowledge-base, thirdweb, rootstockcollective, DAO, rootstock, tokengating, content, NFTs]
 ---
 
-In this guide, we’ll build a token-gated platform using **[Thirdweb](https://thirdweb.com/)** and **[RootstockCollective](https://rootstockcollective.xyz/)**, showing how to integrate Web3 wallets authentication, use Thirdweb to mint NFT drops, verify token balances, and enable NFT minting. We'll use the **Thirdweb SDK** to handle key actions like connecting wallets, check token holdings, and mint NFTs. We’ll use **Thirdweb’s UI components** to manage media rendering and user interactions with blockchain transactions.
+In this guide, we’ll build a token-gated platform using **[Thirdweb](https://thirdweb.com/)** and **[RootstockCollective](https://rootstockcollective.xyz/)**, this dApp will enable members of the platform to mint unique collectibles based on the amount of stRIF tokens they hold. We will learn how to integrate Web3 wallets authentication, use Thirdweb to mint NFT drops, verify token balances, and enable NFT minting.
 
 This guide will also demonstrate how token ownership can be used to control access. We’ll use **stRIF**, the governance token of the **RootstockCollective**, to determine which NFTs users can mint. Holding **stRIF** will enable members to mint unique collectibles based on the amount of stRIF tokens they hold, they will be granted access to mint two ERC-721 collections: **Rooties** (Level 1) and **Legends** (Level 2). This ensures that only engaged community members can participate, creating an exclusive and verifiable experience.
 
@@ -38,7 +38,7 @@ Token-Gating leverages this by granting exclusive access based on token ownershi
 
 [RootstockCollective, or The Collective](https://rootstockcollective.xyz/), is a DAO (Decentralized Autonomous Organization) designed to develop the Rootstock ecosystem by empowering and rewarding builders and users of Rootstock, and RIF token holders. Members of the RootstockCollective gain access exclusive voting rights and participation in the DAO’s governance and decision-making process on Rootstock.
 
-[Thirdweb’s](https://portal.thirdweb.com/) pre-built contracts to avoid writing the smart contracts from scratch, this makes the deployment fast and hassle-free. These contracts are fully compatible with Rootstock and allows us focus on configuring the logic of the platform rather than low-level implementation details.
+[Thirdweb’s](https://portal.thirdweb.com/) pre-built contracts to avoid writing the smart contracts from scratch, this makes the deployment fast and hassle-free. These contracts are fully compatible with Rootstock and allows us focus on configuring the logic of the platform rather than low-level implementation details. This guide will show how to use the **Thirdweb SDK** to handle key actions like connecting wallets, check token holdings, and mint NFTs. We’ll also use **Thirdweb’s UI components** to manage media rendering and user interactions with transactions on Rootstock.
 
 ## Getting Started
 
