@@ -23,7 +23,7 @@ description="The Vyper Starter Kit tutorial demonstrates how to deploy smart con
 <FilterItem
 value="advanced"
 title="Build a Token-Gated NFT Minting dApp on Rootstock using Thirdweb and RootstockCollective"
-subtitle="tokengating"
+subtitle="NFT"
 color="orange"
 linkHref="/resources/tutorials/tokengated-nft-minting/"
 description="A developers guide to building a Token-Gated NFT Minting dApp on Rootstock using Thirdweb & RootstockCollective."
