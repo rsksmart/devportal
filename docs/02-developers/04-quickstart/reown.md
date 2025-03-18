@@ -2,26 +2,26 @@
 sidebar_label: Reown
 sidebar_position: 108
 title: Rootstock Reown-Wagmi Starter Kit
-description: 'The Rootstock Reown-Wagmi Starter Kit provides a solid foundation for developing decentralized applications (dApps) on the Rootstock blockchain. It streamlines development by leveraging the React,Reown, Wagmi, and Shadcn libraries.'
+description: 'The Rootstock Reown-Wagmi Starter Kit provides a solid foundation for developing decentralized applications (dApps) on the Rootstock blockchain. It streamlines development by leveraging React, Reown, Wagmi, and Shadcn libraries.'
 tags: [rsk, rootstock, developers, reown, wagmi, quickstart, dApps, Smart Contracts]
 ---
 
 The Rootstock Reown-Wagmi starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain. 
 It leverages the security of Bitcoin and the flexibility of Ethereum. 
 
-The kit uses [Reown](https://reown.com/) (Previously WalletConnect) to handle wallet management, [Wagmi](https://wagmi.sh/), a React Hooks library, to simplify smart contracts and blockchain network interactions and and [Shadcn libraries](https://ui.shadcn.com/). 
+The kit uses [Reown](https://reown.com/) (previously WalletConnect) to handle wallet management, [Wagmi](https://wagmi.sh/), a React Hooks library, to simplify smart contracts and blockchain network interactions, and [Shadcn libraries](https://ui.shadcn.com/). 
 
 > This starter kit is designed to help developers jump-start their dApp development journey on Rootstock.
 
 ## Prerequisites
-- **Node.js and Git:** Ensure to have Node.js and Git installed on your system. 
+- **Node.js and Git:** Ensure that Node.js and Git are installed on your system. 
     - See the [Prerequisites](/developers/requirements/#installing-nodejs-and-npm) section for how to download Node.js using NVM.
 - **Package Manager:** You can use either Yarn or npm to manage your project dependencies:
     - **Yarn:** Install Yarn, a package manager for Node.js projects. You can do this by running the following command in your terminal:
       ```bash
       npm install -g yarn
       ```
-    - **npm:** npm comes bundled with Node.js installation. To verify your npm installation, run:
+    - **npm:** npm comes bundled with the Node.js installation. To verify your npm installation, run:
       ```bash
       npm -v
       ```
@@ -35,7 +35,7 @@ The kit uses [Reown](https://reown.com/) (Previously WalletConnect) to handle wa
 
 :::tip[Rootstock Blockchain Developer Course]
 
-Learn how to write, test, secure, deploy and verify smart contracts on the Rootstock blockchain network. Enroll for the [Rootstock Blockchain Developer Course](/resources/courses/).
+Learn how to write, test, secure, deploy, and verify smart contracts on the Rootstock blockchain network. Enroll in the [Rootstock Blockchain Developer Course](/resources/courses/).
 :::
 
 ## Setup
@@ -48,26 +48,26 @@ cd rsk-reown-starter-kit
 ```
 
 ### 2. Get Project ID
-Every dApp that relies on Reown (Previously WalletConnect) now needs to obtain a projectId from [Reown Cloud](https://cloud.reown.com). This is free and only takes few minutes.
+Every dApp that relies on Reown (previously WalletConnect) now needs to obtain a project ID from [Reown Cloud](https://cloud.reown.com). This is free and only takes a few minutes.
 
 To get the key:
 1. Go to [Reown](https://cloud.reown.com/sign-in) and sign up.
 2. Create a new project by clicking on **Create Project**.
-3. Add a Name and Link to your project, select a product (AppKit or WalletKit), select **WalletKit**.
-4. Now you will see the project ID, copy it.
+3. Add a name and link to your project, select a product (AppKit or WalletKit), and select **WalletKit**.
+4. Now you will see the project ID. Copy it.
 
 ### 3. Environment Setup
 To set up your environment, follow these steps:
   - Create a `.env` file and add environment variables.
     ```text
-    VITE_WC_PROJECT_ID=Your projectid from cloud Walletconnect
+    VITE_WC_PROJECT_ID=Your project ID from Reown Cloud
     VITE_BUNDLER_API_KEY='etherspot_public_key'
     VITE_CUSTOM_BUNDLER_URL=https://rootstocktestnet-bundler.etherspot.io/
     ```
-  - Put your project ID, and for testnet purposes you can keep the Etherspot bundler api key and bundler url, in case you need a productive environment, please go to [Etherspot](https://etherspot.io/) create an account and obtain your api key.
+  - Enter your project ID. For testnet purposes, you can keep the Etherspot Bundler API key and Bundler URL. If you need a production environment, please go to [Etherspot](https://etherspot.io/), create an account, and obtain your API key.
 
 ### 4. Install Dependencies
-Before running the project, make sure to have the necessary dependencies installed. You can use NPM or YARN, run the following command to install dependencies:
+Before running the project, make sure to have the necessary dependencies installed. You can use NPM or Yarn. Run the following command to install dependencies:
 ```bash
 yarn
 ```
@@ -77,7 +77,7 @@ Now that you’ve cloned the repository and installed dependencies, it’s time 
 ```bash
 yarn dev
 ```
-This will start the Rootstock Reown Starter dApp locally, allowing you to develop and test your smart contracts. You can access the Vite server at [http://localhost:5173](http://localhost:5173).
+This will start the Rootstock Reown Starter DApp locally, allowing you to develop and test your smart contracts. You can access the Vite server at [http://localhost:5173](http://localhost:5173).
 
 ## Result
 
@@ -98,7 +98,7 @@ After successfully running your project using the command above, do the followin
 ## Test Project
 To test the project, follow these simple steps:
 1. **Connect Your Wallet:** Click the “Connect” button.
-2. **Navigate to the Reown-Wagmi Section:** Scroll down and find the card labeled “Contract Interaction with Reown Starter Kit.” Click on it.
+2. **Navigate to the Reown-Wagmi Section:** Scroll down and find the card labeled “Contract Interaction with Reown Starter Kit.” Click it.
 3. **Explore the Tabs:** In the Wagmi section, you’ll see three tabs: ERC-20, ERC-721, and ERC-1155. Click on any of these tabs to explore further.
 
 <img src="/img/developers/quickstart/reown-starter-kit/2.reown.png"  width="800" height="600"/>
@@ -114,7 +114,7 @@ Src
 .env.example
 ```
 
-The `src` folder is organized to streamline the development process and make it easy to locate specific code or assets. Here's a detailed breakdown:
+The `src` folder is organized to streamline the development process and facilitate locating specific code or assets. Here's a detailed breakdown:
 
 #### `.src` Folder Structure
 - **Assets:** Contains the ABIs (Application Binary Interfaces) for ERC20, ERC721, and ERC1155.
@@ -127,9 +127,9 @@ The `src` folder is organized to streamline the development process and make it 
   - **Footers.tsx:** Footer component.
   - **Navbar.tsx:** Navbar component.
 - **Config:**
-  - **config.ts:** Holds the wagmi configuration for reown (walletconnect) implementation.
+  - **config.ts:** Holds the Wagmi configuration for Reown (WalletConnect) implementation.
   - **provider.tsx:** Configuration for web3 providers.
-  - **wagmiProviderConfig.ts:** Configuration for WAGMI providers.
+  - **wagmiProviderConfig.ts:** Configuration for Wagmi providers.
 - **Lib:** Contains various utility folders for easy organization:
   - **Constants:** Application constants.
   - **Functions:** General functions used across the app.
@@ -288,5 +288,5 @@ An asynchronous function that handles the minting of tokens.
 
 ## Join the Community
 
-Building dApps can be challenging, but you’re not alone. 
+Building dApps can be challenging, but you’re not alone.  
 Join the [Rootstock Discord](http://discord.gg/rootstock) community for help, questions, and collaboration.
