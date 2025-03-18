@@ -91,8 +91,6 @@ To test the Wagmi project, follow these simple steps:
 
 <img src="/img/developers/quickstart/wagmi-starterkit-tabs.png"  width="800" height="600"/>
 
-Provide a section on the document about how  the contracts are called in the code, folder structure for ease of finding codes and the main features from Wagmi and Rainbowkit used in the codebase.
-
 ## Understanding the Codebase
 
 ### Folder Structure
