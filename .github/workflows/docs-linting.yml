@@ -12,7 +12,8 @@ jobs:
 
       - name: Fetch docs-style-guide repository
         run: |
-          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/rsksmart/docs-style-guide.git ./docs-style-guide
+          git clone https://github.com/rsksmart/docs-style-guide.git ./docs-style-guide
+          
 
       - name: Install Vale via errata-ai/vale-action
         uses: errata-ai/vale-action@v2
