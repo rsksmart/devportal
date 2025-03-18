@@ -1,5 +1,5 @@
 ---
-section_position: 103
+section_position: 112
 sidebar_label: Dynamic
 title: Dynamic Starter Kit
 description: "The Rootstock Dynamic Starter Kit uses the wagmi library for faster integration of Web3 features into a Next.js application. It uses Wagmi hooks, ability to connect to wallets, retrieve balances, transfer tokens, and sign messages."

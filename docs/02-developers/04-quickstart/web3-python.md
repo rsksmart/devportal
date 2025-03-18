@@ -1,6 +1,6 @@
 ---
 sidebar_label: Web3.py
-sidebar_position: 108
+sidebar_position: 109
 title:  Deploy and Interact with a Smart Contract using Web3.py
 description: 'Deploy and Interact with a Smart Contract Using Web3.py.'
 tags: [quick starts, rsk, rootstock, ethereum, python, web3.py, developers, smart contracts]
