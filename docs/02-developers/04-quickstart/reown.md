@@ -9,7 +9,7 @@ tags: [rsk, rootstock, developers, reown, wagmi, quickstart, dApps, Smart Contra
 The Rootstock Reown-Wagmi starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain. 
 It leverages the security of Bitcoin and the flexibility of Ethereum. 
 
-The kit uses [Reown](https://reown.com/) (previously WalletConnect) to handle wallet management, [Wagmi](https://wagmi.sh/), a React Hooks library, to simplify smart contracts and blockchain network interactions, and [Shadcn libraries](https://ui.shadcn.com/). 
+The kit uses [Reown](https://reown.com/) (previously WalletConnect) to handle wallet management, [Wagmi](https://wagmi.sh/), a React Hooks library, to simplify smart contracts and blockchain network interactions, and [Shadcn libraries](https://ui.shadcn.com/), a set of customizable and accessible UI components for React, designed to streamline frontend development. 
 
 > This starter kit is designed to help developers jump-start their dApp development journey on Rootstock.
 
@@ -53,8 +53,8 @@ Every dApp that relies on Reown (previously WalletConnect) now needs to obtain a
 To get the key:
 1. Go to [Reown](https://cloud.reown.com/sign-in) and sign up.
 2. Create a new project by clicking on **Create Project**.
-3. Add a name and link to your project, select a product (AppKit or WalletKit), and select **WalletKit**.
-4. Now you will see the project ID. Copy it.
+3. Add a name and link to your project, on the product selection page between AppKit and WalletKit, select **WalletKit**.
+4. Your project ID is shown in the left menu under your project name. Click to copy it
 
 ### 3. Environment Setup
 To set up your environment, follow these steps:
