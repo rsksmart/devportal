@@ -14,10 +14,11 @@ jobs:
         run: |
           git clone https://github.com/rsksmart/docs-style-guide.git ./docs-style-guide
 
-      - name: Install Vale via errata-ai/vale-action
+      - name: Install and run Vale linting
         uses: errata-ai/vale-action@v2
         with:
             filter_mode: diff_context
+            files: docs/**/*.md
             vale_flags: "--no-exit --minAlertLevel=error --config=docs-style-guide/.vale.ini"
             reporter: github-pr-review
             fail_on_error: true
