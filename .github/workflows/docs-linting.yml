@@ -18,6 +18,6 @@ jobs:
         uses: errata-ai/vale-action@v2
         with:
             filter_mode: diff_context
-            vale_flags: "--no-exit --minAlertLevel=error"
+            vale_flags: "--no-exit --minAlertLevel=error --config=docs-style-guide/.vale.ini"
             reporter: github-pr-review
             fail_on_error: true
