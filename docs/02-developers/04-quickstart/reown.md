@@ -108,7 +108,8 @@ To test the project, follow these simple steps:
 ### Folder Structure
 
 ```
-Public
+public
+src
 Src
 .env
 .env.example
