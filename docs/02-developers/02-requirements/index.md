@@ -147,8 +147,8 @@ Boost productivity with these CLI tools:
   </TabItem>
   <TabItem value="linux" label="Linux">
       1. Open a terminal.
-      2. Update package manager with sudo apt update
-      3. Install Node.js and npm with sudo apt install nodejs npm
+      2. Update package manager with `sudo apt update`
+      3. Install Node.js and npm with `sudo apt install nodejs npm`
       4. Check versions in the terminal with `node -v` and `npm -v`
   </TabItem>
 </Tabs>
