@@ -77,7 +77,7 @@ Now that you’ve cloned the repository and installed dependencies, it’s time 
 ```bash
 yarn dev
 ```
-This will start the Rootstock Reown Starter DApp locally, allowing you to develop and test your smart contracts. You can access the Vite server at [http://localhost:5173](http://localhost:5173).
+This will start the Rootstock Reown Starter dApp locally, allowing you to develop and test your smart contracts. You can access the Vite server at [http://localhost:5173](http://localhost:5173).
 
 ## Result
 
