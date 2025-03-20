@@ -13,6 +13,7 @@ values={[
 {label: 'Hardhat', value: 'hardhat'},
 {label: 'Remix', value: 'remix'},
 {label: 'Wagmi', value: 'wagmi'},
+{label: 'Reown', value: 'reown'},
 {label: 'On-chain data', value: 'data'},
 {label: 'RPC API', value: 'rpc'},
 {label: 'Port to Rootstock', value: 'port-dapps'}
@@ -52,6 +53,15 @@ values={[
     linkHref="/developers/quickstart/wagmi/"
     linkTitle="Use the Kit"
     description="This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Wagmi and Shadcn libraries."
+  />
+<FilterItem
+    value="reown, beginner"
+    title="Reown Starter Kit"
+    subtitle="quickstart"
+    color="orange"
+    linkHref="/developers/quickstart/reown/"
+    linkTitle="Use the Kit"
+    description="This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Reown, Wagmi and Shadcn libraries."
   />
 <FilterItem
     value="hardhat, beginner"
