@@ -53,7 +53,7 @@ Every dApp that relies on Reown (previously WalletConnect) now needs to obtain a
 To get the key:
 1. Go to [Reown](https://cloud.reown.com/sign-in) and sign up.
 2. Create a new project by clicking on **Create Project**.
-3. Add a name and link to your project, on the product selection page between AppKit and WalletKit, select **WalletKit**.
+3. Add a name and link to your project, on the product selection screen, select **WalletKit** and continue.
 4. Your project ID is shown in the left menu under your project name. Click to copy it
 
 ### 3. Environment Setup
@@ -77,7 +77,7 @@ Now that you’ve cloned the repository and installed dependencies, it’s time 
 ```bash
 yarn dev
 ```
-This will start the Rootstock Reown Starter DApp locally, allowing you to develop and test your smart contracts. You can access the Vite server at [http://localhost:5173](http://localhost:5173).
+This will start the Rootstock Reown Starter dApp locally, allowing you to develop and test your smart contracts. You can access the Vite server at [http://localhost:5173](http://localhost:5173).
 
 ## Result
 
@@ -108,7 +108,8 @@ To test the project, follow these simple steps:
 ### Folder Structure
 
 ```
-Public
+public
+src
 Src
 .env
 .env.example
