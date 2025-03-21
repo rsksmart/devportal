@@ -2,9 +2,12 @@
 sidebar_label: Reproducible Build
 sidebar_position: 7
 title: Gradle building
-tags: [rsk, node, compile, reproducible, checksum, rootstock]
-description: "A deterministic build process used to build Rootstock node JAR file. Provides a way to be reasonable sure that the JAR is built from GitHub RSKj repository. Makes sure that the same tested dependencies are used and statically built into the executable."
+tags: rsk, node, compile, reproducible, checksum, rootstock
+description: A deterministic build process used to build Rootstock node JAR file. Provides a way to be reasonable sure that the JAR is built from GitHub RSKj repository. Makes sure that the same tested dependencies are used and statically built into the executable.
 ---
+
+
+TESTING SYNCHRONIZATION
 
 ## Setup instructions for gradle build in docker container
 
