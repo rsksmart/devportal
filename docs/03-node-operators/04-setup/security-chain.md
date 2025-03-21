@@ -1,13 +1,15 @@
 ---
-
 sidebar_label: Security Chain
 sidebar_position: 8
 title: Verify security chain of RSKj source code
-tags: [rsk, rskj, node, security, node operators, reproducible builds, verification]
-description: "All the different ways that you can verify RSKj: Release signing key, fingerprint of the public key, SHA256SUMS.asc, binary dependencies, secure environment script"
+tags: rsk, rskj, node, security, node operators, reproducible builds, verification
+description: All the different ways that you can verify RSKj: Release signing key, fingerprint of the public key, SHA256SUMS.asc, binary dependencies, secure environment script
 ---
 
+
 ## Verify authenticity of RSKj source code and its binary dependencies
+
+TESTING SYNCHRONIZATION
 
 The authenticity of the source code must be verified by checking the signature of the release tags in the official Git repository. See [Reproducible builds](/node-operators/setup/reproducible-build/). The authenticity of the binary dependencies is verified by Gradle after following the steps below to install the necessary plugins.
 
@@ -49,7 +51,7 @@ sub   rsa4096 2022-05-11 [E]
 
 ## Verify the signature of SHA256SUMS.asc
 
-The file`SHA256SUMS.asc` is signed with Rootstock public key and includes SHA256 hashes of the files necessary to start the build process. 
+The file`SHA256SUMS.asc` is signed with Rootstock public key and includes SHA256 hashes of the files necessary to start the build process.
 
 _Note: Ensure to `cd` into the [`rskj`](https://github.com/rsksmart/rskj) directory_ before executing the commands below.
 
