@@ -2,9 +2,12 @@
 sidebar_label: Hardware Requirements
 sidebar_position: 3
 title: Minimum Hardware Requirements to Run a Rootstock Node
-tags: [hardware, specs, requirements]
-description: "Minimum hardware requirements for Rootstock."
+tags: hardware, specs, requirements
+description: Minimum hardware requirements for Rootstock.
 ---
+
+
+TESTING SYNCHRONIZATION
 
 These are the minimum requirements that must be met to run an Rootstock node (Mainnet and Testnet):
 
