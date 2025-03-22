@@ -6,6 +6,7 @@ tags: [java, install, rootstock, rskj, node, how-to, network, requirements, main
 description: "Install RSKj using Java."
 ---
 
+
 To setup a Rootstock node using Java, you need to:
 
 - Ensure your system meets the [minimum requirements](/node-operators/setup/requirements/) for installing the Rootstock node.
