@@ -2,8 +2,8 @@
 sidebar_label: Transaction Rate Limiter
 sidebar_position: 700
 title: Transaction rate limiting
-description: 'Transaction rate limiting on the Rootstock network. The features, their importance, how to use and configure them.'
 tags: [node operators, rocksdb, node, rskj, rate, limit]
+description: "Transaction rate limiting on the Rootstock network. The features, their importance, how to use and configure them."
 ---
 
 Let’s take a look at what a rate limiter is, the importance of using a rate limiter, its features, and how to configure the rate limiter in RSKj nodes using config keys.

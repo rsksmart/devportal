@@ -1,5 +1,4 @@
 ---
-
 sidebar_label: Security Chain
 sidebar_position: 8
 title: Verify security chain of RSKj source code
@@ -49,7 +48,7 @@ sub   rsa4096 2022-05-11 [E]
 
 ## Verify the signature of SHA256SUMS.asc
 
-The file`SHA256SUMS.asc` is signed with Rootstock public key and includes SHA256 hashes of the files necessary to start the build process. 
+The file`SHA256SUMS.asc` is signed with Rootstock public key and includes SHA256 hashes of the files necessary to start the build process.
 
 _Note: Ensure to `cd` into the [`rskj`](https://github.com/rsksmart/rskj) directory_ before executing the commands below.
 

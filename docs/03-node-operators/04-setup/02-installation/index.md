@@ -6,6 +6,8 @@ tags: [rsk, rootstock, rskj, node, developers, merged mining]
 description: "Install RSKj on different OS."
 ---
 
+# RSKj Node Installation
+
 Rootstock nodes can be installed on Ubuntu OS, Windows, Docker and Java. Here, we provide step-by-step instructions for all supported dev environments. Depending on your network performance, it usually takes *10 to 15 mins* to setup a working node on Mainnet.
 
 > Ensure that your system meets the [minimum requirements](/node-operators/setup/requirements/) before installing the Rootstock nodes.
