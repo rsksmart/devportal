@@ -103,7 +103,7 @@ Then click "Switch Network" to connect to the Rootstock Mainnet.
 
 At this point, you should have everything set up:
 You have a wallet installed,
-that wallet is connected to the RSK Mainnet,
+that wallet is connected to the RSK RSK Mainnet,
 and you have addresses inside that wallet.
 
 You're ready to verify that you can use your wallet to sign messages!
