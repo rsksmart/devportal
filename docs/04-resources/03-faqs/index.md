@@ -54,7 +54,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     <Accordion.Item eventKey="5">
     <Accordion.Header as="h3">What is the current state of the Rootstock project?</Accordion.Header>
     <Accordion.Body>
-      - As of March 2024, the latest released version of Rootstock is the [Arrowhead v6.0.0](https://github.com/rsksmart/rskj/releases), an update that is mainly focused on bringing Ethereum compatibility enhancements to the Rootstock virtual machine, along with notable improvements and performance optimization in the PowPeg protocol. Read more [Arrowhead 6.0.0: What You Need To Know About Rootstock’s Upcoming Network Upgrade](https://blog.rootstock.io/noticia/arrowhead-6-0-0/)
+      - As of February 2025, the latest released version of Rootstock is the [Lovell v7.0.0](https://github.com/rsksmart/rskj/releases), an update that is mainly focused on bringing Ethereum compatibility enhancements to the Rootstock virtual machine, along with notable improvements and performance optimization in the PowPeg protocol. Read more [Introducing Lovell 7.0.0: What You Need To Know About Rootstock’s Upcoming Network Upgrade](https://blog.rootstock.io/noticia/introducing-lovell-7-0-0/)
       - Live statistics about the entire Rootstock network are available at Rootstock Stats, and all the necessary source codes can be found at the Rootstock GitHub organization: [github.com/rsksmart](https://github.com/rsksmart).
     </Accordion.Body>
   </Accordion.Item>

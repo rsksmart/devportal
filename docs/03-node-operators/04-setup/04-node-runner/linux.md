@@ -24,7 +24,7 @@ Recommended IDEs:
 
 :::warning[Important]
 
-Starting with v6.4.0, the minimum supported Java LTS version is Java 17. Previous Java versions will no longer be supported.
+Starting with [v6.4.0](/changelog/), the minimum supported Java LTS version is Java 17. Previous Java versions will no longer be supported.
 
 :::
 
@@ -37,7 +37,7 @@ Run these commands in the terminal:
 ```shell
 git clone --recursive https://github.com/rsksmart/rskj.git
 cd rskj
-git checkout tags/ARROWHEAD-6.4.0 -b ARROWHEAD-6.4.0
+git checkout tags/LOVELL-7.0.0 -b LOVELL-7.0.0
 ```
 
 *Note:* It is better to download the code into a short path.
@@ -59,7 +59,7 @@ This will download and set important components (e.g. Gradle Wrapper).
 
 ## IntelliJ IDEA setup
 
-### Compiling the node 
+### Compiling the node
 
 Now, you can launch IntelliJ IDEA:
 

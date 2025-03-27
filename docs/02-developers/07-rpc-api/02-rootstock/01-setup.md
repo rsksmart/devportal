@@ -7,7 +7,7 @@ description: "Get started with the Rootstock RPC Service to interact with Rootst
 ---
 
 <div align="center">
-    <img width="50%" src="/img/tools/rpc-api/01-rpc-api-landing.png" alt="RPC Service Landing Page"/>
+    <img width="100%" src="/img/tools/rpc-api/01-rpc-api-landing.png" alt="RPC Service Landing Page"/>
 </div>
 
 :::info[Info]
@@ -19,7 +19,7 @@ The [Rootstock RPC API](https://rpc.rootstock.io/)  is available on <Shield labe
 Visit the [Rootstock RPC API](https://rpc.rootstock.io/) to create a **free** account, and click on _Sign up_
 
 <div align="center">
-    <img width="50%" src="/img/tools/rpc-api/02-sign-up.png" alt="RPC Service Sign Up"/>
+    <img width="100%" src="/img/tools/rpc-api/02-sign-up.png" alt="RPC Service Sign Up"/>
 </div>
 
 ## Get An API Key
@@ -30,7 +30,7 @@ Log in to the dashboard, and click on _New API key_:
 
 ````mdx-code-block
 <div align="center">
-    <img width="50%" src="/img/tools/rpc-api/03-generate-new-api-key.png" alt="Generate an API key"/>
+    <img width="100%" src="/img/tools/rpc-api/03-generate-new-api-key.png" alt="Generate an API key"/>
 </div>
 ````
 
@@ -38,7 +38,7 @@ Choose a name to identify your `apikey`, and the Network (either `Testnet` or `M
 
 ````mdx-code-block
 <div align="center">
-    <img width="50%" src="/img/tools/rpc-api/04-create-api-key.png" alt="Create API key"/>
+    <img width="100%" src="/img/tools/rpc-api/04-create-api-key.png" alt="Create API key"/>
 </div>
 ````
 
@@ -48,7 +48,7 @@ Click on the newly created `apikey` to get the details:
 
 ````mdx-code-block
 <div align="center">
-    <img width="50%" src="/img/tools/rpc-api/05-make-first-api-call.png" alt="Make First API Call" />
+    <img width="100%" src="/img/tools/rpc-api/05-make-first-api-call.png" alt="Make First API Call" />
 </div>
 ````
 
@@ -56,7 +56,7 @@ You can make your first api call by using one of the provided examples, or simpl
 
 ````mdx-code-block
 <div align="center">
-    <img width="50%" src="/img/tools/rpc-api/06-connect-api.png" alt="Connect API"/>
+    <img width="100%" src="/img/tools/rpc-api/06-connect-api.png" alt="Connect API"/>
 </div>
 ````
 

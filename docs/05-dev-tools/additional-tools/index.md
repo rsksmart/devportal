@@ -1,5 +1,5 @@
 ---
-sidebar_position: 13
+sidebar_position: 15
 sidebar_label: General Tools
 title: General Tools
 description: "General tools to build on Rootstock" 
@@ -8,11 +8,13 @@ tags: [hardhat, quick start, developer tools, rsk, rootstock, ethereum, dApps, s
 
 ## Faucets
 
-* [Rootstock Faucet](https://faucet.rootstock.io/): Get free RBTC testnet tokens for development and testing.
+* [Rootstock Faucet](https://faucet.rootstock.io/): Get free test RBTC tokens for development and testing.
 * [RIF Testnet Faucet](https://faucet.rifos.org/): Obtain free RIF testnet tokens to explore the RIF ecosystem.
+* [Thirdweb Faucet](https://thirdweb.com/rootstock-testnet): Get free test RBTC tokens for development and testing.
+* [Blast Faucet](https://blastapi.io/faucets/rootstock-testnet): Get free test RBTC tokens for development and testing.
 
-## Gas Fees
-* [Rootstock Gas Station](https://rskgasstation.info/?AspxAutoDetectCookieSupport=1): Estimate gas fees for your transactions on the Rootstock network.
+## Gas
+* See the [gas](/dev-tools/gas/) section for more information.
 
 ## Exchanges - Getting RBTC
 

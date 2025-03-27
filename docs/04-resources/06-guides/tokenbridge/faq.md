@@ -65,14 +65,13 @@ Find a list of frequently asked questions about the Token Bridge.
   <Accordion.Item eventKey="8">
     <Accordion.Header as="h3">Is there a limit on how many tokens can be bridged over?</Accordion.Header>
     <Accordion.Body>
-      - There is no limit on the total. Hypothetically, the entire circulating supply can be bridged, though this is unlikely happen as there will be strong use cases to use the tokens on either network.
-      - However, there is a minimum and maximum amount per transaction and daily quotas. You can see them on [https://dapp.tokenbridge.rootstock.io/](https://dapp.tokenbridge.rootstock.io/)
+      - Visit the [token crossing limit page](/resources/guides/tokenbridge/troubleshooting/) to view the min/max values.
     </Accordion.Body>
   </Accordion.Item>
    <Accordion.Item eventKey="9">
     <Accordion.Header as="h3">Can any token be bridged over?</Accordion.Header>
     <Accordion.Body>
-      - Only whitelisted tokens can cross the bridge, this curated list is used to avoid malicious contracts and DDoS attacks.
+      - Only whitelisted tokens can cross the bridge, this curated list is used to avoid malicious contracts and DDoS attacks. See the [list of supported tokens](/resources/guides/tokenbridge/troubleshooting/)
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="10">

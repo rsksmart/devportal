@@ -14,12 +14,21 @@ values={[
 {label: 'Hardhat', value: 'hardhat'},
 {label: 'Remix', value: 'remix'},
 {label: 'Wagmi', value: 'wagmi'},
+{label: 'Reown', value: 'reown'},
 {label: 'On-chain data', value: 'data'},
 {label: 'RPC API', value: 'rpc'},
-{label: 'Ape', value: 'ape'},
 {label: 'Port to Rootstock', value: 'port-dapps'}
 ]}>
 <FilterItem
+    value="beginner, Advanced"
+    title="Vyper Starter Kit"
+    subtitle="quickstart"
+    color="orange"
+    linkHref="/developers/quickstart/rootstock-vyper/"
+    linkTitle="Use the Kit"
+    description="The Rootstock Vyper Starter Kit demonstrates how to deploy smart contracts written in Vyper to the Rootstock network."
+  />
+  <FilterItem
     value="dynamic, wagmi, advanced"
     title="Dynamic Starter Kit"
     subtitle="quickstart"
@@ -27,6 +36,15 @@ values={[
     linkHref="/developers/quickstart/dynamic/"
     linkTitle="Use the Kit"
     description="The Dynamic Starter Kit uses the Wagmi library for faster integration of Web3 features into a Next.js application."
+  />
+  <FilterItem
+    value="beginner, web3auth, advanced"
+    title="Web3Auth Starter Kit"
+    subtitle="web3auth"
+    color="orange"
+    linkHref="/developers/quickstart/web3auth/"
+    linkTitle="Get Started"
+    description="A step-to-step guide for developers to build and deploy passwordless dApps on Rootstock using Web3Auth and Wagmi."
   />
 <FilterItem
     value="wagmi, beginner"
@@ -38,6 +56,15 @@ values={[
     description="This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Wagmi and Shadcn libraries."
   />
 <FilterItem
+    value="reown, beginner"
+    title="Reown Starter Kit"
+    subtitle="quickstart"
+    color="orange"
+    linkHref="/developers/quickstart/reown/"
+    linkTitle="Use the Kit"
+    description="This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Reown, Wagmi and Shadcn libraries."
+  />
+<FilterItem
     value="hardhat, beginner"
     title="Hardhat Starter Kit"
     subtitle="quickstart"
@@ -45,6 +72,15 @@ values={[
     linkHref="/developers/quickstart/hardhat/"
     linkTitle="Use the Kit"
     description="Smart Contract examples, Tests, Deployments and Tasks for Common ERC Standards (ERC20, ERC721, ERC1155)."
+  />
+<FilterItem
+    value="hardhat, beginner"
+    title="Hardhat Ignition Starter Kit"
+    subtitle="quickstart"
+    color="orange"
+    linkHref="/developers/quickstart/hardhat-ignition/"
+    linkTitle="Use the Kit"
+    description="This guide is designed to help you deploy smart contracts on the Rootstock blockchain, with a focus on using Hardhat Ignition."
   />
 <FilterItem
     value="foundry, sc, beginner"
@@ -120,7 +156,7 @@ values={[
     description="In this guide, we will use the Remix IDE to write, compile, deploy, interact and verify a smart contract on the Rootstock Explorer."
   />
   <FilterItem
-    value="beginner, ape, advanced"
+    value="beginner, advanced"
     title="Getting Started with Apeworx"
     subtitle="Ape"
     color="orange"

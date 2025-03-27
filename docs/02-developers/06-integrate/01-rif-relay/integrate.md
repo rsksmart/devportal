@@ -2,9 +2,10 @@
 sidebar_label: Integrations
 sidebar_position: 200
 title: RIF Relay Integration
+description: Integrating RIF Relay in a dApp.
 tags: [rif, envelope, relay, integration guide]
-description: Integrating RIF Relay in a dApp
 ---
+
 
 This guide goes over the exposed RIF Relay methods that dApps and wallets can consume to provide relaying as a service, with the purpose of allowing users to pay transaction fees with tokens in a particular system.
 

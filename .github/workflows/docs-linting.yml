@@ -1,0 +1,24 @@
+name: Lint Documentation
+
+on:
+  [pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Fetch docs-style-guide repository
+        run: |
+          git clone https://github.com/rsksmart/docs-style-guide.git ./docs-style-guide
+
+      - name: Install and run Vale linting
+        uses: errata-ai/vale-action@v2
+        with:
+            filter_mode: diff_context
+            files: docs/
+            vale_flags: "--no-exit --minAlertLevel=error --config=docs-style-guide/.vale.ini"
+            reporter: github-pr-review
+            fail_on_error: true

@@ -30,6 +30,7 @@ description: "Explore a curated selection of smart contract development tools an
     {label: 'Smart Contracts', value: 'sc'},
     {label: 'Mining', value: 'mine'},
     {label: 'Oracles', value: 'oracles'},
+    {label: 'Attestations', value: 'attest'},
   ]}>
 <FilterItem
     value="bridge, exchange"
@@ -83,9 +84,27 @@ description: "Explore a curated selection of smart contract development tools an
     title="Rootstock Explorer"
     subtitle="Explorers"
     color="orange"
-    linkHref="https://explorer.rootstock.io/"
+    linkHref="/dev-tools/explorers/rootstock/"
     linkTitle="Use the Explorer"
     description="Explore transactions, blocks, addresses, tokens, stats and interact with smart contracts on the Rootstock Explorer."
+  />
+<FilterItem
+    value="explorer, sc"
+    title="Rootstock Blockchair"
+    subtitle="Explorers"
+    color="orange"
+    linkHref="/dev-tools/explorers/blockchair/"
+    linkTitle="Use the Explorer"
+    description="Blockchair explorer is a blockchain search and analytics engine for Rootstock and 40+ chains. It incorporates a multitude of different blockchains into one search engine."
+  />
+<FilterItem
+    value="explorer, sc"
+    title="3xpl"
+    subtitle="Explorers"
+    color="orange"
+    linkHref="/dev-tools/explorers/3xpl/"
+    linkTitle="Use the Explorer"
+    description="3xpl (short for 3xplor3r) is a super-fast, universal explorer for Rootstock. It offers an easy-to-understand block explorer interface for beginner crypto users, as well as lots of professional features for developers and analysts."
   />
 <FilterItem
     value="rpc"
@@ -110,7 +129,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="GetBlock"
     subtitle="json rpc"
     color="orange"
-    linkHref="https://getblock.io/nodes/rsk/"
+    linkHref="/dev-tools/node-rpc/getblock/"
     linkTitle="Make First API Call"
     description="GetBlock provides instant connection to blockchain nodes including Rootstock, Bitcoin (BTC), Ethereum (ETH), among others."
   />
@@ -119,7 +138,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="NOWNodes"
     subtitle="json rpc"
     color="orange"
-    linkHref="https://nownodes.io/nodes/rsk"
+    linkHref="/dev-tools/node-rpc/nownodes/"
     linkTitle="Make First API Call"
     description="NOWNodes is a blockchain-as-a-service enterprise solution that lets users get access to full Nodes and blockbook Explorers via an API."
   />
@@ -128,9 +147,18 @@ description: "Explore a curated selection of smart contract development tools an
     title="dRPC"
     subtitle="json rpc"
     color="orange"
-    linkHref="https://drpc.org/chainlist/rootstock?utm_source=docs&utm_medium=rootstock"
+    linkHref="/dev-tools/node-rpc/drpc/"
     linkTitle="Make First API Call"
     description="dRPC provides access to a distributed network of node providers."
+  />
+<FilterItem
+    value="rpc"
+    title="Blast API"
+    subtitle="json rpc"
+    color="orange"
+    linkHref="/dev-tools/node-rpc/blast-api/"
+    linkTitle="Make First API Call"
+    description="Blast API is a Blockchain-optimized cloud infrastructure for low-latency, cost-effective RPC services."
   />
 <FilterItem
     value="wallet, sc"
@@ -186,6 +214,15 @@ description: "Explore a curated selection of smart contract development tools an
     linkTitle="Get Started"
     description="Access crypto collaterized digital dollars to save, spend & send. Get RIF, USDRIF, MOC, RIF Pro, etc."
   />
+   <FilterItem
+    value="sdk"
+    title="RSK CLI"
+    subtitle="smart contract developement"
+    color="orange"
+    linkHref="/developers/smart-contracts/rsk-cli/"
+    linkTitle="Getting started with RSK CLI"
+    description="The rsk-cli tool or sdk enables users to manage wallets, check balances, send transactions, verify smart contracts and interact with smart contracts on the Rootstock blockchain - a Bitcoin sidechain designed for smart contracts. It supports both mainnet and testnet environments."
+  />
 <FilterItem
     value="bridge, exchange, rifp"
     title="RBTC Flyover"
@@ -240,6 +277,7 @@ description: "Explore a curated selection of smart contract development tools an
     linkTitle="Use Thirdweb"
     description="Thirdweb is a Full-stack web3 development tools, production-grade infrastructure platform for developers to build on Rootstockk."
   />
+ 
 <FilterItem
     value="platform-infra, sc"
     title="useDApp"
@@ -296,12 +334,12 @@ description: "Explore a curated selection of smart contract development tools an
   />
 <FilterItem
     value="gas"
-    title="Gas Station"
+    title="Blocknative Gas Price API"
     subtitle="gas"
     color="orange"
-    linkHref="https://rskgasstation.info/?AspxAutoDetectCookieSupport=1"
-    linkTitle="View Gas Price"
-    description="Rootstock Gas Station."
+    linkHref="/dev-tools/gas/blocknative/"
+    linkTitle="Gas Price API"
+    description="Accurate next block gas price estimation."
   />
 <FilterItem
     value="data"
@@ -329,6 +367,24 @@ description: "Explore a curated selection of smart contract development tools an
     linkHref="https://faucet.rifos.org/"
     linkTitle="Get tRIF"
     description="Get tRIF on the RIF Testnet Faucet"
+  />
+<FilterItem
+    value="faucet"
+    title="Blast Faucet"
+    subtitle="faucets"
+    color="orange"
+    linkHref="https://blastapi.io/faucets/rootstock-testnet"
+    linkTitle="Get tRBTC"
+    description="This faucet offers a convenient way to get free test RBTC tokens for development and testing. It has a higher max daily token allocation of `0.1` tRBTC."
+  />
+<FilterItem
+    value="faucet"
+    title="Thirdweb Faucet"
+    subtitle="faucets"
+    color="orange"
+    linkHref="https://thirdweb.com/rootstock-testnet"
+    linkTitle="Get tRBTC"
+    description="This faucet offers a convenient way to get free test RBTC tokens for development and testing. Its max daily token allocation is `0.01` tRBTC."
   />
 <FilterItem
     value="library, sc"
@@ -497,25 +553,61 @@ description: "Explore a curated selection of smart contract development tools an
     title="Wagmi Starter Kit"
     subtitle="Demos"
     color="orange"
-    linkHref="https://github.com/rsksmart/rsk-wagmi-starter-kit"
+    linkHref="/developers/quickstart/wagmi/"
     linkTitle="Use the Kit"
     description="This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Wagmi and Shadcn libraries."
+  />
+<FilterItem
+    value="demos, sc"
+    title="Reown-Wagmi Starter Kit"
+    subtitle="Demos"
+    color="orange"
+    linkHref="/developers/quickstart/reown/"
+    linkTitle="Use the Kit"
+    description="This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Reown, Wagmi and Shadcn libraries."
   />
 <FilterItem
     value="demos, sc"
     title="Hardhat Starter Kit"
     subtitle="Demos"
     color="orange"
-    linkHref="https://github.com/rsksmart/rootstock-hardhat-starterkit"
+    linkHref="/developers/quickstart/hardhat/"
     linkTitle="Use the Kit"
-    description="Rootstock Hardhat starter."
+    description="Rootstock Hardhat Starter Kit."
+  />
+<FilterItem
+    value="demos, sc"
+    title="Web3Auth Starter Kit"
+    subtitle="Demos"
+    color="orange"
+    linkHref="/developers/quickstart/web3auth/"
+    linkTitle="Use the Kit"
+    description="Build Passwordless dApps on Rootstock using the Rootstock Web3Auth Starter Kit."
+  />
+<FilterItem
+    value="demos, sc"
+    title="Dynamic Starter Kit"
+    subtitle="Demos"
+    color="orange"
+    linkHref="/developers/quickstart/dynamic/"
+    linkTitle="Use the Kit"
+    description="Rootstock Dynamic Starter Kit."
+  />
+<FilterItem
+    value="demos, sc"
+    title="Hardhat Ignition Starter Kit"
+    subtitle="Demos"
+    color="orange"
+    linkHref="/developers/quickstart/hardhat-ignition/"
+    linkTitle="Use the Kit"
+    description="Rootstock Hardhat Ignition Starter Kit."
   />
 <FilterItem
     value="demos, sdk, sc, aa"
     title="Account Abstraction Kit"
     subtitle="Demos"
     color="orange"
-    linkHref="https://github.com/rsksmart/rsk-wagmi-starter-kit/tree/aa-sdk"
+    linkHref="/developers/quickstart/rootstock-etherspot/"
     linkTitle="Use the Kit"
     description="Account Abstraction Starter dApp using Etherspot."
   />
@@ -563,6 +655,15 @@ description: "Explore a curated selection of smart contract development tools an
     linkHref="https://routerprotocol.com/"
     linkTitle="Build Cross Chain dApps"
     description="Router Protocol is a layer-1 blockchain enabling chain abstraction."
+  />
+  <FilterItem
+    value="attest"
+    title="Ethereum Attestation Service (EAS)"
+    subtitle="Attestations"
+    color="orange"
+    linkHref="/dev-tools/attestations/eas/"
+    linkTitle="Attest Now"
+    description="Ethereum Attestation Service (EAS) is a system that allows individuals and organizations to create verifiable claims or proofs about specific events, actions, or data, either on-chain (on the blockchain) or off-chain (outside the blockchain but linked to it). Learn how to use it on Rootstock."
   />
 </Filter>
 ````

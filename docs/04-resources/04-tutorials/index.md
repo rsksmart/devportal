@@ -14,6 +14,22 @@ values={[
 {label: 'Port to Rootstock', value: 'port-dapps'}
 ]}>
 <FilterItem
+value="beginner, advanced"
+title="Deploy a Vyper Smart Contract on Rootstock"
+subtitle="Vyper"
+color="orange"
+linkHref="/developers/quickstart/rootstock-vyper/"
+description="The Vyper Starter Kit tutorial demonstrates how to deploy smart contracts written in Vyper to the Rootstock testnet using Python and Web3.py. We'll create a simple Vyper contract and deploy it to the Rootstock network, set up the environment, and configure the network for Rootstock."
+/>
+<FilterItem
+value="advanced"
+title="Build a Token-Gated NFT Minting dApp on Rootstock using Thirdweb and RootstockCollective"
+subtitle="NFT"
+color="orange"
+linkHref="/resources/tutorials/tokengated-nft-minting/"
+description="A developers guide to building a Token-Gated NFT Minting dApp on Rootstock using Thirdweb & RootstockCollective."
+/>
+<FilterItem
 value="beginner, port-dapps"
 title="Interact with Rootstock using Rust"
 subtitle="rust"

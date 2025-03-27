@@ -63,12 +63,12 @@ Use the following base URLs for API requests:
 
  To learn more about the NowNodes connection with Rootstock  click the button below:
  
-<Button href="https://nownodes.io/nodes/rsk" align="left">Rootstock dRPC Website</Button>
+<Button href="https://nownodes.io/nodes/rsk" align="left">Rootstock NOWNode Website</Button>
 
 :::
 
 #### REST: Retrieve account balance on Bitcoin  
-```
+```bash
 GET https://btc.nownodes.io/v1/balance/your-address?api_key=YOUR_API_KEY
 ```  
 

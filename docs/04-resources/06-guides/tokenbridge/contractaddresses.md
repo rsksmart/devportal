@@ -50,6 +50,8 @@ See the [list of ABIs used](https://github.com/rsksmart/tokenbridge/tree/master/
   - [stats.testnet.rootstock.io](https://stats.testnet.rootstock.io/)
   - [faucet.rootstock.io](https://faucet.rootstock.io/)
   - [faucet.rifos.org](https://faucet.rifos.org/)
+  - [Thirdweb Faucet](https://thirdweb.com/rootstock-testnet) 
+  - [Blast Faucet](https://blastapi.io/faucets/rootstock-testnet)
 - Sepolia (Ethereum Testnet), Explorer and Faucet
   - [sepolia.etherscan.io](https://sepolia.etherscan.io/)
   - [alchemy.com/faucets/ethereum-sepolia](https://www.alchemy.com/faucets/ethereum-sepolia)

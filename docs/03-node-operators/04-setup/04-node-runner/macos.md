@@ -42,7 +42,7 @@ Run these commands on Git command line:
 ```shell
 git clone --recursive https://github.com/rsksmart/rskj.git
 cd rskj
-git checkout tags/ARROWHEAD-6.4.0 -b ARROWHEAD-6.4.0
+git checkout tags/LOVELL-7.0.0 -b LOVELL-7.0.0
 ```
 
 *Note:* It is better to download the code into a short path.
@@ -64,7 +64,7 @@ This will download and set important components (e.g. Gradle Wrapper).
 
 ## IntelliJ IDEA setup
 
-### Compiling the node 
+### Compiling the node
 
 Now, you can launch IntelliJ IDEA.
 When IntelliJ IDEA is launched you should have a window with different options.

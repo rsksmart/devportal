@@ -1,6 +1,6 @@
 ---
 sidebar_label: Wagmi
-sidebar_position: 300
+sidebar_position: 107
 title: Rootstock Wagmi Starter Kit
 description: 'The Rootstock Wagmi Starter Kit provides a solid foundation for developing decentralized applications (dApps) on the Rootstock blockchain. It streamlines development by leveraging the React, Wagmi, and Shadcn libraries.'
 tags: [rsk, rootstock, developers, wagmi, quickstart, dApps, Smart Contracts]
@@ -90,8 +90,6 @@ To test the Wagmi project, follow these simple steps:
 3. **Explore the Tabs:** In the Wagmi section, you’ll see three tabs: ERC-20, ERC-721, and ERC-1155. Click on any of these tabs to explore further.
 
 <img src="/img/developers/quickstart/wagmi-starterkit-tabs.png"  width="800" height="600"/>
-
-Provide a section on the document about how  the contracts are called in the code, folder structure for ease of finding codes and the main features from Wagmi and Rainbowkit used in the codebase.
 
 ## Understanding the Codebase
 

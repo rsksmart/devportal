@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-sidebar_label: Rootstock Explorer
+sidebar_label: Rootstock
 title: Get Started with the Rootstock Explorer
 tags: [overview, explorer, rootstock, smart contracts, transactions, developer tools]
 description: Explore transaction
