@@ -82,7 +82,7 @@ There are two ways to obtain RPC URLs:
 
 After obtaining the RPC URLs, create a file named `.env` in your project's root directory (important: this file should not be committed to version control). Add the necessary environment variables to the `.env` file:
 ```
-PRIVATE_KEY= Your private key (e.g., from your Metamask account details).
+WALLET_PRIVATE_KEY= Your private key (e.g., from your Metamask account details).
 RSK_MAINNET_RPC_URL= The RPC URL for the Rootstock mainnet.
 RSK_TESTNET_RPC_URL= The RPC URL for the Rootstock testnet.
 ```
