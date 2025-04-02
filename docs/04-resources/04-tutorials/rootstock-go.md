@@ -89,7 +89,9 @@ Open a terminal in your current folder and run the code. This displays the lates
 <br/>Run it again after a few seconds to confirm that the block number increases as expected.
 ```bash
 go run main.go
-
+```
+Response:
+```bash
 Latest block number: 6200751
 ```
 
@@ -141,7 +143,9 @@ func main() {
 Run the code to view your wallet balance on the terminal.
 ```bash
 go run main.go
-
+```
+Response:
+```bash
 My RBTC Balance: 0.000718
 ```
 
@@ -294,7 +298,9 @@ func main() {
 ```
 ```bash
 go run main.go
-
+```
+Response:
+```bash
 Stored Number: 3
 ```
 
@@ -430,9 +436,9 @@ go run main.go
 
 :::warning[Warning]
 Gas estimation may fail and show an error similar to the one below.
-```bash
-go run main.go
 
+Response:
+```bash
 Failed to estimate gas:VM Exception while processing transaction: transaction reverted
 exit status 1
 ```
@@ -456,9 +462,9 @@ Replace it with a hardcoded value such as the one below
 :::
 
 If you get a transaction hash as the output, that means the transaction went through.
-```bash
-go run main.go
 
+Response:
+```bash
 Transaction sent! Hash: 0x5658d438fb900b070df70f7298ab2d666926d051a38ec4bb16a89e3915bd1b1f
 ```
 Search the transaction hash in the respective [block explorer](https://dev.rootstock.io/dev-tools/explorers/rootstock/) for a more detailed result of the execution.
