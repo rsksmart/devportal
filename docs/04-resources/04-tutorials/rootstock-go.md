@@ -22,9 +22,9 @@ Go is a fast language with a comparatively simple syntax and is especially popul
 
 
 ## Getting Started
-Create a new folder for the project, rsk-go. Enter that folder and initialize the project from the command line.
+Create a new folder for the project, rootstock-go. Enter that folder and initialize the project from the command line.
 ```bash
-go mod init rsk-go
+go mod init rootstock-go
 ```
 This creates a `go.mod` file in the root directory, which holds your project's dependencies.
 
@@ -37,7 +37,7 @@ This adds the go-ethereum package to your `go.mod` file and automatically genera
 
 ```go
 // go.mod
-module rsk-go
+module rootstock-go
 
 go 1.24.1
 
