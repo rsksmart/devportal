@@ -3,7 +3,7 @@ title: Interact with Rootstock using Go
 sidebar_label: Interact with Rootstock using Go
 sidebar_position: 2
 tags: [rsk, rootstock, go, golang, go-ethereum, tutorials, resources, smart contracts]
-description: "Go is an easy to learn language which combines speed and concurrency. It is widely used in web3 development, especially in the ethereum ecosystem."
+description: "Go is an easy to learn language which combines speed and concurrency. It is widely used in web3 development, especially in the ethereum ecosystem. This guide will help developers read from and write to the Rootstock blockchain using Go."
 ---
 
 Go is a fast language with a comparatively simple syntax and is especially popular in backend and DevOps operations.
