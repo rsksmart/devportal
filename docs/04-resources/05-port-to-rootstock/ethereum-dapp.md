@@ -212,13 +212,13 @@ const config: HardhatUserConfig = {
 
   networks: {
     // Mainnet configuration
-    mainnet: {
+    rskMainnet: {
       url: "https://rpc.mainnet.rootstock.io/<API-KEY>",
       accounts: [process.env.PRIVATE_KEY],
     },
 
     // Testnet configuration
-    testnet: {
+    rskTestnet: {
       url: "https://rpc.testnet.rootstock.io/<API-KEY>",
       accounts: [process.env.PRIVATE_KEY],
     },
