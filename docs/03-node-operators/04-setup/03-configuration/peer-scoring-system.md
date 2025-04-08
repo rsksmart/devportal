@@ -1,7 +1,7 @@
 ---
-title: Peer Scoring System
 sidebar_label: Peer Scoring System
 sidebar_position: 600
+title: Peer Scoring System
 tags: [rsk, rskj, node, config, peer, scoring]
 description: " The peer scoring system protects the RSKj node's resources from abusive or malicious peers"
 ---
