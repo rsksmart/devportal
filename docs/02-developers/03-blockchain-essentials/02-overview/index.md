@@ -94,7 +94,7 @@ During the simulation, the method calculates the exact amount of gas that would 
 **Prior to Arrowhead 6.5.0**, there was a difference in Rootstock compared to Ethereum:
 
 - If one of the steps of the simulated transaction fails, the node would return the gas estimation needed for the transaction
-- On Ethereum, the node would return an error instead of the gas estimation. 
+- On Ethereum, the node would return an error instead of the gas estimation.
 
 **Starting with Arrowhead 6.5.0:**
 
@@ -146,6 +146,15 @@ Response on Ethereum:
     }
 }
 ```
+
+#### Major Differences in Gas Costs
+
+Regarding the differences in gas costs, we have identified that the opcodes with significant variations are `SLOAD` and `SSTORE`.
+Additionally, certain calls (such as `DELEGATECALL` and `STATICCALL`) that utilize these opcodes during an internal call will result in differences in the overall gas cost calculation for the transaction.
+
+These discrepancies are primarily due to an Ethereum Improvement Proposal (EIP) that has been implemented in Ethereum but not yet in Rootstock.
+Specifically, this is [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929). We are aware of this difference, and our team plans to address and implement this in future releases.
+
 
 ## EVM Compatible Smart Contracts
 
