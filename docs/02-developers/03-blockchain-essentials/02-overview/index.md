@@ -85,6 +85,17 @@ However, the price of each op-code (measured in units known as gas) is different
 Further to that, gas units are multiplied by gas price to calculate the transaction cost.
 Since Rootstock’s gas price is denominated in RBTC and Ethereum’s gas price is denominated in Ether, there is another difference between gas prices on Rootstock and Ethereum.
 
+:::info[Update on Gas Cost Differences]
+
+We have identified that the opcodes with significant variations are `SLOAD` and `SSTORE`.
+Additionally, certain calls (such as `DELEGATECALL` and `STATICCALL`) that utilize these opcodes during an internal call will result in differences in the overall gas cost calculation for the transaction.
+
+These discrepancies are primarily due to [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929) that has been implemented in Ethereum but not yet in Rootstock. The team is aware of this difference and intend to implement this in future releases.
+
+:::
+
+#### Estimate Gas Behaviour on Rootstock
+
 Note that when `eth_estimateGas` is called, the node simulates the transaction execution without broadcasting it to the network.
 The simulation runs through the entire transaction process as if it were being executed, including checking for sufficient balance, contract code execution, etc.
 During the simulation, the method calculates the exact amount of gas that would be consumed by the transaction if it were to be executed on the blockchain. The estimated gas amount is returned, helping users set an appropriate gas limit for the actual transaction.
@@ -146,15 +157,6 @@ Response on Ethereum:
     }
 }
 ```
-
-:::info[Major Differences in Gas Costs]
-
-We have identified that the opcodes with significant variations are `SLOAD` and `SSTORE`.
-Additionally, certain calls (such as `DELEGATECALL` and `STATICCALL`) that utilize these opcodes during an internal call will result in differences in the overall gas cost calculation for the transaction.
-
-These discrepancies are primarily due to [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929) that has been implemented in Ethereum but not yet in Rootstock. The team is aware of this difference and intend to implement this in future releases.
-
-:::
 
 ## EVM Compatible Smart Contracts
 
