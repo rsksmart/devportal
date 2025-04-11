@@ -147,14 +147,14 @@ Response on Ethereum:
 }
 ```
 
-#### Major Differences in Gas Costs
+:::info[Major Differences in Gas Costs]
 
-Regarding the differences in gas costs, we have identified that the opcodes with significant variations are `SLOAD` and `SSTORE`.
+We have identified that the opcodes with significant variations are `SLOAD` and `SSTORE`.
 Additionally, certain calls (such as `DELEGATECALL` and `STATICCALL`) that utilize these opcodes during an internal call will result in differences in the overall gas cost calculation for the transaction.
 
-These discrepancies are primarily due to an Ethereum Improvement Proposal (EIP) that has been implemented in Ethereum but not yet in Rootstock.
-Specifically, this is [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929). We are aware of this difference, and our team plans to address and implement this in future releases.
+These discrepancies are primarily due to [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929) that has been implemented in Ethereum but not yet in Rootstock. The team is aware of this difference and intend to implement this in future releases.
 
+:::
 
 ## EVM Compatible Smart Contracts
 
