@@ -94,13 +94,13 @@ These discrepancies are primarily due to [EIP-2929](https://eips.ethereum.org/EI
 
 :::
 
-#### Estimate Gas Behaviour on Rootstock
+#### Eth Estimate Gas Behaviour on Rootstock
 
-Note that when `eth_estimateGas` is called, the node simulates the transaction execution without broadcasting it to the network.
+When `eth_estimateGas` is called, the node simulates the transaction execution without broadcasting it to the network.
 The simulation runs through the entire transaction process as if it were being executed, including checking for sufficient balance, contract code execution, etc.
 During the simulation, the method calculates the exact amount of gas that would be consumed by the transaction if it were to be executed on the blockchain. The estimated gas amount is returned, helping users set an appropriate gas limit for the actual transaction.
 
-:::info[Info]
+:::info[Starting with Arrowhead 6.5.0]
 
 **Prior to Arrowhead 6.5.0**, there was a difference in Rootstock compared to Ethereum:
 
@@ -114,7 +114,7 @@ During the simulation, the method calculates the exact amount of gas that would 
 
 :::
 
-You can see this behavior in the following example, where a call for `eth_estimateGas` on a transaction that would be executed from an address without enough balance.
+This behavior can be seen in the following example, where a call for `eth_estimateGas` on a transaction that would be executed from an address without enough balance.
 
 Example:
 
