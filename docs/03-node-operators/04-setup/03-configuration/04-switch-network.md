@@ -1,7 +1,7 @@
 ---
-title: Switch network
-sidebar_position: 400
 sidebar_label: Switch network
+sidebar_position: 400
+title: Switch network
 tags: [rsk, rskj, node, config, network, mainnet, testnet, regtest]
 description: "How to switch your RSK node between the Mainnet, Testnet, and RegTest networks"
 ---

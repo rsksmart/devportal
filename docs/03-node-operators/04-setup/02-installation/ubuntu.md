@@ -6,6 +6,7 @@ tags: [ubuntu, install, rsk, rskj, node, how-to, network, requirements, mainnet]
 description: "Install RSKj on Ubuntu."
 ---
 
+
 Make sure your system meets the [minimum requirements](/node-operators/setup/requirements/) before installing the Rootstock nodes.
 
 ## Video

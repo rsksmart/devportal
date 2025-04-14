@@ -6,6 +6,7 @@ tags: [java, install, rootstock, rskj, node, how-to, network, requirements, main
 description: "Install RSKj using Java."
 ---
 
+
 To setup a Rootstock node using Java, you need to:
 
 - Ensure your system meets the [minimum requirements](/node-operators/setup/requirements/) for installing the Rootstock node.
@@ -136,7 +137,7 @@ After starting the node, if there's no output, this means it's running correctly
 Output:
 
 ```shell
-{"jsonrpc":"2.0","id":67,"result":"RskJ/6.6.0/Mac OS X/Java17/SNAPSHOT-95a8f1ab84"}
+{"jsonrpc":"2.0","id":67,"result":"RSKj/6.6.0/Mac OS X/Java17/SNAPSHOT-95a8f1ab84"}
 ```
 
 2. To check the block number:
