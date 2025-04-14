@@ -295,5 +295,5 @@ ModuleNotFoundError: No module named 'web3'
 
 
 :::info[Credit]
-This project's boilerplate originates from the [Cyfrin Updraft @cyfrinupdraft](https://updraft.cyfrin.io/courses/intermediate-python-vyper-smart-contract-development) Python and Viper Starter Kit, developed by [@EdwinLiavaa](https://github.com/EdwinLiavaa) during the [Rootstock Hacktivator](/resources/contribute/hacktivator/).
+This project's boilerplate originates from the [Cyfrin Updraft @cyfrinupdraft](https://updraft.cyfrin.io/courses/intermediate-python-vyper-smart-contract-development) Python and Vyper Starter Kit, developed by [@EdwinLiavaa](https://github.com/EdwinLiavaa) during the [Rootstock Hacktivator](/resources/contribute/hacktivator/).
 :::
