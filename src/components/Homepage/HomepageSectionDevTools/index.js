@@ -61,7 +61,7 @@ const data = {
       },
       description: (
         <>
-          Get up to speed, using easy-to-set-up SDKs and Integration Guides.
+          Explore easy-to-set-up SDKs and Integration Guides.
         </>
       ),
     }
