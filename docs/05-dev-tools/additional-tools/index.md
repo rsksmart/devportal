@@ -39,6 +39,21 @@ Effectively test your dApps with these tools:
 * Playwright: Automate browser interactions to simulate real-world user behavior.
 * Synpress: Specifically designed for dApp testing, seamlessly integrates with MetaMask and other wallets.
 
+## CI/CD
+
+* [Tenderly Virtual TestNets](https://docs.tenderly.co/virtual-testnets?mtm_campaign=ext-docs&mtm_kwd=rsk) are hosted on-demand infrastructure for running automated tests and staging smart contracts and dapps. Virtual TestNets are simulated blockchain networks, providing access to actual network data through State Sync, allowing full control over the simulated network via Admin RPC, and making it easy to obtain native and ERC-20 tokens through Unlimited Faucet. Rely on [Tenderly GitHub Action](https://docs.tenderly.co/virtual-testnets/ci-cd/github-actions-foundry?mtm_campaign=ext-docs&mtm_kwd=rsk) for provisioning Virtual TestNets for tests and contract staging.
+
+## Monitoring
+To monitor smart contract interactions and react accordingly, explore the following options:
+
+- Configure [Tenderly Alerts](https://docs.tenderly.co/alerts/intro-to-alerts?mtm_campaign=ext-docs&mtm_kwd=rsk) for notifications on transactions and contract events to enable awareness of critical issues or signal problems to external webhooks. Use [Alerts API](https://docs.tenderly.co/reference/api#/operations/createAlert?mtm_campaign=ext-docs&mtm_kwd=rsk) to programmatically set up more complex alerts with higher granularity of triggering criteria.
+- Use [Tenderly Web3 Actions](https://docs.tenderly.co/web3-actions/intro-to-web3-actions?mtm_campaign=ext-docs&mtm_kwd=rsk) to automate predefined responses, improving security and user experience. 
+
+## Simulations
+Transaction simulations give a prediction of a transaction's execution on the desired network. Obtaining predicted gas usage and asset changes enables additional security layers for dApps and makes security research easier.
+- [Tenderly Simulator UI](https://docs.tenderly.co/simulator-ui?mtm_campaign=ext-docs&mtm_kwd=rsk) makes it easy to compose single transactions and debug existing ones using [Tenderly Debugger](https://docs.tenderly.co/debugger?mtm_campaign=ext-docs&mtm_kwd=rsk).
+- [Tenderly Simulation API](https://docs.tenderly.co/simulations/single-simulations#simulate-via-rpc?mtm_campaign=ext-docs&mtm_kwd=rsk) lets you perform simulations from your code and access asset changes, gas used, decoded transaction trace, and more. To simulate several transactions, use [simulation bundles API](https://docs.tenderly.co/simulations/bundled-simulations?mtm_campaign=ext-docs&mtm_kwd=rsk).
+
 ## Mining Tools
 
 Interested in mining on the Rootstock network? Consider using these mining pools:
