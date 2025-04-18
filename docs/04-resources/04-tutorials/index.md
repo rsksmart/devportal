@@ -85,6 +85,14 @@ linkHref="/resources/tutorials/defillama/"
 description="DefiLlama is the largest TVL aggregator for DeFi. Learn how to list a DeFi project and write an SDK adapter to add a Protocol to DefiLlama."
 />
 <FilterItem
+value="beginner"
+title="Build a Simple MultiSig Contract on Rootstock with Foundry"
+subtitle="MultiSig"
+color="orange"
+linkHref="/resources/tutorials/rootstock-simple-multisig/"
+description="A step-by-step guide demonstrating how to build and deploy a simple multisignature wallet smart contract to Rootstock using the Foundry toolchain."
+/>
+<FilterItem
 value="advanced"
 title="Run Hyperlane Bridge on Rootstock"
 subtitle="hyperlane"

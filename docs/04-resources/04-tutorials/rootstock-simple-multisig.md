@@ -12,13 +12,13 @@ This is a step-by-step guide demonstrating how to build and deploy a simple mult
 ## What is a Multisignature Wallet?
 A multisignature wallet, usually referred to as MultiSig is a smart contract vault with several registered owner accounts, that holds assets and only transfers them when a required number of owners confirm the transfer. In this guide you'll be building a simple MultiSig with 3 owners, and 2/3 confirmations required to transfer assets, and deploying it to the Rootstock testnet.
 
-## 1. Knowledge Prerequisites
+## Knowledge Prerequisites
 
 You will be able to follow this guide comfortably, if you have basic familiarity with the following:
 - EVM-compatible blockchains and Solidity smart contracts
 - Command line (CLI) tools
 
-## 2. Install Foundry
+## 1. Install Foundry
 
 First, install Foundryup - the Foundry toolchain installer. Run the following command and follow the instructions:
 
@@ -33,7 +33,7 @@ Then run `foundryup` to install precompiled binaries: `forge`, `cast`, `anvil`, 
 
 > Visit the [Foundry installation guides](https://book.getfoundry.sh/getting-started/installation) for more information.
 
-## 3. Create a Foundry Project
+## 2. Create a Foundry Project
 
 To start a new project with Foundry, use [forge init](https://book.getfoundry.sh/reference/forge/forge-init.html).
 
@@ -42,7 +42,7 @@ forge init multisig
 ```
 This creates a new directory named multisig with the necessary project structure.
 
-## 4. Create Wallets
+## 3. Create Wallets
 
 Generate three wallets to serve as owners of your multisig contract - run the [cast wallet](https://book.getfoundry.sh/reference/cast/cast-wallet) command three times:
 
@@ -63,7 +63,7 @@ Next, visit the [Rootstock faucet](https://faucet.rootstock.io/), and request te
 
 Verify the balances in the [Rootstock explorer](https://explorer.testnet.rootstock.io/).
 
-## 5. Configure Environment
+## 4. Configure Environment
 
 First, obtain your personal Rootstock RPC URL. Go to the [RPC API DASHBOARD](https://rpc.rootstock.io/), create an account there and get your testnet RPC URL, which consists of the base URL and your API key.
 
@@ -85,7 +85,7 @@ Finally, load your environment variables:
 source .env
 ```
 
-## 6. Add Smart Contract Code
+## 5. Add Smart Contract Code
 
 Let’s take a look at the default Foundry project structure:
 
@@ -216,7 +216,7 @@ contract MultiSig {
 
 These are all features expected of a production-grade MultiSig, but are intentionally omitted here for simplicity.
 
-## 7. Add Test and Deployment Scripts
+## 6. Add Test and Deployment Scripts
 
 ### Test Script
 A test script is not mandatory but is considered a good practice. Though this guide does not focus on test coverage at all, below is a basic test you can use.
@@ -295,7 +295,7 @@ contract DeployMultiSig is Script {
 > Note: This script is configured to send a small amount of the deploying account's test RBTC (specified in `value`) to the multisig during deployment. You can adjust the value as needed.
 
 
-## 8. Compile and (Optionally) Test the Contract
+## 7. Compile and (Optionally) Test the Contract
 To build the contract, run the [forge build](https://book.getfoundry.sh/reference/forge/forge-build) command in the project's root directory:
 
 ```bash
@@ -329,7 +329,7 @@ Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 5.25ms (736.80µs C
 Ran 1 test suite in 8.61ms (5.25ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
 ```
 
-## Deploy the MultiSig to Rootstock Testnet
+## 8. Deploy the MultiSig to Rootstock Testnet
 
 Use the [forge script](https://book.getfoundry.sh/reference/forge/forge-script) command to deploy the MultiSig. Any owner private key can be used for deployment — just ensure it has enough RBTC for gas and initial funding (see [step 7](#deployment-script) above).
 
@@ -347,7 +347,7 @@ More details in [this Foundry issue](https://github.com/foundry-rs/foundry/issue
 The deploy script will display the deployed MultiSig address, assuming you use the one provided above.
 
 
-## Interact with the MultiSig
+## 9. Interact with the MultiSig
 
 Use the following command to check the Multisig balance:
 
