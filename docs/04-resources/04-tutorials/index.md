@@ -2,7 +2,16 @@
 sidebar_position: 4
 title: Tutorials
 sidebar_label: Tutorials
-tags: [rsk, rootstock, beginner, quick starts, advanced, port to rootstock, tutorials]
+tags:
+  [
+    rsk,
+    rootstock,
+    beginner,
+    quick starts,
+    advanced,
+    port to rootstock,
+    tutorials,
+  ]
 description: "Tutorials and learning resources"
 ---
 
@@ -12,6 +21,15 @@ values={[
 {label: 'Advanced', value: 'advanced'},
 {label: 'Port to Rootstock', value: 'port-dapps'}
 ]}>
+<FilterItem
+  value="beginner"
+  title="Build an ERC‑20 Faucet Token dApp on Rootstock"
+  subtitle="foundry"
+  color="orange"
+  linkHref="https://github.com/ishitarastogi/rootstock-example-foundry/tree/main"
+  description="A step-by-step tutorial to create and deploy a custom ERC‑20 faucet token on Rootstock using Foundry. Users can claim 100 ROOT tokens every 24 hours via explorer or CLI."
+/>
+
 <FilterItem
 value="beginner, advanced"
 title="Deploy a Vyper Smart Contract on Rootstock"
