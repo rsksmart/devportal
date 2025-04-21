@@ -1,3 +1,14 @@
+---
+id: verify-foundry-contract
+sidebar_label: Verify Smart Contracts using Foundry
+sidebar_position: 107
+title: Verify a Smart Contract using Foundry
+description: "Configuring Foundry for smart contract verification on Rootstock"
+tags: [guides, developers, smart contracts, rsk, rootstock, foundry, dApps, ethers]
+---
+
+
+
 Smart contracts are the backbone of decentralized applications (dApps). They automate agreements and processes, but their code can be complex and prone to errors. Verifying your smart contracts is crucial to ensure they function as intended.
 
 This tutorial will guide you through verifying your contracts using Foundry on the Rootstock Blockscout Explorer. Foundry is a powerful toolkit spektrum for Ethereum development, and its `forge` tool simplifies the verification of Solidity smart contracts deployed on the Rootstock network. By verifying the contracts, you allow Blockscout, an open-source block explorer, to link your contract's source code with its deployed bytecode on the blockchain, enabling trustless interaction with the code.
@@ -113,3 +124,4 @@ https://rootstock-testnet.blockscout.com/address/0x33aC0cc41B11282085ff6db7E1F3C
 - Visit [hardhat-verify](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-verify#hardhat-verify)
 - Visit [blockscout](https://docs.blockscout.com/for-users/verifying-a-smart-contract/hardhat-verification-plugin)
 - [Hardhat Starter Kit for Rootstock](https://github.com/rsksmart/rootstock-hardhat-starterkit)
+---
