@@ -31,7 +31,7 @@ Foundry includes four tools, and we will use two of them: (1) `forge` to compile
 In this tutorial, we will conceive, design, implement (code), deploy, and finally test our bond contract. We will write our code based on the `rootstock-foundry-starterkit`. Throughout the entire tutorial, we will directly modify only the following files from the base project:
 
 1. `rootstock-foundry-starterkit/src/Erc20Token.sol`: contract source code.
-2. . `rootstock-foundry-starterkit/test/Erc20Token.t.sol`: unit tests for the contract.
+2. `rootstock-foundry-starterkit/test/Erc20Token.t.sol`: unit tests for the contract.
 3. `rootstock-foundry-starterkit/script/Deploy.s.sol`: deployment script to the Rootstock testnet.
 4. `rootstock-foundry-starterkit/.env.example`: development environment variables.
 
