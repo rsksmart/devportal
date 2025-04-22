@@ -558,6 +558,15 @@ description: "Explore a curated selection of smart contract development tools an
   />
 <FilterItem
     value="demos, sc"
+    title="Reown-Wagmi Starter Kit"
+    subtitle="Demos"
+    color="orange"
+    linkHref="/developers/quickstart/reown/"
+    linkTitle="Use the Kit"
+    description="This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Reown, Wagmi and Shadcn libraries."
+  />
+<FilterItem
+    value="demos, sc"
     title="Hardhat Starter Kit"
     subtitle="Demos"
     color="orange"
