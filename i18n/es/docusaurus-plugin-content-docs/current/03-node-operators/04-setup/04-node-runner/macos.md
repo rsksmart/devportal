@@ -18,10 +18,10 @@ Aquí tiene los pasos para compilar y ejecutar un nodo Rootstock en Mac.
 
 En primer lugar, necesitará instalar:
 
-| Dependencia                                                                                       | Detalles                                                                                                                                                                                        |
-| ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Git para Mac](https://git-scm.com/download/mac)                                                  | Descargar esta herramienta de línea de comandos de Git                                                                                                                                          |
-| [Java 8 JDK](http://www.oracle.com/Technetwork/java/javase/downloads/jdk8-downloads-2133151.html) | Siga los pasos para instalar Java. Para comprobar si la instalación ha ido correctamente, compruebe la versión con el comando: `java -version`. |
+| Dependencia                                                                                            | Detalles                                                                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Git para Mac](https://git-scm.com/download/mac)                                                       | Descargar esta herramienta de línea de comandos de Git                                                                                                                                          |
+| [Java 17 JDK](https://docs.oracle.com/en/java/javase/17/install/installation-jdk-linux-platforms.html) | Siga los pasos para instalar Java. Para comprobar si la instalación ha ido correctamente, compruebe la versión con el comando: `java -version`. |
 
 IDs recomendados:
 
@@ -49,7 +49,7 @@ Ejecutar estos comandos en la línea de comandos de Git:
 ```shell
 git clone --recursive https://github.com/rsksmart/rskj.git
 cd rskj
-git checkout tags/ARROWHEAD-6.0.0 -b ARROWHEAD-6.0.0
+git checkout tags/LOVELL-7.0.0 -b LOVELL-7.0.0
 ```
 
 _Nota:_ Es mejor descargar el código en una ruta corta.
@@ -79,7 +79,7 @@ Cuando se inicia IntelliJ IDEA, deberías tener una ventana con diferentes opcio
 - Elegir _Importar proyecto_.
 - Navega en el RskJ descargado código del archivo `rskj\build.gradle` y selecciónalo. Haz clic en _NEXT_.
 - Dentro del cuadro de diálogo, seleccione _Usar envoltorio de gradle predeterminado_ y luego haga clic en _Finalizar_.
-  _Mantener IntelliJ IDEA abierto_.
+   _Mantener IntelliJ IDEA abierto_.
 
 ![img](/img/rsk/howToInstallAndRun/IdeaRskJWelcome.png)
 
@@ -97,7 +97,7 @@ A continuación, establezca las opciones como se muestra a continuación:
 - Clase principal: `co.rsk.Start`
 - Directorio de trabajo: `/path-to-code/rskJ`
 - Usa classpath del módulo: `rskj-core_main`
-- El JRE necesita ser definido como: `Default (1.8 - SDK del módulo 'rsk-core_main')`
+- JRE need to be set as: `Default (17 - SDK of 'rsk-core_main' module)`
 
 #### Ejecutar el nodo
 

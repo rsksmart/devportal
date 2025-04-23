@@ -23,8 +23,8 @@ En esta sección, repasaremos los pasos para convertir BTC a RBTC utilizando el 
   Rootstock Apps instalados. Le recomendamos que tenga
   [Ledger Live](https://www.ledger.com/ledger-live)
   y revise este tutorial:
-- Necesitas tener [Electrum](https://electrum.org/).
-  Instálalo y [configúralo para utilizarlo con Ledger](https://support.ledgerwallet.com/hc/en-us/articles/115005161925-Set-up-and-use-Electrum).
+- You need to have [Electrum](https://electrum.org/).
+  Install it and [configure it to be used with Ledger](https://support.ledger.com/article/115005161925-zd).
 - Nodo >= 10.16.0
 
 ## Conversor de BTC a RBTC
@@ -36,8 +36,8 @@ Instrucciones sobre cómo hacer un peg-in en Mainnet.
 Recomendamos utilizar el monedero Electrum BTC para conectarse a
 BTC Mainnet utilizando el monedero de hardware Ledger.
 
-- Descargue el monedero de
-  [Sitio web de Electrum](https://bitzuma.com/posts/a-beginners-guide-to-the-electrum-bitcoin-wallet/)
+- Download the wallet from
+  [Electrum Website](https://coingate.com/blog/post/setup-electrum-guide)
 - Instalar Electrum
 - Conecta y desbloquea tu dispositivo Ledger.
 - Abrir la aplicación Bitcoin
@@ -138,15 +138,15 @@ Utiliza Electrum para enviar BTCs a la dirección de la federación Rootstock. P
 
 **4 Esperar confirmaciones de BTC**
 
-Para garantizar la transacción, tenemos que esperar 100 confirmaciones BTC, sea paciente :
+To ensure the transaction, we need to wait for 100 BTC confirmations, be patient :
 
 :::tip[Tip]
 100 bloques \* 10 minutos/bloque = 1000 minutos = 16,667 horas aprox.
 :::
 
-**5 Obtener la dirección RBTC del monedero Ledger harware**
+**5 Get RBTC address from Ledger hardware wallet**
 
-Obtenga la dirección RBTC correspondiente de su monedero Ledger harware, siguiendo estos pasos:
+Get the corresponding RBTC address from your Ledger hardware wallet, by following these steps:
 
 - Conecta y desbloquea tu dispositivo Ledger.
 - Abra la aplicación RSK.
@@ -175,16 +175,16 @@ Obtenga la dirección RBTC correspondiente de su monedero Ledger harware, siguie
     })();
 
   ```
-- Vaya a MyCrypto y conéctese a la cartera Ledger harware.
+- Go to MyCrypto and connect to Ledger hardware wallet.
 - Seleccione **Dirección personalizada** y ponga la ruta de derivación `m/44'/0'/0'/0`.
   A continuación, elija la dirección que obtuvo en el paso anterior.
 
 **6 Comprobar saldo RBTC**
 
-Puede comprobar el saldo de la dirección RBTC en MyCrypto o MEW configurando la ruta de derivación correspondiente y seleccionando la dirección.
+You can check balance of RBTC address on MyCrypto or MEW setting the corresponding derivation path and selecting the address.
 
 :::info[Note]
-Tiene que esperar un mínimo de 100 confirmaciones + un mínimo de 5 minutos para consultar su saldo de RBTC
+You have to wait a minimum of 100 confirmations + a minimum of 5 minutes to check your RBTC balance
 :::
 
 ## Conversion RBTC a BTC
@@ -193,22 +193,22 @@ Instrucciones sobre cómo hacer un peg-out de Mainnet.
 
 1. Obtener dirección BTC con Ledger hardware wallet
 
-Si has olvidado tu dirección pública de BTC, puedes consultar el apartado **1**.
-Lo importante es que el receptor es BTC dirección será
-la misma que se utilizó para enviar a la federación.
+If you forgot your BTC public address, you can check section **1**.
+The important thing is that the receiving BTC address will be
+the same that it was used to send to the federation.
 
 2. Enviar RBTC a Rootstock Bridge Contract
 
-Abra MyCrypto o MEW.
-Establezca la ruta de derivación correspondiente y seleccione la dirección. \
-Esta dirección tiene que ser la misma que la de la sección **6**.
-A continuación, realice una transacción al contrato puente.
+Open MyCrypto or MEW.
+Set the corresponding derivation path and select the address. \
+This address has to be the same as that from section **6**.
+Then do a transaction to the Bridge Contract.
 
 > Dirección del contrato puente: `0x0000000000000000000000000000000001000006`
 
 :::info\[Note]
 
-- La cantidad mínima a enviar en una transacción de "peg-out" debe ser mayor o igual a 0,004 **RBTC** para Mainnet y la cantidad mínima a enviar en una transacción de "peg-in" debe ser mayor o igual a 0,005 **BTC** para Mainnet.
+- The minimum amount to send in a peg-out transaction must be greater than or equal to 0.004 **RBTC** for Mainnet and the minimum amount to send in a peg-in transaction must be greater than or equal to 0.005 **BTC** for Mainnet.
 - El límite de gas de la transacción debe fijarse manualmente en 100.000 gas; de lo contrario, la transacción fallará.
 - El precio del gas puede fijarse en 0,06 gwei.
   :::

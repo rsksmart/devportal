@@ -27,7 +27,7 @@ Para más información, consulta [Alloy Examples](https://github.com/alloy-rs/ex
 ## Prerrequisitos
 
 - Oxidado
-  - Instala la última versión de [Rust](https://www.rust-lang.org/tools/install). Si ya tienes Rust instalado, asegúrate de usar la última versión o actualizar usando la toolchain `rustup`.
+   - Instala la última versión de [Rust](https://www.rust-lang.org/tools/install). Si ya tienes Rust instalado, asegúrate de usar la última versión o actualizar usando la toolchain `rustup`.
 
 ## Comenzando
 
@@ -92,7 +92,7 @@ A continuación, actualiza el archivo `rootstock-rs/src/main.rs` con el siguient
 
 :::info\[Info]
 
-Reemplaza `API_KEY` con tu clave API RPC. Para obtener una API_KEY, consulta [RPC Docs](/Developopers/rpc-api/setup/).
+Replace `API_KEY` with your RPC API Key. To get an API_KEY, see the [RPC Docs](/developers/rpc-api/rootstock/setup/).
 
 :::
 
@@ -198,7 +198,7 @@ async fn main() -> eyre::Result<()> {
 
 :::info\[Info]
 
-Reemplaza `API_KEY` con tu clave API RPC. Para obtener una API_KEY, consulta [RPC Docs](/Developopers/rpc-api/setup/). También reemplace las direcciones del contrato RIF Testnet con su propia dirección, ya que se le pediría utilizar una clave privada más adelante.
+Replace `API_KEY` with your RPC API Key. To get an API_KEY, see the [RPC Docs](/developers/rpc-api/rootstock/setup/). Also replace RIF Testnet contract addresses with your own address as you would be required to use a private key later.
 
 :::
 
@@ -323,8 +323,8 @@ async fn main() -> Result<()> {
 ```
 
 - ERROR: error de deserialización: falta campo efectiveGasPrice en la línea 1 columna 959
-  - Se espera que se encuentre un error `effectiveGasPrice`.
-    - Por favor ignora el error anterior. El equipo de RSKj está familiarizado con este error y la corrección sería parte de la nueva versión. Este error no bloquea el envío de una transacción. La transacción se minará correctamente.
+   - Se espera que se encuentre un error `effectiveGasPrice`.
+      - Por favor ignora el error anterior. El equipo de RSKj está familiarizado con este error y la corrección sería parte de la nueva versión. Este error no bloquea el envío de una transacción. La transacción se minará correctamente.
 
 ## Transferir token ERC20
 

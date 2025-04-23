@@ -13,9 +13,13 @@ tags:
   - principiantes
 ---
 
-En la [sección anterior](/developers/blockchain-essentials/overview/), configuramos una extensión del navegador que es un monedero criptográfico, MetaMask. Nos conectamos a la red de pruebas de Rootstock y la cargamos con la criptomoneda de Rootstock, RBTC, y un token basado en Rootstock, RIF.
+In the previous section on [blockchain overview](/developers/blockchain-essentials/overview/), we set up a browser extension that is a crypto wallet, MetaMask. We connected to the Rootstock Testnet, and loaded this up with Rootstock’s cryptocurrency, RBTC, and an Rootstock-based token, RIF.
 
-> Tenga en cuenta que, si aún no ha realizado este paso, le recomendamos que vuelva atrás y lo complete primero. Véase: [Uso de Rootstock en el navegador](/developers/blockchain-essentials/browser/).
+:::note[Using Rootstock in the browser]
+
+If you are yet to do the above, we encourage you to go back and complete that step first. See: [Using Rootstock in the browser](/developers/blockchain-essentials/browser/).
+
+:::
 
 ## Explorador de bloques
 
@@ -93,9 +97,7 @@ Observarás que esta transacción tiene un importe cero, pero emite algunos even
 
 Hasta ahora hemos comprobado direcciones y transacciones individuales. Se trata de información muy detallada y específica. ¿Y si lo que busca es una visión general? ¿Una vista de pájaro de la blockchain de Rootstock en su conjunto?
 
-Para ello, no utilizaremos el explorador de bloques de portainjertos, sino la página de estadísticas de portainjertos.
+For this, we will not use the Rootstock Block explorer, and instead use the [Rootstock Stats](https://stats.rootstock.io) page.
 
-[Estadísticas de Rootstock](https://stats.rootstock.io)
-]
-Aquí podemos ver algunas cifras muy importantes, como la duración media de los bloques y la tasa de hash de minería combinada, así como otros indicadores técnicos importantes de la red Rootstock.
-Un indicador clave a tener en cuenta es la duración media de los bloques, que debería ser de aproximadamente 33 segundos. Otro indicador clave a tener en cuenta es el porcentaje de la tasa de hash de la red Bitcoin que es minería fusionada Rootstock.
+Here, we can see some very important numbers such as the average block duration, and the merged mining hash rate - and several other important technical indicators of the Rootstock network.
+A key indicator to look for is the average block time, which should be approximately 33s. Another key indicator to look for is the percentage of the Bitcoin network’s hash rate that is merge mining Rootstock.

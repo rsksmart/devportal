@@ -1,6 +1,6 @@
 ---
-sidebar_label: Uso de Web3.py
-sidebar_position: 200
+sidebar_label: Web3.py
+sidebar_position: 109
 title: Despliegue e interacción con un contrato inteligente utilizando Web3.py
 description: Despliegue e Interacción con un Contrato Inteligente Usando Web3.py.
 tags:
@@ -78,10 +78,10 @@ añada las siguientes variables al archivo:
 Sustituya `YOUR_APIKEY` por la clave API de su panel de control.
 
 ```bash
-# obtenga esta YOUR_APIKEY del servicio RPC de Rootstock.
+# get this YOUR_APIKEY from the Rootstock RPC Service.
 RPC_PROVIDER_APIKEY = '{YOUR_APIKEY}'
 
-# esta es la clave privada de la cuenta desde la que desplegará el contrato
+# this is the private key of the account from which you will deploy the contract
 ACCOUNT_PRIVATE_KEY = '{YOUR_PRIVATE_KEY}'
 ```
 
@@ -551,17 +551,17 @@ En esta guía, hemos aprendido a utilizar la biblioteca Web3.py para implementar
 ````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
-    <Accordion.Header as="h3">1. Mensaje de error: el método eth_sendTransaction no existe</Accordion.Header>
+    <Accordion.Header as="h3">1. Error message: eth_sendTransaction method does not exist</Accordion.Header>
     <Accordion.Body>
-        - Al desplegar un contrato inteligente, o al intentar interactuar con él, puedes recibir el mensaje "method not found":
+        - When deploying a smart contract, or when trying to interact with it, you may receive the “method not found” message:
         ```bash
-            web3.exceptions.MethodUnavailable: {'code': -32601, 'message': 'El método eth_sendTransaction no existe/no está disponible. Ver métodos disponibles en https://dev.rootstock.io/developers/rpc-api/methods'}
+            web3.exceptions.MethodUnavailable: {'code': -32601, 'message': 'The method eth_sendTransaction does not exist/is not available. See available methods at https://dev.rootstock.io/developers/rpc-api/methods'}
         ```
-        - Nota: La causa del error en el despliegue es que el módulo Web3.py está configurado para utilizar las claves privadas del proveedor RPC (Hosted Keys), que es una forma heredada de utilizar cuentas, y no está soportada por los proveedores RPC modernos, ya que no almacenan claves privadas.
-        - Métodos como `web3.eth.send_transaction` no funcionan con proveedores RPC, porque se basan en el estado de un nodo y todos los nodos modernos no tienen estado, lo que por debajo hace llamadas JSON-RPC a métodos como `eth_accounts` y `eth_sendTransaction`. Siempre debes usar claves privadas locales cuando trabajes con nodos alojados por otra persona.
-        - Si no estás familiarizado, ten en cuenta que puedes [exportar tus claves privadas desde Metamask](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) y otros monederos. Recuerda no compartir nunca tus claves privadas, y no las pongas en tu código o repositorio.
-        - Para poder desplegar con éxito el contrato, el desarrollador necesita configurar Web3.py para usar sus Claves Privadas Locales, y para construir y pre-firmar la transacción antes de enviarla, por lo que el módulo usa `eth_sendRawTransaction` en su lugar.
-        - Para permitir que Web3.py use las claves locales, tenemos que usar el middleware de firma para añadir la clave privada al llavero de firma.
+        - Note: The cause of the error on the deployment is that the Web3.py module is set to use the private keys of the RPC provider (Hosted Keys), which is a legacy way to use accounts, and is not supported by modern RPC providers, as they do not store private keys.
+        - Methods like `web3.eth.send_transaction` do not work with RPC providers, because they rely on a node state and all modern nodes are stateless, which underneath make JSON-RPC calls to methods like  `eth_accounts` and `eth_sendTransaction`. You must always use local private keys when working with nodes hosted by someone else.
+        - If unfamiliar, note that you can [export your private keys from Metamask](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) and other wallets. Remember to never share your private keys, and do not put it on your code or repository.
+        - In order to successfully deploy the contract, the developer needs to set up Web3.py to use his Local Private Keys, and to build and pre-sign the transaction before sending it, so the module uses `eth_sendRawTransaction` instead.
+        - To allow Web3.py to use the local keys, we have to use the Signing middleware to add the Private Key to the signing keychain.
         ```bash
             import os
             from eth_account import Account
@@ -572,37 +572,37 @@ En esta guía, hemos aprendido a utilizar la biblioteca Web3.py para implementar
             w3 = Web3(EthereumTesterProvider())
 
             private_key = os.environ.get("PRIVATE_KEY")
-            assert private_key is not None, "Debe establecer la variable de entorno PRIVATE_KEY"
-            assert private_key.startswith("0x"), "La clave privada debe comenzar con el prefijo hexadecimal 0x"
+            assert private_key is not None, "You must set PRIVATE_KEY environment variable"
+            assert private_key.startswith("0x"), "Private key must start with 0x hex prefix"
 
             account: LocalAccount = Account.from_key(private_key)
             w3.middleware_onion.add(construct_sign_and_send_raw_middleware(account))
 
-            print(f "La dirección de tu hot wallet es {account.address}")
+            print(f"Your hot wallet address is {account.address}")
         ```
-        - Ahora puedes usar las funciones web3.eth.send_transaction(), Contract.functions.xxx.transact() con tu clave privada local a través del middleware y ya no te aparece el error "ValueError: El método eth_sendTransaction no existe/no está disponible.
+        - Now you can use web3.eth.send_transaction(), Contract.functions.xxx.transact() functions with your local private key through middleware and you no longer get the error "ValueError: The method eth_sendTransaction does not exist/is not available.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
-    <Accordion.Header as="h3">2. Mensaje de error: el método eth_feeHistory o eth_maxPriorityFeePerGas no existe</Accordion.Header>
+    <Accordion.Header as="h3">2. Error message: eth_feeHistory or eth_maxPriorityFeePerGas method does not exist</Accordion.Header>
     <Accordion.Body>
-          - Web3.js intentará utilizar estos métodos porque el fork de Ethereum London introdujo los parámetros de transacción `maxFeePerGas` y `maxPriorityFeePerGas` que pueden utilizarse en lugar de `gasPrice`, que utiliza Rootstock. Por esta razón, tenemos que definir el comportamiento de Web3 para rellenar el precio del gas. Esto se hace usando una "Estrategia de Precio del Gas" - un método que toma el objeto Web3 y un diccionario de transacciones y devuelve un precio del gas (denominado en wei).
-          - Una estrategia de precio del gas se implementa como un método python con la siguiente firma, y estableciendo la estrategia de precio del gas llamando a [set_gas_price_strategy()](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.set_gas_price_strategy).
-                - Establecer un precio del gas específico:
+          - Web3.js will try to use these methods because the Ethereum London fork introduced `maxFeePerGas` and `maxPriorityFeePerGas` transaction parameters that can be used instead of `gasPrice`, which Rootstock uses. For that reason, we have to define Web3’s behavior for populating the gas price. This is done using a “Gas Price Strategy” - a method which takes the Web3 object and a transaction dictionary and returns a gas price (denominated in wei).
+          - A gas price strategy is implemented as a python method with the following signature, and by setting the gas price strategy by calling [set_gas_price_strategy()](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.set_gas_price_strategy).
+                - Setting a specific gas price:
           ```bash
             from web3 import Web3, HTTPProvider
 
-            # especificar el precio del gas en wei
+            # specify Gas Price in wei
             GAS_PRICE = 60000000
 
             def gas_price_strategy(web3, transaction_params=None):
                 return GAS_PRICE
 
-            # establecer la estrategia del precio del gas
+            # set the gas price strategy
             w3.eth.set_gas_price_strategy(gas_price_strategy)
             ```
-            - Usando el método `eth_gasPrice`:
-            - Hace una llamada al [método JSON-RPC eth_gasPrice](https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_gasprice) que devuelve el precio del gas configurado por el nodo Ethereum conectado.
+            - Using `eth_gasPrice` method:
+            - Makes a call to the [JSON-RPC eth_gasPrice method](https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_gasprice) which returns the gas price configured by the connected Ethereum node.
             ```bash
                 from web3.gas_strategies.rpc import rpc_gas_price_strategy
                 from web3 import Web3, HTTPProvider

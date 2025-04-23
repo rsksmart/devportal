@@ -2,13 +2,13 @@
 sidebar_label: Configurar
 sidebar_position: 300
 title: Requisitos de instalación del relé RIF
+description: Requirements for installing RIF Relay.
 tags:
   - rif
   - sobre
   - relé
   - usuario
   - guía
-description: Requisitos para instalar el relé RIF
 ---
 
 Para configurar el sistema RIF Relay funcionando localmente se necesitan algunas herramientas. Todas estas herramientas son de código abierto y tienen su propia página de soporte. La funcionalidad de RIF Relay no depende de estas tecnologías y podría actualizarse o sustituirse, si fuera necesario.

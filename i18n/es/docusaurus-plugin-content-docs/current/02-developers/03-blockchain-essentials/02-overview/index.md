@@ -23,14 +23,14 @@ La pila está diseñada para crear un sistema financiero más justo e inclusivo.
 
 > Véase [La pila](/conceptos/fundamentos/pila/)
 
-Bitcoin, es un almacén y transferencia de valor.
-La cadena de bloques es segura porque los mineros, con elevados costes de infraestructura y energía, crean nuevos bloques que se añaden a la cadena de bloques cada 10 minutos.
-Cuanta más potencia de hash proporcionen, más segura será la red.
-Rootstock es la primera plataforma de contratos inteligentes de código abierto impulsada por la red bitcoin.
-El objetivo de Rootstock es añadir valor y funcionalidad al ecosistema bitcoin permitiendo contratos inteligentes,
-pagos casi instantáneos y una mayor escalabilidad.
-RIF es un conjunto todo en uno de aplicaciones y servicios de infraestructura abiertos y descentralizados que permiten un desarrollo más rápido,
-sencillo y escalable de aplicaciones distribuidas (dApps) dentro de un entorno blockchain unificado.
+Bitcoin, is a store and transfer of value.
+The blockchain is secure because miners with high infrastructure and energy costs create new blocks to be added to the blockchain every 10 minutes.
+The more hashing power they provide, the more secure the network is.
+Rootstock is the first open source smart contract platform that is powered by the bitcoin network.
+Rootstock’s goal is to add value and functionality to the bitcoin ecosystem by enabling smart-contracts,
+near instant payments, and higher-scalability.
+RIF is an all-in-one suite of open and decentralized infrastructure applications and services that enable faster,
+easier and scalable development of distributed applications (dApps) within a unified blockchain environment.
 
 Rootstock está conectado a Bitcoin en términos de cómo se minan sus bloques,
 y también en términos de una moneda común.
@@ -83,6 +83,79 @@ Sin embargo, el precio de cada op-code (medido en unidades conocidas como gas) e
 Además, las unidades de gas se multiplican por el precio del gas para calcular el coste de la transacción.
 Dado que el precio del gas de Rootstock está denominado en RBTC y el precio del gas de Ethereum está denominado en Ether, existe otra diferencia entre los precios del gas en Rootstock y Ethereum.
 
+:::info[Update on Gas Cost Differences]
+
+We have identified that the opcodes with significant variations are `SLOAD` and `SSTORE`.
+Additionally, certain calls (such as `DELEGATECALL` and `STATICCALL`) that utilize these opcodes during an internal call will result in differences in the overall gas cost calculation for the transaction.
+
+These discrepancies are primarily due to [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929) that has been implemented in Ethereum but not yet in Rootstock. The team is aware of this difference and intend to implement this in future releases.
+
+:::
+
+#### Eth Estimate Gas Behaviour on Rootstock
+
+When `eth_estimateGas` is called, the node simulates the transaction execution without broadcasting it to the network.
+The simulation runs through the entire transaction process as if it were being executed, including checking for sufficient balance, contract code execution, etc.
+During the simulation, the method calculates the exact amount of gas that would be consumed by the transaction if it were to be executed on the blockchain. The estimated gas amount is returned, helping users set an appropriate gas limit for the actual transaction.
+
+:::info[Starting with Arrowhead 6.5.0]
+
+**Prior to Arrowhead 6.5.0**, there was a difference in Rootstock compared to Ethereum:
+
+- If one of the steps of the simulated transaction fails, the node would return the gas estimation needed for the transaction
+- On Ethereum, the node would return an error instead of the gas estimation.
+
+**Starting with Arrowhead 6.5.0:**
+
+- Rootstock will behave same way as Ethereum's behavior for simulated transaction failures.
+- If a simulated transaction step fails, the node will now return an error, mirroring Ethereum's response.
+
+:::
+
+This behavior can be seen in the following example, where a call for `eth_estimateGas` on a transaction that would be executed from an address without enough balance.
+
+Example:
+
+```js
+{
+    "jsonrpc":"2.0",
+    "method":"eth_estimateGas",
+    "params":[
+        {"from": "0xb60e8dd61c5d32be8058bb8eb970870f07233155",
+        "to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567",
+        "gas": "0x76c0",
+        "gasPrice": "0x9184e72a000",
+        "value": "0x9184e72a",
+        "data": "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675"},
+        "latest"
+    ],
+    "id":0
+}
+```
+
+Response on Rootstock:
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 0,
+    "result": "0x5498"
+}
+```
+
+Response on Ethereum:
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 0,
+    "error": {
+        "code": -32000,
+        "message": "insufficient funds for transfer"
+    }
+}
+```
+
 ## Contratos inteligentes compatibles con EVM
 
 Si está familiarizado con el desarrollo de contratos inteligentes o el desarrollo de dApps utilizando solidity, web3 y otras tecnologías compatibles, le encantará saber que la máquina virtual de Rootstock (RVM) es compatible con la máquina virtual de Ethereum (EVM).
@@ -93,8 +166,8 @@ Por lo tanto, las habilidades de desarrollo de contratos inteligentes y aplicaci
 
 ### Herramientas
 
-- [Hardhat](https://hardhat.org/docs) es un entorno de desarrollo de Ethereum diseñado para profesionales. Se utiliza principalmente en el desarrollo de contratos inteligentes para la blockchain de Ethereum.
-  Consulte el [Hardhat Overview](/dev-tools/hardhat/) para una visión general de cómo se utiliza en Rootstock.
+- [Hardhat](https://hardhat.org/docs) is an Ethereum development environment designed for professionals. It's primarily used in the development of smart contracts for the Ethereum blockchain.
+  Refer to the [Hardhat Guides](/dev-tools/dev-environments/hardhat/) for guides on how to use Hardhat on Rootstock.
 
 - [Metamask](https://metamask.io/) es un monedero de criptomoneda con extensión de navegador o aplicación móvil,
   que permite a los usuarios interactuar con la blockchain de Rootstock,

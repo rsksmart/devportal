@@ -2,12 +2,12 @@
 sidebar_label: Versiones
 sidebar_position: 900
 title: Versiones del relé RIF
+description: RIF Relay Versions.
 tags:
   - rif
   - sobre
   - relé rif
   - guía de integración
-description: Versiones del relé RIF
 ---
 
 La primera iteración de RIF Relay se basó en el gran trabajo realizado por el [equipo de la Red de Gasolineras](https://www.opengsn.org/).
@@ -38,10 +38,10 @@ Es importante recordar que, como medida de seguridad, los contratos de la V0.1 d
 - El contrato RelayHub ya no recibe pagos, el pago por el servicio (en tokens) se envía ahora directamente al trabajador que retransmite la transacción en nombre del usuario.
 - El contrato RelayHub gestiona ahora el replanteo del gestor de relés.
 - Mejoras en la estimación del gas:
-  - Se ha eliminado la sobrecarga de gas de RelayHub; ya no hay validaciones contra valores codificados.
-  - Los campos de gas y gas simbólico de la solicitud pueden dejarse ahora sin definir y, en ese caso, serán estimados automáticamente por el cliente de retransmisión RIF.
-  - La estimación del gas máximo en el servidor de retransmisión RIF es ahora más precisa.
-  - Se dispone de una nueva función de utilidad para estimar el gas máximo que consumiría una transacción de retransmisión, basada en una estimación de ajuste lineal. Esto puede utilizarse en aplicaciones que no quieren firmar una carga útil cada vez que necesitan una aproximación del coste de retransmitir la transacción.
+    - Se ha eliminado la sobrecarga de gas de RelayHub; ya no hay validaciones contra valores codificados.
+    - Los campos de gas y gas simbólico de la solicitud pueden dejarse ahora sin definir y, en ese caso, serán estimados automáticamente por el cliente de retransmisión RIF.
+    - La estimación del gas máximo en el servidor de retransmisión RIF es ahora más precisa.
+    - Se dispone de una nueva función de utilidad para estimar el gas máximo que consumiría una transacción de retransmisión, basada en una estimación de ajuste lineal. Esto puede utilizarse en aplicaciones que no quieren firmar una carga útil cada vez que necesitan una aproximación del coste de retransmitir la transacción.
 - Las verificaciones de los pagadores se realizan fuera de la cadena para optimizar los costes de gas, por lo que los pagadores se llaman ahora Verificadores y no forman parte del flujo de retransmisión en la cadena ni gestionan pagos en absoluto.
 - Optimización del coste del gas.
 - Problemas de seguridad.
@@ -61,7 +61,8 @@ Este cambio no alteró el actual flujo de relés, manteniendo su coste como hast
 - Tras el pago desde la SmartWallet, el feesReceiver no realizará ninguna lógica de distribución para evitar aumentar el coste del servicio de retransmisión para el usuario.
 - Con este planteamiento, no es necesario modificar el flujo de retransmisión, por lo que la introducción de un mecanismo de reparto de ingresos no repercutirá en el precio del servicio de retransmisión.
 - Los participantes pertinentes formarán parte del contrato MultiSig.
-  - El contrato MultiSig especifica qué parte de los fondos recaudados va a cada participante (por ejemplo, el operador del servidor de retransmisión, el proveedor del monedero y el proveedor de liquidez podrían ser los participantes).
-  - Posteriormente, un proceso fuera de la cadena activará el proceso de distribución desde el contrato. Este proceso puede invocar la función de distribución una vez a la semana, al mes o cuando los fondos del contrato superen un determinado umbral.
-  - Los participantes pueden modificar los parámetros de reparto (por ejemplo, los porcentajes utilizados para el reparto entre los participantes) si están de acuerdo en los cambios concretos.
-  - Pueden existir múltiples estrategias de reparto de ingresos, idealmente una por grupo de participantes.
+    - El contrato MultiSig especifica qué parte de los fondos recaudados va a cada participante (por ejemplo, el operador del servidor de retransmisión, el proveedor del monedero y el proveedor de liquidez podrían ser los participantes).
+    - Posteriormente, un proceso fuera de la cadena activará el proceso de distribución desde el contrato. Este proceso puede invocar la función de distribución una vez a la semana, al mes o cuando los fondos del contrato superen un determinado umbral.
+    - Los participantes pueden modificar los parámetros de reparto (por ejemplo, los porcentajes utilizados para el reparto entre los participantes) si están de acuerdo en los cambios concretos.
+    - Pueden existir múltiples estrategias de reparto de ingresos, idealmente una por grupo de participantes.
+

@@ -11,6 +11,168 @@
   "Explore Docs": {
     "message": "Explorar documentación"
   },
+  "Guides for Builders": {
+    "message": "Guides for Builders"
+  },
+  "Beginner to Web3?": {
+    "message": "Beginner to Web3?"
+  },
+  "Explore Rootstock Fundamentals and resources to begin your development journey.": {
+    "message": "Explore Rootstock Fundamentals and resources to begin your development journey."
+  },
+  "Core Concepts": {
+    "message": "Core Concepts"
+  },
+  "Become a Rootstock Blockchain Developer": {
+    "message": "Become a Rootstock Blockchain Developer"
+  },
+  "Deploy Smart Contracts": {
+    "message": "Deploy Smart Contracts"
+  },
+  "EVM-compatible tools and guides to deploy and scale your dApps on Rootstock.": {
+    "message": "EVM-compatible tools and guides to deploy and scale your dApps on Rootstock."
+  },
+  "Quick Starts": {
+    "message": "Quick Starts"
+  },
+  "Join the Discord Community": {
+    "message": "Join the Discord Community"
+  },
+  "Become a Merged Miner": {
+    "message": "Become a Merged Miner"
+  },
+  "Interested in merged mining on Rootstock? Setup a Rootstock node or use the RPC API.": {
+    "message": "Interested in merged mining on Rootstock? Setup a Rootstock node or use the RPC API."
+  },
+  "Merged Mining": {
+    "message": "Merged Mining"
+  },
+  "RPC API": {
+    "message": "RPC API"
+  },
+  "Apply for a Grant": {
+    "message": "Apply for a Grant"
+  },
+  "Get funding and support to build your next dApp on Rootstock through the strategic grants program.": {
+    "message": "Get funding and support to build your next dApp on Rootstock through the strategic grants program."
+  },
+  "Apply now": {
+    "message": "Apply now"
+  },
+  "Browse by DevTools": {
+    "message": "Browse by DevTools"
+  },
+  "Get RBTC": {
+    "message": "Get RBTC"
+  },
+  "Explore the various ways to get RBTC using the PowPeg App, On/Off Ramps, or Exchanges.": {
+    "message": "Explore the various ways to get RBTC using the PowPeg App, On/Off Ramps, or Exchanges."
+  },
+  "View a repository of starter kits, sample codes and tutorials for creating, testing and deploying smart contracts on Rootstock.": {
+    "message": "View a repository of starter kits, sample codes and tutorials for creating, testing and deploying smart contracts on Rootstock."
+  },
+  "EVM-compatible Tools": {
+    "message": "EVM-compatible Tools"
+  },
+  "Build and deploy faster with EVM-compatible tools and guides on Rootstock.": {
+    "message": "Build and deploy faster with EVM-compatible tools and guides on Rootstock."
+  },
+  "SDKs and Integration Guides": {
+    "message": "SDKs and Integration Guides"
+  },
+  "Explore easy-to-set-up SDKs and Integration Guides.": {
+    "message": "Explore easy-to-set-up SDKs and Integration Guides."
+  },
+  "Read more": {
+    "message": "Read more"
+  },
+  "Browse by Products": {
+    "message": "Browse by Products"
+  },
+  "Bridges": {
+    "message": "Bridges"
+  },
+  "Bridge in/out of Rootstock.": {
+    "message": "Bridge in/out of Rootstock."
+  },
+  "RBTC Flyover": {
+    "message": "RBTC Flyover"
+  },
+  "PowPeg App": {
+    "message": "PowPeg App"
+  },
+  "Token Bridge": {
+    "message": "Token Bridge"
+  },
+  "Wallets": {
+    "message": "Wallets"
+  },
+  "View wallets compatible with the Rootstock platform.": {
+    "message": "View wallets compatible with the Rootstock platform."
+  },
+  "MetaMask": {
+    "message": "MetaMask"
+  },
+  "Wallets on Rootstock": {
+    "message": "Wallets on Rootstock"
+  },
+  "RIF Tools": {
+    "message": "RIF Tools"
+  },
+  "Explore Open-source tools and technologies for faster, and more rewarding ways to build on Bitcoin.": {
+    "message": "Explore Open-source tools and technologies for faster, and more rewarding ways to build on Bitcoin."
+  },
+  "Name Service": {
+    "message": "Name Service"
+  },
+  "Relay": {
+    "message": "Relay"
+  },
+  "Read": {
+    "message": "Read"
+  },
+  "Deploy and interact with EVM compatible smart contracts on Rootstock using JSON RPC methods using the Rootstock RPC API.": {
+    "message": "Deploy and interact with EVM compatible smart contracts on Rootstock using JSON RPC methods using the Rootstock RPC API."
+  },
+  "Make First API Call": {
+    "message": "Make First API Call"
+  },
+  "View JSON RPC Methods": {
+    "message": "View JSON RPC Methods"
+  },
+  "Connect with the Community": {
+    "message": "Connect with the Community"
+  },
+  "Join the Rootstock \n Developer Community on Discord.": {
+    "message": "Join the Rootstock \n Developer Community on Discord."
+  },
+  "Join Discord": {
+    "message": "Join Discord"
+  },
+  "Explore open source tools, smart contracts and starter kits for deploying and integrating your dApps.": {
+    "message": "Explore open source tools, smart contracts and starter kits for deploying and integrating your dApps."
+  },
+  "Star on Github": {
+    "message": "Star on Github"
+  },
+  "Stay Connected": {
+    "message": "Stay Connected"
+  },
+  "View upcoming events, community calls, webinars, and meetups happening \n around the world.": {
+    "message": "View upcoming events, community calls, webinars, and meetups happening \n around the world."
+  },
+  "View upcoming Events": {
+    "message": "View upcoming Events"
+  },
+  "theme.common.copyPageLinkMsg": {
+    "message": "Copied!"
+  },
+  "theme.common.copyPageLink": {
+    "message": "Copy page link"
+  },
+  "theme.common.backToTop": {
+    "message": "Back to top"
+  },
   "theme.common.all": {
     "message": "Todos"
   },

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 300
+sidebar_position: 700
 sidebar_label: Verificar la propiedad de la dirección
 title: Verificar la propiedad de la dirección con Metamask Wallet
 description: Confirme que posee una dirección Rootstock utilizando el Gestor de identidades RIF

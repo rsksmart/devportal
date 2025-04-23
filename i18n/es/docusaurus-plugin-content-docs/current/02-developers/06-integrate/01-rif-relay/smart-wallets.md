@@ -1,14 +1,14 @@
 ---
 sidebar_label: Billeteras inteligentes
-sidebar_position: 700
+sidebar_position: 800
 title: Billeteros inteligentes RIF Relé
+description: RIF Relay Smart Wallets.
 tags:
   - rif
   - sobre
   - relé
   - usuario
   - guía
-description: Billetera inteligente RIF Relay
 ---
 
 Esta guía pretende explicar más sobre la interacción y despliegue de las Carteras Inteligentes. Utilizaremos contratos de prueba adicionales que se incluyeron en el proyecto, como el `UtilToken(ERC20)`. Todos los scripts utils se ejecutan desde la cuenta[0] de la red regtest.

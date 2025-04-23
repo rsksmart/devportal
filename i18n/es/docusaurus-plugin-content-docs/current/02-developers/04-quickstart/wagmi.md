@@ -1,7 +1,7 @@
 ---
-sidebar_label: Uso de Wagmi y React Hooks
-sidebar_position: 300
-title: Portainjertos Wagmi Starter dApp
+sidebar_label: Wagmi
+sidebar_position: 107
+title: Rootstock Wagmi Starter Kit
 description: El Rootstock Wagmi Starter Kit proporciona una base sólida para el desarrollo de aplicaciones descentralizadas (dApps) en la blockchain Rootstock. Agiliza el desarrollo aprovechando las bibliotecas React, Wagmi y Shadcn.
 tags:
   - rsk
@@ -23,14 +23,14 @@ El kit utiliza [Wagmi](https://wagmi.sh/), una biblioteca React Hooks, para simp
 ## Requisitos previos
 
 - **Node.js y Git:** Asegúrese de tener Node.js y Git instalados en su sistema.
-  - Consulte la sección [Prerrequisitos](/developers/requirements/#installing-nodejs-and-npm) para saber cómo descargar Node.js usando NVM.
+ - Consulte la sección [Prerrequisitos](/developers/requirements/#installing-nodejs-and-npm) para saber cómo descargar Node.js usando NVM.
 - **Yarn:** Instala Yarn, un gestor de paquetes para proyectos Node.js. Puedes hacerlo ejecutando el siguiente comando en tu terminal:
-  ```bash
-  npm install -g yarn
-  ```
+ ```bash
+ npm install -g yarn
+ ```
 - \*\*Conocimientos básicos
-  - [React](https://react.dev/) (biblioteca JavaScript para crear interfaces de usuario)
-  - [Solidity](https://soliditylang.org/) (un lenguaje de programación para contratos inteligentes Ethereum).
+ - [React](https://react.dev/) (biblioteca JavaScript para crear interfaces de usuario)
+ - [Solidity](https://soliditylang.org/) (un lenguaje de programación para contratos inteligentes Ethereum).
 
 :::tip[Rootstock Curso para desarrolladores de Blockchain].
 
@@ -64,9 +64,9 @@ Para conseguir la llave:
 Para configurar tu entorno, sigue estos pasos:
 
 1. Crea un archivo `.env` y añade variables de entorno.
-   ```text
-   VITE_WC_PROJECT_ID=Su projectid de la nube Walletconnect
-   ```
+ ```text
+ VITE_WC_PROJECT_ID=Su projectid de la nube Walletconnect
+ ```
 
 ### 4) Instalar dependencias
 
@@ -112,8 +112,6 @@ Para probar el proyecto Wagmi, sigue estos sencillos pasos:
 
 <img src="/img/developers/quickstart/wagmi-starterkit-tabs.png"  width="800" height="600"/>
 
-Proporcionar una sección en el documento acerca de cómo los contratos se llaman en el código, la estructura de carpetas para facilitar la búsqueda de códigos y las principales características de Wagmi y Rainbowkit utilizados en la base de código.
-
 ## Entender el código base
 
 ### Estructura de carpetas
@@ -131,27 +129,27 @@ La carpeta `src` está organizada para agilizar el proceso de desarrollo y facil
 
 - **Activos:** Contiene las ABI (Application Binary Interfaces) para ERC20, ERC721 y ERC1155.
 - \*\*Componentes
-  - **AccountAbstraction:** Contiene código relacionado con la abstracción de cuentas.
-  - **Inicio:** Contiene componentes específicos de la página de inicio.
-  - **Iconos:** Contiene varios componentes de iconos.
-  - **Tokens:** Incluye componentes para diferentes tipos de tokens.
-  - \*\*Interfaz de usuario: Componentes generales de interfaz de usuario utilizados en la aplicación.
-  - **Pie de página.tsx:** Componente del pie de página.
-  - \*\*Componente de la barra de navegación.
+ - **AccountAbstraction:** Contiene código relacionado con la abstracción de cuentas.
+ - **Inicio:** Contiene componentes específicos de la página de inicio.
+ - **Iconos:** Contiene varios componentes de iconos.
+ - **Tokens:** Incluye componentes para diferentes tipos de tokens.
+ - \*\*Interfaz de usuario: Componentes generales de interfaz de usuario utilizados en la aplicación.
+ - **Pie de página.tsx:** Componente del pie de página.
+ - \*\*Componente de la barra de navegación.
 - **Config:**
-  - **provider.tsx:** Configuración para proveedores.
-  - **rainbowkitConfig.ts:** Configuración para RainbowKit.
-  - **wagmiProviderConfig.ts:** Configuración para proveedores WAGMI.
+ - **provider.tsx:** Configuración para proveedores.
+ - **rainbowkitConfig.ts:** Configuración para RainbowKit.
+ - **wagmiProviderConfig.ts:** Configuración para proveedores WAGMI.
 - **Lib:** Contiene varias carpetas de utilidades para facilitar la organización:
-  - **Constantes:** Constantes de aplicación.
-  - **Funciones:** Funciones generales utilizadas en toda la aplicación.
-  - **Tipos:** Definiciones de tipos.
-  - **Utilidades:** Funciones de utilidad.
+ - **Constantes:** Constantes de aplicación.
+ - **Funciones:** Funciones generales utilizadas en toda la aplicación.
+ - **Tipos:** Definiciones de tipos.
+ - **Utilidades:** Funciones de utilidad.
 - **Páginas:**
-  - **index.ts:** Punto de entrada principal.
-  - **Etherspot.tsx:** Componente de página para Etherspot.
-  - **Home.tsx:** Componente de la página de inicio.
-  - **Wagmi.tsx:** Componente de página relacionado con Wagmi.
+ - **index.ts:** Punto de entrada principal.
+ - **Etherspot.tsx:** Componente de página para Etherspot.
+ - **Home.tsx:** Componente de la página de inicio.
+ - **Wagmi.tsx:** Componente de página relacionado con Wagmi.
 
 ### Código para las fichas ERC20, ERC721 y ERC1155
 
@@ -184,16 +182,16 @@ const { data, isLoading, isError, refetch } = useReadContract({
 ```
 
 3. **Escribir en el contrato:**
-   El hook `useWriteContract` de la librería wagmi se utiliza para interactuar con las funciones de escritura del contrato (funciones que modifican el estado).
+ El hook `useWriteContract` de la librería wagmi se utiliza para interactuar con las funciones de escritura del contrato (funciones que modifican el estado).
 
 4. **Acuñación de fichas:**
-   La función `mintTokens` llama a `writeContractAsync` para acuñar fichas tRSK.
+ La función `mintTokens` llama a `writeContractAsync` para acuñar fichas tRSK.
 
 - Argumentos:
-  - abi: Define las funciones del contrato y sus parámetros.
-  - Dirección: La dirección del contrato ERC-20 desplegado.
-  - functionName: El nombre de la función a llamar, que en este caso es "menta".
-  - args: Un array que contiene la dirección del monedero del usuario y la cantidad a acuñar (100 en este caso).
+ - abi: Define las funciones del contrato y sus parámetros.
+ - Dirección: La dirección del contrato ERC-20 desplegado.
+ - functionName: El nombre de la función a llamar, que en este caso es "menta".
+ - args: Un array que contiene la dirección del monedero del usuario y la cantidad a acuñar (100 en este caso).
 
 ```javascript
 const mintTokens = async () => {
@@ -237,38 +235,38 @@ Este código define un componente React llamado `ERC721Tab`, que proporciona una
 Las funciones clave dentro de este componente:
 
 1. UsarReadContract\`:
-   Este hook se utiliza para leer datos del contrato ERC-721. Obtiene el saldo de NFT de la dirección del usuario conectado.
+ Este hook se utiliza para leer datos del contrato ERC-721. Obtiene el saldo de NFT de la dirección del usuario conectado.
 
 - \*\*Parámetros:
-  - `abi`: La ABI (Application Binary Interface) del contrato ERC-721.
-  - Dirección La dirección del contrato ERC-721.
-  - `functionName`: El nombre de la función a llamar en el contrato (balanceOf).
-  - `args`: Los argumentos a pasar a la función del contrato ([dirección]).
+ - `abi`: La ABI (Application Binary Interface) del contrato ERC-721.
+ - Dirección La dirección del contrato ERC-721.
+ - `functionName`: El nombre de la función a llamar en el contrato (balanceOf).
+ - `args`: Los argumentos a pasar a la función del contrato ([dirección]).
 
 2. usarWriteContract\`:
-   Este hook se utiliza para escribir datos en el contrato ERC-721, concretamente para acuñar un nuevo NFT.
+ Este hook se utiliza para escribir datos en el contrato ERC-721, concretamente para acuñar un nuevo NFT.
 
 **Función**:
 
 - WriteContractAsync`: Escribe de forma asíncrona en el contrato llamando a la función `safeMint\` del contrato ERC-721.
 
 3. mintNFT\`:
-   Se trata de una función asíncrona que gestiona el proceso de acuñación de un nuevo NFT.
+ Se trata de una función asíncrona que gestiona el proceso de acuñación de un nuevo NFT.
 
 - \*\*Pasos:
-  - Establece el estado de carga en true.
-  - Intenta llamar a la función `safeMint` en el contrato ERC-721 utilizando `writeContractAsync`.
-  - Espera a que se confirme la transacción mediante `waitForTransactionReceipt`.
-  - Muestra un mensaje de brindis de éxito si la acuñación se realiza correctamente.
-  - Obtiene el saldo NFT del usuario llamando a `refetch`.
-  - Captura cualquier error, lo registra y muestra un mensaje de brindis por el error.
-  - Establece el estado de carga en false.
+ - Establece el estado de carga en true.
+ - Intenta llamar a la función `safeMint` en el contrato ERC-721 utilizando `writeContractAsync`.
+ - Espera a que se confirme la transacción mediante `waitForTransactionReceipt`.
+ - Muestra un mensaje de brindis de éxito si la acuñación se realiza correctamente.
+ - Obtiene el saldo NFT del usuario llamando a `refetch`.
+ - Captura cualquier error, lo registra y muestra un mensaje de brindis por el error.
+ - Establece el estado de carga en false.
 
 4. Refetch
-   Esta función forma parte del hook `useReadContract` y se utiliza para refrescar el saldo de NFTs después de una operación de acuñación exitosa.
+ Esta función forma parte del hook `useReadContract` y se utiliza para refrescar el saldo de NFTs después de una operación de acuñación exitosa.
 
 5. `toast`:
-   Esta función se utiliza para mostrar notificaciones tostadas para mensajes de éxito o error.
+ Esta función se utiliza para mostrar notificaciones tostadas para mensajes de éxito o error.
 
 El resto del componente contiene JSX para representar los elementos de la interfaz de usuario, incluido un botón para acuñar el NFT, una pantalla de saldo y un enlace para ver los NFT acuñados en un explorador de bloques.
 
@@ -287,19 +285,19 @@ Las funciones clave dentro de este componente:
 - Dirección La dirección del monedero del usuario obtenida del hook `useAccount`.
 
 2. Ganchos `useReadContract`:
-   Estos ganchos se utilizan para leer datos del contrato inteligente.
+ Estos ganchos se utilizan para leer datos del contrato inteligente.
 
 - `useReadContract` para comprobar el saldo de fichas de tipo A (con ID 1).
 - `useReadContract` para comprobar el saldo de fichas de tipo B (con ID 2).
 
 3. Función `mintTokens`:
-   Función asíncrona que gestiona la acuñación de fichas.
+ Función asíncrona que gestiona la acuñación de fichas.
 
 - \*\*Pasos:
-  - Llama a `writeContractAsync` para interactuar con el contrato inteligente y acuñar tokens.
-  - Espera el recibo de la transacción utilizando `waitForTransactionReceipt`.
-  - Muestra brindis de éxito o error en función del resultado.
-  - Restablece los datos de la balanza después de la acuñación.
+ - Llama a `writeContractAsync` para interactuar con el contrato inteligente y acuñar tokens.
+ - Espera el recibo de la transacción utilizando `waitForTransactionReceipt`.
+ - Muestra brindis de éxito o error en función del resultado.
+ - Restablece los datos de la balanza después de la acuñación.
 
 ## Únete a la Comunidad
 

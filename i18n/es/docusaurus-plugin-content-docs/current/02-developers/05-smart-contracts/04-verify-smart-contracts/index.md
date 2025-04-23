@@ -173,6 +173,7 @@ https://rootstock-testnet.blockscout.com/address/0x33aC0cc41B11282085ff6db7E1F3C
 
 ## Recursos
 
+- [Deploy, Interact and Verify Smart Contracts using Remix and Rootstock Explorer](/developers/quickstart/remix/)
 - Visite [hardhat-verify](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-verify#hardhat-verify)
 - Visite [blockscout](https://docs.blockscout.com/for-users/verifying-a-smart-contract/hardhat-verification-plugin)
 - [Kit de iniciación al casco para portainjertos](https://github.com/rsksmart/rootstock-hardhat-starterkit)

@@ -12,7 +12,7 @@ tags:
 description: Aprenda cómo agregar e iniciar un interruptor de red en Metamask desde un sitio web.
 ---
 
-![rootstock\_metamask\_banner](/img/resources/rootstock-metamask/rootstock-metamask-banner.jpeg)
+![rootstock_metamask_banner](/img/resources/rootstock-metamask/rootstock-metamask-banner.jpeg)
 
 [Rootstock](https://rootstock.io/) es un blockchain con capacidades de contrato inteligentes, es posible construir aplicaciones descentralizadas (dApps) con él. La mayoría de dApps son aplicaciones web a las que usted accede con un navegador de Internet regular, como Chrome. Sin embargo, las interacciones de blockchain requieren algún software adicional, que viene en forma de extensiones del navegador. Estas extensiones del navegador insertan un objeto de proveedor web3, con las partes Javascript de la aplicación web utilizadas para interactuar con el blockchain, formando parte integral de una arquitectura dApp.
 
@@ -95,7 +95,7 @@ export const rskMainnet = {
 };
 ```
 
-> Mira cómo [Obtener una Clave API de la API RPC](/Developopers/rpc-api/setup/)
+> See how to [Get an API Key from the RPC API](/developers/rpc-api/rootstock/setup/)
 
 Ver configuración completa en [GitHub](https://github.com/rsksmart/demo-code-snippets/blob/5cc5124fe5bddc85f09a82e49eba7591003543f0/switch-network-to-rsk/networks.js).
 

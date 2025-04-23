@@ -2,12 +2,12 @@
 sidebar_label: Integraciones
 sidebar_position: 200
 title: Integración de relés RIF
+description: Integrating RIF Relay in a dApp.
 tags:
   - rif
   - sobre
   - relé
   - guía de integración
-description: Integración de RIF Relay en una dApp
 ---
 
 Esta guía repasa los métodos expuestos de RIF Relay que las dApps y wallets pueden consumir para proporcionar relaying como servicio, con el propósito de permitir a los usuarios pagar tarifas de transacción con tokens en un sistema particular.

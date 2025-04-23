@@ -67,9 +67,9 @@ Su configuración debería verse como la de la imagen de abajo; haga clic en Cre
 En Tenderly, hay dos configuraciones RPC: **RPC público** y **RPC de administración**.
 
 - La CPR pública permite interacciones RCP estándar con la cadena de bloques,
-  como desplegar contratos e interactuar con contratos inteligentes.
+   como desplegar contratos e interactuar con contratos inteligentes.
 - The Admin RPC enables you to modify the Testnet network state, including account balances,
-  block numbers, and storage, to support your development requirements.
+   block numbers, and storage, to support your development requirements.
 
 :::
 

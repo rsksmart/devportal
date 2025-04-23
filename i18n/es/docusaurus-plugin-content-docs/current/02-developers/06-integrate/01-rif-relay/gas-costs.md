@@ -2,12 +2,12 @@
 sidebar_label: Costes del gas
 sidebar_position: 950
 title: Relé RIF - Gastos de gas
+description: RIF Relay Gas Costs.
 tags:
   - rif
   - sobre
   - relé
   - integrar
-description: Costes de gas del relé RIF
 ---
 
 El coste adicional del gas es la cantidad extra de gas necesaria para procesar la llamada de retransmisión solicitada por el usuario. Llamemos **X** al gas consumido por la llamada al método del contrato de destino, y **Y** al gas total consumido por la llamada de retransmisión, entonces el coste de la llamada de retransmisión (es decir, el coste del gas de sobrecarga) es: **Z = Y - X**.

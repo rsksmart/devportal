@@ -1,6 +1,6 @@
 ---
 sidebar_label: Registro de interfaces
-sidebar_position: 300
+sidebar_position: 500
 title: Registro universal de interfaces de contratos inteligentes
 description: Consulte la interfaz estándar ERC1820, el soporte de direcciones y la implementación de contratos inteligentes.
 tags:

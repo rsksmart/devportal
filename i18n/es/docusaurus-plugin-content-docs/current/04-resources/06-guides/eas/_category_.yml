@@ -1,0 +1,6 @@
+label: Ethereum Attestation Service
+position: 3
+link:
+  type: generated-index
+  description: Ethereum Attestation Service (EAS) is a system that allows individuals and organizations to create verifiable claims or proofs about specific events, actions, or data, either on-chain (on the blockchain) or off-chain (outside the blockchain but linked to it).
+  slug: /resources/guides/eas/

@@ -2,12 +2,12 @@
 sidebar_label: Arquitectura
 sidebar_position: 980
 title: RIF Relay - Arquitectura
+description: RIF Relay Architeture.
 tags:
   - rif
   - sobre
   - relé
   - integrar
-description: Arquitectura de relés RIF
 ---
 
 El sistema de retransmisión RIF está diseñado para lograr el patrocinio de transacciones a bajo coste. El coste del servicio de retransmisión proporcionado por los "patrocinadores" se acuerda entre las partes fuera de la cadena. El bajo coste de las transacciones en Rootstock (RSK) contribuye también a mantener bajos los costes generales del servicio.
@@ -159,7 +159,7 @@ Relay - Flujo de Inicio](/img/rif-relay/start.jpg)
 - El contrato RelayHub es el contrato clave para el flujo de inicio, ya que es el contrato que tiene los eventos de interés.
 
 3. Initalizar el Servidor de Retransmisión.
-   -El Servidor de Retransmisión tiene toda la lógica para la interacción entre los componentes fuera de la cadena y dentro de la cadena.
+  -El Servidor de Retransmisión tiene toda la lógica para la interacción entre los componentes fuera de la cadena y dentro de la cadena.
 4. Inicializar el RegistationManager.
 
 - El Gestor de Registro empieza a buscar eventos relacionados con el proceso de registro (StakeAdded, WorkerAdded) para identificar si se puede registrar el Servidor en el RelayHub.
@@ -234,9 +234,9 @@ Relé - Flujo de ejecución](/img/rif-relay/execution.jpg)
 5. El Servidor de Retransmisión crea una transacción que incluye la Solicitud de Retransmisión y la firma con una cuenta de Trabajador de Retransmisión.
 6. La cuenta Relay Worker es un EOA registrado en el Relay Hub.
 7. El Servidor de Retransmisión envía la transacción al Centro de Retransmisión utilizando la misma cuenta de trabajador que en el paso anterior, ejecutando la función `relayCall` del contrato del Centro de Retransmisión.
-   - Cuando el Centro de Retransmisión recibe una transacción de un Trabajador de Retransmisión, verifica con el Gestor de Participaciones que el Gestor de Retransmisiones del Trabajador ha bloqueado los fondos para la participación. Si no es así, se revierte la ejecución.
-   - La cuenta del relevista debe tener fondos para pagar el gas consumido (RBTC).
-     - Esta verificación se realiza en el cliente de retransmisión y también en el servidor de retransmisión, llamando al verificador de retransmisión. El verificador comprueba que acepta el token utilizado para pagar y que el pagador tiene un saldo de tokens suficiente. Además, verifica que el monedero inteligente utilizado es el correcto.
+  - Cuando el Centro de Retransmisión recibe una transacción de un Trabajador de Retransmisión, verifica con el Gestor de Participaciones que el Gestor de Retransmisiones del Trabajador ha bloqueado los fondos para la participación. Si no es así, se revierte la ejecución.
+  - La cuenta del relevista debe tener fondos para pagar el gas consumido (RBTC).
+    - Esta verificación se realiza en el cliente de retransmisión y también en el servidor de retransmisión, llamando al verificador de retransmisión. El verificador comprueba que acepta el token utilizado para pagar y que el pagador tiene un saldo de tokens suficiente. Además, verifica que el monedero inteligente utilizado es el correcto.
 8. El RelayHub indica a la Cartera Inteligente que ejecute la Solicitud de Retransmisión a través de la biblioteca [GsnEip712Library](#gsneip712library).
 9. La Cartera Inteligente comprueba la firma y el nonce del Solicitante, revirtiendo si falla las comprobaciones.
 10. A continuación, la cartera inteligente realiza la transferencia de tokens entre el solicitante y el destinatario de tokens, utilizando los datos recibidos en la solicitud de retransmisión.
@@ -263,13 +263,13 @@ El solicitante sin gas tiene una dirección SmartWallet donde recibe los tokens 
 
 7. El Relay Hub llama a la Proxy Factory utilizando el método `relayedUserSmartWalletCreation`.
 8. La fábrica de proxy realiza las siguientes comprobaciones:
-   - Comprueba el nonce del remitente.
-   - Comprueba la firma de la solicitud de despliegue.
+  - Comprueba el nonce del remitente.
+  - Comprueba la firma de la solicitud de despliegue.
 9. La Fábrica de Proxy crea la Cartera Inteligente utilizando el opcode `create2`.
 10. A continuación, llama a la función `initialize` del contrato Smart Wallet.
-    - La Cartera Inteligente, durante su inicialización, ejecuta la transferencia de tokens.
-    - A continuación, inicializa el estado de la Cartera Inteligente y establece el EOA del solicitante como propietario de la Cartera Inteligente.
-    - En el caso de que exista una lógica personalizada, también se llama a su inicialización.
+  - La Cartera Inteligente, durante su inicialización, ejecuta la transferencia de tokens.
+  - A continuación, inicializa el estado de la Cartera Inteligente y establece el EOA del solicitante como propietario de la Cartera Inteligente.
+  - En el caso de que exista una lógica personalizada, también se llama a su inicialización.
 
 ## Obsoleto
 

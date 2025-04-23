@@ -2,14 +2,20 @@
 sidebar_label: Visión general
 sidebar_position: 100
 title: RIF Relay - Visión general
+description: RIF Relay Overview.
 tags:
   - rif
   - sobre
   - relé
   - integrar
   - guía de integración
-description: Visión general del relé RIF
 ---
+
+:::info[Note]
+If you wish to suggest changes on this document, please open a PR on the [Rif Relay Repository](https://github.com/rsksmart/rif-relay.git)
+:::
+
+# RIF Relay
 
 La mayoría de las cadenas de bloques tienen criptomoneda nativa para pagar las tasas de transacción y el consumo de gas; este sencillo diseño tiene muchas ventajas. En primer lugar, para poner en marcha una economía, el modelo de criptomoneda nativa crea una demanda inicial. En segundo lugar, simplifica la interacción entre usuarios y mineros porque les obliga a utilizar el mismo medio de pago. En tercer lugar, reduce la complejidad de las reglas de consenso. Por último, proporciona protección contra la denegación de servicio (DoS) a la red, ya que los nodos llenos pueden pagar lo que los mineros esperan incluir en una transacción recibida. De este modo, los nodos pueden decidir propagar o no una transacción, evitando el consumo gratuito del ancho de banda de la red, y detener las transacciones spam.
 
@@ -20,3 +26,23 @@ Pero con la llegada de las Finanzas Descentralizadas (DeFi), varias monedas esta
 Teniendo esto en cuenta, el objetivo principal del proyecto RIF Relay es **proporcionar al ecosistema Rootstock (RSK) los medios para permitir que las aplicaciones de blockchain y los usuarios finales (wallet-apps) realicen transacciones sin necesidad de RBTC**. El sistema debe permitir a los usuarios de Rootstock (RSK) pagar las tasas de transacción con métodos de pago (es decir, tokens) distintos de RBTC, manteniendo al mismo tiempo sus cuentas como remitentes de transacciones.
 
 RIF Relay se inspira en el proyecto [Gas Station Network (GSN)](https://github.com/opengsn/gsn). GSN es un sistema descentralizado que mejora la usabilidad de la dApp sin sacrificar la seguridad. En pocas palabras, GSN se abstrae del gas (utilizado para pagar las tasas de transacción) para minimizar las fricciones en la integración y la experiencia de usuario de las aplicaciones digitales. Con GSN, los "clientes sin gas" pueden interactuar con contratos inteligentes pagando por el gas con tokens en lugar de moneda nativa.
+
+## Modules
+
+RIF Relay is built in modules, the entire system is made up by 3 modules.
+
+1. [RIF Relay Contracts](https://github.com/rsksmart/rif-relay-contracts) contains all the contracts used by the RIF Relay System.
+2. [RIF Relay Client](https://github.com/rsksmart/rif-relay-client) contains a library to interact with the relay server.
+3. [RIF Relay Server](https://github.com/rsksmart/rif-relay-server) has all the relay server code. You can run the server directly from there.
+
+Each module has instructions for development and usage.
+
+[Deprecated Docs](docs/README.md)
+
+## Contribution Guidelines
+
+- Please refer to the Rootstock Contribution Guidelines for more information on how to contribute to this project.
+
+## License:
+
+MIT License - Copyright (c) 2023 Rootstock

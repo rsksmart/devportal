@@ -2,13 +2,13 @@
 sidebar_label: Desarrollar
 sidebar_position: 600
 title: RIF Relé Desarrollar
+description: RIF Relay deployment process.
 tags:
   - rif
   - sobre
   - relé
   - usuario
   - guía
-description: Proceso de despliegue del relé RIF
 ---
 
 ## Inicializar el proyecto

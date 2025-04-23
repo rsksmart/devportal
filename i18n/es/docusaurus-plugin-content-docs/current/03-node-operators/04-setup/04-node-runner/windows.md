@@ -42,13 +42,13 @@ A continuación, establezca las opciones como se muestra a continuación:
 - Clase principal: `co.rsk.Start`
 - Directorio de trabajo: `/path/to/code/rskJ`
 - Usa classpath del módulo: `rskj-core_main`
-- El JRE necesita ser definido como: `Default (1.8 - SDK del módulo 'rsk-core_main')`
+- JRE need to be set as: `Default (17 - SDK of 'rsk-core_main' module)`
 
 :::info\[Info]
 
 - Si no está configurado el JDK por defecto, tiene que establecerlo en: _Archivo -> Estructura del proyecto_.
 - Si el IDE no reconoce las opciones de configuración, abre `rskj/rskj-core/build.gradle` y sincroniza desde la pestaña `Gradle`.
-  :::
+   :::
 
 #### Ejecutar el nodo
 

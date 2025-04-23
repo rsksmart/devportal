@@ -80,9 +80,9 @@ Los nodos RSKj se ejecutan usando RocksDB por defecto (Ver sección de informaci
 La propiedad `keyvalue.datasource` en la configuración
 sólo puede ser `rocksdb` o `leveldb`.
 
-> Si desea cambiar entre las diferentes opciones de almacenamiento,
-> por ejemplo de `leveldb` a `rocksdb` o viceversa,
-> debe **reiniciar** el nodo con la opción de importación.
+> If you wish to switch between the different storage options,
+> for example from `leveldb` to `rocksdb` or vice versa,
+> you must **restart** the node with the import option.
 
 El siguiente comando de ejemplo muestra cómo hacer esto cuando
 el nodo RSKj estaba ejecutando previamente el predeterminado (`leveldb`),
@@ -141,12 +141,12 @@ o añadir una bandera `peer.port` al comando cuando inicies RSKj.
 <Tabs>
   <TabItem value="mac" label="Linux, Mac OSX" default>
     ```shell
-      $ java -Dpeer. ort=50505 -cp <PATH-TO-THE-RSKJ-JAR> co.rsk. tart
+      $ java -Dpeer.port=50505 -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start
     ```
   </TabItem>
   <TabItem value="windows" label=" Windows">
     ```shell
-      C:\> java -Dpeer. ort=50505 -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start
+      C:\> java -Dpeer.port=50505 -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start
     ```
   </TabItem>
 </Tabs>

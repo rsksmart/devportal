@@ -1,7 +1,7 @@
 ---
-sidebar_label: Uso del casco
-sidebar_position: 400
-title: Rizoma Casco DApp
+sidebar_label: Hardhat
+sidebar_position: 103
+title: Rootstock Hardhat Starter Kit
 description: Tanto si eres un desarrollador experimentado como si acabas de iniciar tu andadura en el desarrollo de contratos inteligentes, el kit de inicio hardhat proporciona una base sólida para crear aplicaciones descentralizadas (dApps) en la red Rootstock.
 tags:
   - rsk
@@ -16,17 +16,17 @@ tags:
 
 Tanto si eres un desarrollador experimentado como si acabas de iniciar tu andadura en el desarrollo de contratos inteligentes, el kit de inicio hardhat proporciona una base sólida para crear aplicaciones descentralizadas (dApps) en la red Rootstock.
 
-Rootstock es totalmente compatible con Ethereum. Aporta la potencia de los contratos inteligentes a Bitcoin, lo que permite a los desarrolladores aprovechar la seguridad de Bitcoin al tiempo que se benefician del ecosistema de Ethereum.
+Rootstock is fully EVM (Ethereum Virtual Machine) compatible. It brings the power of smart contracts to Bitcoin, allowing developers to leverage Bitcoin’s security while benefiting from Ethereum’s ecosystem.
 
 ## Requisitos previos
 
 Antes de iniciar la dApp, asegúrese de tener los siguientes requisitos previos:
 
 1. **Familiaridad con contratos inteligentes:**
-   - Si es nuevo en el mundo de los contratos inteligentes, considere la posibilidad de aprender los conceptos básicos. Entender cómo funcionan los contratos inteligentes mejorará su experiencia con el desarrollo de Rootstock.
+  - Si es nuevo en el mundo de los contratos inteligentes, considere la posibilidad de aprender los conceptos básicos. Entender cómo funcionan los contratos inteligentes mejorará su experiencia con el desarrollo de Rootstock.
 
 2. **Node.js y Hardhat Instalado:**
-   - Asegúrese de que tiene Node.js instalado en su sistema. Consulte la sección [prerequisites](/developers/requirements/#installing-nodejs-and-npm).
+  - Asegúrese de que tiene Node.js instalado en su sistema. Consulte la sección [prerequisites](/developers/requirements/#installing-nodejs-and-npm).
 
 3. **Instalar la taquigrafía del casco:**
 
@@ -94,9 +94,9 @@ Hay dos formas de obtener URLs RPC:
 Después de obtener las URLs RPC, crea un archivo llamado `.env` en el directorio raíz de tu proyecto (importante: este archivo no debe ser enviado al control de versiones). Añade las variables de entorno necesarias al archivo `.env`:
 
 ```
-PRIVATE_KEY: Su clave privada (por ejemplo, de los detalles de su cuenta de Metamask).
-RSK_MAINNET_RPC_URL: La URL RPC para la red principal de Rootstock.
-RSK_TESTNET_RPC_URL: La URL RPC para la red de prueba de Rootstock.
+WALLET_PRIVATE_KEY= Your private key (e.g., from your Metamask account details).
+RSK_MAINNET_RPC_URL= The RPC URL for the Rootstock mainnet.
+RSK_TESTNET_RPC_URL= The RPC URL for the Rootstock testnet.
 ```
 
 ## Despliegue de un contrato de token ERC721

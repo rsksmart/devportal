@@ -2,6 +2,7 @@
 title: Presentando Arrowhead 6.3.0
 author: Rootstock
 tags:
+  - release
   - arrowhead
 url: https://blog.rootstock.io/noticia/introducing-arrowhead-6-3-0/
 ---

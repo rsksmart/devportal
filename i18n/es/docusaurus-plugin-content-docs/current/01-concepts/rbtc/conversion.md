@@ -12,7 +12,7 @@ tags:
   - peg-out
   - federación
   - powpeg
-description: Conversión de RBTC a BTC (peg-in) y de BTC a RBTC (peg-out), tanto para Mainnet como para Testnet.
+description: Converting BTC to RBTC (peg-in) and RBTC to BTC (peg-out), for both Mainnet and Testnet.
 sidebar_position: 301
 ---
 
@@ -44,43 +44,43 @@ Así, tenemos `BTC` y `RBTC` en las Mainnets, que corresponden a `tBTC` y `tRBTC
 
 Introduzca a continuación su dirección de BTC para comprobar si puede utilizarse para pasar de BTC a RBTC.
 
-## Guía del usuario
+<AddressVerifier />
 
-- [Guía Mainnet](/concepts/rbtc/networks#mainnet-conversion)
-- [Guía Testnet](/concepts/rbtc/networks#testnet-conversion)
+## User Guide
 
-Puede probar el proceso de conversión utilizando cualquiera de las opciones siguientes;
+- [Mainnet Guide](/concepts/rbtc/networks#mainnet-conversion)
+- [Testnet Guide](/concepts/rbtc/networks#testnet-conversion)
 
-- Utilizar una [cartera hardware ledger](/concepts/rbtc/conversion-with-ledger)
-- Utilizando un [software](/conceptos/rbtc/conversion-con-nodo-consola)
+You can try the conversion process using either options below;
 
-## Vídeo
+- Using a [ledger hardware wallet](/concepts/rbtc/conversion-with-ledger)
+- Using a [software](/concepts/rbtc/conversion-with-node-console)
 
-Vea este vídeo explicativo sobre **Cómo realizar conversiones BTC y R-BTC utilizando el Powpeg de Rootstock**.
+## Video
 
-<div class="video-container">
-  <iframe width="949" height="534" src="https://youtube.com/embed/XTpQW9Rw838" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+Watch this explainer video on **How to do BTC & R-BTC Conversions using the Rootstock Powpeg**.
 
-### Preguntas frecuentes
+<iframe width="949" height="534" src="https://youtube.com/embed/XTpQW9Rw838" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+
+### FAQs
 
 ```mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
-    <Accordion.Header as="h3">¿Con qué frecuencia cambia la dirección de la Federación de Rootstock?</Accordion.Header>
+    <Accordion.Header as="h3">How often does the Rootstock Federation address change?</Accordion.Header>
     <Accordion.Body>
-      La dirección de la Federación de Rootstock ha cambiado varias veces desde el lanzamiento de la red principal de Rootstock.
+      Rootstock Federation address has changed several times since Rootstock mainnet launch.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">
-    <Accordion.Header as="h3">¿Pierdo mi Bitcoin si la dirección de la Federación Rootstock cambia durante mi transferencia?</Accordion.Header>
+    <Accordion.Header as="h3">Do I lose my Bitcoin if the Rootstock Federation address change during my transfer?</Accordion.Header>
     <Accordion.Body>
-      Hay un periodo de gracia para el cambio de dirección de la Federación de Rootstock. Aún podrá bloquear Bitcoin y obtener RBTC durante el periodo de gracia. Sin embargo, cualquier Bitcoin enviado a la antigua dirección de la Rootstock Federation se perderá después del periodo de gracia.
+      There is a grace period for the Rootstock Federation address change. You will still be able to lock Bitcoin and get RBTC during the grace period. However, any Bitcoin sent to the old Rootstock Federation address will be lost post to the grace period.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
 ```
 
-### Comentarios
+### Feedback
 
-Únase a la [Rootstock Global Discord Community](https://rootstock.io/discord), para hacer preguntas y obtener respuestas.
+Join the [Rootstock Global Discord Community](https://rootstock.io/discord), to ask questions and get answers.

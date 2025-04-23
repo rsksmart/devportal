@@ -88,12 +88,12 @@ Linux - Windows (consola bash)
 <Tabs>
   <TabItem value="linux" label="Linux" default>
     ```bash
-    sha256sum --check SHA256SUMS. sc
+    sha256sum --check SHA256SUMS.asc
     ```
   </TabItem>
   <TabItem value="mac" label="Mac OSX">
    ```bash
-  shasum --check SHA256SUMS. sc
+  shasum --check SHA256SUMS.asc
    ```
   </TabItem>
 </Tabs>

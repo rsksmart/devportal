@@ -27,46 +27,46 @@ Los cambios en las reglas de consenso se introducen como parte de un grupo de ca
 ## ¿Cómo añadir una nueva regla de consenso?
 
 1. Establece la versión de lanzamiento (si aún no está definida en el código). Defina la nueva etiqueta en el archivo de enum `NetworkUpgrade`.
-   ```java
-   public enum NetworkUpgrade {
-       WASABI_100("wasabi100"),
-   }
-   ```
+    ```java
+    public enum NetworkUpgrade {
+        WASABI_100("wasabi100"),
+    }
+    ```
 
 2. Establece la altura del bloque de activación de actualización de red en archivos `[main||testnet||regtest||devnet].conf`
 
-   ```conf
-   # IE for main.conf
+    ```conf
+    # IE for main.conf
 
-   blockchain.config {
-       name = main
-       hardforkActivationHeights = {
-           wasabi100 = 1591000,
-       }
-   }
-   ```
+    blockchain.config {
+        name = main
+        hardforkActivationHeights = {
+            wasabi100 = 1591000,
+        }
+    }
+    ```
 
-   > Para el desarrollo local sólo debes editar `regtest.conf`.
+    > Para el desarrollo local sólo debes editar `regtest.conf`.
 
-   > `[main||testnet||devnet].conf` sólo necesitará ser editado antes de un despliegue de NetworkUpdate, cuando la altura de activación de bloque ya es conocida.
+    > `[main||testnet||devnet].conf` sólo necesitará ser editado antes de un despliegue de NetworkUpdate, cuando la altura de activación de bloque ya es conocida.
 
 3. Define la regla de consenso RSKIP en el archivo `ConsensusRule`.
-   ```java
-   public enum ConsensusRule {
-       RSKIP106("rskip106"),
-   }
-   ```
+    ```java
+    public enum ConsensusRule {
+        RSKIP106("rskip106"),
+    }
+    ```
 
 4. Asocia el RSKIP anterior con una versión específica de actualización de red en el archivo `reference.conf`.
-   ```conf
-   blockchain = {
-       config = {
-           consensusRules = {
-               rskip106 = wasabi100,
-           }
-       }
-   }
-   ```
+    ```conf
+    blockchain = {
+        config = {
+            consensusRules = {
+                rskip106 = wasabi100,
+            }
+        }
+    }
+    ```
 
 ## Codificando un cambio de regla de consenso para una actualización de red RSK
 

@@ -41,7 +41,7 @@ Además de la configuración predeterminada (versión Java y clase principal), n
 
 Debería verse así:
 
-![autominer\_inellij\_config](/img/rsk/autominer_intellij_config.png)
+![autominer_inellij_config](/img/rsk/autominer_intellij_config.png)
 
 ### Configurar Autominer en CLI
 
@@ -59,4 +59,4 @@ java -cp rskj-core-4.1.0-HOP-all.jar -Drsk.conf.file=./autominer.conf co.rsk.Sta
 
 Ver la imagen gif a continuación, por ejemplo, sobre cómo hacer esto;
 
-![autominer\_demo](/img/rsk/autominer_demo.gif)
+![autominer_demo](/img/rsk/autominer_demo.gif)

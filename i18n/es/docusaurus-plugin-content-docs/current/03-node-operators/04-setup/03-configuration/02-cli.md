@@ -17,11 +17,11 @@ Command line (CLI) arguments are arguments specified after the `RSK start` class
 The CLI arguments have two forms; the parameter and the flag:
 
 - **Parámetro**
-  - Tiene un nombre y un valor asociado, separados por un espacio
-  - Comienza con un guión
+ - Tiene un nombre y un valor asociado, separados por un espacio
+ - Comienza con un guión
 - **Flag**
-  - It's a single text, without spaces
-  - Empieza con un guión doble
+ - It's a single text, without spaces
+ - Empieza con un guión doble
 
 Find below a list of CLI flags and parameters available:
 
@@ -32,12 +32,12 @@ Find below a list of CLI flags and parameters available:
 The following CLI flags determine which network the Rootstock (RSK) node will connect to.
 
 - `--main`:
-  This indicates that the configuration for the Rootstock Mainnet (public network) should be used.
+ This indicates that the configuration for the Rootstock Mainnet (public network) should be used.
 - `--testnet`:
-  This indicates that the configuration for the Rootstock Testnet (public network) should be used.
+ This indicates that the configuration for the Rootstock Testnet (public network) should be used.
 - `--regtest`:
-  This indicates that the configuration for the Rootstock Regtest (localhost network) should be used.
-  - Example: `java -cp rsk-core-<VERSION>.jar co.rsk.start --regtest`
+ This indicates that the configuration for the Rootstock Regtest (localhost network) should be used.
+ - Example: `java -cp rsk-core-<VERSION>.jar co.rsk.start --regtest`
 
 > * Only one of these three CLI flags should be specified.
 > * Si no se especifica ninguna de estas opciones, se utiliza **Rootstock Mainnet** por defecto.
@@ -49,39 +49,42 @@ and other blockchain state on disk.
 This is known as the _Blockchain Database_.
 
 - `--reset`:
-  This indicates that the block database should be erased, and should start from scratch,
-  i.e. from genesis block.
-  This is typically expected to be used when connecting to Rootstock Regtest,
-  or in select debugging scenarios.
-  It is also used when switching between different databases,
-  e.g. between `leveldb` and `rocksdb`.
+ This indicates that the block database should be erased, and should start from scratch,
+ i.e. from genesis block.
+ This is typically expected to be used when connecting to Rootstock Regtest,
+ or in select debugging scenarios.
+ It is also used when switching between different databases,
+ e.g. between `leveldb` and `rocksdb`.
 
 - `--import`:
-  This indicates that the block database should be imported from an external source.
-  This is typically expected to be used when connecting to Rootstock Testnet or Rootstock Mainnet,
-  and when a reduction in "initial sync time" is desired.
-  It is also used when switching between different databases,
-  e.g. between `leveldb` and `rocksdb`.
+ This indicates that the block database should be imported from an external source.
+ This is typically expected to be used when connecting to Rootstock Testnet or Rootstock Mainnet,
+ and when a reduction in "initial sync time" is desired.
+ It is also used when switching between different databases,
+ e.g. between `leveldb` and `rocksdb`.
 
 ### Relacionado con la configuración
 
 - `--verify-config`:
-  This indicates that the configuration file used by this run of the Rootstock node should be validated. By default this step is always performed.
+ This indicates that the configuration file used by this run of the Rootstock node should be validated. By default this step is always performed.
 - `--print-system-info`:
-  Indica que se debe mostrar la información del sistema de la computadora en el que se ejecuta el nodo Rootstock. Por defecto, esto es siempre el resultado.
+ Indica que se debe mostrar la información del sistema de la computadora en el que se ejecuta el nodo Rootstock. Por defecto, esto es siempre el resultado.
 - `--skip-java-check`:
-  This indicates that the detection of the version of the Java Virtual Machine that the Rootstock node is running in is supported. By default, this check is always performed, to ensure that the Rootstock node is running in a compatible environment.
+ This indicates that the detection of the version of the Java Virtual Machine that the Rootstock node is running in is supported. By default, this check is always performed, to ensure that the Rootstock node is running in a compatible environment.
 - `-base-path`:
-  This specifies the value of `database.dir`, where the blockchain database is stored.
+ This specifies the value of `database.dir`, where the blockchain database is stored.
 
 > Example: `java -cp rsk-core-<VERSION>.jar co.rsk.start -base-path home/rsk/data`
 
 - `-rpccors`
-  This specifies the value of `rpc.providers.web.cors` to control `cors configuration`.
+ This specifies the value of `rpc.providers.web.cors` to control `cors configuration`.
 
 > Example: `java -cp rsk-core-<VERSION>.jar co.rsk.start -rpccors *`
 
 ## Herramientas de línea de comando
+
+It worth highlight that for some commands below that interacts with the database, you might and should set the network flag desired, like
+`--regtest`, `--testnet` or `--main`. Otherwise, the default network will be used, which is the Rootstock Mainnet (public network).
 
 ### Comandos relacionados con la base de datos
 
@@ -91,7 +94,7 @@ The `ExportState` command is a tool for exporting the state at a specific block 
 
 **Uso:**
 
-- `java -cp rsk.jar co.rsk.cli.tools.ExportState -b <block_number> -f <file_path>`
+- `java -cp rsk.jar co.rsk.cli.tools.ExportState -b <block_number> -f <file_path> --<network_flag>`
 
 **Opciones:**
 
@@ -179,7 +182,7 @@ The `StartBootcamp` command starts a bootstrap node with one service, which only
 
 ```shell
   2023-04-24-15:51:14.0793 INFO [fullnoderunner] [main]  Starting RSK
-  2023-04-24-15:51:14.0794 INFO [fullnoderunner] [main]  Running orchid-testnet.json,  
+  2023-04-24-15:51:14.0794 INFO [fullnoderunner] [main]  Running orchid-testnet.json,
   core version: 5.1.0-SNAPSHOT
   ....
 ```
@@ -191,7 +194,7 @@ The `RewindBlocks` command is used to rewind the Rootstock blockchain to a speci
 **Ejemplo:**
 
 ```shell
-  java -cp rsk.jar co.rsk.cli.tools.RewindBlocks [-b <BLOCK_NUMBER>]  [-fmi] (or) [-rbc]
+  java -cp rsk.jar co.rsk.cli.tools.RewindBlocks [-b <BLOCK_NUMBER>]  [-fmi] (or) [-rbc] --<network_flag>
 ```
 
 **Opciones:**
@@ -199,11 +202,10 @@ The `RewindBlocks` command is used to rewind the Rootstock blockchain to a speci
 - `-b, --block=BLOCK_NUMBER_TO_REWIND_TO` block number to rewind blocks to.
 - `-fmi, --findMinInconsistentBlock` flag to find a min inconsistent block. The default value is `false`.
 - `-rbc, --rewindToBestConsistentBlock` flag to rewind to the best consistent block. The default value is `false`.
-
-  > - An inconsistent block is the one with missing state in the states db (this can happen in case of improper node shutdown).
-  > - `fmi` option can be used for finding a minimum inconsistent block number and printing it to stdout. It will print -1, if no such block is found.
-  > - `rbc` option does two things: it looks for a minimum inconsistent block and, if there's such, rewinds blocks from top one till the found one.
-  > - Note that all three options are mutually exclusive, you can specify only one per call.
+- > - An inconsistent block is the one with missing state in the states db (this can happen in case of improper node shutdown).
+ > - `fmi` option can be used for finding a minimum inconsistent block number and printing it to stdout. It will print -1, if no such block is found.
+ > - `rbc` option does two things: it looks for a minimum inconsistent block and, if there's such, rewinds blocks from top one till the found one.
+ > - Note that all three options are mutually exclusive, you can specify only one per call.
 
 **Ejemplo:**
 
@@ -378,7 +380,7 @@ The `ExecuteBlocks` command is a tool for executing blocks for a specified block
 
 **Uso:**
 
-- `java -cp rsk.jar co.rsk.cli.tools.ExecuteBlocks -fb <from_block_number> -tb <to_block_number>`
+- `java -cp rsk.jar co.rsk.cli.tools.ExecuteBlocks -fb <from_block_number> -tb <to_block_number> --<network_flag>`
 
 **Opciones:**
 
@@ -456,9 +458,9 @@ In this example, the tool will generate an OpenRPC JSON doc file located at `/pa
 
 ```json
   {"openrpc" : "1.2.6",
-    "info" : { 
+    "info" : {
     "version" : "5.0.0",
-    "title" : "RSKj JSON-RPC", 
+    "title" : "RSKj JSON-RPC",
     … etc
   }
 ```

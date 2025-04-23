@@ -49,16 +49,16 @@ Elige `mainnet` y presiona `Enter` para continuar
 
 ## Instalar a través de descargas directas
 
-También puedes descargar el paquete RSKj Ubuntu para la última versión de RSKj `ARROWHEAD 6.0.0` e instalarlo con el comando `dpkg`. Sigue este [enlace de descarga](https://launchpad.net/~rsksmart/+archive/ubuntu/rskj/+packages) para descargar el paquete correspondiente para tu sistema ubuntu.
+You can also download the RSKj Ubuntu Package for the latest RSKj release `LOVELL 7.0.0` and install it with the `dpkg` command. Follow this [download link](https://launchpad.net/~rsksmart/+archive/ubuntu/rskj/+packages) to download the matching package for your ubuntu system.
 
 ```shell
-# primero instale openjdk-8-jre o oracle-java8-installer
-sudo apt-get install openjdk-8-jre
+# first install openjdk-17-jre or oracle-java17-installer
+sudo apt-get install openjdk-17-jre
 
-# descargue el paquete RSKj y encuentre el archivo rskj_2.0. ~yourUbuntuVersionName_amd64.deb
+# download the RSKj package and find the file rskj-6.5.0~UBUNTU_VERSION_NAME_amd64.deb
 
-# ejecuta este comando en el mismo directorio que el archivo deb arriba
-dpkg -i rskj_2.0.1~yourUbuntuVersionName_amd64.deb
+# run this command in the same directory as the deb file above
+dpkg -i rskj-6.5.0~UBUNTU_VERSION_NAME_amd64.deb
 ```
 
 Le recomendamos que compruebe que el hash SHA256 del archivo de paquete descargado coincide, antes de la instalación:

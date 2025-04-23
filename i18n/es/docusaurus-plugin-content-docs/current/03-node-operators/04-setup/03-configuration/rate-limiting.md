@@ -40,13 +40,13 @@ La función funciona de la siguiente forma:
 2. El Rate-Limiter calcula el gas virtual consumido por la transacción teniendo en cuenta varios factores de transacción, como se explicó anteriormente
 3. El Rate-Limiter actualiza la cuota de gas virtual del remitente teniendo en cuenta el tiempo transcurrido desde su última transacción (hasta un máximo) o establece un valor predefinido si esta es su primera transacción
 4. El Rate-Limiter compara los valores consumidos y de cuotas y entonces:
-   1. si cuota >= consumida:
-      1. el valor consumido será restado de la cuota del remitente
-      2. la transacción se añadirá al pool
-      3. la transacción se retransmitirá a los pares
-   2. si cuota < consumida:
-      1. la transacción será rechazada y no será añadida al pool
-      2. la transacción no se retransmitirá a los pares
+ 1. si cuota >= consumida:
+  1. el valor consumido será restado de la cuota del remitente
+  2. la transacción se añadirá al pool
+  3. la transacción se retransmitirá a los pares
+ 2. si cuota < consumida:
+  1. la transacción será rechazada y no será añadida al pool
+  2. la transacción no se retransmitirá a los pares
 
 La implementación del algoritmo de limitación de tasa se puede encontrar en RSKj. Vea [TxQuotaChecker](https://github.com/rsksmart/rskj/blob/10fcc4f/rskj-core/src/main/java/co/rsk/net/handler/quota/TxQuotaChecker.java) para la implementación.
 
@@ -62,9 +62,9 @@ Ambas variantes afectan las redes congestionadas más que las cadenas de bloques
 Esta característica tiene algunas consecuencias inherentes:
 
 1. Accounts gain trust over time.\
-   When an account sends multiple transactions, and these do not go over the allowed limits, the RSKj node implementation remembers it as being more trustworthy for future transactions.
+ When an account sends multiple transactions, and these do not go over the allowed limits, the RSKj node implementation remembers it as being more trustworthy for future transactions.
 2. Accounts replenish virtual gas over time.\
-   When an account does not send any transactions for a period of time, it gains the ability to send more frequent and larger future transactions.
+ When an account does not send any transactions for a period of time, it gains the ability to send more frequent and larger future transactions.
 
 ## Cómo configurar el limitador de velocidad
 

@@ -17,15 +17,21 @@ Aquí tiene los pasos para compilar y ejecutar un nodo Rootstock en Linux.
 
 En primer lugar, necesitará instalar:
 
-| Dependencia                                                                               | Detalles                                                                                                                                                                                                                                                                                                     |
-| ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Git para Linux](https://git-scm.com/download/linux)                                      | Descargar esta herramienta de línea de comandos de Git                                                                                                                                                                                                                                                       |
-| [Java 8 JDK](http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html) | Siga los pasos para instalar Java. Para comprobar si la instalación ha ido correctamente, compruebe la versión con el comando: `java-version`. Luego, como administrador, modifíquelo a `/etc/enviroment` añadiendo `JAVA_HOME="/usr/lib/jvm/java-8-oracle"` |
+| Dependencia                                                                                            | Detalles                                                                                                                                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Git para Linux](https://git-scm.com/download/linux)                                                   | Descargar esta herramienta de línea de comandos de Git                                                                                                                                                                                             |
+| [Java 17 JDK](https://docs.oracle.com/en/java/javase/17/install/installation-jdk-linux-platforms.html) | Follow the steps to install Java. To check if installation went correctly, check the version with command: `java-version`. Then, as admin, modify `/etc/enviroment` adding the correct `JAVA_HOME` |
 
 IDs recomendados:
 
 - [Comunidad IDEA de IntelliJ](https://www.jetbrains.com/idea/download/#section=linux)
 - [Codigo Visual Studio](https://code.visualstudio.com/)
+
+:::warning\[Important]
+
+Starting with [v6.4.0](/changelog/), the minimum supported Java LTS version is Java 17. Previous Java versions will no longer be supported.
+
+:::
 
 ## Obtener el código fuente
 
@@ -36,7 +42,7 @@ Ejecutar estos comandos en la terminal:
 ```shell
 git clone --recursive https://github.com/rsksmart/rskj.git
 cd rskj
-git checkout tags/ARROWHEAD-6.0.0 -b ARROWHEAD-6.0.0
+git checkout tags/LOVELL-7.0.0 -b LOVELL-7.0.0
 ```
 
 _Nota:_ Es mejor descargar el código en una ruta corta.
@@ -74,7 +80,7 @@ Cuando IntelliJ IDEA es lanzado debe tener una ventana con diferentes opciones.
 - Elegir _Importar proyecto_.
 - Navega en el RskJ descargado código del archivo `rskj\build.gradle` y selecciónalo. Haz clic en _NEXT_.
 - Dentro del cuadro de diálogo, seleccione _Usar envoltorio de gradle predeterminado_ y luego haga clic en _Finalizar_.
-  _Mantener IntelliJ IDEA abierto_.
+   _Mantener IntelliJ IDEA abierto_.
 
 ![img](/img/rsk/howToInstallAndRun/IdeaRskJWelcome.png)
 

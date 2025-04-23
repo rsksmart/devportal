@@ -2,12 +2,12 @@
 sidebar_label: Contratos
 sidebar_position: 700
 title: RIF Relay - Contratos
+description: RIF Relay Contracts.
 tags:
   - rif
   - sobre
   - relé
   - integrar
-description: Contratos de relevo RIF
 ---
 
 ## Mainnet

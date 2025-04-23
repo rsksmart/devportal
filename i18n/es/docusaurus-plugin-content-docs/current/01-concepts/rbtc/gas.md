@@ -73,13 +73,13 @@ El límite de gas de transacción por bloque es de 6.800.000 unidades.
 He aquí algunos enfoques prácticos de este tema:
 
 1. Enfoque optimista (no recomendado):
-   Puede establecer `minimumGasPrice` como parámetro del precio del gas para la transacción **pero si el precio mínimo del gas está siendo negociado y sube, su transacción podría ser rechazada**.
+  Puede establecer `minimumGasPrice` como parámetro del precio del gas para la transacción **pero si el precio mínimo del gas está siendo negociado y sube, su transacción podría ser rechazada**.
 
 2. Enfoque sensato:
-   En lugar de utilizar "precio mínimo del gas" tal y como está, puede [añadir un 10% a su valor](#cómo-cambia-el-precio-del-gas-con-el-tiempo).
+  En lugar de utilizar "precio mínimo del gas" tal y como está, puede [añadir un 10% a su valor](#cómo-cambia-el-precio-del-gas-con-el-tiempo).
 
 3. Enfoque de la media de la red:
-   Puedes obtener el precio medio del gas que se está pagando en la red:
+  Puedes obtener el precio medio del gas que se está pagando en la red:
 
 ```javascript
 web3.eth.preciogas()

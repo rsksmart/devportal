@@ -95,14 +95,14 @@ Para banear o desbanear manualmente a un peer, esto puede hacerse por dirección
 deben utilizarse los siguientes [métodos RPC](/node-operators/json-rpc/methods/):
 
 - `sco_banAddress(String address)`:
-  - Elimina una dirección o bloque a la lista de direcciones prohibidas.
+    - Elimina una dirección o bloque a la lista de direcciones prohibidas.
 - `sco_unbanAddress(String address)`:
-  - Elimina una dirección o bloque de direcciones de la lista de direcciones prohibidas.
+    - Elimina una dirección o bloque de direcciones de la lista de direcciones prohibidas.
 
 Para comprobar qué direcciones están prohibidas, utilice el siguiente método:
 
 - `sco_bannedAddresses()`:
-  - Devuelve la lista de direcciones y bloques bloqueados
+    - Devuelve la lista de direcciones y bloques bloqueados
 
 > Advertencia: Estos métodos deben ser utilizados con precaución.
 

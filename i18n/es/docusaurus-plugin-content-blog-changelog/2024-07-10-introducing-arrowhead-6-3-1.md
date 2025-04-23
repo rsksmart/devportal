@@ -3,6 +3,7 @@ title: "Presentando Arrowhead 6.3.1: Lo que debe saber sobre la próxima Patch N
 author: Rootstock
 tags:
   - release
+  - arrowhead
 url: https://blog.rootstock.io/noticia/introducing-arrowhead-6-3-1-what-you-need-to-know-about-rootstocks-upcoming-patch-network-upgrade/
 ---
 

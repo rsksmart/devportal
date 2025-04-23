@@ -30,52 +30,52 @@ Instrucciones sobre cómo hacer un peg-in en Mainnet.
 ```mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
-    <Accordion.Header as="h3">1. Obtener una dirección BTC con saldo</Accordion.Header>
+    <Accordion.Header as="h3">1. Get a BTC address with balance</Accordion.Header>
     <Accordion.Body>
-      - Cualquier monedero Bitcoin que soporte clave privada heredada (`p2pkh`) funciona para este paso. En esta sección, utilizaremos el monedero BTC de Electrum para conectarnos a BTC Mainnet.
-        1. 1. Descargue el monedero desde [Electrum Website](https://electrum.org/)
-        2. Instale Electrum https://electrum.org/ 2. Instale Electrum
-        Inicie Electrum
-        4. Una vez iniciado Electrum, cree o importe un monedero
-        5. 5. Vaya a la tercera pestaña "Recibir". Verá una dirección de Bitcoin Testnet como la siguiente:
+      - Any Bitcoin wallet that supports legacy (`p2pkh`) private key works for this step. In this section, we use the Electrum BTC wallet for connecting to BTC Mainnet.
+        1. Download the wallet from [Electrum Website](https://electrum.org/)
+        2. Install Electrum
+        3. Start Electrum
+        4. Once Electrum starts, create or import a wallet
+        5. Go to the third tab "Receive". You will see a Bitcoin Testnet address like below:
         <div align="left"><img width="70%" src="/img/legacy-private-key.png" alt="Create a Legacy (`p2pkh`) walletn"/></div>
-      > Nota: Utilice un monedero Bitcoin antiguo (no Segwit) con una clave pública que empiece por `m` o `n`, y una clave privada con el prefijo `p2pkh`.
+      > Note: Use a legacy Bitcoin wallet (not Segwit) with a public key beginning with `m` or `n`, and a private key prefixed by `p2pkh`.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">
-    <Accordion.Header as="h3">2. Enviar Bitcoin a la dirección de la Federación Rootstock</Accordion.Header>
+    <Accordion.Header as="h3">2. Send Bitcoin to Rootstock Federation address</Accordion.Header>
     <Accordion.Body>
-      Enviar Bitcoin a la dirección de la federación Rootstock
-      - La dirección de la federación Rootstock se obtiene realizando una llamada a un contrato inteligente en la red principal de Rootstock. Para realizar la llamada, debe tener instalado [MyCrypto](https://app.mycrypto.com/interact-with-contracts):
-        1. 1. Seleccione la red Rootstock (RSK).
-        2. Navegue a **MyCrypto** -> **Contratos**.
-        3. Seleccione **Contratos existentes** y elija **Puente** en el menú desplegable.
-        4. Haga clic en **getFederationAddress** para ejecutar la llamada.
-          Debería parecerse a la captura de pantalla siguiente:
+      Send Bitcoin to Rootstock Federation address
+      - The Rootstock Federation address is retrieved by making a Smart Contract call on Rootstock Mainnet. To make the call, you need to have [MyCrypto](https://app.mycrypto.com/interact-with-contracts) installed:
+        1. Select Rootstock (RSK) Network.
+        2. Navigate to **MyCrypto** -> **Contracts**.
+        3. Select **Existing Contracts**  and choose **Bridge** from the drop-down menu.
+        4. Click **getFederationAddress** to execute the call.
+          It should look like the screenshot below:
         <div align="left"><img width="70%" src="/img/mycrypto-federation-updated-10-07-2024.png" alt="Get Rootstock Federation address from MyCrypto"/></div>
-      Una vez que tenga la dirección de la Federación Rootstock, puede enviarle Bitcoin desde su dirección Bitcoin.
-      > Nota: Debe enviar una cantidad mínima de 0,005 BTC.
+      Once you have the Rootstock Federation address, you can send Bitcoin to it from your Bitcoin address.
+      > Note: You must send a minimum amount of 0.005 BTC.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="3">
-    <Accordion.Header as="h3">3. Esperar confirmaciones de BTC</Accordion.Header>
+    <Accordion.Header as="h3">3. Wait for BTC confirmations</Accordion.Header>
     <Accordion.Body>
-      - Para asegurarnos de que la transacción se realiza correctamente, debemos esperar 100 confirmaciones de la red BTC.
-      > 100 bloques \* 10 minutos/bloque = 1000 minutos = 16,667 horas. Es decir, tardaremos aproximadamente 17 horas.
+      -  To ensure the transaction is successful, we need to wait for 100 BTC network confirmations.
+      > 100 blocks \* 10 minutes/block = 1000 minutes = 16.667 hours. That is, this will take approximately 17 hours.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="4">
-    <Accordion.Header as="h3">4. Obtener dirección RBTC con clave privada BTC</Accordion.Header>
+    <Accordion.Header as="h3">4. Get RBTC address with BTC private key</Accordion.Header>
     <Accordion.Body>
-      - Puede obtener la dirección RBTC correspondiente a partir de su clave privada de BTC utilizando las [Rootstock Utils](https://github.com/rsksmart/utils). Si no desea compilar la utilidad, puede descargar la [última versión](https://github.com/rsksmart/utils/releases/latest).
-      > Nota: cuando introduzca la clave privada de Bitcoin no incluya _p2pkh:_ delante.
+      -  You can get a corresponding RBTC address from your BTC private key by using the [Rootstock Utils](https://github.com/rsksmart/utils). If you do not want to compile the utility, you can download the [latest release](https://github.com/rsksmart/utils/releases/latest).
+      > Note: when entering Bitcoin private key do not include _p2pkh:_ in the front.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="5">
-    <Accordion.Header as="h3">5. Comprobar el saldo de RBTC</Accordion.Header>
+    <Accordion.Header as="h3">5. Check RBTC balance</Accordion.Header>
     <Accordion.Body>
-      Puede comprobar el saldo de la dirección RBTC en Metamask, MyCrypto o cualquier [monedero compatible con Rootstock](https://blog.rootstock.io/noticia/rootstock-wallets/).
-      > Nota: Debe esperar un mínimo de 100 confirmaciones + un mínimo de 5 minutos para comprobar su saldo de RBTC.
+      You can check balance of RBTC address on Metamask, MyCrypto, or any [Rootstock compatible wallets](https://blog.rootstock.io/noticia/rootstock-wallets/).
+      > Note: You have to wait a minimum of 100 confirmations + a minimum of 5 minutes for checking your RBTC balance.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
@@ -88,24 +88,24 @@ Instrucciones sobre cómo hacer un peg-out de Mainnet.
 ```mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
-    <Accordion.Header as="h3">1. Obtener dirección BTC con clave privada RBTC</Accordion.Header>
+    <Accordion.Header as="h3">1. Get BTC address with RBTC private key</Accordion.Header>
     <Accordion.Body>
-      Puedes obtener la dirección BTC correspondiente a tu clave privada RBTC utilizando la utilidad [Rootstock](https://github.com/rsksmart/utils). Si no desea compilar la utilidad, puede descargar la [última versión](https://github.com/rsksmart/utils/releases/latest).
+      You can get a corresponding BTC address from your RBTC private key by using the [Rootstock](https://github.com/rsksmart/utils). If you do not want to compile the utility, you can download the [latest release](https://github.com/rsksmart/utils/releases/latest).
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
-    <Accordion.Header as="h3">2. Enviar RBTC a Rootstock Bridge Contract</Accordion.Header>
+    <Accordion.Header as="h3">2. Send RBTC to Rootstock Bridge Contract</Accordion.Header>
       <Accordion.Body>
-        - Dirección del Contrato Puente Rootstock: `0x0000000000000000000000000000000001000006`
-        - Nota: La cantidad mínima a enviar debe ser de al menos 0,004 RBTC para Mainnet, el envío de cualquier cantidad por debajo de esto, fallará y los fondos serán reembolsados. El Límite de Gas de la transacción debe establecerse manualmente en 100.000 gas; de lo contrario, la transacción fallará. El Precio del Gas puede fijarse en 0,06 gwei (o el precio del gas sugerido por el monedero).
-          ![Personalizar Gas en Metamask antes de enviar transacción en Rootstock](/img/metamask-gas-limit.png)
+        - Rootstock Bridge Contract address: `0x0000000000000000000000000000000001000006`
+        - Note: The minimum amount to send must be at least 0.004 RBTC for Mainnet, sending any amount below this, will fail and funds will be reimbursed. The Gas Limit of the transaction needs to be manually set at 100,000 gas; otherwise the transaction will fail. Gas Price can be set to 0.06 gwei (or the gas price suggested by the wallet).
+          ![Customize Gas in Metamask before send transaction on Rootstock](/img/metamask-gas-limit.png)
       </Accordion.Body>
     </Accordion.Item>
   <Accordion.Item eventKey="2">
-    <Accordion.Header as="h3">3. Comprobar el saldo de la dirección BTC</Accordion.Header>
+    <Accordion.Header as="h3">3. Check balance of BTC address</Accordion.Header>
     <Accordion.Body>
-      - Puede utilizar el monedero Electrum descargado anteriormente o desde cualquier explorador de Bitcoin para comprobar el saldo.
-        > Nota: El proceso de liberación en la red Bitcoin tarda 4000 confirmaciones de bloque de Rootstock y al menos 10 minutos más.
+      - You can either use Electrum wallet downloaded earlier or from any Bitcoin explorer to check the balance.
+        > Note: The release process on Bitcoin network takes 4000 Rootstock block confirmations and at least 10 more minutes.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
@@ -126,55 +126,55 @@ Instrucciones para realizar un enclavamiento Testnet.
 ```mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
-    <Accordion.Header as="h3">1. Conectar un monedero a Bitcoin Testnet</Accordion.Header>
+    <Accordion.Header as="h3">1. Connect a wallet to Bitcoin Testnet</Accordion.Header>
     <Accordion.Body>
-      Recomendamos utilizar el monedero Electrum BTC para conectarse a Bitcoin Testnet.
-      - Descargue el monedero de
-        [Sitio web de Electrum](https://bitzuma.com/posts/a-beginners-guide-to-the-electrum-bitcoin-wallet/)
-      - Instale Electrum
-      - Inicie Electrum en modo Testnet
-        - Por ejemplo en MacOS:
+      We recommend to use Electrum BTC wallet for connecting to Bitcoin Testnet.
+      - Download the wallet from
+        [Electrum Website](https://bitzuma.com/posts/a-beginners-guide-to-the-electrum-bitcoin-wallet/)
+      - Install Electrum
+      - Start Electrum in Testnet mode
+        - For example on MacOS:
           `/Applications/Electrum.app/Contents/MacOS/Electrum --testnet`
-      - Una vez iniciado Electrum, cree o importe un monedero
-      - Vaya a la tercera pestaña, "Recibir".
-        Verá una dirección Bitcoin Testnet como la siguiente.
-      ![Crear un monedero heredado (`p2pkh`)](/img/legacy-private-key.png)
-      - Nota: El monedero Bitcoin tiene que ser heredado (no Segwit) cuya clave pública empiece por `m` o `n`, y la clave privada empiece por `p2pkh:`
-      ![Obtener una dirección Bitcoin Testnet en el monedero Electrum](/img/electrum-wallet.png)
+      - After Electrum starts, create or import a wallet
+      - Go to the third tab, "Receive".
+        You will see a Bitcoin Testnet address like below.
+      ![Create a Legacy (`p2pkh`) wallet](/img/legacy-private-key.png)
+      - Note: The Bitcoin wallet needs to be legacy (not Segwit) whose public key starts with either `m` or `n`, and private key starting with `p2pkh:`
+      ![Get a Bitcoin Testnet address in Electrum Wallet](/img/electrum-wallet.png)
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
-    <Accordion.Header as="h3">2. Obtener Bitcoin de prueba de Testnet Faucet</Accordion.Header>
+    <Accordion.Header as="h3">2. Get test Bitcoin from Testnet Faucet</Accordion.Header>
     <Accordion.Body>
-      Hay varias opciones para obtener Bitcoin en Testnet. Nosotros utilizamos [https://testnet-faucet.mempool.co/](https://testnet-faucet.mempool.co/).
+      There are a few options to get Bitcoin on Testnet. We use [https://testnet-faucet.mempool.co/](https://testnet-faucet.mempool.co/).
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">
-    <Accordion.Header as="h3">3. Enviar Bitcoin a la dirección de la Federación Rootstock</Accordion.Header>
+    <Accordion.Header as="h3">3. Send Bitcoin to Rootstock Federation address</Accordion.Header>
     <Accordion.Body>
-      - La dirección de la Federación Rootstock se obtiene haciendo una llamada de Contrato Inteligente en Testnet Rootstock.
-      - Para realizar la llamada, necesitará tener
+      - The Rootstock Federation address is retrieved by making a Smart Contract call on Rootstock Testnet.
+      - In order to make the call, you will need to have
       [MyCrypto](https://app.mycrypto.com/interact-with-contracts)
-      instalado, seleccionar Rootstock Testnet en _"More Networks"_, y Navegar a _"MyCrypto -> Contracts -> Select Existing Contracts -> "Bridge" -> "getFederationAddress"_ para ejecutar la llamada.
-      - Debe parecerse a la siguiente captura de pantalla.
-      ![Obtener dirección de la Federación Rootstock desde MyCrypto](/img/mycrypto-federation-updated-10-07-2024.png)
-      Una vez que tenga la dirección de la Federación Rootstock,
-      puede enviarle Bitcoin desde su dirección Bitcoin.
-      - Nota: Necesita enviar una cantidad mínima de 0.01 tBTC para la conversión.
+      installed, select Rootstock Testnet in _"More Networks"_, and Navigate to _"MyCrypto -> Contracts -> Select Existing Contracts -> "Bridge" -> "getFederationAddress"_ to execute the call.
+      - It should look like the screenshot below.
+      ![Get Rootstock Federation address from MyCrypto](/img/mycrypto-federation-updated-10-07-2024.png)
+      Once you have the Rootstock Federation address,
+      you can send Bitcoin to it from your Bitcoin address.
+      - Note: You need to send a minimum amount of 0.01 tBTC for conversion.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="3">
-    <Accordion.Header as="h3">4. Obtener dirección tRBTC con clave privada tBTC</Accordion.Header>
+    <Accordion.Header as="h3">4. Get tRBTC address with tBTC private key</Accordion.Header>
     <Accordion.Body>
-      - Puede obtener una dirección tRBTC correspondiente a partir de su clave privada tBTC utilizando [github.com/rsksmart/utils](https://github.com/rsksmart/utils). Si no desea compilar la utilidad, puede descargar la [última versión](https://github.com/rsksmart/utils/releases/latest).
-      - Nota: Cuando introduzcas la clave privada de Bitcoin no incluyas `_p2pkh:_` delante.
+      - You can get a corresponding tRBTC address from your tBTC private key by using [github.com/rsksmart/utils](https://github.com/rsksmart/utils). If you do not want to compile the utility, you can download the [latest release](https://github.com/rsksmart/utils/releases/latest).
+      - Note: When entering Bitcoin private key do not include `_p2pkh:_` in the front.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="4">
-    <Accordion.Header as="h3">5. Comprobar el saldo de tRBTC en Testnet</Accordion.Header>
+    <Accordion.Header as="h3">5. Check tRBTC balance on Testnet</Accordion.Header>
     <Accordion.Body>
-      - Puede comprobar el saldo de la dirección tRBTC anterior en Metamask, MyCrypto o cualquier monedero Rootstock compatible con Testnet.
-      - Tiene que esperar un mínimo de 10 confirmaciones + un mínimo de 5 minutos para comprobar su saldo de RBTC.
+      - You can check the balance of the above tRBTC address on Metamask, MyCrypto or any Rootstock Testnet compatible wallets.
+      - You have to wait a minimum of 10 confirmations + a minimum of 5 minutes for checking your RBTC balance.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
@@ -191,26 +191,26 @@ El proceso de liberación en la red Bitcoin tarda 10 confirmaciones de bloque Ro
 ```mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
-    <Accordion.Header as="h3">1. Obtener la dirección tBTC con la clave privada tRBTC</Accordion.Header>
+    <Accordion.Header as="h3">1. Get tBTC address with tRBTC private key</Accordion.Header>
     <Accordion.Body>
-      - Puedes obtener una dirección tBTC correspondiente a partir de tu clave privada tRBTC utilizando [github.com/rsksmart/utils](https://github.com/rsksmart/utils). Si no desea compilar la utilidad, puede descargar la [última versión](https://github.com/rsksmart/utils/releases/latest).
+      - You can get a corresponding tBTC address from your tRBTC private key by using [github.com/rsksmart/utils](https://github.com/rsksmart/utils). If you do not want to compile the utility, you can download the [latest release](https://github.com/rsksmart/utils/releases/latest).
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
-    <Accordion.Header as="h3">2. Enviar tRBTC a Rootstock Bridge Contract</Accordion.Header>
+    <Accordion.Header as="h3">2. Send tRBTC to Rootstock Bridge Contract</Accordion.Header>
     <Accordion.Body>
-      - Dirección del Contrato Puente Rootstock: `0x0000000000000000000000000000000001000006`
-      - **Nota importante**: La cantidad mínima a enviar debe ser **al menos** 0.004 tRBTC para Testnet, valores por debajo de eso serán rechazados y reembolsados al remitente.
-      - El límite de gas de la transacción debe establecerse manualmente en 100.000 gas; de lo contrario, la transacción fallará.
-      - El precio del gas puede fijarse en 0,06 gwei.
-        ![Personalizar Gas en Metamask antes de enviar transacción en Rootstock](/img/metamask-gas-limit.png)
+      - Rootstock Bridge Contract address: `0x0000000000000000000000000000000001000006`
+      - **Important note**: The minimum amount to send must be **at least** 0.004 tRBTC for Testnet, values below that will be rejected and reimbursed to the sender.
+      - Gas Limit of the transaction needs to be manually set at 100,000 gas; otherwise the transaction will fail.
+      - Gas Price can be set to 0.06 gwei.
+        ![Customize Gas in Metamask before send transaction on Rootstock](/img/metamask-gas-limit.png)
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">
-    <Accordion.Header as="h3">3. Comprobar el saldo de la dirección tBTC en Bitcoin Testnet</Accordion.Header>
+    <Accordion.Header as="h3">3. Check balance of tBTC address on Bitcoin Testnet</Accordion.Header>
     <Accordion.Body>
-      Puede utilizar el monedero Electrum descargado anteriormente o desde
-      cualquier explorador de Bitcoin para comprobar el saldo.
+      You can either use Electrum wallet downloaded earlier or from
+      any Bitcoin explorer to check the balance.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>

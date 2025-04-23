@@ -67,63 +67,63 @@ Como se mencionó anteriormente, Rootstock generalmente ofrece tarifas de gas m�
 Antes de comenzar, asegúrese de tener lo siguiente:
 
 - Node.js:
-  - Asegúrese de que tiene instalado Node.js. Si no, puede seguir las instrucciones de instalación para Windows o MacOS.
+ - Asegúrese de que tiene instalado Node.js. Si no, puede seguir las instrucciones de instalación para Windows o MacOS.
 - Hardhat:
-  - Instala Hardhat globalmente usando npm: `npm i -g hardhat`
+ - Instala Hardhat globalmente usando npm: `npm i -g hardhat`
 - Un conocimiento básico de los contratos inteligentes y la solidez
 
 ### Pasos para configurar un proyecto Hardhat para Rootstock
 
 1. **Crear un nuevo proyecto**: Crea una carpeta para tu proyecto y navega en él:
-   ```sh
-   ejemplo de mkdir rsk-hardhat-example
-   cd rsk-hardhat-example
-   ```
+ ```sh
+ ejemplo de mkdir rsk-hardhat-example
+ cd rsk-hardhat-example
+ ```
 
 2. **Inicializa Hardhat**: Inicializa tu proyecto Hardhat ejecutando este comando:
-   ```sh
-   npx hardhat init
-   ```
+ ```sh
+ npx hardhat init
+ ```
 
 3. **Seleccione el marco del proyecto:** Elija **Crear un proyecto TypeScript** cuando se le pida como se muestra a continuación. Luego pulse entrar.
 
-   ```
-   888    888                      888 888               888
-   888    888                      888 888               888
-   888    888                      888 888               888
-   8888888888  8888b.  888d888 .d88888 88888b.   8888b.  888888
-   888    888     "88b 888P"  d88" 888 888 "88b     "88b 888
-   888    888 .d888888 888    888  888 888  888 .d888888 888
-   888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
-   888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
+ ```
+ 888    888                      888 888               888
+ 888    888                      888 888               888
+ 888    888                      888 888               888
+ 8888888888  8888b.  888d888 .d88888 88888b.   8888b.  888888
+ 888    888     "88b 888P"  d88" 888 888 "88b     "88b 888
+ 888    888 .d888888 888    888  888 888  888 .d888888 888
+ 888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
+ 888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
 
-   👷 Welcome to Hardhat v2.22.5 👷‍
+ 👷 Welcome to Hardhat v2.22.5 👷‍
 
-   ? What do you want to do? …
-   ❯ Create a TypeScript project
-   ```
+ ? What do you want to do? …
+ ❯ Create a TypeScript project
+ ```
 
 4. **Selecciona la raíz del proyecto** (presiona entrar)
-   ```sh
-   ✔️ ¿Qué quieres hacer? · Crear un proyecto TypeScript
-   ? Raíz del proyecto Hardhat: › /path/to/tu/proyecto/rsk-hardhat-example
-   ```
+ ```sh
+ ✔️ ¿Qué quieres hacer? · Crear un proyecto TypeScript
+ ? Raíz del proyecto Hardhat: › /path/to/tu/proyecto/rsk-hardhat-example
+ ```
 
 5. **Agrega un archivo .gitignore**: Si necesitas un archivo .gitignore (recomendado), crea uno en la raíz de tu proyecto. Puedes saltarte este paso si no quieres usar Git.
-   ```sh
-   ? ¿Quieres añadir un .gitignore? (S/n) ›
-   ```
+ ```sh
+ ? ¿Quieres añadir un .gitignore? (S/n) ›
+ ```
 
 6. **Instalar dependencias con npm**:
-   ```sh
-   ? ¿Quieres instalar las dependencias de este proyecto de ejemplo con npm (hardhat @nomicfoundation/hardhat-toolbox)? (Y/n) › y
-   ```
+ ```sh
+ ? ¿Quieres instalar las dependencias de este proyecto de ejemplo con npm (hardhat @nomicfoundation/hardhat-toolbox)? (Y/n) › y
+ ```
 
 7. **Configura las redes Rootstock**: Hasta ahora, tu proyecto hardhat debería tener cuatro artefactos principales además de la configuración básica del nodo:
-   - `contracts/`
-   - `ignition/modules/`
-   - `test/`
-   - `hardhat.config.js`
+ - `contracts/`
+ - `ignition/modules/`
+ - `test/`
+ - `hardhat.config.js`
 
 > Esta guía utiliza la versión 2.22.5 de Hardhat. Para esta versión, la herramienta predeterminada para gestionar implementaciones es [Hardhat Ignition](https://hardhat.org/ignition/docs/getting-started).
 
@@ -228,24 +228,24 @@ import "@nomicfoundation/hardhat-toolbox";
 import "@nomicfoundation/hardhat-ignition-ethers";
 
 const config: HardhatUserConfig = {
-  solidity: "0. .24", // Establecer la versión deseada de Solidity
+  solidity: "0.8.24", // Set your desired Solidity version
 
-  redes: {
-    // Configuración de Mainnet
-    mainnet: {
-      url: "https://rpc. ainnet.rootstock. o/<API-KEY>",
-      cuentas: [process.env.PRIVATE_KEY],
+  networks: {
+    // Mainnet configuration
+    rskMainnet: {
+      url: "https://rpc.mainnet.rootstock.io/<API-KEY>",
+      accounts: [process.env.PRIVATE_KEY],
     },
 
-    // Configuración de Testnet
-    testnet: {
-      url: "https://rpc. estnet.rootstock. o/<API-KEY>",
-      cuentas: [process.env.PRIVATE_KEY],
+    // Testnet configuration
+    rskTestnet: {
+      url: "https://rpc.testnet.rootstock.io/<API-KEY>",
+      accounts: [process.env.PRIVATE_KEY],
     },
   },
 };
 
-exportar configuración predeterminada;
+export default config;
 ```
 
 Reemplaza `<API-KEY>` con tus claves API reales obtenidas del panel de control de Rootstock Labs. Además, almacena tu clave privada de forma segura (por ejemplo, en un archivo `.env`).

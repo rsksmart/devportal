@@ -2,12 +2,12 @@
 sidebar_label: Despliegue del repetidor RIF
 sidebar_position: 500
 title: Despliegue del repetidor RIF
+description: RIF Relay deployment process.
 tags:
   - rif
   - sobre
   - relé
   - guía de integración
-description: Proceso de despliegue del relé RIF
 ---
 
 ## Configurar los contratos de retransmisión RIF y el servidor
@@ -66,11 +66,11 @@ El resumen de despliegue muestra dos conjuntos de Carteras Inteligentes, cada un
 
 #### Testnet
 
-1. Asegúrate de que tu cuenta tiene fondos. Puede obtener fondos de [tRBTC Faucet](https://faucet.rootstock.io/).
+1. Ensure your account is funded. You can get funds from the [tRBTC Faucet](https://faucet.rootstock.io/). Additional faucet options include; [Thirdweb](https://thirdweb.com/rootstock-testnet) and [Blast](https://blastapi.io/faucets/rootstock-testnet) Faucets.
 2. Despliegue en Testnet:
-   ```bash
-     npx hardhat deploy --network testnet
-   ```
+  ```bash
+    npx hardhat deploy --network testnet
+  ```
 
 > Recuerde configurar Testnet en `hardhat.config.ts`. Los contratos existentes de RIF Relay desplegados en Testnet se pueden encontrar en la sección [contracts](/developers/integrate/rif-relay/contracts).
 
@@ -78,9 +78,9 @@ El resumen de despliegue muestra dos conjuntos de Carteras Inteligentes, cada un
 
 1. Asegúrese de que su cuenta tiene fondos.
 2. Despliegue en Mainnet:
-   ```bash
-     npx hardhat deploy --network mainnet
-   ```
+  ```bash
+    npx hardhat deploy --network mainnet
+  ```
 
 > Asegúrese de que Mainnet está configurado en `hardhat.config.ts`. Los contratos existentes de RIF Relay desplegados en Mainnet se pueden encontrar en la [sección de contratos](/developers/integrate/rif-relay/contracts).
 
@@ -91,7 +91,7 @@ La distribución de ingresos es una función opcional de RIF Relay que puede imp
 Antes de desplegar un contrato de recopilador, asegúrese de lo siguiente:
 
 1. Asegúrese de que el token elegido para el contrato de recaudación es el mismo que el utilizado para las comisiones de transacción.
-   > **Nota:** No puede recuperar otros tokens que no sean los establecidos durante la implementación del recopilador.
+  > **Nota:** No puede recuperar otros tokens que no sean los establecidos durante la implementación del recopilador.
 2. Seleccione un propietario adecuado para el contrato de recaudación. Este propietario no tiene por qué ser el implementador, pero debe tener autoridad para ejecutar la función de retirada, o de lo contrario los fondos de ingresos quedarán bloqueados en el contrato.
 3. Configure los socios y sus porcentajes de participación, asegurándose de que el total sume 100%. Los tokens enviados incorrectamente a una dirección inaccesible sin una clave privada del beneficiario se perderán. Para ver un ejemplo de definición de participaciones en ingresos estructuralmente válida, consulte [configuración de ejemplo](https://github.com/rsksmart/rif-relay-contracts/blob/master/deploy-collector.input.sample.json).
 
@@ -100,40 +100,40 @@ Antes de desplegar un contrato de recopilador, asegúrese de lo siguiente:
 Para desplegar el contrato del colector, utilizaremos el [Contrato de retransmisión RIF](https://github.com/rsksmart/).
 
 1. Cree un archivo de configuración llamado `deploy-collector.input.json` con la estructura requerida:
-   ````json
-       {
-         "colectorPropietario": "0xCD2a3d9F938E13CD947Ec05AbC7FE734Df8DD826",
-         "partners": [
-             {
-               "beneficiario": "0x7986b3DF570230288501EEa3D890bd66948C9B79",
-               "cuota": 20
-             },
-             {
-               "beneficiario": "0x0a3aA774752ec2042c46548456c094A76C7F3a79",
-               "share": 35
-             },
-             {
-               "beneficiario": "0xCF7CDBb5F7BA79d3ffe74A0bBA13FC0295F6036",
-               "share": 13
-             },
-             {
-               "beneficiario": "0x39B12C05E8503356E3a7DF0B7B33efA4c054C409",
-               "share": 32
-             }
-         ],
-         "tokenAddresses": ["0x1Af2844A588759D0DE58abD568ADD96BB8B3B6D8"],
-         "remainderAddress": "0xc354D97642FAa06781b76Ffb6786f72cd7746C97"
-       }
-     ```
+  ````json
+      {
+        "colectorPropietario": "0xCD2a3d9F938E13CD947Ec05AbC7FE734Df8DD826",
+        "partners": [
+            {
+              "beneficiario": "0x7986b3DF570230288501EEa3D890bd66948C9B79",
+              "cuota": 20
+            },
+            {
+              "beneficiario": "0x0a3aA774752ec2042c46548456c094A76C7F3a79",
+              "share": 35
+            },
+            {
+              "beneficiario": "0xCF7CDBb5F7BA79d3ffe74A0bBA13FC0295F6036",
+              "share": 13
+            },
+            {
+              "beneficiario": "0x39B12C05E8503356E3a7DF0B7B33efA4c054C409",
+              "share": 32
+            }
+        ],
+        "tokenAddresses": ["0x1Af2844A588759D0DE58abD568ADD96BB8B3B6D8"],
+        "remainderAddress": "0xc354D97642FAa06781b76Ffb6786f72cd7746C97"
+      }
+    ```
 
-   ````
+  ````
 
 > **Nota:** Las cuentas `collectorOwner`, `beneficiaries` y `remainderAddress` son las cinco primeras cuentas proporcionadas por el nodo en Regtest.
 
 2. Despliega el contrato:
-   ```bash
-     npx hardhat collector:deploy --network regtest
-   ```
+  ```bash
+    npx hardhat collector:deploy --network regtest
+  ```
 
 El cobrador está listo y puede empezar a recibir comisiones.
 

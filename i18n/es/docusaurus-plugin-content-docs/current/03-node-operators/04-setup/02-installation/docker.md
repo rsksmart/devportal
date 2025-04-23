@@ -31,13 +31,13 @@ If you already have docker installed. See how to [Install the RSKj node using Do
 ```mdx-code-block
 <Tabs>
   <TabItem value="mac" label="Mac OSX, Windows" default>
-    - [Download](https://www.docker. om/products/docker-desktop) e instalar
-    - Iniciar el cliente Docker Desktop
-    - Iniciar sesión con una cuenta gratuita de Docker Hub
+    - [Download](https://www.docker.com/products/docker-desktop) and install
+    - Start the Docker Desktop client
+    - Login with a Docker Hub free account
   </TabItem>
   <TabItem value="linux" label="Linux">
-   - Instalar [Docker Engine Community](https://docs. ocker.com/install/linux/docker-ce/ubuntu/)
-   - Ten en cuenta que necesitarás usar `sudo` para todos los comandos docker, por defecto. Para evitar esto [pasos adicionales](https://docs.docker.com/install/linux/linux-postinstall/) son requeridos.
+   - Install [Docker Engine Community](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+   - Note that you will need to use `sudo` for all docker commands, by default. To avoid this [additional steps](https://docs.docker.com/install/linux/linux-postinstall/) are required.
   </TabItem>
 </Tabs>
 ```
@@ -45,7 +45,7 @@ If you already have docker installed. See how to [Install the RSKj node using Do
 :::tip[For Mac M1 / M2 Chips planos plegables) usando software basado en x86]
 
 - Asegúrate de que tienes instalado `Rosetta`. Esto normalmente está preinstalado en las versiones recientes de macOS.
-- Descargue una compilación JDK de x86, como [Azul Zulu 11 (x86)](https://www.azul.com/downloads/?version=java-11-lts\&os=macos\&package=jdk), para asegurar la compatibilidad con software basado en x86.
+- Download an x86 JDK build, such as Azul Zulu 17 (x86), to ensure compatibility with x86 based software.
 
 :::
 

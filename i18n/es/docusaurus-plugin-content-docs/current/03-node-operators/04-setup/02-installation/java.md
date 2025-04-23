@@ -19,12 +19,18 @@ description: Instalar RSKj usando Java.
 Para configurar un nodo Rootstock usando Java, necesita:
 
 - Asegúrese de que su sistema cumpla con los [requisitos mínimos](/node-operators/setup/requirements/) para instalar el nodo Rootstock.
-- Instalar [Java 8 JDK](https://www.java.com/download/).
+- Install [Java 17 JDK](https://www.java.com/download/).
+
+:::warning\[Important]
+
+Starting with [v6.4.0](/changelog/), the minimum supported Java LTS version is Java 17. Previous Java versions will no longer be supported.
+
+:::
 
 :::tip[For Mac M1 / M2 Chips planos plegables) usando software basado en x86]
 
 - Asegúrate de que tienes instalado `Rosetta`. Esto normalmente está preinstalado en las versiones recientes de macOS.
-- Descargue una compilación JDK de x86, como [Azul Zulu 11 (x86)](https://www.azul.com/downloads/?version=java-11-lts\&os=macos\&package=jdk), para asegurar la compatibilidad con software basado en x86.
+- Download an x86 JDK build, such as Azul Zulu 17 (x86), to ensure compatibility with x86 based software.
 
 :::
 
@@ -48,19 +54,16 @@ cd ~/rskj-node-jar
 3. **Mueve el JAR**: Mueve o copia el archivo jar recién descargado a tu directorio.
 
 ```jsx
-mv ~/Downloads/rskj-core-6.3.1-ARROWHEAD-all.jar SHA256SUMS.asc /Users/{user}/rskj-node-jar/
+mv ~/Downloads/rskj-core-7.0.0-LOVELL-all.jar SHA256SUMS.asc /Users/{user}/rskj-node-jar/
 ```
 
-### Configuración
-
-1. **Crear directorio de configuración**: Crea otro directorio dentro de `~/rskj-node-jar/config`
-
+<!-- ### Configuration
+1. **Create Config Directory**: Create another directory inside `~/rskj-node-jar/config`
 ```jsx
-  configuración de mkdir
+  mkdir config
 ```
-
-2. **Descargar archivo de configuración**: Obtenga `node.conf` de [here](https://github.com/rsksmart/rif-relay/blob/main/docker/node.conf).
-3. **Mover archivo de configuración**: Mueve el archivo `node.conf` al directorio `config`.
+2. **Download Config File**: Get `node.conf` from [here](https://github.com/rsksmart/rif-relay/blob/main/docker/node.conf).
+3. **Move Config File**: Move the `node.conf` file to the `config` directory. -->
 
 ### Ejecutar el Nodo
 
@@ -68,12 +71,12 @@ mv ~/Downloads/rskj-core-6.3.1-ARROWHEAD-all.jar SHA256SUMS.asc /Users/{user}/rs
 <Tabs>
   <TabItem value="1" label="Linux, Mac OSX" default>
     ```shell
-    java -cp <PATH-TO-THE-RSKJ-JAR> co. sk. tart
+    java -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start
     ```
   </TabItem>
   <TabItem value="2" label="Windows">
     ```shell
-    java -cp <PATH-TO-THE-RSKJ-JAR> co. sk.Start
+    java -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start
     ```
   </TabItem>
 </Tabs>
@@ -81,7 +84,7 @@ mv ~/Downloads/rskj-core-6.3.1-ARROWHEAD-all.jar SHA256SUMS.asc /Users/{user}/rs
 
 :::tip\[Tip]
 
-Reemplaza `<PATH-TO-THE-RSKJ-JAR>` con la ruta real a tu archivo JAR. Por ejemplo, `C:/RskjCode/rskj-core-6.3.1-ARROWHEAD-all.jar`.
+Replace `<PATH-TO-THE-RSKJ-JAR>` with the actual path to your JAR file. For example, `C:/RskjCode/rskj-core-7.0.0-LOVELL-all.jar`.
 :::
 
 ## Usando Sync de importación
@@ -92,12 +95,12 @@ En lugar de la sincronización predeterminada, puede utilizar la sincronización
 <Tabs>
   <TabItem value="3" label="Linux, Mac OSX" default>
     ```shell
-    java -cp <PATH-TO-THE-RSKJ-JAR> co. sk. tart --import
+    java -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start --import
     ```
   </TabItem>
   <TabItem value="4" label="Windows">
     ```shell
-    java -cp <PATH-TO-THE-RSKJ-JAR> co. sk.Start --import
+    java -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start --import
     ```
   </TabItem>
 </Tabs>
@@ -111,12 +114,12 @@ En lugar de la sincronización predeterminada, puede utilizar la sincronización
 <Tabs>
   <TabItem value="5" label="Linux, Mac OSX" default>
     ```shell
-    java -Xmx4G -cp <PATH-TO-THE-RSKJ-JAR> co. sk. tart --import
+    java -Xmx4G -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start --import
     ```
   </TabItem>
   <TabItem value="6" label="Windows">
     ```shell
-    C:\> java -Xmx4G -cp <PATH-TO-THE-RSKJ-JAR> co. sk.Start --import
+    C:\> java -Xmx4G -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start --import
     ```
   </TabItem>
 </Tabs>
@@ -131,7 +134,7 @@ Reemplazar `<PATH-TO-THE-RSKJ-JAR>` con tu ruta de archivo JAR. Para detalles de
 
 :::info\[Info]
 
-Después de iniciar el nodo, si no hay salida, esto significa que se está ejecutando correctamente.
+After starting the node, if there's no output, this means it's running correctly.
 :::
 
 1. Para confirmar, abre una nueva pestaña de consola (es importante no cerrar esta pestaña o interrumpir el proceso) y probar el servidor RPC del nodo. Solicitud de cURL de ejemplo:
@@ -140,12 +143,12 @@ Después de iniciar el nodo, si no hay salida, esto significa que se está ejecu
 <Tabs>
   <TabItem value="7" label="Linux, Mac OSX" default>
     ```shell
-    curl http://localhost:4444 -s -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2. ","method":"web3_clientVersion","params":[], id":67}'
+    curl http://localhost:4444 -s -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}'
     ```
   </TabItem>
   <TabItem value="8" label="Windows">
     ```shell
-    curl http://localhost:4444 -s -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2. ","method":"web3_clientVersion","params":[],"id":67}'
+    curl http://localhost:4444 -s -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}'
     ```
   </TabItem>
 </Tabs>
@@ -154,7 +157,7 @@ Después de iniciar el nodo, si no hay salida, esto significa que se está ejecu
 Salida:
 
 ```shell
-{"jsonrpc":"2.0","id":67,"result":"RskJ/6.3.1/Mac OS X/Java1.8/ARROWHEAD-202f1c5"}
+{"jsonrpc":"2.0","id":67,"result":"RskJ/6.6.0/Mac OS X/Java17/SNAPSHOT-95a8f1ab84"}
 ```
 
 2. Para comprobar el número de bloque:
@@ -163,21 +166,21 @@ Salida:
 <Tabs>
   <TabItem value="9" label="Linux, Mac OSX" default>
      ```shell
-    curl -X POST http://localhost:4444/ -H "Content-Type: application/json" --data '{"jsonrpc":"2. ", "method":"eth_blockNumber","params":[], id":1}'
+    curl -X POST http://localhost:4444/ -H "Content-Type: application/json" --data '{"jsonrpc":"2.0", "method":"eth_blockNumber","params":[],"id":1}'
     ```
   </TabItem>
   <TabItem value="10" label="Windows">
     ```windows-command-prompt
-    curl -X POST http://localhost:4444/ -H "Content-Type: application/json" --data '{"jsonrpc":"2. ", "method":"eth_blockNumber","params":[],"id":1}'
+    curl -X POST http://localhost:4444/ -H "Content-Type: application/json" --data '{"jsonrpc":"2.0", "method":"eth_blockNumber","params":[],"id":1}'
     ```
   </TabItem>
 </Tabs>
 ````
 
-Salida:
+Output:
 
 ```jsx
-{"jsonrpc":"2.0","id":1,"result":"0x0"}
+{"jsonrpc":"2.0","id":1,"result":"0x3710"}
 ```
 
 :::success[Success]
@@ -203,5 +206,5 @@ Para cambiar las redes en el nodo RSKj, utilice los siguientes comandos:
   ```
 
 :::tip[Tip]
-Reemplaza `<PATH-TO-THE-RSKJ-FATJAR>` con la ruta real a tu archivo jar Por ejemplo: `C:/RskjCode/rskj-core-6.3.1-ARROWHEAD-all.jar`.
+Replace `<PATH-TO-THE-RSKJ-FATJAR>` with the actual path to your jar file. For example: `C:/RskjCode/rskj-core-7.0.0-LOVELL-all.jar`.
 :::

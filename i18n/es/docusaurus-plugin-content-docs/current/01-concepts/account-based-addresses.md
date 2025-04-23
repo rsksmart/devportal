@@ -16,7 +16,7 @@ description: EIP-1191 chainId se utiliza en las direcciones Rootstock como suma 
 Las direcciones de Rootstock incorporan un identificador de blockchain opcional (también conocido como `chainId`). Si el `chainId` no está presente, se asume que la dirección se refiere a la red principal de Rootstock.
 
 :::info[Info]
-Consulte [direcciones de contrato](/desarrolladores/contratos-inteligentes/direcciones-de-contrato) para ver la lista de direcciones de contrato en Rootstock o [cómo verificar la propiedad de la dirección](/desarrolladores/contratos-inteligentes/verificar-la-propiedad-de-la-dirección/).
+See [contract addresses](/developers/smart-contracts/contract-addresses) for the list of contract addresses on Rootstock or [how to verify address ownership](/developers/smart-contracts/verify-address-ownership/).
 :::
 
 ## Cómo obtener una dirección

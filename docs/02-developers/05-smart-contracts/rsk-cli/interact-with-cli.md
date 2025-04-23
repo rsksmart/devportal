@@ -109,13 +109,13 @@ To start using the bridge command, open your terminal and use the following comm
 <Tabs>
   <TabItem value="contribute" label="Mainnet" default>
   ```shell
-rsk-cli bridge
-```
+  rsk-cli bridge
+  ```
   </TabItem>
   <TabItem value="contest" label="Testnet">
  ```shell
-rsk-cli bridge --testnet
-```
+  rsk-cli bridge --testnet
+  ```
   </TabItem>
 
 </Tabs>

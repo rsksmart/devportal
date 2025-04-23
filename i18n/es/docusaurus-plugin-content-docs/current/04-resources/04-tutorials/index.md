@@ -21,12 +21,44 @@ values={[
 {label: 'Port to Rootstock', value: 'port-dapps'}
 ]}>
 <FilterItem
+value="beginner, advanced"
+title="Deploy a Vyper Smart Contract on Rootstock"
+subtitle="Vyper"
+color="orange"
+linkHref="/developers/quickstart/rootstock-vyper/"
+description="The Vyper Starter Kit tutorial demonstrates how to deploy smart contracts written in Vyper to the Rootstock testnet using Python and Web3.py. We'll create a simple Vyper contract and deploy it to the Rootstock network, set up the environment, and configure the network for Rootstock."
+/>
+<FilterItem
+value="advanced"
+title="Build a Token-Gated NFT Minting dApp on Rootstock using Thirdweb and RootstockCollective"
+subtitle="NFT"
+color="orange"
+linkHref="/resources/tutorials/tokengated-nft-minting/"
+description="A developers guide to building a Token-Gated NFT Minting dApp on Rootstock using Thirdweb & RootstockCollective."
+/>
+<FilterItem
 value="beginner, port-dapps"
 title="Interact with Rootstock using Rust"
 subtitle="rust"
 color="orange"
 linkHref="/resources/tutorials/rootstock-rust/"
 description="Rust is extensively getting used on backend side of many defi applications, dApps, developer tools, indexers and bridges. This guide will help developers to start using Rust on Rootstock blockchain."
+/>
+<FilterItem
+value="beginner"
+title="Interact with Rootstock using Go"
+subtitle="Go"
+color="orange"
+linkHref="/resources/tutorials/rootstock-go/"
+description="Go is an easy to learn language which combines speed and concurrency. It is widely used in web3 development, especially in the ethereum ecosystem. This guide will help developers read from and write to the Rootstock blockchain using Go."
+/>
+<FilterItem
+value="beginner"
+title="Deploy, Interact and Verify Smart Contracts using Remix and Rootstock Explorer"
+subtitle="Remix"
+color="orange"
+linkHref="/developers/quickstart/remix/"
+description="In this guide, we will use the Remix IDE to write, compile, deploy, interact and verify a smart contract on the Rootstock Explorer."
 />
 <FilterItem
 value="beginner, advanced"
@@ -67,6 +99,14 @@ subtitle="defillama"
 color="orange"
 linkHref="/resources/tutorials/defillama/"
 description="DefiLlama is the largest TVL aggregator for DeFi. Learn how to list a DeFi project and write an SDK adapter to add a Protocol to DefiLlama."
+/>
+<FilterItem
+value="advanced"
+title="Run Hyperlane Bridge on Rootstock"
+subtitle="hyperlane"
+color="orange"
+linkHref="/resources/tutorials/hyperlane-bridge/"
+description="Hyperlane is the first universal and permissionless interoperability layer built for the modular blockchain stack. Learn how to run Hyperlane on Rootstock blockchain."
 />
 </Filter>
 ```

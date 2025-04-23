@@ -31,20 +31,20 @@ Para configurar el archivo de despliegue:
 Para desplegar el contrato `myToken`, copie el script de despliegue que aparece a continuación y péguelo en su archivo de despliegue o consulte el archivo [`deploy.js`](https://raw.githubusercontent.com/rsksmart/rootstock-quick-start-guide/feat/complete/scripts/deploy.js) en GitHub.
 
 ```js
-   async function main() {
-   const [deployer] = await ethers.getSigners();
+async function main() {
+  const [deployer] = await ethers.getSigners();
 
-   console.log("Desplegando contratos con la cuenta:", deployer.address);
+  console.log("Deploying contracts with the account:", deployer.address);
 
-   const MyToken = await ethers.getContractFactory("MyToken");
-   const myToken = await MyToken.deploy(1000);
+  const MyToken = await ethers.getContractFactory("MyToken");
+  const myToken = await MyToken.deploy(1000);
 
-   console.log("Dirección del token:", myToken.address);
-   }
+  console.log("Token address:", myToken.address);
+}
 
-   main().catch((error) => {
-   console.error(error);
-      process.exitCode = 1;
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
 });
 ```
 
@@ -62,6 +62,7 @@ Para ejecutar la red Hardhat localmente:
     Este comando iniciará una red blockchain local y mostrará una lista de cuentas y claves privadas disponibles:
     ![Nodo Rootstock en ejecución](/img/guides/quickstart/hardhat/run-node.png)
 - Despliegue de su contrato en la red local
+
   - Despliega tu contrato en la red local Hardhat, en otro terminal o símbolo del sistema, ejecuta el siguiente comando en el directorio raíz:
 
     ```shell
@@ -92,9 +93,9 @@ Para desplegarlo en la red de pruebas del patrón raíz, ejecute:
 Esto debería devolver lo siguiente:
 
 ```shell
-% npx hardhat run --network rskTestnet scripts/deploy.js 
-Desplegando contratos con la cuenta: 0xA210D04d707f6beBF914Cb1a57199Aebe7B40380
-Dirección del token: 0xc6EcBe0F6643825FD1AAfc03BEC999014759a279
+% npx hardhat run --network rskTestnet scripts/deploy.js
+Deploying contracts with the account: 0xA210D04d707f6beBF914Cb1a57199Aebe7B40380
+Token address: 0xc6EcBe0F6643825FD1AAfc03BEC999014759a279
 ```
 
 - Para desplegar en la red principal de Rootstock, ejecute:
@@ -109,39 +110,63 @@ Dirección del token: 0xc6EcBe0F6643825FD1AAfc03BEC999014759a279
 
 :::
 
-## Paso 4: Conectar Remix a Rootstock Testnet (opcional)
+## Step 4: Interact with your deployed contract
 
-1. Abrir Remix IDE
+To interact with your deployed contract, you can create an interaction script using JavaScript/TypeScript and the [Ethers.js](https://docs.ethers.org/v5/) library.
 
-   - Vaya a [Remix IDE](https://remix.ethereum.org/) en su navegador.
+- Create a `interact.js` file in the `scripts` directory:
 
-2. Conecta MetaMask a Remix:
+```
+   touch scripts/interact.js
+```
 
-   - En Remix, vaya al plugin **Deploy & run transactions**.
-   - En el desplegable **Entorno**, seleccione **Proveedor inyectado**.
-   - Esto conectará con MetaMask. Asegúrate de que MetaMask está en la red `RSK Testnet` que configuraste anteriormente.
+- Paste the following code in the `interact.js` file:
 
-### Interactuar con el contrato desplegado en Remix
+```js
+const hre = require("hardhat");
 
-Para interactuar con su contrato desplegado en la red Rootstock:
+async function main() {
+  try {
+    // Get the ContractFactory of your MyToken contract
+    const MyToken = await hre.ethers.getContractFactory("MyToken");
 
-- Cargar su contrato desplegado
-  - Importa el archivo `myToken.sol` a remix y compila.
+    // Connect to the deployed contract
+    const contractAddress = "0x543ba9FC0ade6f222BD8C7Bf50a0CD9923Faf569"; // Replace with your deployed contract address
+    const contract = await MyToken.attach(contractAddress);
 
-Importar archivo Solidity y compilar](/img/guides/quickstart/hardhat/compile-contract-remix.png)
+    // Retrieve the balance of an account
+    const account = "0x28eb8D29e4713E211D1dDab19dF3de16086BB8fa";
+    const balance = await contract.balanceOf(account);
 
-- Una vez compilado, debería ver la marca de verificación y el archivo solidiity cargado en Remix.
+    // Retrieve the symbol of the token
+    const symbol = await contract.symbol();
 
-Compilación exitosa](/img/guides/quickstart/hardhat/successful-compile-remix.png)
+    console.log(
+      `Balance of ${account} account: ${balance.toString()} ${symbol}`
+    );
+  } catch (error) {
+    console.error(error);
+    process.exit(1);
+  }
+}
 
-- Elija `Deploy and Run Transactions` y en `Environment`, elija "Injected Provider - Metamask".
+main();
+```
 
-Esto carga la cartera Metamask.
+- And run the interaction script. This is how you can do it on testnet:
 
-Despliegue y ejecución de transacciones](/img/guides/quickstart/hardhat/deploy-and-run-tx-remix.png)
+```
+   npx hardhat run scripts/interact.js --network rskTestnet
+```
 
-Ahora haz clic en `Transacciones registradas` ¡interactúa con el Contrato Inteligente! Llama a sus funciones, envía transacciones y observa los resultados. Asegúrate de que tienes suficiente tRBTC en tu cartera MetaMask para las tasas de transacción.
+- And this is how you can do it on mainnet:
 
-- Supervisar las transacciones
-  - Utilice Remix y MetaMask para supervisar las confirmaciones y los resultados de las transacciones.
-  - También puede utilizar [Rootstock Testnet Explorer](https://explorer.testnet.rootstock.io/) para ver las transacciones y las interacciones contractuales.
+```
+   npx hardhat run scripts/interact.js --network rskMainnet
+```
+
+- The expected output by running the interaction script is:
+
+```
+   Balance of 0x28eb8D29e4713E211D1dDab19dF3de16086BB8fa account: 1000 MTK
+```

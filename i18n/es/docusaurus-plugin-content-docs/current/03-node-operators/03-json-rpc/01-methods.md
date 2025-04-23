@@ -154,7 +154,7 @@ curl -X POST --data '{"jsonrpc": "2.0", "method": "web3_clientVersion", "params"
 }
 ```
 
-***
+---
 
 #### web3_sha3
 
@@ -167,9 +167,7 @@ Returns Keccak-256 (_not_ the standardized SHA3-256) of the given data.
 ##### Parámetros de ejemplo
 
 ```js
-params: [
-  "0x68656c6c6f20776f726c64"
-]
+params: ["0x68656c6c6f20776f726c64"];
 ```
 
 ##### Devuelve
@@ -190,7 +188,7 @@ curl -X POST --data '{"jsonrpc": "2.0", "method": "web3_sha3", "params":["0x6865
 }
 ```
 
-***
+---
 
 #### net_version
 
@@ -223,7 +221,7 @@ curl -X POST --data '{"jsonrpc": "2.0", "method": "web3_clientVersion", "params"
 }
 ```
 
-***
+---
 
 #### net_listening
 
@@ -251,7 +249,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":
 }
 ```
 
-***
+---
 
 #### net_peerCount
 
@@ -279,7 +277,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":
 }
 ```
 
-***
+---
 
 #### net_peerList
 
@@ -311,7 +309,7 @@ curl -X POST --data '{"jsonrpc": "2.0", "method": "net_peerList", "params":[], "
 }
 ```
 
-***
+---
 
 #### eth_chainId
 
@@ -339,7 +337,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67
 }
 ```
 
-***
+---
 
 #### eth_protocolVersion
 
@@ -367,7 +365,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 }
 ```
 
-***
+---
 
 #### eth_syncing
 
@@ -409,7 +407,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 }
 ```
 
-***
+---
 
 #### eth_coinbase
 
@@ -437,7 +435,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
 }
 ```
 
-***
+---
 
 #### eth_mining
 
@@ -466,7 +464,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}
 
 ```
 
-***
+---
 
 #### eth_hashrate
 
@@ -495,7 +493,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":7
 
 ```
 
-***
+---
 
 #### eth_gasPrice
 
@@ -523,7 +521,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":7
 }
 ```
 
-***
+---
 
 #### eth_accounts
 
@@ -551,7 +549,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1
 }
 ```
 
-***
+---
 
 #### eth_blockNumber
 
@@ -579,7 +577,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 }
 ```
 
-***
+---
 
 #### eth_getBalance
 
@@ -593,10 +591,7 @@ Returns the balance of the account of given address.
 ##### Parámetros de ejemplo
 
 ```js
-params: [
-   '0xc94770007dda54cF92009BFF0dE90c06F603a09f',
-   'latest'
-]
+params: ["0xc94770007dda54cF92009BFF0dE90c06F603a09f", "latest"];
 ```
 
 ##### Devuelve
@@ -617,7 +612,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0xc94
 }
 ```
 
-***
+---
 
 #### eth_getStorageAt
 
@@ -667,7 +662,12 @@ keccack(LeftPad32(key, 0), LeftPad32(map position, 0))
 This means to retrieve the storage on pos1["0x391694e7e0b0cce554cb130d723a9d27458f9298"] we need to calculate the position with:
 
 ```js
-keccak(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
+keccak(
+  decodeHex(
+    "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" +
+      "0000000000000000000000000000000000000000000000000000000000000001"
+  )
+);
 ```
 
 The geth console which comes with the web3 library can be used to make the calculation:
@@ -688,7 +688,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 ```
 
-***
+---
 
 #### eth_getTransactionCount
 
@@ -703,9 +703,9 @@ Returns the number of transactions _sent_ from an address.
 
 ```js
 params: [
-   '0xc94770007dda54cF92009BFF0dE90c06F603a09f',
-   'latest' // state at the latest block
-]
+  "0xc94770007dda54cF92009BFF0dE90c06F603a09f",
+  "latest", // state at the latest block
+];
 ```
 
 ##### Devuelve
@@ -726,7 +726,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params
 }
 ```
 
-***
+---
 
 #### eth_getBlockTransactionCountByHash
 
@@ -739,9 +739,7 @@ Returns the number of transactions in a block from a block matching the given bl
 ##### Parámetros de ejemplo
 
 ```js
-params: [
-   '0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238'
-]
+params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"];
 ```
 
 ##### Devuelve
@@ -762,7 +760,7 @@ curl -X POST --data '{"jsonrpc": "2.0", "method": "eth_getBlockTransactionCountB
 }
 ```
 
-***
+---
 
 #### eth_getBlockTransactionCountByNumber
 
@@ -776,8 +774,8 @@ Returns the number of transactions in a block matching the given block number.
 
 ```js
 params: [
-   '0xe8', // 232
-]
+  "0xe8", // 232
+];
 ```
 
 ##### Devuelve
@@ -798,7 +796,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNu
 }
 ```
 
-***
+---
 
 #### eth_getUncleCountByBlockHash
 
@@ -811,9 +809,7 @@ Returns the number of uncles in a block from a block matching the given block ha
 ##### Parámetros de ejemplo
 
 ```js
-params: [
-   '0xc94770007dda54cF92009BFF0dE90c06F603a09f'
-]
+params: ["0xc94770007dda54cF92009BFF0dE90c06F603a09f"];
 ```
 
 ##### Devuelve
@@ -834,7 +830,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","p
 }
 ```
 
-***
+---
 
 #### eth_getUncleCountByBlockNumber
 
@@ -846,8 +842,8 @@ Returns the number of uncles in a block from a block matching the given block nu
 
 ```js
 params: [
-   '0xe8', // 232
-]
+  "0xe8", // 232
+];
 ```
 
 ##### Devuelve
@@ -868,7 +864,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber",
 }
 ```
 
-***
+---
 
 #### eth_getCode
 
@@ -883,9 +879,9 @@ Returns code at a given address.
 
 ```js
 params: [
-   '0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b',
-   '0x2'  // 2
-]
+  "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+  "0x2", // 2
+];
 ```
 
 ##### Devuelve
@@ -906,7 +902,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xa94f53
 }
 ```
 
-***
+---
 
 #### eth_sign
 
@@ -951,23 +947,25 @@ Creates new message call transaction or a contract creation, if the data field c
 
 - `from`: `DATA`, 20 Bytes - The address the transaction is sent from.
 - `to`: `DATA`, 20 Bytes - (optional when creating new contract) The address the transaction is sent to.
-- `gas`: `QUANTITY`  - (optional, default: 90000) Integer of the gas provided for the transaction execution. It will return unused gas.
-- `gasPrice`: `QUANTITY`  - (optional, default: 0) Integer of the gasPrice used for each paid gas
-- `value`: `QUANTITY`  - (optional) Integer of the value sent with this transaction
-- `data`: `DATA`  - The compiled code of a contract OR the hash of the invoked method signature and encoded parameters. For details see [Ethereum Contract ABI](https://docs.soliditylang.org/en/develop/abi-spec.html)
-- `nonce`: `QUANTITY`  - (optional) Integer of a nonce. This allows to overwrite your own pending transactions that use the same nonce.
+- `gas`: `QUANTITY` - (optional, default: 90000) Integer of the gas provided for the transaction execution. It will return unused gas.
+- `gasPrice`: `QUANTITY` - (optional, default: 0) Integer of the gasPrice used for each paid gas
+- `value`: `QUANTITY` - (optional) Integer of the value sent with this transaction
+- `data`: `DATA` - The compiled code of a contract OR the hash of the invoked method signature and encoded parameters. For details see [Ethereum Contract ABI](https://docs.soliditylang.org/en/develop/abi-spec.html)
+- `nonce`: `QUANTITY` - (optional) Integer of a nonce. This allows to overwrite your own pending transactions that use the same nonce.
 
 ##### Parámetros de ejemplo
 
 ```js
-params: [{
-  "from": "0xb60e8dd61c5d32be8058bb8eb970870f07233155",
-  "to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567",
-  "gas": "0x76c0", // 30400
-  "gasPrice": "0x9184e72a000", // 10000000000000
-  "value": "0x9184e72a", // 2441406250
-  "data": "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675"
-}]
+params: [
+  {
+    from: "0xb60e8dd61c5d32be8058bb8eb970870f07233155",
+    to: "0xd46e8dd67c5d32be8058bb8eb970870f07244567",
+    gas: "0x76c0", // 30400
+    gasPrice: "0x9184e72a000", // 10000000000000
+    value: "0x9184e72a", // 2441406250
+    data: "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675",
+  },
+];
 ```
 
 ##### Devuelve
@@ -990,7 +988,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{
 }
 ```
 
-***
+---
 
 #### eth_sendRawTransaction
 
@@ -1003,7 +1001,9 @@ Creates new message call transaction or a contract creation for signed transacti
 ##### Parámetros de ejemplo
 
 ```js
-params: ["0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675"]
+params: [
+  "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675",
+];
 ```
 
 ##### Devuelve
@@ -1026,7 +1026,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 }
 ```
 
-***
+---
 
 #### eth_call
 
@@ -1037,21 +1037,24 @@ Executes a new message call immediately without creating a transaction on the bl
 1. `Objeto` - El objeto de llamada de transacción
 
 - `from`: `DATA`, 20 Bytes - (opcional) La dirección desde la que se envía la transacción.
-- `to`: `DATA`, 20 Bytes - La dirección a la que se dirige la transacción.
-- `gas`: `QUANTITY` - (opcional) Integer del gas proporcionado para la ejecución de la transacción. eth_call consume cero gas, pero este parámetro puede ser necesario para algunas ejecuciones.
-- `gasPrice`: `QUANTITY`  - (optional) Integer of the gasPrice used for each paid gas
-- `value`: `QUANTITY`  - (optional) Integer of the value sent with this transaction
-- `data|input`: `DATA`  - (optional) Hash of the method signature and encoded parameters. For details see [Ethereum Contract ABI in the Solidity documentation](https://solidity.readthedocs.io/en/latest/abi-spec.html)
+- `to`: `DATA`, 20 Bytes - The address the transaction is directed to.
+- `gas`: `QUANTITY` - (optional) Integer of the gas provided for the transaction execution. eth_call consumes zero gas, but this parameter may be needed by some executions.
+- `gasPrice`: `QUANTITY` - (optional) Integer of the gasPrice used for each paid gas
+- `value`: `QUANTITY` - (optional) Integer of the value sent with this transaction
+- `data|input`: `DATA` - (optional) Hash of the method signature and encoded parameters. For details see [Ethereum Contract ABI in the Solidity documentation](https://solidity.readthedocs.io/en/latest/abi-spec.html)
 
 2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"` or `"pending"`, see the [default block parameter](https://ethereum.org/en/developers/docs/apis/json-rpc/#default-block)
 
 ##### Parámetros de ejemplo
 
 ```js
-params: [{
-  "from": "0xb60e8dd61c5d32be8058bb8eb970870f07233155",
-  "to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567"
-}, "latest"]
+params: [
+  {
+    from: "0xb60e8dd61c5d32be8058bb8eb970870f07233155",
+    to: "0xd46e8dd67c5d32be8058bb8eb970870f07244567",
+  },
+  "latest",
+];
 ```
 
 ##### Devuelve
@@ -1083,11 +1086,73 @@ curl -X POST --data '{"jsonrpc": "2.0", "method": "eth_call", "params":[{see abo
 }
 ```
 
-***
+---
 
 #### eth_estimateGas
 
 Generates and returns an estimate of how much gas is necessary to allow the transaction to complete. The transaction will not be added to the blockchain. Note that the estimate may be significantly more than the amount of gas actually used by the transaction, for a variety of reasons including EVM mechanics and node performance.
+
+Note that when `eth_estimateGas` is called, the node simulates the transaction execution without broadcasting it to the network.
+The simulation runs through the entire transaction process as if it were being executed, including checking for sufficient balance, contract code execution, etc.
+During the simulation, the method calculates the exact amount of gas that would be consumed by the transaction if it were to be executed on the blockchain. The estimated gas amount is returned, helping users set an appropriate gas limit for the actual transaction.
+
+:::info\[Info]
+
+**Prior to Arrowhead 6.5.0**, there was a difference in Rootstock compared to Ethereum:
+
+- If one of the steps of the simulated transaction fails, the node would return the gas estimation needed for the transaction
+- On Ethereum, the node would return an error instead of the gas estimation.
+
+**Starting with Arrowhead 6.5.0:**
+
+- Rootstock will behave same way as Ethereum's behavior for simulated transaction failures.
+- If a simulated transaction step fails, the node will now return an error, mirroring Ethereum's response.
+
+:::
+
+You can see this behavior on the following example, where we call `eth_estimateGas` for a transaction that would be executed from an address without enough balance.
+
+Example:
+
+```js
+{
+    "jsonrpc":"2.0",
+    "method":"eth_estimateGas",
+    "params":[
+        {"from": "0xb60e8dd61c5d32be8058bb8eb970870f07233155",
+        "to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567",
+        "gas": "0x76c0",
+        "gasPrice": "0x9184e72a000",
+        "value": "0x9184e72a",
+        "data": "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675"},
+        "latest"
+    ],
+    "id":0
+}
+```
+
+Response on Rootstock:
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 0,
+    "result": "0x5498"
+}
+```
+
+Response on Ethereum:
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 0,
+    "error": {
+        "code": -32000,
+        "message": "insufficient funds for transfer"
+    }
+}
+```
 
 ##### Parámetros
 
@@ -1111,7 +1176,7 @@ curl -X POST --data '{"jsonrpc": "2.0", "method": "web21000_clientVersion", "par
 }
 ```
 
-***
+---
 
 #### eth_getBlockByHash
 
@@ -1126,9 +1191,9 @@ Returns information about a block by hash.
 
 ```js
 params: [
-   '0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331',
-   true
-]
+  "0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331",
+  true,
+];
 ```
 
 ##### Devuelve
@@ -1190,7 +1255,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
 }
 ```
 
-***
+---
 
 #### eth_getBlockByNumber
 
@@ -1205,9 +1270,9 @@ Returns information about a block by block number.
 
 ```js
 params: [
-   '0x1b4', // 436
-   true
-]
+  "0x1b4", // 436
+  true,
+];
 ```
 
 ##### Devuelve
@@ -1223,7 +1288,7 @@ curl -X POST --data '{"jsonrpc": "2.0", "method": "eth_getBlockByNumber", "param
 
 Result see [eth_getBlockByHash](#eth_getblockbyhash)
 
-***
+---
 
 #### eth_getTransactionByHash
 
@@ -1236,9 +1301,7 @@ Returns the information about a transaction requested by transaction hash.
 ##### Parámetros de ejemplo
 
 ```js
-params: [
-   "0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"
-]
+params: ["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"];
 ```
 
 ##### Devuelve
@@ -1289,7 +1352,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","param
 }
 ```
 
-***
+---
 
 #### eth_getTransactionByBlockHashAndIndex
 
@@ -1304,9 +1367,9 @@ Returns information about a transaction by block hash and transaction index posi
 
 ```js
 params: [
-   '0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331',
-   '0x0' // 0
-]
+  "0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331",
+  "0x0", // 0
+];
 ```
 
 ##### Devuelve
@@ -1322,7 +1385,7 @@ curl -X POST --data '{"jsonrpc": "2.0", "method": "eth_getTransactionByBlockHash
 
 Result see [eth_getTransactionByHash](#eth_gettransactionbyhash)
 
-***
+---
 
 #### eth_getTransactionByBlockNumberAndIndex
 
@@ -1337,9 +1400,9 @@ Returns information about a transaction by block number and transaction index po
 
 ```js
 params: [
-   '0x29c', // 668
-   '0x0' // 0
-]
+  "0x29c", // 668
+  "0x0", // 0
+];
 ```
 
 ##### Devuelve
@@ -1355,7 +1418,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberA
 
 Result see [eth_getTransactionByHash](#eth_gettransactionbyhash)
 
-***
+---
 
 #### eth_getTransactionReceipt
 
@@ -1370,9 +1433,7 @@ Returns the receipt of a transaction by transaction hash.
 ##### Parámetros de ejemplo
 
 ```js
-params: [
-   '0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238'
-]
+params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"];
 ```
 
 ##### Devuelve
@@ -1390,6 +1451,7 @@ params: [
 - `contractAddress `: `DATA`, 20 Bytes - The contract address created, if the transaction was a contract creation, otherwise `null`.
 - `logs`: `Array` - Array of log objects, which this transaction generated.
 - `logsBloom`: `DATA`, 256 Bytes - Bloom filter for light clients to quickly retrieve related logs.
+- `effectiveGasPrice`: `QUANTITY` - The actual value per gas deducted on the transaction.
 
 It also returns _either_ :
 
@@ -1399,13 +1461,13 @@ It also returns _either_ :
 ##### Ejemplo
 
 ```js
-// Solicitud
-curl -X POST --data '{"jsonrpc": "2.0", "method": "eth_getTransactionReceipt", "params":["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"], "id":1}'
+// Request
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","params":["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"],"id":1}'
 
-// Resultado
+// Result
 {
 "id":1,
-"jsonrpc": "2.0",
+"jsonrpc":"2.0",
 "result": {
      transactionHash: '0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238',
      transactionIndex:  '0x1', // 1
@@ -1413,17 +1475,18 @@ curl -X POST --data '{"jsonrpc": "2.0", "method": "eth_getTransactionReceipt", "
      blockHash: '0xc6ef2fc5426d6ad6fd9e2a26abeab0aa2411b7ab17f30a99d3cb96aed1d1055b',
      cumulativeGasUsed: '0x33bc', // 13244
      gasUsed: '0x4dc', // 1244
-     contractAddress: '0xb60e8dd61c5d32be8058bb8eb970870f07233155', // o null, si no se ha creado ninguno
+     contractAddress: '0xb60e8dd61c5d32be8058bb8eb970870f07233155', // or null, if none was created
      logs: [{
-         // logs como los devueltos por getFilterLogs, etc.
+         // logs as returned by getFilterLogs, etc.
      }, ...],
-     logsBloom: "0x00...0", // filtro bloom de 256 bytes
-     status: '0x1'
+     logsBloom: "0x00...0", // 256 byte bloom filter
+     status: '0x1',
+     effectiveGasPrice: '0x64' // 100
   }
 }
 ```
 
-***
+---
 
 #### eth_pendingTransactions
 
@@ -1433,11 +1496,11 @@ Returns the pending transactions submitted by the node operator.
 
 ninguno
 
-##### Devuelve
+##### Returns
 
 `Array` - A list of pending transactions submitted by the node operator.
 
-##### Ejemplo
+##### Example
 
 ```js
 // Solicitud
@@ -1483,7 +1546,7 @@ curl -X POST --data '{"jsonrpc": "2.0", "method": "eth_pendingTransactions", "pa
 }
 ```
 
-***
+---
 
 #### eth_getUncleByBlockHashAndIndex
 
@@ -1496,9 +1559,9 @@ Returns information about an uncle of a block by hash and the uncle index positi
 
 ```js
 params: [
-   '0xc6ef2fc5426d6ad6fd9e2a26abeab0aa2411b7ab17f30a99d3cb96aed1d1055b',
-   '0x0' // 0
-]
+  "0xc6ef2fc5426d6ad6fd9e2a26abeab0aa2411b7ab17f30a99d3cb96aed1d1055b",
+  "0x0", // 0
+];
 ```
 
 ##### Devuelve
@@ -1514,9 +1577,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex"
 
 Result see [eth_getBlockByHash](#eth_getblockbyhash)
 
-**Nota**: Un uncle no contiene transacciones individuales.
+**Note**: An uncle doesn't contain individual transactions.
 
-***
+---
 
 #### eth_getUncleByBlockNumberAndIndex
 
@@ -1531,16 +1594,16 @@ Returns information about a uncle of a block by number and uncle index position.
 
 ```js
 params: [
-   '0x29c', // 668
-   '0x0' // 0
-]
+  "0x29c", // 668
+  "0x0", // 0
+];
 ```
 
 ##### Devuelve
 
 See [eth_getBlockByHash](#eth_getblockbyhash)
 
-**Note**: An uncle doesn't contain individual transactions.
+**Nota**: Un uncle no contiene transacciones individuales.
 
 ##### Ejemplo
 
@@ -1551,7 +1614,7 @@ curl -X POST --data '{"jsonrpc": "2.0", "method": "eth_getUncleByBlockNumberAndI
 
 Result see [eth_getBlockByHash](#eth_getblockbyhash)
 
-***
+---
 
 #### eth_newFilter
 
@@ -1575,17 +1638,26 @@ Topics are order-dependent. A transaction with a log with topics [A, B] will be 
 - `fromBlock`: `QUANTITY|TAG` - (optional, default: `"latest"`) Integer block number, or `"latest"` for the last mined block or `"pending"`, `"earliest"` for not yet mined transactions.
 - `toBlock`: `QUANTITY|TAG` - (optional, default: `"latest"`) Integer block number, or `"latest"` for the last mined block or `"pending"`, `"earliest"` for not yet mined transactions.
 - `address`: `DATA|Array`, 20 Bytes - (optional) Contract address or a list of addresses from which logs should originate.
-- `topics`: `Array of DATA`,  - (optional) Array of 32 Bytes `DATA` topics. Topics are order-dependent. Each topic can also be an array of DATA with "or" options.
+- `topics`: `Array of DATA`, - (optional) Array of 32 Bytes `DATA` topics. Topics are order-dependent. Each topic can also be an array of DATA with "or" options.
 
 ##### Parámetros de ejemplo
 
 ```js
-params: [{
-  "fromBlock": "0x1",
-  "toBlock": "0x2",
-  "address": "0x8888f1f195afa192cfee860698584c030f4c9db1",
-  "topics": ["0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b", null, ["0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b", "0x0000000000000000000000000aff3454fce5edbc8cca8697c15331677e6ebccc"]]
-}]
+params: [
+  {
+    fromBlock: "0x1",
+    toBlock: "0x2",
+    address: "0x8888f1f195afa192cfee860698584c030f4c9db1",
+    topics: [
+      "0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+      null,
+      [
+        "0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+        "0x0000000000000000000000000aff3454fce5edbc8cca8697c15331677e6ebccc",
+      ],
+    ],
+  },
+];
 ```
 
 ##### Devuelve
@@ -1606,7 +1678,7 @@ curl -X POST --data '{"jsonrpc": "2.0", "method": "eth_newFilter", "params":[{"t
 }
 ```
 
-***
+---
 
 #### eth_newBlockFilter
 
@@ -1635,7 +1707,7 @@ curl -X POST --data '{"jsonrpc": "2.0", "method": "eth_newBlockFilter", "params"
 }
 ```
 
-***
+---
 
 #### eth_newPendingTransactionFilter
 
@@ -1646,11 +1718,11 @@ To check if the state has changed, call [eth_getFilterChanges](#eth_getfiltercha
 
 Ninguno
 
-##### Devuelve
+##### Returns
 
 `QUANTITY` - A filter id.
 
-##### Ejemplo
+##### Example
 
 ```js
 // Solicitud
@@ -1664,26 +1736,26 @@ curl -X POST --data '{"jsonrpc": "2.0", "method": "web1_clientVersion", "params"
 }
 ```
 
-***
+---
 
 #### eth_uninstallFilter
 
 Uninstalls a filter with given id. Should always be called when watch is no longer needed.
 Additonally Filters timeout when they aren't requested with [eth_getFilterChanges](#eth_getfilterchanges) for a period of time.
 
-##### Parámetros
+##### Parameters
 
 1. `QUANTITY` - el id del filtro.
 
-##### Parámetros de ejemplo
+##### Example Parameters
 
 ```js
 params: [
-  "0xb" // 11
-]
+  "0xb", // 11
+];
 ```
 
-##### Devuelve
+##### Returns
 
 `Boolean` - `true` if the filter was successfully uninstalled, otherwise `false`.
 
@@ -1701,7 +1773,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["
 }
 ```
 
-***
+---
 
 #### eth_getFilterChanges
 
@@ -1715,8 +1787,8 @@ Polling method for a filter, which returns an array of logs which occurred since
 
 ```js
 params: [
-  "0x16" // 22
-]
+  "0x16", // 22
+];
 ```
 
 ##### Devuelve
@@ -1737,7 +1809,7 @@ params: [
   - `data`: `DATA` - contains the non-indexed arguments of the log.
   - `topics`: `Array of DATA` - Array of 0 to 4 32 Bytes `DATA` of indexed log arguments. (In _solidity_: The first topic is the _hash_ of the signature of the event (e.g. `Deposit(address,bytes32,uint256)`), except you declared the event with the `anonymous` specifier.)
 
-##### Ejemplo
+##### Example
 
 ```js
 // Request
@@ -1762,7 +1834,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":[
 }
 ```
 
-***
+---
 
 #### eth_getFilterLogs
 
@@ -1776,8 +1848,8 @@ Returns an array of all logs matching filter with given id.
 
 ```js
 params: [
-  "0x16" // 22
-]
+  "0x16", // 22
+];
 ```
 
 ##### Devuelve
@@ -1793,7 +1865,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x
 
 Result see [eth_getFilterChanges](#eth_getfilterchanges)
 
-***
+---
 
 #### eth_getLogs
 
@@ -1806,15 +1878,19 @@ Returns an array of all logs matching a given filter object.
 - `fromBlock`: `QUANTITY|TAG` - (optional, default: `"latest"`) Integer block number, or `"latest"` for the last mined block or `"pending"`, `"earliest"` for not yet mined transactions.
 - `toBlock`: `QUANTITY|TAG` - (optional, default: `"latest"`) Integer block number, or `"latest"` for the last mined block or `"pending"`, `"earliest"` for not yet mined transactions.
 - `address`: `DATA|Array`, 20 Bytes - (optional) Contract address or a list of addresses from which logs should originate.
-- `topics`: `Array of DATA`,  - (optional) Array of 32 Bytes `DATA` topics. Topics are order-dependent. Each topic can also be an array of DATA with "or" options.
-- `blockhash`:  `DATA`, 32 Bytes - (optional) With the addition of EIP-234 (Geth >= v1.8.13 or Parity >= v2.1.0), `blockHash` is a new filter option which restricts the logs returned to the single block with the 32-byte hash `blockHash`.  Using `blockHash` is equivalent to `fromBlock` = `toBlock` = the block number with hash `blockHash`.  If `blockHash` is present in the filter criteria, then neither `fromBlock` nor `toBlock` are allowed.
+- `topics`: `Array of DATA`, - (optional) Array of 32 Bytes `DATA` topics. Topics are order-dependent. Each topic can also be an array of DATA with "or" options.
+- `blockhash`: `DATA`, 32 Bytes - (optional) With the addition of EIP-234 (Geth >= v1.8.13 or Parity >= v2.1.0), `blockHash` is a new filter option which restricts the logs returned to the single block with the 32-byte hash `blockHash`. Using `blockHash` is equivalent to `fromBlock` = `toBlock` = the block number with hash `blockHash`. If `blockHash` is present in the filter criteria, then neither `fromBlock` nor `toBlock` are allowed.
 
 ##### Parámetros de ejemplo
 
 ```js
-params: [{
-  "topics": ["0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b"]
-}]
+params: [
+  {
+    topics: [
+      "0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+    ],
+  },
+];
 ```
 
 ##### Devuelve
@@ -1830,7 +1906,7 @@ curl -X POST --data '{"jsonrpc": "2.0", "method": "eth_getLogs", "params":[{"top
 
 Ver resultados [eth_getFilterChanges](#eth_getfilterchanges)
 
-***
+---
 
 #### eth_getWork
 
@@ -1866,7 +1942,7 @@ curl -X POST --data '{"jsonrpc": "2.0", "method": "eth_getWork", "params":[], "i
 }
 ```
 
-***
+---
 
 #### eth_submitWork
 
@@ -1884,8 +1960,8 @@ Used for submitting a proof-of-work solution.
 params: [
   "0x0000000000000001",
   "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
-  "0xD1FE5700000000000000000000000000D1FE5700000000000000000000000000"
-]
+  "0xD1FE5700000000000000000000000000D1FE5700000000000000000000000000",
+];
 ```
 
 ##### Devuelve
@@ -1906,7 +1982,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method":"eth_submitWork", "params":["0x0
 }
 ```
 
-***
+---
 
 #### eth_submitHashrate
 
@@ -1922,8 +1998,8 @@ Utilizado para enviar hashrate de minería.
 ```js
 params: [
   "0x0000000000000000000000000000000000000000000000000000000000500000",
-  "0x59daa26581d0acd1fce254fb7e85952f4c09d0915afd33d3886cd914bc7d283c"
-]
+  "0x59daa26581d0acd1fce254fb7e85952f4c09d0915afd33d3886cd914bc7d283c",
+];
 ```
 
 ##### Devuelve
@@ -1944,7 +2020,7 @@ curl -X POST --data '{"jsonrpc": "2.0", "method":"eth_submitHashrate", "params":
 }
 ```
 
-***
+---
 
 #### eth_getProof
 

@@ -1,0 +1,6 @@
+label: Rootstock Blockchain Essentials
+position: 3
+link:
+  type: generated-index
+  slug: /developers/blockchain-essentials/
+  description: "Learn how to interact with Rootstock in your web browser, how to look at Rootstock transactions, develop and deploy your very first smart contract to the Rootstock network."

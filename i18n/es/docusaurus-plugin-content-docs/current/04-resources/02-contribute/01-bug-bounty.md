@@ -1,6 +1,6 @@
 ---
 sidebar_label: Programa de Bug Bounty
-sidebar_position: 2
+sidebar_position: 4
 title: Contribuir a la seguridad de las plataformas RootstockLabs
 tags:
   - rsk
@@ -35,3 +35,4 @@ Nuestro objetivo es mantenerle informado sobre el progreso a lo largo del proces
 ### Ámbito y reglas
 
 Visite la [Sección de Ámbito en Hackerone](https://hackerone.com/rootstocklabs/policy_scopes) para ver el alcance / fuera del alcance de la vulnerabilidad, y las reglas del programa.
+

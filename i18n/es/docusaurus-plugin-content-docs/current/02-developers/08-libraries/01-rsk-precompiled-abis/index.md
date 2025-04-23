@@ -84,3 +84,9 @@ Si la versión a instalar no está definida en la línea de comandos, la versió
 | 5.3.0-fingerroot       | FINGERROOT-5.3.0 |
 | 5.4.0-fingerroot       | FINGERROOT-5.4.0 |
 | 6.0.0-CABEZA DE FLECHA | FLECHA-6.0.0     |
+| 6.3.0-ARROWHEAD        | ARROWHEAD-6.3.0  |
+| 6.3.1-ARROWHEAD        | ARROWHEAD-6.3.1  |
+| 6.4.0-ARROWHEAD        | ARROWHEAD-6.4.0  |
+| 6.5.0-ARROWHEAD        | ARROWHEAD-6.5.0  |
+| 6.5.1-ARROWHEAD        | ARROWHEAD-6.5.1  |
+| 7.0.0-LOVELL           | LOVELL-7.0.0     |

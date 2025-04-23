@@ -14,9 +14,16 @@ sidebar_label: Ficha RBTC
 
 RBTC es el token utilizado para [pagar por la ejecución](/concepts/rbtc/gas/) de transacciones en Rootstock. Puede [convertir BTC en RBTC](conversion.md) enviando BTC a través del [Powpeg](/concepts/powpeg/) (tanto en Testnet como en Mainnet), o utilizando el [faucet en Testnet](https://faucet.rootstock.io/), o a través de intercambios descentralizados.
 
+:::info[Additional Faucet Options (Please note these faucets may have daily limits)]
+
+- Use [Thirdweb Faucet](https://thirdweb.com/rootstock-testnet): This faucet offers a convenient way to get free test RBTC tokens for development and testing. Its max daily token allocation is `0.01` tRBTC.
+- Use [Blast Faucet](https://blastapi.io/faucets/rootstock-testnet): This faucet offers a convenient way to get free test RBTC tokens for development and testing. It has a higher max daily token allocation of `0.1` tRBTC.
+
+:::
+
 Ver [monederos soportados](/dev-tools/wallets/).
 
-[Obtener RBTC](https://rootstock.io/rbtc/#get-rbtc)
+<Button href="https://rootstock.io/rbtc/#get-rbtc">Get RBTC</Button>
 
 ## RBTC (Bitcoin inteligente en Mainnet)
 

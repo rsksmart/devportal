@@ -77,7 +77,7 @@ Para configurar tus claves privadas `rskMainnet` y `rskTestnet`, necesitarás ac
   };
 ```
 
-> Vea cómo [Obtener una clave API de la API RPC](/developers/rpc-api/setup/)
+> See how to [Get an API Key from the RPC API](/developers/rpc-api/rootstock/setup/)
 
 > Sustituye `"tu_clave_privada_mainnet"` y `"tu_clave_privada_testnet"` por tus claves privadas. Para obtener información sobre cómo recuperar sus claves privadas, consulte [Cómo exportar la clave privada de una cuenta](https://support.metamask.io/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key).
 
@@ -86,4 +86,4 @@ Para configurar tus claves privadas `rskMainnet` y `rskTestnet`, necesitarás ac
 - Mainnet
   - Necesitarás RBTC, que puedes obtener de un intercambio. Consulte [Obtener RBTC mediante intercambios](https://rootstock.io/rbtc/).
 - Testnet
-  - Puedes obtener tRBTC en el [Grifo de portainjertos](https://faucet.rootstock.io/).
+  - You can get tRBTC from the [Rootstock Faucet](https://faucet.rootstock.io/). Additional faucet options include; [Thirdweb](https://thirdweb.com/rootstock-testnet) and [Blast](https://blastapi.io/faucets/rootstock-testnet) Faucets.

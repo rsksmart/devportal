@@ -18,27 +18,47 @@ Esta sección ofrece ayuda sobre algunos posibles problemas con los que te puede
 
 ## Errores
 
-- Error HH8: Hay uno o más errores en su archivo de configuración
-  ```shell
-    % npx hardhat compile
-    Error HH8: Hay uno o más errores en su archivo de configuración:
+````mdx-code-block
+<Accordion>
+  <Accordion.Item eventKey="0">
+    <Accordion.Header as="h3">Error HH8: There's one or more errors in your config file</Accordion.Header>
+    <Accordion.Body>
+      ```shell
+      % npx hardhat compile
+      Error HH8: There's one or more errors in your config file:
 
-    * Invalid account: #0 for network: rskMainnet - Expected string, received undefined
-    * Cuenta inválida: #0 for network: rskTestnet - Expected string, received undefined
+      * Invalid account: #0 for network: rskMainnet - Expected string, received undefined
+      * Invalid account: #0 for network: rskTestnet - Expected string, received undefined
 
-    Para aprender más sobre la configuración de Hardhat, por favor vaya a https://hardhat.org/config/
+      To learn more about Hardhat's configuration, please go to https://hardhat.org/config/
 
-    Para más información vaya a https://hardhat.org/HH8 o ejecute Hardhat con --show-stack-traces
-  ```
-  > - FIX 1: Asegúrese de que los valores de las variables de entorno coinciden con el archivo de configuración de red hardhat `hardhat.config.js`. Para bash, ejecute `source .env` en el directorio raíz para dotenv para habilitar las variables de entorno.
-- Error: Nada que compilar
-  ```shell
-  % npx hardhat compile
-  Nada que compilar
-  ```
-  > - FIX 2: Borre la carpeta de artefactos y ejecute el comando `npx hardhat compile` para generar nuevos artefactos.
-- Error:  "GET /MiToken.json" Error (404): "No encontrado"
-  - Compruebe que los contratos se han compilado correctamente y que se ha generado la carpeta de artefactos.
-  - Comprueba que se han seguido secuencialmente todos los pasos de [interactuar con frontend](/desarrolladores/contratos-inteligentes/hardhat/interactuar-con-frontend/).
-- Error: HH601: El script scripts/deploy.js no existe.
-  - Asegúrese de que está ejecutando el comando `npx hardhat run --network hardhat scripts/deploy.js` desde el directorio raíz.
+      For more info go to https://hardhat.org/HH8 or run Hardhat with --show-stack-traces
+      ```
+      > - FIX 1: Ensure the values in the environment variables matches with the hardhat network configuration `hardhat.config.js` file. For bash, run `source .env` in the root directory for dotenv to enable the environment variables.
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="1">
+    <Accordion.Header as="h3">Error: Nothing to Compile</Accordion.Header>
+    <Accordion.Body>
+      ```shell
+      % npx hardhat compile
+      Nothing to compile
+      ```
+      > - FIX 2: Delete artifacts folder and run the `npx hardhat compile` command to generate new artifacts.
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="2">
+    <Accordion.Header as="h3">Error:  "GET /MyToken.json" Error (404): "Not found"</Accordion.Header>
+    <Accordion.Body>
+      - Check that contracts were compiled successfully, and artifacts folder was generated.
+      - Check that all the steps in [interacting with frontend](/developers/smart-contracts/hardhat/interact-with-frontend/) were followed sequentially.
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="2">
+    <Accordion.Header as="h3">Error: HH601: Script scripts/deploy.js doesn't exist.</Accordion.Header>
+    <Accordion.Body>
+      - Ensure that you're running the `npx hardhat run --network hardhat scripts/deploy.js` command from the root directory.
+    </Accordion.Body>
+  </Accordion.Item>
+</Accordion>
+````

@@ -2,12 +2,12 @@
 sidebar_label: RIF Relay Ejemplo de dApp
 sidebar_position: 400
 title: Cómo utilizar RIF Relay Sample dApp SDK
+description: RIF Relay Sample dApp SDK Starter kit.
 tags:
   - rif
   - sobre
   - relé
   - guía de integración
-description: RIF Relay Sample dApp SDK Kit de inicio
 ---
 
 ## Primeros pasos
@@ -40,12 +40,12 @@ Para configurar el contrato de retransmisión RIF, clone el repositorio de contr
 ````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
-    <Accordion.Header as="h3">Comprobar tokens permitidos</Accordion.Header>
+    <Accordion.Header as="h3">Check allowed tokens</Accordion.Header>
     <Accordion.Body>
        ```bash
         npx hardhat allowed-tokens --network regtest
        ```
-        Respuesta:
+        Response:
         ```bash
             rif-relay-contracts % npx hardhat allowed-tokens --network regtest
             deployVerifier [ '0x6f217dEd6c86A57f1211F464302e6fA544045B4f' ]
@@ -58,23 +58,23 @@ Para configurar el contrato de retransmisión RIF, clone el repositorio de contr
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
-    <Accordion.Header as="h3">Acuñar ficha</Accordion.Header>
+    <Accordion.Header as="h3">Mint token</Accordion.Header>
     <Accordion.Body>
-        - Para acuñar nuevas unidades del `UtilToken` en la dirección del monedero de Metamask:
-        - Vaya al monedero de Metamask y copie la dirección del monedero:
-        - Ejecute el comando para acuñar el token, donde:
-
-            - `--token-address` → esta es la dirección del `UtilToken`
-            - `--amount` → cantidad a acuñar
-            - `--receiver` → dirección del monedero
+        - To mint new units of the `UtilToken` into the Metamask wallet address:
+        - Go to the Metamask wallet, and copy the wallet address:
+        - Execute the command to mint the token, where:
+            - `--token-address` → this is the address for `UtilToken`
+            - `--amount` → quantity to be minted
+            - `--receiver` → wallet address
             ```bash
-            npx hardhat mint \4 --token-address 0x6f217dEd6c86A57f1211F464302e6fA544045B4f \
+            npx hardhat mint \
+            --token-address 0x6f217dEd6c86A57f1211F464302e6fA544045B4f \
             --amount 10000000000000000000 \
             --receiver <wallet-address> \
             --network regtest
-            ``
-        - Importa el token acuñado al monedero.
-        - Para ver el token en la cartera, haga clic en "importar tokens" y, a continuación, pegue la dirección del token.
+            ```
+        - Import the minted token into the wallet.
+        - To see the token in the wallet, click on “import tokens”, and then paste the token address.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>

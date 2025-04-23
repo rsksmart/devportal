@@ -1,6 +1,6 @@
 ---
-sidebar_label: Abstracción de cuentas
-sidebar_position: 500
+sidebar_label: AA with Etherspot
+sidebar_position: 101
 title: Abstracción de cuenta usando Etherspot Prime SDK
 description: En esta guía, aprenderás a utilizar el SDK de Etherspot Prime para desplegar una dApp de Abstracción de Cuenta en la red Rootstock. Siguiendo estos pasos, permitirás a tus usuarios interactuar con tu dApp sin gestionar claves privadas directamente.
 tags:
@@ -65,7 +65,7 @@ git checkout aa-sdk
 ```
 
 4. Ejecuta el proyecto:
-   Ahora que has clonado el repositorio e instalado las dependencias, es el momento de ejecutar el proyecto. Ejecuta el siguiente comando:
+    Ahora que has clonado el repositorio e instalado las dependencias, es el momento de ejecutar el proyecto. Ejecuta el siguiente comando:
 
 ```javascript
 desarrollo del hilo
@@ -92,11 +92,11 @@ Esto iniciará su dApp Rootstock Wagmi localmente, permitiéndole desarrollar y 
 4. **Estimar y enviar una transacción:**
 
 - Esta sección tiene dos campos:
-  - **Dirección del destinatario:** En este campo se especifica la dirección Ethereum del destinatario. Es la dirección a la que desea enviar la transacción. Piense en ella como el destino de sus fondos. Asegúrese de introducir aquí una dirección Ethereum válida.
+    - **Dirección del destinatario:** En este campo se especifica la dirección Ethereum del destinatario. Es la dirección a la que desea enviar la transacción. Piense en ella como el destino de sus fondos. Asegúrese de introducir aquí una dirección Ethereum válida.
 
-  - **Valor (en Eth):** En este campo, usted indica la cantidad de Ether (ETH) que desea enviar en la transacción. Introduzca el valor que desea transferir. Por ejemplo, si desea enviar 0,5 ETH, introduzca "0,5" en este campo.
+    - **Valor (en Eth):** En este campo, usted indica la cantidad de Ether (ETH) que desea enviar en la transacción. Introduzca el valor que desea transferir. Por ejemplo, si desea enviar 0,5 ETH, introduzca "0,5" en este campo.
 
-  - Pulse el botón "Estimar y enviar" para iniciar la transacción.
+    - Pulse el botón "Estimar y enviar" para iniciar la transacción.
 
 ## Comprender el código base
 
@@ -119,22 +119,22 @@ Esto genera de forma asíncrona una clave privada y deriva una dirección de cue
 - Esta función obtiene el saldo del monedero Etherspot actual.
 
 - **Función:**
-  Esto utiliza de forma asíncrona el SDK para recuperar el saldo nativo de la cuenta y actualiza la variable de estado de saldo.
+    Esto utiliza de forma asíncrona el SDK para recuperar el saldo nativo de la cuenta y actualiza la variable de estado de saldo.
 
 3. **generateEtherspotWallet**
 
 - Esta función genera una dirección contrafactual para el monedero Etherspot.
 
 - **Función:**
-  Esto interactúa de forma asíncrona con el SDK para generar una dirección de cartera Etherspot y obtiene su saldo.
+    Esto interactúa de forma asíncrona con el SDK para generar una dirección de cartera Etherspot y obtiene su saldo.
 
 4. \*\*Estimación y transferencia.
 
 - Esta función calcula el coste de la transacción y envía un valor especificado a un destinatario utilizando el Arka Paymaster.
 
 - **Función:**
-  Valida la dirección del destinatario y las entradas de valor.
-  Utiliza el SDK para configurar la transacción, estimar el coste del gas, enviar la transacción, y espera el recibo de la transacción.
+    Valida la dirección del destinatario y las entradas de valor.
+    Utiliza el SDK para configurar la transacción, estimar el coste del gas, enviar la transacción, y espera el recibo de la transacción.
 
 5. **useEffect Hook**
 
@@ -152,6 +152,6 @@ Configura el SDK con el proveedor de bundler especificado.
 
 ## Recursos
 
-- [Kit de iniciación a la abstracción de cuentas del patrón](https://github.com/wagmi-dev/wagmi-starter-kit.git)
+- [Rootstock Account Abstraction Starter Kit](https://github.com/rsksmart/rsk-wagmi-starter-kit/tree/aa-sdk)
 - [Uso de ejemplos del SDK de Prime](https://etherspot.fyi/prime-sdk/examples/intro)
 - [Etherspot Prime SDK Repo](https://github.com/etherspot/etherspot-prime-sdk/)
