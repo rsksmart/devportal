@@ -104,6 +104,8 @@ The bridge command allows you to interact with the RSK bridge contract on the Ro
 #### Accessing the Bridge Command
 
 To start using the bridge command, open your terminal and use the following command:
+
+````mdx-code-block
 <Tabs>
   <TabItem value="contribute" label="Mainnet" default>
   ```shell
@@ -117,7 +119,7 @@ rsk-cli bridge --testnet
   </TabItem>
 
 </Tabs>
-
+````
 
 - Once you select either the Mainnet or Testnet, you will see the following message:
 
@@ -132,6 +134,8 @@ rsk-cli bridge --testnet
 ❯ read
   write
 ```
+
+````mdx-code-block
 <Tabs>
   <TabItem value="contribute" label="Selecting a Read Function" default>
    - Use the **arrow keys** to highlight your choice and press **Enter**.
@@ -208,3 +212,4 @@ Type your password and press **Enter.**
 :::
   </TabItem>
 </Tabs>
+````
