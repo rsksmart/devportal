@@ -641,6 +641,9 @@
     {"source" : "/developers/smart-contracts/eas/", "destination" : "/dev-tools/attestations/eas/"},
     {"source" : "/developers/smart-contracts/eas/overview/", "destination" : "/dev-tools/attestations/eas/"},
     {"source" : "/developers/quickstart/dynamic-starter-kit/", "destination" : "/developers/quickstart/dynamic/"},
-    {"source" : "/resources/contribute/hacktivator-program/", "destination" : "/resources/contribute/hacktivator/"}
+    {"source" : "/resources/contribute/hacktivator-program/", "destination" : "/resources/contribute/hacktivator/"},
+    {"source" : "/getting-started/", "destination" : "/developers/quickstart/"},
+    {"source" : "/smart-contracts/", "destination" : "/developers/smart-contracts/"},
+    {"source" : "/rsk-cli/", "destination" : "/developers/smart-contracts/rsk-cli/"}
   ]
 }

@@ -39,6 +39,14 @@ description="Rust is extensively getting used on backend side of many defi appli
 />
 <FilterItem
 value="beginner"
+title="Interact with Rootstock using Go"
+subtitle="Go"
+color="orange"
+linkHref="/resources/tutorials/rootstock-go/"
+description="Go is an easy to learn language which combines speed and concurrency. It is widely used in web3 development, especially in the ethereum ecosystem. This guide will help developers read from and write to the Rootstock blockchain using Go."
+/>
+<FilterItem
+value="beginner"
 title="Deploy, Interact and Verify Smart Contracts using Remix and Rootstock Explorer"
 subtitle="Remix"
 color="orange"

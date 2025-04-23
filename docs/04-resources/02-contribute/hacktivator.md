@@ -271,7 +271,7 @@ Your contributions can cover any of the following Rootstock themes:
 
 :::note[More info about the guidelines]
 
-For a comprehensive overview of the guidelines, evaluation, and reward system for content contributions, including detailed criteria for depth, completeness, technical accuracy, educational value, and innovation, please refer to the [Educational Content Evaluation Criteria & Guidelines](https://docs.google.com/document/d/1vA3QK8ZNv5Fgegb0Jv2f03IVIREePDi4lrFE1vsfK7c/edit) and the [terms and conditions of the Hactivator](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?usp=sharing). These criteria outline how contributions, ranging from technical documentation, written or video guides or tutorials will be assessed and rewarded, ensuring a balanced and fair approach to valuing content quality and impact. This document covers everything from word count appropriateness and inclusion of code examples to technical correctness and relevance to the Rootstock ecosystem, with rewards adjusted based on the value and complexity of each contribution.
+For a comprehensive overview of the guidelines, evaluation, and reward system for content contributions, including detailed criteria for depth, completeness, technical accuracy, educational value, and innovation, please refer to the [Educational Content Evaluation Criteria & Guidelines](https://docs.google.com/document/d/1vA3QK8ZNv5Fgegb0Jv2f03IVIREePDi4lrFE1vsfK7c/edit) and the [terms and conditions of the Hacktivator](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?usp=sharing). These criteria outline how contributions, ranging from technical documentation, written or video guides or tutorials will be assessed and rewarded, ensuring a balanced and fair approach to valuing content quality and impact. This document covers everything from word count appropriateness and inclusion of code examples to technical correctness and relevance to the Rootstock ecosystem, with rewards adjusted based on the value and complexity of each contribution.
 
 👉 Guidelines when publishing:
 * Follow the [Rootstock Style Guide](https://github.com/rsksmart/devportal/blob/main/STYLE-GUIDE.md)
@@ -281,7 +281,7 @@ For a comprehensive overview of the guidelines, evaluation, and reward system fo
 
 #### 👉 Educational Content Rewards:
 
-Each verified and approved code contribution that becomes a Qualified Contribution (as defined in the Hactivator's terms and conditions) will be entitled to receive the following rewards, under the established process:
+Each verified and approved code contribution that becomes a Qualified Contribution (as defined in the Hacktivator's terms and conditions) will be entitled to receive the following rewards, under the established process:
 * **Blog Post Contribution:** 50 - 250 USD
 * **Written Guides or Tutorials Contribution:** 250 - 500 USD
 * **Technical Content Contribution:** 500 - 700 USD 

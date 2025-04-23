@@ -53,5 +53,5 @@ The debugger terminal is divided into four quadrants:
 - [Foundry Project Layout](https://book.getfoundry.sh/projects/project-layout)
 - [RPC Calls Using Cast](https://book.getfoundry.sh/cast/)
 - [Foundry Configurations](https://book.getfoundry.sh/config/)
-- [Solidity Scripting](https://book.getfoundry.sh/tutorials/solidity-scripting)
-- [Deploy Smart Contracts To Deterministic Addresses](https://book.getfoundry.sh/tutorials/create2-tutorial)
+- [Solidity Scripting](https://book.getfoundry.sh/guides/scripting-with-solidity)
+- [Deploy Smart Contracts To Deterministic Addresses](https://book.getfoundry.sh/guides/deterministic-deployments-using-create2)
