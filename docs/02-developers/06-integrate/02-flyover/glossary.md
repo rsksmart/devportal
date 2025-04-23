@@ -8,6 +8,7 @@ description: The PowPeg is a user-friendly interface for the conversion of BTC t
 
 See a list of terms about/related to the Flyover and their meanings.
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">RBTC</Accordion.Header>
@@ -65,3 +66,4 @@ See a list of terms about/related to the Flyover and their meanings.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````

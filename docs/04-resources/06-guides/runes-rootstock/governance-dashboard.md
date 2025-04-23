@@ -6,7 +6,7 @@ tags: [Governance Voting Dashboard, rootstock, tutorials, rsk, ERC20, blockchain
 description: "This project is a Governance Voting Dashboard built on the Rootstock blockchain. It allows users to create and vote for teams using governance tokens (ERC20 tokens)."
 ---
 
-This project is a **Governance Voting Dashboard** built on the **Rootstock blockchain**. It allows users to create and vote for teams using governance tokens [ERC20 tokens](/concepts/glossary/#e). 
+This project is a **Governance Voting Dashboard** built on the **Rootstock blockchain**. It allows users to create and vote for teams using governance tokens [ERC20 tokens](/concepts/glossary/#e).
 
 The voting is managed by a smart contract, making it decentralized and transparent. Each team has a unique name, a governance token, and a leader, and users can vote by transferring tokens to their preferred teams.
 
@@ -26,32 +26,32 @@ A Web3 wallet is required for signing transactions and interacting with the Root
 
 ## Features
 
-1. **Create Teams**  
-   Users can establish teams by providing:  
-   * A team name  
-   * A meme token address (used for team identity)  
-   * A team leader address  
-2. **Vote for Teams**  
-   Users cast votes for their preferred teams using governance tokens.  
-3. **Token Balance Tracking**  
-   The system monitors each team leader's balance of governance tokens.  
-4. **Smart Contracts Integration**  
-   The project integrates smart contracts to handle team creation, voting, and token transactions.  
-5. **ERC20 Governance**  
+1. **Create Teams**
+   Users can establish teams by providing:
+   * A team name
+   * A meme token address (used for team identity)
+   * A team leader address
+2. **Vote for Teams**
+   Users cast votes for their preferred teams using governance tokens.
+3. **Token Balance Tracking**
+   The system monitors each team leader's balance of governance tokens.
+4. **Smart Contracts Integration**
+   The project integrates smart contracts to handle team creation, voting, and token transactions.
+5. **ERC20 Governance**
    Votes are cast using ERC20 tokens, ensuring decentralized governance.
 
 ## Core Smart Contract: TeamsManager
 
-The `TeamsManager` contract, written in Solidity, is the foundation of the voting system. It manages team creation, voting, and score tracking, and enforces administrative controls. 
-  
+The `TeamsManager` contract, written in Solidity, is the foundation of the voting system. It manages team creation, voting, and score tracking, and enforces administrative controls.
+
 
 :::info[Key functions:]
 
-* **`vote(teamName, transferAmount)`**  
-  Allows users to vote for a team by transferring governance tokens. teamName specifies the team to receive the vote, and transferAmount is the token amount to transfer.  
+* **`vote(teamName, transferAmount)`**
+  Allows users to vote for a team by transferring governance tokens. teamName specifies the team to receive the vote, and transferAmount is the token amount to transfer.
 
   ```
-  function vote(string memory teamName, uint256 transferAmount) public nonReentrant { 
+  function vote(string memory teamName, uint256 transferAmount) public nonReentrant {
     require(bytes(_teams[teamName].teamName).length > 0, "Unknown team");
     require(keccak256(abi.encodePacked(_teamLeaders[msg.sender])) != keccak256(abi.encodePacked(teamName)), "Cannot vote for own team");
 
@@ -62,32 +62,32 @@ The `TeamsManager` contract, written in Solidity, is the foundation of the votin
    }
   ```
 
-* **`getTeamNames()`**  
-  Returns a list of all teams registered in the contract.  
+* **`getTeamNames()`**
+  Returns a list of all teams registered in the contract.
 ```
 function getTeamNames() external view returns(string[] memory) {
     return _teamNames;
   }
  ```
 
-* **`getTeamInfo(teamName)`**  
-  Provides detailed information on a specified team.  
+* **`getTeamInfo(teamName)`**
+  Provides detailed information on a specified team.
 ```
  function getTeamInfo(string memory teamName) public view returns(TeamInfo memory) {
     return _teams[teamName];
   }
 ```
 
-* **`getScore(teamName)`**  
-  Retrieves the current vote score for a team.  
+* **`getScore(teamName)`**
+  Retrieves the current vote score for a team.
 ```
  function getScore(string memory teamName) public view returns(uint256) {
     return _teams[teamName].score;
   }
   ```
 
-* **`addTeam(teamName, memeTokenAddress, teamLeaderAddress)`**  
-  Allows administrators to add a new team, specifying the team's name, meme token address, and leader address.  
+* **`addTeam(teamName, memeTokenAddress, teamLeaderAddress)`**
+  Allows administrators to add a new team, specifying the team's name, meme token address, and leader address.
 ```
 function addTeam(string memory teamName, address memeTokenAddress, address teamLeaderAddress) public {
     require(bytes(_teams[teamName].teamName).length == 0, "Team already added");
@@ -103,15 +103,15 @@ function addTeam(string memory teamName, address memeTokenAddress, address teamL
   }
 ```
 
-* **`setReadyToVote()`**  
-  Marks the contract as ready for voting. Only administrators can call this function.  
+* **`setReadyToVote()`**
+  Marks the contract as ready for voting. Only administrators can call this function.
   ```
   function setReadyToVote() public onlyAdmins {
     _readyToVote = true;
   }
   ```
 
-* **`reset()`**  
+* **`reset()`**
   Resets the contract's voting state and clears team data. Only administrators can execute this.
   ```
     function reset() public onlyAdmins {
@@ -129,6 +129,7 @@ function addTeam(string memory teamName, address memeTokenAddress, address teamL
 
 ## **Getting Started**
 
+````mdx-code-block
 <Steps>
   <Step title="Clone the Repository">
      Clone the project repository to your local machine:
@@ -138,7 +139,7 @@ git clone https://github.com/rsksmart/rootstock-dynamic.git
 ```
   </Step>
   <Step title="Install Dependencies">
-    
+
 Navigate to the project directory and install dependencies with:
 
 ```
@@ -146,7 +147,7 @@ npm install
 ```
   </Step>
   <Step title="Set Up Environment Variables">
-   
+
 
 Create a .env file in the project root directory and populate it with the required environment variables as listed above.
 
@@ -169,9 +170,9 @@ If you’re new to deploying contracts on Remix, check out this [tutorial](https
 
 :::
 
-* **How to get it**:  
-  * Deploy the TeamsManager.sol contract to the Rootstock network using RemixIDE, a popular tool for writing and deploying smart contracts.   
-  * Once deployed, you’ll find the contract’s address in the Remix’s console. Copy this address.  
+* **How to get it**:
+  * Deploy the TeamsManager.sol contract to the Rootstock network using RemixIDE, a popular tool for writing and deploying smart contracts.
+  * Once deployed, you’ll find the contract’s address in the Remix’s console. Copy this address.
   * Paste this address into your .env file as shown below:
 
 ```
@@ -190,8 +191,8 @@ If you’re unsure how to navigate the Rootstock RPC Dashboard, refer to the [Ge
 
 * **How to get it**:
 
-    * Go to the [Rootstock RPC Dashboard](https://dashboard.rpc.rootstock.io/login) and create an account or log in.  
-    * Once logged in, create a new project or access an existing one to generate a testnet RPC URL.  
+    * Go to the [Rootstock RPC Dashboard](https://dashboard.rpc.rootstock.io/login) and create an account or log in.
+    * Once logged in, create a new project or access an existing one to generate a testnet RPC URL.
     * Copy the URL and add it to your .env file like so:
 
 ```
@@ -202,8 +203,8 @@ NEXT_PUBLIC_RPC_URL=<Your_Rootstock_RPC_URL>
 
 This is the blockchain explorer URL, which lets you view transaction details on the Rootstock network.
 
-* **How to get it**:  
-  * For testnet (for testing purposes), use this URL: https://explorer.testnet.rootstock.io.  
+* **How to get it**:
+  * For testnet (for testing purposes), use this URL: https://explorer.testnet.rootstock.io.
   * For mainnet (for production), use this URL: https://explorer.rootstock.io.
 
 **Example**:
@@ -223,11 +224,11 @@ This is the URL to Pinata, an IPFS (InterPlanetary File System) provider, which 
   <figcaption>NEXT_PUBLIC_PINATA_URL (fig 2.)</figcaption>
 </figure>
 
-* **How to get it**:  
-  * Start by logging into your Pinata Cloud account and navigate to the dashboard [Pinata](https://www.pinata.cloud/).  
-  * In the dashboard, click on the **"Files"** tab to access the file storage area.  
-  * Click the **"Upload"** button and select a sample image file from your device to upload.  
-  * After the upload is complete, locate the uploaded image in the file list. You’ll see a **URL** provided by Pinata that can be used to access your file.  
+* **How to get it**:
+  * Start by logging into your Pinata Cloud account and navigate to the dashboard [Pinata](https://www.pinata.cloud/).
+  * In the dashboard, click on the **"Files"** tab to access the file storage area.
+  * Click the **"Upload"** button and select a sample image file from your device to upload.
+  * After the upload is complete, locate the uploaded image in the file list. You’ll see a **URL** provided by Pinata that can be used to access your file.
 
 For example:
 
@@ -295,18 +296,19 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
   <figcaption>Development server  (fig 3.)</figcaption>
 </figure>
   </Step>
-  
-</Steps>
 
+</Steps>
+````
 
 
 ## Interacting with the Frontend
 
+````mdx-code-block
 <Steps>
 <Step title="Connect Your Wallet">
 
-  * Click the **Connect Wallet** button in the top-right corner.  
-  * Choose your Web3 wallet `(e.g., MetaMask)` and connect it to the Rootstock network.  
+  * Click the **Connect Wallet** button in the top-right corner.
+  * Choose your Web3 wallet `(e.g., MetaMask)` and connect it to the Rootstock network.
   * Make sure your wallet is funded with some governance tokens for voting and RBTC tokens to cover transaction fees.
 
 </Step>
@@ -317,13 +319,13 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
  </figure>
 
  * Explore the list of teams in the **Teams List** section.
- * For each team, you can view:  
-   - **Logo**: Visual representation or meme associated with the team.  
-   - **Team Name**: Helps identify each team uniquely.  
-   - **Symbol**: Represents the token each team uses for voting.  
-   - **Leader Address**: Shows the team leader’s wallet address.  
-   - **Meme Token Address**: Address of the token associated with the team.  
-   - **Score**: The number of votes the team has received.  
+ * For each team, you can view:
+   - **Logo**: Visual representation or meme associated with the team.
+   - **Team Name**: Helps identify each team uniquely.
+   - **Symbol**: Represents the token each team uses for voting.
+   - **Leader Address**: Shows the team leader’s wallet address.
+   - **Meme Token Address**: Address of the token associated with the team.
+   - **Score**: The number of votes the team has received.
  * This information helps you decide which team to support with your vote.
 
 </Step>
@@ -333,14 +335,14 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
   <figcaption>Vote for a Team (fig 5.)</figcaption>
 </figure>
 
- * To vote, find the team you want to support and click the **Vote** button in the **Option** column.  
- * You will see a pop up screen with a field to add the amount to vote and an Add vote button.  
- * Confirm the transaction in your wallet. You’ll need `governance tokens` to cast your vote and a small amount of `RBTC tokens` for transaction fees.  
- * Once confirmed, your vote will be registered, and the team’s score will update to reflect your support. 
+ * To vote, find the team you want to support and click the **Vote** button in the **Option** column.
+ * You will see a pop up screen with a field to add the amount to vote and an Add vote button.
+ * Confirm the transaction in your wallet. You’ll need `governance tokens` to cast your vote and a small amount of `RBTC tokens` for transaction fees.
+ * Once confirmed, your vote will be registered, and the team’s score will update to reflect your support.
 
   </Step>
   <Step title="Check the Scores">
-    * After voting, you’ll see the **Score** column update with the new total votes.  
+    * After voting, you’ll see the **Score** column update with the new total votes.
     * The scores reflect the level of community support each team has received.
 
   </Step>
@@ -350,23 +352,23 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
   <figcaption>Adding a Team (fig 6.)</figcaption>
 </figure>
 
- * If you have administrative privileges, you can add a new team by clicking the **Add Team** button.  
- * Enter the following details to create a new team:  
-   * **Team Name**: A unique name for the team.  
-   * **Meme Token Address**: Address of the meme token associated with the team.  
-   * **Team Leader Address**: Wallet address of the team leader.  
+ * If you have administrative privileges, you can add a new team by clicking the **Add Team** button.
+ * Enter the following details to create a new team:
+   * **Team Name**: A unique name for the team.
+   * **Meme Token Address**: Address of the meme token associated with the team.
+   * **Team Leader Address**: Wallet address of the team leader.
  * Once added, the new team will appear in the Teams List, and users can start voting for it.
 
   </Step>
 </Steps>
-
+````
 
 
 ## Conclusion
 
-Following this guide, you can build and deploy a fully functional Governance Voting Dashboard that supports decentralized decision-making on the Rootstock Network. 
+Following this guide, you can build and deploy a fully functional Governance Voting Dashboard that supports decentralized decision-making on the Rootstock Network.
 
-This dApp enables users to create teams, manage proposals, and cast votes using governance tokens (ERC20). 
+This dApp enables users to create teams, manage proposals, and cast votes using governance tokens (ERC20).
 
 The dApp simplifies the voting process and enhances user engagement with an intuitive interface and smooth interactions.
 

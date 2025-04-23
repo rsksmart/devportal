@@ -6,10 +6,11 @@ description: "Learn about some potential issues you can run into and tips on how
 tags: [guides, developers, smart contracts, rsk, rootstock, foundry, dApps, ethers]
 ---
 
-This section provides help on some potential issues you may run into and tips on how to resolve them. 
+This section provides help on some potential issues you may run into and tips on how to resolve them.
 
 ## Errors
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">Error: Transaction dropped from the mempool or Error Transaction not completed</Accordion.Header>
@@ -24,3 +25,4 @@ This section provides help on some potential issues you may run into and tips on
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
