@@ -8,8 +8,9 @@ description: The PowPeg is a user-friendly interface for the conversion of BTC t
 
 Here, you can find a list of frequently asked questions (FAQs) about the RBTC Flyover.
 
-## General 
+## General
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">1. What is RBTC Flyover?</Accordion.Header>
@@ -31,9 +32,11 @@ Here, you can find a list of frequently asked questions (FAQs) about the RBTC Fl
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 ## For Developers
 
+````mdx-code-block
 <Accordion>
 <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">4. How can I integrate Flyover in my dApp? </Accordion.Header>
@@ -54,9 +57,11 @@ Here, you can find a list of frequently asked questions (FAQs) about the RBTC Fl
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 ## For Liquidity Providers
 
+````mdx-code-block
 <Accordion>
 <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">7. How do I become a Liquidity Provider?</Accordion.Header>
@@ -90,9 +95,11 @@ Here, you can find a list of frequently asked questions (FAQs) about the RBTC Fl
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+```
 
 ## For Users - Converting BTC to RBTC and vice versa
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">11. How can I use Flyover to transfer BTC to RBTC?</Accordion.Header>
@@ -113,3 +120,4 @@ Here, you can find a list of frequently asked questions (FAQs) about the RBTC Fl
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
