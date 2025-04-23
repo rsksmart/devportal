@@ -49,7 +49,7 @@ const data = {
         href: '/developers/integrate/',
       },
       description: (
-        <Translate>Get up to speed, using easy-to-set-up SDKs and Integration Guides.</Translate>
+        <Translate>Explore easy-to-set-up SDKs and Integration Guides.</Translate>
       ),
     }
   ]
