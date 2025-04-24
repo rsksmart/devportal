@@ -173,6 +173,53 @@
   "Read": {
     "message": "Read"
   },
+  "Not now": {
+    "message": "Not now"
+  },
+  "Close": {
+    "message": "Close"
+  },
+  "Submitting": {
+    "message": "Submitting"
+  },
+  "Loading...": {
+    "message": "Loading..."
+  },
+  "Submit": {
+    "message": "Submit"
+  },
+  "Submitted": {
+    "message": "Submitted"
+  },
+
+  "Message": {
+    "message": "Message"
+  },
+  "Name": {
+    "message": "Name"
+  },
+  "Title": {
+    "message": "Title"
+  },
+  "Why / Reason for Request": {
+    "message": "Why / Reason for Request"
+  },
+  "Publication location (E.g, DevPortal, Blog)": {
+    "message": "Publication location (E.g, DevPortal, Blog)"
+  },
+  "Any other information": {
+    "message": "Any other information"
+  },
+  "Are you a technical contributor?": {
+    "message": "Are you a technical contributor?"
+  },
+  "Submit a Pull Request": {
+    "message": "Submit a Pull Request"
+  },
+  "or an Issue": {
+    "message": "or an Issue"
+  },
+
   "theme.common.copyPageLinkMsg": {
     "message": "Copied!"
   },
@@ -186,6 +233,15 @@
     "message": "All"
   },
   "theme.FeedbackForm.title": {
+    "message": "Feedback"
+  },
+  "theme.feedbackForm.form.title": {
+    "message": "Thank you for your feedback!"
+  },
+  "theme.feedbackForm.form.description": {
+    "message": "We would love to hear your thoughts and feedback so that we can improve these Docs for you and others!"
+  },
+  "theme.feedbackForm.form.rating": {
     "message": "Feedback"
   },
   "theme.common.back": {
@@ -291,6 +347,29 @@
   },
   "theme.moreLinks.title": {
     "message": "More"
+  },
+  "theme.moreLinks.changelog": {
+    "message": "Changelog",
+    "description" : "Changelog link label in sidebar"
+  },
+  "theme.moreLinks.reportIssue": {
+    "message": "Report an Issue",
+    "description" : "Report an Issue link label in sidebar"
+  },
+  "theme.moreLinks.joinCommunity": {
+    "message": "Join the Community",
+    "description" : "Join the Community link label in sidebar"
+  },
+  "theme.moreLinks.requestArticle": {
+    "message": "Request an Article"
+  },
+  "theme.moreLinks.requestArticle.form.title": {
+    "message": "Request a New Article",
+    "description" : "Request an Article form title"
+  },
+  "theme.moreLinks.requestArticle.form.description": {
+    "message": "Looking for information we haven’t covered? Fill out the form below to request a new article, and we’ll consider it in future updates.",
+    "description" : "Request an Article form description"
   },
   "theme.navbar.mobileLanguageDropdown.label": {
     "message": "Languages",

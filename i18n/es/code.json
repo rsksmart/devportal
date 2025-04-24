@@ -168,10 +168,10 @@
     "message": "Copied!"
   },
   "theme.common.copyPageLink": {
-    "message": "Copy page link"
+    "message": "Copiar enlace"
   },
   "theme.common.backToTop": {
-    "message": "Back to top"
+    "message": "Volver arriba"
   },
   "theme.common.all": {
     "message": "Todos"
@@ -282,6 +282,29 @@
   },
   "theme.moreLinks.title": {
     "message": "Más"
+  },
+  "theme.moreLinks.requestArticle": {
+    "message": "Solicitar un Artículo"
+  },
+  "theme.moreLinks.requestArticle.form.title": {
+    "message": "Solicitar un nuevo artículo",
+    "description" : "Request an Article form title"
+  },
+  "theme.moreLinks.requestArticle.form.description": {
+    "message": "¿Buscas información que no hemos cubierto? Completa el formulario a continuación para solicitar un nuevo artículo, y lo consideraremos en futuras actualizaciones.",
+    "description" : "Request an Article form description"
+  },
+  "theme.moreLinks.changelog": {
+    "message": "Registro de cambios",
+    "description" : "Changelog link label in sidebar"
+  },
+  "theme.moreLinks.joinCommunity": {
+    "message": "Únete a la Comunidad",
+    "description" : "Join the Community link label in sidebar"
+  },
+  "theme.moreLinks.reportIssue": {
+    "message": "Reportar un Problema",
+    "description" : "Report an Issue link label in sidebar"
   },
   "theme.navbar.mobileLanguageDropdown.label": {
     "message": "Idiomas",

@@ -2,6 +2,7 @@ import React from 'react'
 import Modal from 'react-bootstrap/Modal'
 import { FormFeedback } from './Forms/FormFeedback'
 import { FormRequestArticle } from './Forms/FormRequestArticle'
+import Translate from '@docusaurus/Translate'
 
 export const ModalFormSpark = (props) => {
 
@@ -22,11 +23,21 @@ export const ModalFormSpark = (props) => {
       <Modal.Body>
         {form?.title && (
           <Modal.Title as={'h4'} id="contained-modal-title-vcenter" className={'mb-16 subtitle-2 pe-32'}>
-            {form.title}
+            <Translate
+              id={ form?.type === 'feedback' ? 'theme.feedbackForm.form.title' : 'theme.moreLinks.requestArticle.form.title'}
+            >
+              {form.title}
+            </Translate>
           </Modal.Title>
         )}
         {form.description && (
-          <p className={!form.title ? 'pe-32' : ''}>{form.description}</p>
+          <p className={!form.title ? 'pe-32' : ''}>
+            <Translate
+              id={form?.type === 'feedback' ? 'theme.feedbackForm.form.description' : 'theme.moreLinks.requestArticle.form.description'}
+            >
+              {form.description}
+            </Translate>
+          </p>
         )}
 
         {(form?.type === 'feedback') && <FormFeedback form={form} rating={props.rating || null} onDismiss={props.onHide || null} />}
