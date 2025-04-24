@@ -67,11 +67,13 @@ Before getting started, ensure to have the following tools installed:
 
   Confirm installation:
 
+    ````shell
     ```shell
     yarn -v
     ```
+    ````
 
-3. Fund Your Rootstock Blockchain Wallet
+3. 3. Fund Your Rootstock Blockchain Wallet
   - **Get test RBTC (tRBTC)** from the [Rootstock Faucet](https://faucet.rootstock.io/) to fund your test account.
 
 4. Web3Auth Account
@@ -87,6 +89,7 @@ Before getting started, ensure to have the following tools installed:
 
 To set up the sample dApp project, follow the steps below:
 
+```mdx-code-block
 <Steps>
   <Step title="1. Set Up a Next.js Project">
     Begin by cloning the [Web3 Auth Sample dApp Starter Kit](https://github.com/rsksmart/w3a-rsk-starter-kit) to set up your project environment.
@@ -121,7 +124,6 @@ To set up the sample dApp project, follow the steps below:
 
     - Visit https://cloud.reown.com/ and create a WalletConnect project if you don’t already have one.
     - Copy the **Project ID** provided by WalletConnect.
-
   </Step>
 
     5. Add WalletConnect to Web3Auth
@@ -132,7 +134,6 @@ To set up the sample dApp project, follow the steps below:
     * Select WalletConnect v2 and input the WalletConnect Project ID.
 
     Save changes. Ensure all configurations are saved in the Web3Auth dashboard and project files.
-
   <Step title="Step 3 Start the Project">
     1. Run your project locally using:
 
@@ -147,9 +148,9 @@ To set up the sample dApp project, follow the steps below:
     ```
     - Open browser and go to http://localhost:3000/.
     - You should see the Rootstock & Web3Auth Starter Kit welcome screen.
-
   </Step>
 </Steps>
+```
 
 ## Interacting with the dApp
 

@@ -3,19 +3,28 @@ sidebar_position: 5
 sidebar_label: Interact with Smart Contracts using the Rootstock CLI
 title: Rootstock CLI | Interact with Verified Smart Contracts
 description: "The contract command allows you to interact with a verified smart contract on the Rootstock blockchain. This command lists all available read-only functions within the contract, allowing you to call these functions to view data without altering the contract's state. "
-tags: [Rootstock CLI, developer tools, guides, rsk, rootstock, dApps, smart contracts, solidity, dev-environments]
+tags:
+  - Rootstock CLI
+  - developer tools
+  - guides
+  - rsk
+  - rootstock
+  - dApps
+  - smart contracts
+  - solidity
+  - dev-environments
 ---
 
 The contract command allows you to interact with a verified smart contract on the Rootstock blockchain.
 
 This command lists all available read-only functions within the contract, allowing you to call these functions to view data without altering the contract's state.
 
-:::note[Parameters:]
+:::note[Parameters :]
 
-* `--address`:
-  Specifies the address of the deployed contract on the blockchain. By providing the contract address, `rsk-cli` knows which specific contract instance you want to interact with. This address uniquely identifies the contract on the network.
-* `--testnet`:
-  Indicates that the command should be run on the RSK testnet instead of the mainnet. This parameter tells rsk-cli to execute the command on the testnet (the RSK network designated for testing purposes), which is useful for development and testing without using real funds or affecting production data.
+- `--address`:
+ Specifies the address of the deployed contract on the blockchain. By providing the contract address, `rsk-cli` knows which specific contract instance you want to interact with. This address uniquely identifies the contract on the network.
+- `--testnet`:
+ Indicates that the command should be run on the RSK testnet instead of the mainnet. This parameter tells rsk-cli to execute the command on the testnet (the RSK network designated for testing purposes), which is useful for development and testing without using real funds or affecting production data.
 
 :::
 
@@ -48,8 +57,8 @@ rsk-cli contract --address 0x4edd891c2e988e6145fe3e418c652ee33ebab9ae --testnet
 
 In this example:
 
-* `0x4edd891c2e988e6145fe3e418c652ee33ebab9ae` is the address of the smart contract on the RSK testnet.
-* The `--testnet` flag ensures that the interaction occurs on the test network.
+- `0x4edd891c2e988e6145fe3e418c652ee33ebab9ae` is the address of the smart contract on the RSK testnet.
+- The `--testnet` flag ensures that the interaction occurs on the test network.
 
 After running the command, you will see a response like this:
 
@@ -71,7 +80,7 @@ For example, if you select name, you'll see:
 📜 You selected: name
 ```
 
-2. View the response**: After selecting a function, rsk-cli will call the function on the contract and display the result.
+2. View the response\*\*: After selecting a function, rsk-cli will call the function on the contract and display the result.
 
 ```bash
 ✅ Function name called successfully!
@@ -79,13 +88,14 @@ For example, if you select name, you'll see:
 🔗 View on Explorer: https://explorer.testnet.rootstock.io/address/0x4edd891c2e988e6145fe3e418c652ee33ebab9ae
 ```
 
-3. Check on Explorer**: You can also view the contract and interaction details on the Rootstock testnet explorer by following the link provided.
+3. Check on Explorer\*\*: You can also view the contract and interaction details on the Rootstock testnet explorer by following the link provided.
 
+```mdx-code-block
 <figure>
-<img src="/img/guides/rsk-cli/explorer.png" alt="Rootstock testnet explorer"/>
+  <img src="/img/guides/rsk-cli/explorer.png" alt="Rootstock testnet explorer"/>
   <figcaption>Rootstock testnet explorer (fig 1.)</figcaption>
 </figure>
-
+```
 
 ## Interact with RSK bridge contract
 
@@ -98,8 +108,8 @@ The bridge command allows you to interact with the RSK bridge contract on the Ro
 - **Write Functions:** These require user input and interaction to make changes or submit data to the contract.
 
 > Always be cautious when entering sensitive information, such as your wallet password.
-:::
 
+:::
 
 #### Accessing the Bridge Command
 
