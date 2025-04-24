@@ -68,9 +68,6 @@
   "Explore the various ways to get RBTC using the PowPeg App, On/Off Ramps, or Exchanges.": {
     "message": "Explore the various ways to get RBTC using the PowPeg App, On/Off Ramps, or Exchanges."
   },
-  "Quick Starts": {
-    "message": "Quick Starts"
-  },
   "View a repository of starter kits, sample codes and tutorials for creating, testing and deploying smart contracts on Rootstock.": {
     "message": "View a repository of starter kits, sample codes and tutorials for creating, testing and deploying smart contracts on Rootstock."
   },
@@ -134,9 +131,6 @@
   "Read": {
     "message": "Read"
   },
-  "RPC API": {
-    "message": "RPC API"
-  },
   "Deploy and interact with EVM compatible smart contracts on Rootstock using JSON RPC methods using the Rootstock RPC API.": {
     "message": "Deploy and interact with EVM compatible smart contracts on Rootstock using JSON RPC methods using the Rootstock RPC API."
   },
@@ -170,9 +164,6 @@
   "View upcoming Events": {
     "message": "View upcoming Events"
   },
-  "Read": {
-    "message": "Read"
-  },
   "Not now": {
     "message": "Not now"
   },
@@ -191,7 +182,6 @@
   "Submitted": {
     "message": "Submitted"
   },
-
   "Message": {
     "message": "Message"
   },
@@ -219,7 +209,6 @@
   "or an Issue": {
     "message": "or an Issue"
   },
-
   "theme.common.copyPageLinkMsg": {
     "message": "Copied!"
   },
@@ -350,26 +339,26 @@
   },
   "theme.moreLinks.changelog": {
     "message": "Changelog",
-    "description" : "Changelog link label in sidebar"
+    "description": "Changelog link label in sidebar"
   },
   "theme.moreLinks.reportIssue": {
     "message": "Report an Issue",
-    "description" : "Report an Issue link label in sidebar"
+    "description": "Report an Issue link label in sidebar"
   },
   "theme.moreLinks.joinCommunity": {
     "message": "Join the Community",
-    "description" : "Join the Community link label in sidebar"
+    "description": "Join the Community link label in sidebar"
   },
   "theme.moreLinks.requestArticle": {
     "message": "Request an Article"
   },
   "theme.moreLinks.requestArticle.form.title": {
     "message": "Request a New Article",
-    "description" : "Request an Article form title"
+    "description": "Request an Article form title"
   },
   "theme.moreLinks.requestArticle.form.description": {
     "message": "Looking for information we haven’t covered? Fill out the form below to request a new article, and we’ll consider it in future updates.",
-    "description" : "Request an Article form description"
+    "description": "Request an Article form description"
   },
   "theme.navbar.mobileLanguageDropdown.label": {
     "message": "Languages",
@@ -696,5 +685,8 @@
   "theme.unlistedContent.message": {
     "message": "This page is unlisted. Search engines will not index it, and only users having a direct link can access it.",
     "description": "The unlisted content banner message"
+  },
+  "Email": {
+    "message": "Email"
   }
 }
