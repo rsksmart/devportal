@@ -685,5 +685,8 @@
   "theme.unlistedContent.message": {
     "message": "Esta página no está listada. Los motores de búsqueda no lo indexarán, y sólo los usuarios que tengan un enlace directo pueden acceder a ella.",
     "description": "The unlisted content banner message"
+  },
+  "Email": {
+    "message": "Email"
   }
 }
