@@ -140,7 +140,7 @@ Ejecuta el script `test` o `npm test` para ejecutar las pruebas usando chromium.
  - Una forma fácil de generar definiciones de pasos sería:
   - Seleccione un paso en el archivo de características
   - Clic derecho
-  - \`Generar definición de paso: Copiar a la opción del portapapeles
+  - \\`Generar definición de paso: Copiar a la opción del portapapeles
   - ![Generar definición de paso](/img/guides/quickstart/dapp-testing/copy-to-clipboard.png)
  - Luego ve a la carpeta `stepDefinitions`, crea un nuevo archivo con una extensión `.steps.js`. Por ejemplo, `sample.steps.js` y pegar el paso generado. Se mostrará un fragmento de código como este:
   ```shell

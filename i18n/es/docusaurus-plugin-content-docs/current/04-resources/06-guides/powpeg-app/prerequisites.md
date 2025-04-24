@@ -42,7 +42,7 @@ The Bitcoin testnet app does not show on Ledger live manager by default. To be a
         6. Click on **Add Account**:
              <div align="left"><img width="70%" src="/img/resources/powpeg/add-account-3.png" alt="Add Accounts 3"/></div>
         > Note: See [supported addresses](/resources/guides/powpeg-app/advanced-operations/supported-wallets/) for the types of addresses supported by the PowPeg App.
-        - You have successfully added the Bitcoin testnet app to your account.
+        - You have successfully added the Bitcoin testnet app to your account.<div align="left"><img width="70%" src="/img/resources/powpeg/account-added-successfully.png" alt="Account Added Successfully"/></div>
               <div align="left"><img width="70%" src="/img/resources/powpeg/account-added-successfully.png" alt="Account Added Successfully"/></div>
 
 ## Get Funds

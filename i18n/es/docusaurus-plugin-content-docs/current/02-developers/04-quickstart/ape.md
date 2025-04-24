@@ -40,11 +40,10 @@ To start a new project with Ape, install Ape and then create a new one:
 
 2. Install pipx
 
-> Only neccessary if you don't have [pipx](https://github.com/pypa/pipx) installed:````bash
->     python3 -m pip install --user pipx
->     python3 -m pipx ensurepath
->     ```
-> ````
+> Only neccessary if you don't have [pipx](https://github.com/pypa/pipx) installed:\`\`\`\`bash
+> python3 -m pip install --user pipx
+> python3 -m pipx ensurepath
+> \`\`\`
 
 3. Install Ape using pipx
   ```bash

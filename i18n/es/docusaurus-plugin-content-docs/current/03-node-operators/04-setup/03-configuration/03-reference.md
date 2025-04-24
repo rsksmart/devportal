@@ -109,7 +109,7 @@ Describes how your node peers with other nodes.
   | Testnet | 8100             |
   | Mainnet | 775              |
 - peer.maxActivePeers = int`  es el número máximo de peers activos que mantendrá tu nodo.
-    Valor sugerido:`30\`.
+      Valor sugerido:`30\\`.
 - `peer.p2p.eip8 = bool`
   obliga al peer a enviar el mensaje handshake en el formato definido por
   [EIP-8](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-8.md).

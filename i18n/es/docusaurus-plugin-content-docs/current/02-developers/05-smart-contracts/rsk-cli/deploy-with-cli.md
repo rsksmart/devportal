@@ -140,9 +140,7 @@ This command compiles the project, generating an artifacts folder that contains 
   - Open the `ContactInfo.json` file. Locate and copy the abi and bytecode, which will be used for deployment.
 
 <figure>
-<img src="/img/guides/rsk-cli/artifacts-folder.png" alt="Hardhat Artifacts Folder"/>
-
-  <figcaption>Hardhat Artifacts Folder (fig 1.)</figcaption>
+<img src="/img/guides/rsk-cli/artifacts-folder.png" alt="Hardhat Artifacts Folder"/>  <figcaption>Hardhat Artifacts Folder (fig 1.)</figcaption>
 </figure>
 
 To proceed, save the ABI and bytecode in a new folder. You can choose any name for the folder, but for this tutorial, we'll use 'file' as an example. Inside this folder:

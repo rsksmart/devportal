@@ -164,6 +164,51 @@
   "View upcoming Events": {
     "message": "View upcoming Events"
   },
+  "Not now": {
+    "message": "Not now"
+  },
+  "Close": {
+    "message": "Close"
+  },
+  "Submitting": {
+    "message": "Submitting"
+  },
+  "Loading...": {
+    "message": "Loading..."
+  },
+  "Submit": {
+    "message": "Submit"
+  },
+  "Submitted": {
+    "message": "Submitted"
+  },
+  "Message": {
+    "message": "Message"
+  },
+  "Name": {
+    "message": "Name"
+  },
+  "Title": {
+    "message": "Title"
+  },
+  "Why / Reason for Request": {
+    "message": "Why / Reason for Request"
+  },
+  "Publication location (E.g, DevPortal, Blog)": {
+    "message": "Publication location (E.g, DevPortal, Blog)"
+  },
+  "Any other information": {
+    "message": "Any other information"
+  },
+  "Are you a technical contributor?": {
+    "message": "Are you a technical contributor?"
+  },
+  "Submit a Pull Request": {
+    "message": "Submit a Pull Request"
+  },
+  "or an Issue": {
+    "message": "or an Issue"
+  },
   "theme.common.copyPageLinkMsg": {
     "message": "Copied!"
   },
@@ -178,6 +223,15 @@
   },
   "theme.FeedbackForm.title": {
     "message": "Comentarios"
+  },
+  "theme.feedbackForm.form.title": {
+    "message": "Thank you for your feedback!"
+  },
+  "theme.feedbackForm.form.description": {
+    "message": "We would love to hear your thoughts and feedback so that we can improve these Docs for you and others!"
+  },
+  "theme.feedbackForm.form.rating": {
+    "message": "Feedback"
   },
   "theme.common.back": {
     "message": "Volver"
@@ -283,28 +337,28 @@
   "theme.moreLinks.title": {
     "message": "Más"
   },
+  "theme.moreLinks.changelog": {
+    "message": "Registro de cambios",
+    "description": "Changelog link label in sidebar"
+  },
+  "theme.moreLinks.reportIssue": {
+    "message": "Reportar un Problema",
+    "description": "Report an Issue link label in sidebar"
+  },
+  "theme.moreLinks.joinCommunity": {
+    "message": "Únete a la Comunidad",
+    "description": "Join the Community link label in sidebar"
+  },
   "theme.moreLinks.requestArticle": {
     "message": "Solicitar un Artículo"
   },
   "theme.moreLinks.requestArticle.form.title": {
-    "message": "Solicitar un nuevo artículo",
-    "description" : "Request an Article form title"
+    "message": "Request a New Article",
+    "description": "Request an Article form title"
   },
   "theme.moreLinks.requestArticle.form.description": {
-    "message": "¿Buscas información que no hemos cubierto? Completa el formulario a continuación para solicitar un nuevo artículo, y lo consideraremos en futuras actualizaciones.",
-    "description" : "Request an Article form description"
-  },
-  "theme.moreLinks.changelog": {
-    "message": "Registro de cambios",
-    "description" : "Changelog link label in sidebar"
-  },
-  "theme.moreLinks.joinCommunity": {
-    "message": "Únete a la Comunidad",
-    "description" : "Join the Community link label in sidebar"
-  },
-  "theme.moreLinks.reportIssue": {
-    "message": "Reportar un Problema",
-    "description" : "Report an Issue link label in sidebar"
+    "message": "¿Busca información que no hayamos cubierto? Rellene el siguiente formulario para solicitar un nuevo artículo, y lo tendremos en cuenta en futuras actualizaciones.",
+    "description": "Request an Article form description"
   },
   "theme.navbar.mobileLanguageDropdown.label": {
     "message": "Idiomas",

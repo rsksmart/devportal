@@ -101,7 +101,7 @@ Ver configuración completa en [GitHub](https://github.com/rsksmart/demo-code-sn
 
 ### Configurar index.js
 
-En esta sección, configuraremos el 'index'. s\` archivo que contiene todas las funcionalidades de nuestro DApp, importaremos algunos archivos necesarios, Compruebe si la metamasa está instalada, vea cómo agregar y cambiar de red programáticamente desde dentro de un contrato inteligente.
+En esta sección, configuraremos el 'index'. s\\` archivo que contiene todas las funcionalidades de nuestro DApp, importaremos algunos archivos necesarios, Compruebe si la metamasa está instalada, vea cómo agregar y cambiar de red programáticamente desde dentro de un contrato inteligente.
 
 > Ten en cuenta que `index.js` tiene dos archivos, el primer archivo es una [versión redactada](https://github.com/rsksmart/demo-code-snippets/blob/2d22a1708ddd272130edf05893d8770c38973bd2/switch-network-to-rsk/index-redacted. s) del código que contiene un estado inicial del código y el segundo archivo contiene la [versión completa](https://github. om/rsksmart/demo-code-snippets/blob/5cc5124fe5bddc85f09a82e49eba7591003543f0/switch-network-to-rsk/index.js) que contiene el estado completo del código para `index.js`.
 
@@ -185,7 +185,7 @@ async function switchToNetwork(network) {
 
 > La función `switchToNetwork()` añade una nueva red a Metamask y posteriormente cambia a esa red. Esta función espera un argumento de red, y espera una dirección rootstock que utiliza el método `wallet_switchEthereumChain` y el `chainID`. Luego arroja un error si el indicador de conmutación fue rechazado o el chainID pasado no fue encontrado e intenta agregar la nueva cadena a Metamask.
 
-Para añadir una red programáticamente en Metamask, necesitamos llamar al método `wallet_addEthereumChain`, expuesto por `window. y pasar los parámetros de red configurados en la sección [Configurar redes](#configure-networks)]. Para ello, añade un `try block`dentro de la función`switchToNetwork()\`.
+Para añadir una red programáticamente en Metamask, necesitamos llamar al método `wallet_addEthereumChain`, expuesto por `window. y pasar los parámetros de red configurados en la sección [Configurar redes](#configure-networks)]. Para ello, añade un `try block`dentro de la función`switchToNetwork()\\`.
 
 ```javascript
   try {

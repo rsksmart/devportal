@@ -68,8 +68,8 @@ The `TeamsManager` contract, written in Solidity, is the foundation of the votin
   }
  ```
 
-- **`getTeamNames()`**
- Returns a list of all teams registered in the contract.
+- **`getScore(teamName)`**
+ Retrieves the current vote score for a team.
 
 ```
 function getTeamNames() external view returns(string[] memory) {
@@ -86,8 +86,8 @@ function getTeamNames() external view returns(string[] memory) {
   }
 ```
 
-- **`getScore(teamName)`**
- Retrieves the current vote score for a team.
+- **`getTeamNames()`**
+ Returns a list of all teams registered in the contract.
 
 ```
  function getScore(string memory teamName) public view returns(uint256) {

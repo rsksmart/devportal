@@ -89,7 +89,7 @@ To set up the sample dApp project, follow the steps below:
 
 <Steps>
   <Step title="1. Set Up a Next.js Project">
-    Begin by cloning the [Web3 Auth Sample dApp Starter Kit](https://github.com/rsksmart/w3a-rsk-starter-kit) to set up your project environment. 
+    Begin by cloning the [Web3 Auth Sample dApp Starter Kit](https://github.com/rsksmart/w3a-rsk-starter-kit) to set up your project environment.
     ```shell
     git clone https://github.com/rsksmart/w3a-rsk-starter-kit.git
     ```
@@ -101,36 +101,36 @@ To set up the sample dApp project, follow the steps below:
 
     - After creating a project, view the project details screen.
     - Copy the Client ID from the dashboard. This will be used for initializing Web3Auth.
-    
+
     2. Add Client ID in page.tsx
     <img src="/img/developers/quickstart/web3auth/2.show_client_id.png"  width="800" height="600"/>
-    
+
     - Open `page.tsx` file in your project.
     - Copy and paste the copied Client ID into the appropriate configuration field in your code.
-    
+
     3. Create a .env.local File
     - In the root directory of your project, create a file named `.env.local`.
     - Use this env file to store sensitive project information, including the client secret and Project ID.
     ```shell
     NEXT_PUBLIC_WEB3AUTH_CLIENT_ID=your-client-id
-    ``` 
-    
+    ```
+
     4. Get the WalletConnect Project ID
-    
+
     <img src="/img/developers/quickstart/web3auth/3.copy_client_id.png"  width="800" height="600"/>
-    
+
     - Visit https://cloud.reown.com/ and create a WalletConnect project if you don’t already have one.
     - Copy the **Project ID** provided by WalletConnect.
 
   </Step>
 
     5. Add WalletConnect to Web3Auth
-    
+
     <img src="/img/developers/quickstart/web3auth/4.add_walletconnect_web3auth.png "  width="800" height="600"/>
-    
+
     * Go to the Web3Auth dashboard, and navigate to `Dashboard > Project > Add-ons`
     * Select WalletConnect v2 and input the WalletConnect Project ID.
-    
+
     Save changes. Ensure all configurations are saved in the Web3Auth dashboard and project files.
 
   <Step title="Step 3 Start the Project">
@@ -139,9 +139,9 @@ To set up the sample dApp project, follow the steps below:
     ```shell
     npm run dev
     ```
-    
+
     OR;
-    
+
     ```shell
     yarn dev
     ```

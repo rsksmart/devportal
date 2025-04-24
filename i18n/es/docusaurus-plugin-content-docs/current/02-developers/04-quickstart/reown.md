@@ -34,7 +34,10 @@ The kit uses [Reown](https://reown.com/) (previously WalletConnect) to handle wa
     ```bash
     npm -v
     ```
-  If you need to update npm to the latest version, you can run:
+  If you need to update npm to the latest version, you can run:````bash
+      npm install -g npm@latest
+      ```
+  ````
     ```bash
     npm install -g npm@latest
     ```
@@ -248,8 +251,8 @@ This code defines a React component named `ERC721Tab`, which provides a user int
 
 The Key Functions Within This Component:
 
-1. `useReadContract`:
- This hook is used to read data from the ERC-721 contract. It fetches the balance of NFTs held by the connected user's address.
+1. `useWriteContract`:
+ This hook is used to write data to the ERC-721 contract, specifically to mint a new NFT.
 
 - **Parameters**:
  - `abi`: The ABI (Application Binary Interface) of the ERC-721 contract.
@@ -257,15 +260,15 @@ The Key Functions Within This Component:
  - `functionName`: The name of the function to call on the contract (balanceOf).
  - `args`: The arguments to pass to the contract function ([address]).
 
-2. `useWriteContract`:
- This hook is used to write data to the ERC-721 contract, specifically to mint a new NFT.
+2. `useReadContract`:
+ This hook is used to read data from the ERC-721 contract. It fetches the balance of NFTs held by the connected user's address.
 
 **Function**:
 
 - `writeContractAsync`: Asynchronously writes to the contract by calling the `safeMint` function of the ERC-721 contract.
 
-3. `mintNFT`:
- This is an asynchronous function that handles the minting process of a new NFT.
+3. `refetch`:
+ This function is part of the `useReadContract` hook and is used to refresh the balance of NFTs after a successful minting operation.
 
 - **Steps**:
  - Sets the loading state to true.
@@ -276,8 +279,8 @@ The Key Functions Within This Component:
  - Catches any errors, logs them, and displays an error toast message.
  - Sets the loading state to false.
 
-4. `refetch`:
- This function is part of the `useReadContract` hook and is used to refresh the balance of NFTs after a successful minting operation.
+4. `mintNFT`:
+ This is an asynchronous function that handles the minting process of a new NFT.
 
 5. `toast`:
  This function is used to display toast notifications for success or error messages.

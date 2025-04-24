@@ -195,7 +195,7 @@ account_from = {
 
 4. Crear una instancia de contrato utilizando la función `web3.eth.contract` y pasando la ABI y el bytecode del contrato.
 5. Establece la [estrategia de precio del gas](https://web3py.readthedocs.io/en/stable/gas_price.html#gas-price) usando la función `web3.eth.set_gas_price_strategy`, que nos permitirá obtener el precio del gas del proveedor RPC. Esto es importante porque, de lo contrario, la biblioteca Web3 intentará utilizar los métodos RPC `eth_maxPriorityFeePerGas` y `eth_feeHistory`, que sólo son compatibles con los nodos Ethereum posteriores a Londres.
-6. Construye un constructor de transacción utilizando la instancia del contrato. Entonces usarás la función `build_transaction` para pasar la información de la transacción incluyendo la dirección `from` y el `nonce` para el remitente. Para obtener el `nonce` puedes usar la función \`web3.eth.get_transaction_count
+6. Construye un constructor de transacción utilizando la instancia del contrato. Entonces usarás la función `build_transaction` para pasar la información de la transacción incluyendo la dirección `from` y el `nonce` para el remitente. Para obtener el `nonce` puedes usar la función \\`web3.eth.get_transaction_count
 7. Firmar la transacción utilizando la función `web3.eth.account.sign_transaction` y pasar en el constructor transacción y la `private_key` del remitente.
 8. Utilizando la transacción firmada, puede enviarla utilizando la función `web3.eth.send_raw_transaction` y esperar la recepción de la transacción utilizando la función `web3.eth.wait_for_transaction_receipt`.
 
@@ -280,7 +280,7 @@ A continuación, puede seguir los siguientes pasos para crear el script:
 2. Configure el proveedor Web3 y sustituya YOUR_APIKEY
 3. De fine the `contract_address` of the deployed contract
 4. Crear una instancia de contrato utilizando la función `web3.eth.contract` y pasando el ABI y la dirección del contrato desplegado.
-5. Utilizando la instancia del contrato, puede llamar a la función \`greet
+5. Utilizando la instancia del contrato, puede llamar a la función \\`greet
 
 Codifica y pega el código de abajo en `getMessage.py`;
 
@@ -337,7 +337,7 @@ Abre el archivo `setMessage.py` y sigue los siguientes pasos para crear el scrip
 3. Define la variable `account_from`, incluyendo la `private_key`, y la `contract_address` del contrato desplegado. La clave privada es necesaria para firmar la transacción. Nota: Esto es sólo a modo de ejemplo. Nunca almacene sus claves privadas en su código
 4. Crear una instancia de contrato utilizando la función `web3.eth.contract` y pasando el ABI y la dirección del contrato desplegado.
 5. Establece la estrategia del precio del gas usando la función `web3.eth.set_gas_price_strategy`, que nos permitirá obtener el precio del gas del proveedor RPC. Esto es importante porque, de lo contrario, la biblioteca Web3 intentará utilizar los métodos RPC `eth_maxPriorityFeePerGas` y `eth_feeHistory`, que sólo son compatibles con los nodos Ethereum posteriores a Londres.
-6. Construye la transacción `setGreeting` usando la instancia del contrato y pasando el nuevo mensaje. Luego usarás la función `build_transaction` para pasar la información de la transacción incluyendo la dirección `from` y el `nonce` del remitente. Para obtener el `nonce` puedes usar la función \`web3.eth.get_transaction_count
+6. Construye la transacción `setGreeting` usando la instancia del contrato y pasando el nuevo mensaje. Luego usarás la función `build_transaction` para pasar la información de la transacción incluyendo la dirección `from` y el `nonce` del remitente. Para obtener el `nonce` puedes usar la función \\`web3.eth.get_transaction_count
 7. Firma la transacción usando la función `web3.eth.account.sign_transaction` y pasa la transacción `setGreeting` y la `private_key` del remitente.
 8. Utilizando la transacción firmada, puedes enviarla utilizando la función `web3.eth.send_raw_transaction` y esperar la recepción de la transacción utilizando la función `web3.eth.wait_for_transaction_receipt`.
 
@@ -424,7 +424,7 @@ tocar balances.py
 A continuación, creará el script para este archivo y completará los siguientes pasos:
 
 1. Configurar el proveedor Web3
-2. Definir las variables `dirección_de` y \`dirección_a
+2. Definir las variables `dirección_de` y \\`dirección_a
 3. Obtener el saldo de las cuentas utilizando la función `web3.eth.get_balance` y formatear los 3. resultados utilizando la función `web3.from_wei`.
 
 Codifica y pega el código de abajo en `balances.py`;

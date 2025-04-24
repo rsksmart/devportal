@@ -35,7 +35,7 @@ tags:
   npm install dotenv
 ```
 
-- Crear un archivo \`.env
+- Crear un archivo \\`.env
   - En la raíz del proyecto `rootstock-quick-start-guide`, crea un archivo `.env` y añade tus claves privadas (no compartas este archivo):
 
 ```shell

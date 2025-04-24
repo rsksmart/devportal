@@ -120,7 +120,7 @@ Estos códigos (opcodes) se muestran con nombres mnemotécnicos como `ADD` (suma
 Como puedes adivinar, es importante escribir contratos inteligentes utilizando la mejor combinación (más barata) de opcodes.
 Ejemplos de buenas prácticas para escribir contratos inteligentes:
 
-### Evite declarar variables como \`var
+### Evite declarar variables como \\`var
 
 ```javascript
 function payBonus() {

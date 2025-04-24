@@ -118,7 +118,7 @@ Ya puedes comprobar que puedes utilizar tu monedero para firmar mensajes.
 En MetaMask, puedes consultar el historial de transacciones de una dirección concreta
 seleccionando la pestaña "Actividad" en la pantalla principal.
 
-> "Vista ampliada": \`chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html#\`\`
+> "Vista ampliada": \`chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html#\`\\`
 
 ![](/img/developers/verify-address-ownership/rif-identity-metamask-transaction-history.png)
 

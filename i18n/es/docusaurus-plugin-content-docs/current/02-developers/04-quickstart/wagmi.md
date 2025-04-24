@@ -81,7 +81,7 @@ hilo
 Ahora que has clonado el repositorio e instalado las dependencias, es el momento de ejecutar el proyecto. Ejecute el siguiente comando:
 
 ```bash
-desarrollo del hilo
+hilo
 ```
 
 Esto iniciará la dApp Rootstock Wagmi Starter localmente, permitiéndole desarrollar y probar sus contratos inteligentes. Puedes acceder al servidor Vite en [http://localhost:5173](http://localhost:5173).
@@ -114,7 +114,7 @@ Para probar el proyecto Wagmi, sigue estos sencillos pasos:
 
 ## Entender el código base
 
-### Estructura de carpetas
+### Estructura de la carpeta \\`.src
 
 ```
 Público
@@ -125,7 +125,7 @@ Src
 
 La carpeta `src` está organizada para agilizar el proceso de desarrollo y facilitar la localización de código o recursos específicos. Aquí tienes un desglose detallado:
 
-#### Estructura de la carpeta \`.src
+#### Estructura de carpetas
 
 - **Activos:** Contiene las ABI (Application Binary Interfaces) para ERC20, ERC721 y ERC1155.
 - \*\*Componentes
@@ -234,7 +234,7 @@ Este código define un componente React llamado `ERC721Tab`, que proporciona una
 
 Las funciones clave dentro de este componente:
 
-1. UsarReadContract\`:
+1. UsarReadContract\\`:
  Este hook se utiliza para leer datos del contrato ERC-721. Obtiene el saldo de NFT de la dirección del usuario conectado.
 
 - \*\*Parámetros:
@@ -243,14 +243,14 @@ Las funciones clave dentro de este componente:
  - `functionName`: El nombre de la función a llamar en el contrato (balanceOf).
  - `args`: Los argumentos a pasar a la función del contrato ([dirección]).
 
-2. usarWriteContract\`:
+2. usarWriteContract\\`:
  Este hook se utiliza para escribir datos en el contrato ERC-721, concretamente para acuñar un nuevo NFT.
 
 **Función**:
 
-- WriteContractAsync`: Escribe de forma asíncrona en el contrato llamando a la función `safeMint\` del contrato ERC-721.
+- WriteContractAsync`: Escribe de forma asíncrona en el contrato llamando a la función `safeMint\\` del contrato ERC-721.
 
-3. mintNFT\`:
+3. mintNFT\\`:
  Se trata de una función asíncrona que gestiona el proceso de acuñación de un nuevo NFT.
 
 - \*\*Pasos:

@@ -363,9 +363,7 @@ To perform transactions on the Rootstock network, we’ll need RBTC. To easily f
 You’ll see a transaction confirmation screen, similar to this:
 
 <figure>
-<img src="/img/guides/rsk-cli/rsk-cli-faucets.png" alt="Rootstock Faucet Transaction Confirmation"/>
-
-  <figcaption>Rootstock Faucet Transaction Confirmation (fig 1.)</figcaption>
+<img src="/img/guides/rsk-cli/rsk-cli-faucets.png" alt="Rootstock Faucet Transaction Confirmation"/>  <figcaption>Rootstock Faucet Transaction Confirmation (fig 1.)</figcaption>
 </figure>
 
 #### **Viewing the Transaction:**
