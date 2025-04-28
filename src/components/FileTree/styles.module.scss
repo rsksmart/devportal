@@ -1,0 +1,99 @@
+.fileTree {
+  font-size: 0.8rem;
+  font-family: var(--ifm-font-family-monospace);
+  padding: 8px 16px 8px 16px;
+  border: 1px solid var(--rsk-codeblock-border-color);
+  border-radius: var(--ifm-global-radius);
+  background-color: var(--rsk-filetree-bg);
+  margin: var(--ifm-spacing-vertical) 0;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &.children {
+      margin-left: var(--ifm-spacing-horizontal);
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: calc(var(--ifm-spacing-horizontal) * -0.5);
+        top: 0;
+        bottom: 1em;
+        width: 1px;
+        background: var(--ifm-color-emphasis-300);
+      }
+
+      &.hidden {
+        display: none;
+      }
+    }
+
+    li + li {
+      margin-top: 0;
+    }
+  }
+
+  li {
+    position: relative;
+    padding: 0;
+    color: var(--ifm-font-color-base);
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: calc(var(--ifm-spacing-horizontal) * -0.5);
+      top: 0.9em;
+      width: calc(var(--ifm-spacing-horizontal) * 0.4);
+      height: 1px;
+      background: var(--ifm-color-emphasis-300);
+    }
+
+    &.directory {
+      > .name {
+        font-weight: var(--ifm-font-weight-bold);
+      }
+    }
+
+    .name {
+      display: inline-flex;
+      align-items: center;
+      padding: calc(var(--ifm-spacing-vertical) * 0.25) calc(var(--ifm-spacing-horizontal) * 0.25);
+      border-radius: calc(var(--ifm-global-radius) * 0.5);
+      transition: background-color var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+
+      &.clickable {
+        cursor: pointer;
+        user-select: none;
+      }
+    }
+
+    .arrow {
+      display: inline-flex;
+      align-items: center;
+      width: 1em;
+      margin-right: 0.2em;
+      transition: transform 0.15s ease;
+      font-size: 0.8em;
+    }
+
+    .icon {
+      display: inline-flex;
+      align-items: center;
+      margin-right: calc(var(--ifm-spacing-horizontal) * 0.5);
+    }
+  }
+
+  // Add hover effect
+  li:hover > .name {
+    background-color: var(--ifm-hover-overlay);
+  }
+
+  // Focus styles for keyboard navigation
+  .name:focus-visible {
+    outline: 2px solid var(--ifm-color-primary);
+    outline-offset: 2px;
+  }
+}

@@ -263,6 +263,9 @@ html:root {
   //Steps component
   --rsk-step-border-color: #{$gray-250};
   --rsk-step-bg-color: #{$gray-50};
+
+  //FileTree component
+  --rsk-filetree-bg: #{$white};
 }
 
 
@@ -383,4 +386,7 @@ html:root {
   //Steps component
   --rsk-step-border-color: #{$gray-600};
   --rsk-step-bg-color: #{$gray-850};
+
+  //FileTree component
+  --rsk-filetree-bg: #{$gray-950};
 }

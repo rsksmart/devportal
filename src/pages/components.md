@@ -775,7 +775,7 @@ The Steps component is a structured guide that breaks down complex tasks into cl
 </Steps>
 ````
 
-**Result**
+- **Render**
 
 <Steps>
 
@@ -801,3 +801,53 @@ With your environment prepared, start by initializing your project. Follow these
 By following these steps, you should now have a basic project setup and be ready to start development.
 </Step>
 </Steps>
+
+## FileTree component
+
+The FileTree component helps visualize directory structures and file hierarchies in a clear, indented format.
+
+- **Code**
+
+```jsx
+<FileTree>
+-- package.json
+-- docusaurus.config.js
+-- sidebars.js
+-- src/
+---- components/
+------ Accordion/
+-------- index.jsx
+-------- styles.scss
+-- static/
+---- img/
+------ concepts/
+------ resources/
+---- video/
+-- docs/
+---- components/
+------ markdown.md
+------ ui-components.md
+</FileTree>
+```
+- **Render**
+
+<FileTree>
+-- package.json
+-- docusaurus.config.js
+-- sidebars.js
+-- src/
+---- components/
+------ Accordion/
+-------- index.jsx
+-------- styles.scss
+-- static/
+---- img/
+------ concepts/
+------ resources/
+---- video/
+-- docs/
+---- components/
+------ markdown.md
+------ ui-components.md
+</FileTree>
+
