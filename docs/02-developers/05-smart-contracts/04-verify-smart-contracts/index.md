@@ -54,7 +54,7 @@ import "@nomicfoundation/hardhat-verify";
 
 ### Usage
 
-You need to add the following Etherscan config to your `hardhat.config.ts` file:
+You need to add the following Etherscan config to your `hardhat.config.ts` file and To obtain a Rootstock API key, follow the steps outlined in the [Obtaining a Rootstock API Key from Blockscout](../05-foundry/verify-contract-using-script.md) guide.:
 
 ```bash
 // Hardhat configuration
