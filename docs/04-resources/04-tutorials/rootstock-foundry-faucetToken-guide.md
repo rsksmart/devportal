@@ -128,9 +128,9 @@ cd rootstock-foundry-starterkit
 <pre><code>PRIVATE_KEY=0xyour_testnet_private_key
 </code></pre>
 
-:::tip Ensure the private key copied starts with 0x... :::
+<p><strong> Tip:</strong> Ensure the private key copied starts with <code>0x...</code>.</p>
+<p>Also, make sure your <code>.env</code> file is listed in <code>.gitignore</code> to prevent accidental commits.</p>
 
-<p>🚨 Ensure <code>.env</code> is listed in your <code>.gitignore</code>.</p>
 
 <hr>
 <h2>Compile, Test & Deploy ERC20Token</h2>
