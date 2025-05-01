@@ -1,7 +1,7 @@
 ---
 sidebar_position: 9
 title: Build a Tip Jar dApp on Rootstock with Foundry & Dynamic
-sidebar_label: Buold a Tip Jar dApp with Foundry & Dynamic
+sidebar_label: Build a Tip Jar dApp with Foundry & Dynamic
 tags: [dynamic, rootstock, foundry, content, tip, token]
 description: Learn how to build a full-stack tipping dApp on Rootstock using Foundry for the contract and Dynamic for the frontend.
 ---
