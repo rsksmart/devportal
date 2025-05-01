@@ -5,6 +5,7 @@ sidebar_label: Buold a Tip Jar dApp with Foundry & Dynamic
 tags: [dynamic, rootstock, foundry, content, tip, token]
 description: Learn how to build a full-stack tipping dApp on Rootstock using Foundry for the contract and Dynamic for the frontend.
 ---
+<!-- vale off -->
 
 This tutorial shows you how to build a fully functional tipping dApp on the **Rootstock Testnet**. You’ll deploy a `TipJar` smart contract using [**Foundry**](https://book.getfoundry.sh/) and connect it to a frontend built with [**Dynamic**](https://www.dynamic.xyz/) — a wallet connector and identity toolkit.
 
@@ -23,7 +24,7 @@ Before you begin, make sure you have the following installed and configured:
 - **Node.js v18+**
 - [**Foundry**](https://book.getfoundry.sh/getting-started/installation) – used to write, test, and deploy smart contracts
 - **MetaMask** or another EVM-compatible Web3 wallet connected to the Rootstock Testnet
-- Some test tRBTC from the [Rootstock Faucet](https://faucet.testnet.rsk.co/)
+- Some test tRBTC from the [Rootstock Faucet](https://faucet.rootstock.io/)
 - An **Environment ID** from your [Dynamic dashboard](https://app.dynamic.xyz/). Follow this quick guide on [Setting up Dynamic](https://docs.dynamic.xyz/docs/quickstart/).
 
 
@@ -144,7 +145,7 @@ forge create  --rpc-url https://public-node.testnet.rsk.co   --private-key $PRIV
 Take note of the deployed contract address. You’ll use it later.
 
 :::tip Verify the Contract
-You can verify the contract and track your transactions on the [Rootstock Testnet Explorer](https://explorer.testnet.rsk.co/).
+You can verify the contract and track your transactions on the [Rootstock Testnet Explorer](https://explorer.testnet.rootstock.io/).
 Look up the contract address, select **Code**, and then **Verify Contract**.
 
 
