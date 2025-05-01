@@ -28,6 +28,7 @@ Eligible contributions will be rewarded as set out in the hacktivator's terms an
 
 Developers are encouraged to leverage reference projects to make meaningful contributions to the Rootstock ecosystem. See the options below:
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">1. CLI (Developer Tooling)</Accordion.Header>
@@ -140,6 +141,7 @@ Developers are encouraged to leverage reference projects to make meaningful cont
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 #### 👉 Code Contributions Criteria
 
@@ -165,6 +167,7 @@ Each verified and approved code contribution that becomes a Qualified Contributi
 
 You can contribute to the Rootstock platform by creating one of the following types of content:
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">1. Blog Posts</Accordion.Header>
@@ -199,9 +202,11 @@ You can contribute to the Rootstock platform by creating one of the following ty
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 Your contributions can cover any of the following Rootstock themes:
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">1. Smart Contract Development Tutorials</Accordion.Header>
@@ -218,7 +223,7 @@ Your contributions can cover any of the following Rootstock themes:
     <Accordion.Header as="h3">2. Integration with Rootstock and Ecosystem Solutions</Accordion.Header>
     <Accordion.Body>
       Demonstrating how to use and integrate tools with Rootstock-compatible tools and libraries.
-      
+
       **Contribution Ideas:**
         * Explaining the concept of a sidechain and how Rootstock utilizes it.
         * Step-by-step guides on integrating wallets, SDKs, or APIs with Rootstock applications.
@@ -229,8 +234,8 @@ Your contributions can cover any of the following Rootstock themes:
     <Accordion.Header as="h3">3. Use Case Specific Guides – Case Studies and Real-World Examples</Accordion.Header>
     <Accordion.Body>
       Sharing real-world examples of Rootstock applications and use cases.
-      
-      **Contribution Ideas:** 
+
+      **Contribution Ideas:**
         * Building cross-platform or no-code dApps (e.g., mobile app development using Flutter, etc).
         * Showcasing real-world applications on Rootstock.
         * Building cross-chain applications, data indexing, etc., using partner tools and integrations.
@@ -241,7 +246,7 @@ Your contributions can cover any of the following Rootstock themes:
     <Accordion.Header as="h3">4.  Tools and Libraries</Accordion.Header>
     <Accordion.Body>
       Introducing and explaining various tools and libraries that can be used for Rootstock development.
-      
+
       **Contribution Ideas:**
         * Tutorials on using popular development environments (e.g., Remix, Hardhat, Slither, Viem).
         * Explaining the use of testing frameworks and libraries for smart contract testing.
@@ -253,13 +258,14 @@ Your contributions can cover any of the following Rootstock themes:
     <Accordion.Body>
       Expanding into more complex aspects of Rootstock development and sharing best practices.
 
-      **Contribution Ideas:** 
+      **Contribution Ideas:**
         * Exploring complex concepts and how they enhance scalability on Rootstock.
         * Discussing security considerations in smart contract development and best practices to avoid vulnerabilities.
         * Exploring advanced topics like decentralized finance (DeFi), Runes, Ordinals, BITVMX, and their potential applications on Rootstock.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 #### 👉 Educational Content Criteria & Guidelines:
 
@@ -284,7 +290,7 @@ For a comprehensive overview of the guidelines, evaluation, and reward system fo
 Each verified and approved code contribution that becomes a Qualified Contribution (as defined in the Hacktivator's terms and conditions) will be entitled to receive the following rewards, under the established process:
 * **Blog Post Contribution:** 50 - 250 USD
 * **Written Guides or Tutorials Contribution:** 250 - 500 USD
-* **Technical Content Contribution:** 500 - 700 USD 
+* **Technical Content Contribution:** 500 - 700 USD
 * **Video Guides or Tutorials Contribution:** 700 - 1000 USD
 
 The reward range provided for each option will be used based on the level of contribution to the project to qualify. That is, if the Contributor meets only the minimum required to qualify, they will be assigned the minimum rewards for each option. However, the more the Contributor adds to their contribution and chosen option, the greater the rewards they may receive (up to the maximum cap established for each option).
