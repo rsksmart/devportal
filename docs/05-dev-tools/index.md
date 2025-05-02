@@ -567,6 +567,15 @@ description: "Explore a curated selection of smart contract development tools an
   />
 <FilterItem
     value="demos, sc"
+    title="Privy Starter Kit"
+    subtitle="Demos"
+    color="orange"
+    linkHref="/developers/quickstart/privy/"
+    linkTitle="Use the Kit"
+    description="The Rootstock Privy Starter Kit empowers developers to onboard users with social logins and self custodial wallets while preserving control, privacy, and flexibility for dApps when building on Rootstock."
+  />
+<FilterItem
+    value="demos, sc"
     title="Hardhat Starter Kit"
     subtitle="Demos"
     color="orange"
