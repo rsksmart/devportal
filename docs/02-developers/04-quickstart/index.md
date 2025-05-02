@@ -28,6 +28,15 @@ values={[
     description="The Rootstock Vyper Starter Kit demonstrates how to deploy smart contracts written in Vyper to the Rootstock network."
   />
   <FilterItem
+    value="beginner, Advanced"
+    title="Privy Starter Kit"
+    subtitle="quickstart"
+    color="orange"
+    linkHref="/developers/quickstart/privy/"
+    linkTitle="Use the Kit"
+    description="The Rootstock Privy Starter Kit empowers developers to onboard users with social logins and self custodial wallets while preserving control, privacy, and flexibility for dApps when building on Rootstock."
+  />
+  <FilterItem
     value="dynamic, wagmi, advanced"
     title="Dynamic Starter Kit"
     subtitle="quickstart"
