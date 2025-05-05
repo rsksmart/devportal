@@ -806,36 +806,44 @@ By following these steps, you should now have a basic project setup and be ready
 
 The FileTree component helps visualize directory structures and file hierarchies in a clear, indented format.
 
+Add placeholder files and directories by using either `...` as the name.
+
+Make a file or directory stand out by making its name highlighted, wrap file nawe with `==...==` e.g. `==README.md==`.
+
+
 - **Code**
 
 ```jsx
 <FileTree>
--- package.json
--- docusaurus.config.js
--- sidebars.js
--- src/
----- components/
------- Accordion/
--------- index.jsx
--------- styles.scss
--- static/
----- img/
------- concepts/
------- resources/
----- video/
--- docs/
----- components/
------- markdown.md
------- ui-components.md
+  -- ==package.json==
+  -- docusaurus.config.js
+  -- sidebars.js
+  -- ==src/==
+  ---- components/
+  ------ Accordion/
+  -------- index.jsx
+  -------- styles.scss
+  -- static/
+  ---- img/
+  ------ concepts/
+  ------ resources/
+  ------ ...
+  ---- video/
+  ------ ...
+  -- docs/
+  ---- components/
+  ------ markdown.md
+  ------ ui-components.md
 </FileTree>
 ```
 - **Render**
 
+
 <FileTree>
--- package.json
+-- ==package.json==
 -- docusaurus.config.js
 -- sidebars.js
--- src/
+-- ==src/==
 ---- components/
 ------ Accordion/
 -------- index.jsx
@@ -844,7 +852,9 @@ The FileTree component helps visualize directory structures and file hierarchies
 ---- img/
 ------ concepts/
 ------ resources/
+------ ...
 ---- video/
+------ ...
 -- docs/
 ---- components/
 ------ markdown.md

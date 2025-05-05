@@ -24,9 +24,15 @@ const FileTree = ({ children }) => {
 
       const dashes = dashMatches[0];
       const level = (dashes.match(/--/g) || []).length - 1;
-      const name = trimmedLine.replace(/^-+\s*/, '').trim();
+      let name = trimmedLine.replace(/^-+\s*/, '').trim();
 
       if (!name) return;
+
+      // Check for highlighted syntax
+      const isHighlighted = name.startsWith('==') && name.endsWith('==');
+      if (isHighlighted) {
+        name = name.slice(2, -2); // Remove ** markers
+      }
 
       while (stack.length > level + 1) {
         stack.pop();
@@ -36,7 +42,8 @@ const FileTree = ({ children }) => {
         name,
         children: [],
         level,
-        isDirectory: name.endsWith('/')
+        isDirectory: name.endsWith('/'),
+        isHighlighted
       };
 
       const parent = stack[stack.length - 1];
@@ -55,6 +62,7 @@ const FileTree = ({ children }) => {
   const TreeNode = ({ node }) => {
     const [isExpanded, setIsExpanded] = useState(true);
     const hasChildren = node.children.length > 0;
+    const isEllipsis = node.name === '...';
 
     const toggleExpand = (e) => {
       e.preventDefault();
@@ -70,24 +78,28 @@ const FileTree = ({ children }) => {
         [styles.collapsed]: !isExpanded,
         [styles.hasChildren]: hasChildren
       })}>
-        <span
-          className={clsx(styles.name, {
-            [styles.clickable]: hasChildren
-          })}
-          onClick={toggleExpand}
-          role={hasChildren ? "button" : undefined}
-          tabIndex={hasChildren ? 0 : undefined}
-        >
-          {node.isDirectory && hasChildren && (
-            <span className={styles.arrow}>
-              {isExpanded ? '▾' : '▸'}
-            </span>
-          )}
+      <span
+        className={clsx(styles.name, {
+          [styles.clickable]: hasChildren,
+          [styles.highlighted]: node.isHighlighted,
+          [styles.ellipsis]: isEllipsis
+        })}
+        onClick={toggleExpand}
+        role={hasChildren ? "button" : undefined}
+        tabIndex={hasChildren ? 0 : undefined}
+      >
+        {node.isDirectory && hasChildren && (
+          <span className={styles.arrow}>
+            {isExpanded ? '▾' : '▸'}
+          </span>
+        )}
+        {!isEllipsis && (
           <span className={styles.icon}>
             {node.isDirectory ? (isExpanded ? '📂' : '📁') : '📄'}
           </span>
-          {node.isDirectory ? node.name.replace(/\/$/, '') : node.name}
-        </span>
+        )}
+        {node.isDirectory ? node.name.replace(/\/$/, '') : node.name}
+      </span>
         {hasChildren && (
           <ul className={clsx(styles.children, {
             [styles.hidden]: !isExpanded

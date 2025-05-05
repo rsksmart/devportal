@@ -89,6 +89,7 @@
   // Add hover effect
   li:hover > .name {
     background-color: var(--ifm-hover-overlay);
+    color: var(--ifm-font-color-base);
   }
 
   // Focus styles for keyboard navigation
@@ -96,4 +97,17 @@
     outline: 2px solid var(--ifm-color-primary);
     outline-offset: 2px;
   }
+}
+
+.highlighted {
+  font-weight: bold;
+  background-color: var(--rsk-filetree-highlight-bg);
+  color: var(--rsk-filetree-highlight-color);
+  border-radius: 3px;
+}
+
+.ellipsis {
+  color: var(--ifm-color-emphasis-500) !important;
+  font-style: italic;
+  letter-spacing: -0.2em;
 }

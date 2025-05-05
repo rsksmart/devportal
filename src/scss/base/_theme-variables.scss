@@ -266,6 +266,8 @@ html:root {
 
   //FileTree component
   --rsk-filetree-bg: #{$white};
+  --rsk-filetree-highlight-bg: #{$gray-700};
+  --rsk-filetree-highlight-color: #{$white};
 }
 
 
@@ -390,3 +392,4 @@ html:root {
   //FileTree component
   --rsk-filetree-bg: #{$gray-950};
 }
+
