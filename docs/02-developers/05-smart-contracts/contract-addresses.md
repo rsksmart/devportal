@@ -7,7 +7,7 @@ description: "All Contract Addresses on Rootstock."
 ---
 
 Here, you can find a list of [contracts addresses](#contract-addresses) and [cross-chain OFT addresses](#cross-chain-oft-contract-addresses) on Rootstock. 
-For info on derivation paths, see [Account based addresses](/concepts/account-based-addresses/) or [verify address ownership](/developers/smart-contracts/verify-address-ownership/) section.
+For info on derivation paths, see [Account based addresses](/concepts/account-based-addresses/) or how to [verify address ownership](/developers/smart-contracts/verify-address-ownership/).
 
 :::note[Note]
 - [Rootstock Mainnet OFT Quickstart](https://docs.layerzero.network/v2/deployments/evm-chains/rootstock-mainnet-oft-quickstart)
