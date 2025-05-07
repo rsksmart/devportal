@@ -174,7 +174,7 @@ For the bytecode, we use `.bin` to indicate it’s a binary file containing the 
 * **Example:** If verifying on testnet, use `--testnet`.
 :::
 
-````mdx-block
+````mdx-code-block
 <Tabs>
   <TabItem value="contribute" label="Mainnet" default>
     Use the following command to deploy to the Rootstock mainnet:
