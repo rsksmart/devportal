@@ -94,6 +94,14 @@ description="DefiLlama is the largest TVL aggregator for DeFi. Learn how to list
 />
 <FilterItem
 value="advanced"
+title="Build a Tip Jar dApp on Rootstock with Foundry & Dynamic"
+subtitle="tipjar"
+color="orange"
+linkHref="/resources/tutorials/tipjar/"
+description="Build a full-stack tipping dApp using Foundry for the smart contract and Dynamic for wallet integration on the Rootstock Testnet."
+/>
+<FilterItem
+value="advanced"
 title="Run Hyperlane Bridge on Rootstock"
 subtitle="hyperlane"
 color="orange"
