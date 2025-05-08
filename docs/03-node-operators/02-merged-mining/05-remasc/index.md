@@ -153,12 +153,9 @@ This way, we compute:
 
       [](#top "tex-render IndMiningFeeLate_{rwd}= 2257")
 
-      *In this case A was published late so L is not 0, that is why*
-      [](#top "tex-render IndMiningFeeLate_{rwd}")
-      *is used in the calculation instead of*
-      [](#top "tex-render IndMiningFee_{rwd}")
+      *In this case A was published late so L is not 0, that is why* [](#top "tex-render IndMiningFeeLate_{rwd}") *is used in the calculation instead of* [](#top "tex-render IndMiningFee_{rwd}")
 
-For this example, an assumption that there wasn’t a broken rule for any block was made. Otherwise, fees paid should have been calculated using [](#top "tex-render IndMiningFeeLate_{rwdBroken}").
+For this example, an assumption that there wasn’t a broken rule for any block was made. Otherwise, fees paid should have been calculated using [](#top "tex-render IndMiningFeeLate_{rwdBroken}")
 
 ## References
 

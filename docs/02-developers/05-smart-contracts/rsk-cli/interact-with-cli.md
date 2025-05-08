@@ -2,43 +2,45 @@
 sidebar_position: 5
 sidebar_label: Interact with Smart Contracts using the Rootstock CLI
 title: Rootstock CLI | Interact with Verified Smart Contracts
-description: "The contract command allows you to interact with a verified smart contract on the Rootstock blockchain. This command lists all available read-only functions within the contract, allowing you to call these functions to view data without altering the contract's state. " 
+description: "The contract command allows you to interact with a verified smart contract on the Rootstock blockchain. This command lists all available read-only functions within the contract, allowing you to call these functions to view data without altering the contract's state. "
 tags: [Rootstock CLI, developer tools, guides, rsk, rootstock, dApps, smart contracts, solidity, dev-environments]
 ---
 
-The contract command allows you to interact with a verified smart contract on the Rootstock blockchain. 
+The contract command allows you to interact with a verified smart contract on the Rootstock blockchain.
 
-This command lists all available read-only functions within the contract, allowing you to call these functions to view data without altering the contract's state. 
+This command lists all available read-only functions within the contract, allowing you to call these functions to view data without altering the contract's state.
 
 :::note[Parameters:]
 
-* `--address`:  
-  Specifies the address of the deployed contract on the blockchain. By providing the contract address, `rsk-cli` knows which specific contract instance you want to interact with. This address uniquely identifies the contract on the network.  
-* `--testnet`:  
+* `--address`:
+  Specifies the address of the deployed contract on the blockchain. By providing the contract address, `rsk-cli` knows which specific contract instance you want to interact with. This address uniquely identifies the contract on the network.
+* `--testnet`:
    Indicates that the command should be run on the RSK testnet instead of the mainnet. This parameter tells rsk-cli to execute the command on the testnet (the RSK network designated for testing purposes), which is useful for development and testing without using real funds or affecting production data.
 
 :::
 
 To use this command:
+
+````mdx-code-block
 <Tabs>
   <TabItem value="contribute" label="Mainnet" default>
     ```shell
-rsk-cli contract --address <address>
-```
+    rsk-cli contract --address <address>
+    ```
   </TabItem>
   <TabItem value="contest" label="Testnet">
    ```shell
-rsk-cli contract --address <address> --testnet
-```
+   rsk-cli contract --address <address> --testnet
+   ```
   </TabItem>
- 
 </Tabs>
+````
 
 Replace `<address\>` with the contract's address deployed, which is the one shown in the response of the deployed smart contract
 
 This command will then display a list of all accessible read functions, making it easy to retrieve information from the contract.
 
-Example command 
+Example command
 
 ```bash
 rsk-cli contract --address 0x4edd891c2e988e6145fe3e418c652ee33ebab9ae --testnet
@@ -46,7 +48,7 @@ rsk-cli contract --address 0x4edd891c2e988e6145fe3e418c652ee33ebab9ae --testnet
 
 In this example:
 
-* `0x4edd891c2e988e6145fe3e418c652ee33ebab9ae` is the address of the smart contract on the RSK testnet.  
+* `0x4edd891c2e988e6145fe3e418c652ee33ebab9ae` is the address of the smart contract on the RSK testnet.
 * The `--testnet` flag ensures that the interaction occurs on the test network.
 
 After running the command, you will see a response like this:
@@ -60,7 +62,7 @@ After running the command, you will see a response like this:
   phone
 ```
 
-1. **Select a function to interact with**: Use the arrow keys to navigate through the list of available read functions (e.g., getContactInfo, name, phone). Once you've highlighted the desired function, press **Enter** to select it. 
+1. **Select a function to interact with**: Use the arrow keys to navigate through the list of available read functions (e.g., getContactInfo, name, phone). Once you've highlighted the desired function, press **Enter** to select it.
 
 For example, if you select name, you'll see:
 
@@ -91,9 +93,9 @@ The bridge command allows you to interact with the RSK bridge contract on the Ro
 
 :::note
 
-- **Read Functions:** These are used to retrieve information from the RSK bridge contract.  
+- **Read Functions:** These are used to retrieve information from the RSK bridge contract.
 
-- **Write Functions:** These require user input and interaction to make changes or submit data to the contract. 
+- **Write Functions:** These require user input and interaction to make changes or submit data to the contract.
 
 > Always be cautious when entering sensitive information, such as your wallet password.
 :::
@@ -102,6 +104,8 @@ The bridge command allows you to interact with the RSK bridge contract on the Ro
 #### Accessing the Bridge Command
 
 To start using the bridge command, open your terminal and use the following command:
+
+````mdx-code-block
 <Tabs>
   <TabItem value="contribute" label="Mainnet" default>
   ```shell
@@ -113,9 +117,9 @@ rsk-cli bridge
 rsk-cli bridge --testnet
 ```
   </TabItem>
- 
-</Tabs>
 
+</Tabs>
+````
 
 - Once you select either the Mainnet or Testnet, you will see the following message:
 
@@ -130,9 +134,11 @@ rsk-cli bridge --testnet
 ❯ read
   write
 ```
+
+````mdx-code-block
 <Tabs>
   <TabItem value="contribute" label="Selecting a Read Function" default>
-   - Use the **arrow keys** to highlight your choice and press **Enter**.  
+   - Use the **arrow keys** to highlight your choice and press **Enter**.
 - If you select **read**, you will see a list of available read functions:
 
 ```text
@@ -146,7 +152,7 @@ rsk-cli bridge --testnet
   isBtcTxHashAlreadyProcessed
 ```
 
-- Use the **arrow keys** to choose the read function you want to use (e.g., `getBtcBlockchainBestChainHeight`) and press **Enter**.  
+- Use the **arrow keys** to choose the read function you want to use (e.g., `getBtcBlockchainBestChainHeight`) and press **Enter**.
 - Response after executing a read function:
 
 ```bash
@@ -171,7 +177,7 @@ The result shows the output of the function, along with a link to view details o
 
 Use the **arrow keys** to highlight your choice (e.g., registerBtcTransaction) and press **Enter**.
 
-- Once a write function is selected, you will need to provide the required arguments:  
+- Once a write function is selected, you will need to provide the required arguments:
 - Enter the appropriate value for the tx argument and press **Enter**.
 
 ```bash
@@ -200,9 +206,10 @@ Type your password and press **Enter.**
 
 :::note[Notes on Argument Formats]
 
-* `(bytes)` values should be in hexadecimal format and typically represent transaction or header data.  
-* `(int256)` values should be whole numbers, such as block heights or transaction numbers.  
+* `(bytes)` values should be in hexadecimal format and typically represent transaction or header data.
+* `(int256)` values should be whole numbers, such as block heights or transaction numbers.
 * Ensure valid data: Make sure any data you input aligns with the specific function’s requirements and expected format to avoid errors.
 :::
   </TabItem>
 </Tabs>
+````

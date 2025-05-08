@@ -471,16 +471,18 @@ Search the transaction hash in the respective [block explorer](https://dev.roots
 
 
 ## Troubleshooting
+
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">missing go.sum entry for module providing package...</Accordion.Header>
     <Accordion.Body>
     ../../../go/pkg/mod/github.com/ethereum/go-ethereum@v1.15.5/rpc/websocket.go:30:2: missing go.sum entry for module providing package github.com/deckarep/golang-set/v2 (imported by github.com/ethereum/go-ethereum/rpc);
-    
+
     run the following :
 	```bash
 	go mod tidy
-	``` 
+	```
 	then
 	```bash
 	go run main.go
@@ -488,7 +490,7 @@ Search the transaction hash in the respective [block explorer](https://dev.roots
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
-
+````
 
 
 
