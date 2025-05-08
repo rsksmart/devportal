@@ -1,5 +1,6 @@
 import Card from "/src/components/Card";
 import Translate from "@docusaurus/core/lib/client/exports/Translate";
+import {translate} from '@docusaurus/Translate';
 
 const data = {
   title: <Translate>Connect with the Community</Translate>,
@@ -14,10 +15,7 @@ const data = {
         href: 'https://discord.com/invite/rootstock',
         target: '_blank',
       },
-      description: (
-        <>Join the Rootstock<br/> Developer Community on Discord.</>
-      ),
-
+      description: `Join the Rootstock \n Developer Community on Discord.`
     },
     {
       title: <Translate>GitHub</Translate>,
@@ -28,9 +26,7 @@ const data = {
         href: 'https://github.com/rsksmart/devportal',
         target: '_blank',
       },
-      description: (
-        <Translate>Explore open source tools, smart contracts and starter kits for deploying and integrating your dApps.</Translate>
-      ),
+      description: `Explore open source tools, smart contracts and starter kits for deploying and integrating your dApps.`
     },
     {
       title: <Translate>Stay Connected</Translate>,
@@ -40,9 +36,7 @@ const data = {
         href: 'https://rootstock.io/events',
         target: '_blank',
       },
-      description: (
-        <>View upcoming events, community calls,<br/> webinars, and meetups happening<br/> around the world.</>
-      ),
+      description: `View upcoming events, community calls, webinars, and meetups happening \n around the world.`
     },
   ]
 };
@@ -63,7 +57,7 @@ export default function HomepageSectionCommunity() {
       <div className="row g-16 g-lg-24">
         {data.cards.map((item, idx) => (
           <div className={`col-12 ${idx === 2 ? 'col-md-12' : 'col-md-6'}`} key={idx}>
-            <Card index={`${idx + 1}.`} title={item.title} color={item.color} description={item.description}
+            <Card index={`${idx + 1}.`} title={item.title} color={item.color} description={translate({message:item.description})}
                   link={item.link} icon={item.icon} />
           </div>
         ))}
