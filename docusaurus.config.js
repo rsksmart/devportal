@@ -187,7 +187,7 @@ const config = {
           {
             to: '/',
             position: 'left',
-            activeBaseRegex: '(^/$|es/$|ja/$|ko/$)',
+            activeBaseRegex: '(^/$|^/(es|ko|ja)/$)',
             label: 'Home',
           },
           ...mainNavItems,
