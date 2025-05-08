@@ -1,8 +1,8 @@
 ---
 id: verify-foundry-contract
-sidebar_label: Verify Smart Contracts using Foundry
-sidebar_position: 107
-title: Verify a Smart Contract using Foundry
+sidebar_label: Verify Smart Contracts using Blockscout
+sidebar_position: 400
+title: Verify a Smart Contract using Blockscout
 description: "Configuring Foundry for smart contract verification on Rootstock"
 tags: [guides, developers, smart contracts, rsk, rootstock, foundry, dApps, ethers]
 ---
@@ -43,7 +43,7 @@ To verify smart contracts on the Rootstock Blockscout Explorer, you need an API 
 
 
 2. **Sign In or Register**:
-![File](./images/login.jpg)
+![File](./images/login.png)
    - Click on the "Sign In" or "Register" button, usually located in the top-right corner of the Blockscout website.
 
    ![File](./images/choose.png)
@@ -53,10 +53,10 @@ To verify smart contracts on the Rootstock Blockscout Explorer, you need an API 
    - Once logged in, click on your profile (often represented by your wallet address or a user icon) and select "Account" or "API Keys" from the dropdown menu.
 
 5. **Generate an API Key**:
-![File](./images/add.jpg)
+![File](./images/add.png)
    - In the API Keys section, click "Create New API Key" or a similar button.
 
-   ![File](./images/name.jpg)
+   ![File](./images/name.png)
    - Provide a name for the API key (e.g., "Foundry Verification") to help you identify its purpose.
    - Copy the generated API key and store it securely. You will not be able to view it again after leaving the page.
 
