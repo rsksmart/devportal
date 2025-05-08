@@ -4,13 +4,13 @@ sidebar_position: 250
 sidebar_label: Verify PowPeg Nodes
 tags:
   - rsk
-  - portainjertos
+  - rootstock
   - rbtc
   - btc
   - peg
   - powpeg
   - hsm
-description: Aprenda a verificar los nodos Powpeg utilizando el HSM Firmware Attestation.
+description: Learn how to verify Powpeg nodes using the HSM Firmware Attestation.
 render_features: powpeg-hsm-attestation-frame
 ---
 
@@ -27,7 +27,7 @@ To verify the PowPeg protocol  nodes, follow the HSM firmware attestation proces
 </Tabs>
 ```
 
-### Preguntas frecuentes
+### Frequently Asked Questions
 
 ```mdx-code-block
 <Accordion>

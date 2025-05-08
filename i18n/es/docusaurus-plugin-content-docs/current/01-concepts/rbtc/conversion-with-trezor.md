@@ -1,51 +1,51 @@
 ---
-title: Acceso y uso de fondos que no están en cuentas derivadas con Rootstock (RSK) dpath en Trezor T
-sidebar_label: Con Trezor T
+title: Accessing and using funds that are not in accounts derived with Rootstock (RSK) dpath in Trezor T
+sidebar_label: With Trezor T
 tags:
   - rsk
   - rbtc
-  - conversión
+  - conversion
   - peg
-  - 2 vías
-  - clavija
+  - 2-way
+  - peg-in
   - peg-out
-  - federación
+  - federation
   - trezor
   - dpath
-description: Cómo configurar un monedero hardware Trezor T para derivar con un dpath personalizado.
+description: How to configure a Trezor T hardware wallet to derive with a custom dpath.
 sidebar_position: 306
 ---
 
-Cómo resolver el problema de mover sus fondos cuando están en una cuenta que necesita
-ser derivada con una ruta de derivación personalizada (dpath) utilizando Trezor T.
+How to solve the problem of moving your funds when they are in an account that needs to
+be derived with a custom derivation path (dpath) using Trezor T.
 
-## Contexto
+## Context
 
-Si has hecho una [conversión de BTC a RBTC](/concepts/rbtc/conversion-with-ledger#btc-to-rbtc-conversion) usando Trezor T, necesitas acceder a tu cuenta usando un dpath personalizado (`44'/0'/0'/0/0` para Mainnet). Con las últimas versiones de firmware, Trezor T está comprobando que la dpath coincide con la esperada como una característica de seguridad y esto es un bloqueador cuando se tiene la intención de utilizar una dpath diferente.
-También es posible que desee acceder a su cuenta con un dpath diferente si ha cometido un error; por ejemplo, recibir RBTC en una dirección derivada utilizando el dpath de Ethereum en lugar del dpath de Rootstock.
+If you made a [BTC to RBTC conversion](/concepts/rbtc/conversion-with-ledger#btc-to-rbtc-conversion) using Trezor T, you need to access your account by using a custom dpath (`44'/0'/0'/0/0` for Mainnet). With the last firmware versions, Trezor T is checking that the dpath matches with the expected one as a safety feature and this is a blocker when you intend to use a different dpath.
+You may also want to access your account with a different dpath if you made a mistake; for example, receiving RBTC at an address derived using the Ethereum dpath instead of the Rootstock dpath.
 
-En MyCrypto o MyEtherWallet puede haber recibido este mensaje: `"Ruta de clave prohibida"`.
+In MyCrypto or MyEtherWallet you may have received this message: `"Forbidden key path"`.
 
-## Solución
+## Solution
 
-Para permitir rutas de derivación personalizadas, deberá desactivar las comprobaciones de seguridad (véase [mensaje de Pavol Rusnak](https://github.com/trezor/trezor-firmware/issues/1255#issuecomment-691463540)).
+To allow custom derivation paths, you will need to turn off safety checks (see [Pavol Rusnak message](https://github.com/trezor/trezor-firmware/issues/1255#issuecomment-691463540)).
 
-Para ello, debe instalar [python-trezor](https://github.com/trezor/python-trezor):
+To do this, you need to install [python-trezor](https://github.com/trezor/python-trezor):
 
 ```shell
 pip3 install --upgrade setuptools
 pip3 install trezor
 ```
 
-Una vez que esté listo, ejecute este comando:
+Once you are ready, run this command:
 
 ```shell
 trezorctl set safety-checks prompt
 ```
 
-(necesitas tener tu Trezor T desbloqueado y aceptar la configuración en el dispositivo)
+(you need to have your Trezor T unlocked and accept the configuration in the device)
 
-Después de mover tus fondos, puedes volver a activarlos:
+After moving your funds, you can turn them on again:
 
 ```shell
 trezorctl set safety-checks strict

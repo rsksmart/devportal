@@ -1,27 +1,27 @@
 ---
-sidebar_label: Visión general de Blockchain
+sidebar_label: Blockchain Overview
 sidebar_position: 200
-title: Primeros pasos en el desarrollo de portainjertos (RSK)
-description: Aprenda a interactuar con Rootstock en su navegador web, a consultar las transacciones de Rootstock y a desarrollar e implementar su primer contrato inteligente en la red Rootstock.
+title: Getting Started with Rootstock (RSK) Development
+description: Learn how to interact with Rootstock in your web browser, how to look at Rootstock transactions, develop and deploy your very first smart contract to the Rootstock network.
 tags:
-  - arranques rápidos
+  - quick-starts
   - rsk
-  - portainjertos
+  - rootstock
   - blockchain
-  - monederos de navegador
-  - desarrolladores
-  - principiantes
+  - browser wallets
+  - developers
+  - beginners
 ---
 
-Conozca Rootstock, cómo permite contratos inteligentes en Bitcoin y su compatibilidad con Ethereum y otras plataformas.
+Learn about Rootstock, how it enables smart contract on Bitcoin, and its compatibility with Ethereum and other platforms.
 
-## ¿Qué es el portainjertos?
+## What is Rootstock?
 
-La pila tecnológica completa de Rootstock está construida sobre Bitcoin:
-Desde los contratos inteligentes de Rootstock hasta el marco de infraestructura de Rootstock.
-La pila está diseñada para crear un sistema financiero más justo e inclusivo.
+Rootstock’s full technology stack is built on top of Bitcoin:
+From Rootstock smart contracts to the Rootstock Infrastructure Framework.
+The stack is designed to create a more fair and inclusive financial system.
 
-> Véase [La pila](/conceptos/fundamentos/pila/)
+> See [The Stack](/concepts/fundamentals/stack/)
 
 Bitcoin, is a store and transfer of value.
 The blockchain is secure because miners with high infrastructure and energy costs create new blocks to be added to the blockchain every 10 minutes.
@@ -32,56 +32,56 @@ near instant payments, and higher-scalability.
 RIF is an all-in-one suite of open and decentralized infrastructure applications and services that enable faster,
 easier and scalable development of distributed applications (dApps) within a unified blockchain environment.
 
-Rootstock está conectado a Bitcoin en términos de cómo se minan sus bloques,
-y también en términos de una moneda común.
-Rootstock también es compatible con Ethereum en términos de su máquina virtual (que ejecuta contratos inteligentes),
-así como la RPC (API externa) que expone.
-Veamos brevemente cada una de estas áreas.
+Rootstock is connected to Bitcoin in terms of how its blocks are mined,
+and also in terms of a common currency.
+Rootstock is also compatible with Ethereum in terms of its virtual machine (which executes smart contracts),
+as well as the RPC (external API) that it exposes.
+Let’s briefly look at each of these areas.
 
 ## Powpeg
 
-El segundo punto de contacto es el [Powpeg](/conceptos/powpeg/).
-Este componente conecta ambas redes para permitir la transferencia de bitcoins a Rootstock,
-permitiendo así a los desarrolladores interactuar con contratos inteligentes.
-Pagan el gas utilizando el mismo bitcoin, el bitcoin inteligente.
+The second point of contact is the [Powpeg](/concepts/powpeg/).
+This component connects both networks to allow the transfer of bitcoins to Rootstock,
+thereby allowing developers to interact with smart contracts.
+They pay gas using the same bitcoin, the smart bitcoin.
 
 <div class="sprite-transform-animation-wrapper rsk-peg">
   <div class="sprite-transform-animation rsk-peg"></div>
 </div>
 
-Para ello, se envían bitcoin a una dirección especial,
-, donde quedan bloqueados en la red bitcoin.
-A continuación, en la misma dirección de la red Rootstock,
-, se libera ese mismo bitcoin para que el usuario lo utilice en la red Rootstock.
-Esto se denomina peg-in.
-Puede realizar la operación inversa, denominada peg-out,
-enviando su bitcoin a una dirección especial de la red Rootstock,
-y recibiendo su bitcoin de vuelta en la red bitcoin.
+To do so, you send bitcoin to a special address,
+where they are locked in the bitcoin network.
+Next, in the same address over in the Rootstock network,
+that same bitcoin is released to the user for use in the Rootstock network.
+This is called peg-in.
+You can do the reverse operation called peg-out,
+by sending your bitcoin to a special address in the Rootstock network,
+and receiving your bitcoin back in the bitcoin network.
 
-## Diferencias con Rootstock y Ethereum
+## Differences with Rootstock and Ethereum
 
-Rootstock no es 100% compatible con Ethereum: Tiene diferencias en la forma en que se calculan las sumas de comprobación,
-la ruta de derivación que utiliza, y cómo se calcula el gas.
+Rootstock is not 100% compatible with Ethereum: It has differences in the way checksums are calculated,
+the derivation path it uses, and how gas is calculated.
 
-### Diferencias de suma de comprobación
+### Checksum differences
 
-- Las distintas redes compatibles con Ethereum se diferencian entre sí mediante "identificadores de cadena".
-- Cada red blockchain tiene su propio ID de cadena único.
-- Rootstock utiliza el ID de la cadena al calcular las sumas de comprobación de sus direcciones, mientras que Ethereum no lo tiene en cuenta.
-- Las sumas de comprobación en ambas redes se representan utilizando mayúsculas (mayúsculas y minúsculas), por lo que la "misma" dirección no pasará las validaciones de sumas de comprobación tanto en Rootstock como en Ethereum.
+- Different Ethereum-compatible networks differentiate themselves using “chain IDs”.
+- Each blockchain network has its own unique chain ID.
+- Rootstock uses the chain ID when calculating checksums for its addresses, whereas Ethereum does not take this into account.
+- Checksums in both networks are represented using capitalisation (uppercase and lowercase letters), so the “same” address will not pass checksum validations on both Rootstock and Ethereum.
 
-### Diferencias en la vía de derivación
+### Derivation path differences
 
-Recordar o almacenar claves privadas para sus monederos criptográficos puede ser un gran reto, incluso para los técnicos.
-Esto se debe a que estas claves son esencialmente números extremadamente grandes.
-Así que para facilitar las cosas, la comunidad criptográfica ha ideado una técnica llamada "monederos HD", en la que se utiliza una frase semilla (un conjunto de palabras de diccionario elegidas al azar), más una "ruta de derivación". Rootstock y Ethereum tienen diferentes rutas de derivación, por lo tanto, la misma frase semilla resulta en un conjunto diferente de claves y direcciones entre Rootstock y Ethereum.
+Remembering or storing private keys for your crypto wallets can be super challenging, even for technical people.
+This is because these keys are essentially extremely large numbers.
+So to make things easier, the crypto community has come up with a technique called “HD wallets”, where using a seed phrase (a set of randomly chosen dictionary words), plus a “derivation path”. Rootstock and Ethereum have different derivation paths, therefore, the same seed phrase results in a different set of keys and addresses between Rootstock and Ethereum.
 
-### Diferencias de gas
+### Gas differences
 
-El EVM y el RVM son compatibles en el sentido de que admiten los mismos op-codes y, por tanto, pueden ejecutar los mismos contratos inteligentes.
-Sin embargo, el precio de cada op-code (medido en unidades conocidas como gas) es diferente entre EVM y RVM, por lo que el gas total consumido en varias transacciones es diferente.
-Además, las unidades de gas se multiplican por el precio del gas para calcular el coste de la transacción.
-Dado que el precio del gas de Rootstock está denominado en RBTC y el precio del gas de Ethereum está denominado en Ether, existe otra diferencia entre los precios del gas en Rootstock y Ethereum.
+The EVM and RVM are compatible in that they support the same op-codes, and therefore can run the same smart contracts.
+However, the price of each op-code (measured in units known as gas) is different between EVM and RVM, thus the total gas consumed in various transactions is different.
+Further to that, gas units are multiplied by gas price to calculate the transaction cost.
+Since Rootstock’s gas price is denominated in RBTC and Ethereum’s gas price is denominated in Ether, there is another difference between gas prices on Rootstock and Ethereum.
 
 :::info[Update on Gas Cost Differences]
 
@@ -156,52 +156,52 @@ Response on Ethereum:
 }
 ```
 
-## Contratos inteligentes compatibles con EVM
+## EVM Compatible Smart Contracts
 
-Si está familiarizado con el desarrollo de contratos inteligentes o el desarrollo de dApps utilizando solidity, web3 y otras tecnologías compatibles, le encantará saber que la máquina virtual de Rootstock (RVM) es compatible con la máquina virtual de Ethereum (EVM).
-Así que usted puede utilizar el mismo código, herramientas y bibliotecas cuando se desarrolla con Rootstock también.
-Por lo tanto, las habilidades de desarrollo de contratos inteligentes y aplicaciones a las que está acostumbrado se transferirán muy bien.
+If you are familiar with smart contract development or dApp development using solidity, web3, and other compatible technologies; you might be excited to know that the Rootstock Virtual Machine (RVM) is compatible with the Ethereum Virtual machine (EVM).
+So you can use the same code, tools, and libraries when developing with Rootstock too.
+Thus, the smart contract/dApp development skills that you’re used to will transfer across quite nicely too!
 
-> Consulte la versión de Solidity compatible en [requisitos](/developers/requirements/)
+> See supported Solidity version in [requirements](/developers/requirements/)
 
-### Herramientas
+### Tools
 
 - [Hardhat](https://hardhat.org/docs) is an Ethereum development environment designed for professionals. It's primarily used in the development of smart contracts for the Ethereum blockchain.
   Refer to the [Hardhat Guides](/dev-tools/dev-environments/hardhat/) for guides on how to use Hardhat on Rootstock.
 
-- [Metamask](https://metamask.io/) es un monedero de criptomoneda con extensión de navegador o aplicación móvil,
-  que permite a los usuarios interactuar con la blockchain de Rootstock,
-  incluido el envío de RBTC, el envío de tokens basados en Rootstock como RIF,
-  e interactuar con contratos inteligentes desplegados en la red Rootstock.
-  Consulte cómo [configurar MetaMask para conectarse a Rootstock](/dev-tools/wallets/metamask/).
+- [Metamask](https://metamask.io/) is a browser extension cryptocurrency wallet or mobile app,
+  enabling users to interact with the Rootstock blockchain,
+  including sending RBTC, sending Rootstock-based tokens such as RIF,
+  and interacting with smart contracts deployed to the Rootstock network.
+  See how to [configure MetaMask to connect to Rootstock](/dev-tools/wallets/metamask/).
 
-- [Mocha](https://mochajs.org/) es un popular marco de pruebas de JavaScript que se ejecuta en Node.js.
-  Consulte [Testing Smart Contracts](/developers/smart-contracts/hardhat/test-smart-contracts/) para ver cómo usarlo para probar sus contratos inteligentes en Rootstock.
+- [Mocha](https://mochajs.org/) is a popular JavaScript test framework running on Node.js.
+  See [Testing Smart Contracts](/developers/smart-contracts/hardhat/test-smart-contracts/) to see how to use it to test your smart contracts on Rootstock.
 
-- [Solidity](https://docs.soliditylang.org/) es el lenguaje de programación más popular para implementar contratos inteligentes.
-  El bytecode y la ABI que genera el compilador de Solidity, `solc`, se pueden utilizar para implementar e interactuar con contratos inteligentes en Rootstock, gracias a la compatibilidad entre RVM y EVM.
+- [Solidity](https://docs.soliditylang.org/) is the most popular programming language for implementing smart contracts.
+  The bytecode and ABI that the Solidity compiler, `solc`, outputs can be used to deploy and interact with smart contracts on Rootstock, thanks to the compatibility between RVM and EVM.
 
-> Para obtener una lista completa de herramientas, consulte la sección [Dev Tools](/dev-tools/).
+> For a comprehensive list of tools, see [Dev Tools](/dev-tools/) section.
 
-## RPC JSON compatible con Ethereum
+## Ethereum Compatible JSON RPC
 
-El conjunto de llamadas a procedimientos remotos (RPC) que soporta Rootstock es en gran medida el mismo que las RPC soportadas por Ethereum.
-Se trata de otra capa de compatibilidad, además de la implementación de la máquina virtual, que permite utilizar las mismas herramientas y bibliotecas.
+The set of remote procedure calls (RPCs) that Rootstock supports is largely the same as the RPCs supported by Ethereum.
+This is another layer of compatibility, in addition to the virtual machine implementation, which allows the same tools and libraries to be used.
 
-## Minería fusionada
+## Merged Mining
 
-Los mineros de bitcoin realizan lo que se conoce como [minería fusionada](/concepts/merged-mining/),
-asegurando ambas redes con la misma infraestructura y consumo energético.
+The bitcoin miners do what is known as [merged mining](/concepts/merged-mining/),
+securing both networks with the same infrastructure and energy consumption.
 
 <div class="sprite-transform-animation-wrapper rsk-mining">
   <div class="sprite-transform-animation rsk-mining"></div>
 </div>
 
-Crean bloques en la red bitcoin cada 10 minutos, incluyendo la transferencia de bitcoin desde diferentes direcciones, y en el proceso crean nuevos bitcoins.
-En Rootstock, los bloques se crean cada 30 segundos, para asegurar la ejecución de contratos inteligentes.
-En el proceso no se acuñan nuevas monedas, pero sí se obtiene una recompensa de la minería fusionada.
-Echa un vistazo a [rootstock.io/mine-btc-with-rootstock](https://rootstock.io/mine-btc-with-rootstock/) para obtener más información sobre la minería.
+They create blocks on the bitcoin network every 10 minutes, including transfer of bitcoin from different addresses, and in the process they create new bitcoins.
+On Rootstock, blocks are created every 30 seconds, to secure the execution of smart contracts.
+This does not mint any new coins in the process, but does earn a reward from the merged mining.
+Check out [rootstock.io/mine-btc-with-rootstock](https://rootstock.io/mine-btc-with-rootstock/) to learn more about mining.
 
 :::info[Note]
-El tiempo entre bloques en cada red indicado anteriormente son valores aproximados.
+The time between blocks on each network listed above are approximate values.
 :::

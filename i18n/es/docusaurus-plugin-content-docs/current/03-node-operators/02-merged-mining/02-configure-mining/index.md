@@ -1,144 +1,144 @@
 ---
-title: Configurar
-sidebar_label: Configurar nodo para la minería
+title: Configure
+sidebar_label: Configure Node for Mining
 tags:
   - rsk
   - rootstock
   - rskj
-  - nodo
-  - operadores de nodos
-  - configuración
-description: Configurar sus propias preferencias de configuración, al usar el comando Java, Ubuntu, Azure, AWS o Docker
+  - node
+  - node operators
+  - config
+description: Setting your own config preferences, when using the Java command, Ubuntu, Azure, AWS, or Docker
 ---
 
-## Interfaz de línea de comandos
+## Command Line Interface
 
-El nodo Rootstock puede iniciarse con diferentes
-[banderas CLI](/node-operators/setup/configuration/cli/).
+The Rootstock node can be started with different
+[CLI flags](/node-operators/setup/configuration/cli/).
 
-## Configurando preferencias de configuración
+## Setting config preferences
 
-Ver cómo configurar tu configuración:
+See how to set your config:
 
-- [Usando Ubuntu o Docker](#using-ubuntu-or-docker)
-- [Usando el comando `java`](#using-java-command)
+- [Using Ubuntu or Docker](#using-ubuntu-or-docker)
+- [Using the `java` command](#using-java-command)
 
-&hellip; para ejecutar el nodo.
+&hellip; to run the node.
 
 :::tip[Tip]
-Necesita **reiniciar** el nodo si ha cambiado alguna opción de configuración.
+You need to **restart** the node if you've changed any configuration option.
 :::
 
-### Usando Ubuntu o Docker
+### Using Ubuntu or Docker
 
-El archivo de configuración de tu nodo se encuentra en `is/rsk`.
-Las configuraciones predeterminadas se definen allí y son las mismas que [estas](https://github.com/rsksmart/artifacts/tree/master/rskj-ubuntu-installer/config).
+Your node's config file is in `/etc/rsk`.
+Default configurations are defined there and they are the same as [these ones](https://github.com/rsksmart/artifacts/tree/master/rskj-ubuntu-installer/config).
 
-Deberías editar la configuración relacionada con la red que estás usando (`mainnet.conf`, `testnet.conf`, `regtest.conf`).
-Compruebe [here](/node-operators/setup/configuration/reference) todas las opciones de configuración que podría cambiar.
+You should edit the config related with the network you are using (`mainnet.conf`, `testnet.conf`, `regtest.conf`).
+Check [here](/node-operators/setup/configuration/reference) all the configuration options you could change.
 
-### Usando Windows
+### Using Windows
 
-Para otros sistemas operativos, incluyendo Windows, por favor utilice la opción `-Drsk.conf.file` como se especifica a continuación.
+For other operating systems, including Windows, please use the `-Drsk.conf.file` option as specified below.
 
-### Usando el comando `java`
+### Using `java` command
 
-#### 1. Crea un archivo `.conf`
+#### 1. Create a `.conf` file
 
-Puedes crear un archivo con las opciones de configuración que quieras reemplazar del predeterminado.
-Las configuraciones predeterminadas están definidas [here](https://github.com/rsksmart/rskj/tree/master/rskj-core/src/main/resources/config).
+You can create a file with the configuration options that you want to replace from the default.
+Default configurations are defined [here](https://github.com/rsksmart/rskj/tree/master/rskj-core/src/main/resources/config).
 
-La extensión del archivo debe ser `.conf`.
-Revise [/node-operators/setup/configuration/reference/](/node-operators/setup/configuration/reference/) para toda la opción de configuración.
+The extension of the file must be `.conf`.
+Check [/node-operators/setup/configuration/reference/](/node-operators/setup/configuration/reference/) for all the configuration option.
 
-Como ejemplo, si quieres cambiar el directorio predeterminado de la base de datos, el archivo de configuración solo debería contener:
+As an example, if you want to change the default `database directory`, your config file should only contain:
 
 ```conf
-base de datos {
+database {
     dir = /new/path/for/database
     reset = false
 }
 ```
 
-#### 2. Especifique la ruta del archivo de configuración
+#### 2. Specify your config file path
 
-Para aplicar las opciones de configuración, necesita establecer la ruta de su propio archivo de configuración cuando ejecute su nodo.
+To apply your configuration options, you need to set your own config file's path when you run your node.
 
-Esto puede hacerse de dos maneras:
+This can be done in two ways:
 
-- Ejecutar el nodo con el comando `java`, añade `-Drsk.conf.file=path/to/your/file.conf`
-- Compilando el nodo con IntelliJ, agrega a las opciones de VM: `-Drsk.conf.file=path/to/your/file.conf`
+- Running the node with the `java` command, add `-Drsk.conf.file=path/to/your/file.conf`
+- Compiling the node with IntelliJ, add to VM options: `-Drsk.conf.file=path/to/your/file.conf`
 
-### Usando RocksDB
+### Using RocksDB
 
-:::note[Important Aviso]
+:::note[Important Notice]
 
-- A partir de [RSKj HOP v4.2.0](https://github.com/rsksmart/rskj/releases/tag/HOP-4.2.0), RocksDB ya no es experimental. A partir de la versión más reciente, RocksDB se ha convertido en la biblioteca de almacenamiento por defecto, reemplazando LevelDB. Este cambio se hizo para abordar las cuestiones de mantenimiento y rendimiento del LevelDB.
-- Anteriormente, RSKj ejecutó usando [LevelDB](https://dbdb.io/db/leveldb) por defecto, con la opción de cambiar a [RocksDB](http://rocksdb. rg/). Ahora, RocksDB es la opción de almacenamiento predeterminada, buscando habilitar un mayor rendimiento dentro de los nodos RSKj.
+- Starting from [RSKj HOP v4.2.0](https://github.com/rsksmart/rskj/releases/tag/HOP-4.2.0), RocksDB is no longer experimental. As of the most recent version, RocksDB has now been made the default storage library, replacing LevelDB. This change was made to tackle maintainability and performance issues of LevelDB.
+- Previously, RSKj ran using [LevelDB](https://dbdb.io/db/leveldb) by default, with the option to switch to [RocksDB](http://rocksdb.org/). Now, RocksDB is the default storage option, aiming to enable higher performance within the RSKj nodes.
   :::
 
-#### Empezar
+#### Get Started
 
-Los nodos RSKj se ejecutan usando RocksDB por defecto (Ver sección de información importante). Para volver a LevelDB, modifique el archivo de configuración RSKj relevante (`*.conf`) y establezca la configuración: `keyvalue.datasource=leveldb`.
+RSKj nodes run using RocksDB by default (See important info section). To switch back to LevelDB, modify the relevant RSKj config file (`*.conf`) and set the config: `keyvalue.datasource=leveldb`.
 
-La propiedad `keyvalue.datasource` en la configuración
-sólo puede ser `rocksdb` o `leveldb`.
+The `keyvalue.datasource` property in the config
+may only be either `rocksdb` or `leveldb`.
 
 > If you wish to switch between the different storage options,
 > for example from `leveldb` to `rocksdb` or vice versa,
 > you must **restart** the node with the import option.
 
-El siguiente comando de ejemplo muestra cómo hacer esto cuando
-el nodo RSKj estaba ejecutando previamente el predeterminado (`leveldb`),
-y quiere correr con `rocksdb` siguiente.
+The following sample command shows how to do this when
+the RSKj node was previously running the default (`leveldb`),
+and wants to run with `rocksdb` next.
 
-> Tenga en cuenta el uso de la bandera `--import`, que restablece y reimporta la base de datos.
+> Note the use of the `--import` flag, which resets and re-imports the database.
 
 ```java
 java -Dkeyvalue.datasource=rocksdb -jar ./rskj-core/build/libs/rskj-core-*-all.jar --testnet --import
 ```
 
-#### Ventajas:
+#### Advantages:
 
-- RocksDB utiliza un motor de base de datos estructurado de registros, escrito enteramente en C++, para el máximo rendimiento. Las claves y valores son sólo flujos de bytes de tamaño arbitrario.
-- RocksDB está optimizado para almacenamiento rápido y de baja latencia, como unidades flash y unidades de disco de alta velocidad. RocksDB aprovecha todo el potencial de las altas tasas de lectura/escritura ofrecidas por flash o RAM.
-- RocksDB es adaptable a diferentes cargas de trabajo. Desde motores de almacenamiento de bases de datos como [MyRocks](https://github.com/facebook/(0)[video] ql-5.6) hasta [caché de datos de aplicación](http://techblog. etflix.com/2016/05/application-data-caching-using-ssds.html) para cargas de trabajo embebidas, RocksDB puede usarse para una variedad de necesidades de datos.
-- RocksDB proporciona operaciones básicas tales como abrir y cerrar una base de datos, leer y escribir en operaciones más avanzadas como filtros de fusión y compactación.
+- RocksDB uses a log structured database engine, written entirely in C++, for maximum performance. Keys and values are just arbitrarily-sized byte streams.
+- RocksDB is optimized for fast, low latency storage such as flash drives and high-speed disk drives. RocksDB exploits the full potential of high read/write rates offered by flash or RAM.
+- RocksDB is adaptable to different workloads. From database storage engines such as [MyRocks](https://github.com/facebook/mysql-5.6) to [application data caching](http://techblog.netflix.com/2016/05/application-data-caching-using-ssds.html) to embedded workloads, RocksDB can be used for a variety of data needs.
+- RocksDB provides basic operations such as opening and closing a database, reading and writing to more advanced operations such as merging and compaction filters.
 
-### Cambiando entre DB Kinds\*\*
+### Switching between DB Kinds\*\*
 
-Cambiar entre diferentes tipos de bases de datos en su sistema requiere modificar los archivos de configuración. elimina la base de datos existente y reinicia el nodo para que el nodo comience a sincronizar desde cero usando el nuevo tipo db.
+Switching between different types of databases in your system requires you to modify configuration files, drop the existing database, and restart your node so the node will start syncing from scratch using the new db kind.
 
 :::info\[Info]
 
-Los nodos que ya se estaban ejecutando en LevelDB seguirán usando LevelDB, y lo mismo se aplica a RocksDB. Sin embargo, todos los nodos configurados desde cero usarán RocksDB por defecto.
+Nodes that were already running on LevelDB will continue to use LevelDB, and the same applies to RocksDB. However, all nodes setup from scratch will use RocksDB by default.
 :::
 
-### Precio de gas ajustado
+### Gas Price Setting
 
-El valor devuelto por `eth_gasPrice` puede ser modificado estableciendo un multiplicador a
-para ser utilizado mientras se calcula el precio de gas más importante.
+The value returned by `eth_gasPrice` can be modified by setting a multiplier to
+be used while calculating the aforementioned gas price.
 
-Esto puede hacerse estableciendo un valor numérico en `rpc.gasPriceMultiplier` en el archivo de configuración
-. El valor predeterminado es `1.1`.
+This can be done by setting a numeric value on `rpc.gasPriceMultiplier` in the
+configuration file. Default value is `1.1`.
 
-### Solución de problemas
+### Troubleshooting
 
-#### Puerto UDP ya en uso
+#### UDP port already in use
 
 If you see the following error message,
 it means that RSKj is unable to bind to a particular port number,
 because prior to this, another process has already bound to the same port number.
 
 ```text
-Excepción en el hilo "UDPServer" co.rsk.net.discovery.PeerDiscoveryException: Discovery cannot be started.
-        at co.rsk.net.discoveryunque DPServer$1.run(UDPServer.java:65)
-Cálido por: java.net.BindException: Dirección ya en uso: bind
+Exception in thread "UDPServer" co.rsk.net.discovery.PeerDiscoveryException: Discovery can't be started.
+        at co.rsk.net.discovery.UDPServer$1.run(UDPServer.java:65)
+Caused by: java.net.BindException: Address already in use: bind
 ```
 
-Para rectificar esto,
-cambia el valor de `peer. ort` en el archivo de configuración,
-o añadir una bandera `peer.port` al comando cuando inicies RSKj.
+To rectify this,
+change the value of `peer.port` in the config file,
+or add a `peer.port` flag to the command when you start RSKj.
 
 ````mdx-code-block
 <Tabs>

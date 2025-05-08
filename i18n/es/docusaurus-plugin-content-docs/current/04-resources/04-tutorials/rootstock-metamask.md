@@ -1,82 +1,82 @@
 ---
 sidebar_position: 3
-title: Añadiendo Rootstock a Metamask Programáticamente
-sidebar_label: Añadir Rootstock a Metamask Programmatically
+title: Adding Rootstock to Metamask Programmatically
+sidebar_label: Add Rootstock to Metamask Programmatically
 tags:
   - rsk
   - rootstock
-  - metamásica
-  - tutoriales
-  - recursos
-  - carteras
-description: Aprenda cómo agregar e iniciar un interruptor de red en Metamask desde un sitio web.
+  - metamask
+  - tutorials
+  - resources
+  - wallets
+description: Learn how to add and initiate a network switch on Metamask from a website.
 ---
 
 ![rootstock_metamask_banner](/img/resources/rootstock-metamask/rootstock-metamask-banner.jpeg)
 
-[Rootstock](https://rootstock.io/) es un blockchain con capacidades de contrato inteligentes, es posible construir aplicaciones descentralizadas (dApps) con él. La mayoría de dApps son aplicaciones web a las que usted accede con un navegador de Internet regular, como Chrome. Sin embargo, las interacciones de blockchain requieren algún software adicional, que viene en forma de extensiones del navegador. Estas extensiones del navegador insertan un objeto de proveedor web3, con las partes Javascript de la aplicación web utilizadas para interactuar con el blockchain, formando parte integral de una arquitectura dApp.
+[Rootstock](https://rootstock.io/) is a blockchain with smart contract capabilities, it is possible to build decentralised applications (dApps) with it. Most dApps are web applications that you access with a regular Internet browser, such as Chrome. However, the blockchain interactions require some additional software, which comes in the form of browser extensions. These browser extensions insert a web3 provider object, with the Javascript parts of the web application used to interact with the blockchain, forming an integral part of a dApp architecture.
 
-_Ten en cuenta que estas extensiones de navegador almacenan tus claves privadas, y úsalas para firmar transacciones. Así que manténgalas seguras._
+_Note that these browser extensions store your private keys, and use them to sign transactions. So keep them secure._
 
-En este tutorial aprenderemos cómo agregar e iniciar un interruptor de red en Metamask desde un sitio web. Posteriormente, crearemos una aplicación frontend para comprobar si nuestra configuración funciona conectando nuestro sitio web frontend a metamask.
+In this tutorial, we will learn how to add and initiate a network switch on Metamask from a website. Subsequently, we will create a frontend application to check if our configuration works by connecting our frontend website to metamask.
 
-Ten en cuenta que esta funcionalidad es importante ya que alerta a los usuarios cuando están en una red diferente a la que necesita tu dApp. Les permitirá _cambiar automáticamente_ a la red correcta cuando conecten su cartera o cuando interactúen con un contrato inteligente.
+Note that this functionality is important as it alerts users when they are on a different network than the one needed by your dApp. It will allow them to _switch automatically_ to the correct network when they are connecting their wallet or when interacting with a smart contract.
 
-El estrés aquí está en la capacidad de _cambiar automáticamente_. Típicamente cambiar a una red por primera vez está muy involucrado para el usuario final, implicando leer la documentación, y actualizar manualmente las opciones de configuración en Metamask. Esto omite la necesidad de todo eso, y permite una mejor experiencia de usuario.
+Stress here is on the ability to _switch automatically_. Typically switching to a network for the first time is very involved for the end user, involving reading documentation, and manually updating the configuration options in Metamask. This skips the need for all that, and enables a better user experience.
 
-## Requisitos
+## Requirements
 
-Para seguir este tutorial necesitarás lo siguiente:
+To follow along in this tutorial, you will need the following;
 
-- Cartera de Metamask
+- Metamask wallet
 
-> Si no tienes una cartera de Metamask instalada, sigue las instrucciones de [Cómo descargar, instalar y configurar una cartera de Metamask](https://youtu.be/VlyqXD1TjJk).
+> If you do not have a Metamask wallet installed, follow the instructions in [How to Download, Install, and Setup a Metamask Wallet](https://youtu.be/VlyqXD1TjJk).
 
-**Cómo descargar, instalar y configurar una cartera de Metamask**
+**How to Download, Install, and Setup a Metamask Wallet**
 
 <div class="video-container">
   <iframe width="949" height="534" src="https://youtube.com/embed/VlyqXD1TjJk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## Comenzando
+## Getting started
 
-En esta sección, haremos lo siguiente:
+In this section, we will do the following;
 
-- Clona el [estado inicial del repo](https://github.com/rsksmart/demo-code-snippets/tree/switch-metamask-to-rsk-init-state/switch-network-to-rsk)
-- [Lista de archivos de configuración](#list-configuration-files)
-- [Configurar red](#configure-networks)
-- [Configurar index.js](#configure-indexjs)
-- Prueba nuestra [aplicación frontend](#frontend)
-- Ver [errores comunes](#common-errors)
+- Clone the [initial state of the repo](https://github.com/rsksmart/demo-code-snippets/tree/switch-metamask-to-rsk-init-state/switch-network-to-rsk)
+- [List configuration files](#list-configuration-files)
+- [Configure networks](#configure-networks)
+- [Configure index.js](#configure-indexjs)
+- Try out our [frontend application](#frontend)
+- See [common errors](#common-errors)
 
-### Clonar el estado inicial del repositorio
+### Clone the initial state of the repository
 
-Para empezar, clona el repositorio [demo-code-snippets](https://github.com/rsksmart/demo-code-snippets) y navega al directorio [switch-network-to-rsk](https://github.com/rsksmart/demo-code-snippets/tree/switch-metamask-to-rsk-init-state/switch-network-to-rsk).
+To get started, clone the [demo-code-snippets](https://github.com/rsksmart/demo-code-snippets) repository and navigate to the [switch-network-to-rsk](https://github.com/rsksmart/demo-code-snippets/tree/switch-metamask-to-rsk-init-state/switch-network-to-rsk) directory.
 
-### Lista de archivos de configuración
+### List Configuration Files
 
-Echemos un vistazo al contenido de la carpeta/directorio `switch-network-to-rsk`.
+Let’s take a look at the contents of the `switch-network-to-rsk` folder/directory.
 
-![Archivos de configuración](/img/resources/rootstock-metamask/list-config-files.png)
+![config files](/img/resources/rootstock-metamask/list-config-files.png)
 
-El archivo `index.html` contiene un archivo HTML de ejemplo para probar nuestra aplicación. Incluye un botón **Connect to Testnet** y un botón **Connect to Mainnet**, y veremos todos estos en acción al final de este tutorial.
+The `index.html` file contains a sample HTML file to test out our application. It includes a **Connect to Testnet** button and a **Connect to Mainnet** button, and we will see all these in action at the end of this tutorial.
 
-El archivo `index.js` importa los parámetros de red de `networks.js` y define las funciones `connectProviderTo()` y `switchToNetwork()`.
+The `index.js` file imports the network parameters from `networks.js` and defines the `connectProviderTo()` and `switchToNetwork()` functions.
 
-El archivo `networks.js` contiene toda la configuración de las diferentes redes de Rootstock que se añadirán a Metamask.
+The `networks.js` file contains all the configuration for the different networks on Rootstock that will be added to Metamask.
 
-### Configurar redes
+### Configure Networks
 
-Aquí configuraremos las redes para [Mainnet](/concepts/rbtc/networks#mainnet-conversion) y [Testnet](/concepts/rbtc/networks#testnet-conversion).
+Here, we will configure the networks for both [Mainnet](/concepts/rbtc/networks#mainnet-conversion) and [Testnet](/concepts/rbtc/networks#testnet-conversion).
 
-Abra la [networks.js](https://github.com/rsksmart/demo-code-snippets/blob/5cc5124fe5bddc85f09a82e49eba7591003543f0/switch-network-to-rsk/networks. s) o copie el código de abajo, luego pegue en el archivo `network.js`. Para más información sobre los diferentes tipos de redes en Rootstock, vea [Instalación de MetaMask (/dev-tools/wallets/metamask/).
+Open the [networks.js](https://github.com/rsksmart/demo-code-snippets/blob/5cc5124fe5bddc85f09a82e49eba7591003543f0/switch-network-to-rsk/networks.js) file, or copy the code below, then paste into the `network.js` file. For more information on the different types of networks on Rootstock, see [MetaMask installation](/dev-tools/wallets/metamask/).
 
 ```js
 export const rskTestnet = {
   chainName: 'Rootstock Testnet',
   chainId: '0x1f',
-  rpcUrls: ['https://rpc. estnet.rootstock.io/{YOUR_APIKEY}'],
-  blockExplorerUrls: ['https://explorer.testnet.rootstock. o/'],
+  rpcUrls: ['https://rpc.testnet.rootstock.io/{YOUR_APIKEY}'],
+  blockExplorerUrls: ['https://explorer.testnet.rootstock.io/'],
   nativeCurrency: {
     symbol: 'tRBTC',
     decimals: 18,
@@ -86,7 +86,7 @@ export const rskTestnet = {
 export const rskMainnet = {
   chainName: 'Rootstock Mainnet',
   chainId: '0x1e',
-  rpcUrls: ['https://rpc. estnet.rootstock.io/{YOUR_APIKEY}'],
+  rpcUrls: ['https://rpc.testnet.rootstock.io/{YOUR_APIKEY}'],
   blockExplorerUrls: ['https://explorer.rootstock.io/'],
   nativeCurrency: {
     symbol: 'RBTC',
@@ -97,25 +97,25 @@ export const rskMainnet = {
 
 > See how to [Get an API Key from the RPC API](/developers/rpc-api/rootstock/setup/)
 
-Ver configuración completa en [GitHub](https://github.com/rsksmart/demo-code-snippets/blob/5cc5124fe5bddc85f09a82e49eba7591003543f0/switch-network-to-rsk/networks.js).
+See full configuration on [GitHub](https://github.com/rsksmart/demo-code-snippets/blob/5cc5124fe5bddc85f09a82e49eba7591003543f0/switch-network-to-rsk/networks.js).
 
-### Configurar index.js
+### Configure index.js
 
-En esta sección, configuraremos el 'index'. s\\` archivo que contiene todas las funcionalidades de nuestro DApp, importaremos algunos archivos necesarios, Compruebe si la metamasa está instalada, vea cómo agregar y cambiar de red programáticamente desde dentro de un contrato inteligente.
+In this section, we will configure the `index.js` file which contains all the functionalities powering our DApp, we will import some neccessary files, check if metamask is installed, see how to add and switch networks programmatically from within a smart contract.
 
-> Ten en cuenta que `index.js` tiene dos archivos, el primer archivo es una [versión redactada](https://github.com/rsksmart/demo-code-snippets/blob/2d22a1708ddd272130edf05893d8770c38973bd2/switch-network-to-rsk/index-redacted. s) del código que contiene un estado inicial del código y el segundo archivo contiene la [versión completa](https://github. om/rsksmart/demo-code-snippets/blob/5cc5124fe5bddc85f09a82e49eba7591003543f0/switch-network-to-rsk/index.js) que contiene el estado completo del código para `index.js`.
+> Note that `index.js` has two files, the first file is a [redacted version](https://github.com/rsksmart/demo-code-snippets/blob/2d22a1708ddd272130edf05893d8770c38973bd2/switch-network-to-rsk/index-redacted.js) of the code which contains an initial state of the code and the second file contains the [full version](https://github.com/rsksmart/demo-code-snippets/blob/5cc5124fe5bddc85f09a82e49eba7591003543f0/switch-network-to-rsk/index.js) which contains the complete state of the code for `index.js`.
 
-**Paso 1: Importar archivos necesarios**
+**Step 1: Import neccessary files**
 
-Aquí importaremos las redes configuradas en la [sección anterior](#configure-networks) en el archivo `networks.js` en `index.js`.
+Here, we will import the networks just configured in the [previous section](#configure-networks) in `networks.js` file into `index.js`.
 
 ```
-importar { rskTestnet, rskMainnet } desde './networks.js';
+import { rskTestnet, rskMainnet } from './networks.js';
 ```
 
-**Paso 2: Comprobar si Metamask está instalado**
+**Step 2: Check if Metamask is installed**
 
-**estado inicial**
+**initial state**
 
 ```javascript
 async function connectProviderTo(network) {
@@ -123,113 +123,113 @@ async function connectProviderTo(network) {
     // TODO: implement request accounts
 
     await switchToNetwork(network);
-    showPage(red. hainName, dirección);
+    showPage(network.chainName, address);
   } catch (error) {
     showError(error.message);
   }
 }
 ```
 
-**Caminata de código**
+**Code Walkthrough**
 
-> La función `connectProviderTo()` inicia la conexión a cada una de las redes Rootstock en Metamask, utiliza la `window. thereum` API to check if Metamask is installed then throws an error - **Please install Metamask**, if false, a popup appears trigggered by `window.ethereum. método equest`, esto solicita que el usuario proporcione una dirección de Ethereum a ser identificada. Una vez que el usuario acepta la solicitud, devuelve una dirección y cartera de Ethereum está conectada. Ver [https://docs.metamask.io/guide/rpc-api.html#restricted-methods](https://docs.metamask.io/guide/rpc-api.html#restricted-methods)
+> The `connectProviderTo()` function initiates the connection to each of the Rootstock networks in Metamask, it uses the `window.ethereum` API to check if Metamask is installed then throws an error - **Please install Metamask**, if false, a popup appears triggered by `window.ethereum.request` method, this requests that the user provides an Ethereum address to be identified by. Once the request is accepted by the user it returns an Ethereum address and wallet is connected. See [https://docs.metamask.io/guide/rpc-api.html#restricted-methods](https://docs.metamask.io/guide/rpc-api.html#restricted-methods)
 
-Antes de añadir una red, necesitamos estar seguros de que Metamask ha sido instalado, para hacerlo, añadir el siguiente código al `bloque de intento`:
+Before adding a network, we need to be sure Metamask has been installed, to do this, add the following code to the `try block`:
 
 ```javascript
-prueba {
-    // asegúrate de que Metamask esté instalado
-    if (!window. thereum) throw new Error('Por favor instale Metamask! );
-    // conectar wallet
-    const [address] = await window. thereum.request({
+try {
+    // make sure Metamask is installed
+    if (!window.ethereum) throw new Error('Please install Metamask!');
+    // connect wallet
+    const [address] = await window.ethereum.request({
       method: 'eth_requestAccounts',
     });
 }
 ```
 
-Copia y pega el código completo abajo o ve el código en [GitHub](https://github.com/rsksmart/demo-code-snippets/blob/5cc5124fe5bddc85f09a82e49eba7591003543f0/switch-network-to-rsk/index.js#L3);
+Copy and paste the full code below or see the code on [GitHub](https://github.com/rsksmart/demo-code-snippets/blob/5cc5124fe5bddc85f09a82e49eba7591003543f0/switch-network-to-rsk/index.js#L3);
 
 ```javascript
 async function connectProviderTo(network) {
   try {
     // make sure Metamask is installed
-    if (! �, . thereum) throw new Error('Por favor instale Metamask! );
-    // conectar el monedero
-    const [address] = await window. thereum.request({
+    if (!window.ethereum) throw new Error('Please install Metamask!');
+    // connect wallet
+    const [address] = await window.ethereum.request({
       method: 'eth_requestAccounts',
     });
-    espera switchToNetwork(red);
-    showPage(red. hainName, dirección);
+    await switchToNetwork(network);
+    showPage(network.chainName, address);
   } catch (error) {
     showError(error.message);
   }
 }
 ```
 
-**Paso 3: Agregar y cambiar una red**
+**Step 3: Adding and switching a network**
 
-**estado inicial**
+**initial state**
 
 ```javascript
 async function switchToNetwork(network) {
-  // TODO: implementar cambio de red
+  // TODO: implement network switching
 
-  // Asegúrese de que cambiamos
-  const chainId = await window. thereum.request({ method: 'eth_chainId' });
-  if (chainId !== red. hainId)
-    arrojar un nuevo Error(`Could not connect to ${network.chainName}`);
+  // make sure we switched
+  const chainId = await window.ethereum.request({ method: 'eth_chainId' });
+  if (chainId !== network.chainId)
+    throw new Error(`Could not connect to ${network.chainName}`);
 }
 ```
 
-**Caminata de código**
+**Code Walkthrough**
 
-> La función `switchToNetwork()` añade una nueva red a Metamask y posteriormente cambia a esa red. Esta función espera un argumento de red, y espera una dirección rootstock que utiliza el método `wallet_switchEthereumChain` y el `chainID`. Luego arroja un error si el indicador de conmutación fue rechazado o el chainID pasado no fue encontrado e intenta agregar la nueva cadena a Metamask.
+> The `switchToNetwork()` function adds a new network to Metamask and subsequently switches to that network. This function expects a network argument, and awaits a rootstock address which uses the `wallet_switchEthereumChain` method and the `chainID`. It then  throws an error if the switch prompt was rejected or the chainID passed was not found and tries to add the new chain to Metamask.
 
-Para añadir una red programáticamente en Metamask, necesitamos llamar al método `wallet_addEthereumChain`, expuesto por `window. y pasar los parámetros de red configurados en la sección [Configurar redes](#configure-networks)]. Para ello, añade un `try block`dentro de la función`switchToNetwork()\\`.
+To programmatically add a network in Metamask, we need to call the `wallet_addEthereumChain` method, exposed by `window.ethereum` and pass the network parameters configured in [Configure Networks](#configure-networks) section. To do this, add a `try block` inside the `switchToNetwork()` function.
 
 ```javascript
   try {
-    // tratando de cambiar a una red ya añadida a la ventana de espera de Metamask
-    . ahí. método equest({
-      : 'wallet_switchEthereumChain',
-      parámetros: [{ chainId: network.chainId }],
-});
+    // trying to switch to a network already added to Metamask
+    await window.ethereum.request({
+      method: 'wallet_switchEthereumChain',
+      params: [{ chainId: network.chainId }],
+    });
 ```
 
-Vea el siguiente código completo o vea el enlace al código en [GitHub](https://github.com/rsksmart/demo-code-snippets/blob/5cc5124fe5bddc85f09a82e49eba7591003543f0/switch-network-to-rsk/index.js#L20);
+See the full code below or see link to the code on [GitHub](https://github.com/rsksmart/demo-code-snippets/blob/5cc5124fe5bddc85f09a82e49eba7591003543f0/switch-network-to-rsk/index.js#L20);
 
 ```javascript
 async function switchToNetwork(network) {
   try {
     // trying to switch to a network already added to Metamask
-    await window. ahí. equest({
-      : 'wallet_switchEthereumChain',
-      parámetros: [{ chainId: network.chainId }],
+    await window.ethereum.request({
+      method: 'wallet_switchEthereumChain',
+      params: [{ chainId: network.chainId }],
     });
-    // captando error específico 4902
+    // catching specific error 4902
   } catch (error) {
-    // este código de error indica que la cadena no ha sido añadida a Metamask
-    if (error. ode === 4902) {
-      // intentando añadir una nueva cadena a Metamask
-      await window. ahí. equest({
+    // this error code indicates that the chain has not been added to Metamask
+    if (error.code === 4902) {
+      // trying to add new chain to Metamask
+      await window.ethereum.request({
         method: 'wallet_addEthereumChain',
-        parámetros: [network],
+        params: [network],
       });
     } else {
-      // arrojar todos los demás errores
-      error de lanzamiento;
+      // rethrow all other errors
+      throw error;
     }
   }
-  // asegúrese de que cambiamos
-  const chainId = await window. thereum.request({ method: 'eth_chainId' });
-  if (chainId !== red. hainId)
+  // make sure we switched
+  const chainId = await window.ethereum.request({ method: 'eth_chainId' });
+  if (chainId !== network.chainId)
     throw new Error(`Could not connect to ${network.chainName}`);
 }
 ```
 
-**Mostrar éxito si el cambio de red se ha realizado correctamente**
+**Show success if network switch was successful**
 
-**estado inicial**
+**initial state**
 
 ```javascript
 async function showPage(chainName, address) {
@@ -237,10 +237,10 @@ async function showPage(chainName, address) {
 }
 ```
 
-La función `showPage()` muestra que el cambio a otra red es exitoso y debería mostrar
-un estado conectado, la red y una dirección de monedero. Esto se hace mediante la manipulación de DOM para agregar un estado conectado, el nombre de cadena y una dirección.
+The `showPage()` function shows that the switch to another network is successful and should display
+a connected status, the network and a wallet address. This is done by performing DOM manipulation to add a connected status, the chainName and an address.
 
-Agregue el siguiente código dentro de la función `async`, o vea el código en [GitHub](https://github.com/rsksmart/demo-code-snippets/blob/5cc5124fe5bddc85f09a82e49eba7591003543f0/switch-network-to-rsk/index.js#L47);
+Add the following code inside the `async` function, or see the code on [GitHub](https://github.com/rsksmart/demo-code-snippets/blob/5cc5124fe5bddc85f09a82e49eba7591003543f0/switch-network-to-rsk/index.js#L47);
 
 ```javascript
 async function showPage(chainName, address) {
@@ -251,9 +251,9 @@ async function showPage(chainName, address) {
 }
 ```
 
-**Lanza un error si hubo un problema**
+**Throw an error if there was a problem**
 
-**estado inicial**
+**initial state**
 
 ```javascript
 function showError(message = '') {
@@ -261,107 +261,107 @@ function showError(message = '') {
 }
 ```
 
-La función `showError()` es llamada en el caso de que algo salió mal. Esta función está diseñada para lanzar un error que contiene un mensaje si algo salió mal. Debería verse así:
+The `showError()` function is called in the event that something went wrong. This function is meant to throw an error containing a message if something went wrong. It should look like this:
 
 ![user-rejected-request-error](/img/resources/rootstock-metamask/user-rejected-request.png)
 
-Vea la sección [errores comunes](#common-errors) para más explicación.
+See [common errors](#common-errors) section for more explanation.
 
-Agregue el siguiente código en la función `showError()` o vea el código en [GitHub](https://github.com/rsksmart/demo-code-snippets/blob/5cc5124fe5bddc85f09a82e49eba7591003543f0/switch-network-to-rsk/index.js#L54);
+Add the following code into the `showError()` function or see code on [GitHub](https://github.com/rsksmart/demo-code-snippets/blob/5cc5124fe5bddc85f09a82e49eba7591003543f0/switch-network-to-rsk/index.js#L54);
 
 ```javascript
 function showError(message = '') {
-  document.getElementById('error'). nnerHTML = mensaje;
-  if (! essage) return;
-  // ocultar mensaje de error en 3 segundos
+  document.getElementById('error').innerHTML = message;
+  if (!message) return;
+  // hide error message in 3 seconds
   setTimeout(() => showError(''), 3000);
 }
 ```
 
-**Habilita los listeners de eventos de clic a botones**
+**Enable click event listeners to buttons**
 
-Para añadir un detector de eventos a los botones de conexión creados en `índice. tml`, usa el DOM para obtener los botones `connect-testnet` y `connect-mainnet`, luego agregue un detector de eventos "clic" que utiliza la función `connectProviderTo()` para manejar la conexión a `rskTestnet` o `rskMainnet` respectivamente.
+To add a click event listener to the connect buttons created in `index.html`, use the DOM to get `connect-testnet` and `connect-mainnet` buttons, then add an on "click" event listener which uses the `connectProviderTo()` function to handle the connection to `rskTestnet` or `rskMainnet` respectively.
 
-Vea el siguiente código, o vea el enlace en [GitHub](https://github.com/rsksmart/demo-code-snippets/blob/5cc5124fe5bddc85f09a82e49eba7591003543f0/switch-network-to-rsk/index.js#L61);
+See the code below, or see link on [GitHub](https://github.com/rsksmart/demo-code-snippets/blob/5cc5124fe5bddc85f09a82e49eba7591003543f0/switch-network-to-rsk/index.js#L61);
 
 ```javascript
-// añadir listeners de eventos de clic en los botones de Connect
-documento
+// add click event listeners to the Connect buttons
+document
   .getElementById('connect-testnet')
-  . ddEventListener('click', () => connectProviderTo(rskTestnet));
-documento
+  .addEventListener('click', () => connectProviderTo(rskTestnet));
+document
   .getElementById('connect-mainnet')
   .addEventListener('click', () => connectProviderTo(rskMainnet));
 ```
 
-### Completar pasarela de código
+### Complete code walkthrough
 
-Puedes encontrar el código completo para `index.js` a continuación, o en el [repositorio de GitHub](https://github.com/rsksmart/demo-code-snippets/blob/5cc5124fe5bddc85f09a82e49eba7591003543f0/switch-network-to-rsk/index.js).
+You can find the full code for `index.js` below, or in the [GitHub repository](https://github.com/rsksmart/demo-code-snippets/blob/5cc5124fe5bddc85f09a82e49eba7591003543f0/switch-network-to-rsk/index.js).
 
 ```javascript
-importar { rskTestnet, rskMainnet } desde './redes. s';
+import { rskTestnet, rskMainnet } from './networks.js';
 
 async function connectProviderTo(network) {
   try {
-    // Asegúrese de que Metamask esté instalado
-    if (! �, . thereum) throw new Error('Por favor instale Metamask! );
-    // conectar el monedero
-    const [address] = await window. thereum.request({
+    // make sure Metamask is installed
+    if (!window.ethereum) throw new Error('Please install Metamask!');
+    // connect wallet
+    const [address] = await window.ethereum.request({
       method: 'eth_requestAccounts',
     });
-    espera switchToNetwork(network);
-    showPage(red. hainName, dirección);
+    await switchToNetwork(network);
+    showPage(network.chainName, address);
   } catch (error) {
-    showError(error. essage);
+    showError(error.message);
   }
 }
 
-// ver detalles en la documentación de Metamaska:
-// https://docs.metamask. o/guía/rpc-api. tml#wallet-addethereumchain
+// see details in Metamask documentation:
+// https://docs.metamask.io/guide/rpc-api.html#wallet-addethereumchain
 async function switchToNetwork(network) {
   try {
-    // tratando de cambiar a una red ya añadida a Metamask
-    await window. ahí. equest({
+    // trying to switch to a network already added to Metamask
+    await window.ethereum.request({
       method: 'wallet_switchEthereumChain',
-      parámetros: [{ chainId: network.chainId }],
+      params: [{ chainId: network.chainId }],
     });
-    // capturando el error específico 4902
+    // catching specific error 4902
   } catch (error) {
-    // este código de error indica que la cadena no ha sido añadida a Metamask
-    if (error. ode === 4902) {
-      // intentando añadir una nueva cadena a Metamask
-      await window. ahí. equest({
+    // this error code indicates that the chain has not been added to Metamask
+    if (error.code === 4902) {
+      // trying to add new chain to Metamask
+      await window.ethereum.request({
         method: 'wallet_addEthereumChain',
-        parámetros: [network],
+        params: [network],
       });
     } else {
-      // arrojar todos los demás errores
+      // rethrow all other errors
       throw error;
     }
   }
-  // asegúrese de que cambiamos
-  const chainId = await window. ahí. equest({ method: 'eth_chainId' });
-  if (chainId !== red. hainId)
+  // make sure we switched
+  const chainId = await window.ethereum.request({ method: 'eth_chainId' });
+  if (chainId !== network.chainId)
     throw new Error(`Could not connect to ${network.chainName}`);
 }
 
 async function showPage(chainName, address) {
-  documento. etElementById('connect-prompt').classList.add('hidden');
-  document.getElementById('connected').classList.remove('oculto');
-  documento. etElementById('chain-name').innerHTML = chainName;
+  document.getElementById('connect-prompt').classList.add('hidden');
+  document.getElementById('connected').classList.remove('hidden');
+  document.getElementById('chain-name').innerHTML = chainName;
   document.getElementById('wallet-address').innerHTML = address;
 }
 
 function showError(message = '') {
-  document.getElementById('error'). nnerHTML = mensaje;
-  if (! essage) return;
-  // ocultar mensaje de error en 3 segundos
+  document.getElementById('error').innerHTML = message;
+  if (!message) return;
+  // hide error message in 3 seconds
   setTimeout(() => showError(''), 3000);
 }
 
-// añade listeners de eventos a los botones Connect
-documento
-  . etElementById('connect-testnet')
+// add click event listeners to the Connect buttons
+document
+  .getElementById('connect-testnet')
   .addEventListener('click', () => connectProviderTo(rskTestnet));
 document
   .getElementById('connect-mainnet')
@@ -370,32 +370,32 @@ document
 
 ## Frontend
 
-Ahora vamos a probar nuestra aplicación, siga los pasos siguientes para revisar la aplicación en su navegador.
+Now let's try out our application, follow the steps below to check out the application on your browser.
 
-(1) Abra la [switch-network-to-rsk](https://github.com/rsksmart/demo-code-snippets/tree/master/switch-network-to-rsk) carpeta en VSCode y dentro de la carpeta abra `index.html`
+(1) Open the [switch-network-to-rsk](https://github.com/rsksmart/demo-code-snippets/tree/master/switch-network-to-rsk) folder in VSCode and within the folder open `index.html`
 
 ![index.html](/img/resources/rootstock-metamask/frontend-index.png)
 
-(2) Ejecuta `index.html` con el [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extensión VSCode
-pulsando el botón `Go Live`
+(2) Run `index.html` with the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) VSCode extension
+by pressing `Go Live` button
 
 ![vscode-go-live-button](/img/resources/rootstock-metamask/vscode-go-live-button.png)
 
-En la esquina inferior derecha de la ventana de VSCode. VSCode abrirá la página web desde `index. tml` en una nueva ventana del navegador.
-El navegador debería abrir una página
-en `127.0.0.1` o `localhost`.
+In the bottom-right corner of the VSCode window. VSCode will open the web page from `index.html` in a new browser window.
+The browser should open a page
+on `127.0.0.1` or `localhost`.
 
 ![connect-mainnet-testnet-live-page](/img/resources/rootstock-metamask/connect-mainnet-testnet.png)
 
-(3) En la página web, haga clic en el botón `Connect to Testnet` o `Connect to Mainnet` para añadir y cambiar a la red correspondiente
+(3) On the web page, click on either `Connect to Testnet` or `Connect to Mainnet` button to add and switch to the corresponding network
 
 ![connect-to-testnet](/img/resources/rootstock-metamask/connect-testnet.png)
 
-(4) El navegador abre una ventana para pedir una contraseña de Metamask, introduce tu contraseña de Metamask y pulsa `Unlock`
+(4) The browser then opens up a Metamask password prompt window, enter your Metamask password and press `Unlock`
 
 ![metamask-window](/img/resources/rootstock-metamask/metamask-unlock-password.png)
 
-(5) Metamask muestra una pregunta: `¿Permitir que este sitio añada una red?`
+(5) Metamask shows a prompt: `Allow this site to add a network?`
 
 ![metamask-prompt](/img/resources/rootstock-metamask/metamask-add-network.png)
 
@@ -406,41 +406,41 @@ This gives the user the option to verify
 if the network configuration options are legitimate by comparing against
 the official documentation.
 
-> - Ver configuraciones para Rootstock [Mainnet y Testnet](/dev-tools/wallets/metamask/).
+> - See configurations for Rootstock [Mainnet and Testnet](/dev-tools/wallets/metamask/).
 
-(6) Presiona `Aprobar`
+(6) Press `Approve`
 
 ![metamask-approve](/img/resources/rootstock-metamask/metamask-approve-network-details.png)
 
-(7) La metamásica muestra posteriormente otra indicación: `¿Permitir a este sitio cambiar la red?`. Pulse `Cambiar red`
+(7) Metamask subsequently shows another prompt: `Allow this site to switch the network?`. Press `Switch network`
 
 ![metamask-switch](/img/resources/rootstock-metamask/metamask-switch-network.png)
 
-(8) ¡Metamask ha añadido la nueva red Rootstock y ha cambiado a ella!
+(8) Now Metamask has added the new Rootstock network and switched to it!
 
 ![metamask-successful-switch](/img/resources/rootstock-metamask/metamask-connected-to-rootstock.png)
 
-## Errores comunes
+## Common errors
 
-Puede encontrar los siguientes errores al probar la aplicación:
+You may encounter the following errors when trying out the application:
 
-- Error: No se puede destruir la propiedad del valor intermedio ya que no está definida
+- Error: Cannot destructure property of intermediate value as it is undefined
   > ![show-error-image](/img/resources/rootstock-metamask/cannot-destructure-property-error.png)
   >
-  > - Problema: Esto puede ocurrir si el usuario ya está conectado a Rootstock Mainnet o Rootstock Testnet.
-  > - Posible solución: Si encuentras este error, asegúrese de que ha iniciado sesión en Metamask o compruebe que ya no está conectado a Rootstock Mainnet o Rootstock Testnet.
-- Error: El usuario ha rechazado la solicitud
+  > - Problem: This can occur if the user is already connected to Rootstock Mainnet or Rootstock Testnet.
+  > - Possible Fix: If you encounter this error, ensure you're logged in to Metamask or check that you're not already connected to Rootstock Mainnet or Rootstock Testnet.
+- Error: User rejected the request
   > ![user-rejected-request-error](/img/resources/rootstock-metamask/user-rejected-request.png)
   >
-  > - Problema: Esto ocurre cuando el usuario cierra inesperadamente Metamask o presiona "rechazar" en lugar de "aprobar" en los diálogos.
-  > - Posible corrección: Confirme la solicitud si toda la información es correcta. Su dApp debe tener código para manejar el escenario cuando el usuario decide no pasar añadiendo la nueva configuración de red.
+  > - Problem: This occurs when the user closes Metamask unexpectedly, or presses "reject" instead of "approve" in the dialogs.
+  > - Possible Fix: Confirm the request if all information is correct. Your dApp should have code to handle the scenario when the user does indeed decide not to go through with adding the new network configuration.
 
-## Ajustar
+## Wrap up
 
-¡¡Felicidades!!
+Congratulations!!
 
-Has aprendido a crear un dApp
-que puede programar;
+You have learnt how to create a dApp
+which can programmatically;
 
-- Añadir una nueva configuración de red Rootstock y,
-- Cambiar a una red Rootstock.
+- Add a new Rootstock network configuration, and,
+- Switch to a Rootstock network.

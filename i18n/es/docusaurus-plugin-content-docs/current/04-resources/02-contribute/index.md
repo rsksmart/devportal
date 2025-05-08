@@ -1,24 +1,24 @@
 ---
-title: Contribuir al stock raíz
-sidebar_label: Contribuir
+title: Contribute to Rootstock
+sidebar_label: Contribute
 sidebar_position: 3
-description: Una visión general de las diferentes maneras en que puedes contribuir con Rootstock.
+description: An overview of different ways you can contribute to Rootstock.
 tags:
   - rootstock
   - rsk
-  - contribuir
-  - código abierto
+  - contribute
+  - open source
 ---
 
-¿Eres apasionado por la web 3, bitcoin y el Blockchain? ¿Tienes una pasión por el Open Source y Web3? ¿Te gusta escribir, codificar, buscar recompensas, resolver problemas del mundo real y ansiosos por contribuir al futuro de Bitcoin y Finanzas Descentralizadas? Únete a la [Comunidad de Discord Rootstock](https://rootstock. o/discord) y empieza a hacer contribuciones!
+Are you passionate about web3, bitcoin and the Blockchain? Do you have a passion for Open Source and Web3? Do you enjoy writing, coding, bounty hunting, solving real-world problems, and eager to contribute to the future of Bitcoin and Decentralized Finance? Join the [Rootstock Discord Community](https://rootstock.io/discord) and start making contributions!
 
 ## Who Is It For?
 
-Ya sea un desarrollador experimentado, escritor creativo, investigador, cazador de recompensas de errores, o simplemente entusiasmado con blockchain, el programa da la bienvenida a los colaboradores de todos los orígenes.
+Whether you're a seasoned developer, creative writer, researcher, bug bounty hunter, or simply enthusiastic about blockchain, the program welcomes contributors from all backgrounds.
 
-## Comenzando
+## Getting Started
 
-Por escritura, recompensas de errores y proyectos de código abierto, hay varias maneras de participar y ganar incentivos valiosos.
+From writing, bug bounties and open-source projects, there are various ways to participate and earn valuable incentives.
 
 <Card
 title="Rootstock Hacktivator"
@@ -29,15 +29,15 @@ link="/resources/contribute/hacktivator/"
 <br></br>
 
 <Card
-title="Programa Bug Bounty"
-description="RootstockLabs ha creado el programa bug bounty para recompensar a los investigadores que envíen vulnerabilidades válidas para mejorar la seguridad de las plataformas RootstockLabs."
-link="/resources/contribute/bug-bounty/"
+title="Writing Contests"
+description="Contribute articles, tutorials and guides about Rootstock, Bitcoin, etc."
+link="/resources/contribute/writing-contest/"
 />
 
 <br></br>
 
 <Card
-title="Programa Bug Bounty"
-description="RootstockLabs ha creado el programa bug bounty para recompensar a los investigadores que envíen vulnerabilidades válidas para mejorar la seguridad de las plataformas RootstockLabs."
+title="Bug Bounty Program"
+description="RootstockLabs has created the bug bounty program to reward researchers that submit valid vulnerabilities to improve the RootstockLabs platforms security."
 link="/resources/contribute/bug-bounty/"
 />

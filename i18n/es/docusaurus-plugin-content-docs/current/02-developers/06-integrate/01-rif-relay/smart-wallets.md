@@ -1,51 +1,51 @@
 ---
-sidebar_label: Billeteras inteligentes
+sidebar_label: Smart Wallets
 sidebar_position: 800
-title: Billeteros inteligentes RIF Relé
+title: RIF Relay Smart Wallets
 description: RIF Relay Smart Wallets.
 tags:
   - rif
-  - sobre
-  - relé
-  - usuario
-  - guía
+  - envelope
+  - relay
+  - user
+  - guide
 ---
 
-Esta guía pretende explicar más sobre la interacción y despliegue de las Carteras Inteligentes. Utilizaremos contratos de prueba adicionales que se incluyeron en el proyecto, como el `UtilToken(ERC20)`. Todos los scripts utils se ejecutan desde la cuenta[0] de la red regtest.
+This guide is intended to explain more about the interaction and deployment of the Smart Wallets. We will be using additional testing contracts that were included in the project, like the `UtilToken(ERC20)`. All the utils scripts are executed from the account[0] from the regtest network.
 
-## Requisitos previos
+## Prerequisites
 
-- Siga el proceso de despliegue de la [Guía de despliegue](/developers/integrate/rif-relay/deployment).
-- La definición del monedero inteligente puede encontrarse en [Arquitectura](/developers/integrate/rif-relay/architecture/)
+- Follow the deployment process in [Deployment Guide](/developers/integrate/rif-relay/deployment).
+- The definition of the smart wallet can be found in [Architecture](/developers/integrate/rif-relay/architecture/)
 
-## Formas de crear carteras inteligentes
+## Ways to create smart wallets
 
-Hay **dos maneras** de crear una Cartera Inteligente:
+There are **two ways** to create a Smart Wallet:
 
-1. **Transacción regular:** El Solicitante (u otra cuenta en nombre del Solicitante) llama a la Fábrica de Proxy pidiendo obtener una nueva Cartera Inteligente. Por lo tanto, la Fábrica de Proxy crea un proxy para el código SmartWallet, delegando la propiedad al Solicitante.
-2. **Patrocinado:** Necesita pasar por el proceso de Relevo RIF, que se describe en detalle más adelante. El solicitante pide a un tercero que pague por el despliegue de la Cartera Inteligente, y el solicitante paga en tokens por ello (o gratis si está subvencionado por el tercero, también conocido como Patrocinador).
+1. **Regular transaction:** The Requester (or another account on behalf of the Requester) calls the Proxy Factory asking to get a new Smart Wallet. Therefore the Proxy Factory creates a proxy to the SmartWallet code, delegating the ownership to the Requester.
+2. **Sponsored:** It needs to go through the RIF Relay process, which is described in detail below. The requester asks a third party to pay for the Smart Wallet deployment, and the requester pays in tokens for that (or free if it is subsidized by the third-party, a.k.a, Sponsor).
 
-## Enviar fondos
+## Send funds
 
-En el [RIF Relay Contracts](https://github.com/rsksmart/rif-relay-contracts) hay un script que nos ayudaría a acuñar tokens ERC20.
+In the [RIF Relay Contracts](https://github.com/rsksmart/rif-relay-contracts) there is a script that would help us to mint ERC20 tokens.
 
-Necesitamos ejecutar el siguiente script:
+We need to execute the following script:
 
 ```shell
-npx hardhat mint --token-dirección <0xabc123> --importe <amount_in_wei> --receptor <0xabc123> --red regtest
+npx hardhat mint --token-address <0xabc123> --amount <amount_in_wei> --receiver <0xabc123> --network regtest
 ```
 
-> El contrato de tokens debe tener una función de acuñación.
+> The token contract needs to have a mint function.
 
-## Implantar un monedero inteligente
+## Deploy a Smart Wallet
 
-Para desplegar un monedero inteligente necesitamos seguir algunos pasos que se describirán a continuación:
+To deploy a smart wallet we need to follow some steps that will be described below:
 
-1. Necesitamos generar la dirección del monedero inteligente. Como hemos mencionado antes, el monedero inteligente es una cuenta basada en contratos, por lo tanto, podemos generar tantas direcciones de monedero inteligente como queramos sin gastar gasolina llamando a `getSmartWalletAddress` desde la librería del cliente relé.
+1. We need to generate the smart wallet address. As we mentioned before, the Smart Wallet is a contract-based account, therefore, we can generate as many smart wallet addresses as we want without spending gas by calling the `getSmartWalletAddress` from the relay client library.
 
-> Un monedero inteligente sólo necesita desplegarse cuando necesitamos ejecutar una transacción. El proceso de despliegue utiliza gas, así que, a menos que esté subvencionado, tenemos que pagarlo.
+> A Smart Wallet only needs to be deployed when we need to execute a transaction. The deployment process uses gas so, unless it's subsidized, we need to pay for it.
 
-En este punto deberíamos tener el objeto Relay Client creado.
+At this point we should have the Relay Client object created.
 
 ```typescript
     import type {
@@ -70,11 +70,11 @@ En este punto deberíamos tener el objeto Relay Client creado.
 
 ```
 
-> Ten en cuenta que para pagar cualquier cantidad de tokens durante el despliegue, el monedero inteligente debe recibir fondos primero.
+> Keep in mind that to pay any amount of token fees during the deployment, the smart wallet must receive funds first.
 
-Dónde están las variables:
+Where variables are:
 
-- **EOA**: Cuenta de propiedad externa, el propietario del monedero inteligente.
-- **INDEX**: El índice que queremos utilizar para generar el monedero inteligente.
-- **DIRECCIÓN_TOKEN**: La dirección del contrato token que queremos utilizar para pagar la tasa.
-- **CANTIDAD_DE_TOKENS_EN_WEI**: La cantidad que queremos pagar por la tasa en wei.
+- **EOA**: Externally Owned Account, the owner of the smart wallet.
+- **INDEX**: The index that we would like to use to generate the smart wallet.
+- **TOKEN_ADDRESS**: The token contract address that we want to use to pay for the fee.
+- **AMOUNT_OF_TOKENS_IN_WEI**: The amount that we want to pay for the fee in wei.

@@ -1,17 +1,17 @@
 ---
 sidebar_position: 5
-title: Puerto un dApp de otras cadenas a Rootstock
-sidebar_label: Puerto a Rootstock
+title: Port a dApp from other Chains to Rootstock
+sidebar_label: Port to Rootstock
 tags:
   - rsk
   - rootstock
-  - recursos
-  - principiante
-  - inicio rápido
-  - avanzado
-  - puerto a stock raíz
-  - tutoriales
-description: Puerto un dApp de otras Chains a Rootstock.
+  - resources
+  - beginner
+  - quick starts
+  - advanced
+  - port to rootstock
+  - tutorials
+description: Port a dApp from other Chains to Rootstock.
 ---
 
 ```mdx-code-block

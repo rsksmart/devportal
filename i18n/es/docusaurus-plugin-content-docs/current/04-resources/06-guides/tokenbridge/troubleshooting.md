@@ -1,13 +1,13 @@
 ---
-sidebar_label: Solución de problemas del puente de Token
-title: Guía de solución de problemas del Puente Rootstock
-description: ¿Tienes problemas cruzando tus tokens en el puente de token? Consulta la guía de solución de problemas para obtener ayuda.
+sidebar_label: Token Bridge Troubleshooting
+title: Rootstock Token Bridge Troubleshooting Guide
+description: Having issues crossing your tokens on the token bridge? See the troubleshooting guide for help.
 tags:
-  - recursos
+  - resources
   - tokenbridge
-  - cadena de bloques
-  - puentes
-  - fichas
+  - blockchain
+  - bridges
+  - tokens
   - ethereum
   - rootstock
   - rsk
@@ -37,94 +37,94 @@ Find the min/max values for [crossing tokens on Testnet](https://dapp.testnet.br
 | USDT → rUSDT | Sepolia | 0 <br/> 1,000,000 USDT <br/> 10,000,000 USDT | 120 <br/> <br/> 240 <br/> <br/> 5,760 | 1000 USDT  | 250,000,000 USDT |
 | USDC → rUSDC | Sepolia | 0 <br/> 1,000,000 USDC <br/> 10,000,000 USDC | 120 <br/> <br/> 240 <br/> <br/> 5,760 | 1000 USDC  | 250,000,000 USDC |
 
-## Tokens transferidos desde Ethereum, y después de 24 horas no han recibido tokens en Rootstock
+## Transferred tokens from Ethereum, and after 24 hours have not received tokens on Rootstock
 
-**Red:** ETH a Rootstock
+**Network:** ETH to Rootstock
 
-**Cuándo:** Bloque Actual - Número de Bloque de Transacción < 5760
+**When:** Current Block - Transaction Block Number < 5760
 
-**Respuesta:** 24 horas es una aproximación, no es fija. Espere hasta que 5760 bloques hayan pasado desde el número de bloque de transacción, más 5 minutos.
+**Answer:** 24 hours is an approximation, it is not fixed. Wait until 5760 blocks have past since the transaction block number, plus 5 minutes.
 
-## Tokens transferidos desde Ethereum, y después de 24 horas no han recibido tokens en Rootstock
+## Transferred tokens from Ethereum, and after 24 hours have not received tokens on Rootstock
 
-**Red:** ETH a Rootstock
+**Network:** ETH to Rootstock
 
-**Cuándo:** Bloque Actual - Número de Bloque de Transacción > 5760
+**When:** Current Block - Transaction Block Number > 5760
 
 **Answer:**  Look in the [Rootstock Explorer](https://explorer.rootstock.io/) at the SAME ADDRESS on Rootstock. If you do not see the correct balance in the tokens tab, please share your Transaction Hash in the **#token-bridge** channel on Rootstock Discord, visit the [Discord Community](https://rootstock.io/discord) to join.
 
-## Tokens transferidos de Rootstock, y después de 24 horas no han recibido tokens en Ethereum
+## Transferred tokens from Rootstock, and after 24 hours have not received tokens on Ethereum
 
-**Red:** Rootstock para ETH
+**Network:** Rootstock to ETH
 
-**Cuándo:** Bloque Actual - Número de Bloque de Transacción < 2880
+**When:** Current Block - Transaction Block Number < 2880
 
-**Respuesta:** 24 horas es una aproximación, no es fija. Espere hasta que 5760 bloques hayan pasado desde el número de bloque de transacción, más 5 minutos.
+**Answer:**  24 hours is an approximation, it is not fixed. Wait until 5760 blocks have past since the transaction block number, plus 5 minutes.
 
-## Tokens transferidos de Rootstock, y después de 24 horas no han recibido tokens en Ethereum
+## Transferred tokens from Rootstock, and after 24 hours have not received tokens on Ethereum
 
-**Red:** Rootstock para ETH
+**Network:** Rootstock to ETH
 
-**Cuándo:** Bloque Actual - Número de Bloque de Transacción > 2880
+**When:** Current Block - Transaction Block Number > 2880
 
 **Answer:**  Look in [Etherscan](https://etherscan.io/) at the SAME ADDRESS on Rootstock. If you do not see the correct balance in the tokens tab, please share your Transaction Hash in the **#token-bridge** channel on Rootstock Discord, visit the [ Discord Community](https://rootstock.io/discord) to join.
 
-## Tokens transferidos de Ethereum a Rootstock, pero no los ven en mi cartera
+## Transferred tokens from Ethereum to Rootstock, but do not see them in my wallet
 
-**Red:** ETH a Rootstock
+**Network:** ETH to Rootstock
 
-**Cuándo:** siempre
+**When:** always
 
 **Answer:**  Rootstock has a different derivation path (m/44’/137’/0’/0) from Ethereum (m/44’/60’/0’/0). Software wallets respects this convention. Copy your mnemonic or private key and use Metamask and add Rootstock as custom network, to get the same address as ethereum.
 
-## Tokens transferidos de Rootstock a Ethereum, pero no los ven en mi cartera
+## Transferred tokens from Rootstock to Ethereum, but do not see them in my wallet
 
-**Red:** Rootstock para ETH
+**Network:** Rootstock to ETH
 
-**Cuándo:** siempre
+**When:** always
 
-**Respuesta:** Rootstock tiene una ruta de derivación diferente (m/44’/137’/0’/0) de Ethereum (m/44’/60’/0’/0). Copie su clave mnemónica o privada y utilice MyEtherwallet o My Crypto con la ruta de derivación de Rootstock m/44’/137’/0’/0 para obtener la misma dirección que Rootstock.
+**Answer:**  Rootstock has a different derivation path (m/44’/137’/0’/0) from Ethereum (m/44’/60’/0’/0). Software wallets respects this convention. Copy your mnemonic or private key and use MyEtherwallet or My Crypto with the Rootstock derivation path m/44’/137’/0’/0 to get the same address as Rootstock.
 
-## ¿Por qué tarda 24 horas? ¿Puede ser más rápido?
+## Why does it take 24 hours? Can it be faster?
 
-**Red:** Ambas
+**Network:** Both
 
-**Cuándo:** siempre
+**When:** always
 
-**Respuesta:** Esto es para medidas de seguridad. 24 horas es aproximación, no es exacta. Estamos trabajando para reducir este tiempo en la próxima versión.
+**Answer:**  This is for security measures. 24 hours is an approximation, it is not exact. We are working to reduce this time in the next version.
 
-## ¿Por qué no puedo elegir la dirección?
+## Why can't I choose the address?
 
 **Answer:** The current version of the token bridge allows for choosing the delivery address on the [Token Bridge UI](https://dapp.tokenbridge.rootstock.io/).
 
-## Metamask lanzó un error
+## Metamask threw an error
 
 **Network:** ETH
 
-**Cuándo:** siempre
+**When:** always
 
-**Respuesta:** Esto suele ser un tiempo de espera ya que la transacción no fue minada en el tiempo esperado por Metamask. Esto no significa que la transacción no haya sido minada. Por favor comparte tu Hash de Transacciones en el canal **#token-bridge** en Rootstock Discord (ve a [Comunidad de Discord](https://rootstock.io/discord) para unirte).
+**Answer:**  This is usually a timeout as the Transaction was not mined on the time expected by Metamask. This does not mean that transaction has not been mined. Please share your Transaction Hash in the **#token-bridge** channel on Rootstock Discord (go to [Discord Community](https://rootstock.io/discord) to join).
 
-## No veo mi transacción en la lista de token Bridge
+## I don't see my transaction on the Token Bridge list
 
 **Answer:** In the current Token Bridge version, transaction lists are fetched directly from an API. If a transaction is missing from the list, it's likely due to a synchronization issue on our end.. If this is not the reason why it is not there please let us know in the #token-bridge channel on Rootstock Discord (go to Discord Community to join). If this is not the reason why it is not there please let us know in the `#token-bridge` channel on Rootstock Discord (go to [Discord Community](https://rootstock.io/discord) to join).
 
-## He usado el Sovryn Token Bridge
+## I used the Sovryn Token Bridge
 
-**Red:** N/A
+**Network:** N/A
 
-**Cuándo:** siempre
+**When:** always
 
 If you have used `bridge.sovryn.app`,
 note that this is **not** the same as the Rootstock Token Bridge.
 To get support, please ask on the
 [Sovryn discord group](https://discord.com/channels/729675474665603133/813119624098611260).
 
-## Envié tokens Rootstock a una dirección de Ethereum
+## I sent Rootstock tokens to an Ethereum address
 
-**Red:** N/A
+**Network:** N/A
 
-**Cuándo:** siempre
+**When:** always
 
 Note that if you have tokens on the Rootstock network, such as RIF or USDRIF,
 including "crossed" tokens such as rUSDT or rDAI,
@@ -142,11 +142,11 @@ and sent the tokens to an address that **is** not under your control -
 where you **do have** the private key or the seed phrase -
 then it may be possible to recover your tokens.
 
-## Tengo varias carteras instaladas, pero solo tengo una opción
+## I have multiple wallets installed, but i'm only given one option
 
-**Red:** N/A
+**Network:** N/A
 
-**Cuándo:** siempre
+**When:** always
 
 Decentralised apps on websites, such as the Rootstock Token Bridge,
 interact with the blockchain network through a standard interface

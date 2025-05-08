@@ -1,69 +1,69 @@
 ---
-sidebar_label: Cadena de Seguridad
+sidebar_label: Security Chain
 sidebar_position: 8
-title: Verificar cadena de seguridad del código fuente de RSKj
+title: Verify security chain of RSKj source code
 tags:
   - rsk
   - rskj
-  - nodo
-  - seguridad
-  - operadores de nodos
-  - construcciones reproducibles
-  - verificación
-description: "Todas las diferentes maneras en que puede verificar RSKj: Firmar clave, huellas dactilares de la clave pública, SHA256SUMS.asc, dependencias binarias, script de entorno seguro"
+  - node
+  - security
+  - node operators
+  - reproducible builds
+  - verification
+description: "All the different ways that you can verify RSKj: Release signing key, fingerprint of the public key, SHA256SUMS.asc, binary dependencies, secure environment script"
 ---
 
-## Verificar la autenticidad del código fuente RSKj y sus dependencias binarias
+## Verify authenticity of RSKj source code and its binary dependencies
 
-La autenticidad del código fuente debe ser verificada comprobando la firma de las etiquetas de lanzamiento en el repositorio oficial de Git. Vea [Construcciones reproducibles](/node-operators/setup/reproducible-build/). La autenticidad de las dependencias binarias es verificada por Gradle después de seguir los pasos siguientes para instalar los plugins necesarios.
+The authenticity of the source code must be verified by checking the signature of the release tags in the official Git repository. See [Reproducible builds](/node-operators/setup/reproducible-build/). The authenticity of the binary dependencies is verified by Gradle after following the steps below to install the necessary plugins.
 
-### Descargar clave pública de lanzamiento Rootstock
+### Download Rootstock Release Signing Key public key
 
-Para el sistema operativo Linux (Ubuntu por ejemplo), se recomienda instalar `curl` y `gnupg-curl` para descargar la clave a través de HTTPS.
+For Linux based OS (Ubuntu for example), it's recommended to install `curl` and `gnupg-curl` in order to download the key through HTTPS.
 
-Recomendamos usar GPG v1 para descargar la clave pública porque GPG v2 encuentra problemas al conectarse a servidores de claves HTTPS. También puedes descargar la clave usando `curl`, `wget` o un navegador web, pero siempre comprueba la huella digital antes de importarla.
+We recommend using GPG v1 to download the public key because GPG v2 encounters problems when connecting to HTTPS key servers. You can also download the key using `curl`, `wget` or a web browser but always check the fingerprint before importing it.
 
 ```bash
 gpg --keyserver https://secchannel.rsk.co/SUPPORT.asc --recv-keys A6DBEAC640C5A14B
 ```
 
-Deberías ver la salida a continuación:
+You should see the output below:
 
 ```text
-Salida:
-gpg: clave A6DBEAC640C5A14B: "IOV Labs Support <support@iovlabs.org>" importado
-gpg: Número total procesado: 1
-gpg: importado: 1 (RSA: 1)
+Output:
+gpg: key A6DBEAC640C5A14B: "IOV Labs Support <support@iovlabs.org>" imported
+gpg: Total number processed: 1
+gpg: imported: 1  (RSA: 1)
 ```
 
-## Verificar la huella digital de la clave pública
+## Verify the fingerprint of the public key
 
 ```bash
 gpg --finger A6DBEAC640C5A14B
 ```
 
-La salida debería verse así:
+The output should look like this:
 
 ```text
-Salida:
-pub rsa4096 2022-05-11 [C]
-1DC9 1579 9132 3D23 FD37 BAA7 A6DB EAC6 40C5 A14B
-uid [ unknown] IOV Labs Support <support@iovlabs.org>
-sub rsa4096 2022-05-11 [S]
-sub rsa4096 2022-05-11 [E]
+Output:
+pub   rsa4096 2022-05-11 [C]
+1DC9 1579 9132 3D23 FD37  BAA7 A6DB EAC6 40C5 A14B
+uid   [ unknown] IOV Labs Support <support@iovlabs.org>
+sub   rsa4096 2022-05-11 [S]
+sub   rsa4096 2022-05-11 [E]
 ```
 
-## Verificar la firma de SHA256SUMS.asc
+## Verify the signature of SHA256SUMS.asc
 
-El archivo `SHA256SUMS.asc` está firmado con la clave pública Rootstock e incluye los haskeys SHA256 de los archivos necesarios para iniciar el proceso de compilación.
+The file`SHA256SUMS.asc` is signed with Rootstock public key and includes SHA256 hashes of the files necessary to start the build process.
 
-_Note: Asegúrate de `cd` en el directorio [`rskj`](https://github.com/rsksmart/rskj) antes de ejecutar los siguientes comandos.
+_Note: Ensure to `cd` into the [`rskj`](https://github.com/rsksmart/rskj) directory_ before executing the commands below.
 
 ```bash
 gpg --verify SHA256SUMS.asc
 ```
 
-La salida debería verse así:
+The output should look like this:
 
 ```text
 Output:
@@ -76,13 +76,13 @@ Primary key fingerprint: 1DC9 1579 9132 3D23 FD37  BAA7 A6DB EAC6 40C5 A14B
 Subkey fingerprint: 1F1A A750 373B 90D9 792D  C321 7997 999E EA3A 9079
 ```
 
-_Nota:_ Aprende más sobre [Gestión de claves](https://www.gnupg.org/gph/en/manual/x334.html) aquí.
+_Note:_ Learn more about [key management](https://www.gnupg.org/gph/en/manual/x334.html) here.
 
-## Verificación de dependencias binarias
+## Verification of binary dependencies
 
-La autenticidad del script `configure.sh` se marca usando el comando `sha256sum` y el archivo `SHA256SUM.asc` firmado. El script se utiliza para descargar y comprobar la autenticidad de los complementos Gradle Wrapper y Gradle Witness. Después de instalar estos plugins, Gradle comprueba la autenticidad del resto de las dependencias binarias.
+The authenticity of the script `configure.sh` is checked using the `sha256sum` command and the signed `SHA256SUM.asc` file. The script is used to download and check the authenticity of the Gradle Wrapper and Gradle Witness plugins. After these plugins are installed, the authenticity of the rest of the binary dependencies is checked by Gradle.
 
-Linux - Windows (consola bash)
+Linux - Windows (bash console)
 
 ````mdx-code-block
 <Tabs>
@@ -99,7 +99,7 @@ Linux - Windows (consola bash)
 </Tabs>
 ````
 
-## Ejecutar script configure para configurar entorno seguro
+## Run configure script to configure secure environment
 
 ````mdx-code-block
 <Tabs>

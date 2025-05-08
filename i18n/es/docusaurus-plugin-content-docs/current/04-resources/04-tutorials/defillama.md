@@ -1,10 +1,10 @@
 ---
 sidebar_position: 6
-title: Añadir un protocolo a DefiLama
-sidebar_label: Añadir un protocolo a DefiLama
-description: DefiLlama es el mayor agregador de TVL para DeFi. Aprenda cómo listar un proyecto DeFi y escribir un adaptador SDK para agregar un Protocolo a DefiLlama.
+title: Add a Protocol To DefiLlama
+sidebar_label: Add a Protocol To DefiLlama
+description: DefiLlama is the largest TVL aggregator for DeFi. Learn how to list a DeFi project and write an SDK adapter to add a Protocol to DefiLlama.
 tags:
-  - base de conocimientos
+  - knowledge-base
   - defillama
   - protocol
   - rootstock
@@ -13,30 +13,30 @@ tags:
 
 <!-- ![DefiLlama](/img/resources/defillama-logo.png)  -->
 
-[DefiLlama](https://defillama.com/) es el principal agregador para el valor total bloqueado (TVL) en el ecosistema de finanzas descentralizadas (DeFi). Sus datos de código abierto son mantenidos por una comunidad de colaboradores de varios protocolos. DefiLama prioriza la precisión y transparencia en su metodología.
+[DefiLlama](https://defillama.com/) is the leading aggregator for Total Value Locked (TVL) in the decentralized finance (DeFi) ecosystem. Its open-source data is maintained by a community of contributors from various protocols. DefiLlama prioritizes accuracy and transparency in its methodology.
 
-TVL se calcula evaluando el valor de las fichas bloqueadas en los contratos de protocolos y plataformas DeFi. Mientras que los proyectos de puente están incluidos en el cálculo, su TVL no contribuye a la TVL total de ninguna cadena de bloques específica.
+TVL is calculated by assessing the value of tokens locked in the contracts of DeFi protocols and platforms. While bridge projects are included in the calculation, their TVL does not contribute to the overall TVL of any specific blockchain.
 
-> Échale un vistazo al [sitio web de DefiLlama](https://defillama.com/) y a los [documentos de DefiLlama](https://docs.llama.fi/list-your-project/readme) para más detalles.
+> Check out the [DefiLlama website](https://defillama.com/) and [DefiLlama docs](https://docs.llama.fi/list-your-project/readme) for more details.
 
-## Cómo listar un proyecto DeFi
+## How to list a DeFi project
 
-La mayoría de los adaptadores destacados en DefiLama son proporcionados y gestionados por sus comunidades individuales, y cualquier modificación se organiza a través del repositorio de GitHub [DefiLlama/DefiLlama-Adapters](https://github.com/DefiLlama/DefiLlama-Adapters) de GitHub.
-
-<div class="btn-container">
-  <span></span>
-    <a class="green" href="https://docs.llama.fi/list-your-project/submit-a-project">Cómo Enviar un proyecto</a>
-</div>
-
-## Cómo escribir un adaptador SDK
-
-Un adaptador es una pieza de código diseñada para recibir una marca de tiempo UNIX y alturas de bloques de blockchain como entradas. Luego proporciona los saldos de activos mantenidos dentro de un protocolo, considerando los decimales asociados (es decir, cómo se almacenan en el blockchain). El SDK maneja la conversión de saldos de activos en bruto a su equivalente en USD y los agrega para calcular el total de la TVL. En consecuencia, el adaptador requiere un procesamiento mínimo, ya que la mayor parte del trabajo de conversión es realizado por el SDK.
+Most adapters featured on DefiLlama are provided and managed by their individual communities, and any modifications are organized through the [DefiLlama/DefiLlama-Adapters](https://github.com/DefiLlama/DefiLlama-Adapters) GitHub repository.
 
 <div class="btn-container">
   <span></span>
-    <a class="green" href="https://docs.llama.fi/list-your-project/how-to-write-an-sdk-adapter">Cómo escribir un adaptador SDK</a>
+    <a class="green" href="https://docs.llama.fi/list-your-project/submit-a-project">How to Submit a Project</a>
 </div>
 
-## Recursos
+## How to write an SDK adapter
 
-- Visita [DeFiLama About](https://defillama.com/about) para aprender más.
+An adapter is a piece of code designed to receive a UNIX timestamp and blockchain block heights as inputs. It then provides the balances of assets held within a protocol, considering the associated decimals (i.e., how they are stored on the blockchain). The SDK handles the conversion of raw asset balances into their equivalent in USD and aggregate them to calculate the total TVL. Consequently, the adapter requires minimal processing, as most of the conversion work is performed by the SDK.
+
+<div class="btn-container">
+  <span></span>
+    <a class="green" href="https://docs.llama.fi/list-your-project/how-to-write-an-sdk-adapter">How to write an SDK Adapter</a>
+</div>
+
+## Resources
+
+- Visit [DeFiLlama About](https://defillama.com/about) to learn more.

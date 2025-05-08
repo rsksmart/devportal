@@ -1,45 +1,45 @@
 ---
-sidebar_label: Crear un proyecto de casco
+sidebar_label: Create a Hardhat Project
 sidebar_position: 101
-title: Crear un proyecto de casco
-description: Aprenda a configurar su entorno de desarrollo con Hardhat
+title: Create a Hardhat Project
+description: Learn how to set up your environment for development using Hardhat
 tags:
-  - guías
-  - desarrolladores
-  - contratos inteligentes
+  - guides
+  - developers
+  - smart contracts
   - rsk
-  - portainjertos
-  - casco
+  - rootstock
+  - hardhat
   - dApps
-  - éteres
+  - ethers
 ---
 
-En esta sección, aprenderá a crear un proyecto hardhat y a verificar la instalación de hardhat.
+In this section, you will learn how to create a hardhat project and verify hardhat installation.
 
-## Clonar el repositorio de proyectos
+## Clone the Project Repository
 
-Para empezar, clone el repositorio [rootstock-quick-start-guide](https://github.com/rsksmart/rootstock-quick-start-guide.git):
+To get started, clone the [rootstock-quick-start-guide](https://github.com/rsksmart/rootstock-quick-start-guide.git) repository:
 
 ```shell
 git clone https://github.com/rsksmart/rootstock-quick-start-guide.git
 ```
 
-## Instalar dependencias
+## Install Dependencies
 
-Ejecute el siguiente comando en la raíz del proyecto.
+Run the following command in the project root.
 
 ```shell
-  npm instalar
+  npm install
 ```
 
-> El repositorio de inicio rápido ya viene preinstalado con hardhat. La rama `master` tiene la configuración inicial y el proyecto barebones y la rama `feat/complete` tiene el estado completo del proyecto hardhat. Puedes ver el diff en las ramas de estado inicial y completo del repositorio en cualquier momento mientras revisas este material. Para ejecutar el proyecto completo, haz checkout en la rama feat/complete, instala las dependencias y ejecuta el comando: `npx http-server`.
+> The quick start repo already comes pre-installed with hardhat. The `master` branch has the intial setup and barebones project and the `feat/complete` branch has the complete state of the hardhat project. You can view the diff in the initial and complete state branches of the repo at any point in time while going through this material. To run the full project, checkout into feat/complete branch, install the dependencies and run the command: `npx http-server`.
 
-### Verificar la instalación del casco
+### Verify Hardhat Installation
 
-Aquí verificaremos la instalación del casco en su proyecto.
+Here, we will verify the installation of hardhat in your project.
 
-- Para verificar la instalación del casco:
-  - El repositorio [quickstart](https://github.com/rsksmart/rootstock-quick-start-guide) viene con Hardhat preinstalado. Para comprobar si Hardhat está instalado, ejecute `npx hardhat` en el directorio `rootstock-quick-start-guide`.
-  - `npx hardhat` no sólo verifica la instalación, sino que también le permite iniciar un nuevo proyecto Hardhat si no existe. Para un nuevo proyecto, se le pedirá que elija entre varias opciones. Para crear un proyecto en blanco, selecciona **Create an empty hardhat.config.js**, o elige una de las otras opciones para comenzar con una plantilla preestablecida.
+- To verify hardhat installation:
+  - The [quickstart](https://github.com/rsksmart/rootstock-quick-start-guide) repository comes with Hardhat pre-installed. To check if Hardhat is installed, execute `npx hardhat` in the `rootstock-quick-start-guide` directory.
+  - `npx hardhat` not only verifies installation but also allows you to initiate a new Hardhat project if it doesn't exist. For a new project, you'll be prompted to choose from several options. To create a blank project, select **Create an empty hardhat.config.js**, or pick one of the other options to begin with a pre-set template.
 
-Una vez finalizada la instalación, puede comprobar que Hardhat se ha instalado correctamente ejecutando de nuevo `npx hardhat`. Debería aparecer un mensaje de ayuda con las tareas disponibles, indicando que Hardhat está instalado y listo para usar.
+Once setup is complete, you can verify Hardhat is installed correctly by running `npx hardhat` again. It should display a help message with available tasks, indicating that Hardhat is installed and ready to use.

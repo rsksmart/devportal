@@ -1,38 +1,38 @@
 ---
-sidebar_label: Programa de Bug Bounty
+sidebar_label: Bug Bounty Program
 sidebar_position: 4
-title: Contribuir a la seguridad de las plataformas RootstockLabs
+title: Contribute to RootstockLabs platforms security
 tags:
   - rsk
   - rif
-  - recompensa
-  - seguridad
+  - bounty
+  - security
   - rootstock
 ---
 
-RootstockLabs ha creado el programa de recompensas de errores para recompensar a los investigadores que presentan vulnerabilidades válidas para mejorar la seguridad de las plataformas RootstockLabs.
+RootstockLabs has created the bug bounty program to reward researchers that submit valid vulnerabilities to improve the RootstockLabs platforms security.
 
 <div class="btn-container">
   <span></span>
-    <a class="green" href="https://hackerone.com/rootstocklabs">Visite la página del programa de recompensas de errores en Hackerone</a>
+    <a class="green" href="https://hackerone.com/rootstocklabs">Visit the Bug Bounty Program Page on Hackerone</a>
 </div>
 
-### Acuerdo de Nivel de Servicio (SLA)
+### Service Level Agreement (SLA)
 
-RootstockLabs tiene como objetivo cumplir con los siguientes SLAs para hackers que participan en nuestro programa:
+RootstockLabs aims to meet the following SLAs for hackers participating in our program:
 
-- Tiempo hasta la primera respuesta (de envío del informe) - 5 días hábiles
-- Tiempo de prueba (de envío del informe) - 7 días laborables
-- Tiempo de recompensa (de triage) - 15 días hábiles
+- Time to first response (from report submit) - 5 business days
+- Time to triage (from report submit) - 7 business days
+- Time to bounty (from triage) - 15 business days
 
-Nuestro objetivo es mantenerle informado sobre el progreso a lo largo del proceso.
+We aim to keep you informed about the progress throughout the process.
 
-### Política de divulgación
+### Disclosure Policy
 
-- Sigue las [pautas de revelación de HackerOne](https://www.hackerone.com/disclosure-guidelines).
-- La divulgación pública de una vulnerabilidad hace que no sea elegible para una recompensa. Si el usuario reporta la vulnerabilidad a otros equipos de seguridad (e. . Ethereum o ETC, pero reporta a RootstockLabs con un retraso considerable, entonces RootstockLabs puede reducir o cancelar la recompensa.
+- Follow HackerOne's [disclosure guidelines](https://www.hackerone.com/disclosure-guidelines).
+- Public disclosure of a vulnerability makes it ineligible for a bounty. If the user reports the vulnerability to other security teams (e.g. Ethereum or ETC) but reports to RootstockLabs with considerable delay, then RootstockLabs may reduce or cancel the bounty.
 
-### Ámbito y reglas
+### Scope and Rules
 
-Visite la [Sección de Ámbito en Hackerone](https://hackerone.com/rootstocklabs/policy_scopes) para ver el alcance / fuera del alcance de la vulnerabilidad, y las reglas del programa.
+Visit the [Scope Section on Hackerone](https://hackerone.com/rootstocklabs/policy_scopes) to view the scope / out of scope vulnerability, and the program rules.
 

@@ -1,50 +1,50 @@
 ---
 sidebar_label: MacOS
 sidebar_position: 400
-title: Cómo compilar y ejecutar un nodo RSKj en Mac OS
+title: How to compile and run an RSKj node on Mac OS
 tags:
   - rsk
   - rskj
-  - nodo
-  - contribuir
+  - node
+  - contribute
   - mac
   - osx
-description: Cómo compilar y ejecutar un nodo RSKj en Mac OSX. Instalar pre-requisites. Obtener código fuente. Asegurar la cadena de seguridad. Obtener dependencias externas. Compilar y ejecutar. Configurando su IDE.
+description: How to compile and run an RSKj node on Mac OSX. Installing pre-requisites. Get source code. Ensure security chain. Get external dependencies. Compile and run. Configuring your IDE.
 ---
 
-Aquí tiene los pasos para compilar y ejecutar un nodo Rootstock en Mac.
+Here you have the steps to compile and run an Rootstock node on Mac.
 
-## Requisitos previos
+## Pre-requisites
 
-En primer lugar, necesitará instalar:
+First of all, you will need to install:
 
-| Dependencia                                                                                            | Detalles                                                                                                                                                                                        |
-| ------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Git para Mac](https://git-scm.com/download/mac)                                                       | Descargar esta herramienta de línea de comandos de Git                                                                                                                                          |
-| [Java 17 JDK](https://docs.oracle.com/en/java/javase/17/install/installation-jdk-linux-platforms.html) | Siga los pasos para instalar Java. Para comprobar si la instalación ha ido correctamente, compruebe la versión con el comando: `java -version`. |
+| Dependency                                                                                             | Details                                                                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Git for Mac](https://git-scm.com/download/mac)                                                        | Download this Git command line tool                                                                                                                                         |
+| [Java 17 JDK](https://docs.oracle.com/en/java/javase/17/install/installation-jdk-linux-platforms.html) | Follow the steps to install Java. To check if installation went correctly, check the version with command: `java -version`. |
 
-IDs recomendados:
+Recommended IDEs:
 
-- [Comunidad IDEA de IntelliJ](https://www.jetbrains.com/idea/download/#section=linux)
-- [Codigo Visual Studio](https://code.visualstudio.com/)
+- [IntelliJ IDEA Community](https://www.jetbrains.com/idea/download/#section=linux)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
-Para completar la instalación de Java necesitas configurar la variable de entorno `JAVA_HOME`.
-Tienes que ejecutar los siguientes comandos en la terminal:
+To complete Java installation you need to configure the `JAVA_HOME` environment variable.
+You have to run the following commands on terminal:
 
 ```bash
-./usr/libexec/java_home
+➜ /usr/libexec/java_home
 
-.export JAVA_HOME=`/usr/libexec/java_home`
+➜ export JAVA_HOME=`/usr/libexec/java_home`
 
-.launchctl setenv JAVA_HOME `/usr/libexec/java_home`
+➜ launchctl setenv JAVA_HOME `/usr/libexec/java_home`
 
 ```
 
-## Obtener el código fuente
+## Get the source code
 
-Usando la herramienta Git de línea de comandos instalada, necesita recuperar (o clonar) el código fuente de RSKj Github de [here](https://github.com/rsksmart/rskj).
+Using the installed command-line tool Git, you need to retrieve (or clone) the RSKj Github source code from [here](https://github.com/rsksmart/rskj).
 
-Ejecutar estos comandos en la línea de comandos de Git:
+Run these commands on Git command line:
 
 ```shell
 git clone --recursive https://github.com/rsksmart/rskj.git
@@ -52,168 +52,168 @@ cd rskj
 git checkout tags/LOVELL-7.0.0 -b LOVELL-7.0.0
 ```
 
-_Nota:_ Es mejor descargar el código en una ruta corta.
+_Note:_ It is better to download the code into a short path.
 
-## Asegurar la cadena de seguridad
+## Ensure the security chain
 
-[Asegurar la cadena de seguridad](/node-operators/setup/security-chain/) del código fuente descargado.
+[Ensure the security chain](/node-operators/setup/security-chain/) of the downloaded source code.
 
-## Obtener dependencias externas
+## Get external dependencies
 
-Antes de lanzar IntelliJ IDEA, hay un paso importante.
-Navega en tu directorio clonado de RSKj y luego inicia `configure.sh` con el siguiente comando de terminal:
+Before you can launch IntelliJ IDEA, there is an important step.
+Browse in your RSKj cloned directory and then launch `configure.sh` with the following terminal command:
 
 ```shell
 ./configure.sh
 ```
 
-Esto descargará y establecerá componentes importantes (p.e. Envoltura de gradle).
+This will download and set important components (e.g. Gradle Wrapper).
 
-## Configuración IDEA de IntelliJ
+## IntelliJ IDEA setup
 
-### Compilando el nodo
+### Compiling the node
 
-Ahora, puedes lanzar IntelliJ IDEA.
-Cuando se inicia IntelliJ IDEA, deberías tener una ventana con diferentes opciones.
+Now, you can launch IntelliJ IDEA.
+When IntelliJ IDEA is launched you should have a window with different options.
 
-- Elegir _Importar proyecto_.
-- Navega en el RskJ descargado código del archivo `rskj\build.gradle` y selecciónalo. Haz clic en _NEXT_.
-- Dentro del cuadro de diálogo, seleccione _Usar envoltorio de gradle predeterminado_ y luego haga clic en _Finalizar_.
-   _Mantener IntelliJ IDEA abierto_.
+- Choose _Import project_.
+- Browse in the RskJ downloaded code the file `rskj\build.gradle` and select it. Click _NEXT_.
+- Within the dialog select _Use default gradle wrapper_ and then click _Finish_.
+   _Keep IntelliJ IDEA open_.
 
 ![img](/img/rsk/howToInstallAndRun/IdeaRskJWelcome.png)
 
-#### Configuración de compilación/ejecución de IDEA
+#### IDEA Build/Run configuration
 
 We need to create a new configuration profile to run the node from IDEA.
 That can be done by clicking on _Run_ -> _Edit Configurations_ or as shown in the following picture:
 
 ![img](/img/rsk/howToInstallAndRun/EditConfigs.png)
 
-A continuación, establezca las opciones como se muestra a continuación:
+Then set the options as shown below:
 
 ![img](/img/rsk/howToInstallAndRun/AddNewConfig.png)
 
-- Clase principal: `co.rsk.Start`
-- Directorio de trabajo: `/path-to-code/rskJ`
-- Usa classpath del módulo: `rskj-core_main`
+- Main Class: `co.rsk.Start`
+- Working directory: `/path-to-code/rskJ`
+- Use classpath of module: `rskj-core_main`
 - JRE need to be set as: `Default (17 - SDK of 'rsk-core_main' module)`
 
-#### Ejecutar el nodo
+#### Running the node
 
-Estamos listos para ejecutar el nodo usando IDEA, simplemente pulse el botón _Start_ (flecha verde) a la derecha de la configuración que acaba de crear.
+We are ready to run the node using IDEA, just press the _Start_ (green arrow) button at the right of the configuration just created.
 
 ![img](/img/rsk/howToInstallAndRun/Run.png)
 
-Si todo está bien debería ver la información de depuración como esa:
+If everything is OK you should see the debug information like that:
 
 ![img](/img/rsk/howToInstallAndRun/Running.png)
 
-¡Y sí! ¡Felicidades! Ahora estás ejecutando un nodo local Rootstock :)
+And yes! Congratulations! Now you're running a local Rootstock node :)
 
-Te has unido a Mainnet por defecto.
+You're joined to Mainnet by default.
 
-Si desea cambiar la red, agregar:
+If you want to switch the network, add:
 
-- Para Testnet: `--testnet`
-- Para lamentar: `--regtest`
+- For Testnet: `--testnet`
+- For Regtest: `--regtest`
 
-Dentro del campo `Argumentos del programa` en la configuración de ejecución.
+Inside the field `Program arguments` in your run configuration.
 
-## Configuración del código Visual Studio
+## Visual Studio Code setup
 
-### Plugins recomendados
+### Recommended Plugins
 
-- [Pack de extensión para Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack).
-- [Plugin de Gradle](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-gradle)
+- [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack).
+- [Gradle Plugin](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-gradle)
 
-#### Archivos de configuración de Visual Studio:
+#### Visual Studio Configuration Files:
 
-Para configurar la configuración de JDK, usamos `.vscode/settings.json`. Aquí podemos configurar la última versión de JDK para [Pack de extensiones para Java](https://marketplace. isualstudio.com/items?itemName=vscjava.vscode-java-pack), luego use la versión recomendada para RSKj, por ejemplo:
+In order to setup JDK configuration, we use `.vscode/settings.json`. Here we can setup the latest JDK for [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack), then use the recommended version for RSKj, for instance:
 
 **.vscode/settings.json**
 
 ```text
 {
    "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home",
-   "java.configuration. untimes": [
+   "java.configuration.runtimes": [
       {
-        "name": "JavaSE-1. ",
-        "ruta": "/Library/Internet Plug-Ins/JavaAppletPlugin. lugin/Contents/Home",
+        "name": "JavaSE-1.8",
+        "path": "/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home",
         "default": true
       },
       {
         "name": "JavaSE-17",
-        "ruta": "/Library/Java/JavaVirtualMachines/temurin-17. dk/Contenidos/Inicio",
+        "path": "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home",
       },
     ]
 }
 ```
 
-En este ejemplo, hemos configurado `Java 17` para [Pack de extensiones para Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack) para funcionar como se esperaba y el compilador de Java predeterminado es `Java 1.8`.
+In this example, we have setup `Java 17` for [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack) to work as expected and the default java compiler is `Java 1.8`.
 
-Para listar estas rutas se puede ejecutar:
+In order to list these paths you can run:
 
 ```bash
 /usr/libexec/java_home -V
 ```
 
-o
+or
 
 ```bash
 whereis java
 ```
 
-Tenga en cuenta que la ruta puede variar dependiendo de cómo la instaló.
+Be aware that the path may vary depending on how you installed it.
 
-Para construir, ejecutar o depurar RSKj, usamos `.vscode/launch.json`. Aquí podemos configurar los comandos que se usarán para ejecutar nuestra aplicación, por ejemplo:
+In order to build, run or debug RSKj, we use `.vscode/launch.json`. Here we can setup the commands that will be used to run our application, for instance:
 
 **.vscode/launch.json**
 
 ```text
 {
-    // Utilice IntelliSense para aprender sobre posibles atributos.
-    // Aplique para ver las descripciones de los atributos existentes.
-    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2. ",
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
     "configurations": [
         {
             "type": "java",
-            "nombre": "Ejecutar RSK Start",
-            "solicitud": "lanzar",
-            "mainClass": "co. sk.Start",
-            "args" : "--testnet -Xkeyvalue. atasource=leveldb"
+            "name": "Run RSK Start",
+            "request": "launch",
+            "mainClass": "co.rsk.Start",
+            "args" : "--testnet -Xkeyvalue.datasource=leveldb"
         }
     ]
 }
 ```
 
-En este ejemplo vamos a ejecutar la aplicación con los siguientes argumentos: `--testnet -Xkeyvalue.datasource=leveldb`.
+In this example we are going to run the application with the following arguments: `--testnet -Xkeyvalue.datasource=leveldb`.
 
-#### Ejecutar el proyecto
+#### Running the project
 
-Estamos listos para ejecutar el nodo usando Visual Studio Code, seleccione su configuración desde `launch.json` dentro de `Ejecutar y Debug`.
+We are ready to run the node using Visual Studio Code, select your configuration from `launch.json` within `Run and Debug`.
 
 ![img](/img/rsk/howToInstallAndRun/VSCode_Launch.png)
 
-Haga clic en `start (icono de reproducción verde a la izquierda de su nombre de configuración)`.
+Click on `start (green play icon at the left of your configuration name)`.
 
 ![img](/img/rsk/howToInstallAndRun/VSCode_Run.png)
 
-Un menú de herramientas de depuración aparece en la parte superior de la ventana IDE, ¡si pudiera ejecutar el nodo paso a paso!
+A debug tools menu shows up at the top of the IDE window, were you could run the node step by step!
 
-#### Construyendo el proyecto con Gradle en Visual Studio Code
+#### Building the project with Gradle in Visual Studio Code
 
-Para construir el proyecto usando `Gradle`, podemos simplemente ir a la pestaña correspondiente. En la pestaña, deberíamos ser capaces de ver todas las configuraciones disponibles de `Gradle` desde la aplicación. Seleccione el proyecto a construir y haga doble clic en el `Gradle Task` deseado.
+In order to build the project using `Gradle`, we can simply go to the respective tab. On tab, we should be able to see all available `Gradle` configurations from the application. Select the project to be built and double-click the desired `Gradle Task`.
 
 ![img](/img/rsk/howToInstallAndRun/VSCode_Gradle.png)
 
-#### Pruebas en Visual Studio Code
+#### Testing in Visual Studio Code
 
-Para ejecutar las pruebas, podemos simplemente ir a la pestaña `Testing` donde puedes ver todas las pruebas. También podemos ir directamente al archivo de prueba y hacer clic derecho en el icono a la izquierda de una declaración de una prueba y luego decidir ejecutar o depurar la prueba.
+In order to run tests, we can simply go to the `Testing` tab where you can see all the tests. We can also go directly to the test file and right-click the icon at the left of a declaration of a test and then decide to either run or debug the test.
 
 ![img](/img/rsk/howToInstallAndRun/VSCode_Test_Debug.png)
 
-## ¿Algún problema?
+## Any problems?
 
-Échale un vistazo a la [sección de solución de problemas](/node-operators/troubleshooting/), ¡espero que ayude!
+Check out the [troubleshooting section](/node-operators/troubleshooting/), hope it helps!

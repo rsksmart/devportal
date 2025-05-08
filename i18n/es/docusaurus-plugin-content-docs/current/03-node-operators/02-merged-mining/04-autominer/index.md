@@ -1,62 +1,62 @@
 ---
-sidebar_label: Automóvil
-title: Ejecutar con autominer (Ganache-like)
+sidebar_label: Autominer
+title: Run with autominer (Ganache-like)
 tags:
   - rsk
   - rskj
   - rootstock
-  - nodo
-  - configuración
-description: Aprende cómo ejecutar el nodo Rootstock con autominer - similar a la configuración predeterminada de Ganache
+  - node
+  - config
+description: Learn how to run the Rootstock node with autominer - similar to Ganache default config
 ---
 
-[Ganache](https://trufflesuite.com/docs/ganache/quickstart/) la red local se ejecuta como lo que Rootstock (RSK) llama `autominer mode`, él:
+[Ganache](https://trufflesuite.com/docs/ganache/quickstart/) local network runs like what Rootstock (RSK) calls `autominer mode`, it:
 
-- Crea bloques cuando se envían nuevas transacciones al nodo
-- No se crearán bloques si no se envían transacciones
-- Permite minar bloques manualmente a través de RPC
-- (opcionalmente) Borrar la base de datos al reiniciar
+- Creates blocks when new transactions are sent to the node
+- Will not create blocks if no transactions are sent
+- Allows to mine blocks manually via RPC
+- (optionally) Delete the database on restart
 
-Para configurar el nodo, vamos a:
+To configure the node, we are going to:
 
-1. Ejecutarlo en modo `--regtest`
-2. Usar una configuración personalizada para activar el autominer
+1. Run it in `--regtest` mode
+2. Use a custom config to activate the autominer
 
-La configuración que necesitamos utilizar es:
+The configuration we need to use is:
 
 ```
-miner.client.autoMine = verdadero
+miner.client.autoMine = true
 ```
 
-Crea un archivo `autominer.conf` en la raíz del repositorio (u otro dir., recuerda usar la ruta correcta después)
+Create a `autominer.conf` file in the root of the repo (or other dir., remember to use the correct path afterwards)
 
-Esta opción puede activarse cuando se utiliza el nodo en diferentes modos
+This option can be activated when using the node in different modes
 
-### Configurar Autominer en IntelliJ
+### Setup Autominer on IntelliJ
 
-Además de la configuración predeterminada (versión Java y clase principal), necesitaremos añadir
+On top of the default configuration (Java version and main class), we will need to add
 
-- Argumentos del programa: `--regtest` y opcionalmente `--reset` para reiniciar la base de datos al reiniciar
-- Opciones de MV: `-Drsk.conf.file=./autominer.conf` (o la ruta que elegiste)
+- Program arguments: `--regtest` and optionally `--reset` for database reset on restart
+- VM options: `-Drsk.conf.file=./autominer.conf` (or the path you chose)
 
-Debería verse así:
+It should look like this:
 
 ![autominer_inellij_config](/img/rsk/autominer_intellij_config.png)
 
-### Configurar Autominer en CLI
+### Setup Autominer on CLI
 
-Para configurar el autominer en CLI, utilice el comando de abajo;
+To setup autominer on CLI, use the command below;
 
-> Utilice esto si está corriendo con JAR.
+> Use this if you are running with JAR.
 
 ```java
 java -cp rskj-core-4.1.0-HOP-all.jar -Drsk.conf.file=./autominer.conf co.rsk.Start --regtest --reset
 ```
 
-## Resultado
+## Result
 
-¡Ahora tienes un nodo Rootstock corriendo localmente! Sólo creará bloques para nuevas transacciones, o arbitrariamente usando la llamada RPC `evm_mine`.
+Now you have an Rootstock node running locally! It will create blocks only for new transactions, or arbitrarily by using the `evm_mine` RPC call.
 
-Ver la imagen gif a continuación, por ejemplo, sobre cómo hacer esto;
+See gif image below for example on how to do this;
 
 ![autominer_demo](/img/rsk/autominer_demo.gif)

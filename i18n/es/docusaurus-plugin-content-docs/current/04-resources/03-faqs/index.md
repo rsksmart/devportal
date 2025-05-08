@@ -1,20 +1,20 @@
 ---
-sidebar_label: Preguntas frecuentes
+sidebar_label: FAQs
 sidebar_position: 8
-title: Preguntas frecuentes
+title: Frequently Asked Questions
 tags:
-  - recursos
+  - resources
   - rsk
-  - preguntas frecuentes
-  - ayuda
-  - soporte
+  - faqs
+  - help
+  - support
   - rootstock
-description: Preguntas frecuentes sobre Rootstock y RIF
+description: Explore frequently asked questions about Rootstock and RIF
 ---
 
-Estas son algunas preguntas frecuentes acerca de Rootstock y RIF Platforms.
+Here are some frequently asked questions about the Rootstock and RIF Platforms.
 
-## Acerca de Rootstock
+## About Rootstock
 
 ```mdx-code-block
 <Accordion>
@@ -80,7 +80,7 @@ Estas son algunas preguntas frecuentes acerca de Rootstock y RIF Platforms.
 </Accordion>
 ```
 
-## Rootstock vs Otras Plataformas
+## Rootstock vs Other Platforms
 
 ```mdx-code-block
 <Accordion>
@@ -131,7 +131,7 @@ Estas son algunas preguntas frecuentes acerca de Rootstock y RIF Platforms.
 </Accordion>
 ```
 
-## Rootstock y RIF Token
+## Rootstock and RIF Token
 
 ```mdx-code-block
 <Accordion>
@@ -191,7 +191,7 @@ Estas son algunas preguntas frecuentes acerca de Rootstock y RIF Platforms.
 </Accordion>
 ```
 
-## Características y funcionalidad de Rootstock
+## Rootstock Features and Functionality
 
 ```mdx-code-block
 <Accordion>
@@ -255,7 +255,7 @@ Estas son algunas preguntas frecuentes acerca de Rootstock y RIF Platforms.
 </Accordion>
 ```
 
-## Servicios de Rootstock y RIF
+## Rootstock and RIF Services
 
 ```mdx-code-block
 <Accordion>
@@ -313,7 +313,7 @@ Estas son algunas preguntas frecuentes acerca de Rootstock y RIF Platforms.
 </Accordion>
 ```
 
-## Seguridad y escalabilidad de Rootstock
+## Rootstock Security and Scalability
 
 ```mdx-code-block
 <Accordion>

@@ -1,55 +1,55 @@
 ---
-title: Actualizando el nodo
-sidebar_label: Actualizando el nodo
+title: Updating the Node
+sidebar_label: Updating the Node
 sidebar_position: 200
 tags:
   - rsk
   - rskj
-  - nodo
-  - actualizar
-  - versión
+  - node
+  - update
+  - version
   - rootstock
-description: Cómo introducir reglas de consenso cambia usando actualizaciones de red en un nodo RSK. Qué hacer.Añadiendo una nueva regla. Ejecutando pruebas con nuevas reglas.
+description: How to introduce consensus rules changes using network upgrades on an RSK node. What to consider. Adding a new rule. Running tests with new rules.
 ---
 
-## 1. Descargar rskj
+## 1. Download rskj
 
-Descarga la última versión del [repositorio de Github](https://github.com/rsksmart/rskj/releases).
+Download the latest release from the [Github repo](https://github.com/rsksmart/rskj/releases).
 
-## 2. Actualizar archivo jar
+## 2. Update jar file
 
-Ten en cuenta que `PREVIOUS` y `NEW` se refieren a números de versión.
+Note that `PREVIOUS` and `NEW` refer to version numbers.
 
 ```bash
 cd /usr/share/rsk
-sudo servicio rsk stop
+sudo service rsk stop
 sudo mv rsk.jar rsk-PREVIOUS.jar
 sudo mv rskj-core-NEW-all.jar rsk.jar
 ```
 
-## 3. Limpiar directorio de log
+## 3. Clean up log directory
 
-Este paso es opcional.
+This step is optional.
 
 ```bash
 sudo mkdir /var/log/rsk/PREVIOUS/
 sudo mv /var/log/rsk/rsk* /var/log/rsk/PREVIOUS/
-sudo servicio rsk start
+sudo service rsk start
 ```
 
-## 4. Validar el servicio se ejecuta normalmente
+## 4. Validate service is running normally
 
-Comprobar registros:
+Check logs:
 
 ```bash
 tail -f /var/log/rsk/rsk.log
 ```
 
-Compruebe que Blockchain se está moviendo hacia adelante, y añadiendo bloques:
+Check that Blockchain is moving forward, and adding blocks:
 
 ```bash
-curl -s -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"2.0","method":"eth_blockNumber", "params": {}, "id":123}' http://127. .0.1:4444 | jq .result | tr -d '"' | awk '{print "printf \"%d\\n\" "$0}' | sh
+curl -s -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"2.0","method":"eth_blockNumber", "params": {},  "id":123}' http://127.0.0.1:4444 | jq .result | tr -d '"' | awk '{print "printf \"%d\\n\" "$0}' | sh
 ```
 
-Si ejecutas este comando un par de veces y el número de bloque aumenta,
-significa que también está sincronizando correctamente.
+If you run this command a few times and the block number is increasing,
+it means it is syncing correctly too.

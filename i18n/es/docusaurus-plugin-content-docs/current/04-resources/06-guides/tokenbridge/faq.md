@@ -1,19 +1,19 @@
 ---
 sidebar_position: 304
-sidebar_label: FAQs del Puente Token
-title: FAQs del Puente Token
+sidebar_label: Token Bridge FAQs
+title: Token Bridge FAQs
 tags:
-  - recursos
+  - resources
   - tokenbridge
-  - cadena de bloques
-  - puentes
-  - fichas
+  - blockchain
+  - bridges
+  - tokens
   - ethereum
   - rootstock
   - rsk
 ---
 
-Encuentre una lista de las preguntas más frecuentes sobre el puente Token Bridge.
+Find a list of frequently asked questions about the Token Bridge.
 
 ```mdx-code-block
 <Accordion>

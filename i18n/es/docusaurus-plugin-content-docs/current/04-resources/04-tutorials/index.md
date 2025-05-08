@@ -1,16 +1,16 @@
 ---
 sidebar_position: 4
-title: Tutoriales
-sidebar_label: Tutoriales
+title: Tutorials
+sidebar_label: Tutorials
 tags:
   - rsk
   - rootstock
-  - principiante
-  - inicio rápido
-  - avanzado
-  - puerto a stock raíz
-  - tutoriales
-description: Tutoriales y recursos de aprendizaje
+  - beginner
+  - quick starts
+  - advanced
+  - port to rootstock
+  - tutorials
+description: Tutorials and learning resources
 ---
 
 ```mdx-code-block

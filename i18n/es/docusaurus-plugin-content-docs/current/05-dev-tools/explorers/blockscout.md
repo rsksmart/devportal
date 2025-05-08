@@ -1,103 +1,103 @@
 ---
 sidebar_position: 4
 sidebar_label: Blockscout
-title: Comienza con el Explorador de Blockscout Rootstock
+title: Get Started with Rootstock Blockscout Explorer
 tags:
   - rsk
-  - explorador
+  - explorer
   - rootstock
   - Blockscout
-  - contratos inteligentes
-  - transacciones
-  - herramientas
+  - smart contracts
+  - transactions
+  - tools
 ---
 
 [Blockscout](https://rootstock.blockscout.com/) is a robust open-source tool for exploring transactions on any EVM blockchain, including Rootstock, the leading Bitcoin sidechain1. With Blockscout, you can access in-depth information, verify and interact with smart contracts, create and manage your account, view advanced statistics, and more. It is currently supported on <Shield label="mainnet" title="testnet" tooltip="Supported on Mainnet and Testnet" color="orange" />
 
 <div align="center"><img width="100%" src="/img/tools/explorer/blockscout/blockscout-1.png" alt="Roostock blockscout page"/></div>
 
-Para usar Blockscout con Rootstock, visita [Rootstock Block Explorer](https://rootstock.blockscout.com/), donde puedes ver los últimos bloques, transacciones, y direcciones en la red Rootstock.
+To use Blockscout with Rootstock, visit the [Rootstock Block Explorer](https://rootstock.blockscout.com/), where you can see the latest blocks, transactions, and addresses on the Rootstock network.
 
-### Buscar información específica
+### Search for specific information
 
-Puede buscar una transacción específica introduciendo la dirección de la billetera, número de bloque de transacción hash o token en la barra de búsqueda en el panel superior de la página de Rootstock Blockscout.
+You can look up a specific transaction by entering the wallet address, transaction hash block number, or token in the search bar at the top pane of the Rootstock Blockscout page.
 
 <div align="center"><img width="100%" src="/img/tools/explorer/blockscout/blockscout-search.png" alt="search section"/></div>
 
-### Reseñas
+### Overviews
 
-Las cuadrículas que se muestran debajo de la barra de búsqueda muestran una visión general de varios componentes en la plataforma Rootstock. Puede ver los bloques totales en la red y las transacciones totales. Puede hacer clic en la cuadrícula correspondiente para ver la lista de bloques o transacciones. De la misma manera, las rejillas presentan otros detalles como el promedio de tiempo de bloque, número de direcciones de cartera, gas actual y BTC total bloqueado en el sistema de Rootstock de 2 vías.
+The grids below the search bar show an overview of various components on the Rootstock platform. You can see the total blocks on the network and the total transactions. You can click the respective grid to view the block list or transactions. Likewise, the grids present other details like the average block time, number of wallet addresses, current gas, and total BTC locked in the Rootstock 2-way peg.
 
 <div align="center"><img width="100%" src="/img/tools/explorer/blockscout/blockscout-grids.png" alt="overview grids"/></div>
 
-### Vista de gráfico
+### Chart view
 
-De forma predeterminada, el gráfico debajo de las cuadrículas muestra un gráfico de línea de las transacciones diarias. Puede cambiar para ver una gráfica de línea del precio y la tapa del mercado haciendo clic en los botones, respectivamente.
+By default, the chart below the grids shows a line graph of the Daily transactions. You can switch to see a line graph of RBTC price and market cap by clicking on the buttons, respectively.
 
 <div align="center"><img width="100%" src="/img/tools/explorer/blockscout/blockscout-charts.png" alt="chart view"/></div>
 
-### Últimas transacciones/bloques
+### Latest transactions/blocks
 
-La siguiente sección de la página muestra una lista de los últimos bloques de la red en el lado izquierdo y una lista de las últimas transacciones en la derecha, como se muestra a continuación. Puede ver la lista completa de bloques o transacciones haciendo clic en "ver todos los bloques" o "ver todas las transacciones" al final de la lista.
+The next section on the page shows a list of the latest blocks on the network on the left side and a list of the latest transactions on the right, as shown below. You can view the full list of blocks or transactions by clicking "view all blocks" or "view all transactions" at the end of the list.
 
 <div align="center"><img width="100%" src="/img/tools/explorer/blockscout/blockscout-latests.png" alt="list of latest transactions/blocks"/></div>
 
-### Explorando el blockchain
+### Exploring the blockchain
 
-Aparte de la visión general en la página principal de Rooststock Blockscout, puede ver otros detalles en la cadena de bloques haciendo clic en "Blockchain" en el panel del menú izquierdo y seleccionando las opciones apropiadas. Esto incluye contratos inteligentes soportados en Rootstock, que puede ver seleccionando la opción de contratos verificados.
+Aside from the overview on the Rooststock Blockscout main page, you can view other details on the Blockchain by clicking "Blockchain" on the left menu pane and selecting the appropriate options. This includes supported smart contracts on Rootstock, which you can view by selecting the verified contracts option.
 
 <div align="center"><img width="100%" src="/img/tools/explorer/blockscout/blockscout-explore.png" alt="blockchain menu"/></div>
 
-### Tokens en Rootstock
+### Tokens on Rootstock
 
-Puede ver una lista de las fichas ERC y ERC-721 en la red Rootstock haciendo clic en las fichas del menú de la izquierda. Puede comprobar los detalles de cada ficha haciendo clic en el nombre de la ficha.
+You can view a list of ERC-20 and ERC-721 tokens on the Rootstock network by clicking on the Tokens from the left menu. You can check the details of each token by clicking on the token name.
 
 <div align="center"><img width="100%" src="/img/tools/explorer/blockscout/blockscout-tokens.png" alt="list of tokens"/></div>
 
-### Gráficos y estadísticas
+### Charts and stats
 
-Seleccione la opción Cartas y estadísticas en el menú de la izquierda para ver varias estadísticas avanzadas y representaciones visuales de datos en la plataforma Rootstock. Estas incluyen estadísticas generales de la cadena de bloques, Cuentas, Transacciones, Bloques, Contractos, Gas, etc.
+Select the Charts & stats option on the left menu to view various advanced statistics and visual representations of data on the Rootstock platform. These include general blockchain stats, Accounts, Transactions, Blocks, Contracts, Gas, and so on.
 
 <div align="center"><img width="100%" src="/img/tools/explorer/blockscout/blockscout-tokens.png" alt="charts and blockchain stats"/></div>
 
-### API de Blockscout
+### Blockscout API
 
-Blockscout le permite consultar programáticamente varios detalles de la red Rootstock a través de la API. Puede acceder a la API de Blockscout haciendo clic en el botón "API" en la parte inferior de la página, donde puede encontrar documentación y ejemplos de uso de la API para varios propósitos.
+Blockscout allows you to programmatically query various details from the Rootstock network via the API. You can access the Blockscout API by clicking on the "API" button at the bottom of the page, where you can find documentation and examples of using the API for various purposes.
 
 <div align="center"><img width="100%" src="/img/tools/explorer/blockscout/blockscout-api.png" alt="api documentation"/></div>
 
-Aquí hay un ejemplo básico de cómo usar Blockscout con Rootstock en Python para obtener el último número de bloque:
+Here's a basic example of how to use Blockscout with Rootstock in Python to get the latest block number:
 
 ```python
 import requests
 
 response = requests.get("https://rootstock.blockscout.com/api?module=block&action=eth_block_number")
-latest_block = int(response.json()['result'], 16) # Convierte hexadecimal al entero
-print(f"Último número de bloque Rootstock: {latest_block}")
+latest_block = int(response.json()['result'], 16)  # Converts hex to integer
+print(f"Latest Rootstock Block Number: {latest_block}")
 ```
 
-Este script de Python utiliza la API de Blockscout para obtener el último número de bloque en el mainnet Rootstock.
+This Python script uses the Blockscout API to fetch the latest block number on the Rootstock mainnet.
 **Response:**
 
 ```bash
-Último número de Bloque Rootstock: 6019497
+Latest Rootstock Block Number: 6019497
 ```
 
-Debes tener Python y la librería `requests` instalados para ejecutar este script.
+You must have Python and the `requests` library installed to run this script.
 
-### Verificar y publicar contratos inteligentes en Rootstock
+### Verify and publish smart contracts on Rootstock
 
-Puede verificar y publicar un contrato inteligente en la red Rootstock haciendo clic en **otro>>Verificar contrato** en el menú de la izquierda. Luego, usted proporciona la dirección del contrato y su método de verificación preferido de la lista de métodos de verificación del contrato soportado.
+You can verify and publish a smart contract on the Rootstock network by clicking **other>>Verify Contract** from the left menu. Then, you supply the contract address and your preferred verification method from the supported contract verification methods list.
 
 <div align="center"><img width="100%" src="/img/tools/explorer/blockscout/blockscout-verify.png" alt="contract verification form"/></div>
 
-### Cuenta de Blockscout
+### Blockscout account
 
-Para crear una cuenta en Blockscout, haga clic en el icono de usuario al lado del botón "Connect Wallet" en la esquina superior derecha y inicie sesión / regístrese con su cuenta de correo electrónico o de GitHub. Después de crear o iniciar sesión en tu cuenta de Blockscout puede acceder a otras opciones de menú que le permiten añadir etiquetas personalizadas a direcciones o transacciones, crear una lista de seguimiento, crear ABI personalizada, o enviar solicitudes de etiquetas públicas al equipo Rootstock. También puede acceder a sus claves API de Blockscout.
+To create an account on Blockscout, click on the user icon beside the "Connect Wallet" button at the top right corner and sign in/sign up with your email or GitHub account. After creating or signing in to your Blockscout account, you can access other menu options that allow you to add custom tags to addresses or transactions, create a watch list, create custom ABI, or submit public tags requests to the Rootstock team. You can also access your Blockscout API keys.
 
 <div align="center"><img width="100%" src="/img/tools/explorer/blockscout/blockscout-account.png" alt="account menu"/></div>
 
-## Para información adicional vea:
+## For additonal information see:
 
-- [Documentación de Hardhat](https://docs.blockscout.com)
+- [Hardhat Documentation](https://docs.blockscout.com)
 - [Github Repo](https://github.com/blockscout/blockscout)

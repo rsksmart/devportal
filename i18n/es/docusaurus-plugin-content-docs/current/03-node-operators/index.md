@@ -1,26 +1,26 @@
 ---
 sidebar_position: 1
-title: Resumen de Operadores de Nodos
-sidebar_label: Resumen
+title: Node Operators Overview
+sidebar_label: Overview
 tags:
   - rsk
   - rootstock
   - rskj
-  - nodo
-  - desarrolladores
-  - minería fusionada
-description: Aprende sobre RSKj, una implementación de nodo para el blockchain Rootstock y la minería fusionada en Rootstock.
+  - node
+  - developers
+  - merged mining
+description: Learn about RSKj, a node implementation for the Rootstock blockchain and merged mining on Rootstock.
 ---
 
-Esta sección guía a operadores de nodos que realizan operaciones mineras fusionadas o desarrolladores que buscan configurar y ejecutar el nodo Rootstock (RSKj).
+This section guides node operators performing merged mining operations or developers looking to setup and run the Rootstock node (RSKj).
 
-## Operadores de Nodos Navegantes
+## Navigating Node Operators
 
-| Recurso                                                             | Descripción                                                                                                           |
-| ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| [Configuración del nodo](/node-operators/setup/installation/)       | Configurar requerimientos, instalación, configuración y ejecutar los nodos Rootstock.                 |
-| [JSON RPC](/node-operators/json-rpc/methods/)                       | Los métodos JSON-RPC soportados por nodos Rootstock.                                                  |
-| [Minería Fusionada](/node-operators/merged-mining/getting-started/) | Cómo fusionar Rootstock usando el software de minería de Bitcoin.                                     |
-| [Nodos públicos](/node-operators/public-nodes/)                     | Nodos Rootstock: nodos públicos (Mainnet, Testnet).                |
-| [Maintenance](/node-operators/mantenimiento/network-upgrades/)      | Cómo actualizar y actualizar los nodos Rootstock.                                                     |
-| [Troubleshooting](/node-operators/troubleshooting/)                 | Aprenda cómo resolver algunos problemas conocidos o encontrados con frecuencia al configurar el nodo. |
+| Resource                                                        | Description                                                                                              |
+| --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| [Node Setup](/node-operators/setup/installation/)               | Set up requirements, installation, configuration and run the Rootstock nodes.            |
+| [JSON RPC](/node-operators/json-rpc/methods/)                   | The JSON-RPC methods supported by Rootstock nodes.                                       |
+| [Merged Mining](/node-operators/merged-mining/getting-started/) | How to merge mine Rootstock using Bitcoin mining pool software.                          |
+| [Public Nodes](/node-operators/public-nodes/)                   | Rootstock Nodes: Public nodes (Mainnet, Testnet).     |
+| [Maintenance](/node-operators/maintenance/network-upgrades/)    | How to upgrade and update the Rootstock nodes.                                           |
+| [Troubleshooting](/node-operators/troubleshooting/)             | Learn how to solve some known or frequently encountered issues when setting up the node. |

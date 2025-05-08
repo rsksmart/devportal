@@ -1,68 +1,68 @@
 ---
-sidebar_label: Versiones
+sidebar_label: Versions
 sidebar_position: 900
-title: Versiones del relé RIF
+title: RIF Relay Versions
 description: RIF Relay Versions.
 tags:
   - rif
-  - sobre
-  - relé rif
-  - guía de integración
+  - envelope
+  - rif relay
+  - integration guide
 ---
 
-La primera iteración de RIF Relay se basó en el gran trabajo realizado por el [equipo de la Red de Gasolineras](https://www.opengsn.org/).
+The first iteration of RIF Relay was based on the great work done by the [Gas Station Network team](https://www.opengsn.org/).
 
-## Versión 0.1
+## Version 0.1
 
-RIF Relay V0.1 comenzó como una bifurcación de GSN con dos objetivos en mente:
+RIF Relay V0.1 started as a fork of GSN with two goals in mind:
 
-- Ser compatible con los contratos inteligentes existentes y futuros sin necesidad de adaptar dichos contratos para que funcionen con RIF Relay.
-- Sea lo más rentable posible.
+- Be compatible with existing and future smart contracts without requiring such contracts to be adapted to work with RIF Relay.
+- Be as cost effective as possible.
 
-## Versión 0.2
+## Version 0.2
 
-### Visión general
+### Overview
 
-RIF Relay V0.2 es un rediseño de GSN. Reduce los costes de gas y simplifica la interacción entre los distintos contratos que forman parte del sistema. Esto se consigue mediante:
+RIF Relay V0.2 is a redesign of GSN. It reduces gas costs and simplifies the interaction between the different contracts that are part of the system. It achieves this by:
 
-- Despliegue seguro de proxies Smart Wallet contrafactuales para cada cuenta de usuario: esto elimina la necesidad de depender de las funciones `_msgSender()` y `_msgData()`, haciendo que los contratos existentes y futuros sean compatibles con RIF Relay sin ninguna modificación.
-- Permitir a los repetidores recibir fichas en una dirección de trabajador bajo su control y decidir qué hacer con los fondos posteriormente.
-- Reducción de los costes de gas mediante la optimización de la arquitectura GSN.
+- Securely deploying counterfactual Smart Wallet proxies for each user account: this eliminates the need for relying on `_msgSender()` and `_msgData()` functions, making existing and future contracts compatible with RIF Relay without any modification.
+- Allowing relayers to receive tokens in a worker address under their control and decide what to do with funds later on.
+- Reducing gas costs by optimizing the GSN architecture.
 
-Nuestro principal objetivo es proporcionar al ecosistema de Rootstock (RSK) los medios para permitir que las aplicaciones de blockchain y los usuarios finales (wallet-apps) paguen las tasas de transacción utilizando tokens (por ejemplo, tokens RIF), y así eliminar la necesidad de adquirir RBTC por adelantado.
+Our main objective is to provide the Rootstock (RSK) ecosystem with the means to enable blockchain applications and end-users (wallet-apps) to pay for transaction fees using tokens (e.g. RIF tokens), and thereby remove the need to acquire RBTC in advance.
 
-Es importante recordar que, como medida de seguridad, los contratos de la V0.1 desplegados en Mainnet tienen límites en las cantidades apostadas para operar; estos límites se eliminaron en la V0.2.
+It is important to recall that - as a security measure - V0.1 contracts deployed on Mainnet have limits on the staked amounts to operate; these limits were removed in V0.2.
 
-### Detalles
+### Details
 
-- El contrato RelayHub ya no recibe pagos, el pago por el servicio (en tokens) se envía ahora directamente al trabajador que retransmite la transacción en nombre del usuario.
-- El contrato RelayHub gestiona ahora el replanteo del gestor de relés.
-- Mejoras en la estimación del gas:
-    - Se ha eliminado la sobrecarga de gas de RelayHub; ya no hay validaciones contra valores codificados.
-    - Los campos de gas y gas simbólico de la solicitud pueden dejarse ahora sin definir y, en ese caso, serán estimados automáticamente por el cliente de retransmisión RIF.
-    - La estimación del gas máximo en el servidor de retransmisión RIF es ahora más precisa.
-    - Se dispone de una nueva función de utilidad para estimar el gas máximo que consumiría una transacción de retransmisión, basada en una estimación de ajuste lineal. Esto puede utilizarse en aplicaciones que no quieren firmar una carga útil cada vez que necesitan una aproximación del coste de retransmitir la transacción.
-- Las verificaciones de los pagadores se realizan fuera de la cadena para optimizar los costes de gas, por lo que los pagadores se llaman ahora Verificadores y no forman parte del flujo de retransmisión en la cadena ni gestionan pagos en absoluto.
-- Optimización del coste del gas.
-- Problemas de seguridad.
+- RelayHub contract no longer receives payments, the payment for the service (in tokens) is now sent directly to the worker relaying the transaction on behalf of the user.
+- RelayHub contract now handles relay manager staking.
+- Gas estimation improvements:
+    - Gas overhead removed from RelayHub; there are no more validations against hardcoded values.
+    - The gas and token gas fields from the request can now be left undefined, and in that case, they will automatically be estimated by the RIF Relay Client.
+    - The maximum gas estimation in the RIF Relay Server is more precise now.
+    - A new utility function is available to estimate the maximum gas a relay transaction would consume, based in a linear fit estimation. This can be used in applications that don't want to sign a payload each time they need an approximation of the cost of relaying the transaction.
+- Paymaster verifications are done off-chain to optimize gas costs, thus the paymasters are now called Verifiers and they are not part of the on-chain relay flow nor do they handle payments at all.
+- Gas cost optimization.
+- Security issues.
 
-## Versión 1
+## Version 1
 
-### Visión general
+### Overview
 
-La inclusión de un mecanismo de reparto de ingresos en el servicio RIF Relay no supone una penalización en el precio para los usuarios de RIF Relay. Modificamos la dirección utilizada para recibir el pago (en tokens) por una retransmisión (o despliegue) de transacción satisfactoria.
+Including a revenue-sharing mechanism to the RIF Relay service doesn't introduce a price penalty to the RIF Relay users. We modified the address used to receive the payment (in tokens) for a successful transaction relay (or deploy).
 
-En la implementación V0.2, el RelayRequest y el DeployRequest incluyen un atributo relayWorker para identificar qué cuenta pagó el gas. El RIF Relay SmartWallet paga directamente a esta cuenta el número de tokens negociados para el servicio Relay (o Deploy). En la V1 se eliminó el atributo relayWorker de las peticiones RelayRequest y DeployRequest. Se implementó y configuró un nuevo atributo llamado feesReceiver en el RelayServer
+In V0.2 implementation, the RelayRequest and the DeployRequest include a relayWorker attribute to identify which account paid for the gas. The RIF Relay SmartWallet pays directly to this account the number of tokens negotiated for the Relay (or Deploy) service. In V1 The relayWorker attribute was removed from the RelayRequest and DeployRequest. A new attribute called feesReceiver was implemented and configured in the RelayServer
 
-Este cambio no alteró el actual flujo de relés, manteniendo su coste como hasta ahora, y también introdujo la flexibilidad necesaria para aplicar cualquier estrategia de reparto de ingresos.
+This change did not alter the current relay flow, keeping its cost as it is today, and also introduced the flexibility to implement any revenue-sharing strategy needed.
 
-- El feesReceiver puede ser el trabajador o el contrato MultSig.
-- La SmartWallet pagará al feesReceiver. El feesReceiver guardará los fondos de cada pago del usuario.
-- Tras el pago desde la SmartWallet, el feesReceiver no realizará ninguna lógica de distribución para evitar aumentar el coste del servicio de retransmisión para el usuario.
-- Con este planteamiento, no es necesario modificar el flujo de retransmisión, por lo que la introducción de un mecanismo de reparto de ingresos no repercutirá en el precio del servicio de retransmisión.
-- Los participantes pertinentes formarán parte del contrato MultiSig.
-    - El contrato MultiSig especifica qué parte de los fondos recaudados va a cada participante (por ejemplo, el operador del servidor de retransmisión, el proveedor del monedero y el proveedor de liquidez podrían ser los participantes).
-    - Posteriormente, un proceso fuera de la cadena activará el proceso de distribución desde el contrato. Este proceso puede invocar la función de distribución una vez a la semana, al mes o cuando los fondos del contrato superen un determinado umbral.
-    - Los participantes pueden modificar los parámetros de reparto (por ejemplo, los porcentajes utilizados para el reparto entre los participantes) si están de acuerdo en los cambios concretos.
-    - Pueden existir múltiples estrategias de reparto de ingresos, idealmente una por grupo de participantes.
+- The feesReceiver could be the worker or MultSig contract.
+- The SmartWallet will pay to the feesReceiver. The feesReceiver will hold the funds of each user payment.
+- Upon payment from the SmartWallet, the feesReceiver will not perform any distribution logic to avoid increasing the cost of the relay service for the user.
+- With this approach, no changes in the relay flow are required, and thus the introduction of a revenue-sharing mechanism will not impact the price of the relay service.
+- The relevant participants will form part of the MultiSig contract.
+    - The MultiSig contract specify how much of the funds collected go to each participant (e.g., the relayServer operator, the wallet provider, and the liquidity provider could be the participants).
+    - At a later time, an off-chain process will trigger the distribution process from the contract. This process can invoke the distribution function once per week, month, or when the funds in the contract surpass a certain threshold.
+    - The participants can modify the sharing parameters (e.g., the percentages used for the distribution among the participants) if they agree on the particular changes.
+    - Multiple Revenue Sharing Strategies can exist, ideally one per group of participants.
 

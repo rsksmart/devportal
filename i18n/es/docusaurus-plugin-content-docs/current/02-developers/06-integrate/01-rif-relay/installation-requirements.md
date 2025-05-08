@@ -1,54 +1,54 @@
 ---
-sidebar_label: Configurar
+sidebar_label: Setup
 sidebar_position: 300
-title: Requisitos de instalación del relé RIF
+title: RIF Relay Installation Requirements
 description: Requirements for installing RIF Relay.
 tags:
   - rif
-  - sobre
-  - relé
-  - usuario
-  - guía
+  - envelope
+  - relay
+  - user
+  - guide
 ---
 
-Para configurar el sistema RIF Relay funcionando localmente se necesitan algunas herramientas. Todas estas herramientas son de código abierto y tienen su propia página de soporte. La funcionalidad de RIF Relay no depende de estas tecnologías y podría actualizarse o sustituirse, si fuera necesario.
+To set up the RIF Relay system running locally there are some tools that are required. All of these tools are open source and have their own support page. The functionality of RIF Relay does not depend on these technologies and could be updated or replaced, if necessary.
 
-## Requisitos de hardware
+## Hardware Requirements
 
 ```
-- **Un ordenador con arquitectura x86_64 o Apple Silicon Mac:** Se requiere un Mac o PC con arquitectura Intel x64 o chip Apple M1 (o modelos posteriores).
+- **A Computer Running x86_64 architecture or Apple Silicon Mac:** A Mac or PC with an Intel x64 architecture or Apple M1 chip (or later models) is required.
 ```
 
-## Requisitos de software
+## Software Requirements
 
 ````
-- macOS, Windows o Linux:** Para macOS, necesitarás una versión reciente compatible con Apple Silicon (arquitectura ARM) y la traducción Rosetta 2 para ejecutar aplicaciones x86_64.
-Del mismo modo, para Windows o Linux, funcionará cualquier distribución reciente que se adapte a tus preferencias o requisitos.
-- **Rosetta 2:** Esta capa de traducción permite ejecutar aplicaciones x86_64 en Apple Silicon. Es crucial para ejecutar software que aún no está optimizado para la arquitectura ARM.
-- **Homebrew:** Se trata de un gestor de paquetes para macOS que se utiliza para instalar diversos programas, incluida la versión x86_64 de Java. Dependiendo de los requisitos del software, es posible que necesites las versiones ARM y x86_64 de Homebrew.
-- **Chocolatey:** Se trata de un equivalente de Homebrew para Windows que permite instalar diversos programas, incluido Java JDK.
-- **Java Development Kit (JDK):** Una versión de Java JDK compatible con ARM (como OpenJDK para ARM).
-- **x86_64 JDK:** Para la compatibilidad con bibliotecas o aplicaciones específicas aún no disponibles para ARM, también se necesita una versión x86_64 de Java. Esto se puede instalar usando Homebrew bajo Rosetta 2.
-- Docker:** Necesitas tener `docker` y `docker-compose` instalados localmente. Si no los tienes instalados, te recomendamos que sigas las directrices de la [documentación oficial de Docker](https://docs.docker.com/get-docker/) para su instalación y actualización.
-- Node & NPM:** Utilizamos la versión `v18` de Node. Se recomienda gestionar las versiones de Node con [`nvm`](https://github.com/nvm-sh/nvm). Después de instalar nvm, ejecute estos comandos para instalar y cambiar a la versión 18 de Node:
+-	**macOS, Windows or Linux:** For macOS, you'll need a recent version that supports Apple Silicon (ARM architecture) and Rosetta 2 translation for running x86_64 applications.
+Similarly, for Windows or Linux, any recent distribution that suits your preferences or requirements will work.
+-	**Rosetta 2:** This translation layer enables x86_64 applications to run on Apple Silicon. It's crucial for running software that is yet to be optimized for ARM architecture.
+-	**Homebrew:** This is a package manager for macOS used for installing various software, including the x86_64 version of Java. Depending on the software requirements, you might need both the ARM and x86_64 versions of Homebrew.
+-  **Chocolatey:** This is a Windows equivalent of Homebrew that allows you to install various software, including Java JDK.
+-	**Java Development Kit (JDK):** An ARM-compatible version of Java JDK (like OpenJDK for ARM).
+-	**x86_64 JDK:** For compatibility with specific libraries or applications not yet available for ARM, an x86_64 version of Java is also needed. This can be installed using Homebrew under Rosetta 2.
+-	**Docker:** You need to have `docker` and `docker-compose` installed locally. If you don't have these installed, we recommend following the guidelines in the official [Docker documentation](https://docs.docker.com/get-docker/) for installation and updates.
+-	**Node & NPM:** We use Node version `v18`. It's recommended to manage Node versions with [`nvm`](https://github.com/nvm-sh/nvm). After installing nvm, run these commands to install and switch to Node version 18:
     ```bash
     nvm install 18
     nvm use 18
     ```
-    Para usar Node sin `nvm`, siga las instrucciones de instalación en la [web oficial] de Node(https://nodejs.org/en/). Tras la instalación, verifíquela ejecutando `node -v` en su línea de comandos, que mostrará la versión de Node instalada. Este paso asegura que Node está correctamente instalado en tu sistema.
-- **Ethers:** La interacción con la blockchain se realiza utilizando [Ethers v5](https://docs.ethers.org/v5/).
+    To use Node without `nvm`, follow the installation instructions on Node's [official website](https://nodejs.org/en/). After installation, verify it by executing `node -v` in your command line, which will display the installed Node version. This step ensures Node is correctly installed on your system.
+- **Ethers:** The interaction with the blockchain is done using [Ethers v5](https://docs.ethers.org/v5/).
 ````
 
-## Primeros pasos con el relé RIF
+## Getting Started with RIF Relay
 
-Para obtener una guía detallada paso a paso sobre cómo empezar a utilizar RIF Relay, consulte [Sample dApp](/developers/integrate/rif-relay/sample-dapp/).
+For a detailed step-by-step guide on getting started with RIF Relay, refer to the [Sample dApp](/developers/integrate/rif-relay/sample-dapp/).
 
-## Requisitos para el despliegue del contrato de relevo RIF
+## RIF Relay Contract Deployment Requirements
 
-### Casco
+### Hardhat
 
-- Utilizamos la versión `Hardhat` `v2.10.2` para las interacciones de blockchain. Para más detalles sobre cómo instalar Hardhat, siga las instrucciones del [sitio web de Hardhat](https://hardhat.org/hardhat-runner/docs/getting-started#installation). Utilice el prefijo `npx` para los comandos de Hardhat para garantizar el uso de la versión específica del proyecto. Verifique la instalación con `npx hardhat version`. Para la configuración, consulte `hardhat.config.ts`. Instrucciones detalladas de uso y configuración están disponibles en [Documentación de Hardhat](https://hardhat.org/docs).
+- We use `Hardhat` version `v2.10.2` for blockchain interactions. For details on how to install Hardhat, follow the instructions on the [Hardhat website](https://hardhat.org/hardhat-runner/docs/getting-started#installation). Use the `npx` prefix for Hardhat commands to ensure the use of the project-specific version. Verify the installation with `npx hardhat version`. For configuration, refer to `hardhat.config.ts`. Detailed usage and configuration instructions are available in [Hardhat's documentation](https://hardhat.org/docs).
 
-### Uso de Docker
+### Using Docker
 
-- Los componentes de RIF Relay pueden desplegarse usando Docker o localmente usando [Hardhat](#hardhat). En el repositorio se puede encontrar una guía para [RIF Relay Server](https://github.com/rsksmart/rif-relay-server#execute-as-a-docker-container).
+- RIF Relay components can be deployed using Docker or locally using [Hardhat](#hardhat). A guide for the [RIF Relay Server](https://github.com/rsksmart/rif-relay-server#execute-as-a-docker-container) can be found in the repository.

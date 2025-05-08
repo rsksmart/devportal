@@ -1,48 +1,48 @@
 ---
-title: "Conversión RBTC: Peg in y Peg out"
-sidebar_label: Entrada y salida de clavijas
+title: "RBTC Conversion: Peg in and Peg Out"
+sidebar_label: Peg In & Out
 tags:
   - rsk
-  - portainjertos
+  - rootstock
   - rbtc
-  - conversión
+  - conversion
   - peg
-  - 2 vías
-  - clavija
+  - 2-way
+  - peg-in
   - peg-out
-  - federación
+  - federation
   - powpeg
 description: Converting BTC to RBTC (peg-in) and RBTC to BTC (peg-out), for both Mainnet and Testnet.
 sidebar_position: 301
 ---
 
-En este artículo, explicamos paso a paso cómo convertir de BTC a RBTC, y viceversa.
-El proceso de conversión utiliza un mecanismo [Powpeg](/concepts/powpeg/). Por lo tanto, estas conversiones se denominan peg-ins y peg-outs.
+In this article, we explain step by step on how to convert from BTC to RBTC, and vice versa.
+The process of conversion utilises a [Powpeg](/concepts/powpeg/) mechanism. Thus, these conversions are referred to as peg-ins and peg-outs.
 
 - **Peg-in**:
-  - Conversión de BTC a RBTC
-  - Bloquea BTC en la dirección de la Federación BTC
-  - Libera RBTC en la dirección derivada de Rootstock
+  - A conversion from BTC to RBTC
+  - Locks BTC in the BTC Federation address
+  - Releases RBTC in the Rootstock derived address
 - **Peg-out**:
-  - Conversión de RBTC a BTC
-  - Bloquea RBTC en la red Rootstock
-  - Libera BTC en la red Bitcoin
+  - A conversion from RBTC to BTC
+  - Locks RBTC on the Rootstock network
+  - Releases BTC on the Bitcoin network
 
-## Compatibilidad
+## Compatibility
 
-**Los tipos de direcciones que se aceptan para la Federación son**:
+**The types of addresses that are accepted for the Federation are**:
 
-- Legado (P2PKH)
-- Compatible con Segwit (P2SH-P2WPKH)
+- Legacy (P2PKH)
+- Segwit Compatible (P2SH-P2WPKH)
 
 :::info[Note]
-En las Testnets, los símbolos de los tokens van precedidos de una "t" minúscula.
-Así, tenemos `BTC` y `RBTC` en las Mainnets, que corresponden a `tBTC` y `tRBTC` de las Testnets.
+On the Testnets, the token symbols are prefixed with a lowercase `t`.
+Thus, we have `BTC` and `RBTC` on the Mainnets, which correspond to `tBTC` and `tRBTC` of the Testnets.
 :::
 
-### Verificador de direcciones
+### Address verifier
 
-Introduzca a continuación su dirección de BTC para comprobar si puede utilizarse para pasar de BTC a RBTC.
+Enter your BTC address below to verify whether it may be used to peg in from BTC to RBTC.
 
 <AddressVerifier />
 

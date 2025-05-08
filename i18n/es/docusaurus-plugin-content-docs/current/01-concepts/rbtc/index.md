@@ -1,18 +1,18 @@
 ---
 sidebar_position: 2
-title: Smart Bitcoin RBTC Token en RBTC - BTC a RBTC
+title: Smart Bitcoin RBTC Token on RBTC - BTC to RBTC
 tags:
-  - red principal
-  - red de pruebas
-  - fichas
+  - mainnet
+  - testnet
+  - tokens
   - rbtc
   - gas
   - rsk
-  - portainjertos
-sidebar_label: Ficha RBTC
+  - rootstock
+sidebar_label: RBTC Token
 ---
 
-RBTC es el token utilizado para [pagar por la ejecución](/concepts/rbtc/gas/) de transacciones en Rootstock. Puede [convertir BTC en RBTC](conversion.md) enviando BTC a través del [Powpeg](/concepts/powpeg/) (tanto en Testnet como en Mainnet), o utilizando el [faucet en Testnet](https://faucet.rootstock.io/), o a través de intercambios descentralizados.
+RBTC is the token used to [pay for the execution](/concepts/rbtc/gas/) of transactions in Rootstock. You can [convert BTC into RBTC](conversion.md) by sending BTC through the [Powpeg](/concepts/powpeg/) (both in Testnet and Mainnet), or by using the [faucet in Testnet](https://faucet.rootstock.io/), or via decentralized exchanges.
 
 :::info[Additional Faucet Options (Please note these faucets may have daily limits)]
 
@@ -21,35 +21,35 @@ RBTC es el token utilizado para [pagar por la ejecución](/concepts/rbtc/gas/) d
 
 :::
 
-Ver [monederos soportados](/dev-tools/wallets/).
+See [supported wallets](/dev-tools/wallets/).
 
 <Button href="https://rootstock.io/rbtc/#get-rbtc">Get RBTC</Button>
 
-## RBTC (Bitcoin inteligente en Mainnet)
+## RBTC (Smart Bitcoin in Mainnet)
 
 <table >
   <tbody>
     <tr>
-      <td scope="row">Nombre de la ficha</td>
+      <td scope="row">Token Name</td>
       <td><a href="https://coinmarketcap.com/currencies/rsk-smart-bitcoin/" target="_blank">RBTC</a></td>
     </tr>
     <tr>
-      <td scope="row">Suministro total</td>
-      <td>21.000.000 RBTC</td>
+      <td scope="row">Total Supply</td>
+      <td>21,000,000 RBTC</td>
     </tr>
     <tr>
-      <td scope="row">Alimentación circulante</td>
+      <td scope="row">Circulating supply</td>
       <td><a href="https://be.explorer.rootstock.io/circulating" target="_blank">API</a></td>
     </tr>
     <tr>
-      <td scope="row">Tipo de contrato</td>
-      <td>Nativo<a href="https://explorer.rootstock.io/address/0x0000000000000000000000000000000001000006" target="_blank">(contrato Bridge</a>)</td>
+      <td scope="row">Contract Type</td>
+      <td>Native (<a href="https://explorer.rootstock.io/address/0x0000000000000000000000000000000001000006" target="_blank">Bridge contract</a>)</td>
     </tr>
     <tr>
-      <td scope="row">Cómo conseguir</td>
+      <td scope="row">How to get</td>
       <td>
         <ul>
-            <li><a href="https://rootstock.io/rbtc/#get-rbtc" target="_blank">Intercambios y puentes para obtener RBTC</a></li>
+            <li><a href="https://rootstock.io/rbtc/#get-rbtc" target="_blank">Exchanges and Bridges to get RBTC</a></li>
         </ul>
       </td>
     </tr>
@@ -63,31 +63,31 @@ Ver [monederos soportados](/dev-tools/wallets/).
   </tbody>
 </table>
 
-## tRBTC (Bitcoin inteligente en Testnet)
+## tRBTC (Smart Bitcoin in Testnet)
 
 <table >
   <tbody>
     <tr>
-      <td scope="row">Nombre de la ficha</td>
+      <td scope="row">Token Name</td>
       <td>tRBTC</td>
     </tr>
     <tr>
-      <td scope="row">Suministro total</td>
-      <td>21.000.000 tRBTC</td>
+      <td scope="row">Total Supply</td>
+      <td>21,000,000 tRBTC</td>
     </tr>
     <tr>
-      <td scope="row">Alimentación circulante</td>
+      <td scope="row">Circulating supply</td>
       <td><a href="https://be.explorer.testnet.rootstock.io/circulating" target="_blank">API</a></td>
     </tr>
     <tr>
-      <td scope="row">Tipo de contrato</td>
-      <td>Nativo<a href="https://explorer.testnet.rootstock.io/address/0x0000000000000000000000000000000001000006" target="_blank">(contrato Bridge</a>)</td>
+      <td scope="row">Contract Type</td>
+      <td>Native (<a href="https://explorer.testnet.rootstock.io/address/0x0000000000000000000000000000000001000006" target="_blank">Bridge contract</a>)</td>
     </tr>
     <tr>
-      <td scope="row">Cómo conseguir</td>
+      <td scope="row">How to get</td>
       <td>
         <ul>
-            <li><a href="https://faucet.rootstock.io" target="_blank">Grifo</a></li>
+            <li><a href="https://faucet.rootstock.io" target="_blank">Faucet</a></li>
         </ul>
       </td>
     </tr>

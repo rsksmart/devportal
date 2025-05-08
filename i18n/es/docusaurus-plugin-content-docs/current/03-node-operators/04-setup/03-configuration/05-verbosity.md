@@ -1,58 +1,58 @@
 ---
-title: Configurar Verbosidad
+title: Configure Verbosity
 sidebar_position: 500
-sidebar_label: Configurar Verbosidad
+sidebar_label: Configure Verbosity
 tags:
   - rsk
   - rskj
-  - nodo
-  - configuración
-  - operadores de nodos
+  - node
+  - config
+  - node operators
   - rootstock
   - logs
-description: Configurar RSKj para la verbosidad deseada del registro, encontrar archivos de registro y usar logback.
+description: Configure RSKj for desired log verbosity, finding log files, and using logback.
 ---
 
-Puede configurar la verbosidad de registro deseada para su instalación del nodo Rootstock en función de sus necesidades.
-Puede encontrar más información en: [Proyecto Logback](https://logback.qos.ch/index.html).
+You can configure the desired log verbosity for your Rootstock node installation according to your needs.
+More information can be found at: [Logback Project](https://logback.qos.ch/index.html).
 
-## Requisitos
+## Requirements
 
-- Nodo RSK instalado
-- Acceso SSH
-- Acceso de superusuario (`sudo`)
+- RSK Node Installed
+- SSH Access
+- SuperUser Access (`sudo`)
 
-### Dónde encontrar los archivos de registro RSK
+### Where to find RSK log files
 
-Registro en tiempo real:
+Real time log:
 
 ```shell
 /var/log/rsk/rsk.log
 ```
 
-Registros comprimidos:
+Compressed logs:
 
 ```shell
-/var/log/rsk/rskj-AAAA-MM-DD.N.log.gz
+/var/log/rsk/rskj-YYYY-MM-DD.N.log.gz
 ```
 
-## Opciones de nivel de log
+## Log level options
 
-Al configurar el nivel de registro, todos los elementos de registro de ese nivel e inferiores se escriben en el archivo de registro. En la siguiente tabla, la columna de la izquierda representa los posibles valores que puede establecer en su configuración.
+When you configure your log level, all log items for that level and below get written to the log file. In the following table, the left column represents the the possible values you can set in your configuration.
 
-![Nivel de registro](https://i.stack.imgur.com/7o9Kk.png)
+![Log Levels](https://i.stack.imgur.com/7o9Kk.png)
 
 <!-- TODO fix this image, perhaps convert to a table -->
 
-## Establecer la configuración de verbosidad deseada
+## Setting your desired verbosity configuration
 
-Es necesario editar el archivo `logback.xml` para establecer el nivel de verbosidad deseado.
+You need to edit `logback.xml` file to set your desired level of verbosity.
 
 ```bash
 sudo vi /etc/rsk/logback.xml
 ```
 
-Este archivo le permite configurar diferentes niveles de registro para diferentes partes de la aplicación.
+This file allows you to configure different log levels for different parts of the application.
 
 ```xml
     <logger name="execute" level="INFO"/>
@@ -107,35 +107,35 @@ Este archivo le permite configurar diferentes niveles de registro para diferente
     </root>
 ```
 
-- Guarda tus cambios
-- RSK `logback.xml` config observará y aplicará los cambios sin reiniciar el Nodo RSK.
-  (El observador puede tardar hasta 1 hora en notar los cambios y recargar la configuración de registro)
-- Los registros de RSK con la instalación por defecto rotarán diariamente y/o cuando el archivo de registro alcance los 100MB
+- Save your changes
+- RSK `logback.xml` config will watch and apply changes without restarting RSK Node.
+  (The watcher can take up to 1 hour to notice the changes and reload the logging configuration)
+- RSK logs with default installation will rotate on daily basis and/or when the log file reach 100MB
 
-Usando esta configuración:
+Using this configuration:
 
-- La mayoría de las áreas de la aplicación **sólo** registrarán eventos `FATAL` y `ERROR` para la mayoría de las áreas de la aplicación.
-- Las áreas `execute`, `blockvalidator`, `blockexecutor`, `web3`, `minerserver`, `pendingstate`, `blockchain`, `messageProcess`, especifican `INFO`, por lo que **sólo** registrarán eventos `FATAL`, `ERROR`, `WARN`, e `INFO`.
-- No habrá registros `DEBUG`, `INFO` y `TRACE`.
+- Most areas of the application will **only** log `FATAL` and `ERROR` events for most areas of the application.
+- The `execute`, `blockvalidator`, `blockexecutor`, `web3`, `minerserver`, `pendingstate`, `blockchain`, `messageProcess`, areas specify `INFO`, so those will **only** log `FATAL`, `ERROR`, `WARN`, and `INFO` events.
+- The will be no `DEBUG`, `INFO`, and `TRACE` logs.
 
-## Usando el archivo de configuración de logback
+## Using logback configuration file
 
-Puede descargar un ejemplo de configuración de logback [aquí](https://github.com/rsksmart/artifacts/blob/master/rskj-ubuntu-installer/config/logback.xml).
+A logback configuration example can be downloaded from [here](https://github.com/rsksmart/artifacts/blob/master/rskj-ubuntu-installer/config/logback.xml).
 
-#### Usando logback con un nodo instalado
+#### Using logback with a installed node
 
-Si está ejecutando un nodo [utilizando el release jar file](/node-operators/setup/installation/java) utilice el siguiente comando:
+If you're running a node [using the release jar file](/node-operators/setup/installation/java) use the following command:
 
 ```bash
 java -cp rskj-core-7.0.0-LOVELL-all.jar -Dlogback.configurationFile=/full/path/to/logback.xml co.rsk.Start
 ```
 
-#### Uso de logback con un nodo compilado
+#### Using logback with a compiled node
 
-Si estás ejecutando un nodo [compilando el código](/node-operators/setup/installation/java) en Opciones de VM _add_:
+If you're running a node [by compiling the code](/node-operators/setup/installation/java) on VM Options _add_:
 
 ```shell
 -Dlogback.configurationFile=/full/path/to/logback.xml
 ```
 
-> Nota: la ruta debe escribirse sin abreviaturas (ruta completa)
+> Note: path should be written without abbreviations (full path)

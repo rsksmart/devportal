@@ -4,11 +4,11 @@ sidebar_position: 2
 title: Rootstock Development Prerequisites
 tags:
   - rsk
-  - portainjertos
-  - requisitos previos
-  - configuración
-  - requisitos
-description: Requisitos mínimos de hardware para Rootstock.
+  - rootstock
+  - prerequisites
+  - setup
+  - requirements
+description: Minimum hardware requirements for Rootstock.
 ---
 
 This guide provides clear instructions for developers on the supported Solidity versions and the necessary configurations needed to ensure your smart contracts are deployed on the Rootstock network.

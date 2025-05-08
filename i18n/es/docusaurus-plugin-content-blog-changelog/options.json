@@ -1,14 +1,14 @@
 {
   "title": {
-    "message": "Registro de cambios",
+    "message": "Changelog",
     "description": "The title for the blog used in SEO"
   },
   "description": {
-    "message": "Manténgase informado sobre las últimas actualizaciones de productos en Rootstock.",
+    "message": "Stay informed about the latest product updates on Rootstock.",
     "description": "The description for the blog used in SEO"
   },
   "sidebar.title": {
-    "message": "Registro de cambios",
+    "message": "Changelog",
     "description": "The label for the left sidebar"
   }
 }

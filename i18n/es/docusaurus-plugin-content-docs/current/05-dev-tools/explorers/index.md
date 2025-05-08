@@ -6,12 +6,12 @@ description: Blockchain explorers are a special type of software that connect to
 tags:
   - hardhat
   - quick start
-  - herramientas de desarrollador
+  - developer tools
   - rsk
   - rootstock
   - ethereum
   - dApps
-  - contratos inteligentes
+  - smart contracts
 ---
 
 Blockchain explorers are a special type of software that connect to a blockchain network, and display the data from an immutable public ledger.

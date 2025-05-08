@@ -1,40 +1,40 @@
 ---
-title: Métodos de Módulo Personal
-sidebar_label: Módulo Personal
+title: Personal Module Methods
+sidebar_label: Personal Module
 sidebar_position: 300
 tags:
   - rsk
   - rskj
-  - nodo
+  - node
   - rpc
   - rpc api
-  - operadores de nodos
+  - node operators
   - rootstock
-description: Los métodos JSON-RPC soportados por nodos Rootstock.
+description: The JSON-RPC methods supported by Rootstock nodes.
 ---
 
-## cuenta personal
+## personal_lockAccount
 
-Bloquea la cuenta dada.
+Locks the given account.
 
-### Parámetros
+### Parameters
 
-1. `DATA`, 20 Bytes - dirección.
+1. `DATA`, 20 Bytes - address.
 
-#### Parámetros de ejemplo
+#### Example Parameters
 
 ```js
 params: ['0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b']
 ```
 
-##### Devuelve
+##### Returns
 
-`Boolean` - `true` si la cuenta fue bloqueada con éxito, de lo contrario `false`.
+`Boolean` - `true` if the account was successfully locked, otherwise `false`.
 
-**Ejemplo**
+**Example**
 
 ```js
-// Solicitar
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"personal_lockAccount","params":["0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b"],"id":73}'
 
 // Result
@@ -45,85 +45,85 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_lockAccount","params":[
 }
 ```
 
-## cuenta_personal
+## personal_unlockAccount
 
-Desbloquea la cuenta dada por una cantidad de tiempo.
+Unlocks the given account for a given amount of time.
 
-### Parámetros
+### Parameters
 
-1. `DATA`, 20 Bytes - dirección.
-2. `String` - La contraseña de la cuenta.
-3. `QUANTITY` - (opcional, por defecto: 1800000 milisegundos) La duración de la cuenta para permanecer desbloqueada.
+1. `DATA`, 20 Bytes - address.
+2. `String` - The passphrase of the account.
+3. `QUANTITY`  - (optional, default: 1800000 milliseconds) The duration for the account to remain unlocked.
 
-#### Parámetros de ejemplo
+#### Example Parameters
 
 ```js
 params: [
   "0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe",
   "test passphrase!",
-  "927C0" // 600000 milisegundos (10 min)
+  "927C0" // 600000 milliseconds (10 min)
 ]
 ```
 
-##### Devuelve
+##### Returns
 
-`Boolean` - `true` si la cuenta fue desbloqueada con éxito, de lo contrario `false`.
+`Boolean` - `true` if the account was successfully unlocked, otherwise `false`.
 
-##### Ejemplo
+##### Example
 
 ```js
-// Solicitar
-curl -X POST --data '{"jsonrpc":"2. ","method":"personal_unlockAccount","params":["0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe", "test passphrase!",
+// Request
+curl -X POST --data '{"jsonrpc":"2.0","method":"personal_unlockAccount","params":["0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe", "test passphrase!",
   "927C0"],"id":73}'
 
-// Resultado
+// Result
 {
   "id":1,
-  "jsonrpc": "2. ",
-  "resultado": verdadero
+  "jsonrpc": "2.0",
+  "result": true
 }
 ```
 
 ***
 
-## transacción_personal
+## personal_sendTransaction
 
-Envía una transacción sobre la API de gestión.
+Sends a transaction over the management API.
 
-### Parámetros
+### Parameters
 
-1. `Objeto` - El objeto de llamada de transacción
+1. `Object` - The transaction call object
 
-- `from`: `DATA`, 20 Bytes - (opcional) La dirección desde la que se envía la transacción.
-- `to`: `DATA`, 20 Bytes - La dirección a la que se dirige la transacción.
-- `gas`: `QUANTITY` - (opcional) Integer del gas proporcionado para la ejecución de la transacción. eth_call consume cero gas, pero este parámetro puede ser necesario para algunas ejecuciones.
-- `gasPrice`: `QUANTITY` - (opcional) Entero del precio gaseoso utilizado para cada gas pagado.
-- `value`: `QUANTITY` - (opcional) Integer del valor enviado con esta transacción.
-- `data`: `DATA` - (opcional) Hash de los parámetros codificados y de la firma del método. Para más detalles vea [Ethereum Contract ABI en la documentación de Solididad](https://solidity.readthedocs.io/en/latest/abi-spec.html).
+- `from`: `DATA`, 20 Bytes - (optional) The address the transaction is sent from.
+- `to`: `DATA`, 20 Bytes  - The address the transaction is directed to.
+- `gas`: `QUANTITY`  - (optional) Integer of the gas provided for the transaction execution. eth_call consumes zero gas, but this parameter may be needed by some executions.
+- `gasPrice`: `QUANTITY`  - (optional) Integer of the gasPrice used for each paid gas.
+- `value`: `QUANTITY`  - (optional) Integer of the value sent with this transaction.
+- `data`: `DATA`  - (optional) Hash of the method signature and encoded parameters. For details see [Ethereum Contract ABI in the Solidity documentation](https://solidity.readthedocs.io/en/latest/abi-spec.html).
 
-2. `String` - La contraseña de la cuenta actual.
+2. `String` - The passphrase of the current account.
 
-#### Parámetros de ejemplo
+#### Example Parameters
 
 ```js
 params: [{
   "from": "0xb60e8dd61c5d32be8058bb8eb970870f07233155",
   "to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567",
   "gas": "0x76c0", // 30400
-  "gasPrice": "0x9184e72a000", // 1000000000000000
+  "gasPrice": "0x9184e72a000", // 10000000000000
   "value": "0x9184e72a", // 2441406250
   "data": "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675"
 }, "test passphrase!"]
 ```
 
-##### Devuelve
+##### Returns
 
-`DATA` - El hash de la transacción.
+`DATA` - The transaction hash.
 
-\*\* Ejemplo\*\*
+\*\* Example\*\*
 
 ```js
-// Solicitar
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"personal_sendTransaction","params":[{see above}],"id":1}'
 
 // Result
@@ -134,65 +134,65 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_sendTransaction","param
 }
 ```
 
-## personal_importar_RawKey
+## personal_importRawKey
 
-Importa la clave privada dada en el almacén de claves, cifrándola con la frase.
+Imports the given private key into the key store, encrypting it with the passphrase.
 
-### Parámetros
+### Parameters
 
-1. `DATA` - Una clave privada sin cifrar (cadena hexadecimal).
-2. `String` - La contraseña de la cuenta actual.
+1. `DATA` - An unencrypted private key (hex string).
+2. `String` - The passphrase of the current account.
 
-#### Parámetros de ejemplo
+#### Example Parameters
 
 ```js
-Parámetros: [
+params: [
   "0xcd3376bb711cb332ee3fb2ca04c6a8b9f70c316fcdf7a1f44ef4c7999483295e",
-  "¡frase de contraseña de prueba!"
+  "test passphrase!"
 ]
 ```
 
-##### Devuelve
+##### Returns
 
-`DATA` - La dirección de la nueva cuenta.
+`DATA` - The address of the new account.
 
-\*\* Ejemplo\*\*
+\*\* Example\*\*
 
 ```js
-// Solicitar
-curl -X POST --data '{"jsonrpc":"2. ","method":"personal_importRawKey","params":["0xcd3376bb711cb332ee3fb2ca04c6a8b9f70c316fcdf7a1f44ef4c7999483295e",
+// Request
+curl -X POST --data '{"jsonrpc":"2.0","method":"personal_importRawKey","params":["0xcd3376bb711cb332ee3fb2ca04c6a8b9f70c316fcdf7a1f44ef4c7999483295e",
   "test passphrase!"],"id":1}'
 
 // Result
 {
   "id":1,
-  "jsonrpc": "2. ",
-  "resultado": "0x8f337bf484b2fc75e4b0436645dcc226ee2ac531"
+  "jsonrpc": "2.0",
+  "result": "0x8f337bf484b2fc75e4b0436645dcc226ee2ac531"
 }
 ```
 
 ## personal_dumpRawKey
 
-Devuelve una representación hexadecimal de la clave privada de la dirección dada.
+Returns an hexadecimal representation of the private key of the given address.
 
-### Parámetros
+### Parameters
 
-1. `DATA`, 20 Bytes - La dirección de la cuenta, dicha cuenta debe ser desbloqueada.
+1. `DATA`, 20 Bytes - The address of the account, said account must be unlocked.
 
-#### Parámetros de ejemplo
+#### Example Parameters
 
 ```js
-Parámetros: ["0xcd3376bb711cb332ee3fb2ca04c6a8b9f70c316fcdf7a1f44ef4c7999483295e"]
+params: ["0xcd3376bb711cb332ee3fb2ca04c6a8b9f70c316fcdf7a1f44ef4c7999483295e"]
 ```
 
-##### Devuelve
+##### Returns
 
-`DATA` - Una representación hexadecimal de la clave de la cuenta.
+`DATA` - A hexadecimal representation of the account's key.
 
-##### Ejemplo
+##### Example
 
 ```js
-// Solicitar
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"personal_dumpRawKey","params":["0xcd3376bb711cb332ee3fb2ca04c6a8b9f70c316fcdf7a1f44ef4c7999483295e"],"id":1}'
 
 // Result
@@ -203,66 +203,66 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_dumpRawKey","params":["
 }
 ```
 
-## cuenta_nueva personal
+## personal_newAccount
 
-Crea una nueva cuenta.
+Creates a new account.
 
-### Parámetros
+### Parameters
 
-1. `String` - La contraseña con la que cifrar esta cuenta.
+1. `String` - The passphrase to encrypt this account with.
 
-#### Parámetros de ejemplo
+#### Example Parameters
 
 ```js
-parámetros: ["¡prueba la contraseña!"]
+params: ["test passphrase!"]
 ```
 
-##### Devuelve
+##### Returns
 
-`DATA` - La dirección de la cuenta recién creada.
+`DATA` - The address of the newly created account.
 
-##### Ejemplo
+##### Example
 
 ```js
-// Solicitud
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"personal_newAccount","params":["test passphrase!"],"id":1}'
 
 // Result
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x8f337bf484b2fc75e4b0436645dcc226eee2ac531"
+  "result": "0x8f337bf484b2fc75e4b0436645dcc226ee2ac531"
 }
 ```
 
 ## personal_newAccountWithSeed
 
-Crea una nueva cuenta usando una frase de semilla.
+Creates a new account using a seed phrase.
 
-### Parámetros
+### Parameters
 
-1. `Cadena` - La frase semilla con la que cifrar esta cuenta.
+1. `String` - The seed phrase to encrypt this account with.
 
-#### Parámetros de ejemplo
+#### Example Parameters
 
 ```js
 params: ["seed"]
 ```
 
-##### Devuelve
+##### Returns
 
-`DATA` - La dirección de la cuenta recién creada.
+`DATA` - The address of the newly created account.
 
-**Ejemplo**
+**Example**
 
 ```js
-// Solicitar
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"personal_newAccountWithSeed","params":["seed"],"id":1}'
 
 // Result
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x8f337bf484b2fc75e4b0436645dcc226eee2ac531"
+  "result": "0x8f337bf484b2fc75e4b0436645dcc226ee2ac531"
 }
 ```

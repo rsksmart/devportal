@@ -1,22 +1,22 @@
 ---
-sidebar_label: Interactuar con el Front-end
+sidebar_label: Interact with the Front-end
 sidebar_position: 106
-title: Interactuar con el Front-end
-description: Aprenda a integrar su contrato inteligente Rootstock con aplicaciones front-end.
+title: Interact with the Front-end
+description: Learn how to integrate your Rootstock smart contract with front-end applications.
 tags:
-  - guías
-  - desarrolladores
-  - contratos inteligentes
+  - guides
+  - developers
+  - smart contracts
   - rsk
-  - portainjertos
-  - casco
+  - rootstock
+  - hardhat
   - dApps
   - wagmi
 ---
 
 Creating a user-friendly web interface for smart contracts on the Rootstock network enhances user interaction. Here, we'll focus on using [Wagmi](https://wagmi.sh/) and [RainbowKit](https://www.rainbowkit.com/), some popular libraries for connecting your smart contracts to a web front-end.
 
-## Configuración del proyecto
+## Project Setup
 
 1. Create a new web project. In this case, we'll be using [Next.js](https://nextjs.org/) as our web framework.
 
@@ -439,7 +439,7 @@ We're going to be editing the `page.tsx` file inside the `app` directory. Follow
 
   You just made created a dApp that allows you to send write/read transactions to the Rootstock blockchain!
 
-## Recursos
+## Resources
 
 These tools are specifically designed to make Web3 development smoother, particularly for integrating blockchain functionalities into web applications. Below is a list of key libraries and tools that were used in the article, with brief explanations:
 

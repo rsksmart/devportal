@@ -1,81 +1,81 @@
 ---
 sidebar_label: Web3.py
 sidebar_position: 109
-title: Despliegue e interacción con un contrato inteligente utilizando Web3.py
-description: Despliegue e Interacción con un Contrato Inteligente Usando Web3.py.
+title: Deploy and Interact with a Smart Contract using Web3.py
+description: Deploy and Interact with a Smart Contract Using Web3.py.
 tags:
-  - inicios rápidos
+  - quick starts
   - rsk
-  - portainjertos
+  - rootstock
   - ethereum
   - python
   - web3.py
-  - desarrolladores
-  - contratos inteligentes
+  - developers
+  - smart contracts
 ---
 
-[Web3.py](https://web3py.readthedocs.io/en/stable/) es una biblioteca Python que permite a los desarrolladores interactuar con blockchains basadas en Ethereum con Python. Rootstock dispone de una API similar a Ethereum que es totalmente compatible con las invocaciones JSON-RPC al estilo de Ethereum. Por lo tanto, los desarrolladores pueden aprovechar esta compatibilidad y utilizar la biblioteca `Web3.py` para interactuar con Rootstock de forma similar a como los desarrolladores interactúan con los contratos inteligentes en Ethereum.
+[Web3.py](https://web3py.readthedocs.io/en/stable/) is a Python library that allows developers to interact with Ethereum-based blockchains with Python. Rootstock has an Ethereum-like API available that is fully compatible with Ethereum-style JSON-RPC invocations. Therefore, developers can leverage this compatibility and use the `Web3.py` library to interact with Rootstock similar to how developers interact with smart contracts on Ethereum.
 
-En esta guía, usted aprenderá cómo utilizar la biblioteca Web3.py para implementar e interactuar con los contratos inteligentes en Rootstock.
+In this guide, you'll learn how to use the Web3.py library to deploy and interact with smart contracts on Rootstock.
 
-:::tip[Interact con portainjertos utilizando óxido].
-Consulte el tutorial sobre cómo [interactuar con Rootstock utilizando Rust](/resources/tutorials/rootstock-rust/)
+:::tip[Interact with Rootstock using Rust]
+See tutorial on how to [interact with Rootstock using Rust](/resources/tutorials/rootstock-rust/)
 :::
 
-## Requisitos previos
+## Prerequisites
 
-- Una cuenta testnet con fondos del tRBTC.
-  - [Obtener tRBTC](https://faucet.rootstock.io/).
-- Una CLAVE API del [Servicio RPC de Rootstock](https://rpc.rootstock.io/).
-- Poner en marcha el proyecto
-- Un compilador Solidity instalado -> ver [instrucciones de instalación del compilador solidity](https://docs.soliditylang.org/en/latest/installing-solidity.html)
+- A testnet account with tRBTC funds.
+  - [Get tRBTC](https://faucet.rootstock.io/).
+- An API KEY from the [Rootstock RPC Service](https://rpc.rootstock.io/).
+- Set up the project
+- A Solidity Compiler installed -> see [solidity compiler installation instructions](https://docs.soliditylang.org/en/latest/installing-solidity.html)
 
-Configure el proyecto e instale las dependencias:
+Set up the project and install dependencies:
 
 ```bash
-# crear un directorio para el proyecto
+# create a directory for the project
 mkdir web3-python-guide && cd web3-python-guide
 
-# instalar python 3.10
+# install python 3.10
 brew install python@3.10
 
-# configurar el entorno virtual de desarrollo
+# set up the development virtual environment
 python3.10 -m venv env
 source env/bin/activate
 
-# instalar dependencias
+# install dependencies
 pip install Web3 py-solc-x
 ```
 
-Instrucciones de instalación del compilador Solidity para MacOs:
+Solidity compiler installation instructions for MacOs:
 
 ```bash
 brew install solc-select
 solc-select use 0.8.19 --always-install
 
 solc --version
-# Versión: 0.8.19+commit.7dd6d404.Darwin.appleclang
+# Version: 0.8.19+commit.7dd6d404.Darwin.appleclang
 ```
 
-### Establecer secretos para el proyecto
+### Set Up Secrets for the Project
 
-Estaremos usando datos sensibles que no tienen que ser almacenados en el código, y en su lugar los almacenaremos en un archivo `.env`.
+We will be using sensitive data that doesn’t have to be stored in the code, and instead we will store them in a `.env` file.
 
-Para ello, primero vamos a instalar el paquete para leer los datos del archivo `.env`:
+For that, first lets install the package to read data from the `.env` file:
 
 ```python
 pip install python-dotenv
 ```
 
-A continuación, crearemos un archivo `.env` y añadiremos los secretos:
+Then, we will create a `.env` file and add the secrets:
 
 ```bash
-tocar .env
+touch .env
 ```
 
-añada las siguientes variables al archivo:
+add the following variables to the file:
 
-Sustituya `YOUR_APIKEY` por la clave API de su panel de control.
+Replace `YOUR_APIKEY` with the API key from your dashboard.
 
 ```bash
 # get this YOUR_APIKEY from the Rootstock RPC Service.
@@ -85,22 +85,22 @@ RPC_PROVIDER_APIKEY = '{YOUR_APIKEY}'
 ACCOUNT_PRIVATE_KEY = '{YOUR_PRIVATE_KEY}'
 ```
 
-## Despliegue de un contrato inteligente
+## Deploy a smart contract
 
-### Escribir el contrato inteligente
+### Write the smart contract
 
-El contrato que se compilará y desplegará en la siguiente sección es un contrato simple que almacena un mensaje, y permitirá establecer diferentes mensajes enviando una transacción.
+The contract to be compiled and deployed in the next section is a simple contract that stores a message, and will allow for setting different messages by sending a transaction.
 
-Puede empezar creando un expediente para el contrato:
+You can get started by creating a file for the contract:
 
 ```bash
-toque Greeter.sol
+touch Greeter.sol
 ```
 
-A continuación, añada el código Solidity al archivo:
+Next, add the Solidity code to the file:
 
 ```s
-// SPDX-Licencia-Identificador: MIT
+// SPDX-License-Identifier: MIT
 
 pragma solidity >0.5.0;
 
@@ -108,7 +108,7 @@ contract Greeter {
     string public greeting;
 
     constructor() public {
-        greeting = 'Hola';
+        greeting = 'Hello';
     }
 
     function setGreeting(string memory _greeting) public {
@@ -121,71 +121,71 @@ contract Greeter {
 }
 ```
 
-La función constructora, que se ejecuta cuando se despliega el contrato, establece el valor inicial de la variable de cadena almacenada en la cadena en "Hola". La función setGreeting añade el `_greeting` proporcionado al saludo, pero es necesario enviar una transacción, que modifica los datos almacenados. Por último, la función `greet` recupera el valor almacenado.
+The constructor function, which runs when the contract is deployed, sets the initial value of the string variable stored on-chain to “Hello”. The setGreeting function adds the `_greeting` provided to the greeting, but a transaction needs to be sent, which modifies the stored data. Lastly, the `greet` function retrieves the stored value.
 
-### Compilar el contrato inteligente
+### Compile the smart contract
 
-Crearemos un script que utilice el compilador Solidity para generar el código de bytes y la interfaz (ABI) del contrato `Greeter.sol`. Para empezar, crearemos un archivo `compile.py` ejecutando:
+We will create a script that uses the Solidity compiler to output the bytecode and interface (ABI) for the `Greeter.sol` contract. To get started, we will create a `compile.py` file by running:
 
 ```bash
-toca compilar.py
+touch compile.py
 ```
 
-A continuación, crearemos el script para este archivo y completaremos los siguientes pasos:
-Importar el paquete `solcx`, que compilará el código fuente
-Compilar el contrato `Greeter.sol` utilizando la función `solcx.compile_files`
-Exportar la ABI y el bytecode del contrato.
+Next, we will create the script for this file and complete the following steps:
+Import the `solcx` package, which will compile the source code
+Compile the `Greeter.sol` contract using the `solcx.compile_files` function
+Export the contract's ABI and bytecode
 
-Codifica y pega el código de abajo en `compile.py`;
+Code and paste the code below into `compile.py`;
 
 ```s
 import solcx
 solcx.install_solc('0.8.19')
 
-# Compilar contrato
+# Compile contract
 temp_file = solcx.compile_files(
     'Greeter.sol',
     output_values=['abi', 'bin'],
     solc_version='0.8.19'
 )
 
-# Exportar datos del contrato
+# Export contract data
 abi = temp_file['Greeter.sol:Greeter']['abi']
 bytecode = temp_file['Greeter.sol:Greeter']['bin']
 ```
 
-Ahora puede ejecutar el script para compilar el contrato:
+You can now run the script to compile the contract:
 
 ```python
-python compilar.py
+python compile.py
 ```
 
-### Despliegue del contrato inteligente
+### Deploy the smart contract
 
-Con el script para compilar el contrato `Greeter.sol` en su sitio, puedes usar los resultados para enviar una transacción firmada que lo despliegue. Para ello, puedes crear un archivo para el script de despliegue llamado `deploy.py`:
+With the script for compiling the `Greeter.sol` contract in place, you can then use the results to send a signed transaction that deploys it. To do so, you can create a file for the deployment script called `deploy.py`:
 
 ```bash
-tocar deploy.py
+touch deploy.py
 ```
 
-A continuación, creará el script para este archivo y completará los siguientes pasos:
+Next, you will create the script for this file and complete the following steps:
 
-1. Añadir importaciones, incluyendo `Web3.py` y el ABI y bytecode del contrato `Greeter.sol`.
-2. Configurar el proveedor Web3
+1. Add imports, including `Web3.py` and the ABI and bytecode of the `Greeter.sol` contract
+2. Set up the Web3 provider
 
-Para configurar el Proveedor Web3, tenemos que leer las variables de entorno que hemos añadido previamente al archivo .env.
+In order to set up the Web3 Provider, we have to read the environment variables that we previously added to the .env file.
 
 ```text
-# Añade el proveedor Web3
+# Add the Web3 Provider
 RPC_PROVIDER_APIKEY = os.getenv('RPC_PROVIDER_APIKEY')
 RPC_PROVIDER_URL = 'https://rpc.testnet.rootstock.io/' + RPC_PROVIDER_APIKEY
 web3 = Web3(Web3.HTTPProvider(RPC_PROVIDER_URL))
 ```
 
-3. Defina la `cuenta_de`. La clave privada es necesaria para firmar la transacción. Nota: Esto es sólo para propósitos de ejemplo. Nunca almacene sus claves privadas en su código
+3. Define the `account_from`. The private key is required to sign the transaction. Note: This is for example purposes only. Never store your private keys in your code
 
 ```text
-# Establece la cuenta por defecto
+# Set the default account
 PRIVATE_KEY = os.getenv('ACCOUNT_PRIVATE_KEY')
 account_from = {
     'private_key': PRIVATE_KEY,
@@ -193,13 +193,13 @@ account_from = {
 }
 ```
 
-4. Crear una instancia de contrato utilizando la función `web3.eth.contract` y pasando la ABI y el bytecode del contrato.
-5. Establece la [estrategia de precio del gas](https://web3py.readthedocs.io/en/stable/gas_price.html#gas-price) usando la función `web3.eth.set_gas_price_strategy`, que nos permitirá obtener el precio del gas del proveedor RPC. Esto es importante porque, de lo contrario, la biblioteca Web3 intentará utilizar los métodos RPC `eth_maxPriorityFeePerGas` y `eth_feeHistory`, que sólo son compatibles con los nodos Ethereum posteriores a Londres.
-6. Construye un constructor de transacción utilizando la instancia del contrato. Entonces usarás la función `build_transaction` para pasar la información de la transacción incluyendo la dirección `from` y el `nonce` para el remitente. Para obtener el `nonce` puedes usar la función \\`web3.eth.get_transaction_count
-7. Firmar la transacción utilizando la función `web3.eth.account.sign_transaction` y pasar en el constructor transacción y la `private_key` del remitente.
-8. Utilizando la transacción firmada, puede enviarla utilizando la función `web3.eth.send_raw_transaction` y esperar la recepción de la transacción utilizando la función `web3.eth.wait_for_transaction_receipt`.
+4. Create a contract instance using the `web3.eth.contract` function and passing in the ABI and bytecode of the contract
+5. Set the [gas price strategy](https://web3py.readthedocs.io/en/stable/gas_price.html#gas-price) using the `web3.eth.set_gas_price_strategy` function, which will allow us to fetch the gasPrice from the RPC Provider. This is important because otherwise the Web3 library will attempt to use `eth_maxPriorityFeePerGas` and `eth_feeHistory` RPC methods, which are only supported by post-London Ethereum nodes.
+6. Build a constructor transaction using the contract instance. You will then use the `build_transaction` function to pass in the transaction information including the `from` address and the `nonce` for the sender. To get the `nonce` you can use the `web3.eth.get_transaction_count` function
+7. Sign the transaction using the `web3.eth.account.sign_transaction` function and pass in the constructor transaction and the `private_key` of the sender
+8. Using the signed transaction, you can then send it using the `web3.eth.send_raw_transaction` function and wait for the transaction receipt by using the `web3.eth.wait_for_transaction_receipt` function
 
-Codifica y pega el código de abajo en `deploy.py`;
+Code and paste the code below into `deploy.py`;
 
 ```bash
 from compile import abi, bytecode
@@ -210,13 +210,13 @@ import os
 
 load_dotenv()
 
-# Añade el proveedor Web3
+# Add the Web3 Provider
 RPC_PROVIDER_APIKEY = os.getenv('RPC_PROVIDER_APIKEY')
 RPC_PROVIDER_URL = 'https://rpc.testnet.rootstock.io/' + RPC_PROVIDER_APIKEY
 web3 = Web3(Web3.HTTPProvider(RPC_PROVIDER_URL))
 
 
-# Establecer la cuenta por defecto
+# Set the default account
 PRIVATE_KEY = os.getenv('ACCOUNT_PRIVATE_KEY')
 account_from = {
     'private_key': PRIVATE_KEY,
@@ -231,58 +231,58 @@ Greeter = web3.eth.contract(abi=abi, bytecode=bytecode)
 # Set the gas price strategy
 web3.eth.set_gas_price_strategy(rpc_gas_price_strategy)
 
-# Construir la transacción
+# Build the transaction
 construct_txn = Greeter.constructor().build_transaction({
     'from': account_from['address'],
     'nonce': web3.eth.get_transaction_count(account_from['address']),
     'gasPrice': web3.eth.generate_gas_price()
 })
 
-# Firmar la transacción que despliega el contrato
+# Sign the transaction that deploys the contract
 signed_txn = web3.eth.account.sign_transaction(construct_txn, account_from['private_key'])
 
-# Enviar la transacción que despliega el contrato
+# Send the transaction that deploys the contract
 txn_hash = web3.eth.send_raw_transaction(signed_txn.rawTransaction)
 
-# Esperar a que se realice la transacción y obtener el recibo de la transacción
+# Wait for the transaction to be mined, and get the transaction receipt
 txn_receipt = web3.eth.wait_for_transaction_receipt(txn_hash)
-print(f "Transacción realizada correctamente con hash: { txn_receipt.transactionHash.hex() }")
-print(f "Contrato desplegado en la dirección: { txn_receipt.contractAddress }")
+print(f"Transaction successful with hash: { txn_receipt.transactionHash.hex() }")
+print(f"Contract deployed at address: { txn_receipt.contractAddress }")
 ```
 
-Ahora puede ejecutar el script y obtener el resultado.
+Now you can run the script and get the result.
 
 ```python
 python deploy.py
 
->> Intentando desplegar desde cuenta:  0x3b32a6463Bd0837fBF428bbC2A4c8B4c022e5077
->> Transacción exitosa con hash: 0x98a256c106bdb65e4de6a267e94000acdfe0d6f23c3dc1444f14dccf00713a69
->> Contrato desplegado en la dirección: 0xba39f329255d55a0276c695111b2edc9250C2341
+>> Attempting to deploy from account:  0x3b32a6463Bd0837fBF428bbC2A4c8B4c022e5077
+>> Transaction successful with hash: 0x98a256c106bdb65e4de6a267e94000acdfe0d6f23c3dc1444f14dccf00713a69
+>> Contract deployed at address: 0xba39f329255d55a0276c695111b2edc9250C2341
 ```
 
-Nota: Guarde la dirección del contrato, ya que la utilizaremos más adelante en la guía.
+Note: Save the contract address, as we will use it later in the guide.
 
-## Interactuar con un contrato inteligente
+## Interact with a smart contract
 
-### Lectura de datos contractuales (métodos de llamada)
+### Read Contract Data (Call Methods)
 
-Los métodos de llamada son el tipo de interacción que no modifica el almacenamiento del contrato (variables de cambio), lo que significa que no es necesario enviar ninguna transacción. Simplemente leen varias variables de almacenamiento del contrato desplegado.
+Call methods are the type of interaction that don't modify the contract's storage (change variables), meaning no transaction needs to be sent. They simply read various storage variables of the deployed contract.
 
-Para empezar, puedes crear un archivo y llamarlo `getMessage.py`:
+To get started, you can create a file and name it `getMessage.py`:
 
 ```text
-tocar getMessage.py
+touch getMessage.py
 ```
 
-A continuación, puede seguir los siguientes pasos para crear el script:
+Then you can take the following steps to create the script:
 
-1. Añade importaciones, incluyendo `Web3.py` y la ABI del contrato `Greeter.sol`.
-2. Configure el proveedor Web3 y sustituya YOUR_APIKEY
+1. Add imports, including `Web3.py` and the ABI of the `Greeter.sol` contract
+2. Set up the Web3 provider and replace YOUR_APIKEY
 3. De fine the `contract_address` of the deployed contract
-4. Crear una instancia de contrato utilizando la función `web3.eth.contract` y pasando el ABI y la dirección del contrato desplegado.
-5. Utilizando la instancia del contrato, puede llamar a la función \\`greet
+4. Create a contract instance using the `web3.eth.contract` function and passing in the ABI and address of the deployed contract
+5. Using the contract instance, you can then call the `greet` function
 
-Codifica y pega el código de abajo en `getMessage.py`;
+Code and paste the code below into `getMessage.py`;
 
 ```bash
 from compile import abi
@@ -292,56 +292,56 @@ import os
 
 load_dotenv()
 
-# Añade el proveedor Web3
+# Add the Web3 Provider
 RPC_PROVIDER_APIKEY = os.getenv('RPC_PROVIDER_APIKEY')
 RPC_PROVIDER_URL = 'https://rpc.testnet.rootstock.io/' + RPC_PROVIDER_APIKEY
 web3 = Web3(Web3.HTTPProvider(RPC_PROVIDER_URL))
 
 
-# Crear variable de dirección (utiliza la dirección del contrato que acabas de desplegar)
+# Create address variable (use the address of the contract you just deployed)
 contract_address = '0xba39f329255d55a0276c695111b2edc9250C2341'
 
-print(f "Haciendo una llamada al contrato en la dirección: { contract_address }")
+print(f"Making a call to contract at address: { contract_address }")
 
-# Crear instancia de contrato
-Greeter = web3.eth.contract(address=dirección_contrato, abi=abi)
+# Create contract instance
+Greeter = web3.eth.contract(address=contract_address, abi=abi)
 
-# Llamar al contrato
+# Call the contract
 call_result = Greeter.functions.greet().call()
-print(f "Contrato devuelto: { call_result }")
+print(f"Contract returned: { call_result }")
 ```
 
-Si tiene éxito, la respuesta se mostrará en el terminal:
+If successful, the response will be displayed in the terminal:
 
 ```python
 python getMessage.py
 
->> Realizando una llamada a contrato en la dirección: 0xba39f329255d55a0276c695111b2edc9250C2341
->> Contrato devuelto: Hola
+>> Making a call to contract at address: 0xba39f329255d55a0276c695111b2edc9250C2341
+>> Contract returned: Hello
 ```
 
-### Escribir datos en el contrato (métodos de escritura)
+### Write data to the contract (Write Methods)
 
-Los métodos de escritura son el tipo de interacción que modifica el almacenamiento del contrato (variables de cambio), lo que significa que es necesario firmar y enviar una transacción. En esta sección, crearás el script para cambiar el texto almacenado en el contrato Greeter.
+Write methods are the type of interaction that modify the contract's storage (change variables), meaning a transaction needs to be signed and sent. In this section, you'll create the script to change the text stored in the Greeter contract.
 
-Para empezar, puedes crear un archivo para el script y llamarlo `setMessage.py`:
+To get started, you can create a file for the script and name it `setMessage.py`:
 
 ```bash
-tocar setMessage.py
+touch setMessage.py
 ```
 
-Abre el archivo `setMessage.py` y sigue los siguientes pasos para crear el script:
+Open the `setMessage.py` file and take the following steps to create the script:
 
-1. Añade importaciones, incluyendo Web3.py y la ABI del contrato Incrementer.sol
-2. Configurar el proveedor Web3
-3. Define la variable `account_from`, incluyendo la `private_key`, y la `contract_address` del contrato desplegado. La clave privada es necesaria para firmar la transacción. Nota: Esto es sólo a modo de ejemplo. Nunca almacene sus claves privadas en su código
-4. Crear una instancia de contrato utilizando la función `web3.eth.contract` y pasando el ABI y la dirección del contrato desplegado.
-5. Establece la estrategia del precio del gas usando la función `web3.eth.set_gas_price_strategy`, que nos permitirá obtener el precio del gas del proveedor RPC. Esto es importante porque, de lo contrario, la biblioteca Web3 intentará utilizar los métodos RPC `eth_maxPriorityFeePerGas` y `eth_feeHistory`, que sólo son compatibles con los nodos Ethereum posteriores a Londres.
-6. Construye la transacción `setGreeting` usando la instancia del contrato y pasando el nuevo mensaje. Luego usarás la función `build_transaction` para pasar la información de la transacción incluyendo la dirección `from` y el `nonce` del remitente. Para obtener el `nonce` puedes usar la función \\`web3.eth.get_transaction_count
-7. Firma la transacción usando la función `web3.eth.account.sign_transaction` y pasa la transacción `setGreeting` y la `private_key` del remitente.
-8. Utilizando la transacción firmada, puedes enviarla utilizando la función `web3.eth.send_raw_transaction` y esperar la recepción de la transacción utilizando la función `web3.eth.wait_for_transaction_receipt`.
+1. Add imports, including Web3.py and the ABI of the Incrementer.sol contract
+2. Set up the Web3 provider
+3. Define the `account_from` variable, including the `private_key`, and the `contract_address` of the deployed contract. The private key is required to sign the transaction. Note: This is for example purposes only. Never store your private keys in your code
+4. Create a contract instance using the `web3.eth.contract` function and passing in the ABI and address of the deployed contract
+5. Set the gas price strategy using the `web3.eth.set_gas_price_strategy` function, which will allow us to fetch the gasPrice from the RPC Provider. This is important because otherwise the Web3 library will attempt to use `eth_maxPriorityFeePerGas` and `eth_feeHistory` RPC methods, which are only supported by post-London Ethereum nodes.
+6. Build the `setGreeting` transaction using the contract instance and passing in the new message. You'll then use the `build_transaction` function to pass in the transaction information including the `from` address and the `nonce` for the sender. To get the `nonce` you can use the `web3.eth.get_transaction_count` function
+7. Sign the transaction using the `web3.eth.account.sign_transaction` function and pass in the `setGreeting` transaction and the `private_key` of the sender
+8. Using the signed transaction, you can then send it using the `web3.eth.send_raw_transaction` function and wait for the transaction receipt by using the `web3.eth.wait_for_transaction_receipt` function
 
-Codifica y pega el código de abajo en `setMessage.py`;
+Code and paste the code below into `setMessage.py`;
 
 ```bash
 from compile import abi
@@ -352,82 +352,82 @@ import os
 
 load_dotenv()
 
-# Añade el proveedor Web3
+# Add the Web3 Provider
 RPC_PROVIDER_APIKEY = os.getenv('RPC_PROVIDER_APIKEY')
 RPC_PROVIDER_URL = 'https://rpc.testnet.rootstock.io/' + RPC_PROVIDER_APIKEY
 web3 = Web3(Web3.HTTPProvider(RPC_PROVIDER_URL))
 
 
-# Establecer la cuenta por defecto
+# Set the default account
 PRIVATE_KEY = os.getenv('ACCOUNT_PRIVATE_KEY')
 account_from = {
     'private_key': PRIVATE_KEY,
     'address': web3.eth.account.from_key(PRIVATE_KEY).address
 }
 
-# Crear variable de dirección
+# Create address variable
 contract_address = '0xba39f329255d55a0276c695111b2edc9250C2341'
 
-# Crear instancia de contrato
+# Create contract instance
 Greeter = web3.eth.contract(address=contract_address, abi=abi)
 
-# Establecer la estrategia de precio del gas
+# Set the gas price strategy
 web3.eth.set_gas_price_strategy(rpc_gas_price_strategy)
 
-# Crear la transacción
-txn = Greeter.functions.setGreeting('¡Hola, mundo!').build_transaction({
+# Build the transaction
+txn = Greeter.functions.setGreeting('Hello, World!').build_transaction({
     'from': account_from['address'],
     'nonce': web3.eth.get_transaction_count(account_from['address']),
     'gasPrice': web3.eth.generate_gas_price()
 })
 
-# Firmar la transacción
+# Sign the transaction
 signed_txn = web3.eth.account.sign_transaction(txn, account_from['private_key'])
 
-# Enviar la transacción
+# Send the transaction
 txn_hash = web3.eth.send_raw_transaction(signed_txn.rawTransaction)
 txn_receipt = web3.eth.wait_for_transaction_receipt(txn_hash)
 
-print(f "Transacción correcta con hash: { txn_receipt.transactionHash.hex() }")
+print(f"Transaction successful with hash: { txn_receipt.transactionHash.hex() }")
 ```
 
-Si tiene éxito, el hash de la transacción se mostrará en el terminal.
+If successful, the transaction hash will be displayed in the terminal.
 
 ```python
 python setMessage.py
 
->> Transacción exitosa con hash: 0x95ba4e13269aba8e51c3037270c0ee90f4872c36e076fc94e51226c1597f6d86
+>> Transaction successful with hash: 0x95ba4e13269aba8e51c3037270c0ee90f4872c36e076fc94e51226c1597f6d86
 ```
 
-Ahora puedes ejecutar el script `getMessage.py` para obtener el nuevo valor almacenado en el contrato.
+You can now run the `getMessage.py` script to get the new value stored at the contract.
 
 ```python
 python getMessage.py
 
->> Realizando una llamada a contrato en la dirección: 0xba39f329255d55a0276c695111b2edc9250C2341
->> Contrato devuelto: ¡Hola, Mundo!
+>> Making a call to contract at address: 0xba39f329255d55a0276c695111b2edc9250C2341
+>> Contract returned: Hello, World!
 ```
 
-## Envío de transacciones
+## Sending transactions
 
-Aquí entenderá cómo comprobar el saldo de una cuenta y cómo enviar `tRBTC` de una cuenta a otra.
+Here you will understand how to check the balance of an account, and how to send `tRBTC` from one account to another.
 
-### Consultar el saldo de una cuenta
+### Check the balance of an account
 
-Aquí crearás un script que comprueba el saldo de una cuenta.
-En primer lugar, comience por crear un archivo para el script.
+Here you will create a script that checks the balance of an account.
+First, start by creating a file for the script.
 
 ```python
-tocar balances.py
+touch balances.py
 ```
 
-A continuación, creará el script para este archivo y completará los siguientes pasos:
+Next, you will create the script for this file and complete the following steps:
 
-1. Configurar el proveedor Web3
-2. Definir las variables `dirección_de` y \\`dirección_a
-3. Obtener el saldo de las cuentas utilizando la función `web3.eth.get_balance` y formatear los 3. resultados utilizando la función `web3.from_wei`.
+1. Set up the Web3 provider
+2. Define the `address_from` and `address_to` variables
+3. Get the balance for the accounts using the `web3.eth.get_balance` function and format the 3. results using the `web3.from_wei`
 
-Codifica y pega el código de abajo en `balances.py`;
+Code and paste the code below into `balances.py`;
 
 ```bash
 from web3 import Web3
@@ -437,53 +437,53 @@ import os
 load_dotenv()
 
 
-# Añade el proveedor Web3
+# Add the Web3 Provider
 RPC_PROVIDER_APIKEY = os.getenv('RPC_PROVIDER_APIKEY')
 RPC_PROVIDER_URL = 'https://rpc.testnet.rootstock.io/' + RPC_PROVIDER_APIKEY
 web3 = Web3(Web3.HTTPProvider(RPC_PROVIDER_URL))
 
 
-# Crear variables de dirección
+# Create address variables
 address_from = '0x3b32a6463Bd0837fBF428bbC2A4c8B4c022e5077'
 address_to = '0xcff73226883c1cE8b3bcCc28E45c3c92C843485c'
 
-# Obtener el saldo del remitente
+# Get the balance of the sender
 balance_from = web3.from_wei(web3.eth.get_balance(address_from), 'ether')
-print(f "Saldo de la dirección del remitente {address_from}: { balance_from } TRBTC")
+print(f"Balance of sender address {address_from}: { balance_from } TRBTC")
 
-# Obtener el saldo del receptor
+# Get the balance of the receiver
 balance_to = web3.from_wei(web3.eth.get_balance(address_to), 'ether')
-print(f "Saldo de la dirección del receptor {address_to}: { balance_to } TRBTC")
+print(f"Balance of receiver address {address_to}: { balance_to } TRBTC")
 ```
 
-Ejecuta el script:
+Run the script:
 
 ```python
 python balances.py
 
-# >> Saldo de la dirección del remitente 0x3b32a6463Bd0837fB428bbC2A4c8B4c022e5077: 0.192538506119378425 TRBTC
-# >> Saldo de la dirección del destinatario 0xcff73226883c1cE8b3bcCc28E45c3c92C843485c: 0.407838671951567233 TRBTC
+# >> Balance of sender address 0x3b32a6463Bd0837fBF428bbC2A4c8B4c022e5077: 0.192538506119378425 TRBTC
+# >> Balance of receiver address 0xcff73226883c1cE8b3bcCc28E45c3c92C843485c: 0.407838671951567233 TRBTC
 ```
 
-### Enviar TRBTC
+### Send TRBTC
 
-Aquí crearás un script para enviar tRBTC de una cuenta a otra.
-Primero, empieza por crear un archivo para el script.
+Here you will create a script to send tRBTC from one account to another.
+First, start by creating a file for the script.
 
 ```bash
-tocar transaction.py
+touch transaction.py
 ```
 
-A continuación, creará el script para este archivo y completará los siguientes pasos:
+Next, you will create the script for this file and complete the following steps:
 
-1. Añadir importaciones, incluyendo `Web3.py` y el `rpc_gas_price_strategy`, que se utilizará en los siguientes pasos para obtener el precio del gas utilizado para la transacción.
-2. Configurar el proveedor Web3
-3. Defina las variables `account_from`, incluida la `private_key`, y `address_to`. La clave privada es necesaria para firmar la transacción. Nota: Esto es sólo para propósitos de ejemplo. Nunca almacene sus claves privadas en su código
-4. Utilice la API de precios del gas `Web3.py` para establecer una estrategia de precios del gas. Para este ejemplo, utilizarás la estrategia importada `rpc_gas_price_strategy`. Esto es importante porque, de lo contrario, la biblioteca Web3 intentará utilizar los métodos RPC `eth_maxPriorityFeePerGas` y `eth_feeHistory`, que sólo son compatibles con los nodos Ethereum posteriores a Londres.
-5. Crea y firma la transacción usando la función `web3.eth.account.sign_transaction`. Introduce el `nonce`, `gas`, `gasPrice`, `to`, y el valor de la transacción junto con la `private_key` del remitente. Para obtener el `nonce` puedes utilizar la función `web3.eth.get_transaction_count` y pasar la dirección del remitente. Para predeterminar el `gasPrice` utilizarás la función `web3.eth.generate_gas_price`. Para el valor, puedes formatear la cantidad a enviar de un formato fácilmente legible a Wei utilizando la función `web3.to_wei`.
-6. Utilizando la transacción firmada, puedes enviarla utilizando la función `web3.eth.send_raw_transaction` y esperar la recepción de la transacción utilizando la función `web3.eth.wait_for_transaction_receipt`.
+1. Add imports, including `Web3.py` and the `rpc_gas_price_strategy`, which will be used in the following steps to get the gas price used for the transaction
+2. Set up the Web3 provider
+3. Define the `account_from`, including the `private_key`, and the `address_to` variables. The private key is required to sign the transaction. Note: This is for example purposes only. Never store your private keys in your code
+4. Use the `Web3.py` Gas Price API to set a gas price strategy. For this example, you'll use the imported `rpc_gas_price_strategy`. This is important because otherwise the Web3 library will attempt to use `eth_maxPriorityFeePerGas` and `eth_feeHistory` RPC methods, which are only supported by post-London Ethereum nodes.
+5. Create and sign the transaction using the `web3.eth.account.sign_transaction` function. Pass in the `nonce`, `gas`, `gasPrice`, `to`, and value for the transaction along with the sender's `private_key`. To get the `nonce` you can use the `web3.eth.get_transaction_count` function and pass in the sender's address. To predetermine the `gasPrice` you'll use the `web3.eth.generate_gas_price` function. For the value, you can format the amount to send from an easily readable format to Wei using the `web3.to_wei` function
+6. Using the signed transaction, you can then send it using the `web3.eth.send_raw_transaction` function and wait for the transaction receipt by using the `web3.eth.wait_for_transaction_receipt` function
 
-Codifica y pega el código de abajo en `transaction.py`;
+Code and paste the code below into `transaction.py`;
 
 ```bash
 from web3 import Web3
@@ -493,14 +493,14 @@ import os
 
 load_dotenv()
 
-# Añade el proveedor Web3
+# Add the Web3 Provider
 RPC_PROVIDER_APIKEY = os.getenv('RPC_PROVIDER_APIKEY')
 RPC_PROVIDER_URL = 'https://rpc.testnet.rootstock.io/' + RPC_PROVIDER_APIKEY
 web3 = Web3(Web3.HTTPProvider(RPC_PROVIDER_URL))
 
 
 
-# Establecer la cuenta por defecto
+# Set the default account
 PRIVATE_KEY = os.getenv('ACCOUNT_PRIVATE_KEY')
 account_from = {
     'private_key': PRIVATE_KEY,
@@ -508,12 +508,12 @@ account_from = {
 }
 address_to = '0xcff73226883c1cE8b3bcCc28E45c3c92C843485c'
 
-print(f "Attempting to send transaction from { account_from['address'] } to { address_to }")
+print(f"Attempting to send transaction from { account_from['address'] } to { address_to }")
 
 # Set the gas price strategy
 web3.eth.set_gas_price_strategy(rpc_gas_price_strategy)
 
-# Construye la transacción
+# Build the transaction
 txn = {
     'to': address_to,
     'value': web3.to_wei(0.0001, 'ether'),
@@ -522,31 +522,31 @@ txn = {
     'nonce': web3.eth.get_transaction_count(account_from['address'])
 }
 
-# Firmar la transacción
+# Sign the transaction
 signed_txn = web3.eth.account.sign_transaction(txn, account_from['private_key'])
 
-# Enviar la transacción
+# Send the transaction
 txn_hash = web3.eth.send_raw_transaction(signed_txn.rawTransaction)
 
-# Esperar a que la transacción se extraiga y obtener el recibo de la transacción
+# Wait for the transaction to be mined, and get the transaction receipt
 txn_receipt = web3.eth.wait_for_transaction_receipt(txn_hash)
-print(f "Transacción correcta con hash: { txn_receipt.transactionHash.hex() }")
+print(f"Transaction successful with hash: { txn_receipt.transactionHash.hex() }")
 ```
 
-Ejecuta el script:
+Run the script:
 
 ```python
 python transaction.py
 
-Intentando enviar transacción de 0x112621448Eb148173d5b00edB14B1f576c58CEE a 0xcff73226883c1cE8b3bcCc28E45c3c92C843485c
-Transacción exitosa con hash: 0x79ab8be672b0218d31f81876c34321ee7b08e6a4ec8bfff5249f70c443cbce00
+Attempting to send transaction from 0x112621448Eb148173d5b00edB14B1f576c58cCEE to 0xcff73226883c1cE8b3bcCc28E45c3c92C843485c
+Transaction successful with hash: 0x79ab8be672b0218d31f81876c34321ee7b08e6a4ec8bfff5249f70c443cbce00
 ```
 
-## Resumen
+## Summary
 
-En esta guía, hemos aprendido a utilizar la biblioteca Web3.py para implementar, interactuar con un contrato inteligente y enviar transacciones en Rootstock.
+In this guide, we learnt how to use the Web3.py library to deploy, interact with a smart contract and send transactions on Rootstock.
 
-## Solución de problemas
+## Troubleshooting
 
 ````mdx-code-block
 <Accordion>
@@ -621,12 +621,12 @@ En esta guía, hemos aprendido a utilizar la biblioteca Web3.py para implementar
 </Accordion>
 ````
 
-#### Recursos
+#### Resources
 
-- [Web3.py: Estrategia de precios del gas](https://web3py.readthedocs.io/en/stable/gas_price.html#gas-price)
+- [Web3.py: Gas Price Strategy](https://web3py.readthedocs.io/en/stable/gas_price.html#gas-price)
 - [Infura: eth_accounts](https://docs.infura.io/api/networks/ethereum/json-rpc-methods/eth_accounts)
 - [Infura: eth_sendTransaction](https://docs.infura.io/api/networks/ethereum/json-rpc-methods/eth_sendtransaction)
-- [Web3.py: Trabajo con claves privadas locales](https://web3py.readthedocs.io/en/stable/web3.eth.account.html#working-with-local-private-keys)
-- [Web3.py: Ejemplo de despliegue de contratos](https://web3py.readthedocs.io/en/stable/web3.contract.html)
-- [Web3.py: Firmar una transacción contractual](https://web3py.readthedocs.io/en/stable/providers.html)
-- [Web3.py: Configuración de un proveedor RPC](https://web3py.readthedocs.io/en/stable/providers.html)
+- [Web3.py: Working with Local Private Keys](https://web3py.readthedocs.io/en/stable/web3.eth.account.html#working-with-local-private-keys)
+- [Web3.py: Contract Deployment Example](https://web3py.readthedocs.io/en/stable/web3.contract.html)
+- [Web3.py: Sign a Contract Transaction](https://web3py.readthedocs.io/en/stable/providers.html)
+- [Web3.py: Setting up an RPC Provider](https://web3py.readthedocs.io/en/stable/providers.html)

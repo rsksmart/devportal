@@ -4,7 +4,7 @@ sidebar_position: 7
 title: Gradle building
 tags:
   - rsk
-  - nodo
+  - node
   - compile
   - reproducible
   - checksum
@@ -24,7 +24,7 @@ Starting with [v6.4.0](/changelog/), the minimum supported Java LTS version is J
 
 :::
 
-## Instalar Docker
+## Install Docker
 
 Depending on your OS, you can install Docker following the official Docker guide:
 
@@ -34,7 +34,7 @@ Depending on your OS, you can install Docker following the official Docker guide
 - [CentOS](https://docs.docker.com/engine/installation/linux/centos/)
 - [Fedora](https://docs.docker.com/engine/installation/linux/fedora/)
 - [Debian](https://docs.docker.com/engine/installation/linux/debian/)
-- [Otros](https://docs.docker.com/engine/installation/#platform-support-matrix)
+- [Others](https://docs.docker.com/engine/installation/#platform-support-matrix)
 
 :::info\[Info]
 
@@ -89,7 +89,7 @@ Create a `Dockerfile` to setup the build environment.
 </Tabs>
 ````
 
-**Respuesta:**
+**Response:**
 
 You should get the following as the final response,
 after running the above steps:
@@ -108,7 +108,7 @@ Run the command  `brew install coreutils`
 
 If you are not familiar with Docker or the `Dockerfile` format: what this does is use the Ubuntu 16.04 base image and install `git`, `curl`, `gnupg-curl` and `openjdk-8-jdk`, required for building the Rootstock node.
 
-## Ejecutar build
+## Run build
 
 To create a reproducible build, run the command below in the same directory:
 
@@ -126,10 +126,10 @@ This may take several minutes to complete. What is done is:
 
 - Place in the RSKj repository root because we need Gradle and the project.
 - Runs the [secure chain verification process](/node-operators/setup/security-chain/).
-- Compilar un nodo RSKj reproducible.
+- Compile a reproducible RSKj node.
 - `./gradlew clean build -x test` builds without running tests.
 
-## Verificar Build
+## Verify Build
 
 The last step of the build prints the `sha256sum` of the files, to obtain `SHA-256` checksums, run the following command in the same directory as shown above:
 
@@ -137,7 +137,7 @@ The last step of the build prints the `sha256sum` of the files, to obtain `SHA-2
 docker run --rm rskj/7.0.0-lovell sh -c 'sha256sum * | grep -v javadoc.jar'
 ```
 
-## Verificar Resultados
+## Check Results
 
 After running the build process, a JAR file will be created in `/rskj/rskj-core/build/libs/`, into the docker container.
 
@@ -151,12 +151,12 @@ e85d0783b39ef93fda5f98588f7e4ae5d57784096ce9b3a1f43eb3d99a49d275  rskj-core-7.0.
 d651adc77b82046a976bf5c7e858b741443bc8ffa8372b8e5bac9b92dc8c294d  rskj-core-7.0.0-LOVELL.pom
 ```
 
-Para obtener la suma SHA256 de versiones anteriores, consulte la [página de versiones](https://github.com/rsksmart/rskj/releases).
+For SHA256 sum of older versions check the [releases page](https://github.com/rsksmart/rskj/releases).
 
-Si compruebas dentro del archivo JAR, verás que las fechas de los archivos coinciden con el commit de la versión que estás utilizando.
+If you check inside the JAR file, you will find that the dates of the files are the same as the version commit you are using.
 
-# Más Recursos
+# More Resources
 
-- [Instalar nodo Rootstock](/node-operators/setup/installation/)
-- Ver [builds reproducibles](https://github.com/rsksmart/reproducible-builds/tree/master/rskj)
-- Echa un vistazo a las [últimas versiones de rskj](https://github.com/rsksmart/rskj/releases)
+- [Install Rootstock Node](/node-operators/setup/installation/)
+- See [Reproducible builds](https://github.com/rsksmart/reproducible-builds/tree/master/rskj)
+- Check out the [latest rskj releases](https://github.com/rsksmart/rskj/releases)

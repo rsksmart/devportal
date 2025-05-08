@@ -1,16 +1,16 @@
 ---
-title: Explorar las transacciones de portainjertos
+title: Exploring Rootstock Transactions
 sidebar_position: 400
-sidebar_label: Transacciones de portainjertos
-description: Aprenda a interactuar con Rootstock en su navegador web, a consultar las transacciones de Rootstock y a desarrollar e implementar su primer contrato inteligente en la red Rootstock.
+sidebar_label: Rootstock Transactions
+description: Learn how to interact with Rootstock in your web browser, how to look at Rootstock transactions, develop and deploy your very first smart contract to the Rootstock network.
 tags:
-  - arranques rápidos
+  - quick-starts
   - rsk
-  - portainjertos
+  - rootstock
   - blockchain
-  - monederos de navegador
-  - desarrolladores
-  - principiantes
+  - browser wallets
+  - developers
+  - beginners
 ---
 
 In the previous section on [blockchain overview](/developers/blockchain-essentials/overview/), we set up a browser extension that is a crypto wallet, MetaMask. We connected to the Rootstock Testnet, and loaded this up with Rootstock’s cryptocurrency, RBTC, and an Rootstock-based token, RIF.
@@ -21,81 +21,81 @@ If you are yet to do the above, we encourage you to go back and complete that st
 
 :::
 
-## Explorador de bloques
+## Block Explorer
 
-Ahora que ya estamos preparados, ¡exploremos algunas transacciones!
-La red Rootstock es un **libro contable público inmutable**.
-Vamos a diseccionar esa frase:
+Now that we are set up, let’s explore some transactions!
+The Rootstock network is an **immutable public ledger**.
+Let’s dissect that phrase:
 
-- \*\*Libro de contabilidad: Una lista ordenada de transacciones registradas de alguna forma
-- **Inmutable**: La forma en que este libro se registra y almacena significa que cualquier transacción existente no puede ser borrada o modificada. También se puede considerar un libro de contabilidad "sólo para añadir".
-- **Público**: El contenido de este libro de contabilidad es abierto y transparente, por lo que cualquier persona conectada a esta red puede ver todas y cada una de las transacciones de la historia.
+- **Ledger**: An ordered list of transactions recorded in some form
+- **Immutable**: The way this ledger is recorded and stored means that any existing transactions may not be deleted or modified. You may also think of it as being an “append-only” ledger.
+- **Public**: The contents of this ledger are open and transparent, therefore anyone connected to this network can view every single transaction in history.
 
-Aquí es donde entran en juego los exploradores de bloques.
-Son un tipo especial de software que se conecta a una red blockchain y muestra los datos de este libro de contabilidad público inmutable.
+This is where block explorers come in.
+They are a special type of software that connect to a blockchain network, and display the data from this immutable public ledger.
 
-Dado que es abierto y transparente, nada impide que varios exploradores de bloques muestren los datos en una única cadena de bloques. Este es el caso de Rootstock, y existen varios exploradores de bloques. Aquí utilizaremos el canónico, pero siéntase libre de utilizar otros exploradores de bloques.
+Since it is open and transparent, there is nothing stopping multiple block explorers from displaying the data in a single blockchain. This is certainly true for Rootstock, and there are multiple block explorers. We’ll use the canonical one here, however, feel free to use other block explorers too!
 
-### Ver cuenta en el explorador de bloques
+### View account in the block explorer
 
-Vea este breve vídeo en el que se muestra cómo ver una cuenta en el explorador de bloques.
+Watch this short video demonstrating how to view an account in the block explorer.
 
 <div class="video-container">
   <iframe width="949" height="534" src="https://www.youtube.com/embed/p-q7NBmEqBo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-Para la red principal de Rootstock, iríamos a [`explorer.rootstock.io`](https://explorer.rootstock.io/).
-Sin embargo, como actualmente estamos conectados a la red de pruebas de Rootstock, iremos a [`explorer.testnet.rootstock.io`](https://explorer.testnet.rootstock.io/).
+For the Rootstock Mainnet, we would go to [`explorer.rootstock.io`](https://explorer.rootstock.io/).
+However, since we are currently connected to the Rootstock Testnet, we go to [`explorer.testnet.rootstock.io`](https://explorer.testnet.rootstock.io/) instead.
 
-## Transferencia tRBTC
+## Transfer tRBTC
 
-Hasta ahora, no has realizado ninguna transacción desde tu dirección. Las transacciones que ves cuando ves la dirección en el explorador de bloques se hicieron desde otras direcciones (en este caso, un par de grifos de Testnet). Ahora es el momento de que inicies tus propias transacciones.
+So far, you have not made any transactions from your address. The transactions that you see when you view the address in the block explorer were made from other addresses (in this case, a couple of Testnet faucets). Now, it’s time for you to initiate your own transactions!
 
-Vea este breve vídeo en el que se muestra **cómo transferir tRBTC de una cuenta a otra**.
+Watch this short video demonstrating **how to transfer tRBTC from one account to another**.
 
 <div class="video-container">
   <iframe width="949" height="534" src="https://www.youtube.com/embed/fMdiNeDLKo0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-Empezaremos transfiriendo criptomoneda desde tu dirección a la dirección del grifo.
+We’ll start by transferring cryptocurrency from your address, back to the faucet’s address.
 
-## Transferencia tRIF
+## Transfer tRIF
 
-Vea este breve vídeo en el que se muestra **cómo transferir la tRIF de una cuenta a otra**.
+Watch this short video demonstrating **how to transfer tRIF from one account to another**.
 
 <div class="video-container">
   <iframe width="949" height="534" src="https://www.youtube.com/embed/ncCzQnnMVr8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## Disminución del saldo de RBTC
+## RBTC Balance Decrease
 
-Es posible que haya observado que al enviar tRBTC, el saldo de tRBTC disminuyó en **un poco más** que la cantidad que envió. También habrás observado que cuando enviaste tRIF, el saldo de tRBTC también disminuyó en una pequeña cantidad, aunque en esa transacción sólo se enviaron tRIF.
+You may have noticed that when you sent tRBTC, the tRBTC balance decreased by **slightly more** than the amount that you sent. You may also have noticed that when you sent tRIF, the tRBTC balance also decreased by a small amount, even though only tRIF were sent in that transaction.
 
-Lo habrá visto en las pantallas de confirmación de transacciones al confirmar cada transacción.
+You would have seen this in the transaction confirmation screens when you confirmed each transaction.
 
-Esto **no es un error**, es simplemente un aspecto fundamental del funcionamiento de las redes blockchain: cada vez que añades una transacción a la blockchain, debes pagar a la red una tarifa para compensar sus costes computacionales.
+This is **not an error**, it is simply a fundamental aspect of how blockchain networks function - any time you add a transaction to the blockchain, you must pay the network a fee to compensate them for their computational costs.
 
-## Ver transacciones
+## View Transactions
 
-Cuando realizaste cada una de las transacciones, deberías haber recibido notificaciones en ventanas emergentes.
+When you performed each of the transactions, you should have received notifications in popups.
 
-Sin embargo, si te has perdido esto, no te preocupes, también puedes encontrarlo en el historial de transacciones dentro de MetaMask. Para ello, dentro de la pantalla principal de MetaMask, haz clic en la pestaña "Actividad". Verás la lista de las transacciones.
+However, if you missed this, not to worry, you can also find this within the transaction history within MetaMask. To do so, within the main screen of MetaMask, click on the “Activity” tab. You’ll see the list of the transactions.
 
-A continuación, haga clic en cualquier transacción, y haga clic en el botón de flecha junto al botón de copia llamado ID de transacción, esto le lleva al [Testnet explorer](https://explorer.testnet.rootstock.io)
+Then you click on any transaction, and click on the arrow button beside copy button named transaction ID, this takes you to the [Testnet explorer](https://explorer.testnet.rootstock.io)
 
-Si ha hecho clic en la notificación emergente, o si la encuentra dentro de la pestaña "Actividad", de cualquier forma, esto debería abrir el explorador de bloques con la transacción seleccionada.
+If you clicked on the popup notification, or if you find it within the “Activity” tab, either way, this should open up the block explorer with the selected transaction selected.
 
-Para la transacción de la transferencia tRBTC, debería ver esto
+For the transaction of the tRBTC transfer, you should see this
 
-Observará que esta transacción tiene un importe.
+You will notice that this transaction has an amount.
 
-Para la transacción de la transferencia tRIF, debería ver esto
+For the transaction of the tRIF transfer, you should see this
 
-Observarás que esta transacción tiene un importe cero, pero emite algunos eventos, lo cual se debe a que el contrato inteligente del token RIF se encarga de ello.
+You will notice that this transaction has a zero amount, but it does emit some events, which is because the smart contract of the RIF token does this.
 
-## Ver estadísticas de red
+## View Network Stats
 
-Hasta ahora hemos comprobado direcciones y transacciones individuales. Se trata de información muy detallada y específica. ¿Y si lo que busca es una visión general? ¿Una vista de pájaro de la blockchain de Rootstock en su conjunto?
+So far we have checked out individual addresses and transactions. These are very detailed and specific information. What if you were after the big picture instead? A bird’s eye view of the Rootstock blockchain as a whole?
 
 For this, we will not use the Rootstock Block explorer, and instead use the [Rootstock Stats](https://stats.rootstock.io) page.
 

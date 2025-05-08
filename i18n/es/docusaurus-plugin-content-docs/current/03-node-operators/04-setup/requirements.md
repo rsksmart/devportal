@@ -1,19 +1,19 @@
 ---
-sidebar_label: Requisitos de hardware
+sidebar_label: Hardware Requirements
 sidebar_position: 3
-title: Requisitos mínimos de hardware para ejecutar un nodo raíz
+title: Minimum Hardware Requirements to Run a Rootstock Node
 tags:
   - hardware
-  - especificaciones
-  - requisitos
-description: Requisitos mínimos de hardware para Rootstock.
+  - specs
+  - requirements
+description: Minimum hardware requirements for Rootstock.
 ---
 
-Estos son los requisitos mínimos que deben cumplirse para ejecutar un nodo Rootstock (Mainnet y Testnet):
+These are the minimum requirements that must be met to run an Rootstock node (Mainnet and Testnet):
 
 - 2 cores
 - 8 GB RAM
-- 128 GB de almacenamiento
+- 128 GB storage
 - OS x64
 
-> RSKj le permite ejecutar un nodo Rootstock, crucial para el desarrollo local y las pruebas. Soporta conexiones a Regtest (local), Testnet (testing) y Mainnet (producción). Visite el [repositorio oficial de GitHub de RSKj](https://github.com/rsksmart/rskj) para descargar la última versión estable.
+> RSKj allows you to run a Rootstock node, crucial for local development and testing. It supports connections to Regtest (local), Testnet (testing), and Mainnet (production). Visit the [official RSKj GitHub repository](https://github.com/rsksmart/rskj) to download the latest stable release.

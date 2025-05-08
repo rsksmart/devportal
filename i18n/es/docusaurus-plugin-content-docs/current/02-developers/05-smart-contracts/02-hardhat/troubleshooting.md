@@ -1,22 +1,22 @@
 ---
-sidebar_label: Depuración y resolución de problemas
+sidebar_label: Debugging and Troubleshooting
 sidebar_position: 106
-title: Errores comunes y consejos
-description: Conozca algunos de los posibles problemas que puede encontrarse y consejos para resolverlos.
+title: Common Errors and Tips
+description: Learn about some potential issues you can run into and tips on how to resolve them.
 tags:
-  - guías
-  - desarrolladores
-  - contratos inteligentes
+  - guides
+  - developers
+  - smart contracts
   - rsk
-  - portainjertos
-  - casco
+  - rootstock
+  - hardhat
   - dApps
-  - éteres
+  - ethers
 ---
 
-Esta sección ofrece ayuda sobre algunos posibles problemas con los que te puedes encontrar y consejos para resolverlos.
+This section provides help on some potential issues you may run into and tips on how to resolve them.
 
-## Errores
+## Errors
 
 ````mdx-code-block
 <Accordion>

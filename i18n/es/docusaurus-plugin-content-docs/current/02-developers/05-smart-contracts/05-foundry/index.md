@@ -1,17 +1,17 @@
 ---
-sidebar_label: Primeros pasos con Foundry
+sidebar_label: Getting Started with Foundry
 section_position: 200
-title: Primeros pasos con Foundry
-description: Cómo escribir, probar y desplegar contratos inteligentes con Foundry
+title: Getting Started with Foundry
+description: How to write, test, and deploy smart contracts with Foundry
 tags:
   - rsk
-  - fundición
-  - desarrolladores
-  - herramientas para desarrolladores
-  - portainjertos
-  - pruebas
+  - foundry
+  - developers
+  - developer tools
+  - rootstock
+  - testing
   - dApps
-  - contratos inteligentes
+  - smart contracts
 ---
 
 :::note[Before you begin]

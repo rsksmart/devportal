@@ -1,14 +1,14 @@
 ---
-sidebar_label: Referencia
+sidebar_label: Reference
 sidebar_position: 300
 title: Rootstock Node Configuration Reference
 tags:
   - rsk
   - rskj
-  - nodo
-  - configuración
+  - node
+  - config
   - rpc api
-  - operadores de nodos
+  - node operators
   - rootstock
 description: Configuration reference for RSKj
 render_features: tables-with-borders
@@ -16,11 +16,11 @@ render_features: tables-with-borders
 
 See [CLI flags](/node-operators/setup/configuration/cli/) for command line flag options.
 
-:::info[Important Aviso]
+:::info[Important Notice]
 From [RSKj HOP v4.2.0](https://github.com/rsksmart/rskj/releases/), RocksDB is no longer experimental. See guide on [using RocksDB](/node-operators/merged-mining/configure-mining#using-rocksdb)
 :::
 
-## Configuración avanzada
+## Advanced Configuration
 
 For advanced configuration requirements, please refer to this
 [expected configuration file](https://github.com/rsksmart/rskj/blob/master/rskj-core/src/main/resources/expected.conf).
@@ -31,7 +31,7 @@ The default values for the config file are defined in this
 and are "inherited" and varied based on the
 [selected network](https://github.com/rsksmart/rskj/tree/master/rskj-core/src/main/resources/config).
 
-## Guia
+## Guide
 
 The following detail the most commonly used configuration fields parsed by RSKj.
 
@@ -56,7 +56,7 @@ The following detail the most commonly used configuration fields parsed by RSKj.
 - [`details.inmemory.storage.limit`](#detailsinmemorystoragelimit)
 - [`solc.path`](#solcpath)
 
-## par
+## peer
 
 Describes how your node peers with other nodes.
 
@@ -69,7 +69,7 @@ Describes how your node peers with other nodes.
 
   |         | `ip.list`                                                                                                                                                                                                                                                                                                                                                                                                                         |
   | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-  | Regtest | No aplicable                                                                                                                                                                                                                                                                                                                                                                                                                      |
+  | Regtest | Not applicable                                                                                                                                                                                                                                                                                                                                                                                                                    |
   | Testnet | `"bootstrap02.testnet.rsk.co:50505","bootstrap03.testnet.rsk.co:50505","bootstrap04.testnet.rsk.co:50505","bootstrap05.testnet.rsk.co:50505"`                                                                                                                                                                                                                                                                                     |
   | Mainnet | `"bootstrap01.rsk.co:5050","bootstrap02.rsk.co:5050","bootstrap03.rsk.co:5050","bootstrap04.rsk.co:5050","bootstrap05.rsk.co:5050","bootstrap06.rsk.co:5050","bootstrap07.rsk.co:5050","bootstrap08.rsk.co:5050","bootstrap09.rsk.co:5050","bootstrap10.rsk.co:5050","bootstrap11.rsk.co:5050","bootstrap12.rsk.co:5050","bootstrap13.rsk.co:5050","bootstrap14.rsk.co:5050","bootstrap15.rsk.co:5050","bootstrap16.rsk.co:5050"` |
 - `peer.active = []`
@@ -87,14 +87,14 @@ Describes how your node peers with other nodes.
   | Testnet | 50505       |
   | Mainnet | 5050        |
 - `peer.connection.timeout = number (seconds)`
-  especifica _en segundos_ el tiempo de espera para intentar conectarse a un peer.
-  Valor sugerido: `2`.
+  specifies _in seconds_ the timeout for trying to connect to a peer.
+  Suggested value: `2`.
 - `channel.read.timeout = number (seconds)`
-  especifica _en segundos_ cuánto tiempo esperará a que llegue un mensaje antes de cerrar el canal.
-  Valor sugerido: `30`.
+  specifies _in seconds_ how much time you will wait for a message to come before closing the channel.
+  Suggested value: `30`.
 
 * `peer.privateKey = hash`
-  es una clave privada generada de forma segura y única para tu nodo que **debe** estar configurada.
+  is a securely generated private key unique for your node that **must** be set.
 
 - `peer.networkId = int`
   is the number of the network to connect to.
@@ -108,43 +108,44 @@ Describes how your node peers with other nodes.
   | Regtest | 7771             |
   | Testnet | 8100             |
   | Mainnet | 775              |
-- peer.maxActivePeers = int`  es el número máximo de peers activos que mantendrá tu nodo.
-      Valor sugerido:`30\\`.
+- `peer.maxActivePeers = int`
+  is the max number of active peers that your node will maintain.
+  Suggested value: `30`.
 - `peer.p2p.eip8 = bool`
-  obliga al peer a enviar el mensaje handshake en el formato definido por
+  forces peer to send handshake message in format defined by
   [EIP-8](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-8.md).
 
-## base de datos
+## database
 
-Describe dónde se guarda la base de datos del blockchain.
+Describes where the blockchain database is saved.
 
 - `database.dir = path`
-  es el lugar donde se guardan los archivos de almacenamiento físico.
+  is the place to save physical storage files.
 - `database.reset = [true/false]`
-  reinicia la base de datos cuando se inicia la aplicación cuando se establece en _true_.
+  resets the database when the application starts when set to _true_.
 
 ## database.import
 
-Opciones relacionadas con la sincronización experimental de importaciones v0.1.
+Options related to experimental import sync v0.1.
 
 - `database.import.url = URL`
-  es la URL del bucket de S3 que aloja la base de datos.
+  is the URL to the S3 bucket that hosts the database.
 - `database.import.trusted-keys = []`
-  lista de claves públicas de confianza para validar fuente legítima.
+  list of trusted public keys to validate legit source.
 - `database.import.enabled = [true/false]`
-  habilita la sincronización de importación.
+  enable the import sync.
 
 ## keyvalue.datasource (experimental)
 
-Selecciona la base de datos que se utilizará para almacenar la información.
-Las opciones posibles son:
+Selects the database that will be used to store the information.
+Possible options are:
 
 - `leveldb`
 - `rocksdb` (default)
 
-Si desea cambiar entre las distintas opciones de almacenamiento,
-por ejemplo de `leveldb` a `rocksdb` o viceversa,
-deberá **reiniciar** el nodo con la opción de importación cada vez que lo haga.
+If you wish to switch between the different storage options,
+for example from `leveldb` to `rocksdb` or vice versa,
+you must **restart** the node with the import option each time you do so.
 
 ## vm
 
@@ -161,7 +162,7 @@ When testing, using this module is the only way to see exceptions.
 - `initStorageLimit = int`
   the storage limit.
 
-Un ejemplo:
+An example:
 
 ```
 vm.structured {
@@ -172,13 +173,13 @@ vm.structured {
 }
 ```
 
-## sincronizar
+## sync
 
-Opciones relacionadas con la sincronización del blockchain:
+Options related to syncing the blockchain:
 
 - `sync.enabled = [true/false]`
-  activa la sincronización del blockchain.
-  Debe establecerse en `true` para mantener el nodo actualizado.
+  enables the blockchain synchronization.
+  Should be set to `true` to keep the node updated.
 - `sync.max.hashes.ask = int`
   determines the max amount of blocks to sync in a same batch.
   The synchronization is done in batches of blocks.
@@ -198,7 +199,7 @@ Opciones relacionadas con la sincronización del blockchain:
   **must be** 192 or a divisor of 192:
   - 1, 2, 3, 4, 6, 8, 12, 16, 24, 32, 48, 64, 96, 192
 
-Un ejemplo:
+An example:
 
 ```
 sync {
@@ -258,7 +259,7 @@ Describes the configuration for the RPC protocol.
   If a module is not in the list and enabled,
   its RPC calls are discarded.
 
-Ejemplos:
+Examples:
 
 ```json
 modules = [
@@ -315,7 +316,7 @@ wallet {
 }
 ```
 
-## puntuación
+## scoring
 
 Scoring is the way the node 'punishes' other nodes when bad responses are sent. Punishment can be done by node ID or address.
 
@@ -334,7 +335,7 @@ Scoring is the way the node 'punishes' other nodes when bad responses are sent. 
   maximum punishment duration (in minutes).
   Default is `1 week`.
 
-Un ejemplo:
+An example:
 
 ```shell
 scoring {

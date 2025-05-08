@@ -1,68 +1,68 @@
 ---
-title: Sistema de puntuación de pares
-sidebar_label: Sistema de puntuación de pares
+title: Peer Scoring System
+sidebar_label: Peer Scoring System
 sidebar_position: 600
 tags:
   - rsk
   - rskj
-  - nodo
-  - configuración
-  - par
-  - puntuación
-description: " El sistema de puntuación de pares protege los recursos del nodo RSKj de pares abusivos o maliciosos"
+  - node
+  - config
+  - peer
+  - scoring
+description: " The peer scoring system protects the RSKj node's resources from abusive or malicious peers"
 ---
 
-El principal objetivo del **Sistema de Puntuación Pare** es proteger los recursos de [Rootstock node's](/node-operators/setup/) de pares abusivos o maliciosos.
-por esto, el nodo Rootstock mantiene un seguimiento de
-una reputación por cada par que se conecta a
-y desconecta aquellos cuya reputación actual
-cae por debajo de los niveles aceptables.
+The main objective of the **Peer Scoring System** is to protect the [Rootstock node's](/node-operators/setup/) resources from abusive or malicious peers.
+For this, the Rootstock's node keeps track of
+a reputation for each peer that connects to it
+and disconnects those whose current reputation
+falls below acceptable levels.
 
-## Acciones
+## Actions
 
-Hay tres posibles acciones que el sistema de puntuación de pares puede realizar:
+There are three possible actions that the Peer Scoring system can perform:
 
-- Grabar un evento
-- Penalización automática de nodos de pares
-- Prohibir y desbanear manualmente los nodos de pares
+- Record an event
+- Automatic penalisation of peer nodes
+- Manually ban and unban peer nodes
 
-### Grabando un evento
+### Recording an event
 
-Todos los escenarios de disparo de eventos comenzarán por el nodo recibiendo un mensaje de un compañero.
+All event-firing scenarios will start by the node receiving a message from a peer.
 
-Todos los mensajes se registran automáticamente como eventos.
-Sin embargo, para la versión actual,
-solo algunos de ellos tienen un impacto negativo
-en la reputación del compañero.
-Estos eventos son:
+All messages are automatically recorded as events.
+However, for the current version,
+only some of them have a negative impact
+on the peer’s reputation.
+These events are:
 
-- **`INVALID_NETWORK`**: Esto ocurre cuando el ID de red recibido es diferente del ID de red del nodo.
-- **`INVALID_BLOCK`**: Esto sucede cuando el bloque recibido no es válido según los requerimientos de validación de bloques RSK.
-- **`INVALID_MESSAGE`**: Esto sucede cuando el mensaje recibido no es válido según los requerimientos de validación de mensajes RSK.
+- **`INVALID_NETWORK`**: This occurs when the received network ID is different from the network ID of the node.
+- **`INVALID_BLOCK`**: This happens when the received block is not valid as per RSK block validation requirements.
+- **`INVALID_MESSAGE`**: This happens when the message received is not valid as per RSK message validation requirements.
 
 If one of these events is recorded,
 the peer’s reputation will be marked accordingly,
 and the penalisation process will start automatically.
 This occurs only in nodes where the peer scoring feature is enabled.
 
-### Penalización automática de nodos pares
+### Automatic Penalisation of Peer Nodes
 
-Un par con mala reputación será castigado,
-lo que significa que cuando el nodo recibe un mensaje de él,
-el par será automáticamente desconectado
-y el mensaje recibido será descartado.
-Los Penitenciarios se aplican en dos niveles:
+A peer with a bad reputation will be punished,
+meaning that when the node receives a message from it,
+the peer will be automatically disconnected
+and the received message will be discarded.
+Penalties are applied at two levels:
 
-- La `dirección` del par, y
-- el `nodeID` del peer.
+- The peer’s `address`, and
+- the peer’s `nodeID`.
 
-La duración por defecto para el primer castigo es de 10 minutos.
-Esto se puede cambiar mediante la configuración del nodo RSK:
+The default duration for the first punishment is 10 minutes.
+This can be changed via the RSK node configuration:
 
-- `scoring.addresses.duration` para el nivel `address`
-- `scoring.nodes.duration` para el nivel `nodeID`
+- `scoring.addresses.duration` for `address` level
+- `scoring.nodes.duration` for `nodeID` level
 
-Estos valores se especifican en minutos.
+These values are specified in minutes.
 
 It is worth mentioning that penalty duration
 will be incremented by a percentage value
@@ -70,19 +70,19 @@ each time a penalty is applied to a peer.
 The default increase rate is 10%.
 This can be changed via the RSK node configuration:
 
-- `scoring.addresses.increment` para el nivel `address`
-- `scoring.nodes.increment` para el nivel `nodeID`
+- `scoring.addresses.increment` for `address` level
+- `scoring.nodes.increment` for `nodeID` level
 
-Es posible definir un tiempo máximo para que un nodo permanezca en un estado penalizado,
-que el valor por defecto es 7 días para el nivel de `dirección` y 0 (ilimitado) para el nivel de `nodeID`.
-Esto se puede cambiar mediante la configuración del nodo RSK:
+It is possible to define a maximum time for a node to stay in a penalised state,
+which defaults to 7 days for `address` level and 0 (unlimited) for `nodeID` level.
+This can be changed via the RSK node configuration:
 
-- `scoring.addresses.maximum` para el nivel `address`
-- `scoring.nodes.maximum` para el nivel `nodeID`
+- `scoring.addresses.maximum` for `address` level
+- `scoring.nodes.maximum` for `nodeID` level
 
-Estos valores se especifican en minutos.
+These values are specified in minutes.
 
-### Prohibición manual de nodos pares
+### Manual Banning of Peer Nodes
 
 A banned peer is considered as a peer with a bad reputation.
 Therefore, it will be disconnected the next time a message is received,
@@ -91,40 +91,40 @@ However, the action of banning a peer,
 unlike the Rootstock nodes’s automatic reputation tracking,
 is a manual action.
 
-Para banear o desbanear manualmente a un peer, esto puede hacerse por dirección,
-deben utilizarse los siguientes [métodos RPC](/node-operators/json-rpc/methods/):
+In order to manually ban or unban a peer, this can be done by address,
+the following [RPC methods](/node-operators/json-rpc/methods/) should be used:
 
 - `sco_banAddress(String address)`:
-    - Elimina una dirección o bloque a la lista de direcciones prohibidas.
+    - Removes an address or block to the list of banned addresses.
 - `sco_unbanAddress(String address)`:
-    - Elimina una dirección o bloque de direcciones de la lista de direcciones prohibidas.
+    - Removes an address or block of addresses from the list of banned addresses.
 
-Para comprobar qué direcciones están prohibidas, utilice el siguiente método:
+To check what addresses are banned, use the following method:
 
 - `sco_bannedAddresses()`:
-    - Devuelve la lista de direcciones y bloques bloqueados
+    - Returns the list of banned addresses and blocks
 
-> Advertencia: Estos métodos deben ser utilizados con precaución.
+> Warning: These methods should be used with caution.
 
-### Configuración de funcionalidad
+### Feature config
 
-Esto se puede cambiar mediante la configuración del nodo RSK:
+This can be changed via the RSK node configuration:
 
-- `scoring.penishmentEnabled`
+- `scoring.punishmentEnabled`
 
-Este valor se especifica como un booleano.
+This value is specified as a boolean.
 
-> Advertencia: La recomendación es mantener los valores predeterminados, esta es una característica compleja y poderosa que debe ser usada con precaución.
+> Warning: The recommendation is to keep the defaults, this is a complex and powerful feature that should be used with caution.
 
-### Métodos RPC
+### RPC methods
 
-Los siguientes métodos de RPC relacionados están disponibles.
+The following related RPC methods are available.
 
-- `sco_banAddress(String address)`: see [Manualmente banning of peer nodes](#manual-banning-of-peer-nodes).
-- `sco_unbanAddress(String address)`: see [Manualmente banning of peer nodes](#manual-banning-of-peer-nodes).
-- `sco_bannedAddresses()`: see [Bloqueo manual de nodos pares](#manual-banning-of-peer-nodes).
-- `sco_peerList()`: Devuelve la información de puntuación de pares recolectada
-- `sco_reputationSummary()`: Devuelve el resumen de reputación de todos los pares conectados
-- `sco_clearPeerScoring(String id)`: Limpieza de puntaje para la id recibida (en primer lugar intentada como una dirección, usada como un nodeID de otra manera).
+- `sco_banAddress(String address)`: see [Manually banning of peer nodes](#manual-banning-of-peer-nodes).
+- `sco_unbanAddress(String address)`: see [Manually banning of peer nodes](#manual-banning-of-peer-nodes).
+- `sco_bannedAddresses()`: see [Manually banning of peer nodes](#manual-banning-of-peer-nodes).
+- `sco_peerList()`: Returns the collected peer scoring information
+- `sco_reputationSummary()`: Returns the reputation summary of all the peers connected
+- `sco_clearPeerScoring(String id)`: Clears scoring for the received id (firstly tried as an address, used as a nodeID otherwise).
 
-**Tenga en cuenta que la configuración por defecto y recomendada NO es exponer estos métodos públicamente**.
+**Please note the default and recommended config is to NOT expose these methods publicly**.

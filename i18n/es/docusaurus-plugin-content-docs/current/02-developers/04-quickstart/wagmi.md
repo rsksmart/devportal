@@ -2,175 +2,175 @@
 sidebar_label: Wagmi
 sidebar_position: 107
 title: Rootstock Wagmi Starter Kit
-description: El Rootstock Wagmi Starter Kit proporciona una base sólida para el desarrollo de aplicaciones descentralizadas (dApps) en la blockchain Rootstock. Agiliza el desarrollo aprovechando las bibliotecas React, Wagmi y Shadcn.
+description: The Rootstock Wagmi Starter Kit provides a solid foundation for developing decentralized applications (dApps) on the Rootstock blockchain. It streamlines development by leveraging the React, Wagmi, and Shadcn libraries.
 tags:
   - rsk
-  - portainjertos
-  - desarrolladores
+  - rootstock
+  - developers
   - wagmi
-  - inicio rápido
+  - quickstart
   - dApps
-  - Contratos inteligentes
+  - Smart Contracts
 ---
 
-El kit de inicio Rootstock Wagmi proporciona una base para la creación de aplicaciones descentralizadas (dApps) en la blockchain Rootstock.
-Aprovecha la seguridad de Bitcoin y la flexibilidad de Ethereum.
+The Rootstock Wagmi starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain.
+It leverages the security of Bitcoin and the flexibility of Ethereum.
 
-El kit utiliza [Wagmi](https://wagmi.sh/), una biblioteca React Hooks, para simplificar los contratos inteligentes y las interacciones de la red blockchain y y [Shadcn libraries](https://ui.shadcn.com/).
+The kit uses [Wagmi](https://wagmi.sh/), a React Hooks library, to simplify smart contracts and blockchain network interactions and and [Shadcn libraries](https://ui.shadcn.com/).
 
-> Este kit de inicio está diseñado para ayudar a los desarrolladores a iniciar su viaje de desarrollo de dApp en Rootstock.
+> This starter kit is designed to help developers jump-start their dApp development journey on Rootstock.
 
-## Requisitos previos
+## Prerequisites
 
-- **Node.js y Git:** Asegúrese de tener Node.js y Git instalados en su sistema.
- - Consulte la sección [Prerrequisitos](/developers/requirements/#installing-nodejs-and-npm) para saber cómo descargar Node.js usando NVM.
-- **Yarn:** Instala Yarn, un gestor de paquetes para proyectos Node.js. Puedes hacerlo ejecutando el siguiente comando en tu terminal:
+- **Node.js and Git:** Ensure to have Node.js and Git installed on your system.
+ - See the [Prerequisites](/developers/requirements/#installing-nodejs-and-npm) section for how to download Node.js using NVM.
+- **Yarn:** Install Yarn, a package manager for Node.js projects. You can do this by running the following command in your terminal:
  ```bash
  npm install -g yarn
  ```
-- \*\*Conocimientos básicos
- - [React](https://react.dev/) (biblioteca JavaScript para crear interfaces de usuario)
- - [Solidity](https://soliditylang.org/) (un lenguaje de programación para contratos inteligentes Ethereum).
+- **Basic Knowledge:**
+ - [React](https://react.dev/) (a JavaScript library for building user interfaces)
+ - [Solidity](https://soliditylang.org/) (a programming language for Ethereum smart contracts).
 
-:::tip[Rootstock Curso para desarrolladores de Blockchain].
+:::tip[Rootstock Blockchain Developer Course]
 
-Aprenda a escribir, probar, asegurar, desplegar y verificar contratos inteligentes en la red blockchain de Rootstock. Inscríbase en el [Rootstock Blockchain Developer Course](/resources/courses/).
+Learn how to write, test, secure, deploy and verify smart contracts on the Rootstock blockchain network. Enroll for the [Rootstock Blockchain Developer Course](/resources/courses/).
 :::
 
-## Configurar
+## Setup
 
-### 1. Clonar el repositorio
+### 1. Clone the Repository
 
-En primer lugar, tendrá que clonar el repositorio Rootstock Wagmi Starter Kit. Abre tu terminal y ejecuta los siguientes comandos:
+First, you’ll need to clone the Rootstock Wagmi Starter Kit repository. Open your terminal and run the following commands:
 
 ```bash
 git clone https://github.com/rsksmart/rsk-wagmi-starter-kit
 cd rsk-wagmi-starter-kit
 ```
 
-### 2. Obtener ID de proyecto
+### 2. Get Project ID
 
-Cada dApp que depende de WalletConnect ahora necesita obtener un projectId de [WalletConnect Cloud](https://cloud.walletconnect.com/). Esto es gratis y solo lleva unos minutos.
+Every dApp that relies on WalletConnect now needs to obtain a projectId from [WalletConnect Cloud](https://cloud.walletconnect.com/). This is free and only takes few minutes.
 
-Para conseguir la llave:
+To get the key:
 
-1. Vaya a [Walletconnect](https://cloud.walletconnect.com/sign-up) y regístrese.
-2. Cree un nuevo proyecto haciendo clic en **Crear proyecto**.
-3. Añade un Nombre y un Enlace a tu proyecto, selecciona un producto (AppKit o WalletKit), selecciona **WalletKit**.
-4. Ahora verás el ID del proyecto, cópialo.
+1. Go to [Walletconnect](https://cloud.walletconnect.com/sign-up) and sign up.
+2. Create a new project by clicking on **Create Project**.
+3. Add a Name and Link to your project, select a product (AppKit or WalletKit), select **WalletKit**.
+4. Now you will see the project ID, copy it.
 
-### 3) Configuración del entorno
+### 3) Environment Setup
 
-Para configurar tu entorno, sigue estos pasos:
+To set up your environment, follow these steps:
 
-1. Crea un archivo `.env` y añade variables de entorno.
+1. Create a `.env` file and add environment variables.
  ```text
- VITE_WC_PROJECT_ID=Su projectid de la nube Walletconnect
+ VITE_WC_PROJECT_ID=Your projectid from cloud Walletconnect
  ```
 
-### 4) Instalar dependencias
+### 4) Install Dependencies
 
-Antes de ejecutar el proyecto, asegúrate de tener instaladas las dependencias necesarias. Recomendamos utilizar el gestor de paquetes yarn debido a posibles conflictos con los paquetes npm. Ejecute el siguiente comando para instalar las dependencias:
-
-```bash
-hilo
-```
-
-### 5. Ejecutar el proyecto
-
-Ahora que has clonado el repositorio e instalado las dependencias, es el momento de ejecutar el proyecto. Ejecute el siguiente comando:
+Before running the project, make sure to have the necessary dependencies installed. We recommend using the yarn package manager due to potential conflicts with npm packages. Run the following command to install dependencies:
 
 ```bash
-hilo
+yarn
 ```
 
-Esto iniciará la dApp Rootstock Wagmi Starter localmente, permitiéndole desarrollar y probar sus contratos inteligentes. Puedes acceder al servidor Vite en [http://localhost:5173](http://localhost:5173).
+### 5. Run the Project
 
-## Resultado
+Now that you’ve cloned the repository and installed dependencies, it’s time to run the project. Execute the following command:
+
+```bash
+yarn dev
+```
+
+This will start the Rootstock Wagmi Starter dApp locally, allowing you to develop and test your smart contracts. You can access the Vite server at [http://localhost:5173](http://localhost:5173).
+
+## Result
 
 <img src="/img/developers/quickstart/wagmi-starterkit.png"  width="800" height="600"/>
 
 :::info\[Info]
 
-Después de ejecutar con éxito su proyecto utilizando el comando anterior, haga lo siguiente:
+After successfully running your project using the command above, do the following:
 
-- Haga clic en el botón "Conectar cartera" para conectarse. Una vez conectado, podrás:
-- \*\*Conmuta fácilmente entre Mainnet y Testnet.
-- **Ver y copiar su dirección:** Acceda a la dirección de su monedero.
-- **Consulta tu saldo de tRBTC:** Consulta tu saldo de tRBTC.
-- **Desconectar:** Salir del proyecto.
+- Click the “Connect Wallet” button to log in. Once connected, you can:
+- **Switch Networks:** Easily switch between Mainnet and Testnet.
+- **View and Copy Your Address:** Access your wallet address.
+- **Check Your tRBTC Balance:** See your tRBTC balance.
+- **Disconnect:** Log out from the project.
 
 :::
 
-## Proyecto de prueba
+## Test Project
 
-Para probar el proyecto Wagmi, sigue estos sencillos pasos:
+To test the Wagmi project, follow these simple steps:
 
-1. **Conecte su cartera:** Haga clic en el botón "Conectar cartera".
-2. **Navegue hasta la sección Wagmi:** Desplácese hacia abajo y encuentre la tarjeta etiquetada como "Interacción contractual con el kit de inicio Wagmi". Haga clic en ella.
-3. **Explore las pestañas:** En la sección Wagmi, verá tres pestañas: ERC-20, ERC-721 y ERC-1155. Haz clic en cualquiera de estas pestañas para explorar más a fondo.
+1. **Connect Your Wallet:** Click the “Connect Wallet” button.
+2. **Navigate to the Wagmi Section:** Scroll down and find the card labeled “Contract Interaction with Wagmi Starter Kit.” Click on it.
+3. **Explore the Tabs:** In the Wagmi section, you’ll see three tabs: ERC-20, ERC-721, and ERC-1155. Click on any of these tabs to explore further.
 
 <img src="/img/developers/quickstart/wagmi-starterkit-tabs.png"  width="800" height="600"/>
 
-## Entender el código base
+## Understanding the Codebase
 
-### Estructura de la carpeta \\`.src
+### Folder Structure
 
 ```
-Público
+Public
 Src
 .env
-.env.ejemplo
+.env.example
 ```
 
-La carpeta `src` está organizada para agilizar el proceso de desarrollo y facilitar la localización de código o recursos específicos. Aquí tienes un desglose detallado:
+The `src` folder is organized to streamline the development process and make it easy to locate specific code or assets. Here's a detailed breakdown:
 
-#### Estructura de carpetas
+#### `.src` Folder Structure
 
-- **Activos:** Contiene las ABI (Application Binary Interfaces) para ERC20, ERC721 y ERC1155.
-- \*\*Componentes
- - **AccountAbstraction:** Contiene código relacionado con la abstracción de cuentas.
- - **Inicio:** Contiene componentes específicos de la página de inicio.
- - **Iconos:** Contiene varios componentes de iconos.
- - **Tokens:** Incluye componentes para diferentes tipos de tokens.
- - \*\*Interfaz de usuario: Componentes generales de interfaz de usuario utilizados en la aplicación.
- - **Pie de página.tsx:** Componente del pie de página.
- - \*\*Componente de la barra de navegación.
+- **Assets:** Contains the ABIs (Application Binary Interfaces) for ERC20, ERC721, and ERC1155.
+- **Components:**
+ - **AccountAbstraction:** Contains code related to account abstraction.
+ - **Home:** Holds components specific to the homepage.
+ - **Icons:** Contains various icon components.
+ - **Tokens:** Includes components for different token types.
+ - **UI:** General UI components used across the application.
+ - **Footers.tsx:** Footer component.
+ - **Navbar.tsx:** Navbar component.
 - **Config:**
- - **provider.tsx:** Configuración para proveedores.
- - **rainbowkitConfig.ts:** Configuración para RainbowKit.
- - **wagmiProviderConfig.ts:** Configuración para proveedores WAGMI.
-- **Lib:** Contiene varias carpetas de utilidades para facilitar la organización:
- - **Constantes:** Constantes de aplicación.
- - **Funciones:** Funciones generales utilizadas en toda la aplicación.
- - **Tipos:** Definiciones de tipos.
- - **Utilidades:** Funciones de utilidad.
-- **Páginas:**
- - **index.ts:** Punto de entrada principal.
- - **Etherspot.tsx:** Componente de página para Etherspot.
- - **Home.tsx:** Componente de la página de inicio.
- - **Wagmi.tsx:** Componente de página relacionado con Wagmi.
+ - **provider.tsx:** Configuration for providers.
+ - **rainbowkitConfig.ts:** Configuration for RainbowKit.
+ - **wagmiProviderConfig.ts:** Configuration for WAGMI providers.
+- **Lib:** Contains various utility folders for easy organization:
+ - **Constants:** Application constants.
+ - **Functions:** General functions used across the app.
+ - **Types:** Type definitions.
+ - **Utils:** Utility functions.
+- **Pages:**
+ - **index.ts:** Main entry point.
+ - **Etherspot.tsx:** Page component for Etherspot.
+ - **Home.tsx:** Homepage component.
+ - **Wagmi.tsx:** Wagmi-related page component.
 
-### Código para las fichas ERC20, ERC721 y ERC1155
+### Code for ERC20, ERC721, and ERC1155 Tabs
 
-El código responsable de las pestañas correspondientes a ERC20, ERC721 y ERC1155 se encuentra en la carpeta de componentes:
+The code responsible for the tabs corresponding to ERC20, ERC721, and ERC1155 can be found within the components folder:
 
-- **ERC20:** Ubicado en el directorio `components/tokens/ERC20`.
-- **ERC721:** Ubicado en el directorio `components/tokens/ERC721`.
-- **ERC1155:** Ubicado en el directorio `components/tokens/ERC1155`.
+- **ERC20:** Located in the `components/tokens/ERC20` directory.
+- **ERC721:** Located in the `components/tokens/ERC721` directory.
+- **ERC1155:** Located in the `components/tokens/ERC1155` directory.
 
-Este enfoque estructurado garantiza la agrupación lógica del código y los activos, lo que facilita la navegación y el mantenimiento.
+This structured approach ensures that code and assets are logically grouped, facilitating ease of navigation and maintainability.
 
-#### Comprender el código de ficha ERC20
+#### Understanding the ERC20 Tab Code
 
-El código interactúa con un contrato inteligente para acuñar tokens tRSK. Aquí tienes un desglose detallado de cómo se consigue:
+The code interacts with a smart contract to mint tRSK tokens. Here's a detailed breakdown of how this is achieved:
 
-1. \*\*Referencia del contrato inteligente
+1. **Smart Contract Reference:**
 
-- **Dirección:** La dirección del contrato inteligente se especifica mediante la constante `ERC20_ADDRESS`.
-- **ABI:** La ABI (Application Binary Interface) del contrato, que define las funciones del contrato y sus parámetros, es proporcionada por la constante `abi`.
+- **Address:** The smart contract's address is specified by the `ERC20_ADDRESS` constant.
+- **ABI:** The contract's ABI (Application Binary Interface), which defines the contract functions and their parameters, is provided by the `abi` constant.
 
-2. **Lectura de datos contractuales:**
+2. **Reading Contract Data:**
 
 ```javascript
 const { data, isLoading, isError, refetch } = useReadContract({
@@ -181,17 +181,17 @@ const { data, isLoading, isError, refetch } = useReadContract({
 });
 ```
 
-3. **Escribir en el contrato:**
- El hook `useWriteContract` de la librería wagmi se utiliza para interactuar con las funciones de escritura del contrato (funciones que modifican el estado).
+3. **Writing to the Contract:**
+ The `useWriteContract` hook from the wagmi library is used to interact with the contract's write functions (functions that modify the state).
 
-4. **Acuñación de fichas:**
- La función `mintTokens` llama a `writeContractAsync` para acuñar fichas tRSK.
+4. **Minting Tokens:**
+ The `mintTokens` function calls `writeContractAsync` to mint tRSK tokens.
 
-- Argumentos:
- - abi: Define las funciones del contrato y sus parámetros.
- - Dirección: La dirección del contrato ERC-20 desplegado.
- - functionName: El nombre de la función a llamar, que en este caso es "menta".
- - args: Un array que contiene la dirección del monedero del usuario y la cantidad a acuñar (100 en este caso).
+- Arguments:
+ - abi: Defines the contract functions and their parameters.
+ - address: The address of the deployed ERC-20 contract.
+ - functionName: The name of the function to call, which is "mint" in this case.
+ - args: An array containing the user's wallet address and the amount to mint (100 in this case).
 
 ```javascript
 const mintTokens = async () => {
@@ -209,14 +209,14 @@ const mintTokens = async () => {
       });
       setLoading(false);
       toast({
-          title: "Fichas tRSK acuñadas con éxito",
-          description: "Actualiza la página para ver los cambios",
+          title: "Successfully minted tRSK tokens",
+          description: "Refresh the page to see changes",
       });
       refetch();
   } catch (e) {
       toast({
           title: "Error",
-          description: "Failed tot tokens tRSK",
+          description: "Failed to mint tRSK tokens",
           variant: "destructive",
       });
       setLoading(false);
@@ -226,80 +226,80 @@ const mintTokens = async () => {
 
 ```
 
-Esto envía una transacción a la cadena de bloques para ejecutar la función "acuñar" en el contrato inteligente, acuñando así tokens tRSK y depositándolos en la cartera del usuario.
+This sends a transaction to the blockchain to execute the "mint" function on the smart contract, thereby minting tRSK tokens and depositing them into the user's wallet.
 
-## Comprender el código de ficha ERC721
+## Understanding the ERC721 Tab Code
 
-Este código define un componente React llamado `ERC721Tab`, que proporciona una interfaz de usuario para interactuar con un contrato inteligente ERC-721.
+This code defines a React component named `ERC721Tab`, which provides a user interface for interacting with an ERC-721 smart contract.
 
-Las funciones clave dentro de este componente:
+The Key Functions Within This Component:
 
-1. UsarReadContract\\`:
- Este hook se utiliza para leer datos del contrato ERC-721. Obtiene el saldo de NFT de la dirección del usuario conectado.
+1. `useReadContract`:
+ This hook is used to read data from the ERC-721 contract. It fetches the balance of NFTs held by the connected user's address.
 
-- \*\*Parámetros:
- - `abi`: La ABI (Application Binary Interface) del contrato ERC-721.
- - Dirección La dirección del contrato ERC-721.
- - `functionName`: El nombre de la función a llamar en el contrato (balanceOf).
- - `args`: Los argumentos a pasar a la función del contrato ([dirección]).
+- **Parameters**:
+ - `abi`: The ABI (Application Binary Interface) of the ERC-721 contract.
+ - `address`: The address of the ERC-721 contract.
+ - `functionName`: The name of the function to call on the contract (balanceOf).
+ - `args`: The arguments to pass to the contract function ([address]).
 
-2. usarWriteContract\\`:
- Este hook se utiliza para escribir datos en el contrato ERC-721, concretamente para acuñar un nuevo NFT.
+2. `useWriteContract`:
+ This hook is used to write data to the ERC-721 contract, specifically to mint a new NFT.
 
-**Función**:
+**Function**:
 
-- WriteContractAsync`: Escribe de forma asíncrona en el contrato llamando a la función `safeMint\\` del contrato ERC-721.
+- `writeContractAsync`: Asynchronously writes to the contract by calling the `safeMint` function of the ERC-721 contract.
 
-3. mintNFT\\`:
- Se trata de una función asíncrona que gestiona el proceso de acuñación de un nuevo NFT.
+3. `mintNFT`:
+ This is an asynchronous function that handles the minting process of a new NFT.
 
-- \*\*Pasos:
- - Establece el estado de carga en true.
- - Intenta llamar a la función `safeMint` en el contrato ERC-721 utilizando `writeContractAsync`.
- - Espera a que se confirme la transacción mediante `waitForTransactionReceipt`.
- - Muestra un mensaje de brindis de éxito si la acuñación se realiza correctamente.
- - Obtiene el saldo NFT del usuario llamando a `refetch`.
- - Captura cualquier error, lo registra y muestra un mensaje de brindis por el error.
- - Establece el estado de carga en false.
+- **Steps**:
+ - Sets the loading state to true.
+ - Attempts to call the `safeMint` function on the ERC-721 contract using `writeContractAsync`.
+ - Waits for the transaction to be confirmed using `waitForTransactionReceipt`.
+ - Displays a success toast message if the minting is successful.
+ - Refetches the user's NFT balance by calling `refetch`.
+ - Catches any errors, logs them, and displays an error toast message.
+ - Sets the loading state to false.
 
-4. Refetch
- Esta función forma parte del hook `useReadContract` y se utiliza para refrescar el saldo de NFTs después de una operación de acuñación exitosa.
+4. `refetch`:
+ This function is part of the `useReadContract` hook and is used to refresh the balance of NFTs after a successful minting operation.
 
 5. `toast`:
- Esta función se utiliza para mostrar notificaciones tostadas para mensajes de éxito o error.
+ This function is used to display toast notifications for success or error messages.
 
-El resto del componente contiene JSX para representar los elementos de la interfaz de usuario, incluido un botón para acuñar el NFT, una pantalla de saldo y un enlace para ver los NFT acuñados en un explorador de bloques.
+The rest of the component contains JSX to render the UI elements, including a button to mint the NFT, a balance display, and a link to view the minted NFTs on a block explorer.
 
-## Comprender el código de ficha ERC1155
+## Understanding the ERC1155 Tab Code
 
-El código proporcionado es un componente React que interactúa con un contrato inteligente utilizando el estándar ERC-1155. Permite a los usuarios acuñar tokens y comprobar sus saldos.
+The code provided is a React component that interacts with a smart contract using the ERC-1155 standard. It allows users to mint tokens and check their balances.
 
-Las funciones clave dentro de este componente:
+The Key Functions Within This Component:
 
-1. `ERC1155Tab` Componente:
+1. `ERC1155Tab` Component:
 
-**Variables de Estado**:
+**State Variables**:
 
-- `loading`: Booleano para gestionar el estado de carga durante el minado de tokens.
-- Valor Número para almacenar el tipo de token seleccionado para la acuñación.
-- Dirección La dirección del monedero del usuario obtenida del hook `useAccount`.
+- `loading`: Boolean to manage the loading state during token minting.
+- `value`: Number to store the selected token type for minting.
+- `address`: The user's wallet address obtained from the `useAccount` hook.
 
-2. Ganchos `useReadContract`:
- Estos ganchos se utilizan para leer datos del contrato inteligente.
+2. `useReadContract` Hooks:
+ These hooks are used to read data from the smart contract.
 
-- `useReadContract` para comprobar el saldo de fichas de tipo A (con ID 1).
-- `useReadContract` para comprobar el saldo de fichas de tipo B (con ID 2).
+- `useReadContract` for checking the balance of Type A tokens (with ID 1).
+- `useReadContract` for checking the balance of Type B tokens (with ID 2).
 
-3. Función `mintTokens`:
- Función asíncrona que gestiona la acuñación de fichas.
+3. `mintTokens` Function:
+ An asynchronous function that handles the minting of tokens.
 
-- \*\*Pasos:
- - Llama a `writeContractAsync` para interactuar con el contrato inteligente y acuñar tokens.
- - Espera el recibo de la transacción utilizando `waitForTransactionReceipt`.
- - Muestra brindis de éxito o error en función del resultado.
- - Restablece los datos de la balanza después de la acuñación.
+- **Steps**:
+ - Calls `writeContractAsync` to interact with the smart contract and mint tokens.
+ - Waits for the transaction receipt using `waitForTransactionReceipt`.
+ - Displays success or error toasts based on the outcome.
+ - Refetches the balance data after minting.
 
-## Únete a la Comunidad
+## Join the Community
 
-Crear dApps puede ser un reto, pero no estás solo.
-Únete a la comunidad [Rootstock Discord](http://discord.gg/rootstock) para obtener ayuda, hacer preguntas y colaborar.
+Building dApps can be challenging, but you’re not alone.
+Join the [Rootstock Discord](http://discord.gg/rootstock) community for help, questions, and collaboration.

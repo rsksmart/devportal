@@ -12,118 +12,118 @@
     "message": "Explorar documentación"
   },
   "Guides for Builders": {
-    "message": "Guides for Builders"
+    "message": "Guías para constructores"
   },
   "Beginner to Web3?": {
-    "message": "Beginner to Web3?"
+    "message": "¿Es usted nuevo en Web3?"
   },
   "Explore Rootstock Fundamentals and resources to begin your development journey.": {
-    "message": "Explore Rootstock Fundamentals and resources to begin your development journey."
+    "message": "Descubra los fundamentos de Rootstock y los recursos para comenzar su viaje de desarrollo."
   },
   "Core Concepts": {
-    "message": "Core Concepts"
+    "message": "Conceptos básicos"
   },
   "Become a Rootstock Blockchain Developer": {
-    "message": "Become a Rootstock Blockchain Developer"
+    "message": "Conviértase en un desarrollador de blockchain de Rootstock"
   },
   "Deploy Smart Contracts": {
-    "message": "Deploy Smart Contracts"
+    "message": "Implemente Smart Contracts"
   },
   "EVM-compatible tools and guides to deploy and scale your dApps on Rootstock.": {
-    "message": "EVM-compatible tools and guides to deploy and scale your dApps on Rootstock."
+    "message": "Herramientas y guías compatibles con la máquina virtual de Ethereum para implementar y escalar sus dApp en Rootstock."
   },
   "Quick Starts": {
-    "message": "Quick Starts"
+    "message": "Inicio rápido"
   },
   "Join the Discord Community": {
-    "message": "Join the Discord Community"
+    "message": "Únase a la comunidad de Discord"
   },
   "Become a Merged Miner": {
-    "message": "Become a Merged Miner"
+    "message": "Conviértase en un minero fusionado"
   },
   "Interested in merged mining on Rootstock? Setup a Rootstock node or use the RPC API.": {
-    "message": "Interested in merged mining on Rootstock? Setup a Rootstock node or use the RPC API."
+    "message": "¿Está interesado en la minería fusionada de Rootstock? Configure un nodo de Rootstock o utilice la API RPC."
   },
   "Merged Mining": {
-    "message": "Merged Mining"
+    "message": "Minería Fusionada"
   },
   "RPC API": {
-    "message": "RPC API"
+    "message": "API RPC"
   },
   "Apply for a Grant": {
-    "message": "Apply for a Grant"
+    "message": "Solicite una subvención"
   },
   "Get funding and support to build your next dApp on Rootstock through the strategic grants program.": {
-    "message": "Get funding and support to build your next dApp on Rootstock through the strategic grants program."
+    "message": "Obtenga financiación y apoyo para desarrollar su próxima dApp en Rootstock a través del programa de subvenciones estratégicas."
   },
   "Apply now": {
-    "message": "Apply now"
+    "message": "Solicítela ahora"
   },
   "Browse by DevTools": {
-    "message": "Browse by DevTools"
+    "message": "Navegación por DevTools"
   },
   "Get RBTC": {
-    "message": "Get RBTC"
+    "message": "Obtenga RBTC"
   },
   "Explore the various ways to get RBTC using the PowPeg App, On/Off Ramps, or Exchanges.": {
-    "message": "Explore the various ways to get RBTC using the PowPeg App, On/Off Ramps, or Exchanges."
+    "message": "Descubra las diversas formas de obtener RBTC utilizando la aplicación PowPeg, rampas de entrada y salida o plataformas de intercambio."
   },
   "View a repository of starter kits, sample codes and tutorials for creating, testing and deploying smart contracts on Rootstock.": {
-    "message": "View a repository of starter kits, sample codes and tutorials for creating, testing and deploying smart contracts on Rootstock."
+    "message": "Consulte un repositorio de kits de inicio, ejemplos de código y tutoriales para crear, probar e implementar smart contracts en Rootstock."
   },
   "EVM-compatible Tools": {
-    "message": "EVM-compatible Tools"
+    "message": "Herramientas compatibles con la máquina virtual de Ethereum"
   },
   "Build and deploy faster with EVM-compatible tools and guides on Rootstock.": {
-    "message": "Build and deploy faster with EVM-compatible tools and guides on Rootstock."
+    "message": "Desarrolle e implemente con más rapidez utilizando herramientas y guías compatibles con la máquina virtual de Ethereum en Rootstock."
   },
   "SDKs and Integration Guides": {
-    "message": "SDKs and Integration Guides"
+    "message": "Guías de integración y Kit de desarrollo de software"
   },
   "Explore easy-to-set-up SDKs and Integration Guides.": {
-    "message": "Explore easy-to-set-up SDKs and Integration Guides."
+    "message": "Póngase al día con kits de desarrollo de software fáciles de configurar y guías de integración."
   },
   "Read more": {
-    "message": "Read more"
+    "message": "Más información"
   },
   "Browse by Products": {
-    "message": "Browse by Products"
+    "message": "Buscar por producto"
   },
   "Bridges": {
     "message": "Bridges"
   },
   "Bridge in/out of Rootstock.": {
-    "message": "Bridge in/out of Rootstock."
+    "message": "Bridge de entrada y salida de Rootstock."
   },
   "RBTC Flyover": {
-    "message": "RBTC Flyover"
+    "message": "Flyover de RBTC"
   },
   "PowPeg App": {
-    "message": "PowPeg App"
+    "message": "Aplicación PowPeg"
   },
   "Token Bridge": {
     "message": "Token Bridge"
   },
   "Wallets": {
-    "message": "Wallets"
+    "message": "Billeteras"
   },
   "View wallets compatible with the Rootstock platform.": {
-    "message": "View wallets compatible with the Rootstock platform."
+    "message": "Consulte las billeteras compatibles con la plataforma de Rootstock."
   },
   "MetaMask": {
     "message": "MetaMask"
   },
   "Wallets on Rootstock": {
-    "message": "Wallets on Rootstock"
+    "message": "Billeteras en Rootstock"
   },
   "RIF Tools": {
-    "message": "RIF Tools"
+    "message": "Herramientas RIF"
   },
   "Explore Open-source tools and technologies for faster, and more rewarding ways to build on Bitcoin.": {
-    "message": "Explore Open-source tools and technologies for faster, and more rewarding ways to build on Bitcoin."
+    "message": "Explore herramientas y tecnologías de código abierto para encontrar formas más rápidas y eficientes de construir sobre Bitcoin."
   },
   "Name Service": {
-    "message": "Name Service"
+    "message": "Servicio de nombres"
   },
   "Relay": {
     "message": "Relay"
@@ -132,49 +132,49 @@
     "message": "Read"
   },
   "Deploy and interact with EVM compatible smart contracts on Rootstock using JSON RPC methods using the Rootstock RPC API.": {
-    "message": "Deploy and interact with EVM compatible smart contracts on Rootstock using JSON RPC methods using the Rootstock RPC API."
+    "message": "Implemente e interactúe con contratos inteligentes compatibles con la máquina virtual de Ethereum en Rootstock utilizando métodos JSON RPC a través de la API RPC de Rootstock."
   },
   "Make First API Call": {
-    "message": "Make First API Call"
+    "message": "Realizar la primera llamada a la API"
   },
   "View JSON RPC Methods": {
-    "message": "View JSON RPC Methods"
+    "message": "Ver métodos RPC JSON"
   },
   "Connect with the Community": {
-    "message": "Connect with the Community"
+    "message": "Conéctese con la comunidad"
   },
   "Join the Rootstock \n Developer Community on Discord.": {
-    "message": "Join the Rootstock \n Developer Community on Discord."
+    "message": "Únase a la comunidad de desarrolladores de Rootstock en Discord."
   },
   "Join Discord": {
-    "message": "Join Discord"
+    "message": "Únase a Discord"
   },
   "Explore open source tools, smart contracts and starter kits for deploying and integrating your dApps.": {
-    "message": "Explore open source tools, smart contracts and starter kits for deploying and integrating your dApps."
+    "message": "Explore herramientas de código abierto, smart contracts y kits de inicio para implementar e integrar sus dApp."
   },
   "Star on Github": {
-    "message": "Star on Github"
+    "message": "Marcar como favorito en GitHub"
   },
   "Stay Connected": {
-    "message": "Stay Connected"
+    "message": "Manténgase conectado"
   },
   "View upcoming events, community calls, webinars, and meetups happening \n around the world.": {
-    "message": "View upcoming events, community calls, webinars, and meetups happening \n around the world."
+    "message": "Consulte los próximos eventos, llamadas comunitarias, seminarios web y encuentros que se celebrarán en todo el mundo."
   },
   "View upcoming Events": {
-    "message": "View upcoming Events"
+    "message": "Ver próximos eventos"
   },
   "Not now": {
-    "message": "Not now"
+    "message": "Ahora no"
   },
   "Close": {
-    "message": "Close"
+    "message": "Cerrar"
   },
   "Submitting": {
     "message": "Submitting"
   },
   "Loading...": {
-    "message": "Loading..."
+    "message": "Cargando..."
   },
   "Submit": {
     "message": "Submit"
@@ -183,25 +183,25 @@
     "message": "Submitted"
   },
   "Message": {
-    "message": "Message"
+    "message": "Mensaje"
   },
   "Name": {
-    "message": "Name"
+    "message": "Nombre"
   },
   "Title": {
-    "message": "Title"
+    "message": "Título"
   },
   "Why / Reason for Request": {
-    "message": "Why / Reason for Request"
+    "message": "Por qué / Motivo de la solicitud"
   },
   "Publication location (E.g, DevPortal, Blog)": {
     "message": "Publication location (E.g, DevPortal, Blog)"
   },
   "Any other information": {
-    "message": "Any other information"
+    "message": "Algún otro dato"
   },
   "Are you a technical contributor?": {
-    "message": "Are you a technical contributor?"
+    "message": "¿Eres un colaborador técnico?"
   },
   "Submit a Pull Request": {
     "message": "Submit a Pull Request"
@@ -210,7 +210,7 @@
     "message": "or an Issue"
   },
   "theme.common.copyPageLinkMsg": {
-    "message": "Copied!"
+    "message": "¡Copiado!"
   },
   "theme.common.copyPageLink": {
     "message": "Copiar enlace"
@@ -225,13 +225,13 @@
     "message": "Comentarios"
   },
   "theme.feedbackForm.form.title": {
-    "message": "Thank you for your feedback!"
+    "message": "¡Gracias por tus comentarios!"
   },
   "theme.feedbackForm.form.description": {
     "message": "We would love to hear your thoughts and feedback so that we can improve these Docs for you and others!"
   },
   "theme.feedbackForm.form.rating": {
-    "message": "Feedback"
+    "message": "Sugerencias"
   },
   "theme.common.back": {
     "message": "Volver"
@@ -353,7 +353,7 @@
     "message": "Solicitar un Artículo"
   },
   "theme.moreLinks.requestArticle.form.title": {
-    "message": "Request a New Article",
+    "message": "Solicitar un nuevo artículo",
     "description": "Request an Article form title"
   },
   "theme.moreLinks.requestArticle.form.description": {
@@ -373,7 +373,7 @@
     "description": "The first paragraph of the 404 page"
   },
   "theme.SearchBar.label": {
-    "message": "Buscar en",
+    "message": "",
     "description": "The ARIA label and placeholder for search button"
   },
   "theme.NotFound.p2": {
@@ -687,6 +687,6 @@
     "description": "The unlisted content banner message"
   },
   "Email": {
-    "message": "Email"
+    "message": "Correo electrónico"
   }
 }

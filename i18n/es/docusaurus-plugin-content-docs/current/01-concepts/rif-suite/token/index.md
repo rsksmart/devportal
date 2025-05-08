@@ -1,34 +1,34 @@
 ---
-sidebar_label: Ficha RIF
+sidebar_label: RIF Token
 sidebar_position: 400
 title: "RIF Token: Bringing Utility to Bitcoin"
 tags:
   - rif
-  - ficha
+  - token
   - erc677
-description: Información sobre el RIF token, dónde obtenerlo, cómo transferirlo y detalles técnicos sobre su estándar de token
+description: Information about the RIF token, where to obtain it, how to transfer it, and technical details on its token standard
 ---
 
 The RIF (Rootstock Infrastructure Framework) token makes it easier, faster and more rewarding to build on Bitcoin. It also enables governance on [RootstockCollective DAO](https://rootstockcollective.xyz/). By staking RIF, users can mint stRIF; the governance token of the RootstockCollective used for voting, proposal creation, and rewards allocation. For more information, read the [Rootstock Collective Whitepaper](https://wiki.rootstockcollective.xyz/).
 
-## RIF (RIF Token en Mainnet)
+## RIF (RIF Token in Mainnet)
 
 <table class="table">
   <tbody>
     <tr>
-      <td scope="row">Nombre de la ficha</td>
+      <td scope="row">Token Name</td>
       <td><a href="https://coinmarketcap.com/currencies/rsk-infrastructure-framework/" target="_blank">RIF</a></td>
     </tr>
     <tr>
-      <td scope="row">Suministro total</td>
-      <td>1.000.000.000 RIF</td>
+      <td scope="row">Total Supply</td>
+      <td>1,000,000,000 RIF</td>
     </tr>
     <tr>
-      <td scope="row">Dirección del contrato</td>
+      <td scope="row">Contract Address</td>
       <td><a href="https://explorer.rootstock.io/address/0x2acc95758f8b5f583470ba265eb685a8f45fc9d5" target="_blank">0x2acc95758f8b5f583470ba265eb685a8f45fc9d5</a></td>
     </tr>
     <tr>
-      <td scope="row">Tipo de contrato</td>
+      <td scope="row">Contract Type</td>
       <td>ERC677</td>
     </tr>
     <tr>
@@ -44,31 +44,31 @@ The RIF (Rootstock Infrastructure Framework) token makes it easier, faster and m
 
 <Button href="https://rif.technology/rif-token/">Get RIF on Exchanges</Button>
 
-## tRIF (Token RIF en Testnet)
+## tRIF (RIF Token in Testnet)
 
 <table class="table">
   <tbody>
     <tr>
-      <td scope="row">Nombre de la ficha</td>
+      <td scope="row">Token Name</td>
       <td>tRIF</td>
     </tr>
     <tr>
-      <td scope="row">Suministro total</td>
-      <td>1.000.000.000 tRIF</td>
+      <td scope="row">Total Supply</td>
+      <td>1,000,000,000 tRIF</td>
     </tr>
     <tr>
-      <td scope="row">Dirección de Contrato Testnet</td>
+      <td scope="row">Contract Testnet Address</td>
       <td><a href="https://explorer.testnet.rootstock.io/address/0x19f64674d8a5b4e652319f5e239efd3bc969a1fe" target="_blank">0x19f64674D8a5b4e652319F5e239EFd3bc969a1FE</a></td>
     </tr>
     <tr>
-      <td scope="row">Tipo de contrato</td>
+      <td scope="row">Contract Type</td>
       <td>ERC677</td>
     </tr>
     <tr>
       <td scope="row">How to Get</td>
       <td>
         <ul>
-            <li><a href="https://faucet.rifos.org/" target="_blank">Grifo</a></li>
+            <li><a href="https://faucet.rifos.org/" target="_blank">Faucet</a></li>
         </ul>
       </td>
     </tr>
@@ -110,38 +110,38 @@ The stRIF tokens give you voting rights and participation in the RootstockCollec
   </tbody>
 </table>
 
-## Billeteras
+## Wallets
 
-Ver [monederos soportados](/dev-tools/wallets/).
+See [supported wallets](/dev-tools/wallets/).
 
-## Información técnica
+## Technical information
 
-### Estándar de fichas ERC677
+### ERC677 token standard
 
-Una transacción de tokens [ERC20](https://github.com/ethereum/EIPs/issues/20)
-entre una dirección normal/no contractual y un contrato son dos transacciones diferentes: Debes llamar a `approve` en el contrato de tokens y luego llamar a `transferFrom` en el otro contrato cuando quieras depositar tus tokens en él.
+An [ERC20](https://github.com/ethereum/EIPs/issues/20)
+token transaction between a regular/non-contract address and contract are two different transactions: You should call `approve` on the token contract and then call `transferFrom` on the other contract when you want to deposit your tokens into it.
 
 [ERC677](https://github.com/ethereum/EIPs/issues/677)
-simplifica este requisito y permite utilizar la misma función de transferencia. Los tokens ERC677 pueden enviarse llamando a la función `transfer` en el contrato de tokens sin diferencia si el receptor es un contrato o una dirección de cartera, ya que hay una nueva forma de notificar la transferencia al contrato receptor.
+simplifies this requirement and allows using the same transfer function. ERC677 tokens can be sent by calling `transfer` function on the token contract with no difference if the receiver is a contract or a wallet address, since there is a new way to notify the receiving contract of the transfer.
 
-Una transferencia de tokens ERC677 será igual que una transferencia ERC20. Por otro lado, si el receptor es un contrato, el contrato de tokens ERC677 intentará llamar a la función `tokenFallback` del contrato receptor. Si no hay ninguna función `tokenFallback` en el contrato receptor, la transacción fallará.
+An ERC677 token transfer will be the same as an ERC20 transfer. On the other hand, if the receiver is a contract, then the ERC677 token contract will try to call `tokenFallback` function on receiver contract. If there is no `tokenFallback` function on receiver contract, the transaction will fail.
 
-### Métodos de transferencia RIF
+### RIF transfer methods
 
-- Aprobar y transferir:
+- Approve and transfer:
   ```js
-  function aprobar(address _spender, uint256 _value) public returns (bool)
+  function approve(address _spender, uint256 _value) public returns (bool)
   function transfer(address _to, uint256 _value) public returns (bool)
   ```
 
-- Transferir y llamar:
+- Transfer and call:
 
   ```js
   function transfer(address _to, uint256 _value, bytes data)
   ```
 
-  **Parámetros**
+  **Parameters**
 
-  - `_to: address`: Dirección del contrato.
-  - `_value: uint256`: Cantidad de RIF tokens a enviar.
-  - `datos: bytes`: Firma de 4 bytes de la función a ejecutar, seguida de los parámetros de la función a ejecutar con codificados como matriz de bytes.
+  - `_to: address`: Contract address.
+  - `_value: uint256`: Amount of RIF tokens to send.
+  - `data: bytes`: 4-byte signature of the function to be executed, followed by the function parameters to be executed with encoded as a byte array.

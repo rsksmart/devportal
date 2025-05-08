@@ -1,31 +1,31 @@
 ---
-title: Conversión de BTC a RBTC y viceversa
-sidebar_label: Redes
+title: Converting BTC to RBTC and vice versa
+sidebar_label: Networks
 tags:
   - rsk
-  - portainjertos
+  - rootstock
   - rbtc
-  - conversión
+  - conversion
   - peg
-  - 2 vías
-  - clavija
+  - 2-way
+  - peg-in
   - peg-out
-  - federación
-description: Conversión de BTC a RBTC (peg-in) y de RBTC a BTC (peg-out) en Mainnet y Testnet.
+  - federation
+description: Converting BTC to RBTC (peg-in) and RBTC to BTC (peg-out) on Mainnet and Testnet.
 sidebar_position: 303
 ---
 
-## Conversión de Mainnet
+## Mainnet Conversion
 
-En esta sección repasaremos los pasos necesarios para convertir BTC a RBTC y viceversa en las redes Bitcoin y Rootstock (RSK).
+In this section we will go over the steps of converting BTC to RBTC and vice versa in Bitcoin and Rootstock (RSK) Networks.
 
 :::tip[Tip]
-La cantidad mínima de Bitcoin a convertir es de **0,005 BTC** para Mainnet.
+The minimum amount of Bitcoin to convert is **0.005 BTC** for Mainnet.
 :::
 
-### Conversor de BTC a RBTC
+### BTC to RBTC conversion
 
-Instrucciones sobre cómo hacer un peg-in en Mainnet.
+Instructions on how to do a Mainnet peg-in.
 
 ```mdx-code-block
 <Accordion>
@@ -81,9 +81,9 @@ Instrucciones sobre cómo hacer un peg-in en Mainnet.
 </Accordion>
 ```
 
-### Conversion RBTC a BTC
+### RBTC to BTC conversion
 
-Instrucciones sobre cómo hacer un peg-out de Mainnet.
+Instructions on how to do a Mainnet peg-out.
 
 ```mdx-code-block
 <Accordion>
@@ -111,17 +111,17 @@ Instrucciones sobre cómo hacer un peg-out de Mainnet.
 </Accordion>
 ```
 
-## Conversión de Testnet
+## Testnet Conversion
 
-En esta sección repasaremos los pasos para convertir t-BTC a tRBTC, y viceversa en las Testnets de Bitcoin y Rootstock.
+In this section we will go over the steps of converting t-BTC to tRBTC, and vice versa on the Bitcoin and Rootstock Testnets.
 
 :::tip[Tip]
-La cantidad mínima de Bitcoin a convertir es **0.005 tBTC** para Testnet.
+The minimum amount of Bitcoin to convert is **0.005 tBTC** for Testnet.
 :::
 
-### Conversion de tBTC a tRBTC
+### tBTC to tRBTC conversion
 
-Instrucciones para realizar un enclavamiento Testnet.
+Instructions on how to do a Testnet peg-in.
 
 ```mdx-code-block
 <Accordion>
@@ -180,12 +180,12 @@ Instrucciones para realizar un enclavamiento Testnet.
 </Accordion>
 ```
 
-### Conversion de tRBTC a tBTC
+### tRBTC to tBTC conversion
 
-Instrucciones sobre cómo hacer una clavija Testnet.
+Instructions on how to do a Testnet peg-out.
 
 :::info[Note]
-El proceso de liberación en la red Bitcoin tarda 10 confirmaciones de bloque Rootstock y al menos 10 minutos más.
+The release process on Bitcoin network takes 10 Rootstock block confirmations and at least 10 more minutes.
 :::
 
 ```mdx-code-block

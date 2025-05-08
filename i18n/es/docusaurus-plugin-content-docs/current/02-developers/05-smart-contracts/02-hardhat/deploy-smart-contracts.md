@@ -1,34 +1,34 @@
 ---
-sidebar_label: Implantar contratos inteligentes
+sidebar_label: Deploy Smart Contracts
 sidebar_position: 105
-title: Implantar contratos inteligentes
-description: Aprenda a desplegar su contrato inteligente Rootstock en su entorno local y en la red Rootstock.
+title: Deploy Smart Contracts
+description: Learn how to deploy your Rootstock smart contract on your local environment and the Rootstock network.
 tags:
-  - guías
-  - desarrolladores
-  - contratos inteligentes
+  - guides
+  - developers
+  - smart contracts
   - rsk
-  - portainjertos
-  - casco
+  - rootstock
+  - hardhat
   - dApps
-  - éteres
+  - ethers
 ---
 
-En esta sección, desplegaremos su contrato de token en su entorno local y también desplegaremos e interactuaremos con el contrato en la red Rootstock.
+In this section, we'll deploy your token contract to your local environment and also deploy and interact with the contract on the Rootstock network.
 
-## Paso 1: Configurar el archivo de implantación
+## Step 1: Configure Deployment File
 
-Para configurar el archivo de despliegue:
+To configure your deployment file:
 
-- Navegue hasta el directorio `scripts` en el directorio raíz del repositorio de inicio rápido:
+- Navigate to the `scripts` directory in the root directory of the quick start repo:
 
 ```shell
-   cd guiones
+   cd scripts
 ```
 
-- En el directorio de scripts, abra el archivo de despliegue `deploy.js`:
+- In the scripts directory, open the `deploy.js` deployment file:
 
-Para desplegar el contrato `myToken`, copie el script de despliegue que aparece a continuación y péguelo en su archivo de despliegue o consulte el archivo [`deploy.js`](https://raw.githubusercontent.com/rsksmart/rootstock-quick-start-guide/feat/complete/scripts/deploy.js) en GitHub.
+To deploy `myToken` contract, copy the deployment script below and paste it in your deployment file or see the [`deploy.js` file](https://raw.githubusercontent.com/rsksmart/rootstock-quick-start-guide/feat/complete/scripts/deploy.js) on GitHub.
 
 ```js
 async function main() {
@@ -48,49 +48,49 @@ main().catch((error) => {
 });
 ```
 
-## Paso 2: Ejecutar la red Hardhat localmente
+## Step 2: Run the Hardhat Network Locally
 
-> Nota: Necesitas tener suficientes RBTC en tu cuenta de despliegue para las tasas de gas. Consulte la sección [Financie su cuenta] (/developers/smart-contracts/hardhat/configure-hardhat-rootstock#step-3-fund-your-accounts).
+> Note: You need to have sufficient RBTC in your deploying account for gas fees. See section on [Fund your account](/developers/smart-contracts/hardhat/configure-hardhat-rootstock#step-3-fund-your-accounts).
 
-Para ejecutar la red Hardhat localmente:
+To run the Hardhat network locally:
 
-- Iniciar la red Hardhat
-  - Hardhat viene con una red Ethereum integrada para el desarrollo. Ejecuta el siguiente comando en el directorio raíz de tu proyecto para iniciarlo.
+- Start the Hardhat network
+  - Hardhat comes with a built-in Ethereum network for development. Run the following command in your project's root directory to start it.
     ```shell
-    nodo casco npx
+    npx hardhat node
     ```
-    Este comando iniciará una red blockchain local y mostrará una lista de cuentas y claves privadas disponibles:
-    ![Nodo Rootstock en ejecución](/img/guides/quickstart/hardhat/run-node.png)
-- Despliegue de su contrato en la red local
+    This command will start a local blockchain network and display a list of available accounts and private keys:
+    ![Rootstock Node Running](/img/guides/quickstart/hardhat/run-node.png)
+- Deploy your contract to the local network
 
-  - Despliega tu contrato en la red local Hardhat, en otro terminal o símbolo del sistema, ejecuta el siguiente comando en el directorio raíz:
-
-    ```shell
-    npx hardhat run --network hardhat scripts/deploy.js
-    ```
-
-    Esto debería dar un resultado similar al siguiente:
+  - Deploy your contract to the local Hardhat network, in another terminal or command prompt, run the command below in the root directory:
 
     ```shell
     npx hardhat run --network hardhat scripts/deploy.js
-
-    Desplegando contratos con la cuenta: 0xf39Fd6e51aad88F6F4ce6aB88279cffFb92266
-    Dirección del token: 0x5FbDB2315678afecb367f032d93F642f64180aa3
     ```
 
-## Paso 3: Implemente su contrato en la red Rootstock
+    This should give a result similar to the following:
 
-Siga estos pasos para implementar su contrato en la red Rootstock:
+    ```shell
+    npx hardhat run --network hardhat scripts/deploy.js
 
-- Utilice el comando de ejecución de Hardhat para desplegar su contrato, dependiendo de la red deseada. Puede elegir desplegar en la Testnet o en la Mainnet de Rootstock.
+    Deploying contracts with the account: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+    Token address: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+    ```
 
-Para desplegarlo en la red de pruebas del patrón raíz, ejecute:
+## Step 3: Deploy Your Contract on Rootstock Network
+
+Follow these steps to deploy your contract on Rootstock network:
+
+- Use Hardhat's run command to deploy your contract, depending on the desired network. You can choose to deploy to either Rootstock's Testnet or Mainnet.
+
+To deploy to the Rootstock Testnet, run:
 
 ```shell
    npx hardhat run --network rskTestnet scripts/deploy.js
 ```
 
-Esto debería devolver lo siguiente:
+This should return the following:
 
 ```shell
 % npx hardhat run --network rskTestnet scripts/deploy.js
@@ -98,13 +98,13 @@ Deploying contracts with the account: 0xA210D04d707f6beBF914Cb1a57199Aebe7B40380
 Token address: 0xc6EcBe0F6643825FD1AAfc03BEC999014759a279
 ```
 
-- Para desplegar en la red principal de Rootstock, ejecute:
+- To deploy to the Rootstock Mainnet, run:
 
 ```shell
    npx hardhat run --network rskMainnet scripts/deploy.js
 ```
 
-### Configurar MetaMask
+### Configure MetaMask
 
 :::note[Install Metamask]
 

@@ -1,6 +1,6 @@
-label: API RPC
+label: RPC API
 position: 5
 link:
-  type: índice-generado
-  slug: /desarrolladores/rpc-api/
+  type: generated-index
+  slug: /developers/rpc-api/
   description: "RPC API services for interacting with the Rootstock network."

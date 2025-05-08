@@ -1,82 +1,82 @@
 ---
-title: Métodos API de gestión
-sidebar_label: Métodos API de gestión
+title: Management API Methods
+sidebar_label: Management API Methods
 sidebar_position: 500
 tags:
   - rsk
   - rskj
-  - nodo
+  - node
   - rpc
   - rpc api
-  - operadores de nodos
+  - node operators
   - rootstock
-description: Los métodos JSON-RPC soportados por nodos Rootstock.
+description: The JSON-RPC methods supported by Rootstock nodes.
 ---
 
-| Método                      | Soportado    | Comentarios                                                                                                      |
-| --------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------- |
-| `admin_addPeer`             | NO           |                                                                                                                  |
-| `admin_datadir`             | NO           |                                                                                                                  |
-| `admin_nodeInfo`            | NO           |                                                                                                                  |
-| `admin_peers`               | NO           |                                                                                                                  |
-| `admin_setSolc`             | NO           |                                                                                                                  |
-| `admin_startRPC`            | NO           |                                                                                                                  |
-| `admin_startWS`             | NO           |                                                                                                                  |
-| `admin_stopRPC`             | NO           |                                                                                                                  |
-| `admin_stopWS`              | NO           |                                                                                                                  |
-| `debug_backtraceAt`         | NO           |                                                                                                                  |
-| `debug_blockPerfil`         | NO           |                                                                                                                  |
-| `debug_cpuProfil`           | NO           |                                                                                                                  |
-| `debug_dumpBlock`           | NO           |                                                                                                                  |
-| `debug_getBlockRlp`         | NO           |                                                                                                                  |
-| `debug_goTrace`             | NO           |                                                                                                                  |
-| `debug_memStats`            | NO           |                                                                                                                  |
-| `debug_seedHash`            | NO           |                                                                                                                  |
-| `debug_setHead`             | NO           |                                                                                                                  |
-| `debug_setBlockProfileRate` | NO           |                                                                                                                  |
-| `debug_stacks`              | NO           |                                                                                                                  |
-| `debug_startCPUProfile`     | NO           |                                                                                                                  |
-| `debug_startGoTrace`        | NO           |                                                                                                                  |
-| `debug_stopGoTrace`         | NO           |                                                                                                                  |
-| `debug_traceBlock`          | NO           |                                                                                                                  |
-| `debug_traceBlockByNumber`  | YES          |                                                                                                                  |
-| `debug_traceBlockByHash`    | YES          |                                                                                                                  |
-| `debug_traceBlockFromFile`  | NO           |                                                                                                                  |
-| `debug_traceTransaction`    | SI           |                                                                                                                  |
-| `debug_vmodule`             | NO           |                                                                                                                  |
-| `debug_writeBlockProfile`   | NO           |                                                                                                                  |
-| `debug_writeMemProfile`     | NO           |                                                                                                                  |
-| `miner_setExtra`            | NO           |                                                                                                                  |
-| `miner_setGasPrice`         | NO           |                                                                                                                  |
-| `miner_start`               | NO           |                                                                                                                  |
-| `miner_stop`                | NO           |                                                                                                                  |
-| `miner_setEtherBase`        | NO           |                                                                                                                  |
-| `personal_importRawKey`     | SI           |                                                                                                                  |
-| `personal_listAccounts`     | SI           |                                                                                                                  |
-| `personal_lockAccount`      | SI           |                                                                                                                  |
-| `personal_newAccount`       | SI           |                                                                                                                  |
-| `personal_unlockAccount`    | SI           |                                                                                                                  |
-| `personal_sendTransaction`  | SI           |                                                                                                                  |
-| `personal_sign`             | NO           |                                                                                                                  |
-| `personal_ecRecover`        | NO           |                                                                                                                  |
-| `trace_block`               | PARTIALMENTE | Opción "pending" no soportada. También soporta el hash de bloque como parámetro. |
-| `trace_transaction`         | SI           |                                                                                                                  |
-| `txpool_contenido`          | SI           |                                                                                                                  |
-| `txpool_inspect`            | SI           |                                                                                                                  |
-| `txpool_status`             | SI           |                                                                                                                  |
+| Method                      | Supported | Comments                                                                                                  |
+| --------------------------- | --------- | --------------------------------------------------------------------------------------------------------- |
+| `admin_addPeer`             | NO        |                                                                                                           |
+| `admin_datadir`             | NO        |                                                                                                           |
+| `admin_nodeInfo`            | NO        |                                                                                                           |
+| `admin_peers`               | NO        |                                                                                                           |
+| `admin_setSolc`             | NO        |                                                                                                           |
+| `admin_startRPC`            | NO        |                                                                                                           |
+| `admin_startWS`             | NO        |                                                                                                           |
+| `admin_stopRPC`             | NO        |                                                                                                           |
+| `admin_stopWS`              | NO        |                                                                                                           |
+| `debug_backtraceAt`         | NO        |                                                                                                           |
+| `debug_blockProfile`        | NO        |                                                                                                           |
+| `debug_cpuProfile`          | NO        |                                                                                                           |
+| `debug_dumpBlock`           | NO        |                                                                                                           |
+| `debug_getBlockRlp`         | NO        |                                                                                                           |
+| `debug_goTrace`             | NO        |                                                                                                           |
+| `debug_memStats`            | NO        |                                                                                                           |
+| `debug_seedHash`            | NO        |                                                                                                           |
+| `debug_setHead`             | NO        |                                                                                                           |
+| `debug_setBlockProfileRate` | NO        |                                                                                                           |
+| `debug_stacks`              | NO        |                                                                                                           |
+| `debug_startCPUProfile`     | NO        |                                                                                                           |
+| `debug_startGoTrace`        | NO        |                                                                                                           |
+| `debug_stopGoTrace`         | NO        |                                                                                                           |
+| `debug_traceBlock`          | NO        |                                                                                                           |
+| `debug_traceBlockByNumber`  | YES       |                                                                                                           |
+| `debug_traceBlockByHash`    | YES       |                                                                                                           |
+| `debug_traceBlockFromFile`  | NO        |                                                                                                           |
+| `debug_traceTransaction`    | YES       |                                                                                                           |
+| `debug_vmodule`             | NO        |                                                                                                           |
+| `debug_writeBlockProfile`   | NO        |                                                                                                           |
+| `debug_writeMemProfile`     | NO        |                                                                                                           |
+| `miner_setExtra`            | NO        |                                                                                                           |
+| `miner_setGasPrice`         | NO        |                                                                                                           |
+| `miner_start`               | NO        |                                                                                                           |
+| `miner_stop`                | NO        |                                                                                                           |
+| `miner_setEtherBase`        | NO        |                                                                                                           |
+| `personal_importRawKey`     | YES       |                                                                                                           |
+| `personal_listAccounts`     | YES       |                                                                                                           |
+| `personal_lockAccount`      | YES       |                                                                                                           |
+| `personal_newAccount`       | YES       |                                                                                                           |
+| `personal_unlockAccount`    | YES       |                                                                                                           |
+| `personal_sendTransaction`  | YES       |                                                                                                           |
+| `personal_sign`             | NO        |                                                                                                           |
+| `personal_ecRecover`        | NO        |                                                                                                           |
+| `trace_block`               | PARTIALLY | Option "pending" not supported. It also supports block hash as parameter. |
+| `trace_transaction`         | YES       |                                                                                                           |
+| `txpool_content`            | YES       |                                                                                                           |
+| `txpool_inspect`            | YES       |                                                                                                           |
+| `txpool_status`             | YES       |                                                                                                           |
 
-## Métodos RPC PUB SUB
+## RPC PUB SUB methods
 
-| Método            | Soportado    | Comentarios                                                            |
-| ----------------- | ------------ | ---------------------------------------------------------------------- |
-| `eth_subscribe`   | PARTIALMENTE | Sólo las opciones "newHeads" y "logs" son compatibles. |
-| `eth_unsubscribe` | SI           |                                                                        |
+| Method            | Supported | Comments                                                          |
+| ----------------- | --------- | ----------------------------------------------------------------- |
+| `eth_subscribe`   | PARTIALLY | Only options "newHeads" and "logs" are supported. |
+| `eth_unsubscribe` | YES       |                                                                   |
 
-## Métodos RPC SPV
+## RPC SPV methods
 
-| Método                                 | Soportado | Comentarios                                                                                                                                                                                                                                                                 |
-| -------------------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `rsk_getRawBlockHeaderByNumber`        | SI        | Obtiene la cabecera de bloque codificada RLP usada para SPV, si esto es hashed usando Keccak256 le da el block hash. Esta función toma el número de bloque (en hexa) o la cadena de texto "latest", "pending", "genesis. |
-| `rsk_getRawBlockHeaderByHash`          | SI        | Obtiene la cabecera de bloque codificada RLP usada para SPV, si esto es hashed usando Keccak256 le da el block hash. Esta función toma el block hash como parámetro.                                                                        |
-| `rsk_getRawTransactionReceiptByHash`   | SI        | Obtiene el recibo de transacción codificado RLP, si esto se realiza usando Keccak256 le da el transaction receipt hash. Esta función toma el hash de transacción como parámetro.                                                            |
-| `rsk_getTransactionReceiptNodesByHash` | SI        | Obtiene un array de nodos de la transactions receipt Trie. Esto se utiliza para cifrar hasta la raíz del recibo de la transacción. Esta función toma el hash de bloque y el hash de transacción como parámetros.            |
+| Method                                 | Supported | Comments                                                                                                                                                                                                                                                      |
+| -------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `rsk_getRawBlockHeaderByNumber`        | YES       | Obtains the RLP encoded block header used for SPV, if this is hashed using Keccak256 it gives the block hash. This function takes the block number (in hexa) or the string "latest", "pending", "genesis". |
+| `rsk_getRawBlockHeaderByHash`          | YES       | Obtains the RLP encoded block header used for SPV, if this is hashed using Keccak256 it gives the block hash. This function takes the block hash as parameter.                                                                |
+| `rsk_getRawTransactionReceiptByHash`   | YES       | Obtains the RLP encoded Transaction Receipt, if this is hashed using Keccak256 it gives the transaction receipt hash. This function takes the transaction hash as parameter.                                                  |
+| `rsk_getTransactionReceiptNodesByHash` | YES       | Obtains an array of nodes of the transactions receipt Trie. This is used to hash up to the transaction receipt root. This function takes the block hash and transaction hash as parameters.                   |

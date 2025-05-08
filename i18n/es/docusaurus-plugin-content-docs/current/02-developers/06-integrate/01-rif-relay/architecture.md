@@ -1,278 +1,278 @@
 ---
-sidebar_label: Arquitectura
+sidebar_label: Architecture
 sidebar_position: 980
-title: RIF Relay - Arquitectura
+title: RIF Relay - Architecture
 description: RIF Relay Architeture.
 tags:
   - rif
-  - sobre
-  - relé
-  - integrar
+  - envelope
+  - relay
+  - integrate
 ---
 
-El sistema de retransmisión RIF está diseñado para lograr el patrocinio de transacciones a bajo coste. El coste del servicio de retransmisión proporcionado por los "patrocinadores" se acuerda entre las partes fuera de la cadena. El bajo coste de las transacciones en Rootstock (RSK) contribuye también a mantener bajos los costes generales del servicio.
+The RIF Relay system is designed to achieve transaction sponsorship at a low cost. The cost of the relay service provided by the “sponsors” is agreed upon among the parties off-chain. The low cost of transactions on Rootstock (RSK) contributes to keeping overall service costs low as well.
 
-El sistema de relés RIF está formado por varios componentes, algunos esenciales y otros auxiliares.
+The RIF Relay system is made up of various components, some of which are essential and others which are auxiliary.
 
-A continuación se ofrece una visión general al respecto:
+An overview of this is as follows:
 
-**En cadena**, el sistema no puede funcionar sin sus Contratos Inteligentes, que engloban las Carteras Inteligentes más el Centro de Retransmisión y los Verificadores.
+**On-chain**, the system cannot work without its Smart Contracts, which encompass Smart Wallets plus the Relay Hub and Verifiers.
 
-\*\*Fuera de la cadena, se necesita al menos un servidor de retransmisión para interactuar con los contratos. Sin un Servidor de Retransmisión, no se pueden crear y enviar sobres a los contratos.
+**Off-chain**, at least one Relay Server is needed to interact with the contracts. Without a Relay Server, envelopes cannot be created and sent to the contracts.
 
-A continuación se amplían los detalles de cada uno de estos componentes, así como un glosario introductorio.
+Details for each of these components are expanded down below, as well as an introductory glossary.
 
-### Glosario
+### Glossary
 
-| Plazo                         | Descripción                                                                                                                                                                                                                                                                                            |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Apoderados                    | Un tercero que paga el gas consumido por una transacción patrocinada (véase más abajo) enviándola a la blockchain.                                                                                                                                                  |
-| Transacción patrocinada       | Transacción enviada por el solicitante (véase más abajo) a través del Patrocinador, este tipo de transacción pretende separar al pagador del gas del remitente de la transacción.                                                                                   |
-| Solicitante                   | Se trata de un EOA (véase más abajo). El solicitante envía una transacción patrocinada al Patrocinador. No pagan el gas con criptomoneda nativa sino con un token aceptado por el Patrocinador, si no lo subvencionan.              |
-| Destinatario                  | Abreviatura de contrato de destinatario. Es el destino de la transacción del solicitante.                                                                                                                                                                              |
-| Sobre                         | Utilizando la analogía de los "sobres", es la transacción, (financiada con criptomoneda nativa como gas) enviada por el Patrocinador a la blockchain, la que envuelve la carga útil de la transacción del solicitante (transacción patrocinada). |
-| Relé RIF                      | Todo el sistema que permite la retransmisión de las transacciones patrocinadas.                                                                                                                                                                                                        |
-| DoS                           | Una denegación de servicio es una amenaza a la seguridad de la información cuyo objetivo es hacer que un servicio no esté disponible.                                                                                                                                                  |
-| DeFi                          | Acrónimo de Decentralized Finance, es una novedosa forma de financiación basada en la tecnología blockchain.                                                                                                                                                                           |
-| EOA                           | Una cuenta de propiedad externa (EOA) es una cuenta gestionada con una clave, que es capaz de firmar y enviar transacciones, y pagar el coste por ello.                                                                                                             |
-| Tasa                          | Importe del token que se cobra por cada transacción retransmitida.                                                                                                                                                                                                                     |
-| Modelo de reparto de ingresos | Una forma de retransmitir las transacciones para que las comisiones se repartan entre varios socios.                                                                                                                                                                                   |
-| Honorarios Receptor           | Es el Trabajador/Cobrador designado que recibirá las tasas                                                                                                                                                                                                                                             |
+| Term                  | Description                                                                                                                                                                                                                                                                       |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Sponsor               | A third party that pays the gas consumed by a sponsored transaction (see below) by submitting it to the blockchain.                                                                                                                            |
+| Sponsored Transaction | A transaction sent by the requester (see below) through the Sponsor, this type of transaction aims to separate the gas payer from the sender of the transaction.                                                                               |
+| Requester             | It’s an EOA (see below). The requester sends a sponsored transaction to the Sponsor. They do not pay the gas with native cryptocurrency but with an accepted token by the Sponsor, if they don’t subsidize it. |
+| Recipient             | An abbreviation for recipient contract. It’s the destination of the requester’s transaction.                                                                                                                                                      |
+| Envelope              | Using the “envelopes” analogy, it’s the transaction, (funded with native cryptocurrency as gas) sent by the Sponsor to the blockchain, that wraps the requester’s transaction payload (sponsored transaction).              |
+| RIF Relay             | The entire system which allows the relay of sponsored transactions.                                                                                                                                                                                               |
+| DoS                   | A Denial of Service is an information-security threat whose goal is to become a service unavailable.                                                                                                                                                              |
+| DeFi                  | An acronym for Decentralized Finance, it’s a novel form for finance based in blockchain technology.                                                                                                                                                               |
+| EOA                   | An Externally Owned Account (EOA) is an account managed with a key, which is capable of signing and sending transactions, and paying the cost for it.                                                                                          |
+| Fee                   | Token amount that is being charged for each relayed transaction.                                                                                                                                                                                                  |
+| Revenue Sharing Model | A way to relay transactions so that fees are shared among multiple partners.                                                                                                                                                                                      |
+| Fees Receiver         | Is the designated Worker/Collector that will receive the fees                                                                                                                                                                                                                     |
 
-## Componentes de la cadena
+## On-Chain components
 
-### Centro de relés
+### Relay Hub
 
-El concentrador de retransmisión es el componente principal de la arquitectura de retransmisión RIF. Actúa como interfaz con el servidor de retransmisión y con toda la arquitectura de la cadena. Remite todas las transacciones a sus respectivos contratos al tiempo que comprueba la validez del trabajador que está procesando la transacción.
+The Relay Hub is the main component of the RIF Relay architecture. It acts as an interface with the Relay Server and the whole on-chain architecture. It forwards all the transactions to their respective contracts while checking the validity of the worker that is processing the transaction.
 
-También forma parte del proceso de registro de los Relay Workers junto con los Relay Managers. Además, el Centro de Retransmisión guarda el importe de la apuesta de cada Gestor de Retransmisión para garantizar el buen comportamiento de sus trabajadores.
-La cuenta que apuesta por un Gestor de Retransmisión específico por primera vez se convierte en la propietaria de la apuesta, sólo esta cuenta puede hacer apuestas posteriores para este Gestor de Retransmisión específico.
+It also forms part of the Relay Workers registration process together with the Relay Managers. Furthermore, the Relay Hub keeps the stake amount for each Relay Manager to guarantee good behavior from their workers.
+The account staking for a specific Relay Manager for the first time becomes the owner of the stake, only this account can make subsequent stakes for this specific RelayManager.
 
-Cuando un Gestor de Retransmisiones desautoriza un Centro de Retransmisiones, significa que se desestablece de él, lo que también significa que ya no puede retransmitir a través de ese centro. Cualquier saldo que haya en el centro de retransmisión se envía al remitente original de la participación (el propietario).
+When a Relay Manager unauthorized a Relay Hub, it means it is unstaking from it, which also means not being able to relay through that hub any more. Any balance held in the Relay Hub is sent to the original sender of the stake (the owner).
 
-El desenganche tiene un retardo predefinido (en bloques). Con ello se pretende evitar que el gestor de retransmisiones se desancle antes de un corte que se iba a producir.
+Unstaking has a predefined delay (in blocks). This is intended to prevent the Relay Manager from unstaking before a slashing that was going to occur.
 
-### Billetera inteligente
+### Smart Wallet
 
-Es la "cuenta basada en el contrato" propiedad de la EOA del Solicitante. Antes de ejecutar cualquier transacción utilizando el monedero inteligente, es necesario desplegar el contrato de monedero inteligente.
+It’s the “contract-based account” owned by the Requester’s EOA. Before executing any transaction using the smart wallet, the smart wallet contract needs to be deployed.
 
-Los monederos inteligentes son contratos que verifican los datos transmitidos y posteriormente invocan al contrato receptor de la transacción. La creación de carteras inteligentes no tiene ningún coste de gas proporcionando la ventaja de que se pueden desplegar sólo cuando sea necesario.
+Smart Wallet are contracts that verify forwarded data and subsequently invoke the recipient contract of the transaction. Creating smart wallets does not have any gas cost providing the advantage that can be deployed only when necessary.
 
-Es el componente que llama al contrato del Destinatario (es decir, la dirección `msg.sender` que verá el Destinatario). Durante la ejecución, el contrato verifica la solicitud de retransmisión y, si es válida, llama a la función del destinatario definida; en caso contrario, revierte la invocación. La verificación incluye la comprobación de que el propietario de la SmartWallet realizó la solicitud, el rechazo de cualquier solicitud con una firma no válida y la prevención de ataques de repetición utilizando un nonce.
+It is the component that calls the Recipient contract (i.e, the `msg.sender` address the Recipient will see). During the execution, the contract verifies the Relay Request and, if it’s valid, it calls the defined Recipient’s function, otherwise it reverts the invocation. The verification includes checking that the owner of the SmartWallet made the request, rejecting any request with an invalid signature, and preventing replay attacks using a nonce.
 
-El "monedero inteligente" se diseñó para interactuar únicamente con el sistema de retransmisión RIF, por lo que cualquier saldo en moneda nacional se transferirá al propietario del "monedero inteligente" después de cada transacción.
+The `smart wallet` was designed to only interact with the RIF Relay system, therefore any native currency balance will be transferred back to the owner of `smart wallet` after each transaction.
 
-### Cartera inteligente Native Holder
+### Native Holder Smart Wallet
 
-El `monedero inteligente titular nativo` es un `monedero inteligente` que fue diseñado para tener interacciones fuera del sistema RIF Relay. Esto significa que puede contener moneda nativa, como su nombre indica.
+The `native holder smart wallet` is a `smart wallet` that was designed to have interactions outside the RIF Relay system. This means that it can hold native currency as it's name describes.
 
-El comportamiento del `monedero inteligente de titular nativo` es el mismo que el del `monedero inteligente` con la diferencia de que la moneda nativa no será transferida de vuelta al propietario después de cada transacción y puede disponer del uso de la moneda nativa.
+The behavior of the `native holder smart wallet` is the same as the `smart wallet` with the difference that the native currency will not be transferred back to the owner after each transaction and can dispose the usage of the native currency.
 
-### Cartera inteligente personalizada
+### Custom Smart Wallet
 
-La `cartera inteligente personalizada` es una `cartera inteligente` que fue diseñada para ejecutar lógica personalizada después de cada transacción. La lógica personalizada se crea en el momento del despliegue del contrato y se puede ejecutar en cada transacción.
+The `custom smart wallet` is a `smart wallet` that was designed to execute custom logic after each transaction. The custom logic is created at the moment of the contract deployment and can be executed on each transaction.
 
-### Gestor de relés
+### Relay Manager
 
-Un EOA que tiene un saldo apostado. Cualquier penalización realizada contra un Trabajador de relevo afecta a la apuesta del Gestor de relevo. Un trabajador de relevo sólo puede ser gestionado por un gestor de relevo. Un gestor de retransmisiones puede tener uno o varios trabajadores de retransmisión. Las responsabilidades del Gestor de Retransmisiones son: registrar el Servidor de Retransmisiones y añadir Trabajadores de Retransmisiones, ambos en el Hub de Retransmisiones.
+An EOA that has a staked balance. Any penalization done against a Relay Worker impacts the Relay Manager’s stake. A Relay Worker can be managed by only one Relay Manager. A Relay Manager can have one or more Relay Workers. The responsibilities of the Relay Manager are: registering the Relay Server and adding Relay Workers, both in the Relay Hub.
 
-### Gestor de participaciones
+### Stake Manager
 
-El Stake Manager soporta múltiples Relay Hubs, los stakers son los Relay Managers y pueden autorizar/desautorizar Relay Hubs específicos para poder penalizar a los managers si es necesario. La criptomoneda apostada se mantiene en el contrato StakeManager.
+The Stake Manager supports multiple Relay Hubs, the stakers are the Relay Managers and they can authorize/de-authorize specific Relay Hubs so they can penalize the managers if needed. The staked cryptocurrency is held in the StakeManager contract.
 
-La cuenta que apuesta por primera vez por un Gestor de Retransmisiones específico se convierte en la propietaria de la apuesta, y sólo esta cuenta puede realizar apuestas posteriores para este Gestor de Retransmisiones específico.
+The account staking for a specific Relay Manager for the first time becomes the owner of the stake, only this account can make subsequent stakes for this specific RelayManager.
 
-Cuando un Gestor de Retransmisiones desautoriza un Centro de Retransmisiones, significa que se desestablece de él, lo que también significa que ya no puede retransmitir a través de ese centro. Cualquier saldo que haya en el Centro de Retransmisión se envía al remitente original de la participación (el propietario). Además, los saldos de los trabajadores se transfieren al propietario de la participación y, si está configurado, el saldo del gestor de retransmisión también se puede transferir al propietario de la participación.
+When a Relay Manager unauthorised a Relay Hub, it means it is unstaking from it, which also means not being able to relay through that hub any more. Any balance held in the Relay Hub is sent to the original sender of the stake (the owner). Also, the workers’ balances are transferred to the stake owner, and, if configured, the Relay Manager’s balance can also be transferred to the stake owner.
 
-El desenganche tiene un retardo predefinido (en bloques). Con ello se pretende evitar que el gestor de retransmisiones se desasocie antes de un corte que se iba a producir.
+Unstaking has a predefined delay (in blocks). This is intended to prevent the Relay Manager from unstaking before a slashing that was going to occur.
 
-### Trabajador de relevo
+### Relay Worker
 
-Un EOA que pertenece a un solo Gestor de Retransmisión. Dado que el Trabajador de Retransmisión es el remitente de la solicitud, es el que paga las tasas de gas de cada transacción. También **puede** cobrar las tasas en ERC20 que se cobran por retransmitir las transacciones.
+An EOA that belongs to only one Relay Manager. Since the Relay Worker is the sender of the request, it is the one that pays for the gas fees for each transaction. It **may** also collect the fees in ERC20 that are charged for relaying the transactions.
 
-### Verificador de retransmisión y despliegue
+### Relay & Deploy Verifier
 
-Contratos que autorizan una solicitud específica de retransmisión o despliegue (véase la sección [Solicitudes de retransmisión y despliegue](#solicitudes-de-transmisión-despliegue)).
+Contracts that authorize a specific relay or deploy request (see the [Relay & Deploy Requests](#relay--deploy-requests) section).
 
-Se ofrecen dos ejemplos de aplicación:
+Two example implementations are provided:
 
-- **Verificador de relés**: El Verificador de Retransmisión tiene una lista de fichas que acepta. Cuando recibe una solicitud de retransmisión, comprueba la aceptación del token y el saldo del pagador para el token.
-- **Verificador de despliegue**: Implementación utilizada en el proceso de despliegue de SmartWallet. Realiza las mismas comprobaciones del verificador de retransmisión, pero también se asegura de que el SmartWallet que se va a desplegar no existe ya. También comprueba que se proporciona una dirección de fábrica de proxy en la solicitud de retransmisión.
+- **Relay Verifier**: The Relay Verifier has a list of tokens that it accepts. When it receives a relay request, it checks the token’s acceptance and the payer’s balance for the token.
+- **Deploy Verifier**: An implementation used in the SmartWallet deployment process. It performs the same relay verifier checks but also makes sure that the SmartWallet to be deployed doesn’t already exist. It also checks that a Proxy Factory address is provided in the Relay Request.
 
-### Colector
+### Collector
 
-El recaudador es un contrato inteligente opcional que se utiliza para la función de reparto de ingresos. Normalmente, las comisiones de retransmisión se pagan a la cuenta del trabajador que retransmite la transacción.
+The Collector is an optional smart contract used for the Revenue Sharing feature. Normally, relay fees are paid to the worker account which relays the transaction.
 
-Los contratos colectores están diseñados para retener los ingresos generados por las transacciones retransmitidas, de modo que en el futuro puedan ser entregados a los socios de acuerdo con la distribución de participaciones escrita en el contrato. Se inicializan con un token específico que retener, un conjunto de direcciones de socios (cada conjunto con su propia cuota de ingresos recaudados) más un propietario que puede modificar las cuotas o ejecutar la retirada y distribución de fondos. Las participaciones de cada socio se expresan en números enteros que representan un porcentaje y deben sumar exactamente 100. Se puede especificar cualquier número de socios. Se puede especificar cualquier número de socios.
+Collector contracts are designed to hold revenue generated from relayed transactions so that in the future they can be later given out to partners according to the distribution of shares written in the contract. They are initialized with a specific token to hold, a set of partner addresses (each set with their own share of collected revenues) plus an owner which can modify the shares or execute the withdrawal and distribution of funds. Shares for each partner are expressed in integers representing a percentage and must add up to exactly 100. Any number of partners can be specified.
 
-El propietario del contrato puede ser cualquier dirección, incluyendo pero no limitándose a un contrato multisig (ver [Gnosis Safe Contracts](https://github.com/gnosis/safe-contracts)). Utilizar una dirección multisig puede ser una buena idea si es necesario compartir la propiedad del contrato, de forma que decisiones como la distribución de las cuotas cobradas a los socios o la modificación de las cuotas de ingresos puedan tomarse de forma colectiva. También existe una función de transferencia de propiedad.
+The owner of the contract can be any address, including but not limited to a multisig contract (see [Gnosis Safe Contracts](https://github.com/gnosis/safe-contracts)). Using a multisig address can be a good idea if ownership of the contract needs to be shared, so that decisions like distributing collected fees to partners or modifying revenue shares can be taken collectively. An ownership transfer function is also available.
 
-Se puede desplegar cualquier número de contratos de recaudación y utilizarlos para compartir ingresos, siempre que sus direcciones se especifiquen en las solicitudes de retransmisión. La retirada de fondos de cualquier contrato de recaudación es completamente independiente del flujo de retransmisión de RIF y puede ejecutarse en cualquier momento arbitrario.
+Any number of Collector contracts can be deployed and used to share revenue, as long as their addresses are specified in relay requests. The withdrawal of funds from any Collector contract is completely independent of the RIF Relay flow and can be executed at any arbitrary point in time.
 
-Para obtener información sobre cómo implementar un contrato de recopilador (además de otros detalles técnicos), consulte [la sección del recopilador](/developers/integrate/rif-relay/deployment) del proceso de implementación.
+For steps on how to deploy a Collector contract (plus other technical details) please see [the Collector section](/developers/integrate/rif-relay/deployment) of the deployment process.
 
-### Apoderados
+### Proxies
 
-#### Plantilla
+#### Template
 
-Es la lógica que se ejecutaría en cada transacción. En este escenario concreto, es el contrato Smart Wallet.
+It's the logic that would be executed on each transaction. In this specific scenario, it is the Smart Wallet contract.
 
-#### Fábrica de proxy
+#### Proxy Factory
 
-Fábrica de Proxies a la SmartWallet. La fábrica de proxies se encarga de desplegar los contratos de smart wallets utilizando la plantilla, durante el despliegue ejecuta la inicialización desde cada smart wallet.
+Factory of Proxies to the SmartWallet. The proxy factory is in charge of deploying the smart wallets contracts using the template, during the deployment it executes the initialization from each smart wallet.
 
 #### Proxy
 
-El proxy sólo se implementa en la Cartera Inteligente Personalizada porque delega cada llamada a una dirección lógica de SmartWallet. Este proxy es el que se instanciará por SmartWallet, y recibirá la dirección de SmartWallet como Copia Maestra (MC). Así, cada llamada realizada a este proxy terminará ejecutando la lógica definida en la MC.
+The proxy is only implemented in the Custom Smart Wallet because it delegates every call to a SmartWallet logic address. This proxy is the one instantiated per SmartWallet, and it will receive the SmartWallet address as Master Copy (MC). So every call made to this proxy will end up executing the logic defined in the MC.
 
-Para la ejecución de la transacción (llamada `execute()`), la lógica MC realizará la verificación de la firma y el pago. A continuación, ejecutará la solicitud y, si se ha definido una lógica personalizada, le reenviará el flujo antes de regresar.
+For the transaction execution (`execute()` call), MC logic will do the signature verification and payment. Then it will execute the request, and, if custom logic was defined, it will forward the flow to it before returning.
 
-Durante la inicialización del monedero inteligente personalizado se puede establecer una lógica personalizada (que afectaría al estado del proxy, por supuesto), el proceso de inicialización y el establecimiento de la lógica personalizada sólo se puede hacer durante el despliegue del monedero inteligente.
+During the initialization of the Custom Smart Wallet a custom logic can be set (which would impact the proxy’s state of course), the initialization process and set of the custom logic can only be done during the deployment of the smart wallet.
 
-### GSNEip712Biblioteca
+### GSNEip712Library
 
-Se trata de una biblioteca auxiliar que convierte la solicitud de retransmisión en una llamada a una cartera inteligente o a una fábrica de proxy (en tal caso, la solicitud es una solicitud de despliegue).
+This is an auxiliary library that bridges the Relay Request into a call of a Smart Wallet or Proxy Factory (in such case, the Request is a Deploy Request).
 
-Encontrará documentación detallada [aquí](https://eips.ethereum.org/EIPS/eip-712).
+Detailed documentation can be found [here](https://eips.ethereum.org/EIPS/eip-712).
 
-## Componentes fuera de la cadena
+## Off-chain components
 
-### Servidor de retransmisión
+### Relay Server
 
-El servidor de retransmisión recibe transacciones patrocinadas a través de HTTP.
+The Relay Server receives sponsored transactions via HTTP.
 
-El servidor sólo tiene una dirección de Relay Manager y al menos un Relay Worker, y apunta a un único Relay Hub.
-Cuando el Servidor de Retransmisión recibe una solicitud de Retransmisión HTTP, crea un Sobre, envolviendo la transacción patrocinada, lo firma utilizando su cuenta de Trabajador de Retransmisión y luego lo envía al contrato del Hub de Retransmisión.
+The server has only one Relay Manager address and at least one Relay Worker, and points to just one Relay Hub.
+When the Relay Server receives an HTTP Relay request, it creates an Envelope, wrapping the sponsored transaction, signs it using its Relay Worker account and then sends it to the Relay Hub contract.
 
-El servidor es un demonio de servicio que funciona como un servicio HTTP. Se anuncia a sí mismo (a través del concentrador de retransmisión) y espera las peticiones de los clientes.
+The server is a service daemon, running as an HTTP service. It advertises itself (through the Relay Hub) and waits for client requests.
 
-El Servidor de Retransmisión dispone de mecanismos que intentan evitar que se agote el saldo de los trabajadores. El Relay Manager sigue enviando criptomoneda nativa a los trabajadores en función de un saldo mínimo específico.
+The Relay Server has mechanisms that try to avoid running out of balance in the workers. The Relay Manager keeps sending native cryptocurrency to the workers based on a specific minimum balance.
 
-#### Iniciar flujo
+#### Start Flow
 
-El diagrama de flujo de inicio representa el proceso que sigue el Servidor Relay para comenzar a recibir peticiones, aun que el servidor este recibiendo peticiones no significa que pueda manejarlas, ya que necesita balance para procesar cada petición.
-Relay - Flujo de Inicio](/img/rif-relay/start.jpg)
+The start flow diagram represents the process that is followed by the Relay Server to start receiving requests, even that the server will be receiving requests doesn't mean that can handle it, since it needs balance to process each request.
+![Relay - Start Flow](/img/rif-relay/start.jpg)
 
-1. Genera (claves privadas) las cuentas de los Trabajadores y del Gestor.
-2. Inicializa la instancia para cada contrato que vaya a interactuar con el servidor.
+1. Generates(private keys) the Workers and Manager accounts.
+2. Initialise the instance for each contract that will be interacting with the server.
 
-- El contrato RelayHub es el contrato clave para el flujo de inicio, ya que es el contrato que tiene los eventos de interés.
+- The RelayHub contract is the key contract for the start flow since its the contract that have the events of interest.
 
-3. Initalizar el Servidor de Retransmisión.
-  -El Servidor de Retransmisión tiene toda la lógica para la interacción entre los componentes fuera de la cadena y dentro de la cadena.
-4. Inicializar el RegistationManager.
+3. Initalise the Relay Server.
+  -The Relay Server has all logic for the interaction between off-chain and on-chain components.
+4. Initialise the RegistationManager.
 
-- El Gestor de Registro empieza a buscar eventos relacionados con el proceso de registro (StakeAdded, WorkerAdded) para identificar si se puede registrar el Servidor en el RelayHub.
+- The Registration Manager starts querying for events related to the registration process(StakeAdded, WorkerAdded) to identify if can register the Server on the RelayHub.
 
-5. El servidor de retransmisión empieza a buscar cambios en la cadena de bloques mediante RelayHub.
+5. The Relay Server start querying for changes on the blochain using the RelayHub.
 
-#### Flujo de registros
+#### Register Flow
 
-El diagrama de flujo de registro representa el proceso para proporcionar el stake/balance necesario al gestor/trabajadores para que el Servidor de Retransmisión empiece a procesar peticiones y para registrar el servidor en el RelayHub.
+The register flow diagram represents the process to provide the necessary stake/balance to the manager/workers for the Relay Server start processing requests and to register the server in the RelayHub.
 
-Relé - Flujo de registro](/img/rif-relay/register.jpg)
+![Relay - Register Flow](/img/rif-relay/register.jpg)
 
-1. Obtiene los datos del Servidor de Retransmisión.
-2. Valida si el servidor ya estaba registrado en el RelayHub.
-3. Inicializa la instancia para cada contrato que vaya a interactuar con el servidor.
+1. Gets the Relay Server data.
+2. Validate if the server was already register in the RelayHub.
+3. Initialise the instance for each contract that will be interacting with the server.
 
-- El contrato RelayHub es el contrato clave para el flujo de registro ya que es el contrato que tiene los eventos de interés.
+- The RelayHub contract is the key contract for the register flow since its the contract that have the events of interest.
 
-4. Consulta el stakeInfo del gestor y valida si ya está apostado.
-5. Financie al gestor si es necesario.
+4. Query the stakeInfo for the manager and validates if already staked.
+5. Funds the manager if necessary.
 
-### Controlador de intervalos
+### Interval Handler
 
-El diagrama del manejador de intervalos representa el proceso del Servidor de retransmisión para interactuar con la cadena de bloques y procesar las transacciones.
+The interval handler diagram represents the process from the Relay Server to interact with the blockchain and process the transactions.
 
-Relé - Flujo del controlador de intervalos](/img/rif-relay/interval-handler.jpg)
+![Relay - Interval Handler Flow](/img/rif-relay/interval-handler.jpg)
 
-1. Obtenga el último bloque minado por la cadena de bloques.
-2. Comprueba si es necesario actualizar el estado del Servidor de retransmisión en función de los bloques acuñados.
-3. Refresca el precio de la gasolina.
-4. Obtén los eventos pasados del RelayHub.
-5. Añade los trabajadores y registra el Servidor de Retransmisión si cumple los requisitos.
-6. Siga atento a las transacciones y a los nuevos acontecimientos.
+1. Get the latest mined block by the blockachain.
+2. Check if the Relay Server state needs to be refreshed based on the blocks minted.
+3. Refresh the gas price.
+4. Get the past events from the RelayHub.
+5. Add the workers and register the Relay Server if meets the requirements.
+6. Keep listening for transactions and new events.
 
-### Solicitudes de retransmisión y despliegue
+### Relay & Deploy Requests
 
-Una solicitud de retransmisión es la transacción patrocinada, la estructura utilizada para retransmitir una transacción. Está formada por Relay Data y Forward Request:
+A relay request is the sponsored transaction, the structure used to relay a transaction. It is formed by Relay Data and Forward Request:
 
-- **Datos de retransmisión**: Toda la información necesaria para retransmitir la solicitud de reenvío definida.
-- **Solicitud de reenvío/despliegue**: Está formada por todos los campos "comunes" de la transacción además de todos los datos del token-pago.
+- **Relay Data**: All information required to relay the defined Forward Request.
+- **Forward/Deploy Request**: It is formed by all the “common” transaction fields in addition to all the token-payment data.
 
-Cuando el patrocinador crea un sobre (la transacción real de blockchain que se va a enviar), añadirá esta solicitud de retransmisión (transacción patrocinada) como parte de los datos codificados, junto con el contrato y el método a llamar (RelayHub y relayCall respectivamente).
+When the Sponsor creates an Envelope (the actual blockchain transaction to submit), it will add this Relay Request (sponsored transaction) as part of the encoded data, along with the contract and method to call (RelayHub and relayCall respectively)
 
-La **Solicitud de retransmisión** es una estructura que envuelve la transacción enviada por un usuario final. Incluye los datos necesarios para retransmitir la transacción, como la dirección del pagador, la dirección del solicitante original y los datos del pago simbólico.
+The **Relay request** is structure that wraps the transaction sent by an end-user. It includes data required for relaying the trasaction e.g. address of the payer, address of the original requester, token payment data.
 
-La estructura **Deploy request** que envuelve la transacción enviada para desplegar un monedero inteligente.
+The **Deploy request** structure that wraps the transaction sent to deploy a Smart wallet.
 
-### Herramientas
+### Tools
 
-### Cliente de retransmisión
+### Relay Client
 
-Se trata de una biblioteca typescript para interactuar con el sistema de relés RIF. Proporciona APIs para encontrar un relé, y para enviar transacciones a través de él. También expone métodos para interactuar con la cadena de bloques.
+This is a typescript library to interact with the RIF Relay system. It provides APIs to find a relay, and to send transactions through it. It also exposes methods to interact with the blockchain.
 
-Puede funcionar como punto de acceso al sistema de retransmisión. Crea, firma y envía la transacción patrocinada, que es firmada por el solicitante y reenviada al servidor de retransmisión mediante el protocolo HTTP.
+It can work as an access point to the Relay system. It creates, signs, and sends the Sponsored transaction, which is signed by the requester and forwarded to the Relay Server via the HTTP protocol.
 
-No es _estrictamente_ necesario ya que cualquier dApp o usuario podría retransmitir transacciones utilizando simplemente un Servidor de Retransmisión y los contratos inteligentes, aunque esto es posiblemente más difícil de hacer manualmente.
+It is not _strictly_ needed since any dApp or user could relay transactions using merely a Relay Server and the smart contracts, although this is arguably harder to do manually.
 
-### Proveedor de retransmisión
+### Relay Provider
 
-Es el punto de acceso al sistema RIF Relay. Envuelve el `Relay Client` para la compatibilidad con el proveedor Ethers.js.
+It's the access point to the RIF Relay system. It wraps the `Relay Client` to provider Ethers.js compatibility.
 
-## Flujo de ejecución
+## Execution flow
 
-### Retransmisión (Cartera inteligente ya desplegada)
+### Relaying (Smart Wallet already deployed)
 
-Relé - Flujo de ejecución](/img/rif-relay/execution.jpg)
+![Relay - Execution Flow](/img/rif-relay/execution.jpg)
 
-1. Un solicitante crea una petición.
-2. Un Solicitante envía la solicitud al Cliente de Retransmisión (a través de un Proveedor de Retransmisión).
-3. El cliente de retransmisión envuelve la solicitud en una solicitud de retransmisión y la firma.
-4. El Cliente de Retransmisión envía la Solicitud de Retransmisión al Servidor de Retransmisión (a través de Cliente HTTP ↔ Servidor HTTP).
-5. El Servidor de Retransmisión crea una transacción que incluye la Solicitud de Retransmisión y la firma con una cuenta de Trabajador de Retransmisión.
-6. La cuenta Relay Worker es un EOA registrado en el Relay Hub.
-7. El Servidor de Retransmisión envía la transacción al Centro de Retransmisión utilizando la misma cuenta de trabajador que en el paso anterior, ejecutando la función `relayCall` del contrato del Centro de Retransmisión.
-  - Cuando el Centro de Retransmisión recibe una transacción de un Trabajador de Retransmisión, verifica con el Gestor de Participaciones que el Gestor de Retransmisiones del Trabajador ha bloqueado los fondos para la participación. Si no es así, se revierte la ejecución.
-  - La cuenta del relevista debe tener fondos para pagar el gas consumido (RBTC).
-    - Esta verificación se realiza en el cliente de retransmisión y también en el servidor de retransmisión, llamando al verificador de retransmisión. El verificador comprueba que acepta el token utilizado para pagar y que el pagador tiene un saldo de tokens suficiente. Además, verifica que el monedero inteligente utilizado es el correcto.
-8. El RelayHub indica a la Cartera Inteligente que ejecute la Solicitud de Retransmisión a través de la biblioteca [GsnEip712Library](#gsneip712library).
-9. La Cartera Inteligente comprueba la firma y el nonce del Solicitante, revirtiendo si falla las comprobaciones.
-10. A continuación, la cartera inteligente realiza la transferencia de tokens entre el solicitante y el destinatario de tokens, utilizando los datos recibidos en la solicitud de retransmisión.
-11. Invoca el contrato del destinatario con el método indicado en la solicitud de reenvío.
+1. A Requester creates a request.
+2. A Requester sends the request to the Relay Client (through a Relay Provider).
+3. The Relay Client wraps the request into a Relay Request and signs it.
+4. The Relay Client sends the Relay Request to the Relay Server (via HTTP Client ↔ HTTP Server).
+5. The Relay Server create a transaction including the Relay Request and signs it with a Relay Worker account.
+6. The Relay Worker account is an EOA registered in the Relay Hub.
+7. The Relay Server sends the transaction to the Relay Hub using the same worker account as the previous step, executing the `relayCall` function of the Relay Hub contract.
+  - When the Relay Hub receives a transaction from a Relay Worker, it verifies with the Stake Manager that the Worker’s Relay Manager has indeed locked funds for staking. If not, the execution is reverted.
+  - The Relay Worker account must have funds to pay for the consumed gas (RBTC).
+    - This verification is done in the Relay Client and in the Relay Server as well, by calling the Relay Verifier. The verifier checks that it accepts the token used to pay and that the payer has a sufficient token balance. In addition, it verifies that the used smart wallet is the correct one.
+8. The RelayHub instructs the Smart Wallet to execute the Relay Request through the [GsnEip712Library](#gsneip712library) library.
+9. The Smart Wallet checks the signature and the nonce of the Requester, reverting if it fails the checks.
+10. Then, the Smart Wallet performs the token transfer between the Requester and the token recipient, using the data received within the Relay Request.
+11. It invokes the recipient contract with the indicated method in the Forward Request.
 
-### Despliegue patrocinado de la cartera inteligente
+### Sponsored Smart Wallet deployment
 
-Relay - Billetera inteligente patrocinada](/img/rif-relay/relay.jpg)
+![Relay - Sponsored Smart Wallet](/img/rif-relay/relay.jpg)
 
-El solicitante sin gas tiene una dirección SmartWallet donde recibe los tokens pero no los utiliza. Si el solicitante necesita llamar a un contrato, por ejemplo, para enviar los tokens a otra cuenta, debe desplegar primero una Smart Wallet.
+The gas-less requester has a SmartWallet address where they receive tokens but don't use them. If the requester needs to call a contract, e.g., to send the tokens to another account, they must deploy a Smart Wallet first.
 
-1. Un solicitante crea una solicitud de despliegue de cartera.
-2. Un Solicitante envía la solicitud al Servidor de Retransmisión a través del Cliente de Retransmisión.
-3. El Cliente de Retransmisión envuelve la transacción enviada por el Solicitante en una Solicitud de Despliegue para crear la Cartera Inteligente y la firma.
-4. El Cliente de Retransmisión envía al Servidor de Retransmisión una Solicitud de Despliegue (a través de Cliente HTTP ↔ Servidor HTTP).
-5. El servidor de retransmisión firma la transacción que contiene la solicitud de despliegue con la cuenta del trabajador de retransmisión.
-6. El Servidor de Retransmisión envía la solicitud al Centro de Retransmisión utilizando la cuenta del Trabajador de Retransmisión que ejecuta la función `relayCall` del contrato del Centro de Retransmisión.
+1. A Requester creates a deploy wallet request.
+2. A Requester sends the request to the Relay Server through the Relay Client.
+3. The Relay Client wraps the transaction sent by the Requester in a Deploy Request to create the Smart Wallet and signs it.
+4. The Relay Client sends to the Relay Server a Deploy Request (via HTTP Client ↔ HTTP Server).
+5. The Relay Server signs the transaction containing the Deploy Request, with the Relay Worker account.
+6. The Relay Server sends the request to the Relay Hub using the Relay Worker account executing the `relayCall` function of the Relay Hub contract.
 
-- Aquí es donde el Servidor de Retransmisión normalmente llamará al Verificador de Despliegue para asegurarse:
-  - El Verificador acepta las fichas ofrecidas.
-  - El verificador conoce la instancia de fábrica de proxy que debe utilizarse.
-  - El contrato Proxy Factory no está creando una Cartera Inteligente existente.
-  - El solicitante tiene suficientes fichas para pagar.
+- Here's where the Relay Server will typically call the Deploy Verifier to ensure:
+  - The Verifier accepts the offered tokens.
+  - The Proxy Factory instance to use is known by the verifier.
+  - The Proxy Factory contract isn’t creating an existing Smart Wallet.
+  - The requester has enough tokens to pay.
 
-7. El Relay Hub llama a la Proxy Factory utilizando el método `relayedUserSmartWalletCreation`.
-8. La fábrica de proxy realiza las siguientes comprobaciones:
-  - Comprueba el nonce del remitente.
-  - Comprueba la firma de la solicitud de despliegue.
-9. La Fábrica de Proxy crea la Cartera Inteligente utilizando el opcode `create2`.
-10. A continuación, llama a la función `initialize` del contrato Smart Wallet.
-  - La Cartera Inteligente, durante su inicialización, ejecuta la transferencia de tokens.
-  - A continuación, inicializa el estado de la Cartera Inteligente y establece el EOA del solicitante como propietario de la Cartera Inteligente.
-  - En el caso de que exista una lógica personalizada, también se llama a su inicialización.
+7. The Relay Hub calls the Proxy Factory using the method `relayedUserSmartWalletCreation`.
+8. The Proxy Factory performs the following checks:
+  - Checks the sender's nonce.
+  - Checks the Deploy Request signature.
+9. The Proxy Factory creates the Smart Wallet using the `create2` opcode.
+10. Then it calls the `initialize` function in the Smart Wallet contract.
+  - The Smart Wallet, during its initialization, executes the token transfer.
+  - Then it initializes the Smart Wallet state and sets the requester’s EOA as the owner of the Smart Wallet.
+  - In the case there is a custom logic, its initialization is called as well.
 
-## Obsoleto
+## Deprecated
 
-### Pagador
+### Paymaster
 
-La versión 0.2 eliminó los contratos Paymaster en favor de los Verificadores (véase [versions](/developers/integrate/rif-relay/versions/)).
+V0.2 deprecated the Paymaster contracts in favor of the Verifiers (see [versions](/developers/integrate/rif-relay/versions/)).

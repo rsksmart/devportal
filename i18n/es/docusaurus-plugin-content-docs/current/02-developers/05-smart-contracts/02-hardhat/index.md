@@ -1,39 +1,39 @@
 ---
-sidebar_label: Primeros pasos con el casco
+sidebar_label: Getting Started with Hardhat
 sidebar_position: 100
-title: Primeros pasos con el casco
-description: Empieza a crear una dApp en Rootstock utilizando Hardhat.
+title: Getting Started with Hardhat
+description: Get started with creating a dApps on Rootstock using Hardhat.
 tags:
-  - guías
-  - desarrolladores
-  - contratos inteligentes
+  - guides
+  - developers
+  - smart contracts
   - rsk
-  - portainjertos
-  - casco
+  - rootstock
+  - hardhat
   - dApps
-  - éteres
+  - ethers
 ---
 
-:::note[Before empiezas]
+:::note[Before you begin]
 
-> Si es nuevo en Web3 y en el desarrollo de contratos inteligentes, comience explorando la [red Rootstock](/developers/blockchain-essentials/overview/). A continuación, avance paso a paso a la Guía de inicio rápido con Hardhat para una comprensión completa de la red y empezar a escribir, probar y desplegar contratos inteligentes en Rootstock.
+> If you're new to Web3 and Smart Contract Development, begin by exploring the [Rootstock network](/developers/blockchain-essentials/overview/). Then progress step by step to the quick start Guide with Hardhat for a comprehensive understanding of the network and getting started with writing, testing, and deploying smart contracts on Rootstock.
 
-> Para tu comodidad, hemos creado un [repositorio GitHub](https://github.com/rsksmart/rootstock-quick-start-guide) dedicado a esta guía. La rama [master](https://github.com/rsksmart/rootstock-quick-start-guide/tree/master) contiene el estado inicial del proyecto, mientras que la rama [feat/complete](https://github.com/rsksmart/rootstock-quick-start-guide/tree/feat/complete) presenta el proyecto completo, equipado con todas las instalaciones necesarias para tu referencia.
+> For your convenience, we've established a [GitHub repository](https://github.com/rsksmart/rootstock-quick-start-guide) dedicated to this guide. The [master branch](https://github.com/rsksmart/rootstock-quick-start-guide/tree/master) contains the initial project state, while the [feat/complete](https://github.com/rsksmart/rootstock-quick-start-guide/tree/feat/complete) branch features the complete project, equipped with all the necessary installations for your reference.
 
-> Nota: Esta guía está optimizada para Node.js versión 18 o anterior. Si estás usando una versión posterior, considera usar un gestor de versiones como [NVM](https://github.com/nvm-sh/nvm/blob/master/README.md) para cambiar a una versión compatible.
+> Note: This guide is optimized for Node.js version 18 or earlier. If you're using a later version, consider using a version manager like [NVM](https://github.com/nvm-sh/nvm/blob/master/README.md) to switch to a compatible version.
 
-> ¿Necesitas empezar a utilizar Hardhat rápidamente? Utilice el [Hardhat Starter Kit](/developers/quickstart/hardhat) o utilice el [Wagmi Starter Kit](https://github.com/rsksmart/rsk-wagmi-starter-kit)
+> Need to ramp up fast and get started with Hardhat? Use the [Hardhat Starter Kit](/developers/quickstart/hardhat) or use the [Wagmi Starter Kit](https://github.com/rsksmart/rsk-wagmi-starter-kit)
 > :::
 
-## Navegar por la Guía
+## Navigating the Guide
 
-| Recursos                                                                                               | Descripción                                                                                                                              |
-| ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| [Requisitos previos](/developers/requirements/)                                                        | Infórmate sobre las herramientas que necesitas para seguir esta guía.                                                    |
-| [Create a Hardhat Project](/developers/smart-contracts/hardhat/create-hardhat-project)                 | Aprenda a configurar su entorno de desarrollo con Hardhat.                                                               |
-| [Configurar Hardhat para Rootstock](/developers/smart-contracts/hardhat/configure-hardhat-rootstock/)  | Aprenda a configurar su proyecto Hardhat para el desarrollo en la red de pruebas y la red principal de Rootstock.        |
-| [Escribir contratos inteligentes](/developers/smart-contracts/hardhat/write-smart-contracts/)          | Aprende a escribir contratos inteligentes.                                                                               |
-| [Contratos inteligentes de prueba](/developers/smart-contracts/hardhat/test-smart-contracts/)          | Aprenda a probar su contrato inteligente para asegurarse de que funciona según lo esperado.                              |
-| [Despliegue de contratos inteligentes](/developers/smart-contracts/hardhat/deploy-smart-contracts/)    | Aprenda a desplegar su contrato inteligente en su entorno local y en la red Rootstock.                                   |
-| [Interactuar con el frontend](/developers/smart-contracts/hardhat/interact-with-frontend/)             | Aprende a interactuar con el contrato inteligente desde la aplicación front-end.                                         |
-| [Consejos de depuración y solución de problemas](/developers/smart-contracts/hardhat/troubleshooting/) | Conozca los problemas más comunes que puede encontrarse mientras construye siguiendo esta guía y cómo puede resolverlos. |
+| Resource                                                                                            | Description                                                                                                                       |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| [Prerequisites](/developers/requirements/)                                                          | Learn about the tools you need to have in place to follow along with this guide.                                  |
+| [Create a Hardhat Project](/developers/smart-contracts/hardhat/create-hardhat-project)              | Learn how to set up your environment for development using Hardhat.                                               |
+| [Configure Hardhat for Rootstock](/developers/smart-contracts/hardhat/configure-hardhat-rootstock/) | Learn how to configure your Hardhat project for development on Rootstock testnet and mainnet.                     |
+| [Write Smart Contracts](/developers/smart-contracts/hardhat/write-smart-contracts/)                 | Learn how to write a smart contracts.                                                                             |
+| [Test Smart Contracts](/developers/smart-contracts/hardhat/test-smart-contracts/)                   | Learn how to test your smart contract to ensure it's working as expected.                                         |
+| [Deploy Smart Contracts](/developers/smart-contracts/hardhat/deploy-smart-contracts/)               | Learn how to deploy your smart contract to your local environment and the Rootstock network.                      |
+| [Interact with the Frontend](/developers/smart-contracts/hardhat/interact-with-frontend/)           | Learn how to interact with the smart contract from the front-end application.                                     |
+| [Debugging and Troubleshooting Tips](/developers/smart-contracts/hardhat/troubleshooting/)          | Learn about the common issues you can come across while building following this guide and how you can solve them. |

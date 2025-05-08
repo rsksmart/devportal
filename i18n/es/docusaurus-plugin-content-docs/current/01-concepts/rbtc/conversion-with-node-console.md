@@ -1,81 +1,81 @@
 ---
-title: Conversión con nodo y consola
-sidebar_label: Nodo y consola
+title: Conversion with node and console
+sidebar_label: Node and Console
 tags:
   - rsk
   - rbtc
-  - conversión
+  - conversion
   - peg
-  - 2 vías
-  - clavija
+  - 2-way
+  - peg-in
   - peg-out
-  - federación
-  - nodo
+  - federation
+  - node
   - cli
-description: Cómo realizar el mecanismo Powpeg mediante nodo y consola.
+description: How to perform the Powpeg mechanism using node and console.
 sidebar_position: 305
 ---
 
-En esta sección se explica cómo probar el mecanismo Powpeg utilizando
-su nodo Rootstock y una línea de comandos.
+This section explains how to try the Powpeg mechanism using
+your Rootstock node and a command line.
 
-## Requisitos generales
+## General Requirements
 
-- Necesitas tener el control total de tu clave privada de BTC.
-- Necesitas una Cartera BTC correctamente configurada utilizando dicha clave privada.
-- Necesita un nodo Rootstock en funcionamiento,
-  con la interfaz RPC activada y los módulos personal y eth activados.
-  - Véase [¿cómo se ejecuta un nodo Rootstock?](/node-operators/setup/).
+- You need to be in full control of your BTC private key.
+- You need a BTC Wallet properly configured using said private key.
+- _[Only for release process]_ You need an Rootstock node up and running,
+  with the RPC interface enabled, and the personal and eth modules enabled
+  - See [how do I run an Rootstock Node?](/node-operators/setup/).
 
-## Conversor de BTC a RBTC
+## BTC to RBTC conversion
 
-Cómo realizar un clavado.
+How to perform a peg-in.
 
 :::warning\[Warning]
 
-Lea los [requisitos de bloqueo](/concepts/rbtc/networks#mainnet-conversion)
+Read the [lock requirements](/concepts/rbtc/networks#mainnet-conversion)
 
 :::
 
-1. Con su dirección Bitcoin,
-  envía una transacción BTC a la dirección de la federación Rootstock.
-2. Utilizando su explorador de bloques de BTC preferido
-  (por ejemplo, [Blocktrail](https://www.blocktrail.com/BTC)),
-  siga su transacción y espere el tiempo estipulado.
-3. Convierte la clave privada al formato Rootstock con esta herramienta:
+1. With your Bitcoin address,
+  send a BTC transaction to the Rootstock Federation Address.
+2. Using your preferred BTC block explorer
+  (e.g. [Blocktrail](https://www.blocktrail.com/BTC)),
+  follow your transaction and wait the stipulated time.
+3. Convert the private key to Rootstock format with this tool:
   [https://github.com/rsksmart/utils](https://github.com/rsksmart/utils)),
-  y escriba la información de su cuenta Rootstock.
-4. A continuación, utilice el [Rootstock Testnet Explorer](https://explorer.testnet.rootstock.io)
-  o el [Rootstock Mainnet Explorer](https://explorer.rootstock.io)
-  para ver su saldo de RBTC.
-  Recuerde que las direcciones de Rootstock deben empezar por `0x`.
+  and write down your Rootstock account information.
+4. Then use the [Rootstock Testnet Explorer](https://explorer.testnet.rootstock.io)
+  or [Rootstock Mainnet Explorer](https://explorer.rootstock.io)
+  to see your RBTC balance.
+  Remember that Rootstock addresses must start with `0x`.
 
-## Conversion RBTC a BTC
+## RBTC to BTC conversion
 
-Cómo realizar un peg-out.
+How to perform a peg-out.
 
 :::warning\[Warning]
 
-Lea los [requisitos de publicación](/concepts/rbtc/networks#rbtc-to-btc-conversion)
+Read the [release requirements](/concepts/rbtc/networks#rbtc-to-btc-conversion)
 
 :::
 
-1. Añada su clave privada Rootstock obtenida a su nodo Rootstock.
-  Sustituya `RSKConvertedPrivateKey`, `RSKNode` y `RSKNodePort`
-  y ejecute este comando:
+1. Add your obtained Rootstock private key to your Rootstock node.
+  Replace `RSKConvertedPrivateKey`, `RSKNode` and `RSKNodePort`
+  and run this command:
   ```shell
-  $ curl -X POST --data '{"method": "personal_importRawKey", "params":["<RSKConvertedPrivateKey>", "<passPhraseToEncryptPrivKey>"], "jsonrpc": "2.0", "id":1}' http://<RSKNode>:<RSKNodePort>
+  $ curl -X POST --data '{"method":"personal_importRawKey", "params":["<RSKConvertedPrivateKey>", "<passPhraseToEncryptPrivKey>"], "jsonrpc":"2.0", "id":1}' http://<RSKNode>:<RSKNodePort>
   ```
-2. Desbloquea tu cuenta para transferencias.
-  Sustituye `RSKAddress`, `passPhraseJustUsedToEncryptPrivKey`, `RSKNode`
-  y `RSKNodePort` y ejecuta:
+2. Unlock your account for transfers.
+  Replace `RSKAddress`, `passPhraseJustUsedToEncryptPrivKey`, `RSKNode`
+  and `RSKNodePort` and run:
   ```shell
-  $ curl -X POST --data '{"method": "personal_unlockAccount", "params":["<RSKAddress>", "<passPhraseJustUsedToEncryptPrivKey>", ""], "jsonrpc": "2.0", "id":1}' http://<RSKNode>:<RSKNodePort>
+  $ curl -X POST --data '{"method":"personal_unlockAccount", "params":["<RSKAddress>", "<passPhraseJustUsedToEncryptPrivKey>", ""], "jsonrpc":"2.0", "id":1}' http://<RSKNode>:<RSKNodePort>
   ```
-3. Transfiera la cantidad que desee.
-  Sustituya `RSKAddress`, `valueToReleaseInWeis`, `RSKNode` y `RSKNodePort`
-  y ejecute:
+3. Transfer your desired amount.
+  Replace `RSKAddress`, `valueToReleaseInWeis`, `RSKNode` and `RSKNodePort`
+  and run:
   ```shell
-  $ curl -X POST --data '{"method": "eth_sendTransaction", "params":[{"from": "<RSKAddress>", "to": "0x0000000000000000000000000000000001000006", "gasPrice": 59240000, "gas": 44000, "value": <valueToReleaseInWeis>}], "jsonrpc": "2.0", "id":1}' http://<RSKNode>:<RSKNodePort>
+  $ curl -X POST --data '{"method":"eth_sendTransaction", "params":[{"from": "<RSKAddress>", "to": "0x0000000000000000000000000000000001000006", "gasPrice": 59240000, "gas": 44000, "value": <valueToReleaseInWeis>}], "jsonrpc":"2.0", "id":1}' http://<RSKNode>:<RSKNodePort>
   ```
-4. Espera el tiempo estipulado y comprueba tu saldo de BTC.
+4. Wait the stipulated time and check your BTC balance.

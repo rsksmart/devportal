@@ -1,6 +1,6 @@
-label: Guías de integración
+label: Integration Guides
 position: 7
 link:
-  type: índice-generado
-  slug: /desarrolladores/integrar/
+  type: generated-index
+  slug: /developers/integrate/
   description: "Easily Integrate Your dApps with Developer-Friendly SDKs on Rootstock."

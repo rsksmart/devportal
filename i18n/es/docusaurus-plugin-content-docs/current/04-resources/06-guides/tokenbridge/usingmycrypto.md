@@ -1,135 +1,135 @@
 ---
 sidebar_position: 303
-sidebar_label: Interactuar con dApp usando MyCrypto
-title: Interactuar con dApp usando MyCrypto
+sidebar_label: Interact with dApp using MyCrypto
+title: Interact with dApp using MyCrypto
 tags:
-  - recursos
+  - resources
   - tokenbridge
-  - cadena de bloques
-  - puentes
-  - fichas
+  - blockchain
+  - bridges
+  - tokens
   - ethereum
   - rootstock
   - rsk
 ---
 
-Esta guía describe los pasos necesarios para realizar una transferencia de token entre dos redes blockchain, que llamaremos **Mainchain** y **Sidechain**, a través de la interacción con contratos especiales que componen un subsistema llamado **Token Bridge**.
+This guide describes the necessary steps to perform a token transfer between two blockchain networks, which we will refer to as **Mainchain** and **Sidechain**, through interaction with special contracts that make up a subsystem called **Token Bridge**.
 
-La prueba realizada utiliza los nodos Rootstock (con un nodo de lamentación local) y Ethereum (a través del cliente de Ganache) como Mainchain y Sidechain respectivamente. Las imágenes de demostración para interactuar con ambos Blockchain fueron tomadas de la aplicación MyCrypto. Alternativamente, se puede usar MyEtherWallet o similares, lo que dará los mismos resultados.
+The test performed uses the Rootstock (with a local regtest node) and Ethereum (through the Ganache client) nodes as Mainchain and Sidechain respectively. The demonstration images to interact with both Blockchain were taken from the MyCrypto application. Alternatively, MyEtherWallet or similar can be used which will give the same results.
 
-### Condiciones previas
+### Preconditions
 
-La siguiente lista resume las herramientas y componentes que son necesarios para pasar por esta guía.
+The following list summarizes the tools and components that are necessary to go through this guide.
 
-- Red principal
+- Mainchain network
 
-- Red Sidechain
+- Sidechain network
 
-- Cartera que permite interactuar con contratos
+- Wallet that allows to interact with contracts
 
-- Cuenta principal con fondos
+- Mainchain account with funds
 
-- Contrato de direcciones y JSON ABIs en la cadena principal para token IERC20 (o similar) y contrato Bridge
+- Contract addresses and JSON ABIs in Mainchain for IERC20 token (or similar) and Bridge contract
 
-- Dirección del contrato y JSON ABI en Sidechain para contrato Bridge
+- Contract address and JSON ABI in Sidechain for Bridge contract
 
-- El federador procesa transacciones desde la cadena Mainchain a Sidechain
+- Federator process crossing transactions from Mainchain to Sidechain
 
-En particular para este caso de uso, se utilizó:
+In particular for this use case, it was used:
 
 - [Rootstock (regtest node)](https://dev.rootstock.io/node-operators/setup/installation/)
-- [Ethereum (a través de Ganache)](https://geth.ethereum.org/docs/install-and-build/installing-geth)
+- [Ethereum (through Ganache)](https://geth.ethereum.org/docs/install-and-build/installing-geth)
 - [MyCrypto](https://mycrypto.com/)
 
-### Configurar
+### Setup
 
-Comience conectando el cliente de interfaz blockchain a la red Mainchain. En este caso, la conexión es a un nodo local personalizado que fue previamente iniciado.
+Start by connecting the blockchain interface client to the Mainchain network. In this case the connection is to a custom local node that was previously started.
 
 <img src="/img/resources/tokenbridge/rsk_node_setup.png" />
 
 ---
 
-Luego accede a tu cuenta utilizando uno de los métodos disponibles en tu aplicación. Asegúrate de tener fondos disponibles antes de continuar.
+Then access your account using one of the methods available in your application. Make sure to have funds available before continuing.
 
-!["Acceso al monedero"](/img/resources/tokenbridge/wallet_access.png "Acceso al monedero")
+!["Wallet Access"](/img/resources/tokenbridge/wallet_access.png "Wallet Access")
 
-## Transferencia de token
+## Token transfer
 
-El primer paso para realizar la transferencia cruzada consiste en la interacción con el contrato situado en la cadena principal que contiene las fichas a enviar. En este caso usaremos un contrato `IERC20` como ejemplo, pero no está sujeta a ninguna funcionalidad personalizada por lo que cualquier otro contrato basado en ERC20 puede ser utilizado.
+The first step to perform the cross-transfer consists in the interaction with the contract located in the Mainchain that contains the tokens to be sent. In this case we will use an `IERC20` contract as an example, but it is not subject to any custom functionality so any other ERC20-based contract can be used.
 
-Para continuar, introduzca la `dirección` del contrato y su interfaz `JSON ABI`
+To continue, enter the `address` of the contract and its `JSON ABI` interface
 
-!["Acceso al Contrato"](/img/resources/tokenbridge/access_contract.png "Acceso al Contrato")
-
----
-
-Después seleccione el método 'aprobación' y complete los parámetros con la información del destinatario y la cantidad que queremos enviar en unidad de wei. La dirección del pender será la dirección del denominado contrato Bridge en la red Mainchain que se utilizará como intermedio para la transferencia.
-
-!["Aprobación del contrato"](/img/resources/tokenbridge/contract_approve.png "Aprobación del contrato")
+!["Access Contract"](/img/resources/tokenbridge/access_contract.png "Access Contract")
 
 ---
 
-Luego confirmar el precio del gas, escribir y firmar la transacción y finalmente enviarla. Es posible que se le pida que ingrese la cartera una vez más antes de confirmar.
+Afterward select the `approve` method and complete the parameters with the information of the recipient and the amount we want to send in unit of wei. The spender address will be the address of the so-called Bridge contract in the Mainchain network that will be used as an intermediary for the transfer.
 
-!["Escribir Transacción"](/img/resources/tokenbridge/transaction_write.png "Escribir Transacción")
-!["Envío de Transacción"](/img/resources/tokenbridge/transaction_send.png "Enviado de Transacción")
+!["Contract Approve"](/img/resources/tokenbridge/contract_approve.png "Contract Approve")
+
+---
+
+Then confirm the gas price, write and sign the transaction and finally send it. You might be asked to enter the wallet once again before confirming.
+
+!["Transaction Write"](/img/resources/tokenbridge/transaction_write.png "Transaction Write")
+!["Transaction Send"](/img/resources/tokenbridge/transaction_send.png "Transaction Send")
 
 <img src="/img/resources/tokenbridge/transaction_confirm.png" />
 
 ---
 
-Como resultado, se obtendrá el identificador de transacción correspondiente. Se recomienda esperar a que la transacción sea minada y confirmada. Puedes ir a la sección Estado de TX para verificar su estado.
+As a result, the corresponding transaction identifier will be obtained. It is recommended to wait for the transaction to be mined and confirmed. You can go to the TX Status section to verify its status.
 
-!["Estado de la transacción"](/img/resources/tokenbridge/transaction_status.png "Estado de la transacción")
-
----
-
-## Recibir tokens
-
-A continuación, acceda al contrato Bridge en la cadena principal, introduciendo su dirección (que es a la que originalmente enviamos los tokens) y el JSON ABI.
-
-!["Acceso al puente del contrato"](/img/resources/tokenbridge/access_contract_bridge.png "Acceso al puente del contrato")
+!["Transaction Status"](/img/resources/tokenbridge/transaction_status.png "Transaction Status")
 
 ---
 
-En esta ocasión, invocar el método `receiveTokens` colocando la dirección del contrato IERC20 en la entrada `tokenToUse`, y la cantidad, en wei, que deseamos recibir.
+## Receive tokens
 
-!["Recibir Contrato"](/img/resources/tokenbridge/contract_receive.png "Recibir Contrato")
+Next, access the Bridge contract in the Mainchain, entering its address (which is where we originally sent the tokens to) and the JSON ABI.
+
+!["Access Contract Bridge"](/img/resources/tokenbridge/access_contract_bridge.png "Access Contract Bridge")
 
 ---
 
-Nuevamente, escriba, firme y confirme la transacción y espere a que sea aprobada.
+On this occasion, invoke the `receiveTokens` method placing the IERC20 contract address in the `tokenToUse` input, and the amount, in wei, that we wish to receive.
+
+!["Contract Receive"](/img/resources/tokenbridge/contract_receive.png "Contract Receive")
+
+---
+
+Again, write, sign and confirm the transaction and wait for it to be approved.
 
 <img src="/img/resources/tokenbridge/transaction_confirm_receive.png" />
 
 ---
 
-Una vez que esta transacción se procese en contrato con Bridge, el servicio federador identificará el evento y cruzará la información a la cadena Sidechain. El federador puede ser configurado para esperar unos bloques antes de transferir transacciones.
+Once this transaction  is processed on Bridge contract, the federator service will identify the event and cross the information to the Sidechain. The federator may be configured to wait a few blocks before transferring transactions.
 
-## Cambiar redes
+## Switch networks
 
-El siguiente paso es conectar el cliente de interfaz de Blockchain a la cadena Sidechain, donde los tokens serán recibidos. En este caso utilizamos el cliente de Ganache con los contratos correspondientes previamente desplegados.
+The next step is to connect the Blockchain interface client to the Sidechain, where the tokens will be received. In this case we use the Ganache client with the corresponding contracts previously deployed.
 
-Luego conecte con el contrato Sidechain de Bridge utilizando la dirección correspondiente y JSON ABI una vez más. Esta vez llame al método `mappedTokens`, pasando como parámetro la dirección del contrato IERC20 del Mainchain que se utilizó anteriormente. El resultado de esta operación será la dirección del contrato asociado en la Sidechain que contiene las fichas transferidas.
+Then connect to the Bridge's Sidechain contract using the corresponding address and JSON ABI once again. This time call the `mappedTokens` method, passing as a parameter the address of the IERC20 contract of the Mainchain that was previously used. The result of this operation will be the address of the associated contract on the Sidechain that holds the transferred tokens.
 
-!["Tokens Mapeados de Contrato"](/img/resources/tokenbridge/contract_mapped_tokens.png "Tokens Mapeados de Contrato")
-
----
-
-## Validando resultado
-
-Utilizando la dirección obtenida del paso anterior (`0x1684e1C7bd0225917C48F60FbdC7f47b2982a3C2`), y la interfaz ABI IERC20, conectémonos al contrato.
-
-!["Acceder al Contrato Sidetoken"](/img/resources/tokenbridge/access_contract_sidetoken.png "Acceder al Contrato Lidero")
+!["Contract Mapped Tokens"](/img/resources/tokenbridge/contract_mapped_tokens.png "Contract Mapped Tokens")
 
 ---
 
-Para confirmar que la transferencia fue exitosa, verifique el saldo de la cuenta utilizada para enviar los fondos desde la cadena principal. Invoca el método `balanceOf` y ten en cuenta que el valor ha aumentado en la cadena Sidechain.
+## Validating result
 
-!["Balance del contrato"](/img/resources/tokenbridge/contract_balance.png "Balance del contrato")
+Using the address obtained from the previous step (`0x1684e1C7bd0225917C48F60FbdC7f47b2982a3C2`), and the IERC20 ABI interface, let’s connect to the contract.
+
+!["Access Contract Sidetoken"](/img/resources/tokenbridge/access_contract_sidetoken.png "Access Contract Sidetoken")
 
 ---
 
-Del mismo modo, verifique el contrato `symbol`. Tenga en cuenta que en este caso el valor es `eMAIN` donde 'e' se refiere a una transferencia a la cadena Ethereum Sidechain.
+To confirm that the transfer was successful, verify the balance of the account used to send the funds from the Mainchain. Invoke the `balanceOf` method and note that the value has increased in the Sidechain.
 
-!["Símbolo de contrato"](/img/resources/tokenbridge/contract_symbol.png "Símbolo de contrato")
+!["Contract Balance"](/img/resources/tokenbridge/contract_balance.png "Contract Balance")
+
+---
+
+Similarly, verify the contract `symbol`. Notice that in this case the value is `eMAIN` where ‘e’ refers to a transfer to the Ethereum Sidechain.
+
+!["Contract Symbol"](/img/resources/tokenbridge/contract_symbol.png "Contract Symbol")

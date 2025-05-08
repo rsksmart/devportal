@@ -1,68 +1,68 @@
 ---
-title: Protocoles de transporte
-sidebar_label: Protocolo de transporte
+title: Transport Protocols
+sidebar_label: Transport Protocol
 sidebar_position: 200
 tags:
   - rsk
   - rskj
-  - nodo
+  - node
   - rpc
   - rootstock
-description: Los métodos JSON-RPC soportados por nodos Rootstock.
+description: The JSON-RPC methods supported by Rootstock nodes.
 ---
 
-Los siguientes protocolos de transporte están disponibles en Rootstock:
+The following transport protocols are available on Rootstock:
 
 - [HTTP Transport Protocol](#http-transport-protocol)
-- [Protocolo de transporte de Websockets (#websockets-transport-protocol)
+- [Websockets Transport Protocol](#websockets-transport-protocol)
 
-## Protocolo de transporte HTTP
+## HTTP transport protocol
 
-Las peticiones HTTP deben hacerse:
+HTTP requests should be made:
 
-- al número de puerto especificado en la configuración de `rpc.providers.web.http.port`
-  - esto es `4444` por defecto
-  - para [nodos públicos](/node-operators/public-nodes/), omite el número de puerto
-- a la ruta "root" (`/`)
-- usando el verbo HTTP `POST`
-- especificando un encabezado `Content-Type` de `application/json`
-- con un cuerpo de solicitud especificado como JSON en cadena
+- to the port number specified in the config for `rpc.providers.web.http.port`
+  - this is `4444` by default
+  - for [public nodes](/node-operators/public-nodes/), omit the port number
+- to the "root" route (`/`)
+- using the HTTP verb `POST`
+- specifying a `Content-Type` header of `application/json`
+- with a request body specified as stringified JSON
 
-Por ejemplo, un comando `curl` a un nodo Rootstock `localhost`
-se vería similar a esto:
+For example, a `curl` command to a `localhost` Rootstock node
+would look similar to this:
 
 ```shell
-curl http://localhost:4444/ \ \ \
+curl http://localhost:4444/ \ \
   -X POST \
   -H "Content-Type: application/json" \
   --data '{"jsonrpc":"2.0","method":"RPC_METHOD_NAME","params":[RPC_REQUEST_PARAMETERS],"id":1}'
 ```
 
-## Protocolo de transporte de WebSockets
+## WebSockets transport protocol
 
-Las conexiones WebSockets deben establecerse:
+WebSockets connections should be established:
 
-- al número de puerto especificado en la configuración de `rpc.providers.web.ws.port`
-  - esto es `4445` por defecto
-  - [nodos públicos](/node-operators/public-nodes/) **no** tienen activado el protocolo de transporte de WebSockets
-- a la ruta de WebSockets (`/websocket`)
+- to the port number specified in the config for `rpc.providers.web.ws.port`
+  - this is `4445` by default
+  - [public nodes](/node-operators/public-nodes/) do **not** have the WebSockets transport protocol enabled
+- to the WebSockets route (`/websocket`)
 
-Una vez conectado:
+Once connected:
 
-- Enviar un cuerpo de solicitud especificado como JSON en cadena
-- Ningún "verbo" o "cabeceras" son necesarios, ya que estos son específicos del protocolo de transporte HTTP
+- Send a request body specified as stringified JSON
+- No "verb" or "headers" are necessary, as these are specific to the HTTP transport protocol
 
-Por ejemplo, un comando `wscat` para conectarse a un nodo Rootstock `localhost`
-se vería similar a esto:
+For example, a `wscat` command to connect to a `localhost` Rootstock node
+would look similar to this:
 
 ```shell
 wscat -c ws://localhost:4445/websocket
 ```
 
-Después de que la conexión haya sido establecida usando `wscat`,
-puede enviar múltiples solicitudes RPC dentro de la misma sesión.
-(Nota que `> ` marca las solicitudes para ser entradas,
-y que `< ` marca las respuestas que se imprimirán.)
+After the connection has been established using `wscat`,
+you may send multiple RPC requests within the same session.
+(Note that `> ` marks requests to be input,
+and that `< ` marks responses that will be printed.)
 
 ```json
     {"jsonrpc":"2.0","method":"RPC_METHOD_NAME","params":[RPC_REQUEST_PARAMETERS],"id":1}

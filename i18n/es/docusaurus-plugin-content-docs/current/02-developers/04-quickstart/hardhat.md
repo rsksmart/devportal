@@ -2,96 +2,96 @@
 sidebar_label: Hardhat
 sidebar_position: 103
 title: Rootstock Hardhat Starter Kit
-description: Tanto si eres un desarrollador experimentado como si acabas de iniciar tu andadura en el desarrollo de contratos inteligentes, el kit de inicio hardhat proporciona una base sólida para crear aplicaciones descentralizadas (dApps) en la red Rootstock.
+description: Whether you are a seasoned developer or just starting your journey into smart contract development, the hardhat starter kit provides a solid foundation for building decentralized applications (dApps) on the Rootstock network.
 tags:
   - rsk
-  - portainjertos
-  - tutoriales
-  - desarrolladores
-  - casco
-  - inicios rápidos
+  - rootstock
+  - tutorials
+  - developers
+  - hardhat
+  - quick starts
   - dApps
-  - contratos inteligentes
+  - smart contracts
 ---
 
-Tanto si eres un desarrollador experimentado como si acabas de iniciar tu andadura en el desarrollo de contratos inteligentes, el kit de inicio hardhat proporciona una base sólida para crear aplicaciones descentralizadas (dApps) en la red Rootstock.
+Whether you’re a seasoned developer or just starting your journey into smart contract development, the hardhat starter kit provides a solid foundation for building decentralized applications (dApps) on the Rootstock network.
 
 Rootstock is fully EVM (Ethereum Virtual Machine) compatible. It brings the power of smart contracts to Bitcoin, allowing developers to leverage Bitcoin’s security while benefiting from Ethereum’s ecosystem.
 
-## Requisitos previos
+## Prerequisites
 
-Antes de iniciar la dApp, asegúrese de tener los siguientes requisitos previos:
+Before starting the dApp, make sure to have the following prerequisites:
 
-1. **Familiaridad con contratos inteligentes:**
-  - Si es nuevo en el mundo de los contratos inteligentes, considere la posibilidad de aprender los conceptos básicos. Entender cómo funcionan los contratos inteligentes mejorará su experiencia con el desarrollo de Rootstock.
+1. **Familiarity with Smart Contracts:**
+  - If you’re new to smart contracts, consider learning the basics. Understanding how smart contracts work will enhance your experience with Rootstock development.
 
-2. **Node.js y Hardhat Instalado:**
-  - Asegúrese de que tiene Node.js instalado en su sistema. Consulte la sección [prerequisites](/developers/requirements/#installing-nodejs-and-npm).
+2. **Node.js and Hardhat Installed:**
+  - Ensure you have Node.js installed on your system. See the [prerequisites section](/developers/requirements/#installing-nodejs-and-npm).
 
-3. **Instalar la taquigrafía del casco:**
+3. **Install Hardhat Shorthand:**
 
-- Recomendamos instalar la función de autocompletar `hh` para utilizar la abreviatura `hh` de forma global.
+- We recommend installing `hh` autocomplete to use `hh` shorthand globally.
 
   ```bash
   npm i -g hardhat-shorthand
   ```
-- Para más detalles, consulte su [guía oficial](https://hardhat.org/guides/shorthand.html).
+- For more details, refer to their [official guide](https://hardhat.org/guides/shorthand.html).
 
-4. **Configuración de Metamask con portainjertos:**
+4. **Metamask Setup with Rootstock:**
 
-- Instale la extensión de navegador Metamask si aún no lo ha hecho.
-- Configure Metamask para conectarse a la red Rootstock. Visite [MetaMask Integration on the Rootstock Dev Portal] (/dev-tools/wallets/metamask/).
+- Install the Metamask browser extension if you haven’t already.
+- Configure Metamask to connect to the Rootstock network. Visit the [MetaMask Integration on the Rootstock Dev Portal](/dev-tools/wallets/metamask/).
 
-5. **Conocimientos básicos de Hardhat:**
+5. **Basic Knowledge of Hardhat:**
 
-- Se recomienda estar familiarizado con los conceptos básicos y las funcionalidades de Hardhat. Si no conoce Hardhat, consulte la [Guía de Hardhat del Rootstock](/desarrolladores/contratos-inteligentes/hardhat/).
+- Familiarity with Hardhat's core concepts and functionalities is recommended. If you're new to Hardhat, refer to the [Rootstock Hardhat Guide](/developers/smart-contracts/hardhat/).
 
-:::tip[Rootstock Curso para desarrolladores de Blockchain].
+:::tip[Rootstock Blockchain Developer Course]
 
-Aprenda a escribir, probar, asegurar, desplegar y verificar contratos inteligentes en la red blockchain de Rootstock. Inscríbase en el [Rootstock Blockchain Developer Course](/resources/courses/).
+Learn how to write, test, secure, deploy and verify smart contracts on the Rootstock blockchain network. Enroll for the [Rootstock Blockchain Developer Course](/resources/courses/).
 :::
 
-## Configuración de la dApp de ejemplo
+## Setting Up the Sample dApp
 
-### Clonar el repositorio
+### Clone the Repository
 
-Abre tu terminal o símbolo del sistema y ejecuta el siguiente comando para clonar el repositorio de GitHub:
+Open your terminal or command prompt and run the following command to clone the repository from GitHub:
 
 ```bash
 git clone https://github.com/rsksmart/rootstock-hardhat-starterkit.git
 ```
 
-### Instalar dependencias
+### Install Dependencies
 
-Navegue hasta la carpeta del repositorio clonado:
-
-```bash
-cd portainjertos-hardhat-starterkit
-```
-
-Instale todas las dependencias necesarias utilizando npm:
+Navigate to the cloned repository folder:
 
 ```bash
-npm instalar
+cd rootstock-hardhat-starterkit
 ```
 
-### Obtención de las URL RPC de Rootstock Testnet y Mainnet
+Install all required dependencies using npm:
 
-Esta sección le guiará a través de la adición de Rootstock Testnet y Mainnet RPC URLs a su entorno de desarrollo. Estas URL son esenciales para conectar su aplicación a la red Rootstock e interactuar con contratos inteligentes.
+```bash
+npm install
+```
 
-Hay dos formas de obtener URLs RPC:
+### Obtain Rootstock Testnet and Mainnet RPC URLs
 
-#### Uso de URL RPC públicas
+This section will walk you through adding Rootstock Testnet and Mainnet RPC URLs to your development environment. These URLs are essential for connecting your application to the Rootstock network and interacting with smart contracts.
 
-- Visite [Integración de MetaMask en el portal de desarrollo de Rootstock] (/dev-tools/wallets/metamask/). Esta guía proporciona instrucciones para configurar MetaMask para Rootstock. Mientras sigue estos pasos, preste especial atención a las secciones sobre la adición de redes personalizadas. Encontrará las URL RPC para Rootstock Testnet y Mainnet.
+There are two ways to obtain RPC URLs:
 
-#### Uso de la API RPC
+#### Using Public RPC URLs
 
-- Cree una cuenta en [Rootstock RPC API](https://rpc.rootstock.io/). Una vez iniciada la sesión, vaya a su panel de control y copie la clave de API.
+- Visit the [MetaMask Integration on the Rootstock Dev Portal](/dev-tools/wallets/metamask/). This guide provides instructions on setting up MetaMask for Rootstock. While following these steps, pay close attention to the sections on adding custom networks. You'll find the RPC URLs for Rootstock Testnet and Mainnet listed.
 
-### Añadir las URL a su proyecto
+#### Using RPC API
 
-Después de obtener las URLs RPC, crea un archivo llamado `.env` en el directorio raíz de tu proyecto (importante: este archivo no debe ser enviado al control de versiones). Añade las variables de entorno necesarias al archivo `.env`:
+- Create an account at the [Rootstock RPC API](https://rpc.rootstock.io/). Once logged in, navigate to your dashboard and copy the API Key.
+
+### Adding the URLs to your project
+
+After obtaining the RPC URLs, create a file named `.env` in your project's root directory (important: this file should not be committed to version control). Add the necessary environment variables to the `.env` file:
 
 ```
 WALLET_PRIVATE_KEY= Your private key (e.g., from your Metamask account details).
@@ -99,40 +99,40 @@ RSK_MAINNET_RPC_URL= The RPC URL for the Rootstock mainnet.
 RSK_TESTNET_RPC_URL= The RPC URL for the Rootstock testnet.
 ```
 
-## Despliegue de un contrato de token ERC721
+## Deploying an ERC721 Token Contract
 
-Esta sección utiliza el marco de desarrollo Hardhat para desplegar un token ERC721 (un token no fungible) en la red Rootstock.
+This section uses the Hardhat development framework to deploy an ERC721 token (a non-fungible token) on the Rootstock network.
 
-Ejecute el siguiente comando, sustituyendo `<network>` por `rskTestnet` o `rskMainnet` en función del entorno de despliegue que desee:
+Run the following command, replacing `<network>` with either `rskTestnet` or `rskMainnet` depending on your desired deployment environment:
 
 ```bash
-hh deploy --red <network> --etiquetas 721
+hh deploy --network <network> --tags 721
 ```
 
-Ejemplo de comando:
+Example command:
 
 ```bash
 hh deploy --network rskTestnet --tags 721
 ```
 
-Este comando compilará sus contratos Solidity, generará información de tipo y desplegará su contrato ERC721 en la red Rootstock especificada. La salida mostrará la dirección del contrato desplegado y la cantidad de gas utilizado.
+This command will compile your Solidity contracts, generate type information, and deploy your ERC721 contract to the specified Rootstock network. The output will display the deployed contract address and the amount of gas used.
 
-El comando anterior devolverá una salida similar a la siguiente:
+The above command will return an output similar to the following:
 
 ```bash
-Generando tipados para: 36 artefactos en dir: typechain-types para objetivo: ethers-v6
-¡Generados 106 tipos con éxito!
-Compilados 34 archivos Solidity con éxito (objetivo evm: paris).
-desplegando "MockERC721" (tx: 0x9ad1dbc047b78594cf2cad105ded54c851fc0895ae69e4381908fecedd0ee3fc)...: desplegado en 0x2E027a3a05f3de6777B23397a50a60ecd04fe34C con 2849621 gas
+Generating typings for: 36 artifacts in dir: typechain-types for target: ethers-v6
+Successfully generated 106 typings!
+Compiled 34 Solidity files successfully (evm target: paris).
+deploying "MockERC721" (tx: 0x9ad1dbc047b78594cf2cad105ded54c851fc0895ae69e4381908fecedd0ee3fc)...: deployed at 0x2E027a3a05f3de6777B23397a50a60ecd04fe34C with 2849621 gas
 ```
 
-## Interactuar con el contrato - Acuñar un token
+## Interacting with the Contract - Minting a Token
 
-En el despliegue del contrato, puedes interactuar con él utilizando el comando `erc721-mint` de Hardhat. Este comando te permite acuñar (crear) nuevos tokens ERC721.
+On contract deployment, you can interact with it using Hardhat's `erc721-mint` command. This command allows you to mint (create) new ERC721 tokens.
 
-### Acuñación de una ficha:
+### Minting a Token:
 
-En su terminal, ejecute el siguiente comando, sustituyendo los marcadores de posición por valores reales:
+In your terminal, run the following command, replacing the placeholders with actual values:
 
 ```bash
 hh erc721-mint \
@@ -141,21 +141,21 @@ hh erc721-mint \
   --network rskTestnet
 ```
 
-Ejemplo de comando:
+Example command:
 
 ```bash
 hh erc721-mint --contract 0x2E027a3a05f3de6777B23397a50a60ecd04fe34C --recipient 0xB0f22816750851D18aD9bd54c32C5e09D1940F7d --network rskTestnet
 ```
 
-- `<ContractAddress>`: Sustitúyalo por la dirección de su contrato ERC721 desplegado obtenida en el paso anterior.
-- `<RecipientAddress>`: Sustitúyelo por la dirección del monedero para recibir el token recién acuñado.
-- `<network>`: Sustitúyalo por `rskTestnet` o `rskMainnet`, dependiendo de la red en la que esté desplegado su contrato.
+- `<ContractAddress>`: Replace this with the address of your deployed ERC721 contract obtained from the previous step.
+- `<RecipientAddress>`: Replace this with the wallet address to receive the newly minted token.
+- `<network>`: Replace this with either `rskTestnet` or `rskMainnet`, depending on the network where your contract is deployed.
 
-Este comando iniciará una transacción para acuñar un nuevo token ERC721 y enviarlo a la dirección del destinatario especificada.
+This command will initiate a transaction to mint a new ERC721 tokens and send it to the specified recipient address.
 
-La salida mostrará los detalles de la transacción:
+The output will display the transaction details:
 
 ```bash
-Hash de la transacción: 0xa127ff008e20d8b3944cecb374f28535cd84555881cde157708ec5545603a4e4
-Transacción confirmada
+Transaction Hash: 0xa127ff008e20d8b3944cecb374f28535cd84555881cde157708ec5545603a4e4
+Transaction confirmed
 ```

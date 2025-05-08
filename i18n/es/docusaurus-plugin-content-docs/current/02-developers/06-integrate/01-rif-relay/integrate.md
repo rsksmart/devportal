@@ -1,53 +1,53 @@
 ---
-sidebar_label: Integraciones
+sidebar_label: Integrations
 sidebar_position: 200
-title: Integración de relés RIF
+title: RIF Relay Integration
 description: Integrating RIF Relay in a dApp.
 tags:
   - rif
-  - sobre
-  - relé
-  - guía de integración
+  - envelope
+  - relay
+  - integration guide
 ---
 
-Esta guía repasa los métodos expuestos de RIF Relay que las dApps y wallets pueden consumir para proporcionar relaying como servicio, con el propósito de permitir a los usuarios pagar tarifas de transacción con tokens en un sistema particular.
+This guide goes over the exposed RIF Relay methods that dApps and wallets can consume to provide relaying as a service, with the purpose of allowing users to pay transaction fees with tokens in a particular system.
 
-## Introducción
+## Introduction
 
-Existen múltiples formas de integrar RIF Relay en un sistema. Se detallan a continuación.
+There are multiple ways to integrate RIF Relay into a system. These will be detailed down below.
 
-Además, es importante tener en cuenta que no _todos_ los componentes del relé RIF son necesarios para una integración satisfactoria, como se explica en la siguiente sección.
+Additionally, it's important to note that not _all_ of the RIF Relay components are needed for a successful integration, as explained in the following section.
 
-## Requisitos
+## Requirements
 
-### Contratos inteligentes de relevo RIF
+### RIF Relay Smart Contracts
 
-Es necesario desplegarlos y conocer sus direcciones. Para saber cómo hacerlo, consulte la página [Despliegue de contratos](/developers/integrate/rif-relay/deployment/) de esta guía.
+These need to be deployed and their addresses known. For steps on how to do this, please refer to the [Contract Deployment](/developers/integrate/rif-relay/deployment/) page of this guide.
 
-### Servidor de retransmisión RIF
+### RIF Relay Server
 
-El Servidor de Retransmisión RIF es el componente fuera de la cadena encargado de recibir transacciones y enviarlas a los componentes dentro de la cadena, principalmente el Centro de Retransmisión RIF. El RIF Relay Hub gestiona la información sobre los RIF Relay Workers y los RIF Relay Managers, pero también se comunica con el resto de componentes de la cadena: los contratos Smart Wallets, Factory y Verifier.
+The RIF Relay Server is the off-chain component in charge of receiving transactions and sending them to the on-chain components, chiefly the RIF Relay Hub. The RIF Relay Hub manages information about the RIF Relay Workers and RIF Relay Managers, but also communicates with the rest of the on-chain components in turn: the Smart Wallets, Factory and Verifier contracts.
 
-El RIF Relay Manager posee cuentas de RIF Relay Worker con fondos en moneda nativa. Para retransmitir una transacción, un Worker la firma y la envía al RIF Relay Hub pagando el gas consumido. En el caso de un flujo feliz, las transacciones se retransmitirán en última instancia a través del RIF Relay Hub, utilizando la biblioteca EIP-712.
+The RIF Relay Manager owns RIF Relay Worker accounts with funds in native coin. To relay a transaction, a Worker signs it and sends it to the RIF Relay Hub paying for the gas consumed. In the case of a happy flow, transactions will ultimately be relayed through the RIF Relay Hub, using the EIP-712 library.
 
-Para obtener más información al respecto, consulte la [Página de arquitectura](/developers/integrate/rif-relay/).
+For more details on this, please refer to the [Architecture page](/developers/integrate/rif-relay/).
 
-Los usuarios pueden interactuar con el servidor de retransmisión RIF directa o indirectamente. En este último caso, un usuario puede comunicarse con un servidor de retransmisión RIF a través de un cliente de retransmisión RIF. Un cliente de retransmisión RIF conoce las direcciones de diferentes servidores de retransmisión RIF y puede enviar solicitudes en cadena a cualquiera de ellos. A continuación, el cliente de retransmisión RIF envía la transacción que desea patrocinar al servidor de retransmisión RIF mediante una solicitud HTTP.
+Users can interact with the RIF Relay Server directly or indirectly. For the latter, a user can communicate with a RIF Relay Server through a RIF Relay Client. A RIF Relay Client knows the addresses of different RIF Relay Servers and it can send on-chain requests to any one of them. The RIF Relay Client then sends the transaction to be sponsored to the RIF Relay Server via HTTP request.
 
-En cualquier caso, necesitarás tener el servidor instalado y funcionando. Para ello, consulta las siguientes guías:
+In any case, you'll need to have the server installed and running. To achieve this please refer to the following guides:
 
-1. [Requisitos de instalación del relé RIF](/developers/integrate/rif-relay/installation-requirements/)
+1. [RIF Relay Installation Requirements](/developers/integrate/rif-relay/installation-requirements/)
 2. [RIF Relay Deployment](/developers/integrate/rif-relay/deployment/)
 
-### Cliente de retransmisión RIF
+### RIF Relay Client
 
-La clase `RelayClient`, de la biblioteca RIF Relay Client, ayuda a crear una solicitud de retransmisión, buscar un servidor disponible y enviar la solicitud a través del protocolo http.
+The `RelayClient` class, from the RIF Relay Client library, assists in building a relay request, searching for an available server and sending the request via http protocol.
 
-Para crear un `RelayClient` debemos seguir los siguientes pasos:
+To create a `RelayClient` we need to follow these steps:
 
-1. Establece la configuración.
-2. Proveedor de set (éteres).
-3. Crear instancia.
+1. Set the configuration.
+2. Set (ethers) provider.
+3. Create instance.
 
 ```typescript
 import {
@@ -67,30 +67,30 @@ import {
 
   setProvider(ethersProvider);
   
-  const relayClient = new RelayClient();
+  const relayClient =  new RelayClient();
 ```
 
-Dónde están las variables:
+Where variables are:
 
-- **ID_RED**: Identifica una red con la que interactuar.
-- **MATRIZ_URL_DEL_SERVIDOR**: Una matriz de cadenas de URL de servidor de retransmisión con las que el RelayClient puede interactuar.
-- \*\*DIRECCIÓN DEL CONCENTRADOR DE RETRANSMISIÓN: La dirección del contrato del concentrador de retransmisión.
-- \*\*DIRECCIÓN DEL VERIFICADOR DE DESPLIEGUE: La dirección del contrato del verificador de despliegue.
-- **DIRECCIÓN_DEL_VERIFICADOR_DE_RELÉ**: La dirección del contrato del verificador de retransmisión.
-- **DIRECCIÓN_FÁBRICA_CARTERA_INTELIGENTE**: La dirección del contrato de fábrica del monedero inteligente.
+- **CHAIN_ID**: Identifies a network to interact with.
+- **SERVER_URL_ARRAY**: An array of relay server URL strings that the RelayClient can interact with.
+- **RELAY_HUB_ADDRESS**: The relay hub contract address.
+- **DEPLOY_VERIFIER_ADDRESS**: The deploy verifier contract address.
+- **RELAY_VERIFIER_ADDRESS**: The relay verifier contract address.
+- **SMART_WALLET_FACTORY_ADDRESS**: The smart wallet factory contract address.
 
-Después de establecer la configuración y el proveedor de éteres, podemos empezar a crear instancias desde el `Relay Client`.
+After setting the configuration and the ethers provider, we can start creating instances from the `Relay Client`.
 
-#### Gestor de cuentas
+#### Account Manager
 
-El gestor `Account Manager` es un componente singleton de la biblioteca RIF Relay Client que ayuda a firmar transacciones de retransmisión.  Este componente puede firmar las transacciones con una cuenta interna previamente añadida o utilizando un proveedor de monederos como [metamask](https://metamask.io/). El `Administrador de cuentas` buscará primero las cuentas añadidas manualmente y, si no encuentra ninguna, intentará utilizar el proveedor que se [configuró previamente](#rif-relay-client).
+The `Account Manager` manager is a singleton component from the RIF Relay Client library that helps to sign relay transactions.  This component can sign the transactions with an internal account that was previously added or using a wallet provider like [metamask](https://metamask.io/). The `Account Manager` will look first for manually added accounts and, if none is found, will try to use the provider that was [previously setup](#rif-relay-client).
 
-El `Administrador de cuentas` acepta [Carteras Ethers V5](https://docs.ethers.org/v5/api/signer/#Wallet) como cuentas internas.
+The `Account Manager` accepts [Ethers V5 Wallets](https://docs.ethers.org/v5/api/signer/#Wallet) as internal accounts.
 
-Para interactuar con el `Administrador de Cuentas` debemos seguir los siguientes pasos:
+To interact with the `Account Manager` we need to follow the next steps:
 
-1. Obtener una instancia.
-2. Añade una nueva cuenta.
+1. Get an instance.
+2. Add a new account.
 
 ```typescript
     import {
@@ -102,19 +102,19 @@ Para interactuar con el `Administrador de Cuentas` debemos seguir los siguientes
     accountManager.addAccount(<INTERNAL_ACCOUNT_OBJECT>);
 ```
 
-Dónde están las variables:
+Where variables are:
 
-- **OBJETO_CUENTA_INTERNA**: [Cartera Ethers V5](https://docs.ethers.org/v5/api/signer/#Wallet) objeto.
+- **INTERNAL_ACCOUNT_OBJECT**: [Ethers V5 Wallet](https://docs.ethers.org/v5/api/signer/#Wallet) object.
 
-### Transacción de retransmisión
+### Relay Transaction
 
-Para retransmitir transacciones necesitamos un monedero inteligente ya desplegado, el proceso de despliegue y definición de un monedero inteligente se puede encontrar [Monedero Inteligente](/developers/integrate/rif-relay/smart-wallets).
+To relay transactions we need a smart wallet already deployed, the deployment process and definition of a smart wallet can be found [Smart Wallet](/developers/integrate/rif-relay/smart-wallets).
 
-Los pasos que debemos seguir son:
+The steps that we must follow are:
 
-1. Despliega el monedero inteligente.
-2. Cree la transacción que queremos retransmitir.
-3. Retransmita la transacción.
+1. Deploy the smart wallet.
+2. Create the transaction that we would like to relay.
+3. Relay the transaction.
 
 ```typescript
     const relayTransactionOpts: UserDefinedEnvelopingRequest = {
@@ -130,29 +130,29 @@ Los pasos que debemos seguir son:
       },
     };
 
-    const transaction: Transacción = await relayClient.relayTransaction(
+    const transaction: Transaction = await relayClient.relayTransaction(
       relayTransactionOpts
-);
+    );
 ```
 
-Dónde están las variables:
+Where variables are:
 
-- **EOA**: Cuenta de propiedad externa, el propietario del monedero inteligente.
-- **DATOS_A_EJECUTAR**: La función codificada que queremos retransmitir.
-- **DIRECCIÓN_DESTINO**: La dirección del contrato destino que queremos ejecutar.
-- **DIRECCIÓN_TOKEN**: La dirección del contrato token que queremos utilizar para pagar la tasa.
-- **CANTIDAD_DE_TOKENS_EN_WEI**: La cantidad que queremos pagar por la tasa en wei.
-- **DIRECCIÓN_CARTERA_INTELIGENTE**: La dirección del monedero inteligente que va a ejecutar la transacción retransmitida.
+- **EOA**: Externally Owned Account, the owner of the smart wallet.
+- **DATA_TO_EXECUTE**: The encoded function that we want to relay.
+- **DESTINATION_ADDRESS**: The address of the destination contract that we want to execute.
+- **TOKEN_ADDRESS**: The token contract address that we want to use to pay for the fee.
+- **AMOUNT_OF_TOKENS_IN_WEI**: The amount that we want to pay for the fee in wei.
+- **SMART_WALLET_ADDRESS**: The smart wallet address that is going to execute the relayed transaction.
 
-### Verificadores de relés
+### Relay Verifiers
 
-Para obtener las direcciones de los verificadores necesitamos ejecutar el comando:
+To obtain the verifier addresses we need to execute the command:
 
 ```
 curl http://<SERVER_URL>/verifiers
 ```
 
-> El comando debe ejecutarse en un terminal diferente, ya que necesita que el servidor esté en ejecución para realizar la solicitud.
+> The command needs to be executed in a different terminal since it needs the server to be running to perform the request.
 
 ```json
   {
@@ -163,11 +163,11 @@ curl http://<SERVER_URL>/verifiers
   }
 ```
 
-### Solicitud de construcción
+### Build Request
 
-Para retransmitir transacciones, el Servidor de Retransmisión expone un gestor de envíos HTTP a la siguiente ruta `http://<SERVER_URL>/relay`. El Cliente de Retransmisión proporciona una abstracción para construir y enviar cada transacción a los servidores disponibles; aunque el cliente puede simplificar la interacción con el servidor, siempre es posible enviar peticiones HTTP al servidor sin utilizar el Cliente de Retransmisión.
+To relay transactions, the Relay Server exposes an HTTP post handler to the following path `http://<SERVER_URL>/relay`. The Relay Client provides an abstraction to build and send each transaction to the available servers; although the client can simplify the interaction with the server, it's always possible to send HTTP requests to the server without using the Relay Client.
 
-Cada transacción que se envíe debe tener la siguiente estructura:
+Each transaction that will be sent, needs to have the following structure:
 
 ```json
     {
@@ -176,16 +176,16 @@ Cada transacción que se envíe debe tener la siguiente estructura:
     }
 ```
 
-A continuación describiremos cada campo que se requiere en la solicitud.
+Below we will describe each field that is required in the request.
 
-#### Solicitud de relé
+#### Relay Request
 
 ```json
   {
     "request": {
       "relayHub": "0xDA7Ce79725418F4F6E13Bf5F520C89Cec5f6A974",
       "to": "0x1Af2844A588759D0DE58abD568ADD96BB8B3B6D8",
-      "data": "0xa9059cbb00000000000000000000000000000000c60b724c0865e294d64c94fed89c1e90bce0a7fe0000000000000000000000000000000000000000000000000000000000008ac7230489e80000",
+      "data": "0xa9059cbb000000000000000000000000c60b724c0865e294d64c94fed89c1e90bce0a7fe0000000000000000000000000000000000000000000000008ac7230489e80000",
       "from": "0x553f430066ea56bd4fa9190218af17bad23dcdb1",
       "value": "0",
       "nonce": "1",
@@ -204,34 +204,34 @@ A continuación describiremos cada campo que se requiere en la solicitud.
   }
 ```
 
-Donde está cada clave de `request`:
+Where each key from `request` is:
 
-- **RelayHub**: La dirección del hub de retransmisión que se utilizará para validar la persona que llama desde la transacción.
-- **a**: La dirección del contrato destino que queremos ejecutar.
-- **datos**: La función codificada que queremos retransmitir.
-- **de**: Cuenta de titularidad externa, el propietario del monedero inteligente.
-- **Valor**: El valor de la moneda nativa que se quiere transferir desde smart wallet durante la ejecución.
-- **nonce**: Smart Wallet [nonce](https://github.com/rsksmart/rif-relay-contracts/blob/d1b1ee1c429786f967205f32ed015b3f9a1edaaf/contracts/smartwallet/SmartWallet.sol#L18) para evitar ataques de repetición.
-- **importe del token**: La cantidad de token que queremos pagar por la cuota en wei.
-- **tokenGas**: El límite de gas para la transacción de pago de tokens.
-- **ContratoToken**: La dirección del contrato token que queremos utilizar para pagar la tasa.
-- **gas**: El límite de gas para la ejecución de la operación de retransmisión.
-- **validUntilTime**: Tiempo de expiración de la transacción en segundos.
+- **relayHub**: The relay hub address that will be used to validate the caller from the transaction.
+- **to**: The address of the destination contract that we want to execute.
+- **data**: The encoded function that we want to relay.
+- **from**: Externally Owned Account, the owner of the smart wallet.
+- **value**: The native currency value that wants to be transferred from smart wallet during the execution.
+- **nonce**: Smart Wallet [nonce](https://github.com/rsksmart/rif-relay-contracts/blob/d1b1ee1c429786f967205f32ed015b3f9a1edaaf/contracts/smartwallet/SmartWallet.sol#L18) to avoid replay attacks.
+- **tokenAmount**: The amount of token that we want to pay for the fee in wei.
+- **tokenGas**: The gas limit for the token payment transaction.
+- **tokenContract**: The token contract address that we want to use to pay for the fee.
+- **gas**: The gas limit for the execution of the relaying transaction.
+- **validUntilTime**: Transaction expiration time in seconds.
 
-Donde está cada clave de `relayData`:
+Where each key from `relayData` is:
 
-- **PrecioGas**: El precio del gas que se utilizará para retransmitir la transacción.
-- **Llamada al verificador**: La dirección del verificador del relé para validar la corrección de la transacción.
-- **callForwarder**: La dirección del monedero inteligente que va a ejecutar la transacción.
-- **Recibidor**: La dirección del trabajador o contrato cobrador que va a recibir las comisiones.
+- **gasPrice**: The gas price that will be used to relay the transaction.
+- **callVerifier**: The relay verifier address to validate the correctness of the transaction.
+- **callForwarder**: The smart wallet address that is going to execute the transaction.
+- **feesReceiver**: The address of the worker or collector contract that is going to receive fees.
 
-#### Solicitud de despliegue
+#### Deploy Request
 
 ```json
   {
     "request": {
       "relayHub": "0xDA7Ce79725418F4F6E13Bf5F520C89Cec5f6A974",
-      "to": "0x000000000000000000000000000000000000000000000000",
+      "to": "0x0000000000000000000000000000000000000000",
       "data": "0x",
       "from": "0x553f430066EA56BD4fa9190218AF17bAD23dCdb1",
       "value": "0",
@@ -239,7 +239,7 @@ Donde está cada clave de `relayData`:
       "tokenAmount": "0",
       "tokenGas": "0",
       "tokenContract": "0x1Af2844A588759D0DE58abD568ADD96BB8B3B6D8",
-      "recoverer": "0x0000000000000000000000000000000000000000000000000000",
+      "recoverer": "0x0000000000000000000000000000000000000000",
       "index": "1",
       "validUntilTime": 1676747036,
     },
@@ -252,55 +252,55 @@ Donde está cada clave de `relayData`:
   }
 ```
 
-Donde está cada clave de `request`:
+Where each key from `request` is:
 
-- **RelayHub**: La dirección del hub de retransmisión que se utilizará para validar la persona que llama desde la transacción.
-- **a**: La dirección del contrato destino que queremos ejecutar (`0x000000000000000000000000000000000000000000000000` para el despliegue de Cartera Inteligente).
-- **Datos**: La función codificada que queremos retransmitir (`0x` para el despliegue de Smart Wallet).
-- **de**: Cuenta de titularidad externa, el propietario del monedero inteligente.
-- **Valor**: El valor de la moneda nativa que se quiere transferir desde smart wallet durante la ejecución.
-- **nonces**: SmartWalletFactory mantiene un registro de los [nonces](https://github.com/rsksmart/rif-relay-contracts/blob/d1b1ee1c429786f967205f32ed015b3f9a1edaaf/contracts/factory/SmartWalletFactory.sol#L95) utilizados por cada propietario de cartera inteligente, para evitar ataques de repetición. Se puede recuperar con [`IWalletFactory.nonce(from)`](https://github.com/rsksmart/rif-relay-contracts/blob/d1b1ee1c429786f967205f32ed015b3f9a1edaaf/contracts/interfaces/IWalletFactory.sol#L8)
-- **importe de la ficha**: El importe que queremos pagar por la cuota en wei.
-- **tokenGas**: El límite de gas para la transacción de pago de tokens.
-- **ContratoToken**: La dirección del contrato token que queremos utilizar para pagar la tasa.
-- **Recuperador**: La dirección del recuperador, para recuperar fondos del monedero inteligente. Esta funcionalidad está pendiente de implementar.
-- **Índice**: El índice del monedero inteligente que queremos desplegar.
-- **validUntilTime**: Tiempo de expiración de la transacción en segundos.
+- **relayHub**: The relay hub address that will be used to validate the caller from the transaction.
+- **to**: The address of the destination contract that we want to execute (`0x0000000000000000000000000000000000000000` for the Smart Wallet deployment).
+- **data**: The encoded function that we want to relay (`0x` for the Smart Wallet deployment).
+- **from**: Externally Owned Account, the owner of the smart wallet.
+- **value**: The native currency value that wants to be transferred from smart wallet during the execution.
+- **nonce**: The SmartWalletFactory keeps track of the [nonces](https://github.com/rsksmart/rif-relay-contracts/blob/d1b1ee1c429786f967205f32ed015b3f9a1edaaf/contracts/factory/SmartWalletFactory.sol#L95) used for each smart wallet owner, to avoid replay attacks. It can be retrieved with [`IWalletFactory.nonce(from)`](https://github.com/rsksmart/rif-relay-contracts/blob/d1b1ee1c429786f967205f32ed015b3f9a1edaaf/contracts/interfaces/IWalletFactory.sol#L8)
+- **tokenAmount**: The amount that we want to pay for the fee in wei.
+- **tokenGas**: The gas limit for the token payment transaction.
+- **tokenContract**: The token contract address that we want to use to pay for the fee.
+- **recoverer**: The recoverer address, to recover funds from the smart wallet. This feature is still pending to implement.
+- **index**: The index from the smart wallet that we want to deploy.
+- **validUntilTime**: Transaction expiration time in seconds.
 
-Donde está cada clave de `relayData`:
+Where each key from `relayData` is:
 
-- **PrecioGas**: El precio del gas que se utilizará para retransmitir la transacción.
-- **Llamada al verificador**: La dirección del verificador de despliegue para validar la corrección de la transacción.
-- **callForwarder**: La dirección de fábrica del monedero inteligente que va a realizar el despliegue.
-- **receptorDeCuotas**: La dirección del contrato de trabajador o cobrador que va a recibir las comisiones.
+- **gasPrice**: The gas price that will be used to relay the transaction.
+- **callVerifier**: The deploy verifier address to validate the correctness of the transaction.
+- **callForwarder**: The smart wallet factory address that is going to perform the deployment.
+- **feesReceiver**: The address from the worker or collector contract that is going to receive fees.
 
-#### Metadatos
+#### Metadata
 
 ```json
   {
     "relayHubAddress": "0xDA7Ce79725418F4F6E13Bf5F520C89Cec5f6A974",
     "signature": "0xa9f579cf964c03ac194f577b5fca5271ba13e2965c...",
     "relayMaxNonce": 4
-}
+  }
 ```
 
-Dónde está cada llave:
+Where each key is:
 
-- **Dirección del centro de retransmisión**: El hub de retransmisión que utilizará el servidor para retransmitir la transacción.
-- **Firma**: La transacción de retransmisión firmada por el propietario. Después de firmar la transacción, no se puede cambiar, ya que hay una validación en la cadena que forma parte de la EIP712.
-- **RelayMaxNonce**: Relay worker nonce más un gap extra.
+- **relayHubAddress**: The relay hub that will be used by the server to relay the transaction.
+- **signature**: The relay transaction signed by the owner. After signing the transaction, it cannot be changed, since there is a on-chain validation that is part of the EIP712.
+- **relayMaxNonce**: Relay worker nonce plus an extra gap.
 
-### Función personalizada de reposición de trabajadores
+### Custom worker replenish function
 
-Cada transacción retransmitida es firmada por una cuenta de trabajador de retransmisión. Las cuentas de los trabajadores están controladas por el Gestor de Retransmisiones. Cuando un trabajador de retransmisión firma y retransmite una transacción, el coste de esa transacción se paga utilizando los fondos de la cuenta de ese trabajador. Si la transacción no está subvencionada, el trabajador es compensado con fichas.
+Each relayed transaction is signed by a Relay Worker account. The worker accounts are controlled by the Relay Manager. When a relay worker signs and relays a transaction, the cost for that transaction is paid using the funds in that worker's account. If the transaction is not subsidized, then the worker is compensated with tokens.
 
-Las cuentas de los trabajadores deben tener siempre un saldo mínimo para pagar la gasolina de la transacción. Estos saldos pueden gestionarse implementando una estrategia de reposición. El Gestor de Retransmisiones puede utilizar la estrategia para recargar la cuenta de un trabajador de retransmisión cuando el saldo sea demasiado bajo.
+Worker accounts must always have some minimum balance to pay gas for the transaction. These balances can be managed by implementing a replenishment strategy. The Relay Manager can use the strategy to top off a relay worker's account when the balance gets too low.
 
-Proporcionamos una implementación por defecto para una estrategia de reabastecimiento. Los integradores de soluciones de RIF Relay pueden implementar su propia estrategia de reposición.
+We provide a default implementation for a replenish strategy. RIF Relay solution integrators can implement their own replenish strategy.
 
-Para aplicar y utilizar su propia estrategia de reposición:
+To implement and use your own replenish strategy:
 
-1. En la carpeta `src` del proyecto RIF Relay Server, abre `ReplenishFunction.ts` con un editor de texto.
-2. En la función `replenishStrategy` escribe tu nueva estrategia de reposición.
-3. Reconstruir el proyecto `npm run build`
-4. Cambie el archivo JSON de configuración para establecer `customReplenish` en true.
+1. In the folder `src` from the RIF Relay Server project, open `ReplenishFunction.ts` with a text editor.
+2. On the function `replenishStrategy` write your new replenish strategy.
+3. Re build the project `npm run build`
+4. Change the config JSON file to set `customReplenish` on true.

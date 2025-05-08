@@ -1,24 +1,24 @@
 ---
-sidebar_label: Cursos sobre portainjertos
+sidebar_label: Courses on Rootstock
 sidebar_position: 2
-title: Cursos sobre portainjertos
+title: Courses on Rootstock
 tags:
   - rsk
-  - preguntas frecuentes
-  - ayuda
-  - soporte
-  - curso
-  - portainjertos
-  - programa de embajadores
-description: Bienvenido a los cursos Rootstock; Explora materiales de aprendizaje y cursos para empezar a construir sobre Rootstock y RIF Technologies.
+  - faqs
+  - help
+  - support
+  - course
+  - rootstock
+  - ambassador-program
+description: Welcome to Rootstock Courses;  Explore learning materials and courses to enable you get started on building on Rootstock and RIF Technologies.
 ---
 
-Explore el material didáctico y los cursos que le permitirán empezar a trabajar con Rootstock y RIF Technologies.
+Explore learning materials and courses to enable you get started on building on Rootstock and RIF Technologies.
 
 <Card
 image="/img/courses/welcome.jpg"
-title="Curso de desarrollador de blockchain de Rootstock"
-description="Aprenda a escribir, probar, asegurar, desplegar y verificar contratos inteligentes en la red de blockchain de Rootstock."
+title="Rootstock Blockchain Developer Course"
+description="Learn how to write, test, secure, deploy and verify smart contracts on the Rootstock blockchain network."
 link="https://rsk.thinkific.com/courses/blockchain-developer/"
 />
 
@@ -26,7 +26,7 @@ link="https://rsk.thinkific.com/courses/blockchain-developer/"
 
 <Card
 image="/img/courses/user-course-modules/welcome.jpg"
-title="Curso para usuarios de Rootstock"
-description="Aprenda a utilizar e interactuar con la red de blockchain Rootstock."
+title="Rootstock User Course"
+description="Learn how to use and interact with the Rootstock blockchain network."
 link="https://rsk.thinkific.com/courses/blockchain-user"
 />

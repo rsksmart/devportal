@@ -1,30 +1,30 @@
 ---
-sidebar_label: Desarrollar
+sidebar_label: Develop
 sidebar_position: 600
-title: RIF Relé Desarrollar
+title: RIF Relay Develop
 description: RIF Relay deployment process.
 tags:
   - rif
-  - sobre
-  - relé
-  - usuario
-  - guía
+  - envelope
+  - relay
+  - user
+  - guide
 ---
 
-## Inicializar el proyecto
+## Initializing the project
 
-Para utilizar RIF Relay, siga estos pasos para construir el proyecto.
+To use RIF Relay, follow these steps to build the project.
 
-## Estructura del proyecto
+## Project structure
 
-El proyecto está dividido en varios módulos que interactúan entre sí.
-Cada proyecto tiene su propia documentación en su repositorio.
+The project is divided into multiple modules that interact with each other.
+Each project has its own documentation in its repository.
 
-1. [Contratos de relevo RIF](https://github.com/rsksmart/rif-relay-contracts)
-2. [Cliente de retransmisión RIF](https://github.com/rsksmart/rif-relay-client)
-3. [Servidor de retransmisión RIF](https://github.com/rsksmart/rif-relay-server)
+1. [RIF Relay Contracts](https://github.com/rsksmart/rif-relay-contracts)
+2. [RIF Relay Client](https://github.com/rsksmart/rif-relay-client)
+3. [RIF Relay Server](https://github.com/rsksmart/rif-relay-server)
 4. [RIF Relay Sample dApp](https://github.com/rsksmart/rif-relay-sample-dapp)
 
-## Comprometiendo cambios
+## Committing changes
 
-Para contribuir al proyecto, crea una rama con el nombre de la nueva funcionalidad que estás implementando (por ejemplo, `gas-optimization`). Cuando envías un commit a git, se ejecuta un hook. El gancho ejecuta un linter y todas las pruebas.
+To contribute to the project, create a branch with the name of the new feature you are implementing (e.g. `gas-optimization`). When you commit to git, a hook is executed. The hook executes a linter and all the tests.

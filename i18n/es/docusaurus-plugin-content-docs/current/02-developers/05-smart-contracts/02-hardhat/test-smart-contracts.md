@@ -1,54 +1,54 @@
 ---
-sidebar_label: Probar contratos inteligentes
+sidebar_label: Test Smart Contracts
 sidebar_position: 104
-title: Probar contratos inteligentes
-description: Aprenda a probar su contrato inteligente Rootstock
+title: Test Smart Contracts
+description: Learn how to test your Rootstock smart contract
 tags:
-  - guías
-  - desarrolladores
-  - contratos inteligentes
+  - guides
+  - developers
+  - smart contracts
   - rsk
-  - portainjertos
-  - casco
+  - rootstock
+  - hardhat
   - dApps
-  - éteres
+  - ethers
 ---
 
-En esta sección, configurarás una prueba de contrato inteligente y probarás tu contrato utilizando los marcos de pruebas Mocha y Chai. Ver Automatización de DApps usando [Cucumber y Playwright](/resources/tutorials/dapp-automation-cucumber/).
+In this section, you'll set up a smart contract test and test your contract using Mocha and Chai testing frameworks. See DApps Automation using [Cucumber and Playwright](/resources/tutorials/dapp-automation-cucumber/).
 
-Siga estos pasos para probar el contrato inteligente.
+Follow these steps below to test the smart contract.
 
-### Paso 1: Instalar dependencias
+### Step 1: Install Dependencies
 
-Instalaremos las dependencias de pruebas de Mocha y Chai.
+We'll install the Mocha and Chai testing dependencies.
 
-Mocha es un marco de pruebas de JavaScript que se ejecuta en Node.js. Chai es una biblioteca de aserciones para el navegador y Node que puede emparejarse con cualquier framework de pruebas JavaScript.
+Mocha is a JavaScript test framework running on Node.js. Chai is an assertion library for the browser and Node that can be paired with any JavaScript testing framework.
 
-- Antes de escribir pruebas para su contrato de token, asegúrese de que Mocha y Chai están instalados. Para instalar las dependencias de pruebas necesarias:
+- Before writing tests for your token contract, ensure Mocha and Chai is installed. To install the required testing dependencies:
 
 ```shell
   npm install --save-dev mocha@10.2.0 chai@4.2.0 @nomiclabs/hardhat-ethers@2.2.3
 ```
 
-### Paso 2: Crear pruebas
+### Step 2: Create Tests
 
-1. Navegue hasta el directorio `test` en el directorio raíz de su proyecto, este es el recomendado para almacenar todos los archivos de prueba:
+1. Navigate to the `test` directory in the root directory of your project, this is recommended for storing all test files:
 
 ```shell
-  prueba de cd
+  cd test
 ```
 
-2. En el directorio de pruebas, abre el archivo `MyToken.test.js`, escribiremos pruebas para el contrato token usando Mocha y Chai:
+2. In the test directory, open the `MyToken.test.js` file, we'll write tests for the token contract using Mocha and Chai:
 
-Copia el siguiente fragmento de código y pégalo en tu archivo de prueba o consulta el archivo [`MyToken.test.js`](https://raw.githubusercontent.com/rsksmart/rootstock-quick-start-guide/feat/complete/test/MyToken.test.js) en GitHub.
+Copy the code snippet below and paste it in your test file or see the [`MyToken.test.js`](https://raw.githubusercontent.com/rsksmart/rootstock-quick-start-guide/feat/complete/test/MyToken.test.js) file on GitHub.
 
 ```js
   const { expect } = require("chai");
   const { ethers } = require("hardhat");
 
   describe("MyToken", function () {
-  it("Debería desplegar MyToken y asignar el suministro total al propietario", async function () {
-    const [propietario] = await ethers.getSigners();
+  it("Should deploy MyToken and assign the total supply to the owner", async function () {
+    const [owner] = await ethers.getSigners();
 
     const MyToken = await ethers.getContractFactory("MyToken");
     const myToken = await MyToken.deploy(1000);
@@ -57,29 +57,29 @@ Copia el siguiente fragmento de código y pégalo en tu archivo de prueba o cons
     expect((await myToken.totalSupply()).toString()).to.equal('1000');
     expect((await myToken.balanceOf(owner.address)).toString()).to.equal('1000');
       });
-});
+  });
 ```
 
-### Paso 3: Ejecutar las pruebas
+### Step 3: Run the Tests
 
-Para ejecutar las pruebas, ejecute el siguiente comando en el directorio raíz de su proyecto. Esto ejecutará las pruebas escritas, confirmando que el contrato funciona como se esperaba.
+To execute tests, run the following command in your project's root directory. This will run the written tests, confirming that the contract works as expected.
 
 ```shell
-prueba del casco npx
+npx hardhat test
 ```
 
-Debería obtener una respuesta como la siguiente
-Éxito de la prueba](/img/guides/quickstart/hardhat/test-success.png)
+You should get a response like below:
+![Test Success](/img/guides/quickstart/hardhat/test-success.png)
 
-Siguiendo estos pasos, tendrás instalados los marcos de pruebas necesarios y estarás bien preparado para escribir pruebas eficaces para tu contrato inteligente.
+By following these steps, you'll have the necessary testing frameworks installed and be well prepared to write effective tests for your smart contract.
 
-## Enfoques y marcos de pruebas alternativos
+## Alternative Testing Approaches and Frameworks
 
-Además de Mocha y Chai, puede utilizar varios otros marcos y enfoques en su proyecto Hardhat. Cada uno tiene sus propias características y ventajas.
+In addition to Mocha and Chai, you can use several other frameworks and approaches in your Hardhat project. Each has its unique features and benefits.
 
-- Jest - Marco de pruebas de JavaScript
-  - [Jest](https://jestjs.io/) es popular por su agradable sintaxis y su enfoque en la simplicidad. Funciona bien para probar aplicaciones JavaScript tanto frontend como backend.
-- Waffle - Biblioteca de pruebas de contratos inteligentes de Ethereum
-  - [Waffle](https://getwaffle.io/) es una biblioteca para escribir y probar contratos inteligentes. Se utiliza a menudo con ethers.js y es conocida por su sintaxis fluida.
-- Automatización de DApps Cucumber
-  - [Automatización de aplicaciones con Cucumber](/resources/tutorials/dapp-automation-cucumber/)
+- Jest - JavaScript Testing Framework
+  - [Jest](https://jestjs.io/) is popular for its delightful syntax and focus on simplicity. It works well for testing both frontend and backend JavaScript applications.
+- Waffle - Ethereum Smart Contract Testing Library
+  - [Waffle](https://getwaffle.io/) is a library for writing and testing smart contracts. It is often used with ethers.js and is known for its fluent syntax.
+- Cucumber DApps Automation
+  - [dApp Automation with Cucumber](/resources/tutorials/dapp-automation-cucumber/)

@@ -1,20 +1,20 @@
 ---
-title: Solución de problemas
-sidebar_label: Solución de problemas
+title: Troubleshooting
+sidebar_label: Troubleshooting
 sidebar_position: 11
 tags:
   - rsk
   - rskj
   - rootstock
-  - nodo
+  - node
   - faq
-  - solución de problemas
-description: Cómo resolver algunos problemas conocidos o encontrados con frecuencia al trabajar con RSKj
+  - troubleshoot
+description: How to solve some known or frequently encountered issues when working with RSKj
 ---
 
-Esta sección explica cómo resolver algunos problemas conocidos o encontrados con frecuencia.
+This section explains how to solve some known or frequently encountered issues.
 
-Si lo que necesitas no está en esta sección, **contáctanos** sin dudarlo a través de la [Comunidad de Rootstock en Discord](https://rootstock. o/discord). ¡Estaremos encantados de ayudarle!
+If what you need is not in this section, **contact us** without hesitation through the [Rootstock Community on Discord](https://rootstock.io/discord). We will be happy to help you!
 
 ````mdx-code-block
 <Accordion>

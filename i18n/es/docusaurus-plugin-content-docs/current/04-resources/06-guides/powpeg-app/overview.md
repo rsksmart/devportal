@@ -33,7 +33,7 @@ It is a web application that fosters the interaction between the bitcoin blockch
 
 ## How it Works
 
-The PowPeg App uses a [REST API](https://en.wikipedia.org/wiki/Representational_state_transfer) and a [PowPeg api](https://github.com/rsksmart/2wp-api) as the backend, this API uses a [daemon](https://en.wikipedia.org/wiki/Daemon_\\(computing\\)) process, which is responsible for listening on blockchain transactions to update the state of peg-ins and in the future, the state of peg-outs, these state changes (tx hash, date change, last status) are stored in a mongodb database.
+The PowPeg App uses a [REST API](https://en.wikipedia.org/wiki/Representational_state_transfer) and a [PowPeg api](https://github.com/rsksmart/2wp-api) as the backend, this API uses a [daemon](https://en.wikipedia.org/wiki/Daemon_\(computing\)) process, which is responsible for listening on blockchain transactions to update the state of peg-ins and in the future, the state of peg-outs, these state changes (tx hash, date change, last status) are stored in a mongodb database.
 
 :::info\[Info]
 

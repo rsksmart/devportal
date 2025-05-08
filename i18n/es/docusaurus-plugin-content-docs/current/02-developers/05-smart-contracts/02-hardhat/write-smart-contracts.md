@@ -1,45 +1,45 @@
 ---
-sidebar_label: Escribir un contrato inteligente
+sidebar_label: Write a Smart Contract
 sidebar_position: 103
-title: Escribir un contrato inteligente
-description: Aprende a escribir un contrato inteligente utilizando Solidity y OpenZeppellin
+title: Write a Smart Contract
+description: Learn how to write a smart contract using Solidity and OpenZeppellin
 tags:
-  - guías
-  - desarrolladores
-  - contratos inteligentes
+  - guides
+  - developers
+  - smart contracts
   - rsk
-  - portainjertos
-  - casco
+  - rootstock
+  - hardhat
   - dApps
-  - éteres
+  - ethers
 ---
 
-En esta sección, aprenderemos a escribir un contrato inteligente utilizando la [biblioteca OpenZeppelin](https://www.openzeppelin.com/contracts) y Solidity. OpenZeppelin es ampliamente utilizado por su código base seguro, estandarizado y validado por la comunidad, que simplifica el desarrollo de contratos inteligentes robustos y seguros.
+In this section, we'll learn how to write a smart contract using the [OpenZeppelin library](https://www.openzeppelin.com/contracts) and Solidity. OpenZeppelin is widely used for its secure, community-vetted, and standardized codebase, which simplifies developing robust and secure smart contracts.
 
-## Crear un contrato inteligente
+## Create a Smart Contract
 
-### Paso 1: Instalar los contratos OpenZeppelin
+### Step 1: Install OpenZeppelin Contracts
 
-Ejecute el siguiente comando para instalar la biblioteca de contratos inteligentes reutilizables de OpenZeppelin.
+Run the following command to install the OpenZeppelin's library of reusable smart contracts.
 
 ```shell
-    npm install @openzeppelin/contratos
+    npm install @openzeppelin/contracts
 ```
 
-#### Paso 2: Crear un contrato de token
+#### Step 2: Create a Token Contract
 
-- Navegue hasta el directorio `contracts` en el directorio raíz del proyecto de inicio rápido:
+- Navigate to the `contracts` directory in the root directory of quick start project:
 
 ```shell
-    contratos cd
+    cd contracts
 ```
 
-- En el directorio de contratos, abra el archivo `MyToken.sol` para su contrato de token:
+- In the contracts directory, open the `MyToken.sol` file for your token contract:
 
-Para configurar un token ERC20, copie el siguiente fragmento de código y péguelo en su archivo de token o consulte el archivo completo [`MyToken.sol`](https://raw.githubusercontent.com/rsksmart/rootstock-quick-start-guide/feat/complete/contracts/MyToken.sol) en GitHub.
+To configure an ERC20 token, copy the code snippet below and paste it in your token file or view the complete [`MyToken.sol` file](https://raw.githubusercontent.com/rsksmart/rootstock-quick-start-guide/feat/complete/contracts/MyToken.sol) on GitHub.
 
 ```shell
-    // SPDX-Licencia-Identificador: MIT
+    // SPDX-License-Identifier: MIT
     pragma solidity ^0.8.20;
 
     import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
@@ -51,26 +51,26 @@ Para configurar un token ERC20, copie el siguiente fragmento de código y pégue
     }
 ```
 
-Este contrato define un token `ERC20` llamado `MyToken` con el símbolo `MTK`, utilizando la implementación estándar ERC20 de OpenZeppelin.
+This contract defines an `ERC20` token named `MyToken` with the symbol `MTK`, using OpenZeppelin's ERC20 standard implementation.
 
-## Redactar el contrato
+## Compile the Contract
 
-Para construir el contrato, ejecute el siguiente comando en el directorio raíz del proyecto.
+To build the contract, run the following command in the project's root directory.
 
 ```shell
 npx hardhat compile
 ```
 
-Esto compilará tus contratos inteligentes y generará artefactos:
+This will compile your smart contracts and generate artifacts:
 
 ```shell
 % npx hardhat compile
-Descargando compilador 0.8.20
-Compilado 6 archivos Solidity con éxito (objetivo evm: paris).
+Downloading compiler 0.8.20
+Compiled 6 Solidity files successfully (evm target: paris).
 ```
 
 ---
 
-## Siguiente
+## Next
 
-- [Pruebe su Contrato Inteligente](/developers/smart-contracts/hardhat/test-smart-contracts/) para asegurarse de que funciona como se espera.
+- [Test your Smart Contract](/developers/smart-contracts/hardhat/test-smart-contracts/) to ensure it's working as expected.

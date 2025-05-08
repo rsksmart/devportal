@@ -1,41 +1,41 @@
 ---
-sidebar_label: RIF Relay Ejemplo de dApp
+sidebar_label: RIF Relay Sample dApp
 sidebar_position: 400
-title: Cómo utilizar RIF Relay Sample dApp SDK
+title: How to use the RIF Relay Sample dApp SDK
 description: RIF Relay Sample dApp SDK Starter kit.
 tags:
   - rif
-  - sobre
-  - relé
-  - guía de integración
+  - envelope
+  - relay
+  - integration guide
 ---
 
-## Primeros pasos
+## Getting Started
 
-Esta guía ayuda a comenzar rápidamente con la configuración de su entorno para utilizar RIF Relay y también a utilizar la dApp de ejemplo para probar los servicios de relé.
+This guide helps to quickly get started with setting up your environment to use RIF Relay and also use the sample dApp to test relay services.
 
-### Paso 1: Ejecutar el nodo Portainjerto
+### Step 1: Run the Rootstock node
 
-Necesita configurar y ejecutar un nodo Rootstock, preferiblemente la última versión de RSKj releases. El nodo puede funcionar localmente o a través de Docker. En ambos casos, se utiliza un archivo [`node.conf`](https://github.com/rsksmart/rif-relay/blob/main/docker/node.conf).
+You need to set up and run a Rootstock node, preferably the latest version from RSKj releases. The node can operate locally or via Docker. In either case, a [`node.conf`](https://github.com/rsksmart/rif-relay/blob/main/docker/node.conf) file is used.
 
-Consulte la [Guía de instalación del nodo Rootstock](/node-operators/setup/installation/) para obtener una guía detallada sobre este paso.
+Refer to the [Rootstock Node Installation Guide](/node-operators/setup/installation/) for a detailed guide on this step.
 
-### Paso 2: Añadir red a Metamask
+### Step 2: Add network to Metamask
 
-Para interactuar con la red Rootstock, es necesario añadirla a Metamask. Dado que estamos utilizando el nodo en `--regtest mode`, siga la guía de Metatmask en [Cómo añadir una red personalizada RPC](https://support.metamask.io/hc/en-us/articles/360043227612-How-to-add-a-custom-network-RPC) y añada la red Rootstock RegTest a Metamask con los siguientes datos:
+To interact with the Rootstock network, you need to add it to Metamask. Since we're using the node on `--regtest mode`, follow the Metatmask guide on [How to add a custom network RPC](https://support.metamask.io/hc/en-us/articles/360043227612-How-to-add-a-custom-network-RPC) and add the Rootstock RegTest  Network to Metamask with the following data:
 
 ```text
-- Nombre de la red: RSK regtest
-- Nueva URL RPC: http://127.0.0.1:4444
-- ID de cadena: 33
-- Símbolo de moneda: tRBTC
+- Network name: RSK regtest
+- New RPC URL: http://127.0.0.1:4444
+- Chain ID: 33
+- Currency symbol: tRBTC
 ```
 
-Para obtener más información sobre Metatmask y cómo añadirlo a Rootstock mediante programación, consulte [Metamask](/dev-tools/wallets/metamask/) y [Cómo añadir Metamask a Rootstock mediante programación](/resources/tutorials/rootstock-metamask/).
+To learn more about Metatmask and how to add it to Rootstock programmatically, see [Metamask](/dev-tools/wallets/metamask/) and [How to add Metamask to Rootstock Programmatically](/resources/tutorials/rootstock-metamask/).
 
-### Paso 3: Establecer contratos de relevo RIF
+### Step 3: Set up RIF Relay contracts
 
-Para configurar el contrato de retransmisión RIF, clone el repositorio de contratos de retransmisión RIF: https://github.com/rsksmart/rif-relay-contracts, a continuación, siga la guía [Despliegue de retransmisión RIF](/developers/integrate/rif-relay/deployment/) para desplegar un contrato de retransmisión RIF, habilitar el reparto de ingresos y poner el token en la lista blanca permitiéndolo.
+To set up RIF relay contract, clone the RIF Relay Contracts Repository: https://github.com/rsksmart/rif-relay-contracts, then follow the [RIF Relay Deployment](/developers/integrate/rif-relay/deployment/) guide to deploy an RIF Relay contract, enable revenue sharing, and whitelist the token by allowing it.
 
 ````mdx-code-block
 <Accordion>
@@ -80,15 +80,15 @@ Para configurar el contrato de retransmisión RIF, clone el repositorio de contr
 </Accordion>
 ````
 
-### Paso 4: Configurar el servidor de retransmisión RIF
+### Step 4: Set up RIF Relay Server
 
-Clone el [Repositorio del servidor de retransmisión RIF](https://github.com/rsksmart/rif-relay-server) y, a continuación, consulte [Ejecutar el servidor de retransmisión RIF](/developers/integrate/rif-relay/deployment#run-the-rif-relay-server) para obtener una guía completa sobre la configuración del servidor de retransmisión RIF.
+Clone the [RIF Relay Server Repository](https://github.com/rsksmart/rif-relay-server), then refer to [Run the RIF Relay Server](/developers/integrate/rif-relay/deployment#run-the-rif-relay-server) for a complete guide on setting up the RIF Relay server.
 
-## RIF Relay Ejemplo de dApp
+## RIF Relay Sample dApp
 
-Esta dApp de ejemplo le muestra cómo enviar transacciones a la blockchain de Rootstock utilizando el [RIF Relay Sample dApp SDK](https://github.com/rsksmart/rif-relay-sample-dapp). Necesitarás conectar la dApp con MetaMask para firmar transacciones con la cuenta que gestiona tus Smart Wallets.
+This sample dApp shows you how to send transactions to the Rootstock blockchain using the [RIF Relay Sample dApp SDK](https://github.com/rsksmart/rif-relay-sample-dapp). You'll need to connect the dApp with MetaMask for signing transactions with the account managing your Smart Wallets.
 
-### Clonar repositorio SDK e instalar dependencias
+### Clone SDK repository and install dependencies
 
 ```bash
     # clone repository
@@ -98,9 +98,9 @@ Esta dApp de ejemplo le muestra cómo enviar transacciones a la blockchain de Ro
     npm install --force
 ```
 
-- Configurar variables de entorno
+- Configure environment variables
 
-Crea un nuevo fichero llamado `.env` en el directorio superior, y añade las siguientes líneas en él (con las direcciones de los contratos generadas cuando desplegamos los contratos) en la sección **Set up RIF Relay Contracts** anterior:
+Create a new file named `.env`  in the top directory, and add the following lines in it (with the contract addresses generated when we deployed the contracts) in the **Set up RIF Relay Contracts** section above:
 
 ```bash
     REACT_APP_CONTRACTS_RELAY_HUB=0x463F29B11503e198f6EbeC9903b4e5AaEddf6D29
@@ -120,25 +120,25 @@ Crea un nuevo fichero llamado `.env` en el directorio superior, y añade las sig
 >>>>>>> main
 ```
 
-### Ejecutar la dApp
+### Run the dApp
 
 ```bash
-    # ejecuta la aplicación en el entorno regtest
+    # run app in regtest environment
     ENV_VALUE="regtest" npm run start
 ```
 
-![Ejecutar la dApp](/img/rif-relay/starter-kit/run-the-dapp.png)
+![Run the dApp](/img/rif-relay/starter-kit/run-the-dapp.png)
 
-- Conectar el monedero metamask para firmar
+- Connect metamask wallet for signing
 
-Conectar monedero Metamask](/img/rif-relay/starter-kit/connect-metamask-wallet.png)
+![Connect Metamask Wallet](/img/rif-relay/starter-kit/connect-metamask-wallet.png)
 
-- Crear un nuevo monedero inteligente
+- Create a new smart wallet
 
-Crear un nuevo monedero inteligente](/img/rif-relay/starter-kit/create-smart-wallet.png)
+![Create a new Smart Wallet](/img/rif-relay/starter-kit/create-smart-wallet.png)
 
-- Acuñar fichas en el monedero
-  - Para comandos a token de menta, Ver paso 6 en la sección Configurar contratos de retransmisión RIF más arriba.
-    Mint Tokens](/img/rif-relay/starter-kit/mint-tokens.png)
-- Transferencia a diferentes direcciones, utilizando TKN para el pago de las tasas de transferencia, en lugar de RBTC
-  ![Transferencia utilizando TKN](/img/rif-relay/starter-kit/transfer-using-tkn.png)
+- Mint tokens to the wallet
+  - For commands to mint token, See step 6 in the Set up RIF Relay contracts section above.
+    ![Mint Tokens](/img/rif-relay/starter-kit/mint-tokens.png)
+- Transfer to different addresses, using TKN for transfer fees payment, instead of RBTC
+  ![Transfer using TKN](/img/rif-relay/starter-kit/transfer-using-tkn.png)

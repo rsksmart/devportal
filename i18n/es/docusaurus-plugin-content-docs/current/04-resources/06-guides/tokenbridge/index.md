@@ -1,53 +1,53 @@
 ---
 sidebar_position: 4
-sidebar_label: Puente de Token
-title: Puente de ficha Rootstock
+sidebar_label: Token Bridge
+title: Rootstock Token Bridge
 tags:
-  - recursos
+  - resources
   - tokenbridge
-  - cadena de bloques
-  - puentes
-  - fichas
+  - blockchain
+  - bridges
+  - tokens
   - ethereum
   - rootstock
   - rsk
 ---
 
-Mueva de forma segura sus fichas ERC20 entre Rootstock y Ethereum con la aplicación Tokenbridge. Esta interfaz fácil de usar le permite interactuar directamente con los contratos de Token Bridge. Está disponible en [Mainnet](https://dapp.tokenbridge.rootstock.io/) o [Testnet](https://dapp.testnet.bridges.rootstock.io/).
+Safely move your ERC20 tokens between Rootstock and Ethereum with the Tokenbridge dApp. This user-friendly interface lets you interact with the Token Bridge contracts directly. It is available on [Mainnet](https://dapp.tokenbridge.rootstock.io/) or [Testnet](https://dapp.testnet.bridges.rootstock.io/).
 
-## Racionale
+## Rationale
 
-Los eventos de la cadena transversal son muy importantes en el futuro de las criptomonedas. El intercambio de tokens entre redes permite a los poseedores de tokens usarlos en su cadena favorita sin estar restringidos a la elección de red del propietario del contrato. Además, esto también permite que las soluciones de capa 2 utilicen las mismas fichas en diferentes cadenas. La combinación de puentes simbólicos y monedas estables crea una gran forma de pago con baja volatilidad entre redes.
+Cross chain events are very important in the future of cryptocurrencies. Exchanging tokens between networks allows the token holders to use them in their favorite chain without being restricted to the network choice of the contract owner. Moreover, this also allows layer 2 solutions to use the same tokens on different chains. The combination of token bridges and stable coins creates a great way of payment with low volatility across networks.
 
-## Resumen
+## Overview
 
-Tenemos un contrato inteligente de puente en cada red, el puente en una cadena recibirá y bloqueará los tokens ERC20, entonces emitirá un evento que será servido al puente de la otra cadena. Hay una Federación a cargo de enviar el evento de un contrato a otro. Una vez que el puente de la otra cadena recibe el evento de la Federación, minta las fichas del contrato ERC20 espejo.
-¡Mira la [FAQs](/resources/guides/tokenbridge/faq/) para aprender más sobre cómo funciona!
+We have a bridge smart contract on each network, the bridge on one chain will receive and lock the ERC20 tokens, then it will emit an event that will be served to the bridge on the other chain. There is a Federation in charge of sending the event from one contract to the other. Once the bridge on the other chain receives the event from the Federation, it mints the tokens on the mirror ERC20 contract.
+See the [FAQs](/resources/guides/tokenbridge/faq/) to learn more about how it works!
 
 <img src="/img/resources/tokenbridge/token-bridge-diagram.jpg"/>
 
 The bridge contracts are upgradeable, this enables a smoother move to a more decentralized bridge in the future. This is the
 [token bridge repository](https://github.com/rsksmart/unified-bridges-ui)
 
-## Uso
+## Usage
 
-Puedes usar el ['Token Bridge dApp'](https://dapp.tokenbridge.rootstock.io/) junto con [Metamask con red personalizada](/dev-tools/wallets/metamask/) para mover tokens entre redes.
+You can use the ['Token Bridge dApp'](https://dapp.tokenbridge.rootstock.io/) together with [Metamask with custom network](/dev-tools/wallets/metamask/) to move tokens between networks.
 
-Sigue la [guía dApp](/resources/guides/tokenbridge/dappguide/) para más detalles sobre cómo usar el puente de token.
+Follow the [dApp guide](/resources/guides/tokenbridge/dappguide/) for more details on how to use the token bridge.
 
-Alternativamente, puede utilizar una cartera o web3js con el ABI de los contratos. Vea ['Guía de interacción usando MyCrypto'](/resources/guides/tokenbridge/usingmycrypto/) para más información sobre cómo usar el puente.
+Alternatively, you can use a wallet or web3js with the ABI of the contracts. See ['interaction guide using MyCrypto'](/resources/guides/tokenbridge/usingmycrypto/) for more information on how to use the bridge.
 
-## Desarrolladores
+## Developers
 
-### Contratos
+### Contracts
 
-Aquí están las ['direcciones'](/resources/guides/tokenbridge/contractaddresses/) de los contratos desplegados en las diferentes redes.
+Here are the ['addresses'](/resources/guides/tokenbridge/contractaddresses/) of the deployed contracts in the different networks.
 
-Los contratos inteligentes utilizados por el puente y las instrucciones de despliegue están en el repositorio del puente de tokens en la ['carpeta de puente'](https://github.com/rsksmart/unified-bridges-ui).
+The smart contracts used by the bridge and the deploy instructions are in the token bridge repository in the ['bridge folder'](https://github.com/rsksmart/unified-bridges-ui).
 
-La ABI para interactuar con los contratos está en la ['abis folder'](https://github.com/rsksmart/unified-bridges-sdk/blob/main/packages/tokenbridge-sdk/src/blockchain/tokenbridge/abi.ts)
+The ABI to interact with the contracts are in the ['abis folder'](https://github.com/rsksmart/unified-bridges-sdk/blob/main/packages/tokenbridge-sdk/src/blockchain/tokenbridge/abi.ts)
 
-### Federación
+### Federation
 
-Hay una federación a cargo de notificar los acontecimientos que han ocurrido en el puente entre una cadena y la otra. La federación se compone de los creadores de los contratos simbólicos que quieren permitir su ficha para el cruce.
-Vea en el ['repositorio federador de token bridge'](https://github.com/rsksmart/unified-bridges-sdk/tree/main/packages/tokenbridge-sdk/src/blockchain/federation) para más información.
+There is a federation in charge of notifying the events that have happened in the bridge between one chain and the other. The federation is composed of the creators of the token contracts who want to enable their token for crossing.
+See in the ['token bridge federator repository'](https://github.com/rsksmart/unified-bridges-sdk/tree/main/packages/tokenbridge-sdk/src/blockchain/federation) for more information.

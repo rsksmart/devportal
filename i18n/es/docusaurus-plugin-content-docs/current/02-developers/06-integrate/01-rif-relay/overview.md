@@ -1,14 +1,14 @@
 ---
-sidebar_label: Visión general
+sidebar_label: Overview
 sidebar_position: 100
-title: RIF Relay - Visión general
+title: RIF Relay - Overview
 description: RIF Relay Overview.
 tags:
   - rif
-  - sobre
-  - relé
-  - integrar
-  - guía de integración
+  - envelope
+  - relay
+  - integrate
+  - integration guide
 ---
 
 :::info[Note]
@@ -17,15 +17,15 @@ If you wish to suggest changes on this document, please open a PR on the [Rif Re
 
 # RIF Relay
 
-La mayoría de las cadenas de bloques tienen criptomoneda nativa para pagar las tasas de transacción y el consumo de gas; este sencillo diseño tiene muchas ventajas. En primer lugar, para poner en marcha una economía, el modelo de criptomoneda nativa crea una demanda inicial. En segundo lugar, simplifica la interacción entre usuarios y mineros porque les obliga a utilizar el mismo medio de pago. En tercer lugar, reduce la complejidad de las reglas de consenso. Por último, proporciona protección contra la denegación de servicio (DoS) a la red, ya que los nodos llenos pueden pagar lo que los mineros esperan incluir en una transacción recibida. De este modo, los nodos pueden decidir propagar o no una transacción, evitando el consumo gratuito del ancho de banda de la red, y detener las transacciones spam.
+Most blockchains have native cryptocurrency to pay for transaction fees and gas consumption; this simple design has many benefits. First, to bootstrap an economy, the native cryptocurrency model creates an initial demand for it. Second, it simplifies the interaction between users and miners because it forces them to use the same means of payment. Third, it reduces the complexity of the consensus rules. Finally, it provides Denial of Service (DoS) protection to the network as full nodes can pay what the miners expect to include a received transaction. This way nodes can decide to propagate a transaction or not, preventing the free consumption of network bandwidth, and stop spam transactions.
 
-Las criptomonedas tienden a asociarse con la volatilidad y, para contrarrestar este hecho, se introdujeron las Stablecoins. Las stablecoins tienden un puente entre el mundo de las criptomonedas y el de la moneda fiduciaria, ya que sus precios están vinculados a un activo de reserva como el dólar estadounidense o el oro.
+Cryptocurrencies tend to be associated with volatility and to counter measure this fact, Stablecoins were introduced. Stablecoins bridge the worlds of cryptocurrency and everyday fiat currency because their prices are pegged to a reserve asset like the U.S. dollar or gold.
 
-Pero con la llegada de las Finanzas Descentralizadas (DeFi), varias monedas estables se han convertido en el medio preferido de pago y ahorro tanto para usuarios como para mineros, por lo que se han creado sistemas independientes para facilitar mecanismos de pago alternativos. Las transacciones que permiten pagar operaciones con cualquier moneda que no sea la nativa se denominan meta-transacciones porque en algunos sistemas la transacción del usuario está incrustada en una transacción de nivel superior (o meta) creada por un tercero. Un término más accesible para estas transacciones es "sobres" o, para el conjunto del sistema, un sistema de relés. Una metatransacción/sistema de retransmisión puede servir al menos para dos casos de uso diferentes: 1) pagar las tasas de transacción con tokens, donde una nueva parte recibe los tokens (del usuario) y paga las tasas en nombre del usuario, y 2) permitir a los desarrolladores de contratos inteligentes subvencionar el gas utilizado para interactuar con sus contratos.
+But with the advent of Decentralized Finance (DeFi), several stable coins have become a preferred means of payment and savings for both users and miners, therefore, separate systems to facilitate alternative payment mechanisms. Transactions that enable paying transactions with any coin other than the native currency are named meta-transactions because in some systems the user transaction is embedded in a higher-level (or meta) transaction created by a third party. A more accessible term for these transactions is “envelopes” or, for the whole system, a relay system. A meta-transaction/relay system can serve at least two different use cases: 1) pay the transaction fees with tokens, where one new party receives the tokens (from the user) and pays the fees on behalf of the user, and 2) enable smart contract developers to subsidize the gas used to interact with their contracts.
 
-Teniendo esto en cuenta, el objetivo principal del proyecto RIF Relay es **proporcionar al ecosistema Rootstock (RSK) los medios para permitir que las aplicaciones de blockchain y los usuarios finales (wallet-apps) realicen transacciones sin necesidad de RBTC**. El sistema debe permitir a los usuarios de Rootstock (RSK) pagar las tasas de transacción con métodos de pago (es decir, tokens) distintos de RBTC, manteniendo al mismo tiempo sus cuentas como remitentes de transacciones.
+With this in mind, the main goal of the RIF Relay Project is to **provide the Rootstock (RSK) ecosystem with the means to allow blockchain applications and end-users (wallet-apps) to transact without needing RBTC**. The system should allow Rootstock (RSK) users to pay transaction fees with methods of payment (i.e., tokens) other than RBTC while maintaining their accounts as transaction senders.
 
-RIF Relay se inspira en el proyecto [Gas Station Network (GSN)](https://github.com/opengsn/gsn). GSN es un sistema descentralizado que mejora la usabilidad de la dApp sin sacrificar la seguridad. En pocas palabras, GSN se abstrae del gas (utilizado para pagar las tasas de transacción) para minimizar las fricciones en la integración y la experiencia de usuario de las aplicaciones digitales. Con GSN, los "clientes sin gas" pueden interactuar con contratos inteligentes pagando por el gas con tokens en lugar de moneda nativa.
+RIF Relay takes its inspiration from the [Gas Station Network (GSN) project](https://github.com/opengsn/gsn). GSN is a decentralized system that improves dApp usability without sacrificing security. In a nutshell, GSN abstracts away gas (used to pay transaction fees) to minimize onboarding and UX friction for dApps. With GSN, "gasless clients" can interact with smart contracts paying for gas with tokens instead of native-currency.
 
 ## Modules
 

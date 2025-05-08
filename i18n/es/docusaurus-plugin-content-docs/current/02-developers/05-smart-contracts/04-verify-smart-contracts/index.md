@@ -1,77 +1,77 @@
 ---
-sidebar_label: Verificación de contratos inteligentes con el complemento Hardhat Verify
+sidebar_label: Verify Smart Contracts using the Hardhat Verify Plugin
 sidebar_position: 400
-title: Verificación de un contrato inteligente mediante el complemento de verificación Hardhat
-description: Configuración del complemento de verificación Hardhat para Rootstock
+title: Verify a Smart Contract using the Hardhat Verification Plugin
+description: Configuring Hardhat Verification plugin for Rootstock
 tags:
-  - casco
+  - hardhat
   - tutorial
-  - desarrolladores
-  - inicios rápidos
+  - developers
+  - quick starts
   - rsk
-  - portainjertos
+  - rootstock
 ---
 
-Los contratos inteligentes son la columna vertebral de las aplicaciones descentralizadas (dApps). Automatizan acuerdos y procesos, pero su código puede ser complejo y propenso a errores. Verificar tus contratos inteligentes es crucial para garantizar que funcionan según lo previsto.
+Smart contracts are the backbone of decentralized applications (dApps). They automate agreements and processes, but their code can be complex and prone to errors. Verifying your smart contracts is crucial to ensure they function as intended.
 
-Este tutorial le guiará a través de la verificación de sus contratos utilizando el Plugin de Verificación Hardhat en el Explorador Blockscout de Rootstock. Este complemento simplifica la verificación de los contratos inteligentes Solidity desplegados en la red Rootstock. Al verificar los contratos, permite a Blockscout, un explorador de bloques de código abierto, vincular el código fuente de su contrato con su bytecode desplegado en la blockchain, lo que permite una interacción más fiable con el código.
+This tutorial will guide you through verifying your contracts using the Hardhat Verification Plugin on the Rootstock Blockscout Explorer. This plugin simplifies the verification of Solidity smart contracts deployed on the Rootstock network. By verifying the contracts, you allow Blockscout, an open-source block explorer, to link your contract's source code with its deployed bytecode on the blockchain, allowing for more trustless interaction with the code.
 
-En este tutorial, realizaremos los siguientes pasos:
+In this tutorial, we'll do the following steps:
 
-- Configure su entorno hardhat config en su proyecto
-- Utilice el complemento `hardhat-verify` para verificar la dirección de un contrato.
+- Set up your hardhat config environment in your project
+- Use the `hardhat-verify` plugin to verify a contract address.
 
-## Requisitos previos
+## Prerequisites
 
-Para seguir este tutorial, debes tener conocimientos de lo siguiente:
+To follow this tutorial, you should have knowledge of the following:
 
-- Casco
-- Conocimientos básicos de contratos inteligentes
+- Hardhat
+- Basic knowledge of smart contracts
 
 :::note[Hardhat Starter dApp]
 
-Se ha creado una [Hardhat Starter dApp](https://github.com/rsksmart/rootstock-hardhat-starterkit) con una configuración preestablecida para la red Rootstock. Clona y sigue las instrucciones del README para configurar el proyecto. Nota: Establecer las variables `.env` para que coincidan con el archivo `hardhat.config.ts`, si se utiliza la dApp de inicio para este tutorial.
+A [Hardhat Starter dApp](https://github.com/rsksmart/rootstock-hardhat-starterkit) has been created with preset configuration for the Rootstock network. Clone and follow the instructions in the README to setup the project. Note: To set the `.env` variables to match the `hardhat.config.ts` file, if using the starter dApp for this tutorial.
 
 :::
 
-## ¿Qué es hardhat-verify?
+## What is hardhat-verify?
 
-[Hardhat](https://hardhat.org/) es un entorno de desarrollo completo para la compilación, despliegue y verificación de contratos.
-El [hardhat-verify plugin](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-verify) soporta la verificación de contratos en el [Rootstock Blockscout Explorer](https://rootstock.blockscout.com/).
+[Hardhat](https://hardhat.org/) is a full-featured development environment for contract compilation, deployment and verification.
+The [hardhat-verify plugin](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-verify) supports contract verification on the [Rootstock Blockscout Explorer](https://rootstock.blockscout.com/).
 
-> Nota: El plugin `hardhat-verify` estará disponible próximamente en el [Rootstock Explorer](https://explorer.rootstock.io/).
+> Note: The `hardhat-verify` plugin will be available soon on the [Rootstock Explorer](https://explorer.rootstock.io/).
 
-### Instalación
+### Installation
 
 ```bash
 npm install --save-dev @nomicfoundation/hardhat-verify
 ```
 
-Y añade el siguiente código a tu archivo `hardhat.config.ts`:
+And add the following code to your `hardhat.config.ts` file:
 
 ```bash
 require("@nomicfoundation/hardhat-verify");
 ```
 
-O, si estás usando TypeScript, añade esto a tu hardhat.config.ts:
+Or, if you are using TypeScript, add this to your hardhat.config.ts:
 
 ```bash
-importar "@nomicfoundation/hardhat-verify";
+import "@nomicfoundation/hardhat-verify";
 ```
 
-### Utilización
+### Usage
 
-Necesitas añadir la siguiente configuración de Etherscan a tu archivo `hardhat.config.ts`:
+You need to add the following Etherscan config to your `hardhat.config.ts` file:
 
 ```bash
-// Configuración de Hardhat
+// Hardhat configuration
 const config: HardhatUserConfig = {
     defaultNetwork: "hardhat",
     networks: {
         hardhat: {
-            // Si quieres hacer alguna bifurcación, descomenta esto
-            // bifurcación: {
-            // url: MAINNET_RPC_URL
+            // If you want to do some forking, uncomment this
+            // forking: {
+            //   url: MAINNET_RPC_URL
             // }
         },
         localhost: {
@@ -92,7 +92,7 @@ const config: HardhatUserConfig = {
     },
     namedAccounts: {
         deployer: {
-            default: 0, // Por defecto es la primera cuenta
+            default: 0, // Default is the first account
             mainnet: 0,
         },
         owner: {
@@ -111,7 +111,7 @@ const config: HardhatUserConfig = {
       },      
     etherscan: {    
         apiKey: {
-          // No es requerido por blockscout. Puede ser cualquier cadena no vacía
+          // Is not required by blockscout. Can be any non-empty string
           rskTestnet: 'RSK_TESTNET_RPC_URL',
           rskMainnet: 'RSK_MAINNET_RPC_URL'
         },
@@ -140,14 +140,14 @@ const config: HardhatUserConfig = {
 export default config;
 ```
 
-Ahora, ejecute la tarea de verificación, pasando la dirección del contrato,
-la red donde está desplegado, y cualquier otro argumento que se utilizó para desplegar el contrato:
+Now, run the verify task, passing the address of the contract,
+the network where it's deployed, and any other arguments that was used to deploy the contract:
 
 ```bash
 npx hardhat verify --network rskTestnet DEPLOYED_CONTRACT_ADDRESS
 ```
 
-o
+or
 
 ```bash
 npx hardhat verify --network rskMainnet DEPLOYED_CONTRACT_ADDRESS
@@ -155,25 +155,25 @@ npx hardhat verify --network rskMainnet DEPLOYED_CONTRACT_ADDRESS
 
 :::tip\[Tip]
 
-- Sustituya `DEPLOYED_CONTRACT_ADDRESS` por la dirección del contrato.
-- Esto puede obtenerse del archivo `MockERC721.json` que contiene las direcciones y abi en la carpeta `deployments/network`.
+- Replace `DEPLOYED_CONTRACT_ADDRESS` with the contract address.
+- This can be gotten from the `MockERC721.json` file containing the addresses and abi under the `deployments/network` folder.
 
 :::
 
-**La respuesta debería ser así:**
+**The response should look like this:**
 
 ```bash
-npx hardhat verify --network rskTestnet 0x33aC0cc41B11282085ff6db7E1F3C3c757143722 
-Enviado con éxito el código fuente del contrato
-contracts/ERC721.sol:MockERC721 en 0x33aC0cc41B11282085ff6db7E1F3C3c757143722
-para su verificación en el explorador de bloques. Esperando el resultado de la verificación...
-Verificado con éxito el contrato MockERC721 en el explorador de bloques.
+npx hardhat verify  --network rskTestnet 0x33aC0cc41B11282085ff6db7E1F3C3c757143722 
+Successfully submitted source code for contract
+contracts/ERC721.sol:MockERC721 at 0x33aC0cc41B11282085ff6db7E1F3C3c757143722
+for verification on the block explorer. Waiting for verification result...
+Successfully verified contract MockERC721 on the block explorer.
 https://rootstock-testnet.blockscout.com/address/0x33aC0cc41B11282085ff6db7E1F3C3c757143722#code
 ```
 
-## Recursos
+## Resources
 
 - [Deploy, Interact and Verify Smart Contracts using Remix and Rootstock Explorer](/developers/quickstart/remix/)
-- Visite [hardhat-verify](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-verify#hardhat-verify)
-- Visite [blockscout](https://docs.blockscout.com/for-users/verifying-a-smart-contract/hardhat-verification-plugin)
-- [Kit de iniciación al casco para portainjertos](https://github.com/rsksmart/rootstock-hardhat-starterkit)
+- Visit [hardhat-verify](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-verify#hardhat-verify)
+- Visit [blockscout](https://docs.blockscout.com/for-users/verifying-a-smart-contract/hardhat-verification-plugin)
+- [Hardhat Starter Kit for Rootstock](https://github.com/rsksmart/rootstock-hardhat-starterkit)

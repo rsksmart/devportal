@@ -1,71 +1,71 @@
 ---
-title: Cambiar red
+title: Switch network
 sidebar_position: 400
-sidebar_label: Cambiar red
+sidebar_label: Switch network
 tags:
   - rsk
   - rskj
-  - nodo
-  - configuración
-  - red
-  - red principal
+  - node
+  - config
+  - network
+  - mainnet
   - testnet
   - regtest
-description: Cómo cambiar el nodo RSK entre las redes Mainnet, Testnet y RegTest
+description: How to switch your RSK node between the Mainnet, Testnet, and RegTest networks
 ---
 
-Si desea cambiar su nodo a redes Mainnet, Testnet, o RegTest:
+If you want to switch your node to Mainnet, Testnet, or RegTest networks:
 
-1\. Si su nodo no está en `localhost`, conecte su computadora al nodo a través de `ssh`.
+1\. If your node is not in `localhost`, connect your computer to the node over `ssh`.
 
 ```shell
-usuario@servidor ssh
+ssh user@server
 ```
 
-2\. Elige una red a la que quieras conectarte.
+2\. Pick a network that you would like to connect to.
 
 #### Regtest
 
-Para cambiar de otra red a Regtest:
+In order to switch from another network to Regtest:
 
 ```bash
-sudo servicio rsk stop
-cd /rsk
+sudo service rsk stop
+cd /etc/rsk
 sudo rm -f node.conf
 sudo ln -s regtest.conf node.conf
-sudo servicio rsk start
+sudo service rsk start
 ```
 
-Usando esta red, le permite comenzar con algunas carteras (cuentas) en su nodo. Estas carteras tienen fondos.
+Using this network, it allows you to start with some wallets (accounts) on your node. These wallets have funds.
 
 #### Testnet
 
-Para cambiar de otra red a Testnet:
+In order to switch from another network to Testnet:
 
 ```bash
-sudo servicio rsk stop
-cd /rsk
+sudo service rsk stop
+cd /etc/rsk
 sudo rm -f node.conf
 sudo ln -s testnet.conf node.conf
-sudo servicio rsk start
+sudo service rsk start
 ```
 
-#### Para Mainnet
+#### For Mainnet
 
-Para cambiar de otra red a Mainnet:
+In order to switch from another network to Mainnet:
 
 ```bash
-sudo servicio rsk stop
-cd /rsk
+sudo service rsk stop
+cd /etc/rsk
 sudo rm -f node.conf
 sudo ln -s mainnet.conf node.conf
-sudo servicio rsk start
+sudo service rsk start
 ```
 
-Ejecutando estas instrucciones en su shell, es:
+By running these instructions in your shell, you are:
 
-- Detener el servicio RSK en ejecución.
-- Moviendo a la carpeta de configuración de RSK (`cd`).
-- Quitando `node.conf`, ese es un enlace simbólico a la configuración que estás usando (`rm` lo elimina).
-- Vinculando `node.conf` con el archivo de configuración que decidas (`ls` con la opción `-s`, hace enlaces simbólicos - o _soft_ - ). El nodo está configurado para leer directamente desde el enlace `node.conf`.
-- Reiniciando el servicio RSK.
+- Stopping the running RSK service.
+- Moving to RSK configuration folder (`cd`).
+- Removing `node.conf`, that is a symbolic link to the configuration you're using (`rm` deletes it).
+- Linking `node.conf` with the configuration file you decide (`ls` with the `-s` option, it makes symbolic - or _soft_ - links). The node is configured to read directly from the `node.conf` link.
+- Restarting the RSK service.

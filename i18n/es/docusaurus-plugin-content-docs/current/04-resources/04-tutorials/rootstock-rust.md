@@ -1,94 +1,94 @@
 ---
 sidebar_position: 2
-title: Interactuar con Rootstock usando Rust
-sidebar_label: Interactuar con Rootstock usando Rust
+title: Interact with Rootstock using Rust
+sidebar_label: Interact with Rootstock using Rust
 tags:
   - rsk
   - rootstock
-  - polvo
-  - tutoriales
-  - recursos
-  - contratos inteligentes
+  - rust
+  - tutorials
+  - resources
+  - smart contracts
   - alloy
-description: Rust se está utilizando extensivamente en el lado del backend de muchas aplicaciones defi, dApps, herramientas de desarrollador, índices y puentes. Esta guía ayudará a los desarrolladores a comenzar a usar Rust en blockchain Rootstock.
+description: Rust is extensively getting used on backend side of many defi applications, dApps, developer tools, indexers and bridges. This guide will help developers to start using Rust on Rootstock blockchain.
 ---
 
-Rust es un lenguaje rápido y eficiente en memoria, que puede potenciar servicios críticos al rendimiento,
-ejecutados en dispositivos embebidos e integrarse fácilmente con otros idiomas.
+Rust is a fast and memory-efficient language, it can power performance-critical services,
+run on embedded devices, and easily integrate with other languages.
 
-> Este tutorial ayuda a comenzar en Rootstock usando Rust realizando operaciones básicas como enviar transacciones y llamar a contratos usando la caja de Aleación, similar a los éteres.
+> This tutorial helps to get started on Rootstock using Rust by performing basic operations such as sending transactions and calling contracts using Alloy crate, similiar to ethers.
 
-## Introducción a la aleación
+## Introduction to Alloy
 
-[Alloy](https://github.com/alloy-rs/alloy) conecta las aplicaciones a blockchains, sirve como punto de entrada para conectarse con blockchains compatibles con evm. Es una reescritura de [ethers-rs](https://github. biblioteca om/gakonst/ethers-rs) desde el principio, con nuevas características, alto rendimiento, etc. Un ejemplo es [Foundry](https://github. om/foundry-rs/foundry), una herramienta escrita en Rust que utiliza Alloy como dependencia para conectarse con blockchains.
+[Alloy](https://github.com/alloy-rs/alloy) connects applications to blockchains, it serves as an entry point to connect with evm compatible blockchains. It is a rewrite of [ethers-rs](https://github.com/gakonst/ethers-rs) library from the ground up, with new features, high performance, etc. An example is [Foundry](https://github.com/foundry-rs/foundry), a tool written in Rust which uses Alloy as a dependency to connect with blockchains.
 
-Para más información, consulta [Alloy Examples](https://github.com/alloy-rs/examples) para ayudarte a empezar.
+For more information, see [Alloy Examples](https://github.com/alloy-rs/examples) to help you get started.
 
-## Prerrequisitos
+## Prerequisites
 
-- Oxidado
-   - Instala la última versión de [Rust](https://www.rust-lang.org/tools/install). Si ya tienes Rust instalado, asegúrate de usar la última versión o actualizar usando la toolchain `rustup`.
+- Rust
+   - Install the latest version of [Rust](https://www.rust-lang.org/tools/install). If you already have Rust installed, make sure to use the latest version or update using the `rustup` toolchain.
 
-## Comenzando
+## Getting Started
 
-### Crear un proyecto de Rust
+### Create a Rust project
 
-Ejecuta el comando de abajo usando carga para crear un proyecto de inicio.
+Run the command below using cargo to create a starter project.
 
 ```bash
-carga nueva rootstock-rs
+cargo new rootstock-rs
 ```
 
-> El siguiente paso es actualizar el archivo `cargo.toml` con las dependencias explicadas en la siguiente sección.
+> Next step is to update `cargo.toml` file with dependencies explained in next section.
 
 ## Setup Alloy
 
-Para instalar [Alloy](https://github.com/alloy-rs/alloy) ejecuta el siguiente comando en el directorio raíz del proyecto:
+To install [Alloy](https://github.com/alloy-rs/alloy) run the following command below in the root directory of the project:
 
 ```bash
 cd rootstock-rs
-añadir aleación --git https://github.com/alloy-rs/alloy
+cargo add alloy --git https://github.com/alloy-rs/alloy
 ```
 
-Encuentra más sobre [Configuración de aleaciones usando meta crate](https://alloy.rs/getting-started/installation.html)
+Find more about [Alloy setup using meta crate](https://alloy.rs/getting-started/installation.html)
 
-> Nota: Todas las dependencias requeridas se mencionan en el archivo `.toml` a continuación. Copia y pega en el archivo `cargo.toml`.
+> Note: All the dependencies required are mentioned in the `.toml` file below. Copy and paste into the `cargo.toml` file.
 
 ```bash
 [package]
 name = "rootstock-alloy"
-versión = "0.1. "
+version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-aleación = { git = "https://github.com/alloy-rs/alloy", versión = "0.1. ", default-features = true, features = ["providers", "rpc-client", "transport-http", "sol-types", "json", "contract", "rpc-types", "rpc-types-eth", "network", "signer-local"] }
-eyre = "0. .12"
+alloy = { git = "https://github.com/alloy-rs/alloy", version = "0.1.3", default-features = true, features = ["providers", "rpc-client", "transport-http", "sol-types", "json", "contract", "rpc-types", "rpc-types-eth", "network", "signers", "signer-local"] }
+eyre = "0.6.12"
 futures-util = "0.3.30"
-tokio = { versión = "1", features = ["full"] }
+tokio = { version = "1", features = ["full"] }
 ```
 
-> Se espera que los tipos y declaraciones de importación en las dependencias [Alloy](https://github.com/alloy-rs/alloy) cambien. Si te enfrentas a cualquier tipo de error relacionado mientras ejecutas los ejemplos dados en este tutorial, se recomienda revisar el [Alloy](https://github. repo om/alloy-rs/alloy) y [documentation](https://alloy.rs/).
+> The types and import statements in [Alloy](https://github.com/alloy-rs/alloy) dependencies are expected to change. If you face any type related errors while running the given examples in this tutorial, its recommended to check the [Alloy](https://github.com/alloy-rs/alloy) repo and [documentation](https://alloy.rs/).
 
-## Conectar al nodo Rootstock
+## Connect to the Rootstock node
 
-Para conectar al nodo Rootstock necesitaremos una configuración del proveedor. A [Provider](https://alloy-rs.github.io/alloy/alloy/alloy_provider/trait/trait.Provider. tml) es una abstracción de una conexión a la red Rootstock que proporciona una interfaz concisa y consistente a la funcionalidad estándar del nodo Ethereum.
+To connect to the Rootstock node., we will require a provider setup. A [Provider](https://alloy-rs.github.io/alloy/alloy_provider/provider/trait/trait.Provider.html) is an abstraction of a connection to the Rootstock network, it provides a concise, and consistent interface to standard Ethereum node functionality.
 
-Para ejecutar este programa, usa `cargo run` en la raíz del proyecto:
+To run this program, use `cargo run` in the root of the project:
 
 ```bash
 cd rootstock-rs
-ejecución de carga
+cargo run
 ```
 
-La respuesta debería verse así:
+The response should look like this:
 
 ```bash
-Has finalizado el perfil de `dev` [desoptimizado + debuginfo] en 29.28
-    Ejecutando `target/debug/rootstock-alloy`
-¡Hola, mundo!
+Finished `dev` profile [unoptimized + debuginfo] target(s) in 29.28s
+    Running `target/debug/rootstock-alloy`
+Hello, world!
 ```
 
-A continuación, actualiza el archivo `rootstock-rs/src/main.rs` con el siguiente programa:
+Next, update the `rootstock-rs/src/main.rs` file with the program below:
 
 :::info\[Info]
 
@@ -97,98 +97,98 @@ Replace `API_KEY` with your RPC API Key. To get an API_KEY, see the [RPC Docs](/
 :::
 
 ```rs
-usar aleación::providers::{ Provider, ProviderBuilder };
-usar eyre::Result;
+use alloy::providers::{ Provider, ProviderBuilder };
+use eyre::Result;
 
 #[tokio::main]
 async fn main() -> eyre::Result<()> {
-    // Configura el transporte HTTP que consume el cliente RPC.
-    let rpc_url = "https://rpc.testnet.rootstock.io/{YOUR_APIKEY}". arse()?;
+    // Set up the HTTP transport which is consumed by the RPC client.
+    let rpc_url = "https://rpc.testnet.rootstock.io/{YOUR_APIKEY}".parse()?;
 
-    // Crea un proveedor con el transporte HTTP usando la caja `reqwest`.
-    let provider = ProviderBuilder::new(). n_http(rpc_url);
+    // Create a provider with the HTTP transport using the `reqwest` crate.
+    let provider = ProviderBuilder::new().on_http(rpc_url);
 
-    // Obtener id de cadena
-    let chain_id = provider. et_chain_id().await?;
+    // Get chain id
+    let chain_id = provider.get_chain_id().await?;
 
     println!("chain id: {chain_id}");
 
-    // Obtener el último número de bloque.
-    let latest_block = provider.get_block_number(). espera?;
+    // Get latest block number.
+    let latest_block = provider.get_block_number().await?;
 
-    println!("Último número de bloque: {latest_block}");
+    println!("Latest block number: {latest_block}");
 
     Ok(())
 }
 ```
 
-La respuesta debería verse así:
+The response should look like this:
 
 ```bash
-Perfil `dev` [desoptimizado + debuginfo] finalizado en 1.43s
-    Ejecutando `target/debug/rootstock-alloy`
-cadena id: 31
-Último número de bloque: 5292505
+Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.43s
+    Running `target/debug/rootstock-alloy`
+chain id: 31
+Latest block number: 5292505
 ```
 
-## Obtener saldo RBTC / RIF
+## Get RBTC / RIF balance
 
-Después de configurar el proveedor, interactuar con el nodo Rootstock, obtener el balance de una dirección o llamar a un contrato. Ahora, copie y pegue el código a continuación.
+After setting up the provider, interact with Rootstock node, fetch balance of an address or call a contract. Now, copy and paste the code below.
 
-Haremos lo siguiente:
+We will do the following:
 
-- Codegen del archivo ABI para interactuar con el contrato.
-- Cree un directorio abi en la raíz del proyecto y ponga el token RIF abi en el archivo rif.json.
+- Codegen from ABI file to interact with the contract.
+- Create an abi directory in the root of the project and put RIF token abi in rif.json file.
 
-Ejecutar los comandos de abajo en la carpeta raíz:
+Run the below commands in the root folder:
 
 ```bash
 mkdir abi
 touch rif.json
 ```
 
-Reemplace `rootstock-rs/abi/rif.json file` con el RIF Abi a continuación:
+Replace `rootstock-rs/abi/rif.json file` with the RIF Abi below:
 
 ```bash
 [ { "constant": true, "inputs": [ { "name": "_owner", "type": "address" } ], "name": "balanceOf", "outputs": [ { "name": "balance", "type": "uint256" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": false, "inputs": [ { "name": "_to", "type": "address" }, { "name": "_value", "type": "uint256" } ], "name": "transfer", "outputs": [ { "name": "", "type": "bool" } ], "payable": false, "stateMutability": "nonpayable", "type": "function" } ]
 ```
 
-Actualiza el archivo `rootstock-rs/src/main.rs` con este programa:
+Update the `rootstock-rs/src/main.rs` file with this program:
 
 ```rs
-usa la aleación::providers::{Provider, ProviderBuilder};
-usa alloy::sol;
-usa la aleación::primitives::{ address, utils::format_units  };
- ¡ 
-sol!
+use alloy::providers::{Provider, ProviderBuilder};
+use alloy::sol;
+use alloy::primitives::{ address, utils::format_units  };
+ 
+sol!(
     #[allow(missing_docs)]
     #[sol(rpc)]
     RIF,
-    "abi/rif. hijo"
+    "abi/rif.json"
 );
 
 #[tokio::main]
 async fn main() -> eyre::Result<()> {
-    // Configura el transporte HTTP que consume el cliente RPC.
-    let rpc_url = "https://rpc. estnet.rootstock.io/{YOUR_APIKEY}".parse()?;
+    // Set up the HTTP transport which is consumed by the RPC client.
+    let rpc_url = "https://rpc.testnet.rootstock.io/{YOUR_APIKEY}".parse()?;
 
-    // Crea un proveedor con el transporte HTTP usando la caja `reqwest`.
-    let provider = ProviderBuilder::new(). n_http(rpc_url);
+    // Create a provider with the HTTP transport using the `reqwest` crate.
+    let provider = ProviderBuilder::new().on_http(rpc_url);
 
-    // Dirección sin el prefijo 0x
-    let alice = address! "8F1C0185bB6276638774B9E94985d69D3CDB444a");
+    // Address without 0x prefix
+    let alice = address!("8F1C0185bB6276638774B9E94985d69D3CDB444a");
 
-    let rbtc = provider. et_balance(alice). espera?;
+    let rbtc = provider.get_balance(alice).await?;
 
     let formatted_balance: String = format_units(rbtc, "ether")?;
 
-    println! "Balance de alice: {formatted_balance} rbtc");
+    println!("Balance of alice: {formatted_balance} rbtc");
 
-    // Utilizando la dirección del contrato rif testnet
-    let contract = RIF::new("0x19f64674D8a5b4e652319F5e239EFd3bc969a1FE". arse()?, proveedor);
+    // Using rif testnet contract address
+    let contract = RIF::new("0x19f64674D8a5b4e652319F5e239EFd3bc969a1FE".parse()?, provider);
 
 
-    let RIF::balanceOfReturn { balance } = contract.balanceOf(alice). all().await?;
+    let RIF::balanceOfReturn { balance } = contract.balanceOf(alice).call().await?;
 
     println!("Rif balance: {:?}", balance);
 
@@ -202,46 +202,46 @@ Replace `API_KEY` with your RPC API Key. To get an API_KEY, see the [RPC Docs](/
 
 :::
 
-Nota: Ejecutar el comando de carga en la raíz del proyecto:
+Note: Run the cargo command in the root of the project:
 
 ```bash
 cd rootstock-rs
-ejecución de carga
+cargo run
 ```
 
-Deberías obtener la siguiente respuesta:
+You should get the following response:
 
 ```bash
-Perfil `dev` [desoptimizado + debuginfo] finalizado en 3.01s
-    Ejecutando `target/debug/rootstock-alloy`
-Balance de alice: 0.315632721175825996 rbtc
-Saldo Rif : 183000000000000000000000000000000
+Finished `dev` profile [unoptimized + debuginfo] target(s) in 3.01s
+    Running `target/debug/rootstock-alloy`
+Balance of alice: 0.315632721175825996 rbtc
+Rif balance: 183000000000000000000
 ```
 
-## Enviar una transacción
+## Send a transaction
 
-El siguiente programa envía tRBTC de una cuenta a la otra usando `TransactionRequest` Builder.
+The following program sends tRBTC from one account to the other using `TransactionRequest` Builder.
 
-Ejecutar este programa requerirá configurar la variable env `PRIVATE_KEY` y luego ejecutar el programa usando `cargo run` en la raíz.
+Running this program will require setting your `PRIVATE_KEY` env variable and then run the program using `cargo run` in root.
 
 ```bash
 cd rootstock-rs
-PRIVATE_KEY=0x12... carga de ejecución
+PRIVATE_KEY=0x12... cargo run
 ```
 
-Reemplaza `PRIVATE_KEY` con tu clave privada en el comando anterior para ejecutar este programa.
+Replace `PRIVATE_KEY` with your private key in the command above to run this program.
 
-Deberías ver la siguiente respuesta:
+You should see the following response:
 
 ```bash
-% carga corre
-Perfil `dev` finalizado [desoptimizado + depuración] objetivo(s) en 0. 5s
-    Ejecutando `target/debug/rootstock-alloy`
-Balance de alice: 0.315632721175825996 rbtc
-Balance Rif 183000000000000000000
+% cargo run
+Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.35s
+    Running `target/debug/rootstock-alloy`
+Balance of alice: 0.315632721175825996 rbtc
+Rif balance: 183000000000000000000
 ```
 
-A continuación, actualiza el archivo `rootstock-rs/src/main.rs` con este programa:
+Next, update the `rootstock-rs/src/main.rs` file with this program:
 
 ```rs
 use alloy::{
@@ -322,15 +322,15 @@ async fn main() -> Result<()> {
 }
 ```
 
-- ERROR: error de deserialización: falta campo efectiveGasPrice en la línea 1 columna 959
-   - Se espera que se encuentre un error `effectiveGasPrice`.
-      - Por favor ignora el error anterior. El equipo de RSKj está familiarizado con este error y la corrección sería parte de la nueva versión. Este error no bloquea el envío de una transacción. La transacción se minará correctamente.
+- ERROR: deserialization error: missing field effectiveGasPrice at line 1 column 959
+   - It's expected that you will encounter a missing `effectiveGasPrice` error.
+      - Kindly ignore above error. RSKj team is familiar with this error and fix would be part of new release. This error does not block the sending of a transaction. Transaction will be mined successfully.
 
-## Transferir token ERC20
+## Transfer ERC20 Token
 
-Este programa configura la cartera con el proveedor y envía RIF de una cuenta a la otra. Ejecuta este programa utilizando: `ejecución de carga`.
+This program setups up wallet with provider and sends RIF from one account to the other. Run this program using: `cargo run`.
 
-Actualiza el archivo `rootstock-rs/src/main.rs` con este programa:
+Update the `rootstock-rs/src/main.rs` file with this program:
 
 ```rs
 use alloy::{
@@ -418,22 +418,22 @@ async fn main() -> eyre::Result<()> {
 }
 ```
 
-Ejecuta el siguiente comando para transferir un token ERC20:
+Run the below command to transfer an ERC20 Token:
 
 ```bash
 cd rootstock-rs
-PRIVATE_KEY=0x12... carga de ejecución
+PRIVATE_KEY=0x12... cargo run
 ```
 
-> Nota para reemplazar `PRIVATE_KEY` con tu clave privada en el comando anterior para ejecutar este programa.
+> Note to replace `PRIVATE_KEY` with your private key in the command above to run this program.
 
-Para más detalles, consulta el [ejemplo de código completo](https://alloy.rs/examples/transactions/transfer_erc20.html)
+For more details, see the [complete code example](https://alloy.rs/examples/transactions/transfer_erc20.html)
 
-Vea [foundry](https://github.com/foundry-rs/foundry) codebase para un uso más avanzado de Rust y Alloy para interactuar con blockchains compatibles con EVM incluyendo Rootstock.
+See [foundry](https://github.com/foundry-rs/foundry) codebase for more advanced usage of Rust and Alloy to interact with EVM compatible blockchains including Rootstock.
 
-## Recursos útiles
+## Useful Resources
 
-- [Sitio web de Aleación](https://www.paradigm.xyz/oss/alloy)
-- Ver [documentación de referencia de Aleación](https://alloy.rs/index.html)
-- Programar ejemplos usando Alloy [visita este repo](https://github.com/alloy-rs/examples)
-- Aleación de GitHub [repo](https://github.com/alloy-rs)
+- [Alloy website](https://www.paradigm.xyz/oss/alloy)
+- See [Alloy reference documentation](https://alloy.rs/index.html)
+- Code examples using Alloy [visit this repo](https://github.com/alloy-rs/examples)
+- Alloy GitHub [repo](https://github.com/alloy-rs)

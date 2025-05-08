@@ -1,73 +1,73 @@
 ---
 sidebar_position: 5
-title: "Pruebas Virtuales: Utilice Tenderly para bifurcar la red principal Rootstock para el desarrollo"
-sidebar_label: Crear redes virtuales en Rootstock usando Tenderly
+title: "Virtual Testnets: Use Tenderly to Fork the Rootstock Mainnet for Development"
+sidebar_label: Create Virtual Testnets on Rootstock using Tenderly
 tags:
   - rsk
   - rootstock
-  - tierno
-  - tutoriales
-  - recursos
-  - contratos inteligentes
-  - red de pruebas virtual
-  - red principal
-description: El entorno de pruebas virtuales de Tenderly permite la creación de redes simuladas, gestionando saldos de cuentas, y manipular el almacenamiento de contratos – todo sin necesidad de interactuar con el mainnet Rootstock o red de pruebas.
+  - tenderly
+  - tutorials
+  - resources
+  - smart contracts
+  - virtual testnet
+  - mainnet
+description: Tenderly's virtual testing environment allows the creation of simulated networks, managing account balances, and manipulating contract storage – all without needing to interact with the Rootstock mainnet or testnet.
 ---
 
-¿Necesitas una forma segura y eficiente de probar tus características de dApp antes de desplegarlas en el mainnet Rootstock? ¡No busques más que redes de pruebas virtuales! Estos entornos simulados de blockchain, ofrecidos por plataformas como [Tenderly](https://tenderly. o/), proporciona un campo de pruebas perfecto para desarrolladores.
+Need a safe and efficient way to test your dApp features before deploying them on the Rootstock mainnet? Look no further than virtual testnets! These simulated blockchain environments, offered by platforms like [Tenderly](https://tenderly.co/), provides a perfect testing ground for developers.
 
-Imagina un clon del mainnet Rootstock donde puedes experimentar libremente sin usar fichas reales. Las redes virtuales imitan el comportamiento de un blockchain real, permitiéndote desplegar sus dApps, interactuar con contratos inteligentes y transacciones de depuración – todo dentro de un ajuste controlado.
+Imagine a clone of the Rootstock mainnet, where you can experiment freely without using real tokens. Virtual testnets mimic the behavior of a real blockchain, allowing you to deploy your dApps, interact with smart contracts, and debug transactions – all within a controlled setting.
 
-:::note[Tenderly Redes de pruebas virtuales]
+:::note[Tenderly Virtual Testnets]
 
-[Prueba virtual de Tenderly](https://tenderly. el entorno o/virtual-testnets) permite la creación de redes simuladas, gestionando saldos de cuentas, y manipular el almacenamiento de contratos – todo sin necesidad de interactuar con el mainnet Rootstock o red de pruebas.
+[Tenderly's virtual testing](https://tenderly.co/virtual-testnets) environment allows the creation of simulated networks, managing account balances, and manipulating contract storage – all without needing to interact with the Rootstock mainnet or testnet.
 
 :::
 
-En este tutorial, haremos lo siguiente:
+In this tutorial, we will do the following:
 
-- Configurar una cuenta de Tenderly
-- Configurar una red de prueba virtual
-- Fork de Rootstock Mainnet: Crea una red simulada que replica el estado actual de Rootstock mainnet.
-- Integrar un proyecto
-- Revertir fácilmente a un estado de red anterior para probar escenarios más controlados usando instantáneas.
-- Establecer saldos de cuenta (token nativo y ERC20).
-- Anular almacenamiento por contrato
+- Set up a Tenderly Account
+- Setup a Virtual Test network
+- Fork the Rootstock Mainnet: Create a simulated network that replicates the current state of the Rootstock mainnet.
+- Integrating a project
+- Easily revert to a previous network state for more controlled testing scenarios by using snapshots.
+- Set account balances (native token & ERC20).
+- Override contract storage
 
-## Prerrequisitos
+## Prerequisites
 
-- Una cuenta anterior: Regístrate a una [cuenta Tenderly gratuita (https://tenderly.co/) para acceder a las características de Virtual Testnet
-- Familiaridad básica con Contratos Inteligentes.
+- A Tenderly Account: Sign up for a [free Tenderly account](https://tenderly.co/) to access the Virtual Testnet features
+- Basic familiarity with Smart Contracts.
 
-## Comenzando
+## Getting Started
 
-### Creando un proyecto:
+### Creating a Project:
 
-- [Regístrate o inicia sesión](https://tenderly.co/virtual-testnets) en tu cuenta de Tenderly y crea un nuevo proyecto específicamente para Rootstock.
+- [Sign up or Log in](https://tenderly.co/virtual-testnets) to your Tenderly account and create a new project specifically for Rootstock.
 
 ![Rootstock - Tenderly Dashboard](/img/resources/tenderly/01-tenderly-dashboard.png)
 
-### Configurando una red virtual
+### Setting up a Virtual Testnet
 
-En la navegación de la izquierda, elija las redes virtuales y haga clic en el botón “Crear red virtual de pruebas”.
+In the left navigation, choose Virtual Testnets and click on the button “Create Virtual Testnet”.
 
-Utilice la configuración de abajo para configurar una red de pruebas virtual:
+Use the configuration below to setup a virtual testnet:
 
-- Red padre: **RSK**
-- Nombre de red: Cualquier nombre de elección
+- Parent network: **RSK**
+- Network name: Any name of choice
 - Chain ID: **Default**
-- Explorador público: Desactivado, selecciona **usar el último bloque**.
+- Public Explorer: Off, select **use latest block**.
 
-Su configuración debería verse como la de la imagen de abajo; haga clic en Crear.
+Your setup should look like the one in the image below; Click Create.
 
 ![Rootstock - Tenderly Dashboard](/img/resources/tenderly/02-tenderly-dashboard-setup.png)
 
-:::note[RPC Configuración]
+:::note[RPC Configuration]
 
-En Tenderly, hay dos configuraciones RPC: **RPC público** y **RPC de administración**.
+On Tenderly, there are two RPC configurations: **Public RPC** and **Admin RPC**.
 
-- La CPR pública permite interacciones RCP estándar con la cadena de bloques,
-   como desplegar contratos e interactuar con contratos inteligentes.
+- The Public RPC allows standard RCP interactions with the blockchain,
+   such as deploying contracts and interacting with smart contracts.
 - The Admin RPC enables you to modify the Testnet network state, including account balances,
    block numbers, and storage, to support your development requirements.
 
@@ -75,78 +75,78 @@ En Tenderly, hay dos configuraciones RPC: **RPC público** y **RPC de administra
 
 ![Rootstock - Tenderly Dashboard](/img/resources/tenderly/03-tenderly-rpc-setup.png)
 
-## Integrar un proyecto
+## Integrate a Project
 
-En el menú de la izquierda, seleccione Integrate para aprender cómo agregar la TestNet que acaba de crear a su proyecto.
-Ejemplos están disponibles para Hardhat, Foundry, y otros frameworks. Además de configurar ejemplos,
-encontrarás instrucciones sobre cómo enviar transacciones y agregar cuentas.
+On the left menu, select Integrate to learn how to add the TestNet you just created to your project.
+Examples are available for Hardhat, Foundry, and other frameworks. In addition to setup examples,
+you'll find instructions on how to send transactions and fund accounts.
 
-Para interactuar con Tenderly en tu proyecto Hardhat, necesitarás el paquete `hardhat-tenderly`,
-que puedes instalar ejecutando el siguiente comando:
+To interact with Tenderly in your Hardhat project, you will need the `hardhat-tenderly` package,
+which you can install by running the following command:
 
 ```bash
 npm i @tenderly/hardhat-tenderly
 ```
 
-A continuación, importa y configura Tenderly en tu archivo `hardhat.config`:
+Next, import and set up Tenderly in your `hardhat.config` file:
 
 ```js
 import * as tdly from "@tenderly/hardhat-tenderly";
 require("dotenv").config();
 ```
 
-> Esto habilitará las características de Tenderly en su proyecto Hardhat.
+> This will enable Tenderly's features in your Hardhat project.
 
-## Usando Snapshots para pruebas confiables
+## Using Snapshots for Reliable Testing
 
-Usando el RPC administrador de Tenderly, puede capturar instantáneas del estado actual de su red de pruebas y revertir a estas instantáneas según sea necesario. Esta característica es particularmente útil cuando se ejecutan múltiples pruebas que modifican el estado de testnet. Tomando una instantánea antes de ejecutar una prueba, haciendo cambios durante la prueba, y luego revertir a la instantánea posteriori, usted se asegura de que cada prueba comience con un estado de red limpio y consistente. Este enfoque mejora la fiabilidad y repetibilidad de sus pruebas.
+Using Tenderly's admin RPC, you can capture snapshots of your testnet's current state and revert to these snapshots as needed. This feature is particularly useful when running multiple tests that modify the testnet state. By taking a snapshot before executing a test, making changes during the test, and then reverting to the snapshot afterward, you ensure that each test starts with a clean, consistent network state. This approach enhances the reliability and repeatability of your tests.
 
-#### Tomar instantánea
+#### Take snapshot
 
-Para tomar una instantánea, añade el código de abajo;
+To take a snapshot, add the code below;
 
 ```bash
-const TENDERLY_RCP = 'https://virtual.rsk.rpc.tenderly. o/{id}
+const TENDERLY_RCP = 'https://virtual.rsk.rpc.tenderly.co/{id}
 
 export async function takeSnapshot() {
    const requestOptions = {
        method: 'POST',
-       cabeceras: {
+       headers: {
            'Content-Type': 'application/json'
        },
-       cuerpo: JSON. tringify({
+       body: JSON.stringify({
            jsonrpc: '2.0',
            method: 'evm_snapshot'
        })
    };
    const response = await fetch(TENDERLY_RCP, requestOptions);
-   const snapshotId = (espera la respuesta. son()).result;
+   const snapshotId = (await response.json()).result;
    return snapshotId;
 }
 ```
 
 :::info\[Info]
 
-La función `takeSnapshot` crea una instantánea en una red EVM usando un punto final Tenderly RPC.
-Envía una solicitud `POST` con datos RPC JSON y devuelve el `snapshot ID`.
+The function `takeSnapshot` creates a snapshot on an EVM network using a Tenderly RPC endpoint.
+It sends a `POST` request with JSON RPC data and returns the `snapshot ID`.
 
 :::
 
-#### Revertir a la instantánea
+#### Revert to snapshot
 
-Para revertir a instantánea, añade el código de abajo;
+To revert to snapshot, add the code below;
 
 ```bash
 export async function revertToSnapshot(snapshotId: string) {
    const requestOptions = {
        method: 'POST',
-       cabeceras: {
+       headers: {
            'Content-Type': 'application/json'
        },
-       cuerpo: JSON. tringify({
-           jsonrpc: '2. ',
-           método: 'evm_revert',
-           parámetros: [snapshotId]
+       body: JSON.stringify({
+           jsonrpc: '2.0',
+           method: 'evm_revert',
+           params: [snapshotId]
        })
    };
    await fetch(TENDERLY_RCP, requestOptions);
@@ -155,15 +155,15 @@ export async function revertToSnapshot(snapshotId: string) {
 
 :::info\[Info]
 
-Esto toma un 'snapshotId' como parámetro y lo usa para revertir el estado EVM al snapshot especificado. Construye una solicitud `POST` con los datos JSON-RPC necesarios, la envía al extremo Tenderly RPC y espera la respuesta. Esencialmente, esta función hace retroceder la EVM a un estado anterior capturado en la instantánea.
+This takes a `snapshotId` as a parameter and uses it to revert the EVM state to the specified snapshot. It constructs a `POST` request with the necessary JSON-RPC data, sends it to the Tenderly RPC endpoint, and awaits the response. Essentially, this function rolls back the EVM to a previous state captured in the snapshot.
 
 :::
 
-#### Establecer saldos de cuenta (token nativo y ERC20)
+#### Set account balances (native token & ERC20)
 
-Usando tiderly admin rpc, puedes establecer tanto token nativo como cualquier saldo ERC20 para cualquier cuenta en la TestNet. Esto te permite crear los escenarios de prueba que necesitas.
+Using tenderly admin rpc, you can set both native token and any ERC20 balances for any account in the TestNet. This allows you to create the test scenarios that you need.
 
-#### Establecer saldo de tokens nativos
+#### Set native tokens balance
 
 ```bash
 export async function setNativeBalance(walletAddress: string, amount: BigInt) {
@@ -175,40 +175,40 @@ export async function setNativeBalance(walletAddress: string, amount: BigInt) {
 }
 ```
 
-#### Establecer saldo ERC20
+#### Set ERC20 balance
 
-Para establecer un saldo de cuenta, copie y pegue el código de abajo;
+To set an account balance, copy and paste the code below;
 
 ```bash
 export async function setErc20Balance(erc20Address: string, walletAddress: string, amount: BigInt) {
    const amountHex = ethers.toQuantity(amount.toString());
-   await ethers. rovider. end("tenderly_setErc20Balance", [
+   await ethers.provider.send("tenderly_setErc20Balance", [
        erc20Address,
-       dirección de cartera,
-       montoHex,
+       walletAddress,
+       amountHex,
    ]);
 }
 ```
 
-#### Anular el almacenamiento del contrato
+#### Override the contract storage
 
-Con anterioridad te permite anular el almacenamiento inteligente de contratos en la TestNet, pero necesitamos conocer la ranura para memoria de la variable de almacenamiento que queremos modificar. Para [variables de tipo de valor](https://docs.soliditylang.org/en/latest/types.html#value-types) como dirección o entero, podemos contar la posición de la variable en el contrato.
+Tenderly allows you to override smart contract storage in the TestNet, but we need to know the memory slot of the storage variable we want to modify. For [value type variables](https://docs.soliditylang.org/en/latest/types.html#value-types) like address or integer, we can just count the position of the variable in the contract.
 
 ```bash
-Solidez pragmática ^0.8. ;
+pragma solidity ^0.8.0;
 contract SimpleStorage {
    uint256 public value1; // Stored at slot 0
-   uint256 public value2; // Almacenado en la ranura 1
+   uint256 public value2; // Stored at slot 1
 
 
    function setValues(uint256 _value1, uint256 _value2) public {
        value1 = _value1;
-       valor 2 = _valor2;
+       value2 = _value2;
    }
 }
 ```
 
-Una vez que hayas identificado la ranura que necesitas modificar, puedes establecer un nuevo valor para esa ranura. Recuerde convertir el valor a 32 bytes, ya que este es el tamaño de memoria de una ranura de almacenamiento.
+Once you have identified the slot you need to modify, you can set a new value for that slot. Remember to convert the value to 32 bytes, as this is the memory size of a storage slot.
 
 ```bash
 async function overrideContractStorage() {
@@ -234,8 +234,8 @@ async function overrideContractStorage() {
 
 :::info\[Info]
 
-Para tipos de referencia como arrays dinámicos, necesitamos seguir los principios esbozados en ["Layout of State Variables in Storage"](https://docs. oliditylang.org/es/latest/internals/layout_in_storage.html) para encontrar el espacio de almacenamiento. Otro enfoque más empírico es leer la ranura de almacenamiento de tu contrato por ranura para identificar las variables almacenadas en cada ranura, utilizando por ejemplo el método de ethers [getStorageAt](https://docs. thers.org/v5/api/providers/#Provider-getStorageAt).
+For reference types like dynamic arrays, we need to  follow the principles outlined in the ["Layout of State Variables in Storage"](https://docs.soliditylang.org/en/latest/internals/layout_in_storage.html) to find the storage slot. Another more empirical approach is to read your contract's storage slot by slot to identify the variables stored in each slot, using for example the ethers method [getStorageAt](https://docs.ethers.org/v5/api/providers/provider/#Provider-getStorageAt).
 
 :::
 
-...y eso, en esta guía, hemos creado con éxito un proyecto, configurando una red virtual, bifurcó el Rootstock Mainnet creando una red simulada que replica el estado actual de Rootstock mainnet. Aprendí cómo integrar un proyecto existente, apalancar Instantáneas, tomar instantáneas, revertir instantáneas, establecer saldos de cuenta (token nativo y ERC20) y anular el almacenamiento del contrato.
+...and that’s it, in this guide, we have successfully created a project, setup a Virtual Testnet, forked the Rootstock Mainnet by creating a simulated network that replicates the current state of the Rootstock mainnet. Learned how to integrate an existing project, leverage Snapshots, take snapshots, revert snapshot, set account balances (native token & ERC20), and override the contract storage.

@@ -1,92 +1,92 @@
 ---
 sidebar_position: 301
-sidebar_label: Guía de Token Bridge dApp
-title: Guía de Token Bridge dApp - Transacciones multicadena
+sidebar_label: Token Bridge dApp Guide
+title: Token Bridge dApp Guide - Cross-Chain Transactions
 tags:
-  - recursos
+  - resources
   - tokenbridge
-  - cadena de bloques
-  - puentes
-  - fichas
+  - blockchain
+  - bridges
+  - tokens
   - ethereum
   - rootstock
   - rsk
 ---
 
-Esta guía describe los pasos para transferir tokens usando la interfaz web para [Rootstock Token Bridge dApp](https://dapp. okenbridge.rootstock.io/). Por favor, consulte la documentación del proyecto, si desea saber más sobre cómo funciona este puente. Es posible probar la transferencia de tokens entre las redes Rootstock Testnet y Sepolia o redes de Rootstock Mainnet y Ethereum usando la interfaz web de Rootstock Tokenbridge.
+This guide describes the steps to transfer tokens using the Web Interface for the [Rootstock Token Bridge dApp](https://dapp.tokenbridge.rootstock.io/). Please refer to the project documentation, if you’d like to know more about how this bridge works. It is possible to test the transfer of tokens between Rootstock Testnet and Sepolia networks, or Rootstock Mainnet and Ethereum networks using the Rootstock Tokenbridge web interface.
 
-## Prerrequisitos
+## Prerequisites
 
-Esto requerirá el uso del navegador web Chrome o Chromium, con una de las siguientes extensiones de navegadores:
+This will require the use of either Chrome or Chromium web browser, with one of the following wallet browsers extensions:
 
-- [Metamask](https://metamask.io/download.html) usando una [red personalizada](/dev-tools/wallets/metamask/) para añadir la red Rootstock.
-- Obtén tokens de prueba del [Rootstock Token Faucet](https://rsksmart.github.io/rsk-token-faucet/)
-- Obtén [Test Sepolia ETH](https://www.alchemy.com/faucets/ethereum-sepolia)
+- [Metamask](https://metamask.io/download.html) using a [custom network](/dev-tools/wallets/metamask/) to add the Rootstock network.
+- Get test tokens from the [Rootstock Token Faucet](https://rsksmart.github.io/rsk-token-faucet/)
+- Get [Test Sepolia ETH](https://www.alchemy.com/faucets/ethereum-sepolia)
 
 :::tip\[Tip]
 
-- Vea la sección Herramientas para una lista de [carteras compatibles con Rootstock](/dev-tools/)
-- Ver la sección [Direcciones del contrato](/resources/guides/tokenbridge/contractaddresses/) para una lista de direcciones del contrato.
+- See the Tools Section for a list of [wallets compatible with Rootstock](/dev-tools/)
+- See the [Contract addresses](/resources/guides/tokenbridge/contractaddresses/) section for a list of contract addresses.
   :::
 
-## Empezar
+## Get Started
 
-Comience conectando su cartera y seleccione la red de su elección, en este caso usaremos la red [Rootstock Testnet](https://dapp.testnet.bridges.rootstock.io/).
+Start by connecting your wallet and select the network of your choice, in this case we will use [Rootstock Testnet](https://dapp.testnet.bridges.rootstock.io/) network.
 
 <img src="/img/resources/tokenbridge/dapp-image1-1.png" alt="tokenbridge connect"/>
 
-Elija de la lista de tipos de cartera disponibles, para esta guía, nos conectaremos a una cartera de Metamask:
+Choose from the list of available wallet types, for this guide, we will connect to a Metamask Wallet:
 
 <img src="/img/resources/tokenbridge/dapp-image1-1a.png" alt="token bridge wallet connected" />
 
-Deberías ver la siguiente pantalla:
+You should see the following screen:
 
 <img src="/img/resources/tokenbridge/dapp-image1-2.png" alt="token bridge token bridge connected" />
 
-A continuación, elija el token de red original que desea transferir, introduzca la cantidad y la dirección del receptor.
+Then choose the original network token that you want to transfer, enter the amount, and the receiver address.
 
 <img src="/img/resources/tokenbridge/dapp-image2.png" alt="token bridge approve" />
 
-Haz clic en el botón 'Continuar'.
+Click the `Continue` button.
 
 :::info\[Info]
 
-- Por ejemplo, el token tRUSDT, RDAI, RUSDC o RLINK, etc se puede obtener del [Rootstock Token](https://rsksmart.github. o/rsk-token-faucet/) Faucet.
-  Necesitará aprobar el contrato de puente para usar el token, esto sucederá sólo una vez.
+- For example, tRUSDT, RDAI, RUSDC, or RLINK, etc token can be obtained from the [Rootstock Token](https://rsksmart.github.io/rsk-token-faucet/) Faucet.
+  You will need to approve the bridge contract to use the token, this will happen only once.
 
-- La transferencia mínima es 1RUSDT y la transferencia máxima es 250.000RUSDT
+- Min transfer is 1RUSDT and max transfer is 250,000RUSDT
 
 :::
 
-Confirma la transacción, las comisiones y el tiempo de confirmación y haz clic en **Transferir fichas de Rootstock Testnet**.
+Confirm transaction, fees, and confirmation time and click on **Transfer Tokens from Rootstock Testnet**.
 
 <img src="/img/resources/tokenbridge/dapp-image3.png" />
 
 :::warning\[Important]
 
-No utilices el puente para enviar tokens a tu dirección de intercambio, no podrás reclamarlo
+Don't use the bridge to send tokens to your exchange address, you won't be able to claim it
 
 :::
 
-Tan pronto como comience el proceso, verá un cargador y una ventana emergente de Metamask pidiendo aprobación y confirmación de la transacción.
+As soon as the process starts, you will see a loader and a popup from Metamask asking to approve and confirm the transaction.
 
 <img src="/img/resources/tokenbridge/dapp-image4.png" alt="token bridge wait for transaction" />
 
-Una vez que los tokens han cruzado, **necesitas reclamarlos en la red de Sepolia**. se le pedirá que cambie de red a Sepola. Haga clic en **cambiar de red a Sepola** y apruebe en MetaMask.
+Once the tokens have crossed, **you need to claim them on the Sepolia network**., you will be asked to switch network to Sepolia. Click on **switch network to Sepolia** and approve in MetaMask.
 
-> Cambiar a la red opuesta es importante para reclamar sus tokens.
+> Switching to the opposite network is important in order to claim your tokens.
 
 <img src="/img/resources/tokenbridge/dapp-image5.png"  alt="switch network to Sepolia" />
 
-Si todo funcionó correctamente, deberías ver un mensaje para **Tokens de reclamación**. Haz clic en el botón reclamar.
+If everything worked correctly, you should see a prompt to **Claim Tokens**. Click on the claim button.
 
 <img src="/img/resources/tokenbridge/dapp-image6.png" />
 
-Una ventana emergente de confirmación aparecerá para enviar la transacción de reclamación a la red, enviarla. Deberías ver una pantalla de confirmación.
+A confirmation popup will appear to send the claim transaction to the network, submit it. You should see a confirmation screen.
 
 <img src="/img/resources/tokenbridge/dapp-image7.png" alt="token bridge claim button" />
 
-Después de que la transacción sea minada, usted puede ver su transacción como reclamada comprobando su lista de reclamos.
+After the transaction get mined, you can see your transaction as Claimed by checking your transaction list of claims.
 
 <img src="/img/resources/tokenbridge/dapp-image8.png" alt="token bridge claimed transaction"/>
 
@@ -95,6 +95,6 @@ Después de que la transacción sea minada, usted puede ver su transacción como
 - You can check the token contract on the other network by clicking on the transaction hash (in this case RUSDT).
   You can also confirm the funds in your wallet. To do this add a custom token on the network where the token crossed using the address mentioned before.
 
-- También puedes transferir fichas en la otra dirección, usando el mismo método.
+- You can transfer tokens in the other direction too, using the same method.
 
 :::

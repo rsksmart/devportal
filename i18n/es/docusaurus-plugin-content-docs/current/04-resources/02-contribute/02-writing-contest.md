@@ -1,94 +1,94 @@
 ---
-sidebar_label: Concurso de escritura
+sidebar_label: Writing Contest
 sidebar_position: 3
-title: Concurso de escritura de Bitcoin
-description: "El Concurso de Escritura de #bitcoin, presentado por Rootstock y HackerNoon, ¡ahora está en vivo con un bote total de premios de $17,500 en bote! Ya sea un líder pensado, un escritor calificado, un desarrollador talentoso, o simplemente pasionado por la tecnología blockchain, este concurso le invita a mostrar su experiencia en varios temas relacionados con Bitcoin."
+title: Bitcoin Writing Contest
+description: "The #bitcoin Writing Contest, presented by Rootstock and HackerNoon, is now live with a total prize pool of $17,500 up for grabs! Whether you're a thought leader, a skilled writer, a talented developer, or simply passionate about blockchain technology, this contest invites you to showcase your expertise in various Bitcoin-related topics."
 tags:
   - rootstock
   - rsk
-  - taller
-  - recursos
-  - mediodía
-  - escribir
-  - tutoriales
+  - workshop
+  - resources
+  - hackernoon
+  - writing
+  - tutorials
 ---
 
-El Concurso de Escritura de #bitcoin, presentado por Rootstock y HackerNoon, ¡ahora está en vivo con un bote total de premios de $17,500 en bote!
+The #bitcoin Writing Contest, presented by Rootstock and HackerNoon, is now live with a total prize pool of $17,500 up for grabs!
 
-Las entradas al concurso deben mostrar liderazgo de pensamiento, pila de desarrollo y herramientas, y también crear tutoriales y guías atractivas en el reino de Bitcoin y Rootstock. Envía una historia con la etiqueta #bitcoin en HackerNoon. Envía una historia con la etiqueta `#bitcoin` en HackerNoon, lee los [3 pasos para entrar en el Concurso de Escritura de #bitcoin](https://www.contests.hackernoon.com/how-to-enter-bitcoin-writing-contest).
+Contest entries should showcase thought leadership, dev stack and tooling, and also creating engaging tutorials and guides in the realm of Bitcoin and Rootstock. Submit a story with the #bitcoin tag on HackerNoon. Submit a story with the `#bitcoin` tag on HackerNoon, read the [3 Steps to Enter The #bitcoin Writing Contest](https://www.contests.hackernoon.com/how-to-enter-bitcoin-writing-contest).
 
 :::tip\[Tip]
 
-- ¿Busca contribuir al código de código abierto o contribuir a la seguridad de la plataforma Rootstock? Consulte la sección [Contribute](/resources/contribute/) para encontrar formas más emocionantes de contribuir a la población Rootstock.
+- Looking to contribute to open source code or contribute to the security of the Rootstock platform? See the [Contribute](/resources/contribute/) section for more exciting ways to contribute to Rootstock.
 
 :::
 
 <div class="btn-container">
   <span></span>
-    <a class="green" href="https://www.contests.hackernoon.com/bitcoin-writing-contest">Regístrate para el concurso en HackerNoon</a>
+    <a class="green" href="https://www.contests.hackernoon.com/bitcoin-writing-contest">Register for the Contest on HackerNoon</a>
 </div>
 
-## Temas del concurso
+## Contest Themes
 
-El concurso da la bienvenida a los envíos bajo los siguientes temas:
+The contest welcomes submissions under the following themes:
 
-- Liderazgo de pensamiento: Explora varios temas sobre Bitcoin, tanto nuevos como antiguos, como Runes, qué significan para ti los escritos de Satoshi, ordinarios, capa 2 soluciones, cadenas laterales, cómo Bitcoin cambió la financiación para siempre, y/o análisis de calidad sobre su predicción de precios o impacto en la inflación.
-- Dev Stack and Tooling: Delve into the development stack and tooling related to building on Bitcoin, including SDKs, APIs, smart contract development frameworks, etc. Los desarrolladores y los creadores deben mostrar las capacidades técnicas para construir con Bitcoin.
-- Tutoriales y Guías: Proporcione tutoriales paso a paso y guías sobre cómo construir aplicaciones, contratos inteligentes o implementar características específicas. Puntos de bonificación para construir con Rootstock. Estos tutoriales y guías servirán como guías prácticas para desarrolladores y entusiastas que buscan empezar a construir en Bitcoin.
+- Thought Leadership: Explore various topics about Bitcoin, both new and old, such as Runes, what Satoshi’s writings mean to you, ordinals, layer 2 solutions, sidechains, how Bitcoin changed finance forever, and/or quality analysis about its price prediction or impact on inflation.
+- Dev Stack and Tooling: Delve into the development stack and tooling related to building on Bitcoin, including SDKs, APIs, smart contract development frameworks, etc. Developers and makers should showcase the technical capabilities for building with Bitcoin.
+- Tutorials and Guides: Provide step-by-step tutorials and guides on how to build applications, smart contracts, or implement specific features. Bonus points for building with Rootstock. These tutorials and guides will serve as practical guides for developers and enthusiasts looking to start building on Bitcoin.
 
-### Línea de tiempo y rondas
+### Timeline and Rounds
 
-El concurso consta de 3 rondas y durará seis meses.
+The contest consists of 3 rounds and will run for six months.
 
-- Ronda 1: 22 de mayo - 21 de julio de 2024
-- Ronda 2: 22 de julio - 21 de septiembre de 2024
-- Ronda 3: 22 de septiembre - 22 de noviembre de 2024
+- Round 1: May 22 - July 21, 2024
+- Round 2: July 22 - September 21, 2024
+- Round 3: September 22 - November 22, 2024
 
-> Para más información, visita la [página del concurso #bitcoin en hackernoon](https://www.contests.hackernoon.com/bitcoin-writing-contest) para ver las líneas de tiempo y cuándo enviar tu aplicación.
+> For more information, visit the [#bitcoin contest page on hackernoon](https://www.contests.hackernoon.com/bitcoin-writing-contest) for timelines and when to submit your application.
 
-### Premios
+### Prizes
 
-Aquí hay un desglose de los premios para las mejores sumisiones.
+Here's a breakdown of the prizes for the best submissions.
 
-- Primer premio - $2,000
-- 2º premio - $1,500
-- 3er premio - $1,000
+- 1st prize - $2,000
+- 2nd prize - $1,500
+- 3rd prize - $1,000
 
-> 2 Premios de Bono por valor de $650 cada uno por bitcoin sin embargo envíos de liderazgo cada ronda!
+> 2 Bonus Prizes worth $650 each for bitcoin thought-leadership submissions every round!
 
-### Reglas y directrices
+### Rules and Guidelines
 
-Lea las directrices para el concurso en [HackerNoon](https://www.contests.hackernoon.com/bitcoin-writing-contest).
+Read the guidelines for the contest on [HackerNoon](https://www.contests.hackernoon.com/bitcoin-writing-contest).
 
 ## FAQs
 
-He aquí algunas preguntas frecuentes sobre el concurso. Para más información sobre las pautas de premios, duración y preguntas frecuentes,
-vea las [reglas y directrices del concurso de escritura de #bitcoines](https://www.contests.hackernoon.com/bitcoin-writing-contest).
+Here are some frequently asked questions about the contest. For more information on guidelines prizes, duration and FAQs,
+see the [#bitcoin Writing Contest Rules & Guidelines](https://www.contests.hackernoon.com/bitcoin-writing-contest).
 
-- ¿Quién puede participar en el Concurso de Escritura de HackerNoon?
-  - Cualquier persona pasionada por Bitcoin y Rootstock puede participar. Ya sea desarrollador, entusiasta o experto en la industria, damos la bienvenida a sus perspectivas únicas.
-- ¿Qué tipos de contenido son elegibles para la presentación?
-  - Aceptamos artículos que muestran liderazgo en el pensamiento, información sobre desarrollo y tutoriales relacionados con Bitcoin y Rootstock. Esto incluye piezas de opinión, guías técnicas y tutoriales.
-- ¿Cuáles son los temas del concurso?
-  - El concurso se centra en tres temas principales: Líder de Pensamiento, Dev Stack & Tooling, y Tutorials. Cada tema anima a los colaboradores a explorar aspectos específicos de Bitcoin y Rootstock.
-- ¿Cuánto tiempo dura el concurso?
-  - El concurso dura 6 meses, lo que proporciona tiempo suficiente para que los participantes puedan crear y enviar sus entradas.
-- ¿Cuáles son los premios para los ganadores?
-  - Los detalles sobre los premios del concurso se anunciarán más cerca del plazo de entrega. ¡Mantente atento a las emocionantes recompensas!
-- ¿Cómo me registro en el concurso?
-  - Para registrarte, visita la [Página del Concurso en HackerNoon](https://www.contests.hackernoon.com/bitcoin-writing-contest) y sigue las instrucciones para registrarte como participante.
-- ¿Existen directrices específicas para las presentaciones?
-  - Sí, en la [plataforma HackerNoon](https://www.contests.hackernoon.com/bitcoin-writing-contest) se proporcionan reglas y directrices detalladas del concurso. Asegúrate de revisarlas antes de enviar tu entrada.
-- ¿Dónde puedo encontrar más información sobre Rootstock?
-  - Explora recursos adicionales como el sitio web Rootstock, el Portal del Desarrollador, el Blog y la Comunidad de Discord para obtener información e inspiración. Mira [Guías y Recursos útiles](#útiles-guides-and-resources)
-- ¿Cómo se notificará a los ganadores?
-  - Los ganadores serán notificados por correo electrónico o mediante anuncios oficiales en plataformas HackerNoon y Rootstock.
-- ¿Puedo volver a publicar mi entrada de concurso en otro lugar después de la presentación?
-  - Los participantes conservan los derechos de sus envíos, pero deben revisar [las pautas de HackerNoon](https://www.contests.hackernoon.com/bitcoin-writing-contest) con respecto a la republicación después del concurso.
+- Who can participate in the HackerNoon Writing Contest?
+  - Anyone passionate about Bitcoin and Rootstock can participate. Whether you're a developer, enthusiast, or industry expert, we welcome your unique perspectives.
+- What types of content are eligible for submission?
+  - We accept articles showcasing thought leadership, development insights, and tutorials related to Bitcoin and Rootstock. This includes opinion pieces, technical guides, and how-to tutorials.
+- What are the contest themes?
+  - The contest focuses on three main themes: Thought Leadership, Dev Stack & Tooling, and Tutorials. Each theme encourages contributors to explore specific aspects of Bitcoin and Rootstock.
+- How long is the contest duration?
+  - The contest runs for 6 months, providing ample time for participants to create and submit their entries.
+- What are the prizes for the winners?
+  - Details about contest prizes will be announced closer to the submission deadline. Stay tuned for exciting rewards!
+- How do I register for the contest?
+  - To register, visit the [Contest Page on HackerNoon](https://www.contests.hackernoon.com/bitcoin-writing-contest) and follow the instructions to sign up as a participant.
+- Are there any specific guidelines for submissions?
+  - Yes, detailed contest rules and guidelines are provided on the [HackerNoon platform](https://www.contests.hackernoon.com/bitcoin-writing-contest). Make sure to review them before submitting your entry.
+- Where can I find more information about Rootstock?
+  - Explore additional resources such as the Rootstock website, Developer Portal, Blog, and Discord Community for insights and inspiration. See [Useful Guides and Resources](#useful-guides-and-resources)
+- How will winners be notified?
+  - Winners will be notified via email or through official announcements on HackerNoon and Rootstock platforms.
+- Can I republish my contest entry elsewhere after submission?
+  - Participants retain the rights to their submissions but should review [HackerNoon's guidelines](https://www.contests.hackernoon.com/bitcoin-writing-contest) regarding republishing after the contest.
 
-## Guías y Recursos útiles
+## Useful Guides and Resources
 
-- [Sitio web Rootstock](https://rootstock.io/)
-- [Blog Rootstock](https://blog.rootstock.io/)
-- [Kits de arranque](/desarrolladores/inicio rápido/)
-- [Comunidad de Discord Rootstock](https://rootstock.io/discord)
+- [Rootstock Website](https://rootstock.io/)
+- [Rootstock Blog](https://blog.rootstock.io/)
+- [Starter Kits](/developers/quickstart/)
+- [Rootstock Discord Community](https://rootstock.io/discord)

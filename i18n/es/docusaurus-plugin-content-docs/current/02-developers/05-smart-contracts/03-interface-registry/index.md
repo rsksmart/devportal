@@ -1,57 +1,57 @@
 ---
-sidebar_label: Registro de interfaces
+sidebar_label: Interface Registry
 sidebar_position: 500
-title: Registro universal de interfaces de contratos inteligentes
-description: Consulte la interfaz estándar ERC1820, el soporte de direcciones y la implementación de contratos inteligentes.
+title: Universal Smart Contract Interface Registry
+description: See the ERC1820 standard interface, address support and smart contract implementation
 tags:
-  - contratos inteligentes
+  - smart contracts
   - rsk
-  - portainjertos
-  - desarrolladores
-  - registro de interfaces
+  - rootstock
+  - developers
+  - interface registry
 ---
 
-El estándar ERC1820 define un contrato inteligente de registro universal en el que cualquier dirección (contrato o cuenta normal) puede registrar qué interfaz admite y qué contrato inteligente es responsable de su implementación.
+The ERC1820 standard defines a universal registry smart contract where any address (contract or regular account) can register which interface it supports and which smart contract is responsible for its implementation.
 
-## Descripción
+## Description
 
-Este estándar define un registro donde los contratos inteligentes y las cuentas regulares pueden publicar qué funcionalidad implementan, ya sea directamente o a través de un contrato proxy.
+This standard defines a registry where smart contracts and regular accounts can publish which functionality they implement - either directly or through a proxy contract.
 
-Cualquiera puede consultar este registro para saber si una dirección específica implementa una interfaz determinada y qué contrato inteligente se encarga de su implementación.
+Anyone can query this registry to ask if a specific address implements a given interface and which smart contract handles its implementation.
 
-Este registro puede desplegarse en cualquier cadena y comparte la misma dirección en todas las cadenas.
+This registry may be deployed on any chain and shares the same address on all chains.
 
-Las interfaces con ceros (0) como últimos 28 bytes se consideran interfaces ERC165, y este registro REENVIARÁ la llamada al contrato para comprobar si implementa la interfaz.
+Interfaces with zeroes (0) as the last 28 bytes are considered ERC165 interfaces, and this registry SHALL forward the call to the contract to see if it implements the interface.
 
-Este contrato también actúa como caché del ERC165 para reducir el consumo de gas.
+This contract also acts as an ERC165 cache to reduce gas consumption.
 
-## Motivación
+## Motivation
 
 [EIP1820](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1820.md)
-permite a los contratos registrar la interfaz y consultar el registro, evitando errores de comunicación que pueden dar lugar a la pérdida de fondos.
+allows contracts to register interface and query the registry, avoiding miscommunications that may result in the loss of funds.
 
-Por ejemplo, con un contrato inteligente ERC20, un error puede provocar la quema de tokens.
-Aunque el estándar de tokens ERC20 está bien documentado y bien implementado en general, contiene un error. Este fallo ha provocado pérdidas de tokens por valor de millones de dólares estadounidenses. Con la función `transfer`, sólo puedes enviar tokens a una cuenta externa. Si utilizas la función `transfer` para enviar tokens a un contrato inteligente (que no es una cuenta externa), verás una transacción exitosa, pero el contrato nunca recibirá los tokens. Esto destruye los tokens para siempre, ya que no se pueden recuperar. Al utilizar la función incorrecta, ¡varios usuarios han perdido sus tokens para siempre!
+For example, with an ERC20 smart contract, a mistake can result in tokens being burnt.
+Though the ERC20 token standard is well documented and well implemented overall, it contains a bug. This bug has result in losses of tokens worth millions of US dollars. With the `transfer` function, you can only send tokens to an externally account. If you use the `transfer` function to send tokens to a smart contract (which is not an externally owned account), you will see a successful transaction, but the contract will never receive the tokens. This effectively destroys the tokens forever, as they cannot be retrieved. By using the wrong function, several users have lost their tokens for good!
 
-El estándar de token ERC777 resuelve este problema utilizando el registro de interfaz EIP1820, y es compatible con el estándar de token ECR20.
+The ERC777 token standard solves this problem using the EIP1820 interface registry, and it is backward compatible with the ECR20 token standard.
 
-Con el fin de permitir implementaciones basadas en el estándar de tokens ERC777,
-así como cualquier otro contrato inteligente que se beneficie del uso de
-un registro de interfaz de contrato inteligente universal,
-Rootstock ha desplegado una implementación del registro EIP1820 tanto en su
+In order to enable implementations based on the ERC777 token standard,
+as well as any other smart contracts that would benefit from
+the use of a universal smart contract interface registry,
+Rootstock has deployed an implementation of the EIP1820 registry on both its
 [Mainnet](https://explorer.rootstock.io/address/0x1820a4b7618bde71dce8cdc73aab6c95905fad24),
-y [Testnet](https://explorer.testnet.rootstock.io/address/0x1820a4b7618bde71dce8cdc73aab6c95905fad24).
+and [Testnet](https://explorer.testnet.rootstock.io/address/0x1820a4b7618bde71dce8cdc73aab6c95905fad24).
 
-## Enlaces e información
+## Links and Information
 
 Original:
 
 - [EIP1820](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1820.md)
-- Comparación entre [ERC777 y ERC20](https://hackernoon.com/erc777-is-the-new-token-standard-replacing-the-erc20-fd6319c3b13)
-- Comparación de [ERC777 y ERC223 con ERC20](https://101blockchains.com/erc20-vs-erc223-vs-erc777/)
+- Comparing [ERC777 to ERC20](https://hackernoon.com/erc777-is-the-new-token-standard-replacing-the-erc20-fd6319c3b13)
+- Comparing [ERC777 and ERC223 to ERC20](https://101blockchains.com/erc20-vs-erc223-vs-erc777/)
 
-Portainjerto:
+Rootstock:
 
-- [Contrato inteligente EIP1820 desplegado en la red principal Rootstock](https://explorer.rootstock.io/address/0x1820a4b7618bde71dce8cdc73aab6c95905fad24)
-- [Rootstock Testnet desplegado EIP1820 smartcontract](https://explorer.testnet.rootstock.io/address/0x1820a4b7618bde71dce8cdc73aab6c95905fad24)
-- Propuesta de mejora de portainjertos correspondiente: [RSKIP148](https://github.com/rsksmart/RSKIPs/blob/e0ac990679a2e6f476e41db0c1050132cd2b1bfc/IPs/RSKIP148.md)
+- [Rootstock Mainnet deployed EIP1820 smart contract](https://explorer.rootstock.io/address/0x1820a4b7618bde71dce8cdc73aab6c95905fad24)
+- [Rootstock Testnet deployed EIP1820 smartcontract](https://explorer.testnet.rootstock.io/address/0x1820a4b7618bde71dce8cdc73aab6c95905fad24)
+- Corresponding Rootstock Improvement Proposal: [RSKIP148](https://github.com/rsksmart/RSKIPs/blob/e0ac990679a2e6f476e41db0c1050132cd2b1bfc/IPs/RSKIP148.md)

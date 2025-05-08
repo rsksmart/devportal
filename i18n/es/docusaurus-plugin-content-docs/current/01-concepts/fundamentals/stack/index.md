@@ -1,28 +1,28 @@
 ---
-section_label: Stack
+section_label: The Stack
 title: Rootstock Stack
-sidebar_label: Stack
+sidebar_label: The Stack
 sidebar_position: 200
 tags:
   - rsk
   - rootstock
   - stack
-  - arquitectura
-description: Descubra cómo Rootstock combina la seguridad de Bitcoin PoW con la funcionalidad de contratos inteligentes de Ethereum para crear dApps en Bitcoin y también cómo las herramientas y tecnologías de código abierto de RIF están diseñadas para agilizar e incentivar el desarrollo en Bitcoin.
+  - architecture
+description: Learn about how Rootstock combines the security of Bitcoin PoW with Ethereum's smart contract functionality to build dApps on Bitcoin and also how RIF's Open-source tools and technologies designed to streamline and incentivize development on Bitcoin.
 ---
 
-La máquina virtual Rootstock (RVM) es el núcleo de la plataforma de Contratos Inteligentes. Todos los nodos completos de la red ejecutan contratos inteligentes. El resultado de la ejecución de un contrato inteligente puede ser el procesamiento de mensajes entre contratos, la creación de transacciones monetarias y el cambio del estado de la memoria persistente del contrato. El RVM es compatible con EVM a nivel de op-code, permitiendo que los contratos de Ethereum se ejecuten sin problemas en Rootstock.
+Rootstock virtual machine (RVM) is the core of the Smart Contract platform. Smart Contracts are executed by all network full nodes. The result of the execution of a Smart Contract can be the processing of inter-contract messages, creating monetary transactions and changing the state of contract-persistent memory. The RVM is compatible with EVM at the op-code level, allowing Ethereum contracts to run flawlessly on Rootstock.
 
-Actualmente, la VM se ejecuta mediante interpretación. En una futura actualización de la red, la comunidad Rootstock pretende mejorar sustancialmente el rendimiento de la máquina virtual. Una propuesta es emular la EVM reorientando dinámicamente los opcodes de la EVM a un subconjunto de bytecode similar a Java, y una VM similar a Java reforzada en seguridad y restringida en memoria se convertirá en la nueva VM (RVM2). Esto puede llevar la ejecución de código Rootstock a un rendimiento cercano al del código nativo.
+Currently, the VM is executed by interpretation. In a future network upgrade, the Rootstock community is aiming to improve the VM performance substantially. One proposal is to emulate the EVM by dynamically retargeting EVM opcodes to a subset of Java-like bytecode, and a security-hardened and memory restricted Java-like VM will become the new VM (RVM2). This may bring Rootstock code execution to a performance close to native code.
 
-## Características principales:
+## Main features:
 
-- Máquina virtual independiente, altamente compatible con EVM a nivel de opcode.
-- Ejecute DApps de Ethereum con la seguridad de la red de Bitcoin
-- Canal de mejora del rendimiento documentado en numerosos RSKIP creados por la comunidad de Rootstock
-  - Véanse las [Rootstock Improvement Proposals](https://github.com/rsksmart/RSKIPs).
+- Independent virtual machine, that is highly compatible with EVM at the opcode level
+- Run Ethereum DApps with the security of the Bitcoin network
+- Performance improvement pipeline documented in numerous RSKIPs created by the Rootstock community
+  - See the [Rootstock Improvement Proposals](https://github.com/rsksmart/RSKIPs).
 
-Rootstock Technology Stack - Alto nivel](/img/concepts/rootstock-tech-stack.svg)
+![Rootstock Technology Stack - High Level](/img/concepts/rootstock-tech-stack.svg)
 
 <section>
 <div class="row">
@@ -30,20 +30,20 @@ Rootstock Technology Stack - Alto nivel](/img/concepts/rootstock-tech-stack.svg)
   <div class="header-div">
       <h2 class="zg-text-bg fs-28">Bitcoin</h2><h3 class="fp-title-color fp-title-color-sm"><span class="ml-1 zg-label">BTC</span></h3>
   </div>
-    <p> Es un almacén y transferencia de valor.
-La blockchain es segura porque los mineros
-con elevados costos de infraestructura y energía
-crean los nuevos bloques que se añaden a la blockchain cada 10 minutos.
-Cuanta más potencia de hashing proporcionen, más segura será la red.</p>
+    <p> Is a store and transfer of value.
+The blockchain is secure because miners
+with high infrastructure and energy costs
+create the new blocks to be added to the blockchain every 10 minutes.
+The more hashing power they provide, the more secure the network is.</p>
   </div>
     <div class="col two-x-card">
         <div class="header-div"><h2 class="zg-text-bg fs-28">Rootstock</h2><h3 class="fp-title-color fp-title-color-sm"><span class="ml-1 zg-label">RBTC</span></h3></div>
-            <p> Es la primera plataforma de contratos inteligentes open source
-        impulsada por la red bitcoin.
-        El objetivo de Rootstock es añadir valor y funcionalidad al 
-        ecosistema bitcoin permitiendo contratos inteligentes,
-        pagos casi instantáneos y una mayor escalabilidad.</p>
-        <p>El [Smart Bitcoin (RBTC)](/conceptos/rbtc/) es la moneda nativa de Rootstock y se utiliza para pagar el gas necesario para la ejecución de las transacciones. Está vinculado 1:1 con Bitcoin, lo que significa que en Rootstock hay exactamente 21M de RBTC. Un [Powpeg](/conceptos/powpeg/) permite la [transferencia de bitcoins](/conceptos/rbtc/conversión/) de la blockchain de Bitcoin a la blockchain de Rootstock y viceversa.</p>
+            <p> Is the first open source smart contract platform that is
+        powered by the bitcoin network.
+        Rootstock's goal is to add value and functionality to the
+        bitcoin ecosystem by enabling smart-contracts,
+        near instant payments, and higher-scalability.</p>
+        <p>The [Smart Bitcoin (RBTC)](/concepts/rbtc/) is the native currency in Rootstock and it is used to pay for the gas required for the execution of transactions. It is pegged 1:1 with Bitcoin, which means in Rootstock there are exactly 21M RBTC. A [Powpeg](/concepts/powpeg/) allows the [transfer of bitcoins](/concepts/rbtc/conversion/) from the Bitcoin blockchain to the Rootstock blockchain and vice-versa.</p>
     </div>
 </div>
 </section>

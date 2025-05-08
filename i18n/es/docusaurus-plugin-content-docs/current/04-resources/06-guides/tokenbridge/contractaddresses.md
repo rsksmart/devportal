@@ -1,21 +1,21 @@
 ---
 sidebar_position: 302
-sidebar_label: Direcciones y enlaces
-title: Direcciones y enlaces de la red principal del puente de Token
+sidebar_label: Addresses and Links
+title: Token Bridge Mainnet Addresses and Links
 tags:
-  - recursos
+  - resources
   - tokenbridge
-  - cadena de bloques
-  - puentes
-  - fichas
+  - blockchain
+  - bridges
+  - tokens
   - ethereum
   - rootstock
   - rsk
 ---
 
-Aquí puede encontrar una lista de mainnet, direcciones de red de pruebas y ABI utilizados por el Token Bridge.
+Here, you can find a list of mainnet, testnet addresses, and ABIs used by the Token Bridge.
 
-## Direcciones de Token
+## Token Addresses
 
 ```
 - USDT: 0x31974a4970BADA0ca9BcDe2E2eE6fC15922c5334
@@ -25,7 +25,7 @@ Aquí puede encontrar una lista de mainnet, direcciones de red de pruebas y ABI 
 - USDC: 0xbB739A6e04d07b08E38B66ba137d0c9Cd270c750
 ```
 
-## Dirección de Rootstock principal del puente Token
+## Token Bridge Mainnet Rootstock Addresses
 
 ```
 - Bridge: [`0x9d11937e2179dc5270aa86a3f8143232d6da0e69`](https://explorer.rootstock.io/address/0x9d11937e2179dc5270aa86a3f8143232d6da0e69)
@@ -34,7 +34,7 @@ Aquí puede encontrar una lista de mainnet, direcciones de red de pruebas y ABI 
 - MultiSigWallet: [`0x040007b1804ad78a97f541bebed377dcb60e4138`](https://blockscout.com/rsk/mainnet/address/0x040007b1804aD78A97f541bEBED377dcb60E4138)
 ```
 
-## Dirección Ethereum del puente de Token
+## Token Bridge Mainnet Ethereum Addresses
 
 ```
 - Bridge: [`0x12ed69359919fc775bc2674860e8fe2d2b6a7b5d`](https://etherscan.io/address/0x12ed69359919fc775bc2674860e8fe2d2b6a7b5d)
@@ -43,26 +43,26 @@ Aquí puede encontrar una lista de mainnet, direcciones de red de pruebas y ABI 
 - MultiSigWallet: [`0x040007b1804ad78a97f541bebed377dcb60e4138`](https://etherscan.io/address/0x040007b1804ad78a97f541bebed377dcb60e4138)
 ```
 
-## Direcciones y enlaces de Testnet
+## Testnet Addresses and Links
 
-- En Rootstock Testnet
+- On Rootstock Testnet
   - Bridge: [`0x21df59aef6175467fefb9e44fbb98911978a13f2`](https://explorer.testnet.rootstock.io/address/0x21df59aef6175467fefb9e44fbb98911978a13f2)
-  - Federación: [`0x73de98b3eb19cae5dfc71fb3e54f3ffd4aa02705`](https://explorer.testnet.rootstock.io/address/0x73de98b3eb19cae5dfc71fb3e54f3ffd4aa02705)
+  - Federation: [`0x73de98b3eb19cae5dfc71fb3e54f3ffd4aa02705`](https://explorer.testnet.rootstock.io/address/0x73de98b3eb19cae5dfc71fb3e54f3ffd4aa02705)
   - AllowTokens: [`0xa683146bb93544068737dfca59f098e7844cdfa8`](https://explorer.testnet.rootstock.io/address/0xa683146bb93544068737dfca59f098e7844cdfa8)
   - MultiSigWallet: [`0x8285422f7e58ad7f7b90cb5158098edf548e7b38`](https://explorer.testnet.rootstock.io/address/0x8285422f7e58ad7f7b90cb5158098edf548e7b38)
-- En Sepolia
+- On Sepolia
   - Bridge: [`0xd31e66af9d830bfc35e493929a8f6523ca2b01b1`](https://sepolia.etherscan.io/address/0xd31e66af9d830bfc35e493929a8f6523ca2b01b1)
-  - Federación: [`0x091e26c96e7f4aaef0d85746bb99b733ec28df90`](https://sepolia.etherscan.io/address/0x091e26c96e7f4aaef0d85746bb99b73ec28df90)
-  - Tokens: [`0x926d302f3b6bc4d0eea9caf6942fd7e0a9a0422`](https://sepolia.etherscan.io/address/0x926d302f3b6bc4d0eea9caf6942fd7e0a9a0422)
+  - Federation: [`0x091e26c96e7f4aaef0d85746bb99b733ec28df90`](https://sepolia.etherscan.io/address/0x091e26c96e7f4aaef0d85746bb99b733ec28df90)
+  - AllowTokens: [`0x926d302f3b6bc4d0eeea9caf6942fd7e0a9a0422`](https://sepolia.etherscan.io/address/0x926d302f3b6bc4d0eeea9caf6942fd7e0a9a0422)
   - MultiSigWallet: [`0xbee2572941ffcb2ab2e61450fecc8db75321e6c9`](https://sepolia.etherscan.io/address/0xbee2572941ffcb2ab2e61450fecc8db75321e6c9)
 
-## Lista de ABIs
+## List of ABIs
 
-Ver la [lista de ABIs usadas](https://github.com/rsksmart/tokenbridge/tree/master/bridge/abi)
+See the [list of ABIs used](https://github.com/rsksmart/tokenbridge/tree/master/bridge/abi)
 
-## Enlaces útiles
+## Useful Links
 
-- Explorador de red raíz, calabaza y estadísticas
+- Rootstock Testnet Explorer, Faucet and Stats
   - [explorer.testnet.rootstock.io](https://explorer.testnet.rootstock.io/)
   - [stats.testnet.rootstock.io](https://stats.testnet.rootstock.io/)
   - [faucet.rootstock.io](https://faucet.rootstock.io/)

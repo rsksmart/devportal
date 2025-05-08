@@ -8,27 +8,27 @@
     "description": "The alt text of navbar logo"
   },
   "item.label.Home": {
-    "message": "Inicio",
+    "message": "Home",
     "description": "Navbar item with label Home"
   },
   "item.label. Concepts": {
-    "message": " Conceptos",
+    "message": " Concepts",
     "description": "Navbar item with label  Concepts"
   },
   "item.label. Developers": {
-    "message": " Desarrolladores",
+    "message": " Developers",
     "description": "Navbar item with label  Developers"
   },
   "item.label. Node Operators": {
-    "message": " Operadores de nodo",
+    "message": " Node Operators",
     "description": "Navbar item with label  Node Operators"
   },
   "item.label. Resources": {
-    "message": " Recursos",
+    "message": " Resources",
     "description": "Navbar item with label  Resources"
   },
   "item.label. Dev Tools": {
-    "message": " Herramientas de desarrollo",
+    "message": " Dev Tools",
     "description": "Navbar item with label  Dev Tools"
   },
   "item.label.GitHub": {
@@ -36,7 +36,7 @@
     "description": "Navbar item with label GitHub"
   },
   "item.label.Discord": {
-    "message": "Discordia",
+    "message": "Discord",
     "description": "Navbar item with label Discord"
   }
 }

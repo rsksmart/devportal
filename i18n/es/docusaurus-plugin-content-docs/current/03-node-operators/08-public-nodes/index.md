@@ -1,27 +1,27 @@
 ---
-sidebar_label: Nodos públicos
+sidebar_label: Public Nodes
 sidebar_position: 9
-title: Uso de nodos públicos Rootstock (Mainnet & Testnet)
+title: Using Rootstock Public Nodes (Mainnet & Testnet)
 tags:
   - rsk
-  - redes
-  - nodo rskj
-  - rpc json
-  - red principal
+  - networks
+  - rskj node
+  - json rpc
+  - mainnet
   - testnet
   - cURl
-description: Nodos públicos Rootstock (Mainnet, Testnet), Métodos RPC.
+description: Rootstock Public nodes (Mainnet, Testnet), RPC Methods.
 ---
 
-[RootstockLabs](https://www.rootstocklabs.com/) actualmente proporciona dos nodos públicos que puede usar
-para pruebas y encontrará esa información a continuación.
+[RootstockLabs](https://www.rootstocklabs.com/) currently provides two public nodes that you can use
+for testing purposes, and you will find that information below.
 
-Alternativamente, sigue las [instrucciones de instalación](/node-operators/setup/installation/),
-para ejecutar tu propio nodo Rootstock o usar un proveedor alternativo de nodos.
-Esto es altamente recomendado para entornos de producción,
-y de acuerdo con el máximo de bitcoiners: **No confíes. Verifique.**
+Alternatively, follow the [installation instructions](/node-operators/setup/installation/),
+to run your own Rootstock node or use an alternative node provider.
+This is highly recommended for production environments,
+and in accordance with the bitcoiners' maxim: **Don't trust. Verify.**
 
-:::info[RPC Proveedores de nodos]
+:::info[RPC Node Providers]
 The Rootstock public nodes do not expose WebSockets, they are `HTTP` only.
 To work around this, you may either [run your own Rootstock node](/node-operators/setup/node-runner/), or use the [Rootstock RPC API](/developers/rpc-api/rootstock/setup/) or use a third-party node provider, such as [Getblock](https://getblock.io/nodes/rsk/), [NowNodes](https://nownodes.io/nodes/rsk), dRPC or Blast API.
 :::
@@ -38,15 +38,15 @@ https://public-node.testnet.rsk.co
 https://public-node.rsk.co
 ```
 
-## Métodos RPC JSON soportados
+## Supported JSON RPC methods
 
-Lista de métodos JSON-RPC soportados para cada módulo se puede encontrar en la [documentación JSON-RPC](/node-operators/json-rpc/methods/).
+List of supported JSON-RPC methods for each module can be found in the [JSON-RPC documentation](/node-operators/json-rpc/methods/).
 
-### Usando cURL
+### Using cURL
 
-Aquí hay una solicitud de ejemplo usando `cURL` para obtener el número de bloque Mainnet:
+Here's an example request using `cURL` to get the Mainnet block number:
 
-> `"Tipo de contenido: aplicación/json"`
+> `"Content-Type: application/json"`
 
 ```bash
 curl https://public-node.rsk.co \

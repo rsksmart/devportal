@@ -1,11 +1,11 @@
 ---
 sidebar_label: CLI
 sidebar_position: 200
-title: Interfaz de línea de comandos
+title: Command Line Interface
 tags:
   - rsk
   - rskj
-  - nodo
+  - node
   - cli
 description: Command Line Interface for Rootstock (RSK)
 ---
@@ -16,18 +16,18 @@ Command line (CLI) arguments are arguments specified after the `RSK start` class
 
 The CLI arguments have two forms; the parameter and the flag:
 
-- **Parámetro**
- - Tiene un nombre y un valor asociado, separados por un espacio
- - Comienza con un guión
+- **Parameter**
+ - Has a name and an associated value, separated by a space
+ - Starts with a dash
 - **Flag**
  - It's a single text, without spaces
- - Empieza con un guión doble
+ - Starts with a double dash
 
 Find below a list of CLI flags and parameters available:
 
-## Parámetros y flags
+## Parameters and Flags
 
-### Relacionados con la red
+### Network related
 
 The following CLI flags determine which network the Rootstock (RSK) node will connect to.
 
@@ -40,9 +40,9 @@ The following CLI flags determine which network the Rootstock (RSK) node will co
  - Example: `java -cp rsk-core-<VERSION>.jar co.rsk.start --regtest`
 
 > * Only one of these three CLI flags should be specified.
-> * Si no se especifica ninguna de estas opciones, se utiliza **Rootstock Mainnet** por defecto.
+> * When none of these are specified, **Rootstock Mainnet** is used by default.
 
-### Relacionado con el base de datos
+### Database related
 
 The Rootstock (RSK) node stores transactions, blocks,
 and other blockchain state on disk.
@@ -63,12 +63,12 @@ This is known as the _Blockchain Database_.
  It is also used when switching between different databases,
  e.g. between `leveldb` and `rocksdb`.
 
-### Relacionado con la configuración
+### Configuration related
 
 - `--verify-config`:
  This indicates that the configuration file used by this run of the Rootstock node should be validated. By default this step is always performed.
 - `--print-system-info`:
- Indica que se debe mostrar la información del sistema de la computadora en el que se ejecuta el nodo Rootstock. Por defecto, esto es siempre el resultado.
+ This indicates that the system information of the computer that the Rootstock node is running on should be output. By default, this is always output.
 - `--skip-java-check`:
  This indicates that the detection of the version of the Java Virtual Machine that the Rootstock node is running in is supported. By default, this check is always performed, to ensure that the Rootstock node is running in a compatible environment.
 - `-base-path`:
@@ -81,34 +81,34 @@ This is known as the _Blockchain Database_.
 
 > Example: `java -cp rsk-core-<VERSION>.jar co.rsk.start -rpccors *`
 
-## Herramientas de línea de comando
+## Command Line Tools
 
 It worth highlight that for some commands below that interacts with the database, you might and should set the network flag desired, like
 `--regtest`, `--testnet` or `--main`. Otherwise, the default network will be used, which is the Rootstock Mainnet (public network).
 
-### Comandos relacionados con la base de datos
+### Database related commands
 
 #### ExportState
 
 The `ExportState` command is a tool for exporting the state at a specific block in the Rootstock blockchain to a file.
 
-**Uso:**
+**Usage:**
 
 - `java -cp rsk.jar co.rsk.cli.tools.ExportState -b <block_number> -f <file_path> --<network_flag>`
 
-**Opciones:**
+**Options:**
 
 - `-b, --block`: The block number to export the state from.
 
 - `-f, --file`: The path to a file to export the state to.
 
-**Ejemplo:**
+**Example:**
 
-En este ejemplo, la información de estado del bloque 2000 se exportará al archivo "test.txt" de la red regtest.
+In this example, the state information of block 2000 will be exported to the file “test.txt” on the regtest network.
 
 - `java -cp rsk.jar co.rsk.cli.tools.ExportState -b 2000 -f test.txt --regtest`
 
-**Resultado:**
+**Output:**
 
 ```shell
   INFO [clitool] [main]  ExportState started
@@ -130,20 +130,20 @@ The “test.txt” should look like this:
 The `ExportBlocks` command is a tool for exporting blocks from a specific block range to a file.
 The tool retrieves the block range and exports each block in the range to a specified file.
 
-**Uso:**
+**Usage:**
 
 ```java
   java -cp rsk.jar co.rsk.cli.tools.ExportBlocks -fb <from_block_number>  -tb <to_block_number> -f <file_path>
 ```
 
-**Opciones:**
+**Options:**
 
 ```
 > `-fb, --fromBlock`: The block number to start exporting from.
 > `-tb, --toBlock`: The block number to stop exporting.
 ```
 
-**Ejemplo:**
+**Example:**
 
 In this example, the blocks from block 2000 to block 3000 will be exported to the specified file.
 
@@ -151,7 +151,7 @@ In this example, the blocks from block 2000 to block 3000 will be exported to th
   java -cp rsk.jar co.rsk.cli.tools.ExportBlocks -fb 2000 -tb 3000  -f   test-blocks.txt
 ```
 
-**Resultado:**
+**Output:**
 
 ```shell
   2023-04-24-16:23:25.0897 INFO [clitool] [main]  ExportBlocks started
@@ -174,11 +174,11 @@ Blocks.txt should show the following:
 
 The `StartBootcamp` command starts a bootstrap node with one service, which only participates in the [peer discovery protocol](https://github.com/ethereum/devp2p/wiki/Discovery-Overview).
 
-**Ejemplo:**
+**Example:**
 
 `java -cp rsk.jar co.rsk.cli.tools.StartBootstrap`
 
-**Resultado:**
+**Output:**
 
 ```shell
   2023-04-24-15:51:14.0793 INFO [fullnoderunner] [main]  Starting RSK
@@ -191,13 +191,13 @@ The `StartBootcamp` command starts a bootstrap node with one service, which only
 
 The `RewindBlocks` command is used to rewind the Rootstock blockchain to a specific block. It can also be used to find and print the minimum inconsistent block (a block with missing state in the states database).
 
-**Ejemplo:**
+**Example:**
 
 ```shell
   java -cp rsk.jar co.rsk.cli.tools.RewindBlocks [-b <BLOCK_NUMBER>]  [-fmi] (or) [-rbc] --<network_flag>
 ```
 
-**Opciones:**
+**Options:**
 
 - `-b, --block=BLOCK_NUMBER_TO_REWIND_TO` block number to rewind blocks to.
 - `-fmi, --findMinInconsistentBlock` flag to find a min inconsistent block. The default value is `false`.
@@ -207,11 +207,11 @@ The `RewindBlocks` command is used to rewind the Rootstock blockchain to a speci
  > - `rbc` option does two things: it looks for a minimum inconsistent block and, if there's such, rewinds blocks from top one till the found one.
  > - Note that all three options are mutually exclusive, you can specify only one per call.
 
-**Ejemplo:**
+**Example:**
 
 `java -cp rsk.jar co.rsk.cli.tools.RewindBlocks -b 2000 —regtest`
 
-**Resultado:**
+**Output:**
 
 ```shell
   INFO [clitool] [main]  RewindBlocks started
@@ -225,23 +225,23 @@ The `RewindBlocks` command is used to rewind the Rootstock blockchain to a speci
 
 #### DbMigrate
 
-El comando `DbMigrate` es una herramienta para migrar entre diferentes bases de datos como leveldb y rocksdb.
+The `DbMigrate` command is a tool for migrating between different databases such as leveldb and rocksdb.
 
-**Uso:**
+**Usage:**
 
 `java -cp rsk.jar co.rsk.cli.tools.DbMigrate -t <target_database>`
 
-**Opciones:**
+**Options:**
 
 - `-t, --targetDb`: The target database to migrate to. (“leveldb” or “rocksdb”).
 
-**Ejemplo:**
+**Example:**
 
-En este ejemplo, la base de datos actual se migrará de leveldb a rocksdb.
+In this example, the current database will be migrated from leveldb to rocksdb.
 
 `java -cp rsk.jar co.rsk.cli.tools.DbMigrate -t rocksdb`
 
-**Resultado:**
+**Output:**
 
 ```shell
   INFO [clitool] [main]  DbMigrate started
@@ -260,21 +260,21 @@ If the target database is the same as the one working on the node, the node will
 
 The `ShowStateInfo` command is a tool for displaying state information of a specific block in the Rootstock blockchain.
 
-**Uso:**
+**Usage:**
 
 - `java -cp rsk.jar co.rsk.cli.tools.ShowStateInfo -b <block_number>`
 
-**Opciones:**
+**Options:**
 
 - `-b, --block`: The block number or "best" to show the state info.
 
-**Ejemplo:**
+**Example:**
 
 - `java -cp rsk.jar co.rsk.cli.tools.ShowStateInfo -b 20000`
 
 > In this example, the state information of block 20000 will be displayed.
 
-**Resultado:**
+**Output:**
 
 ```shell
     INFO [clitool] [main]  ShowStateInfo started
@@ -292,25 +292,25 @@ The `ShowStateInfo` command is a tool for displaying state information of a spec
 
 The `IndexBlooms` is a tool for indexing block blooms for a specific block range.
 
-**Uso:**
+**Usage:**
 
 ```shell
     java -cp rsk.jar co.rsk.cli.tools.IndexBlooms [-fb=<fromBlock>] [-tb=<toBlock>]
 ```
 
-**Opciones:**
+**Options:**
 
 - `-fb, --fromBlock=<fromBlock>`: From block number (required)
 
 - `-tb, --toBlock=<toBlock>`: To block number (required)
 
-**Ejemplo:**
+**Example:**
 
 In this example we are indexing block blooms from block number 100 to 200.
 
 `java -cp rsk.jar co.rsk.cli.tools.IndexBlooms -fb=100 -tb=200`
 
-**Resultado:**
+**Output:**
 
 ```
   INFO [c.r.c.t.IndexBlooms] [main]  Processed 28% of blocks
@@ -328,21 +328,21 @@ In this example we are indexing block blooms from block number 100 to 200.
 
 The `ImportState` command is a tool for importing state data from a file into the Rootstock blockchain.
 
-**Uso:**
+**Usage:**
 
 - `java -cp rsk.jar co.rsk.cli.tools.ImportState -f <file_path>`
 
-**Opciones:**
+**Options:**
 
 - `-f, --file`: The path to the file to import state from.
 
-**Ejemplo:**
+**Example:**
 
 In this example, the state data from the file located at `test.txt` will be imported into the Rootstock blockchain. Keep in mind that we are using the previously generated state in the `ExportState` example.
 
 - `java -cp rsk.jar co.rsk.cli.tools.ImportState -f test.txt`
 
-**Resultado:**
+**Output:**
 
 ```text
   INFO [clitool] [main]  ImportState started
@@ -353,21 +353,21 @@ In this example, the state data from the file located at `test.txt` will be impo
 
 The `ImportBlocks` command is a tool for importing blocks from a file into the Rootstock blockchain. The tool reads a file containing blocks, decodes them and saves them to the Rootstock database.
 
-**Uso:**
+**Usage:**
 
 `java -cp rsk.jar co.rsk.cli.tools.ImportBlocks -f <file_path>`
 
-**Opciones:**
+**Options:**
 
 - `-f, --file`: The path to a file to import blocks from.
 
-**Ejemplo:**
+**Example:**
 
 In this example, blocks will be imported from the file `/path/to/blocks_file.txt`.
 
 - `java -cp rsk.jar co.rsk.cli.tools.ImportBlocks -f /path/to/blocks_file.txt`
 
-**Resultado:**
+**Output:**
 
 ```text
   INFO [clitool] [main]  ImportBlocks started
@@ -378,16 +378,16 @@ In this example, blocks will be imported from the file `/path/to/blocks_file.txt
 
 The `ExecuteBlocks` command is a tool for executing blocks for a specified block range. This command is useful for testing purposes, debugging or for analyzing the behavior of a blockchain in a given range of blocks.
 
-**Uso:**
+**Usage:**
 
 - `java -cp rsk.jar co.rsk.cli.tools.ExecuteBlocks -fb <from_block_number> -tb <to_block_number> --<network_flag>`
 
-**Opciones:**
+**Options:**
 
 - `-fb, --fromBlock`: The starting block number.
 - `-tb, --toBlock`: The ending block number.
 
-**Ejemplo:**
+**Example:**
 
 In this example, blocks from 100000 to 200000 will be executed on the regtest network.
 
@@ -395,7 +395,7 @@ In this example, blocks from 100000 to 200000 will be executed on the regtest ne
   java -cp rsk.jar co.rsk.cli.tools.ExecuteBlocks -fb 100000 -tb 200000 –regtest
 ```
 
-**Resultado:**
+**Output:**
 
 ```shell
   2023-04-24-16:27:58.0408 INFO [clitool] [main]  ExecuteBlocks started
@@ -406,15 +406,15 @@ In this example, blocks from 100000 to 200000 will be executed on the regtest ne
 
 The `ConnectBlocks` command is a tool for connecting blocks to a chain from an external source file.
 
-**Uso:**
+**Usage:**
 
 - `java -cp rsk.jar co.rsk.cli.tools.ConnectBlocks -f <file_path>`
 
-**Opciones:**
+**Options:**
 
 - `-f, --file`: The path to the file containing the blocks to connect.
 
-**Ejemplo:**
+**Example:**
 
 In this example, the blocks contained in the file located at `/path/to/blocks.txt` will be connected to the chain.
 
@@ -424,13 +424,13 @@ In this example, the blocks contained in the file located at `/path/to/blocks.tx
 
 The `GenerateOpenRpcDoc` command is a tool for generating an OpenRPC JSON doc file.
 
-**Uso:**
+**Usage:**
 
 ```shell
   java -cp rsk.jar co.rsk.cli.tools.GenerateOpenRpcDoc -v <rskj_version> -d <work_dir_path> -o <output_file_path>
 ```
 
-**Opciones:**
+**Options:**
 
 - `-v, --version`: The RSKj version that will be present in the final docs
 
@@ -438,7 +438,7 @@ The `GenerateOpenRpcDoc` command is a tool for generating an OpenRPC JSON doc fi
 
 - `-o, --outputFile`: The destination file containing the final OpenRPC JSON doc.
 
-**Ejemplo:**
+**Example:**
 
 In this example, the tool will generate an OpenRPC JSON doc file located at `/path/to/output.json`.
 
@@ -446,7 +446,7 @@ In this example, the tool will generate an OpenRPC JSON doc file located at `/pa
   java -cp rsk.jar co.rsk.cli.tools.GenerateOpenRpcDoc -v 1.0.0 -d /path/to/workdir -o /path/to/output.json
 ```
 
-**Resultado:**
+**Output:**
 
 ```text
   2023-04-24-16:35:00.0617 INFO [c.r.c.t.GenerateOpenRpcDoc] [main]  Loading template...
@@ -454,7 +454,7 @@ In this example, the tool will generate an OpenRPC JSON doc file located at `/pa
   ...
 ```
 
-\*\*Archivo de respuesta JSON:
+**JSON output file**:
 
 ```json
   {"openrpc" : "1.2.6",
@@ -469,7 +469,7 @@ In this example, the tool will generate an OpenRPC JSON doc file located at `/pa
 
 Besides the parameters and flags, it's also possible to configure the node over the CLI using the JVM parameters, which starts with the prefix `-D` followed by the full path of the configuration like it is placed inside the configuration file.
 
-**Ejemplo:**
+**Example:**
 
 ```shell
   java -cp rskj-core-<VERSION>.jar -Ddatabase.dir=/home/rsk/data co.rsk.Start

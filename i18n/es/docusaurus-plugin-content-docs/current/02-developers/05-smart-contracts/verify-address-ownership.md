@@ -1,242 +1,242 @@
 ---
 sidebar_position: 700
-sidebar_label: Verificar la propiedad de la dirección
-title: Verificar la propiedad de la dirección con Metamask Wallet
-description: Confirme que posee una dirección Rootstock utilizando el Gestor de identidades RIF
+sidebar_label: Verify address ownership
+title: Verify Address Ownership with Metamask Wallet
+description: Confirm that you own an Rootstock address using RIF Identity Manager
 tags:
-  - metamáscara
-  - dirección
-  - cuenta
-  - contratos inteligentes
+  - metamask
+  - address
+  - account
+  - smart contracts
 ---
 
-Supongamos que necesita recibir una transferencia de RBTC,
-o tokens en la red Rootstock,
-por primera vez.
-Para ello, debe crear un monedero y conectarlo a la red Rootstock.
+Let's say that you need to receive a transfer of RBTC,
+or tokens on the Rootstock network,
+for the very first time.
+To do this you need to set up a wallet and connect it to the Rootstock network.
 
-Sin embargo, puede que no esté seguro de si realmente "controla" las direcciones del monedero.
-Es comprensible, porque es la primera vez que lo utilizas.
-Esa preocupación también tiene una base técnica -
-necesitas **estar seguro** de que eres **capaz de firmar** transacciones en esta dirección,
-antes de pedir a otros que te envíen criptodivisas o tokens a esta dirección.
+However, you may be unsure if you actually "control" the addresses in the wallet.
+Understandably so, because it is your first time using it.
+That concern has a technical basis too -
+you need to **be sure** that you are **able to sign** transactions at this address,
+before you ask others to send you cryptocurrency or tokens at this address.
 
-Aquí demostraremos exactamente cómo hacerlo,
-y estar seguro de que realmente "controlas" una dirección en particular.
-Todo lo que necesitas es Chrome (navegador web) y MetaMask (extensión del navegador).
-Usted no necesita ningún saldo RBTC para hacerlo.
+Here we will demonstrate exactly how to do this,
+and be sure that you truly "control" a particular address.
+All you need is Chrome (web browser) and MetaMask (browser extension).
+You do not need any RBTC balance to do so.
 
-## Primeros pasos
+## Getting Started
 
 :::tip[Install MetaMask]
 
-Puede utilizar la herramienta [metamask-landing.rifos.org](https://metamask-landing.rifos.org/) para descargar/instalar Metamask y añadir la red personalizada Rootstock o seguir los pasos indicados en [metamask.io](https://metamask.io/).
+You can either use the [metamask-landing.rifos.org](https://metamask-landing.rifos.org/) tool to download/install Metamask, and add Rootstock custom network or follow the steps listed in [metamask.io](https://metamask.io/).
 
 :::
 
-En Chrome, visita [metamask.io](https://metamask.io/),
-y sigue las instrucciones para instalar esta extensión en tu navegador.
-Si estás haciendo esto por primera vez,
-necesitarás generar una _frase semilla_,
-y es extremadamente importante que la registres en algún sitio.
+In Chrome, visit [metamask.io](https://metamask.io/),
+and follow the instructions to install this extension in your browser.
+If you are doing this for the first time,
+you will need to generate a _seed phrase_,
+and it is extremely important that you record this somewhere.
 
-### Habilitar sólo una extensión de navegador Web3
+### Enable only one Web3 browser extension
 
-Si tiene más de una extensión de navegador Web3 instalada,
-por ejemplo, si tiene MetaMask, Liquality o Nifty,
-tenga en cuenta que pueden entrar en conflicto entre sí.
+If you have more than one Web3 browser extension installed,
+for example, if you have either MetaMask, Liquality or Nifty,
+be aware that they can conflict with each other.
 
-Pega `chrome://extensions/` en tu barra de direcciones,
-para ver todas las extensiones del navegador que tienes instaladas.
-Comprueba que sólo tienes MetaMask instalada, **o**
-si tienes otras extensiones del navegador Web3,
-debes desactivar todas las demás haciendo clic en los botones de alternancia.
+Paste `chrome://extensions/` in your address bar,
+to see all the browser extensions that you have installed.
+Verify that you only have MetaMask installed, **or**
+if you have other Web3 browser extensions,
+you should disable all of the others by clicking on the toggle buttons.
 
 ![](/img/developers/verify-address-ownership/rif-identity-metamask-disable-other-web3-extensions.png)
 
 :::info\[Optional]
 
-Para una mejor experiencia de usuario, puede que también desee
+For a better user experience, you may also wish to
 
-- Haga clic en el icono de extensiones (forma de rompecabezas), y en el desplegable,
-- Haz clic en el icono de la chincheta junto a MetaMask para asegurarte de que siempre esté visible.
+- Click on the extensions icon (jigsaw shape), and in the dropdown,
+- Click the pin icon next to MetaMask to ensure it is always visible.
 
 :::
 
 ![](/img/developers/verify-address-ownership/rif-identity-metamask-pin-extension-dropdown.png)
 
-### Desbloquear MetaMask
+### Unlock MetaMask
 
-Tras instalar la extensión o iniciar tu navegador,
-MetaMask debería mostrar una ventana emergente pidiéndote que desbloquees la cuenta.
-Introduce tu contraseña de MetaMask.
-(Ten en cuenta que ésta _no_ es la misma que tu frase semilla).
+After installing the extension or starting your browser,
+MetaMask should display a popup asking you to unlock the account.
+Enter your MetaMask password.
+(Note that this is _not_ the same as your seed phrase.)
 
-Si no aparece, puede introducir manualmente
+If it does not popup, you can manually enter
 `chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html#unlock`
-en su barra de direcciones para navegar hasta allí en "vista expandida",
-en lugar de dentro de una ventana emergente.
+in your address bar to navigate there in "expanded view",
+instead of within a popup.
 
 ![](/img/developers/verify-address-ownership/rif-identity-metamask-unlock.png)
 
-### Añadir red personalizada para Rootstock
+### Add custom network for Rootstock
 
-MetaMask sólo contiene configuraciones de red para conectarse a Ethereum por defecto.
-Para conectarse a Rootstock necesitará añadir configuraciones de red de Rootstock.
+MetaMask only contains network configurations to connect to Ethereum by default.
+To connect to Rootstock you will need to add Rootstock Network configurations.
 
-Tiene la opción de añadir manualmente
+You have the option to manually add
 [Rootstock Mainnet network configuration to MetaMask](/dev-tools/wallets/metamask/).
 
-Alternativamente, puede hacerlo automáticamente,
-visitando [identidad.rifos.org](https://identity.rifos.org/),
-y cuando intente conectarse usando MetaMask,
-se le presentará lo siguiente:
+Alternatively, you can do this automatically,
+by visiting [identity.rifos.org](https://identity.rifos.org/),
+and when you attempt to connect using MetaMask,
+you will get presented with the following:
 
 ![](/img/developers/verify-address-ownership/rif-identity-metamask-auto-network-1.png)
 
-Haz clic en "RSK Mainnet". MetaMask mostrará esta ventana emergente:
+Click "RSK Mainnet". MetaMask will then show this popup:
 
 ![](/img/developers/verify-address-ownership/rif-identity-metamask-auto-network-2.png)
 
-Haga clic en "Aprobar". Esto rellenará automáticamente la configuración de red para usted.
+Click "Approve". This will automatically fill out the network configuration for you.
 
 ![](/img/developers/verify-address-ownership/rif-identity-metamask-auto-network-3.png)
 
-A continuación, haga clic en "Cambiar de red" para conectarse a la red principal del Rootstock.
+Then click "Switch Network" to connect to the Rootstock Mainnet.
 
-## Verificación de su cuenta Rootstock
+## Verifying your Rootstock account
 
-En este punto, deberías tener todo configurado:
-Tienes un monedero instalado,
-ese monedero está conectado a la RSK Mainnet,
-y tienes direcciones dentro de ese monedero.
+At this point, you should have everything set up:
+You have a wallet installed,
+that wallet is connected to the RSK Mainnet,
+and you have addresses inside that wallet.
 
-Ya puedes comprobar que puedes utilizar tu monedero para firmar mensajes.
+You're ready to verify that you can use your wallet to sign messages!
 
-### Ver el historial de transacciones
+### View transaction history
 
-En MetaMask, puedes consultar el historial de transacciones de una dirección concreta
-seleccionando la pestaña "Actividad" en la pantalla principal.
+In MetaMask, you can view your transaction history for a particular address
+by selecting the "Activity" tab in the main screen.
 
-> "Vista ampliada": \`chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html#\`\\`
+> "Expanded view": `chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html#`
 
 ![](/img/developers/verify-address-ownership/rif-identity-metamask-transaction-history.png)
 
-Si su ficha de actividad está vacía, como la de arriba,
-significa que hay cero transacciones en esta dirección.
-Copiemos la dirección haciendo clic en ella.
-Se encuentra cerca de la parte superior, empieza por `0x`,
-y debería estar bajo una etiqueta similar a "Cuenta 1".
+If your activity tab is empty, like the one above,
+it means that there are zero transactions at this address.
+Let's copy the address by clicking on it.
+It is located near the top, begins with `0x`,
+and should be under a label similar to "Account 1".
 
-### Visitar el explorador de bloques
+### Visit block explorer
 
-Comprobemos la dirección que acaba de copiar
-en el explorador de bloques de Rootstock.
+Let's check the address that you've just copied
+on the Rootstock block explorer.
 
-Visite `explorer.rsk.co/dirección/${YOUR_ADDRESS}`.
-Sustituya `${YOUR_ADDRESS}` por la dirección copiada anteriormente de MetaMask.
-Por ejemplo, si has copiado `0xdfc0e6361fd1846a223e2d7834a5ebd441a16dd4`,
-la URL será `https://explorer.rsk.co/address/0xdfc0e6361fd1846a223e2d7834a5ebd441a16dd4`.
+Visit `explorer.rsk.co/address/${YOUR_ADDRESS}`.
+Replace `${YOUR_ADDRESS}` with the address copied from MetaMask earlier.
+For example, if you copied `0xdfc0e6361fd1846a223e2d7834a5ebd441a16dd4`,
+the URL will be `https://explorer.rsk.co/address/0xdfc0e6361fd1846a223e2d7834a5ebd441a16dd4`
 
 ![](/img/developers/verify-address-ownership/rif-identity-metamask-block-explorer-address-not-found.png)
 
-Es posible que aparezca el mensaje "No encontrado".
-Esto no significa necesariamente que la cuenta no exista.
-Significa que simplemente no hay transacciones en la cadena de bloques en esta dirección.
+Here you may see "Not Found".
+This does not necessarily mean that the account does not exist.
+Instead, it means that there simply are no transactions on the blockchain at this address.
 
-### Visite el Gestor de identidades RIF
+### Visit RIF Identity Manager
 
-Hasta ahora, no muy bien, ¿verdad?
-... Nada de lo que hemos visto hasta ahora le asegura
-que efectivamente controla esta dirección.
+So far, not so good, right?
+... Nothing we've seen thus far assures you
+that you do indeed control this address.
 
-Aquí es donde entra en juego el Gestor de Identidades de RIF.
-Esta DApp permite verificar si controlamos esta dirección.
-Lo hará firmando un mensaje que **no** es una transacción de blockchain.
+This is where the RIF Identity Manager comes in!
+This DApp allows you to verify whether we control this address.
+You'll do this by signing a message that is **not** a blockchain transaction.
 
-Visite [identity.rifos.org](https://identity.rifos.org/).
+Visit [identity.rifos.org](https://identity.rifos.org/).
 
 ![](/img/developers/verify-address-ownership/rif-identity-metamask-visit.png)
 
-Haga clic en "Conectar su cartera".
+Click on "Connect your Wallet"
 
 ![](/img/developers/verify-address-ownership/rif-identity-metamask-connect-wallet.png)
 
-Seleccione "Metamáscara".
+Select "MetaMask"
 
-> Ten en cuenta que si tienes varias extensiones de navegador Web3 instaladas,
-> deshabilítalas todas excepto una.
-> Si no, esto confunde a la mayoría de las DApps incluyendo RIF Identity Manager,
-> y puede que no veas MetaMask aquí como resultado.
-> Consulta la sección "antes de empezar" para más detalles.
+> Note that if you have multiple Web3 browser extensions installed,
+> disable all of them except for one.
+> If not, this confuses most DApps including RIF Identity Manager,
+> and you may not see MetaMask here as a result.
+> See the "before you begin" section for details.
 
-### Permiso de conexión al sitio MetaMask
+### MetaMask site connection permission
 
-Aparecerá una ventana emergente de MetaMask,
-, que básicamente le pregunta si confía en el Gestor de identidades de RIF.
+You will be presented with a popup from MetaMask,
+which essentially is asking you whether you trust RIF Identity Manager.
 
 ![](/img/developers/verify-address-ownership/rif-identity-metamask-connect-site-permission.png)
 
-Haga clic en "Siguiente".
-Esto permite MetaMask para interactuar con RIF Identity Manager
+Click "Next".
+This allows MetaMask to interact with RIF Identity Manager
 
-MetaMask mostrará entonces otra ventana emergente,
-preguntándote si quieres permitir que el Gestor de identidades de RIF
-vea las direcciones de tus cuentas.
+MetaMask will then show another popup,
+asking you whether you want to allow RIF Identity Manager
+to see your account addresses.
 
 ![](/img/developers/verify-address-ownership/rif-identity-metamask-view-addresses-permission.png)
 
-Haz clic en "Conectar".
-Esto permite a MetaMask ver las direcciones de tus cuentas.
+Click "Connect".
+This allows MetaMask to see your account addresses.
 
-### Autenticación de identidad RIF
+### RIF Identity Authentication
 
-Al conceder estos permisos,
-el Administrador de Identidades DApp
-le presenta otra ventana emergente MetaMask.
+Upon granting these permissions,
+the RIF Identity Manager DApp
+presents you with yet another MetaMask popup.
 
 ![](/img/developers/verify-address-ownership/rif-identity-metamask-sign-authentication-text-message.png)
 
-Esta vez, te pide que firmes un mensaje de texto,
-que debería tener un aspecto similar al siguiente:
+This time, it asks to sign a text message,
+which should look similar to the following:
 
 ```text
-¿Está seguro de que desea iniciar sesión en la Bóveda de Datos RIF?
+Are you sure you want to login to the RIF Data Vault?
 URL: https://data-vault.identity.rifos.org
-Código de verificación: ${SOME_RANDOM_VALUE}
+Verification code: ${SOME_RANDOM_VALUE}
 ```
 
-Haga clic en "Firmar".
-Cuando hagas esto, ¡sucederá la **parte crucial**!
+Click "Sign".
+When you do this, the **crucial part** happens!
 
-- MetaMask utiliza la **clave privada** correspondiente a la dirección
-  para firmar ese mensaje.
-- El mensaje firmado se transmite al backend del Gestor de identidades RIF,
-  , que realiza una verificación de firma digital,
-  que utiliza para confirmar si efectivamente ha sido firmado por esta dirección concreta.
-- Dado que se trata de un mensaje de texto sin formato,
-  y no implica añadir una transacción a la blockchain,
-  no es necesario pagar tasas de gas,
-  y, por tanto, su saldo de RBTC puede ser cero.
+- MetaMask uses the **private key** corresponding to the address
+  to sign that message.
+- The signed message is transmitted to RIF Identity Manager's backend,
+  which performs digital signature verification,
+  which it uses to confirm whether it has indeed been signed by this particular address.
+- Since this is a plain text message,
+  and does not involve adding a transaction to the blockchain,
+  no gas fees need to be paid,
+  and therefore your RBTC balance can be zero.
 
-Esto es perfecto para las cuentas recién generadas.
+This is perfect for newly generated accounts!
 
-### Comprobar el salpicadero
+### Check the dashboard
 
-Una vez que haya firmado el mensaje y se haya verificado,
-verá el panel de control del Gestor de identidades de RIF.
+Once you have signed the message and it has been verified,
+you will see the dashboard for the RIF Identity Manager.
 
 ![](/img/developers/verify-address-ownership/rif-identity-metamask-dashboard.png)
 
-Comprueba que el campo "Persona Address" que aparece aquí **coincide**
-con la dirección de tu cuenta en MetaMask.
+Check that the "Persona Address" field that is displayed here **matches**
+the address of your account in MetaMask.
 
 ![](/img/developers/verify-address-ownership/rif-identity-metamask-dashboard-persona-address.png)
 
-Eso es todo: ahora puede estar seguro de que controla esta dirección en la red principal de Rootstock.
+That's all - now you can be confident that you do control this address on the Rootstock Mainnet!
 
-## Recursos
+## Resources
 
-- [Verificar contratos inteligentes con SolidityScan](https://blog.rootstock.io/noticia/rootstock-guide-to-verifying-smart-contracts-with-solidityscan/)
-- [Herramientas de desarrollo](/dev-tools/)
-- [Verificación de contratos inteligentes mediante el complemento de verificación Hardhat para Rootstock](/developers/smart-contracts/verify-smart-contracts/)
+- [Verify Smart Contracts with SolidityScan](https://blog.rootstock.io/noticia/rootstock-guide-to-verifying-smart-contracts-with-solidityscan/)
+- [Developer Tools](/dev-tools/)
+- [Verify Smart Contracts using Hardhat Verify Plugin for Rootstock](/developers/smart-contracts/verify-smart-contracts/)

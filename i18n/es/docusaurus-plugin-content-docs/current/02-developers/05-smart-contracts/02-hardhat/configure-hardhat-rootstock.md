@@ -1,57 +1,57 @@
 ---
-sidebar_label: Configurar Hardhat para Rootstock
+sidebar_label: Configure Hardhat for Rootstock
 sidebar_position: 102
-title: Configurar Hardhat para Rootstock
-description: Aprenda a configurar su proyecto Hardhat para su desarrollo en la red de pruebas y la red principal de Rootstock.
+title: Configure Hardhat for Rootstock
+description: Learn how to configure your Hardhat project for development on Rootstock testnet and mainnet
 tags:
-  - guías
-  - desarrolladores
-  - contratos inteligentes
+  - guides
+  - developers
+  - smart contracts
   - rsk
-  - portainjertos
-  - casco
+  - rootstock
+  - hardhat
   - dApps
-  - éteres
+  - ethers
 ---
 
-## Requisitos previos
+## Prerequisites
 
-1. Cuentas/direcciones compatibles con Rootstock.
+1. Rootstock-compatible accounts/address.
 
-- Puede utilizar cuentas existentes o crear cuentas nuevas. Véase [Direcciones basadas en cuentas](/concepts/account-based-addresses/).
+- You can use existing accounts or create new ones. See [Account Based Addresses](/concepts/account-based-addresses/).
 
-2. Cartera
+2. Wallet
 
-- Configure un [monedero Metamask](/dev-tools/wallets/metamask/) y obtenga una [clave privada](/developers/blockchain-essentials/browser#private-keys-and-public-keys).
+- Set up a [Metamask wallet](/dev-tools/wallets/metamask/) and get a [private key](/developers/blockchain-essentials/browser#private-keys-and-public-keys).
 
-## Primeros pasos
+## Getting Started
 
-### Paso 1: Configurar el entorno del casco
+### Step 1: Set up Your Hardhat Environment
 
-- Instale dotenv
-  Para gestionar las variables de entorno, instale `dotenv` utilizando el siguiente comando:
+- Install dotenv
+  To manage environment variables, install `dotenv` using the following command:
 
 ```shell
   npm install dotenv
 ```
 
-- Crear un archivo \\`.env
-  - En la raíz del proyecto `rootstock-quick-start-guide`, crea un archivo `.env` y añade tus claves privadas (no compartas este archivo):
+- Create a `.env` file
+  - In the `rootstock-quick-start-guide` project root, create a `.env` file and add your private keys (do not share this file):
 
 ```shell
-  ROOTSTOCK_MAINNET_PRIVATE_KEY="tu_clave_privada_mainnet"
-  ROOTSTOCK_TESTNET_PRIVATE_KEY="tu_clave_privada_testnet"
+  ROOTSTOCK_MAINNET_PRIVATE_KEY="your_mainnet_private_key"
+  ROOTSTOCK_TESTNET_PRIVATE_KEY="your_testnet_private_key"
 ```
 
 :::info[Note]
-Dependiendo de la red que desee, el uso de una clave privada Testnet y Mainnet es opcional, ya que no es necesario que tenga claves privadas separadas en su variable de entorno.
+Depending on your desired network, using a Testnet and Mainnet private key is optional, as you're not required to have separate private keys in your environment variable.
 :::
 
-### Paso 2: Configurar claves privadas
+### Step 2: Configure Private Keys
 
-Para configurar tus claves privadas `rskMainnet` y `rskTestnet`, necesitarás actualizar tu archivo `hardhat.config.js` en el directorio raíz con tus claves privadas.
+To configure your `rskMainnet` and `rskTestnet` private keys, you'll need to update your `hardhat.config.js` file in the root directory with your private keys.
 
-- Copie el siguiente fragmento de código y reemplace el código existente en su archivo `hardhat.config.js`. Ver [archivo diff](https://github.com/rsksmart/rootstock-quick-start-guide/blob/d018514628c4888cdba8bcdcf307cc5a2077e496/hardhat.config.js#L1) para el código inicial.
+- Copy the code snippet below and replace the existing code in your `hardhat.config.js` file. See [diff file](https://github.com/rsksmart/rootstock-quick-start-guide/blob/d018514628c4888cdba8bcdcf307cc5a2077e496/hardhat.config.js#L1) for initial code.
 
 ```js
   require("@nomiclabs/hardhat-ethers");
@@ -79,11 +79,11 @@ Para configurar tus claves privadas `rskMainnet` y `rskTestnet`, necesitarás ac
 
 > See how to [Get an API Key from the RPC API](/developers/rpc-api/rootstock/setup/)
 
-> Sustituye `"tu_clave_privada_mainnet"` y `"tu_clave_privada_testnet"` por tus claves privadas. Para obtener información sobre cómo recuperar sus claves privadas, consulte [Cómo exportar la clave privada de una cuenta](https://support.metamask.io/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key).
+> Replace `"your_mainnet_private_key"` and `"your_testnet_private_key"` with your private keys. For information on how to retrieve your private keys, see [How to export an account's private key](https://support.metamask.io/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key).
 
-### Paso 3: Financiar sus cuentas
+### Step 3: Fund Your Accounts
 
 - Mainnet
-  - Necesitarás RBTC, que puedes obtener de un intercambio. Consulte [Obtener RBTC mediante intercambios](https://rootstock.io/rbtc/).
+  - You'll need RBTC, which you can obtain from an exchange. See [Get RBTC using Exchanges](https://rootstock.io/rbtc/).
 - Testnet
   - You can get tRBTC from the [Rootstock Faucet](https://faucet.rootstock.io/). Additional faucet options include; [Thirdweb](https://thirdweb.com/rootstock-testnet) and [Blast](https://blastapi.io/faucets/rootstock-testnet) Faucets.

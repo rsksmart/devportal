@@ -1,24 +1,24 @@
 ---
-sidebar_label: Configurar nodo usando Java
+sidebar_label: Setup node using Java
 sidebar_position: 100
-title: Configurar nodo usando Java
+title: Setup node using Java
 tags:
   - java
-  - instalar
+  - install
   - rootstock
   - rskj
-  - nodo
-  - cómo
-  - red
-  - requisitos
-  - red principal
-  - tarro
-description: Instalar RSKj usando Java.
+  - node
+  - how-to
+  - network
+  - requirements
+  - mainnet
+  - jar
+description: Install RSKj using Java.
 ---
 
-Para configurar un nodo Rootstock usando Java, necesita:
+To setup a Rootstock node using Java, you need to:
 
-- Asegúrese de que su sistema cumpla con los [requisitos mínimos](/node-operators/setup/requirements/) para instalar el nodo Rootstock.
+- Ensure your system meets the [minimum requirements](/node-operators/setup/requirements/) for installing the Rootstock node.
 - Install [Java 17 JDK](https://www.java.com/download/).
 
 :::warning\[Important]
@@ -27,31 +27,31 @@ Starting with [v6.4.0](/changelog/), the minimum supported Java LTS version is J
 
 :::
 
-:::tip[For Mac M1 / M2 Chips planos plegables) usando software basado en x86]
+:::tip[For Mac M1 / M2 (Apple Chips) using x86 based software]
 
-- Asegúrate de que tienes instalado `Rosetta`. Esto normalmente está preinstalado en las versiones recientes de macOS.
+- Ensure you have `Rosetta` installed. This is typically pre-installed on recent macOS versions.
 - Download an x86 JDK build, such as Azul Zulu 17 (x86), to ensure compatibility with x86 based software.
 
 :::
 
-## Recorrido por vídeo
+## Video walkthrough
 
 <Video url="https://www.youtube-nocookie.com/embed/TxpS6WhxUiU?cc_load_policy=1" thumbnail="/img/thumbnails/install-node-java-thumbnail.png" />
 
-## Instalar el nodo usando un archivo JAR
+## Install the node using a JAR file
 
-### Descargar y configurar
+### Download and Setup
 
-1. **Descarga el JAR**: descarga el Fat JAR o Uber JAR desde [RSKj releases](https://github.com/rsksmart/rskj/releases), o compilarlo [reproducibly](https://github.com/rsksmart/rskj/wiki/Reproducible-Build).
+1. **Download the JAR**: Download the Fat JAR or Uber JAR from [RSKj releases](https://github.com/rsksmart/rskj/releases), or compile it [reproducibly](https://github.com/rsksmart/rskj/wiki/Reproducible-Build).
 
-2. **Crear Directorio**: Crear un directorio para el nodo.
+2. **Create Directory**: Create a directory for the node.
 
 ```jsx
 mkdir rskj-node-jar
 cd ~/rskj-node-jar
 ```
 
-3. **Mueve el JAR**: Mueve o copia el archivo jar recién descargado a tu directorio.
+3. **Move the JAR**: Move or copy the just downloaded jar file to your directory.
 
 ```jsx
 mv ~/Downloads/rskj-core-7.0.0-LOVELL-all.jar SHA256SUMS.asc /Users/{user}/rskj-node-jar/
@@ -65,7 +65,7 @@ mv ~/Downloads/rskj-core-7.0.0-LOVELL-all.jar SHA256SUMS.asc /Users/{user}/rskj-
 2. **Download Config File**: Get `node.conf` from [here](https://github.com/rsksmart/rif-relay/blob/main/docker/node.conf).
 3. **Move Config File**: Move the `node.conf` file to the `config` directory. -->
 
-### Ejecutar el Nodo
+### Run the Node
 
 ````mdx-code-block
 <Tabs>
@@ -87,9 +87,9 @@ mv ~/Downloads/rskj-core-7.0.0-LOVELL-all.jar SHA256SUMS.asc /Users/{user}/rskj-
 Replace `<PATH-TO-THE-RSKJ-JAR>` with the actual path to your JAR file. For example, `C:/RskjCode/rskj-core-7.0.0-LOVELL-all.jar`.
 :::
 
-## Usando Sync de importación
+## Using Import Sync
 
-En lugar de la sincronización predeterminada, puede utilizar la sincronización de importación para importar una base de datos presincronizada desde un origen confiable, que es significativamente más rápido.
+Instead of the default synchronization, you can use import sync to import a pre-synchronized database from a trusted origin, which is significantly faster.
 
 ````mdx-code-block
 <Tabs>
@@ -106,9 +106,9 @@ En lugar de la sincronización predeterminada, puede utilizar la sincronización
 </Tabs>
 ````
 
-### Resolviendo problemas de memoria
+### Resolving memory issues
 
-**¿Problemas de memoria?** Si encuentras errores de memoria y cumples con los [requisitos de hardware mínimos](/node-operators/setup/requirements/), considera usar la bandera `-Xmx4G` para asignar más memoria como se muestra a continuación:
+**Memory Issues?** If you encounter memory errors and meet the [minimum hardware requirements](/node-operators/setup/requirements/), consider using `-Xmx4G` flag to allocate more memory as shown below:
 
 ````mdx-code-block
 <Tabs>
@@ -127,17 +127,17 @@ En lugar de la sincronización predeterminada, puede utilizar la sincronización
 
 :::tip\[Tip]
 
-Reemplazar `<PATH-TO-THE-RSKJ-JAR>` con tu ruta de archivo JAR. Para detalles de configuración, consulta [`database.import`](/node-operators/setup/configuration/reference#databaseimport).
+Replace `<PATH-TO-THE-RSKJ-JAR>` with your JAR file path. For configuration details, see [`database.import` setting](/node-operators/setup/configuration/reference#databaseimport).
 :::
 
-## Compruebe el RPC
+## Check the RPC
 
 :::info\[Info]
 
 After starting the node, if there's no output, this means it's running correctly.
 :::
 
-1. Para confirmar, abre una nueva pestaña de consola (es importante no cerrar esta pestaña o interrumpir el proceso) y probar el servidor RPC del nodo. Solicitud de cURL de ejemplo:
+1. To confirm, open a new console tab (it is important you do not close this tab or interrupt the process) and test the node's RPC server. A sample cURL request:
 
 ````mdx-code-block
 <Tabs>
@@ -154,13 +154,13 @@ After starting the node, if there's no output, this means it's running correctly
 </Tabs>
 ````
 
-Salida:
+Output:
 
 ```shell
 {"jsonrpc":"2.0","id":67,"result":"RskJ/6.6.0/Mac OS X/Java17/SNAPSHOT-95a8f1ab84"}
 ```
 
-2. Para comprobar el número de bloque:
+2. To check the block number:
 
 ````mdx-code-block
 <Tabs>
@@ -184,13 +184,13 @@ Output:
 ```
 
 :::success[Success]
-Ahora, ha configurado con éxito un nodo Rootstock usando el archivo jar.
-La propiedad `result` representa el último bloque sincronizado en hexadecimal.
+Now, you have successfully setup a Rootstock node using the jar file.
+The `result` property represents the latest synced block in hexadecimal.
 :::
 
-## Cambiando redes
+## Switching networks
 
-Para cambiar las redes en el nodo RSKj, utilice los siguientes comandos:
+To change networks on the RSKj node, use the following commands:
 
 - Mainnet
   ```bash

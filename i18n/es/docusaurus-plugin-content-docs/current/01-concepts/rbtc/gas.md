@@ -1,149 +1,149 @@
 ---
-title: "Tarifas de gas RBTC: Optimización de los costes de transacción"
+title: "RBTC Gas Fees: Optimizing Transaction Costs"
 sidebar_label: Gas
 tags:
   - gas
-  - transacciones
+  - transactions
   - rbtc
-  - red principal
+  - mainnet
   - rsk
-  - portainjertos
-  - conversión
+  - rootstock
+  - conversion
   - bitcoin
-  - precio del gas
+  - gas-price
 sidebar_position: 302
 ---
 
-El gas es el precio interno por ejecutar una transacción o contrato.
-Cuando envías tokens, interactúas con un contrato, envías RBTC o haces cualquier otra cosa en la blockchain, debes **pagar por ese cálculo**. Ese pago se calcula como **gas**. En Rootstock, se paga en RBTC.
+Gas is the internal pricing for running a transaction or contract.
+When you send tokens, interact with a contract, send RBTC, or do anything else on the blockchain, you must **pay for that computation**. That payment is calculated as **gas**. In Rootstock, this is paid in RBTC.
 
-## ¿Qué es el gas?
+## What is gas?
 
-Hay cuatro conceptos importantes:
+There are four important concepts:
 
-- \*\*El precio del gas: El coste de la operación.
-- **Límite de gas**: El gas máximo que puede permitirse la operación. Es un límite superior que el usuario establece para evitar perder gas.
-- **Gas total**: El gas que ha consumido la operación. También se denomina **gas utilizado**.
-- \*\*Unidad: El gas se paga en **RBTC**.
+- **Gas price**: The cost of the operation.
+- **Gas limit**: The maximum gas the operation can afford. It's an upper limit the user sets to prevent losing gas.
+- **Total gas**: The gas the operation consumed. Also referred to as **gas used**.
+- **Unit**: Gas is paid in **RBTC**.
 
-Empecemos con una analogía sencilla: Un coche.
+Let's start with a simple analogy: A car.
 
-Para conducir un coche necesitas gasolina. El precio de la gasolina es el dinero que pagas por cada galón. El límite de gasolina es la cantidad máxima de gasolina que aceptas consumir, la gasolina que _cargas_. El total de gasolina es la cantidad que has gastado al final del viaje.
-Puedes calcular el gas total y establecer un límite de gas adecuado para que tu viaje no gaste más de lo previsto.
+To drive a car you need gas. Gas price is the money you pay for each gallon. Gas limit is the max amount of gas you accept to consume, the gas you _charge_. The total gas is the amount you've spent at the end of the trip.
+You can calculate the total gas and set an appropriate gas limit so that your trip does not expend more than expected.
 
-Las transacciones son bastante similares:
+Transactions are quite similar:
 
-El precio del gas es el precio que usted fija para las operaciones. El límite de gas es el precio máximo que va a pagar por la transacción cuando se opere. Entonces, cuando se ejecuta la transacción, el gas total es el precio que finalmente pagas.
+Gas price is the price you set for operations. The gas limit is the maximum price you are going to pay for the transaction when operated. Then, when transaction is executed, the total gas is the price you finally pay.
 
-El gas es la _fee_ cobrada por el minero que mina el bloque que incluye la transacción.
+Gas is the _fee_ collected by the miner who mines the block that includes the transaction.
 
-La tasa resultante es:
+The resulting fee is:
 
 ```
-tarifa = totalGas * precioGas
+fee = totalGas * gasPrice
 ```
 
-## ¿Cómo elijo un precio y un límite de gasolina adecuados?
+## How do I choose an appropriate gas price and limit?
 
-Si quiere gastar menos en una transacción, puede hacerlo reduciendo la cantidad que paga por unidad de gas (precio del gas). Al igual que en Bitcoin, el precio que pagas por cada unidad aumenta o disminuye la **rapidez con la que se minará tu transacción.**
+If you want to spend less on a transaction, you can do so by lowering the amount you pay per unit of gas (gas price). Similar to Bitcoin, the price you pay for each unit increases or decreases how **quickly your transaction will be mined.**
 
-### Precio adecuado del gas
+### Appropriate gas price
 
-El precio del gas cambia con el tiempo. Para elegir un precio del gas adecuado debes tener en cuenta 2 conceptos:
+Gas price changes with time. To choose an appropriate gas price you should consider 2 concepts:
 
-- Qué es el _precio mínimo del gas_ y cómo cambia
-- Cómo conseguir ese _precio mínimo de la gasolina_
+- What is _minimum gas price_ and how it changes
+- How to get that _minimum gas price_
 
-### Precio mínimo del gas
+### Minimum Gas Price
 
-El `minimumGasPrice` lo escriben los mineros en la cabecera del bloque y establece el precio mínimo del gas que debe tener una transacción para ser incluida en ese bloque. Puede cambiar con el tiempo, hasta un 1% del `minimumGasPrice` del bloque anterior. El precio mínimo del gas del último bloque puede obtenerse utilizando este método Web3:
+The `minimumGasPrice` is written in the block header by miners and establishes the minimum gas price a transaction should have in order to be included in that block. It can change with time, by up to 1% of the `minimumGasPrice` of the previous block. The latest block's minimum gas price can be obtained using this Web3 method:
 
-Los medios por los que los mineros negocian el precio mínimo del gas se describen en [RSKIP09](https://github.com/rsksmart/RSKIPs/blob/master/IPs/RSKIP09.md).
+The means by which minimum gas price is negotiated by miners is described in [RSKIP09](https://github.com/rsksmart/RSKIPs/blob/master/IPs/RSKIP09.md).
 
 ```javascript
-web3.eth.getBlock('latest').precioMinimoGas
+web3.eth.getBlock('latest').minimumGasPrice
 ```
 
-:::tip[Gas Límite]
+:::tip[Gas Limit]
 
-El límite de gas de transacción por bloque es de 6.800.000 unidades.
+The transaction gas limit per block is 6,800,000 units.
 
 :::
 
-He aquí algunos enfoques prácticos de este tema:
+Here are some practical approaches to this subject:
 
-1. Enfoque optimista (no recomendado):
-  Puede establecer `minimumGasPrice` como parámetro del precio del gas para la transacción **pero si el precio mínimo del gas está siendo negociado y sube, su transacción podría ser rechazada**.
+1. Optimistic approach (not recommended):
+  You can set `minimumGasPrice` as gas price parameter for the transaction **but if minimum gas price is under negotiation and it gets higher, your transaction could be rejected**.
 
-2. Enfoque sensato:
-  En lugar de utilizar "precio mínimo del gas" tal y como está, puede [añadir un 10% a su valor](#cómo-cambia-el-precio-del-gas-con-el-tiempo).
+2. Sensible approach:
+  Instead of using `minimumGasPrice` as it is, you may [add 10% to its value](#how-does-gas-price-change-over-time).
 
-3. Enfoque de la media de la red:
-  Puedes obtener el precio medio del gas que se está pagando en la red:
+3. Network average approach:
+  You can obtain the average gas price that is being paid in the network:
 
 ```javascript
-web3.eth.preciogas()
+web3.eth.gasPrice()
 ```
 
-Aunque este valor sea mayor o igual que el precio mínimo del gas. (`gasPrice >= minimumGasPrice`), se recomienda añadir un pequeño porcentaje para aumentar la prioridad de su transacción.
+Even though this value is greater than or equal to minimum gas price. (`gasPrice >= minimumGasPrice`), it is recommended to add a small percentage to increase the priority of your transaction.
 
-### Límite de gas adecuado
+### Appropriate gas limit
 
-El gas total puede estimarse utilizando este método Web3:
+Total gas can be estimated using this Web3 method:
 
 ```javascript
 myContract.methods.myMethod(param1, param2, ...).estimateGas(options, callback)
 ```
 
-> Visite [aquí](https://web3js.readthedocs.io/en/1.0/web3-eth-contract.html#methods-mymethod-estimategas) para consultar la documentación de Web3.
+> Go [here](https://web3js.readthedocs.io/en/1.0/web3-eth-contract.html#methods-mymethod-estimategas) for Web3 documentation.
 
-### Más información
+### More information
 
-#### ¿Cómo varía el precio del gas con el tiempo?
+#### How does gas price change over time?
 
-Cada minero puede votar para aumentar o disminuir el "precio mínimo del gas" hasta un 1%. Esto permite a los mineros aumentar el "precio mínimo del gas" un 100% en aproximadamente 50 minutos, suponiendo un bloque cada 30 segundos.
-Los nodos que reenvían transacciones podrían comprobar que el **precio del gas anunciado en una transacción es al menos un 10% superior al mínimo**. Esto asegura a la transacción una vida útil de 10 bloques, suponiendo un "precio mínimo del gas" en bloque en constante aumento.
-El precio mínimo del gas negociado se describe en [RSKIP09](https://github.com/rsksmart/RSKIPs/blob/master/IPs/RSKIP09.md).
+Each miner can vote to increase or decrease the `minimumGasPrice` up to 1%. This allows miners to increase the `minimumGasPrice` 100% in approximately 50 minutes, assuming a block every 30 seconds.
+Nodes that forward transactions could check that the advertised **gas price in a transaction is at least 10% higher than the minimum**. This assures the transaction a lifetime of 10 blocks assuming a constantly increasing block `minimumGasPrice`.
+Negotiated minimum gas price is described in [RSKIP09](https://github.com/rsksmart/RSKIPs/blob/master/IPs/RSKIP09.md).
 
-## ¿Qué ocurre si falla mi transacción?
+## What happen if my transaction fails?
 
-\*\*Incluso si falla, los mineros deben validar y ejecutar su transacción (solicitud de cálculo) y, por tanto, usted debe pagar por ese cálculo igual que pagaría por una transacción exitosa.
+**You are paying for the computation, regardless of whether your transaction succeeds or fails.** Even if it fails, the miners must validate and execute your transaction (computation request) and therefore you must pay for that computation just like you would pay for a successful transaction.
 
-## ¿Qué pasa si me quedo sin gasolina?
+## What happen if I run out of gas?
 
-Si una transacción alcanza el límite de gas, se revertirán todos los cambios pero **se seguirá pagando la tasa**.
+If a transaction reaches the gas limit, all changes will be reverted but **the fee is still paid**.
 
-## El gas en los contratos inteligentes
+## Gas in smart contracts
 
-Cuando compilas contratos inteligentes (comúnmente escritos en [Solidity](https://solidity.readthedocs.io/en/latest/)), se convierten en códigos de operación, conocidos como `opcodes`.
-Estos códigos (opcodes) se muestran con nombres mnemotécnicos como `ADD` (suma) o `MUL` (multiplicación). [Aquí](https://github.com/rsksmart/rskj/blob/master/rskj-core/src/main/java/org/ethereum/vm/GasCost.java) puedes ver el precio de cada opcode.
-Como puedes adivinar, es importante escribir contratos inteligentes utilizando la mejor combinación (más barata) de opcodes.
-Ejemplos de buenas prácticas para escribir contratos inteligentes:
+When you compile smart contracts (commonly written in [Solidity](https://solidity.readthedocs.io/en/latest/)), they get converted to operation codes, known as 'opcodes'.
+These codes (opcodes) are shown with mnemotechnic names as `ADD` (addition) or `MUL `(multiplication). [Here](https://github.com/rsksmart/rskj/blob/master/rskj-core/src/main/java/org/ethereum/vm/GasCost.java) you can see the price of each opcode.
+As you can guess, it is important to write smart contracts using the best (cheaper) combination of opcodes.
+Examples of good practices to write smart contracts:
 
-### Evite declarar variables como \\`var
+### Avoid declaring variables as `var`
 
 ```javascript
 function payBonus() {
-    for (uint i = 0; i < empleados.longitud; i++) {
-      dirección empleado = empleados[i];
-      uint bonus = calculateBonus(empleado);
-      empleado.enviar(bonus);
+    for (uint i = 0; i < employees.length; i++) {
+      address employee = employees[i];
+      uint bonus = calculateBonus(employee);
+      employee.send(bonus);
     }
   }
 ```
 
-En el código anterior, el problema es que si el tipo de `i` se declarara como `var`, se tomaría como `uint8` porque éste es el tipo más pequeño que se requiere para contener el valor 0. Si el array tiene más de 255 elementos, el bucle no terminará con éxito, resultando en gas desperdiciado. Es mejor usar el tipo explícito `uint` para no tener sorpresas y tener límites más altos. **Evita declarar variables usando `var` si es posible.**
+In the code above, the problem is that if the type of `i` was declared as `var`, it would be taken as `uint8` because this is the smallest type that is required to hold the value 0. If the array has more than 255 elements, the loop will not finish successfully, resulting in wasted gas. You'd better use the explicit type `uint` for no surprises and higher limits. **Avoid declaring variables using `var` if possible.**
 
-### Bucle de matrices grandes
+### Looping large arrays
 
 ```javascript
 function soDifficultLooper() {
     for (uint i = 0; i < largeArray.length; i++) {
-      address persona = largeArray[i];
-      uint pago = difficultOperation(largeArray);
-      persona.enviar(pago);
+      address person = largeArray[i];
+      uint payment = difficultOperation(largeArray);
+      person.send(payment);
     }
   }
 ```
 
-Cada llamada a una función que modifica el estado del contrato inteligente tiene un coste de gas. Un bucle podría gastar mucho gas, lo que podría alcanzar fácilmente el límite de gas de una transacción o bloque. Si una transacción alcanza el límite de gas, se revertirán todos los cambios pero se seguirá pagando la tarifa. **Ten en cuenta los costes variables de gas cuando utilices bucles.**
+Every function call that modifies state of the smart contract has a gas cost. A loop could spend a lot of gas, which could easily reach the gas limit of a transaction or block. If a transaction reaches the gas limit, all changes will be reverted but the fee is still paid. **Be aware of variable gas costs when using loops.**

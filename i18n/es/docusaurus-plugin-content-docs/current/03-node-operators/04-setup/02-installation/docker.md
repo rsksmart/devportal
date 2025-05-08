@@ -1,32 +1,32 @@
 ---
-sidebar_label: Configurar nodo en Docker
+sidebar_label: Setup node on Docker
 sidebar_position: 200
-title: Configurar nodo en Docker
+title: Setup node on Docker
 tags:
-  - acoplador
+  - docker
   - rootstock
-  - escritorio
+  - desktop
   - macOS
   - rskj
-  - ventanas
-  - instalar
+  - windows
+  - install
   - rsk
-  - nodo
-  - cómo
-  - red
-  - requisitos
-  - red principal
+  - node
+  - how-to
+  - network
+  - requirements
+  - mainnet
   - testnet
   - regtest
-description: Instalar RSKj usando Docker.
+description: Install RSKj using Docker.
 ---
 
 Before installing Docker, ensure your system meets the [minimum requirements](/node-operators/setup/requirements/) before installing the Rootstock node (RSKj).
 If you already have docker installed. See how to [Install the RSKj node using Docker](#install-rskj-using-docker).
 
-## Instalar cliente Docker Desktop
+## Install Docker Desktop Client
 
-[Docker Desktop](https://www.docker.com/products/docker-desktop/) proporciona una forma fácil y rápida para ejecutar aplicaciones contenedoras en varios sistemas operativos.
+[Docker Desktop](https://www.docker.com/products/docker-desktop/) provides an easy and fast way for running containerized applications on various operating systems.
 
 ```mdx-code-block
 <Tabs>
@@ -42,40 +42,40 @@ If you already have docker installed. See how to [Install the RSKj node using Do
 </Tabs>
 ```
 
-:::tip[For Mac M1 / M2 Chips planos plegables) usando software basado en x86]
+:::tip[For Mac M1 / M2 (Apple Chips) using x86 based software]
 
-- Asegúrate de que tienes instalado `Rosetta`. Esto normalmente está preinstalado en las versiones recientes de macOS.
+- Ensure you have `Rosetta` installed. This is typically pre-installed on recent macOS versions.
 - Download an x86 JDK build, such as Azul Zulu 17 (x86), to ensure compatibility with x86 based software.
 
 :::
 
-Asegúrese de que docker se está ejecutando ejecutando el siguiente comando - debería ejecutarse sin errores.
+Ensure that docker is running by running the following command - it should run without any errors.
 
 ```shell
-acopladores ps
+docker ps
 ```
 
-Deberías ver la siguiente respuesta:
+You should see the following response:
 
 ```text
-CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 ```
 
-Más información sobre Docker install [here](https://docs.docker.com/install/).
+More information about Docker install [here](https://docs.docker.com/install/).
 
-## Instalar RSKj usando Docker
+## Install RSKj Using Docker
 
-Para instalar un nodo RSKj usando Docker, visita [Docker Hub](https://hub.docker.com/r/rsksmart/rskj) para obtener instrucciones de instalación o usa el [Reproducible Build](/node-operators/setup/reproducible-build).
+To install a RSKj node using Docker, visit the [Docker Hub](https://hub.docker.com/r/rsksmart/rskj) for installation instructions or use the [Reproducible Build](/node-operators/setup/reproducible-build).
 
 ## Logging in RSKj
 
-Por defecto, los registros se dirigen exclusivamente a un solo archivo. Sin embargo, si desea habilitar la salida de registro a STDOUT, puede especificar esta propiedad del sistema mediante la línea de comandos usando `-Dlogging. tdout=<LOG_LEVEL>`. Ese comando debería verse algo así:
+By default, logs are exclusively directed to a single file. However, if you wish to enable the logging output to STDOUT, you can specify this system property via the command line using `-Dlogging.stdout=<LOG_LEVEL>`. That command should look something like this:
 
 ```java
 java -Dlogging.stdout=INFO -cp <classpath> co.rsk.Start --reset --<RSK network>
 ```
 
-En cuanto a los contenedores RSKj Docker, los registros se imprimen en STDOUT de forma predeterminada, haciendo más fácil ver los registros mientras el contenedor se está ejecutando. Para modificar esto, puede ejecutar el contenedor Docker con la variable de entorno configurada a un LOG_LEVEL diferente (por ejemplo, nivel de registro DEBUG). Ese comando debe seguir esta estructura:
+Regarding the RSKj Docker containers, logs are printed to STDOUT by default, making it easy to view the logs while the container is running. In order to modify this, you can run the Docker container with the environment variable set to a different LOG_LEVEL (For example, DEBUG log level). That command should follow this structure:
 
 ```bash
 docker run -e RSKJ_LOG_PROPS=DEBUG <container-name>

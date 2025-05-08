@@ -1,102 +1,102 @@
 ---
-sidebar_label: Uso del patrón en el navegador
+sidebar_label: Using Rootstock in Browser
 sidebar_position: 300
-title: Uso de Rootstock con una extensión del navegador
-description: Aprenda a interactuar con Rootstock en su navegador web, a consultar las transacciones de Rootstock y a desarrollar e implementar su primer contrato inteligente en la red Rootstock.
+title: Using Rootstock with a Browser Extension
+description: Learn how to interact with Rootstock in your web browser, how to look at Rootstock transactions, develop and deploy your very first smart contract to the Rootstock network.
 tags:
-  - arranques rápidos
+  - quick-starts
   - rsk
-  - portainjertos
+  - rootstock
   - blockchain
-  - monederos de navegador
-  - desarrolladores
-  - principiantes
+  - browser wallets
+  - developers
+  - beginners
 ---
 
-Como Rootstock es una cadena de bloques con capacidades de contrato inteligente, es posible crear aplicaciones descentralizadas (dApps) con ella.
-La mayoría de las dApps son aplicaciones web a las que se accede con un navegador de Internet normal, como Chrome.
-Sin embargo, las interacciones blockchain requieren algún software adicional, que viene en forma de extensiones del navegador.
-Estas extensiones de navegador insertan un objeto **web3 provider**, con las partes Javascript de la aplicación web utilizadas para interactuar con la blockchain, formando parte integral de la arquitectura de la dApp.
+As Rootstock is a blockchain with smart contract capabilities, it is possible to build decentralised applications (dApps) with it.
+Most dApps are web applications that you access with a regular Internet browser, such as Chrome.
+However, the blockchain interactions require some additional software, which comes in the form of browser extensions.
+These browser extensions insert a **web3 provider** object, with the Javascript parts of the web application used to interact with the blockchain, forming an integral part of dApp architecture.
 
-> Ten en cuenta que estas extensiones de navegador almacenan tus claves privadas,
-> y las utilizan para firmar transacciones. Así que manténgalas seguras.
+> Note that these browser extensions store your private keys,
+> and use them to sign transactions. So keep them secure.
 
-:::note[Rootstock Carteras]
-Hay varias extensiones de navegador que puede utilizar para interactuar con la blockchain Rootstock, esto incluye: [MetaMask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn). Para obtener una lista completa de monederos, consulte la sección [Dev Tools](/dev-tools/).
+:::note[Rootstock Wallets]
+There are several browser extensions that you can use to interact with the Rootstock blockchain, this includes: [MetaMask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn). For a full list of wallets, see the [Dev Tools](/dev-tools/) section.
 :::
 
-Dado que este es un comienzo rápido, no vamos a ir a través de todos ellos - sólo MetaMask.
+Since this is a quick start, we will not go through all of them - just MetaMask.
 
-Hay algunas complejidades ocultas que hemos pasado por alto en el contenido anterior para que
-pueda configurarse y ponerse en marcha lo antes posible.
-Si quieres profundizar más, aquí tienes algunos recursos que te recomendamos.
+There are some hidden complexity that we've glossed over in the content above so
+you can set up and get running as quickly as possible.
+If you would like to delve deeper, here are some resources that we recommend.
 
-## Instalar Metamask
+## Install Metamask
 
-MetaMask es la extensión de navegador más popular con capacidades de proveedor web3.
-Permite a los usuarios comprar, almacenar, enviar e intercambiar tokens.
+MetaMask is the most popular browser extension with web3 provider capabilities.
+It enables users to buy, store, send and swap tokens.
 
-Metamask también le proporciona un depósito de claves, un inicio de sesión seguro, un monedero de tokens y un intercambio de tokens: todo lo que necesita para gestionar sus activos digitales.
+Metamask also equips you with a key vault, secure login, token wallet, and token exchange—everything you need to manage your digital assets.
 
-Abra el navegador Chrome e instale la extensión desde [Chrome store](https://chrome.google.com/webstore/detail/nkbihfbeogaeaoehlefnkodbefgpgknn).
+Open up Chrome browser, and install the extension from the [Chrome store](https://chrome.google.com/webstore/detail/nkbihfbeogaeaoehlefnkodbefgpgknn).
 
-Este breve vídeo muestra cómo descargar e instalar MetaMask en tu navegador, y también cómo crear una cartera para almacenar tus criptoactivos.
+This short video demonstrates how to download and install MetaMask on your browser, and also how to create a wallet to store your crypto assets.
 
 <div class="video-container">
   <iframe width="949" height="534" src="https://www.youtube.com/embed/VlyqXD1TjJk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## Criptografía
+## Cryptography
 
-## Claves privadas y claves públicas
+## Private Keys and Public Keys
 
-En el software de monedero, generalmente se ven "cuentas" representadas por direcciones en la red blockchain.
-En el caso de Rootstock, es `0x` seguido de una serie de caracteres hexadecimales, por ejemplo, `0xdfc0e6361fd1846a223e2d7834a5ebd441a16dd4`.
-Hay cierta complejidad oculta detrás de esto, relacionada con la criptografía, que es necesaria para asegurar la cuenta y todas las transacciones de blockchain que realiza.
+In wallet software, you generally see “accounts” represented by addresses on the blockchain network.
+In the case of Rootstock, this is `0x` followed by a series of hexadecimal characters, for example, `0xdfc0e6361fd1846a223e2d7834a5ebd441a16dd4`.
+There is some hidden complexity behind that, to do with cryptography, which is necessary to secure the account, and all the blockchain transactions it makes.
 
-- Empiezas con una clave privada, que es esencialmente un número extremadamente grande, y debe ser generado aleatoriamente.
-  Debes mantener la clave privada en secreto, porque es la que se utiliza para firmar las transacciones.
-- A partir de la clave privada se genera una clave pública, que también es un número muy grande.
-  No es necesario mantenerla en secreto, porque otros miembros de la red blockchain la utilizan para verificar las transacciones.
-- Una dirección se genera a partir de la clave pública, y es la cadena hexadecimal que ves en el software de tu monedero.
+- You start off with a private key, which is essentially an extremely large number, and should be randomly generated.
+  You should keep the private key secret, because that is what is used to sign transactions.
+- A public key is generated from the private key, and this is also a very large number.
+  This does not need to be kept secret, because others in the blockchain network use it to verify transactions.
+- An address is generated from the public key, and is the hexadecimal string that you see in your wallet software.
 
-### Frases semilla
+### Seed Phrases
 
-Cuando abras MetaMask por primera vez después de instalarlo, se te pedirá que lo inicialices utilizando una frase semilla.
-Si ya lo has hecho antes, puedes utilizar tu propia frase semilla. Si no, ¡vamos a generar una nueva!
+When you open up MetaMask for the first time after installing it, you will be asked to initialise it using a seed phrase.
+If you have done this before, you can use your own seed phrase. Otherwise, let’s generate a new one!
 
-> Para generar una nueva frase semilla, deberá crear un nuevo monedero.
-> Consulte los pasos anteriores para crear un nuevo monedero.
+> To generate a new seed phrase, you will need to create a new wallet.
+> See the above steps to create a new wallet.
 
-La mayoría de los usuarios de blockchain manejan una o más cuentas, y puede ser bastante difícil recordar el valor de las claves criptográficas - esos números tan grandes - ¡necesitarás una memoria sobrehumana!
-La **frase semilla** es actualmente el método más popular utilizado para generar, almacenar, recordar y recuperar claves para criptocarteras, y es algo accesible para el usuario medio.
+Most blockchain users operate one or more accounts, and it can be quite difficult to remember the value of cryptographic keys - those very large numbers - you’ll need superhuman memory!
+The **seed phrase** is presently the most popular method used to generate, store, remember, and recover keys for crypto wallets, and is something that is approachable for the average user.
 
-También es el método por defecto utilizado por MetaMask (y muchos otros monederos).
-En pocas palabras, toma una secuencia generada aleatoriamente de palabras del diccionario.
-El monedero utiliza esta secuencia de palabras para generar no uno, sino múltiples conjuntos de claves criptográficas.
-Así es como MetaMask es capaz de soportar múltiples cuentas utilizando una única frase semilla.
+It also is the default method used by MetaMask (and many other wallets).
+In a nutshell, it takes a randomly generated sequence of dictionary words.
+The wallet then uses this sequence of words to generate not one, but multiple sets of cryptographic keys.
+This is how MetaMask is able to support multiple accounts using a single seed phrase.
 
-Este proceso se describe detalladamente en la norma técnica BIP-44.
-Esto garantiza que el funcionamiento de las frases semilla sea el mismo entre múltiples criptocarteras, lo que permite que la misma frase sea portátil.
+This process is described in detail in the BIP-44 technical standard.
+This ensures that the way that seed phrases work is the same between multiple crypto wallets, enabling the same phrase to be portable.
 
-## Configurar una red personalizada para Rootstock Testnet
+## Configure custom network for Rootstock Testnet
 
-MetaMask viene preconfigurado con conexiones para redes Ethereum.
-Vamos a utilizar su función de redes personalizadas para añadir una conexión a una red Rootstock.
+MetaMask comes pre-configured with connections for Ethereum networks.
+Let’s use its custom networks feature to add a connection to an Rootstock network.
 
 <div class="video-container">
   <iframe width="949" height="534" src="https://www.youtube.com/embed/VyPewQoWhn0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-Después de crear la red personalizada para la Testnet de Rootstock, debería poder interactuar con los contratos inteligentes desplegados en la Testnet de Rootstock.
-También debería ver sus saldos en tRBTC (Testnet RBTC).
-Actualmente es cero, lo que significa que no podemos enviar ninguna transacción a la blockchain, así que vamos a conseguir algunas usando el grifo RBTC.
+After creating the custom network for the Rootstock Testnet, you should be able to interact with smart contracts deployed on the Rootstock Testnet!
+You should also see your balances in tRBTC (Testnet RBTC).
+This is currently zero, which means that we cannot send any transactions to the blockchain, so let’s get some using the RBTC faucet.
 
 <div class="video-container">
   <iframe width="949" height="534" src="https://www.youtube.com/embed/twfK8Rd5hak" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-Ahora debería tener un saldo de tRBTC, ¡y podrá enviar transacciones en la Testnet de Rootstock!
+Now you should have a balance of tRBTC, and you will be able to send transactions on the Rootstock Testnet!
 
 :::info[Additional Faucet Options (Please note these faucets may have daily limits)]
 
@@ -105,33 +105,33 @@ Ahora debería tener un saldo de tRBTC, ¡y podrá enviar transacciones en la Te
 
 :::
 
-## Configurar token personalizado para tRIF
+## Configure Custom Token for tRIF
 
-El Marco de Infraestructura del Rootstock (RIF) incluye múltiples servicios para aplicaciones descentralizadas.
-Estos servicios pueden pagarse utilizando el token RIF.
-Vamos a configurar MetaMask para que conozca el token RIF.
-Utilizaremos tRIF como símbolo del token, ya que estamos en la Testnet de Rootstock.
+The Rootstock Infrastructure Framework (RIF) includes multiple services for decentralised applications.
+These services may be paid for using the RIF token.
+Let’s configure MetaMask to be aware of the RIF token.
+We’ll use tRIF as the token symbol, since we’re on the Rootstock Testnet.
 
 <div class="video-container">
   <iframe width="949" height="534" src="https://www.youtube.com/embed/QCabRPfr2Zs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-Ahora que MetaMask tiene el token RIF configurado, vamos a obtener algunos tokens de prueba utilizando el grifo RIF.
+Now that MetaMask has the RIF token configured, let’s get some test tokens using the RIF faucet.
 
 <div class="video-container">
   <iframe width="949" height="534" src="https://www.youtube.com/embed/ttb8EOTWey8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-Ahora deberías tener un saldo de tRIF, ¡y podrás utilizar los servicios de RIF en la Rootstock Testnet!
+Now you should have a balance of tRIF, and you will be able to use RIF services on the Rootstock Testnet!
 
-### Lecturas complementarias
+### Further Reading
 
-- [Cómo configurar Metamask](/dev-tools/wallets/metamask/)
-- [Direcciones basadas en cuentas en Rootstock](/concepts/account-based-addresses/)
-- [Acerca del token RIF](/concepts/rif-suite/token/)
-- [Acerca de la criptomoneda RBTC](/conceptos/rbtc/)
-- [Acerca del gas](/concepts/rbtc/gas/)
-- [Acerca de los servicios RIF](https://www.rifos.org/)
-- [Sobre BIP-44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki)
-- [Acerca de EIP-20](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md)
-- [Generación de claves asimétricas](https://en.wikipedia.org/wiki/Public-key_cryptography)
+- [How to configure Metamask](/dev-tools/wallets/metamask/)
+- [Account based addresses on Rootstock](/concepts/account-based-addresses/)
+- [About the RIF token](/concepts/rif-suite/token/)
+- [About the RBTC cryptocurrency](/concepts/rbtc/)
+- [About Gas](/concepts/rbtc/gas/)
+- [About RIF Services](https://www.rifos.org/)
+- [About BIP-44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki)
+- [About EIP-20](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md)
+- [Asymmetric Key Generation](https://en.wikipedia.org/wiki/Public-key_cryptography)

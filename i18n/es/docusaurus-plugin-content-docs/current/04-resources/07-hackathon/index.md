@@ -1,14 +1,14 @@
 ---
-sidebar_label: Hackatones
+sidebar_label: Hackathons
 sidebar_position: 7
-title: Recursos de Hackathon y taller
+title: Hackathon and Workshop Resources
 tags:
-  - hackatones
+  - hackathons
   - rsk
-  - taller
-  - recursos
+  - workshop
+  - resources
   - rootstock
-description: Recursos y herramientas de Hackathon
+description: Hackathon resources and tools
 ---
 
 This guide details the necessary hardware and software requirements for developing on the Rootstock blockchain.

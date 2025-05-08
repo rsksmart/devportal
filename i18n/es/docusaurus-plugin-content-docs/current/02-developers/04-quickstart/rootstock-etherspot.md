@@ -1,157 +1,157 @@
 ---
 sidebar_label: AA with Etherspot
 sidebar_position: 101
-title: Abstracción de cuenta usando Etherspot Prime SDK
-description: En esta guía, aprenderás a utilizar el SDK de Etherspot Prime para desplegar una dApp de Abstracción de Cuenta en la red Rootstock. Siguiendo estos pasos, permitirás a tus usuarios interactuar con tu dApp sin gestionar claves privadas directamente.
+title: Account Abstraction using Etherspot Prime SDK
+description: In this guide, you will learn how to use the Etherspot Prime SDK to deploy an Account Abstraction dApp on the Rootstock network. By following these steps, you will empower your users to interact with your dApp without managing private keys directly.
 tags:
   - rsk
-  - portainjertos
-  - desarrolladores
-  - inicios rápidos
+  - rootstock
+  - developers
+  - quick starts
   - etherspot
   - dApps
-  - abstracción de cuentas
+  - account abstraction
 ---
 
-En esta guía, aprenderás a utilizar el SDK de Etherspot Prime para desplegar una dApp de Abstracción de Cuenta en la red Rootstock.
-Siguiendo estos pasos, permitirás a tus usuarios interactuar con tu dApp sin gestionar claves privadas directamente.
+In this guide, you will learn how to use the Etherspot Prime SDK to deploy an Account Abstraction dApp on the Rootstock network.
+By following these steps, you'll empower your users to interact with your dApp without managing private keys directly.
 
-## Requisitos previos
+## Prerequisites
 
-- Asegúrese de que git está instalado
-- Conocimientos básicos de React y JavaScript
-- Node.js y npm (o yarn) instalados en su máquina
-- Un editor de código de su elección (por ejemplo, Visual Studio Code)
-- Familiaridad con el [Wagmi starter kit](https://github.com/rsksmart/rsk-wagmi-starter-kit/tree/aa-sdk)
+- Ensure git is installed
+- Basic understanding of React and JavaScript
+- Node.js and npm (or yarn) installed on your machine
+- A code editor of your choice (e.g., Visual Studio Code)
+- Familiarity with the [Wagmi starter kit](https://github.com/rsksmart/rsk-wagmi-starter-kit/tree/aa-sdk)
 
 :::info[Info]
-_Esta guía asume que ya tienes un [Wagmi starter kit](https://github.com/rsksmart/rsk-wagmi-starter-kit/tree/aa-sdk) configurado._
+_This guide assumes you have a [Wagmi starter kit](https://github.com/rsksmart/rsk-wagmi-starter-kit/tree/aa-sdk) already set up._
 :::
 
-## Comprender la abstracción de cuentas
+## Understanding Account Abstraction
 
-La abstracción consiste en ocultar datos innecesarios sobre un "objeto" para simplificar el sistema y mejorar la eficiencia. Aplicada a la tecnología blockchain de Ethereum, la abstracción de cuentas pretende crear un único tipo de cuenta que incluya solo los aspectos relevantes.
+Abstraction involves hiding unnecessary data about an "object" to simplify the system and improve efficiency. When applied to Ethereum's blockchain technology, Account Abstraction aims to create a single account type that includes only relevant aspects.
 
-Existen dos tipos principales de cuentas de Ethereum: Cuentas de Usuario (EOA) y Contratos. Las cuentas de usuario están diseñadas para particulares y se controlan mediante claves privadas. Estas cuentas, también conocidas como cuentas de propiedad externa (EOA), pueden mantener un saldo en Ether y realizar transacciones con otras EOA utilizando Ether y otros tokens respaldados por el ERC.
+There are two main types of Ethereum accounts: User Accounts (EOA) and Contracts. User Accounts are designed for individuals and are controlled by private keys. These accounts, also known as externally owned accounts (EOA), can hold a balance in Ether and conduct transactions with other EOAs using Ether and other ERC-supported tokens.
 
-Por otro lado, los Contratos están controlados por código y pueden realizar diversas funciones, como interactuar con cuentas externas e iniciar actividades como el intercambio de tokens o la creación de nuevos contratos.
+On the other hand, Contracts are controlled by code and can perform various functions, including interacting with external accounts and initiating activities such as exchanging tokens or creating new contracts.
 
-Con la abstracción de cuentas, una sola cuenta puede contener tanto código como Ether, lo que le permite ejecutar transacciones y funciones de contratos inteligentes. Esto elimina la necesidad de un EOA separado para gestionar las transacciones, permitiendo que los contratos manejen los fondos directamente.
+With account abstraction, a single account can hold both code and Ether, enabling it to execute transactions and smart contract functions. This eliminates the need for a separate EOA to manage transactions, allowing contracts to handle funds directly.
 
-Etherspot Prime, un SDK de código abierto, simplifica la implementación de la Abstracción de Cuenta para desarrolladores de dApps. Usando un monedero inteligente Etherspot, los usuarios pueden disfrutar de una experiencia web2 a través de logins sociales o transacciones por lotes.
+Etherspot Prime, an open-source SDK, simplifies the implementation of Account Abstraction for dApp developers. Using an Etherspot smart wallet, users can enjoy a seamless web2-like experience through social logins or transaction batching.
 
-## Primeros pasos
+## Getting Started
 
-Para explorar Account Abstraction con Etherspot, sigue estos pasos:
+To explore Account Abstraction with Etherspot, follow these steps:
 
-### Utilizar una rama diferente:
+### Using a Different Branch:
 
-1. Clona el repositorio del kit de inicio de Wagmi:
+1. Clone the Wagmi starter kit repository:
 
 ```sh
 git clone https://github.com/wagmi-dev/wagmi-starter-kit.git
 ```
 
-2. Navegue hasta el directorio del proyecto:
+2. Navigate to the project directory:
 
 ```javascript
 cd wagmi-starter-kit
 ```
 
-3. En lugar de utilizar la rama principal, cambie a la rama que contiene las funcionalidades de Abstracción de Cuentas:
+3. Instead of using the main branch, switch to the branch containing the Account Abstraction functionalities:
 
 ```javascript
 git checkout aa-sdk  
 ```
 
-4. Ejecuta el proyecto:
-    Ahora que has clonado el repositorio e instalado las dependencias, es el momento de ejecutar el proyecto. Ejecuta el siguiente comando:
+4. Run the project:
+    Now that you’ve cloned the repository and installed dependencies, it’s time to run the project. Execute the following command:
 
 ```javascript
-desarrollo del hilo
+yarn dev
 ```
 
-Esto iniciará su dApp Rootstock Wagmi localmente, permitiéndole desarrollar y probar sus contratos inteligentes. Puede acceder al servidor Vite en `http://localhost:5173.`
+This will start your Rootstock Wagmi dApp locally, allowing you to develop and test your smart contracts. You can access the Vite server at `http://localhost:5173.`
 
-## Interactuar con la abstracción Cuenta
+## Interact with Account abstraction
 
 <img src="/img/resources/rootstock-metamask/accountabstraction.png"  width="800" height="600"/>
 
-1. **Generar una cuenta aleatoria:**
+1. **Generate a Random Account:**
 
-- Haga clic en el botón "Generar" para crear una cuenta aleatoria.
+- Click the “Generate” button to create a random account.
 
-2. **Generar una dirección de pago:**
+2. **Generate a Payment Address:**
 
-- Pulse el botón "Generar" para obtener una dirección de pago.
+- Click the “Generate” button to obtain a payment address.
 
-3. **Comprobar saldo de cuenta:**
+3. **Check Account Balance:**
 
-- Al hacer clic en Obtener saldo se mostrará el saldo de la dirección de pago.
+- Clicking the Get Balance will show the balance of the payment address.
 
-4. **Estimar y enviar una transacción:**
+4. **Estimate and Send a Transaction:**
 
-- Esta sección tiene dos campos:
-    - **Dirección del destinatario:** En este campo se especifica la dirección Ethereum del destinatario. Es la dirección a la que desea enviar la transacción. Piense en ella como el destino de sus fondos. Asegúrese de introducir aquí una dirección Ethereum válida.
+- This section has two fields:
+    - **Receipt Address:** This field is where you specify the recipient’s Ethereum address. It’s the address where you want to send the transaction. Think of it as the destination for your funds. Make sure you enter a valid Ethereum address here.
 
-    - **Valor (en Eth):** En este campo, usted indica la cantidad de Ether (ETH) que desea enviar en la transacción. Introduzca el valor que desea transferir. Por ejemplo, si desea enviar 0,5 ETH, introduzca "0,5" en este campo.
+    - **Value (in Eth):** In this field, you indicate the amount of Ether (ETH) you want to send in the transaction. Enter the value you wish to transfer. For example, if you want to send 0.5 ETH, input “0.5” in this field.
 
-    - Pulse el botón "Estimar y enviar" para iniciar la transacción.
+    - Click the “Estimate and Send” button to initiate the transaction.
 
-## Comprender el código base
+## Understanding the codebase
 
-Este código define un componente React llamado Demo, que proporciona una interfaz de usuario para interactuar con las funcionalidades de blockchain a través del SDK de Etherspot.
+This code defines a React component named Demo, which provides a user interface for interacting with blockchain functionalities through the Etherspot SDK.
 
-El componente permite a los usuarios generar una cuenta de propiedad externa (EOA) aleatoria, generar un monedero Etherspot, comprobar el saldo del monedero Etherspot, y estimar y enviar transacciones utilizando el Arka Paymaster.
+The component allows users to generate a random externally owned account (EOA), generate an Etherspot wallet, check the balance of the Etherspot wallet, and estimate and send transactions using the Arka Paymaster.
 
-El componente gestiona varios estados e interacciones, lo que facilita la gestión de carteras y la realización de transacciones de blockchain sin tener que tratar directamente con claves privadas.
+The component handles various states and interactions, making it easier to manage wallets and perform blockchain transactions without directly dealing with private keys.
 
 1. **generateRandomEOA**
 
-- Esta función genera una cuenta de propiedad externa (EOA) aleatoria.
+- This function generates a random externally owned account (EOA).
 
-- **Función:**
+- **Function:**
 
-Esto genera de forma asíncrona una clave privada y deriva una dirección de cuenta a partir de ella, estableciendo las variables de estado de la dirección del monedero EOA y la clave privada.
+This Asynchronously generates a private key and derives an account address from it, setting the EOA wallet address and private key state variables.
 
 2. **getBalance**
 
-- Esta función obtiene el saldo del monedero Etherspot actual.
+- This function fetches the balance of the current Etherspot wallet.
 
-- **Función:**
-    Esto utiliza de forma asíncrona el SDK para recuperar el saldo nativo de la cuenta y actualiza la variable de estado de saldo.
+- **Function:**
+    This Asynchronously uses the SDK to retrieve the native balance of the account and updates the balance state variable.
 
 3. **generateEtherspotWallet**
 
-- Esta función genera una dirección contrafactual para el monedero Etherspot.
+- This function generates a counterfactual address for the Etherspot wallet.
 
-- **Función:**
-    Esto interactúa de forma asíncrona con el SDK para generar una dirección de cartera Etherspot y obtiene su saldo.
+- **Function:**
+    This Asynchronously interacts with the SDK to generate an Etherspot wallet address and fetches its balance.
 
-4. \*\*Estimación y transferencia.
+4. **estimateAndTransfer**
 
-- Esta función calcula el coste de la transacción y envía un valor especificado a un destinatario utilizando el Arka Paymaster.
+- This function estimates the transaction cost and sends a specified value to a recipient using the Arka Paymaster.
 
-- **Función:**
-    Valida la dirección del destinatario y las entradas de valor.
-    Utiliza el SDK para configurar la transacción, estimar el coste del gas, enviar la transacción, y espera el recibo de la transacción.
+- **Function:**
+    This Validates recipient address and value inputs.
+    Uses the SDK to set up the transaction, estimate the gas cost, send the transaction, and waits for the transaction receipt.
 
 5. **useEffect Hook**
 
-- Este hook inicializa el SDK Prime cuando se establece la clave privada EOA.
+- This hook initializes the Prime SDK when the EOA private key is set.
 
-\*\*Parámetros
+**Parameters:**
 
-**eoaPrivateKey:** La clave privada de la cuenta de propiedad externa (EOA).
+**eoaPrivateKey:** The private key of the externally owned account (EOA).
 
-- **Función:**
+- **Function:**
 
 **useEffect:**
-Configura la instancia de Prime SDK con la eoaPrivateKey.
-Configura el SDK con el proveedor de bundler especificado.
+Sets up the Prime SDK instance with the eoaPrivateKey.
+Configures the SDK with the specified bundler provider.
 
-## Recursos
+## Resources
 
 - [Rootstock Account Abstraction Starter Kit](https://github.com/rsksmart/rsk-wagmi-starter-kit/tree/aa-sdk)
-- [Uso de ejemplos del SDK de Prime](https://etherspot.fyi/prime-sdk/examples/intro)
+- [Using Prime SDK Examples](https://etherspot.fyi/prime-sdk/examples/intro)
 - [Etherspot Prime SDK Repo](https://github.com/etherspot/etherspot-prime-sdk/)

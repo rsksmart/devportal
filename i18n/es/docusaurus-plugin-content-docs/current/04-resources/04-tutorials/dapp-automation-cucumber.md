@@ -1,62 +1,62 @@
 ---
-sidebar_lable: dApp Automation con pepino
+sidebar_lable: dApp Automation with Cucumber
 sidebar_position: 4
-title: dApp Automation con pepino & Playwright
-description: La prueba de aplicaciones descentralizadas (dApps) es crucial para proporcionar una experiencia de usuario fluida y asegurar la fiabilidad de los sistemas descentralizados. Cupeber y Playwright forman un dúo dinámico en pruebas automatizadas, desarrollo basado en el comportamiento (BDD) y potentes capacidades de automatización de navegadores.
+title: dApp Automation with Cucumber & Playwright
+description: Testing decentralized applications (dApps) is crucial for delivering a smooth user experience and ensuring the reliability of decentralized systems. Cucumber and Playwright form a dynamic duo in automated testing, blending behavior-driven development (BDD) and powerful browser automation capabilities.
 tags:
   - rsk
   - rootstock
-  - tutoriales
-  - recursos
-  - pruebas
-  - automatización-dapp
-  - contratos inteligentes
+  - tutorials
+  - resources
+  - tests
+  - dapp-automation
+  - smart contracts
   - dapps
-  - pepino
+  - cucumber
   - playwright
 ---
 
-Rootstock es una plataforma blockchain que extiende las capacidades de la red Bitcoin incorporando la funcionalidad del contrato inteligente. Compatible con EVM (Ethereum Virtual Machine) Rootstock permite a los desarrolladores implementar y ejecutar contratos inteligentes usando los mismos lenguajes de programación y herramientas que Ethereum.
+Rootstock is a blockchain platform that extends the capabilities of the Bitcoin network by incorporating smart contract functionality. Built to be EVM (Ethereum Virtual Machine) compatible, Rootstock enables developers to deploy and execute smart contracts using the same programming languages and tools as Ethereum.
 
-Esta guía pretende presentarte un [framework de automatización ágil](https://github.com/rsksmart/e2e_dapps_automation) diseñado exclusivamente para automatización de aplicaciones descentralizadas (dApps) y pruebas E2E.
+This guide aim to introduce you to an [agile automation framework](https://github.com/rsksmart/e2e_dapps_automation) designed exclusively for decentralized applications (dApps) automation and E2E testing.
 
 This solution seamlessly brings together Cucumber's user-friendly behavior-driven development, Playwright's precise browser automation, and the tailored dApp testing capabilities of Synpress. With Cucumber's Gherkin syntax, teams collaboratively define DApp behaviors. Playwright, customized for Chrome, adds finesse to browser automation. Synpress, in its Playwright version, effortlessly integrates with MetaMask (more software wallets to come) for thorough dApp testing.
 This way, developers enjoy expressive scenarios, targeted browser automation, and specialized dApp testing features.
 
-## Prerrequisitos
+## Prerequisites
 
-- Instalar Nodejs y NPM
- - Ver [Hackathon Dev Starter](/Developopers/requirements/)
-- [Cucumber](#instalando-y-configuring-cupeber)
-- Editor de código
- - [Codigo Visual Studio](https://code.visualstudio.com/)
+- Install Nodejs and NPM
+ - See [Hackathon Dev Starter](/developers/requirements/)
+- [Cucumber](#installing-and-configuring-cucumber)
+- Code Editor
+ - [Visual Studio Code](https://code.visualstudio.com/)
 
-## Comenzando
+## Getting Started
 
-Clona el repositorio y `cd` en el directorio:
+Clone the repo and `cd` into the directory:
 
 ```shell
-git clon https://github.com/rsksmart/e2e_dapps_automation/
+git clone https://github.com/rsksmart/e2e_dapps_automation/
 cd e2e_dapps_automation
 ```
 
-### Instalar dependencias
+### Install dependencies
 
-Para instalar dependencias, ejecuta el comando `npm i` en la terminal o ejecuta el script `npm:install`.
+To install dependencies, run the command `npm i` in the terminal or run the `npm:install` script.
 
-Crea un archivo `.env` dentro de la carpeta de configuración y añade tu dirección de cartera de pruebas MetaMask para propósitos de prueba (semilla y contraseña). Vea [cómo crear un monedero de metamas](/Developopers/blockchain-essentials/browser#install-metamask) y [configure Metamask para rootstock](/Developopers/blockchain-essentials/browser).
+Create a `.env` file inside config folder, and add your MetaMask test wallet address for testing purposes (seed & password). See [how to create a metamask wallet](/developers/blockchain-essentials/browser#install-metamask) and [configure Metamask for rootstock](/developers/blockchain-essentials/browser).
 
-Ver ejemplo:
+See example:
 
 ```text
-secretWordsOrPrivateKey=test test test test test test test test test test test test 
+secretWordsOrPrivateKey=test test test test test test test test test test test 
 testpassword=Tester@1234
 ```
 
-> Para exportar una clave privada en Metamask, vea [Cómo exportar una clave privada de la cuenta](https://support.metamask. o/hc/es/articles/360015289632-Cómo exportar-an-account-s-private-key#:~:text=Haz clic en%20el%20tres %20 tres%20de otros%20dverticales,para%20djuegan%20tu clave%20privada%20.).
+> To export a private key on Metamask, see [How to export an account private key](https://support.metamask.io/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key#:~:text=Click%20the%20three%20vertical%20dots,to%20display%20your%20private%20key.).
 >
-> - Tenga en cuenta que se trata de información sensible, incluso si se almacena localmente en el archivo .env. Si se comparte de cualquier manera, podría potencialmente perder todos sus fondos. Asegúrese de que la cartera proporcionada es para propósitos de prueba solamente.
-> - La versión de Metamask se puede proporcionar en el archivo .env o en el archivo `src/hooks/fixtures.js` de la siguiente manera:
+> - Please note that this is sensitive information, even if it is stored locally in the .env file. If shared anyhow, you could potentially lose all your funds. Ensure the provided wallet is for testing purposes only.
+> - Metamask version can be provided either in the .env file or in the `src/hooks/fixtures.js` file as follows:
 
 ```shell
 const metamaskPath = await prepareMetamask(
@@ -64,21 +64,21 @@ const metamaskPath = await prepareMetamask(
 );
 ```
 
-> - Encontrará la red Rootstock ya configurada en el archivo `config/config. s` como se ve en [DApp bajo Test](#dapp-configuration), solo necesitarás modificar la constante `dAppURL`, que puede apuntar también a tu localhost.
+> - You will find the Rootstock network already configured in the `config/config.js` file as seen in [DApp under Test](#dapp-configuration), you will only need to modify the `dAppURL` constant, which can point also to your localhost.
 
-### Instalando y configurando Cupeber
+### Installing and configuring Cucumber
 
-[Cucumber](https://cucumber. o/) ya viene como una dependencia integrada en este entorno de automatización, al instalar las dependencias, sólo asegúrese de añadir las extensiones vscode también, que le permitirán manejar las características de pepino sin problemas.
+[Cucumber](https://cucumber.io/) already comes as a built-in dependency in this automation framework, when installing the dependencies, just be certain to add the vscode extensions as well, which will let you handle cucumber features seamlessly.
 
-- Generador de Definición de Paso Cuke
- - Autor: Muralidharan Rajendran
- - Descripción: Esta extensión VSCode ayuda a los usuarios generando snippets de Cucumber Glue / Step Definition para las sentencias seleccionadas, streamlining work with Cucumber JS in VS Code.
- - [Ver Generador de Definición de Paso en Marketplace](https://marketplace.visualstudio.com/items?itemName=muralidharan92.cuke-step-definition-generator).
-- Soporte completo de pepino autocompletado (Gherkin)
- - Autor: Alexander Krechik
- - Descripción: This extension provides comprehensive language support for Cucumber (Gherkin), including syntax highlighting, snippets, autocompletado y soporte de formato en múltiples lenguajes de programación como JS, TS, Ruby y Kotlin.
- - [Ver pepino (Gherkin) Soporte completo en Marketplace](https://marketplace.visualstudio.com/items?itemName=alexkrechik.cucumberautocomplete).
-- Añadir extensiones en VSCode
+- Cuke Step Definition Generator
+ - Author: Muralidharan Rajendran
+ - Description: This VSCode extension aids users by generating Cucumber Glue / Step Definition snippets for selected statements, streamlining work with Cucumber JS in VS Code.
+ - [View Cuke Step Definition Generator on Marketplace](https://marketplace.visualstudio.com/items?itemName=muralidharan92.cuke-step-definition-generator).
+- Cucumber Auto Complete (Gherkin) Full Support
+ - Author: Alexander Krechik
+ - Description: This extension provides comprehensive language support for Cucumber (Gherkin), including syntax highlighting, snippets, autocompletion, and format support across multiple programming languages such as JS, TS, Ruby, and Kotlin.
+ - [View Cucumber (Gherkin) Full Support on Marketplace](https://marketplace.visualstudio.com/items?itemName=alexkrechik.cucumberautocomplete).
+- Add Extensions on VSCode
  ```text
  {
      "recommendations": [
@@ -88,124 +88,124 @@ const metamaskPath = await prepareMetamask(
  }
  ```
 
-## Configuración DApp
+## DApp Configuration
 
-Para probar tu DApp en tu blockchain preferido, ve a `config/config.js` y modifica los siguientes parámetros:
+To test your DApp on your preferred blockchain, go to `config/config.js` and modify the following parameters:
 
 ```shell
 const dAppURL = 'https://wallet.testnet.rollup.rif.technology/';
 
-// Red personalizada bajo prueba
+// Custom network under test
 const networkConfiguration = {
  networkName: 'Rootstock',
- rpcUrl: 'https://rpc. estnet.rootstock.io/{YOUR_APIKEY}',
+ rpcUrl: 'https://rpc.testnet.rootstock.io/{YOUR_APIKEY}',
  chainId: '31',
  symbol: 'RBTC',
  isTestnet: true
 }
 ```
 
-### Pruebas en ejecución
+### Running Tests
 
-Ya que este es un proyecto de boilerplatz, sólo se ha implementado una 'demo.feature'. Siéntase libre de construir su suite de pruebas en `src/test/features/_dappLivingDocumentation/`.
+Since this is a boilerplate project, just a 'demo.feature' has been implemented. Feel free to build your test suite at `src/test/features/_dappLivingDocumentation/`.
 
-Ejecuta el script `test` o `npm test` para ejecutar las pruebas usando chromium.
+Execute `test` or `npm test` script to run the tests using chromium.
 
-## Escribiendo pruebas E2E usando pepino
+## Writing E2E Tests using Cucumber
 
-- A. Identificar escenarios de prueba para dApps en Rootstock
- - La identificación de escenarios para automatizar en un entorno de interfaz de usuario implica considerar diversos factores relacionados con su aplicación, objetivos de prueba y la naturaleza de los escenarios. Aquí hay algunas pautas específicas para la automatización de la interfaz:
-  - **Pruebas Frecuentemente Ejecutadas y Estables:**
-   Priorizar escenarios automatizados que se ejecutan con frecuencia, especialmente como parte de su suite de pruebas de regresión. Las características estables con comportamiento consistente son buenos candidatos.
-  - **Ruta Crítica y Funcionalidad del núcleo:**
-   Identifica y automatiza escenarios que cubren las rutas críticas y la funcionalidad central de tu aplicación. Estos son los viajes clave para el usuario que son cruciales para el éxito de la aplicación.
-  - **Prueba de drenaje de datos:**
-   Automatiza escenarios que implican pruebas con diferentes conjuntos de datos. Esto es especialmente útil para formular pruebas basadas en datos que cubran una amplia gama de entradas.
-  - **Integración con sistemas externos:**
-   Automatiza escenarios que implican la integración de tu aplicación con sistemas externos o APIs. Verificar que los datos se intercambian correctamente y que las integraciones funcionan como se esperaba.
-  - **Experiencia del usuario y del usuario:**
-   Automatiza escenarios relacionados con la incorporación del usuario y la experiencia general del usuario. Verificar que los nuevos usuarios puedan navegar fácilmente a través de la aplicación y realizar acciones clave.
-- B. Crear archivos de características para diferentes casos de uso
- - Dentro de la carpeta `features`, crea un nuevo archivo con una extensión `.feature`. Por ejemplo, `sample.feature.`
- - Escribe tu archivo de características usando [sintaxis de Gherkin](https://cucumber.io/docs/gherkin/).
- - Por ejemplo:
+- A. Identifying test scenarios for dApps on Rootstock
+ - Identifying scenarios to automate in a UI framework involves considering various factors related to your application, testing goals, and the nature of the scenarios. Here are some guidelines specific to UI automation:
+  - **Frequently Executed and Stable Tests:**
+   Prioritize automating scenarios that are executed frequently, especially as part of your regression testing suite. Stable features with consistent behavior are good candidates.
+  - **Critical Path and Core Functionality:**
+   Identify and automate scenarios that cover the critical paths and core functionality of your application. These are the key user journeys that are crucial for the application's success.
+  - **Data-Driven Testing:**
+   Automate scenarios that involve testing with different sets of data. This is especially useful for formulating data-driven tests to cover a wide range of inputs.
+  - **Integration with External Systems:**
+   Automate scenarios that involve the integration of your application with external systems or APIs. Verify that data is exchanged correctly and that integrations function as expected.
+  - **User Onboarding and User Experience:**
+   Automate scenarios related to user onboarding and overall user experience. Verify that new users can easily navigate through the application and perform key actions.
+- B. Creating feature files for different use cases
+ - Inside the `features` folder, create a new file with a `.feature` extension. For example, `sample.feature.`
+ - Write your feature file using [Gherkin syntax](https://cucumber.io/docs/gherkin/).
+ - For example:
   ```
-  Característica: Demostrar para probar Cupeber + Playwright + Sincronizar
-  Escenario: Validar la metamasa se conecta a Rootstock DApp
-      Dado que abro el sitio web de DApp
-      Cuando conecto la metamasa
-      Luego verifiqué que mi cartera está correctamente conectada al DApp
+  Feature: Demo to test Cucumber + Playwright + Synpress
+  Scenario: Validate metamask connects to Rootstock DApp
+      Given I open the DApp website
+      When I connect metamask
+      Then I verify my wallet is successfully connected to the DApp
   ```
-- Definir definiciones de pasos para interactuar con Rootstock dApps
- - Una forma fácil de generar definiciones de pasos sería:
-  - Seleccione un paso en el archivo de características
-  - Clic derecho
-  - \\`Generar definición de paso: Copiar a la opción del portapapeles
-  - ![Generar definición de paso](/img/guides/quickstart/dapp-testing/copy-to-clipboard.png)
- - Luego ve a la carpeta `stepDefinitions`, crea un nuevo archivo con una extensión `.steps.js`. Por ejemplo, `sample.steps.js` y pegar el paso generado. Se mostrará un fragmento de código como este:
+- Defining step definitions to interact with Rootstock dApps
+ - An easy way to generate step definitions would be:
+  - Select a step in the feature file
+  - Right mouse click
+  - `Generate Step Definition: Copy To Clipboard option`
+  - ![Generate step definition](/img/guides/quickstart/dapp-testing/copy-to-clipboard.png)
+ - Then go to the `stepDefinitions` folder, create a new file with a `.steps.js` extension. For example, `sample.steps.js` and paste the generated step. A code snippet like this will be displayed:
   ```shell
   Then(/^I verify my wallet is successfully connected to the dApp$/, () => {
       return true;
   });
   ```
- - Puesto que estamos usando `"snippetInterface": "async-await"` en la configuración de pepino `cucumber.json`, necesitará cambiar el fragmento anterior manualmente a:
+ - Since we are using `"snippetInterface": "async-await"` in the cucumber configuration `cucumber.json`, you will need to change the previous snippet manually to:
   ```shell
   Then(/^I verify my wallet is successfully connected to the dApp$/, async function () {
       return true;
   });
   ```
- - Ahora, simplemente necesitas añadir tu código en ese paso, por ejemplo llamando a algunos de los métodos de tu página, recuerda que esto se basa en el [patrón de modelo de objeto de página](https://playwright. ev/docs/pom). Aquí un ejemplo de un archivo de pasos completos:
+ - Now, you just simply need to add your code into that step, for example calling some of your page’s methods, remember this is based on the [page object model pattern](https://playwright.dev/docs/pom). Here an example of an entire steps file:
   ```shell
   import { Given, When, Then } from '@cucumber/cucumber';
   import metamask from "@synthetixio/synpress/commands/metamask.js";
-  import DemoPage from ". /../pages/demo.page.js"
+  import DemoPage from "../../pages/demo.page.js"
 
   Given(/^I open the dApp website$/, {timeout: 20 * 1000}, async function () {
-  await DemoPage.navigateToDapp(global. ASE_URL);
+  await DemoPage.navigateToDapp(global.BASE_URL);
   });
 
-  Cuándo(/^I connect metamask$/, {timeout: 20 * 1000}, async function () {
+  When(/^I connect metamask$/, {timeout: 20 * 1000}, async function () {
   await DemoPage.connectWallet();
-  await metamask. cceptAccess();
+  await metamask.acceptAccess();
   });
 
   Then(/^I verify my wallet is successfully connected to the dApp$/, {timeout: 20 * 1000}, async function () {
-  await expect(page. ocator(".address")).toHaveText("0xf39...92266");
+  await expect(page.locator(".address")).toHaveText("0xf39...92266");
   });
   ```
- - Aviso, dentro de estos pasos hay referencias a los métodos DemoPage así como a los métodos de metamasa. Así es como se ve la clase DemoPage sólo almacena algunos elementos web y te permite ejecutar ciertas acciones con ellos.
+ - Notice, inside those steps there are references to the DemoPage methods as well as metamask methods. This is how the DemoPage class looks like, just stores some web elements and lets you execute certain actions with them.
   ```shell
   class DemoPage {
-  // Elementos de página
+  // Page elements
   get btnConnectWallet() {
-      página de devolución. ocator('[id="btn-core-connect-wallet"]');
+      return page.locator('[id="btn-core-connect-wallet"]');
   }
   get btnConnectMetamask() {
-      return page.locator('.wallet-button-styling .svelte-1vlog3j'). irst();
+      return page.locator('.wallet-button-styling .svelte-1vlog3j').first();
   }
-  // Métodos
-  asíncronos navigateToDapp(url) {
-      página de espera. oto(url);
+  // Methods
+  async navigateToDapp(url) {
+      await page.goto(url);
   }
   async connectWallet(){
-      esperan esto. tnConnectWallet.click();
+      await this.btnConnectWallet.click();
       await this.btnConnectMetamask.click();
   }
   }
   export default new DemoPage();
   ```
 
-### Informando
+### Reporting
 
-- Los informes generados se ubicarán en la carpeta `reports`
-- Dado que Cucumber es el corredor elegido, los informes y otras opciones de configuración se pueden encontrar en `e2e_dapps_automation/cucumber.json`
+- Generated reports will be located at `reports` folder
+- Since Cucumber is the chosen runner, reports and other config options can be found at `e2e_dapps_automation/cucumber.json`
 
-## Conclusión
+## Conclusion
 
-La prueba de aplicaciones descentralizadas (dApps) es crucial para proporcionar una experiencia de usuario fluida y asegurar la fiabilidad de los sistemas descentralizados. La prueba minuciosa del frontend identifica y aborda problemas de usabilidad, creando una interfaz amigable para el usuario. [Cucumber](https://cucumber.io/) y [Playwright](https://playwright. ev/) forman un dúo dinámico en pruebas automatizadas, desarrollo basado en la mezcla de comportamientos (BDD) y potentes capacidades de automatización del navegador. Cucumber, utilizando la sintaxis de Gherkin legible, permite la colaboración entre los miembros técnicos y no técnicos del equipo describiendo el comportamiento de la aplicación en lenguaje sencillo.
+Testing decentralized applications (dApps) is crucial for delivering a smooth user experience and ensuring the reliability of decentralized systems. Thorough testing of the frontend identifies and addresses usability issues, creating a user-friendly interface. [Cucumber](https://cucumber.io/) and [Playwright](https://playwright.dev/) form a dynamic duo in automated testing, blending behavior-driven development (BDD) and powerful browser automation capabilities. Cucumber, employing the human-readable Gherkin syntax, enables collaboration between technical and non-technical team members by describing application behavior in plain language.
 
-## Enlaces útiles
+## Useful Links
 
-- Para obtener información sobre otras herramientas de prueba, consulte [Quick Start: Testing Smart Contracts](/Developopers/smart-contracts/hardhat/test-smart-contracts/)
+- For information on other testing tools, see [Quick Start: Testing Smart Contracts](/developers/smart-contracts/hardhat/test-smart-contracts/)
 - [Cucumber](https://cucumber.io/)
 - [Playwright](https://playwright.dev/)

@@ -1,66 +1,66 @@
 ---
-title: Configuración de límites para la interfaz JSON-RPC
-sidebar_label: Límites de configuración
+title: Configuration of Limits for JSON-RPC Interface
+sidebar_label: Configuration Limits
 sidebar_position: 400
 tags:
   - rsk
   - rskj
-  - nodo
+  - node
   - rpc
   - rootstock
-description: Los métodos JSON-RPC soportados por nodos Rootstock.
+description: The JSON-RPC methods supported by Rootstock nodes.
 ---
 
-A continuación se muestran los límites de configuración para los siguientes métodos JSON-RPC:
+Below are the configuration limits for the following JSON-RPC methods:
 
-> Nota: Estos límites están disponibles en [Fingerroot v5.1.0](https://github.com/rsksmart/rskj/releases/).
+> Note: These limits are available from [Fingerroot v5.1.0](https://github.com/rsksmart/rskj/releases/).
 
-## Límites del método JSON-RPC eth_getLogs
+## JSON-RPC method eth_getLogs limits
 
-La configuración añadida en los archivos de configuración del cliente RSKj permite el control de dos límites relacionados con la llamada JSON-RPC `eth_getLogs`, que se utiliza para recuperar registros de eventos de contratos inteligentes en el blockchain de Rootstock.
+The added configuration in the RSKj client's configuration files allows the control of two limits related to the `eth_getLogs` JSON-RPC call, which is used to retrieve event logs from smart contracts on the Rootstock blockchain.
 
-### Máximo de bloques a consultar
+### Maximum blocks to query
 
-El `maxBlocksToQuery` se refiere al número máximo de bloques a consultar.
+The `maxBlocksToQuery` refers to the maximum number of blocks to query.
 
-Este parámetro determina el número máximo de bloques que el cliente RSKj consultará en el blockchain cuando ejecute una llamada `eth_getLogs`. Por defecto, este valor está desactivado, lo que significa que si no se especifica ningún valor, el cliente RSKj consultará registros de eventos de todos los bloques especificados en los parámetros de la llamada eth_getLogs. Si un límite es definido y la llamada eth_getLogs excede este límite, la ejecución de la consulta será terminada, y se retornará un código de error.
+This parameter determines the maximum number of blocks the RSKj client will query on the blockchain when executing an `eth_getLogs` call. By default, this value is disabled, meaning that if no value is specified,  the RSKj client will query event logs from all blocks specified in the parameters of the eth_getLogs call. If a limit is defined and the eth_getLogs call exceeds this limit, the query execution will be terminated, and an error code will be returned.
 
-### Registros máximos a devolver
+### Maximum Logs to Return
 
-El `maxLogsToReturn` se refiere al número máximo de registros a regresar.
+The `maxLogsToReturn` refers to the maximum number of logs to return.
 
-Este parámetro determina el número máximo de registros de eventos que el cliente RSKj retornará en respuesta a una llamada `eth_getLogs`. De forma predeterminada, este valor está desactivado (i. , en 0), indicando que el cliente RSKj devolverá todos los registros de eventos que coincidan con los criterios de búsqueda. Si el límite está definido y la llamada excede este límite, la ejecución de la consulta terminará devolviendo un código de error.
+This parameter determines the maximum number of event logs that the RSKj client will return in response to an `eth_getLogs` call. By default, this value is disabled (i.e, set to 0), indicating that the RSKj client will return all event logs that match the search criteria. If the limit is defined and the call exceeds this limit, the query execution will be terminated returning an error code.
 
 :::warning\[Warning]
 
-Deshabilitar el límite (`maxLogsToReturn = 0`) podría llevar a la inclusión de un gran número de registros en la respuesta. Sin embargo, permitir el límite ayuda a proteger los recursos del nodo y evita el uso malicioso.
+Disabling the limit (`maxLogsToReturn = 0`) could lead to the inclusion of a large number of logs in the response. However, enabling the limit helps protect the node's resources and prevents malicious usages.
 
 :::
 
-## Límite de interfaz JSON-RPC
+## JSON-RPC Interface Limit
 
-El cliente RSKj introduce ahora una nueva opción de configuración para limitar el tamaño máximo de las respuestas devueltas por la interfaz JSON-RPC.
+The RSKj client now introduces a new configuration option to limit the maximum size of responses returned by the JSON-RPC interface.
 
-### Tamaño máximo de respuesta JSON-RPC
+### Maximum JSON-RPC response size
 
-El `maxResponseSize` se refiere al tamaño máximo de respuesta JSON-RPC.
+The `maxResponseSize` refers to the maximum JSON-RPC response size.
 
-Este parámetro le permite establecer un límite en el tamaño máximo de las respuestas devueltas por la interfaz JSON-RPC. El tamaño de la respuesta se mide en bytes. Por defecto, este valor está deshabilitado con `maxResponseSize = 0`, lo que significa que no hay límite impuesto al tamaño de las respuestas JSON-RPC.
+This parameter allows you to set a limit on the maximum size of responses returned by the JSON-RPC interface. The response size is measured in bytes. By default, this value is disabled with `maxResponseSize = 0`, meaning that there is no limit imposed on the size of JSON-RPC responses.
 
 :::info\[Info]
 
-Cuando `maxResponseSize` está habilitado y establecido en un valor específico, la interfaz JSON-RPC truncará o rechazará las respuestas que excedan el límite de tamaño especificado.
+When `maxResponseSize` is enabled and set to a specific value, the JSON-RPC interface will truncate or reject responses that exceed the specified size limit.
 
 :::
 
-## Uso de configuración
+## Configuration Usage
 
-Al añadir estas configuraciones a los archivos de configuración del cliente RSKJ, puede gestionar los límites de acuerdo a sus necesidades y requerimientos específicos. Con la funcionalidad añadida de limitar el tamaño de respuesta JSON-RPC, puede controlar la cantidad de datos devueltos por la interfaz para evitar un consumo excesivo de recursos.
+By adding these configurations to the RSKj client's configuration files, you can manage the limits according to your specific needs and requirements. With the added functionality of limiting the JSON-RPC response size, you can control the amount of data returned by the interface to avoid excessive resource consumption.
 
-Se recomienda establecer valores razonables para estos límites, teniendo en cuenta la carga de la red y los recursos disponibles para el cliente RSKj.
+It is recommended to set reasonable values for these limits, considering the network's load and the available resources for the RSKj client.
 
 :::info\[Info]
 
-La configuración puede variar según la versión del cliente RSKj que está utilizando y cómo se integra con otros componentes de su sistema. Consulte siempre la documentación oficial de RSKj y las especificaciones relevantes para obtener detalles más precisos sobre la configuración.
+The configuration may vary based on the version of the RSKj client you are using and how it integrates with other components of your system. Always refer to the official RSKj documentation and relevant specifications for more precise details about the configuration.
 
 :::

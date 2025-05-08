@@ -1,5 +1,5 @@
 ---
-title: Presentando Arrowhead 6.3.0
+title: Introducing Arrowhead 6.3.0
 author: Rootstock
 tags:
   - release
@@ -7,4 +7,4 @@ tags:
 url: https://blog.rootstock.io/noticia/introducing-arrowhead-6-3-0/
 ---
 
-La comunidad de Rootstock se complace en anunciar el lanzamiento de la última versión del cliente RSKj, que ya está disponible en el [repositorio RSKj GitHub](https://github.com/rsksmart/rskj/releases/tag/ARROWHEAD-6.3.0). Esta actualización se centra principalmente en mejorar la compatibilidad con Ethereum en la interfaz JSON-RPC y en mejorar el rendimiento del nodo.
+The Rootstock community is pleased to announce the release of the latest version of the RSKj client, which is now available in the [RSKj GitHub repository](https://github.com/rsksmart/rskj/releases/tag/ARROWHEAD-6.3.0). This update mainly focuses on improving Ethereum compatibility at the JSON-RPC interface and enhancing the node’s performance.

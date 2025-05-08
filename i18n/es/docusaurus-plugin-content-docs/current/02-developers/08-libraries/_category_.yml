@@ -1,6 +1,6 @@
-label: Bibliotecas
+label: Libraries
 position: 8
 link:
-  type: índice-generado
-  slug: /desarrolladores/bibliotecas/
+  type: generated-index
+  slug: /developers/libraries/
   description: "Libraries for Rootstock Integration."

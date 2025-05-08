@@ -1,123 +1,123 @@
 ---
-sidebar_label: Despliegue del repetidor RIF
+sidebar_label: RIF Relay Deployment
 sidebar_position: 500
-title: Despliegue del repetidor RIF
+title: RIF Relay Deployment
 description: RIF Relay deployment process.
 tags:
   - rif
-  - sobre
-  - relé
-  - guía de integración
+  - envelope
+  - relay
+  - integration guide
 ---
 
-## Configurar los contratos de retransmisión RIF y el servidor
+## Set Up RIF Relay Contracts and Server
 
-### Despliegue de contratos
+### Deploy Contracts
 
-Empiece por desplegar componentes en la cadena. Todas las herramientas necesarias se encuentran en el [repositorio de contratos de retransmisión RIF](https://github.com/rsksmart/rif-relay-contracts)
+Start by deploying on-chain components. All tools needed are in the [RIF Relay Contract repository](https://github.com/rsksmart/rif-relay-contracts)
 
 #### Regtest
 
-1. Clonar el repositorio:
+1. Clone the Repository:
 
 ```bash
   git clone https://github.com/rsksmart/rif-relay-contracts
 ```
 
-2. Navegue hasta el directorio e instale las dependencias:
+2. Navigate to the directory and install dependencies:
 
 ```bash
   cd rif-relay-contracts
   npm install
 ```
 
-3. Despliega el contrato:
+3. Deploy the contract:
 
 ```bash
   npx hardhat deploy --network regtest
 ```
 
-> Esto utiliza la configuración Regtest de `hardhat.config.ts`.
+> This uses the Regtest configuration from `hardhat.config.ts`.
 
-Tras el despliegue, verá un resumen de los contratos desplegados. Este resumen incluye los componentes en cadena esenciales para RIF Relay, y contratos adicionales con fines de prueba y validación.````texto
+After deployment, you'll see a summary of the deployed contracts. This summary includes the on-chain components essential for RIF Relay, and additional contracts for testing and validation purposes.````text
       ┌───────────────────────────────────────┬──────────────────────────────────────────────┐
-      │ (índice) │ Valores │
+      │             (index)                   │                    Values                    │
       ├───────────────────────────────────────┼──────────────────────────────────────────────┤
-      │ Penalizador │ '0x77045E71a7A2c50903d88e564cD72fab11e82051' │
-      │ RelayHub │ '0xDA7Ce79725418F4F6E13Bf5F520C89Cec5f6A974' │
-      │ SmartWallet │ '0x83C5541A6c8D2dBAD642f385d8d06Ca9B6C731ee' │
-      │       SmartWalletFactory │ '0xE0825f57Dd05Ef62FF731c27222A86E104CC4Cad' │
-      │ DeployVerifier │ '0x73ec81da0C72DD112e06c09A6ec03B5544d26F05' │
-      │ RelayVerifier │ '0x03F23ae1917722d5A27a2Ea0Bcc98725a2a2a49a' │
-      │ CustomSmartWallet              │ '0x1eD614cd3443EFd9c70F04b6d777aed947A4b0c4' │
-      │ CustomSmartWalletFactory │ '0x5159345aaB821172e795d56274D0f5FDFdC6aBD9' │
-      │ CustomSmartWalletDeployVerifier │ '0x7557fcE0BbFAe81a9508FF469D481f2c72a8B5f3' │
-      │ CustomSmartWalletRelayVerifier │ '0x0e19674ebc2c2B6Df3e7a1417c49b50235c61924' │
-      │ NativeHolderSmartWallet │ '0x4aC9422c7720eF71Cb219B006aB363Ab54BB4183' │
-      │    NativeHolderSmartWalletFactory │ '0xBaDb31cAf5B95edd785446B76219b60fB1f07233' │
+      │            Penalizer                  │ '0x77045E71a7A2c50903d88e564cD72fab11e82051' │
+      │            RelayHub                   │ '0xDA7Ce79725418F4F6E13Bf5F520C89Cec5f6A974' │
+      │           SmartWallet                 │ '0x83C5541A6c8D2dBAD642f385d8d06Ca9B6C731ee' │
+      │       SmartWalletFactory              │ '0xE0825f57Dd05Ef62FF731c27222A86E104CC4Cad' │
+      │         DeployVerifier                │ '0x73ec81da0C72DD112e06c09A6ec03B5544d26F05' │
+      │          RelayVerifier                │ '0x03F23ae1917722d5A27a2Ea0Bcc98725a2a2a49a' │
+      │        CustomSmartWallet              │ '0x1eD614cd3443EFd9c70F04b6d777aed947A4b0c4' │
+      │    CustomSmartWalletFactory           │ '0x5159345aaB821172e795d56274D0f5FDFdC6aBD9' │
+      │ CustomSmartWalletDeployVerifier       │ '0x7557fcE0BbFAe81a9508FF469D481f2c72a8B5f3' │
+      │ CustomSmartWalletRelayVerifier        │ '0x0e19674ebc2c2B6Df3e7a1417c49b50235c61924' │
+      │      NativeHolderSmartWallet          │ '0x4aC9422c7720eF71Cb219B006aB363Ab54BB4183' │
+      │    NativeHolderSmartWalletFactory     │ '0xBaDb31cAf5B95edd785446B76219b60fB1f07233' │
       │ NativeHolderSmartWalletDeployVerifier │ '0xAe59e767768c6c25d64619Ee1c498Fd7D83e3c24' │
-      │ NativeHolderSmartWalletRelayVerifier │ '0x5897E84216220663F306676458Afc7bf2A6A3C52' │
-      │ UtilToken                  │ '0x1Af2844A588759D0DE58abD568ADD96BB8B3B6D8' │
-      │ VersionRegistry │ '0x8901a2Bbf639bFD21A97004BA4D7aE2BD00B8DA8' │
+      │ NativeHolderSmartWalletRelayVerifier  │ '0x5897E84216220663F306676458Afc7bf2A6A3C52' │
+      │            UtilToken                  │ '0x1Af2844A588759D0DE58abD568ADD96BB8B3B6D8' │
+      │         VersionRegistry               │ '0x8901a2Bbf639bFD21A97004BA4D7aE2BD00B8DA8' │
       └───────────────────────────────────────┴──────────────────────────────────────────────┘
       ```
-El resumen de despliegue muestra dos conjuntos de Carteras Inteligentes, cada uno emparejado con sus verificadores. Esto se debe a que el verificador se utiliza tanto para el despliegue como para la validación de transacciones. Para las pruebas, nos centraremos en el uso de estos Contratos de Cartera Inteligente.
+The deployment summary shows two sets of Smart Wallets, each paired with its verifiers. This is because the verifier is used for both deployment and transaction validation. For testing purposes, the focus will be on using these Smart Wallet Contracts.
 ````
 
 #### Testnet
 
 1. Ensure your account is funded. You can get funds from the [tRBTC Faucet](https://faucet.rootstock.io/). Additional faucet options include; [Thirdweb](https://thirdweb.com/rootstock-testnet) and [Blast](https://blastapi.io/faucets/rootstock-testnet) Faucets.
-2. Despliegue en Testnet:
+2. Deploy on Testnet:
   ```bash
     npx hardhat deploy --network testnet
   ```
 
-> Recuerde configurar Testnet en `hardhat.config.ts`. Los contratos existentes de RIF Relay desplegados en Testnet se pueden encontrar en la sección [contracts](/developers/integrate/rif-relay/contracts).
+> Remember to configure Testnet in `hardhat.config.ts`. Existing RIF Relay contracts deployed on Testnet can be found in the [contracts section](/developers/integrate/rif-relay/contracts).
 
 #### Mainnet
 
-1. Asegúrese de que su cuenta tiene fondos.
-2. Despliegue en Mainnet:
+1. Ensure your account is funded.
+2. Deploy on Mainnet:
   ```bash
     npx hardhat deploy --network mainnet
   ```
 
-> Asegúrese de que Mainnet está configurado en `hardhat.config.ts`. Los contratos existentes de RIF Relay desplegados en Mainnet se pueden encontrar en la [sección de contratos](/developers/integrate/rif-relay/contracts).
+> Ensure Mainnet is set up in `hardhat.config.ts`. Existing RIF Relay contracts deployed on Mainnet can be found in the [contracts section](/developers/integrate/rif-relay/contracts).
 
-### Reparto de ingresos
+### Revenue Sharing
 
-La distribución de ingresos es una función opcional de RIF Relay que puede implementarse mediante contratos de recopilador. Puede implementar varios contratos de recopilador, pero no se incluyen en la implementación predeterminada de contratos de Relay. Para obtener información detallada sobre los contratos de recopilador, consulte la [documentación de arquitectura](/developers/integrate/rif-relay/architecture#collector).
+Revenue Sharing is an optional feature in RIF Relay that can be implemented using collector contracts. You can deploy multiple Collector contracts, but they are not included in the default Relay contract deployment. For detailed information on Collector contracts, refer to the [architecture documentation](/developers/integrate/rif-relay/architecture#collector).
 
-Antes de desplegar un contrato de recopilador, asegúrese de lo siguiente:
+Before deploying a Collector contract ensure the following:
 
-1. Asegúrese de que el token elegido para el contrato de recaudación es el mismo que el utilizado para las comisiones de transacción.
-  > **Nota:** No puede recuperar otros tokens que no sean los establecidos durante la implementación del recopilador.
-2. Seleccione un propietario adecuado para el contrato de recaudación. Este propietario no tiene por qué ser el implementador, pero debe tener autoridad para ejecutar la función de retirada, o de lo contrario los fondos de ingresos quedarán bloqueados en el contrato.
-3. Configure los socios y sus porcentajes de participación, asegurándose de que el total sume 100%. Los tokens enviados incorrectamente a una dirección inaccesible sin una clave privada del beneficiario se perderán. Para ver un ejemplo de definición de participaciones en ingresos estructuralmente válida, consulte [configuración de ejemplo](https://github.com/rsksmart/rif-relay-contracts/blob/master/deploy-collector.input.sample.json).
+1. Ensure the chosen token for the Collector contract is the same as the one used for transaction fees.
+  > **Note:** You cannot retrieve any other tokens other than the one set during Collector deployment.
+2. Select an appropriate owner for the Collector contract. This owner doesn't have to be the deployer but must have the authority to execute the withdraw function, or else the revenue funds will be locked in the contract.
+3. Set up partners and their share percentages, ensuring the total adds up to 100%. Incorrectly sent tokens to an inaccessible address without a private key from the beneficiary will be lost. For an example of a structurally valid revenue shares definition see [sample configuration](https://github.com/rsksmart/rif-relay-contracts/blob/master/deploy-collector.input.sample.json).
 
 #### Regtest
 
-Para desplegar el contrato del colector, utilizaremos el [Contrato de retransmisión RIF](https://github.com/rsksmart/).
+To deploy the Collector contract, we'll use the [RIF Relay Contract](https://github.com/rsksmart/).
 
-1. Cree un archivo de configuración llamado `deploy-collector.input.json` con la estructura requerida:
+1. Create a configuration file named `deploy-collector.input.json` with the required structure:
   ````json
       {
-        "colectorPropietario": "0xCD2a3d9F938E13CD947Ec05AbC7FE734Df8DD826",
+        "collectorOwner": "0xCD2a3d9F938E13CD947Ec05AbC7FE734Df8DD826",
         "partners": [
             {
-              "beneficiario": "0x7986b3DF570230288501EEa3D890bd66948C9B79",
-              "cuota": 20
+              "beneficiary": "0x7986b3DF570230288501EEa3D890bd66948C9B79",
+              "share": 20
             },
             {
-              "beneficiario": "0x0a3aA774752ec2042c46548456c094A76C7F3a79",
+              "beneficiary": "0x0a3aA774752ec2042c46548456c094A76C7F3a79",
               "share": 35
             },
             {
-              "beneficiario": "0xCF7CDBb5F7BA79d3ffe74A0bBA13FC0295F6036",
+              "beneficiary": "0xCF7CDBbB5F7BA79d3ffe74A0bBA13FC0295F6036",
               "share": 13
             },
             {
-              "beneficiario": "0x39B12C05E8503356E3a7DF0B7B33efA4c054C409",
+              "beneficiary": "0x39B12C05E8503356E3a7DF0B7B33efA4c054C409",
               "share": 32
             }
         ],
@@ -128,18 +128,18 @@ Para desplegar el contrato del colector, utilizaremos el [Contrato de retransmis
 
   ````
 
-> **Nota:** Las cuentas `collectorOwner`, `beneficiaries` y `remainderAddress` son las cinco primeras cuentas proporcionadas por el nodo en Regtest.
+> **Note:** The `collectorOwner`, `beneficiaries`, and `remainderAddress` are the first five accounts provided by the node in Regtest.
 
-2. Despliega el contrato:
+2. Deploy the contract:
   ```bash
     npx hardhat collector:deploy --network regtest
   ```
 
-El cobrador está listo y puede empezar a recibir comisiones.
+The collector is ready and can start receiving fees.
 
 #### Testnet
 
-Utilizando el archivo de configuración que creó en la sección regtest, ejecute este comando para desplegar el contrato:
+Using the configuration file you created in the regtest section, run this command to deploy the contract:
 
 ```js
   npx hardhat collector:deploy --network testnet
@@ -147,83 +147,83 @@ Utilizando el archivo de configuración que creó en la sección regtest, ejecut
 
 #### Mainnet
 
-Utilizando el archivo de configuración que creó en la sección regtest, ejecute este comando para desplegar el contrato:
+Using the configuration file you created in the regtest section, run this command to deploy the contract:
 
 ```js
   npx hardhat collector:deploy --network mainnet
 ```
 
-### Permitir fichas
+### Allow Tokens
 
-RIF Relay sólo acepta tokens de la lista blanca, principalmente para garantizar que sólo se aceptan tokens de valor para el operador. Para incluir un token en la lista blanca
-Ejecute la función `acceptToken(address token)` en los contratos de los verificadores de Relay, que incluyen:
+RIF Relay only accepts whitelisted tokens, primarily to ensure only tokens of value to the operator are accepted. To whitelist a token:
+Execute the `acceptToken(address token)` function on the Relay Verifiers contracts, which include:
 
 - `SmartWalletDeployVerifier`
 - `SmartWalletRelayVerifier`
 
 :::info[Note]
-Esta acción debe ser realizada por el propietario de los contratos, normalmente la cuenta que realizó el despliegue.
+This action must be performed by the contracts' owner, typically the account that conducted the deployment.
 :::
 
 #### Regtest
 
-En los Contratos de Relé RIF, ejecute este comando:
+In the RIF Relay Contracts, execute this command:
 
 ```js
   npx hardhat allow-tokens --network regtest --token-list <TOKEN_ADDRESSES>
 ```
 
-> `<TOKEN_ADDRESSES>` es una lista separada por comas de las direcciones de los tokens que se permitirán en los verificadores disponibles. El `allowTokens` utiliza la primera cuenta (referida como account[0]) como propietaria de los contratos. Esto es importante porque sólo el propietario de la cuenta puede permitir tokens.
+> `<TOKEN_ADDRESSES>` is a comma-separated list of the token addresses to be allowed on the available verifiers. The `allowTokens` uses the first account (referred to as account[0]) as the owner of the contracts. This is important because only the account owner can allow tokens.
 
 #### Testnet
 
-En los Contratos de relevo RIF, ejecute el comando:
+In the RIF Relay Contracts, execute the command:
 
 ```js
   npx hardhat allow-tokens --network testnet --token-list <TOKEN_ADDRESSES>
 ```
 
-> `<TOKEN_ADDRESSES>` es una lista separada por comas de las direcciones de tokens que se permitirán en los verificadores disponibles. El script `allowTokens` utilizará la red Testnet configurada en el `hardhat.config.ts`, esta red deberá utilizar la cuenta que desplegó los contratos.
-> También puedes modificar los tokens permitidos para verificadores específicos usando la opción `--verifier-list` de la siguiente manera:
+> `<TOKEN_ADDRESSES>` is a comma-separated list of the token addresses to be allowed on the available verifiers. The `allowTokens` script will use the Testnet network configured in the `hardhat.config.ts`, this network will be required to use the account that deployed the contracts.
+> You can also modify the allowed tokens for specific verifiers only by using the `--verifier-list` option as follows:
 
 ```js
   npx hardhat allow-tokens --network testnet --token-list <TOKEN_ADDRESSES> --verifier-list <VERIFIER_ADRESSES>
 ```
 
-> El `<TOKEN_ADDRESSES>`, `<VERIFIER_ADDRESSES>` es una lista separada por comas de direcciones de verificadores para permitir los tokens.
+> The `<TOKEN_ADDRESSES>`, `<VERIFIER_ADDRESSES>` is a comma-seperated list of verifier addresses to allow the tokens for.
 
 #### Mainnet
 
-En los Contratos de relevo RIF, ejecute el comando:
+In the RIF Relay Contracts, execute the command:
 
 ```js
   npx hardhat allow-tokens --network mainnet --token-list <TOKEN_ADDRESSES>
 ```
 
-> `<TOKEN_ADDRESSES>` es una lista separada por comas de las direcciones de tokens que se permitirán en los verificadores disponibles. El script `allowTokens` utilizará la red Mainnet configurada en `hardhat.config.ts`, esta red deberá utilizar la cuenta que realizó el despliegue de los contratos.
-> También puedes modificar los tokens permitidos sólo para verificadores específicos usando la opción `--verifier-list` de la siguiente manera:
+> `<TOKEN_ADDRESSES>` is a comma-separated list of the token addresses to be allowed on the available verifiers. The `allowTokens` script will use the Mainnet network configured in `hardhat.config.ts`, this network will be required to use the account that did the deployment of the contracts.
+> You can also modify the allowed tokens for specific verifiers only by using the `--verifier-list` option as follows:
 
 ```js
   npx hardhat allow-tokens --network testnet --token-list <TOKEN_ADDRESSES> --verifier-list <VERIFIER_ADRESSES>
 ```
 
-> El `<TOKEN_ADDRESSES>`, `<VERIFIER_ADDRESSES>` es una lista separada por comas de direcciones de verificadores para permitir los tokens.
+> The `<TOKEN_ADDRESSES>`, `<VERIFIER_ADDRESSES>` is a comma-seperated list of verifier addresses to allow the tokens for.
 
 :::info[Note]
-El nombre de la red; regtest, testnet, o mainnet, es un parámetro opcional que se toma del archivo hardhat.config.ts. El nombre de red que especifiques debe ser el mismo que el utilizado para desplegar el contrato.
+The network name; regtest, testnet, or mainnet, is an optional parameter that is taken from the hardhat.config.ts file. The network name you specify must be the same as the one used to deploy the contract.
 :::
 
-### Ejecutar el servidor de retransmisión RIF
+### Run the RIF Relay Server
 
-Tras configurar los componentes dentro de la cadena, el siguiente paso es configurar los componentes fuera de la cadena, utilizando el [RIF Relay Server](https://github.com/rsksmart/rif-relay-server).
-La configuración del Servidor de Retransmisión se simplifica utilizando el paquete [node-config](https://www.npmjs.com/package/config). Para conocer las ventajas detalladas de este paquete, visita su [wiki](https://github.com/node-config/node-config/wiki).
+After setting up on-chain components, the next step is to set up off-chain components, using the [RIF Relay Server](https://github.com/rsksmart/rif-relay-server).
+Configuration of the Relay Server is streamlined using the [node-config](https://www.npmjs.com/package/config) package. For detailed advantages of this package, visit their [wiki](https://github.com/node-config/node-config/wiki).
 
-<b>El TL;DR:</b> En el directorio `config`, cree un archivo llamado `local.json`.
-Para obtener información visual sobre cómo funciona el Servidor de Retransmisión, consulte los diagramas disponibles [aquí](/developers/integrate/rif-relay/architecture/).
+<b>The TL;DR:</b> In the `config` directory, create a file named `local.json`.
+For visual insights into how the Relay Server functions, refer to the diagrams available [here](/developers/integrate/rif-relay/architecture/).
 
 #### Regtest
 
-A continuación se muestra un ejemplo de configuración para configurar el nodo RSKj localmente con los contratos desplegados en Regtest:
+Here's a configuration example for setting up the RSKj node locally with the contracts deployed in Regtest:
 
 ```json
 {
@@ -245,39 +245,39 @@ A continuación se muestra un ejemplo de configuración para configurar el nodo 
 }
 ```
 
-> **Nota:** Los verificadores de retransmisión y despliegue utilizan los contratos de la sección Cartera inteligente del resumen.
+> **Note:** Relay and Deploy verifiers use the contracts from the Smart Wallet section in the summary.
 
-El significado de cada clave puede consultarse en [Configuración del servidor de retransmisión RIF](https://github.com/rsksmart/rif-relay-server#server-configuration)
+The meaning of each key can be found in [RIF Relay Server Configuration](https://github.com/rsksmart/rif-relay-server#server-configuration)
 
-Para iniciar el servidor, ejecute el siguiente comando:
+To start the server, run the following command:
 
 ```js
   npm run start
 ```
 
-> Por defecto, el servidor utiliza el fichero `default.json5` del directorio config. Dependiendo del perfil en `NODE_ENV`, los valores en el archivo `default.json5` se anulan.
+> By default, the server uses the `default.json5` file in the config directory. Depending on the profile in `NODE_ENV`, the values in the `default.json5` file is overriden.
 
-En este punto el servidor debería estar funcionando y listo para empezar a procesar transacciones, sin embargo, todavía necesitas registrar los componentes fuera de la cadena en el Relay Hub.
+At this point the server should be running and ready to start processing transactions, however, you still need to register the off-chain components in the Relay Hub.
 
-Para habilitar el servidor para el procesamiento de transacciones, debe registrar los componentes fuera de la cadena en el Centro de retransmisión. Este paso requiere que el servidor esté activo. Para registrar los componentes, en una ventana de terminal diferente, ejecute el siguiente comando:
+To enable the server for transaction processing, you must register the off-chain components in the Relay Hub. This step requires the server to be active. To register the components, in a different terminal window, execute the following command:
 
 ```js
-  npm ejecutar registro
+  npm run register
 ```
 
-El proceso de registro realiza las siguientes acciones:
+The register process performs the following actions:
 
-- Estaca el gestor de relevo
-- Añade el Relay Worker
-- Registra el Servidor de Retransmisión
+- Stakes the Relay Manager
+- Adds the Relay Worker
+- Registers the Relay Server
 
-El servidor ya está listo para empezar a procesar transacciones y se muestra un mensaje de "listo" en la consola. Para más detalles sobre los parámetros de configuración y registro, consulte la [Documentación del servidor de retransmisión RIF](https://github.com/rsksmart/rif-relay-server#overrides).
+The server is now ready to start processing transactions and a `ready` message is diplayed on the console. For more details on configuration and registration parameters, refer to the [RIF Relay Server documentation](https://github.com/rsksmart/rif-relay-server#overrides).
 
 #### Testnet
 
-A continuación se muestra un archivo de configuración de ejemplo que utiliza los componentes fuera de cadena desplegados en la red de pruebas Rootstock (https://rpc.testnet.rootstock.io/{YOUR_APIKEY}).
+Here's an example configuration file using the off-chain components deployed on the Rootstock Testnet (https://rpc.testnet.rootstock.io/{YOUR_APIKEY}).
 
-> **Importante:** Debido a módulos específicos habilitados en los nodos RSKj, el Servidor de Retransmisión RIF no puede conectarse a los nodos públicos.
+> **Important:** Due to specific modules enabled in the RSKj nodes, the RIF Relay Server cannot connect to the public nodes.
 
 ```json
   {
@@ -300,24 +300,24 @@ A continuación se muestra un archivo de configuración de ejemplo que utiliza l
   }
 ```
 
-> Los [contratos](/developers/integrate/rif-relay/contracts/) utilizados en esta configuración son los contratos primarios disponibles en la red Rootstock. Estos contratos primarios, sin embargo, no incluyen soporte para la `CustomSmartWallet`.
+> The [contracts](/developers/integrate/rif-relay/contracts/) used in this setup are the primary contracts available on the Rootstock network. These primary contracts, however, do not include support for the `CustomSmartWallet`.
 
-Para obtener información detallada sobre cada clave de configuración utilizada para configurar el servidor de retransmisión RIF, consulte la documentación [Configuración del servidor de retransmisión RIF](https://github.com/rsksmart/rif-relay-server#server-configuration).
+For details of each configuration key used in setting up the RIF Relay Server, refer to the [RIF Relay Server Configuration](https://github.com/rsksmart/rif-relay-server#server-configuration) documentation.
 
-Para iniciar el servidor, ejecute el siguiente comando:
+To start the server, execute the following command:
 
 ```js
   npm run start
 ```
 
-> Por defecto, el servidor utiliza el fichero `default.json5` del directorio config. Dependiendo del perfil en `NODE_ENV`, los valores en el archivo `default.json5` son anulados. Por lo tanto, es necesario configurar el entorno `NODE_ENV` a `testnet`.
+> By default, the server uses the `default.json5` file in the config directory. Depending on the profile in `NODE_ENV`, the values in the `default.json5` file is overriden. Therefore you need to setup the `NODE_ENV` environment to `testnet`.
 
-En este punto, el servidor debería estar funcionando y listo para empezar a procesar transacciones; sin embargo, aún necesitas registrar los componentes fuera de la cadena en el Relay Hub. Para el proceso de registro, el Relay Manager y el Worker deben tener fondos.
+At this point, the server should be running and ready to start processing transactions; however, you still need to register the off-chain components in the Relay Hub. For the registration process, the Relay Manager and Worker must have funds.
 
-Para obtener las direcciones, es necesario que el servidor esté activo. En una ventana de terminal diferente, ejecute el siguiente comando:
+To get the addresses, this requires the server to be active. In a different terminal window, execute the following command:
 
 ```bash
-  curl http://<SERVER_URL>/cadena-info
+  curl http://<SERVER_URL>/chain-info
 ```
 
 ```json
@@ -334,18 +334,18 @@ Para obtener las direcciones, es necesario que el servidor esté activo. En una 
 }
 ```
 
-1. Envía una cantidad arbitraria de tRBTC, 0,001 tRBTC por ejemplo, al Trabajador y al Gestor.
-2. Ahora ejecuta el comando de registro.
+1. Send an arbitrary amount of tRBTC, 0.001 tRBTC for example, to the Worker and Manager.
+2. Now execute the register command.
 
 ```js
-  npm ejecutar registro
+  npm run register
 ```
 
-He aquí un ejemplo de `register.json5`.
+Here's an example of the `register.json5`
 
 ```json
   {
-    "registro": {
+    "register": {
     "stake": "REGISTER_STAKE",
     "funds": "REGISTER_FUNDS",
     "mnemonic": "REGISTER_MNEMONIC",
@@ -358,14 +358,14 @@ He aquí un ejemplo de `register.json5`.
   }
 ```
 
-El proceso de registro realiza las siguientes acciones:
+The register process performs the following actions:
 
-- Estaca el gestor de relevo
-- Añade el Relay Worker
-- Registra el Servidor de Retransmisión
+- Stakes the Relay Manager
+- Adds the Relay Worker
+- Registers the Relay Server
 
-El servidor ya está listo para empezar a procesar transacciones y se muestra un mensaje de listo en la consola. Para más detalles sobre la configuración y los parámetros de registro, consulte la [Documentación del servidor de retransmisión RIF](https://github.com/rsksmart/rif-relay-server#overrides).
+The server is now ready to start processing transactions and a ready message is diplayed on the console. For more details on configuration and registration parameters, refer to the [RIF Relay Server documentation](https://github.com/rsksmart/rif-relay-server#overrides).
 
 #### Mainnet
 
-- Para ejecutar el servidor de retransmisión de RIF en la red principal de Rootstock, el procedimiento es el mismo que en la red de prueba, la única diferencia es la configuración. Configúrelo para utilizar contratos desplegados en Mainnet y un nodo RSKj conectado a Mainnet.
+- To run RIF Relay Server on the Rootstock Mainnet, the procedure is the same as the one on Testnet, the only difference is the configuration. Configure it to use contracts deployed on Mainnet and an RSKj node connected to Mainnet.

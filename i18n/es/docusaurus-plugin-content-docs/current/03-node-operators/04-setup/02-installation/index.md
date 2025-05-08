@@ -1,28 +1,28 @@
 ---
-sidebar_label: Instalación del nodo
+sidebar_label: Node Installation
 sidebar_position: 4
-title: Instalación del nodo RSKj
+title: RSKj Node Installation
 tags:
   - rsk
   - rootstock
   - rskj
-  - nodo
-  - desarrolladores
-  - minería fusionada
-description: Instalar RSKj en diferentes sistemas operativos.
+  - node
+  - developers
+  - merged mining
+description: Install RSKj on different OS.
 ---
 
-Los nodos Rootstock se pueden instalar en Ubuntu OS, Windows, Docker y Java. Dependiendo del rendimiento de su red, generalmente tarda _10 a 15 minutos_ en configurar un nodo de trabajo en Mainnet.
+Rootstock nodes can be installed on Ubuntu OS, Windows, Docker and Java. Here, we provide step-by-step instructions for all supported dev environments. Depending on your network performance, it usually takes _10 to 15 mins_ to setup a working node on Mainnet.
 
-> Asegúrese de que su sistema cumple con los [requisitos mínimos](/node-operators/setup/requirements/) antes de instalar los nodos Rootstock.
+> Ensure that your system meets the [minimum requirements](/node-operators/setup/requirements/) before installing the Rootstock nodes.
 
-> ¿Buscas probar tu dApps en testnet en minutos antes de desplegar en mainnet? Usa la [API RPC](/Developopers/rpc-api/)
+> Looking to test your dApps on testnet in minutes before deploying to mainnet? Use the [RPC API](/developers/rpc-api/)
 
-## Entornos soportados
+## Supported Environments
 
-| Entornos                                                          | Cómo instalar                                                                                                                                                                                       |
-| ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Paquete Ubuntu](/node-operators/setup/installation/ubuntu/)      | Visita [Configurar Nodo en Ubuntu](/node-operators/setup/installation/ubuntu/) para obtener instrucciones sobre cómo instalar Rootstock Node en sistemas ubuntu                                     |
-| [Java - Fat / Uber JAR](/node-operators/setup/installation/java/) | Visita [Setup Node usando JAR](/node-operators/setup/installation/java/) para obtener instrucciones sobre cómo instalar Rootstock Node en cualquier sistema con Fat JAR o Uber JAR. |
-| [Docker](https://hub.docker.com/r/rsksmart/rskj)                  | Visita el [Docker Hub](https://hub.docker.com/r/rsksmart/rskj) para obtener instrucciones sobre cómo instalar Rootstock Node como un contenedor docker en cualquier sistema.        |
-| [Windows](/node-operators/setup/node-runner/windows/)             | Visita [Setup Node en Windows OS](/node-operators/setup/node-runner/windows/)                                                                                                                       |
+| Environments                                                      | How to Install                                                                                                                                                               |
+| ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Ubuntu Package](/node-operators/setup/installation/ubuntu/)      | Visit [Setup Node on Ubuntu](/node-operators/setup/installation/ubuntu/) for instructions on installing Rootstock Node on ubuntu systems                                     |
+| [Java - Fat / Uber JAR](/node-operators/setup/installation/java/) | Visit [Setup Node using JAR](/node-operators/setup/installation/java/) for instructions on installing Rootstock Node on any system with Fat JAR or Uber JAR. |
+| [Docker](https://hub.docker.com/r/rsksmart/rskj)                  | Visit the [Docker Hub](https://hub.docker.com/r/rsksmart/rskj) for instructions on installing Rootstock Node as a docker container on any system.            |
+| [Windows](/node-operators/setup/node-runner/windows/)             | Visit [Setup Node on Windows OS](/node-operators/setup/node-runner/windows/)                                                                                                 |

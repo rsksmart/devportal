@@ -1,29 +1,29 @@
 ---
 sidebar_position: 1
-title: Resumen de recursos
-sidebar_label: Resumen
+title: Resources Overview
+sidebar_label: Overview
 tags:
   - rsk
   - rootstock
-  - soluciones
-  - cursos
-  - guías
-  - tutoriales
-description: Encuentra todos los recursos que necesitas para empezar en rootstock si eres de un entorno de desarrollador, un colaborador de código abierto, un startup, o simplemente buscando aprender a través de tutoriales o cursos.
+  - solutions
+  - courses
+  - guides
+  - tutorials
+description: Find all the resources you need to get started on rootstock whether you're from a developer background, an open source contributor, a startup, or a just looking to learn via tutorials or courses.
 ---
 
-La sección Recursos de Rootstock sirve como una base de conocimiento integral que incluye enlaces a oportunidades de subvención, eventos, hackathons, tutoriales, comunidad, programas de embajadores y cómo contribuir a la plataforma Rootstock.
+The Rootstock Resources section serves as a comprehensive knowledge base comprising of links to grants opportunities, events, hackathons, tutorials, community, ambassador programs, and how to contribute to Rootstock platform.
 
-## Navegando recursos
+## Navigating Resources
 
-| Recurso                                                                                          | Descripción                                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Contribuir a Rootstock](/resources/contribute/)                                                 | Explore las pautas claras y concisas de contribución y las diversas formas de contribuir a la plataforma Rootstock.                         |
-| [FAQs](/resources/faqs/)                                                                         | Encuentre respuestas a las preguntas frecuentes (FAQs) y los errores de solución de problemas que encuentra en su viaje. |
-| [Únete a la comunidad de Discord](https://discord.com/invite/rootstock)                          | Forme parte de la Comunidad de Rootstock en Discord.                                                                                        |
-| [Programas de Embajador](https://rootstock.io/ambassadors-program/)                              | Aprende sobre el programa del Embajador Rootstock y cómo convertirte en uno.                                                                |
-| [Grants](https://rootstock.io/grants/)                                                           | Obtén apoyo para construir tu siguiente dApp en Rootstock a través del programa de becas estratégicas.                                      |
-| [Tutorials](/recursos/tutorials/)                                                                | Tutoriales sobre Rootstock.                                                                                                                 |
-| [Guides](/resources/guides/)                                                                     | Guías de usuario en Rootstock.                                                                                                              |
-| [Hackathons](/recursos/hackathon/)                                                               | Hackathon y Recursos del taller.                                                                                                            |
-| [Propuestas de mejora Rootstock (RSKIPs)](https://github.com/rsksmart/RSKIPs) | Propuestas de Mejora de Rootstock.                                                                                                          |
+| Resource                                                                                          | Description                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Contribute to Rootstock](/resources/contribute/)                                                 | Explore clear and concise contribution guidelines and the various ways to contribute to the Rootstock platform.             |
+| [FAQs](/resources/faqs/)                                                                          | Find answers to frequently asked questions (FAQs) and troubleshoot errors you encounter on your journey. |
+| [Join the Discord Community](https://discord.com/invite/rootstock)                                | Be a part of the Rootstock Community on Discord.                                                                            |
+| [Ambassador Programs](https://rootstock.io/ambassadors-program/)                                  | Learn about the Rootstock Ambassador Program, and how to become one.                                                        |
+| [Grants](https://rootstock.io/grants/)                                                            | Get support to build your next dApp on Rootstock through the strategic grants program.                                      |
+| [Tutorials](/resources/tutorials/)                                                                | Tutorials on Rootstock.                                                                                                     |
+| [Guides](/resources/guides/)                                                                      | User Guides on Rootstock.                                                                                                   |
+| [Hackathons](/resources/hackathon/)                                                               | Hackathon and Workshop Resources.                                                                                           |
+| [Rootstock Improvement Proposals (RSKIPs)](https://github.com/rsksmart/RSKIPs) | Rootstock Improvement Proposals.                                                                                            |
