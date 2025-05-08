@@ -1,8 +1,8 @@
 ---
 id: verify-foundry-contract
-sidebar_label: Verify Smart Contracts using Blockscout
+sidebar_label: Verify Smart Contracts using Blockscout (Foundry)
 sidebar_position: 400
-title: Verify a Smart Contract using Blockscout
+title: Verify a Smart Contract using Blockscout (Foundry)
 description: "Configuring Foundry for smart contract verification on Rootstock"
 tags: [guides, developers, smart contracts, rsk, rootstock, foundry, dApps, ethers]
 ---

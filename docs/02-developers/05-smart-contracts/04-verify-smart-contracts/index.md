@@ -1,4 +1,4 @@
 ---
-sidebar_label: Verify Smart contract
+sidebar_label: Verify Smart contracts
 sidebar_position: 400
 ---
