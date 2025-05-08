@@ -1,0 +1,6 @@
+label: Integration Guides
+position: 7
+link:
+  type: generated-index
+  slug: /developers/integrate/
+  description: "Easily Integrate Your dApps with Developer-Friendly SDKs on Rootstock."

@@ -2,7 +2,7 @@ import Card from "/src/components/Card";
 import Translate from "@docusaurus/core/lib/client/exports/Translate";
 
 const data = {
-  title: <Translate>Connect with the Community'</Translate>,
+  title: <Translate>Connect with the Community</Translate>,
   description: null,
   cards: [
     {

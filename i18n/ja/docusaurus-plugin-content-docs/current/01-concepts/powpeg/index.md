@@ -1,0 +1,111 @@
+---
+title: 最も安全で、許可不要かつ検閲耐性のあるBitcoinペグの構築
+sidebar_position: 4
+sidebar_label: PowPegプロトコル
+tags:
+  - rsk
+  - rootstock
+  - rbtc
+  - btc
+  - アーキテクチャー
+  - powpegプロトコル
+  - powpegアプリ
+description: PowPegプロトコルを通じて、BTCをRBTCに、RBTCをBTCに転送します。
+render_features: powpeg-hsm-attestation-frame
+---
+
+Rootstockの**PowPeg**プロトコルは、2018年にフェデレーションとして始まり、現在では多くの分散型特性を備えるまでに発展しました。このプロトコルは、改ざん防止機能を備えたセキュアエレメント（SE）を基盤とする専用のPowHSM内に保管された秘密鍵を保護します。各PowHSMは、SPVモードでRootstockノードを実行しており、そのため署名はチェーンの累積プルーフ・オブ・ワークによってのみコマンドできます。PowPegのセキュリティは、「多層防御」と呼ばれるシンプルな層別設計によって確立されています。
+
+:::note\[Info]
+
+- PowPegアプリは、[テストネット](https://powpeg.testnet.rootstock.io/)と[メインネット](https://powpeg.rootstock.io/)で利用できます。
+- 設計とアーキテクチャーに関する概要説明、LedgerとTrezorを使用したペグイントランザクションの実行方法、よくある質問、およびPowPegで実行できる高度な操作については、[PowPegユーザーガイド](/resources/guides/powpeg-app/)をご覧ください。
+- 署名者と証明に関する情報は、[PowPeg HSMファームウェア証明](/concepts/powpeg/hsm-firmware-attestation)セクションを参照してください。
+- PowPegを使用する際のネイティブモードとファーストモードの違いについては、「[ファーストモードの導入：PowPeg経由でRBTCをより速く取得する（Introducing Fast Mode: Getting RBTC via the PowPeg, but Faster）](https://blog.rootstock.io/noticia/get-rbtc-fast-mode/)」をご覧ください。
+  :::
+
+## PowPegプロトコルの歴史
+
+ブロック形式が異なる2つのブロックチェーンは、それぞれがもう一方のコンセンサスルールを評価でき、クロスチェーンメッセージが長期間検閲されていない場合、完全に分散化された方法で通信することができます。現在、他のブロックチェーンのコンセンサスルールを評価できるのは、「チューリング完全」なスマートコントラクトを持つプラットフォームだけです。Bitcoinは、良くも悪くも、任意の述語でコインのロックを解除する能力を持っていません。そのため、Rootstockが作られた際は、当事者間で信頼を分散するために、Bitcoinで利用可能な唯一の技術であるマルチシグを使用する必要がありました。マルチシグを使えば、ロックされたビットコインを保護する役割を公証人グループに与えることができ、悪意のある当事者、ハッキングされた当事者、またはアクセス不能な当事者を一定の範囲で許容することができます。
+
+Rootstockのジェネシスブロックがマイニングされた際、マルチシグの保護を目的とした自律的な複数のファンクショナリーで構成されるRootstock Federationが誕生しました。このフェデレーションは、Rootstock上で実行される停止不可能なスマートコントラクトのRootstock Bridgeによって制御され、その誕生以来、順調に機能してきました。2020年、Rootstockコミュニティは、セキュリティと検閲耐性の両方においてRootstockペグの成長時期であると判断し、フェデレーションシステムからPowPegへと進化させます。PowPegとは、コンセンサスを確立するのと同じBitcoinハッシュレートでロックされたビットコインを保護する、独自の双方向ペグシステムです。ファンクショナリーはまだ存在しますが、その役割は主にハードウェアとノードを常に接続し、生存させておくことにあり、Bitcoinのマルチシグ秘密鍵を直接管理することはありません。詳しくは、「[PowPeg HSMファームウェア認証](/concepts/powpeg/hsm-firmware-attestation)」をご参照ください。
+
+## RootstockのPowPegプロトコル
+
+Rootstockの研究者と開発者がPowPegを設計する際に採用した戦略は、他のチームが双方向ペグプロトコルを構築した際に採用したものとは異なります。Rootstock PowPegは、「**多層防御**」と呼ばれる多層化セキュリティモデルに基づいています。その他のほとんどのペグは、複雑な方法で複数当事者のカストディ問題を解決する、単一の包括的な暗号化プロトコルに依存しています。このような複雑な暗号化プロトコルはデリケートで、十分に監査できる機関はほとんどありません。この種のプロトコルは侵害を受けることが多く、その結果、ユーザーのセキュリティが突然失われてしまうことがあります。
+
+最近のその他の双方向ペグに関する設計は、新しいトークンにおける高い担保を利用した暗号経済的インセンティブに焦点を当てています。しかし、サイドチェーンのコア機能に別のトークンを使用することは、Bitcoinの価値観と一致しません。その代わり、Rootstock PowPegブリッジは複数の防御（または層）に依存することで、各層を比較的シンプルに理解し、テストすることができます。このような多層防御アプローチにより、Rootstockは誕生から現在に至るまで、大きな問題やダウンタイムなしに成長することができました。担保がないため、Rootstock PowPegのメンバーは、Rootstockの取引手数料の一部を自動的に受け取ることで、参加のインセンティブを得ています。Ethereumのエコシステムで見られるように、取引手数料は最終的にマイナーにとって持続的な収入をもたらし、時にはブロックチェーンの補助金を[上回る](https://coinmetrics.io/ethereums-defi-evolution-how-defi-is-fueling-ethereums-growth/)こともあります。
+
+## PowPegプロトコルのファンクショナリー
+
+Rootstock PowPegに参加するファンクショナリーは、**PowHSM**と呼ばれる専用のハードウェアを常に稼働させ、特定の種類のRootstockフルノード（「PowPegノード」）に接続させます。PowHSMは外部の改ざん防止デバイスで、Bitcoinのマルチシグプロトコルに必須の秘密鍵の一つを生成し、保護します。これにより、十分な累積作業によって有効と証明されたトランザクションのみが署名されます。PowPegノードは、最大の持続性を持ち、かつRootstockブロックチェーンの情報、特に累積作業に関する情報をPowHSMに伝達するよう設計されています。
+
+ファンクショナリーの役割は、PowHSM、PowPegノード、およびそれらの間の通信における変更を監査することによって、PowHSMが確実に有効なマルチシグトランザクションのみを署名するようにすることにあります。ファンクショナリー自体はトランザクションの署名に一切関与せず、Rootstockブロックチェーン上のブロックの生成にも関与しません。
+
+## マージマイナーとArmadilloモニター
+
+Bitcoinマイナーの大部分はRootstockのマージドマイニングに参加し、Rootstockネットワークの安全を効果的に守るために必要なブロックチェーン特性である永続性とライブネスを提供しています。PowPegプロトコルにおけるマージドマイナーは、RootstockとBitcoin間のブリッジを保護するRootstockの多層防御アプローチの中で、最大かつ最も重要な層としての役割を果たします。ファンクショナリーはマージドマイニングの安全性に依存しており、有効なマルチシグトランザクションが安全かつ適時に署名・検証されることを保証しています。
+
+## 経済主体とブリッジコントラクト
+
+マーチャントや取引所などの経済主体は、Rootstockネットワークを通じてBridgeスマートコントラクトにペグインとペグアウトのトランザクション（詳細は後述）を送受信することで、Rootstock PowPegとのインタラクションを行います。Bridgeは、Rootstockブロックチェーンに存在するコンパイル済みのスマートコントラクトです。その役割は、Bitcoinブロックチェーンの最新のビューを維持し、ペグインリクエストを検証して、ペグアウトを命令することにあります。Bridgeコントラクトはこの機能を実現するために、SPV（[簡易支払い検証](https://en.bitcoinwiki.org/wiki/Simplified_Payment_Verification)）モードでBitcoinウォレットを管理します。このモードでは、トランザクションはブロックヘッダーによって確認されます。ブロックヘッダーには最小限の検証のみが行われますが、その検証には期待されるプルーフ・オブ・ワークが含まれています。これらの検証により、Bridgeウォレットは最も多くのチェーン作業が行われたBitcoinチェーンに従うことが保証されますが、チェーンが有効であるかどうかについては確認されません。
+
+通常、最も多くのチェーン作業が行われたチェーンが、ネットワークにおける最良のチェーンです。Bitcoinの歴史の中で、事前に確立されたコンセンサスルールに従って一つのブランチが無効となった、[意図しないネットワークフォーク](https://bitcoinmagazine.com/articles/bitcoin-network-shaken-by-blockchain-fork-1363144448)が一度だけありました。そのフォークの長さは24ブロックでした。したがって、意図的なまたは意図しない無効なフォークを防ぐため、Bridgeは100回の確認を待ってから、ペグイントランザクションを確認するよう設計されています。
+
+## Rootstock PowPegプロトコルのペグインとペグアウト、およびその他の特性
+
+現在では標準化された用語の「ペグイン」はビットコインをサイドチェーンに転送するプロセスを指し、「ペグアウト」はそれをBitcoinに戻すプロセスを意味します。ペグインの実行は、ビットコインをPowPegアドレスに送信し、そのBitcoin取引についてBridgeに通知するだけ簡単に行えます。PowPegのファンクショナリーは、ユーザーに代わって「監視塔」のサービスを提供し、Bridgeにペグインを通知します。
+
+Rootstock PowPegは資産移行プロトコルであり、ネットワークの遅延が発生した場合にペグインを中止することはできません。ネットワークの遅延時にペグインを中止できないことが、資産移行プロトコルと取引プロトコルを区別する一般的なポイントです。取引プロトコルの場合、取引相手が資金のロック解除に失敗するリスクが常に存在し、ユーザーはその失敗を所定の遅延時間内に通知しなければなりません。Rootstockでは、時間の経過とともに徐々に増加する上限値を超えた特別な場合でのみ、ペグイン操作のビットコインを返金します。
+
+厳密に言えば、Rootstock PowPegはハイブリッドペグです。ペグインはSPV証明を使用して、完全分散型の仕組みで機能し、PowPegメンバーは、ビットコインの入金が正しくRootstockに通知されていることを確認する監視塔としてのみ機能します。ペグイントランザクションを発行したユーザーは、最悪のケースとしてPowPegメンバーがRootstockに通知しなかった場合でも、最終的にユーザー自身がオンラインであればRootstockにトランザクションを通知することができます。Rootstockでは、双方向ペグトランザクションの送信者と受信者は同一人物であることを前提としているため、ユーザーはRootstockネットワークに通知することが強く推奨されます。
+
+ペグアウトを実行するために、BridgeはRootstockアカウントからリクエストを受け取ると、何千回もの確認ブロックを経て、このトランザクションに署名するようPowHSMに命令するBitcoinペグアウトトランザクションを構築します。Bridgeはペグアウトトランザクションに含める取引入力（またはUTXO）を選択し、いかなる種類のUTXOの選択的検閲も防ぎます。また、Bridgeは、PowPeg構成が変更される際に必要なすべての財務操作を調整し、強制遅延を適用します。最終的に、BridgeはBitcoinのブロックチェーンをRootstockのスマートコントラクトに公開するオラクルとして機能します。PowHSMはすべてのペグアウトトランザクションに署名する必要があるため、Rootstockのペグアウトは、PowHSMの参加とPowPegメンバーの大多数の協力に依存しています。PowHSMが提供する実用的なセキュリティを前提とすると、PowPegのペグアウトもトラストレスといえます。
+
+## Rootstock PowPegのセキュリティ
+
+Rootstockペグは、現存する中で最も安全なマルチシグシステムの一つになりつつあります。技術的に、PowPegのセキュリティは多層防御、調整の透明性、公開証明という複数の同時戦略に依存しています。しかし、ペグのセキュリティは技術的な要素だけに頼るものではありません。実世界でのセキュリティは、技術的、運用的、および評判的な観点から分析する必要があります。そこで、以下ではPowPegの技術的設計判断に焦点を当てたいと思います。
+
+## 多層防御
+
+多層防御は、慎重な責任分担によって実現されています。そのため、単一の要素や主体者だけではシステムを侵害することはできません。マイナー、ファンクショナリー、PowHSMの製造元、または開発者のいずれも単独で資金を盗むことはできません。ペグプロセスは、ソフトウェアとファームウェアで適用されるコンセンサスルールによって管理され、それぞれがバグや脆弱性からお互いを保護する仕組みとなっています。さらに、Rootstockコミュニティがコードのミスを防ぐ役割を担っています。コミュニティの目標は、より多くの保護層を追加し、各層がさらなるセキュリティを提供することで、PowPegを強化することにあります。
+
+前述通り、各ファンクショナリーはPowPegノードだけでなく、PowHSMも実行しています。今後数ヶ月以内に、既存のPowPegメンバーはすべて、PowHSMバージョン2.0へのアップグレードを終える予定です。先に説明したように、各PowHSMはSPVモードでコンセンサスノードを実行するため、コマンドは実際のハッシュレートで裏付けされる必要があります。複数のBitcoinマイニングプールをハッキングしない限り、PowHSMを不正に操作することは極めて困難になります。
+
+「ビトクラシー」は、このコンテキストでは非常に便利な用語です。ビトクラシーとは、意思決定を行って効果的に管理するのに十分な権力を保持する単一の組織が存在しないガバナンスシステムを指します。PowPegのセキュリティに対するRootstockの多層防御アプローチは、このような理念に基づいており、攻撃を無効なものにします。双方向ペグシステムを設計する際に、「このプロトコルはどれだけビトクラシーに近づいているか」と問うべきです。これにより、フェデレーション型システムと分散型システムを巡る終わりなき議論から解放されます。
+
+## 調整の透明性
+
+ファンクショナリー間の通信はすべて、Rootstockブロックチェーン上で行われます。ファンクショナリー間に隠されたメッセージはなく、秘密裏に通信できるようなサブシステムもあらかじめ確立されていません。交換されるメッセージはすべて公開されます。仮にPowPegノードの実行コードを完全に制御できる攻撃者がいたとしたら、彼らによる隠れた通信を防ぐことはできませんが、長期間にわたる隠れた共謀を防ぐことは可能です。調整は公開ネットワーク上で行われるため、システムはPowHSMをブロックチェーンの誠実な最良のチェーンに強制的に公開し、すべてのネットワーク参加者が定期的にPowHSMの内部状態を知れるようにします。外部のハッカーにとっては、事前に確立された隠れた調整システムの存在は、権限昇格の強力なツールとなります。なぜなら、それを使ってファンクショナリーIPを取得し、標的型攻撃を試みることができるためです。PowPegのファンクショナリーは、Tor経由でネットワークに接続したり、問題なくIPを毎日変更したりすることができます。
+
+最終的に、Bridgeスマートコントラクトがペグアウトトランザクションを構築し、PowHSMがトランザクションに関連するものを選択して署名することはありません。トランザクション全体の内容は、Rootstockのコンセンサスによって決定されます。
+
+## ファームウェア証明
+
+Rootstock PowHSMファームウェアは、フルノードとPowPegノードと同様に、決定論的ビルドを使用して生成されていますが、現時点でPowHSMでのファームウェアインストールは完全にトラストレスにはできません。監査グループが、新しいデバイスやデバイスのバッチごとに、ファームウェアのインストー ルプロセスが適切であることを証明する必要があります。この点に関しては、新しい防御策を導入することで改善を試みています。次期バージョンのPowHSMファームウェア（バージョン 2.1）では、デバイスが提供するセキュリ ティ機能を利用したファームウェア証明が可能となります。したがって、次の目標は、Rootstockのデプロイ手順の一部として、あるいは定期的な_キープアライブ_メッセージとして、ファームウェア証明を含めることにあります。近日中に証明メッセージはブロックチェーンに保存され、コミュニティのすべてのメンバーが PowHSMファームウェアを検証できるようになります。
+
+## プルーフ・オブ・ワークは時間の証明
+
+PowHSMが必要とする累積的作業は、あらゆる攻撃に対するレートリミッターまたは**強制的な時間**の遅延としても機能します。Rootstockがマージドマイニングを通じてBitcoinハッシュレートの大部分を保持しているという事実を考慮すると、PowHSMを「騙して」悪意のあるフォークブランチ上のペグアウトを確認させるのに必要な累積難易度は、主要なBitcoinマイニングプールによる大規模な共謀が数日間にわたって続くことを意味します。このような攻撃は、BitcoinとRootstockの両コミュニティにとって透明で、確認することができます。銀行の金庫の[開錠手順](https://www.law.cornell.edu/cfr/text/12/208.61)のように、PowHSMは実際に[時間遅延](https://en.wikipedia.org/wiki/Time_lock)を適用しており、攻撃が疑われる場合には、人間がループに介入することができます。
+
+## ペグインとペグアウトの最終性
+
+Since the Bitcoin blockchain and the Rootstock sidechain are not entangled in a single blockchain or in a parent-child relation as in a [syncchain](https://blog.rootstock.io/noticia/syncchain-synchronized-sidechains-for-improved-security-and-usability/), the transfers of bitcoins between them must at some point in time be considered final. If not, bitcoins locked on one side would never be able to be safely unlocked on the other. **Therefore, peg-in and peg-out transactions require a high number of block confirmations. Peg-ins require 100 Bitcoin blocks (approximately 2000 Rootstock blocks), and peg-outs require 4000 Rootstock blocks (approximately 200 Bitcoin blocks)**. Transactions signed by federation nodes are considered final by Rootstock: these transactions are broadcast and assumed to be included sooner or later in the Bitcoin blockchain. Due to the need for finality, Rootstock consensus does not attempt to recover from an attack that manages to revert the blockchain deep enough to revert a final peg-in or peg-out transaction. If a huge reversal occurs, PowPeg nodes halt any future peg-out, and the malicious actors should not be able to double-spend the peg.
+
+:::note[IRIS 3.0.0]
+IRIS 3.0.0のアップグレード以降、ペグインとペグアウトに必要な最小値が半分に減少し、現在ではペグイン（BTC）の最小値が0.005、ペグアウト（RBTC）の最小値が0.004となっています。この最小値の他に、Bridgeはペグアウトに必要な手数料を見積もり、手数料を支払った後の残りが少なすぎる場合（BTCで使用するには十分でない場合）、ペグアウトは拒否されます。上記のいずれかの条件でペグアウトが拒否された場合、資金は返金されます。
+:::
+
+## 分散化 - ビトクラシーの構築
+
+The use of PowHSMs in a federation is a step forward in decentralization, because a remotely compromised functionary does not compromise the main element for the security of the peg: a multisig private key. Since Rootstock has a large portion of the Bitcoin merge-mined hashrate, currently surpassing 51%, it seems extremely unlikely that a new group of merge-miners can hijack consensus long enough to force PowHSMs to perform a malicious peg-out. But the Rootstock community should never rest on its laurels.  Instead, the Rootstock community is planning to apply once again a layered approach leading to more “additive security”.
+
+## PowPegの検閲耐性
+
+Rootstock PowPegは、各PowPegノードに委任される責任の範囲が限定されている点においても特徴があります。特に、PowPegファンクショナリーは、ペグインとペグアウトのトランザクションに選択的検閲を適用することはできません。あるPowPegファンクショナリーが特定のトランザクションを検閲しようとした場合、他のファンクショナリーがペグアウトトランザクションに署名して実行し、検閲は失敗します。すべてのファンクショナリーがトランザクションを検閲しようとした場合、ペグアウトはUTXOとリンクしているため、ファンクショナリーは他のペグアウトを実行できなくなり、ペグアウトトランザクションのUTXOを選択できません。「変更」のUTXOを含むペグアウトUTXOは、Bridgeコントラクトによって選択され、コンセンサスに基づくチェーンを形成します。したがって、あるトランザクションを選択的に禁止することは、最終的にはPowPegの完全停止を引き起こすことになります。これが、選択的検閲が不可能な理由です。
+
+単一政府によるPowPegの完全なシャットダウンは、ファンクショナリーが地理的に世界中に分散しているため、実行するのは非常に困難です。強力な世界規模の組織攻撃や三文字機関の攻撃から守るため、Rootstockは、PowPegが解体されたことが証明された一年後に起動する緊急復旧マルチシグタイムロックを追加する予定です。シャットダウンの試みは、Rootstockをさらに強化し、次の攻撃に対する耐性を高めることになります。なぜなら、新しいRootstock PowPegは急速に拡大し、Tor上でPowHSMデバイスとPowPegノードをそれぞれ実行する世界中の個人ユーザー100人に分散化されるからです。
+
+## まとめ
+
+Rootstockペグは、フェデレーションからPowPegへと進化しました。ペグが時間とともに成長するにつれ、より多くのビットコインがRootstockに移動しています。開発者は、当社の安全かつ効率的な金庫上でdAppsを構築する、独自の機会を見出すことができます。代替手段と比較して、PowPegはBitcoinのスクリプトシステムによって確立された制約の範囲内で、分散化を最大限に活用した多層的保護に基づく強力なセキュリティを兼ね備えています。
