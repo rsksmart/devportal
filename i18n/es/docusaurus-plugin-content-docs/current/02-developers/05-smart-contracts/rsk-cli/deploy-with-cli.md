@@ -18,7 +18,7 @@ npx hardhat
 ```
 
 2. **Project Structure**:
-  * After creating the project, your folder structure will look something like this:
+* After creating the project, your folder structure will look something like this:
 
 ```text
 ├── contracts
@@ -157,14 +157,14 @@ For the bytecode, we use `.bin` to indicate it’s a binary file containing the 
 :::note[Deploy Parameters]
 
 1. `--abi` `<path\_to\_abi\>`:
-  * This specifies the path to the ABI (Application Binary Interface) file for the smart contract.
-  * The ABI file contains information about the contract's functions, events, and structure, allowing `rsk-cli` to understand how to interact with the deployed contract.
+* This specifies the path to the ABI (Application Binary Interface) file for the smart contract.
+* The ABI file contains information about the contract's functions, events, and structure, allowing `rsk-cli` to understand how to interact with the deployed contract.
 2. `--bytecode` `<path\_to\_bytecode\>`:
-  * This specifies the path to the bytecode file for the smart contract.
-  * The bytecode is the compiled binary code of the smart contract. This is what gets deployed to the blockchain.
+* This specifies the path to the bytecode file for the smart contract.
+* The bytecode is the compiled binary code of the smart contract. This is what gets deployed to the blockchain.
 3. `--args` `<arg1\> <arg2\> ...`:
-  * **This** provides the initial arguments for the contract's constructor.
-  * These arguments initialize the contract with any required values at deployment, such as setting initial owners, parameters, or other values needed by the contract. > The constructor args are optional depending on your contract
+* **This** provides the initial arguments for the contract's constructor.
+* These arguments initialize the contract with any required values at deployment, such as setting initial owners, parameters, or other values needed by the contract. > The constructor args are optional depending on your contract
 
 4. `--testnet` *(Optional)*
 
@@ -172,7 +172,7 @@ For the bytecode, we use `.bin` to indicate it’s a binary file containing the 
   * Testnet is used for testing purposes, so developers often use it to verify contracts in a non-production environment before deploying them on the mainnet.
 
 * **Example:** If verifying on testnet, use `--testnet`.
-:::
+  :::
 
 ````mdx-code-block
 <Tabs>
