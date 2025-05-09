@@ -16,7 +16,7 @@ render_features: powpeg-hsm-attestation-frame
 
 El protocolo **PowPeg** de Rootstock ha madurado desde su creación en 2018 como una federación hasta incluir ahora muchas cualidades descentralizadas. El protocolo protege las claves privadas almacenadas en PowHSM de propósito especial basadas en elementos seguros (SE) a prueba de manipulaciones. Cada PowHSM ejecuta un nodo de Rootstock en modo SPV, por lo que las firmas solo pueden ser ordenadas mediante la prueba acumulativa de trabajo de la cadena. La seguridad en PowPeg se establece a través de la simplicidad de un diseño en capas que denominamos defensa en profundidad.
 
-:::note\[Info]
+:::note[Info]
 
 - La aplicación PowPeg está disponible en [Testnet] (https://powpeg.testnet.rootstock.io/) y en [Mainnet] (https://powpeg.rootstock.io/).
 - Para obtener información general sobre el diseño y la arquitectura, cómo realizar una transacción peg-in utilizando Ledger y Trezor, preguntas frecuentes y operaciones avanzadas que puede realizar en el PowPeg, consulte la [Guía del usuario de PowPeg] (/resources/guides/powpeg-app/).

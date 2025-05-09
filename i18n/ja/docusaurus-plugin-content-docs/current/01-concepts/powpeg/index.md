@@ -16,7 +16,7 @@ render_features: powpeg-hsm-attestation-frame
 
 Rootstockの**PowPeg**プロトコルは、2018年にフェデレーションとして始まり、現在では多くの分散型特性を備えるまでに発展しました。このプロトコルは、改ざん防止機能を備えたセキュアエレメント（SE）を基盤とする専用のPowHSM内に保管された秘密鍵を保護します。各PowHSMは、SPVモードでRootstockノードを実行しており、そのため署名はチェーンの累積プルーフ・オブ・ワークによってのみコマンドできます。PowPegのセキュリティは、「多層防御」と呼ばれるシンプルな層別設計によって確立されています。
 
-:::note\[Info]
+:::note[Info]
 
 - PowPegアプリは、[テストネット](https://powpeg.testnet.rootstock.io/)と[メインネット](https://powpeg.rootstock.io/)で利用できます。
 - 設計とアーキテクチャーに関する概要説明、LedgerとTrezorを使用したペグイントランザクションの実行方法、よくある質問、およびPowPegで実行できる高度な操作については、[PowPegユーザーガイド](/resources/guides/powpeg-app/)をご覧ください。

@@ -16,7 +16,7 @@ render_features: powpeg-hsm-증명-프레임
 
 Rootstock의 **PowPeg** 프로토콜은 2018년 연합으로 시작된 이후 계속 발전하여 현재는 많은 탈중앙적 특성을 포함하고 있습니다. 이 프로토콜은 변조 방지 보안 요소(SE)에 기반한 특수 목적 PowHSM에 저장된 개인 키를 보호합니다. 각 PowHSM은 SPV 모드에서 Rootstock 노드를 실행하므로, 체인 누적 작업 증명(PoW)으로만 서명을 요구할 수 있습니다. PowPeg에서 보안은 심층 방어라고 하는 중첩 설계의 단순성을 통해 만들어집니다.
 
-:::note\[Info]
+:::note[Info]
 
 - PowPeg 앱은 [테스트넷](https://powpeg.testnet.rootstock.io/) 및 [메인넷](https://powpeg.rootstock.io/)에서 사용할 수 있습니다.
 - 설계 및 아키텍처에 관한 일반 정보, Ledger와 Trezor를 사용해 페그인(peg-in) 트랜잭션을 수행하는 방법, 자주 묻는 질문 및 PowPeg에서 수행할 수 있는 고급 옵션에 대한 내용은 [PowPeg 사용자 가이드](/resources/guides/powpeg-app/)를 참조해 주세요.
