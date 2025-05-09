@@ -390,7 +390,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="Ethers.js"
     subtitle="library"
     color="orange"
-    linkHref="https://web3js.readthedocs.io/en/v1.10.0/"
+    linkHref="https://docs.ethers.org/v5/"
     linkTitle="Use Ethers.js Library"
     description="A library for Interacting with the Rootstock Virtual Machine."
   />
@@ -399,7 +399,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="Web3.js"
     subtitle="library"
     color="orange"
-    linkHref="https://docs.ethers.org/v5/"
+    linkHref="https://web3js.readthedocs.io/en/v1.10.0/"
     linkTitle="Use Web3.js Library"
     description="A library for Interacting with the Rootstock Virtual Machine."
   />
