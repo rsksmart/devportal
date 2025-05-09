@@ -22,7 +22,8 @@ El protocolo **PowPeg** de Rootstock ha madurado desde su creación en 2018 como
 - Para obtener información general sobre el diseño y la arquitectura, cómo realizar una transacción peg-in utilizando Ledger y Trezor, preguntas frecuentes y operaciones avanzadas que puede realizar en el PowPeg, consulte la [Guía del usuario de PowPeg] (/resources/guides/powpeg-app/).
 - Obtenga información sobre los signatarios y la atestación en la sección de [Atestación del firmware HSM de PowPeg] (/concepts/powpeg/hsm-firmware-attestation).
 - Lea [Introducción al Modo Rápido: Obtenga RBTC a través de PowPeg, pero más rápido](https://blog.rootstock.io/noticia/get-rbtc-fast-mode/) para conocer la diferencia entre los Modos Nativo y Rápido al utilizar el PowPeg.
-  :::
+
+:::
 
 ## La historia del protocolo PowPeg
 
