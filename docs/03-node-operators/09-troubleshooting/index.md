@@ -1,12 +1,11 @@
 ---
-title: Troubleshooting
 sidebar_label: Troubleshooting
 sidebar_position: 11
+title: Troubleshooting
 tags: [rsk, rskj, rootstock, node, faq, troubleshoot]
 description: "How to solve some known or frequently encountered issues when working with RSKj"
 ---
 
-This section explains how to solve some known or frequently encountered issues.
 
 If what you need is not in this section, **contact us** without hesitation through the [Rootstock Community on Discord](https://rootstock.io/discord). We will be happy to help you!
 
@@ -113,6 +112,13 @@ If what you need is not in this section, **contact us** without hesitation throu
     <Accordion.Body>
        - This warning indicates that the platform of the image doesn't match the platform of your host machine. The image is built for linux/amd64 architecture, but your host machine is linux/arm64/v8 architecture.
         - Use a compatible image: `docker run -d --name rsk-node -p 4444:4444 -p 50505:50505 rsksmart/rskj:arm64v8-latest node --regtest`
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="9">
+    <Accordion.Header as="h3">* What went wrong: A problem occurred configuring root project 'rskj'. Could not resolve all files for configuration ':classpath'.</Accordion.Header>
+    <Accordion.Body>
+       - This error can happen if you are not using the correct java version. Assure that you are using at least Java 17 to build rskj.
+       - To check that, you can run in the terminal the command `java -version` and check the version.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
