@@ -16,7 +16,7 @@ En esta guía aprenderá cómo descargar e instalar MetaMask y a configurar rede
 
 :::note[Download e instalar MetaMask]
 
-Para descargar o instalar Metamask y añadir redes personalizadas Rootstock, acceda a la herramienta [metamask-landing.rifos.org] (https://metamask-landing.rifos.org/) o siga los pasos que se indican en el video siguiente.
+Para descargar o instalar Metamask y añadir redes personalizadas Rootstock, acceda a la herramienta [metamask-landing.rifos.org](https://metamask-landing.rifos.org/) o siga los pasos que se indican en el video siguiente.
 :::
 
 <div class="video-container">
@@ -73,7 +73,7 @@ Para descargar o instalar Metamask y añadir redes personalizadas Rootstock, acc
 
 :::tip[Get Clave API RPC]
 
-Acceda a [RPC API Docs] (/developers/rpc-api/) para registrarse y obtener una clave API.
+Acceda a [RPC API Docs](/developers/rpc-api/) para registrarse y obtener una clave API.
 :::
 
 ¡Ahora MetaMask está listo para usarse con Rootstock!
@@ -82,14 +82,14 @@ Acceda a [RPC API Docs] (/developers/rpc-api/) para registrarse y obtener una cl
 
 Pruebe la Testnet de Rootstock:
 
-- [Obtenga la prueba RBTC] (https://faucet.rootstock.io)
-- [Obtenga tokens RIF de prueba] (https://faucet.rifos.org)
+- [Obtenga la prueba RBTC](https://faucet.rootstock.io)
+- [Obtenga tokens RIF de prueba](https://faucet.rifos.org)
 
-Si desea obtener más información sobre los valores utilizados en la configuración de la red personalizada mencionada anteriormente, consulte [direcciones basadas en cuentas en Rootstock] (/concepts/account-based-addresses/).
+Si desea obtener más información sobre los valores utilizados en la configuración de la red personalizada mencionada anteriormente, consulte [direcciones basadas en cuentas en Rootstock](/concepts/account-based-addresses/).
 
 ### Limitaciones
 
-MetaMask aún no cumple completamente con las especificaciones técnicas de las [direcciones basadas en cuentas en Rootstock] (/concepts/account-based-addresses/). Tenga en cuenta que existen soluciones alternativas disponibles que permiten a la mayoría de los usuarios utilizar MetaMask en Rootstock con éxito.
+MetaMask aún no cumple completamente con las especificaciones técnicas de las [direcciones basadas en cuentas en Rootstock](/concepts/account-based-addresses/). Tenga en cuenta que existen soluciones alternativas disponibles que permiten a la mayoría de los usuarios utilizar MetaMask en Rootstock con éxito.
 
 MetaMask utiliza el valor de Ethereum para **ruta de derivación** y actualmente no permite su configuración. Esto significa que, si utiliza la misma frase semilla en MetaMask y en otras billeteras, obtendrá un conjunto diferente de direcciones. Una **solución alternativa** para esto es utilizar rutas de derivación personalizadas al utilizar otras billeteras que admitan esta función.
 
@@ -98,9 +98,9 @@ MetaMask actualmente no admite **sumas de comprobación** de EIP-1191. Esto sign
 :::warning\[Disclaimer]
 
 - Es posible que la moneda se muestre erróneamente como "ETH" en algunas pantallas de MetaMask. La red Rootstock utiliza "RBTC" como su criptomoneda.
-- Este tutorial utiliza la [API RPC de Rootstock] (/developers/rpc-api/). Puede conectarse a otros nodos o utilizar el [Nodo Público] (/node-operators/public-nodes/) cambiando la URL del RPC.
+- Este tutorial utiliza la [API RPC de Rootstock](/developers/rpc-api/). Puede conectarse a otros nodos o utilizar el [Nodo Público](/node-operators/public-nodes/) cambiando la URL del RPC.
 - El nodo debe habilitar CORS para que las dApp basadas en navegador funcionen.
-  - Revise la [referencia del archivo de configuración] (/node-operators/setup/configuration/) para la configuración de CORS.
+  - Revise la [referencia del archivo de configuración](/node-operators/setup/configuration/) para la configuración de CORS.
     :::
 
 ## Recursos útiles

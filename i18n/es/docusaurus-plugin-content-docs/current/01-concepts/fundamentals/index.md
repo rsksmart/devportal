@@ -14,7 +14,7 @@ description: Rootstock es la primera cadena lateral de Bitcoin y la más durader
 
 Rootstock es la primera cadena lateral de Bitcoin y la más duradera. Es la única solución de layer 2 que combina la seguridad de la prueba de trabajo de Bitcoin con las capacidades de contratos inteligentes de Ethereum. La plataforma es de código abierto, compatible con la máquina virtual de Ethereum y asegurada por más del 60 % del poder de hashing de Bitcoin, lo que la convierte en la puerta de entrada a un floreciente ecosistema de dApp que continúa evolucionando para convertirse en una plataforma sin necesidad de intermediarios de confianza.
 
-Vea la [Pila de Rootstock] (/concepts/fundamentals/stack/).
+Vea la [Pila de Rootstock](/concepts/fundamentals/stack/).
 
 ## ¿Cómo se conecta Rootstock a bitcoin?
 
@@ -22,7 +22,7 @@ Vea la [Pila de Rootstock] (/concepts/fundamentals/stack/).
 
 El primer punto de contacto es la minería.
 
-Los mineros de Bitcoin hacen lo que se conoce como [minería fusionada] (/node-operators/merged-mining/), asegurando ambas redes con la misma infraestructura y consumo de energía.
+Los mineros de Bitcoin hacen lo que se conoce como [minería fusionada](/node-operators/merged-mining/), asegurando ambas redes con la misma infraestructura y consumo de energía.
 
 Crean bloques en la red de bitcoin cada 10 minutos, incluyendo la transferencia de bitcoins entre diferentes direcciones, generando nuevos bitcoins en el proceso.
 
