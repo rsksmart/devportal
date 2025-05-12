@@ -154,7 +154,7 @@ Se invita a los desarrolladores a aprovechar los proyectos de referencia para ha
 
 #### 👉 Criterios para las contribuciones de código
 
-Para una visión general completa del sistema de evaluación y recompensa para las contribuciones de código, que incluye criterios detallados sobre complejidad, impacto del proyecto, pruebas y documentación, consulte los [Criterios de evaluación para contribuciones de código] (https://docs.google.com/document/d/1vWYWdWxSXUcTxNS_OlRikfEwmPSXgw3iDsQ-UAqheMw/edit) y los [términos y condiciones del hacktivator] (https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?usp=sharing). Estos criterios describen cómo se evaluarán y recompensarán las contribuciones, que van desde correcciones simples hasta características avanzadas o integraciones externas, asegurando un enfoque equilibrado y justo para valorar la participación e impacto de los desarrolladores. Este documento cubre todo, desde la optimización del rendimiento hasta la integración de API externas, con recompensas ajustadas según el valor y la complejidad de cada contribución.
+Para una visión general completa del sistema de evaluación y recompensa para las contribuciones de código, que incluye criterios detallados sobre complejidad, impacto del proyecto, pruebas y documentación, consulte los [Criterios de evaluación para contribuciones de código](https://docs.google.com/document/d/1vWYWdWxSXUcTxNS_OlRikfEwmPSXgw3iDsQ-UAqheMw/edit) y los [términos y condiciones del hacktivator](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?usp=sharing). Estos criterios describen cómo se evaluarán y recompensarán las contribuciones, que van desde correcciones simples hasta características avanzadas o integraciones externas, asegurando un enfoque equilibrado y justo para valorar la participación e impacto de los desarrolladores. Este documento cubre todo, desde la optimización del rendimiento hasta la integración de API externas, con recompensas ajustadas según el valor y la complejidad de cada contribución.
 
 #### 👉 Recompensas por contribuciones de código
 
@@ -280,17 +280,17 @@ Sus contribuciones pueden cubrir cualquiera de los siguientes temas de Rootstock
 - Los blogs, tutoriales (escritos o en video) y la documentación técnica deben ser contenidos originales creados después del lanzamiento de Hacktivator el 11 de noviembre **(no publicados previamente en otro lugar)**, deben ser rigurosos y proporcionar información práctica. Comparta su contenido mediante Google Drive proporcionando la URL en el formulario de envío (enlace a continuación).
 - El contenido educativo debe estar dirigido a desarrolladores que quieran construir sobre Rootstock o comprender su integración con Bitcoin.
 - El contenido debe ayudar a otros desarrolladores a navegar y trabajar con Rootstock, implementar contratos inteligentes, utilizar herramientas, kits de desarrollo de software y bibliotecas compatibles, e integrar protocolos en Rootstock.
-- Las contribuciones para la documentación técnica de Rootstock deben enviarse como una solicitud de incorporación de cambios (Pull Request, PR) directamente en el [repositorio de DevPortal] (https://github.com/rsksmart/devportal/pulls), y el enlace de la PR debe ser enviado a través del [formulario de Google] (https://forms.gle/aF9pFMfRyoygfzJWA). Asegúrese de utilizar la etiqueta **“hacktivator”** en la PR y de describir adecuadamente su PR utilizando la plantilla.
+- Las contribuciones para la documentación técnica de Rootstock deben enviarse como una solicitud de incorporación de cambios (Pull Request, PR) directamente en el [repositorio de DevPortal](https://github.com/rsksmart/devportal/pulls), y el enlace de la PR debe ser enviado a través del [formulario de Google](https://forms.gle/aF9pFMfRyoygfzJWA). Asegúrese de utilizar la etiqueta **“hacktivator”** en la PR y de describir adecuadamente su PR utilizando la plantilla.
 - After approval, the contributor must publish their educational content on the [Rootstock Community blog](https://rootstock.hashnode.dev/) to qualify for rewards. They will be invited as a collaborator to do so, and the contribution will only be eligible for rewards once successfully published.
 
-:::note[More información sobre las pautas]
+:::note Más información sobre las pautas
 
 For a comprehensive overview of the guidelines, evaluation, and reward system for content contributions, including detailed criteria for depth, completeness, technical accuracy, educational value, and innovation, please refer to the [Educational Content Evaluation Criteria & Guidelines](https://docs.google.com/document/d/1vA3QK8ZNv5Fgegb0Jv2f03IVIREePDi4lrFE1vsfK7c/edit) and the [terms and conditions of the Hacktivator](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?usp=sharing). These criteria outline how contributions, ranging from technical documentation, written or video guides or tutorials will be assessed and rewarded, ensuring a balanced and fair approach to valuing content quality and impact. This document covers everything from word count appropriateness and inclusion of code examples to technical correctness and relevance to the Rootstock ecosystem, with rewards adjusted based on the value and complexity of each contribution.
 
 👉 Pautas a la hora de publicar:
 
-- Siga la [Guía de estilo de Rootstock] (https://github.com/rsksmart/devportal/blob/main/STYLE-GUIDE.md)
-- Vea [Contribuir a la documentación de Rootstock] (https://github.com/rsksmart/devportal/blob/main/CONTRIBUTING_DOCS.md) y [Pautas para los colaboradores de Rootstock] (https://github.com/rsksmart/devportal/blob/main/CONTRIBUTING.md)
+- Siga la [Guía de estilo de Rootstock](https://github.com/rsksmart/devportal/blob/main/STYLE-GUIDE.md)
+- Vea [Contribuir a la documentación de Rootstock](https://github.com/rsksmart/devportal/blob/main/CONTRIBUTING_DOCS.md) y [Pautas para los colaboradores de Rootstock](https://github.com/rsksmart/devportal/blob/main/CONTRIBUTING.md)
 
 :::
 
@@ -310,7 +310,7 @@ El rango de recompensas proporcionado para cada opción se utilizará en funció
 Es muy fácil enviar sus contribuciones. Solo siga estos pasos:
 
 1. Complete su trabajo: Ya sea código o contenido educativo, asegúrese de que esté completamente terminado y cumpla con los criterios de contribución.
-2. Envíe su contribución a través del formulario de Google: Use este [enlace al formulario] (https://forms.gle/aF9pFMfRyoygfzJWA) para enviarla. Se le pedirá que proporcione:
+2. Envíe su contribución a través del formulario de Google: Use este [enlace al formulario](https://forms.gle/aF9pFMfRyoygfzJWA) para enviarla. Se le pedirá que proporcione:
 
 - Su nombre o seudónimo
 - País
@@ -326,11 +326,9 @@ Esta es su oportunidad de dejar una huella significativa en Rootstock a la vez q
 
 <Button size="lg" href="https://forms.gle/aF9pFMfRyoygfzJWA">Envíe su trabajo</Button>
 
-<br></br>
+:::success T&C
 
-:::success\[T\&C]
-
-Al participar en Hacktivator, usted reconoce que ha leído, comprendido y acepta cumplir con todos los aspectos del programa y sus [términos y condiciones] (https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?usp=sharing). Si no está de acuerdo con alguna parte o con todos los términos del programa o sus términos y condiciones, absténgase de unirse o enviar contribuciones, ya que su participación será interpretada como una aceptación total de estos términos.
+Al participar en Hacktivator, usted reconoce que ha leído, comprendido y acepta cumplir con todos los aspectos del programa y sus [términos y condiciones](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?usp=sharing). Si no está de acuerdo con alguna parte o con todos los términos del programa o sus términos y condiciones, absténgase de unirse o enviar contribuciones, ya que su participación será interpretada como una aceptación total de estos términos.
 
 :::
 
