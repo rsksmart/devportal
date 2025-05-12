@@ -28,11 +28,11 @@ Crean bloques en la red de bitcoin cada 10 minutos, incluyendo la transferencia 
 
 En Rootstock, los bloques se crean cada 30 segundos para asegurar la ejecución de los contratos inteligentes. Esto no genera nuevas monedas en el proceso, pero sí obtiene una recompensa de la minería fusionada.
 
-> Consulte [https://rootstock.io/mine-btc-with-rootstock/](https://rootstock.io/mine-btc-with-rootstock/) para obtener más información sobre la minería.
+> Consulte [https://rootstock.io/mine-btc-with-rootstock/(https://rootstock.io/mine-btc-with-rootstock/) para obtener más información sobre la minería.
 
 ### Powpeg con Bitcoin
 
-El segundo punto de contacto es el [Powpeg] (/concepts/powpeg/), también conocido como bridge.
+El segundo punto de contacto es el [Powpeg](/concepts/powpeg/), también conocido como bridge.
 
 Este componente conecta ambas redes para permitir la transferencia de bitcoins a Rootstock, lo que a su vez permite a los desarrolladores interactuar con contratos inteligentes. Ellos pagan el gas utilizando el mismo bitcoin, el smart bitcoin.
 

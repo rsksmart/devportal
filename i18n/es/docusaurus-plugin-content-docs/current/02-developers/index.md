@@ -19,20 +19,20 @@ Esta sección permite a los desarrolladores iniciarse en la blockchain de Rootst
 
 :::info\[Info]
 
-- ¿Quiere probar rápidamente su dApp en testnet antes de implementarla en mainnet? Use la [API RPC de Rootstock] (https://rpc.rootstock.io/) o consulte los [métodos JSON-RPC] (/developers/rpc-api/rootstock/methods/) disponibles en la API RPC.
-- Sumérjase de lleno con estas [guías paso a paso] (/developers/quickstart/) para configurar su entorno de desarrollo e implementar su primera dApp.
+- ¿Quiere probar rápidamente su dApp en testnet antes de implementarla en mainnet? Use la [API RPC de Rootstock](https://rpc.rootstock.io/) o consulte los [métodos JSON-RPC](/developers/rpc-api/rootstock/methods/) disponibles en la API RPC.
+- Sumérjase de lleno con estas [guías paso a paso](/developers/quickstart/) para configurar su entorno de desarrollo e implementar su primera dApp.
   :::
 
 ## Navegación por la sección de desarrolladores
 
-| Recurso                                                                                                                                          | Descripción                                                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Requisitos de hardware] (/developers/requirements/)                      | Configuración de su entorno local.                                                                                                  |
-| [Conceptos esenciales de blockchain] (/developers/blockchain-essentials/) | Conceptos esenciales de la blockchain de Rootstock.                                                                                 |
-| [Inicio rápido] (/developers/quickstart/)                                 | Sumérjase de lleno con estas guías paso a paso para configurar su entorno de desarrollo e implementar su primera dApp.              |
-| [Desarrollo de un contrato inteligente] (/developers/smart-contracts/)    | Explore en profundidad los recursos sobre la creación de contratos inteligentes seguros y escalables en Rootstock.                  |
-| [Guías de integración] (/developers/integrate/)                           | Profundice su conocimiento con guías detalladas y tutoriales informativos que cubren diversos aspectos del desarrollo de Rootstock. |
-| [JSON-RPC] (/developers/rpc-api/)                                         | Pruebe sus dApp en testnet antes de implementarlas en mainnet utilizando los proveedores de la API RPC en Rootstock.                |
-| [Bibliotecas] (/developers/libraries/)                                    | Acceda a herramientas y bibliotecas indispensables para agilizar su proceso de desarrollo.                                          |
+| Recurso                                                                  | Descripción                                                                                                                                         |
+| ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Requisitos de hardware](/developers/requirements/)                      | Configuración de su entorno local.                                                                                                  |
+| [Conceptos esenciales de blockchain](/developers/blockchain-essentials/) | Conceptos esenciales de la blockchain de Rootstock.                                                                                 |
+| [Inicio rápido](/developers/quickstart/)                                 | Sumérjase de lleno con estas guías paso a paso para configurar su entorno de desarrollo e implementar su primera dApp.              |
+| [Desarrollo de un contrato inteligente](/developers/smart-contracts/)    | Explore en profundidad los recursos sobre la creación de contratos inteligentes seguros y escalables en Rootstock.                  |
+| [Guías de integración](/developers/integrate/)                           | Profundice su conocimiento con guías detalladas y tutoriales informativos que cubren diversos aspectos del desarrollo de Rootstock. |
+| [JSON-RPC](/developers/rpc-api/)                                         | Pruebe sus dApp en testnet antes de implementarlas en mainnet utilizando los proveedores de la API RPC en Rootstock.                |
+| [Bibliotecas](/developers/libraries/)                                    | Acceda a herramientas y bibliotecas indispensables para agilizar su proceso de desarrollo.                                          |
 
 

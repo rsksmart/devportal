@@ -10,7 +10,7 @@ tags:
 description: Cómo funciona la minería fusionada de Rootstock con Bitcoin y sus beneficios.
 ---
 
-La [minería fusionada] (https://rootstock.io/mine-btc-with-rootstock/) es el proceso que permite que la blockchain de Rootstock se mine simultáneamente con la blockchain de Bitcoin. Esto es posible porque ambas cadenas utilizan el mismo algoritmo de prueba de trabajo (PoW) con doble SHA-256.
+La [minería fusionada](https://rootstock.io/mine-btc-with-rootstock/) es el proceso que permite que la blockchain de Rootstock se mine simultáneamente con la blockchain de Bitcoin. Esto es posible porque ambas cadenas utilizan el mismo algoritmo de prueba de trabajo (PoW) con doble SHA-256.
 
 <Button href="/node-operators/merged-mining/getting-started/">Comencemos</Button>
 
@@ -39,4 +39,4 @@ Puede ver la potencia de hash de la red Rootstock en el [sitio web de estadísti
 
 ## Detalles de implementación de los pools de software de minería
 
-Consulte la [Guía de implementación para comenzar] (/node-operators/merged-mining/getting-started/).
+Consulte la [Guía de implementación para comenzar](/node-operators/merged-mining/getting-started/).
