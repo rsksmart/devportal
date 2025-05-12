@@ -28,6 +28,7 @@ Eligible contributions will be rewarded as set out in the hacktivator's terms an
 
 Developers are encouraged to leverage reference projects to make meaningful contributions to the Rootstock ecosystem. See the options below:
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">1. CLI (Developer Tooling)</Accordion.Header>
@@ -140,6 +141,7 @@ Developers are encouraged to leverage reference projects to make meaningful cont
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 #### 👉 Code Contributions Criteria
 
@@ -165,6 +167,7 @@ Each verified and approved code contribution that becomes a Qualified Contributi
 
 You can contribute to the Rootstock platform by creating one of the following types of content:
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">1. Blog Posts</Accordion.Header>
@@ -199,9 +202,11 @@ You can contribute to the Rootstock platform by creating one of the following ty
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 Your contributions can cover any of the following Rootstock themes:
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">1. Smart Contract Development Tutorials</Accordion.Header>
@@ -265,6 +270,7 @@ Your contributions can cover any of the following Rootstock themes:
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 #### 👉 Educational Content Criteria & Guidelines:
 
