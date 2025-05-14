@@ -7,7 +7,7 @@ description: The Flyover SDK streamlines integration between client applications
 ---
 
 ## Custom network setups
-To configure custom networks, see [Configuration](https://github.com/rsksmart/unified-bridges-sdk/tree/main/packages/flyover-sdk#configuration) section.
+To configure custom networks, see [Configuration](https://github.com/rsksmart/flyover-sdk/tree/main?tab=readme-ov-file#configuration) section.
 
 ## Captcha token handling 
 
@@ -44,7 +44,7 @@ const flyover = new Flyover({
 
 ## FlyoverUtils
 
-Flyover SDK exports an object with a collection of util functions that the client application might use during the integration with the SDK. You can see the [list of the utility functions](https://github.com/rsksmart/unified-bridges-sdk/blob/main/packages/flyover-sdk/docs/modules.md#flyoverutils) and also when importing the FlyoverUtils object from the SDK package every function has a JsDoc explaining its usage.
+Flyover SDK exports an object with a collection of util functions that the client application might use during the integration with the SDK. You can see the [list of the utility functions](https://github.com/rsksmart/flyover-sdk/blob/main/docs/modules.md#flyoverutils) and also when importing the FlyoverUtils object from the SDK package every function has a JsDoc explaining its usage.
 
 :::danger[Troubleshooting]
 

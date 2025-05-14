@@ -6,35 +6,58 @@ tags: [rsk, rootstock, rif, flyover, integrate, integration guide, rbtc, powpeg]
 description: The Flyover SDK streamlines integration between client applications and the Flyover Protocol. This easy-to-use JavaScript/TypeScript toolkit provides configuration options for Liquidity Providers (LPs) and custom network setups for connecting to Rootstock.
 ---
 
-Liquidity Providers (LPs) interacts with the protocol to perform some management operations related to topics such as collateral, funds, fees management, configuration, etc through a Liquidity Provider Server (LPS). The LP does this operation through the Liquidity Provider Server (LPS), that's the reason why the LPS also has an API that the LP interacts with to perform various management operations.
+# Liquidity Provider Server
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/rsksmart/liquidity-provider-server/badge)](https://scorecard.dev/viewer/?uri=github.com/rsksmart/liquidity-provider-server)
+[![CodeQL](https://github.com/rsksmart/liquidity-provider-server/workflows/CodeQL/badge.svg)](https://github.com/rsksmart/liquidity-provider-server/actions/workflows/codeql-analysis.yml)
+[![Unit Tests](https://github.com/rsksmart/liquidity-provider-server/workflows/Liquidity%20Provider%20Server%20CI/badge.svg)](https://github.com/rsksmart/liquidity-provider-server/actions/workflows/ci.yml)
 
-In the Flyover Protocol, there are two three main Actors: 
-1. The regular user (user), who is party interested in executing Peg-In/Peg-Out operations 
+The Liquidity Provider Server (LPS) is a server that interacts with a [Liquidity Bridge Contract (LBC)](https://github.com/rsksmart/liquidity-bridge-contract) to provide liquidity for users as part of the Flyover protocol. This server performs all the necessary operations to play the role of the Liquidity Provider, involving transactions in both Rootstock and Bitcoin networks.
+
+Liquidity Providers (LPs) interact with the protocol to perform management operations related to topics such as collateral, funds, fees management, configuration, etc. through the LPS. The LP does these operations through the Liquidity Provider Server, which is why the LPS also has an API that the LP interacts with to perform various management operations.
+
+## Actors in the Flyover Protocol
+
+In the Flyover Protocol, there are three main Actors: 
+1. The regular user (user), who is the party interested in executing Peg-In/Peg-Out operations 
 2. The Liquidity Provider (LP), who provides liquidity to speed up the operation for the user in exchange for a fee as a reward
 3. The integrator who integrates the flyover SDK into their dapp/protocol. In order to do this, the user and the LP need to agree on the terms of the service (a Peg-In/Peg-Out Quote). This implies that the different LPs may offer different quotes, so the user needs to be able to interact with each LP to receive quote details and decide which one is going to be used for the operation.
 
 > The user interacts with the Flyover Protocol through the Flyover SDK. This SDK fetches the list of the available LP from the liquidity bridge contract (LBC), this contract returns a list where each element has some information about the LP, among this information will be the URL of the liquidity provider server (LPS) instance of that LP so the user can communicate with it. This means that the LPS has an API that every user interacts with to do the quote agreement.
 
+## How to Run LPS
+
+To run the project locally you can follow these steps:
+
+1. `git clone git@github.com:rsksmart/liquidity-provider-server.git`
+2. `cd docker-compose/local`
+3. `export LPS_STAGE=regtest`
+4. `./lps-env.sh up`
+
+This will set up a local environment, please keep in mind that a productive set-up could vary in multiple aspects.
+
+### How to run the tests
+For the unit tests you can run `make test` in the root of the repository and for the integration tests please [check this file](https://github.com/rsksmart/liquidity-provider-server/blob/master/test/integration/Readme.md)
+
+### Installing the project
+If you want to play with the code and make modifications to it then run the following commands (remember that you need to have Go installed with the version specified in the `go.mod` file):
+1. `git clone git@github.com:rsksmart/liquidity-provider-server.git`
+2. `make tools`
+
+## LPS APIs
+
 The LPS has two main APIs:
-* User/Public API: This API is used by the user to interact with the LP to agree on a quote, the API can be accessed via the Flyover dApp. See [Using the Public API](#using-the-public-api)
+* User/Public API: This API is used by the user to interact with the LP to agree on a quote. See [Using the Public API](#using-the-public-api)
 * LP/Management API: This API is used by the LP to interact with the LPS to perform management operations. It can be accessed via `<LPS URL>/management`. See [LP Management](./management.md) Section
 
-:::note
-
-The Management UI and Public API share the same server, accessible through the same URL. However, the Management API requires authentication for access, while the Public API does not. While authentication is a security measure, it's still recommended to deploy the Management API behind a [Web Application Firewall (WAF)](https://en.wikipedia.org/wiki/Web_application_firewall) or Virtual Private Network (VPN) for added protection.
-
-:::
-
-:::info[Info]
+> **Note**
+> The Management UI and Public API share the same server, accessible through the same URL. However, the Management API requires authentication for access, while the Public API does not. While authentication is a security measure, it's still recommended to deploy the Management API behind a [Web Application Firewall (WAF)](https://en.wikipedia.org/wiki/Web_application_firewall) or Virtual Private Network (VPN) for added protection.
 
 API limitations can vary based on the specific infrastructure of each Liquidity Provider Server (LPS). 
 The current implementation does not impose explicit rate limits.
 
-:::
-
 ## Configuring the Liquidity Provider Server
 
-A [Liquidity Provider Server (LPS)](https://github.com/rsksmart/liquidity-provider-server?tab=readme-ov-file) acts as a crucial component of the Flyover protocol by managing liquidity between the Bitcoin and Rootstock networks. Interacting directly with the [Liquidity Bridge Contract (LBC)](https://github.com/rsksmart/liquidity-bridge-contract), the LP server fulfills requests for token swaps by holding reserves of both BTC and RBTC. It executes complex operations such as collateral management, fund transfers, and fee adjustments.
+A Liquidity Provider Server acts as a crucial component of the Flyover protocol by managing liquidity between the Bitcoin and Rootstock networks. Interacting directly with the [Liquidity Bridge Contract (LBC)](https://github.com/rsksmart/liquidity-bridge-contract), the LP server fulfills requests for token swaps by holding reserves of both BTC and RBTC. It executes complex operations such as collateral management, fund transfers, and fee adjustments.
 
 By default, the Management API is disabled, and it can be enabled only by setting the `ENABLE_MANAGEMENT_API` environment variable to `true`. This is a security measure to ensure that the API will only be accessible if it is explicitly enabled by the LP (or the person setting up the environment). 
 
@@ -44,7 +67,26 @@ If the `ENABLE_MANAGEMENT_API` environment variable is set to `true`, it is the 
 
 :::
 
-See [How to Configure the LPS](https://github.com/rsksmart/liquidity-provider-server/tree/master?tab=readme-ov-file#liquidity-provider-server).
+### Environment Variables
+
+To see the required environment variables to run an instance of this server and its description check the [Environment.md](https://github.com/rsksmart/liquidity-provider-server/blob/master/docs/Environment.md) file.
+
+### API Details
+
+The HTTP API provided in this server is divided in two; the public API and the Management (private) API. To understand the purpose of each API check the [LP Management file](https://github.com/rsksmart/liquidity-provider-server/blob/master/docs/LP-Management.md#context).
+
+To see the details of the interface itself and the structures involved check the [OpenAPI.yml](https://github.com/rsksmart/liquidity-provider-server/blob/master/OpenApi.yml) file that is in the root of the repository.
+
+### Dependencies
+
+The server has the following dependencies:
+- Rootstock node
+- Bitcoin node
+- MongoDB instance
+
+**IMPORTANT**: The liquidity provider server performs sensitive operations and uses non publicly enabled functionality of both Rootstock and Bitcoin nodes. This means that the nodes used to run this server must be private and well protected, the usage of public nodes or nodes that are not properly secured might lead to a loss of funds.
+
+P.S.: if you run the server locally you'll see that the docker compose includes more services than the previously mentioned, that is because the ones mentioned before are the minimal dependencies, but in order to run a fully functional environment more dependencies might be required.
 
 ### Using the Public API
 
@@ -58,15 +100,20 @@ See the [full details of the endpoints](https://github.com/rsksmart/liquidity-pr
 ### Accessing the Management UI
 The LPS provides a Management UI out of the box to facilitate the interaction with the Management API. To go to that UI you just need to go to `<LPS URL>/management` page in your browser.
 
-
-In order to interact with this API, the LP needs to be authenticated. The authentication mechanism consists in user/password credentials. There is a default credentials pair which is admin as username and a random password that the LPS will generate on its startup in the file management_password.txt inside the temporal directory of your OS. E.g.: `/tmp/management_password.txt`.
-
+In order to interact with this API, the LP needs to be authenticated. The authentication mechanism consists in user/password credentials. There is a default credentials pair which is admin as username and a random password that the LPS will generate on its startup in the file `management_password.txt` inside the temporal directory of your OS. E.g.: `/tmp/management_password.txt`.
 
 The first time that the LP enters the Management UI he will be asked to provide the default credentials and set the new ones to use from that point to the future. After logging in, the LP will have access to all the operations of the Management API.
 
 :::info[Info]
 ⚠️ Remember that if `ENABLE_MANAGEMENT_API` is set to `false`, the Management UI won't be accessible.
 :::
+
+## Main Operations
+
+The LPS handles two main operations as part of the Flyover protocol:
+
+- **PegIn**: Process of converting BTC into RBTC. [Here](https://github.com/rsksmart/liquidity-provider-server/blob/master/docs/diagrams/PegIn.mmd) is a diagram with a detailed view of the process.
+- **PegOut**: Process of converting RBTC into BTC. [Here](https://github.com/rsksmart/liquidity-provider-server/blob/master/docs/diagrams/PegOut.mmd) is a diagram with a detailed view of the process.
 
 ## Wallet Management
 The LPS performs operations on behalf of the LP during the process of the protocol, which means that it requires access to both LP's Bitcoin and Rootstock wallets. To be more specific, it requires access to the Rootstock wallet of the LP and by having it, it also has access to the BTC wallet associated with that Rootstock wallet.
@@ -118,8 +165,42 @@ Regardless of the option chosen by the LP to handle the wallet management, the L
 > The LPS expects this watch-only wallets to be unencrypted, there aren't any security implications in this since they handle public information only. 
 > Regarding the secrets themselves, it is up to the LP to decide the way how those secrets will be fetched for the wallet integration. See [how to manage secrets](https://github.com/rsksmart/liquidity-provider-server/blob/QA-Test/docs/LP-Management.md#secrets-management).
 
-:::danger[Troubleshooting]
+## LPS Utilities
 
-Encountering difficulties with the SDK setup, LPS configuration, or specific Flyover issues? Join the [Rootstock Discord community](http://discord.gg/rootstock) for expert support and assistance. Our dedicated team is ready to help you resolve any problems you may encounter.
+The LPS provides several utility scripts that can be helpful for liquidity providers. These scripts are located in the [cmd/utils](https://github.com/rsksmart/liquidity-provider-server/tree/master/cmd/utils) directory. You can either run them directly with `go run` or build them with `make utils`. You can run the scripts with the `--help` flag to see the available options. The current utilities are:
 
-:::
+- **update_provider_url**: Updates the URL of a liquidity provider provided when the discovery function of the Liquidity Bridge Contract is executed.
+- **register_pegin**: Register a PegIn transaction within the Liquidity Bridge Contract. Most times, this script is only required to execute refunds on special cases. This script requires an input file whose structure can be found in the [input-example.json](https://github.com/rsksmart/liquidity-provider-server/blob/master/cmd/utils/register_pegin/input-example.json) file.
+- **refund_user_pegout**: Executes a refund for a user's peg-out operation through the Liquidity Bridge Contract. This is used when a peg-out operation needs to be refunded back to the user's RSK address. The script requires the quote hash of the operation to refund.
+- **key_conversion**: Shows the corresponding BTC and RSK address for a given private key and encrypts it into a keystore, accepts the key either in WIF or hex format. The key can be provided through the terminal, a file or an existing keystore.
+
+## Monitoring Service
+
+The project includes a Bitcoin balance monitoring service that tracks specified BTC addresses and exposes metrics at `http://<host>:8080/metrics` using Prometheus `https://prometheus.io/`.
+
+To run the monitoring service with the default port (8090):
+```bash
+make monitoring
+```
+
+To run the monitoring service with a custom port (e.g., 8091):
+```bash
+make monitoring MONITOR_PORT=8091
+```
+
+The service is configured in `docker-compose/monitoring/src/config.ts` and supports both testnet and mainnet monitoring:
+
+- MONITORED_ADDRESSES: The set of addresses to be monitored. Each address should have an alias that will be used in the metrics.
+- MONITOR_CONFIG: The configuration for the monitoring service.
+  - pollingIntervalSeconds: How often the service will check the bitcoin balance of the monitored addresses in seconds.
+  - monitorName: The name of the monitoring service.
+  - network: The network to monitor (mainnet or testnet).
+  - port: The port where the service will be exposed.
+
+The service can be configured to monitor other addresses by modifying the `MONITORED_ADDRESSES` array in `docker-compose/monitoring/src/config.ts`.
+
+## More Information
+
+If you're looking forward to integrate with Flyover Protocol then you can check the [Flyover SDK repository](https://github.com/rsksmart/unified-bridges-sdk/tree/main/packages/flyover-sdk).
+
+If you're interested in becoming a liquidity provider then you can read the [Liquidity Provider Management](https://github.com/rsksmart/liquidity-provider-server/blob/master/docs/LP-Management.md) file.
