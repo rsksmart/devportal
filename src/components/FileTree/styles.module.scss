@@ -82,7 +82,16 @@
     .icon {
       display: inline-flex;
       align-items: center;
-      margin-right: calc(var(--ifm-spacing-horizontal) * 0.5);
+      margin-right: 6px;
+
+      .svgIcon {
+        width: 14px;
+        height: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -1px;
+      }
     }
   }
 

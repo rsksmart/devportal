@@ -821,14 +821,18 @@ Make a file or directory stand out by making its name highlighted, wrap file naw
   -- ==src/==
   ---- components/
   ------ Accordion/
-  -------- index.jsx
-  -------- styles.scss
+  -------- data.json
+  -------- index.js
+  -------- styles.css
   -- static/
   ---- img/
   ------ concepts/
   ------ resources/
+  ------ image.png
+  ------ photo.jpg
   ------ ...
   ---- video/
+  ------ intro.mp4
   ------ ...
   -- docs/
   ---- components/
@@ -846,14 +850,18 @@ Make a file or directory stand out by making its name highlighted, wrap file naw
 -- ==src/==
 ---- components/
 ------ Accordion/
--------- index.jsx
--------- styles.scss
+-------- data.json
+-------- index.js
+-------- styles.css
 -- static/
 ---- img/
 ------ concepts/
 ------ resources/
+------ image.png
+------ photo.jpg
 ------ ...
 ---- video/
+------ intro.mp4
 ------ ...
 -- docs/
 ---- components/

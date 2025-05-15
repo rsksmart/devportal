@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './styles.module.scss';
 import clsx from 'clsx';
+import FTIcon from "react-file-type-icons";
 
 const FileTree = ({ children }) => {
   const parseContent = () => {
@@ -95,7 +96,10 @@ const FileTree = ({ children }) => {
         )}
         {!isEllipsis && (
           <span className={styles.icon}>
-            {node.isDirectory ? (isExpanded ? '📂' : '📁') : '📄'}
+            {node.isDirectory ?
+              (isExpanded ? '📂' : '📁') :
+              <FTIcon fileName={node.name} className={styles.svgIcon} colorType="multiColor" />
+            }
           </span>
         )}
         {node.isDirectory ? node.name.replace(/\/$/, '') : node.name}
