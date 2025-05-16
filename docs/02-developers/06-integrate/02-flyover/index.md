@@ -6,7 +6,7 @@ tags: [rsk, rootstock, rif, flyover, integrate, integration guide, rbtc, powpeg]
 description: The RBTC Flyover enables fast, trust-minimized onboarding of users into the Rootstock ecosystem from Bitcoin with less friction. It improves the usability for bitcoiners and integrators to interact with the Rootstock ecosystem via the Powpeg and Flyover SDK.  
 ---
 
-The [RBTC Flyover](https://github.com/rsksmart/unified-bridges-sdk/tree/main/packages/flyover-sdk) enables fast, trust-minimized onboarding of users into the Rootstock ecosystem from Bitcoin with less friction. It improves the usability for bitcoiners and integrators to interact with the Rootstock ecosystem via the Powpeg and Flyover SDK. See the [Comparison between the PowPeg and RBTC Flyover](/developers/integrate/flyover/powpeg-vs-flyover/)
+The [RBTC Flyover](https://github.com/rsksmart/flyover-sdk) enables fast, trust-minimized onboarding of users into the Rootstock ecosystem from Bitcoin with less friction. It improves the usability for bitcoiners and integrators to interact with the Rootstock ecosystem via the Powpeg and Flyover SDK. See the [Comparison between the PowPeg and RBTC Flyover](/developers/integrate/flyover/powpeg-vs-flyover/)
 
 Its main goal is to accelerate getting into Rootstock from Bitcoin by significantly reducing the wait times associated with the current PowPeg time. Developers, integrators or Liquidity Providers (LP) looking to provide RBTC access, Cross-chain swaps, and access to liquidity pools can integrate the Flyover SDK. Visit the [ LP integration section](/developers/integrate/flyover/LP/) to get started.
 
@@ -18,7 +18,7 @@ Its main goal is to accelerate getting into Rootstock from Bitcoin by significan
 
 :::info[Flyover SDK]
 
-The [Flyover SDK](https://github.com/rsksmart/unified-bridges-sdk/tree/main/packages/flyover-sdk) is currently available on Mainnet and Testnet. 
+The [Flyover SDK](https://github.com/rsksmart/flyover-sdk) is currently available on Mainnet and Testnet. 
 To convert RBTC to BTC and vice versa, use the PowPeg App.
 
 :::
@@ -72,8 +72,8 @@ Flyover is integrated in the [PowPeg App](http://powpeg.rootstock.io) which prov
 
 
 ## Resources
-- [Release Notes](https://github.com/rsksmart/unified-bridges-sdk/releases)
-- [Flyover SDK](https://github.com/rsksmart/unified-bridges-sdk/tree/main/packages/flyover-sdk)
+- [Release Notes](https://github.com/rsksmart/flyover-sdk/releases)
+- [Flyover SDK](https://github.com/rsksmart/flyover-sdk)
 - [Liquidity Provider Server](https://github.com/rsksmart/liquidity-provider-server?tab=readme-ov-file)
 - [Liquidity Bridge Contract](https://github.com/rsksmart/liquidity-bridge-contract)
 - [Flyover LBC Mainnet Contract Address](https://explorer.rootstock.io/address/0xaa9caf1e3967600578727f975f283446a3da6612)
