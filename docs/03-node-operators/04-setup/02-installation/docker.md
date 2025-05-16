@@ -2,11 +2,13 @@
 sidebar_label: Setup node on Docker
 sidebar_position: 200
 title: Setup node on Docker
-tags: [docker, rootstock, desktop, macOS, rskj, windows, install, rsk, node, how-to, network, requirements, mainnet, testnet, regtest]
+tags: [docker, rootstock, desktop, macOS, rskj, windows, install, rsk, node, how-to, network,
+  requirements, mainnet, testnet, regtest]
 description: "Install RSKj using Docker."
 ---
 
-Before installing Docker, ensure your system meets the [minimum requirements](/node-operators/setup/requirements/) before installing the Rootstock node (RSKj). 
+
+Before installing Docker, ensure your system meets the [minimum requirements](/node-operators/setup/requirements/) before installing the Rootstock node (RSKj).
 If you already have docker installed. See how to [Install the RSKj node using Docker](#install-rskj-using-docker).
 
 ## Install Docker Desktop Client
@@ -45,7 +47,7 @@ You should see the following response:
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 ```
 
-More information about Docker install [here](https://docs.docker.com/install/).
+More information about [How to Install Docker](https://docs.docker.com/install/).
 
 ## Install RSKj Using Docker
 
