@@ -100,4 +100,12 @@ color="orange"
 linkHref="/resources/tutorials/hyperlane-bridge/"
 description="Hyperlane is the first universal and permissionless interoperability layer built for the modular blockchain stack. Learn how to run Hyperlane on Rootstock blockchain."
 />
+<FilterItem
+value="advanced"
+title="Develop a bond contract"
+subtitle="Bonds"
+color="orange"
+linkHref="/resources/tutorials/develop-bond-contract/"
+description="Tutorial to assist developers in getting started with the rootstock-foundry-starterkit."
+/>
 </Filter>
