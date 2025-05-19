@@ -93,6 +93,14 @@ linkHref="/resources/tutorials/defillama/"
 description="DefiLlama is the largest TVL aggregator for DeFi. Learn how to list a DeFi project and write an SDK adapter to add a Protocol to DefiLlama."
 />
 <FilterItem
+value="beginner"
+title="Deploy an Escrow Contract on Rootstock"
+subtitle="Escrow"
+color="orange"
+linkHref="/resources/tutorials/rootstock-escrow-contract/"
+description="A step-by-step guide to build and deploy an escrow smart contract on Rootstock testnet using Foundry"
+/>
+<FilterItem
 value="advanced"
 title="Run Hyperlane Bridge on Rootstock"
 subtitle="hyperlane"
