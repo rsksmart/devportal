@@ -2,17 +2,17 @@
 sidebar_label: Cross Chain Token Transfers
 sidebar_position: 100
 title: Build an Omnichain Fungible Token (OFT) on Rootstock with Layerzero
-tags: [rsk, rootstock, layerzero, omnichain, cross chain, oft]
-description: "This guide demonstrates implementing cross-chain token transfers using OFT (Omnichain Fungible Token) between Rootstock Testnet and Ethereum Sepolia Testnet via LayerZero's OFT V2 protocol."
+tags: [rsk, rootstock, layerzero, omnichain, cross chain, oft, defi on bitcoin, defi]
+description: "This tutorial demonstrates implementing cross-chain token transfers using OFT (Omnichain Fungible Token) between Rootstock Testnet and Ethereum Sepolia Testnet via LayerZero's OFT V2 protocol."
 ---
 
 LayerZero is an omnichain interoperability protocol that enables seamless communication between different blockchains. It allows developers to build omnichain applications (OApps) that can interact across multiple chains as if they were on a single chain.
 
 Rootstock's integration with LayerZero, a cross-chain messaging protocol that enables interoperability between blockchains, enables seamless movement of Bitcoin-backed assets from Rootstock to other chains. This means users can now move their Bitcoin across different DeFi ecosystems without complicated bridges, high fees, or slow transactions.
 
-This guide demonstrates how to implement cross-chain token transfers using OFT (Omnichain Fungible Token) between Rootstock Testnet and Ethereum Sepolia Testnet via LayerZero's OFT V2 protocol.
+This tutorial demonstrates how to implement cross-chain token transfers using OFT (Omnichain Fungible Token) between Rootstock Testnet and Ethereum Sepolia Testnet via LayerZero's OFT V2 protocol.
 
-For a detailed guide into Crosschain interoperability, how it works, and use cases on Rootstock. Read the section on Understanding the Basics. 
+For a detailed tutorial into Crosschain interoperability, how it works, and use cases on Rootstock. Read the section on Understanding the Basics. 
 
 ## What you'll learn
 - Set up Hardhat for cross-chain deployments
@@ -22,7 +22,7 @@ For a detailed guide into Crosschain interoperability, how it works, and use cas
 
 
 ## Prerequisites
-To complete this guide, you'll need:
+To complete this tutorial, you'll need:
 - Node.js: v18.18.0+ 
 - RPC Providers ([Rootstock](/developers/rpc-api/rootstock/), [Alchemy](/developers/rpc-api/alchemy/)) 
 - Etherscan API Key
@@ -52,9 +52,6 @@ Developers can now build sophisticated applications that leverage Bitcoin's secu
 - Omnichain Governance Systems: Enable decentralized governance models that span multiple chains, allowing token holders to participate in decision-making regardless of their preferred blockchain.
 - Cross-Chain Yield Aggregators: Develop yield optimization platforms that automatically allocate rBTC and other assets to the most profitable opportunities across multiple chains.
 - NFT Marketplaces with Cross-Chain Interoperability: Create NFT marketplaces that allow users to buy, sell, and transfer NFTs across different chains, leveraging Bitcoin's security.
-
-> For a more detailed guide into Cross chain dApps, how it works, read the article on Cross-Chain Bridges on Rootstock.
-
 
 ## Getting started
 
@@ -131,7 +128,7 @@ During this step, the deployer and the token contract address will be requested.
 
 :::tip[Tip]
 
-Save the deployer address and contract address, as this will be used later in this guide to verify the contracts.
+Save the deployer address and contract address, as this will be used later in this tutorial to verify the contracts.
 
 :::
 

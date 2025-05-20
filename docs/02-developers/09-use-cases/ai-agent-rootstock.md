@@ -3,23 +3,25 @@ sidebar_label: Conversational AI Agents
 sidebar_position: 200
 title: Conversational AI Agent with Blockchain Actions on Rootstock
 tags: [rsk, rootstock, ai agents, ai]
-description: "This guide demonstrates how to build a lightweight dApp that connects a conversational AI agent to the Rootstock testnet, allowing users to perform DeFi actions like checking token balances and sending tRBTC simply by chatting."
+description: "This tutorial demonstrates how to build a lightweight dApp that connects a conversational AI agent to the Rootstock testnet, allowing users to perform DeFi actions like checking token balances and sending tRBTC simply by chatting."
 ---
 
 Imagine being able to ask your app, “What’s my token balance?” or “Send 0.01 tRBTC to this address,” and it just… does it. No forms, no buttons—just a conversation with an AI agent that knows how to talk to the blockchain.
 
 In this guide, we will build a lightweight dApp that connects a conversational AI agent to the Rootstock testnet, allowing users to perform DeFi actions like checking token balances and sending tRBTC simply by chatting. This is not just a chatbot—it is a minimal DeFi agent that can reason over wallet data, maintain conversational context, and issue token actions with a human-like touch.
 
-The tech stack that we will be using for this tutorial is:
+The tech stack used in this tutorial is:
 - [NextJS](https://nextjs.org/) as the development framework.
 - The [Rootstock Next Reown starter kit](https://github.com/rsksmart/reown-next-wagmi) and Wagmi to handle wallet connections and blockchain interactions.
 - [Groq’s](https://groq.com/) LLM API, for the natural language interface.
 - [Shadcn](https://ui.shadcn.com/) as UI library.
 
+## What you'll learn
+
 **By the end of this tutorial, you will have**:
 - A connected wallet UI running on Rootstock testnet
 - A chat interface powered by an LLM (via Groq SDK)
-- A fully functioning agent that can interpret user intent and call blockchain methods accordingly
+- A fully functioning AI agent that can interpret user intent and call blockchain methods accordingly
 
 Let’s dive into how AI and decentralized infrastructure can come together in a single-page app with real utility.
 

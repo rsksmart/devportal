@@ -11,7 +11,7 @@ values={[
 {label: 'Beginner', value: 'beginner'},
 {label: 'Advanced', value: 'advanced'},
 {label: 'Port to Rootstock', value: 'port-dapps'},
-{label: 'Cross chain dApps', value: 'cc-dapps'},
+{label: 'DeFi', value: 'defi'},
 {label: 'AI', value: 'ai'}
 ]}>
 <FilterItem
@@ -23,9 +23,9 @@ linkHref="/developers/quickstart/rootstock-vyper/"
 description="The Vyper Starter Kit tutorial demonstrates how to deploy smart contracts written in Vyper to the Rootstock testnet using Python and Web3.py. We'll create a simple Vyper contract and deploy it to the Rootstock network, set up the environment, and configure the network for Rootstock."
 />
 <FilterItem
-value="advanced, cc-dapps"
+value="advanced, defi"
 title="Build and deploy an Omnichain Fungible Token (OFT) on Rootstock with Layerzero"
-subtitle="Layerzero"
+subtitle="Cross chain"
 color="orange"
 linkHref="/developers/use-cases/rootstock-layerzero/"
 description="This guide demonstrates implementing cross-chain token transfers using OFT (Omnichain Fungible Token) between Rootstock Testnet and Ethereum Sepolia Testnet via LayerZero's OFT V2 protocol."

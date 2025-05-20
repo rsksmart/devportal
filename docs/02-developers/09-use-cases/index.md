@@ -2,17 +2,17 @@
 sidebar_label: Use Cases
 sidebar_position: 9
 title: Use Cases
-tags: [rsk, rootstock, beginner, use cases, developers, advanced, tutorials, guides]
-description: "Use Case guides and tutorials for developing on Rootstock."
+tags: [rsk, rootstock, beginner, use cases,defi on bitcoin, ai, developers, advanced, tutorials, guides]
+description: "Explore Rootstock dApp use case guides and tutorials for building DeFi on Bitcoin, AI, and cross-chain solutions."
 ---
 
 <Filter
 values={[
-{label: 'Cross chain dApps', value: 'cc-dapps'},
+{label: 'DeFi', value: 'defi'},
 {label: 'AI', value: 'ai'}
 ]}>
 <FilterItem
-value="advanced, cc-dapps"
+value="advanced, defi"
 title="Build and deploy an Omnichain Fungible Token (OFT) on Rootstock with Layerzero"
 subtitle="Layerzero"
 color="orange"
