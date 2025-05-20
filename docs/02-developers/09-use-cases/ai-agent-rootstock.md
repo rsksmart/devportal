@@ -597,7 +597,7 @@ const [isLoading, setIsLoading] = useState(false);
 
 **Token transfer**
 
-```solidity
+```js
 const handleTransfer = async (data: { token1: string; address: string; amount: number }) => {
   const tokenAddress = data.token1.toLowerCase() === "trbtc"
     ? "trbtc"
@@ -623,7 +623,7 @@ const handleTransfer = async (data: { token1: string; address: string; amount: n
 
 **Token balance**
 
-```solidity
+```js
 const handleBalance = async (data: any) => {
   const tokenAdd = data.token1.toLowerCase() === "trbtc"
     ? "trbtc"
@@ -648,11 +648,11 @@ const handleBalance = async (data: any) => {
 
 3. Refactor handleSend to Process AI Function Calls
 
-Enhance the `handleSend` function so it calls to the ``/api/ai` endpoint and handles any functionCall responses. 
+Enhance the `handleSend` function so it calls to the `/api/ai` endpoint and handles any functionCall responses. 
 
 Here’s the full updated logic:
 
-```solidity
+```js
 const handleSend = async () => {
   if (!input.trim()) return;
 
@@ -762,7 +762,7 @@ const handleSend = async () => {
 
 4. Add Autoscroll to the Message View
 
-```html
+```js
 const containerRef = useRef<HTMLDivElement>(null);
 
 useEffect(() => {
@@ -799,7 +799,7 @@ Add loading states to input and button
 
 Create a `src/lib/utils.ts` file and include this `isValidWalletAddress` and `findToken` functions:
 
-```solidity
+```js
 export function isValidWalletAddress(address: string): boolean {
 	const regex = /^(0x)?[0-9a-fA-F]{40}$/;
 
