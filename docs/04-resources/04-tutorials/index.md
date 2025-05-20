@@ -27,7 +27,7 @@ value="advanced, cc-dapps"
 title="Build and deploy an Omnichain Fungible Token (OFT) on Rootstock with Layerzero"
 subtitle="Layerzero"
 color="orange"
-linkHref="/developers/use-cases/cross-chain/rootstock-layerzero/"
+linkHref="/developers/use-cases/rootstock-layerzero/"
 description="This guide demonstrates implementing cross-chain token transfers using OFT (Omnichain Fungible Token) between Rootstock Testnet and Ethereum Sepolia Testnet via LayerZero's OFT V2 protocol."
 />
 <FilterItem
