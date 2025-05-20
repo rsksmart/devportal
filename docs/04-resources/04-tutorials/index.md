@@ -10,7 +10,9 @@ description: "Tutorials and learning resources"
 values={[
 {label: 'Beginner', value: 'beginner'},
 {label: 'Advanced', value: 'advanced'},
-{label: 'Port to Rootstock', value: 'port-dapps'}
+{label: 'Port to Rootstock', value: 'port-dapps'},
+{label: 'Cross chain dApps', value: 'cc-dapps'},
+{label: 'AI', value: 'ai'}
 ]}>
 <FilterItem
 value="beginner, advanced"
@@ -19,6 +21,22 @@ subtitle="Vyper"
 color="orange"
 linkHref="/developers/quickstart/rootstock-vyper/"
 description="The Vyper Starter Kit tutorial demonstrates how to deploy smart contracts written in Vyper to the Rootstock testnet using Python and Web3.py. We'll create a simple Vyper contract and deploy it to the Rootstock network, set up the environment, and configure the network for Rootstock."
+/>
+<FilterItem
+value="advanced, cc-dapps"
+title="Build and deploy an Omnichain Fungible Token (OFT) on Rootstock with Layerzero"
+subtitle="Layerzero"
+color="orange"
+linkHref="/developers/use-cases/cross-chain/rootstock-layerzero/"
+description="This guide demonstrates implementing cross-chain token transfers using OFT (Omnichain Fungible Token) between Rootstock Testnet and Ethereum Sepolia Testnet via LayerZero's OFT V2 protocol."
+/>
+<FilterItem
+value="ai"
+title="Building a Conversational AI Agent with Blockchain Actions on Rootstock"
+subtitle="ai agents"
+color="orange"
+linkHref="/developers/use-cases/ai-agent-rootstock"
+description="This guide demonstrates how to build a lightweight dApp that connects a conversational AI agent to the Rootstock testnet, allowing users to perform DeFi actions like checking token balances and sending tRBTC simply by chatting."
 />
 <FilterItem
 value="advanced"
