@@ -7,7 +7,7 @@ tags: [rsk, explorer, rootstock, Blockscout, smart contracts, transactions, tool
 
 [Blockscout](https://rootstock.blockscout.com/) is a robust open-source tool for exploring transactions on any EVM blockchain, including Rootstock, the leading Bitcoin sidechain1. With Blockscout, you can access in-depth information, verify and interact with smart contracts, create and manage your account, view advanced statistics, and more. It is currently supported on <Shield label="mainnet" title="testnet" tooltip="Supported on Mainnet and Testnet" color="orange" />
 
-<div align="center"><img width="100%" src="/img/tools/explorer/blockscout/blockscout-1.png" alt="Roostock blockscout page"/></div>
+<div align="center"><img width="100%" src="/img/tools/explorer/blockscout/blockscout-1.png" alt="Rootstock blockscout page"/></div>
 
 To use Blockscout with Rootstock, visit the [Rootstock Block Explorer](https://rootstock.blockscout.com/), where you can see the latest blocks, transactions, and addresses on the Rootstock network.
 
