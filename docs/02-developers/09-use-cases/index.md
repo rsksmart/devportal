@@ -13,7 +13,7 @@ values={[
 ]}>
 <FilterItem
 value="advanced, defi"
-title="Build and deploy an Omnichain Fungible Token (OFT) on Rootstock with Layerzero"
+title="Build Omnichain Fungible Token (OFTs) on Rootstock with Layerzero"
 subtitle="Layerzero"
 color="orange"
 linkHref="/developers/use-cases/rootstock-layerzero/"
@@ -21,7 +21,7 @@ description="This guide demonstrates implementing cross-chain token transfers us
 />
 <FilterItem
 value="ai"
-title="Building a Conversational AI Agent with Blockchain Actions on Rootstock"
+title="Build a Conversational AI Agent with Blockchain Actions on Rootstock"
 subtitle="ai agents"
 color="orange"
 linkHref="/developers/use-cases/ai-agent-rootstock"

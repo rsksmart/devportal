@@ -1,7 +1,7 @@
 ---
 sidebar_label: Cross Chain Token Transfers
 sidebar_position: 100
-title: Build an Omnichain Fungible Token (OFT) on Rootstock with Layerzero
+title: Build Omnichain Fungible Token (OFTs) on Rootstock with Layerzero
 tags: [rsk, rootstock, layerzero, omnichain, cross chain, oft, defi on bitcoin, defi]
 description: "This tutorial demonstrates implementing cross-chain token transfers using OFT (Omnichain Fungible Token) between Rootstock Testnet and Ethereum Sepolia Testnet via LayerZero's OFT V2 protocol."
 ---
