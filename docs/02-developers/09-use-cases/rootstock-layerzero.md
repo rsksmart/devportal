@@ -6,7 +6,7 @@ tags: [rsk, rootstock, layerzero, omnichain, cross chain, oft, defi on bitcoin, 
 description: "This tutorial demonstrates implementing cross-chain token transfers using OFT (Omnichain Fungible Token) between Rootstock Testnet and Ethereum Sepolia Testnet via LayerZero's OFT V2 protocol."
 ---
 
-Rootstock now integrates with LayerZero, a cross-chain messaging protocol. This integration enables the seamless movement of Bitcoin-backed assets from Rootstock to other blockchains, allowing developers to build omnichain applications (OApps) that interact across multiple chains as if they were one. Users can now move their Bitcoin across different DeFi ecosystems without complicated bridges, high fees, or slow transactions.
+Rootstock now integrates with LayerZero, a cross-chain messaging protocol. This integration enables the seamless movement of Bitcoin-backed assets from Rootstock to other blockchains, allowing developers to build [omnichain applications (OApps)](https://docs.layerzero.network/v2/developers/evm/oapp/overview) that interact across multiple chains as if they were one. Users can now move their Bitcoin across different DeFi ecosystems without complicated bridges, high fees, or slow transactions.
 
 This tutorial demonstrates how to implement cross-chain token transfers using OFT (Omnichain Fungible Token) between Rootstock Testnet and Ethereum Sepolia Testnet via LayerZero's OFT V2 protocol.
 
@@ -321,5 +321,5 @@ Encountered issues?
 ## Resources
 - [LayerZero Documentation](https://docs.layerzero.network/)
 - [OFT Standard Specification](https://docs.layerzero.network/contracts/oft)
-- [Rootstock Documentation](https://developers.rsk.co/)
-
+- [Rootstock Documentation](https://dev.rootstock.io/)
+- [Deployed Endpoints, Message Libraries, and Executors](https://docs.layerzero.network/v2/deployments/deployed-contracts)
