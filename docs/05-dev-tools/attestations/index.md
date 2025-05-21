@@ -28,11 +28,11 @@ The Rootstock network is innovating in the attestation space, here are solutions
 
 <CardsGrid>
   <CardsGridItem
-    title="EAS"
+    title="RAS"
     subtitle="attestation"
     color="green"
     description="Ethereum Attestation Service (EAS) is an open-source infrastructure public good for making attestations onchain or offchain. Learn how to use it on Rootstock."
-    linkHref="/dev-tools/attestations/eas/"
+    linkHref="/dev-tools/attestations/ras/"
     linkTitle="Get Started"
   />
 </CardsGrid>
