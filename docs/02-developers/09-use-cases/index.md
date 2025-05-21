@@ -6,6 +6,10 @@ tags: [rsk, rootstock, beginner, use cases,defi on bitcoin, ai, developers, adva
 description: "Explore Rootstock dApp use case guides and tutorials for building DeFi on Bitcoin, AI, and cross-chain solutions."
 ---
 
+Explore dApp use case guides and tutorials for building DeFi on Bitcoin, AI, and cross-chain solutions on Rootstock.
+
+<br></br>
+
 <Filter
 values={[
 {label: 'DeFi', value: 'defi'},
