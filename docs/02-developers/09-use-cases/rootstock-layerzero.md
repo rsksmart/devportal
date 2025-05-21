@@ -6,13 +6,9 @@ tags: [rsk, rootstock, layerzero, omnichain, cross chain, oft, defi on bitcoin, 
 description: "This tutorial demonstrates implementing cross-chain token transfers using OFT (Omnichain Fungible Token) between Rootstock Testnet and Ethereum Sepolia Testnet via LayerZero's OFT V2 protocol."
 ---
 
-LayerZero is an omnichain interoperability protocol that enables seamless communication between different blockchains. It allows developers to build omnichain applications (OApps) that can interact across multiple chains as if they were on a single chain.
-
-Rootstock's integration with LayerZero, a cross-chain messaging protocol that enables interoperability between blockchains, enables seamless movement of Bitcoin-backed assets from Rootstock to other chains. This means users can now move their Bitcoin across different DeFi ecosystems without complicated bridges, high fees, or slow transactions.
+Rootstock now integrates with LayerZero, a cross-chain messaging protocol. This integration enables the seamless movement of Bitcoin-backed assets from Rootstock to other blockchains, allowing developers to build omnichain applications (OApps) that interact across multiple chains as if they were one. Users can now move their Bitcoin across different DeFi ecosystems without complicated bridges, high fees, or slow transactions.
 
 This tutorial demonstrates how to implement cross-chain token transfers using OFT (Omnichain Fungible Token) between Rootstock Testnet and Ethereum Sepolia Testnet via LayerZero's OFT V2 protocol.
-
-For a detailed tutorial into Crosschain interoperability, how it works, and use cases on Rootstock. Read the section on Understanding the Basics. 
 
 ## What you'll learn
 - Set up Hardhat for cross-chain deployments
@@ -29,7 +25,7 @@ To complete this tutorial, you'll need:
     - Sign up to get an [API Key](https://docs.etherscan.io/getting-started/viewing-api-usage-statistics). 
     This will be used for verifying the contracts.
 - Metamask: [Install](/dev-tools/wallets/metamask/) and connect to Ethereum Sepolia and Rootstock Testnet
-- Test Funds: Sepolia ETH and Rootstock rBTC
+- Test Funds: [Sepolia ETH](https://www.alchemy.com/faucets/ethereum-sepolia) and [Rootstock rBTC](/dev-tools/additional-tools/#faucets)
 
 > Important: Ensure you have sufficient test tokens on both networks.
 
@@ -43,7 +39,8 @@ To complete this tutorial, you'll need:
 - Programmable Cross-Chain Logic: Construct complex, multi-chain workflows and applications with LayerZero's flexible messaging framework.
 
 ## Use cases for building cross-chain dApps on Rootstock.
-Rootstock's and LayerZero integration opens up a vast array of innovative use cases, extending beyond simple asset transfers. 
+
+The integration with Layerzero opens up a vast array of innovative use cases, extending beyond simple asset transfers. 
 
 Developers can now build sophisticated applications that leverage Bitcoin's security and Rootstock's EVM compatibility across multiple chains:
 
