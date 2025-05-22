@@ -78,6 +78,13 @@ The RIF (Rootstock Infrastructure Framework) token makes it easier, faster and m
 
 The stRIF tokens give you voting rights and participation in the RootstockCollective DAO's governance and decision-making process they are pegged 1:1 with RIF. To acquire stRIF tokens, you need to stake RIF tokens in the [governance system dApp](https://app.rootstockcollective.xyz). RIF tokens can be purchased through [various exchanges](https://wiki.rootstockcollective.xyz/Token-Resources-e3f89008a96e4dcab3037ff7861d9d8a), and once staked, an equivalent amount of stRIF is issued for governance participation.
 
+:::info[Contract Addresses used in DAO]
+
+For a comprehensive list of contract addresses used across various DAO environments, please refer to the [DAO Frontend GitHub repository](https://github.com/RootstockCollective/dao-frontend?tab=readme-ov-file#environments).
+
+:::
+
+
 <table class="table">
   <tbody>
     <tr>
@@ -89,8 +96,12 @@ The stRIF tokens give you voting rights and participation in the RootstockCollec
       <td>Varies and will increase and decrease as RIF is staked and unstaked.</td>
     </tr>
     <tr>
-      <td scope="row">Contract Address</td>
+      <td scope="row">Contract Address (Mainnet)</td>
       <td><a href="https://rootstock.blockscout.com/token/0x5db91e24BD32059584bbDb831A901f1199f3d459?tab=contract" target="_blank">0x5db91e24BD32059584bbDb831A901f1199f3d459</a></td>
+    </tr>
+     <tr>
+      <td scope="row">Contract Address (Testnet)</td>
+      <td><a href="https://explorer.testnet.rootstock.io/address/0xe7039717c51c44652fb47be1794884a82634f08f" target="_blank">0xe7039717c51c44652fb47be1794884a82634f08f</a></td>
     </tr>
     <tr>
       <td scope="row">Contract Types</td>

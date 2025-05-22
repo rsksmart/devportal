@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 8
 title: Interact with Rootstock using Rust
 sidebar_label: Interact with Rootstock using Rust
 tags: [rsk, rootstock, rust, tutorials, resources, smart contracts, alloy]
