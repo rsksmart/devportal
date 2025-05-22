@@ -2,34 +2,31 @@
 sidebar_position: 100
 title: Rootstock Attestation Service Starter Guide
 sidebar_label: Roostock Attestation Service
-description: "Ethereum Attestation Service (EAS) is a system that allows individuals and organizations to create verifiable claims or proofs about specific events, actions, or data, either on-chain (on the blockchain) or off-chain (outside the blockchain but linked to it). Learn how to use it on Rootstock."
-tags: [rsk, rootstock, guides, EAS, Attestation, Ethereum, ras]
+description: "Rootstock Attestation Service (EAS) is a system that allows individuals and organizations to create verifiable claims or proofs about specific events, actions, or data, either on-chain (on the blockchain) or off-chain (outside the blockchain but linked to it). Learn how to use it on Rootstock."
+tags: [rsk, rootstock, guides, EAS, Attestation, ethereum, RAS]
 ---
 
-Welcome to the Rootstock Attestation Service.  This guide will help you understand and get started with the attestation service.
+Rootstock Attestation Service (RAS) is an open, decentralized infrastructure that enables the creation of attestations—both on-chain and off-chain—about any type of information or event.  Inspired by [Ethereum Attestation Service (EAS)](https://docs.attest.org/docs/welcome), RAS provides a common standard for issuing verifiable claims within Rootstock's smart contract ecosystem.
+
+This guide will help you understand and get started with the Rootstock attestation service.
 
 Supported on: <Shield label="mainnet" title="testnet" tooltip="Available on Mainnet and Testnet" color="orange" />
-
-## What is the Rootstock Attestation Service?
-
-Rootstock Attestation Service (RAS) is an open, decentralized infrastructure that enables the creation of attestations—both on-chain and off-chain—about any type of information or event.  Inspired by [Ethereum Attestation Service (EAS)](https://docs.attest.org/docs/welcome), RAS provides a common standard for issuing verifiable claims within Rootstock's smart contract ecosystem.
 
 ## How EAS is integrated with Rootstock
 
 The EAS essential contracts has been successfully deployed to Rootstock, this includes a robust indexer, and a user-friendly alternative explorer. The following sections will delve into the technical details of these implementations.
 
 ## Getting Started 
-- 🧾 [RAS contract](https://github.com/rsksmart/eas-contracts): We deployed EAS contracts on Rootstock Mainnet and Testnet
+- 🧾 [EAS contract](https://github.com/rsksmart/eas-contracts): We deployed EAS contracts on Rootstock Mainnet and Testnet
 - 📖 Learn the basics: Read the [EAS documentation](https://docs.attest.org/docs/category/core-concepts) to understand what attestations are and how they work.
 - 💻 Install the SDK: Use the [EAS SDK](https://docs.attest.org/docs/developer-tools/eas-sdk) to easily create and manage attestations in JavaScript/TypeScript projects.
 - 🛠️ Set up a custom indexer: Build your own attestation [indexer](https://github.com/rsksmart/eas-indexing-service) to efficiently filter, store, and serve attestation data in your application.
 - 🔍 Query data via GraphQL: Access attestation records using GraphQL queries tied to RAS/EAS-compatible smart contracts and UI.
-- 🌐 Use the [Rootstock Attestation Explorer](https://explorer.rootstock.io/ras): Create, view, and verify attestations.
+- 🌐 Use the [Rootstock Attestation Explorer](https://explorer.rootstock.io/ras) to create, view, and verify attestations.
 
 ## RAS Contracts
 The Rootstock Attestation Service (RAS) smart contracts have been deployed on both Rootstock Mainnet and Testnet, enabling developers to interact with attestations in a secure and standardized way.  Below are the official contract addresses for the core components: the EAS contract, the EIP712 Proxy Indexer, and the Schema Registry. 
-You can review the full contract code and deployment structure here:
- 🔍 GitHub: https://github.com/rsksmart/eas-contracts
+You can review the full contract code and deployment structure. See [EAS Contracts on GitHub](https://github.com/rsksmart/eas-contracts)
 
 :::info[Info]
 Note: Since Rootstock is not integrated into the official EAS deployment package, you cannot import the contract addresses directly using
@@ -37,7 +34,7 @@ Note: Since Rootstock is not integrated into the official EAS deployment package
 :::
 
 🔗 **Mainnet (Rootstock)**
-- **🧾 EAS Contract**
+- **🧾 RAS Contract**
  [0x54c0726E9D2D57Bc37aD52C7E219a3229E0ee963](https://rootstock.blockscout.com/address/0x54c0726E9D2D57Bc37aD52C7E219a3229E0ee963)
 - **🔁 Indexer (EIP712Proxy)**
  [0x4c0Ac010c2eC50Fc1FF3e7E35dADA06A7F26073F](https://rootstock.blockscout.com/address/0x4c0Ac010c2eC50Fc1FF3e7E35dADA06A7F26073F)
@@ -52,17 +49,19 @@ Note: Since Rootstock is not integrated into the official EAS deployment package
 - **🗂️ Schema Registry**
  [0x679c62956cD2801ABaBF80e9D430F18859eea2D5](https://rootstock-testnet.blockscout.com/address/0x679c62956cD2801ABaBF80e9D430F18859eea2D5)
 
-## Indexer Service
+## Using the Indexer Service
+
 This tool enables developers to quickly deploy a custom indexer for the Rootstock Attestation Service (RAS), fully compatible with the EAS architecture.  It works on the Rootstock network where EAS contracts have been deployed, allowing you to index and query attestation data efficiently.
 Make sure to check the documentation for the installation steps.
 
-🔗 **GitHub Repository**: https://github.com/rsksmart/eas-indexing-service
+See the [GitHub Repository](https://github.com/rsksmart/eas-indexing-service)
 
-## Roostock RAS Explorer
+## Using Roostock RAS Explorer
+
 The Rootstock Explorer is the central hub for the attestation ecosystem on Rootstock.  It allows you to easily explore, create, and verify schemas and attestations.
 Designed for both technical and non-technical users, the explorer offers a simple and intuitive interface to interact with attestations on the Rootstock network.
 
-![Attestations](/img/resources/attestations/ras-attestations.png)
+![Attestations](/img/tools/attestations/ras-attestations.png)
 
 ### What you can do
 There are several main things you can do with the explorer site. You are able to:
@@ -75,11 +74,11 @@ There are several main things you can do with the explorer site. You are able to
 - Timestamp offchain attestations onchain
 
 ### Attestations
-![Attestation](/img/resources/attestations/ras-attestations.png)
+![Attestation](/img/tools/attestations/ras-attestations.png)
 In the main navigation, click on the "Attestations" tab.
 
 ### Schemas
-![Schemas](/img/resources/attestations/ras-schemas.png)
+![Schemas](/img/tools/attestations/ras-schemas.png)
 In the main navigation, click on the "Schemas" tab.
 
 ### How to Create an Attestation
@@ -88,22 +87,29 @@ In the main navigation, click on the "Schemas" tab.
 
 You will then be guided through the process of filling out the required fields and submitting your attestation.
 
-![schema-detail](/img/resources/attestations/ras-schema-detail.png)
-![schema-detail-attest](/img/resources/attestations/ras-schema-detail-attest.png)
+![schema-detail](/img/tools/attestations/ras-schema-detail.png)
+![schema-detail-attest](/img/tools/attestations/ras-schema-detail-attest.png)
 
 ### How to Create a Schema
 1. Navigate to the "Schemas" tab in the Rootstock Explorer.
 2. Click the "Create Schema +" button.
 3. A popup will appear where you can fill in the schema fields, including the schema definition and any additional metadata.
-:::info[Info]
+
+
+:::note[Note]
 Creating a schema is an on-chain operation, so you'll need to have RBTC in your wallet to cover the transaction fees.
 :::
-![Schemas](/img/resources/attestations/ras-schemas.png)
-![Create Schema](/img/resources/attestations/ras-create-schema.png)
+
+
+![Schemas](/img/tools/attestations/ras-schemas.png)
+
+![Create Schema](/img/tools/attestations/ras-create-schema.png)
 
 ### Naming Schema
+
 As the creator of a schema, you have the option to **give it a name**. This name can help provide more context for others viewing or using the schema within the Rootstock Explorer.
-:::info[Info]
+
+:::note[Note]
  Naming a schema is optional.
 You don’t need to name it unless you want to make it easier for others to understand its purpose in the Rootstock Explorer.
 :::
@@ -111,8 +117,8 @@ You don’t need to name it unless you want to make it easier for others to unde
 When you "name a schema", the creator is just attesting to it's name using a referenced attestation to the UID of the schema.
 
 1. First create your schema and make sure you have a UID of the schema and access to the creator address of the schema.
-2. Then you can use Schema #1, which has the Schema UID: 0x44d562ac1d7cd77e232978687fea027ace48f719cf1d58c7888e509663bb87fc
-  Here’s an [example](https://explorer.rootstock.io/ras/attestation/0x060faf353716b141c3648995494c0bff4cdcef0e892587a2b6fdf20299b1796d) Name a Schema on Roostock Mainnet.
+2. Then you can use Schema #1, which has the Schema UID: `0x44d562ac1d7cd77e232978687fea027ace48f719cf1d58c7888e509663bb87fc`
+    - Here’s an [example](https://explorer.rootstock.io/ras/attestation/0x060faf353716b141c3648995494c0bff4cdcef0e892587a2b6fdf20299b1796d) Name a Schema on Roostock Mainnet.
 3. Fill in the Schema Data:
     - You do NOT need to add a Recipient for this attestation.
     - Add the UID of the Schema you created that you want to name.
@@ -121,20 +127,20 @@ When you "name a schema", the creator is just attesting to it's name using a ref
 4. Nice work! You've successfully named a schema.
 
 
-Go to the schema detail view to name your schema:  [Name Schema #1](https://explorer.rootstock.io/ras/schema/0x44d562ac1d7cd77e232978687fea027ace48f719cf1d58c7888e509663bb87fc)
+- Go to the schema detail view to name your schema:  [Name Schema #1](https://explorer.rootstock.io/ras/schema/0x44d562ac1d7cd77e232978687fea027ace48f719cf1d58c7888e509663bb87fc)
 
-![Schema Detail](/img/resources/attestations/ras-schema-detail-2.png)
+![Schema Detail](/img/tools/attestations/ras-schema-detail-2.png)
 
 Click the **"Attest with Schema"** button.
+
 In the attestation form:
 - Do not fill in the "Recipient" field — leave it empty.
 - In the schemaId field, enter the UID of the schema you want to name.
 - In the name field, type the desired name you want to assign to the schema.
 
-
 Submit the attestation to publish the name on-chain.
 
-![new attestation](/img/resources/attestations/ras-new-attestation-popup.png)
+![new attestation](/img/tools/attestations/ras-new-attestation-popup.png)
 
 ## Using the EAS SDK with Rootstock
 In this section, you'll learn how to use the Ethereum Attestation Service (EAS) SDK on the Rootstock network.
@@ -186,7 +192,7 @@ console.log("Transaction submitted:", attestation);
 ```
 
 ### Getting an Attestation
-The getAttestation function allows you to retrieve an on-chain attestation for a given UID. This function returns an attestation object containing information about the attestation, such as the schema, recipient, attester, and more.
+The `getAttestation` function allows you to retrieve an on-chain attestation for a given UID. This function returns an attestation object containing information about the attestation, such as the schema, recipient, attester, and more.
 
 **Usage**
 
@@ -221,6 +227,7 @@ console.log(attestation);
 ```
 
 ## GraphQL API
+
 This API allows you to access various attestation and schema data and perform queries using the GraphQL.
 
 To get started with the Easscan GraphQL API, you need to send an HTTP POST request to the endpoint with a JSON payload containing your GraphQL query.

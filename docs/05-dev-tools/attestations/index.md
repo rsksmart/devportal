@@ -14,6 +14,8 @@ An attestation is a digital certificate or proof that verifies a specific claim 
 * University Degree: A certificate confirming academic achievement and qualifications.
 * Driver's License: A legal document certifying the holder's ability to operate a motor vehicle.
 
+- [Explore Example Use Cases for RAS](https://docs.attest.org/docs/category/example-use-cases)
+
 ## Web3 Attestations
 
 In the web3 world, attestations are taking on a new dimension. They can be used to verify:
@@ -31,7 +33,7 @@ The Rootstock network is innovating in the attestation space, here are solutions
     title="RAS"
     subtitle="attestation"
     color="green"
-    description="Ethereum Attestation Service (EAS) is an open-source infrastructure public good for making attestations onchain or offchain. Learn how to use it on Rootstock."
+    description="Rootstock Attestation Service (RAS) is an open, decentralized infrastructure that enables the creation of attestations—both on-chain and off-chain—about any type of information or event."
     linkHref="/dev-tools/attestations/ras/"
     linkTitle="Get Started"
   />
