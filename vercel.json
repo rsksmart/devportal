@@ -644,6 +644,7 @@
     {"source" : "/resources/contribute/hacktivator-program/", "destination" : "/resources/contribute/hacktivator/"},
     {"source" : "/getting-started/", "destination" : "/developers/quickstart/"},
     {"source" : "/smart-contracts/", "destination" : "/developers/smart-contracts/"},
+    {"source": "/developers/smart-contracts/verify-smart-contracts/", "destination": "/developers/smart-contracts/verify-smart-contracts/hardhat-plugin/"},
     {"source" : "/rsk-cli/", "destination" : "/developers/smart-contracts/rsk-cli/"}
   ]
 }
