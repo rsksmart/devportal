@@ -167,7 +167,6 @@ After configuring Foundry, you can deploy a smart contract to the Rootstock netw
   
 
    ```bash
-   
    cyberhackb@cyberhackb-ThinkPad-X1-Nano-Gen-1:~/Downloads/rootstock-foundry-starterkit$ forge script script/deploy.s.sol --rpc-url $RSK_TESTNET_RPC_URL --broadcast --legacy --evm-version london
    #The response should look like this:
    [⠊] Compiling...
@@ -228,7 +227,7 @@ For Rootstock Testnet:
 
 The response should look like this:
 
-   ```
+   ```bash
    Submitting verification for [src/mockAggregator.sol:MockAggregator] 0xD48bB9503C5Caba9D0Cbbac8B6Ea4F0613C37Bd1.
    Submitted contract for verification:
          Response: `OK`
