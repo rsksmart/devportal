@@ -34,7 +34,7 @@ Imagine different islands, each with its own unique economy and currency. To tra
     subtitle="cross-chain"
     color="green"
     description="Convert BTC to RBTC and vice versa. It is secured by the PowPeg protocol, which is a unique protocol that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus."
-    linkHref="/resources/guides/tokenbridge/"
+    linkHref="https://powpeg.rootstock.io/"
     linkTitle="Start Bridging"
   />
   <CardsGridItem
@@ -42,7 +42,7 @@ Imagine different islands, each with its own unique economy and currency. To tra
     subtitle="cross-chain"
     color="green"
     description="Router Protocol enables communication and interaction between different networks (Layer 1) regardless of their underlying technology."
-    linkHref="https://powpeg.rootstock.io/"
+    linkHref="/dev-tools/cross-chain-bridges/router-protocol/"
     linkTitle="Start Bridging"
   />
   <CardsGridItem
@@ -59,6 +59,14 @@ Imagine different islands, each with its own unique economy and currency. To tra
     color="green"
     description="Build dApps that seamlessly communicates between Rootstock to other EVM-compatible chains."
     linkHref="/resources/tutorials/hyperlane-bridge/"
+    linkTitle="Start Bridging"
+  />
+  <CardsGridItem
+    title="Layerzero"
+    subtitle="cross-chain"
+    color="green"
+    description="LayerZero, a cross-chain messaging protocol enables the seamless movement of Bitcoin-backed assets from Rootstock to other blockchains, allowing developers to build omnichain applications (OApps) that interact across multiple chains as if they were one."
+    linkHref="/developers/use-cases/rootstock-layerzero/"
     linkTitle="Start Bridging"
   />
 </CardsGrid>

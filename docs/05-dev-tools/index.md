@@ -665,6 +665,15 @@ description: "Explore a curated selection of smart contract development tools an
     description="Router Protocol is a layer-1 blockchain enabling chain abstraction."
   />
   <FilterItem
+    value="cc, data"
+    title="Layerzero"
+    subtitle="Cross Chain Bridges"
+    color="orange"
+    linkHref="/developers/use-cases/rootstock-layerzero/"
+    linkTitle="Build Cross Chain dApps"
+    description="LayerZero, a cross-chain messaging protocol enables the seamless movement of Bitcoin-backed assets from Rootstock to other blockchains, allowing developers to build omnichain applications (OApps) that interact across multiple chains as if they were one."
+  />
+  <FilterItem
     value="attest"
     title="Roostock Attestation Service (RAS)"
     subtitle="Attestations"
