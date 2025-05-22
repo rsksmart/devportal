@@ -54,4 +54,3 @@ The Omnichain Fungible Token (OFT) Standard allows fungible tokens to be transfe
 | RIF        | [Arbitrum One](https://arbiscan.io/address/0xe5e851b01DD3Eda24FDe709a407dB44555B6d1E0)                 | `0xe5e851b01DD3Eda24FDe709a407dB44555B6d1E0` |
 | RIF        | [Base](https://basescan.org/address/0xe5e851b01DD3Eda24FDe709a407dB44555B6d1E0)                       | `0xe5e851b01DD3Eda24FDe709a407dB44555B6d1E0` |
 | RIF        | [Solana](https://solscan.io/token/AAeENcfHbTExuTvs4q7r9Bjax98Dg6BGX3aMph4bTLdK)                       | `AAeENcfHbTExuTvs4q7r9Bjax98Dg6BGX3aMph4bTLdK`|
-0xE7039717C51C44652FB47be1794884A82634f08F
