@@ -2,13 +2,13 @@
 sidebar_position: 100
 title: Rootstock Attestation Service Starter Guide
 sidebar_label: Roostock Attestation Service
-description: "Rootstock Attestation Service (EAS) is a system that allows individuals and organizations to create verifiable claims or proofs about specific events, actions, or data, either on-chain (on the blockchain) or off-chain (outside the blockchain but linked to it). Learn how to use it on Rootstock."
+description: "Rootstock Attestation Service (RAS) is a system that allows individuals and organizations to create verifiable claims or proofs about specific events, actions, or data, either on-chain (on the blockchain) or off-chain (outside the blockchain but linked to it). Learn how to use it on Rootstock."
 tags: [rsk, rootstock, guides, EAS, Attestation, ethereum, RAS]
 ---
 
 Rootstock Attestation Service (RAS) is an open, decentralized infrastructure that enables the creation of attestations—both on-chain and off-chain—about any type of information or event.  Inspired by [Ethereum Attestation Service (EAS)](https://docs.attest.org/docs/welcome), RAS provides a common standard for issuing verifiable claims within Rootstock's smart contract ecosystem.
 
-This guide will help you understand and get started with the Rootstock attestation service.
+This guide will help you understand and get started with the Rootstock Attestation Service.
 
 Supported on: <Shield label="mainnet" title="testnet" tooltip="Available on Mainnet and Testnet" color="orange" />
 

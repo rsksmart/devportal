@@ -675,11 +675,11 @@ description: "Explore a curated selection of smart contract development tools an
   />
   <FilterItem
     value="attest"
-    title="Ethereum Attestation Service (EAS)"
+    title="Rootstock Attestation Service (RAS)"
     subtitle="Attestations"
     color="orange"
-    linkHref="/dev-tools/attestations/eas/"
+    linkHref="/dev-tools/attestations/ras/"
     linkTitle="Attest Now"
-    description="Ethereum Attestation Service (EAS) is a system that allows individuals and organizations to create verifiable claims or proofs about specific events, actions, or data, either on-chain (on the blockchain) or off-chain (outside the blockchain but linked to it). Learn how to use it on Rootstock."
+    description="Rootstock Attestation Service (RAS) is a system that allows individuals and organizations to create verifiable claims or proofs about specific events, actions, or data, either on-chain (on the blockchain) or off-chain (outside the blockchain but linked to it). Learn how to use it on Rootstock."
   />
 </Filter>
