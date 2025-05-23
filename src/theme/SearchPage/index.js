@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/no-autofocus */
 import React, { useEffect, useReducer, useRef, useState } from 'react'
 import clsx from 'clsx'
-import algoliaSearchHelper from 'algoliasearch-helper'
-import algoliaSearch from 'algoliasearch/lite'
+// import algoliaSearchHelper from 'algoliasearch-helper'
+// import algoliaSearch from 'algoliasearch/lite'
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment'
 import Head from '@docusaurus/Head'
 import Link from '@docusaurus/Link'
@@ -23,6 +23,11 @@ import {
 import Layout from '@theme/Layout'
 import Heading from '@theme/Heading'
 import styles from './styles.module.scss'
+
+
+// Import BrowserOnly
+import BrowserOnly from '@docusaurus/BrowserOnly';
+
 
 // Very simple pluralization: probably good enough for now
 function useDocumentsFoundPlural () {
@@ -112,7 +117,11 @@ function SearchVersionSelectList ({ docsSearchVersionsHelpers }) {
   )
 }
 
-function SearchPageContent () {
+function SearchPageContentInternal () { // <--- RENAMED TO AVOID CONFLICTS
+  // <--- MOVED ALGOLIA IMPORTS HERE
+  const algoliaSearch = require('algoliasearch/lite').default || require('algoliasearch/lite');
+  const algoliaSearchHelper = require('algoliasearch-helper').default || require('algoliasearch-helper');
+
   const {
     i18n: { currentLocale },
   } = useDocusaurusContext()
@@ -481,7 +490,9 @@ function SearchPageContent () {
 export default function SearchPage () {
   return (
     <HtmlClassNameProvider className="search-page-wrapper">
-      <SearchPageContent/>
+      <BrowserOnly fallback={<div>Loading Search...</div>}>
+        {() => <SearchPageContentInternal />}
+      </BrowserOnly>
     </HtmlClassNameProvider>
   )
 }
