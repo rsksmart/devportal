@@ -35,18 +35,18 @@ In the following matrix you can see the different features by wallet.
 | Wallet | Rootstock Checksum  |  Rootstock dPath | Customizable dPath  | Platforms | Available Networks |
 |---|---|---|---|---| ---|
 |  [Beexo](https://beexo.com) |  ✔ |  ✔ |  ✔ | Desktop, Mobile | Mainnet |
-|  [Edge](https://edge.app/) | ✔  | ✔  | ❌  | Desktop, Mobile | Mainnet, Testnet |
-|  [Ledger](https://www.ledger.com/) | ✔  |  ✔ | ❌  |
+|  [Edge](https://edge.app/) | ✔  | ✔  | -  | Desktop, Mobile | Mainnet, Testnet |
+|  [Ledger](https://www.ledger.com/) | ✔  |  ✔ | -  |
 |  [MyEtherWallet](https://www.myetherwallet.com/) | ✔  |  ✔ |  ✔  | Desktop, Android, IOS | Mainnet, Testnet |
-|  [Trezor](https://trezor.io/trezor-suite) | ✔  |  ✔ |  ❌  |
-|  [Metamask](/dev-tools/wallets/metamask) | ❌ |  ❌ | ❌  | Browser, Mobile | Rootstock (RBTC) |
+|  [Trezor](https://trezor.io/trezor-suite) | ✔  |  ✔ |  -  |
+|  [Metamask](/dev-tools/wallets/metamask) | - |  - | -  | Browser, Mobile | Mainnet, Testnet |
 |  [Portis](https://www.portis.io/) | ✔ |  ✔ | ✔  | Desktop | Mainnet |
 |  [Rabby Wallet](https://rabby.io) | - |  - | -  | Chrome, Desktop, Mobile | 
 |  [Enkrypt](https://www.enkrypt.com/networks/rootstock-wallet/)|  ✔ |   ✔ | -  | Chrome | Mainnet, Testnet |
 |  [MyCrypto](https://mycrypto.com/) | - |  - | -  | Desktop | Rootstock (RBTC) |
 |  [TaHo](https://taho.xyz) | ✔ |  ✔ | -  | Chrome | Rootstock (RBTC), Mainnet |
 |  [Frontier](https://www.frontier.xyz/browser-extension) | - |  - | -  | Desktop, Mobile, Chrome | Rootstock (RBTC) |
-|  [Bitget](https://web3.bitget.com/en/) | - |  ❌ | -  | Chrome, Mobile | RBTC |
+|  [Bitget](https://web3.bitget.com/en/) | - |  - | -  | Chrome, Mobile | RBTC |
 |  [SafePal](https://www.safepal.com/en/extension) | ✔ |  ✔ | -  | Chrome, Mobile | Rootstock (RBTC), Mainnet |
 |  [Wallby](https://wallby.app/) | ✔ |  ✔ | -  | Mobile | Rootstock (RBTC), Bitcoin |
 |  [MathWallet](https://blog.mathwallet.org/?p=1625) | ✔ |  ✔ | -  | Chrome, Desktop, Mobile | Mainnet | 
@@ -55,7 +55,7 @@ In the following matrix you can see the different features by wallet.
 |  [Exodus](https://www.exodus.com/) | ✔ |  ✔ | -  | Chrome, Desktop, Mobile | Mainnet |
 |  [SubWallet](https://www.subwallet.app/) | ✔ | ✔ | -  | Chrome  | Mainnet, Testnet |
 |  [WigWam](https://wigwam.app/) | ✔ | ✔ | -  | Chrome  | Mainnet, Testnet |
-|  [AirGap](https://airgap.it/) | ✔ | ✔ | -  | ❌  | Mainnet |
+|  [AirGap](https://airgap.it/) | ✔ | ✔ | -  | -  | Mainnet |
 |  [Zerion](https://zerion.io/) | ✔ | ✔ | -  | Chrome  | Mainnet, Testnet|
 |  [Rainbow Wallet](https://rainbow.me/en/) | ✔ | ✔ | -  | Chrome  | Mainnet, Testnet|
 
