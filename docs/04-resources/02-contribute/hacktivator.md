@@ -35,7 +35,7 @@ Eligible contributions will be rewarded according to the hacktivator's terms and
 
 Code contributions allow developers to improve Rootstock’s developer tools and ecosystem by building features, improving libraries, or expanding project functionality. Developers can leverage the following reference projects to deliver meaningful contributions to the Rootstock ecosystem.
 
-### 📌 Reference Projects:
+### 📌 Reference Projects
 
 <Accordion>
   <Accordion.Item eventKey="0">
@@ -192,7 +192,7 @@ _**The reward range provided for each option will be used based on the level of 
 
 Educational content contributions enable developers to educate the Rootstock community through blog posts, technical guides, tutorials, and documentation. They must be developer-focused and aimed at providing real value to the Rootstock developer community. You are encouraged to contribute using any of the formats below, addressing one or more of the listed Rootstock themes.
 
-### 📌 Formats:
+### 📌 Formats
 
 1. **Blog Posts**
   * Create engaging articles that share insights, updates, technical opinions, or hands-on experiences related to building on Rootstock or contributing to its ecosystem.
@@ -213,7 +213,7 @@ Pre-approval does not guarantee the final video will be approved, but it ensures
 :::
 
 
-### 📌 Themes: 
+### 📌 Themes
 
 <Accordion>
   <Accordion.Item eventKey="0">
