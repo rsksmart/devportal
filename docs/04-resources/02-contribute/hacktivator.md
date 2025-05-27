@@ -334,10 +334,6 @@ You can contribute by:
 
 All online events must be **technical in nature** and targeted at developers interested in learning how to build on Rootstock or integrate its tools.
 
-:::tip[⚠️ Pre-alignment encouraged:]
-While not mandatory, we recommend discussing major online events with the Rootstock team beforehand to align on key objectives and target metrics (e.g. expected developer attendance and engagement goals).
-:::
-
 ### 📌 IRL Events (In-Person) 
 
 IRL events are physical gatherings where developers represent Rootstock by educating developers in person.
