@@ -80,7 +80,13 @@ const config = {
     '/src/clientModules/renderEquations.js'
   ],
   plugins: [
-    'docusaurus-plugin-sass',
+    [
+      'docusaurus-plugin-sass', {
+      sassOptions: {
+        // Disable deprecation warnings
+        quietDeps: true,
+      }
+    }],
     [
       '@docusaurus/plugin-content-blog',
       {
@@ -265,6 +271,11 @@ const config = {
         contextualSearch: false,
 
       },
+      sass: {
+        sassOptions: {
+          quietDeps: true
+        }
+      }
     }),
 };
 

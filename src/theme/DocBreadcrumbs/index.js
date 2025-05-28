@@ -1,14 +1,13 @@
 import React from 'react';
 import clsx from 'clsx';
 import {ThemeClassNames} from '@docusaurus/theme-common';
-import {
-  useSidebarBreadcrumbs,
-  useHomePageRoute, useDocsSidebar,
-} from '@docusaurus/theme-common/internal';
 import Link from '@docusaurus/Link';
 import {translate} from '@docusaurus/Translate';
 
 import {findSidebarItemIndex} from '/src/_utils/hooks.js';
+
+import {useSidebarBreadcrumbs, useDocsSidebar} from '@docusaurus/plugin-content-docs/client';
+
 
 // TODO move to design system folder
 function BreadcrumbsItemLink({children, href, isLast}) {

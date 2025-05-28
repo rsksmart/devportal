@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import {Collapsible, ThemeClassNames, useCollapsible, useWindowSize} from '@docusaurus/theme-common';
-import {useDoc} from '@docusaurus/theme-common/internal';
+import {useDoc} from '@docusaurus/plugin-content-docs/client';
 import Translate from '@docusaurus/Translate';
 
 import styles from './styles.module.scss';
