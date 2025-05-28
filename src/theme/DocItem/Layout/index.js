@@ -10,7 +10,8 @@ import DocItemTOCMobile from '@theme/DocItem/TOC/Mobile';
 
 import DocItemContent from '@theme/DocItem/Content';
 
-import Unlisted from '@theme/Unlisted';
+import ContentVisibility from '@theme/ContentVisibility';
+
 import styles from './styles.module.css';
 
 import DocItemAside from "@theme/DocItem/Aside";
@@ -36,14 +37,13 @@ function useDocTOC() {
 }
 export default function DocItemLayout({children}) {
   const docTOC = useDocTOC();
-  const {
-    metadata: {unlisted},
-  } = useDoc();
+  const { metadata } = useDoc();
 
   return (
     <div className="row gx-0">
       <div className={clsx('col', !docTOC.hidden && styles.docItemCol)}>
-        {unlisted && <Unlisted />}
+        <ContentVisibility metadata={metadata} />
+
         <DocVersionBanner />
         <div className={clsx(styles.docItemContainer, `ps-md-24 px-lg-24`)}>
           <article>

@@ -7,10 +7,8 @@ import {
 } from '@docusaurus/theme-common';
 import Layout from '@theme/Layout';
 import MDXContent from '@theme/MDXContent';
-import TOC from '@theme/TOC';
-import Unlisted from '@theme/Unlisted';
+import ContentVisibility from '@theme/ContentVisibility';
 import EditMetaRow from '@theme/EditMetaRow';
-import styles from './styles.module.css';
 
 import Aside from "../../components/Homepage/Aside";
 export default function MDXPage(props) {
@@ -21,7 +19,6 @@ export default function MDXPage(props) {
       editUrl,
       description,
       frontMatter,
-      unlisted,
       lastUpdatedBy,
       lastUpdatedAt,
     },
@@ -50,7 +47,7 @@ export default function MDXPage(props) {
         <main>
           <div className="row">
             <div className="col-12 col-lg-9 col-xl-10">
-              {unlisted && <Unlisted/>}
+              <ContentVisibility metadata={metadata} />
               <article className={`markdown`}>
                 <MDXContent>
                   <MDXPageContent/>
