@@ -50,7 +50,7 @@ const config = {
         form : {
           id : '5qQ40ScPu',
           title : 'Request a New Article',
-          description : 'Looking for information we haven’t covered? Fill out the form below to request a new article, and we’ll consider it in future updates.',
+          description : 'Looking for information we haven't covered? Fill out the form below to request a new article, and we'll consider it in future updates.',
         }
       },
     },
@@ -240,7 +240,7 @@ const config = {
       },
       socials: {
         discord: 'http://discord.gg/rootstock',
-        x: 'https://twitter.com/rootstock_io',
+        twitter: 'https://twitter.com/rootstock_io',
         telegram: 'https://t.me/rskofficialcommunity'
       },
       tagline: {
