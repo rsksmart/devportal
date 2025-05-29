@@ -7,7 +7,7 @@ tags:
   - rootstock
   - 도구
   - 개발자 도구
-description: 전문적으로 선별한 스마트 컨트랙트 개발 도구와 언어를 살펴보세요. 익히 알고 있는 Solidity에서 Rust나 Hardhat 등의 개발자 환경까지, Rootstock에서 스마트 컨트랙트와 상호 작용하고 이를 배포하는 데 필요한 모든 내용을 확인할 수 있습니다.
+description: Rootstock에서 스마트 컨트랙트를 개발하고 배포하는 데 필요한 도구와 언어들을 엄선해 소개합니다. 익숙한 Solidity부터 Rust, Hardhat과 같은 개발 환경까지, 스마트 컨트랙트와 상호작용하고 배포하는 데 필요한 모든 것을 이곳에서 확인할 수 있습니다.
 ---
 
 ```mdx-code-block

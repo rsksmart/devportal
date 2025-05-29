@@ -1,17 +1,17 @@
 ---
-sidebar_label: 빠른 시작
+sidebar_label: 퀵스타트
 sidebar_position: 4
-title: 빠른 시작
+title: 퀵스타트
 tags:
   - rsk
   - rootstock
   - 초급자
-  - 빠른 시작
+  - 퀵스타트
   - 개발자
   - 고급
   - Rootstock으로 포팅
   - 튜토리얼
-description: Rootstock에서의 개발을 위한 빠른 시작, 데모 및 스타터 키트를 소개합니다.
+description: Rootstock에서 개발할 수 있도록 도와주는 퀵스타트, 데모, 스타터 키트.
 ---
 
 ```mdx-code-block
