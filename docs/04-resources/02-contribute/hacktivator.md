@@ -190,26 +190,24 @@ _**The reward range provided for each option will be used based on the level of 
 
 ## 2️⃣ Category: Educational Content Contributions 
 
-Educational content contributions enable developers to educate the Rootstock community through blog posts, technical guides, tutorials, and documentation. They must be developer-focused and aimed at providing real value to the Rootstock developer community. You are encouraged to contribute using any of the formats below, addressing one or more of the listed Rootstock themes.
+Educational content contributions enable developers to educate the Rootstock community through technical guides, tutorials, and documentation. They must be developer-focused and aimed at providing real value to the Rootstock developer community.
 
 ### 📌 Formats
 
-1. **Blog Posts**
-  * Create engaging articles that share insights, updates, technical opinions, or hands-on experiences related to building on Rootstock or contributing to its ecosystem.
-2. **Written Guides or Tutorials**
-  * Develop step-by-step guides that help Rootstock developers complete specific tasks or understand key concepts related to Rootstock tools, protocols, and integrations.
-3. **Technical Documentation on Rootstock Docs**
-  * Produce in-depth technical documentation that explains Rootstock’s technology stack, protocols, and architecture for a highly technical audience.
-4. **Video Guides or Tutorials**
-  * Record and share visual tutorials that walk developers through practical tasks or explain technical concepts related to Rootstock development.
+1. **Written Guides or Tutorials**
+    * Develop step-by-step guides that showcase a working dApp, technical concept, or feature that can be implemented by Rootstock developers. Each guide must be supported by a GitHub repository containing a README with a clear explanation and setup instructions.
+2. **Technical Documentation on Rootstock Docs**
+    * Produce in-depth technical documentation that explains Rootstock’s technology stack, protocols, and architecture for a highly technical audience.
+3. **Video Guides or Tutorials**
+    * Record and share visual tutorials that walk developers through practical tasks or explain technical concepts related to Rootstock development. Each video must be accompanied by a GitHub repository containing a README with a clear explanation and setup instructions.
 
 
 :::info[Improvements]
 ❗To improve the feedback loop and reduce the need for major video editions:
-Instead of submitting a final video first, please submit a written outline.
-You don’t need a full script — just summarize the key topics and structure you plan to follow.
-Mention in the description that this is a video outline for preapproval.
-Pre-approval does not guarantee the final video will be approved, but it ensures smoother feedback.
+- It is recommended to submit a written outline and get approval before recording the video
+- You don’t need a full script — just summarize the key topics and structure you plan to follow.
+- Mention in the description that this is a video outline for preapproval.
+- Pre-approval does not guarantee the final video will be approved, but it ensures smoother feedback.
 :::
 
 
@@ -233,27 +231,27 @@ Pre-approval does not guarantee the final video will be approved, but it ensures
       Demonstrating how to use and integrate tools with Rootstock-compatible tools and libraries.
 
       **Contribution Ideas**:
-        * Explaining the concept of a sidechain and how Rootstock utilizes it.
-        * Step-by-step guides on integrating wallets, SDKs, or APIs with Rootstock applications.
-        * Step-by-step guides on using ecosystem dApps - refer to the “Building DeFi on Bitcoin” series on the Rootstock blog.
+        * Implementing and demonstrating how Rootstock operates as a sidechain through a working integration or data flow example.
+        * Step-by-step guides on integrating wallets, SDKs, or APIs with Rootstock applications, including setup instructions and GitHub code.
+        * Tutorials on using ecosystem dApps by demonstrating integration steps or extending their functionality with Rootstock components.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">
-    <Accordion.Header as="h4">**Use Case Specific Guides – Case Studies and Real-World Examples**</Accordion.Header>
+    <Accordion.Header as="h4">**Use Case Specific Guides - Real-World Examples**</Accordion.Header>
     <Accordion.Body>
-      Sharing real-world examples of Rootstock applications and use cases.
+      Step-by-step guides demonstrating working dApps or prototypes that reflect real-world use cases on Rootstock. Each guide must include a GitHub repo with implementation details.
 
       **Contribution Ideas**:
-        * Building cross-platform or no-code dApps (e.g., mobile app development using Flutter, etc).
+        * Building cross-platform or no-code dApps (e.g., mobile app development using Flutter).
         * Showcasing real-world applications on Rootstock.
         * Building cross-chain applications, data indexing, etc., using partner tools and integrations.
-        * Porting dApps to Rootstock from other ecosystems
+        * Porting dApps to Rootstock from other ecosystems.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="3">
     <Accordion.Header as="h4">**Tools and Libraries**</Accordion.Header>
     <Accordion.Body>
-      Introducing and explaining various tools and libraries that can be used for Rootstock development.
+      Documentation and guides explaining various tools and libraries that can be used for Rootstock development.
 
       **Contribution Ideas**:
         * Tutorials on using popular development environments (e.g., Remix, Hardhat, Slither, Viem).
@@ -265,27 +263,27 @@ Pre-approval does not guarantee the final video will be approved, but it ensures
     <Accordion.Header as="h4">**Advanced Topics and Best Practices**</Accordion.Header>
     <Accordion.Body>
       
-      Expanding into more complex aspects of Rootstock development and sharing best practices.
+      Step-by-step guides exploring advanced Rootstock features or best practices, supported by a working implementation. Each submission must include a GitHub repo demonstrating the concept.
 
       **Contribution Ideas**:
-        * Exploring complex concepts and how they enhance scalability on Rootstock.
-        * Discussing security considerations in smart contract development and best practices to avoid vulnerabilities.
-        * Exploring advanced topics like decentralized finance (DeFi), Runes, Ordinals, BITVMX, and their potential applications on Rootstock.
+        * Implementing scalable contract patterns or mechanisms to demonstrate how Rootstock can support advanced scalability strategies.
+        * Applying security best practices in smart contract development, using real examples and code walkthroughs.
+        * Building working implementations using DeFi, Runes, Ordinals, or BITVMX on Rootstock, with practical code and setup documentation.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
 
-## 2️⃣ Category: Educational Content Contributions 
+## 2️⃣ Category: Educational Criteria and Guidelines 
 
-* Educational content must be **developer-focused and practical**, helping others build, integrate, or optimize with Rootstock. Submissions should go beyond generic explanations or rewordings of existing documentation and must avoid introductory content intended for general audiences. Priority is given to original, technical material that demonstrates real use—such as building a dApp or integrating Rootstock tools into a working project.
-* Blogs, tutorials (written or video), and technical documentation must be original content created after the Hacktivator launch. Submissions must not have been previously published elsewhere and should be technically accurate while offering actionable insights for the Rootstock developer community.
+* Only **written guides** or **tutorials** will be accepted. These must showcase a working dApp, technical concept, or feature that can be implemented by Rootstock developers.
+* Each submission must include a **GitHub repository** containing a README section with a clear explanation and setup instructions.
+* Submissions must be original, technically accurate, and not previously published elsewhere.
 * Once approved, you will be invited as a collaborator to publish your educational content on the [Rootstock Community blog](https://rootstock.hashnode.dev/). Contributions become eligible for rewards only after successful publication.
-* If you are contributing technical documentation to the [Rootstock DevPortal](https://github.com/rsksmart/devportal/pulls), it must be submitted directly as a Pull Request (PR) on the repository. Include the PR link in your submission form, ensure the “hacktivator” label is applied, and follow the provided template.
-* Submissions consisting of only a single line of code or minor edits that do not offer real functionality or improvement will not be accepted.
-
+* If you are contributing technical documentation to the [Rootstock DevPortal](https://github.com/rsksmart/devportal/pulls), it must be submitted directly as a Pull Request (PR) on the repository. Include the PR link in your submission form, ensure the “hacktivator” label is applied, and follow the provided template. Submissions consisting of only a single line of code or minor edits that do not offer real functionality or improvement will not be accepted.
 
 :::tip[❗More info about the guidelines]
-For a comprehensive overview of the guidelines, evaluation, and reward system for content contributions, including detailed criteria for depth, completeness, technical accuracy, educational value, and innovation, please refer to the [Educational Content Evaluation Criteria & Guidelines](https://docs.google.com/document/d/1vA3QK8ZNv5Fgegb0Jv2f03IVIREePDi4lrFE1vsfK7c/edit) and the [terms and conditions of the Hacktivator](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?usp=sharing). These criteria outline how contributions, ranging from technical documentation, written or video guides or tutorials will be assessed and rewarded, ensuring a balanced and fair approach to valuing content quality and impact. This document covers everything from word count appropriateness and inclusion of code examples to technical correctness and relevance to the Rootstock ecosystem, with rewards adjusted based on the value and complexity of each contribution.
+
+For a comprehensive overview of the guidelines, evaluation, and reward system for content contributions, including detailed criteria for depth, completeness, technical accuracy, educational value, and innovation, please refer to the [Educational Content Evaluation Criteria & Guidelines](https://docs.google.com/document/d/1vA3QK8ZNv5Fgegb0Jv2f03IVIREePDi4lrFE1vsfK7c/edit) and [terms and conditions of the Hacktivator](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?usp=sharing). These criteria outline how contributions, ranging from technical documentation, written or video guides or tutorials will be assessed and rewarded, ensuring a balanced and fair approach to valuing content quality and impact. This document covers everything from word count appropriateness and inclusion of code examples to technical correctness and relevance to the Rootstock ecosystem, with rewards adjusted based on the value and complexity of each contribution.
 
 👉 Guidelines when publishing:
 * Follow the [Rootstock Style Guide](https://github.com/rsksmart/devportal/blob/main/STYLE-GUIDE.md)
@@ -297,10 +295,9 @@ For a comprehensive overview of the guidelines, evaluation, and reward system fo
 Each verified and approved code contribution that becomes a Qualified Contribution (as defined in the program's terms and conditions) will be entitled to receive the following rewards, under the established process:
 
 :::success[Success]
-  * **Blog Post Contribution**: 50 - 250 USD
-  * **Written Guides or Tutorials Contribution**: 250 - 500 USD
-  * **Technical Content Contribution**: 500 - 700 USD 
-  * **Video Guides or Tutorials Contribution**: 700 - 1000 USD
+  * **Written Guides or Tutorials Contribution**: 50 - 200 USD
+  * **Technical Content Contribution**: 150 - 400 USD 
+  * **Video Guides or Tutorials Contribution**: 150 - 500 USD
 
 _**The reward range provided for each option will be used based on the level of contribution to the project to qualify. That is, if the Contributor meets only the minimum required to qualify, they will be assigned the minimum rewards for each option. However, the more the Contributor adds to their contribution and chosen option, the greater the rewards they may receive (up to the maximum cap established for each option).**_
 
