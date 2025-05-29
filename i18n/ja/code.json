@@ -3,7 +3,7 @@
     "message": "Rootstock ドキュメント"
   },
   "Explore guides, quick starts, and SDKs to build and integrate your dApps.": {
-    "message": "guías, inicios rápidos y SDK para crear e integrar sus dApps."
+    "message": "dAppsの構築と統合に役立つガイド、クイックスタート、SDKをご覧ください。"
   },
   "Quick Start": {
     "message": "クイックスタート"
@@ -165,7 +165,7 @@
     "message": "今後のイベントを見る"
   },
   "Not now": {
-    "message": "Not now"
+    "message": "後で"
   },
   "Close": {
     "message": "閉じる"
@@ -192,22 +192,22 @@
     "message": "タイトル"
   },
   "Why / Reason for Request": {
-    "message": "Why / Reason for Request"
+    "message": "リクエストの理由"
   },
   "Publication location (E.g, DevPortal, Blog)": {
-    "message": "Publication location (E.g, DevPortal, Blog)"
+    "message": "公開場所（例：DevPortal、ブログ）"
   },
   "Any other information": {
-    "message": "Any other information"
+    "message": "その他の情報"
   },
   "Are you a technical contributor?": {
-    "message": "Are you a technical contributor?"
+    "message": "あなたは技術的な貢献者ですか？"
   },
   "Submit a Pull Request": {
-    "message": "Submit a Pull Request"
+    "message": "プルリクエストを送信する"
   },
   "or an Issue": {
-    "message": "or an Issue"
+    "message": "または問題を報告する"
   },
   "theme.common.copyPageLinkMsg": {
     "message": "コピー完了！"
@@ -228,7 +228,7 @@
     "message": "フィードバックありがとうございます！"
   },
   "theme.feedbackForm.form.description": {
-    "message": "We would love to hear your thoughts and feedback so that we can improve these Docs for you and others!"
+    "message": "ぜひあなたのご意見やフィードバックをお聞かせください。"
   },
   "theme.feedbackForm.form.rating": {
     "message": "フィードバック"
@@ -353,11 +353,11 @@
     "message": "記事をリクエストする"
   },
   "theme.moreLinks.requestArticle.form.title": {
-    "message": "Request a New Article",
+    "message": "記事をリクエストする",
     "description": "Request an Article form title"
   },
   "theme.moreLinks.requestArticle.form.description": {
-    "message": "Looking for information we haven’t covered? Fill out the form below to request a new article, and we’ll consider it in future updates.",
+    "message": "掲載されていない情報をお探しですか？ 下のフォームにご記入いただければ、新しい記事としてリクエストを受け付け、今後のアップデートで検討させていただきます。",
     "description": "Request an Article form description"
   },
   "theme.navbar.mobileLanguageDropdown.label": {

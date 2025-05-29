@@ -21,7 +21,7 @@ Rootstockは、最初に登場したBitcoinのサイドチェーンで、最も�
 | --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Rootstockブロックチェーンの概要](/concepts/fundamentals/)                 | Rootstockプラットフォームについて包括的に理解します。                                                                                                                                                                                            |
 | [Rootstockスタック](/concepts/fundamentals/stack/)                  | Rootstockが、Bitcoin PoWのセキュリティとEthereumのスマートコントラクト機能をどのように組み合わせているかを学びます。                                                                                                                                                   |
-| [Glossary](/concepts/glossary/)                                 | This glossary provides essential definitions for key terms related to Rootstock and blockchain technology.                                                                                                 |
+| [用語集](/concepts/glossary/)                                      | この用語集では、Rootstockとブロックチェーン技術に関連する重要な用語の定義を提供します。                                                                                                                                                                           |
 | [RBTCトークン](/concepts/rbtc/)                                     | RBTCトークンは、Rootstockネットワーク上のトランザクションを可能にします。BTCからRBTCへの変換は、さまざまな方法で簡単に行うことができます。RBTCの取得を促進する取引所とアプリケーションの包括的なリストは、RBTCセクションをご覧ください。また、[RBTCセクション](https://rootstock.io/rbtc/)にアクセスすると、RBTCを入手できる取引所とアプリケーションのリストをご確認いただけます。 |
 | [RIFスイート](/concepts/rif-suite/)                                 | Bitcoin上での開発を合理化し、インセンティブを与えるために設計されたオープンソースツールと技術の包括的コレクションであるRootstockインフラストラクチャーフレームワークについて学びます。                                                                                                                        |
 | [Rootstockセキュリティ](/concepts/powpeg/security-model/)             | Rootstockプラットフォームは「[Powpeg](/concepts/powpeg/)」と呼ばれるセキュリティメカニズムを使用しており、これは「多層防御」という多層セキュリティモデルに基づいています。                                                                                                                    |
@@ -34,7 +34,7 @@ Rootstock開発の旅に出る準備は整いましたか？ご自身の関心�
 
 ### 開発者
 
-The [Developers](/developers/) section provides all the necessary guides and information for building secure and scalable dApps on Bitcoin with Rootstock. Leverage your existing knowledge of Solidity and tools like Rust, Hardhat, and Wagmi to deploy and scale your dApps on the pioneering layer 2 solution that combines the best of Bitcoin security and Ethereum Smart Contract capabilities.
+[開発者](/developers/)セクションでは、Rootstockを使用してBitcoin上で安全でスケーラブルなdAppを構築するために必要なすべてのガイドと情報を提供します。SolidityやRust、Hardhat、Wagmiのようなツールの既存の知識を活用して、BitcoinのセキュリティとEthereumのスマートコントラクト機能の長所を組み合わせた先駆的なレイヤー2ソリューション上でdAppをデプロイし、拡張することができます。
 
 ### ノードオペレーター
 

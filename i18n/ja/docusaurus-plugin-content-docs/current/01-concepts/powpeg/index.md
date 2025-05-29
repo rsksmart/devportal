@@ -16,14 +16,13 @@ render_features: powpeg-hsm-attestation-frame
 
 Rootstockの**PowPeg**プロトコルは、2018年にフェデレーションとして始まり、現在では多くの分散型特性を備えるまでに発展しました。このプロトコルは、改ざん防止機能を備えたセキュアエレメント（SE）を基盤とする専用のPowHSM内に保管された秘密鍵を保護します。各PowHSMは、SPVモードでRootstockノードを実行しており、そのため署名はチェーンの累積プルーフ・オブ・ワークによってのみコマンドできます。PowPegのセキュリティは、「多層防御」と呼ばれるシンプルな層別設計によって確立されています。
 
-:::note[Info]
+:::note 情報
 
 - PowPegアプリは、[テストネット](https://powpeg.testnet.rootstock.io/)と[メインネット](https://powpeg.rootstock.io/)で利用できます。
 - 設計とアーキテクチャーに関する概要説明、LedgerとTrezorを使用したペグイントランザクションの実行方法、よくある質問、およびPowPegで実行できる高度な操作については、[PowPegユーザーガイド](/resources/guides/powpeg-app/)をご覧ください。
 - 署名者と証明に関する情報は、[PowPeg HSMファームウェア証明](/concepts/powpeg/hsm-firmware-attestation)セクションを参照してください。
 - PowPegを使用する際のネイティブモードとファーストモードの違いについては、「[ファーストモードの導入：PowPeg経由でRBTCをより速く取得する（Introducing Fast Mode: Getting RBTC via the PowPeg, but Faster）](https://blog.rootstock.io/noticia/get-rbtc-fast-mode/)」をご覧ください。
-
-:::
+  :::
 
 ## PowPegプロトコルの歴史
 
@@ -91,15 +90,23 @@ PowHSMが必要とする累積的作業は、あらゆる攻撃に対するレ�
 
 ## ペグインとペグアウトの最終性
 
-Since the Bitcoin blockchain and the Rootstock sidechain are not entangled in a single blockchain or in a parent-child relation as in a [syncchain](https://blog.rootstock.io/noticia/syncchain-synchronized-sidechains-for-improved-security-and-usability/), the transfers of bitcoins between them must at some point in time be considered final. If not, bitcoins locked on one side would never be able to be safely unlocked on the other. **Therefore, peg-in and peg-out transactions require a high number of block confirmations. Peg-ins require 100 Bitcoin blocks (approximately 2000 Rootstock blocks), and peg-outs require 4000 Rootstock blocks (approximately 200 Bitcoin blocks)**. Transactions signed by federation nodes are considered final by Rootstock: these transactions are broadcast and assumed to be included sooner or later in the Bitcoin blockchain. Due to the need for finality, Rootstock consensus does not attempt to recover from an attack that manages to revert the blockchain deep enough to revert a final peg-in or peg-out transaction. If a huge reversal occurs, PowPeg nodes halt any future peg-out, and the malicious actors should not be able to double-spend the peg.
+ビットコインのブロックチェーンとRootstockのサイドチェーンは、単一のブロックチェーン上に統合されているわけでも、[syncchain](https://blog.rootstock.io/noticia/syncchain-synchronized-sidechains-for-improved-security-and-usability/) のような親子関係にあるわけでもないため、両者間でのビットコインの移転は、ある時点で確定的である必要があります。
+そうでなければ、一方でロックされたビットコインは、もう一方で安全にアンロックすることができなくなってしまいます。
+\*\*そのため、peg-inおよびpeg-outトランザクションには多くのブロック承認が必要です。peg-inにはビットコインのブロック100個分（Rootstockのブロックで約2000個）、peg-outにはRootstockのブロック4000個分（ビットコインのブロックで約200個）\*\*が求められます。
+連合ノードによって署名されたトランザクションは、Rootstock側でファイナルと見なされます：これらのトランザクションはブロードキャストされ、いずれビットコインのブロックチェーンに取り込まれるものと仮定されます。
+ファイナリティ（確定性）の必要性により、Rootstockのコンセンサスは、peg-inやpeg-outの最終トランザクションを巻き戻すほど深い攻撃によるブロックチェーンの巻き戻しから回復しようとはしません。
+仮に大規模な巻き戻しが発生した場合、PowPegノードは将来のpeg-outを停止し、悪意ある攻撃者がpegを二重支払いすることはできないようになります。
 
-:::note[IRIS 3.0.0]
+:::note IRIS 3.0.0
 IRIS 3.0.0のアップグレード以降、ペグインとペグアウトに必要な最小値が半分に減少し、現在ではペグイン（BTC）の最小値が0.005、ペグアウト（RBTC）の最小値が0.004となっています。この最小値の他に、Bridgeはペグアウトに必要な手数料を見積もり、手数料を支払った後の残りが少なすぎる場合（BTCで使用するには十分でない場合）、ペグアウトは拒否されます。上記のいずれかの条件でペグアウトが拒否された場合、資金は返金されます。
 :::
 
 ## 分散化 - ビトクラシーの構築
 
-The use of PowHSMs in a federation is a step forward in decentralization, because a remotely compromised functionary does not compromise the main element for the security of the peg: a multisig private key. Since Rootstock has a large portion of the Bitcoin merge-mined hashrate, currently surpassing 51%, it seems extremely unlikely that a new group of merge-miners can hijack consensus long enough to force PowHSMs to perform a malicious peg-out. But the Rootstock community should never rest on its laurels.  Instead, the Rootstock community is planning to apply once again a layered approach leading to more “additive security”.
+連合におけるPowHSMの利用は、分散化に向けた前進です。というのも、リモートから機能者が侵害されたとしても、ペグのセキュリティの要であるマルチシグの秘密鍵そのものが侵害されるわけではないからです。
+Rootstockは、ビットコインのマージマイニングに参加するハッシュレートの大部分を保持しており、現在では51％を超えています。そのため、新たなマージマイナーのグループがコンセンサスをハイジャックし、PowHSMに悪意のあるpeg-outを実行させるような状況は、極めて起こりにくいと考えられます。
+しかし、Rootstockコミュニティはこの現状に決して甘んじるべきではありません。
+むしろ、Rootstockコミュニティは引き続き「積み上げ型のセキュリティ（additive security）」を実現するためのレイヤードアプローチの適用を計画しています。
 
 ## PowPegの検閲耐性
 

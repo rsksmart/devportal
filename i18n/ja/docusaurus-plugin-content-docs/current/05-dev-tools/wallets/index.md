@@ -32,38 +32,39 @@ description: 互換性のあるウォレットでRootstockに接続する方法�
   <CarouselItem image="/img/rsk/wallets/zerion.svg" href="https://zerion.io/" />
   <CarouselItem image="/img/rsk/wallets/rainbow-wallet-main.png" href="https://rainbow.me/en/" />
 </Carousel>
+
 ```
 
 ## 互換性のマトリックス
 
 下記のマトリックスでは、ウォレットごとの異なる機能を確認できます。
 
-| ウォレット                                                         | Rootstockチェックサム | Rootstock dPath | カスタマイズ可能なdPath | プラットフォーム           | Available Networks                                                           |
-| ------------------------------------------------------------- | --------------- | --------------- | -------------- | ------------------ | ---------------------------------------------------------------------------- |
-| [Beexo](https://beexo.com)                                    | ✔               | ✔               | ✔              | デスクトップ、モバイル        | Mainnet                                                                      |
-| [Edge](https://edge.app/)                                     | ✔               | ✔               | ❌              | デスクトップ、モバイル        | Mainnet, Testnet                                                             |
-| [Ledger](https://www.ledger.com/)                             | ✔               | ✔               | ❌              |                    |                                                                              |
-| [MyEtherWallet](https://www.myetherwallet.com/)               | ✔               | ✔               | ✔              | デスクトップ、Android、iOS | Mainnet, Testnet                                                             |
-| [Trezor](https://trezor.io/trezor-suite)                      | ✔               | ✔               | ❌              |                    |                                                                              |
-| [Metamask](/dev-tools/wallets/metamask)                       | ❌               | ❌               | ❌              | ブラウザー、モバイル         | Rootstock (RBTC)                                          |
-| [Portis](https://www.portis.io/)                              | ✔               | ✔               | ✔              | デスクトップ             | Mainnet                                                                      |
-| [Rabby Wallet](https://rabby.io)                              | -               | -               | -              | Chrome、デスクトップ、モバイル |                                                                              |
-| [Enkrypt](https://www.enkrypt.com/networks/rootstock-wallet/) | ✔               | ✔               | -              | Chrome             | Mainnet, Testnet                                                             |
-| [MyCrypto](https://mycrypto.com/)                             | -               | -               | -              | デスクトップ             | Rootstock (RBTC)                                          |
-| [TaHo](https://taho.xyz)                                      | ✔               | ✔               | -              | Chrome             | Rootstock (RBTC), Mainnet                                 |
-| [Frontier](https://www.frontier.xyz/browser-extension)        | -               | -               | -              | デスクトップ、モバイル、Chrome | Rootstock (RBTC)                                          |
-| [Bitget](https://web3.bitget.com/en/)                         | -               | ❌               | -              | Chrome、モバイル        | RBTC                                                                         |
-| [SafePal](https://www.safepal.com/en/extension)               | ✔               | ✔               | -              | Chrome、モバイル        | Rootstock (RBTC), Mainnet                                 |
-| [Wallby](https://wallby.app/)                                 | ✔               | ✔               | -              | モバイル               | Rootstock (RBTC)、Bitcoin                                  |
-| [MathWallet](https://blog.mathwallet.org/?p=1625)             | ✔               | ✔               | -              | Chrome、デスクトップ、モバイル | Mainnet                                                                      |
-| [Block Wallet](https://blockwallet.io/)                       | ✔               | ✔               | -              | Chrome             | Mainnet                                                                      |
-| [MtPelerin Bridge](https://www.mtpelerin.com/bridge-wallet)   | ✔               | ✔               | -              | デスクトップ、モバイル        | Rootstock (Mainnet), Bitcoin (Testnet) |
-| [Exodus](https://www.exodus.com/)                             | ✔               | ✔               | -              | Chrome、デスクトップ、モバイル | Mainnet                                                                      |
-| [SubWallet](https://www.subwallet.app/)                       | ✔               | ✔               | -              | Chrome             | Mainnet, Testnet                                                             |
-| [WigWam](https://wigwam.app/)                                 | ✔               | ✔               | -              | Chrome             | Mainnet, Testnet                                                             |
-| [AirGap](https://airgap.it/)                                  | ✔               | ✔               | -              | ❌                  | Mainnet                                                                      |
-| [Zerion](https://zerion.io/)                                  | ✔               | ✔               | -              | Chrome             | Mainnet, Testnet                                                             |
-| [Rainbow Wallet](https://rainbow.me/en/)                      | ✔               | ✔               | -              | Chrome             | Mainnet, Testnet                                                             |
+| ウォレット                                                         | Rootstockチェックサム | Rootstock dPath | カスタマイズ可能なdPath | プラットフォーム           | 利用可能なネットワーク                                                               |
+| ------------------------------------------------------------- | --------------- | --------------- | -------------- | ------------------ | ------------------------------------------------------------------------- |
+| [Beexo](https://beexo.com)                                    | ✔               | ✔               | ✔              | デスクトップ、モバイル        | メインネット                                                                    |
+| [Edge](https://edge.app/)                                     | ✔               | ✔               | ❌              | デスクトップ、モバイル        | メインネット・テストネット                                                             |
+| [Ledger](https://www.ledger.com/)                             | ✔               | ✔               | ❌              |                    |                                                                           |
+| [MyEtherWallet](https://www.myetherwallet.com/)               | ✔               | ✔               | ✔              | デスクトップ、Android、iOS | メインネット・テストネット                                                             |
+| [Trezor](https://trezor.io/trezor-suite)                      | ✔               | ✔               | ❌              |                    |                                                                           |
+| [Metamask](/dev-tools/wallets/metamask)                       | ❌               | ❌               | ❌              | ブラウザー、モバイル         | Rootstock (RBTC)                                       |
+| [Portis](https://www.portis.io/)                              | ✔               | ✔               | ✔              | デスクトップ             | メインネット                                                                    |
+| [Rabby Wallet](https://rabby.io)                              | -               | -               | -              | Chrome、デスクトップ、モバイル |                                                                           |
+| [Enkrypt](https://www.enkrypt.com/networks/rootstock-wallet/) | ✔               | ✔               | -              | Chrome             | メインネット・テストネット                                                             |
+| [MyCrypto](https://mycrypto.com/)                             | -               | -               | -              | デスクトップ             | Rootstock (RBTC)                                       |
+| [TaHo](https://taho.xyz)                                      | ✔               | ✔               | -              | Chrome             | Rootstock (RBTC)、メインネット                                |
+| [Frontier](https://www.frontier.xyz/browser-extension)        | -               | -               | -              | デスクトップ、モバイル、Chrome | Rootstock (RBTC)                                       |
+| [Bitget](https://web3.bitget.com/en/)                         | -               | ❌               | -              | Chrome、モバイル        | RBTC                                                                      |
+| [SafePal](https://www.safepal.com/en/extension)               | ✔               | ✔               | -              | Chrome、モバイル        | Rootstock (RBTC)、メインネット                                |
+| [Wallby](https://wallby.app/)                                 | ✔               | ✔               | -              | モバイル               | Rootstock (RBTC)、Bitcoin                               |
+| [MathWallet](https://blog.mathwallet.org/?p=1625)             | ✔               | ✔               | -              | Chrome、デスクトップ、モバイル | メインネット                                                                    |
+| [Block Wallet](https://blockwallet.io/)                       | ✔               | ✔               | -              | Chrome             | メインネット                                                                    |
+| [MtPelerin Bridge](https://www.mtpelerin.com/bridge-wallet)   | ✔               | ✔               | -              | デスクトップ、モバイル        | Rootstock (メインネット)・ ビットコイン (テストネット) |
+| [Exodus](https://www.exodus.com/)                             | ✔               | ✔               | -              | Chrome、デスクトップ、モバイル | メインネット                                                                    |
+| [サブウォレット](https://www.subwallet.app/)                         | ✔               | ✔               | -              | Chrome             | メインネット・テストネット                                                             |
+| [WigWam](https://wigwam.app/)                                 | ✔               | ✔               | -              | Chrome             | メインネット・テストネット                                                             |
+| [AirGap](https://airgap.it/)                                  | ✔               | ✔               | -              | ❌                  | メインネット                                                                    |
+| [Zerion](https://zerion.io/)                                  | ✔               | ✔               | -              | Chrome             | メインネット・テストネット                                                             |
+| [Rainbow Wallet](https://rainbow.me/en/)                      | ✔               | ✔               | -              | Chrome             | メインネット・テストネット                                                             |
 
 
 

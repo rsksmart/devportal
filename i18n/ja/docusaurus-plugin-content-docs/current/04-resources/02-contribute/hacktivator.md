@@ -40,113 +40,113 @@ Rootstock Hacktivatorでは、開発者がコードを提供したり教育コ�
 ```mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
-    <Accordion.Header as="h3">1. CLI (Developer Tooling)</Accordion.Header>
+    <Accordion.Header as="h3">1. CLI（開発者ツール）</Accordion.Header>
     <Accordion.Body>
-      The [Rootstock CLI](https://github.com/rsksmart/rsk-cli) is a command-line interface designed to simplify the process of building on the Rootstock platform, catering to both seasoned web3 developers and those transitioning from web2. In its initial iteration, the CLI offers essential features that streamline development by making it easier to interact with the network. Whether you're creating wallets, checking balances, sending transactions, or deploying contracts, the Rootstock CLI simplifies these tasks, allowing you to focus more on building your applications and less on managing infrastructure. For more details, see the [CLI Repo](https://github.com/rsksmart/rsk-cli) and the [NPM Package](https://www.npmjs.com/package/@rsksmart/rsk-cli).
+      [Rootstock CLI](https://github.com/rsksmart/rsk-cli) は、Rootstockプラットフォーム上での開発プロセスを簡素化するために設計されたコマンドラインインターフェースで、熟練のWeb3開発者とWeb2から移行する開発者の両方に対応します。初期バージョンのCLIは、ネットワークとのやり取りを容易にすることで開発を効率化する基本機能を提供します。ウォレットの作成、残高確認、トランザクション送信、コントラクトのデプロイなど、Rootstock CLIはこれらの作業を簡略化し、インフラ管理ではなくアプリケーション構築に集中できるようにします。詳細は [CLI Repo](https://github.com/rsksmart/rsk-cli) および [NPM Package](https://www.npmjs.com/package/@rsksmart/rsk-cli) を参照してください。
 
-      **Contribution Ideas:**
+      **貢献アイデア**
 
-        * Check Balances: Implement features to easily check balances for any address on Rootstock.
+        * 残高確認: Rootstock上の任意のアドレスの残高を簡単に確認できる機能を実装。
 
-        * Transfer Any Token:  Enable to transfer any token on the Rootstock network, ensuring compatibility with major token standards (e.g., ERC-20, ERC-721) for a seamless user experience
+        * 任意トークンの転送: Rootstockネットワーク上の任意のトークンを転送可能にし、主要なトークン標準（例: ERC-20、ERC-721）と互換性を確保してシームレスなユーザー体験を提供。
 
-        * Send Transactions: Simplify sending transactions with built-in commands.
+        * トランザクション送信: 組み込みコマンドでトランザクション送信を簡略化。
 
-        * Transactions history:  Show the transactions history from the current wallet
+        * トランザクション履歴: 現在のウォレットからのトランザクション履歴を表示。
 
-        * Address Book: Add an address book feature for frequently used addresses, with easy labeling and optional encryption for secure storage.
+        * アドレス帳: よく使用するアドレス用のアドレス帳機能を追加し、簡単なラベル付けや安全な保存のための暗号化オプションを提供。
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
-    <Accordion.Header as="h3">2. Voting Scoreboard</Accordion.Header>
+    <Accordion.Header as="h3">2. 投票スコアボード</Accordion.Header>
     <Accordion.Body>
-      The [Voting Scoreboard](https://github.com/rsksmart/rootstock-scoreboard) is a tool that demonstrates how ERC-20 tokens can be used for voting, complete with a leaderboard to track community engagement and top participants. While it's not a full production tool but rather a reference project, it's ideal for developers or project creators looking to easily integrate voting mechanisms into their ecosystems and monitor engagement, making it perfect for promotional campaigns or gauging interest in a project through on-chain participation. For more details, see the [Voting Scoreboard Repo](https://github.com/rsksmart/rootstock-scoreboard).
+      [Voting Scoreboard](https://github.com/rsksmart/rootstock-scoreboard) は、ERC-20トークンを使った投票の仕組みを示すツールで、コミュニティの参加状況やトップ参加者を追跡するリーダーボードが備わっています。これは完全な本番ツールではなく参考プロジェクトですが、投票メカニズムをエコシステムに簡単に統合し、参加を監視したい開発者やプロジェクト制作者に理想的です。プロモーションキャンペーンやオンチェーン参加を通じたプロジェクトの関心度測定に最適です。詳細は [Voting Scoreboard Repo](https://github.com/rsksmart/rootstock-scoreboard) を参照してください。
 
-      **Contribution Ideas:**
+      **貢献アイデア**
 
-        * ERC-20 Token Voting: Set up ERC-20 tokens for voting, allowing users to vote on proposals or choices within a project.
+        * ERC-20トークン投票: プロジェクト内の提案や選択肢にユーザーが投票できるよう、ERC-20トークンを設定。
 
-        * Leaderboard Display: Track voter participation making it easy to highlight the most engaged community members.
+        * リーダーボード表示: 投票参加を追跡し、最も積極的なコミュニティメンバーを簡単に強調表示。
 
-        * On-Chain Identity Integration: Incorporate RNS domains or other on-chain identities for personalized leaderboards.
+        * オンチェーンID統合: RNSドメインやその他のオンチェーンIDを取り入れ、パーソナライズされたリーダーボードを作成。
 
-        * Graphical Representations: Add charts or graphs to visualize leaders' positions over time.
+        * グラフ表示: チャートやグラフを追加して、リーダーの順位変動を視覚化。
 
-        * Positional Changes: Display how participants' rankings shift daily or weekly, providing transparency in voting dynamics.
+        * 順位変動: 参加者の順位変動を日次または週次で表示し、投票動態の透明性を提供。
 
-        * Countdown Timer: Include a countdown feature to indicate when the voting period ends, creating a sense of urgency for participants.
+        * カウントダウンタイマー: 投票期間終了までのカウントダウン機能を追加し、参加者に緊迫感を与える。
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">
-    <Accordion.Header as="h3">3. RUNES & MEME Giveaway Engine: A Tool for Token Airdrops</Accordion.Header>
+    <Accordion.Header as="h3">3. RUNES & MEME Giveaway Engine: トークンエアドロップ用ツール</Accordion.Header>
     <Accordion.Body>
-      The Giveaway Engine is a demo project that offers developers a blueprint for setting up airdrops and token giveaways on the Rootstock network. While it's not a production-ready tool, it serves as a technical reference for distributing tokens like RUNES (once bridged to Rootstock as ERC-20 or ERC-1155 tokens) or any general ERC-20 / ERC-1155 tokens. This engine provides an example path for engaging communities and building excitement around projects through token distribution. For more details, see the [Airdrop Template](https://github.com/rsksmart/airdrop-template) and the [Airdrop UI](https://github.com/rsksmart/airdrop-ui).
+      Giveaway Engineは、Rootstockネットワーク上でのエアドロップやトークン配布を設定するための設計図を開発者に提供するデモプロジェクトです。本番用ツールではありませんが、RUNES（RootstockにERC-20またはERC-1155トークンとしてブリッジされた後）や一般的なERC-20 / ERC-1155トークンの配布に関する技術的な参考資料として機能します。このエンジンは、トークン配布を通じてコミュニティを巻き込み、プロジェクトへの興奮を高める例を提供します。詳細は [Airdrop Template](https://github.com/rsksmart/airdrop-template) および [Airdrop UI](https://github.com/rsksmart/airdrop-ui) を参照してください。
 
-      **Contribution Ideas:**
+      **貢献アイデア**
 
-        * Set Up a Token Airdrop: Implement airdrops of ERC-20 tokens or RUNES.
+        * トークンエアドロップの設定: ERC-20トークンまたはRUNESのエアドロップを実装。
 
-        * Staking-Based Eligibility: Add rules to reward users who have staked tokens in another protocol, encouraging broader ecosystem participation.
+        * ステーキングに基づく対象者判定: 別のプロトコルでトークンをステーキングしているユーザーに報酬を与えるルールを追加し、より広範なエコシステム参加を促進。
 
-        * On-Chain Activity: Create rules to distribute tokens based on on-chain actions like interacting with a contract or voting on a proposal.
+        * オンチェーンアクティビティ: コントラクトとのやり取りや提案への投票など、オンチェーンの行動に基づいてトークンを配布するルールを作成。
 
-        * Holdings-Based Eligibility: Reward users based on the number of tokens they hold, incentivizing loyalty and long-term engagement.
+        * 保有量に基づく対象者判定: 保有トークン数に基づいてユーザーに報酬を与え、ロイヤルティや長期参加を奨励。
 
-        * RNS Domain Criteria: Airdrop tokens to users who own specific RNS domains, adding a unique layer to community interaction.
+        * RNSドメイン条件: 特定のRNSドメインを所有するユーザーにトークンをエアドロップし、コミュニティとの独自の関わりを追加。
 
-        * Add New Different Rewards System: Introduce a new reward system such as a random or tiered reward system
+        * 新しい異なる報酬システムの追加: ランダムまたは階層型の報酬システムなど、新しい報酬システムを導入。
 
-        * Time-Limited Airdrops and Expirations: Implement time-sensitive giveaways where unclaimed rewards are redistributed, creating urgency and encouraging immediate engagement.
+        * 時間制限付きエアドロップと有効期限: 未請求の報酬が再配布される時間制限付き配布を実装し、緊迫感を生み出し即時の参加を促進。
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="3">
-    <Accordion.Header as="h3">4. Meme Token Launchpad</Accordion.Header>
+    <Accordion.Header as="h3">4. ミームトークンローンチパッド</Accordion.Header>
     <Accordion.Body>
-      The [Meme Token Launchpad](https://github.com/rsksmart/meme-token-launch) is an easy-to-use tool that simplifies the process of creating and launching your own ERC-1155/ERC-20 tokens. It caters to both experienced developers and newcomers by allowing users to define token parameters like name and ticker, and even store images via IPFS. Integrated with Etherspot for gasless deployment, it makes token creation more accessible by eliminating the complexities and costs associated with fees. For more details, see the [Meme Token Repo](https://github.com/rsksmart/meme-token-launch).
+      [Meme Token Launchpad](https://github.com/rsksmart/meme-token-launch) は、独自のERC-1155/ERC-20トークンを作成・ローンチするプロセスを簡素化する使いやすいツールです。ユーザーがトークン名やティッカーなどのパラメータを定義し、画像をIPFS経由で保存することも可能にすることで、経験豊富な開発者と初心者の両方に対応します。Etherspotと統合され、ガスレスデプロイが可能となっており、手数料に関連する複雑さやコストを排除することでトークン作成のハードルを下げます。詳細は  [Meme Token Repo](https://github.com/rsksmart/meme-token-launch) を参照してください。
 
-      **Contribution Ideas:**
+      **貢献アイデア**
 
-        * Additional Minting Parameters: Implement extra minting options.
+        * 追加ミントパラメータ: 追加のミントオプションを実装。
 
-        * Burn Mechanisms: Define and implement token burn mechanisms to increase scarcity or reward holders.
+        * 焼却メカニズム: 希少性を高めたり、保有者に報酬を与えたりするためのトークン焼却メカニズムを定義・実装。
 
-        * Pump Fun Platform: Build a platform to showcase and hype newly launched tokens, creating an engaging environment for degens and creators.
+        * Pump Funプラットフォーム: 新しくローンチされたトークンを紹介・盛り上げるプラットフォームを構築し、デジェンやクリエイター向けの魅力的な環境を作成。
 
-        * Token Vesting and Timelock: Allow users to set vesting schedules or timelocks for tokens, which is useful for founders, early investors, or community rewards.
+        * トークンのベスティングおよびタイムロック: 創設者、初期投資家、コミュニティ報酬に役立つ、トークンのベスティングスケジュールやタイムロックを設定可能に。
 
-        * Governance Integration:  Include options to create governance tokens or add voting modules, enabling users to set up DAOs or community-driven projects directly.
+        * ガバナンス統合: ガバナンストークン作成や投票モジュール追加のオプションを含め、DAOやコミュニティ主導プロジェクトを直接セットアップできるようにする。
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="4">
-    <Accordion.Header as="h3">5. Multi-Language SDK Expansion</Accordion.Header>
+    <Accordion.Header as="h3">5. マルチ言語SDK拡張</Accordion.Header>
     <Accordion.Body>
-      This section introduces support for additional programming languages, enhancing accessibility and usability for developers across various backgrounds. Built on the EVM-compatible Rootstock blockchain, the SDKs offer powerful libraries and services in languages like **Rust**, **Python** and **Go**. Each language-specific SDK provides essential tools and utilities for token management, transaction handling, eligibility checks, and more, catering to diverse needs. These multi-language expansions are designed to broaden developer engagement and simplify integrations across multiple environments, solidifying the SDKs as versatile, cross-platform resources.
+      このセクションでは、追加のプログラミング言語のサポートを導入し、さまざまなバックグラウンドを持つ開発者向けにアクセシビリティと使いやすさを向上させます。EVM互換のRootstockブロックチェーン上に構築されたSDKは、Rust、Python、Go などの言語で強力なライブラリとサービスを提供します。各言語固有のSDKは、トークン管理、トランザクション処理、対象者判定などの基本的なツールとユーティリティを提供し、多様なニーズに対応します。これらのマルチ言語拡張は、開発者の関与を広げ、複数の環境での統合を簡素化することで、SDKを多用途でクロスプラットフォームなリソースとして確立します。
 
       <b/>
-      **Contribution Ideas: Rust**
+      **貢献アイデア: Rust**
 
-        * Transaction Processing Library:  Build a library in Rust to handle token transfers, deploy contracts, and execute transactions for ERC-20 and ERC-1155 standards, leveraging Rust's speed and security.
+        * トランザクション処理ライブラリ: Rustでライブラリを構築し、ERC-20およびERC-1155規格向けのトークン転送、コントラクトデプロイ、トランザクション実行を処理し、Rustの速度とセキュリティを活用。
 
-        * Crypto Wallet Library:  Develop a lightweight wallet in Rust, with support for private key management, signing, and ECDSA cryptography, designed for integration with desktop and server applications.
-
-      <b/>
-
-      **Contribution Ideas: Python**
-
-        * Airdrop Eligibility Analyzer:  Create a Python library that checks eligibility criteria (e.g., RNS domains owned, on-chain activity) for airdrops, connecting easily to databases or analytics pipelines.
-
-        * Data Visualization for Token Metrics:  Develop a tool using Python’s data libraries (like Pandas and Matplotlib) to visualize token distribution, transfer patterns, and airdrop impacts.
-
-        * Smart Contract Event Scraper:  Build a Python script to capture and parse smart contract events from the blockchain, storing relevant data for user interaction tracking or analytics.
+        * 暗号ウォレットライブラリ: Rustで軽量ウォレットを開発し、秘密鍵管理、署名、ECDSA暗号化をサポートし、デスクトップおよびサーバーアプリケーションとの統合向けに設計。
 
       <b/>
-      **Contribution Ideas: Go**
 
-        * Backend for Airdrop and Giveaway Engine:  Use Go to build a high-performance backend that handles token distribution, logging, and eligibility checking for the Giveaway Engine.
+      **貢献アイデア: Python**
 
-        * Token Management Microservices:  Create microservices for token-related operations, such as minting, burning, and transferring, allowing applications to call specific functions as needed.
+        * エアドロップ対象者分析ツール: RNSドメイン保有、オンチェーン活動などの対象者判定基準を確認するPythonライブラリを作成し、データベースや分析パイプラインに容易に接続。
 
-        * Network Listener for Events:  Implement an event listener in Go to monitor smart contracts for token-related events, ideal for notifications or automated actions.
+        * トークン指標のデータ可視化: PandasやMatplotlibなどのPythonデータライブラリを使って、トークン分布、転送パターン、エアドロップの影響を可視化するツールを開発。
+
+        * スマートコントラクトイベントスクレイパー: ブロックチェーンからスマートコントラクトイベントを取得・解析し、ユーザーインタラクショントラッキングや分析用に関連データを保存するPythonスクリプトを構築。
+
+      <b/>
+      **貢献アイデア: Go**
+
+        * エアドロップおよびGiveaway Engine用バックエンド: Goを使用して、トークン配布、ログ記録、対象者判定を処理する高性能バックエンドを構築。
+
+        * トークン管理マイクロサービス: ミント、焼却、転送など、トークン関連操作用のマイクロサービスを作成し、アプリケーションが必要に応じて特定の機能を呼び出せるようにする。
+
+        * イベント用ネットワークリスナー: Goでイベントリスナーを実装し、トークン関連イベントのためにスマートコントラクトを監視し、通知や自動化アクションに最適化。
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
@@ -160,14 +160,14 @@ Rootstock Hacktivatorでは、開発者がコードを提供したり教育コ�
 
 （上記のHacktivatorの利用規約で定められた）「適格な貢献」として検証・承認されたコンテンツの貢献はそれぞれ、確立されたプロセスに従って、以下の報酬を受け取る権利を有します。
 
-- **Level 1 —> 50 - 150 USD**
-  - **Basic Contribution (Low Complexity):** Minor documentation or style fixes (e.g., correcting typos, adding a missing comment explaining a function’s purpose).
-- **Level 2 —> 150 - 300 USD**
-  - Small Improvements (Medium-Low Complexity): Refactors or optimizations that don’t change functionality but improve code efficiency or readability.
-- **Level 3 —> 300 - 700 USD**
-  - **New Feature or Significant Improvement (Medium-High Complexity):** Implementing a simple new feature or enhancing existing functionality.
-- **Level 4 —> 700 - 1000 USD**
-  - **Complex or Innovative Contribution (High Complexity):** Large-scale features or critical changes requiring coordination across multiple components (e.g., API integration or system architecture changes).
+- **レベル1 -> 50 - 150 USD**
+  - 基本的な貢献（低難易度）： 小さなドキュメント修正やスタイル修正（例：タイポの修正、関数の目的を説明するコメントの追加）。
+- **レベル2 -> 150 - 300 USD**
+  - 小規模な改善（中低難易度）： 機能を変更せずにコードの効率や可読性を向上させるリファクタリングや最適化。
+- **レベル3 -> 300 - 700 USD**
+  - 新機能または重要な改善（中高難易度）： シンプルな新機能の実装や既存機能の強化。
+- **レベル4 -> 700 - 1000 USD**
+  - 複雑または革新的な貢献（高難易度）： 大規模な機能追加や重要な変更で、複数のコンポーネント間の調整を必要とするもの（例：API統合やシステムアーキテクチャの変更）。
 
 > 各オプションで提供される報酬の範囲は、適格性を判断するプロジェクトへの貢献度に基づいて適用されます。つまり、貢献者が資格を得るために必要な最低要件のみを満たしている場合は、各オプションにおける最小限の報酬が割り当てられます。しかし、貢献者が貢献内容や選択したオプションに対してより多くの価値を提供した場合、それに応じて受け取る報酬も増加します（ただし、各オプションで設定された上限まで）。
 
@@ -178,35 +178,35 @@ Rootstock Hacktivatorでは、開発者がコードを提供したり教育コ�
 ```mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
-    <Accordion.Header as="h3">1. Blog Posts</Accordion.Header>
+    <Accordion.Header as="h3">1. ブログ投稿</Accordion.Header>
     <Accordion.Body>
-      * Definition: Engaging articles that share news, insights, opinions, or experiences related to developing dApps on Rootstock and the Rootstock ecosystem.
-      * Purpose: To inform and engage the community, spark discussions, and provide thought leadership on relevant topics.
-      * Audience: General readers, crypto enthusiasts, and community members interested in Rootstock developments.
+      * 定義：RootstockおよびRootstockエコシステム上でのdApps開発に関連するニュース、洞察、意見、または体験を共有する魅力的な記事。
+      * 目的：コミュニティに情報を提供し、議論を喚起し、関連トピックに関する思想的リーダーシップを発揮すること。
+      * 対象読者：一般読者、暗号資産愛好者、Rootstockの進展に関心のあるコミュニティメンバー。
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
-    <Accordion.Header as="h3">2. Written Guides or Tutorials</Accordion.Header>
+    <Accordion.Header as="h3">2. 書面によるガイドまたはチュートリアル</Accordion.Header>
     <Accordion.Body>
-      * Definition: Step-by-step instructional documents that help readers learn how to perform specific tasks or understand concepts related to Rootstock.
-      * Purpose: To educate users and developers on using Rootstock's features, tools, or building applications.
-      * Audience: Developers, users, and anyone seeking practical guidance on Rootstock.
+      * 定義：読者が特定の作業を行う方法やRootstockに関連する概念を理解するためのステップバイステップの説明資料。
+      * 目的：Rootstockの機能、ツールの使用方法、アプリケーション構築に関して、ユーザーや開発者を教育すること。
+      * 対象読者：開発者、ユーザー、Rootstockに関する実践的なガイダンスを求める人々。
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">
-    <Accordion.Header as="h3">3. Technical Documentation on Rootstock Docs</Accordion.Header>
+    <Accordion.Header as="h3">3. Rootstock Docsにおける技術ドキュメント</Accordion.Header>
     <Accordion.Body>
-      * Definition: In-depth documentation and detailed explanations of Rootstock's underlying technology, protocols, and architecture intended for a technical audience.
-      * Purpose: To provide comprehensive technical information, promote transparency, and assist developers in understanding complex aspects of Rootstock.
-      * Audience: Developers, blockchain engineers, and technical enthusiasts interested in Rootstock's technical details.
+      * 定義：技術者向けのRootstockの基盤技術、プロトコル、アーキテクチャに関する詳細なドキュメントおよび解説。
+      * 目的：包括的な技術情報を提供し、透明性を促進し、開発者がRootstockの複雑な側面を理解できるよう支援すること。
+      * 対象読者：開発者、ブロックチェーンエンジニア、Rootstockの技術的詳細に関心のある技術愛好者。
     </Accordion.Body>
   </Accordion.Item>
     <Accordion.Item eventKey="3">
-    <Accordion.Header as="h3">4. Video Guides or Tutorials</Accordion.Header>
+    <Accordion.Header as="h3">4. ビデオガイドまたはチュートリアル</Accordion.Header>
     <Accordion.Body>
-      * Definition: Visual and auditory instructional materials that demonstrate how to perform tasks or explain concepts related to Rootstock in a video format.
-      * Purpose: To offer a visual learning experience, making complex information more accessible through demonstrations and walkthroughs.
-      * Audience: Users and developers who prefer visual content for learning and problem-solving.
+      * 定義：Rootstockに関連する作業の進め方や概念を動画形式で示す視覚・聴覚教材。
+      * 目的：デモンストレーションやウォークスルーを通じて、複雑な情報をより分かりやすく伝える視覚的学習体験を提供すること。
+      * 対象読者：学習や問題解決のために視覚コンテンツを好むユーザーおよび開発者。
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
@@ -217,62 +217,71 @@ Rootstock Hacktivatorでは、開発者がコードを提供したり教育コ�
 ```mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
-    <Accordion.Header as="h3">1. Smart Contract Development Tutorials</Accordion.Header>
+    <Accordion.Header as="h3">1. スマートコントラクト開発チュートリアル</Accordion.Header>
     <Accordion.Body>
-      Writing, testing and deploying smart contracts on the Rootstock network.
+      Rootstockネットワーク上でのスマートコントラクトの作成、テスト、デプロイ。
 
-      **Contribution Ideas:**
-        * Step-by-step guides on creating various types of smart contracts (e.g., tokens, DeFi, wallets, swaps, RWAs, NFTs, Runes, Ordinals, indexing, interoperability).
-        * Explaining Rootstock's unique features and how they can be utilized in smart contract development.
-        * Debugging and troubleshooting common issues in smart contract development.
+  **貢献アイデア:**  
+    * 様々な種類のスマートコントラクト（例：トークン、DeFi、ウォレット、スワップ、RWA、NFT、ルーン、オーディナル、インデックス、相互運用性）の作成に関するステップバイステップガイド。  
+    * Rootstockのユニークな機能と、それらをスマートコントラクト開発でどのように活用できるかの解説。  
+    * スマートコントラクト開発における一般的な問題のデバッグとトラブルシューティング。  
+
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
-    <Accordion.Header as="h3">2. Integration with Rootstock and Ecosystem Solutions</Accordion.Header>
+    <Accordion.Header as="h3">2. Rootstockおよびエコシステムソリューションとの統合</Accordion.Header>
     <Accordion.Body>
-      Demonstrating how to use and integrate tools with Rootstock-compatible tools and libraries.
+      Rootstock互換のツールやライブラリを使用・統合する方法のデモ。
 
-      **Contribution Ideas:**
-        * Explaining the concept of a sidechain and how Rootstock utilizes it.
-        * Step-by-step guides on integrating wallets, SDKs, or APIs with Rootstock applications.
-        * Step-by-step guides on using ecosystem dApps - refer to the “Building DeFi on Bitcoin” series on the Rootstock blog.
+  **貢献アイデア:**  
+    * サイドチェーンの概念とRootstockがそれをどのように利用しているかの解説。  
+    * ウォレット、SDK、APIをRootstockアプリケーションと統合するためのステップバイステップガイド。  
+    * エコシステムのdAppsの使用方法に関するステップバイステップガイド — Rootstockブログの「Building DeFi on Bitcoin」シリーズを参照。  
+
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">
-    <Accordion.Header as="h3">3. Use Case Specific Guides – Case Studies and Real-World Examples</Accordion.Header>
+    <Accordion.Header as="h3">3. ユースケース別ガイド — ケーススタディおよび実例</Accordion.Header>
     <Accordion.Body>
-      Sharing real-world examples of Rootstock applications and use cases.
+      Rootstockアプリケーションやユースケースの実例を共有。
 
-      **Contribution Ideas:**
-        * Building cross-platform or no-code dApps (e.g., mobile app development using Flutter, etc).
-        * Showcasing real-world applications on Rootstock.
-        * Building cross-chain applications, data indexing, etc., using partner tools and integrations.
-        * Porting dApps to Rootstock from other ecosystems
-    </Accordion.Body>
+  **貢献アイデア:**  
+    * クロスプラットフォームまたはノーコードdAppsの構築（例：Flutterを用いたモバイルアプリ開発など）。  
+    * Rootstock上の実世界のアプリケーションの紹介。  
+    * パートナーツールや統合を用いたクロスチェーンアプリケーション、データインデックス作成などの構築。  
+    * 他のエコシステムからRootstockへのdAppsの移植。  
+
+</Accordion.Body>  
   </Accordion.Item>
   <Accordion.Item eventKey="3">
-    <Accordion.Header as="h3">4.  Tools and Libraries</Accordion.Header>
+    <Accordion.Header as="h3">4. ツールおよびライブラリ</Accordion.Header>
     <Accordion.Body>
-      Introducing and explaining various tools and libraries that can be used for Rootstock development.
+      Rootstock開発に使用できる様々なツールやライブラリの紹介と解説。
 
-      **Contribution Ideas:**
-        * Tutorials on using popular development environments (e.g., Remix, Hardhat, Slither, Viem).
-        * Explaining the use of testing frameworks and libraries for smart contract testing.
-        * Demonstrating how to use debugging tools to identify and fix issues in Rootstock applications.
+  **貢献アイデア:**  
+    * 人気の開発環境（例：Remix、Hardhat、Slither、Viem）の使用方法に関するチュートリアル。  
+    * スマートコントラクトテスト用のテストフレームワークおよびライブラリの使用方法の解説。  
+    * Rootstockアプリケーションにおける問題の特定および修正のためのデバッグツールの使用方法のデモ。  
+
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="4">
-    <Accordion.Header as="h3">5. Advanced Topics and Best Practices</Accordion.Header>
+    <Accordion.Header as="h3">5. 上級トピックおよびベストプラクティス</Accordion.Header>
     <Accordion.Body>
-      Expanding into more complex aspects of Rootstock development and sharing best practices.
+      Rootstock開発のより複雑な側面に踏み込み、ベストプラクティスを共有。
 
-      **Contribution Ideas:**
-        * Exploring complex concepts and how they enhance scalability on Rootstock.
-        * Discussing security considerations in smart contract development and best practices to avoid vulnerabilities.
-        * Exploring advanced topics like decentralized finance (DeFi), Runes, Ordinals, BITVMX, and their potential applications on Rootstock.
+  **貢献アイデア:**  
+    * 複雑な概念の探求と、それらがRootstockにおけるスケーラビリティをどのように高めるかの解説。  
+    * スマートコントラクト開発におけるセキュリティ上の考慮事項および脆弱性を回避するためのベストプラクティスの議論。  
+    * 分散型金融（DeFi）、ルーン、オーディナル、BITVMXなどの上級トピックと、それらがRootstock上で持つ可能性の探求。  
+
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+
+
+
+
 ```
 
 #### 👉 教育コンテンツの基準とガイドライン：
@@ -281,11 +290,11 @@ Rootstock Hacktivatorでは、開発者がコードを提供したり教育コ�
 - 教育コンテンツは、Rootstockでの構築を試みる開発者や、Bitcoinとの統合について理解したいと考えている開発者向けに作成する必要があります。
 - コンテンツは、Rootstockの理解と活用、スマートコントラクトのデプロイ、互換性のあるツール、SDK、およびライブラリの使用、またはRootstock上でのプロトコル統合に関して、他の開発者に役立つ内容である必要があります。
 - Rootstockの技術文書に対する貢献は、[DevPortalレポジトリ](https://github.com/rsksmart/devportal/pulls)上にプルリクエスト（PR）として直接投稿し、PRのリンクは[Googleフォーム](https://forms.gle/aF9pFMfRyoygfzJWA)経由で送信してください。PRには必ず\*\*「hacktivator」\*\*のラベルを付け、テンプレートを使ってPRの内容を適切に記述してください。
-- After approval, the contributor must publish their educational content on the [Rootstock Community blog](https://rootstock.hashnode.dev/) to qualify for rewards. They will be invited as a collaborator to do so, and the contribution will only be eligible for rewards once successfully published.
+- 承認後、貢献者は報酬を得るために自身の教育コンテンツを [Rootstock Communityブログ](https://rootstock.hashnode.dev/) に公開する必要があります。そのためにコラボレーターとして招待され、貢献は正常に公開された時点でのみ報酬の対象となります。
 
-:::note[More ガイドラインの詳細]
+:::note ガイドラインの詳細情報
 
-For a comprehensive overview of the guidelines, evaluation, and reward system for content contributions, including detailed criteria for depth, completeness, technical accuracy, educational value, and innovation, please refer to the [Educational Content Evaluation Criteria & Guidelines](https://docs.google.com/document/d/1vA3QK8ZNv5Fgegb0Jv2f03IVIREePDi4lrFE1vsfK7c/edit) and the [terms and conditions of the Hacktivator](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?usp=sharing). These criteria outline how contributions, ranging from technical documentation, written or video guides or tutorials will be assessed and rewarded, ensuring a balanced and fair approach to valuing content quality and impact. This document covers everything from word count appropriateness and inclusion of code examples to technical correctness and relevance to the Rootstock ecosystem, with rewards adjusted based on the value and complexity of each contribution.
+コンテンツ貢献に関するガイドライン、評価基準、報酬システムの包括的な概要については、[教育コンテンツ評価基準とガイドライン](https://docs.google.com/document/d/1vA3QK8ZNv5Fgegb0Jv2f03IVIREePDi4lrFE1vsfK7c/edit) および [Hacktivator の利用規約](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?usp=sharing) をご参照ください。これらの基準には、技術ドキュメント、書面またはビデオによるガイドやチュートリアルといった貢献がどのように評価・報酬されるかが詳細に示されており、コンテンツの質と影響を公平かつバランスよく評価する仕組みが説明されています。このドキュメントでは、適切な文字数、コード例の有無、技術的正確性、Rootstockエコシステムとの関連性など、各貢献の価値と複雑さに応じて報酬が調整される仕組みについてもカバーしています。
 
 👉 公開時のガイドライン：
 
@@ -296,7 +305,7 @@ For a comprehensive overview of the guidelines, evaluation, and reward system fo
 
 #### 👉 教育コンテンツの報酬：
 
-Each verified and approved code contribution that becomes a Qualified Contribution (as defined in the Hacktivator's terms and conditions) will be entitled to receive the following rewards, under the established process:
+Hacktivator の利用規約で定義される「適格な貢献」となる、確認および承認済みのコード貢献ごとに、確立されたプロセスに従って以下の報酬を受け取る権利が与えられます。
 
 - **ブログ記事の貢献：** 50～250 USD
 - **文書によるガイドまたはチュートリアルの貢献：** 250～500 USD
@@ -326,9 +335,7 @@ Rootstockに意味のある影響を与えながら、報酬を受け取るチ�
 
 <Button size="lg" href="https://forms.gle/aF9pFMfRyoygfzJWA">コンテンツを投稿する</Button>
 
-<br></br>
-
-:::success\[T\&C]
+:::success 利用規約
 
 Hacktivatorに参加することで、あなたはプログラムおよびその[利用規約](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?usp=sharing)の内容をすべて読み、理解して、遵守することに同意したものとみなされます。プログラムおよび／または利用規約の一部またはすべてに同意できない場合、参加または貢献の投稿はお控えいただきますようお願いいたします。参加した時点で、これらの規約にすべて同意したものとみなされます。
 
