@@ -3,7 +3,7 @@
     "message": "Documentación de Rootstock"
   },
   "Explore guides, quick starts, and SDKs to build and integrate your dApps.": {
-    "message": "Explore guías, inicios rápidos y SDK para crear e integrar sus dApps."
+    "message": "Explora guías, quick starts y SDKs para construir e integrar tus dApps."
   },
   "Quick Start": {
     "message": "Inicio rápido"
@@ -129,7 +129,7 @@
     "message": "Relay"
   },
   "Read": {
-    "message": "Read"
+    "message": "Leer"
   },
   "Deploy and interact with EVM compatible smart contracts on Rootstock using JSON RPC methods using the Rootstock RPC API.": {
     "message": "Implemente e interactúe con contratos inteligentes compatibles con la máquina virtual de Ethereum en Rootstock utilizando métodos JSON RPC a través de la API RPC de Rootstock."
@@ -171,16 +171,16 @@
     "message": "Cerrar"
   },
   "Submitting": {
-    "message": "Submitting"
+    "message": "Enviando"
   },
   "Loading...": {
     "message": "Cargando..."
   },
   "Submit": {
-    "message": "Submit"
+    "message": "Enviar"
   },
   "Submitted": {
-    "message": "Submitted"
+    "message": "Enviado"
   },
   "Message": {
     "message": "Mensaje"
@@ -195,7 +195,7 @@
     "message": "Por qué / Motivo de la solicitud"
   },
   "Publication location (E.g, DevPortal, Blog)": {
-    "message": "Publication location (E.g, DevPortal, Blog)"
+    "message": "Lugar de publicación (por ejemplo, DevPortal, Blog)"
   },
   "Any other information": {
     "message": "Algún otro dato"
@@ -204,10 +204,10 @@
     "message": "¿Eres un colaborador técnico?"
   },
   "Submit a Pull Request": {
-    "message": "Submit a Pull Request"
+    "message": "Enviar un Pull Request"
   },
   "or an Issue": {
-    "message": "or an Issue"
+    "message": "o un problema"
   },
   "theme.common.copyPageLinkMsg": {
     "message": "¡Copiado!"
@@ -228,7 +228,7 @@
     "message": "¡Gracias por tus comentarios!"
   },
   "theme.feedbackForm.form.description": {
-    "message": "We would love to hear your thoughts and feedback so that we can improve these Docs for you and others!"
+    "message": "Nos encantaría escuchar tus opiniones y comentarios para que podamos mejorar estos documentos para ti y para los demás!"
   },
   "theme.feedbackForm.form.rating": {
     "message": "Sugerencias"

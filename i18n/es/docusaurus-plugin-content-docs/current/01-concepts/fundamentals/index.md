@@ -4,7 +4,7 @@ sidebar_position: 2
 title: Fundamentos de Rootstock
 tags:
   - rsk
-  - portainjertos
+  - rootstock
   - principiante
   - conceptos
 description: Rootstock es la primera cadena lateral de Bitcoin y la más duradera. Es la única solución de layer 2 que combina la seguridad de la prueba de trabajo de Bitcoin con las capacidades de contratos inteligentes de Ethereum.

@@ -4,7 +4,7 @@ sidebar_position: 4
 sidebar_label: Protocolo PowPeg
 tags:
   - rsk
-  - portainjertos
+  - rootstock
   - rbtc
   - btc
   - arquitectura
@@ -16,14 +16,13 @@ render_features: powpeg-hsm-attestation-frame
 
 El protocolo **PowPeg** de Rootstock ha madurado desde su creación en 2018 como una federación hasta incluir ahora muchas cualidades descentralizadas. El protocolo protege las claves privadas almacenadas en PowHSM de propósito especial basadas en elementos seguros (SE) a prueba de manipulaciones. Cada PowHSM ejecuta un nodo de Rootstock en modo SPV, por lo que las firmas solo pueden ser ordenadas mediante la prueba acumulativa de trabajo de la cadena. La seguridad en PowPeg se establece a través de la simplicidad de un diseño en capas que denominamos defensa en profundidad.
 
-:::note[Info]
+:::note Información
 
 - La aplicación PowPeg está disponible en [Testnet](https://powpeg.testnet.rootstock.io/) y en [Mainnet](https://powpeg.rootstock.io/).
 - Para obtener información general sobre el diseño y la arquitectura, cómo realizar una transacción peg-in utilizando Ledger y Trezor, preguntas frecuentes y operaciones avanzadas que puede realizar en el PowPeg, consulte la [Guía del usuario de PowPeg](/resources/guides/powpeg-app/).
 - Obtenga información sobre los signatarios y la atestación en la sección de [Atestación del firmware HSM de PowPeg](/concepts/powpeg/hsm-firmware-attestation).
 - Lea [Introducción al Modo Rápido: Obtenga RBTC a través de PowPeg, pero más rápido](https://blog.rootstock.io/noticia/get-rbtc-fast-mode/) para conocer la diferencia entre los Modos Nativo y Rápido al utilizar el PowPeg.
-
-:::
+  :::
 
 ## La historia del protocolo PowPeg
 
@@ -51,7 +50,7 @@ Una gran parte de los mineros de Bitcoin participa en la minería fusionada de R
 
 Los actores económicos, como los comerciantes y las plataformas de intercambio, interactúan con el PowPeg de Rootstock enviando y recibiendo transacciones peg-in y peg-out (descritas con más detalle a continuación) al contrato inteligente del Bridge a través de la red Rootstock. El Bridge es un contrato inteligente precompilado que reside en la blockchain de Rootstock. El rol del Bridge es mantener una vista actualizada de la blockchain de Bitcoin, verificar las solicitudes peg-in y ordenar los peg-out. Para lograr esta funcionalidad, el contrato de Bridge gestiona una cartera de Bitcoin en modo SPV ([Verificación Simple de Pagos](https://en.bitcoinwiki.org/wiki/Simplified_Payment_Verification)). En este modo, las transacciones se confirman mediante los encabezados de bloque y estos a su vez se validan de forma mínima, pero la validación incluye la prueba de trabajo esperada. Estas validaciones aseguran que la cartera del Bridge siga la cadena de Bitcoin que tiene el mayor trabajo de cadena, pero no comprueba que la cadena sea válida.
 
-Normalmente, la mejor cadena de la red es la que cuenta con el mayor trabajo de cadena. En la historia de Bitcoin, solo hubo una [bifurcación no intencionada de la red](https://bitcoinmagazine.com/articles/bitcoin-network-shaken-by-blockchain-fork-1363144448) en la que una rama no era válida según las reglas de consenso preestablecidas. La longitud de la bifurcación fue de 24 bloques. Por lo tanto, para evitar bifurcaciones inválidas, tanto intencionadas como no intencionadas, el Bridge está diseñado para esperar 100 confirmaciones antes de confirmar una transacción peg-in.
+
 
 ## Peg-in/Peg-out y otras propiedades del protocolo PowPeg de Rootstock
 
@@ -91,15 +90,15 @@ El trabajo acumulado requerido por el PowHSM también funciona como un limitador
 
 ## Finalidad de Peg-in y Peg-out
 
-Since the Bitcoin blockchain and the Rootstock sidechain are not entangled in a single blockchain or in a parent-child relation as in a [syncchain](https://blog.rootstock.io/noticia/syncchain-synchronized-sidechains-for-improved-security-and-usability/), the transfers of bitcoins between them must at some point in time be considered final. If not, bitcoins locked on one side would never be able to be safely unlocked on the other. **Therefore, peg-in and peg-out transactions require a high number of block confirmations. Peg-ins require 100 Bitcoin blocks (approximately 2000 Rootstock blocks), and peg-outs require 4000 Rootstock blocks (approximately 200 Bitcoin blocks)**. Transactions signed by federation nodes are considered final by Rootstock: these transactions are broadcast and assumed to be included sooner or later in the Bitcoin blockchain. Due to the need for finality, Rootstock consensus does not attempt to recover from an attack that manages to revert the blockchain deep enough to revert a final peg-in or peg-out transaction. If a huge reversal occurs, PowPeg nodes halt any future peg-out, and the malicious actors should not be able to double-spend the peg.
+Dado que la blockchain de Bitcoin y la cadena lateral de Rootstock no están entrelazadas en una única blockchain ni en una relación padre-hijo como en una [syncchain](https://blog.rootstock.io/noticia/syncchain-synchronized-sidechains-for-improved-security-and-usability/), las transferencias de bitcoins entre ellas deben considerarse definitivas en algún momento. De lo contrario, los bitcoins bloqueados en un lado nunca podrían desbloquearse de manera segura en el otro. **Por lo tanto, las transacciones peg-in y peg-out requieren un alto https://blog.rootstock.io/noticia/syncchain-synchronized-sidechains-for-improved-security-and-usability/número de confirmaciones de bloque. Los peg-in requieren 100 bloques de Bitcoin (aproximadamente 2000 bloques RSK) y los peg-out requieren 4000 bloques de Rootstock (aproximadamente 200 bloques de Bitcoin)**. Las transacciones firmadas por los nodos de la federación se consideran definitivas para Rootstock: estas transacciones se transmiten y se asume que serán incluidas tarde o temprano en la blockchain de Bitcoin. Debido a la necesidad de finalidad, el consenso de Rootstock no intenta recuperarse de un ataque que logre revertir la blockchain lo suficientemente profundo como para anular una transacción peg-in o peg-out final. Si ocurre una reversión masiva, los nodos PowPeg detienen cualquier peg-out futuro, y los actores maliciosos no deberían poder duplicar el gasto del peg.
 
-:::note[IRIS 3.0.0]
+:::note IRIS 3.0.0
 Desde la actualización a IRIS 3.0.0, los valores mínimos requeridos para peg-in y peg-out se han reducido a la mitad, el mínimo de peg-in (BTC) ahora es 0.005 y el de peg-out (RBTC) 0.004. Aparte de este mínimo, el Bridge estimará las comisiones necesarias para pagar el peg-out. Si el saldo restante después de pagar las comisiones es demasiado bajo (no suficiente para ser gastado en BTC), el peg-out será rechazado. Los fondos serán reembolsados si el peg-out es rechazado por cualquiera de las condiciones descritas anteriormente.
 :::
 
 ## Descentralización - Construcción de una vetocracia
 
-The use of PowHSMs in a federation is a step forward in decentralization, because a remotely compromised functionary does not compromise the main element for the security of the peg: a multisig private key. Since Rootstock has a large portion of the Bitcoin merge-mined hashrate, currently surpassing 51%, it seems extremely unlikely that a new group of merge-miners can hijack consensus long enough to force PowHSMs to perform a malicious peg-out. But the Rootstock community should never rest on its laurels.  Instead, the Rootstock community is planning to apply once again a layered approach leading to more “additive security”.
+El uso de PowHSMs en una federación es un paso adelante en la descentralización, porque un funcionario comprometido remotamente no compromete el elemento principal para la seguridad de la clavija: una clave privada multisig. Dado que Rootstock tiene una gran parte del hashrate minado por fusión de Bitcoin, que actualmente supera el 51%, parece extremadamente improbable que un nuevo grupo de mineros por fusión pueda secuestrar el consenso el tiempo suficiente para forzar a los PowHSM a realizar un peg-out malicioso. Pero la comunidad Rootstock no debería dormirse en los laureles.  En su lugar, la comunidad Rootstock planea aplicar una vez más un enfoque por capas que conduzca a una mayor "seguridad aditiva".
 
 ## La resistencia a la censura de PowPeg
 
