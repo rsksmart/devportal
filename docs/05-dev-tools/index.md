@@ -666,13 +666,22 @@ description: "Explore a curated selection of smart contract development tools an
     description="Router Protocol is a layer-1 blockchain enabling chain abstraction."
   />
   <FilterItem
+    value="cc, data"
+    title="Layerzero"
+    subtitle="Cross Chain Bridges"
+    color="orange"
+    linkHref="/developers/use-cases/rootstock-layerzero/"
+    linkTitle="Build Cross Chain dApps"
+    description="LayerZero, a cross-chain messaging protocol enables the seamless movement of Bitcoin-backed assets from Rootstock to other blockchains, allowing developers to build omnichain applications (OApps) that interact across multiple chains as if they were one."
+  />
+  <FilterItem
     value="attest"
-    title="Ethereum Attestation Service (EAS)"
+    title="Rootstock Attestation Service (RAS)"
     subtitle="Attestations"
     color="orange"
-    linkHref="/dev-tools/attestations/eas/"
+    linkHref="/dev-tools/attestations/ras/"
     linkTitle="Attest Now"
-    description="Ethereum Attestation Service (EAS) is a system that allows individuals and organizations to create verifiable claims or proofs about specific events, actions, or data, either on-chain (on the blockchain) or off-chain (outside the blockchain but linked to it). Learn how to use it on Rootstock."
+    description="Rootstock Attestation Service (RAS) is a system that allows individuals and organizations to create verifiable claims or proofs about specific events, actions, or data, either on-chain (on the blockchain) or off-chain (outside the blockchain but linked to it). Learn how to use it on Rootstock."
   />
 </Filter>
 ````

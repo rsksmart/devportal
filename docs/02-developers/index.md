@@ -26,5 +26,6 @@ This section enables developers getting started with the Rootstock blockchain. D
 | [Integration Guides](/developers/integrate/) | Deepen your knowledge with detailed guides and informative tutorials that cover various aspects of Rootstock development.|
 | [JSON-RPC](/developers/rpc-api/) | Test your dApps on testnet in minutes before deploying to mainnet using RPC API providers on Rootstock.|
 | [Libraries](/developers/libraries/) | Access essential tools and libraries to streamline your development process. |
+| [Use Cases](/developers/use-cases/) | Explore Rootstock dApp use case guides and tutorials for building DeFi on Bitcoin, AI, and cross-chain solutions. |
 
 

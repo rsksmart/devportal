@@ -1,5 +1,4 @@
 ---
-
 sidebar_label: Security Chain
 sidebar_position: 8
 title: Verify security chain of RSKj source code

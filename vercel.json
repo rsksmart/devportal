@@ -644,6 +644,9 @@
     {"source" : "/resources/contribute/hacktivator-program/", "destination" : "/resources/contribute/hacktivator/"},
     {"source" : "/getting-started/", "destination" : "/developers/quickstart/"},
     {"source" : "/smart-contracts/", "destination" : "/developers/smart-contracts/"},
-    {"source" : "/rsk-cli/", "destination" : "/developers/smart-contracts/rsk-cli/"}
+    {"source" : "/rsk-cli/", "destination" : "/developers/smart-contracts/rsk-cli/"},
+    {"source" : "/dev-tools/cross-chain-bridges/hyperlanebridge/", "destination" : "/dev-tools/cross-chain-bridges/hyperlane-bridge/"},
+    {"source" : "/dev-tools/cross-chain-bridges/routerprotocol/", "destination" : "/dev-tools/cross-chain-bridges/router-protocol/"},
+    {"source" : "/dev-tools/attestations/eas/", "destination" : "/dev-tools/attestations/ras/"}
   ]
 }

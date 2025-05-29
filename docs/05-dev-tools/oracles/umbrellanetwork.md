@@ -6,7 +6,6 @@ description: "Umbrella Network provides decentralized and scalable oracles desig
 tags: [Umbrella Network, developer tools, rsk, rootstock, ethereum, dApps, smart contracts, testnet, Oracles]
 ---
 
-
 Umbrella Network provides decentralized and scalable oracles designed for high-performance blockchain applications. 
 
 The platform combines a decentralized architecture with seamless integration options to deliver reliable data feeds. It is compatible with 12 major blockchains, including Rootstock, Ethereum, BNB Chain, ensuring extensive support for various blockchain projects.
@@ -26,8 +25,8 @@ Umbrella Network offers data feeds for thousands of cryptocurrencies, crypto opt
    - A secure RNG solution for blockchain applications.
 
 ## **Developer Resources**
-- [SDK Documentation](https://umbrella-network.readme.io/docs/instructions)
-- [Integration Guides](https://umbrella-network.readme.io/docs/getting-started-1)
-- [API Reference](https://umbrella-network.readme.io/docs)
+- [Smart Contract Addresses](https://umbrella-network.github.io/technical-documentation/umbrella-network/docs/umb-token-contracts.html#contract-registry)
+- [Integration Guides](https://umbrella-network.github.io/technical-documentation/umbrella-network/docs/getting-started-1.html)
+- [API Reference](https://umbrella-network.readme.io/reference/get_projects)
 
 For more information and advanced features, visit the <Shield title="Umbrella Network documentation" tooltip="This is the official Umbrella Network documentation" href="https://umbrella-network.readme.io/" color="orange" />
