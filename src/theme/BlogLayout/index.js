@@ -1,7 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
-import BlogSidebar from '@theme/BlogSidebar';
 import BlogAside from "@theme/BlogAside";
 import Button from "/src/components/Button";
 import Translate from '@docusaurus/Translate';

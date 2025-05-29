@@ -85,6 +85,14 @@ const config = {
       sassOptions: {
         // Disable deprecation warnings
         quietDeps: true,
+        verbose: false,
+        silenceDeprecations: [
+          'legacy-js-api',
+          'import',
+          'global-builtin',
+          'color-functions',
+          'slash-div'
+        ]
       }
     }],
     [
@@ -96,6 +104,8 @@ const config = {
         blogSidebarCount: 'ALL',
         blogSidebarTitle: 'Changelog',
         showReadingTime: false,
+        onInlineAuthors: 'ignore',
+        onUntruncatedBlogPosts: 'ignore',
         /**
          * Required for any multi-instance plugin
          */
@@ -270,11 +280,6 @@ const config = {
         // Optional: see doc section below
         contextualSearch: false,
 
-      },
-      sass: {
-        sassOptions: {
-          quietDeps: true
-        }
       }
     }),
 };

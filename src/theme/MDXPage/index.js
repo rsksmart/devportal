@@ -12,18 +12,18 @@ import EditMetaRow from '@theme/EditMetaRow';
 
 import Aside from "../../components/Homepage/Aside";
 export default function MDXPage(props) {
+
   const {content: MDXPageContent} = props;
+  const {metadata, assets} = MDXPageContent;
   const {
-    metadata: {
-      title,
-      editUrl,
-      description,
-      frontMatter,
-      lastUpdatedBy,
-      lastUpdatedAt,
-    },
-    assets,
-  } = MDXPageContent;
+    title,
+    editUrl,
+    description,
+    frontMatter,
+    lastUpdatedBy,
+    lastUpdatedAt,
+  } = metadata;
+
   const {
     keywords,
     wrapperClassName,
@@ -67,13 +67,6 @@ export default function MDXPage(props) {
             </div>
               <div className="col-12 col-lg-3 col-xl-2">
                 <Aside />
-                {/*{!hideTableOfContents && MDXPageContent.toc.length > 0 && (*/}
-                {/*    <TOC*/}
-                {/*      toc={MDXPageContent.toc}*/}
-                {/*      minHeadingLevel={frontMatter.toc_min_heading_level}*/}
-                {/*      maxHeadingLevel={frontMatter.toc_max_heading_level}*/}
-                {/*    />*/}
-                {/*)}*/}
               </div>
           </div>
         </main>
