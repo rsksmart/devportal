@@ -126,6 +126,7 @@ Code contributions allow developers to improve Rootstock’s developer tools and
     <Accordion.Header as="h5">Voting Scoreboard</Accordion.Header>
     <Accordion.Body>
          The [Voting Scoreboard](https://github.com/rsksmart/rootstock-scoreboard) is a tool that demonstrates how ERC-20 tokens can be used for voting, complete with a leaderboard to track community engagement and top participants. While it's not a full production tool but rather a reference project, it's ideal for developers or project creators looking to easily integrate voting mechanisms into their ecosystems and monitor engagement, making it perfect for promotional campaigns or gauging interest in a project through on-chain participation. For more details, see the [Voting Scoreboard Repo](https://github.com/rsksmart/rootstock-scoreboard).
+
       **Contribution Ideas**:
         * **ERC-20 Token Voting**: Set up ERC-20 tokens for voting, allowing users to vote on proposals or choices within a project.
         * **Leaderboard Display**: Track voter participation making it easy to highlight the most engaged community members.
@@ -139,6 +140,7 @@ Code contributions allow developers to improve Rootstock’s developer tools and
     <Accordion.Header as="h5">RUNES & MEME Giveaway Engine: A Tool for Token Airdrops</Accordion.Header>
     <Accordion.Body>
       The Giveaway Engine is a demo project that offers developers a blueprint for setting up airdrops and token giveaways on the Rootstock network. While it's not a production-ready tool, it serves as a technical reference for distributing tokens like RUNES (once bridged to Rootstock as ERC-20 or ERC-1155 tokens) or any general ERC-20 / ERC-1155 tokens. This engine provides an example path for engaging communities and building excitement around projects through token distribution. For more details, see the [Airdrop Template](https://github.com/rsksmart/airdrop-template) and the [Airdrop UI](https://github.com/rsksmart/airdrop-ui).
+
     **Contribution Ideas**:
       * **Set Up a Token Airdrop**: Implement airdrops of ERC-20 tokens or RUNES.
       * **Staking-Based Eligibility**: Add rules to reward users who have staked tokens in another protocol, encouraging broader ecosystem participation.
@@ -166,9 +168,12 @@ Code contributions allow developers to improve Rootstock’s developer tools and
 
 ### 📌 Code Contributions Criteria
 
-Submissions that consist of only a single line of code or minor edits that do not provide real functionality or improvement will not be accepted.
+* Submissions that consist of only a single line of code or minor edits that do not provide real functionality or improvement will not be accepted.
 
-  * For a comprehensive overview of the **evaluation** and **reward** system for code contributions, including detailed criteria for complexity, project impact, tests, and documentation, please refer to [Evaluation Criteria for Code Contributions](https://docs.google.com/document/d/1vWYWdWxSXUcTxNS_OlRikfEwmPSXgw3iDsQ-UAqheMw/edit?tab=t.0#heading=h.x3c1jx5xd0ko) and the [terms and conditions of the hacktivator](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?tab=t.0). These criteria outline how contributions, ranging from simple fixes to advanced features or external integrations, will be assessed and rewarded, ensuring a balanced and fair approach to valuing developer participation and impact. This document covers everything from optimizing performance to integrating external APIs, with rewards adjusted based on the value and complexity of each contribution.
+:::tip[📌 Criteria & Guidelines]
+For a comprehensive overview of the **evaluation** and **reward** system for code contributions, including detailed criteria for complexity, project impact, tests, and documentation, please refer to [Evaluation Criteria for Code Contributions](https://docs.google.com/document/d/1vWYWdWxSXUcTxNS_OlRikfEwmPSXgw3iDsQ-UAqheMw/edit?tab=t.0#heading=h.x3c1jx5xd0ko) and the [terms and conditions of the hacktivator](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?tab=t.0). These criteria outline how contributions, ranging from simple fixes to advanced features or external integrations, will be assessed and rewarded, ensuring a balanced and fair approach to valuing developer participation and impact. This document covers everything from optimizing performance to integrating external APIs, with rewards adjusted based on the value and complexity of each contribution.
+:::
+  
 
 ### 📌 Code Contributions Rewards
 
@@ -354,7 +359,7 @@ All IRL events must be strictly **developer-focused** and deliver **clear techni
 
 ### 📌 Criteria & Guidelines
 
- :::tip[📌 Criteria & Guidelines]
+:::tip[📌 Criteria & Guidelines]
 * Events (online or IRL) must be strictly developer-focused and designed to educate, inspire, or support developers in building on or integrating Rootstock.
 * Events should deliver clear technical value related to Rootstock tools, services, or ecosystem components.
 * All events (online or IRL) must be pre-approved by Rootstock.
