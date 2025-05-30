@@ -1844,7 +1844,7 @@
     tslib "^2.6.0"
     utility-types "^3.10.0"
 
-"@docusaurus/theme-search-algolia@3.8.0", "@docusaurus/theme-search-algolia@^3.8.0":
+"@docusaurus/theme-search-algolia@3.8.0":
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/@docusaurus/theme-search-algolia/-/theme-search-algolia-3.8.0.tgz#21c2f18e07a73d13ca3b44fcf0ae9aac33bef60f"
   integrity sha512-GBZ5UOcPgiu6nUw153+0+PNWvFKweSnvKIL6Rp04H9olKb475jfKjAwCCtju5D2xs5qXHvCMvzWOg5o9f6DtuQ==
@@ -4039,7 +4039,7 @@ algoliasearch-helper@^3.22.6:
   dependencies:
     "@algolia/events" "^4.0.1"
 
-algoliasearch@^5.14.2, algoliasearch@^5.17.1, algoliasearch@^5.25.0:
+algoliasearch@^5.14.2, algoliasearch@^5.17.1:
   version "5.25.0"
   resolved "https://registry.yarnpkg.com/algoliasearch/-/algoliasearch-5.25.0.tgz#7337b097deadeca0e6e985c0f8724abea189994f"
   integrity sha512-n73BVorL4HIwKlfJKb4SEzAYkR3Buwfwbh+MYxg2mloFph2fFGV58E90QTzdbfzWrLn4HE5Czx/WTjI8fcHaMg==
