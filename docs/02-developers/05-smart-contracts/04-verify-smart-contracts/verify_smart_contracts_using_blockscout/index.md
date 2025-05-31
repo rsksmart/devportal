@@ -1,12 +1,11 @@
 ---
- verify-foundry-contract
+
 sidebar_label: Verify a Smart Contract using Foundry and Blockscout Explorer
 sidebar_position: 400
 title: Verify a Smart Contract using Foundry and Blockscout Explorer
 description: "Configuring Foundry for smart contract verification on Rootstock"
 tags: [guides, developers, smart contracts, rsk, rootstock, foundry, dApps, ethers]
 ---
-
 
 
 Smart contracts are the backbone of decentralized applications (dApps). They automate agreements and processes, but their code can be complex and prone to errors. Verifying your smart contracts is crucial to ensure they function as intended.
