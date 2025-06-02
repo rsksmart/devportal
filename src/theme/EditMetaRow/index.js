@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import LastUpdated from '@theme/LastUpdated';
 import styles from './styles.module.scss';
-import {useDoc} from "@docusaurus/theme-common/internal";
+import {useDoc} from '@docusaurus/plugin-content-docs/client';
 export default function EditMetaRow() {
   const {metadata} = useDoc();
   const {lastUpdatedAt, lastUpdatedBy, tags} = metadata;

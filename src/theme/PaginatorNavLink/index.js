@@ -4,7 +4,7 @@ import Link from '@docusaurus/Link';
 import styles from './styles.module.scss';
 
 import {findSidebarItemIndex} from '/src/_utils/hooks.js';
-import {useDocsSidebar} from "@docusaurus/theme-common/internal";
+import {useDocsSidebar} from '@docusaurus/plugin-content-docs/client';
 
 export default function PaginatorNavLink(props) {
   const {permalink, title, subLabel, isNext, isBlog} = props;

@@ -7,26 +7,23 @@ import {
 } from '@docusaurus/theme-common';
 import Layout from '@theme/Layout';
 import MDXContent from '@theme/MDXContent';
-import TOC from '@theme/TOC';
-import Unlisted from '@theme/Unlisted';
+import ContentVisibility from '@theme/ContentVisibility';
 import EditMetaRow from '@theme/EditMetaRow';
-import styles from './styles.module.css';
 
 import Aside from "../../components/Homepage/Aside";
 export default function MDXPage(props) {
+
   const {content: MDXPageContent} = props;
+  const {metadata, assets} = MDXPageContent;
   const {
-    metadata: {
-      title,
-      editUrl,
-      description,
-      frontMatter,
-      unlisted,
-      lastUpdatedBy,
-      lastUpdatedAt,
-    },
-    assets,
-  } = MDXPageContent;
+    title,
+    editUrl,
+    description,
+    frontMatter,
+    lastUpdatedBy,
+    lastUpdatedAt,
+  } = metadata;
+
   const {
     keywords,
     wrapperClassName,
@@ -50,7 +47,7 @@ export default function MDXPage(props) {
         <main>
           <div className="row">
             <div className="col-12 col-lg-9 col-xl-10">
-              {unlisted && <Unlisted/>}
+              <ContentVisibility metadata={metadata} />
               <article className={`markdown`}>
                 <MDXContent>
                   <MDXPageContent/>
@@ -70,13 +67,6 @@ export default function MDXPage(props) {
             </div>
               <div className="col-12 col-lg-3 col-xl-2">
                 <Aside />
-                {/*{!hideTableOfContents && MDXPageContent.toc.length > 0 && (*/}
-                {/*    <TOC*/}
-                {/*      toc={MDXPageContent.toc}*/}
-                {/*      minHeadingLevel={frontMatter.toc_min_heading_level}*/}
-                {/*      maxHeadingLevel={frontMatter.toc_max_heading_level}*/}
-                {/*    />*/}
-                {/*)}*/}
               </div>
           </div>
         </main>

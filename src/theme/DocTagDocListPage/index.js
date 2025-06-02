@@ -9,7 +9,8 @@ import {
 } from '@docusaurus/theme-common'
 import Translate, { translate } from '@docusaurus/Translate'
 import SearchMetadata from '@theme/SearchMetadata'
-import Unlisted from '@theme/Unlisted'
+
+
 import Heading from '@theme/Heading'
 import Button from '../../components/Button'
 import { useHistory } from 'react-router-dom'
@@ -126,7 +127,6 @@ function DocTagDocListPageContent ({ tag, title }) {
     <HtmlClassNameProvider
       className={clsx(ThemeClassNames.page.docsTagDocListPage)}>
       <main>
-        {tag.unlisted && <Unlisted/>}
         <header className="mb-24">
           <div className="d-flex flex-column flex-md-row gap-24 align-items-start align-items-md-center mb-24">
             <Button size={'sm'} className={`px-12 py-3`} onClick={() => history.goBack()}>
