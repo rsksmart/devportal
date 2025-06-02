@@ -28,7 +28,7 @@ Crean bloques en la red de bitcoin cada 10 minutos, incluyendo la transferencia 
 
 En Rootstock, los bloques se crean cada 30 segundos para asegurar la ejecución de los contratos inteligentes. Esto no genera nuevas monedas en el proceso, pero sí obtiene una recompensa de la minería fusionada.
 
-> Consulte [https://rootstock.io/mine-btc-with-rootstock/(https://rootstock.io/mine-btc-with-rootstock/) para obtener más información sobre la minería.
+> Consulte [https://rootstock.io/mine-btc-with-rootstock/](https://rootstock.io/mine-btc-with-rootstock/) para obtener más información sobre la minería.
 
 ### Powpeg con Bitcoin
 

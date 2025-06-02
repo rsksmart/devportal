@@ -25,14 +25,15 @@ Esta sección permite a los desarrolladores iniciarse en la blockchain de Rootst
 
 ## Navegación por la sección de desarrolladores
 
-| Recurso                                                                  | Descripción                                                                                                                                         |
-| ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Requisitos de hardware](/developers/requirements/)                      | Configuración de su entorno local.                                                                                                  |
-| [Conceptos esenciales de blockchain](/developers/blockchain-essentials/) | Conceptos esenciales de la blockchain de Rootstock.                                                                                 |
-| [Inicio rápido](/developers/quickstart/)                                 | Sumérjase de lleno con estas guías paso a paso para configurar su entorno de desarrollo e implementar su primera dApp.              |
-| [Desarrollo de un contrato inteligente](/developers/smart-contracts/)    | Explore en profundidad los recursos sobre la creación de contratos inteligentes seguros y escalables en Rootstock.                  |
-| [Guías de integración](/developers/integrate/)                           | Profundice su conocimiento con guías detalladas y tutoriales informativos que cubren diversos aspectos del desarrollo de Rootstock. |
-| [JSON-RPC](/developers/rpc-api/)                                         | Pruebe sus dApp en testnet antes de implementarlas en mainnet utilizando los proveedores de la API RPC en Rootstock.                |
-| [Bibliotecas](/developers/libraries/)                                    | Acceda a herramientas y bibliotecas indispensables para agilizar su proceso de desarrollo.                                          |
+| Recurso                                                                  | Descripción                                                                                                                                           |
+| ------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Requisitos de hardware](/developers/requirements/)                      | Configuración de su entorno local.                                                                                                    |
+| [Conceptos esenciales de blockchain](/developers/blockchain-essentials/) | Conceptos esenciales de la blockchain de Rootstock.                                                                                   |
+| [Inicio rápido](/developers/quickstart/)                                 | Sumérjase de lleno con estas guías paso a paso para configurar su entorno de desarrollo e implementar su primera dApp.                |
+| [Desarrollo de un contrato inteligente](/developers/smart-contracts/)    | Explore en profundidad los recursos sobre la creación de contratos inteligentes seguros y escalables en Rootstock.                    |
+| [Guías de integración](/developers/integrate/)                           | Profundice su conocimiento con guías detalladas y tutoriales informativos que cubren diversos aspectos del desarrollo de Rootstock.   |
+| [JSON-RPC](/developers/rpc-api/)                                         | Pruebe sus dApp en testnet antes de implementarlas en mainnet utilizando los proveedores de la API RPC en Rootstock.                  |
+| [Bibliotecas](/developers/libraries/)                                    | Acceda a herramientas y bibliotecas indispensables para agilizar su proceso de desarrollo.                                            |
+| [Casos de Uso](/developers/use-cases/)                                   | Explore las guías de casos de uso y tutoriales de la dApp de Rootstock para crear DeFi en Bitcoin, IA y soluciones de cadena cruzada. |
 
 

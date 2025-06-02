@@ -17,42 +17,42 @@ description: Inicios rápidos, demostraciones y kits de inicio para desarrollar 
 ```mdx-code-block
 <Filter
 values={[
-{label: 'Beginner', value: 'beginner'},
-{label: 'Advanced', value: 'advanced'},
-{label: 'Hardhat', value: 'hardhat'},
-{label: 'Remix', value: 'remix'},
-{label: 'Wagmi', value: 'wagmi'},
-{label: 'Reown', value: 'reown'},
-{label: 'On-chain data', value: 'data'},
-{label: 'RPC API', value: 'rpc'},
-{label: 'Port to Rootstock', value: 'port-dapps'}
+  {label: 'Principiante', value: 'beginner'},
+  {label: 'Avanzado', value: 'advanced'},
+  {label: 'Hardhat', value: 'hardhat'},
+  {label: 'Remix', value: 'remix'},
+  {label: 'Wagmi', value: 'wagmi'},
+  {label: 'Reown', value: 'reown'},
+  {label: 'Datos on-chain', value: 'data'},
+  {label: 'API RPC', value: 'rpc'},
+  {label: 'Migrar a Rootstock', value: 'port-dapps'}
 ]}>
 <FilterItem
-    value="beginner, Advanced"
-    title="Vyper Starter Kit"
-    subtitle="quickstart"
+    value="principiante, avanzado"
+    title="Kit de inicio de Vyper"
+    subtitle="inicio rápido"
     color="orange"
     linkHref="/developers/quickstart/rootstock-vyper/"
-    linkTitle="Use the Kit"
-    description="The Rootstock Vyper Starter Kit demonstrates how to deploy smart contracts written in Vyper to the Rootstock network."
+    linkTitle="Utilizar el kit"
+    description="El kit de inicio de Vyper de Rootstock demuestra cómo desplegar contratos inteligentes escritos en Vyper en la red Rootstock."
   />
   <FilterItem
     value="beginner, Advanced"
-    title="Privy Starter Kit"
+    title="Kit de inicio Privy"
     subtitle="quickstart"
     color="orange"
     linkHref="/developers/quickstart/privy/"
     linkTitle="Use the Kit"
-    description="The Rootstock Privy Starter Kit empowers developers to onboard users with social logins and self custodial wallets while preserving control, privacy, and flexibility for dApps when building on Rootstock."
+    description="El Kit de inicio Privy de Rootstock permite a los desarrolladores incorporar usuarios con inicios de sesión sociales y monederos de autocustodia a la vez que se preserva el control, privacidad y flexibilidad para dApps al construir sobre Rootstock."
   />
   <FilterItem
     value="dynamic, wagmi, advanced"
-    title="Dynamic Starter Kit"
+    title="Kit de inicio dinámico"
     subtitle="quickstart"
     color="orange"
     linkHref="/developers/quickstart/dynamic/"
     linkTitle="Use the Kit"
-    description="The Dynamic Starter Kit uses the Wagmi library for faster integration of Web3 features into a Next.js application."
+    description="El Kit de inicio dinámico utiliza la biblioteca Wagmi para una integración más rápida de las funciones Web3 en una aplicación Next.js."
   />
   <FilterItem
     value="beginner, web3auth, advanced"
@@ -61,25 +61,25 @@ values={[
     color="orange"
     linkHref="/developers/quickstart/web3auth/"
     linkTitle="Get Started"
-    description="A step-to-step guide for developers to build and deploy passwordless dApps on Rootstock using Web3Auth and Wagmi."
+    description="Una guía paso a paso para desarrolladores para construir y desplegar dApps sin contraseña en Rootstock usando Web3Auth y Wagmi."
   />
 <FilterItem
     value="wagmi, beginner"
-    title="Wagmi Starter Kit"
+    title="Kit de inicio de Wagmi"
     subtitle="quickstart"
     color="orange"
     linkHref="/developers/quickstart/wagmi/"
     linkTitle="Use the Kit"
-    description="This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Wagmi and Shadcn libraries."
+    description="Este kit de inicio proporciona una base para crear aplicaciones descentralizadas (dApps) en la blockchain de Rootstock utilizando las bibliotecas React, Wagmi y Shadcn."
   />
 <FilterItem
     value="reown, beginner"
-    title="Reown Starter Kit"
+    title="Kit de inicio de Reown"
     subtitle="quickstart"
     color="orange"
     linkHref="/developers/quickstart/reown/"
     linkTitle="Use the Kit"
-    description="This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Reown, Wagmi and Shadcn libraries."
+    description="Este kit de inicio proporciona una base para crear aplicaciones descentralizadas (dApps) en la blockchain Rootstock utilizando React, Reown, Wagmi y bibliotecas Shadcn."
   />
 <FilterItem
     value="hardhat, beginner"
@@ -88,16 +88,16 @@ values={[
     color="orange"
     linkHref="/developers/quickstart/hardhat/"
     linkTitle="Use the Kit"
-    description="Smart Contract examples, Tests, Deployments and Tasks for Common ERC Standards (ERC20, ERC721, ERC1155)."
+    description="Ejemplos de contratos inteligentes, pruebas, implementaciones y tareas para estándares ERC comunes (ERC20, ERC721, ERC1155)."
   />
 <FilterItem
-    value="hardhat, beginner"
-    title="Hardhat Ignition Starter Kit"
-    subtitle="quickstart"
+    value="hardhat, principiante"
+    title="Kit de inicio de Hardhat Ignition"
+    subtitle="inicio rápido"
     color="orange"
     linkHref="/developers/quickstart/hardhat-ignition/"
-    linkTitle="Use the Kit"
-    description="This guide is designed to help you deploy smart contracts on the Rootstock blockchain, with a focus on using Hardhat Ignition."
+    linkTitle="Utilice el kit"
+    description="Esta guía está diseñada para ayudarle a implementar contratos inteligentes en la blockchain Rootstock, centrándose en el uso de Hardhat Ignition."
   />
 <FilterItem
     value="foundry, sc, beginner"
@@ -106,26 +106,26 @@ values={[
     color="orange"
     linkHref="/developers/quickstart/foundry/"
     linkTitle="Use the Kit"
-    description="Smart Contract examples, Tests, Deployments and Tasks for Common ERC Standards (ERC20, ERC721, ERC1155)."
+    description="Ejemplos de contratos inteligentes, pruebas, despliegues y tareas para estándares ERC comunes (ERC20, ERC721, ERC1155)."
   />
 <FilterItem
     value="wagmi, sc, advanced"
     value="wagmi, advanced"
-    title="Account Abstraction Kit"
+    title="Kit de Abstracción de Cuentas"
     subtitle="quickstart"
     color="orange"
     linkHref="/developers/quickstart/rootstock-etherspot/"
-    linkTitle="Use the Kit"
-    description="Account Abstraction Starter Kit using Etherspot."
+    linkTitle="Utiliza el Kit"
+    description="Kit de Inicio de Abstracción de Cuentas utilizando Etherspot."
   />
 <FilterItem
     value="advanced"
-    title="dApp Automation with Cucumber"
+    title="Automatización de dApps con Cucumber"
     subtitle="quickstart"
     color="orange"
     linkHref="/resources/tutorials/dapp-automation-cucumber/"
-    linkTitle="Automate dApps"
-    description="Learn how to automate dApps using Cucumber Agile Automation Framework."
+    linkTitle="Automatiza dApps"
+    description="Aprende a automatizar dApps usando Cucumber Agile Automation Framework."
   />
 <FilterItem
     value="advanced"
@@ -134,7 +134,7 @@ values={[
     color="orange"
     linkHref="/developers/integrate/rif-relay/sample-dapp/"
     linkTitle="Use Kit"
-    description="Starter kit to develop on RIF Relay."
+    description="Kit de inicio para desarrollar en RIF Relay."
   />
 <FilterItem
     value="data, advanced"
@@ -143,7 +143,7 @@ values={[
     color="orange"
     linkHref="/dev-tools/data/thegraph/"
     linkTitle="Get Started"
-    description="Easily query on-chain data through a decentralized network of indexers"
+    description="Consulta fácil de datos en cadena a través de una red descentralizada de indexadores"
   />
 <FilterItem
     value="beginner"
@@ -151,53 +151,53 @@ values={[
     subtitle="Web3.py"
     color="orange"
     linkHref="/developers/quickstart/web3-python/"
-    linkTitle="Get Started"
-    description="Get started with deploying and interacting with smart contracts on Rootstock using Web3.py."
+    linkTitle="Empiece"
+    description="Empiece a desplegar e interactuar con contratos inteligentes en Rootstock utilizando Web3.py."
   />
   <FilterItem
     value="beginner, advanced, port-dapps"
-    title="Port an Ethereum dApp to Rootstock"
-    subtitle="Port dApps"
+    title="Portar una dApp de Ethereum a Rootstock"
+    subtitle="Portar dApps"
     color="orange"
     linkHref="/resources/port-to-rootstock/ethereum-dapp"
-    linkTitle="Get Started"
-    description="Learn how to port an Ethereum dApp to Rootstock."
+    linkTitle="Empiece"
+    description="Aprenda a portar una dApp de Ethereum a Rootstock."
   />
   <FilterItem
     value="beginner, remix"
-    title="Deploy, Interact and Verify Smart Contracts using Remix and Rootstock Explorer"
+    title="Despliega, interactúa y verifica contratos inteligentes usando Remix y Rootstock Explorer"
     subtitle="Remix"
     color="orange"
     linkHref="/developers/quickstart/remix/"
-    linkTitle="Use Remix"
-    description="In this guide, we will use the Remix IDE to write, compile, deploy, interact and verify a smart contract on the Rootstock Explorer."
+    linkTitle="Usa Remix"
+    description="En esta guía, utilizaremos el IDE Remix para escribir, compilar, desplegar, interactuar y verificar un contrato inteligente en el Rootstock Explorer."
   />
   <FilterItem
-    value="beginner, advanced"
-    title="Getting Started with Apeworx"
+    value="principiante, avanzado"
+    title="Primeros pasos con Apeworx"
     subtitle="Ape"
     color="orange"
     linkHref="/developers/quickstart/ape/"
-    linkTitle="Use Ape"
-    description="Learn how to compile, deploy, and intereact with smart contracts with Ape on Rootstock"
+    linkTitle="Utiliza Ape"
+    description="Aprende a compilar, desplegar e interactuar con contratos inteligentes con Ape en Rootstock"
   />
   <FilterItem
     value="beginner, rpc"
-    title="Get Started with Rootstock RPC API"
-    subtitle="RPC API"
+    title="Primeros pasos con la API RPC de Rootstock"
+    subtitle="API RPC"
     color="orange"
     linkHref="/developers/rpc-api/rootstock/setup/"
-    linkTitle="Use the RPC API"
-    description="The Rootstock RPC Service provides a seamless and intuitive web interface for developers to interact with Rootstock nodes via JSON-RPC methods."
+    linkTitle="Utilice la API RPC"
+    description="El servicio RPC de Rootstock proporciona una interfaz web intuitiva y sin fisuras para que los desarrolladores interactúen con los nodos Rootstock a través de métodos JSON-RPC."
   />
     <FilterItem
     value="beginner, rpc"
-    title="Get Started with Alchemy"
-    subtitle="RPC API"
+    title="Primeros pasos con Alchemy"
+    subtitle="API RPC"
     color="orange"
     linkHref="/developers/rpc-api/alchemy/"
-    linkTitle="Use the RPC API"
-    description="A step-to-step guide for developers to interact with Rootstock network with the Alchemy RPC Provider Service."
+    linkTitle="Utilice la API RPC"
+    description="Una guía paso a paso para que los desarrolladores interactúen con la red Rootstock con el servicio de proveedor RPC Alchemy."
   />
 </Filter>
 ```
