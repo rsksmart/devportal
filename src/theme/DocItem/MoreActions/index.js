@@ -3,7 +3,7 @@ import React from 'react';
 import Translate from '@docusaurus/Translate';
 import clsx from "clsx";
 
-import {useDoc} from "@docusaurus/theme-common/internal";
+import {useDoc} from '@docusaurus/plugin-content-docs/client';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 import EditThisPage from '@theme/EditThisPage';

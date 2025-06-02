@@ -1,14 +1,16 @@
 /* eslint-disable jsx-a11y/no-autofocus */
 import React, { useEffect, useReducer, useRef, useState } from 'react'
 import clsx from 'clsx'
-// import algoliaSearchHelper from 'algoliasearch-helper'
-// import algoliaSearch from 'algoliasearch/lite'
+
+import algoliaSearchHelper from 'algoliasearch-helper';
+import {liteClient} from 'algoliasearch/lite';
+
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment'
 import Head from '@docusaurus/Head'
 import Link from '@docusaurus/Link'
 import { useAllDocsData } from '@docusaurus/plugin-content-docs/client'
 import {
-  HtmlClassNameProvider,
+  HtmlClassNameProvider, PageMetadata,
   useEvent,
   usePluralForm,
   useSearchQueryString,
@@ -117,10 +119,11 @@ function SearchVersionSelectList ({ docsSearchVersionsHelpers }) {
   )
 }
 
-function SearchPageContentInternal () { // <--- RENAMED TO AVOID CONFLICTS
-  // <--- MOVED ALGOLIA IMPORTS HERE
-  const algoliaSearch = require('algoliasearch/lite').default || require('algoliasearch/lite');
-  const algoliaSearchHelper = require('algoliasearch-helper').default || require('algoliasearch-helper');
+function SearchPageContentInternal () {
+  // // <--- RENAMED TO AVOID CONFLICTS
+  // // <--- MOVED ALGOLIA IMPORTS HERE
+  // const algoliaSearch = require('algoliasearch/lite').default || require('algoliasearch/lite');
+  // const algoliaSearchHelper = require('algoliasearch-helper').default || require('algoliasearch-helper');
 
   const {
     i18n: { currentLocale },
@@ -180,7 +183,7 @@ function SearchPageContentInternal () { // <--- RENAMED TO AVOID CONFLICTS
   const disjunctiveFacets = contextualSearch
     ? ['language', 'docusaurus_tag']
     : []
-  const algoliaClient = algoliaSearch(appId, apiKey)
+  const algoliaClient = liteClient(appId, apiKey)
   const algoliaHelper = algoliaSearchHelper(algoliaClient, indexName, {
     hitsPerPage: 15,
     advancedSyntax: true,
@@ -313,8 +316,9 @@ function SearchPageContentInternal () { // <--- RENAMED TO AVOID CONFLICTS
 
   return (
     <Layout>
+      <PageMetadata title={getTitle()} />
+
       <Head>
-        <title>{useTitleFormatter(getTitle())}</title>
         {/*
          We should not index search pages
           See https://github.com/facebook/docusaurus/pull/3233

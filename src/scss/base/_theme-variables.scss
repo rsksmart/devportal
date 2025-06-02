@@ -1,17 +1,11 @@
 html:root {
   --doc-sidebar-width: 260px;
   --doc-sidebar-hidden-width: 48px;
-  @include media-breakpoint-up(xl) {
-    --doc-sidebar-width: 315px;
-  }
 
   --ifm-container-width: 1440px;
   --ifm-container-width-xl: 1440px;
 
   --rsk-navbar-height: 92px;
-  @include media-breakpoint-up(lg) {
-    --rsk-navbar-height: 104px;
-  }
 
   --ifm-z-index-fixed: 200;
 
@@ -77,9 +71,7 @@ html:root {
   --ifm-navbar-search-input-placeholder-color: var(--ifm-color-emphasis-500);
   --ifm-navbar-search-input-icon: url('data:image/svg+xml;utf8,<svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" height="16px" width="16px"><path d="M6.02945,10.20327a4.17382,4.17382,0,1,1,4.17382-4.17382A4.15609,4.15609,0,0,1,6.02945,10.20327Zm9.69195,4.2199L10.8989,9.59979A5.88021,5.88021,0,0,0,12.058,6.02856,6.00467,6.00467,0,1,0,9.59979,10.8989l4.82338,4.82338a.89729.89729,0,0,0,1.29912,0,.89749.89749,0,0,0-.00087-1.29909Z" /></svg>');
   --ifm-navbar-sidebar-width: 100vw;
-  @include media-breakpoint-up(md) {
-    --ifm-navbar-sidebar-width: 83vw;
-  }
+
   //Typography
   --bs-heading-font-family: #{$headings-font-family};
   --rsk-caption-color: var(--bs-gray-600);
@@ -128,15 +120,6 @@ html:root {
 
   //
   --rsk-last-updated-color: var(--bs-gray-500);
-
-  @include media-breakpoint-up(md) {
-    --ifm-navbar-padding-vertical: 24px;
-    --ifm-navbar-padding-horizontal: 16px;
-  }
-  @include media-breakpoint-up(lg) {
-    --ifm-navbar-padding-horizontal: 0;
-    --ifm-navbar-padding-horizontal: 0;
-  }
 
   //Paginator
   --rsk-paginator-link-color: var(--bs-body-color);
@@ -266,6 +249,27 @@ html:root {
   //Steps component
   --rsk-step-border-color: #{$gray-250};
   --rsk-step-bg-color: #{$gray-50};
+
+
+  @include media-breakpoint-up(md) {
+    --ifm-navbar-sidebar-width: 83vw;
+  }
+  @include media-breakpoint-up(xl) {
+    --doc-sidebar-width: 315px;
+  }
+  @include media-breakpoint-up(lg) {
+    --rsk-navbar-height: 104px;
+  }
+
+
+  @include media-breakpoint-up(md) {
+    --ifm-navbar-padding-vertical: 24px;
+    --ifm-navbar-padding-horizontal: 16px;
+  }
+  @include media-breakpoint-up(lg) {
+    --ifm-navbar-padding-horizontal: 0;
+    --ifm-navbar-padding-horizontal: 0;
+  }
 }
 
 

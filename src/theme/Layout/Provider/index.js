@@ -1,13 +1,19 @@
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
 import React from 'react';
 import {composeProviders} from '@docusaurus/theme-common';
 import {
   ColorModeProvider,
   AnnouncementBarProvider,
-  DocsPreferredVersionContextProvider,
   ScrollControllerProvider,
   NavbarProvider,
   PluginHtmlClassNameProvider,
 } from '@docusaurus/theme-common/internal';
+import {DocsPreferredVersionContextProvider} from '@docusaurus/plugin-content-docs/client';
 const Provider = composeProviders([
   ColorModeProvider,
   AnnouncementBarProvider,

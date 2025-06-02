@@ -98,7 +98,21 @@ const config = {
     '/src/clientModules/renderEquations.js'
   ],
   plugins: [
-    'docusaurus-plugin-sass',
+    [
+      'docusaurus-plugin-sass', {
+      sassOptions: {
+        // Disable deprecation warnings
+        quietDeps: true,
+        verbose: false,
+        silenceDeprecations: [
+          'legacy-js-api',
+          'import',
+          'global-builtin',
+          'color-functions',
+          'slash-div'
+        ]
+      }
+    }],
     [
       '@docusaurus/plugin-content-blog',
       {
@@ -108,6 +122,8 @@ const config = {
         blogSidebarCount: 'ALL',
         blogSidebarTitle: 'Changelog',
         showReadingTime: false,
+        onInlineAuthors: 'ignore',
+        onUntruncatedBlogPosts: 'ignore',
         /**
          * Required for any multi-instance plugin
          */
@@ -279,7 +295,7 @@ const config = {
         // Optional: see doc section below
         contextualSearch: false,
 
-      },
+      }
     }),
 };
 
