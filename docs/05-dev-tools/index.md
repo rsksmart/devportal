@@ -491,7 +491,25 @@ description: "Explore a curated selection of smart contract development tools an
     color="orange"
     linkHref="https://envio.dev/"
     linkTitle="Access on-chain data"
-    description="Get on-chain data when building dApps on Rootstock."
+    description="Easily query on-chain data through a decentralized network of indexers."
+  />
+<FilterItem
+    value="data, sc"
+    title="Goldsky"
+    subtitle="data"
+    color="orange"
+    linkHref="https://docs.goldsky.com/introduction"
+    linkTitle="Access on-chain data"
+    description="Goldsky is a data indexer that offers high-performance subgraph hosting and realtime data on Rootstock."
+  />
+<FilterItem
+    value="data, sc"
+    title="Subquery"
+    subtitle="data"
+    color="orange"
+    linkHref="https://subquery.network/indexer/30"
+    linkTitle="Access on-chain data"
+    description="SubQuery provides fast, reliable, decentralised, and customised data indexing on Rootstock."
   />
 <FilterItem
     value="mine"

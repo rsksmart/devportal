@@ -38,7 +38,7 @@ To complete this tutorial, you'll need:
 - Atomic Transactions: Facilitate secure and reliable cross-chain transactions with LayerZero's guaranteed message delivery.
 - Programmable Cross-Chain Logic: Construct complex, multi-chain workflows and applications with LayerZero's flexible messaging framework.
 
-## Use cases for building cross-chain dApps on Rootstock.
+## Use cases for building cross-chain dApps on Rootstock
 
 The integration with Layerzero opens up a vast array of innovative use cases, extending beyond simple asset transfers. 
 
@@ -168,7 +168,7 @@ https://repo.sourcify.dev/contracts/full_match/11155111/0xa3725eAC59776F075dC5bb
 LayerZero configures and validates communication between smart contracts across different blockchains. This is done by defining a connection pathway that sets the required send and receive libraries, message verification settings ([DVNs and Executors](https://docs.layerzero.network/v2/developers/evm/developer-overview)), and execution parameters (like gas and value limits). These configurations ensure that the contracts can securely and reliably send and receive messages, allowing for seamless cross-chain interoperability.
 
 
-### Initialize your OApp configurations by running:
+### Initialize your OApp configurations by running
 
 ```shell
 npx hardhat lz:oapp:config:init --contract-name MyOFT --oapp-config layerzero.config.ts

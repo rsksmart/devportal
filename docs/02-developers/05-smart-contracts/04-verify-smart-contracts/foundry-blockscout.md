@@ -1,12 +1,10 @@
 ---
-
 sidebar_label: Verify a Smart Contract using Foundry and Blockscout Explorer
-sidebar_position: 400
+sidebar_position: 106
 title: Verify a Smart Contract using Foundry and Blockscout Explorer
 description: "Configuring Foundry for smart contract verification on Rootstock"
 tags: [guides, developers, smart contracts, rsk, rootstock, foundry, dApps, ethers]
 ---
-
 
 Smart contracts are the backbone of decentralized applications (dApps). They automate agreements and processes, but their code can be complex and prone to errors. Verifying your smart contracts is crucial to ensure they function as intended.
 
@@ -19,15 +17,14 @@ In this tutorial, we'll do the following steps:
 
 ## Prerequisites
 
-   To follow this tutorial, you should have knowledge of the following:
+To follow along, you should have knowledge of the following:
 
-   - Foundry
-   - Basic knowledge of smart contracts
+- Foundry
+- Basic knowledge of smart contracts
 
-   :::note [Foundry Starter Project](https://github.com/rsksmart/rootstock-foundry-starterkit)
-   A Foundry starter project can be set up with preset configurations for the Rootstock network. Initialize a new Foundry project using `forge init` and configure it as shown below. Ensure you set up the `.env` variables to match the `foundry.toml` configuration.
-   :::
----
+:::note [Foundry Starter Project](https://github.com/rsksmart/rootstock-foundry-starterkit)
+A Foundry starter project can be set up with preset configurations for the Rootstock network. Initialize a new Foundry project using `forge init` and configure it as shown below. Ensure you set up the `.env` variables to match the `foundry.toml` configuration.
+:::
 
 ## Obtaining a Rootstock API Key from Blockscout
 
@@ -39,20 +36,20 @@ In this tutorial, we'll do the following steps:
 
 
 2. **Sign In or Register**:
-   ![File](./images/login.png)
+   ![Log in](/img/developers/smart-contracts/foundry-blockscout/images/login.png)
    - Click on the "Sign In" or "Register" button, usually located in the top-right corner of the Blockscout website.
 
-   ![File](./images/choose.png)
+   ![Choose Wallet](/img/developers/smart-contracts/foundry-blockscout/images/choose.png)
    - If you don’t have an account, create one by providing an email address or choose web3 wallet. Verify your email if prompted.
 
 4. **Access Your Account Settings**:
    - Once logged in, click on your profile (often represented by your wallet address or a user icon) and select "Account" or "API Keys" from the dropdown menu.
 
 5. **Generate an API Key**:
-   ![File](./images/add.png)
+   ![Create API Key](/img/developers/smart-contracts/foundry-blockscout/images/add.png)
    - In the API Keys section, click "Create New API Key" or a similar button.
 
-   ![File](./images/name.png)
+   ![Name API Key](/img/developers/smart-contracts/foundry-blockscout/images/name.png)
    - Provide a name for the API key (e.g., "Foundry Verification") to help you identify its purpose.
    - Copy the generated API key and store it securely. You will not be able to view it again after leaving the page.
 
@@ -63,13 +60,9 @@ In this tutorial, we'll do the following steps:
    Keep your API key confidential and avoid sharing it publicly. If you suspect it has been compromised, regenerate a new key from your Blockscout account.
 :::
 
----
-
 ### Integration into the Tutorial
 
    To integrate this section, place it after the **Prerequisites** section and update the **Configuration** section to reference it. For example, modify the **Configuration** section to start with:
-
----
 
 ## Configure Foundry
 
@@ -95,21 +88,24 @@ In this tutorial, we'll do the following steps:
    rskMainnet = { key = "your api key", url = "https://rootstock-blockscout.com/api" }
    ```
 
----
 ## Deploy the Contract
 
    After configuring Foundry, you can deploy a smart contract to the Rootstock network using the Foundry Starter Kit or your own project. Follow these steps:
 
 1. **Clone the Foundry Starter Kit**:
+
    ```bash
    git clone https://github.com/rsksmart/rootstock-foundry-starterkit
    cd rootstock-foundry-starterkit
    #do well to edit with your smartcontract.
    ```
    **you should see something like this**:
+
    ```bash
-   cyberhackb@cyberhackb-ThinkPad-X1-Nano-Gen-1:~/Downloads$ git clone https://github.com/rsksmart/rootstock-foundry-starterkit
+   $ git clone https://github.com/rsksmart/rootstock-foundry-starterkit
+
    cd rootstock-foundry-starterkit
+
    Cloning into 'rootstock-foundry-starterkit'...
    remote: Enumerating objects: 374, done.
    remote: Counting objects: 100% (53/53), done.
@@ -118,11 +114,14 @@ In this tutorial, we'll do the following steps:
    Receiving objects: 100% (374/374), 259.07 KiB | 154.00 KiB/s, done.
    Resolving deltas: 100% (129/129), done.
    ```
+
    ```bash
    forge install
    ```
+
    ```bash
-   cyberhackb@cyberhackb-ThinkPad-X1-Nano-Gen-1:~/Downloads/rootstock-foundry-starterkit$ forge install
+   $ forge install
+
    Updating dependencies in /home/cyberhackb/Downloads/rootstock-foundry-starterkit/lib
    Submodule 'lib/openzeppelin-contracts' (https://github.com/OpenZeppelin/openzeppelin-contracts) registered for path 'lib/openzeppelin-contracts'
    Cloning into '/home/cyberhackb/Downloads/rootstock-foundry-starterkit/lib/openzeppelin-contracts'...
@@ -134,19 +133,23 @@ In this tutorial, we'll do the following steps:
    ......remote: Compressing objects: 100% (79/79), done.        
    remote: Total 313 (delta 91), reused 132 (delta 83), pack-reused 142 (from 1)        
    Receiving objects: 100% (313/313), 71.35 KiB | 312.00 KiB/s, done.
+   ```
 
 2. **Compile your smart contract to ensure there are no errors**:
+   
    ```bash
    forge build
 
    ```
+
    ```bash
-   cyberhackb@cyberhackb-ThinkPad-X1-Nano-Gen-1:~/Downloads/rootstock-foundry-starterkit$ forge build
+   $ forge build
    [⠊] Compiling...
    [⠊] Compiling 38 files with Solc 0.8.17
    [⠒] Solc 0.8.17 finished in 1.90s
    Compiler run successful!
    ```
+   
 3. **Set Up Environment Variables**:
    Create a .env file in the project root and add your private
    ```bash
@@ -161,14 +164,16 @@ In this tutorial, we'll do the following steps:
    source .env
    ```
 5. **Deploy the Contract: Use a Foundry script to deploy the contract.**:
+
    ```bash
    forge script script/deploy.s.sol --rpc-url $RSK_TESTNET_RPC_URL --broadcast --legacy --evm-version london
    ```
   
 
    ```bash
-   cyberhackb@cyberhackb-ThinkPad-X1-Nano-Gen-1:~/Downloads/rootstock-foundry-starterkit$ forge script script/deploy.s.sol --rpc-url $RSK_TESTNET_RPC_URL --broadcast --legacy --evm-version london
-   #The response should look like this:
+   $ forge script script/deploy.s.sol --rpc-url $RSK_TESTNET_RPC_URL --broadcast --legacy --evm-version london
+
+   # The response should look like this:
    [⠊] Compiling...
    [⠘] Compiling 2 files with Solc 0.8.17
    [⠊] Solc 0.8.17 finished in 1.72s
@@ -214,15 +219,16 @@ In this tutorial, we'll do the following steps:
 
    Sensitive values saved to: /home/cyberhackb/Downloads/rootstock-foundry-starterkit$/cache/deploy.s.sol/31/run-latest.json
    ```
+
 ## Usage
 
-   To verify a deployed contract, use the `forge verify-contract` command. You need the contract address and the contract name (as defined in your Solidity file). Run the following command:
+To verify a deployed contract, use the `forge verify-contract` command. You need the contract address and the contract name (as defined in your Solidity file). Run the following command:
 
-   For Rootstock Testnet:
+**For Rootstock Testnet:**
 
    ```bash
    forge verify-contract --chain-id 31 --verifier blockscout --verifier-url https://rootstock-testnet.blockscout.com/api "0xD48bB9503C5Caba9D0Cbbac8B6Ea4F0613C37Bd1" src/mockAggregator.sol:MockAggregator
-   #remeber to edit to your contract address and contract name
+   # Remember to edit to your contract address and contract name
    ```
 
 The response should look like this:
@@ -243,15 +249,17 @@ The response should look like this:
    All (6) contracts were verified!
    ```
 
-   For Rootstock Mainnet:
-   To verify a contract on Rootstock Mainnet, use the following command with the appropriate contract address and name
+   
+**For Rootstock Mainnet:**
+
+- To verify a contract on Rootstock Mainnet, use the following command with the appropriate contract address and name
 
    ```bash
    forge verify-contract --chain-id 30 --verifier blockscout --verifier-url https://rootstock.blockscout.com/api <your_contract_address> <contract_file:contract_name>
    ```
+
 ## Resources
 - [Deploy, Interact and Verify Smart Contracts using Remix and Rootstock Explorer](/developers/quickstart/remix/)
 - Visit [hardhat-verify](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-verify#hardhat-verify)
 - Visit [blockscout](https://docs.blockscout.com/for-users/verifying-a-smart-contract/hardhat-verification-plugin)
 - [Hardhat Starter Kit for Rootstock](https://github.com/rsksmart/rootstock-hardhat-starterkit)
----
