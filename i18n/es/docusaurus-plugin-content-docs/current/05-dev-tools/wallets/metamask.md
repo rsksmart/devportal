@@ -95,13 +95,14 @@ MetaMask utiliza el valor de Ethereum para **ruta de derivación** y actualmente
 
 MetaMask actualmente no admite **sumas de comprobación** de EIP-1191. Esto significa que, si utiliza las direcciones copiadas desde MetaMask, es posible que encuentre errores de validación de suma de comprobación. Una **solución alternativa** para esto es convertir las direcciones a minúsculas después de copiarlas.
 
-:::warning\[Disclaimer]
+:::warning [Disclaimer]
 
 - Es posible que la moneda se muestre erróneamente como "ETH" en algunas pantallas de MetaMask. La red Rootstock utiliza "RBTC" como su criptomoneda.
 - Este tutorial utiliza la [API RPC de Rootstock](/developers/rpc-api/). Puede conectarse a otros nodos o utilizar el [Nodo Público](/node-operators/public-nodes/) cambiando la URL del RPC.
 - El nodo debe habilitar CORS para que las dApp basadas en navegador funcionen.
   - Revise la [referencia del archivo de configuración](/node-operators/setup/configuration/) para la configuración de CORS.
-    :::
+
+:::
 
 ## Recursos útiles
 

@@ -95,13 +95,14 @@ MetaMaskは**導出パス**にEthereumの値を使用しており、現時点で
 
 MetaMaskは現在、EIP-1191**チェックサム**に対応していません。これにより、MetaMaskからコピーしたアドレスを使用すると、チェックサムの検証エラーが発生する可能性があります。これに対する**回避策**としては、アドレスをコピーした後に小文字に変換する方法があります。
 
-:::warning\[Disclaimer]
+:::warning [Disclaimer]
 
 - MetaMaskの一部の画面では、通貨が誤って「ETH」と表示される場合があります。Rootstockネットワークでは、暗号通貨として「RBTC」を使用しています。
 - このチュートリアルでは、[Rootstock RPC API](/developers/rpc-api/)を使用しています。RPC URLを変更することで、他のノードに接続したり、[公開ノード](/node-operators/public-nodes/)を利用したりできます。
 - ブラウザベースのdAppsが動作するためには、ノードがCORSを有効にする必要があります。
   - CORSの設定については、[設定ファイルのリファレンス](/node-operators/setup/configuration/)をご覧ください。
-    :::
+
+:::
 
 ## 役に立つリソース
 

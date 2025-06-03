@@ -17,11 +17,12 @@ Rootstockの開発者向け概要セクションへようこそ。
 
 このセクションでは、Rootstockブロックチェーンを始める開発者向けのサポートを提供します。開発者は、Hardhatなどを使ったローカル開発環境のインストール、提供されるライブラリを使用したコントラクトの生成・テスト、そしてライブラリを活用した分散型アプリケーションの構築ができます。
 
-:::info\[Info]
+:::info [Info]
 
 - メインネットにデプロイする前に、テストネットでdAppを素早くテストしたいですか？[Rootstock RPC API](https://rpc.rootstock.io/)を使用するか、RPC APIで利用可能な[json-rpcメソッド](/developers/rpc-api/rootstock/methods/)をご覧ください。
 - [ステップバイステップガイド](/developers/quickstart/)を参照して開発環境をセットアップし、最初のdAppをデプロイしましょう。
-  :::
+
+:::
 
 ## 開発者セクションのナビゲーション
 

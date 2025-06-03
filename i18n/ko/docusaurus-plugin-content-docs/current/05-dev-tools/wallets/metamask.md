@@ -108,7 +108,7 @@ MetaMask는 현재 EIP-1191 **체크섬**을 지원하지 않습니다.
 체크섬 검증 오류가 발생할 수 있음을 의미합니다.
 이에 대한 **차선 해결책**은 주소를 복사한 다음 소문자로 바꾸는 것입니다.
 
-:::warning\[Disclaimer]
+:::warning [Disclaimer]
 
 - 일부 MetaMask 화면 내에서는 통화가 'ETH'로 잘못 표시될 수 있습니다.
   Rootstock 네트워크에서는 암호화폐로 'RBTC'를 사용합니다.
@@ -116,6 +116,8 @@ MetaMask는 현재 EIP-1191 **체크섬**을 지원하지 않습니다.
   RPC URL을 변경하여 다른 노드를 연결하거나 [공개 노드](/node-operators/public-nodes/)를 사용할 수 있습니다.
 - 브라우저 기반 dApp이 작동하려면 노드에서 반드시 CORS를 활성화해야 합니다.
   - CORS 설정에 관한 자세한 내용은 [구성 파일 참조](/node-operators/setup/configuration/)를 검토해 주세요.
+
+:::
 
 ## 유용한 자료
 

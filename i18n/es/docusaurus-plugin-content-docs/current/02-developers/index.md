@@ -17,11 +17,12 @@ Bienvenido a la sección de Información para desarrolladores de Rootstock.
 
 Esta sección permite a los desarrolladores iniciarse en la blockchain de Rootstock. Los desarrolladores pueden instalar un entorno de desarrollo local utilizando Hardhat, entre otras herramientas, crear y probar contratos con las bibliotecas proporcionadas y utilizarlas para desarrollar aplicaciones descentralizadas
 
-:::info\[Info]
+:::info [Info]
 
 - ¿Quiere probar rápidamente su dApp en testnet antes de implementarla en mainnet? Use la [API RPC de Rootstock](https://rpc.rootstock.io/) o consulte los [métodos JSON-RPC](/developers/rpc-api/rootstock/methods/) disponibles en la API RPC.
 - Sumérjase de lleno con estas [guías paso a paso](/developers/quickstart/) para configurar su entorno de desarrollo e implementar su primera dApp.
-  :::
+
+:::
 
 ## Navegación por la sección de desarrolladores
 
