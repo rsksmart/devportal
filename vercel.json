@@ -648,10 +648,6 @@
     {"source" : "/dev-tools/cross-chain-bridges/hyperlanebridge/", "destination" : "/dev-tools/cross-chain-bridges/hyperlane-bridge/"},
     {"source" : "/dev-tools/cross-chain-bridges/routerprotocol/", "destination" : "/dev-tools/cross-chain-bridges/router-protocol/"},
     {"source" : "/dev-tools/attestations/eas/", "destination" : "/dev-tools/attestations/ras/"},
-    {
-      "source": "/developers/smart-contracts/verify-smart-contracts/",
-      "destination": "/developers/smart-contracts/verify-smart-contracts/hardhat-plugin/",
-      "permanent": true
-    }
+    {"source": "/developers/smart-contracts/verify-smart-contracts/", "destination": "/developers/smart-contracts/verify-smart-contracts/hardhat-verify-plugin/"}
   ]
 }

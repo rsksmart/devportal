@@ -1,5 +1,5 @@
 ---
-sidebar_position: 800
+sidebar_position: 900
 sidebar_label: Best Practices for Smart Contract Development on Rootstock
 title: Best Practices for Smart Contract Development on Rootstock
 description: 'Best practices for Smart Contract Development on Rootstock'
