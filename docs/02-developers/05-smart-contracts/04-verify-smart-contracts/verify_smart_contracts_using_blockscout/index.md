@@ -241,7 +241,13 @@ The response should look like this:
    Details: `Pass - Verified`
    Contract successfully verified
    All (6) contracts were verified!
+   ```
+
    For Rootstock Mainnet:
+   To verify a contract on Rootstock Mainnet, use the following command with the appropriate contract address and name
+
+   ```bash
+   forge verify-contract --chain-id 30 --verifier blockscout --verifier-url https://rootstock.blockscout.com/api <your_contract_address> <contract_file:contract_name>
    ```
 ## Resources
 - [Deploy, Interact and Verify Smart Contracts using Remix and Rootstock Explorer](/developers/quickstart/remix/)
