@@ -53,7 +53,7 @@ Data indexers act like librarians for blockchain data, organizing and storing in
     title="Subquery"
     subtitle="data indexers"
     color="green"
-    description="SubQuery provides fast, reliable, decentralised, and customised data indexing for your next Rootstock project."
+    description="SubQuery provides fast, reliable, decentralised, and customised data indexing on Rootstock."
     linkHref="/dev-tools/data/subquery/"
     linkTitle="Get Started"
   />

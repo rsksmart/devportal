@@ -2,13 +2,11 @@
 sidebar_label: Subquery
 sidebar_position: 6
 title: Get Started with Subquery
-description: "SubQuery provides fast, reliable, decentralised, and customised data indexing for your next Rootstock project."
+description: "SubQuery provides fast, reliable, decentralised, and customised data indexing on Rootstock."
 tags: [subquery, indexers, data, dApps, smart contracts, developers, developer tools, get-started]
 ---
 
-[SubQuery](https://subquery.network/indexer/30) provides fast, reliable, decentralised, and customised data indexing for Rootstock.
-
-Deploy EVM compatible smart contracts on Rootstock and with the security of the Bitcoin network.
+[SubQuery](https://subquery.network/indexer/30) provides fast, reliable, decentralised, and customised data indexing on Rootstock.
 
 The Subquery tool is available on: <Shield title="mainnet" tooltip="Supported on Mainnet" color="orange" />
 

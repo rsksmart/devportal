@@ -509,7 +509,7 @@ description: "Explore a curated selection of smart contract development tools an
     color="orange"
     linkHref="https://subquery.network/indexer/30"
     linkTitle="Access on-chain data"
-    description="SubQuery provides fast, reliable, decentralised, and customised data indexing for your next Rootstock project."
+    description="SubQuery provides fast, reliable, decentralised, and customised data indexing on Rootstock."
   />
 <FilterItem
     value="mine"
