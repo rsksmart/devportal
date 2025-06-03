@@ -14,22 +14,19 @@ The Subquery tool is available on: <Shield title="mainnet" tooltip="Supported on
 
 ## Getting Started
 
-To get started with Data Indexing using Subquery:
-
-### Install SubQuery CLI globally
+Install SubQuery CLI globally:
 
 ```bash
 npm install -g @subql/cli
 ```
 
-### Clone GitHub repo
+### Clone the GitHub repo
 
 Clone the [Subql Starter Repo](https://github.com/subquery/ethereum-subql-starter) and install dependencies.
 
-### Use Subql CLI
+### Use the Subql CLI
 
 You can use the subql CLI to bootstrap a clean project in the network of your choosing by running `subql init`.
-
 
 <Button href="https://github.com/subquery/ethereum-subql-starter/tree/main/Rootstock/rootstock-starter">Starter Kit</Button>
 
