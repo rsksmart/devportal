@@ -69,6 +69,13 @@ const config = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
+  future: {
+    experimental_faster: {
+      rspackBundler: true,
+      rspackPersistentCache: true,
+    },
+  },
+
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
@@ -293,7 +300,7 @@ const config = {
         indexName: 'dev-rootstock',
 
         // Optional: see doc section below
-        contextualSearch: false,
+        contextualSearch: true,
 
       }
     }),
