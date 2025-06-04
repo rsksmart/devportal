@@ -7,7 +7,7 @@ import isInternalUrl from '@docusaurus/isInternalUrl';
 
 export default function RightNavbarItems() {
   const items = useThemeConfig().navbar.items;
-  const [leftItems, rightItems] = splitNavbarItems(items);
+  const [rightItems] = splitNavbarItems(items);
 
   return rightItems?.length && (
     <div className={`d-flex gap-24 align-items-center`}>
