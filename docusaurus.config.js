@@ -24,6 +24,7 @@ const config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
+  staticDirectories: ['static'],
   customFields: {
     keys : {
       mendable : process.env.MENDABLE_KEY,
@@ -74,7 +75,25 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'es', 'ja', 'ko'],
+    localeConfigs: {
+      en: {
+        label: 'ENG',
+        htmlLang: 'en-GB',
+      },
+      es: {
+        label: 'ESP',
+        htmlLang: 'es',
+      },
+      ja: {
+        label: 'JPN',
+        htmlLang: 'ja',
+      },
+      ko: {
+        label: 'KOR',
+        htmlLang: 'ko',
+      },
+    },
   },
   clientModules:[
     '/src/clientModules/renderEquations.js'
@@ -134,16 +153,9 @@ const config = {
           showLastUpdateTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/rsksmart/devportal/tree/main/'
+          editUrl: 'https://github.com/rsksmart/devportal/tree/main/',
         },
-        blog: {
-          blogSidebarTitle: 'All posts',
-          blogSidebarCount: 'ALL',
-          blogTitle: 'Changelog',
-          blogDescription:
-            'stay informed about the latest product updates on Rootstock.',
-        },
-
+        blog: false,
         theme: {
           customCss: ['./src/scss/app.scss'],
           // customCss: ['./src/css/custom.css']
@@ -192,7 +204,7 @@ const config = {
           {
             to: '/',
             position: 'left',
-            activeBaseRegex: '^/$',
+            activeBaseRegex: '(^/$|^/(es|ko|ja)/$)',
             label: 'Home',
           },
           ...mainNavItems,
@@ -208,13 +220,17 @@ const config = {
             position: 'right',
             icon: 'discord',
           },
+          {
+            position: 'right',
+            type: 'localeDropdown',
+          },
         ],
       },
       footer: {
         // style: 'dark',
         links: [
           {
-            title: 'WHITEPAPER',
+            title: 'Whitepaper',
             items: [
               {
                 label: 'Original Whitepaper',
@@ -231,7 +247,7 @@ const config = {
             ],
           },
           {
-            title: 'RESOURCES',
+            title: 'Resources',
             items: [
               {
                 label: 'Merged Mining',

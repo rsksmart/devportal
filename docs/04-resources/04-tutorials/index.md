@@ -6,6 +6,7 @@ tags: [rsk, rootstock, beginner, quick starts, advanced, port to rootstock, tuto
 description: "Tutorials and learning resources"
 ---
 
+````mdx-code-block
 <Filter
 values={[
 {label: 'Beginner', value: 'beginner'},
@@ -119,3 +120,4 @@ linkHref="/resources/tutorials/hyperlane-bridge/"
 description="Hyperlane is the first universal and permissionless interoperability layer built for the modular blockchain stack. Learn how to run Hyperlane on Rootstock blockchain."
 />
 </Filter>
+````

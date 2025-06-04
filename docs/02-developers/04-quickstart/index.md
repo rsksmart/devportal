@@ -6,6 +6,7 @@ tags: [rsk, rootstock, beginner, quick starts, developers, advanced, port to roo
 description: "Quick starts, demos and starter kits to develop on Rootstock."
 ---
 
+````mdx-code-block
 <Filter
 values={[
 {label: 'Beginner', value: 'beginner'},
@@ -191,3 +192,4 @@ values={[
     description="A step-to-step guide for developers to interact with Rootstock network with the Alchemy RPC Provider Service."
   />
 </Filter>
+````

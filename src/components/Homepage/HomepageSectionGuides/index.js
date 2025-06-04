@@ -1,81 +1,71 @@
-import clsx from 'clsx';
-
 import Card from "/src/components/Card";
+import Translate from "@docusaurus/core/lib/client/exports/Translate";
 
 const data = {
-  title: 'Guides for Builders',
+  title: <Translate>Guides for Builders</Translate>,
   description: null,
   cards: [
     {
-      title: 'Beginner to Web3?',
+      title: <Translate>Beginner to Web3?</Translate>,
       color: 'orange',
       description: (
-        <>
-          Explore Rootstock Fundamentals and resources to begin your development journey.
-        </>
+        <Translate>Explore Rootstock Fundamentals and resources to begin your development journey.</Translate>
       ),
       list: [
         {
-          title: 'Core Concepts',
+          title: <Translate>Core Concepts</Translate>,
           href: '/concepts/fundamentals/',
         },
         {
-          title: 'Become a Rootstock Blockchain Developer',
+          title: <Translate>Become a Rootstock Blockchain Developer</Translate>,
           href: '/resources/courses/',
         },
       ],
 
     },
     {
-      title: 'Deploy Smart Contracts',
+      title: <Translate>Deploy Smart Contracts</Translate>,
       color: 'purple',
       description: (
-        <>
-          EVM-compatible tools and guides to deploy and scale your dApps on Rootstock.
-        </>
+        <Translate>EVM-compatible tools and guides to deploy and scale your dApps on Rootstock.</Translate>
       ),
       list: [
         {
-          title: 'Quick Starts',
+          title: <Translate>Quick Starts</Translate>,
           href: '/developers/quickstart/',
         },
         {
-          title: 'Join the Discord Community',
+          title: <Translate>Join the Discord Community</Translate>,
           href: 'http://discord.gg/rootstock',
         },
       ],
     },
     {
-      title: 'Become a Merged Miner',
+      title: <Translate>Become a Merged Miner</Translate>,
       color: 'green',
       description: (
-        <>
-          Interested in merged mining on Rootstock?
-          Setup a Rootstock node or use the RPC API.
-        </>
+        <Translate>Interested in merged mining on Rootstock? Setup a Rootstock node or use the RPC API.</Translate>
       ),
       list: [
         {
-          title: 'Merged Mining',
+          title: <Translate>Merged Mining</Translate>,
           href: '/node-operators/merged-mining/getting-started/',
         },
         {
-          title: 'RPC API',
+          title: <Translate>RPC API</Translate>,
           href: 'https://rpc.rootstock.io/',
         },
       ],
     },
     {
-      title: 'Apply for a Grant',
+      title: <Translate>Apply for a Grant</Translate>,
       color: 'pink',
       description: (
-        <>
-          Get funding and support to build your next dApp on Rootstock through the strategic grants program.
-        </>
+        <Translate>Get funding and support to build your next dApp on Rootstock through the strategic grants program.</Translate>
       ),
       list: [
         {
-          title: 'Apply now',
+          title: <Translate>Apply now</Translate>,
           href: 'https://rootstock.io/grants/',
         },
       ],

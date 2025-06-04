@@ -57,9 +57,9 @@ As mentioned earlier, Rootstock generally offers lower gas fees. Developers can 
 ### Prerequisites
 
 Before you begin, ensure that you have the following:
-- Node.js: 
+- Node.js:
   - Make sure you have Node.js installed. If not, you can follow the installation instructions for Windows or MacOS.
-- Hardhat: 
+- Hardhat:
   - Install Hardhat globally using npm: `npm i -g hardhat`
 - A basic knowledge of smart contracts and Solidity
 
@@ -103,7 +103,7 @@ Before you begin, ensure that you have the following:
     ? Do you want to add a .gitignore? (Y/n) › y
     ```
 
-6. **Install dependencies with npm**: 
+6. **Install dependencies with npm**:
     ```sh
     ? Do you want to install this sample project's dependencies with npm (hardhat @nomicfoundation/hardhat-toolbox)? (Y/n) › y
     ```
@@ -142,6 +142,7 @@ To configure the Rootstock networks, you'll need an RPC URL for both mainnet and
 To get the RPCs, go to the [RPC API dashboard from Rootstock Labs](https://dashboard.rpc.rootstock.io/dashboard) create an account if you don't have one, and get an API key for Rootstock testnet or Rootstock mainnet.
 
 
+````mdx-code-block
 <Tabs>
   <TabItem value="contribute" label="Mainnet RPC URL should look similar to this:" default>
     ```
@@ -153,10 +154,11 @@ https://rpc.mainnet.rootstock.io/<API-KEY>
 https://rpc.testnet.rootstock.io/<API-KEY>
 ```
   </TabItem>
- 
-</Tabs>
 
-The next step is to retrieve your private key. If you don't know how to get the private key to your wallet, here's a [tutorial](https://support.metamask.io/managing-my-wallet/secret-recovery-phrase-and-private-keys/how-to-export-an-accounts-private-key/) on [Metamask](https://metamask.io/). 
+</Tabs>
+````
+
+The next step is to retrieve your private key. If you don't know how to get the private key to your wallet, here's a [tutorial](https://support.metamask.io/managing-my-wallet/secret-recovery-phrase-and-private-keys/how-to-export-an-accounts-private-key/) on [Metamask](https://metamask.io/).
 
 Also, if you haven't added Rootstock mainnet or testnet to your Metamask Wallet, you can do it by clicking the Add Rootstock or Add Rootstock Testnet buttons in the footer of [mainnet explorer](https://rootstock.blockscout.com/) or [testnet explorer](https://rootstock-testnet.blockscout.com/).
 
@@ -173,7 +175,7 @@ And enter the value after pressing enter.
 
 Make sure your TESTNET_RPC_URL value is in this format: `https://rpc.testnet.rootstock.io/API-KEY`
 
-For example, `https://rpc.testnet.rootstock.io/eOQAoxAI7Bt6zZ6blwOdMjQQIzKwSW-W` (Where `eOQAoxAI7Bt6zZ6blwOdMjQQIzKwSW-W` is your API-KEY) 
+For example, `https://rpc.testnet.rootstock.io/eOQAoxAI7Bt6zZ6blwOdMjQQIzKwSW-W` (Where `eOQAoxAI7Bt6zZ6blwOdMjQQIzKwSW-W` is your API-KEY)
 
 :::
 
@@ -368,8 +370,8 @@ This TypeScript script uses Hardhat Ignition to deploy the `SimpleStorage` contr
 
 **4. Confirmation and Deployment**
 
-- Confirm the deployment to the Rootstock testnet by typing “yes.” 
-- Hardhat Ignition will resume the existing deployment (if any) and execute the deployment process. 
+- Confirm the deployment to the Rootstock testnet by typing “yes.”
+- Hardhat Ignition will resume the existing deployment (if any) and execute the deployment process.
 - You’ll see a success message indicating that the contract was deployed.
 
 ```bash

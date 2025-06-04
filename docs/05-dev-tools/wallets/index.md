@@ -7,7 +7,7 @@ description: "Learn how to connect to Rootstock with a compatible Wallet"
 ---
 
 The following wallets support [RBTC](/concepts/rbtc/) and [RIF](/concepts/rif-suite/token) tokens.
-
+````mdx-code-block
 <Carousel width="370" height="260" >
   <CarouselItem image="/img/rsk/wallets/my-crypto.png" href="https://app.mycrypto.com/add-account" />
   <CarouselItem image="/img/rsk/wallets/metamask-logo.png" href="https://metamask.io/download" target="_blank" />
@@ -27,6 +27,7 @@ The following wallets support [RBTC](/concepts/rbtc/) and [RIF](/concepts/rif-su
   <CarouselItem image="/img/rsk/wallets/zerion.svg" href="https://zerion.io/" />
   <CarouselItem image="/img/rsk/wallets/rainbow-wallet-main.png" href="https://rainbow.me/en/" />
 </Carousel>
+````
 
 ## Compatibility Matrix
 
@@ -41,7 +42,7 @@ In the following matrix you can see the different features by wallet.
 |  [Trezor](https://trezor.io/trezor-suite) | ✔  |  ✔ |  -  |
 |  [Metamask](/dev-tools/wallets/metamask) | - |  - | -  | Browser, Mobile | Mainnet, Testnet |
 |  [Portis](https://www.portis.io/) | ✔ |  ✔ | ✔  | Desktop | Mainnet |
-|  [Rabby Wallet](https://rabby.io) | - |  - | -  | Chrome, Desktop, Mobile | 
+|  [Rabby Wallet](https://rabby.io) | - |  - | -  | Chrome, Desktop, Mobile |
 |  [Enkrypt](https://www.enkrypt.com/networks/rootstock-wallet/)|  ✔ |   ✔ | -  | Chrome | Mainnet, Testnet |
 |  [MyCrypto](https://mycrypto.com/) | - |  - | -  | Desktop | Rootstock (RBTC) |
 |  [TaHo](https://taho.xyz) | ✔ |  ✔ | -  | Chrome | Rootstock (RBTC), Mainnet |
@@ -49,7 +50,7 @@ In the following matrix you can see the different features by wallet.
 |  [Bitget](https://web3.bitget.com/en/) | - |  - | -  | Chrome, Mobile | RBTC |
 |  [SafePal](https://www.safepal.com/en/extension) | ✔ |  ✔ | -  | Chrome, Mobile | Rootstock (RBTC), Mainnet |
 |  [Wallby](https://wallby.app/) | ✔ |  ✔ | -  | Mobile | Rootstock (RBTC), Bitcoin |
-|  [MathWallet](https://blog.mathwallet.org/?p=1625) | ✔ |  ✔ | -  | Chrome, Desktop, Mobile | Mainnet | 
+|  [MathWallet](https://blog.mathwallet.org/?p=1625) | ✔ |  ✔ | -  | Chrome, Desktop, Mobile | Mainnet |
 |  [Block Wallet](https://blockwallet.io/) | ✔ |  ✔ | -  | Chrome | Mainnet
 |  [MtPelerin Bridge](https://www.mtpelerin.com/bridge-wallet) | ✔ |  ✔ | -  | Desktop, Mobile | Rootstock (Mainnet), Bitcoin (Testnet) |
 |  [Exodus](https://www.exodus.com/) | ✔ |  ✔ | -  | Chrome, Desktop, Mobile | Mainnet |

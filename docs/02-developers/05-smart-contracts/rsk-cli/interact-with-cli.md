@@ -81,11 +81,12 @@ For example, if you select name, you'll see:
 
 3. Check on Explorer**: You can also view the contract and interaction details on the Rootstock testnet explorer by following the link provided.
 
+````mdx-code-block
 <figure>
-<img src="/img/guides/rsk-cli/explorer.png" alt="Rootstock testnet explorer"/>
+  <img src="/img/guides/rsk-cli/explorer.png" alt="Rootstock testnet explorer"/>
   <figcaption>Rootstock testnet explorer (fig 1.)</figcaption>
 </figure>
-
+````
 
 ## Interact with RSK bridge contract
 
@@ -98,6 +99,7 @@ The bridge command allows you to interact with the RSK bridge contract on the Ro
 - **Write Functions:** These require user input and interaction to make changes or submit data to the contract.
 
 > Always be cautious when entering sensitive information, such as your wallet password.
+
 :::
 
 
@@ -109,13 +111,13 @@ To start using the bridge command, open your terminal and use the following comm
 <Tabs>
   <TabItem value="contribute" label="Mainnet" default>
   ```shell
-rsk-cli bridge
-```
+  rsk-cli bridge
+  ```
   </TabItem>
   <TabItem value="contest" label="Testnet">
  ```shell
-rsk-cli bridge --testnet
-```
+  rsk-cli bridge --testnet
+  ```
   </TabItem>
 
 </Tabs>

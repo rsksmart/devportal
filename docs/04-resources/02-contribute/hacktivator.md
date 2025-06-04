@@ -217,6 +217,7 @@ Your contributions can cover any of the following Rootstock themes:
         * Step-by-step guides on creating various types of smart contracts (e.g., tokens, DeFi, wallets, swaps, RWAs, NFTs, Runes, Ordinals, indexing, interoperability).
         * Explaining Rootstock's unique features and how they can be utilized in smart contract development.
         * Debugging and troubleshooting common issues in smart contract development.
+
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
@@ -228,6 +229,7 @@ Your contributions can cover any of the following Rootstock themes:
         * Explaining the concept of a sidechain and how Rootstock utilizes it.
         * Step-by-step guides on integrating wallets, SDKs, or APIs with Rootstock applications.
         * Step-by-step guides on using ecosystem dApps - refer to the “Building DeFi on Bitcoin” series on the Rootstock blog.
+
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">
@@ -240,6 +242,7 @@ Your contributions can cover any of the following Rootstock themes:
         * Showcasing real-world applications on Rootstock.
         * Building cross-chain applications, data indexing, etc., using partner tools and integrations.
         * Porting dApps to Rootstock from other ecosystems
+
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="3">
@@ -251,6 +254,7 @@ Your contributions can cover any of the following Rootstock themes:
         * Tutorials on using popular development environments (e.g., Remix, Hardhat, Slither, Viem).
         * Explaining the use of testing frameworks and libraries for smart contract testing.
         * Demonstrating how to use debugging tools to identify and fix issues in Rootstock applications.
+
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="4">
@@ -262,6 +266,7 @@ Your contributions can cover any of the following Rootstock themes:
         * Exploring complex concepts and how they enhance scalability on Rootstock.
         * Discussing security considerations in smart contract development and best practices to avoid vulnerabilities.
         * Exploring advanced topics like decentralized finance (DeFi), Runes, Ordinals, BITVMX, and their potential applications on Rootstock.
+
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
@@ -275,7 +280,7 @@ Your contributions can cover any of the following Rootstock themes:
 * Contributions for Rootstock Technical documentation should be submitted as a Pull Request (PR) directly on the [DevPortal Repo](https://github.com/rsksmart/devportal/pulls), and the PR link should be submitted via the [Google form](https://forms.gle/aF9pFMfRyoygfzJWA). Ensure to use the label **“hacktivator”** on the PR and properly describe your PR using the template.
 * After approval, the contributor must publish their educational content on the [Rootstock Community blog](https://rootstock.hashnode.dev/) to qualify for rewards. They will be invited as a collaborator to do so, and the contribution will only be eligible for rewards once successfully published.
 
-:::note[More info about the guidelines]
+:::note More info about the guidelines
 
 For a comprehensive overview of the guidelines, evaluation, and reward system for content contributions, including detailed criteria for depth, completeness, technical accuracy, educational value, and innovation, please refer to the [Educational Content Evaluation Criteria & Guidelines](https://docs.google.com/document/d/1vA3QK8ZNv5Fgegb0Jv2f03IVIREePDi4lrFE1vsfK7c/edit) and the [terms and conditions of the Hacktivator](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?usp=sharing). These criteria outline how contributions, ranging from technical documentation, written or video guides or tutorials will be assessed and rewarded, ensuring a balanced and fair approach to valuing content quality and impact. This document covers everything from word count appropriateness and inclusion of code examples to technical correctness and relevance to the Rootstock ecosystem, with rewards adjusted based on the value and complexity of each contribution.
 
@@ -314,9 +319,7 @@ This is your chance to make a meaningful impact on Rootstock while earning rewar
 
 <Button size="lg" href="https://forms.gle/aF9pFMfRyoygfzJWA">Submit Your Work</Button>
 
-<br></br>
-
-:::success[T&C]
+:::success T&C
 
 By participating in the hacktivator, you acknowledge that you have read, understood, and agree to abide by all aspects of the program and its [terms and conditions](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?usp=sharing). If you do not agree with any part or all of the program and/or its terms and conditions, please refrain from joining or submitting contributions, as your participation will be construed as your full acceptance of these terms.
 

@@ -65,7 +65,7 @@ This can be done in two ways:
 - Compiling the node with IntelliJ, add to VM options: `-Drsk.conf.file=path/to/your/file.conf`
 
 ### Using RocksDB
-  
+
 :::note[Important Notice]
 - Starting from [RSKj HOP v4.2.0](https://github.com/rsksmart/rskj/releases/tag/HOP-4.2.0), RocksDB is no longer experimental. As of the most recent version, RocksDB has now been made the default storage library, replacing LevelDB. This change was made to tackle maintainability and performance issues of LevelDB.
 - Previously, RSKj ran using [LevelDB](https://dbdb.io/db/leveldb) by default, with the option to switch to [RocksDB](http://rocksdb.org/). Now, RocksDB is the default storage option, aiming to enable higher performance within the RSKj nodes.
@@ -80,7 +80,7 @@ The `keyvalue.datasource` property in the config
 may only be either `rocksdb` or `leveldb`.
 
 > If you wish to switch between the different storage options,
-for example from `leveldb` to `rocksdb` or vice versa, 
+for example from `leveldb` to `rocksdb` or vice versa,
 you must **restart** the node with the import option.
 
 The following sample command shows how to do this when
@@ -135,6 +135,7 @@ To rectify this,
 change the value of `peer.port` in the config file,
 or add a `peer.port` flag to the command when you start RSKj.
 
+````mdx-code-block
 <Tabs>
   <TabItem value="code" label="Linux, Mac OSX" default>
      ```shell
@@ -147,3 +148,4 @@ or add a `peer.port` flag to the command when you start RSKj.
     ```
   </TabItem>
 </Tabs>
+````
