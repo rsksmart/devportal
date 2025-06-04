@@ -2,7 +2,7 @@
 sidebar_label: Rootstock Hacktivator
 sidebar_position: 2
 title: 💻 Rootstock Hacktivator
-description: "Rootstock Hacktivator allows developers to evolve to Rootstock by contributing code, creating educational content or organizing community events. You get to support the platform at your own pace, and every eligible contribution will be rewarded based on its impact and value."
+description: "Rootstock Hacktivator allows developers to evolve to Rootstock by contributing code, or creating educational content. You get to support the platform at your own pace, and every eligible contribution will be rewarded based on its impact and value."
 tags: [rootstock, rsk, code, resources, content, hacktivator, writing, rewards]
 ---
 
@@ -15,9 +15,8 @@ Welcome to the Rootstock Hacktivator! Designed for developers who want to contri
 Rootstock Hacktivator allows developers to contribute to the Rootstock ecosystem by submitting code, creating educational content, or advocating within developer communities. You can support the platform at your own pace and choose from the following contribution categories:
 - Code Contributions
 - Educational Content Contributions
-- Community Events
 
-Developers are free to select the paths that best match their skills and interests, with every eligible contribution rewarded based on its quality, impact, and relevance to Rootstock’s developer ecosystem.
+Choose the path that best match your skills and interests, with every eligible contribution rewarded based on its quality, impact, and relevance to Rootstock’s developer ecosystem.
 
 ## ✔️ General Contribution Criteria
 * **Quality:** Contributions must be valuable to the Rootstock ecosystem, whether improving functionality, enhancing usability, or educating developers and community members.
@@ -29,7 +28,7 @@ Developers are free to select the paths that best match their skills and interes
 
 ## 🎁 Rewards Per Category
 
-Eligible contributions will be rewarded according to the hacktivator's terms and conditions, based on the value and impact they bring to the Rootstock developer community, following the specifications for each category.
+Eligible contributions will be rewarded according to the hacktivator's [terms and conditions](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?tab=t.0), based on the value and impact they bring to the Rootstock developer community, following the specifications for each category.
 
 ### 1️⃣ Category: Code Contributions
 
@@ -44,7 +43,7 @@ Code contributions allow developers to improve Rootstock’s developer tools and
       The [Rootstock CLI](https://github.com/rsksmart/rsk-cli) is a command-line interface designed to simplify the process of building on the Rootstock platform, catering to both seasoned web3 developers and those transitioning from web2. In its initial iteration, the CLI offers essential features that streamline development by making it easier to interact with the network. Whether you're creating wallets, checking balances, sending transactions, or deploying contracts, the Rootstock CLI simplifies these tasks, allowing you to focus more on building your applications and less on managing infrastructure. For more details, see the [CLI Repo](https://github.com/rsksmart/rsk-cli) and the [NPM Package](https://www.npmjs.com/package/@rsksmart/rsk-cli).
 
       **Contribution Ideas:**
-        * [Thirdweb SDK](https://thirdweb.com/) Integration in the CLI: Support for deploying `ERC20`, `ERC721` collections and integrating IPFS storage provided by Thirdweb.
+        * **[Thirdweb SDK](https://thirdweb.com/) Integration in the CLI**: Support for deploying `ERC20`, `ERC721` collections and integrating IPFS storage provided by Thirdweb.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
@@ -75,7 +74,7 @@ Code contributions allow developers to improve Rootstock’s developer tools and
          Integrating the Ethereum Attestation Service (EAS)  into the Rootstock ecosystem opens the door to a wide range of trustless, verifiable use cases.  This initiative focuses on enabling developers to issue, store, and verify attestations on Rootstock, expanding the platform’s potential for identity, validation, and reputation systems.  Through tutorials and starter kits, contributors will gain hands-on experience creating schemas, managing attestations, and applying them in real-world scenarios.
 
       **Contribution Ideas:**
-        * RAS - Rootstock Starter Kit: Basic configuration to create and manage attestations in Rootstock.
+        * RAS SDK/Starter Kit: Basic configuration to create and manage attestations in Rootstock.
         * RAS Tutorial: How to create and query schemas and attestations on the new RAS tab in the Rootstock Explorer
         * Attestation system for documents in IPFS: Validation of documents uploaded to IPFS using RAS.
         * Wallet balance attestations: Create verifiable attestations of on-chain balances.
@@ -119,7 +118,7 @@ Code contributions allow developers to improve Rootstock’s developer tools and
   <Accordion.Item eventKey="4">
     <Accordion.Header as="h5">Visualizing RNS Token Holdings with The Graph and Alchemy</Accordion.Header>
     <Accordion.Body>
-      This proposal aims to create from scratch a decentralized application that enables users to query RNS (Rootstock Name Service) addresses and visualize associated token balances and assets.  By integrating The Graph for efficient indexing and Alchemy for accessing token data, the Dapp will offer a seamless and transparent view of on-chain holdings tied to human-readable RNS names.
+      This proposal aims to create from scratch a decentralized application that enables users to query **RNS (Rootstock Name Service) addresses** and visualize associated token balances and assets.  By integrating The Graph for efficient indexing and Alchemy for accessing token data, the Dapp will offer a seamless and transparent view of on-chain holdings tied to human-readable RNS names.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="5">
@@ -209,10 +208,10 @@ Educational content contributions enable developers to educate the Rootstock com
 
 :::info[Improvements]
 ❗To improve the feedback loop and reduce the need for major video editions:
-- It is recommended to submit a written outline and get approval before recording the video
-- You don’t need a full script — just summarize the key topics and structure you plan to follow.
-- Mention in the description that this is a video outline for preapproval.
-- Pre-approval does not guarantee the final video will be approved, but it ensures smoother feedback.
+  - **Recommended**: Submit a written outline and get approval before recording the video
+  - You don’t need a full script — just summarize the key topics and structure you plan to follow.
+  - Mention in the description that this is a video outline for preapproval.
+  - Pre-approval does not guarantee the final video will be approved, but it ensures smoother feedback.
 :::
 
 
@@ -280,7 +279,7 @@ Educational content contributions enable developers to educate the Rootstock com
 
 ## 2️⃣ Category: Educational Criteria and Guidelines 
 
-* Only **written guides** or **tutorials** will be accepted. These must showcase a working dApp, technical concept, or feature that can be implemented by Rootstock developers.
+* ONLY **written guides** or **tutorials** will be accepted. These must showcase a working dApp, technical concept, or feature that can be implemented by Rootstock developers.
 * Each submission must include a **GitHub repository** containing a README section with a clear explanation and setup instructions.
 * Submissions must be original, technically accurate, and not previously published elsewhere.
 * Once approved, you will be invited as a collaborator to publish your educational content on the [Rootstock Community blog](https://rootstock.hashnode.dev/). Contributions become eligible for rewards only after successful publication.
@@ -308,112 +307,11 @@ _**The reward range provided for each option will be used based on the level of 
 
 :::
 
-## 3️⃣ Category: Community Events
-
-Community Events contributions focus on creating direct engagement with the developer community to promote Rootstock through high-impact events. There are two types of developer-focused events you can contribute to:
-  * Online Events
-  * In-Person (IRL) Events
-
-For both categories, you can either:
-  * Organize a developer event from scratch, or
-  * Represent Rootstock at an external event organized by a third party (e.g. community events, partner meetups, conferences)
-
-### 📌 Online Events
-
-Online events are virtual gatherings designed to educate and engage developers around Rootstock’s technology and ecosystem.
-
-You can contribute by:
-
-* Organizing your own online event, such as:
-  * Webinars focused on Rootstock development topics (e.g. using Rootstock SDKs, deploying smart contracts)
-  * Interactive office hours or live Q&A sessions for developers building on Rootstock
-  * Technical workshops or live coding sessions hosted under the Rootstock brand
-
-* Representing Rootstock at external online developer events, such as:
-  * Speaking at a partner’s developer webinar
-  * Participating in online hackathons as a Rootstock mentor
-  * Co-hosting educational sessions with other blockchain or developer communities
-
-All online events must be **technical in nature** and targeted at developers interested in learning how to build on Rootstock or integrate its tools.
-
-### 📌 IRL Events (In-Person) 
-
-IRL events are physical gatherings where developers represent Rootstock by educating developers in person.
-
-You can contribute by:
-
-* Organizing your own in-person developer event, such as:
-
-  * Hands-on workshops (e.g. building dApps on Rootstock)
-  * Developer meetups focused on the Rootstock ecosystem and tooling
-  * Academic outreach events at universities or bootcamps
-
-* Representing Rootstock at external IRL events, such as:
-
-  * Delivering technical talks or workshops at developer conferences
-  * Mentoring at third-party hackathons where Rootstock is being used
-  * Speaking at tech meetups or university events targeting developers
-
-
-All IRL events must be strictly **developer-focused** and deliver **clear technical value**, helping attendees better understand Rootstock’s tools, ecosystem, and integration opportunities.
-
-### 📌 Criteria & Guidelines
-
-:::tip[📌 Criteria & Guidelines]
-* Events (online or IRL) must be strictly developer-focused and designed to educate, inspire, or support developers in building on or integrating Rootstock.
-* Events should deliver clear technical value related to Rootstock tools, services, or ecosystem components.
-* All events (online or IRL) must be pre-approved by Rootstock.
-* All events (online or IRL) must be recorded, and the recording must be sent to Rootstock for review together with the post-event report.
-* A post-event report is required, including metrics such as:
-  * Recording link
-  * Number of attendees
-  * Developer engagement (e.g. questions, feedback, code examples)
-  * Qualitative insights (e.g. testimonials or follow-ups)
-:::
-
-
-:::note[⚠️ Pre-Approval Process for Events]
-
-Before committing to an event, contributors must request pre-approval via the submission form. This process ensures alignment on key event details, such as event type, audience profile, format, and clear success metrics (e.g., minimum expected number of participants, engagement goals).
-
-Important: Pre-approval is required to proceed but does not automatically guarantee rewards. Final approval and reward disbursement will only occur if the agreed objectives are fully met. For example, if the pre-approved goal was 50 attendees and only 20 participants attend, the contribution would not qualify for rewards. Ensure expectations are realistic and achievable when submitting for pre-approval.
-
-**⚠️ Flat-Fee Reward Model**:
-We do not cover event expenses. Instead, approved events receive a flat reward based on the event type and quality. Pre-approval is required to ensure clarity on expectations and avoid misunderstandings.
-
-⚠️ Geographic Focus for IRL Events:
-To start, we’re prioritizing IRL events in the following cities:
-  * New York City, United States — North America
-  * Buenos Aires, Argentina — Latin America
-  * Lisbon, Portugal — Europe
-  * London, United Kingdom — Europe
-  * Lagos, Nigeria — Africa
-  * Bengaluru, Mumbai & New Delhi, India — Asia-Pacific
-  * Seoul, South Korea — Asia-Pacific
-
-More locations are on the way, so if your city isn’t listed yet, stay tuned!
-
-❗More info about the guidelines
-For a comprehensive overview of the guidelines, evaluation, and reward system for Community Events contributions, including detailed criteria for depth, completeness, technical accuracy, educational value, and innovation, please refer to [Community Events Contributions – Evaluation Criteria & Guidelines](https://docs.google.com/document/d/1j1ut89KaJXlVQTPJ2qRUGLrZX2BQRS6OJXp91monPBg/edit?tab=t.0) and [Rootstock Hacktivator Program – T&Cs](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?tab=t.0). These criteria outline how contributions, ranging from online or IRL developer events, will be assessed and rewarded, ensuring a balanced and fair approach to valuing their impact and effectiveness. This document covers everything from event structure and target developer audience to pre-approval requirements, engagement metrics, and technical
-
-:::
-
-
-### 📌 Rewards
-
-**Online Events**:
-  * **$200–$400** per approved online event (e.g., Rootstock webinars, technical office hours, online collaborations).
-  * **Bonus**: Additional rewards may apply for events with high developer engagement, attendance beyond agreed expectations, or involve key partners (e.g., universities, developer hubs).
-
-**IRL Events**:
-  * **$500–$1500** per approved IRL event (e.g., developer workshops, meetups, academic outreach, hackathon mentorship, or conference sessions).
-  * **Bonus**: Additional rewards may apply for events that exceed targets or involve key partners (e.g., universities, developer hubs).
-
 ## 📤 Submission Process
 
 Submitting your contributions is easy! Just follow these steps:
 
-1. Complete Your Work: Whether it’s code, educational content or community events, make sure it’s polished and meets the contribution criteria.
+1. Complete Your Work: Whether it’s code or educational content, make sure it’s polished and meets the contribution criteria.
 2. Submit Through Google Form: Use this [form link](https://forms.gle/k7vgaowUSaVKSmnC9) to submit your contribution. You’ll be asked to provide:
     * Your name or pseudonym
     * Country
