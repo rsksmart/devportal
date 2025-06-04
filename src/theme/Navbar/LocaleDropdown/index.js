@@ -7,7 +7,7 @@ import NavbarItem from "@theme/NavbarItem";
 export default function LocaleDropdown() {
 
   const items = useThemeConfig().navbar.items;
-  const [rightItems] = splitNavbarItems(items);
+  const [leftitems, rightItems] = splitNavbarItems(items);
   return (
     <>
       {rightItems.map((item, i) => item.type === 'localeDropdown' && (

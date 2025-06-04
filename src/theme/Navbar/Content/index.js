@@ -60,7 +60,7 @@ function NavbarContentLayout({left, right}) {
 export default function NavbarContent() {
   const mobileSidebar = useNavbarMobileSidebar();
   const items = useNavbarItems();
-  const [rightItems] = splitNavbarItems(items);
+  const [leftItems, rightItems] = splitNavbarItems(items);
   const searchBarItem = items.find((item) => item.type === 'search');
   return (
     <NavbarContentLayout
