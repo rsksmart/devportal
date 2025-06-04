@@ -8,7 +8,7 @@ tags: [rootstock, rsk, code, resources, content, hacktivator, writing, rewards]
 
 Welcome to the Rootstock Hacktivator! Designed for developers who want to contribute to the Rootstock ecosystem and receive rewards for their valuable contributions.
 
-<Button size="lg" href="https://forms.gle/k7vgaowUSaVKSmnC9">Submit Your Work</Button>
+<Button size="lg" href="https://forms.gle/Gd6uMt8qaLpPtryW6">Submit Your Work</Button>
 
 ## 🌟 What is it?
 
@@ -312,7 +312,7 @@ _**The reward range provided for each option will be used based on the level of 
 Submitting your contributions is easy! Just follow these steps:
 
 1. Complete Your Work: Whether it’s code or educational content, make sure it’s polished and meets the contribution criteria.
-2. Submit Through Google Form: Use this [form link](https://forms.gle/k7vgaowUSaVKSmnC9) to submit your contribution. You’ll be asked to provide:
+2. Submit Through Google Form: Use this [form link](https://forms.gle/Gd6uMt8qaLpPtryW6) to submit your contribution. You’ll be asked to provide:
     * Your name or pseudonym
     * Country
     * Email address
@@ -324,7 +324,7 @@ Submitting your contributions is easy! Just follow these steps:
 
 This program is your chance to make a meaningful impact on Rootstock while earning rewards. Ready to contribute? Submit your work and be a part of the Rootstock developer community! 🌍
 
-<Button size="lg" href="https://forms.gle/k7vgaowUSaVKSmnC9">Submit Your Work</Button>
+<Button size="lg" href="https://forms.gle/Gd6uMt8qaLpPtryW6">Submit Your Work</Button>
 
 <br></br>
 
