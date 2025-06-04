@@ -1,6 +1,6 @@
 project_id: 683600
 preserve_hierarchy: true
-api_token_env: CROWDIN_PERSONAL_TOKE
+api_token_env: CROWDIN_PERSONAL_TOKEN
 files:
   # JSON translation files
   - source: /i18n/en/**/*
