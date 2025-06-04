@@ -24,6 +24,7 @@ const config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
+  staticDirectories: ['static'],
   customFields: {
     keys : {
       mendable : process.env.MENDABLE_KEY,
@@ -152,7 +153,8 @@ const config = {
           showLastUpdateTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/rsksmart/devportal/tree/main/'
+          editUrl: 'https://github.com/rsksmart/devportal/tree/main/',
+          exclude: ['/static/**'],
         },
         blog: false,
         theme: {
@@ -293,7 +295,7 @@ const config = {
         indexName: 'dev-rootstock',
 
         // Optional: see doc section below
-        contextualSearch: true,
+        contextualSearch: false,
 
       }
     }),
