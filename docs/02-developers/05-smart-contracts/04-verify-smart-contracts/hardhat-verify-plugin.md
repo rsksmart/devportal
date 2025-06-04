@@ -1,6 +1,6 @@
 ---
 sidebar_label: Verify Smart Contracts using the Hardhat Verify Plugin
-sidebar_position: 400
+sidebar_position: 107
 title: Verify a Smart Contract using the Hardhat Verification Plugin
 description: "Configuring Hardhat Verification plugin for Rootstock"
 tags: [hardhat, tutorial, developers, quick starts, rsk, rootstock]
@@ -51,10 +51,10 @@ Or, if you are using TypeScript, add this to your hardhat.config.ts:
 import "@nomicfoundation/hardhat-verify";
 ```
 
-
 ### Usage
 
-You need to add the following Etherscan config to your `hardhat.config.ts` file:
+You need to add the following Etherscan config to your `hardhat.config.ts` file and To obtain a Rootstock API key, follow the steps outlined in the [Obtaining a Rootstock API Key from Blockscout](/developers/smart-contracts/verify-smart-contracts/foundry-blockscout/) guide:
+
 
 ```bash
 // Hardhat configuration
@@ -74,13 +74,13 @@ const config: HardhatUserConfig = {
             url: RSK_MAINNET_RPC_URL,
             chainId: 30,
             gasPrice: 60000000,
-			accounts:[PRIVATE_KEY]
+            accounts:[PRIVATE_KEY]
         },
         rskTestnet: {
             url: RSK_TESTNET_RPC_URL, 
             chainId: 31,
             gasPrice: 60000000,
-			accounts:[PRIVATE_KEY]
+            accounts:[PRIVATE_KEY]
         },
     },
     namedAccounts: {

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 600
+sidebar_position: 700
 title: Rootstock Contract Addresses
 sidebar_label: Contract Addresses
 tags: [rsk, rootstock, developers, quick starts, smart contracts, contract addresses]
