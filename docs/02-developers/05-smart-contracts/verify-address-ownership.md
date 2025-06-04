@@ -1,5 +1,5 @@
 ---
-sidebar_position: 700
+sidebar_position: 1000
 sidebar_label: Verify address ownership
 title: 'Verify Address Ownership with Metamask Wallet'
 description: 'Confirm that you own an Rootstock address using RIF Identity Manager'
@@ -234,4 +234,5 @@ That's all - now you can be confident that you do control this address on the Ro
 
 - [Verify Smart Contracts with SolidityScan](https://blog.rootstock.io/noticia/rootstock-guide-to-verifying-smart-contracts-with-solidityscan/)
 - [Developer Tools](/dev-tools/)
-- [Verify Smart Contracts using Hardhat Verify Plugin for Rootstock](/developers/smart-contracts/verify-smart-contracts/)
+- [Verify a Smart Contract using the Hardhat Verification Plugin](/developers/smart-contracts/verify-smart-contracts/hardhat-verify-plugin/)
+- [Verify a Smart Contract using Foundry and Blockscout](/developers/smart-contracts/verify-smart-contracts/foundry-blockscout/)

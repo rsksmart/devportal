@@ -194,7 +194,8 @@ Congratulations, we have successfully compiled, deployed, interacted and verifie
 ## Resources
 * [Getting Started with Wagmi](/developers/quickstart/wagmi/)
 * [Getting Started with Hardhat](/developers/quickstart/hardhat/)
-* [Verify a Smart Contract using the Hardhat Verification Plugin](/developers/smart-contracts/verify-smart-contracts/)
+* [Verify a Smart Contract using the Hardhat Verification Plugin](/developers/smart-contracts/verify-smart-contracts/hardhat-verify-plugin/)
+* [Verify a Smart Contract using Foundry and Blockscout](/developers/smart-contracts/verify-smart-contracts/foundry-blockscout/)
 
 
 
