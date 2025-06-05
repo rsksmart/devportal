@@ -28,7 +28,7 @@ values={[
   {label: 'Migrar a Rootstock', value: 'port-dapps'}
 ]}>
 <FilterItem
-    value="principiante, avanzado"
+    value="beginner, Advanced"
     title="Kit de inicio de Vyper"
     subtitle="inicio rápido"
     color="orange"
@@ -91,7 +91,7 @@ values={[
     description="Ejemplos de contratos inteligentes, pruebas, implementaciones y tareas para estándares ERC comunes (ERC20, ERC721, ERC1155)."
   />
 <FilterItem
-    value="hardhat, principiante"
+    value="hardhat, beginner"
     title="Kit de inicio de Hardhat Ignition"
     subtitle="inicio rápido"
     color="orange"
@@ -110,7 +110,6 @@ values={[
   />
 <FilterItem
     value="wagmi, sc, advanced"
-    value="wagmi, advanced"
     title="Kit de Abstracción de Cuentas"
     subtitle="quickstart"
     color="orange"
@@ -173,7 +172,7 @@ values={[
     description="En esta guía, utilizaremos el IDE Remix para escribir, compilar, desplegar, interactuar y verificar un contrato inteligente en el Rootstock Explorer."
   />
   <FilterItem
-    value="principiante, avanzado"
+    value="beginner, avanzado"
     title="Primeros pasos con Apeworx"
     subtitle="Ape"
     color="orange"
