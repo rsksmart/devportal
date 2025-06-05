@@ -17,187 +17,187 @@ description: Rootstockでの開発をサポートするクイックスタート�
 ```mdx-code-block
 <Filter
 values={[
-{label: 'Beginner', value: 'beginner'},
-{label: 'Advanced', value: 'advanced'},
+{label: '初心者', value: 'beginner'},
+{label: '上級者', value: 'advanced'},
 {label: 'Hardhat', value: 'hardhat'},
 {label: 'Remix', value: 'remix'},
 {label: 'Wagmi', value: 'wagmi'},
 {label: 'Reown', value: 'reown'},
-{label: 'On-chain data', value: 'data'},
+{label: 'オンチェーンデータ', value: 'data'},
 {label: 'RPC API', value: 'rpc'},
-{label: 'Port to Rootstock', value: 'port-dapps'}
+{label: 'Rootstock へのポート', value: 'port-dapps'}
 ]}>
 <FilterItem
     value="beginner, Advanced"
-    title="Vyper Starter Kit"
-    subtitle="quickstart"
+    title="Vyper スターターキット"
+    subtitle="クイックスタート"
     color="orange"
     linkHref="/developers/quickstart/rootstock-vyper/"
-    linkTitle="Use the Kit"
-    description="The Rootstock Vyper Starter Kit demonstrates how to deploy smart contracts written in Vyper to the Rootstock network."
+    linkTitle="キットを使う"
+    description="Rootstock Vyper スターターキットは、Vyper で記述されたスマートコントラクトを Rootstock ネットワークにデプロイする方法を示します。"
   />
   <FilterItem
     value="beginner, Advanced"
-    title="Privy Starter Kit"
-    subtitle="quickstart"
+    title="Privy スターターキット"
+    subtitle="クイックスタート"
     color="orange"
     linkHref="/developers/quickstart/privy/"
-    linkTitle="Use the Kit"
-    description="The Rootstock Privy Starter Kit empowers developers to onboard users with social logins and self custodial wallets while preserving control, privacy, and flexibility for dApps when building on Rootstock."
+    linkTitle="キットを使う"
+    description="Rootstock Privy スターターキットは、開発者がソーシャルログインや自己管理ウォレットを使って、dApp構築時にコントロール、プライバシー、柔軟性を維持しつつユーザーをオンボーディングできるようにします。"
   />
   <FilterItem
     value="dynamic, wagmi, advanced"
-    title="Dynamic Starter Kit"
-    subtitle="quickstart"
+    title="Dynamic スターターキット"
+    subtitle="クイックスタート"
     color="orange"
     linkHref="/developers/quickstart/dynamic/"
-    linkTitle="Use the Kit"
-    description="The Dynamic Starter Kit uses the Wagmi library for faster integration of Web3 features into a Next.js application."
+    linkTitle="キットを使う"
+    description="Dynamic スターターキットは、Wagmiライブラリを使用して、Next.jsアプリケーションにWeb3機能を高速統合します。"
   />
   <FilterItem
     value="beginner, web3auth, advanced"
-    title="Web3Auth Starter Kit"
+    title="Web3Auth スターターキット"
     subtitle="web3auth"
     color="orange"
     linkHref="/developers/quickstart/web3auth/"
-    linkTitle="Get Started"
+    linkTitle="今すぐ始める"
     description="A step-to-step guide for developers to build and deploy passwordless dApps on Rootstock using Web3Auth and Wagmi."
   />
 <FilterItem
     value="wagmi, beginner"
-    title="Wagmi Starter Kit"
-    subtitle="quickstart"
+    title="Wagmi スターターキット"
+    subtitle="クイックスタート"
     color="orange"
     linkHref="/developers/quickstart/wagmi/"
-    linkTitle="Use the Kit"
-    description="This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Wagmi and Shadcn libraries."
+    linkTitle="キットを使う"
+    description="このスターターキットは、React、Wagmi、Shadcnライブラリを使ってRootstockブロックチェーン上で分散型アプリケーション(dApps)を構築する基盤を提供します。"
   />
 <FilterItem
     value="reown, beginner"
-    title="Reown Starter Kit"
-    subtitle="quickstart"
+    title="Reown スターターキット"
+    subtitle="クイックスタート"
     color="orange"
     linkHref="/developers/quickstart/reown/"
-    linkTitle="Use the Kit"
-    description="This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Reown, Wagmi and Shadcn libraries."
+    linkTitle="キットを使う"
+    description="このスターターキットは、React、Reown、Wagmi、Shadcnライブラリを使ってRootstockブロックチェーン上でdAppsを構築する基盤を提供します。"
   />
 <FilterItem
     value="hardhat, beginner"
-    title="Hardhat Starter Kit"
-    subtitle="quickstart"
+    title="Hardhat スターターキット"
+    subtitle="クイックスタート"
     color="orange"
     linkHref="/developers/quickstart/hardhat/"
-    linkTitle="Use the Kit"
-    description="Smart Contract examples, Tests, Deployments and Tasks for Common ERC Standards (ERC20, ERC721, ERC1155)."
+    linkTitle="キットを使う"
+    description="一般的なERC標準（ERC20、ERC721、ERC1155）のスマートコントラクト例、テスト、デプロイ、タスク。"
   />
 <FilterItem
     value="hardhat, beginner"
-    title="Hardhat Ignition Starter Kit"
-    subtitle="quickstart"
+    title="Hardhat Ignition スターターキット"
+    subtitle="クイックスタート"
     color="orange"
     linkHref="/developers/quickstart/hardhat-ignition/"
-    linkTitle="Use the Kit"
-    description="This guide is designed to help you deploy smart contracts on the Rootstock blockchain, with a focus on using Hardhat Ignition."
+    linkTitle="キットを使う"
+    description="このガイドは、Hardhat Ignitionを使ってRootstockブロックチェーン上にスマートコントラクトをデプロイする方法に焦点を当てています。"
   />
 <FilterItem
     value="foundry, sc, beginner"
-    title="Foundry Starter Kit"
-    subtitle="quickstart"
+    title="Foundry スターターキット"
+    subtitle="クイックスタート"
     color="orange"
     linkHref="/developers/quickstart/foundry/"
-    linkTitle="Use the Kit"
-    description="Smart Contract examples, Tests, Deployments and Tasks for Common ERC Standards (ERC20, ERC721, ERC1155)."
+    linkTitle="キットを使う"
+    description="一般的なERC標準（ERC20、ERC721、ERC1155）のスマートコントラクト例、テスト、デプロイ、タスク。"
   />
 <FilterItem
     value="wagmi, sc, advanced"
     value="wagmi, advanced"
-    title="Account Abstraction Kit"
-    subtitle="quickstart"
+    title="アカウントアブストラクションキット"
+    subtitle="クイックスタート"
     color="orange"
     linkHref="/developers/quickstart/rootstock-etherspot/"
-    linkTitle="Use the Kit"
-    description="Account Abstraction Starter Kit using Etherspot."
+    linkTitle="キットを使う"
+    description="Etherspotを使用したアカウントアブストラクション スターターキット。"
   />
 <FilterItem
     value="advanced"
-    title="dApp Automation with Cucumber"
-    subtitle="quickstart"
+    title="CucumberでのdApp自動化"
+    subtitle="クイックスタート"
     color="orange"
     linkHref="/resources/tutorials/dapp-automation-cucumber/"
-    linkTitle="Automate dApps"
-    description="Learn how to automate dApps using Cucumber Agile Automation Framework."
+    linkTitle="dAppsを自動化"
+    description="Cucumberアジャイルオートメーションフレームワークを使ってdAppsを自動化する方法を学びます。"
   />
 <FilterItem
     value="advanced"
-    title="RIF Relay Starter Kit"
-    subtitle="quickstart"
+    title="RIF Relay スターターキット"
+    subtitle="クイックスタート"
     color="orange"
     linkHref="/developers/integrate/rif-relay/sample-dapp/"
-    linkTitle="Use Kit"
-    description="Starter kit to develop on RIF Relay."
+    linkTitle="キットを使う"
+    description="RIF Relay上で開発するためのスターターキット。"
   />
 <FilterItem
     value="data, advanced"
-    title="Get Started with The Graph"
-    subtitle="quickstart"
+    title="The Graph を使った入門"
+    subtitle="クイックスタート"
     color="orange"
     linkHref="/dev-tools/data/thegraph/"
-    linkTitle="Get Started"
-    description="Easily query on-chain data through a decentralized network of indexers"
+    linkTitle="今すぐ始める"
+    description="インデクサーの分散ネットワークを通じてオンチェーンデータを簡単にクエリします。"
   />
 <FilterItem
     value="beginner"
-    title="Get Started with Web3.py"
+    title="Web3.py入門"
     subtitle="Web3.py"
     color="orange"
     linkHref="/developers/quickstart/web3-python/"
-    linkTitle="Get Started"
-    description="Get started with deploying and interacting with smart contracts on Rootstock using Web3.py."
+    linkTitle="今すぐ始める"
+    description="Web3.pyを使って、Rootstock上のスマートコントラクトをデプロイ・操作する方法を学びます。"
   />
   <FilterItem
     value="beginner, advanced, port-dapps"
-    title="Port an Ethereum dApp to Rootstock"
-    subtitle="Port dApps"
+    title="Ethereum dAppをRootstockにポートする"
+    subtitle="dAppsをポート"
     color="orange"
     linkHref="/resources/port-to-rootstock/ethereum-dapp"
-    linkTitle="Get Started"
-    description="Learn how to port an Ethereum dApp to Rootstock."
+    linkTitle="今すぐ始める"
+    description="EthereumのdAppをRootstockにポートする方法を学びます。"
   />
   <FilterItem
     value="beginner, remix"
-    title="Deploy, Interact and Verify Smart Contracts using Remix and Rootstock Explorer"
+    title="RemixとRootstock Explorerでスマートコントラクトをデプロイ、操作、検証する"
     subtitle="Remix"
     color="orange"
     linkHref="/developers/quickstart/remix/"
-    linkTitle="Use Remix"
-    description="In this guide, we will use the Remix IDE to write, compile, deploy, interact and verify a smart contract on the Rootstock Explorer."
+    linkTitle="Remixを使う"
+    description="このガイドでは、Remix IDEを使って、Rootstock Explorer上でスマートコントラクトの作成、コンパイル、デプロイ、操作、検証を行います。"
   />
   <FilterItem
     value="beginner, advanced"
-    title="Getting Started with Apeworx"
+    title="Apeworx入門"
     subtitle="Ape"
     color="orange"
     linkHref="/developers/quickstart/ape/"
-    linkTitle="Use Ape"
-    description="Learn how to compile, deploy, and intereact with smart contracts with Ape on Rootstock"
+    linkTitle="Apeを使う"
+    description="Apeを使って、Rootstock上のスマートコントラクトをコンパイル、デプロイ、操作する方法を学びます。"
   />
   <FilterItem
     value="beginner, rpc"
-    title="Get Started with Rootstock RPC API"
+    title="Rootstock RPC API入門"
     subtitle="RPC API"
     color="orange"
     linkHref="/developers/rpc-api/rootstock/setup/"
-    linkTitle="Use the RPC API"
-    description="The Rootstock RPC Service provides a seamless and intuitive web interface for developers to interact with Rootstock nodes via JSON-RPC methods."
+    linkTitle="RPC APIを使う"
+    description="Rootstock RPCサービスは、開発者がJSON-RPCメソッドを使ってRootstockノードとやり取りするためのシームレスで直感的なWebインターフェースを提供します。"
   />
     <FilterItem
     value="beginner, rpc"
-    title="Get Started with Alchemy"
+    title="Alchemy入門"
     subtitle="RPC API"
     color="orange"
     linkHref="/developers/rpc-api/alchemy/"
-    linkTitle="Use the RPC API"
-    description="A step-to-step guide for developers to interact with Rootstock network with the Alchemy RPC Provider Service."
+    linkTitle="RPC APIを使う"
+    description="Alchemy RPCプロバイダーサービスを使ってRootstockネットワークとやり取りするためのステップガイドです。"
   />
 </Filter>
 ```
