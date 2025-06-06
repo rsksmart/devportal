@@ -12,11 +12,11 @@ Welcome to the Rootstock Hacktivator! Designed for developers who want to contri
 
 ## 🌟 What is it?
 
-Rootstock Hacktivator allows developers to contribute to the Rootstock ecosystem by submitting code, creating educational content, or advocating within developer communities. You can support the platform at your own pace and choose from the following contribution categories:
+Rootstock Hacktivator allows developers to contribute to the Rootstock ecosystem. You can support the platform at your own pace and choose from the following contribution categories:
 - Code Contributions
 - Educational Content Contributions
 
-Choose the path that best match your skills and interests, with every eligible contribution rewarded based on its quality, impact, and relevance to Rootstock’s developer ecosystem.
+Choose the path that best matches your skills and interests, with every eligible contribution rewarded based on its quality, impact, and relevance to Rootstock’s developer ecosystem.
 
 ## ✔️ General Contribution Criteria
 * **Quality:** Contributions must be valuable to the Rootstock ecosystem, whether improving functionality, enhancing usability, or educating developers and community members.
