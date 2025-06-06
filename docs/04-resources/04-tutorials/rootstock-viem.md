@@ -2,19 +2,19 @@
 sidebar_label:  Interacting with Rootstock using Viem
 sidebar_position: 2
 title:  Interacting with Rootstock using Viem
-description: 'Viem offers a minimalist and performant TypeScript alternative to Ethers.js and Web3.js for frontends to interact with deployed contracts when building dApps. This guide will teach developers how to use Viem when building for RSK.'
+description: 'Viem offers a minimalist TypeScript alternative to Ethers.js and Web3.js to interact with deployed contracts when building dApps on the frontend. This guide will teach developers how to use Viem when building for Rootstock.'
 tags: [rsk, rootstock, tutorials, resources, frontend, smart contracts, dapps, viem]
 ---
 
 
 [Viem](https://viem.sh/) offers a minimalist, lightweight, and more efficient Typescript interface alternative to [Ethers.js](https://docs.ethers.org/v5/) and [Web3.js](https://web3js.readthedocs.io/en/v1.10.0/) for interacting with Ethereum nodes. It maintains a bundle size of 35KB compared to Ethers and Web3.js, which are over 300KB and 600KB, respectively. Viem also offers more granular control over APIs in contrast to Ethers.js, which abstracts APIs for more functionalities. 
 
-This tutorial will teach you how to use Viem to interact with your RSK contracts.
+This tutorial will teach you how to use Viem to interact with your contracts on Rootstock.
 
 
 ## Installation and Setup
 
-In this guide, you will learn how you can interact with an existing lending contract on the RSK Explorer, [rLending RBTC](https://explorer.testnet.rootstock.io/address/0xc19f0882bf318c9f8767c7d520018888e878417b).
+In this guide, you will learn how to interact with an existing lending contract on the Rootstock Explorer, [rLending RBTC](https://explorer.testnet.rootstock.io/address/0xc19f0882bf318c9f8767c7d520018888e878417b).
 
 Use the following command to install the Viem npm package:
 
@@ -41,9 +41,9 @@ const publicClient = createPublicClient({
 ```
 
 **In the above code:** 
-- You need to define a `Chain` and `Transport` for RSK-specific values. 
-- Chain values for the RSK chain could be `rootstock` for the mainnet or `rootstockTestnet` for the Testnet
-- Your `RPC_URL` is best set as an environmental variable whose value can be obtained from the RSK [RPC API dashboard](https://dev.rootstock.io/developers/rpc-api/rootstock/setup/).
+- You need to define a `Chain` and `Transport` for Rootstock-specific values. 
+- Chain values for the Rootstock chain could be `rootstock` for the mainnet or `rootstockTestnet` for the Testnet
+- It is recommended to set your `RPC_URL` as an environmental variable whose value can be obtained from the Rootstock [RPC API dashboard](https://dev.rootstock.io/developers/rpc-api/rootstock/setup/).
 
 ```
 RPC_URL='https://rpc.testnet.rootstock.io/<API_KEY>'
@@ -53,7 +53,7 @@ CONTRACT_ADDRESS='0x...' // You can also add the contract address as an environm
 **NB:** If you are working on a Next.js project, environment variables must be prepended with `NEXT_PUBLIC_` as `NEXT_PUBLIC_RPC_URL` for the RPC URL variable.
 
 
-You access a deployed contract with its ABI using the Viem's `getContract` method. 
+To access a deployed contract with its ABI using the Viem's `getContract` method. 
 
 ```ts
 import { profileContractAbi } from './contractABI';
@@ -142,7 +142,7 @@ export async function borrow(amount: bigint): Promise<`0x${string}`> {
 
 ### Simulating Transactions
 
-It helps to do a dry run of your state-changing functions first to catch errors and see if something fails before the real transaction. You can use the `simulateContract()` feature, which does not spend gas. Doing a simulation prevents blindly sending a transaction that could be gas-costly. It also helps you to catch and return human-readable revert reasons if provided in the smart contract via `require()` or `revert()`. The following snippet shows how to simulate a transaction before performing the actual transaction.
+It helps to do a dry run of your state-changing functions first to catch errors and see if something fails before the real transaction. You can use the `simulateContract()` feature, which does not spend gas. Performing a simulation prevents sending a transaction that could cost more gas fees. It also helps you to detect and return human-readable revert reasons if provided in the smart contract via `require()` or `revert()`. The following code snippet shows how to simulate a transaction before performing the actual transaction.
 
 ```ts
 // Simulate transaction
@@ -160,6 +160,6 @@ const txHash = await walletClient.writeContract(request);
 return txHash;
 ```
 
-Resources:
+## Resources:
 - [Full working demo code](https://github.com/entuziaz/rsk-viem-demo) 
 - [Viem documentation](https://viem.sh/docs/getting-started)
