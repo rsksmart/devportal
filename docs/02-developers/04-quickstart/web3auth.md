@@ -64,13 +64,14 @@ Before getting started, ensure to have the following tools installed:
     * Sign up on [WalletConnect Cloud](https://cloud.walletconnect.com/).
     * Create a project and obtain your **WalletConnect Project ID**.
 
-## Set up the Project 
+## Set up the Project
 
 To set up the sample dApp project, follow the steps below:
 
+````mdx-code-block
 <Steps>
   <Step title="1. Set Up a Next.js Project">
-    Begin by cloning the [Web3 Auth Sample dApp Starter Kit](https://github.com/rsksmart/w3a-rsk-starter-kit) to set up your project environment. 
+    Begin by cloning the [Web3 Auth Sample dApp Starter Kit](https://github.com/rsksmart/w3a-rsk-starter-kit) to set up your project environment.
     ```shell
     git clone https://github.com/rsksmart/w3a-rsk-starter-kit.git
     ```
@@ -79,7 +80,7 @@ To set up the sample dApp project, follow the steps below:
   <Step title="Step 2: Configure Web3Auth Client ID and WalletConnect Project ID">
     1. Copy the Client ID
     <img src="/img/developers/quickstart/web3auth/1.copy_client_id.png"  width="800" height="600"/>
-    
+
     - After creating a project, view the project details screen.
     - Copy the Client ID from the dashboard. This will be used for initializing Web3Auth.
 
@@ -94,7 +95,7 @@ To set up the sample dApp project, follow the steps below:
     - Use this env file to store sensitive project information, including the client secret and Project ID.
     ```shell
     NEXT_PUBLIC_WEB3AUTH_CLIENT_ID=your-client-id
-    ``` 
+    ```
 
     4. Get the WalletConnect Project ID
 
@@ -128,6 +129,7 @@ To set up the sample dApp project, follow the steps below:
     - You should see the Rootstock & Web3Auth Starter Kit welcome screen.
   </Step>
 </Steps>
+````
 
 ## Interacting with the dApp
 
@@ -153,7 +155,7 @@ To set up the sample dApp project, follow the steps below:
         - Signing messages.
         - Sending transactions.
 
-## Interacting with Rootstock 
+## Interacting with Rootstock
 
 To interact with Rootstock using the sample dApp, we will do the following:
 - Check balances
@@ -171,7 +173,7 @@ It shows the balances for the following Rootstock-based tokens:
 
 If you have any of these tokens in your wallet, the token balances will be updated automatically.
 
-> Tip: To add more tokens, use the "Custom token" input field and enter the token contract address. 
+> Tip: To add more tokens, use the "Custom token" input field and enter the token contract address.
 
 ### Sign a Message
 

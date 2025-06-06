@@ -18,6 +18,7 @@ The minimum amount of Bitcoin to convert is **0.005 BTC** for Mainnet.
 
 Instructions on how to do a Mainnet peg-in.
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">1. Get a BTC address with balance</Accordion.Header>
@@ -68,12 +69,14 @@ Instructions on how to do a Mainnet peg-in.
       > Note: You have to wait a minimum of 100 confirmations + a minimum of 5 minutes for checking your RBTC balance.
     </Accordion.Body>
   </Accordion.Item>
-</Accordion>  
+</Accordion>
+````
 
 ### RBTC to BTC conversion
 
 Instructions on how to do a Mainnet peg-out.
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">1. Get BTC address with RBTC private key</Accordion.Header>
@@ -97,6 +100,7 @@ Instructions on how to do a Mainnet peg-out.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 ## Testnet Conversion
 
@@ -110,6 +114,7 @@ The minimum amount of Bitcoin to convert is **0.005 tBTC** for Testnet.
 
 Instructions on how to do a Testnet peg-in.
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">1. Connect a wallet to Bitcoin Testnet</Accordion.Header>
@@ -124,7 +129,6 @@ Instructions on how to do a Testnet peg-in.
       - After Electrum starts, create or import a wallet
       - Go to the third tab, "Receive".
         You will see a Bitcoin Testnet address like below.
-
       ![Create a Legacy (`p2pkh`) wallet](/img/legacy-private-key.png)
       - Note: The Bitcoin wallet needs to be legacy (not Segwit) whose public key starts with either `m` or `n`, and private key starting with `p2pkh:`
       ![Get a Bitcoin Testnet address in Electrum Wallet](/img/electrum-wallet.png)
@@ -154,7 +158,6 @@ Instructions on how to do a Testnet peg-in.
     <Accordion.Header as="h3">4. Get tRBTC address with tBTC private key</Accordion.Header>
     <Accordion.Body>
       - You can get a corresponding tRBTC address from your tBTC private key by using [github.com/rsksmart/utils](https://github.com/rsksmart/utils). If you do not want to compile the utility, you can download the [latest release](https://github.com/rsksmart/utils/releases/latest).
-
       - Note: When entering Bitcoin private key do not include `_p2pkh:_` in the front.
     </Accordion.Body>
   </Accordion.Item>
@@ -166,6 +169,7 @@ Instructions on how to do a Testnet peg-in.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 ### tRBTC to tBTC conversion
 
@@ -175,6 +179,7 @@ Instructions on how to do a Testnet peg-out.
 The release process on Bitcoin network takes 10 Rootstock block confirmations and at least 10 more minutes.
 :::
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">1. Get tBTC address with tRBTC private key</Accordion.Header>
@@ -200,3 +205,4 @@ The release process on Bitcoin network takes 10 Rootstock block confirmations an
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````

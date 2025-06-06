@@ -1,91 +1,81 @@
 import Card from "/src/components/Card";
+import Translate from "@docusaurus/core/lib/client/exports/Translate";
 
 const data = {
-  title: 'Browse by Products',
+  title: <Translate>Browse by Products</Translate>,
   description: null,
   cards: [
     {
-      title: 'Bridges',
+      title: <Translate>Bridges</Translate>,
       color: 'orange',
       description: (
-        <>
-          Bridge in/out of Rootstock.
-        </>
+        <Translate>Bridge in/out of Rootstock.</Translate>
       ),
       list: [
         {
-          title: 'RBTC Flyover',
+          title: <Translate>RBTC Flyover</Translate>,
           href: '/developers/integrate/flyover/',
         },
         {
-          title: 'PowPeg App',
+          title: <Translate>PowPeg App</Translate>,
           href: 'https://powpeg.rootstock.io',
         },
         {
-          title: 'Token Bridge',
+          title: <Translate>Token Bridge</Translate>,
           href: 'https://dapp.tokenbridge.rootstock.io',
         },
       ],
 
     },
     {
-      title: 'Wallets',
+      title: <Translate>Wallets</Translate>,
       color: 'green',
       description: (
-        <>
-          View wallets compatible with the Rootstock platform.
-        </>
+        <Translate>View wallets compatible with the Rootstock platform.</Translate>
       ),
       list: [
         {
-          title: 'MetaMask',
+          title: <Translate>MetaMask</Translate>,
           href: '/dev-tools/wallets/metamask',
         },
         {
-          title: 'Wallets on Rootstock',
+          title: <Translate>Wallets on Rootstock</Translate>,
           href: '/dev-tools/wallets/',
         }
       ],
     },
     {
       title: (
-        <>
-          RIF Tools
-        </>
+        <Translate>RIF Tools</Translate>
       ),
       color: 'pink',
       description: (
-        <>
-          Explore Open-source tools and technologies for faster, 
-          and more rewarding ways to build on Bitcoin.
-        </>
+        <Translate>Explore Open-source tools and technologies for faster, and more rewarding ways to build on Bitcoin.</Translate>
       ),
       list: [
         {
-          title: 'Name Service',
+          title: <Translate>Name Service</Translate>,
           href: 'https://rns.rifos.org/',
         },
         {
-          title: 'Relay',
+          title: <Translate>Relay</Translate>,
           href: '/developers/integrate/rif-relay',
         },
       ],
     },
     {
-      title: 'RPC API',
+      title: <Translate>RPC API</Translate>,
       color: 'yellow',
       description: (
-        <>
-          Deploy and interact with EVM compatible smart contracts on Rootstock using JSON RPC methods using the Rootstock RPC API.
-        </>
+        <Translate>Deploy and interact with EVM compatible smart contracts on Rootstock using JSON RPC methods using the Rootstock RPC API.</Translate>
       ),
       list: [
         {
-          title: 'Make First API Call',
+          title: <Translate>Make First API Call</Translate>,
           href: '/developers/rpc-api/rootstock/setup/',
         },
         {
-          title: 'View JSON RPC Methods',
+          title: <Translate>View JSON RPC Methods</Translate>,
           href: '/developers/rpc-api/rootstock/methods/',
         }
       ],

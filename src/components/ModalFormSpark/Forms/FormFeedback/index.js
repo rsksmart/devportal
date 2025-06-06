@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useFormspark } from '@formspark/use-formspark'
+import Translate, {translate} from '@docusaurus/Translate'
 
 export const FormFeedback = (props) => {
   const [url, setUrl] = useState('#');
@@ -57,7 +58,7 @@ export const FormFeedback = (props) => {
     <>
       {props?.rating && (
         <div className="my-32 d-flex gap-12 justify-content-between align-items-center">
-          <span>Current rating</span>
+          <span><Translate id="theme.feedbackForm.form.rating">Current rating</Translate></span>
           <div className={'d-flex gap-8'}>
             {[...Array(totalStars)].map((star, index) => {
               const currentRating = index + 1;
@@ -94,20 +95,20 @@ export const FormFeedback = (props) => {
           {props?.rating && (
             <input type="hidden" name="rating" value={rating}/>
           )}
-          <input type="text" className="form-control" name={`name`} required={true} placeholder={`Name`}
+          <input type="text" className="form-control" name={`name`} required={true} placeholder={translate({message:`Name`})}
                  value={name} onChange={(e) => setName(e.target.value)}
           />
-          <input type="email" className="form-control" name={`email`} required={true} placeholder={`Email`}
+          <input type="email" className="form-control" name={`email`} required={true} placeholder={translate({message:`Email`})}
                  value={email} onChange={(e) => setEmail(e.target.value)}
           />
 
-          <textarea required={true} value={message} placeholder={`Message`} className="form-control" rows={4}
+          <textarea required={true} value={message} placeholder={translate({message:`Message`})} className="form-control" rows={4}
                     onChange={(e) => setMessage(e.target.value)}/>
         </div>
 
         <div className={`d-flex justify-content-between align-items-center`}>
           <button type={`button`} className={`btn-blank`} onClick={props.onDismiss}>
-            {!submitted ? (`Not now`) : (`Close`)}
+            {!submitted ? <Translate>Not now</Translate> : <Translate>Close</Translate>}
           </button>
 
           <button
@@ -117,15 +118,15 @@ export const FormFeedback = (props) => {
               <span>
                 {sending && (
                   <>
-                    Submitting
+                    <Translate>Submitting</Translate>
                     <div className="spinner-border" role="status">
-                      <span className="visually-hidden">Loading...</span>
+                      <span className="visually-hidden"><Translate>Loading...</Translate></span>
                     </div>
                   </>
                 )}
                 {!sending && !submitted && (
                   <>
-                    Submit
+                    <Translate>Submit</Translate>
                     <svg width="16" height="17">
                       <use xlinkHref="#icon-arrow-right"/>
                     </svg>
@@ -133,7 +134,7 @@ export const FormFeedback = (props) => {
                 )}
                 {!sending && submitted && (
                   <>
-                    Submitted
+                    <Translate>Submitted</Translate>
                     <svg width="16" height="17">
                       <use xlinkHref="#icon-check-circle"/>
                     </svg>

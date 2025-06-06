@@ -8,6 +8,7 @@ tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 
 See a list of terms about/related to the PowPeg App and their meanings.
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">What is the PowPeg App?</Accordion.Header>
@@ -72,7 +73,7 @@ See a list of terms about/related to the PowPeg App and their meanings.
   <Accordion.Item eventKey="10">
     <Accordion.Header as="h3">Peg-outs</Accordion.Header>
     <Accordion.Body>
-      - A conversion from RBTC to BTC. This locks RBTC on the Rootstock network and releases BTC on the Bitcoin network. 
+      - A conversion from RBTC to BTC. This locks RBTC on the Rootstock network and releases BTC on the Bitcoin network.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="11">
@@ -131,3 +132,4 @@ See a list of terms about/related to the PowPeg App and their meanings.
   </Accordion.Item>
 
 </Accordion>
+````

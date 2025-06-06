@@ -436,16 +436,17 @@ We're going to be editing the `page.tsx` file inside the `app` directory. Follow
 
 These tools are specifically designed to make Web3 development smoother, particularly for integrating blockchain functionalities into web applications. Below is a list of key libraries and tools that were used in the article, with brief explanations:
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">1. RainbowKit</Accordion.Header>
     <Accordion.Body>
       - [RainbowKit](https://www.rainbowkit.com/) is a React library offering a comprehensive wallet connection solution. It provides a beautiful, easy-to-use wallet connection interface that supports multiple wallets and networks.
-      - **Why Use It:** 
+      - **Why Use It:**
         It is great for projects where you want a seamless and user-friendly wallet connection experience. It's easy to integrate and manage, especially in React-based applications.
     </Accordion.Body>
   </Accordion.Item>
-  
+
   <Accordion.Item eventKey="2">
     <Accordion.Header as="h3">2. Wagmi</Accordion.Header>
     <Accordion.Body>
@@ -461,3 +462,4 @@ These tools are specifically designed to make Web3 development smoother, particu
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````

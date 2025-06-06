@@ -10,6 +10,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
 
 ## About Rootstock
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">What is Rootstock?</Accordion.Header>
@@ -71,9 +72,11 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 ## Rootstock vs Other Platforms
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="1">
     <Accordion.Header as="h3">How is Rootstock different from Stacks?</Accordion.Header>
@@ -120,10 +123,12 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 
 ## Rootstock and RIF Token
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="1">
     <Accordion.Header as="h3">What is the RBTC token, and what is its purpose?</Accordion.Header>
@@ -179,9 +184,11 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 ## Rootstock Features and Functionality
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="1">
     <Accordion.Header as="h3">What is merged mining, and how does it secure the Rootstock network?</Accordion.Header>
@@ -241,10 +248,12 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 
 ## Rootstock and RIF Services
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="1">
     <Accordion.Header as="h3">What is RIF, and what are its goals?</Accordion.Header>
@@ -298,10 +307,12 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 
 ## Rootstock Security and Scalability
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="1">
     <Accordion.Header as="h3">What is the PowPeg Federation, and what is its role in the PowPeg?</Accordion.Header>
@@ -336,3 +347,4 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````

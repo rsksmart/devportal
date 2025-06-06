@@ -77,7 +77,7 @@ The `keyvalue.datasource` property in the config
 may only be either `rocksdb` or `leveldb`.
 
 > If you wish to switch between the different storage options,
-for example from `leveldb` to `rocksdb` or vice versa, 
+for example from `leveldb` to `rocksdb` or vice versa,
 you must **restart** the node with the import option.
 
 The following sample command shows how to do this when
@@ -133,6 +133,7 @@ To rectify this,
 change the value of `peer.port` in the config file,
 or add a `peer.port` flag to the command when you start RSKj.
 
+````mdx-code-block
 <Tabs>
   <TabItem value="mac" label="Linux, Mac OSX" default>
     ```shell
@@ -145,3 +146,4 @@ or add a `peer.port` flag to the command when you start RSKj.
     ```
   </TabItem>
 </Tabs>
+````

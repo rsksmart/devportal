@@ -261,6 +261,7 @@ Educational content contributions enable developers to educate the Rootstock com
         * Tutorials on using popular development environments (e.g., Remix, Hardhat, Slither, Viem).
         * Explaining the use of testing frameworks and libraries for smart contract testing.
         * Demonstrating how to use debugging tools to identify and fix issues in Rootstock applications.
+
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="4">

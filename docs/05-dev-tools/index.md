@@ -6,6 +6,7 @@ tags: [rsk, rootstock, tools, developer tools]
 description: "Explore a curated selection of smart contract development tools and languages. From the familiar Solidity to Rust or Developer Environments like Hardhat, you'll find everything you need to interact and deploy your smart contracts on Rootstock."
 ---
 
+````mdx-code-block
 <Filter
   values={[
     {label: 'Bridges', value: 'bridge'},
@@ -701,3 +702,4 @@ description: "Explore a curated selection of smart contract development tools an
     description="Rootstock Attestation Service (RAS) is a system that allows individuals and organizations to create verifiable claims or proofs about specific events, actions, or data, either on-chain (on the blockchain) or off-chain (outside the blockchain but linked to it). Learn how to use it on Rootstock."
   />
 </Filter>
+````

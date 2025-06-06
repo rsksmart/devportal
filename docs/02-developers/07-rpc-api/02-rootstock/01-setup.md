@@ -28,29 +28,37 @@ To get an API key:
 
 Log in to the dashboard, and click on _New API key_:
 
+````mdx-code-block
 <div align="center">
     <img width="100%" src="/img/tools/rpc-api/03-generate-new-api-key.png" alt="Generate an API key"/>
 </div>
+````
 
 Choose a name to identify your `apikey`, and the Network (either `Testnet` or `Mainnet`). You can also add a description (optional). Click on **Create**.
 
+````mdx-code-block
 <div align="center">
     <img width="100%" src="/img/tools/rpc-api/04-create-api-key.png" alt="Create API key"/>
 </div>
+````
 
 ## Make First API Call
 
 Click on the newly created `apikey` to get the details:
 
+````mdx-code-block
 <div align="center">
-    <img width="100%" src="/img/tools/rpc-api/05-make-first-api-call.png" alt="Make First API Call"></img>
+    <img width="100%" src="/img/tools/rpc-api/05-make-first-api-call.png" alt="Make First API Call" />
 </div>
+````
 
 You can make your first api call by using one of the provided examples, or simply by adding a url and `apikey` to your application.
 
+````mdx-code-block
 <div align="center">
     <img width="100%" src="/img/tools/rpc-api/06-connect-api.png" alt="Connect API"/>
 </div>
+````
 
 ### Example Request
 

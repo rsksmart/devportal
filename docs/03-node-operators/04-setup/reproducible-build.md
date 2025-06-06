@@ -39,6 +39,7 @@ See how to [Setup and Run RSKj using Java](/node-operators/setup/installation/ja
 
 Create a ```Dockerfile``` to setup the build environment.
 
+````mdx-code-block
 <Tabs>
   <TabItem value="linux" label="Linux" default>
       ```bash
@@ -80,6 +81,7 @@ Create a ```Dockerfile``` to setup the build environment.
       ```
   </TabItem>
 </Tabs>
+````
 
 **Response:**
 
