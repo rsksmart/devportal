@@ -7,16 +7,16 @@ tags: [rsk, rootstock, tutorials, resources, frontend, smart contracts, dapps, v
 ---
 
 
-[Viem](https://viem.sh/) offers a minimalist, lightweight, and more efficient Typescript interface alternative to [Ethers.js](https://docs.ethers.org/v5/) and [Web3.js](https://web3js.readthedocs.io/en/v1.10.0/) for interacting with Ethereum nodes. It maintains a bundle size of 35KB compared to Ethers and Web3.js, which are over 300KB and 600KB, respectively. Viem also offers more granular control over APIs in contrast to Ethers.js, which abstracts APIs for more functionalities. 
+[Viem](https://viem.sh/) offers a minimalist, lightweight, and more efficient Typescript interface alternative to [Ethers.js](https://docs.ethers.org/v5/) and [Web3.js](https://web3js.readthedocs.io/en/v1.10.0/) for interacting with Ethereum nodes. It maintains a bundle size of 35KB compared to Ethers and Web3.js, which are over 300KB and 600KB, respectively. Smaller bundle size implies faster page loads and better performance on mobile. Viem also offers more granular control over APIs in contrast to Ethers.js, which abstracts APIs for more functionalities. 
 
 This tutorial will teach you how to use Viem to interact with your contracts on Rootstock.
 
 
 ## Installation and Setup
 
-In this guide, you will learn how to interact with an existing lending contract on the Rootstock Explorer, [rLending RBTC](https://explorer.testnet.rootstock.io/address/0xc19f0882bf318c9f8767c7d520018888e878417b).
+In this guide, you will learn how to interact with an existing lending contract on the Rootstock Explorer, [rLending RBTC](https://explorer.testnet.rootstock.io/address/0xc19f0882bf318c9f8767c7d520018888e878417b). The full code of the working demo is available on [GitHub](https://github.com/entuziaz/rsk-viem-demo).
 
-Use the following command to install the Viem npm package:
+You can use the following command to install the Viem npm package:
 
 ```bash
 npm install viem
@@ -26,7 +26,7 @@ For more installation options, you can check out the official [installation guid
 
 ## Using the Public Client
 
-You would need to set up your Client in Viem, which would have been your `Provider` in a typical Ethers.js project.
+You need to set up your [Client](https://viem.sh/docs/clients/intro#clients) in Viem, which would have been your [Provider](https://docs.ethers.org/v5/api/providers/provider/) in a typical Ethers.js project. A Client allows you to access Viem actions for interacting with the blockchain. One type of Client is the [Public Client](https://viem.sh/docs/clients/public) which provides access to public actions like the `getBlockNumber` and `getBalance`. The following snippet indicates how you would use the Public Client in an existing project.
 
 ```ts
 import { createPublicClient, http } from 'viem'
@@ -76,6 +76,12 @@ export async function fetchBorrowRatePerBlock(): Promise<bigint> {
 	})
 	return result as bigint;
 }
+```
+
+You would get a response like the following in `bigint` data type:
+
+```bash
+67627655645n
 ```
 
 To use some other read contract functions like `fetchTotalSupply` and `fetchTotalBorrows`:
@@ -159,6 +165,54 @@ const txHash = await walletClient.writeContract(request);
 
 return txHash;
 ```
+
+In the above code snippet, a transaction was simulated with the smart contract Abi which you have to provide in your project. Then, a real transaction is allowed to happen after a successful simulation. We used another type of client in the snippet, the Wallet Client. The Wallet Client allows you to use wallet actions like signing a message or sending a transaction.
+
+The simulated transaction looks like the following:
+
+```json
+{
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "borrowAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "borrow",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "address": "0xc19F0882bf318C9f8767C7d520018888E878417b",
+  "args": [
+    "100000000000000000"
+  ],
+  "functionName": "borrow",
+  "account": {
+    "address": "0xfcdF314daed7E8c39E8591870e20A8c25D138a5C",
+    "type": "json-rpc"
+  }
+}
+```
+
+Then, the returned transaction hash is in the following form:
+
+```bash
+0x61c7f5cc54dd2c9cfa10c10eb50f212c40ba62d78e63c683b9e9d0db20d9630b
+```
+
 
 ## Resources:
 - [Full working demo code](https://github.com/entuziaz/rsk-viem-demo) 
