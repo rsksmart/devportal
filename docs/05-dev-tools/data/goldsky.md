@@ -55,12 +55,12 @@ Options:
 ```
 
 ## Create a project
-For this example, we will index the official RIF token contract on mainnet. More details about the contract can be found [here](https://dev.rootstock.io/concepts/rif-suite/token/).
+For this example, we will index the official RIF token contract on mainnet. More details about the contract can be found on the [RIF Token](https://dev.rootstock.io/concepts/rif-suite/token/) page.
 
 Create a folder `rif` for the project and navigate into it.
 <br/>The contract's address and ABI will be needed to configure the subgraph.
 
-Visit the contract's [block explorer link](https://explorer.rootstock.io/address/0x2acc95758f8b5f583470ba265eb685a8f45fc9d5). Click on the `Contract` tab just below the `Contract Details` section. Inside the `Contract` section, click on `ABI`.
+Visit the RIF contract's [block explorer link](https://explorer.rootstock.io/address/0x2acc95758f8b5f583470ba265eb685a8f45fc9d5). Click on the `Contract` tab just below the `Contract Details` section. Inside the `Contract` section, click on `ABI`.
 <br/>Copy the contents of the contract ABI into a json file, `rif-abi.json`.
 
 <div align="center"><img width="100%" src="/img/tools/indexers/goldsky/rootstock-explorer.png" alt="RIF token in Rootstock explorer"/></div>
@@ -206,7 +206,7 @@ Sample query to get the latest 20 token transfers that occurred in the RIF contr
 }
 ```
 
-Paste the query as follows in the GraphiQL playground.
+Paste the query as follows in the GraphiQL playground and press the execute button.
 
 <div align="center"><img width="100%" src="/img/tools/indexers/goldsky/graphiql.png" alt="GraphiQL playground"/></div>
 
