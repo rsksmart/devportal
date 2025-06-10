@@ -5,7 +5,7 @@ tags: [release, lovell]
 url: https://blog.rootstock.io/noticia/introducing-lovell-7-0-0/
 ---
 
-**Summary**: 
+## Summary
 
 The Rootstock community has approved the Lovell network upgrade, which includes consensus changes. Lovell will activate on Mainnet at block `7,338,024` by 12th March, 2025. Update your RSKj nodes to the latest version, available on the [RSKj GitHub repository](https://blog.rootstock.io/noticia/introducing-lovell-7-0-0/).
 
