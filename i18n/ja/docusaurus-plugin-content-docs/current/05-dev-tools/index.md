@@ -13,697 +13,696 @@ description: スマートコントラクト開発ツールと言語のキュレ�
 ```mdx-code-block
 <Filter
   values={[
-    {label: 'Bridges', value: 'bridge'},
-    {label: 'Starter Kits', value: 'demos'},
-    {label: 'Exchanges', value: 'exchange'},
-    {label: 'Wallets', value: 'wallet'},
-    {label: 'Explorers', value: 'explorer'},
-    {label: 'Platforms and Infra', value: 'platform-infra'},
-    {label: 'Cross Chain', value: 'cc'},
-    {label: 'Data', value: 'data'},
-    {label: 'SDKs', value: 'sdk'},
-    {label: 'Faucets', value: 'faucet'},
-    {label: 'Gas', value: 'gas'},
-    {label: 'Dev Environments', value: 'dev-environment'},
-    {label: 'Account Abstraction', value: 'aa'},
-    {label: 'Code Quality', value: 'code-quality'},
+    {label: 'ブリッジ', value: 'bridge'},
+    {label: 'スターターキット', value: 'demos'},
+    {label: '取引所', value: 'exchange'},
+    {label: 'ウォレット', value: 'wallet'},
+    {label: 'エクスプローラー', value: 'explorer'},
+    {label: 'プラットフォーム・インフラ', value: 'platform-infra'},
+    {label: 'クロスチェーン', value: 'cc'},
+    {label: 'データ', value: 'data'},
+    {label: 'SDK', value: 'sdk'},
+    {label: 'ファウセット', value: 'faucet'},
+    {label: 'ガス', value: 'gas'},
+    {label: '開発環境', value: 'dev-environment'},
+    {label: 'アカウントアブストラクション', value: 'aa'},
+    {label: 'コード品質', value: 'code-quality'},
     {label: 'JSON-RPC', value: 'rpc'},
-    {label: 'Libraries', value: 'library'},
-    {label: 'No Code', value: 'no-code'},
-    {label: 'RIF Tools', value: 'rifp'},
-    {label: 'Smart Contracts', value: 'sc'},
-    {label: 'Mining', value: 'mine'},
-    {label: 'Oracles', value: 'oracles'},
-    {label: 'Attestations', value: 'attest'},
+    {label: 'ライブラリ', value: 'library'},
+    {label: 'ノーコード', value: 'no-code'},
+    {label: 'RIFツール', value: 'rifp'},
+    {label: 'スマートコントラクト', value: 'sc'},
+    {label: 'マイニング', value: 'mine'},
+    {label: 'オラクル', value: 'oracles'},
+    {label: 'アテステーション', value: 'attest'},
   ]}>
 <FilterItem
     value="bridge, exchange"
-    title="PowPeg App"
-    subtitle="bridges"
+    title="PowPeg アプリ"
+    subtitle="ブリッジ"
     color="orange"
     linkHref="/resources/guides/powpeg-app/"
     target="_blank"
-    linkTitle="Documentation"
-    description="Bridge Bitcoin and Rootstock using the PowPeg App."
-  />
+    linkTitle="ドキュメント"
+    description="PowPegアプリを使ってBitcoinとRootstockをブリッジします。"
+/>
 <FilterItem
     value="bridge, cc"
-    title="Token Bridge"
-    subtitle="bridges"
+    title="トークンブリッジ"
+    subtitle="ブリッジ"
     color="orange"
     linkHref="/resources/guides/tokenbridge/"
     target="_blank"
-    linkTitle="Documentation"
-    description="Use the Token Bridge to safely and securely move ERC20 tokens from Ethereum to Rootstock and vice-versa."
-  />
+    linkTitle="ドキュメント"
+    description="トークンブリッジを使ってEthereumからRootstock、またはその逆にERC20トークンを安全に移動します。"
+/>
 <FilterItem
     value="dev-environment, sc, platform-infra"
     title="Foundry"
-    subtitle="Dev Environments"
+    subtitle="開発環境"
     color="orange"
     linkHref="https://dev.rootstock.io/dev-tools/foundry/"
-    linkTitle="Deploy Smart Contracts"
-    description="Foundry is a smart contract development toolchain, and user-friendly development environment for writing and testing smart contracts in Solidity."
-  />
+    linkTitle="スマートコントラクトをデプロイ"
+    description="Foundryは、Solidityでスマートコントラクトを記述・テストするための開発ツールチェーンであり、ユーザーフレンドリーな環境です。"
+/>
 <FilterItem
     value="dev-environment, sc"
     title="Hardhat"
-    subtitle="Dev Environments"
+    subtitle="開発環境"
     color="orange"
     linkHref="/dev-tools/dev-environments/hardhat/"
-    linkTitle="Deploy Smart Contracts"
-    description="Hardhat is an Ethereum development environment for developers. It's primarily used in the development of smart contracts for the Rootstock and EVM-compatible chains."
-  />
+    linkTitle="スマートコントラクトをデプロイ"
+    description="Hardhatは、RootstockおよびEVM互換チェーン用のスマートコントラクト開発で主に使用されるEthereum開発環境です。"
+/>
 <FilterItem
     value="explorer, sc"
-    title="Blockscout Explorer"
-    subtitle="Explorers"
+    title="Blockscout エクスプローラー"
+    subtitle="エクスプローラー"
     color="orange"
     linkHref="/dev-tools/explorers/blockscout/"
-    linkTitle="Use the Explorer"
-    description="Blockscout is an open-source tool for exploring transactions on any EVM chain, including Rootstock."
-  />
+    linkTitle="エクスプローラーを使う"
+    description="Blockscoutは、Rootstockを含むあらゆるEVMチェーン上のトランザクションを探索できるオープンソースツールです。"
+/>
 <FilterItem
     value="explorer, sc"
-    title="Rootstock Explorer"
-    subtitle="Explorers"
+    title="Rootstock エクスプローラー"
+    subtitle="エクスプローラー"
     color="orange"
     linkHref="/dev-tools/explorers/rootstock/"
-    linkTitle="Use the Explorer"
-    description="Explore transactions, blocks, addresses, tokens, stats and interact with smart contracts on the Rootstock Explorer."
-  />
+    linkTitle="エクスプローラーを使う"
+    description="Rootstockエクスプローラーでトランザクション、ブロック、アドレス、トークン、統計を探索し、スマートコントラクトと対話できます。"
+/>
 <FilterItem
     value="explorer, sc"
-    title="Rootstock Blockchair"
-    subtitle="Explorers"
+    title="Rootstockブロックチェーン"
+    subtitle="エクスプローラー"
     color="orange"
     linkHref="/dev-tools/explorers/blockchair/"
-    linkTitle="Use the Explorer"
-    description="Blockchair explorer is a blockchain search and analytics engine for Rootstock and 40+ chains. It incorporates a multitude of different blockchains into one search engine."
-  />
+    linkTitle="エクスプローラーを使う"
+    description="Blockchairエクスプローラーは、Rootstockを含む40以上のチェーンを統合したブロックチェーン検索・分析エンジンです。"
+/>
 <FilterItem
     value="explorer, sc"
     title="3xpl"
-    subtitle="Explorers"
+    subtitle="エクスプローラー"
     color="orange"
     linkHref="/dev-tools/explorers/3xpl/"
-    linkTitle="Use the Explorer"
-    description="3xpl (short for 3xplor3r) is a super-fast, universal explorer for Rootstock. It offers an easy-to-understand block explorer interface for beginner crypto users, as well as lots of professional features for developers and analysts."
-  />
+    linkTitle="エクスプローラーを使う"
+    description="3xpl（3xplor3rの略）は、Rootstock用の超高速でユニバーサルなエクスプローラーです。初心者でもわかりやすいインターフェースと、開発者・アナリスト向けの多くのプロ機能を備えています。"
+/>
 <FilterItem
     value="rpc"
     title="RPC API"
-    subtitle="json rpc"
+    subtitle="JSON RPC"
     color="orange"
     linkHref="/developers/rpc-api/rootstock/"
-    linkTitle="Make First API Call"
-    description="The Rootstock RPC API provides a seamless and intuitive web interface for developers to interact with Rootstock nodes via JSON-RPC methods."
-  />
+    linkTitle="最初のAPIコールを実行"
+    description="Rootstock RPC APIは、開発者がJSON-RPCメソッドを介してRootstockノードとやり取りできる直感的なWebインターフェースを提供します。"
+/>
 <FilterItem
     value="rpc"
     title="Alchemy"
-    subtitle="json rpc"
+    subtitle="JSON RPC"
     color="orange"
     linkHref="/developers/rpc-api/alchemy/"
-    linkTitle="Make First API Call"
-    description="Powerful APIs, SDKs, and tools to build and scale your web3 app with ease."
-  />
+    linkTitle="最初のAPIコールを実行"
+    description="強力なAPI、SDK、ツールでWeb3アプリを簡単に構築・スケールできます。"
+/>
 <FilterItem
     value="rpc, smart contracts"
     title="GetBlock"
-    subtitle="json rpc"
+    subtitle="JSON RPC"
     color="orange"
     linkHref="/dev-tools/node-rpc/getblock/"
-    linkTitle="Make First API Call"
-    description="GetBlock provides instant connection to blockchain nodes including Rootstock, Bitcoin (BTC), Ethereum (ETH), among others."
-  />
+    linkTitle="最初のAPIコールを実行"
+    description="GetBlockは、Rootstock、Bitcoin（BTC）、Ethereum（ETH）などのブロックチェーンノードへの即時接続を提供します。"
+/>
 <FilterItem
     value="rpc, smart contracts"
     title="NOWNodes"
-    subtitle="json rpc"
+    subtitle="JSON RPC"
     color="orange"
     linkHref="/dev-tools/node-rpc/nownodes/"
-    linkTitle="Make First API Call"
-    description="NOWNodes is a blockchain-as-a-service enterprise solution that lets users get access to full Nodes and blockbook Explorers via an API."
-  />
+    linkTitle="最初のAPIコールを実行"
+    description="NOWNodesは、API経由でフルノードおよびブロックブックエクスプローラーへのアクセスを提供するブロックチェーン・アズ・ア・サービスソリューションです。"
+/>
 <FilterItem
     value="rpc, smart contracts"
     title="dRPC"
-    subtitle="json rpc"
+    subtitle="JSON RPC"
     color="orange"
     linkHref="/dev-tools/node-rpc/drpc/"
-    linkTitle="Make First API Call"
-    description="dRPC provides access to a distributed network of node providers."
-  />
+    linkTitle="最初のAPIコールを実行"
+    description="dRPCは、分散型ノードプロバイダーネットワークへのアクセスを提供します。"
+/>
 <FilterItem
     value="rpc"
     title="Blast API"
-    subtitle="json rpc"
+    subtitle="JSON RPC"
     color="orange"
     linkHref="/dev-tools/node-rpc/blast-api/"
-    linkTitle="Make First API Call"
-    description="Blast API is a Blockchain-optimized cloud infrastructure for low-latency, cost-effective RPC services."
-  />
+    linkTitle="最初のAPIコールを実行"
+    description="Blast APIは、低遅延・低コストなRPCサービスのためのブロックチェーン最適化クラウドインフラです。"
+/>
 <FilterItem
     value="wallet, sc"
     title="MetaMask"
-    subtitle="wallets"
+    subtitle="ウォレット"
     color="orange"
     linkHref="/dev-tools/wallets/metamask/"
-    linkTitle="Use MetaMask"
-    description="Learn how to create, and add Rootstock tokens to MetaMask."
-  />
+    linkTitle="MetaMaskを使う"
+    description="MetaMaskの作成方法およびRootstockトークンの追加方法を学びます。"
+/>
 <FilterItem
     value="wallet, sc"
-    title="Rootstock Wallets"
-    subtitle="wallets"
+    title="Rootstock ウォレット"
+    subtitle="ウォレット"
     color="orange"
     linkHref="/dev-tools/wallets/"
-    linkTitle="Use Wallets"
-    description="View all Rootstock Wallets."
-  />
+    linkTitle="ウォレットを使う"
+    description="すべてのRootstockウォレットを表示します。"
+/>
 <FilterItem
     value="bridge, exchange"
     title="Sovryn Fast BTC"
-    subtitle="bridges"
+    subtitle="ブリッジ"
     color="orange"
     linkHref="https://wiki.sovryn.com/en/sovryn-dapp/bridge"
-    linkTitle="Get RBTC"
-    description="Sovryn is a non-custodial and permissionless smart contract based system for Bitcoin lending, borrowing and margin trading."
-  />
+    linkTitle="RBTCを入手"
+    description="Sovrynは、ビットコインのレンディング、借入、マージントレードのための非カストディアルかつパーミッションレスなスマートコントラクトベースシステムです。"
+/>
 <FilterItem
     value="bridge, exchange"
-    title="RBTC Exchanges"
-    subtitle="Exchanges"
+    title="RBTC取引所"
+    subtitle="取引所"
     color="orange"
     linkHref="https://rootstock.io/rbtc/"
-    linkTitle="Get RBTC"
-    description="Exchanges and Bridges to get RBTC."
-  />
+    linkTitle="RBTCを入手"
+    description="RBTCを入手するための取引所およびブリッジ。"
+/>
 <FilterItem
     value="bridge, exchange, rifp"
-    title="RIF Exchanges"
-    subtitle="Exchanges"
+    title="RIF取引所"
+    subtitle="取引所"
     color="orange"
     linkHref="https://rif.technology/rif-token/"
-    linkTitle="Get RIF Tokens"
-    description="Exchanges and Bridges to get the RIF Token."
-  />
+    linkTitle="RIFトークンを入手"
+    description="RIFトークンを入手するための取引所およびブリッジ。"
+/>
 <FilterItem
     value="exchange"
-    title="RIF on Chain"
-    subtitle="Exchanges"
+    title="RIFオンチェーン"
+    subtitle="取引所"
     color="orange"
     linkHref="https://dapp.rifonchain.com/ipfs/QmWpKDzJ9fUECiiYkGHxqEXKh3CRUEzfvTxYoQonxFBK61/"
-    linkTitle="Get Started"
-    description="Access crypto collaterized digital dollars to save, spend & send. Get RIF, USDRIF, MOC, RIF Pro, etc."
-  />
-   <FilterItem
+    linkTitle="始める"
+    description="RIF、USDRIF、MOC、RIF Proなどを使って、暗号資産担保のデジタルドルを保存、使用、送信できます。"
+/>
+<FilterItem
     value="sdk"
     title="RSK CLI"
-    subtitle="smart contract developement"
+    subtitle="スマートコントラクト開発"
     color="orange"
     linkHref="/developers/smart-contracts/rsk-cli/"
-    linkTitle="Getting started with RSK CLI"
-    description="The rsk-cli tool or sdk enables users to manage wallets, check balances, send transactions, verify smart contracts and interact with smart contracts on the Rootstock blockchain - a Bitcoin sidechain designed for smart contracts. It supports both mainnet and testnet environments."
-  />
+    linkTitle="RSK CLIの始め方"
+    description="rsk-cliツールまたはSDKを使用して、ウォレット管理、残高確認、トランザクション送信、スマートコントラクトの検証およびRootstockブロックチェーンとの対話を行えます。メインネットとテストネットの両方に対応。"
+/>
 <FilterItem
     value="bridge, exchange, rifp"
-    title="RBTC Flyover"
-    subtitle="bridges"
+    title="RBTCフライオーバー"
+    subtitle="ブリッジ"
     color="orange"
     linkHref="/developers/integrate/flyover/"
-    linkTitle="Get RBTC"
-    description="The Flyover protocol performs fast peg-ins and peg-outs between Bitcoin and Rootstock networks."
-  />
+    linkTitle="RBTCを入手"
+    description="フライオーバープロトコルは、BitcoinとRootstock間の高速ペグイン・ペグアウトを行います。"
+/>
 <FilterItem
     value="data"
     title="The Graph"
-    subtitle="data & analytics"
+    subtitle="データ・分析"
     color="orange"
     linkHref="/dev-tools/data/thegraph/"
-    linkTitle="Access on-chain data"
-    description="Get historical data on smart contracts when building dApps."
-  />
+    linkTitle="オンチェーンデータにアクセス"
+    description="dApps構築時にスマートコントラクトの履歴データを取得。"
+/>
 <FilterItem
     value="data"
     title="Covalent"
-    subtitle="data & analytics"
+    subtitle="データ・分析"
     color="orange"
     linkHref="https://www.covalenthq.com/docs/networks/rootstock/?utm_source=rootstock&utm_medium=partner-docs"
-    linkTitle="Access on-chain data"
-    description="Covalent is a hosted blockchain data solution providing access to historical and current on-chain data for 100+ supported blockchains, including Rootstock."
-  />
+    linkTitle="オンチェーンデータにアクセス"
+    description="Covalentは、Rootstockを含む100以上の対応ブロックチェーンの履歴および現在のオンチェーンデータへのアクセスを提供するホステッド型ブロックチェーンデータソリューションです。"
+/>
 <FilterItem
     value="data"
     title="DefiLlama"
-    subtitle="data & analytics"
+    subtitle="データ・分析"
     color="orange"
     linkHref="https://defillama.com/chain/Rootstock"
-    linkTitle="Access on-chain data"
-    description="DefiLlama is the largest Total Value Locked (TVL) aggregator in the DeFi space. It assesses the TVL by taking into account the worth of tokens locked within the contracts of a protocol or platform."
-  />
+    linkTitle="オンチェーンデータにアクセス"
+    description="DefiLlamaは、DeFi分野最大のTotal Value Locked（TVL）アグリゲーターで、プロトコルやプラットフォーム内にロックされたトークンの価値を評価します。"
+/>
 <FilterItem
     value="data"
     title="Tenderly"
-    subtitle="data & analytics"
+    subtitle="データ・分析"
     color="orange"
     linkHref="https://tenderly.co/"
-    linkTitle="Access on-chain data"
-    description="Tenderly helps developers build, monitor, and improve smart contracts by providing a set of tools to boost productivity, save time, and ensure efficient smart contracts functionality."
-  />
+    linkTitle="オンチェーンデータにアクセス"
+    description="Tenderlyは、開発者がスマートコントラクトを構築、モニター、改善するためのツール群を提供し、生産性を向上させ、時間を節約し、効率的な機能を実現します。"
+/>
 <FilterItem
     value="platform-infra, sc, sdk"
     title="Thirdweb"
-    subtitle="platforms"
+    subtitle="プラットフォーム"
     color="orange"
     linkHref="https://thirdweb.com/"
-    linkTitle="Use Thirdweb"
-    description="Thirdweb is a Full-stack web3 development tools, production-grade infrastructure platform for developers to build on Rootstockk."
-  />
- 
+    linkTitle="Thirdwebを使う"
+    description="Thirdwebは、Rootstock上で構築するためのフルスタックWeb3開発ツールおよび本番対応インフラプラットフォームです。"
+/>
 <FilterItem
     value="platform-infra, sc"
     title="useDApp"
-    subtitle="platforms"
+    subtitle="プラットフォーム"
     color="orange"
     linkHref="https://usedapp.io/"
-    linkTitle="Build with useDApp"
-    description="Build a dApp on Rootstock using useDApp React library."
-  />
+    linkTitle="useDAppで構築"
+    description="useDApp Reactライブラリを使ってRootstock上でdAppを構築。"
+/>
 <FilterItem
     value="no-code, platform-infra, sc"
     title="Forward Protocol"
-    subtitle="no-code"
+    subtitle="ノーコード"
     color="orange"
     linkHref="https://forwardprotocol.io/"
-    linkTitle="Build a no-code dApp"
-    description="Build a dApp on Rootstock using Forward Protocol's no-code tools."
-  />
+    linkTitle="ノーコードdAppを構築"
+    description="Forward Protocolのノーコードツールを使用してRootstock上でdAppを構築。"
+/>
 <FilterItem
     value="no-code, platform-infra, sc"
     title="CryptoDO"
-    subtitle="no-code"
+    subtitle="ノーコード"
     color="orange"
     linkHref="https://www.cryptodo.app/"
-    linkTitle="Build a no-code Multichain dApp"
-    description="CryptoDo is a multichain, no-code web3 solution builder for businesses."
-  />
+    linkTitle="ノーコードマルチチェーンdAppを構築"
+    description="CryptoDoは、企業向けのマルチチェーンノーコードWeb3ソリューションビルダーです。"
+/>
 <FilterItem
     value="library, sdk, rifp, abs"
     title="RIF Relay"
-    subtitle="sdks"
+    subtitle="SDK"
     color="orange"
     linkHref="/developers/integrate/rif-relay/"
-    linkTitle="Integrate RIF Relay"
-    description="RIF Relay is a secure sponsored transaction system that enables users to pay transaction fees using ERC-20 tokens."
-  />
+    linkTitle="RIF Relayを統合"
+    description="RIF Relayは、安全なスポンサー付きトランザクションシステムで、ユーザーがERC-20トークンを使用して手数料を支払うことを可能にします。"
+/>
 <FilterItem
     value="dev-environment, sc"
     title="Remix"
-    subtitle="Dev Environments"
+    subtitle="開発環境"
     color="orange"
     linkHref="https://remix.ethereum.org/"
-    linkTitle="Deploy Smart Contracts"
-    description="Compile, Interact and Deploy Smart Contracts using Remix."
-  />
+    linkTitle="スマートコントラクトをデプロイ"
+    description="Remixを使ってスマートコントラクトをコンパイル、対話、デプロイします。"
+/>
 <FilterItem
     value="library, sdk, wallet, rifp"
     title="RIF Wallet"
-    subtitle="sdks"
+    subtitle="SDK"
     color="orange"
     linkHref="/developers/libraries/rif-wallet-libs/"
-    linkTitle="Integrate RIF Wallet"
-    description="RIF wallet is a fully programmable and extensible DeFi wallet enabling developers and businesses to build intuitive and secure mobile-first Web3 experiences for their end-users."
-  />
+    linkTitle="RIF Walletを統合"
+    description="RIF Walletは、開発者や企業が直感的かつ安全なモバイルファーストのWeb3体験を構築できる完全プログラム可能で拡張可能なDeFiウォレットです。"
+/>
 <FilterItem
     value="gas"
     title="Blocknative Gas Price API"
-    subtitle="gas"
+    subtitle="ガス"
     color="orange"
     linkHref="/dev-tools/gas/blocknative/"
-    linkTitle="Gas Price API"
-    description="Accurate next block gas price estimation."
-  />
+    linkTitle="ガス価格API"
+    description="次のブロックのガス価格を正確に推定します。"
+/>
 <FilterItem
     value="data"
-    title="Rootstock Stats"
-    subtitle="data & analytics"
+    title="Rootstock 統計情報"
+    subtitle="データ・分析"
     color="orange"
     linkHref="https://stats.rootstock.io/"
-    linkTitle="View Stats"
-    description="Rootstock Stats."
-  />
+    linkTitle="統計を見る"
+    description="Rootstockの統計情報。"
+/>
 <FilterItem
     value="faucet"
-    title="Rootstock Faucet"
-    subtitle="faucets"
+    title="Rootstock ファウセット"
+    subtitle="ファウセット"
     color="orange"
     linkHref="https://faucet.rootstock.io/"
-    linkTitle="Get tRBTC"
-    description="Get tRBTC on the Rootstock Testnet Faucet."
-  />
+    linkTitle="tRBTCを入手"
+    description="RootstockテストネットファウセットでtRBTCを入手。"
+/>
 <FilterItem
     value="faucet, rifp"
-    title="RIF Testnet Faucet"
-    subtitle="faucets"
+    title="RIF テストネットファウセット"
+    subtitle="ファウセット"
     color="orange"
     linkHref="https://faucet.rifos.org/"
-    linkTitle="Get tRIF"
-    description="Get tRIF on the RIF Testnet Faucet"
-  />
+    linkTitle="tRIFを入手"
+    description="RIFテストネットファウセットでtRIFを入手。"
+/>
 <FilterItem
     value="faucet"
-    title="Blast Faucet"
-    subtitle="faucets"
+    title="Blast ファウセット"
+    subtitle="ファウセット"
     color="orange"
     linkHref="https://blastapi.io/faucets/rootstock-testnet"
-    linkTitle="Get tRBTC"
-    description="This faucet offers a convenient way to get free test RBTC tokens for development and testing. It has a higher max daily token allocation of `0.1` tRBTC."
-  />
+    linkTitle="tRBTCを入手"
+    description="このファウセットは、開発・テスト用に無料のtRBTCトークンを入手でき、1日の最大割当量は0.1 tRBTCです。"
+/>
 <FilterItem
     value="faucet"
-    title="Thirdweb Faucet"
-    subtitle="faucets"
+    title="Thirdweb ファウセット"
+    subtitle="ファウセット"
     color="orange"
     linkHref="https://thirdweb.com/rootstock-testnet"
-    linkTitle="Get tRBTC"
-    description="This faucet offers a convenient way to get free test RBTC tokens for development and testing. Its max daily token allocation is `0.01` tRBTC."
-  />
+    linkTitle="tRBTCを入手"
+    description="このファウセットは、開発・テスト用に無料のtRBTCトークンを入手でき、1日の最大割当量は0.01 tRBTCです。"
+/>
 <FilterItem
     value="library, sc"
     title="Ethers.js"
-    subtitle="library"
+    subtitle="ライブラリ"
     color="orange"
     linkHref="https://web3js.readthedocs.io/en/v1.10.0/"
-    linkTitle="Use Ethers.js Library"
-    description="A library for Interacting with the Rootstock Virtual Machine."
-  />
+    linkTitle="Ethers.jsライブラリを使用"
+    description="Rootstock Virtual Machineと対話するためのライブラリ。"
+/>
 <FilterItem
     value="library, sc"
     title="Web3.js"
-    subtitle="library"
+    subtitle="ライブラリ"
     color="orange"
     linkHref="https://docs.ethers.org/v5/"
-    linkTitle="Use Web3.js Library"
-    description="A library for Interacting with the Rootstock Virtual Machine."
-  />
+    linkTitle="Web3.jsライブラリを使用"
+    description="Rootstock Virtual Machineと対話するためのライブラリ。"
+/>
 <FilterItem
     value="library, sdk, rifp"
     title="RNS"
-    subtitle="name service"
+    subtitle="ネームサービス"
     color="orange"
     linkHref="https://rns.rifos.org/"
-    linkTitle="Register a Domain Name"
-    description="RNS provides an architecture which enables the identification of blockchain addresses by human-readable names."
-  />
+    linkTitle="ドメイン名を登録"
+    description="RNSは、ブロックチェーンアドレスを人間が読める名前で識別できるアーキテクチャを提供します。"
+/>
 <FilterItem
     value="code-quality, testing, sc"
     title="SolidityScan"
-    subtitle="code quality"
+    subtitle="コード品質"
     color="orange"
     linkHref="https://solidityscan.com/"
-    linkTitle="Secure Smart Contracts"
-    description="Secure your smart contracts on Rootstock, and get accurate security audit results and detailed reports."
-  />
+    linkTitle="スマートコントラクトを保護"
+    description="Rootstock上のスマートコントラクトを保護し、正確なセキュリティ監査結果と詳細なレポートを取得。"
+/>
 <FilterItem
     value="code-quality, testing, sc"
     title="Slither"
-    subtitle="code quality"
+    subtitle="コード品質"
     color="orange"
     linkHref="https://github.com/crytic/slither"
-    linkTitle="Analyse Smart Contracts"
-    description="Slither built with Solidity & Vyper static analysis framework written in Python3, enables developers to find vulnerabilities, enhance their code comprehension, and quickly prototype custom analyses."
-  />
+    linkTitle="スマートコントラクトを解析"
+    description="Slitherは、Python3で書かれたSolidity & Vyper静的解析フレームワークで、脆弱性発見、コード理解の強化、カスタム分析の迅速な試作を支援します。"
+/>
 <FilterItem
     value="code-quality, testing, sc"
     title="Sourcify"
-    subtitle="code quality"
+    subtitle="コード品質"
     color="orange"
     linkHref="https://sourcify.dev"
-    linkTitle="Verify Smart Contracts"
-    description="Verify smart contracts on Rootstock, Sourcify enables transparent and human-readable smart contract interactions through automated Solidity contract verification, contract metadata."
-  />
+    linkTitle="スマートコントラクトを検証"
+    description="Rootstock上のスマートコントラクトを検証し、自動化されたSolidity契約検証とメタデータを通じて透明かつ人間可読なスマートコントラクト操作を実現します。"
+/>
 <FilterItem
     value="sc, rollups, aa, platform-infra"
     title="Gelato"
-    subtitle="infra"
+    subtitle="インフラ"
     color="orange"
     linkHref="https://gelato.network"
-    linkTitle="Deploy Rollups"
-    description="Deploy production-grade & fully-serviced L2 rollups on Rootstock, natively integrated with tools like oracles, bridges, data indexers and Account Abstraction."
-  />
+    linkTitle="ロールアップをデプロイ"
+    description="Rootstock上で本番品質かつフルサービスのL2ロールアップをデプロイし、オラクル、ブリッジ、データインデクサ、アカウントアブストラクションなどのツールとネイティブ統合。"
+/>
 <FilterItem
     value="mine, platform-infra"
     title="Antpool"
-    subtitle="mining"
+    subtitle="マイニング"
     color="orange"
     linkHref="https://www.antpool.com/home"
-    linkTitle="Start Mining"
-    description="Start mining with Antpool."
-  />
+    linkTitle="マイニングを開始"
+    description="Antpoolでマイニングを開始。"
+/>
 <FilterItem
     value="platform-infra"
     title="Vottun"
-    subtitle="infra"
+    subtitle="インフラ"
     color="orange"
     linkHref="https://vottun.com"
-    linkTitle="Get Started"
-    description="Vottun interoperable multi-blockchain architecture is built to make it easy to develop Web3 applications without the need to understand much of the underlying blockchain technology."
-  />
+    linkTitle="始める"
+    description="Vottunの相互運用可能なマルチブロックチェーンアーキテクチャは、基盤技術を深く理解せずにWeb3アプリを開発しやすくします。"
+/>
 <FilterItem
     value="platform-infra"
     title="WakeUp Labs"
-    subtitle="infra"
+    subtitle="インフラ"
     color="orange"
     linkHref="https://platform.wakeuplabs.io"
-    linkTitle="Get Started"
-    description="WakeUp Labs is a software development studio that assists EVM-Compatible Blockchains, DAOs and traditional organizations in overcoming technical challenges and expediting product development."
-  />
+    linkTitle="始める"
+    description="WakeUp Labsは、EVM互換ブロックチェーン、DAO、伝統的組織が技術的課題を克服し、製品開発を迅速化できるよう支援するソフトウェア開発スタジオです。"
+/>
 <FilterItem
     value="bridge, sc"
     title="Wormhole"
-    subtitle="Cross-chain Bridges"
+    subtitle="クロスチェーンブリッジ"
     color="orange"
     linkHref="https://docs.wormhole.com/wormhole"
-    linkTitle="Start Building"
-    description="Build and Deploy a Multi-chain dApp on Rootstock."
-  />
+    linkTitle="構築を開始"
+    description="Rootstock上でマルチチェーンdAppを構築・デプロイ。"
+/>
 <FilterItem
     value="data, sc"
     title="Envio"
-    subtitle="data"
+    subtitle="データ"
     color="orange"
     linkHref="https://envio.dev/"
-    linkTitle="Access on-chain data"
-    description="Easily query on-chain data through a decentralized network of indexers."
-  />
+    linkTitle="オンチェーンデータにアクセス"
+    description="Rootstock上のdApps構築時にオンチェーンデータを取得。"
+/>
 <FilterItem
     value="data, sc"
     title="Goldsky"
-    subtitle="data"
+    subtitle="データ"
     color="orange"
     linkHref="https://docs.goldsky.com/introduction"
-    linkTitle="Access on-chain data"
-    description="Goldsky is a data indexer that offers high-performance subgraph hosting and realtime data on Rootstock."
-  />
+    linkTitle="オンチェーンデータにアクセス"
+    description="Goldskyは、高性能なサブグラフホスティングおよびリアルタイムデータを提供するRootstock向けのデータインデクサです。"
+/>
 <FilterItem
     value="data, sc"
     title="Subquery"
-    subtitle="data"
+    subtitle="データ"
     color="orange"
     linkHref="https://subquery.network/indexer/30"
-    linkTitle="Access on-chain data"
-    description="SubQuery provides fast, reliable, decentralised, and customised data indexing on Rootstock."
-  />
+    linkTitle="オンチェーンデータにアクセス"
+    description="SubQueryは、Rootstock上で高速・信頼性・分散化・カスタマイズ可能なデータインデクシングを提供します。"
+/>
 <FilterItem
     value="mine"
     title="F2Pool"
-    subtitle="mining"
+    subtitle="マイニング"
     color="orange"
     linkHref="https://www.f2pool.com/"
-    linkTitle="Start Mining"
-    description="Mining Pool on Rootstock."
-  />
+    linkTitle="マイニングを開始"
+    description="Rootstockのマイニングプール。"
+/>
 <FilterItem
     value="mine"
     title="ViaBTC"
-    subtitle="mining"
+    subtitle="マイニング"
     color="orange"
     linkHref="https://www.viabtc.com/"
-    linkTitle="Start Mining"
-    description="Mining Pool on Rootstock."
-  />
+    linkTitle="マイニングを開始"
+    description="Rootstockのマイニングプール。"
+/>
 <FilterItem
     value="mine"
     title="Luxor"
-    subtitle="mining"
+    subtitle="マイニング"
     color="orange"
     linkHref="https://luxor.tech/mining"
-    linkTitle="Start Mining"
-    description="Mining Pool on Rootstock."
-  />
+    linkTitle="マイニングを開始"
+    description="Rootstockのマイニングプール。"
+/>
 <FilterItem
     value="mine"
     title="BraiinsPool"
-    subtitle="mining"
+    subtitle="マイニング"
     color="orange"
     linkHref="https://braiins.com/pool"
-    linkTitle="Start Mining"
-    description="Mining Pool on Rootstock."
-  />
+    linkTitle="マイニングを開始"
+    description="Rootstockのマイニングプール。"
+/>
 <FilterItem
     value="bridge"
     title="Chainport"
-    subtitle="Cross-Chain Bridge"
+    subtitle="クロスチェーンブリッジ"
     color="orange"
     linkHref="https://www.chainport.io/"
-    linkTitle="Get Started"
-    description="Cross-chain bridge integrated with Rootstock."
-  />
+    linkTitle="始める"
+    description="Rootstockと統合されたクロスチェーンブリッジ。"
+/>
 <FilterItem
     value="data"
     title="Tres Finance"
-    subtitle="Accounting"
+    subtitle="会計"
     color="orange"
     linkHref="https://tres.finance/"
-    linkTitle="Get Started"
-    description="Web3 Accounting, Auditing, and Reporting on Rootstock."
-  />
+    linkTitle="始める"
+    description="Rootstock上のWeb3会計、監査、レポーティング。"
+/>
 <FilterItem
     value="demos, sc"
-    title="Wagmi Starter Kit"
-    subtitle="Demos"
+    title="Wagmiスターターキット"
+    subtitle="デモ"
     color="orange"
     linkHref="/developers/quickstart/wagmi/"
-    linkTitle="Use the Kit"
-    description="This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Wagmi and Shadcn libraries."
-  />
+    linkTitle="キットを使う"
+    description="React、Wagmi、Shadcnライブラリを使用してRootstockブロックチェーン上でdAppを構築する基盤を提供します。"
+/>
 <FilterItem
     value="demos, sc"
-    title="Reown-Wagmi Starter Kit"
-    subtitle="Demos"
+    title="Reown-Wagmiスターターキット"
+    subtitle="デモ"
     color="orange"
     linkHref="/developers/quickstart/reown/"
-    linkTitle="Use the Kit"
-    description="This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Reown, Wagmi and Shadcn libraries."
-  />
+    linkTitle="キットを使う"
+    description="React、Reown、Wagmi、Shadcnライブラリを使用してRootstockブロックチェーン上でdAppを構築する基盤を提供します。"
+/>
 <FilterItem
     value="demos, sc"
-    title="Privy Starter Kit"
-    subtitle="Demos"
+    title="Privyスターターキット"
+    subtitle="デモ"
     color="orange"
     linkHref="/developers/quickstart/privy/"
-    linkTitle="Use the Kit"
-    description="The Rootstock Privy Starter Kit empowers developers to onboard users with social logins and self custodial wallets while preserving control, privacy, and flexibility for dApps when building on Rootstock."
-  />
+    linkTitle="キットを使う"
+    description="Rootstock Privyスターターキットは、dApp構築時にコントロール、プライバシー、柔軟性を保ちながら、ソーシャルログインおよび自己管理ウォレットでユーザーをオンボーディングするためのツールです。"
+/>
 <FilterItem
     value="demos, sc"
-    title="Hardhat Starter Kit"
-    subtitle="Demos"
+    title="Hardhatスターターキット"
+    subtitle="デモ"
     color="orange"
     linkHref="/developers/quickstart/hardhat/"
-    linkTitle="Use the Kit"
-    description="Rootstock Hardhat Starter Kit."
-  />
+    linkTitle="キットを使う"
+    description="Rootstock Hardhatスターターキット。"
+/>
 <FilterItem
     value="demos, sc"
-    title="Web3Auth Starter Kit"
-    subtitle="Demos"
+    title="Web3Authスターターキット"
+    subtitle="デモ"
     color="orange"
     linkHref="/developers/quickstart/web3auth/"
-    linkTitle="Use the Kit"
-    description="Build Passwordless dApps on Rootstock using the Rootstock Web3Auth Starter Kit."
-  />
+    linkTitle="キットを使う"
+    description="Rootstock Web3Authスターターキットを使用して、パスワードレスdAppを構築。"
+/>
 <FilterItem
     value="demos, sc"
-    title="Dynamic Starter Kit"
-    subtitle="Demos"
+    title="Dynamicスターターキット"
+    subtitle="デモ"
     color="orange"
     linkHref="/developers/quickstart/dynamic/"
-    linkTitle="Use the Kit"
-    description="Rootstock Dynamic Starter Kit."
-  />
+    linkTitle="キットを使う"
+    description="Rootstock Dynamicスターターキット。"
+/>
 <FilterItem
     value="demos, sc"
-    title="Hardhat Ignition Starter Kit"
-    subtitle="Demos"
+    title="Hardhat Ignitionスターターキット"
+    subtitle="デモ"
     color="orange"
     linkHref="/developers/quickstart/hardhat-ignition/"
-    linkTitle="Use the Kit"
-    description="Rootstock Hardhat Ignition Starter Kit."
-  />
+    linkTitle="キットを使う"
+    description="Rootstock Hardhat Ignitionスターターキット。"
+/>
 <FilterItem
     value="demos, sdk, sc, aa"
-    title="Account Abstraction Kit"
-    subtitle="Demos"
+    title="アカウントアブストラクションキット"
+    subtitle="デモ"
     color="orange"
     linkHref="/developers/quickstart/rootstock-etherspot/"
-    linkTitle="Use the Kit"
-    description="Account Abstraction Starter dApp using Etherspot."
-  />
+    linkTitle="キットを使う"
+    description="Etherspotを使用したアカウントアブストラクションのスターターdApp。"
+/>
 <FilterItem
     value="sdk, sc, aa, platform-infra"
     title="Etherspot"
-    subtitle="Account Abstraction"
+    subtitle="アカウントアブストラクション"
     color="orange"
     linkHref="https://etherspot.io/"
-    linkTitle="Use Etherspot"
-    description="Account Abstraction Development on Rootstock."
-  />
+    linkTitle="Etherspotを使用"
+    description="Rootstock上でのアカウントアブストラクション開発。"
+/>
 <FilterItem
     value="demos, sc"
-    title="dApp Automation"
-    subtitle="Demos"
+    title="dApp自動化"
+    subtitle="デモ"
     color="orange"
     linkHref="/resources/tutorials/dapp-automation-cucumber/"
-    linkTitle="Automate dApps"
-    description="Learn how to automate dApp using Cucumber and Playwright."
-  />
+    linkTitle="dAppを自動化"
+    description="CucumberとPlaywrightを使用してdAppを自動化する方法を学びます。"
+/>
 <FilterItem
     value="sc, oracles, data"
     title="Umbrella Network"
-    subtitle="Oracles"
+    subtitle="オラクル"
     color="orange"
     linkHref="https://umb.network/"
-    linkTitle="Access On-chain Data"
-    description="Access On-Chain data for your smart contracts on Rootstock."
-  />
+    linkTitle="オンチェーンデータにアクセス"
+    description="Rootstock上のスマートコントラクト向けのオンチェーンデータにアクセス。"
+/>
 <FilterItem
     value="sc, oracles, data"
     title="Redstone Finance"
-    subtitle="Oracles"
+    subtitle="オラクル"
     color="orange"
     linkHref="https://redstone.finance/"
-    linkTitle="Access On-chain Data"
-    description="Access On-Chain data for your smart contracts on Rootstock."
-  />
-  <FilterItem
+    linkTitle="オンチェーンデータにアクセス"
+    description="Rootstock上のスマートコントラクト向けのオンチェーンデータにアクセス。"
+/>
+<FilterItem
     value="cc, data"
     title="Router Protocol"
-    subtitle="Cross Chain Bridges"
+    subtitle="クロスチェーンブリッジ"
     color="orange"
     linkHref="https://routerprotocol.com/"
-    linkTitle="Build Cross Chain dApps"
-    description="Router Protocol is a layer-1 blockchain enabling chain abstraction."
-  />
-  <FilterItem
+    linkTitle="クロスチェーンdAppを構築"
+    description="Router Protocolは、チェーンアブストラクションを可能にするレイヤー1ブロックチェーンです。"
+/>
+<FilterItem
     value="cc, data"
-    title="Layerzero"
-    subtitle="Cross Chain Bridges"
+    title="LayerZero"
+    subtitle="クロスチェーンブリッジ"
     color="orange"
     linkHref="/developers/use-cases/rootstock-layerzero/"
-    linkTitle="Build Cross Chain dApps"
-    description="LayerZero, a cross-chain messaging protocol enables the seamless movement of Bitcoin-backed assets from Rootstock to other blockchains, allowing developers to build omnichain applications (OApps) that interact across multiple chains as if they were one."
-  />
-  <FilterItem
+    linkTitle="クロスチェーンdAppを構築"
+    description="LayerZeroは、Rootstockから他のブロックチェーンへのBitcoinバック資産のシームレスな移動を可能にするクロスチェーンメッセージングプロトコルで、複数のチェーンを一体のように扱えるオムニチェーンアプリケーション（OApps）を構築可能。"
+/>
+<FilterItem
     value="attest"
     title="Rootstock Attestation Service (RAS)"
-    subtitle="Attestations"
+    subtitle="アテステーション"
     color="orange"
     linkHref="/dev-tools/attestations/ras/"
-    linkTitle="Attest Now"
-    description="Rootstock Attestation Service (RAS) is a system that allows individuals and organizations to create verifiable claims or proofs about specific events, actions, or data, either on-chain (on the blockchain) or off-chain (outside the blockchain but linked to it). Learn how to use it on Rootstock."
-  />
+    linkTitle="今すぐアテスト"
+    description="Rootstock Attestation Service (RAS)は、個人や組織が特定のイベント、行動、データについてオンチェーン（ブロックチェーン上）またはオフチェーン（ブロックチェーン外だが紐づけ可能）で検証可能な証明や主張を作成できるシステムです。"
+/>
 </Filter>
 ```
