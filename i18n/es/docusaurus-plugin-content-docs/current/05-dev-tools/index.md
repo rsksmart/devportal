@@ -28,7 +28,7 @@ values={[
 {label: 'Abstracción de cuenta', value: 'aa'},
 {label: 'Calidad del código', value: 'code-quality'},
 {label: 'JSON-RPC', value: 'rpc'},
-{label: 'Librerías, value: 'library'},
+{label: 'Librerías', value: 'library'},
 {label: 'No Code', value: 'no-code'},
 {label: 'Herramientas RIF', value: 'rifp'},
 {label: 'Contratos inteligentes', value: 'sc'},
@@ -268,7 +268,7 @@ title="CryptoDO"
 subtitle="no-code"
 color="orange"
 linkHref="https://www.cryptodo.app/"
-linkTitle="Construya una dApp multicadena sin código"
+linkTitle="Construya una dApp multicadena sin escribir código"
 description="CryptoDo es un constructor de soluciones web3 multicadena para empresas que no requiere escribir código."
 />
 <FilterItem
