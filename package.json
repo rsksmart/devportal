@@ -9,6 +9,8 @@
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "start:es": "docusaurus start --locale es",
+    "start:ko": "docusaurus start --locale ko",
+    "start:ja": "docusaurus start --locale ja",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",

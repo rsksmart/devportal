@@ -102,7 +102,6 @@ values={[
   />
 <FilterItem
     value="wagmi, sc, advanced"
-    value="wagmi, advanced"
     title="Account Abstraction Kit"
     subtitle="quickstart"
     color="orange"

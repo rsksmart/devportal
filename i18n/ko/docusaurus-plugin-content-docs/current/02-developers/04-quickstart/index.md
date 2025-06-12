@@ -8,7 +8,7 @@ tags:
   - 초급자
   - 퀵스타트
   - 개발자
-  - 고급
+  - 숙련자
   - Rootstock으로 포팅
   - 튜토리얼
 description: Rootstock에서 개발할 수 있도록 도와주는 퀵스타트, 데모, 스타터 키트.
@@ -17,187 +17,187 @@ description: Rootstock에서 개발할 수 있도록 도와주는 퀵스타트, 
 ```mdx-code-block
 <Filter
 values={[
-{label: 'Beginner', value: 'beginner'},
-{label: 'Advanced', value: 'advanced'},
+{label: '초급자', value: 'beginner'},
+{label: '숙련자', value: 'advanced'},
 {label: 'Hardhat', value: 'hardhat'},
 {label: 'Remix', value: 'remix'},
 {label: 'Wagmi', value: 'wagmi'},
 {label: 'Reown', value: 'reown'},
-{label: 'On-chain data', value: 'data'},
+{label: '온체인 데이터', value: 'data'},
 {label: 'RPC API', value: 'rpc'},
-{label: 'Port to Rootstock', value: 'port-dapps'}
+{label: 'Rootstock으로 포팅', value: 'port-dapps'}
 ]}>
 <FilterItem
     value="beginner, Advanced"
-    title="Vyper Starter Kit"
-    subtitle="quickstart"
+    title="Vyper 스타터 키트"
+    subtitle="퀵스타트"
     color="orange"
     linkHref="/developers/quickstart/rootstock-vyper/"
-    linkTitle="Use the Kit"
-    description="The Rootstock Vyper Starter Kit demonstrates how to deploy smart contracts written in Vyper to the Rootstock network."
+    linkTitle="키트 사용"
+    description="Rootstock Vyper 스타터 키트는 Vyper로 작성한 스마트 컨트랙트를 Rootstock 네트워크에 배포하는 방법을 보여줍니다."
   />
-  <FilterItem
+<FilterItem
     value="beginner, Advanced"
-    title="Privy Starter Kit"
-    subtitle="quickstart"
+    title="Privy 스타터 키트"
+    subtitle="퀵스타트"
     color="orange"
     linkHref="/developers/quickstart/privy/"
-    linkTitle="Use the Kit"
-    description="The Rootstock Privy Starter Kit empowers developers to onboard users with social logins and self custodial wallets while preserving control, privacy, and flexibility for dApps when building on Rootstock."
+    linkTitle="키트 사용"
+    description="Rootstock Privy 스타터 키트는 개발자가 소셜 로그인을 통해 사용자를 온보딩하면서도, 사용자가 직접 지갑을 관리할 수 있도록 지원합니다. 이를 통해 dApp은 Rootstock 위에서 개발할 때 사용자에 대한 제어권, 프라이버시, 유연성을 모두 유지할 수 있습니다."
   />
-  <FilterItem
+<FilterItem
     value="dynamic, wagmi, advanced"
-    title="Dynamic Starter Kit"
-    subtitle="quickstart"
+    title="Dynamic 스타터 키트"
+    subtitle="퀵스타트"
     color="orange"
     linkHref="/developers/quickstart/dynamic/"
-    linkTitle="Use the Kit"
-    description="The Dynamic Starter Kit uses the Wagmi library for faster integration of Web3 features into a Next.js application."
+    linkTitle="키트 사용"
+    description="Dynamic 스타터 키트는 Wagmi 라이브러리를 사용해 Web3 기능을 Next.js 애플리케이션에 더 빠르게 연동할 수 있도록 도와줍니다."
   />
-  <FilterItem
+<FilterItem
     value="beginner, web3auth, advanced"
-    title="Web3Auth Starter Kit"
-    subtitle="web3auth"
+    title="Web3Auth 스타터 키트"
+    subtitle="Web3Auth"
     color="orange"
     linkHref="/developers/quickstart/web3auth/"
-    linkTitle="Get Started"
-    description="A step-to-step guide for developers to build and deploy passwordless dApps on Rootstock using Web3Auth and Wagmi."
+    linkTitle="시작하기"
+    description="Web3Auth와 Wagmi를 사용해, 소셜 로그인 기반 dApp을 Rootstock에 구축하고 배포하는 단계별 가이드입니다."
   />
 <FilterItem
     value="wagmi, beginner"
-    title="Wagmi Starter Kit"
-    subtitle="quickstart"
+    title="Wagmi 스타터 키트"
+    subtitle="퀵스타트"
     color="orange"
     linkHref="/developers/quickstart/wagmi/"
-    linkTitle="Use the Kit"
-    description="This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Wagmi and Shadcn libraries."
+    linkTitle="키트 사용"
+    description="이 스타터 키트는 React, Wagmi, Shadcn 라이브러리를 사용해 Rootstock 블록체인 위에 탈중앙화 애플리케이션(dApp)을 개발할 수 있는 기반을 제공합니다."
   />
 <FilterItem
     value="reown, beginner"
-    title="Reown Starter Kit"
-    subtitle="quickstart"
+    title="Reown 스타터 키트"
+    subtitle="퀵스타트"
     color="orange"
     linkHref="/developers/quickstart/reown/"
-    linkTitle="Use the Kit"
-    description="This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Reown, Wagmi and Shadcn libraries."
+    linkTitle="키트 사용"
+    description="이 스타터 키트는 React, Reown, Wagmi, Shadcn 라이브러리를 활용해 Rootstock 블록체인 위에 탈중앙화 애플리케이션(dApp)을 개발할 수 있는 기반을 제공합니다."
   />
 <FilterItem
     value="hardhat, beginner"
-    title="Hardhat Starter Kit"
-    subtitle="quickstart"
+    title="Hardhat 스타터 키트"
+    subtitle="퀵스타트"
     color="orange"
     linkHref="/developers/quickstart/hardhat/"
-    linkTitle="Use the Kit"
-    description="Smart Contract examples, Tests, Deployments and Tasks for Common ERC Standards (ERC20, ERC721, ERC1155)."
+    linkTitle="키트 사용"
+    description="ERC20, ERC721, ERC1155 등 대표적인 ERC 표준을 기반으로 한 스마트 컨트랙트 예제, 테스트, 배포 스크립트, 그리고 관련 작업들을 제공합니다."
   />
 <FilterItem
     value="hardhat, beginner"
-    title="Hardhat Ignition Starter Kit"
-    subtitle="quickstart"
+    title="Hardhat Ignition 스타터 키트"
+    subtitle="퀵스타트"
     color="orange"
     linkHref="/developers/quickstart/hardhat-ignition/"
-    linkTitle="Use the Kit"
-    description="This guide is designed to help you deploy smart contracts on the Rootstock blockchain, with a focus on using Hardhat Ignition."
+    linkTitle="키트 사용"
+    description="이 가이드는 Hardhat Ignition을 활용해 스마트 컨트랙트를 Rootstock 블록체인에 배포하는 과정을 쉽게 따라할 수 있도록 구성되어 있습니다."
   />
 <FilterItem
     value="foundry, sc, beginner"
-    title="Foundry Starter Kit"
-    subtitle="quickstart"
+    title="Foundry 스타터 키트"
+    subtitle="퀵스타트"
     color="orange"
     linkHref="/developers/quickstart/foundry/"
-    linkTitle="Use the Kit"
-    description="Smart Contract examples, Tests, Deployments and Tasks for Common ERC Standards (ERC20, ERC721, ERC1155)."
+    linkTitle="키트 사용"
+    description="ERC20, ERC721, ERC1155 등 대표적인 ERC 표준을 기반으로 한 스마트 컨트랙트 예제, 테스트, 배포 스크립트, 그리고 관련 작업들을 제공합니다."
   />
 <FilterItem
     value="wagmi, sc, advanced"
     value="wagmi, advanced"
-    title="Account Abstraction Kit"
-    subtitle="quickstart"
+    title="계정 추상화 키트"
+    subtitle="퀵스타트"
     color="orange"
     linkHref="/developers/quickstart/rootstock-etherspot/"
-    linkTitle="Use the Kit"
-    description="Account Abstraction Starter Kit using Etherspot."
+    linkTitle="키트 사용"
+    description="Etherspot을 사용한 계정 추상화 스타터 키트"
   />
 <FilterItem
     value="advanced"
-    title="dApp Automation with Cucumber"
-    subtitle="quickstart"
+    title="Cucumber를 사용한 dApp 자동화"
+    subtitle="퀵스타트"
     color="orange"
     linkHref="/resources/tutorials/dapp-automation-cucumber/"
-    linkTitle="Automate dApps"
-    description="Learn how to automate dApps using Cucumber Agile Automation Framework."
+    linkTitle="dApp 자동화"
+    description="Cucumber 애자일 자동화 프레임워크를 활용해 dApp을 자동화하는 방법을 배워보세요."
   />
 <FilterItem
     value="advanced"
-    title="RIF Relay Starter Kit"
-    subtitle="quickstart"
+    title="RIF 릴레이 스타터 키트"
+    subtitle="퀵스타트"
     color="orange"
     linkHref="/developers/integrate/rif-relay/sample-dapp/"
-    linkTitle="Use Kit"
-    description="Starter kit to develop on RIF Relay."
+    linkTitle="키트 사용"
+    description="RIF 릴레이 위에서 개발할 수 있도록 도와주는 스타터 키트입니다."
   />
 <FilterItem
     value="data, advanced"
-    title="Get Started with The Graph"
-    subtitle="quickstart"
+    title="The Graph 시작하기"
+    subtitle="퀵스타트"
     color="orange"
     linkHref="/dev-tools/data/thegraph/"
-    linkTitle="Get Started"
-    description="Easily query on-chain data through a decentralized network of indexers"
+    linkTitle="시작하기"
+    description="탈중앙화된 인덱서 네트워크를 통해 온체인 데이터를 손쉽게 조회할 수 있습니다."
   />
 <FilterItem
     value="beginner"
-    title="Get Started with Web3.py"
+    title="Web3.py 시작하기"
     subtitle="Web3.py"
     color="orange"
     linkHref="/developers/quickstart/web3-python/"
-    linkTitle="Get Started"
-    description="Get started with deploying and interacting with smart contracts on Rootstock using Web3.py."
+    linkTitle="시작하기"
+    description="Web3.py를 사용해 Rootstock에서 스마트 컨트랙트를 배포하고 상호작용해보세요."
   />
-  <FilterItem
+<FilterItem
     value="beginner, advanced, port-dapps"
-    title="Port an Ethereum dApp to Rootstock"
-    subtitle="Port dApps"
+    title="이더리움 dApp을 Rootstock으로 포팅하기"
+    subtitle="dApp 포팅"
     color="orange"
     linkHref="/resources/port-to-rootstock/ethereum-dapp"
-    linkTitle="Get Started"
-    description="Learn how to port an Ethereum dApp to Rootstock."
+    linkTitle="시작하기"
+    description="이더리움 dApp을 Rootstock으로 포팅하는 방법을 알아보세요."
   />
-  <FilterItem
+<FilterItem
     value="beginner, remix"
-    title="Deploy, Interact and Verify Smart Contracts using Remix and Rootstock Explorer"
+    title="Remix와 Rootstock 익스플로러를 사용해 스마트 컨트랙트 배포, 상호작용, 검증하기"
     subtitle="Remix"
     color="orange"
     linkHref="/developers/quickstart/remix/"
-    linkTitle="Use Remix"
-    description="In this guide, we will use the Remix IDE to write, compile, deploy, interact and verify a smart contract on the Rootstock Explorer."
+    linkTitle="Remix 사용"
+    description="이 가이드에서는 Remix IDE를 사용해 스마트 컨트랙트를 작성하고, 컴파일하고, Rootstock 익스플로러를 통해 배포, 상호작용, 검증하는 방법을 다룹니다."
   />
-  <FilterItem
+<FilterItem
     value="beginner, advanced"
-    title="Getting Started with Apeworx"
+    title="Apeworx 시작하기"
     subtitle="Ape"
     color="orange"
     linkHref="/developers/quickstart/ape/"
-    linkTitle="Use Ape"
-    description="Learn how to compile, deploy, and intereact with smart contracts with Ape on Rootstock"
+    linkTitle="Ape 사용"
+    description="Ape 프레임워크를 사용해 Rootstock에서 스마트 컨트랙트를 컴파일하고 배포하며 상호작용하는 방법을 알아보세요."
   />
-  <FilterItem
+<FilterItem
     value="beginner, rpc"
-    title="Get Started with Rootstock RPC API"
+    title="Rootstock RPC API 시작하기"
     subtitle="RPC API"
     color="orange"
     linkHref="/developers/rpc-api/rootstock/setup/"
-    linkTitle="Use the RPC API"
-    description="The Rootstock RPC Service provides a seamless and intuitive web interface for developers to interact with Rootstock nodes via JSON-RPC methods."
+    linkTitle="RPC API 사용"
+    description="Rootstock RPC 서비스는 개발자가 JSON-RPC 메서드를 통해 Rootstock 노드와 쉽고 직관적으로 상호작용할 수 있도록 웹 인터페이스를 제공합니다."
   />
-    <FilterItem
+<FilterItem
     value="beginner, rpc"
-    title="Get Started with Alchemy"
+    title="Alchemy 시작하기"
     subtitle="RPC API"
     color="orange"
     linkHref="/developers/rpc-api/alchemy/"
-    linkTitle="Use the RPC API"
-    description="A step-to-step guide for developers to interact with Rootstock network with the Alchemy RPC Provider Service."
+    linkTitle="RPC API 사용"
+    description="개발자가 Alchemy RPC Provider 서비스를 사용해 Rootstock 네트워크와 상호작용할 수 있도록 단계별로 안내하는 가이드입니다."
   />
 </Filter>
 ```

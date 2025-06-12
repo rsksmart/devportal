@@ -8,7 +8,7 @@ description: "Minimum hardware requirements for Rootstock."
 
 This guide provides clear instructions for developers on the supported Solidity versions and the necessary configurations needed to ensure your smart contracts are deployed on the Rootstock network.
 
-:::tip[Hackathons & Workshops]
+:::tip Hackathons & Workshops
 
 - Participating in a Rootstock Hackathon or Workshop?
 - Visit the [Hackathon Resources](/resources/hackathon/)  section for details.
@@ -16,12 +16,11 @@ This guide provides clear instructions for developers on the supported Solidity 
 - **Resources:**
   - Explore the [Developer Tools](/dev-tools/) section for a full list of tools and resources.
 
-````mdx-code-block
 :::
+
+````mdx-code-block
 <Steps>
  <Step title="Software Requirements:">
-
-
 
 Set up the necessary software for a seamless development experience:
 
@@ -38,7 +37,8 @@ Set up the necessary software for a seamless development experience:
     ```bash
     npm install --save-dev hardhat
     ```
-    :::tip[Recommended]
+    :::tip Recommended
+
     For added convenience, install shorthand globally
     - Install `hh` autocomplete to use `hh` shorthand globally.
     ```bash
@@ -49,7 +49,7 @@ Set up the necessary software for a seamless development experience:
 
     - Learn how to write, interact, deploy, and test smart contracts on Rootstock using [Hardhat](/developers/smart-contracts/hardhat) or [Foundry](/developers/smart-contracts/foundry/).
 
-     :::
+    :::
 
 - **Foundry (Optional):**
   - Install Foundry as an alternative to Hardhat for building, deploying, and testing contracts:
@@ -73,8 +73,11 @@ Set up your wallet to connect with Rootstock networks:
     - **Testnet:** `m/44'/37310'/0'/0/N`
 
  *See the [Account-Based Addresses](#account-based-addresses) section for guidance on address verification.*
-:::info[Info]
+
+:::info Info
+
 See [Account based addresses](/concepts/account-based-addresses/) section for more information or [how to verify address ownership](/developers/smart-contracts/verify-address-ownership/).
+
 :::
 
 </Step>
@@ -99,11 +102,14 @@ Choose one of the following environments to build and deploy your contracts:
   - Install and manage using `foundryup`.
 
 
-:::note[Development Environments]
+:::note Development Environments
+
 Learn how to write, interact, deploy, and test smart contracts on Rootstock using [Hardhat](/developers/smart-contracts/hardhat) or [Foundry](/developers/smart-contracts/foundry/).
 
 💡 *You don’t need to use both  (Hardhat and Foundry); pick the one that suits your workflow.*
+
 :::
+
 </Step>
 
 <Step title="Command Line Tools">

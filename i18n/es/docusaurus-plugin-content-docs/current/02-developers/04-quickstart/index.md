@@ -28,12 +28,12 @@ values={[
   {label: 'Migrar a Rootstock', value: 'port-dapps'}
 ]}>
 <FilterItem
-    value="principiante, avanzado"
+    value="beginner, Advanced"
     title="Kit de inicio de Vyper"
     subtitle="inicio rápido"
     color="orange"
     linkHref="/developers/quickstart/rootstock-vyper/"
-    linkTitle="Utilizar el kit"
+    linkTitle="Usa el kit"
     description="El kit de inicio de Vyper de Rootstock demuestra cómo desplegar contratos inteligentes escritos en Vyper en la red Rootstock."
   />
   <FilterItem
@@ -42,7 +42,7 @@ values={[
     subtitle="quickstart"
     color="orange"
     linkHref="/developers/quickstart/privy/"
-    linkTitle="Use the Kit"
+    linkTitle="Usa el kit"
     description="El Kit de inicio Privy de Rootstock permite a los desarrolladores incorporar usuarios con inicios de sesión sociales y monederos de autocustodia a la vez que se preserva el control, privacidad y flexibilidad para dApps al construir sobre Rootstock."
   />
   <FilterItem
@@ -51,7 +51,7 @@ values={[
     subtitle="quickstart"
     color="orange"
     linkHref="/developers/quickstart/dynamic/"
-    linkTitle="Use the Kit"
+    linkTitle="Usa el kit"
     description="El Kit de inicio dinámico utiliza la biblioteca Wagmi para una integración más rápida de las funciones Web3 en una aplicación Next.js."
   />
   <FilterItem
@@ -60,7 +60,7 @@ values={[
     subtitle="web3auth"
     color="orange"
     linkHref="/developers/quickstart/web3auth/"
-    linkTitle="Get Started"
+    linkTitle="Comenzar"
     description="Una guía paso a paso para desarrolladores para construir y desplegar dApps sin contraseña en Rootstock usando Web3Auth y Wagmi."
   />
 <FilterItem
@@ -69,7 +69,7 @@ values={[
     subtitle="quickstart"
     color="orange"
     linkHref="/developers/quickstart/wagmi/"
-    linkTitle="Use the Kit"
+    linkTitle="Usa el kit"
     description="Este kit de inicio proporciona una base para crear aplicaciones descentralizadas (dApps) en la blockchain de Rootstock utilizando las bibliotecas React, Wagmi y Shadcn."
   />
 <FilterItem
@@ -78,7 +78,7 @@ values={[
     subtitle="quickstart"
     color="orange"
     linkHref="/developers/quickstart/reown/"
-    linkTitle="Use the Kit"
+    linkTitle="Usa el kit"
     description="Este kit de inicio proporciona una base para crear aplicaciones descentralizadas (dApps) en la blockchain Rootstock utilizando React, Reown, Wagmi y bibliotecas Shadcn."
   />
 <FilterItem
@@ -87,16 +87,16 @@ values={[
     subtitle="quickstart"
     color="orange"
     linkHref="/developers/quickstart/hardhat/"
-    linkTitle="Use the Kit"
+    linkTitle="Usa el kit"
     description="Ejemplos de contratos inteligentes, pruebas, implementaciones y tareas para estándares ERC comunes (ERC20, ERC721, ERC1155)."
   />
 <FilterItem
-    value="hardhat, principiante"
+    value="hardhat, beginner"
     title="Kit de inicio de Hardhat Ignition"
     subtitle="inicio rápido"
     color="orange"
     linkHref="/developers/quickstart/hardhat-ignition/"
-    linkTitle="Utilice el kit"
+    linkTitle="Usa el kit"
     description="Esta guía está diseñada para ayudarle a implementar contratos inteligentes en la blockchain Rootstock, centrándose en el uso de Hardhat Ignition."
   />
 <FilterItem
@@ -105,17 +105,16 @@ values={[
     subtitle="quickstart"
     color="orange"
     linkHref="/developers/quickstart/foundry/"
-    linkTitle="Use the Kit"
+    linkTitle="Usa el kit"
     description="Ejemplos de contratos inteligentes, pruebas, despliegues y tareas para estándares ERC comunes (ERC20, ERC721, ERC1155)."
   />
 <FilterItem
     value="wagmi, sc, advanced"
-    value="wagmi, advanced"
     title="Kit de Abstracción de Cuentas"
     subtitle="quickstart"
     color="orange"
     linkHref="/developers/quickstart/rootstock-etherspot/"
-    linkTitle="Utiliza el Kit"
+    linkTitle="Usa el kit"
     description="Kit de Inicio de Abstracción de Cuentas utilizando Etherspot."
   />
 <FilterItem
@@ -133,7 +132,7 @@ values={[
     subtitle="quickstart"
     color="orange"
     linkHref="/developers/integrate/rif-relay/sample-dapp/"
-    linkTitle="Use Kit"
+    linkTitle="Usa el kit"
     description="Kit de inicio para desarrollar en RIF Relay."
   />
 <FilterItem
@@ -142,7 +141,7 @@ values={[
     subtitle="quickstart"
     color="orange"
     linkHref="/dev-tools/data/thegraph/"
-    linkTitle="Get Started"
+    linkTitle="Comenzar"
     description="Consulta fácil de datos en cadena a través de una red descentralizada de indexadores"
   />
 <FilterItem
@@ -151,7 +150,7 @@ values={[
     subtitle="Web3.py"
     color="orange"
     linkHref="/developers/quickstart/web3-python/"
-    linkTitle="Empiece"
+    linkTitle="Comenzar"
     description="Empiece a desplegar e interactuar con contratos inteligentes en Rootstock utilizando Web3.py."
   />
   <FilterItem
@@ -160,7 +159,7 @@ values={[
     subtitle="Portar dApps"
     color="orange"
     linkHref="/resources/port-to-rootstock/ethereum-dapp"
-    linkTitle="Empiece"
+    linkTitle="Comenzar"
     description="Aprenda a portar una dApp de Ethereum a Rootstock."
   />
   <FilterItem
@@ -173,7 +172,7 @@ values={[
     description="En esta guía, utilizaremos el IDE Remix para escribir, compilar, desplegar, interactuar y verificar un contrato inteligente en el Rootstock Explorer."
   />
   <FilterItem
-    value="principiante, avanzado"
+    value="beginner, avanzado"
     title="Primeros pasos con Apeworx"
     subtitle="Ape"
     color="orange"
