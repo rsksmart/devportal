@@ -58,7 +58,7 @@ description="Utilice el Puente de Tokens para mover de forma segura tokens ERC20
 <FilterItem
 value="dev-environment, sc, platform-infra"
 title="Foundry"
-subtitle="Dev Environments"
+subtitle="Entornos de Desarrollo"
 color="orange"
 linkHref="https://dev.rootstock.io/dev-tools/foundry/"
 linkTitle="Implemente contratos inteligentes"
@@ -67,7 +67,7 @@ description="Foundry es una cadena de herramientas de desarrollo de contratos in
 <FilterItem
 value="dev-environment, sc"
 title="Hardhat"
-subtitle="Dev Environments"
+subtitle="Entornos de Desarrollo"
 color="orange"
 linkHref="/dev-tools/dev-environments/hardhat/"
 linkTitle="Implemente contratos inteligentes"
@@ -202,7 +202,7 @@ description="El protocolo Flyover realiza peg-ins y peg-outs rápidos entre las 
 <FilterItem
 value="data"
 title="The Graph"
-subtitle="data & analytics"
+subtitle="Datos y Analítica"
 color="orange"
 linkHref="/dev-tools/data/thegraph/"
 linkTitle="Acceda a datos de la cadena"
@@ -211,7 +211,7 @@ description="Obtenga datos históricos sobre contratos inteligentes al crear dAp
 <FilterItem
 value="data"
 title="Covalent"
-subtitle="data & analytics"
+subtitle="Datos y Analítica"
 color="orange"
 linkHref="https://www.covalenthq.com/docs/networks/rootstock/?utm_source=rootstock&utm_medium=partner-docs"
 linkTitle="Acceda a datos de la cadena"
@@ -220,7 +220,7 @@ description="Covalent es una solución alojada de datos de blockchain que propor
 <FilterItem
 value="data"
 title="DefiLlama"
-subtitle="data & analytics"
+subtitle="Datos y Analítica"
 color="orange"
 linkHref="https://defillama.com/chain/Rootstock"
 linkTitle="Acceda a datos de la cadena"
@@ -229,7 +229,7 @@ description="DefiLlama es el mayor agregador de Valor total bloqueado (TVL) en e
 <FilterItem
 value="data"
 title="Tenderly"
-subtitle="data & analytics"
+subtitle="Datos y Analítica"
 color="orange"
 linkHref="https://tenderly.co/"
 linkTitle="Acceda a datos de la cadena"
@@ -238,7 +238,7 @@ description="Tenderly ayuda a los desarrolladores a crear, monitorear y mejorar 
 <FilterItem
 value="platform-infra, sc, sdk"
 title="Thirdweb"
-subtitle="platforms"
+subtitle="Plataformas"
 color="orange"
 linkHref="https://thirdweb.com/"
 linkTitle="Utilice Thirdweb"
@@ -247,7 +247,7 @@ description="Thirdweb es una herramienta de desarrollo web3 full-stack, una plat
 <FilterItem
 value="platform-infra, sc"
 title="useDApp"
-subtitle="platforms"
+subtitle="Plataformas"
 color="orange"
 linkHref="https://usedapp.io/"
 linkTitle="Construya con useDApp"
@@ -268,7 +268,7 @@ title="CryptoDO"
 subtitle="no-code"
 color="orange"
 linkHref="https://www.cryptodo.app/"
-linkTitle="Construye una dApp multicadena sin código"
+linkTitle="Construya una dApp multicadena sin código"
 description="CryptoDo es un constructor de soluciones web3 multicadena para empresas que no requiere escribir código."
 />
 <FilterItem
@@ -283,7 +283,7 @@ description="RIF Relay es un sistema seguro de transacciones patrocinadas que pe
 <FilterItem
 value="dev-environment, sc"
 title="Remix"
-subtitle="Dev Environments"
+subtitle="Entornos de Desarrollo"
 color="orange"
 linkHref="https://remix.ethereum.org/"
 linkTitle="Implemente contratos inteligentes"
@@ -310,7 +310,7 @@ description="Estación de Gas de Rootstock."
 <FilterItem
 value="data"
 title="Estadísticas de Rootstock"
-subtitle="data & analytics"
+subtitle="Datos y Analítica"
 color="orange"
 linkHref="https://stats.rootstock.io/"
 linkTitle="Vea las estadísticas"
@@ -327,7 +327,7 @@ description="Obtenga tRBTC en el Faucet de Rootstock Testnet."
 />
 <FilterItem
 value="faucet, rifp"
-title="Grifo RIF Testnet"
+title="Faucet de RIF Testnet"
 subtitle="faucets"
 color="orange"
 linkHref="https://faucet.rifos.org/"
@@ -364,7 +364,7 @@ description="RNS proporciona una arquitectura que permite la identificación de 
 <FilterItem
 value="code-quality, testing, sc"
 title="SolidityScan"
-subtitle="code quality"
+subtitle="Calidad del Código"
 color="orange"
 linkHref="https://solidityscan.com/"
 linkTitle="Proteja sus contratos inteligentes"
@@ -373,7 +373,7 @@ description="Proteja sus contratos inteligentes en Rootstock y reciba informes d
 <FilterItem
 value="code-quality, testing, sc"
 title="Slither"
-subtitle="code quality"
+subtitle="Calidad del Código"
 color="orange"
 linkHref="https://github.com/crytic/slither"
 linkTitle="Analice los contratos inteligente"
@@ -382,7 +382,7 @@ description="Slither, construido con Solidity y Vyper, es un marco de análisis 
 <FilterItem
 value="code-quality, testing, sc"
 title="Sourcify"
-subtitle="code quality"
+subtitle="Calidad del Código"
 color="orange"
 linkHref="https://sourcify.dev"
 linkTitle="Verifique sus contratos inteligentes"
@@ -490,7 +490,7 @@ description="Bridge de cadena cruzada integrado con Rootstock."
 <FilterItem
 value="data"
 title="Tres Finance"
-subtitle="Accounting"
+subtitle="Contabilidad"
 color="orange"
 linkHref="https://tres.finance/"
 linkTitle="Cómo empezar"
@@ -526,7 +526,7 @@ description="dApp de inicio de abstracción de cuentas utilizando Etherspot."
 <FilterItem
 value="sdk, sc, aa, platform-infra"
 title="Etherspot"
-subtitle="Account Abstraction"
+subtitle="Abstracción de Cuentas"
 color="orange"
 linkHref="https://etherspot.io/"
 linkTitle="Utilice Etherspot"
