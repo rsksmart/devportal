@@ -182,7 +182,7 @@ function SearchPageContentInternal () {
   // respect settings from the theme config for facets
   const disjunctiveFacets = contextualSearch
     ? ['language', 'docusaurus_tag']
-    : []
+    : ['language'] //TODO: remove this when contextualSearch fixed
   const algoliaClient = liteClient(appId, apiKey)
   const algoliaHelper = algoliaSearchHelper(algoliaClient, indexName, {
     hitsPerPage: 15,
@@ -271,6 +271,8 @@ function SearchPageContentInternal () {
         description: 'The search page title for empty query',
       })
   const makeSearch = useEvent((page = 0) => {
+    algoliaHelper.addDisjunctiveFacetRefinement('language', currentLocale) //TODO: remove this when contextualSearch fixed
+
     if (contextualSearch) {
       algoliaHelper.addDisjunctiveFacetRefinement('docusaurus_tag', 'default')
       algoliaHelper.addDisjunctiveFacetRefinement('language', currentLocale)

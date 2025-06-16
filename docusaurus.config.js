@@ -295,6 +295,9 @@ const config = {
 
         // Optional: see doc section below
         contextualSearch: false,
+        searchParameters: {
+          facetFilters: ['language:en'],
+        },
 
       }
     }),
