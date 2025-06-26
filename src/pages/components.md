@@ -775,7 +775,7 @@ The Steps component is a structured guide that breaks down complex tasks into cl
 </Steps>
 ````
 
-**Result**
+- **Render**
 
 <Steps>
 
@@ -801,3 +801,71 @@ With your environment prepared, start by initializing your project. Follow these
 By following these steps, you should now have a basic project setup and be ready to start development.
 </Step>
 </Steps>
+
+## FileTree component
+
+The FileTree component helps visualize directory structures and file hierarchies in a clear, indented format.
+
+Add placeholder files and directories by using either `...` as the name.
+
+Make a file or directory stand out by making its name highlighted, wrap file nawe with `==...==` e.g. `==README.md==`.
+
+
+- **Code**
+
+```jsx
+<FileTree>
+  -- ==package.json==
+  -- docusaurus.config.js
+  -- sidebars.js
+  -- ==src/==
+  ---- components/
+  ------ Accordion/
+  -------- data.json
+  -------- index.js
+  -------- styles.css
+  -- static/
+  ---- img/
+  ------ concepts/
+  ------ resources/
+  ------ image.png
+  ------ photo.jpg
+  ------ ...
+  ---- video/
+  ------ intro.mp4
+  ------ ...
+  -- docs/
+  ---- components/
+  ------ markdown.md
+  ------ ui-components.md
+</FileTree>
+```
+- **Render**
+
+
+<FileTree>
+-- ==package.json==
+-- docusaurus.config.js
+-- sidebars.js
+-- ==src/==
+---- components/
+------ Accordion/
+-------- data.json
+-------- index.js
+-------- styles.css
+-- static/
+---- img/
+------ concepts/
+------ resources/
+------ image.png
+------ photo.jpg
+------ ...
+---- video/
+------ intro.mp4
+------ ...
+-- docs/
+---- components/
+------ markdown.md
+------ ui-components.md
+</FileTree>
+

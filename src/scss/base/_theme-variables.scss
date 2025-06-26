@@ -250,6 +250,11 @@ html:root {
   --rsk-step-border-color: #{$gray-250};
   --rsk-step-bg-color: #{$gray-50};
 
+  //FileTree component
+  --rsk-filetree-bg: #{$white};
+  --rsk-filetree-highlight-bg: #{$gray-700};
+  --rsk-filetree-highlight-color: #{$white};
+
 
   @include media-breakpoint-up(md) {
     --ifm-navbar-sidebar-width: 83vw;
@@ -390,4 +395,7 @@ html:root {
   //Steps component
   --rsk-step-border-color: #{$gray-600};
   --rsk-step-bg-color: #{$gray-850};
+
+  //FileTree component
+  --rsk-filetree-bg: #{$gray-950};
 }

@@ -19,6 +19,7 @@ import Steps from "/src/components/Steps";
 import Step from "/src/components/Steps/Step";
 import AddressVerifier from "/src/components/AddressVerifier";
 import RNSDomainSearch from "/src/components/RNSDomainSearch";
+import FileTree from "/src/components/FileTree";
 
 export default {
   // Re-use the default mapping
@@ -26,5 +27,6 @@ export default {
   // Map the "<Highlight>" tag to our Highlight component
   // `Highlight` will receive all props that were passed to `<Highlight>` in MDX
   Carousel, CarouselItem, Tabs, TabItem, Accordion, Card, Quote, Video, Filter, FilterItem, Button, CardsGrid, CardsGridItem, Shield, Steps, Step,
-  AddressVerifier, RNSDomainSearch
+  AddressVerifier, RNSDomainSearch,
+  FileTree
 };
