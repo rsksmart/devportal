@@ -6,7 +6,6 @@ description: "Reown gives developers the tools to build user experiences that ma
 tags: [reown, account abstraction, developer tools, rootstock, ethereum, dApps, wallets, wallet connections, wallet infrastructure]
 ---
 
-
 **[Reown](https://reown.com/?utm_source=rootstock&utm_medium=docs&utm_campaign=backlinks)** provides developers with the tools to build user experiences that make digital ownership effortless, intuitive, and secure.
 
 Reown has two major product offerings, they are, **AppKit** and **WalletKit**.

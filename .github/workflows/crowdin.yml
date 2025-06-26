@@ -1,0 +1,32 @@
+name: Crowdin Sync
+
+on:
+  push:
+    branches:
+      - main # Adjust the branch as needed
+      - feature/i18n
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install unzip utility
+        run: sudo apt-get install unzip
+
+      - name: Install Crowdin CLI
+        run: |
+          curl -s https://downloads.crowdin.com/cli/v3/crowdin-cli.zip -o crowdin-cli.zip
+          unzip crowdin-cli.zip -d crowdin-cli
+          sudo mv crowdin-cli/3.15.0/crowdin /usr/local/bin/
+          sudo mv crowdin-cli/3.15.0/crowdin-cli.jar /usr/local/bin/
+          sudo chmod +x /usr/local/bin/crowdin
+
+      - name: Crowdin Sync
+        run: |
+          crowdin upload sources \
+          --project-id 683600 \
+          --token ${{ secrets.CROWDIN_API_TOKEN }} \
+          --preserve-hierarchy

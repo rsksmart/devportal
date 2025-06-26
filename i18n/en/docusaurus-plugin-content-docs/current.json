@@ -1,0 +1,278 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.01ConceptsSidebar.category.Rootstock Fundamentals": {
+    "message": "Rootstock Fundamentals",
+    "description": "The label for category Rootstock Fundamentals in sidebar 01ConceptsSidebar"
+  },
+  "sidebar.01ConceptsSidebar.category.RBTC Token": {
+    "message": "RBTC Token",
+    "description": "The label for category RBTC Token in sidebar 01ConceptsSidebar"
+  },
+  "sidebar.01ConceptsSidebar.category.RIF Suite": {
+    "message": "RIF Suite",
+    "description": "The label for category RIF Suite in sidebar 01ConceptsSidebar"
+  },
+  "sidebar.01ConceptsSidebar.category.Powpeg": {
+    "message": "Powpeg",
+    "description": "The label for category Powpeg in sidebar 01ConceptsSidebar"
+  },
+  "sidebar.02DevelopersSidebar.category.Blockchain Essentials": {
+    "message": "Blockchain Essentials",
+    "description": "The label for category Blockchain Essentials in sidebar 02DevelopersSidebar"
+  },
+  "sidebar.02DevelopersSidebar.category.Quick Starts": {
+    "message": "Quick Starts",
+    "description": "The label for category Quick Starts in sidebar 02DevelopersSidebar"
+  },
+  "sidebar.02DevelopersSidebar.category.Smart Contracts Development": {
+    "message": "Smart Contracts Development",
+    "description": "The label for category Smart Contracts Development in sidebar 02DevelopersSidebar"
+  },
+  "sidebar.02DevelopersSidebar.category.Getting Started with Hardhat": {
+    "message": "Getting Started with Hardhat",
+    "description": "The label for category Getting Started with Hardhat in sidebar 02DevelopersSidebar"
+  },
+  "sidebar.02DevelopersSidebar.category.RPC API": {
+    "message": "RPC API",
+    "description": "The label for category RPC API in sidebar 02DevelopersSidebar"
+  },
+  "sidebar.02DevelopersSidebar.category.Integration Guides": {
+    "message": "Integration Guides",
+    "description": "The label for category Integration Guides in sidebar 02DevelopersSidebar"
+  },
+  "sidebar.02DevelopersSidebar.category.RIF Relay": {
+    "message": "RIF Relay",
+    "description": "The label for category RIF Relay in sidebar 02DevelopersSidebar"
+  },
+  "sidebar.02DevelopersSidebar.category.Libraries": {
+    "message": "Libraries",
+    "description": "The label for category Libraries in sidebar 02DevelopersSidebar"
+  },
+  "sidebar.03NodeOperatorsSidebar.category.Node Setup": {
+    "message": "Node Setup",
+    "description": "The label for category Node Setup in sidebar 03NodeOperatorsSidebar"
+  },
+  "sidebar.03NodeOperatorsSidebar.category.Node Installation": {
+    "message": "Node Installation",
+    "description": "The label for category Node Installation in sidebar 03NodeOperatorsSidebar"
+  },
+  "sidebar.03NodeOperatorsSidebar.category.Configure the node": {
+    "message": "Configure the node",
+    "description": "The label for category Configure the node in sidebar 03NodeOperatorsSidebar"
+  },
+  "sidebar.03NodeOperatorsSidebar.category.Node Runners": {
+    "message": "Node Runners",
+    "description": "The label for category Node Runners in sidebar 03NodeOperatorsSidebar"
+  },
+  "sidebar.03NodeOperatorsSidebar.category.Merged Mining": {
+    "message": "Merged Mining",
+    "description": "The label for category Merged Mining in sidebar 03NodeOperatorsSidebar"
+  },
+  "sidebar.03NodeOperatorsSidebar.category.JSON RPC": {
+    "message": "JSON RPC",
+    "description": "The label for category JSON RPC in sidebar 03NodeOperatorsSidebar"
+  },
+  "sidebar.03NodeOperatorsSidebar.category.Maintenance": {
+    "message": "Maintenance",
+    "description": "The label for category Maintenance in sidebar 03NodeOperatorsSidebar"
+  },
+  "sidebar.04ResourcesSidebar.category.Contribute": {
+    "message": "Contribute",
+    "description": "The label for category Contribute in sidebar 04ResourcesSidebar"
+  },
+  "sidebar.04ResourcesSidebar.category.Tutorials": {
+    "message": "Tutorials",
+    "description": "The label for category Tutorials in sidebar 04ResourcesSidebar"
+  },
+  "sidebar.04ResourcesSidebar.category.Port to Rootstock": {
+    "message": "Port to Rootstock",
+    "description": "The label for category Port to Rootstock in sidebar 04ResourcesSidebar"
+  },
+  "sidebar.04ResourcesSidebar.category.Guides": {
+    "message": "Guides",
+    "description": "The label for category Guides in sidebar 04ResourcesSidebar"
+  },
+  "sidebar.04ResourcesSidebar.category.2 Way Peg App": {
+    "message": "2 Way Peg App",
+    "description": "The label for category 2 Way Peg App in sidebar 04ResourcesSidebar"
+  },
+  "sidebar.04ResourcesSidebar.category.2 Way Peg App.link.generated-index.description": {
+    "message": "The 2 way peg is a protocol that converts BTC to RBTC and vice versa. It is secured by the powpeg, which is a unique 2-way peg system that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus.",
+    "description": "The generated-index page description for category 2 Way Peg App in sidebar 04ResourcesSidebar"
+  },
+  "sidebar.04ResourcesSidebar.category.Peg-in": {
+    "message": "Peg-in",
+    "description": "The label for category Peg-in in sidebar 04ResourcesSidebar"
+  },
+  "sidebar.04ResourcesSidebar.category.Peg-out": {
+    "message": "Peg-out",
+    "description": "The label for category Peg-out in sidebar 04ResourcesSidebar"
+  },
+  "sidebar.04ResourcesSidebar.category.Advanced Operations": {
+    "message": "Advanced Operations",
+    "description": "The label for category Advanced Operations in sidebar 04ResourcesSidebar"
+  },
+  "sidebar.04ResourcesSidebar.category.Token Bridge": {
+    "message": "Token Bridge",
+    "description": "The label for category Token Bridge in sidebar 04ResourcesSidebar"
+  },
+  "sidebar.05DevToolsSidebar.category.Rootstock Wallets": {
+    "message": "Rootstock Wallets",
+    "description": "The label for category Rootstock Wallets in sidebar 05DevToolsSidebar"
+  },
+  "sidebar.05DevToolsSidebar.category.Rootstock Explorers": {
+    "message": "Rootstock Explorers",
+    "description": "The label for category Rootstock Explorers in sidebar 05DevToolsSidebar"
+  },
+  "sidebar.01ConceptsSidebar.category.RNS": {
+    "message": "RNS",
+    "description": "The label for category RNS in sidebar 01ConceptsSidebar"
+  },
+  "sidebar.01ConceptsSidebar.category.Spec": {
+    "message": "Spec",
+    "description": "The label for category Spec in sidebar 01ConceptsSidebar"
+  },
+  "sidebar.01ConceptsSidebar.category.PowPeg Protocol": {
+    "message": "PowPeg Protocol",
+    "description": "The label for category PowPeg Protocol in sidebar 01ConceptsSidebar"
+  },
+  "sidebar.02DevelopersSidebar.category.Rootstock Blockchain Essentials": {
+    "message": "Rootstock Blockchain Essentials",
+    "description": "The label for category Rootstock Blockchain Essentials in sidebar 02DevelopersSidebar"
+  },
+  "sidebar.02DevelopersSidebar.category.Rootstock Blockchain Essentials.link.generated-index.description": {
+    "message": "Learn how to interact with Rootstock in your web browser, how to look at Rootstock transactions, develop and deploy your very first smart contract to the Rootstock network.",
+    "description": "The generated-index page description for category Rootstock Blockchain Essentials in sidebar 02DevelopersSidebar"
+  },
+  "sidebar.02DevelopersSidebar.category.Smart Contracts Development.link.generated-index.description": {
+    "message": "Get started with deploying dApps on Rootstock using Hardhat, Wagmi, Remix and other EVM-compatible tools.",
+    "description": "The generated-index page description for category Smart Contracts Development in sidebar 02DevelopersSidebar"
+  },
+  "sidebar.02DevelopersSidebar.category.Getting Started with Foundry": {
+    "message": "Getting Started with Foundry",
+    "description": "The label for category Getting Started with Foundry in sidebar 02DevelopersSidebar"
+  },
+  "sidebar.02DevelopersSidebar.category.Getting Started with Rootstock CLI": {
+    "message": "Getting Started with Rootstock CLI",
+    "description": "The label for category Getting Started with Rootstock CLI in sidebar 02DevelopersSidebar"
+  },
+  "sidebar.02DevelopersSidebar.category.Getting Started with Rootstock CLI.link.generated-index.description": {
+    "message": "The Rootstock CLI (rsk-cli) tool enables users to manage wallets, check balances, send transactions, verify smart contracts and interact with smart contracts on the Rootstock blockchain - a Bitcoin sidechain designed for smart contracts. It supports both mainnet and testnet environments.",
+    "description": "The generated-index page description for category Getting Started with Rootstock CLI in sidebar 02DevelopersSidebar"
+  },
+  "sidebar.02DevelopersSidebar.category.RPC API.link.generated-index.description": {
+    "message": "RPC API services for interacting with the Rootstock network.",
+    "description": "The generated-index page description for category RPC API in sidebar 02DevelopersSidebar"
+  },
+  "sidebar.02DevelopersSidebar.category.Rootstock RPC API": {
+    "message": "Rootstock RPC API",
+    "description": "The label for category Rootstock RPC API in sidebar 02DevelopersSidebar"
+  },
+  "sidebar.02DevelopersSidebar.category.Integration Guides.link.generated-index.description": {
+    "message": "Easily Integrate Your dApps with Developer-Friendly SDKs on Rootstock.",
+    "description": "The generated-index page description for category Integration Guides in sidebar 02DevelopersSidebar"
+  },
+  "sidebar.02DevelopersSidebar.category.RBTC Flyover": {
+    "message": "RBTC Flyover",
+    "description": "The label for category RBTC Flyover in sidebar 02DevelopersSidebar"
+  },
+  "sidebar.02DevelopersSidebar.category.Liquidity Provider Onboarding": {
+    "message": "Liquidity Provider Onboarding",
+    "description": "The label for category Liquidity Provider Onboarding in sidebar 02DevelopersSidebar"
+  },
+  "sidebar.02DevelopersSidebar.category.Libraries.link.generated-index.description": {
+    "message": "Libraries for Rootstock Integration.",
+    "description": "The generated-index page description for category Libraries in sidebar 02DevelopersSidebar"
+  },
+  "sidebar.04ResourcesSidebar.category.Runes on Rootstock": {
+    "message": "Runes on Rootstock",
+    "description": "The label for category Runes on Rootstock in sidebar 04ResourcesSidebar"
+  },
+  "sidebar.04ResourcesSidebar.category.Runes on Rootstock.link.generated-index.description": {
+    "message": "The Rootstock Runes Mock Bridge Project opens up exciting opportunities for developers to build Runes-focused applications within the Rootstock ecosystem.",
+    "description": "The generated-index page description for category Runes on Rootstock in sidebar 04ResourcesSidebar"
+  },
+  "sidebar.04ResourcesSidebar.category.Create and Deploy a Runes Mock Bridge dApp on Rootstock": {
+    "message": "Create and Deploy a Runes Mock Bridge dApp on Rootstock",
+    "description": "The label for category Create and Deploy a Runes Mock Bridge dApp on Rootstock in sidebar 04ResourcesSidebar"
+  },
+  "sidebar.04ResourcesSidebar.category.Create and Deploy a Runes Mock Bridge dApp on Rootstock.link.generated-index.description": {
+    "message": "The Rootstock Runes Mock Bridge project opens up exciting opportunities for developers to build Runes-focused applications within the Rootstock ecosystem.",
+    "description": "The generated-index page description for category Create and Deploy a Runes Mock Bridge dApp on Rootstock in sidebar 04ResourcesSidebar"
+  },
+  "sidebar.04ResourcesSidebar.category.Build A Giveaway Airdrop Machine on Rootstock": {
+    "message": "Build A Giveaway Airdrop Machine on Rootstock",
+    "description": "The label for category Build A Giveaway Airdrop Machine on Rootstock in sidebar 04ResourcesSidebar"
+  },
+  "sidebar.04ResourcesSidebar.category.Build A Giveaway Airdrop Machine on Rootstock.link.generated-index.description": {
+    "message": "This guide will focus on building a giveaway airdrop machine on the Rootstock network, highlighting how they function and the unique benefits they offer to users. A particular focus will be on the Runes Giveaway Machine Airdrop Claim, where you will learn how to install and use this innovative tool to claim your tokens easily.",
+    "description": "The generated-index page description for category Build A Giveaway Airdrop Machine on Rootstock in sidebar 04ResourcesSidebar"
+  },
+  "sidebar.04ResourcesSidebar.category.PowPeg App": {
+    "message": "PowPeg App",
+    "description": "The label for category PowPeg App in sidebar 04ResourcesSidebar"
+  },
+  "sidebar.04ResourcesSidebar.category.PowPeg App.link.generated-index.description": {
+    "message": "The PowPeg App fka 2 way peg app converts BTC to RBTC and vice versa. It is secured by the powpeg protocol, which is a unique PowPeg system that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus.",
+    "description": "The generated-index page description for category PowPeg App in sidebar 04ResourcesSidebar"
+  },
+  "sidebar.04ResourcesSidebar.category.Ethereum Attestation Service": {
+    "message": "Ethereum Attestation Service",
+    "description": "The label for category Ethereum Attestation Service in sidebar 04ResourcesSidebar"
+  },
+  "sidebar.04ResourcesSidebar.category.Ethereum Attestation Service.link.generated-index.description": {
+    "message": "Ethereum Attestation Service (EAS) is a system that allows individuals and organizations to create verifiable claims or proofs about specific events, actions, or data, either on-chain (on the blockchain) or off-chain (outside the blockchain but linked to it).",
+    "description": "The generated-index page description for category Ethereum Attestation Service in sidebar 04ResourcesSidebar"
+  },
+  "sidebar.05DevToolsSidebar.category.Wallets": {
+    "message": "Wallets",
+    "description": "The label for category Wallets in sidebar 05DevToolsSidebar"
+  },
+  "sidebar.05DevToolsSidebar.category.RPC Node Providers": {
+    "message": "RPC Node Providers",
+    "description": "The label for category RPC Node Providers in sidebar 05DevToolsSidebar"
+  },
+  "sidebar.05DevToolsSidebar.category.Account Abstraction": {
+    "message": "Account Abstraction",
+    "description": "The label for category Account Abstraction in sidebar 05DevToolsSidebar"
+  },
+  "sidebar.05DevToolsSidebar.category.Oracles": {
+    "message": "Oracles",
+    "description": "The label for category Oracles in sidebar 05DevToolsSidebar"
+  },
+  "sidebar.05DevToolsSidebar.category.Cross Chain Bridges": {
+    "message": "Cross Chain Bridges",
+    "description": "The label for category Cross Chain Bridges in sidebar 05DevToolsSidebar"
+  },
+  "sidebar.05DevToolsSidebar.category.Data Indexers": {
+    "message": "Data Indexers",
+    "description": "The label for category Data Indexers in sidebar 05DevToolsSidebar"
+  },
+  "sidebar.05DevToolsSidebar.category.Explorers": {
+    "message": "Explorers",
+    "description": "The label for category Explorers in sidebar 05DevToolsSidebar"
+  },
+  "sidebar.05DevToolsSidebar.category.Dev Environments": {
+    "message": "Dev Environments",
+    "description": "The label for category Dev Environments in sidebar 05DevToolsSidebar"
+  },
+  "sidebar.05DevToolsSidebar.category.Attestations": {
+    "message": "Attestations",
+    "description": "The label for category Attestations in sidebar 05DevToolsSidebar"
+  },
+  "sidebar.05DevToolsSidebar.category.No Code": {
+    "message": "No Code",
+    "description": "The label for category No Code in sidebar 05DevToolsSidebar"
+  },
+  "sidebar.05DevToolsSidebar.category.User Onboarding": {
+    "message": "User Onboarding",
+    "description": "The label for category User Onboarding in sidebar 05DevToolsSidebar"
+  },
+  "sidebar.05DevToolsSidebar.category.Gas": {
+    "message": "Gas",
+    "description": "The label for category Gas in sidebar 05DevToolsSidebar"
+  }
+}

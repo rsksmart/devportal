@@ -9,8 +9,8 @@ render_features: 'powpeg-hsm-attestation-frame'
 
 Rootstock’s **PowPeg** protocol, has matured from its inception in 2018 as a federation to now include many decentralized qualities. The protocol protects private keys stored in special purpose PowHSMs based on tamper-proof secure elements (SE). Each PowHSM runs a Rootstock node in SPV mode, and so signatures can only be commanded by chain cumulative proof of work. Security is established in the PowPeg through the simplicity of a layered design we refer to as defence-in-depth.
 
-:::note[Info]
-- The PowPeg App is available on [Testnet](https://powpeg.testnet.rootstock.io/) and [Mainnet](https://powpeg.rootstock.io/). 
+:::note Info
+- The PowPeg App is available on [Testnet](https://powpeg.testnet.rootstock.io/) and [Mainnet](https://powpeg.rootstock.io/).
 - For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the PowPeg, please refer to the [PowPeg user guide](/resources/guides/powpeg-app/).
 - Get information on the signatories and attestion in the [PowPeg HSM Firmware Attestation](/concepts/powpeg/hsm-firmware-attestation) section.
 - Read [Introducing Fast Mode: Getting RBTC via the PowPeg, but Faster](https://blog.rootstock.io/noticia/get-rbtc-fast-mode/) to learn about the difference between Native Mode and Fast Modes when using the PowPeg.
@@ -84,7 +84,7 @@ The cumulative work required by the PowHSM also works as a rate limiter or **for
 
 Since the Bitcoin blockchain and the Rootstock sidechain are not entangled in a single blockchain or in a parent-child relation as in a [syncchain](https://blog.rootstock.io/noticia/syncchain-synchronized-sidechains-for-improved-security-and-usability/), the transfers of bitcoins between them must at some point in time be considered final. If not, bitcoins locked on one side would never be able to be safely unlocked on the other. **Therefore, peg-in and peg-out transactions require a high number of block confirmations. Peg-ins require 100 Bitcoin blocks (approximately 2000 Rootstock blocks), and peg-outs require 4000 Rootstock blocks (approximately 200 Bitcoin blocks)**. Transactions signed by federation nodes are considered final by Rootstock: these transactions are broadcast and assumed to be included sooner or later in the Bitcoin blockchain. Due to the need for finality, Rootstock consensus does not attempt to recover from an attack that manages to revert the blockchain deep enough to revert a final peg-in or peg-out transaction. If a huge reversal occurs, PowPeg nodes halt any future peg-out, and the malicious actors should not be able to double-spend the peg.
 
-:::note[IRIS 3.0.0]
+:::note IRIS 3.0.0
 Since the IRIS 3.0.0 upgrade, minimum required values for peg-in and peg-out have been halved, Peg-in (BTC) minimum is now 0.005 and Peg-out (RBTC) minimum is now 0.004. Besides this minimum, the Bridge will estimate the fees required to pay for the pegout, if the remainder after paying the fees is too low (not enough to be spent in BTC) the pegout will be rejected. The funds will be reimbursed if the pegout is rejected by any of the conditions described above.
 :::
 

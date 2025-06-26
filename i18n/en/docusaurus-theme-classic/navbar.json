@@ -1,0 +1,42 @@
+{
+  "title": {
+    "message": "Docs",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Rootstock Devportal",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Home": {
+    "message": "Home",
+    "description": "Navbar item with label Home"
+  },
+  "item.label. Concepts": {
+    "message": " Concepts",
+    "description": "Navbar item with label  Concepts"
+  },
+  "item.label. Developers": {
+    "message": " Developers",
+    "description": "Navbar item with label  Developers"
+  },
+  "item.label. Node Operators": {
+    "message": " Node Operators",
+    "description": "Navbar item with label  Node Operators"
+  },
+  "item.label. Resources": {
+    "message": " Resources",
+    "description": "Navbar item with label  Resources"
+  },
+  "item.label. Dev Tools": {
+    "message": " Dev Tools",
+    "description": "Navbar item with label  Dev Tools"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.Discord": {
+    "message": "Discord",
+    "description": "Navbar item with label Discord"
+  }
+}

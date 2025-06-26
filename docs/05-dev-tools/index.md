@@ -6,6 +6,7 @@ tags: [rsk, rootstock, tools, developer tools]
 description: "Explore a curated selection of smart contract development tools and languages. From the familiar Solidity to Rust or Developer Environments like Hardhat, you'll find everything you need to interact and deploy your smart contracts on Rootstock."
 ---
 
+````mdx-code-block
 <Filter
   values={[
     {label: 'Bridges', value: 'bridge'},
@@ -491,7 +492,25 @@ description: "Explore a curated selection of smart contract development tools an
     color="orange"
     linkHref="https://envio.dev/"
     linkTitle="Access on-chain data"
-    description="Get on-chain data when building dApps on Rootstock."
+    description="Easily query on-chain data through a decentralized network of indexers."
+  />
+<FilterItem
+    value="data, sc"
+    title="Goldsky"
+    subtitle="data"
+    color="orange"
+    linkHref="https://docs.goldsky.com/introduction"
+    linkTitle="Access on-chain data"
+    description="Goldsky is a data indexer that offers high-performance subgraph hosting and realtime data on Rootstock."
+  />
+<FilterItem
+    value="data, sc"
+    title="Subquery"
+    subtitle="data"
+    color="orange"
+    linkHref="https://subquery.network/indexer/30"
+    linkTitle="Access on-chain data"
+    description="SubQuery provides fast, reliable, decentralised, and customised data indexing on Rootstock."
   />
 <FilterItem
     value="mine"
@@ -564,6 +583,15 @@ description: "Explore a curated selection of smart contract development tools an
     linkHref="/developers/quickstart/reown/"
     linkTitle="Use the Kit"
     description="This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Reown, Wagmi and Shadcn libraries."
+  />
+<FilterItem
+    value="demos, sc"
+    title="Privy Starter Kit"
+    subtitle="Demos"
+    color="orange"
+    linkHref="/developers/quickstart/privy/"
+    linkTitle="Use the Kit"
+    description="The Rootstock Privy Starter Kit empowers developers to onboard users with social logins and self custodial wallets while preserving control, privacy, and flexibility for dApps when building on Rootstock."
   />
 <FilterItem
     value="demos, sc"
@@ -656,12 +684,22 @@ description: "Explore a curated selection of smart contract development tools an
     description="Router Protocol is a layer-1 blockchain enabling chain abstraction."
   />
   <FilterItem
+    value="cc, data"
+    title="Layerzero"
+    subtitle="Cross Chain Bridges"
+    color="orange"
+    linkHref="/developers/use-cases/rootstock-layerzero/"
+    linkTitle="Build Cross Chain dApps"
+    description="LayerZero, a cross-chain messaging protocol enables the seamless movement of Bitcoin-backed assets from Rootstock to other blockchains, allowing developers to build omnichain applications (OApps) that interact across multiple chains as if they were one."
+  />
+  <FilterItem
     value="attest"
-    title="Ethereum Attestation Service (EAS)"
+    title="Rootstock Attestation Service (RAS)"
     subtitle="Attestations"
     color="orange"
-    linkHref="/dev-tools/attestations/eas/"
+    linkHref="/dev-tools/attestations/ras/"
     linkTitle="Attest Now"
-    description="Ethereum Attestation Service (EAS) is a system that allows individuals and organizations to create verifiable claims or proofs about specific events, actions, or data, either on-chain (on the blockchain) or off-chain (outside the blockchain but linked to it). Learn how to use it on Rootstock."
+    description="Rootstock Attestation Service (RAS) is a system that allows individuals and organizations to create verifiable claims or proofs about specific events, actions, or data, either on-chain (on the blockchain) or off-chain (outside the blockchain but linked to it). Learn how to use it on Rootstock."
   />
 </Filter>
+````

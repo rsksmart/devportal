@@ -7,13 +7,14 @@ tags: [resources, tokenbridge, blockchain, bridges, tokens, ethereum, rootstock,
 
 Find a list of frequently asked questions about the Token Bridge.
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">What is the Token Bridge?</Accordion.Header>
     <Accordion.Body>
        - The Token Bridge is an interoperability protocol which allows users to move their own Rootstock or Ethereum ERC20 Tokens between networks in a quick and cost-efficient manner.
         - The UI is available at:
-            - Mainnet: [https://dapp.tokenbridge.rootstock.io/](https://dapp.tokenbridge.rootstock.io/)    
+            - Mainnet: [https://dapp.tokenbridge.rootstock.io/](https://dapp.tokenbridge.rootstock.io/)
             - Testnet: [https://dapp.testnet.bridges.rootstock.io/](https://dapp.testnet.bridges.rootstock.io/)
             - ![Rootstock-Ethereum Token Bridge](/img/resources/tokenbridge/token-bridge-diagram.jpg)
     </Accordion.Body>
@@ -99,5 +100,6 @@ Find a list of frequently asked questions about the Token Bridge.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
-    
+````
+
 

@@ -16,7 +16,7 @@ In this guide, we will use the Remix online IDE to write, compile, deploy, inter
 3. Rootstock Testnet Explorer
 
 ## Setting up Remix
-In the left menu, click on **Deploy and run transactions**, and under **Environment** select **Injected provider - MetaMask**, this will trigger the MetaMask Wallet, confirm connection, and ensure you are logged in to Metamask and connected to the Testnet or Mainnet Rootstock network. 
+In the left menu, click on **Deploy and run transactions**, and under **Environment** select **Injected provider - MetaMask**, this will trigger the MetaMask Wallet, confirm connection, and ensure you are logged in to Metamask and connected to the Testnet or Mainnet Rootstock network.
 
 Once selected, under Account, select the account you want to deploy the contract with.
 
@@ -83,7 +83,7 @@ As shown in the previous step after deploying the contract, you can expand the d
 
 Smart contracts are the backbone of decentralized applications (dApps). They automate agreements and processes, but their code can be complex and prone to errors. Verifying your smart contracts is crucial to ensure they function as intended.
 
-The [Rootstock Explorer](https://explorer.rootstock.io/) provides a UI for exploring and verifying transactions, blocks, addresses, tokens, stats, and interacting with smart contracts. 
+The [Rootstock Explorer](https://explorer.rootstock.io/) provides a UI for exploring and verifying transactions, blocks, addresses, tokens, stats, and interacting with smart contracts.
 
 To verify the deployed contract on the explorer, go back to Remix file explorer and go to `contracts -> artifacts -> build-info`. In this folder there will be a json file containing the information of the compilation process. You’ll need this in order to verify the contract on the [Rootstock Testnet Explorer](https://explorer.testnet.rootstock.io/). Copy the value of the input attribute and save it as a json file in your computer.
 
@@ -107,7 +107,7 @@ Select **Standard JSON Input** as the verification method and fill the form:
 
 1. Standard JSON input: In the standard JSON input, upload the file you created from the build info of the contract.
 2. Contract name: The name of the contract which you declared it with. Remember that it’s important the file of the contract has the same matching name as the standard-json-input.json. Now, click on add file to upload.
-3. Compiler: This is the compiler version the contract has been compiled with. For example 
+3. Compiler: This is the compiler version the contract has been compiled with. For example
 Constructor arguments: The constructor arguments of the contract, if any. If you don’t know the arguments at first, continue with the process and the explorer will attempt to identify the constructor arguments from the bytecode and suggest them, if possible.
 4. ABI encoded arguments: if the arguments provided are ABI encoded, check this option.
 
@@ -161,7 +161,7 @@ Here’s the example code of an input value:
 ```solidity
 contract Storage {
   // code
-} 
+}
 ```
 * Select the compiler version, note to use the same compiler version used when compiling the contracts on Remix.
 
@@ -179,6 +179,7 @@ Congratulations, we have successfully compiled, deployed, interacted and verifie
 
 ## Troubleshooting
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">Error: Missing contract verifier data</Accordion.Header>
@@ -188,11 +189,13 @@ Congratulations, we have successfully compiled, deployed, interacted and verifie
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````
 
 ## Resources
 * [Getting Started with Wagmi](/developers/quickstart/wagmi/)
 * [Getting Started with Hardhat](/developers/quickstart/hardhat/)
-* [Verify a Smart Contract using the Hardhat Verification Plugin](/developers/smart-contracts/verify-smart-contracts/)
+* [Verify a Smart Contract using the Hardhat Verification Plugin](/developers/smart-contracts/verify-smart-contracts/hardhat-verify-plugin/)
+* [Verify a Smart Contract using Foundry and Blockscout](/developers/smart-contracts/verify-smart-contracts/foundry-blockscout/)
 
 
 

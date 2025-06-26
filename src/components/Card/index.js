@@ -28,7 +28,7 @@ export default function Card({index, title, description, list, color = "orange",
       <div className={clsx("d-flex flex-column flex-md-row align-items-start justify-content-lg-between gap-16 gap-md-32 flex-grow-1", link?.href ? "align-items-md-end" : "align-items-md-stretch")}>
         <div className="d-flex flex-column gap-20">
           {description && (
-            <div className={`markdown fw-medium`}>
+            <div className={`markdown fw-medium text-preline`}>
               {description}
             </div>
           )}

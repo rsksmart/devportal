@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {useDoc} from '@docusaurus/theme-common/internal';
+import {useDoc} from '@docusaurus/plugin-content-docs/client';
 
 import DocItemTOCDesktop from "@theme/DocItem/TOC/Desktop";
 import {useWindowSize} from "@docusaurus/theme-common";

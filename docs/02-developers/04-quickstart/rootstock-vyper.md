@@ -24,6 +24,7 @@ Whether you're an experienced Ethereum developer looking to deploy smart contrac
 - [git](https://git-scm.com/)
   - To confirm installation, run `git --version`, it should return a version number.
   - Helpful shortcuts:
+    ````mdx-code-block
     <Tabs>
       <TabItem value="bash" label="Bash" default>
         echo "source $HOME/.bashrc >> $HOME/.bash_profile"
@@ -32,9 +33,11 @@ Whether you're an experienced Ethereum developer looking to deploy smart contrac
         echo "source $HOME/.zshenv >> $HOME/.zprofile"
       </TabItem>
     </Tabs>
+    ````
 
 ## Install Python
 
+````mdx-code-block
 <Tabs>
   <TabItem value="Windows" label="Windows" default>
     1. Visit the [Python downloads page](https://www.python.org/downloads/)
@@ -85,7 +88,7 @@ Whether you're an experienced Ethereum developer looking to deploy smart contrac
     ```
   </TabItem>
 </Tabs>
-
+````
 
 ## Install the Vyper Starter Kit
 
@@ -140,7 +143,7 @@ Create a `.env` file in the project root and specify your custom configuration:
 
 ```text
 RPC_URL="https://rpc.testnet.rootstock.io/[YOUR-API-KEY]"
-PRIVATE_KEY="your-private-key" 
+PRIVATE_KEY="your-private-key"
 MY_ADDRESS="your-wallet-address"
 ```
 
@@ -264,6 +267,7 @@ if __name__ == "__main__":
 
 To execute the deployment script, run the following command:
 
+````mdx-code-block
 <Tabs>
   <TabItem value="Linux" label="Linux" default>
     ```bash
@@ -276,6 +280,7 @@ To execute the deployment script, run the following command:
     ```
   </TabItem>
 </Tabs>
+````
 
 ## Troubleshooting
 

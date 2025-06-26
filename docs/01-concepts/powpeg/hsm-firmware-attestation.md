@@ -8,7 +8,7 @@ render_features: 'powpeg-hsm-attestation-frame'
 ---
 
 To verify the PowPeg protocol  nodes, follow the HSM firmware attestation process using the steps below. See the [Attestation README](https://github.com/rsksmart/rsk-powhsm/blob/2.3.5/docs/attestation.md).
-
+````mdx-code-block
 <Tabs>
   <TabItem value="sovryn" label="Sovryn" default>
     <iframe class="w-100 rounded-4" src="/img/rsk/architecture/powpeg-hsm-attestation/sovryn.html" title="Sovryn" height="400"></iframe>
@@ -17,9 +17,10 @@ To verify the PowPeg protocol  nodes, follow the HSM firmware attestation proces
    <iframe class="w-100 rounded-4" src="/img/rsk/architecture/powpeg-hsm-attestation/pnetwork.html" title="pNetwork" height="400"></iframe>
   </TabItem>
 </Tabs>
-
+````
 ### Frequently Asked Questions
 
+````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="1">
     <Accordion.Header as="h3">What is the multisig scheme for the powHSM? It is a M of N multisig.
@@ -31,3 +32,4 @@ What is M and what is N?</Accordion.Header>
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+````

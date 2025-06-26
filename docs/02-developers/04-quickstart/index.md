@@ -6,6 +6,7 @@ tags: [rsk, rootstock, beginner, quick starts, developers, advanced, port to roo
 description: "Quick starts, demos and starter kits to develop on Rootstock."
 ---
 
+````mdx-code-block
 <Filter
 values={[
 {label: 'Beginner', value: 'beginner'},
@@ -26,6 +27,15 @@ values={[
     linkHref="/developers/quickstart/rootstock-vyper/"
     linkTitle="Use the Kit"
     description="The Rootstock Vyper Starter Kit demonstrates how to deploy smart contracts written in Vyper to the Rootstock network."
+  />
+  <FilterItem
+    value="beginner, Advanced"
+    title="Privy Starter Kit"
+    subtitle="quickstart"
+    color="orange"
+    linkHref="/developers/quickstart/privy/"
+    linkTitle="Use the Kit"
+    description="The Rootstock Privy Starter Kit empowers developers to onboard users with social logins and self custodial wallets while preserving control, privacy, and flexibility for dApps when building on Rootstock."
   />
   <FilterItem
     value="dynamic, wagmi, advanced"
@@ -92,7 +102,6 @@ values={[
   />
 <FilterItem
     value="wagmi, sc, advanced"
-    value="wagmi, advanced"
     title="Account Abstraction Kit"
     subtitle="quickstart"
     color="orange"
@@ -182,3 +191,4 @@ values={[
     description="A step-to-step guide for developers to interact with Rootstock network with the Alchemy RPC Provider Service."
   />
 </Filter>
+````

@@ -1,0 +1,6 @@
+label: Verify Smart Contracts
+position: 300
+link:
+  type: generated-index
+  slug: /developers/verify-smart-contracts/
+  description: Learn how to verify smart contracts on Rootstock using various tools and explorers.
