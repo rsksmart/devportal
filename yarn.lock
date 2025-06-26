@@ -1127,10 +1127,10 @@
   resolved "https://registry.yarnpkg.com/@cookbookdev/sonner/-/sonner-1.5.1.tgz#a50b53a1287d0a373e2fc1b2aea78cf1b45b82bb"
   integrity sha512-MqPxvFpWKRWuYpKv6ktnT+nGa2mk4jz+OVgunlpIxqfLgMvJ/PSg9OQv0+QlR6iAbThyjiedD6exULSgogPTmA==
 
-"@crowdin/cli@^4.7.0":
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/@crowdin/cli/-/cli-4.7.0.tgz#53e1da71b25d6db4250c342b12a3eeec1e3e4c64"
-  integrity sha512-l/fj4kIp4yo3tmJ/aa1JegSMBGslCem8ydA+2Lci73UY3tdZQ9zbJyxxtF2N3xl8XBqgZhLyi5nyE8/zCGt9RQ==
+"@crowdin/cli@^4.8.0":
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/@crowdin/cli/-/cli-4.8.0.tgz#13408ed849504fd00dd055de0be15b98a262951d"
+  integrity sha512-k3AK/SRLHiEAAWyhY7072egNLPqJqj8MjW5cqrS/TzdJzSoQmNv97TGjZYw/xCAzGLTAMrTSrLAdV+mjBfqrjA==
   dependencies:
     command-exists-promise "^2.0.2"
     node-fetch "2.7.0"
