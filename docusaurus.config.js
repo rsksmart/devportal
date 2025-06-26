@@ -294,11 +294,7 @@ const config = {
         indexName: 'dev-rootstock',
 
         // Optional: see doc section below
-        contextualSearch: false,
-        searchParameters: {
-          facetFilters: ['language:en'],
-        },
-
+        contextualSearch: true,
       }
     }),
 };

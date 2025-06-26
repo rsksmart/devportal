@@ -120,10 +120,6 @@ function SearchVersionSelectList ({ docsSearchVersionsHelpers }) {
 }
 
 function SearchPageContentInternal () {
-  // // <--- RENAMED TO AVOID CONFLICTS
-  // // <--- MOVED ALGOLIA IMPORTS HERE
-  // const algoliaSearch = require('algoliasearch/lite').default || require('algoliasearch/lite');
-  // const algoliaSearchHelper = require('algoliasearch-helper').default || require('algoliasearch-helper');
 
   const {
     i18n: { currentLocale },
@@ -182,7 +178,7 @@ function SearchPageContentInternal () {
   // respect settings from the theme config for facets
   const disjunctiveFacets = contextualSearch
     ? ['language', 'docusaurus_tag']
-    : ['language'] //TODO: remove this when contextualSearch fixed
+    : []
   const algoliaClient = liteClient(appId, apiKey)
   const algoliaHelper = algoliaSearchHelper(algoliaClient, indexName, {
     hitsPerPage: 15,
@@ -271,7 +267,6 @@ function SearchPageContentInternal () {
         description: 'The search page title for empty query',
       })
   const makeSearch = useEvent((page = 0) => {
-    algoliaHelper.addDisjunctiveFacetRefinement('language', currentLocale) //TODO: remove this when contextualSearch fixed
 
     if (contextualSearch) {
       algoliaHelper.addDisjunctiveFacetRefinement('docusaurus_tag', 'default')
