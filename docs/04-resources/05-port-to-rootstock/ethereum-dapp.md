@@ -108,7 +108,7 @@ Before you begin, ensure that you have the following:
     ? Do you want to install this sample project's dependencies with npm (hardhat @nomicfoundation/hardhat-toolbox)? (Y/n) › y
     ```
 
-7. **Configure Rootstock Networks**: By now, your hardhat project should have four main artifacts besides the basic Node configuration:
+7. **Configure Rootstock Networks**: Your hardhat project should have four main artifacts besides the basic Node configuration:
     - `contracts/`
     - `ignition/modules/`
     - `test/`
@@ -118,8 +118,8 @@ Before you begin, ensure that you have the following:
 
 8. **Install Hardhat Ignition and TypeScript**
 
-```sh
-  npm install --save-dev @nomicfoundation/hardhat-ignition-ethers typescript
+  ```ts
+    npm install --save-dev @nomicfoundation/hardhat-ignition-ethers typescript
   ```
 
   At this point, your `hardhat.config.ts` should look like this:
