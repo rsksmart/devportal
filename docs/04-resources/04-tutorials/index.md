@@ -17,6 +17,14 @@ values={[
 ]}>
 <FilterItem
 value="beginner, advanced"
+title="Interacting with Rootstock using Viem"
+subtitle="Viem"
+color="orange"
+linkHref="/resources/tutorials/rootstock-viem/"
+description="This tutorial will teach you how to use Viem to interact with your contracts on Rootstock."
+/>
+<FilterItem
+value="beginner, advanced"
 title="Deploy a Vyper Smart Contract on Rootstock"
 subtitle="Vyper"
 color="orange"
