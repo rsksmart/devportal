@@ -275,7 +275,7 @@ description: "Explore a curated selection of smart contract development tools an
     color="orange"
     linkHref="https://thirdweb.com/"
     linkTitle="Use Thirdweb"
-    description="Thirdweb is a Full-stack web3 development tools, production-grade infrastructure platform for developers to build on Rootstockk."
+    description="Thirdweb is a Full-stack web3 development tools, production-grade infrastructure platform for developers to build on Rootstock."
   />
  
 <FilterItem

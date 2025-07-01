@@ -29,4 +29,12 @@ tags: [rsk-cli, developer tools, rsk, rootstock, blockchain, dApps,mainnet, test
     linkTitle="Getting started with RSK CLI"
     description="The rsk-cli tool or sdk enables users to manage wallets, check balances, send transactions, verify smart contracts and interact with smart contracts on the Rootstock blockchain - a Bitcoin sidechain designed for smart contracts. It supports both mainnet and testnet environments."
   />
+    <CardsGridItem
+    title="Thirdweb"
+    subtitle="smart contract developement"
+    color="cyan"
+    linkHref="/developers/smart-contracts/thirdweb/"
+    linkTitle="Getting started with Thirdweb"
+    description="Thirdweb is a Full-stack web3 development tools, production-grade infrastructure platform for developers to build on Rootstock."
+  />
 </CardsGrid>
