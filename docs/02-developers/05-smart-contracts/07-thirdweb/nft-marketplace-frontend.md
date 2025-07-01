@@ -1,6 +1,6 @@
 ---
 sidebar_label: Developing the Frontend for Your NFT Marketplace
-section_position: 102
+section_position: 103
 title: Developing the Frontend for Your NFT Marketplace Store on Rootstock
 description: 'How to develop and deploy the marketplace frontend for Your NFT Store with Thirdweb'
 tags: [rsk, thirdweb, developers, developer tools, rootstock, sdk, dApps, smart contracts]

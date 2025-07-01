@@ -1,6 +1,6 @@
 ---
 sidebar_label: Deploy a Marketplace Contract
-section_position: 101
+section_position: 102
 title: Deploy a Marketplace Contract for Your NFT Store on Rootstock
 description: 'How to deploy a marketplace contracts for Your NFT Store with Thirdweb'
 tags: [rsk, thirdweb, developers, developer tools, rootstock, sdk, dApps, smart contracts]

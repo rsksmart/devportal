@@ -1,6 +1,6 @@
 ---
 sidebar_label: Overview
-section_position: 100 
+section_position: 101 
 title: Getting Started with Thirdweb on Rootstock
 description: 'How to write, test, and deploy smart contracts with Thirdweb'
 tags: [rsk, thirdweb, developers, developer tools, rootstock, sdk, dApps, smart contracts]
