@@ -269,15 +269,14 @@ description: "Explore a curated selection of smart contract development tools an
     description="Tenderly helps developers build, monitor, and improve smart contracts by providing a set of tools to boost productivity, save time, and ensure efficient smart contracts functionality."
   />
 <FilterItem
-    value="platform-infra, sc, sdk"
+    value="platform-infra, sc, sdk, demos"
     title="Thirdweb"
     subtitle="platforms"
     color="orange"
-    linkHref="https://thirdweb.com/"
+    linkHref="/developers/smart-contracts/thirdweb/"
     linkTitle="Use Thirdweb"
     description="Thirdweb is a Full-stack web3 development tools, production-grade infrastructure platform for developers to build on Rootstock."
   />
- 
 <FilterItem
     value="platform-infra, sc"
     title="useDApp"

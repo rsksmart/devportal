@@ -35,6 +35,6 @@ tags: [rsk-cli, developer tools, rsk, rootstock, blockchain, dApps,mainnet, test
     color="cyan"
     linkHref="/developers/smart-contracts/thirdweb/"
     linkTitle="Getting started with Thirdweb"
-    description="Thirdweb is a Full-stack web3 development tools, production-grade infrastructure platform for developers to build on Rootstock."
+    description="Thirdweb is a full-stack web3 development tools, and production-grade infrastructure platform for developers to build on Rootstock."
   />
 </CardsGrid>
