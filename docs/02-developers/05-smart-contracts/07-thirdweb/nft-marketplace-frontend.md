@@ -1,8 +1,8 @@
 ---
 sidebar_label: Developing the Frontend for Your NFT Marketplace
 section_position: 103
-title: Developing the Frontend for Your NFT Marketplace Store on Rootstock
-description: 'How to develop and deploy the marketplace frontend for Your NFT Store with Thirdweb'
+title: Developing the Frontend for Your NFT Marketplace on Rootstock
+description: 'How to develop and deploy the marketplace frontend for Your NFT Marketplace with Thirdweb'
 tags: [rsk, thirdweb, developers, developer tools, rootstock, sdk, dApps, smart contracts]
 ---
 
@@ -12,10 +12,9 @@ You’ll also learn how to customize essential parameters like price, accepted c
 
 By the end of this guide, your NFT marketplace on Rootstock will be fully operational and ready for real user interaction.
 
-:::tip[Tip]
+:::info[Complete Part 1: Deploy a Marketplace Contract]
 
-Ensure to complete [Part 1: Deploy a Marketplace Contract](/developers/smart-contracts/thirdweb/deploy-marketplace-contracts)  of the guide before continuing on this section. To access the frontend application, open http://localhost:3000 in your browser.
-
+Ensure to complete [Part 1: Deploy a Marketplace Contract](/developers/smart-contracts/thirdweb/deploy-marketplace-contracts)  of the guide before continuing on this section. To access the frontend application, open [http://localhost:3000](http://localhost:3000) in your browser.
 :::
 
 ## Key Functionalities

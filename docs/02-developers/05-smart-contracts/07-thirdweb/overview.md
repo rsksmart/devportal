@@ -2,21 +2,25 @@
 sidebar_label: Overview
 section_position: 101 
 title: Getting Started with Thirdweb on Rootstock
-description: 'How to write, test, and deploy smart contracts with Thirdweb'
+description: 'How to build and deploy dApps on Rootstock with Thirdweb'
 tags: [rsk, thirdweb, developers, developer tools, rootstock, sdk, dApps, smart contracts]
 ---
 
 [Thirdweb](https://thirdweb.com/rootstock) simplifies Web3 dApp development. It provides ready-to-use smart contracts and developer tools like SDKs, React hooks, and CLIs, reducing the need to build from scratch. This allows you to launch token or marketplace projects quickly with less boilerplate code on Rootstock.
 
-Learn more about deploying different contract types, SDK extensions, and all Thirdweb features by visiting the [Thirdweb Rootstock](https://thirdweb.com/rootstock) documentation.
+:::note[Learn More]
+
+Learn more about deploying different contract types, SDK extensions, and all Thirdweb features by visiting the [Thirdweb Rootstock](https://thirdweb.com/rootstock) documentation or use the [Rootstock NFT Marketplace Starter Kit](https://github.com/rsksmart/rsk-thirdweb-marketplace).
+
+:::
 
 ## Integrating dApps
 
-Integrating thirdweb's SDK with Rootstock allows developers to leverage:
+Integrating Thirdweb's SDK with Rootstock allows developers to leverage:
 
-- Simplified Development Workflow: Utilize thirdweb's SDK to abstract away the complexities of smart contract development, enabling a focus on building the core application logic.
-- Enhanced Scalability and Efficiency: Rootstock, combined with thirdweb's infrastructure, ensure high transaction throughput and reduced costs, making your dApps more scalable and user-friendly.
-- Comprehensive Tooling: From smart contract deployment to user authentication and wallet management, thirdweb provides all the necessary tools to build, deploy, and manage your dApps on Rootstock.
+- Simplified Development Workflow: Utilize Thirdweb's SDK to abstract away the complexities of smart contract development, enabling a focus on building the core application logic.
+- Enhanced Scalability and Efficiency: Rootstock, combined with Thirdweb's infrastructure, ensure high transaction throughput and reduced costs, making your dApps more scalable and user-friendly.
+- Comprehensive Tooling: From smart contract deployment to user authentication and wallet management, Thirdweb provides all the necessary tools to build, deploy, and manage your dApps on Rootstock.
 - Enterprise-Grade Infrastructure: Thirdweb's Engine offers a backend server solution for reliable smart contract calls, managed backend wallets, and high transaction throughput, all of which are crucial for building professional-grade applications on Rootstock.
 
 ## Resources
