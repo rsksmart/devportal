@@ -57,7 +57,7 @@ const config = {
     },
     newsHighlight : [
       {
-        title : '📣 Rootstock Hacktivator is Live! Contribute code or video tutorials and earn rewards. (Note: We\'re not accepting written educational content at this time.)',
+        title : '📣 Hacktivator Update! Contribute code or video tutorials and earn rewards. (Note: We\'re not accepting written educational content at this time.)',
         url : '/resources/contribute/hacktivator/'
       }
     ]
