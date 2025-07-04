@@ -51,8 +51,8 @@ When using the Flyover protocol, two fees apply:
 See the [minimum security requirements](https://github.com/rsksmart/liquidity-provider-server/blob/master/docs/LP-Management.md#minimum-security-requirements).
 
 ## Resources
-- [Release Notes](https://github.com/rsksmart/unified-bridges-sdk/releases)
-- [Flyover SDK](https://github.com/rsksmart/unified-bridges-sdk/tree/main/packages/flyover-sdk)
+<!-- - [Release Notes](https://github.com/rsksmart/unified-bridges-sdk/releases)
+- [Flyover SDK](https://github.com/rsksmart/unified-bridges-sdk/tree/main/packages/flyover-sdk) -->
 - [Liquidity Provider Server](https://github.com/rsksmart/liquidity-provider-server?tab=readme-ov-file)
 - [Liquidity Bridge Contract](https://github.com/rsksmart/liquidity-bridge-contract)
 - [Flyover LBC Mainnet Contract Address](https://explorer.rootstock.io/address/0xaa9caf1e3967600578727f975f283446a3da6612)

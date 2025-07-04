@@ -6,7 +6,7 @@ tags: [rsk, rootstock, rif, flyover, integrate, integration guide, rbtc, powpeg]
 description: The Flyover SDK streamlines integration between client applications and the Flyover Protocol. This easy-to-use JavaScript/TypeScript toolkit provides configuration options for Liquidity Providers (LPs) and custom network setups for connecting to Rootstock.
 ---
 
-The RBTC [Flyover SDK](https://github.com/rsksmart/unified-bridges-sdk/tree/main/packages/flyover-sdk) streamlines integration between client applications and the Flyover Protocol. This easy-to-use JavaScript/TypeScript toolkit provides configuration options for Liquidity Providers (LPs) and custom network setups for connecting to Rootstock.
+The RBTC Flyover SDK streamlines integration between client applications and the Flyover Protocol. This easy-to-use JavaScript/TypeScript toolkit provides configuration options for Liquidity Providers (LPs) and custom network setups for connecting to Rootstock.
 
 Here you can find step-by-step guides on how to integrate and perform basic operations using the SDK. 
 
@@ -17,7 +17,7 @@ The following are the minimum requirements and dependencies required for integra
 * See the [minimum hardware requirements](/node-operators/setup/requirements/) to set up and run a Rootstock Node.
 
 ### Networks
-* See the [list of supported networks](https://github.com/rsksmart/unified-bridges-sdk/tree/main/packages/flyover-sdk#configuration) by the Flyover SDK
+* See the list of supported networks by the Flyover SDK
 
 :::tip[Tip]
 
@@ -35,7 +35,7 @@ Find a list of contract addresses for the [Liquidity Bridge Contract (LBC)](http
 
 ## Installation 
 
-To install the Flyover SDK. See the different [installation types](https://github.com/rsksmart/unified-bridges-sdk/pkgs/npm/flyover-sdk).
+To install the Flyover SDK. See the different installation types.
 
 ```bash
 npm install @rsksmart/flyover-sdk
@@ -58,7 +58,7 @@ captchaTokenResolver: async () => Promise.resolve(''),
 })
 ```
 
-> This creates a new instance of the Flyover and sets the network to "Regtest". See [available network options](https://github.com/rsksmart/unified-bridges-sdk/pkgs/npm/flyover-sdk#configuration).
+> This creates a new instance of the Flyover and sets the network to "Regtest". See available network options.
 
 :::warning[catpchaTokenResolver]
 
@@ -67,7 +67,7 @@ There is a mandatory parameter called `catpchaTokenResolver`, this is because so
 :::
 
 ## Configuring the SDK
-* See section on how to configure the Flyover SDK in the [`FlyoverConfig` object](https://github.com/rsksmart/unified-bridges-sdk/tree/main/packages/flyover-sdk#configuration).
+* See section on how to configure the Flyover SDK in the `FlyoverConfig` object.
 
 ## Connect to Rootstock
 
@@ -102,7 +102,7 @@ Now, you can interact with the SDK and perform basic queries, for example, reque
 ```
 
 ### Get Quotes
-Quotes act as a contract between a user and a liquidity provider. The `getQuote` operation creates a quote that defines the terms of the service that the LP will provide to a given user, each quote is unique so if the same request is done multiple times it will result in different quotes. The [`PeginQuoteRequest`](https://github.com/rsksmart/unified-bridges-sdk/blob/main/packages/flyover-sdk/docs/interfaces/PeginQuoteRequest.md) is used to compute a specific  quote.
+Quotes act as a contract between a user and a liquidity provider. The `getQuote` operation creates a quote that defines the terms of the service that the LP will provide to a given user, each quote is unique so if the same request is done multiple times it will result in different quotes. The `PeginQuoteRequest` is used to compute a specific  quote.
 
 **Example Request:**
 
@@ -136,7 +136,7 @@ In the same way we need to select an LP to perform PegIn operations, we need to 
 ```
 
 ### Get Peg out Quote
-This operation gets the available peg-out quotes for the given parameters. Instead of a QuoteRequest, this method requires a [PegOutQuoteRequest](https://github.com/rsksmart/unified-bridges-sdk/blob/main/packages/flyover-sdk/docs/interfaces/PegoutQuoteRequest.md).
+This operation gets the available peg-out quotes for the given parameters. Instead of a QuoteRequest, this method requires a `PegOutQuoteRequest`.
 
 ```js
 flyover.useProvider(provider)
@@ -144,7 +144,7 @@ await flyover.getPegoutQuotes(quoteRequest)
 ```
 
 ### Accept Peg out Quote
-This method accepts a specific peg out quote and returns a promise with an [AcceptedPegoutQuote](https://github.com/rsksmart/unified-bridges-sdk/blob/0c18d5ed9ed01b3943120176c4c3b7bd67d4d566/packages/flyover-sdk/docs/interfaces/AcceptedPegoutQuote.md), an accepted quote with confirmation data. Instead of a deposit address, the acceptPegoutQuote method returns the address of the liquidity bridge contract where the user needs to execute the “depositPegout” function (this can be done with the SDK as well).
+This method accepts a specific peg out quote and returns a promise with an `AcceptedPegoutQuote`, an accepted quote with confirmation data. Instead of a deposit address, the acceptPegoutQuote method returns the address of the liquidity bridge contract where the user needs to execute the “depositPegout” function (this can be done with the SDK as well).
 
 ```js
 flyover.useProvider(provider)
@@ -160,7 +160,7 @@ For peg outs, deposits (RBTC) can be made directly from the SDK, using a connect
 
 ## API Reference
 
-The API reference provides comprehensive documentation of all Flyover SDK functions and functionalities with detailed explanations and code examples. See the [Flyover SDK documentation](https://github.com/rsksmart/unified-bridges-sdk/tree/main/packages/flyover-sdk/docs).
+The API reference provides comprehensive documentation of all Flyover SDK functions and functionalities with detailed explanations and code examples. See the Flyover SDK documentation.
 
 :::danger[Troubleshooting]
 
