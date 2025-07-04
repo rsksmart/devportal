@@ -263,3 +263,9 @@ The response should look like this:
 - Visit [hardhat-verify](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-verify#hardhat-verify)
 - Visit [blockscout](https://docs.blockscout.com/for-users/verifying-a-smart-contract/hardhat-verification-plugin)
 - [Hardhat Starter Kit for Rootstock](https://github.com/rsksmart/rootstock-hardhat-starterkit)
+
+:::info[Credit]
+
+This content was contributed by [@jerydam](https://github.com/rsksmart/devportal/pull/309) as part of the [Rootstock Hacktivator](https://dev.rootstock.io/resources/contribute/hacktivator/). For full details, please review the [Hacktivator Terms and Conditions](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?tab=t.0).
+
+:::

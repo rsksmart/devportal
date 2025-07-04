@@ -492,7 +492,9 @@ Search the transaction hash in the respective [block explorer](https://dev.roots
 </Accordion>
 ````
 
+:::info[Credit]
 
+This content was contributed by [@iMac7](https://github.com/rsksmart/devportal/pull/282) as part of the [Rootstock Hacktivator](https://dev.rootstock.io/resources/contribute/hacktivator/). For full details, please review the [Hacktivator Terms and Conditions](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?tab=t.0).
 
-
+:::
 
