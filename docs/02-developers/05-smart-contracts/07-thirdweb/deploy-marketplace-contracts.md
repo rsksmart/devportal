@@ -1,8 +1,8 @@
 ---
-sidebar_label: Deploy a Marketplace Contract
+sidebar_label: Deploy an NFT Marketplace Contract
 sidebar_position: 102
-title: Deploy a Marketplace Contract for Your NFT Marketplace on Rootstock
-description: 'How to deploy a marketplace contracts for Your NFT Marketplace with Thirdweb'
+title: Deploy an NFT Marketplace Contract on Rootstock with Thirdweb
+description: 'How to deploy an NFT marketplace contract with Thirdweb'
 tags: [rsk, thirdweb, developers, developer tools, rootstock, sdk, dApps, smart contracts]
 ---
 
@@ -14,7 +14,7 @@ Whether you're just setting up a simple digital shop or trying to build dApps, u
 
 In this two-part guide, you will learn how to: 
 
-- Build and launch an NFT store using Thirdweb on the Rootstock Testnet 
+- Build and deploy an NFT marketplace contract with Thirdweb on the Rootstock Testnet 
 - [Set up the smart contract which is the foundation for the marketplace](/developers/smart-contracts/thirdweb/deploy-marketplace-contracts)
 - Install the [direct listing extension using the Thirdweb SDK](#install-the-direct-listing-extension-using-thirdweb-sdk)
 - [Develop the frontend for Your NFT Marketplace](/developers/smart-contracts/thirdweb/nft-marketplace-frontend) 
@@ -196,7 +196,7 @@ If everything’s set up correctly, you’ll get a transaction hash in the conso
 
 ## What’s Next?
 
-That’s it for setting up the foundation! In [Part 2](/developers/smart-contracts/thirdweb/nft-marketplace-frontend), we’ll explore in depth how to create listings and customize settings like price, currency, and duration. We’ll also learn how to connect the frontend using Thirdweb’s SDK and React hooks. With your contracts in place and direct listings installed, you’re now one step closer to launching your own NFT store on Rootstock.
+That’s it for setting up the foundation! In [Part 2](/developers/smart-contracts/thirdweb/nft-marketplace-frontend), we’ll explore in depth how to create listings and customize settings like price, currency, and duration. We’ll also learn how to connect the frontend using Thirdweb’s SDK and React hooks. With your contracts in place and direct listings installed, you’re now one step closer to launching your own NFT marketplace on Rootstock.
 
 ## Resources
 - [Thirdweb Marketplace V3: Thirdweb Documentation](https://thirdweb.com/thirdweb.eth/MarketplaceV3)

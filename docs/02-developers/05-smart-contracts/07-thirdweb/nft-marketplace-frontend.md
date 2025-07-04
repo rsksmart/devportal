@@ -2,11 +2,11 @@
 sidebar_label: Interact with the Frontend
 sidebar_position: 103
 title: Interact with the Frontend for Your NFT Marketplace on Rootstock
-description: 'How to develop and interact with the marketplace frontend for Your NFT Marketplace with Thirdweb.'
+description: 'How to develop and interact with the frontend for Your NFT Marketplace with Thirdweb.'
 tags: [rsk, thirdweb, developers, developer tools, rootstock, sdk, dApps, smart contracts]
 ---
 
-In [Part 1: Deploy a Marketplace Contract](/developers/smart-contracts/thirdweb/deploy-marketplace-contracts) of this two parts guide, we learnt how to set up an account on the Thirdweb marketplace and  deployed a smart contract on the Thirdweb marketplace and added the Direct Listing extension. In this section, we will build the core user-facing features of your NFT store using the Thirdweb SDK to implement key marketplace functionalities such as listing NFTs for sale, purchasing listed assets, and canceling active offers.
+In [Part 1: Deploy a Marketplace Contract](/developers/smart-contracts/thirdweb/deploy-marketplace-contracts) of this two parts guide, we learnt how to set up an account on the Thirdweb marketplace and  deployed a smart contract on the Thirdweb marketplace and added the Direct Listing extension. In this section, we will build the core user-facing features of your NFT marketplace using the Thirdweb SDK, we will implement key marketplace functionalities such as listing NFTs for sale, purchasing listed assets, and canceling active offers.
 
 You’ll also learn how to customize essential parameters like price, accepted currency, and listing duration, giving you full flexibility and control over your trading experience.
 
@@ -162,7 +162,7 @@ To give users control over their listings, a "Cancel Listing" button is included
 
 > This connects to the marketplace contract and removes the specified listing using its ID.
 
-Once confirmed, the listing disappears from the store view. A quick toast message lets the user know it worked, and the UI refreshes to reflect the change instantly.
+Once confirmed, the listing disappears from the marketplace view. A quick toast message lets the user know it worked, and the UI refreshes to reflect the change instantly.
 
 ### Buy a Listed NFT
 
