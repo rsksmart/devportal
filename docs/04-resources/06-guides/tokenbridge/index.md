@@ -37,9 +37,9 @@ Alternatively, you can use a wallet or web3js with the ABI of the contracts. See
 
 Here are the ['addresses'](/resources/guides/tokenbridge/contractaddresses/) of the deployed contracts in the different networks.
 
-The smart contracts used by the bridge and the deploy instructions are in the token bridge repository in the ['bridge folder'](https://github.com/rsksmart/unified-bridges-ui).
+The smart contracts used by the bridge and the deploy instructions are in the token bridge repository in the 'bridge folder'.
 
-The ABI to interact with the contracts are in the ['abis folder'](https://github.com/rsksmart/unified-bridges-sdk/blob/main/packages/tokenbridge-sdk/src/blockchain/tokenbridge/abi.ts)
+The ABI to interact with the contracts are in the 'abis folder'.
 
 
 ### Federation
