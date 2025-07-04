@@ -10,6 +10,12 @@ Welcome to the Rootstock Hacktivator! Designed for developers who want to contri
 
 <Button size="lg" href="https://forms.gle/Gd6uMt8qaLpPtryW6">Submit Your Work</Button>
 
+:::info[Important]
+
+Hacktivator update: We’re not accepting written educational content at the moment. Your code contributions and video tutorials are still welcome!
+
+:::
+
 ## 🌟 What is it?
 
 Rootstock Hacktivator allows developers to contribute to the Rootstock ecosystem. You can support the platform at your own pace and choose from the following contribution categories:
@@ -195,6 +201,12 @@ _**The reward range provided for each option will be used based on the level of 
 ## 2️⃣ Category: Educational Content Contributions 
 
 Educational content contributions enable developers to educate the Rootstock community through technical guides, tutorials, and documentation. They must be developer-focused and aimed at providing real value to the Rootstock developer community.
+
+:::info[Important]
+
+Hacktivator update: We’re not accepting written educational content at the moment. Your code contributions and video tutorials are still welcome!
+
+:::
 
 ### 📌 Formats
 
