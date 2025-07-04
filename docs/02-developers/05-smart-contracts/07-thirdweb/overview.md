@@ -1,6 +1,6 @@
 ---
 sidebar_label: Overview
-section_position: 101 
+section_position: 101
 title: Getting Started with Thirdweb on Rootstock
 description: 'How to build and deploy dApps on Rootstock with Thirdweb'
 tags: [rsk, thirdweb, developers, developer tools, rootstock, sdk, dApps, smart contracts]

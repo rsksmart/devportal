@@ -6,13 +6,15 @@ description: 'How to deploy a marketplace contracts for Your NFT Marketplace wit
 tags: [rsk, thirdweb, developers, developer tools, rootstock, sdk, dApps, smart contracts]
 ---
 
-Over the past few years, there’s been massive growth in the world of tokenization, from digital art and collectibles to real world assets and utility based tokens. This shift has opened the door for creators, brands, and developers to build new kinds of value and ownership models on the blockchain.
+There's been massive growth in tokenization, from digital art and collectibles to real-world assets and utility tokens. This shift lets creators, brands, and developers build new value and ownership models on the blockchain.
 
-[Thirdweb’s NFT marketplace](https://portal.thirdweb.com/) provides a flexible and customizable platform, enabling users to create, trade, and interact with NFTs and other tokenized assets. Whether you're just setting up a simple digital shop or trying to build dApps, this gives you a solid starting point.
+[Thirdweb’s NFT marketplace](https://portal.thirdweb.com/) provides a flexible and customizable platform, enabling users to create, trade, and interact with NFTs and other tokenized assets on Rootstock. 
+
+Whether you're just setting up a simple digital shop or trying to build dApps, using Thirdweb gives you a solid starting point to build and deploy dApps on Rootstock.
 
 In this two-part guide, you will learn how to: 
 
-- Build and launch an NFT store using Thirdweb on the Rootstock Testnet. 
+- Build and launch an NFT store using Thirdweb on the Rootstock Testnet 
 - [Set up the smart contract which is the foundation for the marketplace](/developers/smart-contracts/thirdweb/deploy-marketplace-contracts)
 - Install the [direct listing extension using the Thirdweb SDK](#install-the-direct-listing-extension-using-thirdweb-sdk)
 - [Develop the frontend for Your NFT Marketplace](/developers/smart-contracts/thirdweb/nft-marketplace-frontend) 
@@ -41,7 +43,7 @@ bun install
 ```sh
 NEXT_PUBLIC_CLIENT_ID=<CLIENT_ID_FROM_THIRD_WEB>
 NEXT_PUBLIC_MARKETPLACE_CONTRACT=<CONTRACT_ADDRESS>
-PRIVATE_KEY=
+PRIVATE_KEY=<YOUR_PRIVATE_KEY>
 ```
 
 To get the client ID, navigate to [Thirdweb's dashboard](https://thirdweb.com/login), log in using your preferred method and create a new project. 

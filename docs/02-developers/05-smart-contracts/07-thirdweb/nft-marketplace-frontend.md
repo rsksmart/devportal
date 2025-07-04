@@ -1,12 +1,12 @@
 ---
-sidebar_label: Developing the Frontend for Your NFT Marketplace
+sidebar_label: Interact with the Frontend
 section_position: 103
-title: Developing the Frontend for Your NFT Marketplace on Rootstock
-description: 'How to develop and deploy the marketplace frontend for Your NFT Marketplace with Thirdweb'
+title: Interact with the Frontend for Your NFT Marketplace on Rootstock
+description: 'How to develop and interact with the marketplace frontend for Your NFT Marketplace with Thirdweb.'
 tags: [rsk, thirdweb, developers, developer tools, rootstock, sdk, dApps, smart contracts]
 ---
 
-In the [Part 1: Deploy a Marketplace Contract](/developers/smart-contracts/thirdweb/deploy-marketplace-contracts) of this two parts guide, we learnt how to set up an account on the Thirdweb marketplace and  deployed a smart contract on the Thirdweb marketplace and added the Direct Listing extension. In this section, we will build the core user-facing features of your NFT store using the Thirdweb SDK to implement key marketplace functionalities such as listing NFTs for sale, purchasing listed assets, and canceling active offers.
+In [Part 1: Deploy a Marketplace Contract](/developers/smart-contracts/thirdweb/deploy-marketplace-contracts) of this two parts guide, we learnt how to set up an account on the Thirdweb marketplace and  deployed a smart contract on the Thirdweb marketplace and added the Direct Listing extension. In this section, we will build the core user-facing features of your NFT store using the Thirdweb SDK to implement key marketplace functionalities such as listing NFTs for sale, purchasing listed assets, and canceling active offers.
 
 You’ll also learn how to customize essential parameters like price, accepted currency, and listing duration, giving you full flexibility and control over your trading experience.
 
@@ -14,7 +14,7 @@ By the end of this guide, your NFT marketplace on Rootstock will be fully operat
 
 :::info[Complete Part 1: Deploy a Marketplace Contract]
 
-Ensure to complete [Part 1: Deploy a Marketplace Contract](/developers/smart-contracts/thirdweb/deploy-marketplace-contracts)  of the guide before continuing on this section. To access the frontend application, open [http://localhost:3000](http://localhost:3000) in your browser.
+Ensure to complete [Part 1: Deploy a Marketplace Contract](/developers/smart-contracts/thirdweb/deploy-marketplace-contracts) of the guide before continuing on this section. To access the frontend application, open [http://localhost:3000](http://localhost:3000) in your browser.
 :::
 
 ## Key Functionalities
@@ -28,7 +28,7 @@ Allow sellers to remove their NFTs from the marketplace if they change their min
 4. Buying listed offers
 Integrate the purchasing flow using Thirdweb's tools to allow users to seamlessly buy NFTs with the configured currency.
 
-The Thirdweb SDK simplifies the integration of these core operations and supports additional extensions for enhanced user experiences, making it easier to develop and focus on the use case rather than the processes.
+The [Thirdweb SDK](https://github.com/thirdweb-dev/js/tree/main#readme) simplifies the integration of these core operations and supports additional extensions for enhanced user experiences, making it easier to develop and focus on the use case rather than the processes.
 
 You can explore many more advanced features and best practices in the [Thirdweb documentation](https://portal.thirdweb.com/), should you need to expand or tailor your marketplace further.
 
@@ -184,6 +184,9 @@ const transaction = buyFromListing({
 It connects to the marketplace contract, grabs the listing by its ID, and sends the NFT to the buyer’s wallet address. The quantity is set to 1, since most listings are for single NFTs, and the recipient is simply the connected wallet.
 
 After the transaction is confirmed, the NFT is transferred, and the listing is automatically removed from the marketplace.
+
+![Thirdweb - Removed Listing NFT](/img/developers/smart-contracts/thirdweb/25-confirm-transactions.png)
+
 
 ## Conclusion
 
