@@ -51,7 +51,6 @@ description: Rootstock과 호환 지갑을 어떻게 연결하는지 알아보�
 | [Enkrypt](https://www.enkrypt.com/networks/rootstock-wallet/) | ✔             | ✔               | -            | Chrome             | 메인넷, 테스트넷                                                             |
 | [MyCrypto](https://mycrypto.com/)                             | -             | -               | -            | 데스크톱               | Rootstock(RBTC)                                    |
 | [TaHo](https://taho.xyz)                                      | ✔             | ✔               | -            | Chrome             | Rootstock (RBTC), 메인넷                              |
-| [Frontier](https://www.frontier.xyz/browser-extension)        | -             | -               | -            | 데스크톱, 모바일, Chrome  | Rootstock(RBTC)                                    |
 | [Bitget](https://web3.bitget.com/en/)                         | -             | -               | -            | Chrome, 모바일        | RBTC                                                                  |
 | [SafePal](https://www.safepal.com/en/extension)               | ✔             | ✔               | -            | Chrome, 모바일        | Rootstock (RBTC), 메인넷                              |
 | [Wallby](https://wallby.app/)                                 | ✔             | ✔               | -            | 모바일                | Rootstock(RBTC), Bitcoin                           |

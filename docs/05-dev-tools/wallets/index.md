@@ -7,6 +7,7 @@ description: "Learn how to connect to Rootstock with a compatible Wallet"
 ---
 
 The following wallets support [RBTC](/concepts/rbtc/) and [RIF](/concepts/rif-suite/token) tokens.
+
 ````mdx-code-block
 <Carousel width="370" height="260" >
   <CarouselItem image="/img/rsk/wallets/my-crypto.png" href="https://app.mycrypto.com/add-account" />
@@ -46,7 +47,6 @@ In the following matrix you can see the different features by wallet.
 |  [Enkrypt](https://www.enkrypt.com/networks/rootstock-wallet/)|  ✔ |   ✔ | -  | Chrome | Mainnet, Testnet |
 |  [MyCrypto](https://mycrypto.com/) | - |  - | -  | Desktop | Rootstock (RBTC) |
 |  [TaHo](https://taho.xyz) | ✔ |  ✔ | -  | Chrome | Rootstock (RBTC), Mainnet |
-|  [Frontier](https://www.frontier.xyz/browser-extension) | - |  - | -  | Desktop, Mobile, Chrome | Rootstock (RBTC) |
 |  [Bitget](https://web3.bitget.com/en/) | - |  - | -  | Chrome, Mobile | RBTC |
 |  [SafePal](https://www.safepal.com/en/extension) | ✔ |  ✔ | -  | Chrome, Mobile | Rootstock (RBTC), Mainnet |
 |  [Wallby](https://wallby.app/) | ✔ |  ✔ | -  | Mobile | Rootstock (RBTC), Bitcoin |

@@ -21,6 +21,15 @@ values={[
 ]}>
 <FilterItem
     value="beginner, Advanced"
+    title="Rootstock - Thirdweb Starter Kit"
+    subtitle="quickstart"
+    color="orange"
+    linkHref="/developers/smart-contracts/thirdweb/"
+    linkTitle="Use the Kit"
+    description="The Rootstock - Thirdweb starter kit aims to facilitate the integration of a marketplace contract using the thirdweb SDK v5 on Rootstock."
+  />
+<FilterItem
+    value="beginner, Advanced"
     title="Vyper Starter Kit"
     subtitle="quickstart"
     color="orange"

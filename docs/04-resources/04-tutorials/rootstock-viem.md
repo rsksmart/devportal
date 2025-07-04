@@ -6,7 +6,6 @@ description: 'Viem offers a minimalist TypeScript alternative to Ethers.js and W
 tags: [rsk, rootstock, tutorials, resources, frontend, smart contracts, dapps, viem]
 ---
 
-
 [Viem](https://viem.sh/) offers a minimalist, lightweight, and more efficient Typescript interface alternative to [Ethers.js](https://docs.ethers.org/v5/) and [Web3.js](https://web3js.readthedocs.io/en/v1.10.0/) for interacting with Ethereum nodes. It maintains a bundle size of 35KB compared to Ethers and Web3.js, which are over 300KB and 600KB, respectively. Smaller bundle size implies faster page loads and better performance on mobile. Viem also offers more granular control over APIs in contrast to Ethers.js, which abstracts APIs for more functionalities. 
 
 This tutorial will teach you how to use Viem to interact with your contracts on Rootstock.
@@ -40,17 +39,21 @@ const publicClient = createPublicClient({
 }) 
 ```
 
-**In the above code:** 
+**Explanation:** 
 - You need to define a `Chain` and `Transport` for Rootstock-specific values. 
 - Chain values for the Rootstock chain could be `rootstock` for the mainnet or `rootstockTestnet` for the Testnet
 - It is recommended to set your `RPC_URL` as an environmental variable whose value can be obtained from the Rootstock [RPC API dashboard](https://dev.rootstock.io/developers/rpc-api/rootstock/setup/).
 
-```
+```text
 RPC_URL='https://rpc.testnet.rootstock.io/<API_KEY>'
 CONTRACT_ADDRESS='0x...' // You can also add the contract address as an environment variable 
 ```
 
-**NB:** If you are working on a Next.js project, environment variables must be prepended with `NEXT_PUBLIC_` as `NEXT_PUBLIC_RPC_URL` for the RPC URL variable.
+:::tip[Tip]
+
+If you are working on a Next.js project, environment variables must be prepended with `NEXT_PUBLIC_` as `NEXT_PUBLIC_RPC_URL` for the RPC URL variable.
+
+:::
 
 
 To access a deployed contract with its ABI using the Viem's `getContract` method. 
@@ -119,7 +122,7 @@ export const walletClient = createWalletClient({
 const [walletAddresses] = await walletClient.getAddresses()
 ```
 
-You have to explicitly make TypeScript aware that `window.ethereum` exists. It is not part of the standard `Window` library but is injected by browser wallets like MetaMask. Create a file called `global.d.ts` in the utils folder and add the following code to it.
+Explicitly make TypeScript aware that `window.ethereum` exists. It is not part of the standard `Window` library but is injected by browser wallets like MetaMask. Create a file called `global.d.ts` in the utils folder and add the following code to it.
 
 ```ts
 interface Window {
