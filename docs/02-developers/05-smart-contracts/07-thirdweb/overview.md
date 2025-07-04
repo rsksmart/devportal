@@ -1,6 +1,6 @@
 ---
 sidebar_label: Overview
-section_position: 101
+sidebar_position: 101
 title: Getting Started with Thirdweb on Rootstock
 description: 'How to build and deploy dApps on Rootstock with Thirdweb'
 tags: [rsk, thirdweb, developers, developer tools, rootstock, sdk, dApps, smart contracts]
@@ -25,7 +25,7 @@ Integrating Thirdweb's SDK with Rootstock allows developers to leverage:
 
 ## Resources
 - [Part 1: Deploy Marketplace Contracts](/developers/smart-contracts/thirdweb/deploy-marketplace-contracts)
-- [Part 2: Developing the Frontend for Your NFT Marketplace](/developers/smart-contracts/thirdweb/nft-marketplace-frontend)
+- [Part 2: Interact with the Frontend for Your NFT Marketplace on Rootstock](/developers/smart-contracts/thirdweb/nft-marketplace-frontend)
 - [Thirdweb Marketplace V3: Thirdweb Documentation](https://thirdweb.com/thirdweb.eth/MarketplaceV3)
 - [Thirdweb TS SDK: Thirdweb Github](https://github.com/thirdweb-dev/js/tree/main#readme)
 - [Rootstock NFT Marketplace Starter Kit](https://github.com/rsksmart/rsk-thirdweb-marketplace)

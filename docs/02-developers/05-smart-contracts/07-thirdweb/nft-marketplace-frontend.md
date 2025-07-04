@@ -1,6 +1,6 @@
 ---
 sidebar_label: Interact with the Frontend
-section_position: 103
+sidebar_position: 103
 title: Interact with the Frontend for Your NFT Marketplace on Rootstock
 description: 'How to develop and interact with the marketplace frontend for Your NFT Marketplace with Thirdweb.'
 tags: [rsk, thirdweb, developers, developer tools, rootstock, sdk, dApps, smart contracts]
