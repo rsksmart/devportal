@@ -23,7 +23,7 @@ Integrating Thirdweb's SDK on Rootstock allows developers to leverage:
 - Comprehensive Tooling: From smart contract deployment to user authentication and wallet management, Thirdweb provides all the necessary tools to build, deploy, and manage your dApps on Rootstock.
 - Enterprise-Grade Infrastructure: Thirdweb's Engine offers a backend server solution for reliable smart contract calls, managed backend wallets, and high transaction throughput, all of which are crucial for building professional-grade applications on Rootstock.
 
-## Getting Started with Thirdweb
+## Guides for Developers
 - [Part 1: Deploy an NFT Marketplace Contract](/developers/smart-contracts/thirdweb/deploy-marketplace-contracts)
 - [Part 2: Interact with the Frontend for Your NFT Marketplace on Rootstock](/developers/smart-contracts/thirdweb/nft-marketplace-frontend)
 
