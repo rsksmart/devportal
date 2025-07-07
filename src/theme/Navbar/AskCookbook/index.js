@@ -19,25 +19,29 @@ export default function AskCookbook() {
       if (el && el.shadowRoot) {
         const btn = el.shadowRoot.querySelector("#ask-cookbook-button");
         if (btn) {
-          btn.addEventListener("click", () => {
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({ event: "askCookbookClick" });
-            console.log("✅ askCookbookClick fired from MutationObserver in React.");
-          });
-          console.log("✅ Listener attached to ask-cookbook button.");
+          // Wait a bit to ensure widget initialization is complete
+          setTimeout(() => {
+            btn.addEventListener("click", () => {
+              window.dataLayer = window.dataLayer || [];
+              window.dataLayer.push({ event: "askCookbookClick" });
+              console.log("✅ askCookbookClick fired after delayed attach.");
+            });
+            console.log("✅ Listener attached to ask-cookbook button after delay.");
+          }, 2000); // You can adjust if needed
+  
           obs.disconnect();
         }
       }
     });
-
+  
     observer.observe(document, {
       childList: true,
       subtree: true
     });
-
+  
     return () => observer.disconnect();
   }, []);
-
+  
   return (
     <BrowserOnly>
       {() => (
