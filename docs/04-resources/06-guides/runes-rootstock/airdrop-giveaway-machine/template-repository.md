@@ -22,7 +22,7 @@ This contract serves as the base contract for managing administrator roles withi
 
 ```
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.19;
+pragma solidity ^0.8.25;
 
 contract Administrable {
     mapping(address => bool) _admins;
@@ -34,7 +34,7 @@ contract Administrable {
     }
 }
 ```
-* **License and Version**: The first two lines specify the license type and the Solidity compiler version (0.8.19) being used for this contract.
+* **License and Version**: The first two lines specify the license type and the Solidity compiler version (0.8.25) being used for this contract.
 * **Contract Declaration**: `contract Administrable` declares a new smart contract named `Administrable`.
 * **Mapping**: `mapping(address => bool) _admins;` creates a mapping (a kind of dictionary) where each address (an Ethereum account) is associated with a boolean value. This is used to track whether an address is an admin (true) or not (false).
 * **Constructor**: The constructor function is called when the contract is deployed. It takes an array of addresses (`initialAdmins`) and sets those addresses as admins in the `_admins` mapping.
@@ -80,7 +80,7 @@ contract Administrable {
 
 ```
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.19;
+pragma solidity ^0.8.25;
 
 import "./Administrable.sol";
 
@@ -235,12 +235,12 @@ function getTotalAirdropAmount(address airdropAddress) public view returns(uint2
 
 ```
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.19;
+pragma solidity ^0.8.25;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 ```
 
-* **License and Version**: The first two lines specify the license type (MIT) and the Solidity version (0.8.19) for this contract.
+* **License and Version**: The first two lines specify the license type (MIT) and the Solidity version (0.8.25) for this contract.
 * **Imports**: The contract imports the `Ownable` contract from OpenZeppelin, which provides basic authorization control functions, simplifying the implementation of user permissions.
 
 
@@ -464,14 +464,14 @@ This contract likely extends the functionality of `CustomAirdrop1155.sol` by imp
 
 ```
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.19;
+pragma solidity ^0.8.25;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 import { MerkleProof } from "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
 
 ```
 
-* **License and Version**: The first two lines specify the license type (MIT) and the Solidity version (0.8.19) for this contract.
+* **License and Version**: The first two lines specify the license type (MIT) and the Solidity version (0.8.25) for this contract.
 * **Imports**: The contract imports:
   * `Ownable` from OpenZeppelin, which provides basic authorization control functions.
   * `MerkleProof`, which includes utilities for verifying Merkle proofs.
@@ -700,14 +700,14 @@ This contract implements the ERC-1155 standard, providing the foundational struc
 ```
 // SPDX-License-Identifier: MIT
 // Compatible with OpenZeppelin Contracts ^5.0.0
-pragma solidity ^0.8.19;
+pragma solidity ^0.8.25;
 
 import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 ```
 
 * **License and Version**: The first line specifies the license type (MIT). The comment indicates compatibility with OpenZeppelin Contracts version 5.0.0.
-* **Solidity Version**: The `pragma` statement specifies that this contract uses Solidity version 0.8.19 or higher.
+* **Solidity Version**: The `pragma` statement specifies that this contract uses Solidity version 0.8.25 or higher.
 * **Imports**: The contract imports two modules from OpenZeppelin:
   * `ERC1155`: The base implementation of the ERC-1155 token standard, which allows for the creation of multiple token types in a single contract.
   * `Ownable`: A contract that provides basic authorization control functions, allowing only the owner of the contract to execute certain functions.

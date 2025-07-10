@@ -45,7 +45,7 @@ In the left menu, click on **Solidity compiler** and set the compilation paramet
 
 :::tip[Tip]
 
-Current [supported solidity version](https://dev.rootstock.io/developers/requirements/) for Rootstock is `0.8.19`.
+Current [supported solidity version](https://dev.rootstock.io/developers/requirements/) for Rootstock is `0.8.25`.
 
 :::
 

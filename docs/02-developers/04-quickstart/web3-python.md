@@ -43,10 +43,10 @@ Solidity compiler installation instructions for MacOs:
 
 ```bash
 brew install solc-select
-solc-select use 0.8.19 --always-install
+solc-select use 0.8.25 --always-install
 
 solc --version
-# Version: 0.8.19+commit.7dd6d404.Darwin.appleclang
+# Version: 0.8.25+commit.7dd6d404.Darwin.appleclang
 ```
 
 ### Set Up Secrets for the Project
@@ -134,13 +134,13 @@ Code and paste the code below into `compile.py`;
 
 ```s
 import solcx
-solcx.install_solc('0.8.19')
+solcx.install_solc('0.8.25')
 
 # Compile contract
 temp_file = solcx.compile_files(
     'Greeter.sol',
     output_values=['abi', 'bin'],
-    solc_version='0.8.19'
+    solc_version='0.8.25'
 )
 
 # Export contract data

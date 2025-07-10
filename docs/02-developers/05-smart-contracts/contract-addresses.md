@@ -30,6 +30,8 @@ For info on derivation paths, see [Account based addresses](/concepts/account-ba
 |  RIFX |  [RIFX](https://rif.moneyonchain.com/metrics) |  | Rootstock | [0xcff3fca...](https://explorer.rootstock.io/address/0xcff3fcaec2352c672c38d77cb1a064b7d50ce7e1) |
 |  WRBTC |  Wrapped RBTC | ERC20  | Rootstock | [0x542FDA3...](https://rootstock.blockscout.com/token/0x542FDA317318eBf1d3DeAF76E0B632741a7e677d) |
 |  stRIF |  Staked RIF in RootstockCollective DAO | ERC20  | Rootstock | [0x5db91e2...](https://rootstock.blockscout.com/token/0x5db91e24BD32059584bbDb831A901f1199f3d459?tab=contract) | [0xe703971](https://explorer.testnet.rootstock.io/address/0xe7039717c51c44652fb47be1794884a82634f08f) |
+|  USDT0 |  USDT0 | ERC20  | Rootstock | [0x779dED0...](https://explorer.rootstock.io/address/0x779ded0c9e1022225f8e0630b35a9b54be713736) | [0x5A2256D](https://explorer.testnet.rootstock.io/token/0x5a2256dd0dfbc8ce121d923ac7d6e7a3fc7f9922) |
+
 
 
 ## Cross Chain (OFT) Contract Addresses
@@ -54,3 +56,4 @@ The Omnichain Fungible Token (OFT) Standard allows fungible tokens to be transfe
 | RIF        | [Arbitrum One](https://arbiscan.io/address/0xe5e851b01DD3Eda24FDe709a407dB44555B6d1E0)                 | `0xe5e851b01DD3Eda24FDe709a407dB44555B6d1E0` |
 | RIF        | [Base](https://basescan.org/address/0xe5e851b01DD3Eda24FDe709a407dB44555B6d1E0)                       | `0xe5e851b01DD3Eda24FDe709a407dB44555B6d1E0` |
 | RIF        | [Solana](https://solscan.io/token/AAeENcfHbTExuTvs4q7r9Bjax98Dg6BGX3aMph4bTLdK)                       | `AAeENcfHbTExuTvs4q7r9Bjax98Dg6BGX3aMph4bTLdK`|
+| USDT0       | [Rootstock](https://explorer.rootstock.io/address/0x1a594d5d5d1c426281c1064b07f23f57b2716b61)        | `0x1a594d5d5d1c426281C1064B07f23F57B2716B61`|

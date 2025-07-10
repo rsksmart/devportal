@@ -48,6 +48,7 @@ In part 1 of this guide, we created a marketplace contract, now we will launch o
 ![Thirdweb - Create the NFT Collection](/img/developers/smart-contracts/thirdweb/17-create-nft-collection.png)
 
 2. Add the Token Collection info
+
 ![Thirdweb - Create the NFT Collection](/img/developers/smart-contracts/thirdweb/18-add-collection-info.png)
 
 3. Upload NFT in Collection
@@ -59,10 +60,12 @@ In part 1 of this guide, we created a marketplace contract, now we will launch o
 ![Thirdweb - View Sales and Fees](/img/developers/smart-contracts/thirdweb/20-view-sales-and-fees.png)
 
 5. Preview and Launch the NFT Collection
+
 ![Thirdweb - Preview and Launch the NFT Collection](/img/developers/smart-contracts/thirdweb/21-preview-launch-nft.png)
 
 6. Approve Transaction
 Approve the transaction in your Metamask Wallet
+
 ![Thirdweb - Approve Transaction](/img/developers/smart-contracts/thirdweb/22-approve-transaction.png)
 
 7. View Token Collection
