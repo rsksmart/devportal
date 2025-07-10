@@ -8,7 +8,7 @@ sidebar_position: 303
 
 ## Mainnet Conversion
 
-In this section we will go over the steps of converting BTC to RBTC and vice versa in Bitcoin and Rootstock (RSK) Networks.
+In this section we will go over the steps of converting BTC to RBTC and vice versa in Bitcoin and Rootstock network.
 
 :::tip[Tip]
 The minimum amount of Bitcoin to convert is **0.005 BTC** for Mainnet.
@@ -37,15 +37,18 @@ Instructions on how to do a Mainnet peg-in.
     <Accordion.Header as="h3">2. Send Bitcoin to Rootstock Federation address</Accordion.Header>
     <Accordion.Body>
       Send Bitcoin to Rootstock Federation address
-      - The Rootstock Federation address is retrieved by making a Smart Contract call on Rootstock Mainnet. To make the call, you need to have [MyCrypto](https://app.mycrypto.com/interact-with-contracts) installed:
-        1. Select Rootstock (RSK) Network.
-        2. Navigate to **MyCrypto** -> **Contracts**.
-        3. Select **Existing Contracts**  and choose **Bridge** from the drop-down menu.
-        4. Click **getFederationAddress** to execute the call.
+      - To retrieve the Rootstock Federation address:
+        1. Search the brige contract address [0x0000000000000000000000000000000001000006](https://explorer.rootstock.io/address/0x0000000000000000000000000000000001000006) on the Rootstock Explorer.
+        
+        ![Get Federation Address](/img/concepts/rbtc/01-federation-address.png)
+        
+        2. Go to Contracts tab --> Read Contracts and scroll to the 8th option which is `getFederationAddress()` and click the Read button.
           It should look like the screenshot below:
-        <div align="left"><img width="70%" src="/img/mycrypto-federation-updated-10-07-2024.png" alt="Get Rootstock Federation address from MyCrypto"/></div>
-      Once you have the Rootstock Federation address, you can send Bitcoin to it from your Bitcoin address.
-      > Note: You must send a minimum amount of 0.005 BTC.
+
+        ![Get Federation Address](/img/concepts/rbtc/03-federation-address-mainnet.png)
+
+        Now, you can send Bitcoin to the Federation address via your Bitcoin address.
+        > Note: You must send a minimum amount of `0.005 BTC`.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="3">
@@ -87,8 +90,8 @@ Instructions on how to do a Mainnet peg-out.
   <Accordion.Item eventKey="1">
     <Accordion.Header as="h3">2. Send RBTC to Rootstock Bridge Contract</Accordion.Header>
       <Accordion.Body>
-        - Rootstock Bridge Contract address: `0x0000000000000000000000000000000001000006`
-        - Note: The minimum amount to send must be at least 0.004 RBTC for Mainnet, sending any amount below this, will fail and funds will be reimbursed. The Gas Limit of the transaction needs to be manually set at 100,000 gas; otherwise the transaction will fail. Gas Price can be set to 0.06 gwei (or the gas price suggested by the wallet).
+        - [Rootstock Bridge Contract address](https://explorer.rootstock.io/address/0x0000000000000000000000000000000001000006): `0x0000000000000000000000000000000001000006`
+        - Note: The minimum amount to send must be at least `0.004 RBTC` for Mainnet, sending any amount below this, will fail and funds will be reimbursed. The Gas Limit of the transaction needs to be manually set at 100,000 gas; otherwise the transaction will fail. Gas Price can be set to 0.06 gwei (or the gas price suggested by the wallet).
           ![Customize Gas in Metamask before send transaction on Rootstock](/img/metamask-gas-limit.png)
       </Accordion.Body>
     </Accordion.Item>
@@ -143,15 +146,19 @@ Instructions on how to do a Testnet peg-in.
   <Accordion.Item eventKey="2">
     <Accordion.Header as="h3">3. Send Bitcoin to Rootstock Federation address</Accordion.Header>
     <Accordion.Body>
-      - The Rootstock Federation address is retrieved by making a Smart Contract call on Rootstock Testnet.
-      - In order to make the call, you will need to have
-      [MyCrypto](https://app.mycrypto.com/interact-with-contracts)
-      installed, select Rootstock Testnet in _"More Networks"_, and Navigate to _"MyCrypto -> Contracts -> Select Existing Contracts -> "Bridge" -> "getFederationAddress"_ to execute the call.
-      - It should look like the screenshot below.
-      ![Get Rootstock Federation address from MyCrypto](/img/mycrypto-federation-updated-10-07-2024.png)
-      Once you have the Rootstock Federation address,
-      you can send Bitcoin to it from your Bitcoin address.
-      - Note: You need to send a minimum amount of 0.01 tBTC for conversion.
+      The Rootstock Federation address is retrieved by making a Smart Contract call on Rootstock Testnet.
+      - To retrieve the Rootstock Federation address:
+        1. Search the brige contract address [0x0000000000000000000000000000000001000006](https://explorer.testnet.rootstock.io/address/0x0000000000000000000000000000000001000006) on the Rootstock Testnet Explorer.
+        
+        ![Get Federation Address](/img/concepts/rbtc/01-federation-address.png)
+        
+        2. Go to Contracts tab --> Read Contracts and scroll to the 8th option which is `getFederationAddress()` and click the Read button.
+          It should look like the screenshot below:
+
+        ![Get Federation Address](/img/concepts/rbtc/02-federation-address-testnet.png)
+
+        Now, you can send Bitcoin to the Federation address via your Bitcoin address.
+        > Note: You must send a minimum amount of `0.01 tBTC`.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="3">
@@ -190,7 +197,7 @@ The release process on Bitcoin network takes 10 Rootstock block confirmations an
   <Accordion.Item eventKey="1">
     <Accordion.Header as="h3">2. Send tRBTC to Rootstock Bridge Contract</Accordion.Header>
     <Accordion.Body>
-      - Rootstock Bridge Contract address: `0x0000000000000000000000000000000001000006`
+      - [Rootstock Bridge Contract address](https://explorer.testnet.rootstock.io/address/0x0000000000000000000000000000000001000006): `0x0000000000000000000000000000000001000006`
       - **Important note**: The minimum amount to send must be **at least** 0.004 tRBTC for Testnet, values below that will be rejected and reimbursed to the sender.
       - Gas Limit of the transaction needs to be manually set at 100,000 gas; otherwise the transaction will fail.
       - Gas Price can be set to 0.06 gwei.
