@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@cookbookdev/docsbot": "^4.24.7",
-    "@crowdin/cli": "^4.7.0",
+    "@crowdin/cli": "^4.9.0",
     "@docusaurus/core": "^3.8.0",
     "@docusaurus/plugin-google-tag-manager": "^3.8.0",
     "@docusaurus/preset-classic": "^3.8.0",
