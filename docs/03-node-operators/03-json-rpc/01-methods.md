@@ -1038,23 +1038,16 @@ Executes a new message call immediately without creating a transaction on the bl
 
 2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"` or `"pending"`, see the [default block parameter](https://ethereum.org/en/developers/docs/apis/json-rpc/#default-block)
 
-##### Example Parameters
+3. `Object` - From release LOVELL-7.2.0 and on, we support the State Override Set. The state override set is an optional address-to-state mapping, used in eth_call, where each entry specifies some state to be ephemerally overridden prior to executing the call. Each address maps to an object containing the following fields:
 
-```js
-params: [
-  {
-    from: "0xb60e8dd61c5d32be8058bb8eb970870f07233155",
-    to: "0xd46e8dd67c5d32be8058bb8eb970870f07244567",
-  },
-  "latest",
-];
-```
+- `balance`: `QUANTITY`, 32 Bytes - (optional) Fake balance to set for the account before executing the call.
+- `nonce`: `QUANTITY`, 8 Bytes - (optional) Fake nonce to set for the account before executing the call.
+- `code`: `DATA`, any - (optional) Fake EVM bytecode to inject into the account before executing the call.
+- `state`: `Object`, any - (optional) Fake key-value mapping to override all slots in the account storage before executing the call.
+- `stateDiff`: `Object`, any - (optional) Fake key-value mapping to override individual slots in the account storage before executing the call.
+- `movePrecompileToAddress`: `DATA`, 20 Bytes - Not suppported yet.
 
-##### Returns
-
-`DATA` - the return value of executed contract.
-
-##### Example
+##### Example without State Override
 
 ```js
 // Request
@@ -1078,6 +1071,86 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
    }
 }
 ```
+
+##### Example with State Override
+
+```js
+// Request
+curl -X POST --data '{
+    "jsonrpc":"2.0",
+    "method":"eth_call",
+    "params":[
+        {
+            "from": "0xb60e8dd61c5d32be8058bb8eb970870f07233155",
+            "to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567",
+            "gas": "0x76c0",
+            "gasPrice": "0x9184e72a000",
+            "value": "0x9184e72a",
+            "data": "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675"
+        },
+        "latest",
+        {
+            "0xb60e8dd61c5d32be8058bb8eb970870f07233155": {
+                "balance": "0x1000000000000000000",
+                "nonce": "0x2",
+                "code": "<your EVM bytecode here>",
+                "state": {
+                    "0x0000000000000000000000000000000000000000000000000000000000000000": "0x0000000000000000000000000000000000000000000000000000000000000001",
+                    "0x0000000000000000000000000000000000000000000000000000000000000001": "0x0000000000000000000000000000000000000000000000000000000000000002"
+                },
+                "stateDiff": {
+                    "0x0000000000000000000000000000000000000000000000000000000000000002": "0x0000000000000000000000000000000000000000000000000000000000000003"
+                }
+            },
+            "0xd46e8dd67c5d32be8058bb8eb970870f07244567": {
+                "balance": "0x2000000000000000000",
+                "nonce": "0x10"
+            }
+        }
+    ]
+}'
+
+// Result
+{
+  "id":1,
+  "jsonrpc": "2.0",
+  "result": "0x"
+}
+
+// In case of REVERT error
+{
+   "jsonrpc":"2.0",
+   "id":1,
+   "error":{
+      "code":-32015,
+      "message":"VM Exception while processing transaction: revert reason",
+      "data":"0x08c379a..."
+   }
+}
+```
+
+
+```js
+// Request
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}],"id":1}'
+
+// Result
+{
+  "id":1,
+  "jsonrpc": "2.0",
+  "result": "0x"
+}
+
+// In case of REVERT error
+{
+   "jsonrpc":"2.0",
+   "id":1,
+   "error":{
+      "code":-32015,
+      "message":"VM Exception while processing transaction: revert reason",
+      "data":"0x08c379a..."
+   }
+}
 
 ---
 
