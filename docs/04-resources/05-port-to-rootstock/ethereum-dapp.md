@@ -129,7 +129,7 @@ Before you begin, ensure that you have the following:
     import "@nomicfoundation/hardhat-ignition-ethers";
 
     const config: HardhatUserConfig = {
-      solidity: "0.8.24",
+      solidity: "0.8.25",
   };
 
 export default config;
@@ -188,7 +188,7 @@ Now repeat this step for your MAINNET_RPC_URL.
 
 You’ll see output similar to this:
 ```
-The configuration variable has been stored in /Users/wisdomnwokocha/Library/Preferences/hardhat-nodejs/vars.json
+The configuration variable has been stored in /Users/Library/Preferences/hardhat-nodejs/vars.json
 ```
 
 For the Private key:
@@ -200,7 +200,7 @@ npx hardhat vars set PRIVATE_KEY
 
 You’ll see output similar to this:
 ```
-The configuration variable has been stored in /Users/wisdomnwokocha/Library/Preferences/hardhat-nodejs/vars.json
+The configuration variable has been stored in /Users/Library/Preferences/hardhat-nodejs/vars.json
 ```
 
 Now, update your `hardhat.config.ts` file to include Rootstock network configurations. Here’s an example of how it should look:
@@ -210,7 +210,7 @@ import "@nomicfoundation/hardhat-toolbox";
 import "@nomicfoundation/hardhat-ignition-ethers";
 
 const config: HardhatUserConfig = {
-  solidity: "0.8.24", // Set your desired Solidity version
+  solidity: "0.8.25", // Set your desired Solidity version
 
   networks: {
     // Mainnet configuration
@@ -239,7 +239,7 @@ Copy this Ethereum contract and its tests to your Rootstock Hardhat project. Pla
 
 ```solidity
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.24;
+pragma solidity ^0.8.25;
 
 contract SimpleStorage {
     uint256 public favoriteNumber;

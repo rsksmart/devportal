@@ -92,10 +92,18 @@ This is the address that you have to use in order to do the transfer to the fede
 
 ### Send Bitcoin to Rootstock Federation address
 
+:::tip[Alternative option for getting Federation Address]
+
+See [RBTC Conversion](/concepts/rbtc/networks/#btc-to-rbtc-conversion).
+
+:::
+
 :::warning[Warning]
 You need to send a minimum amount of 0.01 BTC or maximum amount,
 not more than 10 BTC for conversion.
 :::
+
+
 
 To get the Rootstock Federation address you can run the following script:
 
