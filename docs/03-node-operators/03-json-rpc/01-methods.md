@@ -1038,7 +1038,7 @@ Executes a new message call immediately without creating a transaction on the bl
 
 2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"` or `"pending"`, see the [default block parameter](https://ethereum.org/en/developers/docs/apis/json-rpc/#default-block)
 
-3. `Object` - From release LOVELL-7.2.0 and on, we support the State Override Set. The state override set is an optional address-to-state mapping, used in eth_call, where each entry specifies some state to be ephemerally overridden prior to executing the call. Each address maps to an object containing the following fields:
+3. `Object` - From [LOVELL-7.2.0](https://rootstock.io/blog/introducing-rskj-lovell-7-2-0/) release and on, we support the State Override Set. The state override set is an optional address-to-state mapping, used in `eth_call`, where each entry specifies some state to be momentarily overridden prior to executing the call. Each address maps to an object containing the following fields:
 
 - `balance`: `QUANTITY`, 32 Bytes - (optional) Fake balance to set for the account before executing the call.
 - `nonce`: `QUANTITY`, 8 Bytes - (optional) Fake nonce to set for the account before executing the call.
