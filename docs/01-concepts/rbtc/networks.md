@@ -38,7 +38,7 @@ Instructions on how to do a Mainnet peg-in.
     <Accordion.Body>
       Send Bitcoin to Rootstock Federation address
       - To retrieve the Rootstock Federation address:
-        1. Search the brige contract address [0x0000000000000000000000000000000001000006](https://explorer.rootstock.io/address/0x0000000000000000000000000000000001000006) on the Rootstock Explorer.
+        1. Search the bridge contract address [0x0000000000000000000000000000000001000006](https://explorer.rootstock.io/address/0x0000000000000000000000000000000001000006) on the Rootstock Explorer.
         
         ![Get Federation Address](/img/concepts/rbtc/01-federation-address.png)
         
@@ -148,7 +148,7 @@ Instructions on how to do a Testnet peg-in.
     <Accordion.Body>
       The Rootstock Federation address is retrieved by making a Smart Contract call on Rootstock Testnet.
       - To retrieve the Rootstock Federation address:
-        1. Search the brige contract address [0x0000000000000000000000000000000001000006](https://explorer.testnet.rootstock.io/address/0x0000000000000000000000000000000001000006) on the Rootstock Testnet Explorer.
+        1. Search the bridge contract address [0x0000000000000000000000000000000001000006](https://explorer.testnet.rootstock.io/address/0x0000000000000000000000000000000001000006) on the Rootstock Testnet Explorer.
         
         ![Get Federation Address](/img/concepts/rbtc/01-federation-address.png)
         

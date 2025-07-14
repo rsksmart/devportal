@@ -26,8 +26,9 @@ Read the [lock requirements](/concepts/rbtc/networks#mainnet-conversion)
 
 :::
 
+
 1. With your Bitcoin address,
-   send a BTC transaction to the Rootstock Federation Address.
+   send a BTC transaction to the Rootstock Federation Address. See how to get the [Federation Address](/concepts/rbtc/networks/#btc-to-rbtc-conversion).
 2. Using your preferred BTC block explorer
    (e.g. [Blocktrail](https://www.blocktrail.com/BTC)),
    follow your transaction and wait the stipulated time.
