@@ -7,7 +7,7 @@ url: https://rootstock.io/blog/introducing-rskj-lovell-7-1-0/
 
 ## Summary
 
-The latest version of the [RSKj client - Lovell 7.1.0](https://github.com/rsksmart/rskj/releases/tag/LOVELL-7.1.0). This version introduces several enhancements, including the experimental Snap Synchronization mode, updates to the Fiat Stable MinGasPrice feature, and improvements to JSON-RPC API compatibility.
+The latest version of the [RSKj client - Lovell 7.1.0](https://github.com/rsksmart/rskj/releases/tag/LOVELL-7.1.0) introduces several enhancements, including the experimental Snap Synchronization mode, updates to the Fiat Stable MinGasPrice feature, and improvements to JSON-RPC API compatibility.
 
 :::tip[Tip]
 
