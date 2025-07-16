@@ -1,14 +1,16 @@
 ---
 sidebar_label: Advanced Operations
-sidebar_position: 120
+sidebar_position: 240
 title: Flyover SDK - Advanced Operations
 tags: [rsk, rootstock, rif, flyover, integrate, integration guide, rbtc, powpeg]
-description: The Flyover SDK streamlines integration between client applications and the Flyover Protocol. This easy-to-use JavaScript/TypeScript toolkit provides configuration options for Liquidity Providers (LPs) and custom network setups for connecting to Rootstock.
+description: Advanced topics covering custom network setups, captcha token handling and Flyover SDK utility helpers for sophisticated client integrations.
 ---
 
-## Custom network setups
+:::info[Note]
+If you wish to suggest changes on this document, please open a PR on the [Liquidity Provider Server Repository](https://github.com/rsksmart/liquidity-provider-server.git)
+:::
 
-To configure custom networks, see the Configuration section.
+To configure custom networks, see [Configuration](https://github.com/rsksmart/flyover-sdk/tree/main?tab=readme-ov-file#configuration) section.
 
 ## Captcha token handling 
 
@@ -45,10 +47,4 @@ const flyover = new Flyover({
 
 ## FlyoverUtils
 
-Flyover SDK exports an object with a collection of util functions that the client application might use during the integration with the SDK. You can see the list of the utility functions and also when importing the FlyoverUtils object from the SDK package every function has a JsDoc explaining its usage.
-
-:::danger[Troubleshooting]
-
-Encountering difficulties with the SDK setup, LPS configuration, or specific Flyover issues? Join the [Rootstock Discord community](http://discord.gg/rootstock) for expert support and assistance. Our dedicated team is ready to help you resolve any problems you may encounter.
-
-:::
+Flyover SDK exports an object with a collection of util functions that the client application might use during the integration with the SDK. You can see the [list of the utility functions](https://github.com/rsksmart/flyover-sdk/blob/main/docs/modules.md#flyoverutils) and also when importing the FlyoverUtils object from the SDK package every function has a JsDoc explaining its usage.
