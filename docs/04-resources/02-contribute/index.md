@@ -22,13 +22,13 @@ From writing, bug bounties and open-source projects, there are various ways to p
   link="/resources/contribute/hacktivator/"
 />
 
-<br></br>
+<!-- <br></br>
 
 <Card
   title="Writing Contests"
   description="Contribute articles, tutorials and guides about Rootstock, Bitcoin, etc."
   link="/resources/contribute/writing-contest/"
-/>
+/> -->
 
 <br></br>
 
