@@ -9,7 +9,7 @@ Here, you can find a list of mainnet, testnet addresses, and ABIs used by the To
 
 
 ## Token Addresses
-    - USDT: 0x31974a4970BADA0ca9BcDe2E2eE6fC15922c5334
+    - USDT: 0xEf213441a85DF4d7acBdAe0Cf78004E1e486BB96
     - LINK: 0x2d850c8E369F26bc02fF4c9fFbaE2d50107395CB
     - DAI: 0xdF63373ddb5B37F44d848532BBcA14DBf4e8aa53
     - DOC: 0xAC3896da7940c8e4Fe9E7F8cd4475Cd2534F37d7

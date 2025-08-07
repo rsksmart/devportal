@@ -25,14 +25,6 @@ From writing, bug bounties and open-source projects, there are various ways to p
 <br></br>
 
 <Card
-  title="Writing Contests"
-  description="Contribute articles, tutorials and guides about Rootstock, Bitcoin, etc."
-  link="/resources/contribute/writing-contest/"
-/>
-
-<br></br>
-
-<Card
   title="Bug Bounty Program"
   description="RootstockLabs has created the bug bounty program to reward researchers that submit valid vulnerabilities to improve the RootstockLabs platforms security."
   link="/resources/contribute/bug-bounty/"

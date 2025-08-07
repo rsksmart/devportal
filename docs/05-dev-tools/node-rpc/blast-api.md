@@ -8,7 +8,7 @@ description: "Remote Procedure Call (RPC) is a protocol that allows a program to
 
 Blast API is a Blockchain-optimized cloud infrastructure for low-latency, cost-effective RPC services on Rootstock.
 
-## **Getting Started with Blast API**  
+## Getting Started with Blast API
 
 <Steps>
   <Step title="Sign Up and Get an API Key">
@@ -33,4 +33,4 @@ Blast API is a Blockchain-optimized cloud infrastructure for low-latency, cost-e
   </Step>
 </Steps>
 
-<Button href="https://blastapi.io/chains/rootstock">Get Free API</Button>
+<Button href="https://blastapi.io/public-api/rootstock">Get Free Public API</Button>

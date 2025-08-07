@@ -7,7 +7,16 @@ description: "Learn how to verify Powpeg nodes using the HSM Firmware Attestatio
 render_features: 'powpeg-hsm-attestation-frame'
 ---
 
-To verify the PowPeg protocol  nodes, follow the HSM firmware attestation process using the steps below. See the [Attestation README](https://github.com/rsksmart/rsk-powhsm/blob/2.3.5/docs/attestation.md).
+To verify the PowPeg protocol nodes, follow the HSM firmware attestation process using the steps below. See the [Attestation README](https://github.com/rsksmart/rsk-powhsm/blob/2.3.5/docs/attestation.md).
+
+
+:::tip[Tip]
+
+For a comprehensive list of attestations, see the [PowPeg HSM Firmware Attestation](https://rootstock.io/powpeg/) landing page.
+
+:::
+
+
 ````mdx-code-block
 <Tabs>
   <TabItem value="sovryn" label="Sovryn" default>
