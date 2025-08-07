@@ -8,11 +8,13 @@ tags: [rootstock, rsk, code, resources, content, hacktivator, writing, rewards]
 
 Welcome to the Rootstock Hacktivator! Designed for developers who want to contribute to the Rootstock ecosystem and receive rewards for their valuable contributions.
 
-<Button size="lg" href="https://forms.gle/Gd6uMt8qaLpPtryW6">Submit Your Work</Button>
+<!-- <Button size="lg" href="https://forms.gle/Gd6uMt8qaLpPtryW6">Submit Your Work</Button> -->
 
 :::info[Hacktivator update]
 
-We’re not accepting written educational content at the moment. Your code contributions and video tutorials are still welcome!
+Hacktivator 2.0 is now closed!
+Thank you to everyone who contributed and helped grow the Rootstock ecosystem.
+Hacktivator 3.0 is coming soon with an improved experience for all builders. Stay tuned!
 
 :::
 
@@ -202,12 +204,6 @@ _**The reward range provided for each option will be used based on the level of 
 
 Educational content contributions enable developers to educate the Rootstock community through technical guides, tutorials, and documentation. They must be developer-focused and aimed at providing real value to the Rootstock developer community.
 
-:::info[Hacktivator update]
-
-We’re not accepting written educational content at the moment. Your code contributions and video tutorials are still welcome!
-
-:::
-
 ### 📌 Formats
 
 1. **Written Guides or Tutorials**
@@ -337,7 +333,7 @@ Submitting your contributions is easy! Just follow these steps:
 
 This program is your chance to make a meaningful impact on Rootstock while earning rewards. Ready to contribute? Submit your work and be a part of the Rootstock developer community! 🌍
 
-<Button size="lg" href="https://forms.gle/Gd6uMt8qaLpPtryW6">Submit Your Work</Button>
+<!-- <Button size="lg" href="https://forms.gle/Gd6uMt8qaLpPtryW6">Submit Your Work</Button> -->
 
 <br></br>
 
