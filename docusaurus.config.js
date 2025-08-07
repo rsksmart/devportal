@@ -57,7 +57,7 @@ const config = {
     },
     newsHighlight : [
       {
-        title : '📣 Hacktivator 2.0 is now closed! Thank you to everyone who contributed and helped grow the Rootstock ecosystem.',
+        title : '📣 Hacktivator 2.0 is now closed! Hacktivator 3.0 is coming soon. Stay tuned!',
         url : '/resources/contribute/hacktivator/'
       }
     ]
