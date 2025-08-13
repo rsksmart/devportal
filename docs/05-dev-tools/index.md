@@ -471,7 +471,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="WakeUp Labs"
     subtitle="infra"
     color="orange"
-    linkHref="https://platform.wakeuplabs.io"
+    linkHref="https://www.wakeuplabs.io/"
     linkTitle="Get Started"
     description="WakeUp Labs is a software development studio that assists EVM-Compatible Blockchains, DAOs and traditional organizations in overcoming technical challenges and expediting product development."
   />
