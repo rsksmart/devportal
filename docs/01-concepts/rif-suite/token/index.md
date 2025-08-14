@@ -1,6 +1,6 @@
 ---
 sidebar_label: RIF Token
-sidebar_position: 400
+sidebar_position: 2
 title: "RIF Token: Bringing Utility to Bitcoin"
 tags: [rif, token, erc677]
 description: "Information about the RIF token, where to obtain it, how to transfer it, and technical details on its token standard"

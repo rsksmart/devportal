@@ -11,9 +11,9 @@ The following wallets support [RBTC](/concepts/rbtc/) and [RIF](/concepts/rif-su
 ````mdx-code-block
 <Carousel width="370" height="260" >
   <CarouselItem image="/img/rsk/wallets/my-crypto.png" href="https://app.mycrypto.com/add-account" />
-  <CarouselItem image="/img/rsk/wallets/metamask-logo.png" href="https://metamask.io/download" target="_blank" />
-  <CarouselItem image="/img/rsk/wallets/edge-wallet-logo.png" href="https://edge.app/" />
-  <CarouselItem image="/img/rsk/wallets/ledger-logo.png" href="https://www.ledger.com/" />
+  <CarouselItem image="/img/rsk/wallets/metamask-logo.png" href="/dev-tools/wallets/metamask/" />
+  <CarouselItem image="/img/rsk/wallets/edge-wallet-logo.png" href="https://edge.app/" target="_blank" />
+  <CarouselItem image="/img/rsk/wallets/ledger-logo.png" href="https://www.ledger.com/"  target="_blank" />
   <CarouselItem image="/img/rsk/wallets/trezor-wallet.png" href="https://trezor.io/trezor-suite" />
   <CarouselItem image="/img/rsk/wallets/dcent-wallet.png" href="https://www.dcentwallet.com/en" />
   <CarouselItem image="/img/rsk/wallets/math-wallet.png" href="https://blog.mathwallet.org/?p=1625" />

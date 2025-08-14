@@ -11,8 +11,9 @@ description: "Explore a curated selection of smart contract development tools an
   values={[
     {label: 'Bridges', value: 'bridge'},
     {label: 'Starter Kits', value: 'demos'},
-    {label: 'Exchanges', value: 'exchange'},
+    {label: 'CLI', value: 'cli'},
     {label: 'Wallets', value: 'wallet'},
+    {label: 'Exchanges', value: 'exchange'},
     {label: 'Explorers', value: 'explorer'},
     {label: 'Platforms and Infra', value: 'platform-infra'},
     {label: 'Cross Chain', value: 'cc'},
@@ -700,5 +701,32 @@ description: "Explore a curated selection of smart contract development tools an
     linkTitle="Attest Now"
     description="Rootstock Attestation Service (RAS) is a system that allows individuals and organizations to create verifiable claims or proofs about specific events, actions, or data, either on-chain (on the blockchain) or off-chain (outside the blockchain but linked to it). Learn how to use it on Rootstock."
   />
+  <FilterItem
+    value="cli"
+    title="Rootstock CLI"
+    subtitle="rsk-cli"
+    color="orange"
+    linkHref="https://github.com/rsksmart/rsk-cli"
+    linkTitle="Use the CLI"
+    description="The Rootstock CLI (rsk-cli) tool enables users to manage wallets, check balances, send transactions, verify smart contracts and interact with smart contracts on the Rootstock blockchain - a Bitcoin sidechain designed for smart contracts. It supports both mainnet and testnet environments."
+  />
+  <FilterItem
+    value="cli"
+    title="Rootstock GO CLI"
+    subtitle="rsk-cli"
+    color="orange"
+    linkHref="https://github.com/rsksmart/rsk-go-cli"
+    linkTitle="Use the CLI"
+    description="The Rootstock Go CLI (rsk-cli) tool for interacting with Rootstock blockchain."
+  />
+  <!-- <FilterItem
+    value="cli"
+    title="Rootstock Rust CLI"
+    subtitle="rsk-cli"
+    color="orange"
+    linkHref="https://github.com/rsksmart/rsk-go-cli"
+    linkTitle="Use the CLI"
+    description="A secure, feature-rich Rust-based CLI wallet for the Rootstock blockchain."
+  /> -->
 </Filter>
 ````

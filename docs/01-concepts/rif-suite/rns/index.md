@@ -1,9 +1,9 @@
 ---
 sidebar_label: RNS
 sidebar_position: 400
-title: "RIF RNS: RIF Name Service | Rootstock (RSK)"
-tags: [rif, rns, rif-name-service, rsk]
-description: "Information about the RIF token, where to obtain it, how to transfer it, and technical details on its token standard"
+title: "RIF RNS: RIF Name Service"
+tags: [rif, rns, rif-name-service, rsk, rootstock]
+description: "Information about the RIF Name Service, specs, how to use and integrate."
 ---
 
 RNS provides an architecture which enables the identification of blockchain addresses by human-readable names.
@@ -19,7 +19,7 @@ RNS provides an architecture which enables the identification of blockchain addr
       <p>Register a domain in the Testnet, for free.</p>
     </div>
   </div>
-  <div className="col">
+  <!-- <div className="col">
     <div className="rns-index-box">
       <a href="./integrate">Integrate with RNS</a>
       <br />
@@ -44,7 +44,7 @@ RNS provides an architecture which enables the identification of blockchain addr
       <br />
       <p>Use simple libraries to interact with RNS service.</p>
     </div>
-  </div>
+  </div> -->
 </div>
 
 ## The stack
@@ -71,18 +71,15 @@ The design of the RIF Name Service is shaped by specific goals:
 - To ensure the namespace is adaptable across different networks and applications, RNS supports the use of the same namespace with various protocol families or management systems. Data in RNS is tagged with both a class and a type, enabling the parallel use of different formats for data of type "address."
 - There may be trade-offs between data acquisition costs, update speed, and cache accuracy. The domain owner, as the data source, should consider these trade-offs and decide what to store and how to cache it.
 
-> [RNS specs](./specs)
-
-
 ## Elements of the RNS
 
 RNS has four major components:
 
 | **Component**    | **Description**                                                                                                                                                                                                                               | **Specs** |
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
-| **RNS Registry**  | The RNS Registry is a specification for a tree-structured namespace and the data associated with the names. Conceptually, each node and leaf in the domain name space tree represents a set of information. Query operations attempt to extract specific types of information from a particular set. A query specifies the domain name of interest and the type of resource information desired. | [Specs](./specs/registry)  |
-| **RNS Resolvers** | RNS Resolvers are contracts that provide information from a name in response to client requests. Resolvers must answer a query directly or use referrals to other resolvers. Typically, a resolver is a contract's public function that is directly accessible to user programs or other contracts. No specific protocol is required between the resolver and the user program. | [Specs](./specs/resolver)  |
-| **RNS Registrar** | The RNS Registrar is a critical component within the RIF Name Service, managing the registration of `.rsk` domain names. This contract has the authority to register names in the RSK Owner contract, ensuring that new domain registrations are handled securely and efficiently. | [Specs](./specs/registrar)  |
+| **RNS Registry**  | The RNS Registry is a specification for a tree-structured namespace and the data associated with the names. Conceptually, each node and leaf in the domain name space tree represents a set of information. Query operations attempt to extract specific types of information from a particular set. A query specifies the domain name of interest and the type of resource information desired. | Specs |
+| **RNS Resolvers** | RNS Resolvers are contracts that provide information from a name in response to client requests. Resolvers must answer a query directly or use referrals to other resolvers. Typically, a resolver is a contract's public function that is directly accessible to user programs or other contracts. No specific protocol is required between the resolver and the user program. | Specs |
+| **RNS Registrar** | The RNS Registrar is a critical component within the RIF Name Service, managing the registration of `.rsk` domain names. This contract has the authority to register names in the RSK Owner contract, ensuring that new domain registrations are handled securely and efficiently. | Specs |
 | **Renewer**       | The Renewer is a contract designed to facilitate the renewal of names registered in the Node Owner. It is equipped with permissions to renew these names and provides flexibility in how the renewal is executed.
 
 These fours components roughly correspond to the four layers or views of the domain system:
@@ -95,14 +92,14 @@ These fours components roughly correspond to the four layers or views of the dom
 ## Guidelines on use
 
 Before RNS can be used to hold naming information for some kind of object, two needs must be met:
-- A convention for mapping between object names and domain names. This describes how information about an object is accessed. Find specs [here](specs#name-mapping-convention)
+- A convention for mapping between object names and domain names. This describes how information about an object is accessed.
 - Resource record types and data formats for describing the object. Find specs.
 
 The guideline for finding a specific record for a name is as follows:
-1. Calculate the name identifier with [`namehash` function](specs#name-mapping-convention).
-2. Get the name's resolver address via [`resolver(bytes32)`](specs/registry#AcessFunctions).
-3. Determine if resolver supports desired resource record via [ERC-165 interface detection](https://eips.ethereum.org/EIPS/eip-165).
-4. Get the desired resource record. Find currently standardized [resolvers](./specs/resolver).
+1. Calculate the name identifier with `namehash` function.
+2. Get the name's resolver address via `resolver(bytes32)`.
+3. Determine if resolver supports desired resource record via ERC-165 interface detection.
+4. Get the desired resource record. Find currently standardized resolvers.
 
 > Guidelines on integration
 

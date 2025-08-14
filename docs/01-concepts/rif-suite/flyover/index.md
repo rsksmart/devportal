@@ -1,12 +1,12 @@
 ---
 sidebar_label: RBTC Flyover
 sidebar_position: 100
-title: RBTC Flyover - Overview
+title: RBTC Flyover
 tags: [rsk, rootstock, rif, flyover, integrate, integration guide, rbtc, powpeg]
 description: The RBTC Flyover enables fast, trust-minimized onboarding of users into the Rootstock ecosystem from Bitcoin with less friction. It improves the usability for bitcoiners and integrators to interact with the Rootstock ecosystem via the Powpeg and Flyover SDK.
 ---
 
-Flyover accelerates getting into Rootstock from Bitcoin by significantly reducing the wait times associated with the current PowPeg time. Developers, integrators or Liquidity Providers (LP) looking to provide RBTC access, Cross-chain swaps, and access to liquidity pools can integrate the Flyover SDK. Visit the [LP integration section](/developers/integrate/flyover/LP/) to get started.
+Flyover accelerates getting into Rootstock from Bitcoin by significantly reducing the wait times associated with the current PowPeg time. Developers, integrators or Liquidity Providers (LP) looking to provide RBTC access, Cross-chain swaps, and access to liquidity pools can integrate the Flyover SDK. Visit the [ LP integration section](/developers/integrate/flyover/LP/) to get started.
 
 ## Features of the Flyover
 * Flyover significantly reduces the amount of time required to transfer BTC and RBTC between the Bitcoin and Rootstock networks
@@ -14,11 +14,48 @@ Flyover accelerates getting into Rootstock from Bitcoin by significantly reducin
 * Provides the same security guarantees as the Powpeg
 * Customizable SDK for LPs and integrators 
 
-:::info[Flyover SDK]
+:::info[Who is it for?]
+
+**For Liquidity Providers (LP)**
+An LP provides liquidity in Rootstock (RBTC) and Bitcoin (BTC) on behalf of users in exchange for a fee (configurable) as a reward. The LP can be wallets, exchanges, aggregators or individuals and institutions. See section on [LP Management](/developers/integrate/flyover/LP/management/) for more information.
+
+**For Developers**
 
 The [Flyover SDK](https://github.com/rsksmart/flyover-sdk) is currently available on Mainnet and Testnet. 
 To convert RBTC to BTC and vice versa, use the PowPeg App.
 
+**For General Users**
+
+Use the [PowPeg App](http://powpeg.rootstock.io) to Peg in and out of Rootstock, easily perform trust-minimized BTC and RBTC transfers between Bitcoin and Rootstock using Flyover. See section on [Using the PowPeg App](/resources/guides/powpeg-app/) to learn about how you can convert BTC - RBTC and vice versa.
+
+:::
+
+
+:::tip[Ready to integrate Flyover into your platform or become a Liquidity Provider?]
+[Contact the Flyover team](https://rootstock.io/contact/) to explore partnership opportunities and learn more about how you can contribute to the growth of the Rootstock ecosystem and integrate Flyover into your dApps.
+:::
+
+## PowPeg vs RBTC Flyover
+
+Here's a detailed comparison of the PowPeg vs RBTC Flyover.
+
+|  | PowPeg | Flyover (Includes PowPeg) |
+| --- | --- | --- |
+| Network (and Coin) | Bitcoin (BTC) and Rootstock (RBTC) | Bitcoin (BTC) and Rootstock (RBTC) |
+| Key Differentiators | Native for Rootstock (as a Bitcoin sidechain) | Significantly Faster than the PowPeg |
+| Core Concept | Federated 2 Way Peg | Liquidity Provider (LP) Service + Federated 2 Way Peg (i.e. the PowPeg) |
+| Trust | Requires trust in PowPeg | Requires trust in PowPeg. LPs are trustless |
+| Time to transfer value to Rootstock | 100 Bitcoin Blocks (about 17 hours) | ~20 minutes <sup>1</sup> |
+| Time for value transfer from Rootstock | 4000 Rootstock Blocks (about 34 hours) | ~15 minutes <sup>2</sup> |
+|  Cost Structure | No service fees, Only blockchain TX fees on Bitcoin (for peg-in) and Rootstock (for peg-out) | LP provider fees (0.0001 RBTC) <sup>3</sup> + transaction fees on Rootstock + Bitcoin TX fee  |
+| Minimum Limit for value transfer | 0.005 BTC for peg in and 0.004 RBTC for peg-out | Same as PowPeg for peg in (BTC). Peg out min (RBTC) is configurable by the LP (set at 0.004 RBTC initially) |
+| Max Limit for value transfer | None | 0.1 BTC and 0.1 RBTC <sup>4</sup> |
+
+:::note[Notes]
+1. Based on the number of Bitcoin block confirmations configured by the LP (currently set at 2 Bitcoin block confirmations for amounts `<= 0.1 BTC`). Bitcoin blocks can take longer to confirm.
+2. Based on the number of Rootstock block confirmations configured by the LP (currently set at 10 Rootstock confirmations for amounts `<= 0.1 RBTC`) + 1 Bitcoin block confirmation.
+3. An LP can set their own fees.  The initial LP In the PowPeg app has set its provider fee at `0.0001` RBTC so that the LP covers network fees when receiving and rebalancing funds from PowPeg.
+4. There is no technical limit for transfers.  It depends on the available liquidity and limitations set by the LP. The initial LP in the PowPeg app, has set the max transfer limits to `0.1 BTC/RBTC`.
 :::
 
 ## Use Cases
@@ -59,20 +96,3 @@ An LP provides liquidity in Rootstock (RBTC) and Bitcoin (BTC) on behalf of user
 * Increased User Reach: By being a part of the Flyover network of LPs, LPs can gain access to a wider user base of Bitcoiners seeking to interact with the Rootstock ecosystem.
 
 For more information, see [LP Onboarding](/developers/integrate/flyover/LP/) section.
-
-:::tip[Ready to integrate Flyover into your platform or become a Liquidity Provider?]
-[Contact the Flyover team](https://rootstock.io/contact/) to explore partnership opportunities and learn more about how you can contribute to the growth of the Rootstock ecosystem and integrate Flyover into your dApps.
-:::
-
-### Converting BTC to RBTC - General Users
-
-Flyover is integrated in the [PowPeg App](http://powpeg.rootstock.io) which provides a user-friendly UI for Bitcoiners to use the native Rootstock PowPeg protocol to Peg in and out, as well as to easily perform trust-minimized BTC and RBTC transfers between Bitcoin and Rootstock using Flyover. See section on [Using the PowPeg App](/resources/guides/powpeg-app/) to learn about how you can convert BTC - RBTC and vice versa.
-
-
-## Resources
-- [Release Notes](https://github.com/rsksmart/flyover-sdk/releases)
-- [Flyover SDK](https://github.com/rsksmart/flyover-sdk)
-- [Liquidity Provider Server](https://github.com/rsksmart/liquidity-provider-server?tab=readme-ov-file)
-- [Liquidity Bridge Contract](https://github.com/rsksmart/liquidity-bridge-contract)
-- [Flyover LBC Mainnet Contract Address](https://explorer.rootstock.io/address/0xaa9caf1e3967600578727f975f283446a3da6612)
-- [Flyover LBC Testnet Contract Address](https://explorer.testnet.rootstock.io/address/0xc2a630c053d12d63d32b025082f6ba268db18300)

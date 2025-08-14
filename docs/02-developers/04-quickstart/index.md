@@ -12,7 +12,7 @@ values={[
 {label: 'Beginner', value: 'beginner'},
 {label: 'Advanced', value: 'advanced'},
 {label: 'Hardhat', value: 'hardhat'},
-{label: 'Remix', value: 'remix'},
+{label: 'CLI', value: 'cli'},
 {label: 'Wagmi', value: 'wagmi'},
 {label: 'Reown', value: 'reown'},
 {label: 'On-chain data', value: 'data'},
@@ -164,15 +164,6 @@ values={[
     description="Learn how to port an Ethereum dApp to Rootstock."
   />
   <FilterItem
-    value="beginner, remix"
-    title="Deploy, Interact and Verify Smart Contracts using Remix and Rootstock Explorer"
-    subtitle="Remix"
-    color="orange"
-    linkHref="/developers/quickstart/remix/"
-    linkTitle="Use Remix"
-    description="In this guide, we will use the Remix IDE to write, compile, deploy, interact and verify a smart contract on the Rootstock Explorer."
-  />
-  <FilterItem
     value="beginner, advanced"
     title="Getting Started with Apeworx"
     subtitle="Ape"
@@ -198,6 +189,24 @@ values={[
     linkHref="/developers/rpc-api/alchemy/"
     linkTitle="Use the RPC API"
     description="A step-to-step guide for developers to interact with Rootstock network with the Alchemy RPC Provider Service."
+  />
+  <FilterItem
+    value="cli"
+    title="Rootstock CLI"
+    subtitle="rsk-cli"
+    color="orange"
+    linkHref="https://github.com/rsksmart/rsk-cli"
+    linkTitle="Use the CLI"
+    description="The Rootstock CLI (rsk-cli) tool enables users to manage wallets, check balances, send transactions, verify smart contracts and interact with smart contracts on the Rootstock blockchain - a Bitcoin sidechain designed for smart contracts. It supports both mainnet and testnet environments."
+  />
+  <FilterItem
+    value="cli"
+    title="Rootstock GO CLI"
+    subtitle="rsk-cli"
+    color="orange"
+    linkHref="https://github.com/rsksmart/rsk-go-cli"
+    linkTitle="Use the CLI"
+    description="The Rootstock Go CLI (rsk-cli) tool for interacting with Rootstock blockchain."
   />
 </Filter>
 ````
