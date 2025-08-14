@@ -137,5 +137,5 @@ Create a new file named `.env`  in the top directory, and add the following line
 - Mint tokens to the wallet
     - For commands to mint token, See step 6 in the Set up RIF Relay contracts section above.
 ![Mint Tokens](/img/rif-relay/starter-kit/mint-tokens.png)
-- Transfer to different addresses, using TKN for transfer fees payment, instead of RBTC
+- Transfer to different addresses, using TKN for transfer fees payment, instead of rBTC
 ![Transfer using TKN](/img/rif-relay/starter-kit/transfer-using-tkn.png)

@@ -2,7 +2,7 @@
 sidebar_position: 2
 sidebar_label: CLI Commands on Rootstock CLI
 title: CLI Commands on Rootstock CLI
-description: "The Rootstock CLI  (Command Line Interface) lets you manage your Rootstock wallet directly from the terminal. Create, manage, and fund your wallet with RBTC (Rootstock Bitcoin) easily and securely." 
+description: "The Rootstock CLI  (Command Line Interface) lets you manage your Rootstock wallet directly from the terminal. Create, manage, and fund your wallet with rBTC (Rootstock Bitcoin) easily and securely." 
 tags: [Rootstock CLI, developer tools, guides, rsk, rootstock, dApps, smart contracts, solidity, dev-environments]
 ---
 
@@ -354,13 +354,13 @@ When practicing or testing, always use the Testnet to avoid risking actual funds
 
 ## Adding Funds to Your Wallet
 
-To perform transactions on the Rootstock network, we’ll need RBTC. To easily fund your wallet, request RBTC from the Rootstock faucet.
+To perform transactions on the Rootstock network, we’ll need rBTC. To easily fund your wallet, request rBTC from the Rootstock faucet.
 
-#### **Steps to Add RBTC:**
+#### **Steps to Add rBTC:**
 
 1. Visit the official Rootstock Faucet: [faucet.rootstock.io](https://faucet.rootstock.io/).  
 2. Enter your wallet address in the provided field.  
-3. Click the **"Get RBTC"** button.
+3. Click the **"Get rBTC"** button.
 
 You’ll see a transaction confirmation screen, similar to this:
 
@@ -371,13 +371,13 @@ You’ll see a transaction confirmation screen, similar to this:
 
 #### **Viewing the Transaction:**
 
-Click on the **Transaction Hash** button to view the transaction details on the Rootstock explorer. This will show you if the transaction has been confirmed and how much RBTC was credited to your wallet.
+Click on the **Transaction Hash** button to view the transaction details on the Rootstock explorer. This will show you if the transaction has been confirmed and how much rBTC was credited to your wallet.
 
-> The Rootstock faucet provides free RBTC for testing on the Rootstock testnet. This faucet is intended for development and testing purposes only.  You can also find  [alternative faucets available](https://dev.rootstock.io/dev-tools/#filters=faucet).
+> The Rootstock faucet provides free rBTC for testing on the Rootstock testnet. This faucet is intended for development and testing purposes only.  You can also find  [alternative faucets available](https://dev.rootstock.io/dev-tools/#filters=faucet).
 
 ## Checking Your Wallet Balance
 
-The balance command in the Rootstock CLI allows for viewing the amount of RBTC in your wallet on the Rootstock network. This command supports both Mainnet (live network) and Testnet (testing network). Always make sure to use the correct network to avoid any confusion.
+The balance command in the Rootstock CLI allows for viewing the amount of rBTC in your wallet on the Rootstock network. This command supports both Mainnet (live network) and Testnet (testing network). Always make sure to use the correct network to avoid any confusion.
 
 <Tabs>
    <TabItem value="contribute" label="Mainnet" default>
@@ -396,7 +396,7 @@ The balance command in the Rootstock CLI allows for viewing the amount of RBTC i
     ```bash
      📄 Wallet Address: 0x05BFa711ef4B2f40855C4E73bA96a8Da86a4be9F
      🌐 Network: Rootstock Mainnet
-     💰 Current Balance: 0 RBTC
+     💰 Current Balance: 0 rBTC
     🔗 Ensure that transactions are conducted on the correct network.
      ```
 
@@ -404,7 +404,7 @@ The balance command in the Rootstock CLI allows for viewing the amount of RBTC i
 
  - **Wallet Address**: Your unique Rootstock wallet address.  
  - **Network**: This specifies that the balance is being checked on the Mainnet.  
- - **Current Balance**: Displays the amount of RBTC currently in your wallet.
+ - **Current Balance**: Displays the amount of rBTC currently in your wallet.
 
 :::
 
@@ -423,7 +423,7 @@ The balance command in the Rootstock CLI allows for viewing the amount of RBTC i
   ```bash
   📄 Wallet Address: 0x05BFa711ef4B2f40855C4E73bA96a8Da86a4be9F
   🌐 Network: Rootstock Testnet
-  💰 Current Balance: 0.000499835435453 RBTC
+  💰 Current Balance: 0.000499835435453 rBTC
   🔗 Ensure that transactions are conducted on the correct network.
   ```
   </TabItem>
@@ -431,9 +431,9 @@ The balance command in the Rootstock CLI allows for viewing the amount of RBTC i
 </Tabs>
 
 
-## Transferring RBTC
+## Transferring rBTC
 
-The transfer command allows for sending RBTC from your wallet to another address on the Rootstock network. As with the balance command, you can perform transfers on either the Mainnet or Testnet.
+The transfer command allows for sending rBTC from your wallet to another address on the Rootstock network. As with the balance command, you can perform transfers on either the Mainnet or Testnet.
 
 :::info[Info]
 
@@ -444,13 +444,13 @@ For testing, always use the Testnet to avoid risking real funds.
 <Tabs>
   <TabItem value="contribute" label="Mainnet" default>
     
-To transfer funds on the Mainnet, use the following command, replacing 0xRecipientAddress with the address you want to send RBTC to and 0.001 with the amount you wish to send:
+To transfer funds on the Mainnet, use the following command, replacing 0xRecipientAddress with the address you want to send rBTC to and 0.001 with the amount you wish to send:
 
 ### **Parameters:**
 
 - `--address \<RecipientAddress\>`: This specifies the recipient’s address on the RSK network. Replace `<RecipientAddress\>` with the actual RSK-compatible wallet address of the recipient.  
 
-- `--value \<Amount\>`: This defines the amount of RSK (RBTC) you want to transfer. Replace `<Amount\>` with the exact amount of RBTC you want to send. Make sure to verify that the amount is correct and that your account has enough balance to cover the transaction and any fees.
+- `--value \<Amount\>`: This defines the amount of rBTC you want to transfer. Replace `<Amount\>` with the exact amount of rBTC you want to send. Make sure to verify that the amount is correct and that your account has enough balance to cover the transaction and any fees.
 
 ```bash
 rsk-cli transfer --address 0xRecipientAddress --value 0.001
@@ -461,12 +461,12 @@ rsk-cli transfer --address 0xRecipientAddress --value 0.001
 ```shell
 📄 Wallet Address: 0xcfEa49816A22fa49524e1d62FDF8f0F938b1FE5C
 🎯 Recipient Address: 0x05BFa711ef4B2f40855C4E73bA96a8Da86a4be9F
-💵 Amount to Transfer: 0.001 RBTC
-💰 Current Balance: 0.000499835710721 RBTC
+💵 Amount to Transfer: 0.001 rBTC
+💰 Current Balance: 0.000499835710721 rBTC
 ```
   </TabItem>
   <TabItem value="contest" label="Testnet">
-   To transfer RBTC on the Testnet, use the \-t or \--testnet flag:
+   To transfer rBTC on the Testnet, use the \-t or \--testnet flag:
 
 ### Parameters
 
@@ -479,7 +479,7 @@ rsk-cli transfer --testnet --address 0xRecipientAddress --value 0.001
 If the specified amount exceeds your wallet balance, the CLI will provide an error message:
 
 ```text
-🚫 Insufficient balance to transfer 0.001 RBTC.
+🚫 Insufficient balance to transfer 0.001 rBTC.
 ```
 
 If there’s sufficient funds, you’ll be prompted to enter your password to decrypt the wallet:

@@ -1,21 +1,21 @@
 ---
-title: "RBTC Conversion: Peg in and Peg Out"
+title: "rBTC Conversion: Peg in and Peg Out"
 sidebar_label: Peg In & Out
 tags: [rsk, rootstock, rbtc, conversion, peg, 2-way, peg-in, peg-out, federation, powpeg]
-description: 'Converting BTC to RBTC (peg-in) and RBTC to BTC (peg-out), for both Mainnet and Testnet.'
+description: 'Converting BTC to RBTC (peg-in) and rBTC to BTC (peg-out), for both Mainnet and Testnet.'
 sidebar_position: 301
 ---
 
-In this article, we explain step by step on how to convert from BTC to RBTC, and vice versa.
+In this article, we explain step by step on how to convert from BTC to rBTC, and vice versa.
 The process of conversion utilises a [Powpeg](/concepts/powpeg/) mechanism. Thus, these conversions are referred to as peg-ins and peg-outs.
 
 - **Peg-in**:
-  - A conversion from BTC to RBTC
+  - A conversion from BTC to rBTC
   - Locks BTC in the BTC Federation address
-  - Releases RBTC in the Rootstock derived address
+  - Releases rBTC in the Rootstock derived address
 - **Peg-out**:
-  - A conversion from RBTC to BTC
-  - Locks RBTC on the Rootstock network
+  - A conversion from rBTC to BTC
+  - Locks rBTC on the Rootstock network
   - Releases BTC on the Bitcoin network
 
 ## Compatibility
@@ -26,12 +26,12 @@ The process of conversion utilises a [Powpeg](/concepts/powpeg/) mechanism. Thus
 
 :::info[Note]
 On the Testnets, the token symbols are prefixed with a lowercase `t`.
-Thus, we have `BTC` and `RBTC` on the Mainnets, which correspond to `tBTC` and `tRBTC` of the Testnets.
+Thus, we have `BTC` and `rBTC` on the Mainnets, which correspond to `tBTC` and `tRBTC` of the Testnets.
 :::
 
 ### Address verifier
 
-Enter your BTC address below to verify whether it may be used to peg in from BTC to RBTC.
+Enter your BTC address below to verify whether it may be used to peg in from BTC to rBTC.
 
 <AddressVerifier />
 
@@ -64,7 +64,7 @@ Watch this explainer video on **How to do BTC & R-BTC Conversions using the Root
   <Accordion.Item eventKey="2">
     <Accordion.Header as="h3">Do I lose my Bitcoin if the Rootstock Federation address change during my transfer?</Accordion.Header>
     <Accordion.Body>
-      There is a grace period for the Rootstock Federation address change. You will still be able to lock Bitcoin and get RBTC during the grace period. However, any Bitcoin sent to the old Rootstock Federation address will be lost post to the grace period.
+      There is a grace period for the Rootstock Federation address change. You will still be able to lock Bitcoin and get rBTC during the grace period. However, any Bitcoin sent to the old Rootstock Federation address will be lost post to the grace period.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>

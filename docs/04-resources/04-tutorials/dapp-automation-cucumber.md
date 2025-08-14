@@ -89,7 +89,7 @@ const networkConfiguration = {
  networkName: 'Rootstock',
  rpcUrl: 'https://rpc.testnet.rootstock.io/{YOUR_APIKEY}',
  chainId: '31',
- symbol: 'RBTC',
+ symbol: 'rBTC',
  isTestnet: true
 }
 ```

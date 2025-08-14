@@ -1,20 +1,20 @@
 ---
-title: Converting BTC to RBTC and vice versa
+title: Converting BTC to rBTC and vice versa
 sidebar_label: Networks
 tags: [rsk, rootstock, rbtc, conversion, peg, 2-way, peg-in, peg-out, federation]
-description: 'Converting BTC to RBTC (peg-in) and RBTC to BTC (peg-out) on Mainnet and Testnet.'
+description: 'Converting BTC to rBTC (peg-in) and rBTC to BTC (peg-out) on Mainnet and Testnet.'
 sidebar_position: 303
 ---
 
 ## Mainnet Conversion
 
-In this section we will go over the steps of converting BTC to RBTC and vice versa in Bitcoin and Rootstock network.
+In this section we will go over the steps of converting BTC to rBTC and vice versa in Bitcoin and Rootstock network.
 
 :::tip[Tip]
 The minimum amount of Bitcoin to convert is **0.005 BTC** for Mainnet.
 :::
 
-### BTC to RBTC conversion
+### BTC to rBTC conversion
 
 Instructions on how to do a Mainnet peg-in.
 
@@ -59,39 +59,39 @@ Instructions on how to do a Mainnet peg-in.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="4">
-    <Accordion.Header as="h3">4. Get RBTC address with BTC private key</Accordion.Header>
+    <Accordion.Header as="h3">4. Get rBTC address with BTC private key</Accordion.Header>
     <Accordion.Body>
-      -  You can get a corresponding RBTC address from your BTC private key by using the [Rootstock Utils](https://github.com/rsksmart/utils). If you do not want to compile the utility, you can download the [latest release](https://github.com/rsksmart/utils/releases/latest).
+      -  You can get a corresponding rBTC address from your BTC private key by using the [Rootstock Utils](https://github.com/rsksmart/utils). If you do not want to compile the utility, you can download the [latest release](https://github.com/rsksmart/utils/releases/latest).
       > Note: when entering Bitcoin private key do not include _p2pkh:_ in the front.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="5">
-    <Accordion.Header as="h3">5. Check RBTC balance</Accordion.Header>
+    <Accordion.Header as="h3">5. Check rBTC balance</Accordion.Header>
     <Accordion.Body>
-      You can check balance of RBTC address on Metamask, MyCrypto, or any [Rootstock compatible wallets](https://blog.rootstock.io/noticia/rootstock-wallets/).
+      You can check balance of rBTC address on Metamask, MyCrypto, or any [Rootstock compatible wallets](https://blog.rootstock.io/noticia/rootstock-wallets/).
       > Note: You have to wait a minimum of 100 confirmations + a minimum of 5 minutes for checking your RBTC balance.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
 ````
 
-### RBTC to BTC conversion
+### rBTC to BTC conversion
 
 Instructions on how to do a Mainnet peg-out.
 
 ````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
-    <Accordion.Header as="h3">1. Get BTC address with RBTC private key</Accordion.Header>
+    <Accordion.Header as="h3">1. Get BTC address with rBTC private key</Accordion.Header>
     <Accordion.Body>
-      You can get a corresponding BTC address from your RBTC private key by using the [Rootstock](https://github.com/rsksmart/utils). If you do not want to compile the utility, you can download the [latest release](https://github.com/rsksmart/utils/releases/latest).
+      You can get a corresponding BTC address from your rBTC private key by using the [Rootstock](https://github.com/rsksmart/utils). If you do not want to compile the utility, you can download the [latest release](https://github.com/rsksmart/utils/releases/latest).
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
-    <Accordion.Header as="h3">2. Send RBTC to Rootstock Bridge Contract</Accordion.Header>
+    <Accordion.Header as="h3">2. Send rBTC to Rootstock Bridge Contract</Accordion.Header>
       <Accordion.Body>
         - [Rootstock Bridge Contract address](https://explorer.rootstock.io/address/0x0000000000000000000000000000000001000006): `0x0000000000000000000000000000000001000006`
-        - Note: The minimum amount to send must be at least `0.004 RBTC` for Mainnet, sending any amount below this, will fail and funds will be reimbursed. The Gas Limit of the transaction needs to be manually set at 100,000 gas; otherwise the transaction will fail. Gas Price can be set to 0.06 gwei (or the gas price suggested by the wallet).
+        - Note: The minimum amount to send must be at least `0.004 rBTC` for Mainnet, sending any amount below this, will fail and funds will be reimbursed. The Gas Limit of the transaction needs to be manually set at 100,000 gas; otherwise the transaction will fail. Gas Price can be set to 0.06 gwei (or the gas price suggested by the wallet).
           ![Customize Gas in Metamask before send transaction on Rootstock](/img/metamask-gas-limit.png)
       </Accordion.Body>
     </Accordion.Item>

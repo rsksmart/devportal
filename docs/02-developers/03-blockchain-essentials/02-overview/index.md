@@ -83,7 +83,7 @@ So to make things easier, the crypto community has come up with a technique call
 The EVM and RVM are compatible in that they support the same op-codes, and therefore can run the same smart contracts.
 However, the price of each op-code (measured in units known as gas) is different between EVM and RVM, thus the total gas consumed in various transactions is different.
 Further to that, gas units are multiplied by gas price to calculate the transaction cost.
-Since Rootstock’s gas price is denominated in RBTC and Ethereum’s gas price is denominated in Ether, there is another difference between gas prices on Rootstock and Ethereum.
+Since Rootstock’s gas price is denominated in rBTC and Ethereum’s gas price is denominated in Ether, there is another difference between gas prices on Rootstock and Ethereum.
 
 :::info[Update on Gas Cost Differences]
 
@@ -173,7 +173,7 @@ Thus, the smart contract/dApp development skills that you’re used to will tran
 
 - [Metamask](https://metamask.io/) is a browser extension cryptocurrency wallet or mobile app,
   enabling users to interact with the Rootstock blockchain,
-  including sending RBTC, sending Rootstock-based tokens such as RIF,
+  including sending rBTC, sending Rootstock-based tokens such as RIF,
   and interacting with smart contracts deployed to the Rootstock network.
   See how to [configure MetaMask to connect to Rootstock](/dev-tools/wallets/metamask/).
 

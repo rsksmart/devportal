@@ -291,7 +291,7 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
 
 - _Method:_ `eth_getBalance`
   - Returns the balance of the account of a given address (hexadecimal).
-  - _Note:_ eth_getBalance only returns the balance of the native chain currency (RBTC) and does not include any ERC20 token balances for the given address.
+  - _Note:_ eth_getBalance only returns the balance of the native chain currency (rBTC) and does not include any ERC20 token balances for the given address.
 - _Params:_
   - **Address:** String, required - 20 Bytes (type: account)
   - **Block:** String: optional, either the hexadecimal value of a **blockNumber**, OR a blockHash, OR one of the following block tags:

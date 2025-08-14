@@ -124,7 +124,7 @@ chain id: 31
 Latest block number: 5292505
 ```
 
-## Get RBTC / RIF balance
+## Get rBTC / RIF balance
 
 After setting up the provider, interact with Rootstock node, fetch balance of an address or call a contract. Now, copy and paste the code below.
 

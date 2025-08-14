@@ -16,7 +16,7 @@ your Rootstock node and a command line.
   with the RPC interface enabled, and the personal and eth modules enabled
   - See [how do I run an Rootstock Node?](/node-operators/setup/).
 
-## BTC to RBTC conversion
+## BTC to rBTC conversion
 
 How to perform a peg-in.
 
@@ -37,10 +37,10 @@ Read the [lock requirements](/concepts/rbtc/networks#mainnet-conversion)
    and write down your Rootstock account information.
 4. Then use the [Rootstock Testnet Explorer](https://explorer.testnet.rootstock.io)
    or [Rootstock Mainnet Explorer](https://explorer.rootstock.io)
-   to see your RBTC balance.
+   to see your rBTC balance.
    Remember that Rootstock addresses must start with `0x`.
 
-## RBTC to BTC conversion
+## rBTC to BTC conversion
 
 How to perform a peg-out.
 
