@@ -95,7 +95,7 @@ Next, add the Solidity code to the file:
 ```s
 // SPDX-License-Identifier: MIT
 
-pragma solidity >0.5.0;
+pragma solidity ^0.8.25;
 
 contract Greeter {
     string public greeting;
@@ -181,10 +181,10 @@ web3 = Web3(Web3.HTTPProvider(RPC_PROVIDER_URL))
 
 ```text
 # Set the default account
-PRIVATE_KEY = os.getenv('ACCOUNT_PRIVATE_KEY')
+ACCOUNT_PRIVATE_KEY = os.getenv('ACCOUNT_PRIVATE_KEY')
 account_from = {
-    'private_key': PRIVATE_KEY,
-    'address': web3.eth.account.from_key(PRIVATE_KEY).address
+    'private_key': ACCOUNT_PRIVATE_KEY,
+    'address': web3.eth.account.from_key(ACCOUNT_PRIVATE_KEY).address
 }
 ```
 
@@ -354,10 +354,10 @@ web3 = Web3(Web3.HTTPProvider(RPC_PROVIDER_URL))
 
 
 # Set the default account
-PRIVATE_KEY = os.getenv('ACCOUNT_PRIVATE_KEY')
+ACCOUNT_PRIVATE_KEY = os.getenv('ACCOUNT_PRIVATE_KEY')
 account_from = {
     'private_key': PRIVATE_KEY,
-    'address': web3.eth.account.from_key(PRIVATE_KEY).address
+    'address': web3.eth.account.from_key(ACCOUNT_PRIVATE_KEY).address
 }
 
 # Create address variable
@@ -385,6 +385,11 @@ txn_receipt = web3.eth.wait_for_transaction_receipt(txn_hash)
 
 print(f"Transaction successful with hash: { txn_receipt.transactionHash.hex() }")
 ```
+
+:::warning[CAUTION]
+
+This example broadcasts on **testnet** and requires tRBTC.
+:::
 
 If successful, the transaction hash will be displayed in the terminal.
 
@@ -472,7 +477,7 @@ Next, you will create the script for this file and complete the following steps:
 
 1. Add imports, including `Web3.py` and the `rpc_gas_price_strategy`, which will be used in the following steps to get the gas price used for the transaction
 2. Set up the Web3 provider
-3. Define the `account_from`, including the `private_key`, and the `address_to` variables. The private key is required to sign the transaction. Note: This is for example purposes only. Never store your private keys in your code
+3. Define the `account_from`, including the `private_key`, and the `address_to` variables. The private key is required to sign the transaction. Note: This is for testing purposes only. Never store your private keys in your code
 4. Use the `Web3.py` Gas Price API to set a gas price strategy. For this example, you'll use the imported `rpc_gas_price_strategy`. This is important because otherwise the Web3 library will attempt to use `eth_maxPriorityFeePerGas` and `eth_feeHistory` RPC methods, which are only supported by post-London Ethereum nodes.
 5. Create and sign the transaction using the `web3.eth.account.sign_transaction` function. Pass in the `nonce`, `gas`, `gasPrice`, `to`, and value for the transaction along with the sender's `private_key`. To get the `nonce` you can use the `web3.eth.get_transaction_count` function and pass in the sender's address. To predetermine the `gasPrice` you'll use the `web3.eth.generate_gas_price` function. For the value, you can format the amount to send from an easily readable format to Wei using the `web3.to_wei` function
 6. Using the signed transaction, you can then send it using the `web3.eth.send_raw_transaction` function and wait for the transaction receipt by using the `web3.eth.wait_for_transaction_receipt` function
@@ -495,10 +500,10 @@ web3 = Web3(Web3.HTTPProvider(RPC_PROVIDER_URL))
 
 
 # Set the default account
-PRIVATE_KEY = os.getenv('ACCOUNT_PRIVATE_KEY')
+ACCOUNT_PRIVATE_KEY = os.getenv('ACCOUNT_PRIVATE_KEY')
 account_from = {
-    'private_key': PRIVATE_KEY,
-    'address': web3.eth.account.from_key(PRIVATE_KEY).address
+    'private_key': ACCOUNT_PRIVATE_KEY,
+    'address': web3.eth.account.from_key(ACCOUNT_PRIVATE_KEY).address
 }
 address_to = '0xcff73226883c1cE8b3bcCc28E45c3c92C843485c'
 
@@ -565,8 +570,8 @@ In this guide, we learnt how to use the Web3.py library to deploy, interact with
 
             w3 = Web3(EthereumTesterProvider())
 
-            private_key = os.environ.get("PRIVATE_KEY")
-            assert private_key is not None, "You must set PRIVATE_KEY environment variable"
+            private_key = os.environ.get("ACCOUNT_PRIVATE_KEY")
+            assert private_key is not None, "You must set ACCOUNT_PRIVATE_KEY environment variable"
             assert private_key.startswith("0x"), "Private key must start with 0x hex prefix"
 
             account: LocalAccount = Account.from_key(private_key)

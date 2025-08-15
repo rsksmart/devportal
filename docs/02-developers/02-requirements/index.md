@@ -25,7 +25,7 @@ This guide provides clear instructions for developers on the supported Solidity 
 Set up the necessary software for a seamless development experience:
 
 - **Solidity Version:**
-  - Supported compiler version: **`solc 0.8.25`**.
+  - Supported compiler version: **`solc ^0.8.25`**.
   - Use compatible versions to avoid deployment errors.
 
 - **Node RPC Access:**
