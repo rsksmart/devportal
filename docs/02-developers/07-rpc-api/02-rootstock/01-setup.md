@@ -89,4 +89,4 @@ Join the [Rootstock Discord](https://rootstock.io/discord) to get support or giv
 
 - Supported [JSON RPC Methods](/node-operators/json-rpc/methods/)
 - [Quick Start Guide with Hardhat](/developers/smart-contracts/hardhat/)
-- [RBTC Faucet](https://faucet.rootstock.io/)
+- [rBTC Faucet](https://faucet.rootstock.io/)

@@ -24,7 +24,7 @@ In this two-part guide, you will learn how to:
 Ensure to have the following:
 - Node.js installed (v18 or later)
 - A wallet like MetaMask set up for the Rootstock testnet ([Thirdweb’s social login](https://portal.thirdweb.com/connect/wallet/sign-in-methods/configure) could be also used).
-- Testnet RBTC (Get it from the [Rootstock faucet](https://faucet.rootstock.io/))
+- Testnet rBTC (Get it from the [Rootstock faucet](https://faucet.rootstock.io/))
 - [Thirdweb credentials](https://thirdweb.com/login)
 
 

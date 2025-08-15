@@ -85,4 +85,4 @@ All transactions need to be confirmed via the device used by the customer, wheth
 * Convert [BTC to RBTC using the PowPeg App](/resources/guides/powpeg-app/pegin/).
 * Convert [RBTC to BTC using the PowPeg App](/resources/guides/powpeg-app/pegout/).
 * View [Advanced Operations](/resources/guides/powpeg-app/advanced-operations/)
-* Comparing [PowPeg and Flyover](/developers/integrate/flyover/powpeg-vs-flyover/).
+* Comparing [PowPeg and Flyover](/concepts/rif-suite/flyover/).

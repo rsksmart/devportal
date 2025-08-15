@@ -6,7 +6,7 @@ description: 'Learn how to interact with Rootstock in your web browser, how to l
 tags: [quick-starts, rsk, rootstock, blockchain, browser wallets, developers, beginners]
 ---
 
-In the previous section on [blockchain overview](/developers/blockchain-essentials/overview/), we set up a browser extension that is a crypto wallet, MetaMask. We connected to the Rootstock Testnet, and loaded this up with Rootstock’s cryptocurrency, RBTC, and an Rootstock-based token, RIF.
+In the previous section on [blockchain overview](/developers/blockchain-essentials/overview/), we set up a browser extension that is a crypto wallet, MetaMask. We connected to the Rootstock Testnet, and loaded this up with Rootstock’s cryptocurrency, rBTC, and an Rootstock-based token, RIF.
 
 :::note[Using Rootstock in the browser]
 
@@ -60,7 +60,7 @@ Watch this short video demonstrating **how to transfer tRIF from one account to 
   <iframe width="949" height="534" src="https://www.youtube.com/embed/ncCzQnnMVr8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## RBTC Balance Decrease
+## rBTC Balance Decrease
 
 You may have noticed that when you sent tRBTC, the tRBTC balance decreased by **slightly more** than the amount that you sent. You may also have noticed that when you sent tRIF, the tRBTC balance also decreased by a small amount, even though only tRIF were sent in that transaction.
 

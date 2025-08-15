@@ -14,7 +14,8 @@ Supported on: <Shield label="mainnet" title="testnet" tooltip="Available on Main
 
 ## How EAS is integrated with Rootstock
 
-The EAS essential contracts has been successfully deployed to Rootstock, this includes a robust indexer, and a user-friendly alternative explorer. The following sections will delve into the technical details of these implementations.
+The EAS essential contracts has been successfully deployed to Rootstock, this includes a robust indexer, and a user-friendly alternative explorer. The following sections will delve into the technical details of these implementations. See [Rootstock Attestation
+Service (RAS) Is Now Live on Rootstock Explorer](https://rootstock.io/blog/rootstock-attestation-service-ras-is-now-live-on-rootstock-explorer-v3/).
 
 ## Getting Started 
 - 🧾 [EAS contract](https://github.com/rsksmart/eas-contracts): We deployed EAS contracts on Rootstock Mainnet and Testnet
@@ -278,6 +279,6 @@ query Attestation {
 ```
 
 ## Useful Resources
-- [How to Run EAS DevTool Locally](/resources/guides/eas/overview/)
-- [Navigating the EAS Dashboard](/resources/guides/eas/user-guide/)
+- [How to Run EAS DevTool Locally](/dev-tools/attestations/eas/overview/)
+- [Navigating the EAS Dashboard](/dev-tools/attestations/eas/user-guide/)
 - [EAS Github](https://github.com/ethereum-attestation-service)

@@ -26,7 +26,7 @@ RIF Relay V0.2 is a redesign of GSN. It reduces gas costs and simplifies the int
 - Allowing relayers to receive tokens in a worker address under their control and decide what to do with funds later on.
 - Reducing gas costs by optimizing the GSN architecture.
 
-Our main objective is to provide the Rootstock (RSK) ecosystem with the means to enable blockchain applications and end-users (wallet-apps) to pay for transaction fees using tokens (e.g. RIF tokens), and thereby remove the need to acquire RBTC in advance.
+Our main objective is to provide the Rootstock ecosystem with the means to enable blockchain applications and end-users (wallet-apps) to pay for transaction fees using tokens (e.g. RIF tokens), and thereby remove the need to acquire rBTC in advance.
 
 It is important to recall that - as a security measure - V0.1 contracts deployed on Mainnet have limits on the staked amounts to operate; these limits were removed in V0.2.
 

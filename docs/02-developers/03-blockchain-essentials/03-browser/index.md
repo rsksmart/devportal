@@ -82,8 +82,8 @@ Let’s use its custom networks feature to add a connection to an Rootstock netw
 </div>
 
 After creating the custom network for the Rootstock Testnet, you should be able to interact with smart contracts deployed on the Rootstock Testnet!
-You should also see your balances in tRBTC (Testnet RBTC).
-This is currently zero, which means that we cannot send any transactions to the blockchain, so let’s get some using the RBTC faucet.
+You should also see your balances in tRBTC (Testnet rBTC).
+This is currently zero, which means that we cannot send any transactions to the blockchain, so let’s get some using the rBTC faucet.
 
 <div class="video-container">
   <iframe width="949" height="534" src="https://www.youtube.com/embed/twfK8Rd5hak" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -93,8 +93,8 @@ Now you should have a balance of tRBTC, and you will be able to send transaction
 
 :::info[Additional Faucet Options (Please note these faucets may have daily limits)]
 
-* Use [Thirdweb Faucet](https://thirdweb.com/rootstock-testnet): This faucet offers a convenient way to get free test RBTC tokens for development and testing. Its max daily token allocation is `0.01` tRBTC.
-* Use [Blast Faucet](https://blastapi.io/faucets/rootstock-testnet): This faucet offers a convenient way to get free test RBTC tokens for development and testing. It has a higher max daily token allocation of `0.1` tRBTC.
+* Use [Thirdweb Faucet](https://thirdweb.com/rootstock-testnet): This faucet offers a convenient way to get free test rBTC tokens for development and testing. Its max daily token allocation is `0.01` tRBTC.
+* Use [Blast Faucet](https://blastapi.io/faucets/rootstock-testnet): This faucet offers a convenient way to get free test rBTC tokens for development and testing. It has a higher max daily token allocation of `0.1` tRBTC.
 
 :::
 
@@ -122,7 +122,7 @@ Now you should have a balance of tRIF, and you will be able to use RIF services 
 - [How to configure Metamask](/dev-tools/wallets/metamask/)
 - [Account based addresses on Rootstock](/concepts/account-based-addresses/) 
 - [About the RIF token](/concepts/rif-suite/token/)
-- [About the RBTC cryptocurrency](/concepts/rbtc/)
+- [About the rBTC cryptocurrency](/concepts/rbtc/)
 - [About Gas](/concepts/rbtc/gas/)
 - [About RIF Services](https://www.rifos.org/)
 - [About BIP-44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki)

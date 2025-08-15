@@ -13,7 +13,8 @@ Explore dApp use case guides and tutorials for building DeFi on Bitcoin, AI, and
 <Filter
 values={[
 {label: 'DeFi', value: 'defi'},
-{label: 'AI', value: 'ai'}
+{label: 'AI', value: 'ai'},
+{label: 'Runes', value: 'runes'}
 ]}>
 <FilterItem
 value="advanced, defi"
@@ -30,5 +31,13 @@ subtitle="ai"
 color="orange"
 linkHref="/developers/use-cases/ai-agent-rootstock"
 description="This guide demonstrates how to build a lightweight dApp that connects a conversational AI agent to the Rootstock testnet, allowing users to perform DeFi actions like checking token balances and sending tRBTC simply by chatting."
+/>
+<FilterItem
+value="runes"
+title="Deploy Runes on Rootstock"
+subtitle="runes"
+color="orange"
+linkHref="/developers/use-cases/runes-rootstock/overview/"
+description="The Rootstock Runes Mock Bridge opens up exciting opportunities for developers to build Runes-focused applications within the Rootstock ecosystem. This bridge introduces three core solutions: Mock Bridge, Marketplace, Giveaway Engine."
 />
 </Filter>

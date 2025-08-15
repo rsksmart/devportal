@@ -28,7 +28,7 @@ Follow these steps to get started:
       <figcaption>RSK-CLI environment on Replit (fig 1.)</figcaption>
   </figure>
 
-    This project provides a convenient interface for interacting with the Rootstock blockchain, enabling tasks such as wallet management, balance checking, `RBTC` transfers, and smart contract deployment.
+    This project provides a convenient interface for interacting with the Rootstock blockchain, enabling tasks such as wallet management, balance checking, `rBTC` transfers, and smart contract deployment.
 
     The Replit environment allows you to run the CLI directly in your browser without requiring any local setup, making it accessible and easy to use.
 

@@ -10,7 +10,7 @@ The Rootstock CLI (rsk-cli) tool enables users to manage wallets, check balances
 
 It supports both mainnet and testnet environments. Additionally, the tool provides bridge interaction features, allowing users to seamlessly transfer assets between Rootstock and Bitcoin (or other supported blockchains) via integrated bridge protocols.
 
-The CLI allows you to interact with your Rootstock wallet directly from the terminal, giving you control over creating, managing, and funding your wallet with RBTC (Smart Bitcoin).
+The CLI allows you to interact with your Rootstock wallet directly from the terminal, giving you control over creating, managing, and funding your wallet with rBTC (Smart Bitcoin).
 
 In this guide, we will explore how to use the Rootstock CLI to create a wallet, manage it securely, and add funds to it.
 
@@ -37,9 +37,9 @@ In this guide, we will explore how to use the Rootstock CLI to create a wallet, 
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="5">
-    <Accordion.Header as="h3">3. Sending RBTC</Accordion.Header>
+    <Accordion.Header as="h3">3. Sending rBTC</Accordion.Header>
     <Accordion.Body>
-      The <code>transfer</code> command enables sending RBTC to another address.
+      The <code>transfer</code> command enables sending rBTC to another address.
       Transactions can be initiated on both mainnet and testnet.
     </Accordion.Body>
   </Accordion.Item>
@@ -90,7 +90,7 @@ Ensure to have v22.9.0 version of node and above for compatibility
 
 :::
 
-2. **Access to Rootstock Network**: Ensure to have access to Rootstock's mainnet or testnet. For testnet use, we’ll need testnet RBTC for experimentation, which can be requested from a testnet faucet.
+2. **Access to Rootstock Network**: Ensure to have access to Rootstock's mainnet or testnet. For testnet use, we’ll need testnet rBTC for experimentation, which can be requested from a testnet faucet.
 
 Once these prerequisites are met, proceed to install and use rsk-cli.
 

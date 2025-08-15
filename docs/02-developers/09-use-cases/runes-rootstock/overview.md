@@ -3,7 +3,7 @@ sidebar_position: 1
 title: Overview of Runes on Rootstock
 sidebar_label: Overview of Runes on Rootstock
 tags: [rsk, rootstock, resources, tutorials, runes, nft, Ethereum, dApps, smart contracts]
-description: "The Rootstock Runes Mock Bridge opens up exciting opportunities for developers to build Runes-focused applications within the Rootstock ecosystem. This bridge introduces three core solutions: Mock Bridge, Marketplace, Giveaway Engine"
+description: "The Rootstock Runes Mock Bridge opens up exciting opportunities for developers to build Runes-focused applications within the Rootstock ecosystem. This bridge introduces three core solutions: Mock Bridge, Marketplace, Giveaway Engine."
 ---
 
 The Rootstock Runes Mock Bridge opens up exciting opportunities for developers to build Runes-focused applications within the Rootstock ecosystem. This bridge introduces three core solutions:

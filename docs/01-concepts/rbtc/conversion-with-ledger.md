@@ -6,7 +6,7 @@ description: 'How to perform the Powpeg mechanism using Ledger.'
 sidebar_position: 304
 ---
 
-In this section, we will go over the steps of converting BTC to RBTC using Ledger hardware wallet, and vice versa on the Bitcoin and Rootstock (RSK) networks.
+In this section, we will go over the steps of converting BTC to rBTC using Ledger hardware wallet, and vice versa on the Bitcoin and Rootstock (RSK) networks.
 
 ## General Requirements
 
@@ -18,7 +18,7 @@ In this section, we will go over the steps of converting BTC to RBTC using Ledge
   Install it and [configure it to be used with Ledger](https://support.ledger.com/article/115005161925-zd).
 - Node >= 10.16.0
 
-## BTC to RBTC conversion
+## BTC to rBTC conversion
 
 Instructions on how to do a Mainnet peg-in.
 
@@ -94,7 +94,7 @@ This is the address that you have to use in order to do the transfer to the fede
 
 :::tip[Alternative option for getting Federation Address]
 
-See [RBTC Conversion](/concepts/rbtc/networks/#btc-to-rbtc-conversion).
+See [rBTC Conversion](/concepts/rbtc/networks/#btc-to-rbtc-conversion).
 
 :::
 
@@ -143,9 +143,9 @@ To ensure the transaction, we need to wait for 100 BTC confirmations, be patient
 100 blocks \* 10 minutes/block = 1000 minutes = 16.667 hours approx.
 :::
 
-**5 Get RBTC address from Ledger hardware wallet**
+**5 Get rBTC address from Ledger hardware wallet**
 
-Get the corresponding RBTC address from your Ledger hardware wallet, by following these steps:
+Get the corresponding rBTC address from your Ledger hardware wallet, by following these steps:
 
 - Connect and unlock your Ledger device.
 - Open the RSK app.
@@ -178,15 +178,15 @@ Get the corresponding RBTC address from your Ledger hardware wallet, by followin
 - Select **Custom** Address and put the derivation path `m/44'/0'/0'/0`.
   Then choose the address that you got from the previous step.
 
-**6 Check RBTC balance**
+**6 Check rBTC balance**
 
-You can check balance of RBTC address on MyCrypto or MEW setting the corresponding derivation path and selecting the address.
+You can check balance of rBTC address on MyCrypto or MEW setting the corresponding derivation path and selecting the address.
 
 :::info[Note]
-You have to wait a minimum of 100 confirmations + a minimum of 5 minutes to check your RBTC balance
+You have to wait a minimum of 100 confirmations + a minimum of 5 minutes to check your rBTC balance
 :::
 
-## RBTC to BTC conversion
+## rBTC to BTC conversion
 
 Instructions on how to do a Mainnet peg-out.
 
@@ -196,7 +196,7 @@ If you forgot your BTC public address, you can check section **1**.
 The important thing is that the receiving BTC address will be
 the same that it was used to send to the federation.
 
-2. Send RBTC to Rootstock Bridge Contract
+2. Send rBTC to Rootstock Bridge Contract
 
 Open MyCrypto or MEW.
 Set the corresponding derivation path and select the address. \

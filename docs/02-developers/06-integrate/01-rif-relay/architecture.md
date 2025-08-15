@@ -213,7 +213,7 @@ It's the access point to the RIF Relay system. It wraps the `Relay Client` to pr
 6. The Relay Worker account is an EOA registered in the Relay Hub.
 7. The Relay Server sends the transaction to the Relay Hub using the same worker account as the previous step, executing the `relayCall` function of the Relay Hub contract.
     - When the Relay Hub receives a transaction from a Relay Worker, it verifies with the Stake Manager that the Worker’s Relay Manager has indeed locked funds for staking. If not, the execution is reverted.
-    - The Relay Worker account must have funds to pay for the consumed gas (RBTC).
+    - The Relay Worker account must have funds to pay for the consumed gas (rBTC).
         - This verification is done in the Relay Client and in the Relay Server as well, by calling the Relay Verifier. The verifier checks that it accepts the token used to pay and that the payer has a sufficient token balance. In addition, it verifies that the used smart wallet is the correct one. 
 8. The RelayHub instructs the Smart Wallet to execute the Relay Request through the [GsnEip712Library](#gsneip712library) library.
 9. The Smart Wallet checks the signature and the nonce of the Requester, reverting if it fails the checks.

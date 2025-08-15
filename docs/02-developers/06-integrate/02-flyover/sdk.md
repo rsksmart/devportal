@@ -1,12 +1,12 @@
 ---
 sidebar_label: Using the SDK
 sidebar_position: 110
-title: RBTC Flyover - SDK Integration
+title: rBTC Flyover - SDK Integration
 tags: [rsk, rootstock, rif, flyover, integrate, integration guide, rbtc, powpeg]
 description: The Flyover SDK streamlines integration between client applications and the Flyover Protocol. This easy-to-use JavaScript/TypeScript toolkit provides configuration options for Liquidity Providers (LPs) and custom network setups for connecting to Rootstock.
 ---
 
-The RBTC Flyover SDK streamlines integration between client applications and the Flyover Protocol. This easy-to-use JavaScript/TypeScript toolkit provides configuration options for Liquidity Providers (LPs) and custom network setups for connecting to Rootstock.
+The rBTC Flyover SDK streamlines integration between client applications and the Flyover Protocol. This easy-to-use JavaScript/TypeScript toolkit provides configuration options for Liquidity Providers (LPs) and custom network setups for connecting to Rootstock.
 
 Here you can find step-by-step guides on how to integrate and perform basic operations using the SDK. 
 
@@ -26,7 +26,7 @@ To set up a Rootstock node (RSKj). Read the [Installation Guide](/node-operators
 :::
 
 ### Getting Testnet Funds
-You can get test BTC funds on [Coinfaucet](https://coinfaucet.eu/en/btc-testnet/). To get test funds for RBTC, use the [Rootstock Faucet](https://faucet.rootstock.io/). To get a legacy wallet address for use on Testnet, consider using an [Electrum Bitcoin wallet](https://electrum.org/).
+You can get test BTC funds on [Coinfaucet](https://coinfaucet.eu/en/btc-testnet/). To get test funds for rBTC, use the [Rootstock Faucet](https://faucet.rootstock.io/). To get a legacy wallet address for use on Testnet, consider using an [Electrum Bitcoin wallet](https://electrum.org/).
 
 ### Contract Addresses
 Find a list of contract addresses for the [Liquidity Bridge Contract (LBC)](https://github.com/rsksmart/liquidity-bridge-contract), mainnet, and testnet addresses.
@@ -83,10 +83,10 @@ const flyover = new Flyover({
 
 ## Peg in Operations
 
-A Peg-in is the process of converting BTC to RBTC.
+A Peg-in is the process of converting BTC to rBTC.
 
 ### Choose a Liquidity Provider (LP)
-First, you need to choose the LP that will be providing the service to advance the RBTC, in order to do this, you should fetch the LPs list and select one of them by using the `useLiquidityProvider` method. Before making this selection you may want to present the options to the final users so they can choose based on the delivery time or fees.
+First, you need to choose the LP that will be providing the service to advance the rBTC, in order to do this, you should fetch the LPs list and select one of them by using the `useLiquidityProvider` method. Before making this selection you may want to present the options to the final users so they can choose based on the delivery time or fees.
 
 ```js
 const providers = await flyover.getLiquidityProviders()
@@ -125,7 +125,7 @@ await flyover.acceptQuote(quotes[0])
 
 ## Peg out Operations
 
-This is the process of converting RBTC to BTC. See [Mainnet Guide](/concepts/rbtc/networks/#mainnet-conversion).
+This is the process of converting rBTC to BTC. See [Mainnet Guide](/concepts/rbtc/networks/#mainnet-conversion).
 
 ### Select a Liquidity Provider
 In the same way we need to select an LP to perform PegIn operations, we need to select one to perform PegOut operations. It’s important to remark that if you already selected an LP to perform a PegIn you don’t need to select it again for a PegOut.
@@ -155,7 +155,7 @@ const txHash = await flyover.depositPegout(quotes[0], acceptedQuote.signature, F
 
 :::tip[Tip]
 
-For peg outs, deposits (RBTC) can be made directly from the SDK, using a connected [wallet](/dev-tools/wallets/).
+For peg outs, deposits (rBTC) can be made directly from the SDK, using a connected [wallet](/dev-tools/wallets/).
 :::
 
 ## API Reference

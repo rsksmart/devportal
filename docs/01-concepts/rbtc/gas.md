@@ -1,12 +1,12 @@
 ---
-title: "RBTC Gas Fees: Optimizing Transaction Costs"
+title: "rBTC Gas Fees: Optimizing Transaction Costs"
 sidebar_label: Gas
 tags: [gas, transactions, rbtc, mainnet, rsk, rootstock, conversion, bitcoin, gas-price]
 sidebar_position: 302
 ---
 
 Gas is the internal pricing for running a transaction or contract.
-When you send tokens, interact with a contract, send RBTC, or do anything else on the blockchain, you must **pay for that computation**. That payment is calculated as **gas**. In Rootstock, this is paid in RBTC.
+When you send tokens, interact with a contract, send rBTC, or do anything else on the blockchain, you must **pay for that computation**. That payment is calculated as **gas**. In Rootstock, this is paid in rBTC.
 
 ## What is gas?
 
@@ -14,7 +14,7 @@ There are four important concepts:
 - **Gas price**: The cost of the operation.
 - **Gas limit**: The maximum gas the operation can afford. It's an upper limit the user sets to prevent losing gas.
 - **Total gas**: The gas the operation consumed. Also referred to as **gas used**.
-- **Unit**: Gas is paid in **RBTC**.
+- **Unit**: Gas is paid in **rBTC**.
 
 Let's start with a simple analogy: A car.
 

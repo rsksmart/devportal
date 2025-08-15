@@ -42,23 +42,13 @@ Attestations often involve sensitive personal or organizational information, cre
 
 As blockchain networks grow, attestation systems face significant technical challenges, including managing high volumes of attestations without compromising network performance, minimizing transaction costs and computational overhead, ensuring fast verification processes, and designing efficient storage and retrieval mechanisms for large-scale attestation networks.
 
+## Onchain and Offchain Attestations
 
+Onchain Attestations: These are attestations stored directly on Rootstock. They are immutable and benefit from the security of Bitcoin. They work best when attestations need to be read by smart contracts or verify that it’s available on chain.
 
-## Why Choose the EAS Tool on Rootstock?
+Offchain Attestations: These attestations are stored on Rootstock, typically in a database or another storage mechanism like IPFS. They are linked to the blockchain through cryptographic signatures but do not reside on it. Offchain attestations work best when you want to hold the attestation privately and shared on a need to know basis.
 
-* **Centralized Management**
-
-EAS Devtool provides a unified platform to manage, view, and attest schemas, eliminating fragmentation. Developers can easily access all attestations for a project in one dashboard, reducing operational overhead.
-
-* **User-Friendly Interface**
-
-With tools like the EAS React SDK, developers and end-users can interact with attestations through an intuitive interface. A React-based dApp can integrate the EAS React SDK for seamless schema creation, allowing users to attest directly without technical knowledge.
-
-* **Enhanced Efficiency**
-
-The EAS Indexing Service enables fast and reliable data fetching using GraphQL, optimizing performance for high-volume use cases. An NFT marketplace can use the Indexing Service to verify authenticity attestations instantly.
-
-
+Learn about [Rootstock Attestation Service](/dev-tools/attestations/ras/).
 
 ## Prerequisites
 
@@ -321,6 +311,6 @@ Expected output:
 
 :::info[Info]
 
-Once you've set up and run the `EAS DevTool` locally, you can proceed to explore its **[dashboard](/resources/guides/eas/user-guide/)** and functionality in detail. The following guide will walk you through navigating the `EAS Dashboard`, connecting your `wallet`, and managing `schemas` and `attestations`.
+Once you've set up and run the `EAS DevTool` locally, you can proceed to explore its **[dashboard](/dev-tools/attestations/eas/user-guide/)** and functionality in detail. The following guide will walk you through navigating the `EAS Dashboard`, connecting your `wallet`, and managing `schemas` and `attestations`.
 
 :::

@@ -39,6 +39,12 @@ This enables features like social recovery and batched transactions.
 A set of tools and protocols that allow software applications to interact with each other. 
 APIs are commonly used for enabling integrations with external systems.
 
+## Attestation
+
+Attestations involve formally witnessing and verifying the proper signing of a document or claim by the parties involved. In the context of blockchain and crypto, attestation refers to the on-chain or off-chain verification of any transaction or contract, confirming its authenticity and the truthfulness of its source or originator.
+
+<Button size="sm" href="https://rootstock.io/blog/rootstock-attestation-service-ras-is-now-live-on-rootstock-explorer-v3/">Learn more about attestations</Button>
+
 # B
 
 ## Bitcoin (BTC) 
@@ -51,7 +57,7 @@ It operates on a decentralized network using proof-of-work consensus.
 This is a protocol for creating fungible tokens directly on the blockchain. Developed by Casey Rodarmor, 
 the mind behind Ordinals, Runes offers a more efficient way to issue tokens. 
 
-<Button size="sm" href="/resources/guides/runes-rootstock/">Try Bitcoin Runes on Rootstock</Button>
+<Button size="sm" href="/developers/use-cases/runes-rootstock/">Try Bitcoin Runes on Rootstock</Button>
 
 <br/>
 <br/>

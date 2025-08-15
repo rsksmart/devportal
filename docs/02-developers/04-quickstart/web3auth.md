@@ -53,7 +53,7 @@ Before getting started, ensure to have the following tools installed:
     yarn -v
     ```
 3. Fund Your Rootstock Blockchain Wallet
-    * **Get test RBTC (tRBTC)** from the [Rootstock Faucet](https://faucet.rootstock.io/) to fund your test account.
+    * **Get test rBTC (tRBTC)** from the [Rootstock Faucet](https://faucet.rootstock.io/) to fund your test account.
 
 4. Web3Auth Account
     * Sign up on the [Web3Auth Dashboard](https://web3auth.io/).

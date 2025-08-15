@@ -1,21 +1,21 @@
 ---
 sidebar_label: FAQs
-sidebar_position: 310
+sidebar_position: 250
 title: Frequently Asked Questions
 tags: [rsk, rootstock, rif, flyover, integrate, integration guide, rbtc, powpeg]
-description: The PowPeg is a user-friendly interface for the conversion of BTC to RBTC and vice versa. It is secured by the powpeg protocol, which is a unique 2-way peg system that allows users to natively transfer bitcoins from the Bitcoin blockchain to the Rootstock blockchain and vice versa, creating a token called RBTC that is pegged to the value of Bitcoin.
+description: The PowPeg is a user-friendly interface for the conversion of BTC to rBTC and vice versa. It is secured by the powpeg protocol, which is a unique 2-way peg system that allows users to natively transfer bitcoins from the Bitcoin blockchain to the Rootstock blockchain and vice versa, creating a token called rBTC that is pegged to the value of Bitcoin.
 ---
 
-Here, you can find a list of frequently asked questions (FAQs) about the RBTC Flyover.
+Here, you can find a list of frequently asked questions (FAQs) about the rBTC Flyover.
 
 ## General
 
 ````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
-    <Accordion.Header as="h3">1. What is RBTC Flyover?</Accordion.Header>
+    <Accordion.Header as="h3">1. What is rBTC Flyover?</Accordion.Header>
     <Accordion.Body>
-      - RBTC Flyover is an innovative protocol built on top of the Rootstock network that significantly speeds up the process of transferring Bitcoin (BTC) to Rootstock Bitcoin (RBTC). It achieves this by leveraging a pool of liquidity providers who hold both BTC and RBTC, enabling near-instantaneous transfers with minimal confirmations.
+      - rBTC Flyover is an innovative protocol built on top of the Rootstock network that significantly speeds up the process of transferring Bitcoin (BTC) to Rootstock Bitcoin (rBTC). It achieves this by leveraging a pool of liquidity providers who hold both BTC and rBTC, enabling near-instantaneous transfers with minimal confirmations.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
@@ -72,7 +72,7 @@ Here, you can find a list of frequently asked questions (FAQs) about the RBTC Fl
 <Accordion.Item eventKey="1">
     <Accordion.Header as="h3">8. What’s the minimum recommended amount of Liquidity?</Accordion.Header>
     <Accordion.Body>
-       - The minimum required collateral is **0.06 RBTC**, regardless of the total liquidity provided. This collateral is paid upon transaction registration. The recommended amount of liquidity depends on the anticipated volume of concurrent operations the LP wishes to support. A higher liquidity level enables the LP to handle more transactions simultaneously.
+       - The minimum required collateral is **0.06 rBTC**, regardless of the total liquidity provided. This collateral is paid upon transaction registration. The recommended amount of liquidity depends on the anticipated volume of concurrent operations the LP wishes to support. A higher liquidity level enables the LP to handle more transactions simultaneously.
        - Note: For peg outs, LPs will need to wait for 2 Bitcoin block confirmations before receiving a refund.
     </Accordion.Body>
   </Accordion.Item>
@@ -97,14 +97,14 @@ Here, you can find a list of frequently asked questions (FAQs) about the RBTC Fl
 </Accordion>
 ```
 
-## For Users - Converting BTC to RBTC and vice versa
+## For Users - Converting BTC to rBTC and vice versa
 
 ````mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
-    <Accordion.Header as="h3">11. How can I use Flyover to transfer BTC to RBTC?</Accordion.Header>
+    <Accordion.Header as="h3">11. How can I use Flyover to transfer BTC to rBTC?</Accordion.Header>
     <Accordion.Body>
-        - The easiest way to use Flyover is through the PowPeg. This user-friendly interface guides you through the transfer process, allowing you to quickly and securely convert your BTC to RBTC.
+        - The easiest way to use Flyover is through the PowPeg. This user-friendly interface guides you through the transfer process, allowing you to quickly and securely convert your BTC to rBTC.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="0">

@@ -187,14 +187,14 @@ Visit [http://localhost:3000](http://localhost:3000) in your browser to view you
   </Step>
   <Step title="Check Token Balances">
 
-   The [`Balances`](https://github.com/RookieCol/rootstock-dynamic/blob/main/components/Balances.tsx) component fetches and displays the wallet's token balances, supporting multiple tokens like RBTC, tRIF, and DOC.
+   The [`Balances`](https://github.com/RookieCol/rootstock-dynamic/blob/main/components/Balances.tsx) component fetches and displays the wallet's token balances, supporting multiple tokens like rBTC, tRIF, and DOC.
   </Step>
   <Step title="Send Tokens">
    Through the [`Transfer`](https://github.com/RookieCol/rootstock-dynamic/blob/main/components/Transfer.tsx) component, users can transfer tokens directly within the dApp. It includes fields to specify the recipient address and token amount, along with secure hooks to initiate the transfer.
 
    **Features:**
 
-   * **Dropdown**: Select a token from available options (**RBTC, tRIF, and DOC**)
+   * **Dropdown**: Select a token from available options (**rBTC, tRIF, and DOC**)
    * **Input Fields**:
 
       - **Amount:** Enter the amount to send.
