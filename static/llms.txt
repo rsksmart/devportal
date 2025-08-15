@@ -1,6 +1,6 @@
-# https://dev.rootstock.io/
+# https://dev.rootstock.io/ Rootstock Documentation Index
 
-<|Rootstock Developer Portal | Home|>
+<|Rootstock Documentation Index|>
 ## Page
 [Skip to main content](https://dev.rootstock.io/#__docusaurus_skipToContent_fallback)
 
@@ -32,7 +32,7 @@ Explore Rootstock Fundamentals and resources to begin your development journey.
 EVM-compatible tools and guides to deploy and scale your dApps on Rootstock.
 
 - [Quick Starts](https://dev.rootstock.io/developers/quickstart/)
-- [Join the Discord Community](http://discord.gg/rootstock)
+- [Join the Discord Community](https://discord.gg/rootstock)
 
 ### Become a Merged Miner
 
@@ -156,7 +156,7 @@ around the world.
 
 - [Edit this page](https://github.com/rsksmart/devportal/tree/main//src/pages/index.js)
 - [Report an Issue](https://github.com/rsksmart/devportal/issues)
-- [Join the Community](http://discord.gg/rootstock)
+- [Join the Community](https://discord.gg/rootstock)
 - [Changelog](https://dev.rootstock.io/changelog/)
 - Request an Article
 
@@ -347,7 +347,7 @@ Last updated on **Aug 14, 2025** by **Owanate Amachree**
 
 - [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/01-concepts/rbtc/gas.md)
 - [Report an Issue](https://github.com/rsksmart/devportal/issues)
-- [Join the Community](http://discord.gg/rootstock)
+- [Join the Community](https://discord.gg/rootstock)
 - [Changelog](https://dev.rootstock.io/changelog/)
 - Request an Article
 
@@ -486,7 +486,7 @@ Last updated on **Aug 14, 2025** by **Owanate Amachree**
 
 - [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/01-concepts/rif-suite/token/index.md)
 - [Report an Issue](https://github.com/rsksmart/devportal/issues)
-- [Join the Community](http://discord.gg/rootstock)
+- [Join the Community](https://discord.gg/rootstock)
 - [Changelog](https://dev.rootstock.io/changelog/)
 - Request an Article
 
@@ -560,6 +560,8 @@ solc --version
 ### Set Up Secrets for the Project [​](https://dev.rootstock.io/developers/quickstart/web3-python/\#set-up-secrets-for-the-project "Direct link to Set Up Secrets for the Project")
 
 We will be using sensitive data that doesn’t have to be stored in the code, and instead we will store them in a `.env` file.
+[!SECURITY]
+**Secrets Safety Box:** Use **test accounts only** for tutorials. Never commit `.env` files; include them in `.gitignore`. Restrict file permissions with `chmod 600 .env`. For production, use HSMs or hardware wallets.
 
 For that, first lets install the package to read data from the `.env` file:
 
@@ -606,7 +608,7 @@ Next, add the Solidity code to the file:
 ```codeBlockLines_e6Vv
 // SPDX-License-Identifier: MIT
 
-pragma solidity >0.5.0;
+pragma solidity ^0.8.25;
 
 contract Greeter {
     string public greeting;
@@ -696,10 +698,10 @@ web3 = Web3(Web3.HTTPProvider(RPC_PROVIDER_URL))
 
 ```codeBlockLines_e6Vv
 # Set the default account
-PRIVATE_KEY = os.getenv('ACCOUNT_PRIVATE_KEY')
+ACCOUNT_PRIVATE_KEY = os.getenv('ACCOUNT_PRIVATE_KEY')
 account_from = {
-    'private_key': PRIVATE_KEY,
-    'address': web3.eth.account.from_key(PRIVATE_KEY).address
+    'private_key': ACCOUNT_PRIVATE_KEY,
+    'address': web3.eth.account.from_key(ACCOUNT_PRIVATE_KEY).address
 }
 
 ```
@@ -708,7 +710,8 @@ account_from = {
 5. Set the [gas price strategy](https://web3py.readthedocs.io/en/stable/gas_price.html#gas-price) using the `web3.eth.set_gas_price_strategy` function, which will allow us to fetch the gasPrice from the RPC Provider. This is important because otherwise the Web3 library will attempt to use `eth_maxPriorityFeePerGas` and `eth_feeHistory` RPC methods, which are only supported by post-London Ethereum nodes.
 6. Build a constructor transaction using the contract instance. You will then use the `build_transaction` function to pass in the transaction information including the `from` address and the `nonce` for the sender. To get the `nonce` you can use the `web3.eth.get_transaction_count` function
 7. Sign the transaction using the `web3.eth.account.sign_transaction` function and pass in the constructor transaction and the `private_key` of the sender
-8. Using the signed transaction, you can then send it using the `web3.eth.send_raw_transaction` function and wait for the transaction receipt by using the `web3.eth.wait_for_transaction_receipt` function
+8. Using the signed transaction, you can then send it using the `web3.eth.[!CAUTION] This example broadcasts on **testnet** and requires tRBTC.
+send_raw_transaction` function and wait for the transaction receipt by using the `web3.eth.wait_for_transaction_receipt` function
 
 Code and paste the code below into `deploy.py`;
 
@@ -727,10 +730,10 @@ RPC_PROVIDER_URL = 'https://rpc.testnet.rootstock.io/' + RPC_PROVIDER_APIKEY
 web3 = Web3(Web3.HTTPProvider(RPC_PROVIDER_URL))
 
 # Set the default account
-PRIVATE_KEY = os.getenv('ACCOUNT_PRIVATE_KEY')
+ACCOUNT_PRIVATE_KEY = os.getenv('ACCOUNT_PRIVATE_KEY')
 account_from = {
-    'private_key': PRIVATE_KEY,
-    'address': web3.eth.account.from_key(PRIVATE_KEY).address
+    'private_key': ACCOUNT_PRIVATE_KEY,
+    'address': web3.eth.account.from_key(ACCOUNT_PRIVATE_KEY).address
 }
 
 print("Attempting to deploy from account: ", account_from['address'])
@@ -752,7 +755,8 @@ construct_txn = Greeter.constructor().build_transaction({
 signed_txn = web3.eth.account.sign_transaction(construct_txn, account_from['private_key'])
 
 # Send the transaction that deploys the contract
-txn_hash = web3.eth.send_raw_transaction(signed_txn.rawTransaction)
+txn_hash = web3.eth.[!CAUTION] This example broadcasts on **testnet** and requires tRBTC.
+send_raw_transaction(signed_txn.rawTransaction)
 
 # Wait for the transaction to be mined, and get the transaction receipt
 txn_receipt = web3.eth.wait_for_transaction_receipt(txn_hash)
@@ -854,7 +858,8 @@ Open the `setMessage.py` file and take the following steps to create the script:
 5. Set the gas price strategy using the `web3.eth.set_gas_price_strategy` function, which will allow us to fetch the gasPrice from the RPC Provider. This is important because otherwise the Web3 library will attempt to use `eth_maxPriorityFeePerGas` and `eth_feeHistory` RPC methods, which are only supported by post-London Ethereum nodes.
 6. Build the `setGreeting` transaction using the contract instance and passing in the new message. You'll then use the `build_transaction` function to pass in the transaction information including the `from` address and the `nonce` for the sender. To get the `nonce` you can use the `web3.eth.get_transaction_count` function
 7. Sign the transaction using the `web3.eth.account.sign_transaction` function and pass in the `setGreeting` transaction and the `private_key` of the sender
-8. Using the signed transaction, you can then send it using the `web3.eth.send_raw_transaction` function and wait for the transaction receipt by using the `web3.eth.wait_for_transaction_receipt` function
+8. Using the signed transaction, you can then send it using the `web3.eth.[!CAUTION] This example broadcasts on **testnet** and requires tRBTC.
+send_raw_transaction` function and wait for the transaction receipt by using the `web3.eth.wait_for_transaction_receipt` function
 
 Code and paste the code below into `setMessage.py`;
 
@@ -873,10 +878,10 @@ RPC_PROVIDER_URL = 'https://rpc.testnet.rootstock.io/' + RPC_PROVIDER_APIKEY
 web3 = Web3(Web3.HTTPProvider(RPC_PROVIDER_URL))
 
 # Set the default account
-PRIVATE_KEY = os.getenv('ACCOUNT_PRIVATE_KEY')
+ACCOUNT_PRIVATE_KEY = os.getenv('ACCOUNT_PRIVATE_KEY')
 account_from = {
-    'private_key': PRIVATE_KEY,
-    'address': web3.eth.account.from_key(PRIVATE_KEY).address
+    'private_key': ACCOUNT_PRIVATE_KEY,
+    'address': web3.eth.account.from_key(ACCOUNT_PRIVATE_KEY).address
 }
 
 # Create address variable
@@ -899,7 +904,8 @@ txn = Greeter.functions.setGreeting('Hello, World!').build_transaction({
 signed_txn = web3.eth.account.sign_transaction(txn, account_from['private_key'])
 
 # Send the transaction
-txn_hash = web3.eth.send_raw_transaction(signed_txn.rawTransaction)
+txn_hash = web3.eth.[!CAUTION] This example broadcasts on **testnet** and requires tRBTC.
+send_raw_transaction(signed_txn.rawTransaction)
 txn_receipt = web3.eth.wait_for_transaction_receipt(txn_hash)
 
 print(f"Transaction successful with hash: { txn_receipt.transactionHash.hex() }")
@@ -1000,7 +1006,8 @@ Next, you will create the script for this file and complete the following steps:
 3. Define the `account_from`, including the `private_key`, and the `address_to` variables. The private key is required to sign the transaction. Note: This is for example purposes only. Never store your private keys in your code
 4. Use the `Web3.py` Gas Price API to set a gas price strategy. For this example, you'll use the imported `rpc_gas_price_strategy`. This is important because otherwise the Web3 library will attempt to use `eth_maxPriorityFeePerGas` and `eth_feeHistory` RPC methods, which are only supported by post-London Ethereum nodes.
 5. Create and sign the transaction using the `web3.eth.account.sign_transaction` function. Pass in the `nonce`, `gas`, `gasPrice`, `to`, and value for the transaction along with the sender's `private_key`. To get the `nonce` you can use the `web3.eth.get_transaction_count` function and pass in the sender's address. To predetermine the `gasPrice` you'll use the `web3.eth.generate_gas_price` function. For the value, you can format the amount to send from an easily readable format to Wei using the `web3.to_wei` function
-6. Using the signed transaction, you can then send it using the `web3.eth.send_raw_transaction` function and wait for the transaction receipt by using the `web3.eth.wait_for_transaction_receipt` function
+6. Using the signed transaction, you can then send it using the `web3.eth.[!CAUTION] This example broadcasts on **testnet** and requires tRBTC.
+send_raw_transaction` function and wait for the transaction receipt by using the `web3.eth.wait_for_transaction_receipt` function
 
 Code and paste the code below into `transaction.py`;
 
@@ -1018,10 +1025,10 @@ RPC_PROVIDER_URL = 'https://rpc.testnet.rootstock.io/' + RPC_PROVIDER_APIKEY
 web3 = Web3(Web3.HTTPProvider(RPC_PROVIDER_URL))
 
 # Set the default account
-PRIVATE_KEY = os.getenv('ACCOUNT_PRIVATE_KEY')
+ACCOUNT_PRIVATE_KEY = os.getenv('ACCOUNT_PRIVATE_KEY')
 account_from = {
-    'private_key': PRIVATE_KEY,
-    'address': web3.eth.account.from_key(PRIVATE_KEY).address
+    'private_key': ACCOUNT_PRIVATE_KEY,
+    'address': web3.eth.account.from_key(ACCOUNT_PRIVATE_KEY).address
 }
 address_to = '0xcff73226883c1cE8b3bcCc28E45c3c92C843485c'
 
@@ -1043,7 +1050,8 @@ txn = {
 signed_txn = web3.eth.account.sign_transaction(txn, account_from['private_key'])
 
 # Send the transaction
-txn_hash = web3.eth.send_raw_transaction(signed_txn.rawTransaction)
+txn_hash = web3.eth.[!CAUTION] This example broadcasts on **testnet** and requires tRBTC.
+send_raw_transaction(signed_txn.rawTransaction)
 
 # Wait for the transaction to be mined, and get the transaction receipt
 txn_receipt = web3.eth.wait_for_transaction_receipt(txn_hash)
@@ -1079,7 +1087,8 @@ In this guide, we learnt how to use the Web3.py library to deploy, interact with
 - Note: The cause of the error on the deployment is that the Web3.py module is set to use the private keys of the RPC provider (Hosted Keys), which is a legacy way to use accounts, and is not supported by modern RPC providers, as they do not store private keys.
 - Methods like `web3.eth.send_transaction` do not work with RPC providers, because they rely on a node state and all modern nodes are stateless, which underneath make JSON-RPC calls to methods like `eth_accounts` and `eth_sendTransaction`. You must always use local private keys when working with nodes hosted by someone else.
 - If unfamiliar, note that you can [export your private keys from Metamask](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) and other wallets. Remember to never share your private keys, and do not put it on your code or repository.
-- In order to successfully deploy the contract, the developer needs to set up Web3.py to use his Local Private Keys, and to build and pre-sign the transaction before sending it, so the module uses `eth_sendRawTransaction` instead.
+- In order to successfully deploy the contract, the developer needs to set up Web3.py to use his Local Private Keys, and to build and pre-sign the transaction before sending it, so the module uses `[!CAUTION] This example broadcasts on **testnet** and requires tRBTC.
+eth_sendRawTransaction` instead.
 - To allow Web3.py to use the local keys, we have to use the Signing middleware to add the Private Key to the signing keychain.
 
 ```codeBlockLines_e6Vv
@@ -1091,8 +1100,8 @@ In this guide, we learnt how to use the Web3.py library to deploy, interact with
 
     w3 = Web3(EthereumTesterProvider())
 
-    private_key = os.environ.get("PRIVATE_KEY")
-    assert private_key is not None, "You must set PRIVATE_KEY environment variable"
+    private_key = os.environ.get("ACCOUNT_PRIVATE_KEY")
+    assert private_key is not None, "You must set ACCOUNT_PRIVATE_KEY environment variable"
     assert private_key.startswith("0x"), "Private key must start with 0x hex prefix"
 
     account: LocalAccount = Account.from_key(private_key)
@@ -1175,7 +1184,7 @@ Last updated on **Jul 10, 2025** by **Owanate Amachree**
 
 - [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/02-developers/04-quickstart/web3-python.md)
 - [Report an Issue](https://github.com/rsksmart/devportal/issues)
-- [Join the Community](http://discord.gg/rootstock)
+- [Join the Community](https://discord.gg/rootstock)
 - [Changelog](https://dev.rootstock.io/changelog/)
 - Request an Article
 
@@ -1233,7 +1242,7 @@ Last updated on **Jun 26, 2025** by **Owanate Amachree**
 
 - [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/02-developers/index.md)
 - [Report an Issue](https://github.com/rsksmart/devportal/issues)
-- [Join the Community](http://discord.gg/rootstock)
+- [Join the Community](https://discord.gg/rootstock)
 - [Changelog](https://dev.rootstock.io/changelog/)
 - Request an Article
 
@@ -1415,7 +1424,7 @@ Last updated on **Jun 26, 2025** by **Owanate Amachree**
 
 - [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/03-node-operators/02-merged-mining/02-configure-mining/index.md)
 - [Report an Issue](https://github.com/rsksmart/devportal/issues)
-- [Join the Community](http://discord.gg/rootstock)
+- [Join the Community](https://discord.gg/rootstock)
 - [Changelog](https://dev.rootstock.io/changelog/)
 - Request an Article
 
@@ -1454,7 +1463,7 @@ Last updated on **Jun 26, 2025** by **Owanate Amachree**
 
 - [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/04-resources/05-port-to-rootstock/index.md)
 - [Report an Issue](https://github.com/rsksmart/devportal/issues)
-- [Join the Community](http://discord.gg/rootstock)
+- [Join the Community](https://discord.gg/rootstock)
 - [Changelog](https://dev.rootstock.io/changelog/)
 - Request an Article
 
@@ -1530,7 +1539,7 @@ Last updated on **Jun 26, 2025** by **Owanate Amachree**
 
 - [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/02-developers/05-smart-contracts/02-hardhat/troubleshooting.md)
 - [Report an Issue](https://github.com/rsksmart/devportal/issues)
-- [Join the Community](http://discord.gg/rootstock)
+- [Join the Community](https://discord.gg/rootstock)
 - [Changelog](https://dev.rootstock.io/changelog/)
 - Request an Article
 
@@ -1610,7 +1619,7 @@ Last updated on **Jun 26, 2025** by **Owanate Amachree**
 
 - [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/01-concepts/index.md)
 - [Report an Issue](https://github.com/rsksmart/devportal/issues)
-- [Join the Community](http://discord.gg/rootstock)
+- [Join the Community](https://discord.gg/rootstock)
 - [Changelog](https://dev.rootstock.io/changelog/)
 - Request an Article
 
@@ -1647,7 +1656,7 @@ This guide demonstrates to a developer how to handle Bitcoin transactions in a S
 #### More
 
 - [Report an Issue](https://github.com/rsksmart/devportal/issues)
-- [Join the Community](http://discord.gg/rootstock)
+- [Join the Community](https://discord.gg/rootstock)
 - [Changelog](https://dev.rootstock.io/changelog/)
 - Request an Article
 
@@ -1830,7 +1839,7 @@ Last updated on **Jun 26, 2025** by **Owanate Amachree**
 
 - [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/02-developers/05-smart-contracts/02-hardhat/create-hardhat-project.md)
 - [Report an Issue](https://github.com/rsksmart/devportal/issues)
-- [Join the Community](http://discord.gg/rootstock)
+- [Join the Community](https://discord.gg/rootstock)
 - [Changelog](https://dev.rootstock.io/changelog/)
 - Request an Article
 
@@ -1885,7 +1894,7 @@ Last updated on **Aug 14, 2025** by **Owanate Amachree**
 
 - [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/01-concepts/powpeg/security-model.md)
 - [Report an Issue](https://github.com/rsksmart/devportal/issues)
-- [Join the Community](http://discord.gg/rootstock)
+- [Join the Community](https://discord.gg/rootstock)
 - [Changelog](https://dev.rootstock.io/changelog/)
 - Request an Article
 
@@ -2024,7 +2033,7 @@ Last updated on **Jun 26, 2025** by **Owanate Amachree**
 
 - [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/03-node-operators/04-setup/02-installation/docker.md)
 - [Report an Issue](https://github.com/rsksmart/devportal/issues)
-- [Join the Community](http://discord.gg/rootstock)
+- [Join the Community](https://discord.gg/rootstock)
 - [Changelog](https://dev.rootstock.io/changelog/)
 - Request an Article
 
@@ -2110,7 +2119,7 @@ Last updated on **Aug 14, 2025** by **Owanate Amachree**
 
 - [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/05-dev-tools/wallets/index.md)
 - [Report an Issue](https://github.com/rsksmart/devportal/issues)
-- [Join the Community](http://discord.gg/rootstock)
+- [Join the Community](https://discord.gg/rootstock)
 - [Changelog](https://dev.rootstock.io/changelog/)
 - Request an Article
 
@@ -2168,7 +2177,7 @@ Last updated on **Jun 26, 2025** by **Owanate Amachree**
 
 - [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/03-node-operators/02-merged-mining/03-reference/index.md)
 - [Report an Issue](https://github.com/rsksmart/devportal/issues)
-- [Join the Community](http://discord.gg/rootstock)
+- [Join the Community](https://discord.gg/rootstock)
 - [Changelog](https://dev.rootstock.io/changelog/)
 - Request an Article
 
@@ -2264,7 +2273,7 @@ Last updated on **Jun 26, 2025** by **Owanate Amachree**
 
 - [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/01-concepts/account-based-addresses.md)
 - [Report an Issue](https://github.com/rsksmart/devportal/issues)
-- [Join the Community](http://discord.gg/rootstock)
+- [Join the Community](https://discord.gg/rootstock)
 - [Changelog](https://dev.rootstock.io/changelog/)
 - Request an Article
 
@@ -2361,7 +2370,7 @@ Last updated on **Jun 26, 2025** by **Owanate Amachree**
 
 - [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/03-node-operators/02-merged-mining/01-getting-started/index.md)
 - [Report an Issue](https://github.com/rsksmart/devportal/issues)
-- [Join the Community](http://discord.gg/rootstock)
+- [Join the Community](https://discord.gg/rootstock)
 - [Changelog](https://dev.rootstock.io/changelog/)
 - Request an Article
 
@@ -2539,16 +2548,17 @@ Last updated on **Jun 26, 2025** by **Owanate Amachree**
 
 - [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/03-node-operators/04-setup/03-configuration/preferences.md)
 - [Report an Issue](https://github.com/rsksmart/devportal/issues)
-- [Join the Community](http://discord.gg/rootstock)
+- [Join the Community](https://discord.gg/rootstock)
 - [Changelog](https://dev.rootstock.io/changelog/)
 - Request an Article
 
 #### Feedback
 
-[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io/ "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io/ "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io/ "Share on Linkedin")
+[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io "Share on Linkedin")
 
 Copy page link
 
 Back to top
 
 281.68M
+
