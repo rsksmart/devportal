@@ -1,0 +1,2554 @@
+# https://dev.rootstock.io/
+
+<|Rootstock Developer Portal | Home|>
+## Page
+[Skip to main content](https://dev.rootstock.io/#__docusaurus_skipToContent_fallback)
+
+[📣 Hacktivator 2.0 is now closed! Hacktivator 3.0 is coming soon. Stay tuned!](https://dev.rootstock.io/resources/contribute/hacktivator/)
+
+[Home](https://dev.rootstock.io/) [Concepts](https://dev.rootstock.io/concepts/) [Developers](https://dev.rootstock.io/developers/) [Node Operators](https://dev.rootstock.io/node-operators/) [Resources](https://dev.rootstock.io/resources/) [Dev Tools](https://dev.rootstock.io/dev-tools/)
+
+# Rootstock Documentation
+
+Explore guides, quick starts, and SDKs to build and integrate your dApps.
+
+[Quick Start](https://dev.rootstock.io/developers/quickstart/) [Explore Docs](https://dev.rootstock.io/concepts/fundamentals/)
+
+## Guides for Builders
+
+### Beginner to Web3?
+
+1.
+
+Explore Rootstock Fundamentals and resources to begin your development journey.
+
+- [Core Concepts](https://dev.rootstock.io/concepts/fundamentals/)
+- [Become a Rootstock Blockchain Developer](https://dev.rootstock.io/resources/courses/)
+
+### Deploy Smart Contracts
+
+2.
+
+EVM-compatible tools and guides to deploy and scale your dApps on Rootstock.
+
+- [Quick Starts](https://dev.rootstock.io/developers/quickstart/)
+- [Join the Discord Community](http://discord.gg/rootstock)
+
+### Become a Merged Miner
+
+3.
+
+Interested in merged mining on Rootstock? Setup a Rootstock node or use the RPC API.
+
+- [Merged Mining](https://dev.rootstock.io/node-operators/merged-mining/getting-started/)
+- [RPC API](https://rpc.rootstock.io/)
+
+### Apply for a Grant
+
+4.
+
+Get funding and support to build your next dApp on Rootstock through the strategic grants program.
+
+- [Apply now](https://rootstock.io/grants/)
+
+## Browse by DevTools
+
+### Get RBTC
+
+1.
+
+Explore the various ways to get RBTC using the PowPeg App, On/Off Ramps, or Exchanges.
+
+[Read more](https://rootstock.io/rbtc/)
+
+### Quick Starts
+
+2.
+
+View a repository of starter kits, sample codes and tutorials for creating, testing and deploying smart contracts on Rootstock.
+
+[Read more](https://dev.rootstock.io/developers/quickstart/)
+
+### EVM-compatible  Tools
+
+3.
+
+Build and deploy faster with EVM-compatible tools and guides on Rootstock.
+
+[Read more](https://dev.rootstock.io/dev-tools/)
+
+### SDKs and Integration Guides
+
+4.
+
+Explore easy-to-set-up SDKs and Integration Guides.
+
+[Read more](https://dev.rootstock.io/developers/integrate/)
+
+## Browse by Products
+
+### Bridges
+
+1.
+
+Bridge in/out of Rootstock.
+
+- [RBTC Flyover](https://dev.rootstock.io/developers/integrate/flyover/)
+- [PowPeg App](https://powpeg.rootstock.io/)
+- [Token Bridge](https://dapp.tokenbridge.rootstock.io/)
+
+### Wallets
+
+2.
+
+View wallets compatible with the Rootstock platform.
+
+- [MetaMask](https://dev.rootstock.io/dev-tools/wallets/metamask/)
+- [Wallets on Rootstock](https://dev.rootstock.io/dev-tools/wallets/)
+
+### RIF Tools
+
+3.
+
+Explore Open-source tools and technologies for faster, and more rewarding ways to build on Bitcoin.
+
+- [Name Service](https://rns.rifos.org/)
+- [Relay](https://dev.rootstock.io/developers/integrate/rif-relay/)
+
+### RPC API
+
+4.
+
+Deploy and interact with EVM compatible smart contracts on Rootstock using JSON RPC methods using the Rootstock RPC API.
+
+- [Make First API Call](https://dev.rootstock.io/developers/rpc-api/rootstock/setup/)
+- [View JSON RPC Methods](https://dev.rootstock.io/developers/rpc-api/rootstock/methods/)
+
+## Connect with the Community
+
+### Discord
+
+1.
+
+Join the Rootstock
+Developer Community on Discord.
+
+[Join Discord](https://discord.com/invite/rootstock)
+
+### GitHub
+
+2.
+
+Explore open source tools, smart contracts and starter kits for deploying and integrating your dApps.
+
+[Star on Github](https://github.com/rsksmart/devportal)
+
+### Stay Connected
+
+3.
+
+View upcoming events, community calls, webinars, and meetups happening
+around the world.
+
+[View upcoming Events](https://rootstock.io/events)
+
+#### More
+
+- [Edit this page](https://github.com/rsksmart/devportal/tree/main//src/pages/index.js)
+- [Report an Issue](https://github.com/rsksmart/devportal/issues)
+- [Join the Community](http://discord.gg/rootstock)
+- [Changelog](https://dev.rootstock.io/changelog/)
+- Request an Article
+
+#### Feedback
+
+#### Share
+
+[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io/ "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io/ "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io/ "Share on Linkedin")
+
+Copy page link
+
+[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io/ "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io/ "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io/ "Share on Linkedin")
+
+Copy page link
+
+Back to top
+
+281.68M
+
+<|firecrawl-page-2-lllmstxt|>
+## Understanding Gas in Rootstock
+[Skip to main content](https://dev.rootstock.io/concepts/rbtc/gas/#__docusaurus_skipToContent_fallback)
+
+[📣 Hacktivator 2.0 is now closed! Hacktivator 3.0 is coming soon. Stay tuned!](https://dev.rootstock.io/resources/contribute/hacktivator/)
+
+[Home](https://dev.rootstock.io/) [Concepts](https://dev.rootstock.io/concepts/) [Developers](https://dev.rootstock.io/developers/) [Node Operators](https://dev.rootstock.io/node-operators/) [Resources](https://dev.rootstock.io/resources/) [Dev Tools](https://dev.rootstock.io/dev-tools/)
+
+Time to read: 4 min
+
+On this page
+
+Gas is the internal pricing for running a transaction or contract.
+When you send tokens, interact with a contract, send rBTC, or do anything else on the blockchain, you must **pay for that computation**. That payment is calculated as **gas**. In Rootstock, this is paid in rBTC.
+
+## What is gas? [​](https://dev.rootstock.io/concepts/rbtc/gas/\#what-is-gas "Direct link to What is gas?")
+
+There are four important concepts:
+
+- **Gas price**: The cost of the operation.
+- **Gas limit**: The maximum gas the operation can afford. It's an upper limit the user sets to prevent losing gas.
+- **Total gas**: The gas the operation consumed. Also referred to as **gas used**.
+- **Unit**: Gas is paid in **rBTC**.
+
+Let's start with a simple analogy: A car.
+
+To drive a car you need gas. Gas price is the money you pay for each gallon. Gas limit is the max amount of gas you accept to consume, the gas you _charge_. The total gas is the amount you've spent at the end of the trip.
+You can calculate the total gas and set an appropriate gas limit so that your trip does not expend more than expected.
+
+Transactions are quite similar:
+
+Gas price is the price you set for operations. The gas limit is the maximum price you are going to pay for the transaction when operated. Then, when transaction is executed, the total gas is the price you finally pay.
+
+Gas is the _fee_ collected by the miner who mines the block that includes the transaction.
+
+The resulting fee is:
+
+```codeBlockLines_e6Vv
+fee = totalGas * gasPrice
+
+```
+
+## How do I choose an appropriate gas price and limit? [​](https://dev.rootstock.io/concepts/rbtc/gas/\#how-do-i-choose-an-appropriate-gas-price-and-limit "Direct link to How do I choose an appropriate gas price and limit?")
+
+If you want to spend less on a transaction, you can do so by lowering the amount you pay per unit of gas (gas price). Similar to Bitcoin, the price you pay for each unit increases or decreases how **quickly your transaction will be mined.**
+
+### Appropriate gas price [​](https://dev.rootstock.io/concepts/rbtc/gas/\#appropriate-gas-price "Direct link to Appropriate gas price")
+
+Gas price changes with time. To choose an appropriate gas price you should consider 2 concepts:
+
+- What is _minimum gas price_ and how it changes
+- How to get that _minimum gas price_
+
+### Minimum Gas Price [​](https://dev.rootstock.io/concepts/rbtc/gas/\#minimum-gas-price "Direct link to Minimum Gas Price")
+
+The `minimumGasPrice` is written in the block header by miners and establishes the minimum gas price a transaction should have in order to be included in that block. It can change with time, by up to 1% of the `minimumGasPrice` of the previous block. The latest block's minimum gas price can be obtained using this Web3 method:
+
+The means by which minimum gas price is negotiated by miners is described in [RSKIP09](https://github.com/rsksmart/RSKIPs/blob/master/IPs/RSKIP09.md).
+
+```codeBlockLines_e6Vv
+web3.eth.getBlock('latest').minimumGasPrice
+
+```
+
+Gas Limit
+
+The transaction gas limit per block is 6,800,000 units.
+
+Here are some practical approaches to this subject:
+
+1. Optimistic approach (not recommended):
+You can set `minimumGasPrice` as gas price parameter for the transaction **but if minimum gas price is under negotiation and it gets higher, your transaction could be rejected**.
+
+2. Sensible approach:
+Instead of using `minimumGasPrice` as it is, you may [add 10% to its value](https://dev.rootstock.io/concepts/rbtc/gas/#how-does-gas-price-change-over-time).
+
+3. Network average approach:
+You can obtain the average gas price that is being paid in the network:
+
+
+```codeBlockLines_e6Vv
+web3.eth.gasPrice()
+
+```
+
+Even though this value is greater than or equal to minimum gas price. ( `gasPrice >= minimumGasPrice`), it is recommended to add a small percentage to increase the priority of your transaction.
+
+### Appropriate gas limit [​](https://dev.rootstock.io/concepts/rbtc/gas/\#appropriate-gas-limit "Direct link to Appropriate gas limit")
+
+Total gas can be estimated using this Web3 method:
+
+```codeBlockLines_e6Vv
+myContract.methods.myMethod(param1, param2, ...).estimateGas(options, callback)
+
+```
+
+> Go [here](https://web3js.readthedocs.io/en/1.0/web3-eth-contract.html#methods-mymethod-estimategas) for Web3 documentation.
+
+### More information [​](https://dev.rootstock.io/concepts/rbtc/gas/\#more-information "Direct link to More information")
+
+#### How does gas price change over time? [​](https://dev.rootstock.io/concepts/rbtc/gas/\#how-does-gas-price-change-over-time "Direct link to How does gas price change over time?")
+
+Each miner can vote to increase or decrease the `minimumGasPrice` up to 1%. This allows miners to increase the `minimumGasPrice` 100% in approximately 50 minutes, assuming a block every 30 seconds.
+Nodes that forward transactions could check that the advertised **gas price in a transaction is at least 10% higher than the minimum**. This assures the transaction a lifetime of 10 blocks assuming a constantly increasing block `minimumGasPrice`.
+Negotiated minimum gas price is described in [RSKIP09](https://github.com/rsksmart/RSKIPs/blob/master/IPs/RSKIP09.md).
+
+## What happen if my transaction fails? [​](https://dev.rootstock.io/concepts/rbtc/gas/\#what-happen-if-my-transaction-fails "Direct link to What happen if my transaction fails?")
+
+**You are paying for the computation, regardless of whether your transaction succeeds or fails.** Even if it fails, the miners must validate and execute your transaction (computation request) and therefore you must pay for that computation just like you would pay for a successful transaction.
+
+## What happen if I run out of gas? [​](https://dev.rootstock.io/concepts/rbtc/gas/\#what-happen-if-i-run-out-of-gas "Direct link to What happen if I run out of gas?")
+
+If a transaction reaches the gas limit, all changes will be reverted but **the fee is still paid**.
+
+## Gas in smart contracts [​](https://dev.rootstock.io/concepts/rbtc/gas/\#gas-in-smart-contracts "Direct link to Gas in smart contracts")
+
+When you compile smart contracts (commonly written in [Solidity](https://solidity.readthedocs.io/en/latest/)), they get converted to operation codes, known as 'opcodes'.
+These codes (opcodes) are shown with mnemotechnic names as `ADD` (addition) or `MUL `(multiplication). [Here](https://github.com/rsksmart/rskj/blob/master/rskj-core/src/main/java/org/ethereum/vm/GasCost.java) you can see the price of each opcode.
+As you can guess, it is important to write smart contracts using the best (cheaper) combination of opcodes.
+Examples of good practices to write smart contracts:
+
+### Avoid declaring variables as `var` [​](https://dev.rootstock.io/concepts/rbtc/gas/\#avoid-declaring-variables-as-var "Direct link to avoid-declaring-variables-as-var")
+
+```codeBlockLines_e6Vv
+function payBonus() {
+    for (uint i = 0; i < employees.length; i++) {
+      address employee = employees[i];
+      uint bonus = calculateBonus(employee);
+      employee.send(bonus);
+    }
+  }
+
+```
+
+In the code above, the problem is that if the type of `i` was declared as `var`, it would be taken as `uint8` because this is the smallest type that is required to hold the value 0. If the array has more than 255 elements, the loop will not finish successfully, resulting in wasted gas. You'd better use the explicit type `uint` for no surprises and higher limits. **Avoid declaring variables using `var` if possible.**
+
+### Looping large arrays [​](https://dev.rootstock.io/concepts/rbtc/gas/\#looping-large-arrays "Direct link to Looping large arrays")
+
+```codeBlockLines_e6Vv
+function soDifficultLooper() {
+    for (uint i = 0; i < largeArray.length; i++) {
+      address person = largeArray[i];
+      uint payment = difficultOperation(largeArray);
+      person.send(payment);
+    }
+  }
+
+```
+
+Every function call that modifies state of the smart contract has a gas cost. A loop could spend a lot of gas, which could easily reach the gas limit of a transaction or block. If a transaction reaches the gas limit, all changes will be reverted but the fee is still paid. **Be aware of variable gas costs when using loops.**
+
+Last updated on **Aug 14, 2025** by **Owanate Amachree**
+
+#### On this page
+
+- [What is gas?](https://dev.rootstock.io/concepts/rbtc/gas/#what-is-gas)
+- [How do I choose an appropriate gas price and limit?](https://dev.rootstock.io/concepts/rbtc/gas/#how-do-i-choose-an-appropriate-gas-price-and-limit)
+  - [Appropriate gas price](https://dev.rootstock.io/concepts/rbtc/gas/#appropriate-gas-price)
+  - [Minimum Gas Price](https://dev.rootstock.io/concepts/rbtc/gas/#minimum-gas-price)
+  - [Appropriate gas limit](https://dev.rootstock.io/concepts/rbtc/gas/#appropriate-gas-limit)
+  - [More information](https://dev.rootstock.io/concepts/rbtc/gas/#more-information)
+- [What happen if my transaction fails?](https://dev.rootstock.io/concepts/rbtc/gas/#what-happen-if-my-transaction-fails)
+- [What happen if I run out of gas?](https://dev.rootstock.io/concepts/rbtc/gas/#what-happen-if-i-run-out-of-gas)
+- [Gas in smart contracts](https://dev.rootstock.io/concepts/rbtc/gas/#gas-in-smart-contracts)
+  - [Avoid declaring variables as `var`](https://dev.rootstock.io/concepts/rbtc/gas/#avoid-declaring-variables-as-var)
+  - [Looping large arrays](https://dev.rootstock.io/concepts/rbtc/gas/#looping-large-arrays)
+
+#### More
+
+- [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/01-concepts/rbtc/gas.md)
+- [Report an Issue](https://github.com/rsksmart/devportal/issues)
+- [Join the Community](http://discord.gg/rootstock)
+- [Changelog](https://dev.rootstock.io/changelog/)
+- Request an Article
+
+#### Feedback
+
+[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io/concepts/rbtc/gas/ "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io/concepts/rbtc/gas/ "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io/concepts/rbtc/gas/ "Share on Linkedin")
+
+Copy page link
+
+Back to top
+
+281.68M
+
+<|firecrawl-page-3-lllmstxt|>
+## RIF Token Overview
+[Skip to main content](https://dev.rootstock.io/concepts/rif-suite/token/#__docusaurus_skipToContent_fallback)
+
+[📣 Hacktivator 2.0 is now closed! Hacktivator 3.0 is coming soon. Stay tuned!](https://dev.rootstock.io/resources/contribute/hacktivator/)
+
+[Home](https://dev.rootstock.io/) [Concepts](https://dev.rootstock.io/concepts/) [Developers](https://dev.rootstock.io/developers/) [Node Operators](https://dev.rootstock.io/node-operators/) [Resources](https://dev.rootstock.io/resources/) [Dev Tools](https://dev.rootstock.io/dev-tools/)
+
+Time to read: 2 min
+
+On this page
+
+The RIF (Rootstock Infrastructure Framework) token makes it easier, faster and more rewarding to build on Bitcoin. It also enables governance on [RootstockCollective DAO](https://rootstockcollective.xyz/). By staking RIF, users can mint stRIF; the governance token of the RootstockCollective used for voting, proposal creation, and rewards allocation. For more information, read the [Rootstock Collective Whitepaper](https://wiki.rootstockcollective.xyz/).
+
+## RIF (RIF Token in Mainnet) [​](https://dev.rootstock.io/concepts/rif-suite/token/\#rif-rif-token-in-mainnet "Direct link to RIF (RIF Token in Mainnet)")
+
+|     |     |
+| --- | --- |
+| Token Name | [RIF](https://coinmarketcap.com/currencies/rsk-infrastructure-framework/) |
+| Total Supply | 1,000,000,000 RIF |
+| Contract Address | [0x2acc95758f8b5f583470ba265eb685a8f45fc9d5](https://explorer.rootstock.io/address/0x2acc95758f8b5f583470ba265eb685a8f45fc9d5) |
+| Contract Type | ERC677 |
+| How to Get | - [Exchanges](https://rif.technology/rif-token/) |
+
+[Get RIF on Exchanges](https://rif.technology/rif-token/)
+
+## tRIF (RIF Token in Testnet) [​](https://dev.rootstock.io/concepts/rif-suite/token/\#trif-rif-token-in-testnet "Direct link to tRIF (RIF Token in Testnet)")
+
+|     |     |
+| --- | --- |
+| Token Name | tRIF |
+| Total Supply | 1,000,000,000 tRIF |
+| Contract Testnet Address | [0x19f64674D8a5b4e652319F5e239EFd3bc969a1FE](https://explorer.testnet.rootstock.io/address/0x19f64674d8a5b4e652319f5e239efd3bc969a1fe) |
+| Contract Type | ERC677 |
+| How to Get | - [Faucet](https://faucet.rifos.org/) |
+
+[Get tRIF in Testnet](https://faucet.rifos.org/)
+
+## stRIF (Staked RIF Token in the RootstockCollective DAO) [​](https://dev.rootstock.io/concepts/rif-suite/token/\#strif-staked-rif-token-in-the-rootstockcollective-dao "Direct link to stRIF (Staked RIF Token in the RootstockCollective DAO)")
+
+The stRIF tokens give you voting rights and participation in the RootstockCollective DAO's governance and decision-making process they are pegged 1:1 with RIF. To acquire stRIF tokens, you need to stake RIF tokens in the [governance system dApp](https://app.rootstockcollective.xyz/). RIF tokens can be purchased through [various exchanges](https://wiki.rootstockcollective.xyz/Token-Resources-e3f89008a96e4dcab3037ff7861d9d8a), and once staked, an equivalent amount of stRIF is issued for governance participation.
+
+Contract Addresses used in DAO
+
+For a comprehensive list of contract addresses used across various DAO environments, please refer to the [DAO Frontend GitHub repository](https://github.com/RootstockCollective/dao-frontend?tab=readme-ov-file#environments).
+
+|     |     |
+| --- | --- |
+| Token Name | [stRIF](https://wiki.rootstockcollective.xyz/2c6e3b87b49f4c1e9225b713e1b49538?v=819168fca4964319896c19e8299a8ea0) |
+| Total Supply | Varies and will increase and decrease as RIF is staked and unstaked. |
+| Contract Address (Mainnet) | [0x5db91e24BD32059584bbDb831A901f1199f3d459](https://rootstock.blockscout.com/token/0x5db91e24BD32059584bbDb831A901f1199f3d459?tab=contract) |
+| Contract Address (Testnet) | [0xe7039717c51c44652fb47be1794884a82634f08f](https://explorer.testnet.rootstock.io/address/0xe7039717c51c44652fb47be1794884a82634f08f) |
+| Contract Types | ERC20, ERC677, ERC1967Proxy |
+| How to Get | - [Stake your RIF on the RootstockCollective dApp to get stRIF](http://app.rootstockcollective.xyz/) |
+
+## Wallets [​](https://dev.rootstock.io/concepts/rif-suite/token/\#wallets "Direct link to Wallets")
+
+See [supported wallets](https://dev.rootstock.io/dev-tools/wallets/).
+
+## Technical information [​](https://dev.rootstock.io/concepts/rif-suite/token/\#technical-information "Direct link to Technical information")
+
+### ERC677 token standard [​](https://dev.rootstock.io/concepts/rif-suite/token/\#erc677-token-standard "Direct link to ERC677 token standard")
+
+An [ERC20](https://github.com/ethereum/EIPs/issues/20)
+token transaction between a regular/non-contract address and contract are two different transactions: You should call `approve` on the token contract and then call `transferFrom` on the other contract when you want to deposit your tokens into it.
+
+[ERC677](https://github.com/ethereum/EIPs/issues/677)
+simplifies this requirement and allows using the same transfer function. ERC677 tokens can be sent by calling `transfer` function on the token contract with no difference if the receiver is a contract or a wallet address, since there is a new way to notify the receiving contract of the transfer.
+
+An ERC677 token transfer will be the same as an ERC20 transfer. On the other hand, if the receiver is a contract, then the ERC677 token contract will try to call `tokenFallback` function on receiver contract. If there is no `tokenFallback` function on receiver contract, the transaction will fail.
+
+### RIF transfer methods [​](https://dev.rootstock.io/concepts/rif-suite/token/\#rif-transfer-methods "Direct link to RIF transfer methods")
+
+- Approve and transfer:
+
+
+
+
+
+```codeBlockLines_e6Vv
+function approve(address _spender, uint256 _value) public returns (bool)
+function transfer(address _to, uint256 _value) public returns (bool)
+
+```
+
+- Transfer and call:
+
+
+
+
+
+```codeBlockLines_e6Vv
+function transfer(address _to, uint256 _value, bytes data)
+
+```
+
+
+
+
+
+
+
+
+
+**Parameters**
+  - `_to: address`: Contract address.
+  - `_value: uint256`: Amount of RIF tokens to send.
+  - `data: bytes`: 4-byte signature of the function to be executed, followed by the function parameters to be executed with encoded as a byte array.
+
+Last updated on **Aug 14, 2025** by **Owanate Amachree**
+
+#### On this page
+
+- [RIF (RIF Token in Mainnet)](https://dev.rootstock.io/concepts/rif-suite/token/#rif-rif-token-in-mainnet)
+- [tRIF (RIF Token in Testnet)](https://dev.rootstock.io/concepts/rif-suite/token/#trif-rif-token-in-testnet)
+- [stRIF (Staked RIF Token in the RootstockCollective DAO)](https://dev.rootstock.io/concepts/rif-suite/token/#strif-staked-rif-token-in-the-rootstockcollective-dao)
+- [Wallets](https://dev.rootstock.io/concepts/rif-suite/token/#wallets)
+- [Technical information](https://dev.rootstock.io/concepts/rif-suite/token/#technical-information)
+  - [ERC677 token standard](https://dev.rootstock.io/concepts/rif-suite/token/#erc677-token-standard)
+  - [RIF transfer methods](https://dev.rootstock.io/concepts/rif-suite/token/#rif-transfer-methods)
+
+#### More
+
+- [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/01-concepts/rif-suite/token/index.md)
+- [Report an Issue](https://github.com/rsksmart/devportal/issues)
+- [Join the Community](http://discord.gg/rootstock)
+- [Changelog](https://dev.rootstock.io/changelog/)
+- Request an Article
+
+#### Feedback
+
+[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io/concepts/rif-suite/token/ "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io/concepts/rif-suite/token/ "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io/concepts/rif-suite/token/ "Share on Linkedin")
+
+Copy page link
+
+Back to top
+
+281.68M
+
+<|firecrawl-page-4-lllmstxt|>
+## Web3 Python Quickstart
+[Skip to main content](https://dev.rootstock.io/developers/quickstart/web3-python/#__docusaurus_skipToContent_fallback)
+
+[📣 Hacktivator 2.0 is now closed! Hacktivator 3.0 is coming soon. Stay tuned!](https://dev.rootstock.io/resources/contribute/hacktivator/)
+
+[Home](https://dev.rootstock.io/) [Concepts](https://dev.rootstock.io/concepts/) [Developers](https://dev.rootstock.io/developers/) [Node Operators](https://dev.rootstock.io/node-operators/) [Resources](https://dev.rootstock.io/resources/) [Dev Tools](https://dev.rootstock.io/dev-tools/)
+
+Time to read: 10 min
+
+On this page
+
+[Web3.py](https://web3py.readthedocs.io/en/stable/) is a Python library that allows developers to interact with Ethereum-based blockchains with Python. Rootstock has an Ethereum-like API available that is fully compatible with Ethereum-style JSON-RPC invocations. Therefore, developers can leverage this compatibility and use the `Web3.py` library to interact with Rootstock similar to how developers interact with smart contracts on Ethereum.
+
+In this guide, you'll learn how to use the Web3.py library to deploy and interact with smart contracts on Rootstock.
+
+Interact with Rootstock using Rust
+
+See tutorial on how to [interact with Rootstock using Rust](https://dev.rootstock.io/resources/tutorials/rootstock-rust/)
+
+## Prerequisites [​](https://dev.rootstock.io/developers/quickstart/web3-python/\#prerequisites "Direct link to Prerequisites")
+
+- A testnet account with tRBTC funds.
+  - [Get tRBTC](https://faucet.rootstock.io/).
+- An API KEY from the [Rootstock RPC Service](https://rpc.rootstock.io/).
+- Set up the project
+- A Solidity Compiler installed -> see [solidity compiler installation instructions](https://docs.soliditylang.org/en/latest/installing-solidity.html)
+
+Set up the project and install dependencies:
+
+```codeBlockLines_e6Vv
+# create a directory for the project
+mkdir web3-python-guide && cd web3-python-guide
+
+# install python 3.10
+brew install python@3.10
+
+# set up the development virtual environment
+python3.10 -m venv env
+source env/bin/activate
+
+# install dependencies
+pip install Web3 py-solc-x
+
+```
+
+Solidity compiler installation instructions for MacOs:
+
+```codeBlockLines_e6Vv
+brew install solc-select
+solc-select use 0.8.25 --always-install
+
+solc --version
+# Version: 0.8.25+commit.7dd6d404.Darwin.appleclang
+
+```
+
+### Set Up Secrets for the Project [​](https://dev.rootstock.io/developers/quickstart/web3-python/\#set-up-secrets-for-the-project "Direct link to Set Up Secrets for the Project")
+
+We will be using sensitive data that doesn’t have to be stored in the code, and instead we will store them in a `.env` file.
+
+For that, first lets install the package to read data from the `.env` file:
+
+```codeBlockLines_e6Vv
+pip install python-dotenv
+
+```
+
+Then, we will create a `.env` file and add the secrets:
+
+```codeBlockLines_e6Vv
+touch .env
+
+```
+
+add the following variables to the file:
+
+Replace `YOUR_APIKEY` with the API key from your dashboard.
+
+```codeBlockLines_e6Vv
+# get this YOUR_APIKEY from the Rootstock RPC Service.
+RPC_PROVIDER_APIKEY = '{YOUR_APIKEY}'
+
+# this is the private key of the account from which you will deploy the contract
+ACCOUNT_PRIVATE_KEY = '{YOUR_PRIVATE_KEY}'
+
+```
+
+## Deploy a smart contract [​](https://dev.rootstock.io/developers/quickstart/web3-python/\#deploy-a-smart-contract "Direct link to Deploy a smart contract")
+
+### Write the smart contract [​](https://dev.rootstock.io/developers/quickstart/web3-python/\#write-the-smart-contract "Direct link to Write the smart contract")
+
+The contract to be compiled and deployed in the next section is a simple contract that stores a message, and will allow for setting different messages by sending a transaction.
+
+You can get started by creating a file for the contract:
+
+```codeBlockLines_e6Vv
+touch Greeter.sol
+
+```
+
+Next, add the Solidity code to the file:
+
+```codeBlockLines_e6Vv
+// SPDX-License-Identifier: MIT
+
+pragma solidity >0.5.0;
+
+contract Greeter {
+    string public greeting;
+
+    constructor() public {
+        greeting = 'Hello';
+    }
+
+    function setGreeting(string memory _greeting) public {
+        greeting = _greeting;
+    }
+
+    function greet() view public returns (string memory) {
+        return greeting;
+    }
+}
+
+```
+
+The constructor function, which runs when the contract is deployed, sets the initial value of the string variable stored on-chain to “Hello”. The setGreeting function adds the `_greeting` provided to the greeting, but a transaction needs to be sent, which modifies the stored data. Lastly, the `greet` function retrieves the stored value.
+
+### Compile the smart contract [​](https://dev.rootstock.io/developers/quickstart/web3-python/\#compile-the-smart-contract "Direct link to Compile the smart contract")
+
+We will create a script that uses the Solidity compiler to output the bytecode and interface (ABI) for the `Greeter.sol` contract. To get started, we will create a `compile.py` file by running:
+
+```codeBlockLines_e6Vv
+touch compile.py
+
+```
+
+Next, we will create the script for this file and complete the following steps:
+Import the `solcx` package, which will compile the source code
+Compile the `Greeter.sol` contract using the `solcx.compile_files` function
+Export the contract's ABI and bytecode
+
+Code and paste the code below into `compile.py`;
+
+```codeBlockLines_e6Vv
+import solcx
+solcx.install_solc('0.8.25')
+
+# Compile contract
+temp_file = solcx.compile_files(
+    'Greeter.sol',
+    output_values=['abi', 'bin'],
+    solc_version='0.8.25'
+)
+
+# Export contract data
+abi = temp_file['Greeter.sol:Greeter']['abi']
+bytecode = temp_file['Greeter.sol:Greeter']['bin']
+
+```
+
+You can now run the script to compile the contract:
+
+```codeBlockLines_e6Vv
+python compile.py
+
+```
+
+### Deploy the smart contract [​](https://dev.rootstock.io/developers/quickstart/web3-python/\#deploy-the-smart-contract "Direct link to Deploy the smart contract")
+
+With the script for compiling the `Greeter.sol` contract in place, you can then use the results to send a signed transaction that deploys it. To do so, you can create a file for the deployment script called `deploy.py`:
+
+```codeBlockLines_e6Vv
+touch deploy.py
+
+```
+
+Next, you will create the script for this file and complete the following steps:
+
+1. Add imports, including `Web3.py` and the ABI and bytecode of the `Greeter.sol` contract
+2. Set up the Web3 provider
+
+In order to set up the Web3 Provider, we have to read the environment variables that we previously added to the .env file.
+
+```codeBlockLines_e6Vv
+# Add the Web3 Provider
+RPC_PROVIDER_APIKEY = os.getenv('RPC_PROVIDER_APIKEY')
+RPC_PROVIDER_URL = 'https://rpc.testnet.rootstock.io/' + RPC_PROVIDER_APIKEY
+web3 = Web3(Web3.HTTPProvider(RPC_PROVIDER_URL))
+
+```
+
+3. Define the `account_from`. The private key is required to sign the transaction. Note: This is for example purposes only. Never store your private keys in your code
+
+```codeBlockLines_e6Vv
+# Set the default account
+PRIVATE_KEY = os.getenv('ACCOUNT_PRIVATE_KEY')
+account_from = {
+    'private_key': PRIVATE_KEY,
+    'address': web3.eth.account.from_key(PRIVATE_KEY).address
+}
+
+```
+
+4. Create a contract instance using the `web3.eth.contract` function and passing in the ABI and bytecode of the contract
+5. Set the [gas price strategy](https://web3py.readthedocs.io/en/stable/gas_price.html#gas-price) using the `web3.eth.set_gas_price_strategy` function, which will allow us to fetch the gasPrice from the RPC Provider. This is important because otherwise the Web3 library will attempt to use `eth_maxPriorityFeePerGas` and `eth_feeHistory` RPC methods, which are only supported by post-London Ethereum nodes.
+6. Build a constructor transaction using the contract instance. You will then use the `build_transaction` function to pass in the transaction information including the `from` address and the `nonce` for the sender. To get the `nonce` you can use the `web3.eth.get_transaction_count` function
+7. Sign the transaction using the `web3.eth.account.sign_transaction` function and pass in the constructor transaction and the `private_key` of the sender
+8. Using the signed transaction, you can then send it using the `web3.eth.send_raw_transaction` function and wait for the transaction receipt by using the `web3.eth.wait_for_transaction_receipt` function
+
+Code and paste the code below into `deploy.py`;
+
+```codeBlockLines_e6Vv
+from compile import abi, bytecode
+from web3 import Web3
+from web3.gas_strategies.rpc import rpc_gas_price_strategy
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+# Add the Web3 Provider
+RPC_PROVIDER_APIKEY = os.getenv('RPC_PROVIDER_APIKEY')
+RPC_PROVIDER_URL = 'https://rpc.testnet.rootstock.io/' + RPC_PROVIDER_APIKEY
+web3 = Web3(Web3.HTTPProvider(RPC_PROVIDER_URL))
+
+# Set the default account
+PRIVATE_KEY = os.getenv('ACCOUNT_PRIVATE_KEY')
+account_from = {
+    'private_key': PRIVATE_KEY,
+    'address': web3.eth.account.from_key(PRIVATE_KEY).address
+}
+
+print("Attempting to deploy from account: ", account_from['address'])
+
+# Create contract instance
+Greeter = web3.eth.contract(abi=abi, bytecode=bytecode)
+
+# Set the gas price strategy
+web3.eth.set_gas_price_strategy(rpc_gas_price_strategy)
+
+# Build the transaction
+construct_txn = Greeter.constructor().build_transaction({
+    'from': account_from['address'],
+    'nonce': web3.eth.get_transaction_count(account_from['address']),
+    'gasPrice': web3.eth.generate_gas_price()
+})
+
+# Sign the transaction that deploys the contract
+signed_txn = web3.eth.account.sign_transaction(construct_txn, account_from['private_key'])
+
+# Send the transaction that deploys the contract
+txn_hash = web3.eth.send_raw_transaction(signed_txn.rawTransaction)
+
+# Wait for the transaction to be mined, and get the transaction receipt
+txn_receipt = web3.eth.wait_for_transaction_receipt(txn_hash)
+print(f"Transaction successful with hash: { txn_receipt.transactionHash.hex() }")
+print(f"Contract deployed at address: { txn_receipt.contractAddress }")
+
+```
+
+Now you can run the script and get the result.
+
+```codeBlockLines_e6Vv
+python deploy.py
+
+>> Attempting to deploy from account:  0x3b32a6463Bd0837fBF428bbC2A4c8B4c022e5077
+>> Transaction successful with hash: 0x98a256c106bdb65e4de6a267e94000acdfe0d6f23c3dc1444f14dccf00713a69
+>> Contract deployed at address: 0xba39f329255d55a0276c695111b2edc9250C2341
+
+```
+
+Note: Save the contract address, as we will use it later in the guide.
+
+## Interact with a smart contract [​](https://dev.rootstock.io/developers/quickstart/web3-python/\#interact-with-a-smart-contract "Direct link to Interact with a smart contract")
+
+### Read Contract Data (Call Methods) [​](https://dev.rootstock.io/developers/quickstart/web3-python/\#read-contract-data-call-methods "Direct link to Read Contract Data (Call Methods)")
+
+Call methods are the type of interaction that don't modify the contract's storage (change variables), meaning no transaction needs to be sent. They simply read various storage variables of the deployed contract.
+
+To get started, you can create a file and name it `getMessage.py`:
+
+```codeBlockLines_e6Vv
+touch getMessage.py
+
+```
+
+Then you can take the following steps to create the script:
+
+1. Add imports, including `Web3.py` and the ABI of the `Greeter.sol` contract
+2. Set up the Web3 provider and replace YOUR\_APIKEY
+3. De fine the `contract_address` of the deployed contract
+4. Create a contract instance using the `web3.eth.contract` function and passing in the ABI and address of the deployed contract
+5. Using the contract instance, you can then call the `greet` function
+
+Code and paste the code below into `getMessage.py`;
+
+```codeBlockLines_e6Vv
+from compile import abi
+from web3 import Web3
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+# Add the Web3 Provider
+RPC_PROVIDER_APIKEY = os.getenv('RPC_PROVIDER_APIKEY')
+RPC_PROVIDER_URL = 'https://rpc.testnet.rootstock.io/' + RPC_PROVIDER_APIKEY
+web3 = Web3(Web3.HTTPProvider(RPC_PROVIDER_URL))
+
+# Create address variable (use the address of the contract you just deployed)
+contract_address = '0xba39f329255d55a0276c695111b2edc9250C2341'
+
+print(f"Making a call to contract at address: { contract_address }")
+
+# Create contract instance
+Greeter = web3.eth.contract(address=contract_address, abi=abi)
+
+# Call the contract
+call_result = Greeter.functions.greet().call()
+print(f"Contract returned: { call_result }")
+
+```
+
+If successful, the response will be displayed in the terminal:
+
+```codeBlockLines_e6Vv
+python getMessage.py
+
+>> Making a call to contract at address: 0xba39f329255d55a0276c695111b2edc9250C2341
+>> Contract returned: Hello
+
+```
+
+### Write data to the contract (Write Methods) [​](https://dev.rootstock.io/developers/quickstart/web3-python/\#write-data-to-the-contract-write-methods "Direct link to Write data to the contract (Write Methods)")
+
+Write methods are the type of interaction that modify the contract's storage (change variables), meaning a transaction needs to be signed and sent. In this section, you'll create the script to change the text stored in the Greeter contract.
+
+To get started, you can create a file for the script and name it `setMessage.py`:
+
+```codeBlockLines_e6Vv
+touch setMessage.py
+
+```
+
+Open the `setMessage.py` file and take the following steps to create the script:
+
+1. Add imports, including Web3.py and the ABI of the Incrementer.sol contract
+2. Set up the Web3 provider
+3. Define the `account_from` variable, including the `private_key`, and the `contract_address` of the deployed contract. The private key is required to sign the transaction. Note: This is for example purposes only. Never store your private keys in your code
+4. Create a contract instance using the `web3.eth.contract` function and passing in the ABI and address of the deployed contract
+5. Set the gas price strategy using the `web3.eth.set_gas_price_strategy` function, which will allow us to fetch the gasPrice from the RPC Provider. This is important because otherwise the Web3 library will attempt to use `eth_maxPriorityFeePerGas` and `eth_feeHistory` RPC methods, which are only supported by post-London Ethereum nodes.
+6. Build the `setGreeting` transaction using the contract instance and passing in the new message. You'll then use the `build_transaction` function to pass in the transaction information including the `from` address and the `nonce` for the sender. To get the `nonce` you can use the `web3.eth.get_transaction_count` function
+7. Sign the transaction using the `web3.eth.account.sign_transaction` function and pass in the `setGreeting` transaction and the `private_key` of the sender
+8. Using the signed transaction, you can then send it using the `web3.eth.send_raw_transaction` function and wait for the transaction receipt by using the `web3.eth.wait_for_transaction_receipt` function
+
+Code and paste the code below into `setMessage.py`;
+
+```codeBlockLines_e6Vv
+from compile import abi
+from web3 import Web3
+from web3.gas_strategies.rpc import rpc_gas_price_strategy
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+# Add the Web3 Provider
+RPC_PROVIDER_APIKEY = os.getenv('RPC_PROVIDER_APIKEY')
+RPC_PROVIDER_URL = 'https://rpc.testnet.rootstock.io/' + RPC_PROVIDER_APIKEY
+web3 = Web3(Web3.HTTPProvider(RPC_PROVIDER_URL))
+
+# Set the default account
+PRIVATE_KEY = os.getenv('ACCOUNT_PRIVATE_KEY')
+account_from = {
+    'private_key': PRIVATE_KEY,
+    'address': web3.eth.account.from_key(PRIVATE_KEY).address
+}
+
+# Create address variable
+contract_address = '0xba39f329255d55a0276c695111b2edc9250C2341'
+
+# Create contract instance
+Greeter = web3.eth.contract(address=contract_address, abi=abi)
+
+# Set the gas price strategy
+web3.eth.set_gas_price_strategy(rpc_gas_price_strategy)
+
+# Build the transaction
+txn = Greeter.functions.setGreeting('Hello, World!').build_transaction({
+    'from': account_from['address'],
+    'nonce': web3.eth.get_transaction_count(account_from['address']),
+    'gasPrice': web3.eth.generate_gas_price()
+})
+
+# Sign the transaction
+signed_txn = web3.eth.account.sign_transaction(txn, account_from['private_key'])
+
+# Send the transaction
+txn_hash = web3.eth.send_raw_transaction(signed_txn.rawTransaction)
+txn_receipt = web3.eth.wait_for_transaction_receipt(txn_hash)
+
+print(f"Transaction successful with hash: { txn_receipt.transactionHash.hex() }")
+
+```
+
+If successful, the transaction hash will be displayed in the terminal.
+
+```codeBlockLines_e6Vv
+python setMessage.py
+
+>> Transaction successful with hash: 0x95ba4e13269aba8e51c3037270c0ee90f4872c36e076fc94e51226c1597f6d86
+
+```
+
+You can now run the `getMessage.py` script to get the new value stored at the contract.
+
+```codeBlockLines_e6Vv
+python getMessage.py
+
+>> Making a call to contract at address: 0xba39f329255d55a0276c695111b2edc9250C2341
+>> Contract returned: Hello, World!
+
+```
+
+## Sending transactions [​](https://dev.rootstock.io/developers/quickstart/web3-python/\#sending-transactions "Direct link to Sending transactions")
+
+Here you will understand how to check the balance of an account, and how to send `tRBTC` from one account to another.
+
+### Check the balance of an account [​](https://dev.rootstock.io/developers/quickstart/web3-python/\#check-the-balance-of-an-account "Direct link to Check the balance of an account")
+
+Here you will create a script that checks the balance of an account.
+First, start by creating a file for the script.
+
+```codeBlockLines_e6Vv
+touch balances.py
+
+```
+
+Next, you will create the script for this file and complete the following steps:
+
+1. Set up the Web3 provider
+2. Define the `address_from` and `address_to` variables
+3. Get the balance for the accounts using the `web3.eth.get_balance` function and format the 3. results using the `web3.from_wei`
+
+Code and paste the code below into `balances.py`;
+
+```codeBlockLines_e6Vv
+from web3 import Web3
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+# Add the Web3 Provider
+RPC_PROVIDER_APIKEY = os.getenv('RPC_PROVIDER_APIKEY')
+RPC_PROVIDER_URL = 'https://rpc.testnet.rootstock.io/' + RPC_PROVIDER_APIKEY
+web3 = Web3(Web3.HTTPProvider(RPC_PROVIDER_URL))
+
+# Create address variables
+address_from = '0x3b32a6463Bd0837fBF428bbC2A4c8B4c022e5077'
+address_to = '0xcff73226883c1cE8b3bcCc28E45c3c92C843485c'
+
+# Get the balance of the sender
+balance_from = web3.from_wei(web3.eth.get_balance(address_from), 'ether')
+print(f"Balance of sender address {address_from}: { balance_from } TRBTC")
+
+# Get the balance of the receiver
+balance_to = web3.from_wei(web3.eth.get_balance(address_to), 'ether')
+print(f"Balance of receiver address {address_to}: { balance_to } TRBTC")
+
+```
+
+Run the script:
+
+```codeBlockLines_e6Vv
+python balances.py
+
+# >> Balance of sender address 0x3b32a6463Bd0837fBF428bbC2A4c8B4c022e5077: 0.192538506119378425 TRBTC
+# >> Balance of receiver address 0xcff73226883c1cE8b3bcCc28E45c3c92C843485c: 0.407838671951567233 TRBTC
+
+```
+
+### Send TRBTC [​](https://dev.rootstock.io/developers/quickstart/web3-python/\#send-trbtc "Direct link to Send TRBTC")
+
+Here you will create a script to send tRBTC from one account to another.
+First, start by creating a file for the script.
+
+```codeBlockLines_e6Vv
+touch transaction.py
+
+```
+
+Next, you will create the script for this file and complete the following steps:
+
+1. Add imports, including `Web3.py` and the `rpc_gas_price_strategy`, which will be used in the following steps to get the gas price used for the transaction
+2. Set up the Web3 provider
+3. Define the `account_from`, including the `private_key`, and the `address_to` variables. The private key is required to sign the transaction. Note: This is for example purposes only. Never store your private keys in your code
+4. Use the `Web3.py` Gas Price API to set a gas price strategy. For this example, you'll use the imported `rpc_gas_price_strategy`. This is important because otherwise the Web3 library will attempt to use `eth_maxPriorityFeePerGas` and `eth_feeHistory` RPC methods, which are only supported by post-London Ethereum nodes.
+5. Create and sign the transaction using the `web3.eth.account.sign_transaction` function. Pass in the `nonce`, `gas`, `gasPrice`, `to`, and value for the transaction along with the sender's `private_key`. To get the `nonce` you can use the `web3.eth.get_transaction_count` function and pass in the sender's address. To predetermine the `gasPrice` you'll use the `web3.eth.generate_gas_price` function. For the value, you can format the amount to send from an easily readable format to Wei using the `web3.to_wei` function
+6. Using the signed transaction, you can then send it using the `web3.eth.send_raw_transaction` function and wait for the transaction receipt by using the `web3.eth.wait_for_transaction_receipt` function
+
+Code and paste the code below into `transaction.py`;
+
+```codeBlockLines_e6Vv
+from web3 import Web3
+from web3.gas_strategies.rpc import rpc_gas_price_strategy
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+# Add the Web3 Provider
+RPC_PROVIDER_APIKEY = os.getenv('RPC_PROVIDER_APIKEY')
+RPC_PROVIDER_URL = 'https://rpc.testnet.rootstock.io/' + RPC_PROVIDER_APIKEY
+web3 = Web3(Web3.HTTPProvider(RPC_PROVIDER_URL))
+
+# Set the default account
+PRIVATE_KEY = os.getenv('ACCOUNT_PRIVATE_KEY')
+account_from = {
+    'private_key': PRIVATE_KEY,
+    'address': web3.eth.account.from_key(PRIVATE_KEY).address
+}
+address_to = '0xcff73226883c1cE8b3bcCc28E45c3c92C843485c'
+
+print(f"Attempting to send transaction from { account_from['address'] } to { address_to }")
+
+# Set the gas price strategy
+web3.eth.set_gas_price_strategy(rpc_gas_price_strategy)
+
+# Build the transaction
+txn = {
+    'to': address_to,
+    'value': web3.to_wei(0.0001, 'ether'),
+    'gas': 21000,
+    'gasPrice': web3.eth.generate_gas_price(),
+    'nonce': web3.eth.get_transaction_count(account_from['address'])
+}
+
+# Sign the transaction
+signed_txn = web3.eth.account.sign_transaction(txn, account_from['private_key'])
+
+# Send the transaction
+txn_hash = web3.eth.send_raw_transaction(signed_txn.rawTransaction)
+
+# Wait for the transaction to be mined, and get the transaction receipt
+txn_receipt = web3.eth.wait_for_transaction_receipt(txn_hash)
+print(f"Transaction successful with hash: { txn_receipt.transactionHash.hex() }")
+
+```
+
+Run the script:
+
+```codeBlockLines_e6Vv
+python transaction.py
+
+Attempting to send transaction from 0x112621448Eb148173d5b00edB14B1f576c58cCEE to 0xcff73226883c1cE8b3bcCc28E45c3c92C843485c
+Transaction successful with hash: 0x79ab8be672b0218d31f81876c34321ee7b08e6a4ec8bfff5249f70c443cbce00
+
+```
+
+## Summary [​](https://dev.rootstock.io/developers/quickstart/web3-python/\#summary "Direct link to Summary")
+
+In this guide, we learnt how to use the Web3.py library to deploy, interact with a smart contract and send transactions on Rootstock.
+
+## Troubleshooting [​](https://dev.rootstock.io/developers/quickstart/web3-python/\#troubleshooting "Direct link to Troubleshooting")
+
+### 1\. Error message: eth\_sendTransaction method does not exist
+
+- When deploying a smart contract, or when trying to interact with it, you may receive the “method not found” message:
+
+```codeBlockLines_e6Vv
+    web3.exceptions.MethodUnavailable: {'code': -32601, 'message': 'The method eth_sendTransaction does not exist/is not available. See available methods at https://dev.rootstock.io/developers/rpc-api/methods'}
+
+```
+
+- Note: The cause of the error on the deployment is that the Web3.py module is set to use the private keys of the RPC provider (Hosted Keys), which is a legacy way to use accounts, and is not supported by modern RPC providers, as they do not store private keys.
+- Methods like `web3.eth.send_transaction` do not work with RPC providers, because they rely on a node state and all modern nodes are stateless, which underneath make JSON-RPC calls to methods like `eth_accounts` and `eth_sendTransaction`. You must always use local private keys when working with nodes hosted by someone else.
+- If unfamiliar, note that you can [export your private keys from Metamask](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) and other wallets. Remember to never share your private keys, and do not put it on your code or repository.
+- In order to successfully deploy the contract, the developer needs to set up Web3.py to use his Local Private Keys, and to build and pre-sign the transaction before sending it, so the module uses `eth_sendRawTransaction` instead.
+- To allow Web3.py to use the local keys, we have to use the Signing middleware to add the Private Key to the signing keychain.
+
+```codeBlockLines_e6Vv
+    import os
+    from eth_account import Account
+    from eth_account.signers.local import LocalAccount
+    from web3 import Web3, EthereumTesterProvider
+    from web3.middleware import construct_sign_and_send_raw_middleware
+
+    w3 = Web3(EthereumTesterProvider())
+
+    private_key = os.environ.get("PRIVATE_KEY")
+    assert private_key is not None, "You must set PRIVATE_KEY environment variable"
+    assert private_key.startswith("0x"), "Private key must start with 0x hex prefix"
+
+    account: LocalAccount = Account.from_key(private_key)
+    w3.middleware_onion.add(construct_sign_and_send_raw_middleware(account))
+
+    print(f"Your hot wallet address is {account.address}")
+
+```
+
+- Now you can use web3.eth.send\_transaction(), Contract.functions.xxx.transact() functions with your local private key through middleware and you no longer get the error "ValueError: The method eth\_sendTransaction does not exist/is not available.
+
+### 2\. Error message: eth\_feeHistory or eth\_maxPriorityFeePerGas method does not exist
+
+- Web3.js will try to use these methods because the Ethereum London fork introduced `maxFeePerGas` and `maxPriorityFeePerGas` transaction parameters that can be used instead of `gasPrice`, which Rootstock uses. For that reason, we have to define Web3’s behavior for populating the gas price. This is done using a “Gas Price Strategy” - a method which takes the Web3 object and a transaction dictionary and returns a gas price (denominated in wei).
+- A gas price strategy is implemented as a python method with the following signature, and by setting the gas price strategy by calling [set\_gas\_price\_strategy()](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.set_gas_price_strategy).
+  - Setting a specific gas price:
+
+```codeBlockLines_e6Vv
+  from web3 import Web3, HTTPProvider
+
+  # specify Gas Price in wei
+  GAS_PRICE = 60000000
+
+  def gas_price_strategy(web3, transaction_params=None):
+      return GAS_PRICE
+
+  # set the gas price strategy
+  w3.eth.set_gas_price_strategy(gas_price_strategy)
+
+```
+
+- Using `eth_gasPrice` method:
+- Makes a call to the [JSON-RPC eth\_gasPrice method](https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_gasprice) which returns the gas price configured by the connected Ethereum node.
+
+```codeBlockLines_e6Vv
+    from web3.gas_strategies.rpc import rpc_gas_price_strategy
+    from web3 import Web3, HTTPProvider
+
+    RPC_PROVIDER = 'https://rpc.testnet.rootstock.io/{API_KEY}'
+
+    w3 = Web3(HTTPProvider(RPC_PROVIDER))
+    w3.eth.set_gas_price_strategy(rpc_gas_price_strategy)
+
+    gasPrice = w3.eth.generate_gas_price()
+
+    print('gasPrice: ', gasPrice)
+
+```
+
+#### Resources [​](https://dev.rootstock.io/developers/quickstart/web3-python/\#resources "Direct link to Resources")
+
+- [Web3.py: Gas Price Strategy](https://web3py.readthedocs.io/en/stable/gas_price.html#gas-price)
+- [Infura: eth\_accounts](https://docs.infura.io/api/networks/ethereum/json-rpc-methods/eth_accounts)
+- [Infura: eth\_sendTransaction](https://docs.infura.io/api/networks/ethereum/json-rpc-methods/eth_sendtransaction)
+- [Web3.py: Working with Local Private Keys](https://web3py.readthedocs.io/en/stable/web3.eth.account.html#working-with-local-private-keys)
+- [Web3.py: Contract Deployment Example](https://web3py.readthedocs.io/en/stable/web3.contract.html)
+- [Web3.py: Sign a Contract Transaction](https://web3py.readthedocs.io/en/stable/providers.html)
+- [Web3.py: Setting up an RPC Provider](https://web3py.readthedocs.io/en/stable/providers.html)
+
+Last updated on **Jul 10, 2025** by **Owanate Amachree**
+
+#### On this page
+
+- [Prerequisites](https://dev.rootstock.io/developers/quickstart/web3-python/#prerequisites)
+  - [Set Up Secrets for the Project](https://dev.rootstock.io/developers/quickstart/web3-python/#set-up-secrets-for-the-project)
+- [Deploy a smart contract](https://dev.rootstock.io/developers/quickstart/web3-python/#deploy-a-smart-contract)
+  - [Write the smart contract](https://dev.rootstock.io/developers/quickstart/web3-python/#write-the-smart-contract)
+  - [Compile the smart contract](https://dev.rootstock.io/developers/quickstart/web3-python/#compile-the-smart-contract)
+  - [Deploy the smart contract](https://dev.rootstock.io/developers/quickstart/web3-python/#deploy-the-smart-contract)
+- [Interact with a smart contract](https://dev.rootstock.io/developers/quickstart/web3-python/#interact-with-a-smart-contract)
+  - [Read Contract Data (Call Methods)](https://dev.rootstock.io/developers/quickstart/web3-python/#read-contract-data-call-methods)
+  - [Write data to the contract (Write Methods)](https://dev.rootstock.io/developers/quickstart/web3-python/#write-data-to-the-contract-write-methods)
+- [Sending transactions](https://dev.rootstock.io/developers/quickstart/web3-python/#sending-transactions)
+  - [Check the balance of an account](https://dev.rootstock.io/developers/quickstart/web3-python/#check-the-balance-of-an-account)
+  - [Send TRBTC](https://dev.rootstock.io/developers/quickstart/web3-python/#send-trbtc)
+- [Summary](https://dev.rootstock.io/developers/quickstart/web3-python/#summary)
+- [Troubleshooting](https://dev.rootstock.io/developers/quickstart/web3-python/#troubleshooting)
+
+#### More
+
+- [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/02-developers/04-quickstart/web3-python.md)
+- [Report an Issue](https://github.com/rsksmart/devportal/issues)
+- [Join the Community](http://discord.gg/rootstock)
+- [Changelog](https://dev.rootstock.io/changelog/)
+- Request an Article
+
+#### Feedback
+
+[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io/developers/quickstart/web3-python/ "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io/developers/quickstart/web3-python/ "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io/developers/quickstart/web3-python/ "Share on Linkedin")
+
+Copy page link
+
+Back to top
+
+281.68M
+
+<|firecrawl-page-5-lllmstxt|>
+## Rootstock Developer Resources
+[Skip to main content](https://dev.rootstock.io/developers/#__docusaurus_skipToContent_fallback)
+
+[📣 Hacktivator 2.0 is now closed! Hacktivator 3.0 is coming soon. Stay tuned!](https://dev.rootstock.io/resources/contribute/hacktivator/)
+
+[Home](https://dev.rootstock.io/) [Concepts](https://dev.rootstock.io/concepts/) [Developers](https://dev.rootstock.io/developers/) [Node Operators](https://dev.rootstock.io/node-operators/) [Resources](https://dev.rootstock.io/resources/) [Dev Tools](https://dev.rootstock.io/dev-tools/)
+
+Time to read: 1 min
+
+On this page
+
+Welcome to the Rootstock Developers Overview section.
+
+This section enables developers getting started with the Rootstock blockchain. Developers can install a local development environment using Hardhat, etc, create and test contracts with the libraries provided and use the libraries to build decentralized applications
+
+Info
+
+- Looking to quickly test your dApp on testnet before deploying to mainnet? Use the [Rootstock RPC API](https://rpc.rootstock.io/) or view the [json-rpc methods](https://dev.rootstock.io/developers/rpc-api/rootstock/methods/) available on the RPC API.
+- Dive right in with [step-by-step guides](https://dev.rootstock.io/developers/quickstart/) to get your development environment set up and deploy your first dApp.
+
+## Navigating the Developer Section [​](https://dev.rootstock.io/developers/\#navigating-the-developer-section "Direct link to Navigating the Developer Section")
+
+| Resource | Description |
+| --- | --- |
+| [Hardware Requirements](https://dev.rootstock.io/developers/requirements/) | Set up your local environment. |
+| [Blockchain Essentials](https://dev.rootstock.io/developers/blockchain-essentials/) | Rootstock Blockchain Essentials. |
+| [Quick Starts](https://dev.rootstock.io/developers/quickstart/) | Dive right in with step-by-step guides to get your development environment set up and deploy your first dApp. |
+| [Smart Contract Development](https://dev.rootstock.io/developers/smart-contracts/) | Explore in-depth resources on building secure and scalable smart contracts on Rootstock. |
+| [Integration Guides](https://dev.rootstock.io/developers/integrate/) | Deepen your knowledge with detailed guides and informative tutorials that cover various aspects of Rootstock development. |
+| [JSON-RPC](https://dev.rootstock.io/developers/rpc-api/) | Test your dApps on testnet in minutes before deploying to mainnet using RPC API providers on Rootstock. |
+| [Libraries](https://dev.rootstock.io/developers/libraries/) | Access essential tools and libraries to streamline your development process. |
+| [Use Cases](https://dev.rootstock.io/developers/use-cases/) | Explore Rootstock dApp use case guides and tutorials for building DeFi on Bitcoin, AI, and cross-chain solutions. |
+
+Last updated on **Jun 26, 2025** by **Owanate Amachree**
+
+#### On this page
+
+- [Navigating the Developer Section](https://dev.rootstock.io/developers/#navigating-the-developer-section)
+
+#### More
+
+- [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/02-developers/index.md)
+- [Report an Issue](https://github.com/rsksmart/devportal/issues)
+- [Join the Community](http://discord.gg/rootstock)
+- [Changelog](https://dev.rootstock.io/changelog/)
+- Request an Article
+
+#### Feedback
+
+[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io/developers/ "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io/developers/ "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io/developers/ "Share on Linkedin")
+
+Copy page link
+
+Back to top
+
+281.68M
+
+<|firecrawl-page-6-lllmstxt|>
+## Configure Merged Mining
+[Skip to main content](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/#__docusaurus_skipToContent_fallback)
+
+[📣 Hacktivator 2.0 is now closed! Hacktivator 3.0 is coming soon. Stay tuned!](https://dev.rootstock.io/resources/contribute/hacktivator/)
+
+[Home](https://dev.rootstock.io/) [Concepts](https://dev.rootstock.io/concepts/) [Developers](https://dev.rootstock.io/developers/) [Node Operators](https://dev.rootstock.io/node-operators/) [Resources](https://dev.rootstock.io/resources/) [Dev Tools](https://dev.rootstock.io/dev-tools/)
+
+Time to read: 3 min
+
+On this page
+
+## Command Line Interface [​](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/\#command-line-interface "Direct link to Command Line Interface")
+
+The Rootstock node can be started with different
+[CLI flags](https://dev.rootstock.io/node-operators/setup/configuration/cli/).
+
+## Setting config preferences [​](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/\#setting-config-preferences "Direct link to Setting config preferences")
+
+See how to set your config:
+
+- [Using Ubuntu or Docker](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/#using-ubuntu-or-docker)
+- [Using the `java` command](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/#using-java-command)
+
+… to run the node.
+
+Tip
+
+You need to **restart** the node if you've changed any configuration option.
+
+### Using Ubuntu or Docker [​](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/\#using-ubuntu-or-docker "Direct link to Using Ubuntu or Docker")
+
+Your node's config file is in `/etc/rsk`.
+Default configurations are defined there and they are the same as [these ones](https://github.com/rsksmart/artifacts/tree/master/rskj-ubuntu-installer/config).
+
+You should edit the config related with the network you are using ( `mainnet.conf`, `testnet.conf`, `regtest.conf`).
+Check [here](https://dev.rootstock.io/node-operators/setup/configuration/reference/) all the configuration options you could change.
+
+### Using Windows [​](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/\#using-windows "Direct link to Using Windows")
+
+For other operating systems, including Windows, please use the `-Drsk.conf.file` option as specified below.
+
+### Using `java` command [​](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/\#using-java-command "Direct link to using-java-command")
+
+#### 1\. Create a `.conf` file [​](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/\#1-create-a-conf-file "Direct link to 1-create-a-conf-file")
+
+You can create a file with the configuration options that you want to replace from the default.
+Default configurations are defined [here](https://github.com/rsksmart/rskj/tree/master/rskj-core/src/main/resources/config).
+
+The extension of the file must be `.conf`.
+Check [/node-operators/setup/configuration/reference/](https://dev.rootstock.io/node-operators/setup/configuration/reference/) for all the configuration option.
+
+As an example, if you want to change the default `database directory`, your config file should only contain:
+
+```codeBlockLines_e6Vv
+database {
+    dir = /new/path/for/database
+    reset = false
+}
+
+```
+
+#### 2\. Specify your config file path [​](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/\#2-specify-your-config-file-path "Direct link to 2. Specify your config file path")
+
+To apply your configuration options, you need to set your own config file's path when you run your node.
+
+This can be done in two ways:
+
+- Running the node with the `java` command, add `-Drsk.conf.file=path/to/your/file.conf`
+- Compiling the node with IntelliJ, add to VM options: `-Drsk.conf.file=path/to/your/file.conf`
+
+### Using RocksDB [​](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/\#using-rocksdb "Direct link to Using RocksDB")
+
+Important Notice
+
+- Starting from [RSKj HOP v4.2.0](https://github.com/rsksmart/rskj/releases/tag/HOP-4.2.0), RocksDB is no longer experimental. As of the most recent version, RocksDB has now been made the default storage library, replacing LevelDB. This change was made to tackle maintainability and performance issues of LevelDB.
+- Previously, RSKj ran using [LevelDB](https://dbdb.io/db/leveldb) by default, with the option to switch to [RocksDB](http://rocksdb.org/). Now, RocksDB is the default storage option, aiming to enable higher performance within the RSKj nodes.
+
+#### Get Started [​](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/\#get-started "Direct link to Get Started")
+
+RSKj nodes run using RocksDB by default (See important info section). To switch back to LevelDB, modify the relevant RSKj config file ( `*.conf`) and set the config: `keyvalue.datasource=leveldb`.
+
+The `keyvalue.datasource` property in the config
+may only be either `rocksdb` or `leveldb`.
+
+> If you wish to switch between the different storage options,
+> for example from `leveldb` to `rocksdb` or vice versa,
+> you must **restart** the node with the import option.
+
+The following sample command shows how to do this when
+the RSKj node was previously running the default ( `leveldb`),
+and wants to run with `rocksdb` next.
+
+> Note the use of the `--import` flag, which resets and re-imports the database.
+
+```codeBlockLines_e6Vv
+java -Dkeyvalue.datasource=rocksdb -jar ./rskj-core/build/libs/rskj-core-*-all.jar --testnet --import
+
+```
+
+#### Advantages: [​](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/\#advantages "Direct link to Advantages:")
+
+- RocksDB uses a log structured database engine, written entirely in C++, for maximum performance. Keys and values are just arbitrarily-sized byte streams.
+- RocksDB is optimized for fast, low latency storage such as flash drives and high-speed disk drives. RocksDB exploits the full potential of high read/write rates offered by flash or RAM.
+- RocksDB is adaptable to different workloads. From database storage engines such as [MyRocks](https://github.com/facebook/mysql-5.6) to [application data caching](http://techblog.netflix.com/2016/05/application-data-caching-using-ssds.html) to embedded workloads, RocksDB can be used for a variety of data needs.
+- RocksDB provides basic operations such as opening and closing a database, reading and writing to more advanced operations such as merging and compaction filters.
+
+### Switching between DB Kinds\*\* [​](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/\#switching-between-db-kinds "Direct link to Switching between DB Kinds**")
+
+Switching between different types of databases in your system requires you to modify configuration files, drop the existing database, and restart your node so the node will start syncing from scratch using the new db kind.
+
+Info
+
+Nodes that were already running on LevelDB will continue to use LevelDB, and the same applies to RocksDB. However, all nodes setup from scratch will use RocksDB by default.
+
+### Gas Price Setting [​](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/\#gas-price-setting "Direct link to Gas Price Setting")
+
+The value returned by `eth_gasPrice` can be modified by setting a multiplier to
+be used while calculating the aforementioned gas price.
+
+This can be done by setting a numeric value on `rpc.gasPriceMultiplier` in the
+configuration file. Default value is `1.1`.
+
+### Troubleshooting [​](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/\#troubleshooting "Direct link to Troubleshooting")
+
+#### UDP port already in use [​](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/\#udp-port-already-in-use "Direct link to UDP port already in use")
+
+If you see the following error message,
+it means that RSKj is unable to bind to a particular port number,
+because prior to this, another process has already bound to the same port number.
+
+```codeBlockLines_e6Vv
+Exception in thread "UDPServer" co.rsk.net.discovery.PeerDiscoveryException: Discovery can't be started.
+        at co.rsk.net.discovery.UDPServer$1.run(UDPServer.java:65)
+Caused by: java.net.BindException: Address already in use: bind
+
+```
+
+To rectify this,
+change the value of `peer.port` in the config file,
+or add a `peer.port` flag to the command when you start RSKj.
+
+- Linux, Mac OSX
+- Windows
+
+```codeBlockLines_e6Vv
+ $ java -Dpeer.port=50505 -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start
+
+```
+
+Last updated on **Jun 26, 2025** by **Owanate Amachree**
+
+#### On this page
+
+- [Command Line Interface](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/#command-line-interface)
+- [Setting config preferences](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/#setting-config-preferences)
+  - [Using Ubuntu or Docker](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/#using-ubuntu-or-docker)
+  - [Using Windows](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/#using-windows)
+  - [Using `java` command](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/#using-java-command)
+  - [Using RocksDB](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/#using-rocksdb)
+  - [Switching between DB Kinds\*\*](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/#switching-between-db-kinds)
+  - [Gas Price Setting](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/#gas-price-setting)
+  - [Troubleshooting](https://dev.rootstock.io/node-operators/merged-mining/configure-mining/#troubleshooting)
+
+#### More
+
+- [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/03-node-operators/02-merged-mining/02-configure-mining/index.md)
+- [Report an Issue](https://github.com/rsksmart/devportal/issues)
+- [Join the Community](http://discord.gg/rootstock)
+- [Changelog](https://dev.rootstock.io/changelog/)
+- Request an Article
+
+#### Feedback
+
+[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io/node-operators/merged-mining/configure-mining/ "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io/node-operators/merged-mining/configure-mining/ "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io/node-operators/merged-mining/configure-mining/ "Share on Linkedin")
+
+Copy page link
+
+Back to top
+
+281.68M
+
+<|firecrawl-page-7-lllmstxt|>
+## Page
+[Skip to main content](https://dev.rootstock.io/resources/port-to-rootstock/#__docusaurus_skipToContent_fallback)
+
+[📣 Hacktivator 2.0 is now closed! Hacktivator 3.0 is coming soon. Stay tuned!](https://dev.rootstock.io/resources/contribute/hacktivator/)
+
+[Home](https://dev.rootstock.io/) [Concepts](https://dev.rootstock.io/concepts/) [Developers](https://dev.rootstock.io/developers/) [Node Operators](https://dev.rootstock.io/node-operators/) [Resources](https://dev.rootstock.io/resources/) [Dev Tools](https://dev.rootstock.io/dev-tools/)
+
+Time to read: 1 min
+
+- All
+- From Ethereum
+
+Ethereum
+
+### Port an Ethereum dApp to Rootstock
+
+Porting an Ethereum decentralized application (dApp) to Rootstock presents an exciting opportunity to leverage the benefits of the Rootstock network, which is a smart contract platform secured by the Bitcoin network.
+
+Last updated on **Jun 26, 2025** by **Owanate Amachree**
+
+#### More
+
+- [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/04-resources/05-port-to-rootstock/index.md)
+- [Report an Issue](https://github.com/rsksmart/devportal/issues)
+- [Join the Community](http://discord.gg/rootstock)
+- [Changelog](https://dev.rootstock.io/changelog/)
+- Request an Article
+
+#### Feedback
+
+[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io/resources/port-to-rootstock/ "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io/resources/port-to-rootstock/ "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io/resources/port-to-rootstock/ "Share on Linkedin")
+
+Copy page link
+
+Back to top
+
+281.68M
+
+<|firecrawl-page-8-lllmstxt|>
+## Page
+[Skip to main content](https://dev.rootstock.io/developers/smart-contracts/hardhat/troubleshooting/#__docusaurus_skipToContent_fallback)
+
+[📣 Hacktivator 2.0 is now closed! Hacktivator 3.0 is coming soon. Stay tuned!](https://dev.rootstock.io/resources/contribute/hacktivator/)
+
+[Home](https://dev.rootstock.io/) [Concepts](https://dev.rootstock.io/concepts/) [Developers](https://dev.rootstock.io/developers/) [Node Operators](https://dev.rootstock.io/node-operators/) [Resources](https://dev.rootstock.io/resources/) [Dev Tools](https://dev.rootstock.io/dev-tools/)
+
+Time to read: 1 min
+
+On this page
+
+This section provides help on some potential issues you may run into and tips on how to resolve them.
+
+## Errors [​](https://dev.rootstock.io/developers/smart-contracts/hardhat/troubleshooting/\#errors "Direct link to Errors")
+
+### Error HH8: There's one or more errors in your config file
+
+```codeBlockLines_e6Vv
+% npx hardhat compile
+Error HH8: There's one or more errors in your config file:
+
+* Invalid account: #0 for network: rskMainnet - Expected string, received undefined
+* Invalid account: #0 for network: rskTestnet - Expected string, received undefined
+
+To learn more about Hardhat's configuration, please go to https://hardhat.org/config/
+
+For more info go to https://hardhat.org/HH8 or run Hardhat with --show-stack-traces
+
+```
+
+> - FIX 1: Ensure the values in the environment variables matches with the hardhat network configuration `hardhat.config.js` file. For bash, run `source .env` in the root directory for dotenv to enable the environment variables.
+
+### Error: Nothing to Compile
+
+```codeBlockLines_e6Vv
+% npx hardhat compile
+Nothing to compile
+
+```
+
+> - FIX 2: Delete artifacts folder and run the `npx hardhat compile` command to generate new artifacts.
+
+### Error: "GET /MyToken.json" Error (404): "Not found"
+
+- Check that contracts were compiled successfully, and artifacts folder was generated.
+- Check that all the steps in [interacting with frontend](https://dev.rootstock.io/developers/smart-contracts/hardhat/interact-with-frontend/) were followed sequentially.
+
+### Error: HH601: Script scripts/deploy.js doesn't exist.
+
+- Ensure that you're running the `npx hardhat run --network hardhat scripts/deploy.js` command from the root directory.
+
+Last updated on **Jun 26, 2025** by **Owanate Amachree**
+
+#### On this page
+
+- [Errors](https://dev.rootstock.io/developers/smart-contracts/hardhat/troubleshooting/#errors)
+
+#### More
+
+- [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/02-developers/05-smart-contracts/02-hardhat/troubleshooting.md)
+- [Report an Issue](https://github.com/rsksmart/devportal/issues)
+- [Join the Community](http://discord.gg/rootstock)
+- [Changelog](https://dev.rootstock.io/changelog/)
+- Request an Article
+
+#### Feedback
+
+[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io/developers/smart-contracts/hardhat/troubleshooting/ "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io/developers/smart-contracts/hardhat/troubleshooting/ "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io/developers/smart-contracts/hardhat/troubleshooting/ "Share on Linkedin")
+
+Copy page link
+
+Back to top
+
+281.68M
+
+<|firecrawl-page-9-lllmstxt|>
+## Rootstock Blockchain Concepts
+[Skip to main content](https://dev.rootstock.io/concepts/#__docusaurus_skipToContent_fallback)
+
+[📣 Hacktivator 2.0 is now closed! Hacktivator 3.0 is coming soon. Stay tuned!](https://dev.rootstock.io/resources/contribute/hacktivator/)
+
+[Home](https://dev.rootstock.io/) [Concepts](https://dev.rootstock.io/concepts/) [Developers](https://dev.rootstock.io/developers/) [Node Operators](https://dev.rootstock.io/node-operators/) [Resources](https://dev.rootstock.io/resources/) [Dev Tools](https://dev.rootstock.io/dev-tools/)
+
+Time to read: 2 min
+
+On this page
+
+Rootstock is the first and longest-lasting Bitcoin sidechain. It is the only layer 2 solution that combines the security of Bitcoin's proof of work with Ethereum's smart contract capabilities. The platform is open-source, EVM-compatible, and secured by over 60% of Bitcoin’s hashing power, This robust security model empowers developers to build trustless, innovative dApps within a thriving ecosystem.
+
+This section equips you with the fundamental knowledge required to navigate the Rootstock blockchain. Familiarity with blockchain technology, Bitcoin, and smart contracts will be beneficial as you navigate deeper.
+
+## Navigating Core Concepts [​](https://dev.rootstock.io/concepts/\#navigating-core-concepts "Direct link to Navigating Core Concepts")
+
+| Resource | Description |
+| --- | --- |
+| [Rootstock Blockchain Overview](https://dev.rootstock.io/concepts/fundamentals/) | Gain a comprehensive understanding of the Rootstock platform. |
+| [Rootstock Stack](https://dev.rootstock.io/concepts/fundamentals/stack/) | Learn about how Rootstock combines the security of Bitcoin PoW with Ethereum's smart contract functionality. |
+| [Glossary](https://dev.rootstock.io/concepts/glossary/) | This glossary provides essential definitions for key terms related to Rootstock and blockchain technology. |
+| [RBTC Token](https://dev.rootstock.io/concepts/rbtc/) | The RBTC token fuels transactions on the Rootstock network. Converting BTC to RBTC is straightforward using various methods. Visit the RBTC section for a comprehensive list of exchanges and applications facilitating RBTC acquisition. Visit the [RBTC section](https://rootstock.io/rbtc/) for a list of exchanges and apps to get RBTC. |
+| [RIF Suite](https://dev.rootstock.io/concepts/rif-suite/) | Learn about the Rootstock Infrastructure Framework, a comprehensive set of Open-source tools and technologies designed to streamline and incentivize development on Bitcoin. |
+| [Rootstock Security](https://dev.rootstock.io/concepts/powpeg/security-model/) | The Rootstock platform uses a security mechanism called the [Powpeg](https://dev.rootstock.io/concepts/powpeg/), it is based on a layered security model, called “defence-in-depth”. |
+| [Powpeg HSM Firmware](https://dev.rootstock.io/concepts/powpeg/hsm-firmware-attestation/) | Learn how to verify Powpeg nodes using the HSM Firmware Attestation. |
+| [Account Based Addresses](https://dev.rootstock.io/concepts/account-based-addresses/) | EIP-1191 chainId is used in Rootstock addresses as a checksum. m/44'/137'/0'/0 is the derivation path used for BIP-44 compatible wallets. |
+
+## Next Steps [​](https://dev.rootstock.io/concepts/\#next-steps "Direct link to Next Steps")
+
+Ready to embark on your Rootstock development journey? Explore these sections tailored to your specific interests:
+
+### Developers [​](https://dev.rootstock.io/concepts/\#developers "Direct link to Developers")
+
+The [Developers](https://dev.rootstock.io/developers/) section provides all the necessary guides and information for building secure and scalable dApps on Bitcoin with Rootstock. Leverage your existing knowledge of Solidity and tools like Rust, Hardhat, and Wagmi to deploy and scale your dApps on the pioneering layer 2 solution that combines the best of Bitcoin security and Ethereum Smart Contract capabilities.
+
+### Node Operators [​](https://dev.rootstock.io/concepts/\#node-operators "Direct link to Node Operators")
+
+Rootstock's [Merged mining](https://rootstock.io/mine-btc-with-rootstock/) offers bitcoin miners an additional revenue stream at no additional cost by using the same mining infrastructure and work to secure the Rootstock sidechain.
+
+The [Node Operators](https://dev.rootstock.io/node-operators/) section caters specifically to node miners and developers interested in running and managing a Rootstock node.
+
+### Developer Tools [​](https://dev.rootstock.io/concepts/\#developer-tools "Direct link to Developer Tools")
+
+The [tools](https://dev.rootstock.io/dev-tools/) section curates all the essential developer tools available on Rootstock. Find comprehensive resources on tool configuration, usage guides, reference materials, and informative tutorials.
+
+### Resources [​](https://dev.rootstock.io/concepts/\#resources "Direct link to Resources")
+
+Expand your knowledge base with the [comprehensive Resources](https://dev.rootstock.io/resources/) section. Explore tutorials, courses, FAQs, and valuable information on contributing to the Rootstock ecosystem.
+
+Last updated on **Jun 26, 2025** by **Owanate Amachree**
+
+#### On this page
+
+- [Navigating Core Concepts](https://dev.rootstock.io/concepts/#navigating-core-concepts)
+- [Next Steps](https://dev.rootstock.io/concepts/#next-steps)
+  - [Developers](https://dev.rootstock.io/concepts/#developers)
+  - [Node Operators](https://dev.rootstock.io/concepts/#node-operators)
+  - [Developer Tools](https://dev.rootstock.io/concepts/#developer-tools)
+  - [Resources](https://dev.rootstock.io/concepts/#resources)
+
+#### More
+
+- [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/01-concepts/index.md)
+- [Report an Issue](https://github.com/rsksmart/devportal/issues)
+- [Join the Community](http://discord.gg/rootstock)
+- [Changelog](https://dev.rootstock.io/changelog/)
+- Request an Article
+
+#### Feedback
+
+[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io/concepts/ "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io/concepts/ "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io/concepts/ "Share on Linkedin")
+
+Copy page link
+
+Back to top
+
+281.68M
+
+<|firecrawl-page-10-lllmstxt|>
+## Rootstock Developer Libraries
+[Skip to main content](https://dev.rootstock.io/developers/libraries/#__docusaurus_skipToContent_fallback)
+
+[📣 Hacktivator 2.0 is now closed! Hacktivator 3.0 is coming soon. Stay tuned!](https://dev.rootstock.io/resources/contribute/hacktivator/)
+
+[Home](https://dev.rootstock.io/) [Concepts](https://dev.rootstock.io/concepts/) [Developers](https://dev.rootstock.io/developers/) [Node Operators](https://dev.rootstock.io/node-operators/) [Resources](https://dev.rootstock.io/resources/) [Dev Tools](https://dev.rootstock.io/dev-tools/)
+
+### Pre-compiled ABIs
+
+Rootstock Pre-compiled ABIs.
+
+### RIF Wallet Libraries
+
+RIF Wallet is an open source smart contract wallet which enables businesses to create and deploy fully customizable on-chain wallets.
+
+### Bitcoin Transaction Solidity Helper Library
+
+This guide demonstrates to a developer how to handle Bitcoin transactions in a Solidity Smart contract, we will also learn how to parse transactions, hash transactions and validate scripts for bitcoin transactions.
+
+#### More
+
+- [Report an Issue](https://github.com/rsksmart/devportal/issues)
+- [Join the Community](http://discord.gg/rootstock)
+- [Changelog](https://dev.rootstock.io/changelog/)
+- Request an Article
+
+#### Feedback
+
+#### Share
+
+[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io/developers/libraries/ "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io/developers/libraries/ "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io/developers/libraries/ "Share on Linkedin")
+
+Copy page link
+
+[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io/developers/libraries/ "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io/developers/libraries/ "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io/developers/libraries/ "Share on Linkedin")
+
+Copy page link
+
+Back to top
+
+281.68M
+
+<|firecrawl-page-11-lllmstxt|>
+## Rootstock Changelog Updates
+[Skip to main content](https://dev.rootstock.io/changelog/#__docusaurus_skipToContent_fallback)
+
+[📣 Hacktivator 2.0 is now closed! Hacktivator 3.0 is coming soon. Stay tuned!](https://dev.rootstock.io/resources/contribute/hacktivator/)
+
+[Home](https://dev.rootstock.io/) [Concepts](https://dev.rootstock.io/concepts/) [Developers](https://dev.rootstock.io/developers/) [Node Operators](https://dev.rootstock.io/node-operators/) [Resources](https://dev.rootstock.io/resources/) [Dev Tools](https://dev.rootstock.io/dev-tools/)
+
+Back
+
+#### Filters
+
+Name AscendingName DescendingOlder FirstNewest First
+
+#### Filters
+
+releaselovellarrowhead
+
+# Changelog
+
+Stay informed about the latest product updates on Rootstock.
+
+## Summary [​](https://dev.rootstock.io/changelog/\#summary "Direct link to Summary")
+
+The latest version of the [RSKj client - Lovell 7.2.0](https://github.com/rsksmart/rskj/releases/tag/LOVELL-7.2.0) includes improvements to Ethereum compatibility, specifically in how the RSKj node handles the logIndex field, which indicates the position of a log entry within a transaction receipt’s list of logs. It also introduces the state override feature, enabling developers to simulate transactions with custom account code, storage, or balances during an eth\_call, without altering the actual blockchain state.
+
+Tip
+
+⚠️ Although this upgrade is optional, we strongly recommend updating your node to take advantage of the latest performance and security improvements.
+
+## What changes are included in Lovell 7.2.0? [​](https://dev.rootstock.io/changelog/\#what-changes-are-included-in-lovell-720 "Direct link to What changes are included in Lovell 7.2.0?")
+
+Here’s a summary of the most notable changes in this version:
+
+- **LogIndex compatibility enhancement:** Aligned logIndex handling with Ethereum clients by making it block-relative.
+- **State override feature:** introduced the state override feature, enabling developers to simulate transactions with custom account code, storage, or balances during an eth\_call, without altering the actual blockchain state.
+
+## Summary [​](https://dev.rootstock.io/changelog/\#summary "Direct link to Summary")
+
+The latest version of the [RSKj client - Lovell 7.1.0](https://github.com/rsksmart/rskj/releases/tag/LOVELL-7.1.0) introduces several enhancements, including the experimental Snap Synchronization mode, updates to the Fiat Stable MinGasPrice feature, and improvements to JSON-RPC API compatibility.
+
+Tip
+
+⚠️ Although this upgrade is optional, we strongly recommend updating your node to take advantage of the latest performance and security improvements.
+
+## What changes are included in Lovell 7.1.0? [​](https://dev.rootstock.io/changelog/\#what-changes-are-included-in-lovell-710 "Direct link to What changes are included in Lovell 7.1.0?")
+
+- \[Experimental\] Introduced SnapSync, a new fast synchronization mode designed to accelerate node bootstrapping.
+- Enhanced Fiat Stable MinGasPrice — added support for defining a valid minimum and maximum gas price range.
+- Improved upgrade awareness — added a warning message when a disabled network upgrade is detected.
+- JSON-RPC compatibility — added the `mixHash` and `nonce` fields to the block DTO, defaulting to zero for compatibility with Ethereum-based tools.
+- RLP validation enhancement — `RLP.getNextElementIndex` now throws an exception if an invalid pos value is provided.
+
+> Features marked as **\[Experimental\]** are disabled by default. These features require further validation or security reviews and may be changed or removed in future releases. If you’re unsure about their implications, we recommend leaving them disabled. See the [full changelog](https://github.com/rsksmart/rskj/compare/LOVELL-7.0.0...LOVELL-7.1.0).
+
+## Summary [​](https://dev.rootstock.io/changelog/\#summary "Direct link to Summary")
+
+The Rootstock community has approved the Lovell network upgrade, which includes consensus changes. Lovell will activate on Mainnet at block `7,338,024` by 12th March, 2025. Update your RSKj nodes to the latest version, available on the [RSKj GitHub repository](https://blog.rootstock.io/noticia/introducing-lovell-7-0-0/).
+
+## What changes are included in Lovell 7.0.0? [​](https://dev.rootstock.io/changelog/\#what-changes-are-included-in-lovell-700 "Direct link to What changes are included in Lovell 7.0.0?")
+
+The consensus changes included in this version are:
+
+- PowPeg Spendability Validation Protocol (RSKIP-419)
+- Express the amount value in wei for peg-out-related events (RSKIP-427)
+- New pegout creation event including UTXO outpoint values (RSKIP-428)
+- Limit the maximum size of initcode and apply extra gas cost for every 32-byte chunk of initcode (RSKIP-438)
+- and lots more...
+
+> Since consensus rules have changed, this release is incompatible with previous versions. If you are running earlier versions of the Rootstock client node and adhering to these changes, you must update to this new version. The Mainnet network upgrade will happen at block number 7,338,024. The Testnet network upgrade will happen at block number 6,110,487. If you are already running an RSKj node using a Docker image, please follow the instructions on the [releases page](https://github.com/rsksmart/rskj/releases). Note that this upgrade is MANDATORY.
+
+## Summary [​](https://dev.rootstock.io/changelog/\#summary "Direct link to Summary")
+
+The Rootstock community is pleased to announce the release of the latest version of the RSKj client, which is now available in the [RSKj GitHub repository](https://github.com/rsksmart/rskj/releases/tag/ARROWHEAD-6.5.0). This update features new debugging methods and other improvements to the JSON-RPC interface, designed to optimize the developer experience.
+
+> Note that this upgrade is optional, however it is strongly recommended that users update their nodes to the latest version to benefit from enhanced performance and security.
+
+## Summary [​](https://dev.rootstock.io/changelog/\#summary "Direct link to Summary")
+
+The Rootstock community is pleased to announce the release of the latest version of the RSKj client, which is now available in the [RSKj GitHub repository](https://github.com/rsksmart/rskj/releases/tag/ARROWHEAD-6.4.0). This update introduces the **fiat-stable minimum gas price feature** (disabled by default), enabling mining pools to automatically adjust their minimum gas price configuration based on the price of Bitcoin. Additionally, it includes JSON-RPC interface improvements and dependency upgrades.
+
+> Note that this upgrade is optional, however it is strongly recommended that users update their nodes to the latest version to benefit from enhanced performance and security.
+
+## Summary [​](https://dev.rootstock.io/changelog/\#summary "Direct link to Summary")
+
+The Rootstock network will undergo a patch network upgrade on block 6,549,300. This mandatory upgrade fixes the PowPeg outage reported on June 24th; users who adhere to these changes must update their nodes to the latest version
+
+## Summary [​](https://dev.rootstock.io/changelog/\#summary "Direct link to Summary")
+
+The Rootstock community is pleased to announce the release of the latest version of the RSKj client, which is now available in the [RSKj GitHub repository](https://github.com/rsksmart/rskj/releases/tag/ARROWHEAD-6.3.0). This update mainly focuses on improving Ethereum compatibility at the JSON-RPC interface and enhancing the node’s performance.
+
+#### Feedback
+
+#### Share
+
+[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io/changelog/ "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io/changelog/ "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io/changelog/ "Share on Linkedin")
+
+Copy page link
+
+[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io/changelog/ "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io/changelog/ "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io/changelog/ "Share on Linkedin")
+
+Copy page link
+
+Back to top
+
+281.68M
+
+<|firecrawl-page-12-lllmstxt|>
+## Page
+[Skip to main content](https://dev.rootstock.io/developers/smart-contracts/hardhat/create-hardhat-project/#__docusaurus_skipToContent_fallback)
+
+[📣 Hacktivator 2.0 is now closed! Hacktivator 3.0 is coming soon. Stay tuned!](https://dev.rootstock.io/resources/contribute/hacktivator/)
+
+[Home](https://dev.rootstock.io/) [Concepts](https://dev.rootstock.io/concepts/) [Developers](https://dev.rootstock.io/developers/) [Node Operators](https://dev.rootstock.io/node-operators/) [Resources](https://dev.rootstock.io/resources/) [Dev Tools](https://dev.rootstock.io/dev-tools/)
+
+Time to read: 1 min
+
+On this page
+
+In this section, you will learn how to create a hardhat project and verify hardhat installation.
+
+## Clone the Project Repository [​](https://dev.rootstock.io/developers/smart-contracts/hardhat/create-hardhat-project/\#clone-the-project-repository "Direct link to Clone the Project Repository")
+
+To get started, clone the [rootstock-quick-start-guide](https://github.com/rsksmart/rootstock-quick-start-guide.git) repository:
+
+```codeBlockLines_e6Vv
+git clone https://github.com/rsksmart/rootstock-quick-start-guide.git
+
+```
+
+## Install Dependencies [​](https://dev.rootstock.io/developers/smart-contracts/hardhat/create-hardhat-project/\#install-dependencies "Direct link to Install Dependencies")
+
+Run the following command in the project root.
+
+```codeBlockLines_e6Vv
+  npm install
+
+```
+
+> The quick start repo already comes pre-installed with hardhat. The `master` branch has the intial setup and barebones project and the `feat/complete` branch has the complete state of the hardhat project. You can view the diff in the initial and complete state branches of the repo at any point in time while going through this material. To run the full project, checkout into feat/complete branch, install the dependencies and run the command: `npx http-server`.
+
+### Verify Hardhat Installation [​](https://dev.rootstock.io/developers/smart-contracts/hardhat/create-hardhat-project/\#verify-hardhat-installation "Direct link to Verify Hardhat Installation")
+
+Here, we will verify the installation of hardhat in your project.
+
+- To verify hardhat installation:
+  - The [quickstart](https://github.com/rsksmart/rootstock-quick-start-guide) repository comes with Hardhat pre-installed. To check if Hardhat is installed, execute `npx hardhat` in the `rootstock-quick-start-guide` directory.
+  - `npx hardhat` not only verifies installation but also allows you to initiate a new Hardhat project if it doesn't exist. For a new project, you'll be prompted to choose from several options. To create a blank project, select **Create an empty hardhat.config.js**, or pick one of the other options to begin with a pre-set template.
+
+Once setup is complete, you can verify Hardhat is installed correctly by running `npx hardhat` again. It should display a help message with available tasks, indicating that Hardhat is installed and ready to use.
+
+Last updated on **Jun 26, 2025** by **Owanate Amachree**
+
+#### On this page
+
+- [Clone the Project Repository](https://dev.rootstock.io/developers/smart-contracts/hardhat/create-hardhat-project/#clone-the-project-repository)
+- [Install Dependencies](https://dev.rootstock.io/developers/smart-contracts/hardhat/create-hardhat-project/#install-dependencies)
+  - [Verify Hardhat Installation](https://dev.rootstock.io/developers/smart-contracts/hardhat/create-hardhat-project/#verify-hardhat-installation)
+
+#### More
+
+- [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/02-developers/05-smart-contracts/02-hardhat/create-hardhat-project.md)
+- [Report an Issue](https://github.com/rsksmart/devportal/issues)
+- [Join the Community](http://discord.gg/rootstock)
+- [Changelog](https://dev.rootstock.io/changelog/)
+- Request an Article
+
+#### Feedback
+
+[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io/developers/smart-contracts/hardhat/create-hardhat-project/ "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io/developers/smart-contracts/hardhat/create-hardhat-project/ "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io/developers/smart-contracts/hardhat/create-hardhat-project/ "Share on Linkedin")
+
+Copy page link
+
+Back to top
+
+281.68M
+
+<|firecrawl-page-13-lllmstxt|>
+## Page
+[Skip to main content](https://dev.rootstock.io/concepts/powpeg/security-model/#__docusaurus_skipToContent_fallback)
+
+[📣 Hacktivator 2.0 is now closed! Hacktivator 3.0 is coming soon. Stay tuned!](https://dev.rootstock.io/resources/contribute/hacktivator/)
+
+[Home](https://dev.rootstock.io/) [Concepts](https://dev.rootstock.io/concepts/) [Developers](https://dev.rootstock.io/developers/) [Node Operators](https://dev.rootstock.io/node-operators/) [Resources](https://dev.rootstock.io/resources/) [Dev Tools](https://dev.rootstock.io/dev-tools/)
+
+Time to read: 4 min
+
+On this page
+
+A sidechain is an independent blockchain whose native currency is pegged to the value of another blockchain currency. The peg can be enforced by a protocol or it can be synthetic. A [2-way peg](https://dev.rootstock.io/concepts/powpeg/) is a protocol-enforced system allowing two currencies to be exchanged freely, automatically, and without incurring in a price negotiation. In Rootstock, the asset that can be freely moved is Bitcoin. When the network where the bitcoins exist is not clear from the context, we refer to rBTC to bitcoins existing in Rootstock.
+
+In practice, when BTC is exchanged for rBTC, no currency is “transferred” between blockchains in a single transaction. The transfer operation is split into two transactions. In the first, some BTCs are locked in Bitcoin and in the second the same amount of rBTC is unlocked in Rootstock. The whole process is called peg-in. When rBTC needs to be converted back into BTC, the reverse process occurs: the rBTC gets locked again in Rootstock and the same amount of BTC is unlocked in Bitcoin. The process is called peg-out.
+
+Fully trust-minimized and third-party-free two-way pegs can be created if two platforms have Turing-complete smart-contracts. But since Bitcoin currently does not support Turing-complete smart-contracts nor native opcodes to validate external SPV proofs, part of the 2-way peg system in Rootstock relies on an autonomous system called PowPeg. This system comprises a smart-contract called Bridge that controls every operation, and a set of third-parties called pegnatories, each one running a software called PowPeg node and a hardware security module called PowHSM. The PowHSM is a tamper-proof device responsible for storing a private key that is part of a multi-signature scheme. In the peg-in process, users send bitcoins to this multi-signature address. The PowHSMs are also responsible for choosing the Rootstock best chain based on cumulative proof-of-work, in a security model called SPV, and for signing Bitcoin peg-put transactions in case the Rootstock blockchain consensus requires it. **No single pegnatory can control the locked BTCs, nor access the multi-sig private key stored in the PowHSM. Not even the majority of pegnatories has the ability to release BTC funds**. The PowHSM only proceeds to sign a peg-out transaction upon receiving commands from the Rootstock blockchain, backed by 4000 confirmation blocks, with a cumulative proof-of-work currently equivalent to approximately 100 bitcoin blocks. Note that if a user transfers BTC into rBTC and back, they will normally not receive bitcoins that are directly connected by UTXOs with the original BTC sent. The bitcoins are not locked for specific users, and instead they are locked for use across the entire Rootstock network.
+
+The locking and unlocking of funds is done by the PowPeg without any human intervention. A requirement for being part of the PowPeg is the ability to maintain the PowHSM device online and connected to the Rootstock network with high up-time. It’s also a requirement that pegnatories are capable of auditing, or review third party audits that attest that the software that powers the node behaves as expected. The PowHSM device is manufactured by a top hardware security company and the firmware was developed by RootstockLabs. The PowHSM provides state-of-the-art maximum security for their private keys using a Secure Element (SE).
+
+As of January 2020, the PowPeg comprises 12 well-known, and highly secure pegnatories. Leading Blockchain companies are currently members of the PowPeg. In exchange for their work, the pegnatories are awarded 1% of the transaction fees generated on Rootstock, in order to cover the hardware and maintenance costs.
+
+## PowPeg Members Update [​](https://dev.rootstock.io/concepts/powpeg/security-model/\#powpeg-members-update "Direct link to PowPeg Members Update")
+
+The PowPeg is governed by a written protocol that establishes when it is possible or required to add or remove a member. If the conditions to change the composition are met, a pegnatory can send a message to the Bridge contract requiring the beginning of a PowPeg composition change. The change involves three phases: a voting period, a delay period and a funds migration period. All phases are automated and coordinated by the Bridge contract, so the process is open, public, and leaves a cryptographic audit trail. During the voting phase, each pegnatory can either accept or reject a composition change. Only if the majority of pegnatories accept the change, the next phase begins. This phase is a consensus enforced delay of one week. The delay allows users to transfer the Bitcoins back to the Bitcoin network in case they do not trust the new PowPeg composition. Finally, the composition change is activated and the last phase starts, which is responsible for the migration of the funds from the old PowPeg to the new one.
+
+## The Future [​](https://dev.rootstock.io/concepts/powpeg/security-model/\#the-future "Direct link to The Future")
+
+One of the features that has been accepted by the community is adding public attestation of the PowHSM firmware for all users to verify the correctness of the PowHSMs. Another upcoming feature is the introduction of frequent keep-alives to detect as early as possible if a pegnatory is down. Several competing community proposals exist on how to improve the security of the PowPeg. If Bitcoin adds special opcodes or extensibility to validate SPV proofs, and once the new system is proven to be secure and trust-free, the PowPeg role will no longer be necessary, and the Rootstock community may implement the changes to adapt Rootstock to the new trust-free system. For example, members of the Rootstock community proposed in 2016 a drivechain BIP, which represents a trust-minimized alternative to the PowPeg.
+
+Last updated on **Aug 14, 2025** by **Owanate Amachree**
+
+#### On this page
+
+- [PowPeg Members Update](https://dev.rootstock.io/concepts/powpeg/security-model/#powpeg-members-update)
+- [The Future](https://dev.rootstock.io/concepts/powpeg/security-model/#the-future)
+
+#### More
+
+- [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/01-concepts/powpeg/security-model.md)
+- [Report an Issue](https://github.com/rsksmart/devportal/issues)
+- [Join the Community](http://discord.gg/rootstock)
+- [Changelog](https://dev.rootstock.io/changelog/)
+- Request an Article
+
+#### Feedback
+
+[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io/concepts/powpeg/security-model/ "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io/concepts/powpeg/security-model/ "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io/concepts/powpeg/security-model/ "Share on Linkedin")
+
+Copy page link
+
+Back to top
+
+281.68M
+
+<|firecrawl-page-14-lllmstxt|>
+## Arrowhead Release Notes
+[Skip to main content](https://dev.rootstock.io/changelog/tags/arrowhead/#__docusaurus_skipToContent_fallback)
+
+[📣 Hacktivator 2.0 is now closed! Hacktivator 3.0 is coming soon. Stay tuned!](https://dev.rootstock.io/resources/contribute/hacktivator/)
+
+[Home](https://dev.rootstock.io/) [Concepts](https://dev.rootstock.io/concepts/) [Developers](https://dev.rootstock.io/developers/) [Node Operators](https://dev.rootstock.io/node-operators/) [Resources](https://dev.rootstock.io/resources/) [Dev Tools](https://dev.rootstock.io/dev-tools/)
+
+Back
+
+## Summary [​](https://dev.rootstock.io/changelog/tags/arrowhead/\#summary "Direct link to Summary")
+
+The Rootstock community is pleased to announce the release of the latest version of the RSKj client, which is now available in the [RSKj GitHub repository](https://github.com/rsksmart/rskj/releases/tag/ARROWHEAD-6.5.0). This update features new debugging methods and other improvements to the JSON-RPC interface, designed to optimize the developer experience.
+
+> Note that this upgrade is optional, however it is strongly recommended that users update their nodes to the latest version to benefit from enhanced performance and security.
+
+## Summary [​](https://dev.rootstock.io/changelog/tags/arrowhead/\#summary "Direct link to Summary")
+
+The Rootstock community is pleased to announce the release of the latest version of the RSKj client, which is now available in the [RSKj GitHub repository](https://github.com/rsksmart/rskj/releases/tag/ARROWHEAD-6.4.0). This update introduces the **fiat-stable minimum gas price feature** (disabled by default), enabling mining pools to automatically adjust their minimum gas price configuration based on the price of Bitcoin. Additionally, it includes JSON-RPC interface improvements and dependency upgrades.
+
+> Note that this upgrade is optional, however it is strongly recommended that users update their nodes to the latest version to benefit from enhanced performance and security.
+
+## Summary [​](https://dev.rootstock.io/changelog/tags/arrowhead/\#summary "Direct link to Summary")
+
+The Rootstock network will undergo a patch network upgrade on block 6,549,300. This mandatory upgrade fixes the PowPeg outage reported on June 24th; users who adhere to these changes must update their nodes to the latest version
+
+## Summary [​](https://dev.rootstock.io/changelog/tags/arrowhead/\#summary "Direct link to Summary")
+
+The Rootstock community is pleased to announce the release of the latest version of the RSKj client, which is now available in the [RSKj GitHub repository](https://github.com/rsksmart/rskj/releases/tag/ARROWHEAD-6.3.0). This update mainly focuses on improving Ethereum compatibility at the JSON-RPC interface and enhancing the node’s performance.
+
+#### Feedback
+
+#### Share
+
+[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io/changelog/tags/arrowhead/ "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io/changelog/tags/arrowhead/ "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io/changelog/tags/arrowhead/ "Share on Linkedin")
+
+Copy page link
+
+[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io/changelog/tags/arrowhead/ "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io/changelog/tags/arrowhead/ "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io/changelog/tags/arrowhead/ "Share on Linkedin")
+
+Copy page link
+
+Back to top
+
+281.68M
+
+<|firecrawl-page-15-lllmstxt|>
+## Docker Installation Guide
+[Skip to main content](https://dev.rootstock.io/node-operators/setup/installation/docker/#__docusaurus_skipToContent_fallback)
+
+[📣 Hacktivator 2.0 is now closed! Hacktivator 3.0 is coming soon. Stay tuned!](https://dev.rootstock.io/resources/contribute/hacktivator/)
+
+[Home](https://dev.rootstock.io/) [Concepts](https://dev.rootstock.io/concepts/) [Developers](https://dev.rootstock.io/developers/) [Node Operators](https://dev.rootstock.io/node-operators/) [Resources](https://dev.rootstock.io/resources/) [Dev Tools](https://dev.rootstock.io/dev-tools/)
+
+Time to read: 1 min
+
+On this page
+
+Before installing Docker, ensure your system meets the [minimum requirements](https://dev.rootstock.io/node-operators/setup/requirements/) before installing the Rootstock node (RSKj).
+If you already have docker installed. See how to [Install the RSKj node using Docker](https://dev.rootstock.io/node-operators/setup/installation/docker/#install-rskj-using-docker).
+
+## Install Docker Desktop Client [​](https://dev.rootstock.io/node-operators/setup/installation/docker/\#install-docker-desktop-client "Direct link to Install Docker Desktop Client")
+
+[Docker Desktop](https://www.docker.com/products/docker-desktop/) provides an easy and fast way for running containerized applications on various operating systems.
+
+- Mac OSX, Windows
+- Linux
+
+- [Download](https://www.docker.com/products/docker-desktop) and install
+- Start the Docker Desktop client
+- Login with a Docker Hub free account
+
+For Mac M1 / M2 (Apple Chips) using x86 based software
+
+- Ensure you have `Rosetta` installed. This is typically pre-installed on recent macOS versions.
+- Download an x86 JDK build, such as [Azul Zulu 17 (x86)](https://www.azul.com/downloads/?version=java-17-lts&os=macos&package=jdk#zulu), to ensure compatibility with x86 based software.
+
+Ensure that docker is running by running the following command - it should run without any errors.
+
+```codeBlockLines_e6Vv
+docker ps
+
+```
+
+You should see the following response:
+
+```codeBlockLines_e6Vv
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+```
+
+More information about [How to Install Docker](https://docs.docker.com/install/).
+
+## Install RSKj Using Docker [​](https://dev.rootstock.io/node-operators/setup/installation/docker/\#install-rskj-using-docker "Direct link to Install RSKj Using Docker")
+
+To install a RSKj node using Docker, visit the [Docker Hub](https://hub.docker.com/r/rsksmart/rskj) for installation instructions or use the [Reproducible Build](https://dev.rootstock.io/node-operators/setup/reproducible-build/).
+
+## Logging in RSKj [​](https://dev.rootstock.io/node-operators/setup/installation/docker/\#logging-in-rskj "Direct link to Logging in RSKj")
+
+By default, logs are exclusively directed to a single file. However, if you wish to enable the logging output to STDOUT, you can specify this system property via the command line using `-Dlogging.stdout=<LOG_LEVEL>`. That command should look something like this:
+
+```codeBlockLines_e6Vv
+java -Dlogging.stdout=INFO -cp <classpath> co.rsk.Start --reset --<RSK network>
+
+```
+
+Regarding the RSKj Docker containers, logs are printed to STDOUT by default, making it easy to view the logs while the container is running. In order to modify this, you can run the Docker container with the environment variable set to a different LOG\_LEVEL (For example, DEBUG log level). That command should follow this structure:
+
+```codeBlockLines_e6Vv
+docker run -e RSKJ_LOG_PROPS=DEBUG <container-name>
+
+```
+
+Last updated on **Jun 26, 2025** by **Owanate Amachree**
+
+#### On this page
+
+- [Install Docker Desktop Client](https://dev.rootstock.io/node-operators/setup/installation/docker/#install-docker-desktop-client)
+- [Install RSKj Using Docker](https://dev.rootstock.io/node-operators/setup/installation/docker/#install-rskj-using-docker)
+- [Logging in RSKj](https://dev.rootstock.io/node-operators/setup/installation/docker/#logging-in-rskj)
+
+#### More
+
+- [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/03-node-operators/04-setup/02-installation/docker.md)
+- [Report an Issue](https://github.com/rsksmart/devportal/issues)
+- [Join the Community](http://discord.gg/rootstock)
+- [Changelog](https://dev.rootstock.io/changelog/)
+- Request an Article
+
+#### Feedback
+
+[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io/node-operators/setup/installation/docker/ "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io/node-operators/setup/installation/docker/ "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io/node-operators/setup/installation/docker/ "Share on Linkedin")
+
+Copy page link
+
+Back to top
+
+281.68M
+
+<|firecrawl-page-16-lllmstxt|>
+## Page
+[Skip to main content](https://dev.rootstock.io/dev-tools/wallets/#__docusaurus_skipToContent_fallback)
+
+[📣 Hacktivator 2.0 is now closed! Hacktivator 3.0 is coming soon. Stay tuned!](https://dev.rootstock.io/resources/contribute/hacktivator/)
+
+[Home](https://dev.rootstock.io/) [Concepts](https://dev.rootstock.io/concepts/) [Developers](https://dev.rootstock.io/developers/) [Node Operators](https://dev.rootstock.io/node-operators/) [Resources](https://dev.rootstock.io/resources/) [Dev Tools](https://dev.rootstock.io/dev-tools/)
+
+Time to read: 1 min
+
+On this page
+
+The following wallets support [RBTC](https://dev.rootstock.io/concepts/rbtc/) and [RIF](https://dev.rootstock.io/concepts/rif-suite/token/) tokens.
+
+- [![](https://dev.rootstock.io/img/rsk/wallets/my-crypto.png)](https://app.mycrypto.com/add-account)
+- [![](https://dev.rootstock.io/img/rsk/wallets/metamask-logo.png)](https://dev.rootstock.io/dev-tools/wallets/metamask/)
+- [![](https://dev.rootstock.io/img/rsk/wallets/edge-wallet-logo.png)](https://edge.app/)
+- [![](https://dev.rootstock.io/img/rsk/wallets/ledger-logo.png)](https://www.ledger.com/)
+- [![](https://dev.rootstock.io/img/rsk/wallets/trezor-wallet.png)](https://trezor.io/trezor-suite)
+- [![](https://dev.rootstock.io/img/rsk/wallets/dcent-wallet.png)](https://www.dcentwallet.com/en)
+- [![](https://dev.rootstock.io/img/rsk/wallets/math-wallet.png)](https://blog.mathwallet.org/?p=1625)
+- [![](https://dev.rootstock.io/img/rsk/wallets/Exodus_logo_white.png)](https://www.exodus.com/)
+- [![](https://dev.rootstock.io/img/rsk/wallets/mew.svg)](https://www.myetherwallet.com/)
+- [![](https://dev.rootstock.io/img/rsk/wallets/enkrypt-logo.png)](https://www.enkrypt.com/networks/rootstock-wallet/)
+- [![](https://dev.rootstock.io/img/rsk/wallets/block-wallet.png)](https://blockwallet.io/)
+- [![](https://dev.rootstock.io/img/rsk/wallets/taho.png)](https://taho.xyz/)
+- [![](https://dev.rootstock.io/img/rsk/wallets/testtwo.png)](https://rabby.io/)
+- [![](https://dev.rootstock.io/img/rsk/wallets/subwallet.svg)](https://www.subwallet.app/)
+- [![](https://dev.rootstock.io/img/rsk/wallets/WigwamGreen.svg)](https://wigwam.app/)
+- [![](https://dev.rootstock.io/img/rsk/wallets/zerion.svg)](https://zerion.io/)
+- [![](https://dev.rootstock.io/img/rsk/wallets/rainbow-wallet-main.png)](https://rainbow.me/en/)
+
+## Compatibility Matrix [​](https://dev.rootstock.io/dev-tools/wallets/\#compatibility-matrix "Direct link to Compatibility Matrix")
+
+In the following matrix you can see the different features by wallet.
+
+| Wallet | Rootstock Checksum | Rootstock dPath | Customizable dPath | Platforms | Available Networks |
+| --- | --- | --- | --- | --- | --- |
+| [Beexo](https://beexo.com/) | ✔ | ✔ | ✔ | Desktop, Mobile | Mainnet |
+| [Edge](https://edge.app/) | ✔ | ✔ | - | Desktop, Mobile | Mainnet, Testnet |
+| [Ledger](https://www.ledger.com/) | ✔ | ✔ | - |  |  |
+| [MyEtherWallet](https://www.myetherwallet.com/) | ✔ | ✔ | ✔ | Desktop, Android, IOS | Mainnet, Testnet |
+| [Trezor](https://trezor.io/trezor-suite) | ✔ | ✔ | - |  |  |
+| [Metamask](https://dev.rootstock.io/dev-tools/wallets/metamask/) | - | - | - | Browser, Mobile | Mainnet, Testnet |
+| [Portis](https://www.portis.io/) | ✔ | ✔ | ✔ | Desktop | Mainnet |
+| [Rabby Wallet](https://rabby.io/) | - | - | - | Chrome, Desktop, Mobile |  |
+| [Enkrypt](https://www.enkrypt.com/networks/rootstock-wallet/) | ✔ | ✔ | - | Chrome | Mainnet, Testnet |
+| [MyCrypto](https://mycrypto.com/) | - | - | - | Desktop | Rootstock (RBTC) |
+| [TaHo](https://taho.xyz/) | ✔ | ✔ | - | Chrome | Rootstock (RBTC), Mainnet |
+| [Bitget](https://web3.bitget.com/en/) | - | - | - | Chrome, Mobile | RBTC |
+| [SafePal](https://www.safepal.com/en/extension) | ✔ | ✔ | - | Chrome, Mobile | Rootstock (RBTC), Mainnet |
+| [Wallby](https://wallby.app/) | ✔ | ✔ | - | Mobile | Rootstock (RBTC), Bitcoin |
+| [MathWallet](https://blog.mathwallet.org/?p=1625) | ✔ | ✔ | - | Chrome, Desktop, Mobile | Mainnet |
+| [Block Wallet](https://blockwallet.io/) | ✔ | ✔ | - | Chrome | Mainnet |
+| [MtPelerin Bridge](https://www.mtpelerin.com/bridge-wallet) | ✔ | ✔ | - | Desktop, Mobile | Rootstock (Mainnet), Bitcoin (Testnet) |
+| [Exodus](https://www.exodus.com/) | ✔ | ✔ | - | Chrome, Desktop, Mobile | Mainnet |
+| [SubWallet](https://www.subwallet.app/) | ✔ | ✔ | - | Chrome | Mainnet, Testnet |
+| [WigWam](https://wigwam.app/) | ✔ | ✔ | - | Chrome | Mainnet, Testnet |
+| [AirGap](https://airgap.it/) | ✔ | ✔ | - | - | Mainnet |
+| [Zerion](https://zerion.io/) | ✔ | ✔ | - | Chrome | Mainnet, Testnet |
+| [Rainbow Wallet](https://rainbow.me/en/) | ✔ | ✔ | - | Chrome | Mainnet, Testnet |
+
+Last updated on **Aug 14, 2025** by **Owanate Amachree**
+
+#### On this page
+
+- [Compatibility Matrix](https://dev.rootstock.io/dev-tools/wallets/#compatibility-matrix)
+
+#### More
+
+- [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/05-dev-tools/wallets/index.md)
+- [Report an Issue](https://github.com/rsksmart/devportal/issues)
+- [Join the Community](http://discord.gg/rootstock)
+- [Changelog](https://dev.rootstock.io/changelog/)
+- Request an Article
+
+#### Feedback
+
+[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io/dev-tools/wallets/ "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io/dev-tools/wallets/ "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io/dev-tools/wallets/ "Share on Linkedin")
+
+Copy page link
+
+Back to top
+
+281.68M
+
+<|firecrawl-page-17-lllmstxt|>
+## Page
+[Skip to main content](https://dev.rootstock.io/node-operators/merged-mining/reference/#__docusaurus_skipToContent_fallback)
+
+[📣 Hacktivator 2.0 is now closed! Hacktivator 3.0 is coming soon. Stay tuned!](https://dev.rootstock.io/resources/contribute/hacktivator/)
+
+[Home](https://dev.rootstock.io/) [Concepts](https://dev.rootstock.io/concepts/) [Developers](https://dev.rootstock.io/developers/) [Node Operators](https://dev.rootstock.io/node-operators/) [Resources](https://dev.rootstock.io/resources/) [Dev Tools](https://dev.rootstock.io/dev-tools/)
+
+Time to read: 2 min
+
+On this page
+
+Satoshi consensus, based on proof-of-work (PoW), is the only consensus system that prevents the rewrite of blockchain history at a low cost. The academic community is advancing the knowledge and study of proof-of-stake (PoS) as an alternative, but currently PoW provides the highest proven security. Merge mining is a technique that allows Bitcoin miners to mine other cryptocurrencies simultaneously with nearly zero marginal cost. The same mining infrastructure and setup they use to mine Bitcoins is reused to mine Rootstock (RSK) simultaneously. This means that as Rootstock rewards the miners with additional transaction fees, the incentive for merged mining becomes high.
+
+We have identified three phases for Rootstock merge-mining growth:
+
+- Bootstrap phase: Merge-mining is below 30% of Bitcoin hashrate.
+- Stable phase: Merge-mining is between 30% and 60% of Bitcoin hashrate.
+- Mature phase: Merge-mining is higher than 60% of Bitcoin hashrate.
+
+Rootstock has left behind its bootstrapping phase, when rogue merge-miners could theoretically revert Rootstock blockchain at a low cost. As of December 2021, more than 50% of Bitcoin miners are engaged in Rootstock merge-mining. But as Rootstock fees remain low compared to Bitcoin block reward, the cost to attack Rootstock through double-spending is lower than Bitcoin’s.
+Rootstock has some properties to reduce the risk of double-spend attacks, such as long miner rewards maturity. Still RootstockLabs research team has developed several protections to prevent attacks during the stable and mature phases of the project:
+
+- _**Signed notifications:**_ Rootstock clients can make use of signed notifications by notaries. Nodes can use these notifications to detect Sybil attacks and inform the user.
+- _**Transparent double-spend trails:**_ this is a method where all Rootstock merge-mining tags are augmented with additional information that can be used to detect selfish Rootstock forks that are public in the Bitcoin blockchain. Selfish-fork proofs are automatically constructed and these proofs are presented to the Rootstock nodes, which spread them over the network. The proofs force nodes to enter a “safe mode” where no transaction is advertised as confirmed. The safe mode prevents merchants and exchanges from accepting payments that could be double-spent. Once the proven selfish-fork is outpaced by the Rootstock mainchain in accumulated PoW, the network reverts to its normal state. This method is a deterrent for any Rootstock double-spend attempt, where the malicious miner still tries to collect Bitcoin rewards when mining the selfish fork.
+
+Once the platform enters the maturity phase, we estimate the security of Rootstock will be enough to support the economy of worldwide financial inclusion.
+
+## Main features: [​](https://dev.rootstock.io/node-operators/merged-mining/reference/\#main-features "Direct link to Main features:")
+
+- [REMASC consensus protocol](https://dev.rootstock.io/node-operators/merged-mining/remasc/)
+- One-day maturity for mining reward
+- No loss of efficiency in Bitcoin mining expected from merge mining (for late mid-state switching)
+
+Last updated on **Jun 26, 2025** by **Owanate Amachree**
+
+#### On this page
+
+- [Main features:](https://dev.rootstock.io/node-operators/merged-mining/reference/#main-features)
+
+#### More
+
+- [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/03-node-operators/02-merged-mining/03-reference/index.md)
+- [Report an Issue](https://github.com/rsksmart/devportal/issues)
+- [Join the Community](http://discord.gg/rootstock)
+- [Changelog](https://dev.rootstock.io/changelog/)
+- Request an Article
+
+#### Feedback
+
+[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io/node-operators/merged-mining/reference/ "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io/node-operators/merged-mining/reference/ "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io/node-operators/merged-mining/reference/ "Share on Linkedin")
+
+Copy page link
+
+Back to top
+
+281.68M
+
+<|firecrawl-page-18-lllmstxt|>
+## Account-Based Addresses Overview
+[Skip to main content](https://dev.rootstock.io/concepts/account-based-addresses/#__docusaurus_skipToContent_fallback)
+
+[📣 Hacktivator 2.0 is now closed! Hacktivator 3.0 is coming soon. Stay tuned!](https://dev.rootstock.io/resources/contribute/hacktivator/)
+
+[Home](https://dev.rootstock.io/) [Concepts](https://dev.rootstock.io/concepts/) [Developers](https://dev.rootstock.io/developers/) [Node Operators](https://dev.rootstock.io/node-operators/) [Resources](https://dev.rootstock.io/resources/) [Dev Tools](https://dev.rootstock.io/dev-tools/)
+
+Time to read: 2 min
+
+On this page
+
+Rootstock Addresses incorporate an optional blockchain identifier (also known as `chainId`). If the `chainId` is not present, it is assumed the address refers to the Rootstock main network.
+
+Info
+
+See [contract addresses](https://dev.rootstock.io/developers/smart-contracts/contract-addresses/) for the list of contract addresses on Rootstock or [how to verify address ownership](https://dev.rootstock.io/developers/smart-contracts/verify-address-ownership/).
+
+## How to get an address [​](https://dev.rootstock.io/concepts/account-based-addresses/\#how-to-get-an-address "Direct link to How to get an address")
+
+Check out the already [integrated wallets](https://dev.rootstock.io/dev-tools/wallets/) on Rootstock.
+
+## Derivation path info [​](https://dev.rootstock.io/concepts/account-based-addresses/\#derivation-path-info "Direct link to Derivation path info")
+
+When using
+[BIP-44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki "Multi-Account Hierarchy for Deterministic Wallets")-compatible
+wallet software, you will need to specify a derivation path.
+
+```codeBlockLines_e6Vv
+Mainnet: m/44'/137'/0'/0/N
+Testnet: m/44'/37310'/0'/0/N
+
+```
+
+- The first level of the hierarchy is for _purpose_.
+This is always `44'`, as per the BIP44 specification.
+- The second level of the hierarchy is for the _registered coin type_.
+  - For Rootstock Mainnet, this should be `137'`, as per the
+    [SLIP-44](https://github.com/satoshilabs/slips/blob/master/slip-0044.md "Registered coin types for BIP-0044")
+    specification.
+  - For Rootstock Testnet, this should be `37310'`, as per the
+    [RSKIP-57](https://github.com/rsksmart/RSKIPs/blob/master/IPs/RSKIP57.md "Derivation Path for Hierarchical Deterministic Wallets")
+    specification.
+- The final level of the hierarchy is for _index_: Addresses are numbered from index 0 in sequentially increasing manner. This number is used as child index in [BIP32 derivation](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki#specification-key-derivation "Hierarchical Deterministic Wallets - Key Derivation"). Public derivation is used at this level.
+
+## Checksum [​](https://dev.rootstock.io/concepts/account-based-addresses/\#checksum "Direct link to Checksum")
+
+Rootstock implements [EIP-1191](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1191.md) to protect users from losing funds by mixing addresses of different Ethereum based networks.
+
+[In this document](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1191.md), you can find out how to apply the checksum and validate an address. This EIP is also supported by Web3 and hardware wallets.
+
+## ChainId [​](https://dev.rootstock.io/concepts/account-based-addresses/\#chainid "Direct link to ChainId")
+
+To avoid a replay attack by using an already-signed transaction, originally broadcast in “network A”, and subsequently replayed it in “network B”, the EVM-based networks use `chainId` as part of the transaction properties.
+All `chainId` s can be found at [chainid.network](https://chainid.network/).
+
+```codeBlockLines_e6Vv
+Rootstock Mainnet: 30
+Rootstock Testnet: 31
+
+```
+
+See [EIP-155](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md#user-content-list-of-chain-ids) for more information.
+
+We strongly recommend the following:
+
+1. Add the `chainId` in the Rootstock integration (and every time you integrate EVM-based blockchains)
+2. Use a different account to hold value for each blockchain (do not share the same account among Rootstock, ETH, and others)
+
+Last updated on **Jun 26, 2025** by **Owanate Amachree**
+
+#### On this page
+
+- [How to get an address](https://dev.rootstock.io/concepts/account-based-addresses/#how-to-get-an-address)
+- [Derivation path info](https://dev.rootstock.io/concepts/account-based-addresses/#derivation-path-info)
+- [Checksum](https://dev.rootstock.io/concepts/account-based-addresses/#checksum)
+- [ChainId](https://dev.rootstock.io/concepts/account-based-addresses/#chainid)
+
+#### More
+
+- [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/01-concepts/account-based-addresses.md)
+- [Report an Issue](https://github.com/rsksmart/devportal/issues)
+- [Join the Community](http://discord.gg/rootstock)
+- [Changelog](https://dev.rootstock.io/changelog/)
+- Request an Article
+
+#### Feedback
+
+[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io/concepts/account-based-addresses/ "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io/concepts/account-based-addresses/ "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io/concepts/account-based-addresses/ "Share on Linkedin")
+
+Copy page link
+
+Back to top
+
+281.68M
+
+<|firecrawl-page-19-lllmstxt|>
+## Merged Mining Guide
+[Skip to main content](https://dev.rootstock.io/node-operators/merged-mining/getting-started/#__docusaurus_skipToContent_fallback)
+
+[📣 Hacktivator 2.0 is now closed! Hacktivator 3.0 is coming soon. Stay tuned!](https://dev.rootstock.io/resources/contribute/hacktivator/)
+
+[Home](https://dev.rootstock.io/) [Concepts](https://dev.rootstock.io/concepts/) [Developers](https://dev.rootstock.io/developers/) [Node Operators](https://dev.rootstock.io/node-operators/) [Resources](https://dev.rootstock.io/resources/) [Dev Tools](https://dev.rootstock.io/dev-tools/)
+
+Time to read: 2 min
+
+On this page
+
+Here are the steps needed to add Rootstock (RSK) merged mining capabilities to mining pool software.
+
+## What do you need to do [​](https://dev.rootstock.io/node-operators/merged-mining/getting-started/\#what-do-you-need-to-do "Direct link to What do you need to do")
+
+Add the Rootstock merged mining information in Bitcoin block as a commitment, the complete steps are as follows:
+
+### 1\. Get the work from Rootstock node [​](https://dev.rootstock.io/node-operators/merged-mining/getting-started/\#1-get-the-work-from-rootstock-node "Direct link to 1. Get the work from Rootstock node")
+
+Use the [`mnr_getWork`](https://dev.rootstock.io/node-operators/json-rpc/methods/) method from the Rootstock node's JSON-RPC API. This method returns the information of the current block for merged mining, the boundary condition to be met ("target"), and some other data.
+
+### 2\. Put the information for merged mining in the Bitcoin block [​](https://dev.rootstock.io/node-operators/merged-mining/getting-started/\#2-put-the-information-for-merged-mining-in-the-bitcoin-block "Direct link to 2. Put the information for merged mining in the Bitcoin block")
+
+#### Format [​](https://dev.rootstock.io/node-operators/merged-mining/getting-started/\#format "Direct link to Format")
+
+`OP_RETURN` \+ `Length` \+ `RSKBLOCK:` \+ `RskBlockInfo`
+
+- `OP_RETURN:` is `0x6a`
+- `Length` is `0x29` and represents the length of the information included after the `OP_RETURN` opcode
+- `RSKBLOCK:` is the ASCII string for `0x52534b424c4f434b3a`
+- `RskBlockInfo` is the block information in binary format.
+
+For example, if `RskBlockInfo` is `e5aad3b6b9dc71a3eb98a069bd29ca32211aee8b03fd462f4ffbbe97cc75a174`
+the merged mining information is `6a2952534b424c4f434b3ae5aad3b6b9dc71a3eb98a069bd29ca32211aee8b03fd462f4ffbbe97cc75a174`
+
+#### Position [​](https://dev.rootstock.io/node-operators/merged-mining/getting-started/\#position "Direct link to Position")
+
+Include as the last output of Bitcoin coinbase transaction.
+
+#### Restrictions [​](https://dev.rootstock.io/node-operators/merged-mining/getting-started/\#restrictions "Direct link to Restrictions")
+
+- The number of bytes immediately after `RskBlockInfo`, up to the end of the coinbase transaction must be lower than or equal to 128 bytes.
+- The trailing raw bytes must not contain the binary string `RSKBLOCK:`
+- The probability of the `RSK` tag to appear by chance is negligible, but pool servers must not rule out the possibility of a rogue Bitcoin address included in the coinbase transaction having this pattern, and being used as an attack to break the validity of merged mining header.
+- The `RSKBLOCK:` tag may appear by chance or maliciously in the `ExtraNonce2` data field that is provided by miners as part of the Stratum protocol. This is not a problem as long as the poolserver adds the `RSKBLOCK:` tag after the `ExtraNonce2` chunk.
+
+### 3\. Notify Miners on a faster pace [​](https://dev.rootstock.io/node-operators/merged-mining/getting-started/\#3-notify-miners-on-a-faster-pace "Direct link to 3. Notify Miners on a faster pace")
+
+Rootstock's average block time is 30 seconds, which is faster than Bitcoin's 10 minutes. This fact triggers the following implementation changes:
+
+- Retrieve work from Rootstock node every **2 seconds**, so as to be always mining on the last Rootstock work.
+- Sent to miners a `mining.notify` message, from stratum protocol, every time new Rootstock work is received.
+
+### 4\. Mine until work is enough to meet the target received in the work info [​](https://dev.rootstock.io/node-operators/merged-mining/getting-started/\#4-mine-until-work-is-enough-to-meet-the-target-received-in-the-work-info "Direct link to 4. Mine until work is enough to meet the target received in the work info")
+
+### 5\. Submit Solution to Rootstock node [​](https://dev.rootstock.io/node-operators/merged-mining/getting-started/\#5-submit-solution-to-rootstock-node "Direct link to 5. Submit Solution to Rootstock node")
+
+Use the [`mnr_submitBitcoinBlockPartialMerkle`](https://dev.rootstock.io/node-operators/json-rpc/methods/) method from Rootstock node's JSON-RPC API. That method has optimum performance, and is preferred among other available methods.
+Other submission methods and information about the pros and cons between them can be found in the [Mining JSON-RPC API documentation](https://dev.rootstock.io/node-operators/json-rpc/).
+
+## Influence on Bitcoin [​](https://dev.rootstock.io/node-operators/merged-mining/getting-started/\#influence-on-bitcoin "Direct link to Influence on Bitcoin")
+
+As a result of Rootstock's implementation of merged mining, the Bitcoin network does not get filled up with merged mining information. Only a minimal amount of information is stored: An extra output on the coinbase transaction.
+
+Furthermore, no changes are required on Bitcoin node to support merged mining with Rootstock.
+
+Last updated on **Jun 26, 2025** by **Owanate Amachree**
+
+#### On this page
+
+- [What do you need to do](https://dev.rootstock.io/node-operators/merged-mining/getting-started/#what-do-you-need-to-do)
+  - [1\. Get the work from Rootstock node](https://dev.rootstock.io/node-operators/merged-mining/getting-started/#1-get-the-work-from-rootstock-node)
+  - [2\. Put the information for merged mining in the Bitcoin block](https://dev.rootstock.io/node-operators/merged-mining/getting-started/#2-put-the-information-for-merged-mining-in-the-bitcoin-block)
+  - [3\. Notify Miners on a faster pace](https://dev.rootstock.io/node-operators/merged-mining/getting-started/#3-notify-miners-on-a-faster-pace)
+  - [4\. Mine until work is enough to meet the target received in the work info](https://dev.rootstock.io/node-operators/merged-mining/getting-started/#4-mine-until-work-is-enough-to-meet-the-target-received-in-the-work-info)
+  - [5\. Submit Solution to Rootstock node](https://dev.rootstock.io/node-operators/merged-mining/getting-started/#5-submit-solution-to-rootstock-node)
+- [Influence on Bitcoin](https://dev.rootstock.io/node-operators/merged-mining/getting-started/#influence-on-bitcoin)
+
+#### More
+
+- [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/03-node-operators/02-merged-mining/01-getting-started/index.md)
+- [Report an Issue](https://github.com/rsksmart/devportal/issues)
+- [Join the Community](http://discord.gg/rootstock)
+- [Changelog](https://dev.rootstock.io/changelog/)
+- Request an Article
+
+#### Feedback
+
+[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io/node-operators/merged-mining/getting-started/ "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io/node-operators/merged-mining/getting-started/ "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io/node-operators/merged-mining/getting-started/ "Share on Linkedin")
+
+Copy page link
+
+Back to top
+
+281.68M
+
+<|firecrawl-page-20-lllmstxt|>
+## Page
+[Skip to main content](https://dev.rootstock.io/node-operators/setup/configuration/preferences/#__docusaurus_skipToContent_fallback)
+
+[📣 Hacktivator 2.0 is now closed! Hacktivator 3.0 is coming soon. Stay tuned!](https://dev.rootstock.io/resources/contribute/hacktivator/)
+
+[Home](https://dev.rootstock.io/) [Concepts](https://dev.rootstock.io/concepts/) [Developers](https://dev.rootstock.io/developers/) [Node Operators](https://dev.rootstock.io/node-operators/) [Resources](https://dev.rootstock.io/resources/) [Dev Tools](https://dev.rootstock.io/dev-tools/)
+
+Time to read: 3 min
+
+On this page
+
+The Rootstock node can be started with different
+[CLI flags](https://dev.rootstock.io/node-operators/setup/configuration/cli/).
+
+## Setting config preferences [​](https://dev.rootstock.io/node-operators/setup/configuration/preferences/\#setting-config-preferences "Direct link to Setting config preferences")
+
+See how to set your config:
+
+- [Using Ubuntu or Docker](https://dev.rootstock.io/node-operators/setup/configuration/preferences/#using-ubuntu-or-docker)
+- [Using the `java` command](https://dev.rootstock.io/node-operators/setup/configuration/preferences/#using-java-command)
+
+… to run the node.
+
+> Remember:
+> You need to **restart** the node if you've changed any configuration option.
+
+### Using Ubuntu or Docker [​](https://dev.rootstock.io/node-operators/setup/configuration/preferences/\#using-ubuntu-or-docker "Direct link to Using Ubuntu or Docker")
+
+Your node's config file is in `/etc/rsk`.
+Default configurations are defined there and they are the same as [the config](https://github.com/rsksmart/artifacts/tree/master/rskj-ubuntu-installer/config).
+
+You should edit the config related with the network you are using ( `mainnet.conf`, `testnet.conf`, `regtest.conf`).
+Check [reference](https://dev.rootstock.io/node-operators/setup/configuration/reference/) all the configuration options you could change.
+
+### Using Windows [​](https://dev.rootstock.io/node-operators/setup/configuration/preferences/\#using-windows "Direct link to Using Windows")
+
+For other operating systems, including Windows, please use the `-Drsk.conf.file` option as specified below.
+
+### Using `java` command [​](https://dev.rootstock.io/node-operators/setup/configuration/preferences/\#using-java-command "Direct link to using-java-command")
+
+#### 1\. Create a `.conf` file [​](https://dev.rootstock.io/node-operators/setup/configuration/preferences/\#1-create-a-conf-file "Direct link to 1-create-a-conf-file")
+
+You can create a file with the configuration options that you want to replace from the default.
+Default configurations are defined in the [Config](https://github.com/rsksmart/rskj/tree/master/rskj-core/src/main/resources/config).
+
+The extension of the file must be `.conf`.
+Check [here](https://dev.rootstock.io/node-operators/setup/configuration/reference/) for all the configuration option.
+
+As an example, if you want to change the default `database directory`, your config file should only contain:
+
+```codeBlockLines_e6Vv
+database {
+    dir = /new/path/for/database
+    reset = false
+}
+
+```
+
+#### 2\. Specify your config file path [​](https://dev.rootstock.io/node-operators/setup/configuration/preferences/\#2-specify-your-config-file-path "Direct link to 2. Specify your config file path")
+
+To apply your configuration options, you need to set your own config file's path when you run your node.
+
+This can be done in two ways:
+
+- Running the node with the `java` command, add `-Drsk.conf.file=path/to/your/file.conf`
+- Compiling the node with IntelliJ, add to VM options: `-Drsk.conf.file=path/to/your/file.conf`
+
+### Using RocksDB [​](https://dev.rootstock.io/node-operators/setup/configuration/preferences/\#using-rocksdb "Direct link to Using RocksDB")
+
+Important Notice
+
+- Starting from [RSKj HOP v4.2.0](https://github.com/rsksmart/rskj/releases/tag/HOP-4.2.0), RocksDB is no longer experimental. As of the most recent version, RocksDB has now been made the default storage library, replacing LevelDB. This change was made to tackle maintainability and performance issues of LevelDB.
+- Previously, RSKj ran using [LevelDB](https://dbdb.io/db/leveldb) by default, with the option to switch to [RocksDB](http://rocksdb.org/). Now, RocksDB is the default storage option, aiming to enable higher performance within the RSKj nodes.
+
+#### Get Started [​](https://dev.rootstock.io/node-operators/setup/configuration/preferences/\#get-started "Direct link to Get Started")
+
+RSKj nodes run using RocksDB by default (See important info section). To switch back to LevelDB, modify the relevant RSKj config file ( `*.conf`) and set the config: `keyvalue.datasource=leveldb`.
+
+The `keyvalue.datasource` property in the config
+may only be either `rocksdb` or `leveldb`.
+
+> If you wish to switch between the different storage options,
+> for example from `leveldb` to `rocksdb` or vice versa,
+> you must **restart** the node with the import option.
+
+The following sample command shows how to do this when
+the RSKj node was previously running the default ( `leveldb`),
+and wants to run with `rocksdb` next.
+
+> Note the use of the `--import` flag, which resets and re-imports the database.
+
+```codeBlockLines_e6Vv
+java -Dkeyvalue.datasource=rocksdb -jar ./rskj-core/build/libs/rskj-core-*-all.jar --testnet --import
+
+```
+
+#### Advantages: [​](https://dev.rootstock.io/node-operators/setup/configuration/preferences/\#advantages "Direct link to Advantages:")
+
+- RocksDB uses a log structured database engine, written entirely in C++, for maximum performance. Keys and values are just arbitrarily-sized byte streams.
+- RocksDB is optimized for fast, low latency storage such as flash drives and high-speed disk drives. RocksDB exploits the full potential of high read/write rates offered by flash or RAM.
+- RocksDB is adaptable to different workloads. From database storage engines such as [MyRocks](https://github.com/facebook/mysql-5.6) to [application data caching](http://techblog.netflix.com/2016/05/application-data-caching-using-ssds.html) to embedded workloads, RocksDB can be used for a variety of data needs.
+- RocksDB provides basic operations such as opening and closing a database, reading and writing to more advanced operations such as merging and compaction filters.
+
+### Switching between DB Kinds\*\* [​](https://dev.rootstock.io/node-operators/setup/configuration/preferences/\#switching-between-db-kinds "Direct link to Switching between DB Kinds**")
+
+Switching between different types of databases in your system requires you to modify configuration files, drop the existing database, and restart your node so the node will start syncing from scratch using the new db kind.
+
+Warning
+
+Nodes that were already running on LevelDB will continue to use LevelDB, and the same applies to RocksDB. However, all nodes setup from scratch will use RocksDB by default.
+
+### Gas Price Setting [​](https://dev.rootstock.io/node-operators/setup/configuration/preferences/\#gas-price-setting "Direct link to Gas Price Setting")
+
+The value returned by `eth_gasPrice` can be modified by setting a multiplier to
+be used while calculating the aforementioned gas price.
+
+This can be done by setting a numeric value on `rpc.gasPriceMultiplier` in the
+configuration file. Default value is `1.1`.
+
+### Troubleshooting [​](https://dev.rootstock.io/node-operators/setup/configuration/preferences/\#troubleshooting "Direct link to Troubleshooting")
+
+#### UDP port already in use [​](https://dev.rootstock.io/node-operators/setup/configuration/preferences/\#udp-port-already-in-use "Direct link to UDP port already in use")
+
+If you see the following error message,
+it means that RSKj is unable to bind to a particular port number,
+because prior to this, another process has already bound to the same port number.
+
+```codeBlockLines_e6Vv
+Exception in thread "UDPServer" co.rsk.net.discovery.PeerDiscoveryException: Discovery can't be started.
+        at co.rsk.net.discovery.UDPServer$1.run(UDPServer.java:65)
+Caused by: java.net.BindException: Address already in use: bind
+
+```
+
+To rectify this,
+change the value of `peer.port` in the config file,
+or add a `peer.port` flag to the command when you start RSKj.
+
+- Linux, Mac OSX
+- Windows
+
+```codeBlockLines_e6Vv
+  $ java -Dpeer.port=50505 -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start
+
+```
+
+Last updated on **Jun 26, 2025** by **Owanate Amachree**
+
+#### On this page
+
+- [Setting config preferences](https://dev.rootstock.io/node-operators/setup/configuration/preferences/#setting-config-preferences)
+  - [Using Ubuntu or Docker](https://dev.rootstock.io/node-operators/setup/configuration/preferences/#using-ubuntu-or-docker)
+  - [Using Windows](https://dev.rootstock.io/node-operators/setup/configuration/preferences/#using-windows)
+  - [Using `java` command](https://dev.rootstock.io/node-operators/setup/configuration/preferences/#using-java-command)
+  - [Using RocksDB](https://dev.rootstock.io/node-operators/setup/configuration/preferences/#using-rocksdb)
+  - [Switching between DB Kinds\*\*](https://dev.rootstock.io/node-operators/setup/configuration/preferences/#switching-between-db-kinds)
+  - [Gas Price Setting](https://dev.rootstock.io/node-operators/setup/configuration/preferences/#gas-price-setting)
+  - [Troubleshooting](https://dev.rootstock.io/node-operators/setup/configuration/preferences/#troubleshooting)
+
+#### More
+
+- [Edit this page](https://github.com/rsksmart/devportal/tree/main/docs/03-node-operators/04-setup/03-configuration/preferences.md)
+- [Report an Issue](https://github.com/rsksmart/devportal/issues)
+- [Join the Community](http://discord.gg/rootstock)
+- [Changelog](https://dev.rootstock.io/changelog/)
+- Request an Article
+
+#### Feedback
+
+[Share on Twitter](https://twitter.com/intent/tweet?url=https://dev.rootstock.io/ "Share on Twitter")[Share on Facebook](https://www.facebook.com/sharer.php?&u=https://dev.rootstock.io/ "Share on Facebook")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://dev.rootstock.io/ "Share on Linkedin")
+
+Copy page link
+
+Back to top
+
+281.68M
