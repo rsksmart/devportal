@@ -22,8 +22,6 @@ export default function ReadMoreLink(props) {
         {
           message: 'Read more about {title}',
           id: 'theme.blog.post.readMoreLabel',
-          description:
-            'The ARIA label for the link to full blog posts from excerpts',
         },
         {title: title},
       )}

@@ -4,6 +4,7 @@ import styles from './styles.module.scss'
 import MDXRenderer from '/src//components/MDXRenderer' // Your chosen renderer
 import Link from '@docusaurus/Link'
 import ReadMoreLink from './ReadMoreLink'
+import changelogRedirects from '/src/data/changelog-redirects.json'
 
 const formatDate = (dateString) => {
   const date = new Date(dateString)
@@ -59,6 +60,11 @@ const formatBody = (body) => {
   return truncated
 }
 
+const findBlogUrl = (githubUrl) => {
+  const redirect = changelogRedirects.find(item => item.githubUrl === githubUrl)
+  return redirect ? (redirect?.blogUrl || githubUrl) : githubUrl
+}
+
 const ChangelogItem = ({ release, productName }) => {
   if (!release) return null
 
@@ -92,7 +98,10 @@ const ChangelogItem = ({ release, productName }) => {
       </div>
 
       <footer className="d-flex align-items-center justify-content-between mt-24 gap-16">
-        <ReadMoreLink title={title} to={release.html_url}/>
+        <ReadMoreLink
+          title={title}
+          to={findBlogUrl(release.html_url)}
+        />
         {release?.author?.login && (
           <div className="opacity-75 fs-14">
             by <Link className="link-base" href={release.author.html_url}>{release.author?.login}</Link>
