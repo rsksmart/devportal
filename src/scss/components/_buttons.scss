@@ -113,6 +113,24 @@
   padding: 11px 15px;
   position: relative;
   border-radius: 10px;
+
+  &.btn-sm{
+    padding: 8px 12px;
+    font-size: #{$f14};
+    font-weight: 400;
+    border-radius: var(--ifm-code-border-radius);
+  }
+
+  &.btn-muted{
+    --bs-btn-color: rgba(var(--bs-body-color-rgb), 0.5);
+    --bs-btn-border-color: var(--rsk-codeblock-border-color);
+    --bs-btn-hover-color: var(--bs-body-color);
+    --bs-btn-hover-bg: var(--bs-body-bg);
+    --bs-btn-hover-border-color: var(--bs-body-color);
+    --bs-btn-active-color: var(--bs-body-color);
+    --bs-btn-active-bg: var(--bs-body-bg);
+    --bs-btn-active-border-color: var(--bs-body-color);
+  }
 }
 
 .btn-no-shadow{
