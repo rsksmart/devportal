@@ -6,12 +6,11 @@ tags: [rsk, rootstock, oku, usdrif, rbtc rust, tutorials, exchange, resources, m
 description: "Want to move your USDRIF from Rootstock to another blockchain to access new DeFi opportunities or a different stablecoin? This guide shows you how to securely and efficiently bridge your USDRIF to USD using the OKU protocol."
 ---
 
-Want to move tokens from Rootstock to another blockchain to access DeFi opportunities or get a different token? This tutorial demonstrates how to securely and efficiently bridge `USDRIF` on Rootstock to `USDC` on Ethereum using [OKU](https://oku.trade/).
-
+Want to move tokens from Rootstock to another blockchain to access DeFi opportunities or get a different token? This tutorial demonstrates how to securely and efficiently bridge `USDRIF` on Rootstock to `USDC` on Ethereum using [OKU](https://oku.trade/). Oku is a DeFi aggregator that offers the best swap and bridge rates across any chain including Rootstock. 
 
 ## Prerequisites
 
-* Software wallet (e.g., MetaMask). 
+* Software wallet (e.g., [MetaMask](https://metamask.io/)). 
     * See how to [Configure MetaMask Wallet for Rootstock](https://dev.rootstock.io/dev-tools/wallets/metamask/).
 * Make sure you have at least `0.000015` **RBTC** on Rootstock for gas.
     * No RBTC? See how to [Get RBTC](https://rootstock.io/rbtc/#get-rbtc) or how to [Get RIF](https://rif.technology/rif-token/).
