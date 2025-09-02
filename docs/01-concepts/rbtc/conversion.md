@@ -22,7 +22,7 @@ The process of conversion utilises a [Powpeg](/concepts/powpeg/) mechanism. Thus
 
 There are two main ways to perform a peg-in:
 
-1. **Direct Peg-in (Legacy)**: You can send funds directly from your wallet to a Federation address or using the [PowPeg App](https://powpeg.rootstock.io/). This method is only supported for two specific address types:
+1. **Direct Peg-in (Legacy)**: You can send funds directly from your wallet to a [Federation address](/concepts/powpeg/#the-history-of-the-powpeg-protocol) or using the [PowPeg App](https://powpeg.rootstock.io/). This method is only supported for two specific address types:
     - Legacy Addresses (P2PKH): Starts with a `1`. These addresses are the original Bitcoin address format.
     - SegWit Compatible Addresses (P2SH-P2WPKH): Starts with a `3`. These addresses support Segregated Witness (SegWit), a type of upgrade to the Bitcoin network.
 
