@@ -21,7 +21,7 @@ title="Move USDRIF to USDC on Symbiosis"
 subtitle="symbiosis"
 color="orange"
 linkHref="/resources/tutorials/symbiosis-rootstock/"
-description="This tutorial will teach you how to use Viem to interact with your contracts on Rootstock."
+description="This tutorial demonstrates how to securely and efficiently bridge USDRIF on Rootstock to USDC on Ethereum using Symbiosis."
 />
 <FilterItem
 value="beginner, advanced"
