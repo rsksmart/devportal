@@ -6,7 +6,7 @@ tags: [rsk, rootstock, symbiosis, usdrif, rbtc rust, tutorials, exchange, resour
 description: "Want to move your USDRIF from Rootstock to another blockchain to access new DeFi opportunities or a different stablecoin? This guide shows you how to securely and efficiently bridge your USDRIF to USDC using Symbiosis."
 ---
 
-Want to move tokens from Rootstock to other blockchains? This tutorial demonstrates how to securely and efficiently bridge `USDRIF` on Rootstock to `USDC` on Ethereum using [Symbiosis](https://symbiosis.finance/). Symbiosis is a cross-chain AMM DEX that enables asset transfers and swaps from Rootstock to other chains.
+Symbiosis is a cross-chain AMM DEX that enables asset transfers and swaps on Rootstock. Want to move tokens from Rootstock to other blockchains? This tutorial demonstrates how to securely and efficiently bridge `USDRIF` on Rootstock to `USDC` on Ethereum using [Symbiosis](https://symbiosis.finance/). 
  
 ## Prerequisites
 
