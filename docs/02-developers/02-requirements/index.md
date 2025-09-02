@@ -15,7 +15,6 @@ This guide provides clear instructions for developers on the supported Solidity 
 
 - **Resources:**
   - Explore the [Developer Tools](/dev-tools/) section for a full list of tools and resources.
-
 :::
 
 ````mdx-code-block
@@ -82,6 +81,16 @@ See [Account based addresses](/concepts/account-based-addresses/) section for mo
 
 </Step>
 
+<Step title="Faucets">
+
+Get test tokens on Rootstock:
+* [Rootstock Faucet](https://faucet.rootstock.io/): Get free test RBTC tokens for development and testing.
+* [RIF Testnet Faucet](https://faucet.rifos.org/): Obtain free RIF testnet tokens to explore the RIF ecosystem.
+* [Thirdweb Faucet](https://thirdweb.com/rootstock-testnet): Get free test RBTC tokens for development and testing.
+* [Blast Faucet](https://blastapi.io/faucets/rootstock-testnet): Get free test RBTC tokens for development and testing.
+
+</Step>
+
 <Step title="Contract Addresses">
 
 Understand and reference key contract addresses for development:
@@ -135,7 +144,6 @@ Boost productivity with these CLI tools:
 
 
 ### Installing Node.js and NPM
-
 
 <Tabs>
   <TabItem value="nvm" label="NVM" default>

@@ -323,3 +323,4 @@ Encountered issues?
 - [OFT Standard Specification](https://docs.layerzero.network/contracts/oft)
 - [Rootstock Documentation](https://dev.rootstock.io/)
 - [Deployed Endpoints, Message Libraries, and Executors](https://docs.layerzero.network/v2/deployments/deployed-contracts)
+- [Move USDRIF to USDC on OKU](/resources/tutorials/oku-rootstock/)

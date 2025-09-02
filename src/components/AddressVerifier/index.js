@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { getAddressInformation, canPegIn } from '/src/_utils/pegin-address-verifier/pegin-address-verifier'
 import Admonition from '@theme/Admonition'
+import { ADDRESS_TYPES } from '/src/_utils/pegin-address-verifier/crypto/constants'
 
 export default function AddressVerifier () {
 
@@ -27,26 +28,28 @@ export default function AddressVerifier () {
 
     useEffect(() => {
       const displayAddress = `<code>${address}</code>`
-
-      if (info === null) {
+      // Check if info is null or if info.type is undefined before attempting to use it.
+      if (!info || !info.type) {
         setResult(`The address ${displayAddress} is not valid.`)
         setResultType('warning')
         setResultTitle('Not valid')
-      } else if (info?.type) {
-        setResultType('success')
-        setResultTitle('Valid')
+      } else {
         let displayAddressType = `<code>${info.type.toUpperCase()}</code>`
         let displayNetwork = `<code>${info.network.charAt(0).toUpperCase()}${info.network.slice(1)}</code>`
+        let isCanPegIn = canPegIn(info);
 
-        let isCanPegIn = canPegIn(info)
         if (isCanPegIn) {
-          if (info.type == 'p2pkh') {
-            setResult(`The address ${displayAddress} is a valid ${displayAddressType} address, and may peg in on ${displayNetwork}.`)
-          } else {
-            setResult(`The address ${displayAddress} is a valid ${displayAddressType} address, however, may not peg in on ${displayNetwork}. Please check the compatibility matrix.`)
-          }
+          setResultTitle('Valid for Direct Peg-in')
+          setResultType('success')
+          setResult(`The address ${displayAddress} is a valid ${displayAddressType} address, and may be used for a direct peg-in on ${displayNetwork}. Visit the <a href="https://powpeg.rootstock.io/" target="_blank">Powpeg App</a> to peg-in or peg-out on Rootstock.`)
+        } else if (info.type === ADDRESS_TYPES.BECH32) {
+          setResultTitle('Not valid for Legacy Peg-in, visit the PowPeg App')
+          setResultType('info')
+          setResult(`The address ${displayAddress} is a valid ${displayAddressType} address. However, a direct peg-in is not supported for this address type. Visit the <a href="https://powpeg.rootstock.io/" target="_blank">Powpeg App</a> to perform a peg-in transaction from this address.`)
         } else {
-          setResult(`The address ${displayAddress} is a valid ${displayAddressType} address, however, will not peg in on ${displayNetwork}.<br/><strong>Do not use</strong> this wallet, your BTC will be <strong>lost</strong>. Please check the compatibility matrix.`)
+          setResultTitle('Not Valid for Peg-in')
+          setResultType('warning')
+          setResult(`The address ${displayAddress} is a valid ${displayAddressType} address, however, will not peg in on ${displayNetwork}.<br/><strong>Do not use</strong> this wallet for peg-in, your BTC may be <strong>lost</strong>. Please check the <a href="/dev-tools/wallets/#compatibility-matrix" target="_blank">compatibility matrix</a>.`)
         }
       }
     }, [info])
@@ -67,7 +70,7 @@ export default function AddressVerifier () {
           <button type="reset" className="btn" onClick={clearForm}>Clear</button>
         </div>
       </div>
-      <AddressInfoResult info={addressInfo}/>
+      {addressInfo && <AddressInfoResult info={addressInfo}/>}
     </form>
   )
 }

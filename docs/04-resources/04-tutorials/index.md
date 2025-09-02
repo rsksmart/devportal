@@ -17,6 +17,14 @@ values={[
 ]}>
 <FilterItem
 value="beginner, advanced"
+title="Move USDRIF to USDC on OKU"
+subtitle="oku"
+color="orange"
+linkHref="/resources/tutorials/oku-rootstock/"
+description="This tutorial demonstrates how to securely and efficiently bridge USDRIF on Rootstock to USDC on Ethereum using OKU."
+/>
+<FilterItem
+value="beginner, advanced"
 title="Interacting with Rootstock using Viem"
 subtitle="Viem"
 color="orange"
