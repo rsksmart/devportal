@@ -3,11 +3,11 @@ sidebar_position: 11
 title: Move USDRIF to USDC on Symbiosis | Cross-chain transfers
 sidebar_label: Move USDRIF to USDC on Symbiosis 
 tags: [rsk, rootstock, symbiosis, usdrif, rbtc rust, tutorials, exchange, resources, move stablecoins from Rootstock]
-description: "Want to move your USDRIF from Rootstock to another blockchain to access new DeFi opportunities or a different stablecoin? This guide shows you how to securely and efficiently bridge your USDRIF to USD using Symbiosis."
+description: "Want to move your USDRIF from Rootstock to another blockchain to access new DeFi opportunities or a different stablecoin? This guide shows you how to securely and efficiently bridge your USDRIF to USDC using Symbiosis."
 ---
 
-Want to move tokens from Rootstock to other blockchains? This tutorial demonstrates how to securely and efficiently bridge `USDRIF` on Rootstock to `USDC` on Ethereum using [Symbiosis](https://symbiosis.finance/). Symbiosis is a cross-chain AMM DEX that pools together liquidity from different networks including Rootstock. Easily swap Rootstock tokens and move your assets from Rootstock to other chains.
-
+Want to move tokens from Rootstock to other blockchains? This tutorial demonstrates how to securely and efficiently bridge `USDRIF` on Rootstock to `USDC` on Ethereum using [Symbiosis](https://symbiosis.finance/). Symbiosis is a cross-chain AMM DEX that enables asset transfers and swaps from Rootstock to other chains.
+ 
 ## Prerequisites
 
 * Software wallet (e.g., [MetaMask](https://metamask.io/)). 
@@ -77,6 +77,18 @@ On the destination chain without its **native token**? You can use **Symbiosis**
 
 ![Symbiosis Updated rates](/img/resources/tutorials/symbiosis/10-updated-rate-change.png)
 
-4. Click ‘Swap’.
+4. Click ‘Swap’ and confirmation the transaction in your wallet.
 
+![Confirm Transaction Wallet](/img/resources/tutorials/symbiosis/11-confirm-transaction-wallet.png)
 
+5. Confirm the swap.
+
+Approve the **swap transaction** in your wallet.
+
+![Confirm Transaction Wallet](/img/resources/tutorials/symbiosis/12-confirm-transaction-status.png)
+
+6. Check wallet
+
+Your **native token** is now available for gas.
+
+![Native token available](/img/resources/tutorials/symbiosis/13-native-token-available.png)
