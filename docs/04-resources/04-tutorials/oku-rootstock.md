@@ -101,6 +101,6 @@ Approve the **swap transaction** in your wallet.
 
 7. Check your wallet  
 
-Your **native tokens** is now available for gas.
+Your **native token** is now available for gas.
 
 ![Native Token Available](/img/resources/tutorials/oku/13-native-token-available.png)
