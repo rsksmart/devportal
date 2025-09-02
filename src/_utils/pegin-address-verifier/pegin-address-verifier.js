@@ -16,9 +16,9 @@ const getAddressInformation = (address) => {
 };
 
 const canPegIn = (addressInfo) => {
-    return addressInfo && 
-        addressInfo.type == ADDRESS_TYPES.P2PKH || 
-        addressInfo.type == ADDRESS_TYPES.P2SH;
+    return addressInfo &&
+        (addressInfo.type == ADDRESS_TYPES.P2PKH ||
+        addressInfo.type == ADDRESS_TYPES.P2SH);
 };
 
 /**
