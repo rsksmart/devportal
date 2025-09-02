@@ -12,8 +12,10 @@ Want to move tokens from Rootstock to another blockchain to access DeFi opportun
 
 * Software wallet (e.g., [MetaMask](https://metamask.io/)). 
     * See how to [Configure MetaMask Wallet for Rootstock](https://dev.rootstock.io/dev-tools/wallets/metamask/).
-* Make sure you have at least `0.000015` **RBTC** on Rootstock for gas.
-    * No RBTC? See how to [Get RBTC](https://rootstock.io/rbtc/#get-rbtc) or how to [Get RIF](https://rif.technology/rif-token/).
+* Make sure you have at least `0.000015` **rBTC** on Rootstock for gas.
+    * No rBTC? See how to [Get rBTC](https://rootstock.io/rbtc/#get-rbtc) or how to [Get RIF](https://rif.technology/rif-token/).
+* At least `20` USDRIF
+    * See how to [Get RIF](https://rif.technology/rif-token/) or [stake RIF](https://app.rootstockcollective.xyz/).
 * Ensure you're connected to the **Rootstock** Mainnet network in your wallet.
     * See how to [Add Rootstock network to MetaMask](https://dev.rootstock.io/dev-tools/wallets/metamask/#option-1-add-rootstock-networks-to-metamask-automatically).
 
@@ -30,7 +32,8 @@ Want to move tokens from Rootstock to another blockchain to access DeFi opportun
 > Note:  The panel on the right shows the route and an estimate of the gas fees
 
 3. Review Transaction
-Click on Bridge and Review the Transaction
+
+Click on Bridge and review the transaction
 
 ![Confirm Transaction](/img/resources/tutorials/oku/2-confirm-transaction.png)
 
@@ -64,7 +67,7 @@ You can monitor progress in your wallet’s **Activity / Transactions** tab.
 
 All done! Your cross-chain transfer is complete.
 
-## Using OKU Paymaster
+## Using OKU to pay for gas
 
 On the destination chain without its **native token**? You can use **OKU** to pay fees with the **same token you’re swapping**.
 
