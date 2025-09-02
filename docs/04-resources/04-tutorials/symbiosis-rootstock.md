@@ -35,7 +35,7 @@ Symbiosis is a cross-chain AMM DEX that enables asset transfers and swaps on Roo
 
 ![Confirm Spending Cap USDRIF](/img/resources/tutorials/symbiosis/2-confirm-spending-cap.png)
 
-5. Rates often fluctuates, click the ‘Update Rates’ button
+5. Rates often fluctuates, click to ‘Update Rates’.
 
 ![Update Rates](/img/resources/tutorials/symbiosis/3-update-rates.png)
 
@@ -73,9 +73,13 @@ On the destination chain without its **native token**? You can use **Symbiosis**
 
 > Note: Fees are paid in the token you’re swapping, not in the native token.
 
-3. Rates often fluctuates, click the ‘Update Rates’ button
+3. Rates often fluctuates, click to ‘Update Rates’.
 
-![Symbiosis Updated rates](/img/resources/tutorials/symbiosis/10-updated-rate-change.png)
+![Update Rates](/img/resources/tutorials/symbiosis/3a-update-rates.png)
+
+Observe the rate changes in the image below:
+
+![View Updated Rates](/img/resources/tutorials/symbiosis/4a-view-updated-rates.png)
 
 4. Click ‘Swap’ and confirmation the transaction in your wallet.
 
