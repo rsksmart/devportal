@@ -35,23 +35,23 @@ Symbiosis is a cross-chain AMM DEX that enables asset transfers and swaps on Roo
 
 ![Confirm Spending Cap USDRIF](/img/resources/tutorials/symbiosis/2-confirm-spending-cap.png)
 
-5. Rates often fluctuates, click the ‘Update Rates’ button
+5. Rates often fluctuates, click the button to Update Rates.
 
 ![Update Rates](/img/resources/tutorials/symbiosis/3-update-rates.png)
 
-Observe the rate changes in the image below:
+6. Observe the rate changes in the updated rates image and click Swap:
 
 ![View Updated Rates](/img/resources/tutorials/symbiosis/4-view-updated-rates.png)
 
-6. Confirm the swap transaction
+7. Confirm the transaction in your wallet
 
 ![Confirm Swap Transaction](/img/resources/tutorials/symbiosis/5-confirm-swap-transaction.png)
 
-7. Review the transaction status popup for step by step updates
+8. View transaction status
 
 ![Step by step updates](/img/resources/tutorials/symbiosis/6-step-by-step-updates.png)
 
-8. Track wallet activity
+9. Track wallet activity
 
 You can monitor progress in your wallet’s **Activity / Transactions** tab.
 
@@ -73,17 +73,19 @@ On the destination chain without its **native token**? You can use **Symbiosis**
 
 > Note: Fees are paid in the token you’re swapping, not in the native token.
 
-3. Rates often fluctuates, click the ‘Update Rates’ button
+3. Rates often fluctuates, click the button to Update Rates.
 
-![Symbiosis Updated rates](/img/resources/tutorials/symbiosis/10-updated-rate-change.png)
+![Update Rates](/img/resources/tutorials/symbiosis/3a-update-rates.png)
 
-4. Click ‘Swap’ and confirmation the transaction in your wallet.
+4. Observe the rate changes in the updated rates image and click Swap:
+
+![View Updated Rates](/img/resources/tutorials/symbiosis/4a-view-updated-rates.png)
+
+5. Confirm Transaction in Wallet.
 
 ![Confirm Transaction Wallet](/img/resources/tutorials/symbiosis/11-confirm-transaction-wallet.png)
 
-5. Confirm the swap.
-
-Approve the **swap transaction** in your wallet.
+5. View transaction status
 
 ![Confirm Transaction Wallet](/img/resources/tutorials/symbiosis/12-confirm-transaction-status.png)
 
