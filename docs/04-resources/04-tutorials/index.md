@@ -17,6 +17,14 @@ values={[
 ]}>
 <FilterItem
 value="beginner, advanced"
+title="Move USDRIF to USDC on Symbiosis"
+subtitle="symbiosis"
+color="orange"
+linkHref="/resources/tutorials/symbiosis-rootstock/"
+description="This tutorial will teach you how to use Viem to interact with your contracts on Rootstock."
+/>
+<FilterItem
+value="beginner, advanced"
 title="Interacting with Rootstock using Viem"
 subtitle="Viem"
 color="orange"
