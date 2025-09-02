@@ -3,19 +3,19 @@ sidebar_position: 10
 title: Move USDRIF to USDC on OKU | Cross-chain transfers
 sidebar_label: Move USDRIF to USDC on OKU 
 tags: [rsk, rootstock, oku, usdrif, rbtc rust, tutorials, exchange, resources, move stablecoins from Rootstock]
-description: "Want to move your USDRIF from Rootstock to another blockchain to access new DeFi opportunities or a different stablecoin? This guide shows you how to securely and efficiently bridge your USDRIF to USD using the OKU protocol."
+description: "Want to move your USDRIF from Rootstock to another blockchain to access new DeFi opportunities or a different stablecoin? This guide shows you how to securely and efficiently bridge your USDRIF to USDC using OKU."
 ---
 
-Want to move tokens from Rootstock to another blockchain to access DeFi opportunities or get a different token? This tutorial demonstrates how to securely and efficiently bridge `USDRIF` on Rootstock to `USDC` on Ethereum using [OKU](https://oku.trade/). Oku is a DeFi aggregator that offers the best swap and bridge rates across any chain including Rootstock. 
+Oku is a DeFi aggregator that offers the best swap and bridge rates across any chain including Rootstock. Want to move tokens from Rootstock to another blockchain to access DeFi opportunities or get a different token? This tutorial demonstrates how to securely and efficiently bridge `USDRIF` on Rootstock to `USDC` on Ethereum using [OKU](https://oku.trade/). 
 
 ## Prerequisites
 
 * Software wallet (e.g., [MetaMask](https://metamask.io/)). 
     * See how to [Configure MetaMask Wallet for Rootstock](https://dev.rootstock.io/dev-tools/wallets/metamask/).
 * Make sure you have at least `0.000015` **rBTC** on Rootstock for gas.
-    * No rBTC? See how to [Get rBTC](https://rootstock.io/rbtc/#get-rbtc) or how to [Get RIF](https://rif.technology/rif-token/).
-* At least `20` USDRIF
-    * See how to [Get RIF](https://rif.technology/rif-token/) or [stake RIF](https://app.rootstockcollective.xyz/).
+    * No rBTC? See how to [Get rBTC](https://rootstock.io/rbtc/#get-rbtc)
+* A minimum of 20 USDRIF
+    * See how to [Get RIF](https://rif.technology/rif-token/) or [stake RIF using the RootstockCollective](https://app.rootstockcollective.xyz/).
 * Ensure you're connected to the **Rootstock** Mainnet network in your wallet.
     * See how to [Add Rootstock network to MetaMask](https://dev.rootstock.io/dev-tools/wallets/metamask/#option-1-add-rootstock-networks-to-metamask-automatically).
 
