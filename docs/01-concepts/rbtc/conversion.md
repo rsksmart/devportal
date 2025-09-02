@@ -18,20 +18,25 @@ The process of conversion utilises a [Powpeg](/concepts/powpeg/) mechanism. Thus
   - Locks rBTC on the Rootstock network
   - Releases BTC on the Bitcoin network
 
-## Compatibility
+## Address Compatibility
 
-**The types of addresses that are accepted for the Federation are**:
-- Legacy (P2PKH)
-- Segwit Compatible (P2SH-P2WPKH)
+There are two main ways to perform a peg-in:
 
-:::info[Note]
-On the Testnets, the token symbols are prefixed with a lowercase `t`.
-Thus, we have `BTC` and `rBTC` on the Mainnets, which correspond to `tBTC` and `tRBTC` of the Testnets.
+1. **Direct Peg-in (Legacy)**: You can send funds directly from your wallet to a [Federation address](/concepts/powpeg/#the-history-of-the-powpeg-protocol) or using the [PowPeg App](https://powpeg.rootstock.io/). This method is only supported for two specific address types:
+    - Legacy Addresses (P2PKH): Starts with a `1`. These addresses are the original Bitcoin address format.
+    - SegWit Compatible Addresses (P2SH-P2WPKH): Starts with a `3`. These addresses support Segregated Witness (SegWit), a type of upgrade to the Bitcoin network.
+
+2. **Using the PowPeg App (Modern)**: For other address types, a specialized tool like the [PowPeg App](https://powpeg.rootstock.io/) has been built for smoother UX and faster peg-ins. Required for addresses such as:
+    - Native SegWit (Bech32): Starts with `bc1`. Starts with `bc1`. This is the newest address format. You cannot use it for a direct peg-in because it requires the `OP_RETURN` field to be included in the transaction. Modern tools like the PowPeg App include this field directly from the destination address.
+
+:::tip[Tip]
+
+The address verifier on this page is designed to check for direct peg-in compatibility only. If you are using a Native Segwit (Bech32) address, you will need to use a tool like the [PowPeg App](https://powpeg.rootstock.io/) to perform a peg-in.
 :::
 
-### Address verifier
+## Address verifier
 
-Enter your BTC address below to verify whether it may be used to peg in from BTC to rBTC.
+Enter your BTC address below to verify whether it may be used to peg in from BTC to rBTC. 
 
 <AddressVerifier />
 
