@@ -13,7 +13,7 @@ Explore dApp use case guides and tutorials for building DeFi on Bitcoin, AI, and
 <Filter
 values={[
 {label: 'DeFi', value: 'defi'},
-{label: 'AI', value: 'ai'},
+{label: 'AI/MCP', value: 'ai'},
 {label: 'Runes', value: 'runes'}
 ]}>
 <FilterItem

@@ -65,7 +65,7 @@ description: "Explore a curated selection of smart contract development tools an
   />
 <FilterItem
     value="dev-environment, sc, deploy, ai"
-    title="MCP"
+    title="Deploy and Interact with Rootstock using the MCP Server"
     subtitle="Dev Environments"
     color="orange"
     linkHref="/developers/quickstart/mcp/"

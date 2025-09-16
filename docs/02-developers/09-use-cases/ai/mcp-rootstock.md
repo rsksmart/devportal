@@ -12,7 +12,12 @@ It's aimed at helping AI models produce better and more relevant responses. MCPs
 
 In this section, we will dive into MCPs, how they work, key use cases and applications on Rootstock.
 
-Ready to build? See the [Developer Guide on Setting up the Rootstock MCP Server](/developers/quickstart/mcp/) to get started building and deploying AI Enabled dApps on Rootstock for step-by-step instructions or use the [MCP Starter Kit](https://github.com/rsksmart/rsk-mcp-server) or use the [NPM Package](https://www.npmjs.com/package/@rsksmart/rsk-mcp-server) for remote configuration of the AI client.
+:::info[Model Context Protocols on Rootstock]
+
+Ready to build? See the [Developer Guide to interacting with Rootstock using the MCP Server](/developers/quickstart/mcp/) to get started building and deploying AI Enabled dApps on Rootstock for step-by-step instructions or use the [MCP Starter Kit](https://github.com/rsksmart/rsk-mcp-server) or use the [NPM Package](https://www.npmjs.com/package/@rsksmart/rsk-mcp-server) for remote configuration of the AI client.
+
+:::
+
 
 ## What are MCPs?
 
@@ -47,6 +52,12 @@ To better understand MCPs, let's break down its term:
 **Verified AI Actions:** By using MCPs, actions performed by an AI can be transparent and verifiable on the blockchain. The blockchain's public ledger records every action, so you can always see exactly what the AI did.
 
 **Enabling AI dApps:** MCPs can help build decentralized applications where AI models perform tasks autonomously without a central authority.
+
+:::info[Model Context Protocols on Rootstock]
+
+Ready to build? See the [Developer Guide to interacting with Rootstock using the MCP Server](/developers/quickstart/mcp/) to get started building and deploying AI Enabled dApps on Rootstock for step-by-step instructions or use the [MCP Starter Kit](https://github.com/rsksmart/rsk-mcp-server) or use the [NPM Package](https://www.npmjs.com/package/@rsksmart/rsk-mcp-server) for remote configuration of the AI client.
+
+:::
 
 ## Key Use Cases for MCP on Rootstock
 

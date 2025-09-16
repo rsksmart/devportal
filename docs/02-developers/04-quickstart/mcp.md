@@ -1,7 +1,7 @@
 ---
-sidebar_label: Rootstock MCP Server
+sidebar_label: MCP Server
 sidebar_position: 201
-title: Deploy, Interact and Automate your dApps with Rootstock MCP
+title: Deploy and Interact with Rootstock using the MCP Server
 tags: [rsk, rootstock, mcp, ai agents, ai]
 description: "This quick start tutorial demonstrates how to interact with AI clients to automate, build and deploy innovative AI-enabled dApps on Rootstock."
 ---
@@ -10,7 +10,7 @@ Rootstock MCP Server is a Model Context Protocol (MCP) server that provides adva
 
 In this tutorial, you will learn how to interact with AI clients to automate, build and deploy innovative AI-enabled dApps on Rootstock.
 
-:::info[Understanding Model Context Protocols]
+:::info[Model Context Protocols on Rootstock]
 
 Not sure about what MCPs are or how they work? Read the [guide to MCPs on Rootstock](/developers/use-cases/ai/mcp-rootstock).
 
@@ -117,9 +117,9 @@ There are two ways to configure the MCP Server:
 
 Note: You will use this Model Context Protocol Server from a LLM Client (e.g Cursor, Claude, Warp, etc) which needs to be compatible with the MCP standard.
 
-For detailed set up instructions, please refer to the [README](https://github.com/rsksmart/rsk-mcp-server?tab=readme-ov-file#%EF%B8%8F-ai-client-configuration).
+For detailed set up instructions, please refer to the [MCP Server README](https://github.com/rsksmart/rsk-mcp-server?tab=readme-ov-file#%EF%B8%8F-ai-client-configuration) AI Client configuration guide.
 
-:::tip[NPM Package]
+:::tip[Connect Remotely to MCP Server using NPM]
 
 For remote configurations with AI clients like cursor and claude, connect using the [NPM Package](https://www.npmjs.com/package/@rsksmart/rsk-mcp-server).
 :::

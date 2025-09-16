@@ -30,7 +30,7 @@ values={[
   />
 <FilterItem
     value="beginner, Advanced"
-    title="Deploy, Interact and Automate with Rootstock MCP"
+    title="Deploy and Interact with Rootstock using the MCP Server"
     subtitle="quickstart"
     color="orange"
     linkHref="/developers/quickstart/mcp/"
