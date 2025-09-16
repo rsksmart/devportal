@@ -30,6 +30,15 @@ values={[
   />
 <FilterItem
     value="beginner, Advanced"
+    title="Deploy, Interact and Automate with Rootstock MCP"
+    subtitle="quickstart"
+    color="orange"
+    linkHref="/developers/quickstart/mcp/"
+    linkTitle="Use the Kit"
+    description="Rootstock MCP Server is a Model Context Protocol (MCP) server that provides advanced tools for interacting with the Rootstock blockchain. This project enables AI clients to seamlessly connect and execute blockchain operations."
+  />
+<FilterItem
+    value="beginner, Advanced"
     title="Vyper Starter Kit"
     subtitle="quickstart"
     color="orange"

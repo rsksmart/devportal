@@ -692,7 +692,7 @@ description: Rootstock에서 스마트 컨트랙트를 개발하고 배포하는
     title="Layerzero"
     subtitle="크로스체인 브릿지"
     color="orange"
-    linkHref="/developers/use-cases/rootstock-layerzero/"
+    linkHref="/developers/use-cases/defi/rootstock-layerzero/"
     linkTitle="크로스체인 dApps 개발"
     description="LayerZero는 크로스체인 메시징 프로토콜로, Rootstock에서 다른 블록체인으로 비트코인 기반 자산을 원활하게 이동할 수 있도록 해줍니다. 이를 통해 개발자는 여러 체인을 마치 하나처럼 연결해 상호작용하는 옴니체인 애플리케이션(OApp)을 구축할 수 있습니다."
   />

@@ -11,11 +11,12 @@ description: "Explore a curated selection of smart contract development tools an
   values={[
     {label: 'Bridges', value: 'bridge'},
     {label: 'Starter Kits', value: 'demos'},
-    {label: 'CLI', value: 'cli'},
+    {label: 'AI', value: 'ai'},
     {label: 'Wallets', value: 'wallet'},
+    {label: 'CLI', value: 'cli'},
     {label: 'Exchanges', value: 'exchange'},
     {label: 'Explorers', value: 'explorer'},
-    {label: 'Platforms and Infra', value: 'platform-infra'},
+    {label: 'Deployment', value: 'deploy'},
     {label: 'Cross Chain', value: 'cc'},
     {label: 'Data', value: 'data'},
     {label: 'SDKs', value: 'sdk'},
@@ -54,13 +55,31 @@ description: "Explore a curated selection of smart contract development tools an
     description="Use the Token Bridge to safely and securely move ERC20 tokens from Ethereum to Rootstock and vice-versa."
   />
 <FilterItem
-    value="dev-environment, sc, platform-infra"
+    value="dev-environment, sc, deploy"
     title="Foundry"
     subtitle="Dev Environments"
     color="orange"
     linkHref="https://dev.rootstock.io/dev-tools/foundry/"
     linkTitle="Deploy Smart Contracts"
     description="Foundry is a smart contract development toolchain, and user-friendly development environment for writing and testing smart contracts in Solidity."
+  />
+<FilterItem
+    value="dev-environment, sc, deploy, ai"
+    title="MCP"
+    subtitle="Dev Environments"
+    color="orange"
+    linkHref="/developers/quickstart/mcp/"
+    linkTitle="Use MCP"
+    description="Rootstock MCP Server is a Model Context Protocol (MCP) server that provides advanced tools for interacting with the Rootstock blockchain. This project enables AI clients to seamlessly connect and execute blockchain operations."
+  />
+<FilterItem
+    value="dev-environment, sc, deploy, ai"
+    title="Agents"
+    subtitle="Dev Environments"
+    color="orange"
+    linkHref="/developers/use-cases/ai/ai-agent-rootstock/"
+    linkTitle="Create AI Agent"
+    description="This guide demonstrates how to build a lightweight dApp that connects a conversational AI agent to the Rootstock testnet, allowing users to perform DeFi actions like checking token balances and sending tRBTC simply by chatting."
   />
 <FilterItem
     value="dev-environment, sc"
@@ -270,7 +289,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Tenderly helps developers build, monitor, and improve smart contracts by providing a set of tools to boost productivity, save time, and ensure efficient smart contracts functionality."
   />
 <FilterItem
-    value="platform-infra, sc, sdk, demos"
+    value="deploy, sc, sdk, demos"
     title="Thirdweb"
     subtitle="platforms"
     color="orange"
@@ -279,7 +298,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Thirdweb is a Full-stack web3 development tools, production-grade infrastructure platform for developers to build on Rootstock."
   />
 <FilterItem
-    value="platform-infra, sc"
+    value="deploy, sc"
     title="useDApp"
     subtitle="platforms"
     color="orange"
@@ -288,7 +307,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Build a dApp on Rootstock using useDApp React library."
   />
 <FilterItem
-    value="no-code, platform-infra, sc"
+    value="no-code, deploy, sc"
     title="Forward Protocol"
     subtitle="no-code"
     color="orange"
@@ -297,7 +316,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Build a dApp on Rootstock using Forward Protocol's no-code tools."
   />
 <FilterItem
-    value="no-code, platform-infra, sc"
+    value="no-code, deploy, sc"
     title="CryptoDO"
     subtitle="no-code"
     color="orange"
@@ -342,7 +361,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Accurate next block gas price estimation."
   />
 <FilterItem
-    value="data"
+    value="data, gas"
     title="Rootstock Stats"
     subtitle="data & analytics"
     color="orange"
@@ -441,7 +460,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Verify smart contracts on Rootstock, Sourcify enables transparent and human-readable smart contract interactions through automated Solidity contract verification, contract metadata."
   />
 <FilterItem
-    value="sc, rollups, aa, platform-infra"
+    value="sc, rollups, aa, deploy"
     title="Gelato"
     subtitle="infra"
     color="orange"
@@ -450,7 +469,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Deploy production-grade & fully-serviced L2 rollups on Rootstock, natively integrated with tools like oracles, bridges, data indexers and Account Abstraction."
   />
 <FilterItem
-    value="mine, platform-infra"
+    value="mine, deploy"
     title="Antpool"
     subtitle="mining"
     color="orange"
@@ -459,7 +478,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Start mining with Antpool."
   />
 <FilterItem
-    value="platform-infra"
+    value="deploy"
     title="Vottun"
     subtitle="infra"
     color="orange"
@@ -468,7 +487,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Vottun interoperable multi-blockchain architecture is built to make it easy to develop Web3 applications without the need to understand much of the underlying blockchain technology."
   />
 <FilterItem
-    value="platform-infra"
+    value="deploy"
     title="WakeUp Labs"
     subtitle="infra"
     color="orange"
@@ -639,7 +658,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Account Abstraction Starter dApp using Etherspot."
   />
 <FilterItem
-    value="sdk, sc, aa, platform-infra"
+    value="sdk, sc, aa, deploy"
     title="Etherspot"
     subtitle="Account Abstraction"
     color="orange"
@@ -688,7 +707,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="Layerzero"
     subtitle="Cross Chain Bridges"
     color="orange"
-    linkHref="/developers/use-cases/rootstock-layerzero/"
+    linkHref="/developers/use-cases/defi/rootstock-layerzero/"
     linkTitle="Build Cross Chain dApps"
     description="LayerZero, a cross-chain messaging protocol enables the seamless movement of Bitcoin-backed assets from Rootstock to other blockchains, allowing developers to build omnichain applications (OApps) that interact across multiple chains as if they were one."
   />
