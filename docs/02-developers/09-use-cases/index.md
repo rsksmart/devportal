@@ -13,7 +13,7 @@ Explore dApp use case guides and tutorials for building DeFi on Bitcoin, AI, and
 <Filter
 values={[
 {label: 'DeFi', value: 'defi'},
-{label: 'AI', value: 'ai'},
+{label: 'AI/MCP', value: 'ai'},
 {label: 'Runes', value: 'runes'}
 ]}>
 <FilterItem
@@ -21,7 +21,7 @@ value="advanced, defi"
 title="Build Omnichain Fungible Token (OFTs) on Rootstock with Layerzero"
 subtitle="DeFi"
 color="orange"
-linkHref="/developers/use-cases/rootstock-layerzero/"
+linkHref="/developers/use-cases/defi/rootstock-layerzero/"
 description="This guide demonstrates implementing cross-chain token transfers using OFT (Omnichain Fungible Token) between Rootstock Testnet and Ethereum Sepolia Testnet via LayerZero's OFT V2 protocol."
 />
 <FilterItem
@@ -29,8 +29,16 @@ value="ai"
 title="Build a Conversational AI Agent with Blockchain Actions on Rootstock"
 subtitle="ai"
 color="orange"
-linkHref="/developers/use-cases/ai-agent-rootstock"
+linkHref="/developers/use-cases/ai/ai-agent-rootstock"
 description="This guide demonstrates how to build a lightweight dApp that connects a conversational AI agent to the Rootstock testnet, allowing users to perform DeFi actions like checking token balances and sending tRBTC simply by chatting."
+/>
+<FilterItem
+value="ai"
+title="Understanding Model Context Protocols (MCP) on Rootstock"
+subtitle="ai"
+color="orange"
+linkHref="/developers/use-cases/ai/mcp-rootstock"
+description="This section gives a high level overview on how MCPs work, key use cases and applications on Rootstock."
 />
 <FilterItem
 value="runes"
