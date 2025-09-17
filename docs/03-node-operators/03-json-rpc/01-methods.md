@@ -1047,7 +1047,11 @@ Executes a new message call immediately without creating a transaction on the bl
 - `stateDiff`: `Object`, any - (optional) Fake key-value mapping to override individual slots in the account storage before executing the call.
 - `movePrecompileToAddress`: `DATA`, 20 Bytes - Not suppported yet.
 
+:::tip[Tip]
+
 State override can be enabled/disabled and its behavior can be tweaked via [rpc configurations](https://dev.rootstock.io/node-operators/setup/configuration/reference/#rpc).
+
+:::
 
 ##### Example without State Override
 
