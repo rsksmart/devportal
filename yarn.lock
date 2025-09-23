@@ -9910,10 +9910,10 @@ sass-loader@^16.0.2:
   dependencies:
     neo-async "^2.6.2"
 
-sass@^1.77.3:
-  version "1.89.0"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.89.0.tgz#6df72360c5c3ec2a9833c49adafe57b28206752d"
-  integrity sha512-ld+kQU8YTdGNjOLfRWBzewJpU5cwEv/h5yyqlSeJcj6Yh8U4TDA9UA5FPicqDz/xgRPWRSYIQNiFks21TbA9KQ==
+sass@^1.93.1:
+  version "1.93.1"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.93.1.tgz#94bf77eeef5fba022c7316515327e275e46b654e"
+  integrity sha512-wLAeLB7IksO2u+cCfhHqcy7/2ZUMPp/X2oV6+LjmweTqgjhOKrkaE/Q1wljxtco5EcOcupZ4c981X0gpk5Tiag==
   dependencies:
     chokidar "^4.0.0"
     immutable "^5.0.2"
