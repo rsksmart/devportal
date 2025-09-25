@@ -30,6 +30,15 @@ values={[
   />
 <FilterItem
     value="beginner, Advanced"
+    title="Rootstock Scaffold Starter Kit"
+    subtitle="Demos"
+    color="orange"
+    linkHref="https://github.com/rsksmart/rsk-scaffold"
+    linkTitle="Use the Scaffold"
+    description="Rootstock scaffold enables developers to create, debug and deploy smart contracts and build user interfaces that interact with those contracts."
+  />
+<FilterItem
+    value="beginner, Advanced"
     title="Deploy and Interact with Rootstock using the MCP Server"
     subtitle="quickstart"
     color="orange"
