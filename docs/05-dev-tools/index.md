@@ -703,6 +703,15 @@ description: "Explore a curated selection of smart contract development tools an
     description="Access On-Chain data for your smart contracts on Rootstock."
   />
   <FilterItem
+    value="sc, oracles, data"
+    title="APRO Oracle"
+    subtitle="Oracles"
+    color="orange"
+    linkHref="https://www.apro.com/data-push?chain=rootstock-main"
+    linkTitle="Access On-chain Data"
+    description="APRO data service provides data push, empowering smart contracts deployed on Rootstock with accurate, reliable data for a wide range of DeFi applications."
+  />
+  <FilterItem
     value="cc, data"
     title="Router Protocol"
     subtitle="Cross Chain Bridges"

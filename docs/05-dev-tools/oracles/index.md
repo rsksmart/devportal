@@ -34,4 +34,12 @@ Oracles act as bridges, securely bringing external data onto the Rootstock block
     linkHref="https://redstone.finance/"
     linkTitle="Access on-chain data"
   />
+  <CardsGridItem
+    title="APRO Oracle"
+    subtitle="oracles"
+    color="cyan"
+    description="APRO data service provides data push, empowering smart contracts deployed on Rootstock with accurate, reliable data for a wide range of DeFi applications."
+    linkHref="https://www.apro.com/data-push?chain=rootstock-main"
+    linkTitle="Access on-chain data"
+  />
 </CardsGrid>
