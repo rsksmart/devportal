@@ -40,22 +40,25 @@ Have an idea that could benefit the Rootstock ecosystem? Submit it to the market
     Clearly describe your idea. What problem does it solve or what opportunity does it create? Why is it useful for the Rootstock ecosystem? (max 200 words).
   </Step>
   <Step title="Detailed Scope / Guidance">
-    * Provide clear instructions so someone else could pick up and build the idea. Examples:
-      * Code: features required, key functions, dependencies, expected behavior.
-      * Documentation: sections to cover, depth, examples to include.
-      * Tutorials: target audience, structure/outline, examples, formats (blog, video, workshop).  
+    * Provide specific guidance on what should be created. Think of this as instructions for someone else who may pick up the idea. Include as much detail as possible so the builder knows what’s expected. Examples:
+      * For **code**: Outline the code contribution, detailing required features, key functions, dependencies, and the expected behavior
+      * For **documentation**: Outline the documentation updates, specifying the Rootstock stack, protocol, or architecture topic, to be contributed through a pull request
+      * For **guides/tutorials**: Outline the tutorial’s step-by-step flow, including the dApp, feature, or concept to be built, plus the required GitHub repo and README with setup instructions
   </Step>
   <Step title="Skills Needed">
     What skills would someone need? (e.g., Solidity, React, writing, video editing).
   </Step>
   <Step title="Supporting Material">
-    Links to GitHub repos, draft outlines, reference materials, or similar work.
+    * If you already have drafts or references, insert the links here. Examples:
+      * Link to a **GitHub repo** or code snippet
+      * Link for a draft **outline** for a written or video tutorial
+      * Reference materials or similar work that inspired your proposal
   </Step>
 </Steps>
 
 ## Inspiration for Submitting Your Ideas
 
-### Code Contributions
+:::note[Code Contributions]
 
 <Accordion>
   <Accordion.Item eventKey="0">
@@ -120,13 +123,14 @@ Have an idea that could benefit the Rootstock ecosystem? Submit it to the market
   </Accordion.Item>
 </Accordion>
 
-### Educational Content Contribution
+:::
 
+:::info[Educational Content Contribution]
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h5">Written guides or tutorials</Accordion.Header>
     <Accordion.Body>
-      Step-by-step instructions that implement a working dApp, feature, or technical concept on Rootstock — with a GitHub repo and README explaining setup.
+      Step-by-step instructions that implement a working dApp, feature, or technical concept on Rootstock — with a GitHub repo and README explaining the setup instructions.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
@@ -142,6 +146,7 @@ Have an idea that could benefit the Rootstock ecosystem? Submit it to the market
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
+:::
 
 
 ### Path II: Claim Existing Ideas
@@ -152,17 +157,17 @@ Want to build, but don’t have an idea of your own?
 * If approved, you earn a reward within the established ranges, determined based on the quality, complexity, and impact of your contribution.
 
 
-### Contribution Criteria & Guidelines  
+#### Contribution Criteria & Guidelines  
 
 To be accepted, contributions must meet the following standards.
 
-#### General Criteria
+##### General Criteria
 * Quality – Technically sound, well-executed.
 * Originality – Must be your own work, not copied.
 * Relevance – Should directly benefit the Rootstock developer or user ecosystem.
 * Accuracy – Must be correct, precise, and clearly presented.
 
-#### Code Contribution Criteria and Guidelines
+##### Code Contribution Criteria and Guidelines
 * Must include clear documentation and usage instructions.
 * Should include tests to validate correctness.
 * Must consider maintainability, reusability, and long-term impact.
@@ -174,7 +179,7 @@ For a comprehensive overview of the evaluation and reward system for code contri
 
 :::
 
-### Educational Content Criteria and Guidelines
+##### Educational Content Criteria and Guidelines
 * Written guides or tutorials must **showcase a working dApp, technical concept, or feature.**
 * Each submission must include a **GitHub repository** with a **README** section explaining setup and usage.
 * Submissions must be **original, technically accurate, and not previously published elsewhere.**
@@ -193,39 +198,43 @@ For a comprehensive overview of the evaluation and reward system for code contri
 
 :::
 
-## Rewards
+#### Rewards
 
-Rewards are distributed, according to the hacktivator's [terms and conditions](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?tab=t.0), based on how you choose to contribute:
+Rewards are distributed, according to the hacktivator's [terms and conditions](https://docs.google.com/document/d/1i95IIgBccohELezcrBraXWBtWEH1LaPLe3p_Zf1LzPQ/edit?tab=t.0), based on how you choose to contribute.
 
-* Submit Ideas (Path I): Earn a flat reward of $15 for each approved idea.
-* Claim Ideas (Path II): Rewards are determined within the established ranges for each type of contribution and assigned after review and approval.
-
-### Code Contributions
-
-* **Level 1: $50 – $150**
-Basic Contribution (Low Complexity): Minor documentation or style fixes (e.g., correcting typos, adding a missing comment explaining a function’s purpose).
-
-* **Level 2: $160 – $300**
-Small Improvements (Medium–Low Complexity): Refactors or optimizations that don’t change functionality but improve code efficiency or readability.
-
-* **Level 3: $310 – $700**
-New Feature or Significant Improvement (Medium–High Complexity): Implementing a simple new feature or enhancing existing functionality.
-
-* **Level 4: $710 – $1,000**
-Complex or Innovative Contribution (High Complexity): Large-scale features or critical changes requiring coordination across multiple components (e.g., API integration or system architecture changes).
-
-### Educational Content
-
-* Written Guides or Tutorials: $50 – $200
-* Technical Content: $150 – $400
-* Video Guides or Tutorials: $150 – $500
-
-
-:::tip[Reward Range]
+:::tip[Check Rewards Range]
 
 The reward range provided for each option will be used based on the level of contribution to the project to qualify. That is, if the Contributor meets only the minimum required to qualify, they will be assigned the minimum rewards for each option. However, the more the Contributor adds to their contribution and chosen option, the greater the rewards they may receive (up to the maximum cap established for each option).
 
+<Steps>
+  <Step title="Submit Ideas (Path I):">
+    Earn a flat reward of $15 for each approved idea.
+  </Step>
+  <Step title="Claim Ideas (Path II):">
+    Rewards are determined within the established ranges for each type of contribution and assigned after review and approval.
+
+    **Code Contributions**
+      * **Level 1: $50 – $150**
+      Basic Contribution (Low Complexity): Minor documentation or style fixes (e.g., correcting typos, adding a missing comment explaining a function’s purpose).
+
+      * **Level 2: $160 – $300**
+      Small Improvements (Medium–Low Complexity): Refactors or optimizations that don’t change functionality but improve code efficiency or readability.
+
+      * **Level 3: $310 – $700**
+      New Feature or Significant Improvement (Medium–High Complexity): Implementing a simple new feature or enhancing existing functionality.
+
+      * **Level 4: $710 – $1,000**
+      Complex or Innovative Contribution (High Complexity): Large-scale features or critical changes requiring coordination across multiple components (e.g., API integration or system architecture changes).
+
+    **Educational Content:**
+      * Written Guides or Tutorials: $50 – $200
+      * Technical Content: $150 – $400
+      * Video Guides or Tutorials: $150 – $500
+  </Step>
+</Steps>
+
 :::
+
 
 ## How to Participate
 
