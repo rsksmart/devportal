@@ -3,7 +3,7 @@ sidebar_position: 1
 title: Developer Tooling and Infrastructure
 sidebar_label: All Tools
 tags: [rsk, rootstock, tools, developer tools]
-description: "Explore a curated selection of smart contract development tools and languages. From the familiar Solidity to Rust or Developer Environments like Hardhat, you'll find everything you need to interact and deploy your smart contracts on Rootstock."
+description: "Explore a curated selection of smart contract development tools and languages. From the familiar Solidity to Rust or Developer Tools like Hardhat, you'll find everything you need to interact and deploy your smart contracts on Rootstock."
 ---
 
 ````mdx-code-block
@@ -22,7 +22,7 @@ description: "Explore a curated selection of smart contract development tools an
     {label: 'SDKs', value: 'sdk'},
     {label: 'Faucets', value: 'faucet'},
     {label: 'Gas', value: 'gas'},
-    {label: 'Dev Environments', value: 'dev-environment'},
+    {label: 'Dev Tools', value: 'dev-tools'},
     {label: 'Account Abstraction', value: 'aa'},
     {label: 'Code Quality', value: 'code-quality'},
     {label: 'JSON-RPC', value: 'rpc'},
@@ -55,36 +55,36 @@ description: "Explore a curated selection of smart contract development tools an
     description="Use the Token Bridge to safely and securely move ERC20 tokens from Ethereum to Rootstock and vice-versa."
   />
 <FilterItem
-    value="dev-environment, sc, deploy"
+    value="dev-tools, sc, deploy"
     title="Foundry"
-    subtitle="Dev Environments"
+    subtitle="Dev Tools"
     color="orange"
     linkHref="https://dev.rootstock.io/dev-tools/foundry/"
     linkTitle="Deploy Smart Contracts"
     description="Foundry is a smart contract development toolchain, and user-friendly development environment for writing and testing smart contracts in Solidity."
   />
 <FilterItem
-    value="dev-environment, sc, deploy, ai"
+    value="dev-tools, sc, deploy, ai"
     title="MCP Server"
-    subtitle="Dev Environments"
+    subtitle="Dev Tools"
     color="orange"
     linkHref="/developers/quickstart/mcp/"
     linkTitle="Use MCP"
     description="Rootstock MCP Server is a Model Context Protocol (MCP) server that provides advanced tools for interacting with the Rootstock blockchain. This project enables AI clients to seamlessly connect and execute blockchain operations."
   />
 <FilterItem
-    value="dev-environment, sc, deploy, ai"
+    value="dev-tools, sc, deploy, ai"
     title="Agents"
-    subtitle="Dev Environments"
+    subtitle="Dev Tools"
     color="orange"
     linkHref="/developers/use-cases/ai/ai-agent-rootstock/"
     linkTitle="Create AI Agent"
     description="This guide demonstrates how to build a lightweight dApp that connects a conversational AI agent to the Rootstock testnet, allowing users to perform DeFi actions like checking token balances and sending tRBTC simply by chatting."
   />
 <FilterItem
-    value="dev-environment, sc"
+    value="dev-tools, sc"
     title="Hardhat"
-    subtitle="Dev Environments"
+    subtitle="Dev Tools"
     color="orange"
     linkHref="/dev-tools/dev-environments/hardhat/"
     linkTitle="Deploy Smart Contracts"
@@ -289,7 +289,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Tenderly helps developers build, monitor, and improve smart contracts by providing a set of tools to boost productivity, save time, and ensure efficient smart contracts functionality."
   />
 <FilterItem
-    value="deploy, sc, sdk, demos"
+    value="deploy, sc, sdk, demos, dev-tools"
     title="Thirdweb"
     subtitle="platforms"
     color="orange"
@@ -334,9 +334,9 @@ description: "Explore a curated selection of smart contract development tools an
     description="RIF Relay is a secure sponsored transaction system that enables users to pay transaction fees using ERC-20 tokens."
   />
 <FilterItem
-    value="dev-environment, sc"
+    value="dev-tools, sc"
     title="Remix"
-    subtitle="Dev Environments"
+    subtitle="Dev Tools"
     color="orange"
     linkHref="https://remix.ethereum.org/"
     linkTitle="Deploy Smart Contracts"
@@ -586,7 +586,16 @@ description: "Explore a curated selection of smart contract development tools an
     description="Web3 Accounting, Auditing, and Reporting on Rootstock."
   />
 <FilterItem
-    value="demos, sc"
+    value="demos, sc, dev-tools"
+    title="Rootstock Scaffold"
+    subtitle="Demos"
+    color="orange"
+    linkHref="https://github.com/rsksmart/rsk-scaffold"
+    linkTitle="Use the Scaffold"
+    description="Rootstock scaffold enables developers to create, debug and deploy smart contracts and build user interfaces that interact with those contracts."
+  />
+<FilterItem
+    value="demos, sc, dev-tools"
     title="Wagmi Starter Kit"
     subtitle="Demos"
     color="orange"
@@ -595,7 +604,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Wagmi and Shadcn libraries."
   />
 <FilterItem
-    value="demos, sc"
+    value="demos, sc, dev-tools"
     title="Reown-Wagmi Starter Kit"
     subtitle="Demos"
     color="orange"
@@ -604,7 +613,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Reown, Wagmi and Shadcn libraries."
   />
 <FilterItem
-    value="demos, sc"
+    value="demos, sc, dev-tools"
     title="Privy Starter Kit"
     subtitle="Demos"
     color="orange"
@@ -613,7 +622,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="The Rootstock Privy Starter Kit empowers developers to onboard users with social logins and self custodial wallets while preserving control, privacy, and flexibility for dApps when building on Rootstock."
   />
 <FilterItem
-    value="demos, sc"
+    value="demos, sc, dev-tools"
     title="Hardhat Starter Kit"
     subtitle="Demos"
     color="orange"
@@ -622,7 +631,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Rootstock Hardhat Starter Kit."
   />
 <FilterItem
-    value="demos, sc"
+    value="demos, sc, dev-tools"
     title="Web3Auth Starter Kit"
     subtitle="Demos"
     color="orange"
@@ -631,7 +640,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Build Passwordless dApps on Rootstock using the Rootstock Web3Auth Starter Kit."
   />
 <FilterItem
-    value="demos, sc"
+    value="demos, sc, dev-tools"
     title="Dynamic Starter Kit"
     subtitle="Demos"
     color="orange"
@@ -640,7 +649,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Rootstock Dynamic Starter Kit."
   />
 <FilterItem
-    value="demos, sc"
+    value="demos, sc, dev-tools"
     title="Hardhat Ignition Starter Kit"
     subtitle="Demos"
     color="orange"
@@ -649,7 +658,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Rootstock Hardhat Ignition Starter Kit."
   />
 <FilterItem
-    value="demos, sdk, sc, aa"
+    value="demos, sdk, sc, aa, dev-tools"
     title="Account Abstraction Kit"
     subtitle="Demos"
     color="orange"
@@ -667,7 +676,7 @@ description: "Explore a curated selection of smart contract development tools an
     description="Account Abstraction Development on Rootstock."
   />
 <FilterItem
-    value="demos, sc"
+    value="demos, sc, dev-tools"
     title="dApp Automation"
     subtitle="Demos"
     color="orange"
@@ -692,6 +701,15 @@ description: "Explore a curated selection of smart contract development tools an
     linkHref="https://redstone.finance/"
     linkTitle="Access On-chain Data"
     description="Access On-Chain data for your smart contracts on Rootstock."
+  />
+  <FilterItem
+    value="sc, oracles, data"
+    title="APRO Oracle"
+    subtitle="Oracles"
+    color="orange"
+    linkHref="https://www.apro.com/data-push?chain=rootstock-main"
+    linkTitle="Access On-chain Data"
+    description="APRO data service provides data push, empowering smart contracts deployed on Rootstock with accurate, reliable data for a wide range of DeFi applications."
   />
   <FilterItem
     value="cc, data"

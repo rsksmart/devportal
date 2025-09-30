@@ -57,7 +57,7 @@ const config = {
     },
     newsHighlight : [
       {
-        title : '📣 Hacktivator 2.0 is now closed! Hacktivator 3.0 is coming soon. Stay tuned!',
+        title : '📣 Hacktivator is live! Contribute, propose ideas and earn rewards.',
         url : '/resources/contribute/hacktivator/'
       }
     ]
