@@ -11,7 +11,7 @@ RIF Name Service (RNS) is a decentralised service that allows users to register 
 
 For example, `alice.rsk` can be mapped to wallet address `0x6746f241e80d3ee1036ce57e1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa`. So therefore,i nstead of sharing the long alphanumeric string, she can share this domain name `alice.rsk`.
 
-## Why it Matters:
+## Why it Matters
 
  Here are the major reason RNS exist and its purpose:
 

@@ -1,6 +1,6 @@
 ---
 sidebar_label: Sample dApp Integration
-sidebar_position: 500
+sidebar_position: 400
 title: Sample dApp RNS Integration 
 description: RNS Integration Guide into Frontend
 tags: [rns, integrate, integration guide, rif, frontend]
@@ -270,6 +270,7 @@ return (
   </div>
 );
 ```
+
 <Card
   index={1}
   title="RNS Javascript SDK"
