@@ -30,8 +30,8 @@ These are the environment variables required by the liquidity provider server (L
 | `LBC_ADDR` | Address of the Liquidity Bridge Contract (LBC). | `0x8901a2Bbf639bFD21A97004BA4D7aE2BD00B8DA8` | YES |
 | `RSK_BRIDGE_ADDR` | Address of the Rootstock bridge. | `0x0000000000000000000000000000000001000006` | YES |
 | `RSK_REQUIRED_BRIDGE_CONFIRMATIONS` | The number of confirmations that need to pass before being able to register a pegin, it changes depending on the network. | `100` | YES |
-| `IRIS_ACTIVATION_HEIGHT` | Block number where the iris update is activated, depends on the network. | `1500000` | YES |
 | `ERP_KEYS` | Keys that are used as a secondary multisig that would be allowed to spend UTXOs after a year they were created. |`0216c23b2ea8e4f11c3f9e22711addb1d16a93964796913830856b568cc3ea21d3`,`0275562901dd8faae20de0a4166362a4f82188db77dbed4ca887422ea1ec185f14`,`034db69f2112f4fb1bb6141bf6e2bd6631f0484d0bd95b16767902c9fe219d4a6f` | YES |
+| `USE_SEGWIT_FEDERATION` | Wether to generate the federation address as a P2SH-P2WSH or not | true | NO |
 | `ACCOUNT_NUM` | The keystore account number to use. If not provided default value will be 0. | `0` | NO |
 | `DAO_FEE_COLLECTOR_ADDRESS` | Address of the DAO fee collector. | `0x86B6534687A176A476C16083a373fB9Fe4FAb449` | YES |
 | `KEY_SECRET` | Name of the secret of AWS secrets manager that contains the encrypted json of the liquidity provider RSK account. Only required if `SECRET_SRC` is `aws`. | `FlyoverTestEnv/LPS-KEY` | NO |
@@ -68,6 +68,14 @@ These are the environment variables required by the liquidity provider server (L
 | `SERVER_WRITE_TIMEOUT` | The time in seconds that the http server will wait for the response to be written. If not provided default value will be the one defined in timeout.go. | `60` | NO |
 | `SERVER_IDLE_TIMEOUT` | The time in seconds that the http server will wait for the next request when keep-alives are enabled. If not provided default value will be the one defined in timeout.go. | `10` | NO |
 | `PEGOUT_DEPOSIT_CHECK_TIMEOUT` | The time in seconds that the LPS will wait for every pegout deposit check repetition. If not provided default value will be the one defined in timeout.go. | `10` | NO |
+| `ECLIPSE_CHECK_ENABLED` | Wether the eclipse check is enabled or not | `true` | No |
+| `ECLIPSE_RSK_TOLERANCE_THRESHOLD` | Percentage of datasources that need to be synced with our RSK node to consider is not being eclipsed | `50` | No |
+| `ECLIPSE_RSK_MAX_MS_WAIT_FOR_BLOCK` | Number of milliseconds that the LPS will wait for our RSK node to catch up with the external datasources before assuming the node is eclipsed | `1000` | No |
+| `ECLIPSE_RSK_WAIT_POLLING_MS_INTERVAL` | Polling interval in ms to check our RSK node when is out of sync with the external data sources | `500` | No |
+| `ECLIPSE_BTC_TOLERANCE_THRESHOLD` | Percentage of datasources that need to be synced with our BTC node to consider is not being eclipsed | `50` | No |
+| `ECLIPSE_BTC_MAX_MS_WAIT_FOR_BLOCK` | Number of milliseconds that the LPS will wait for our BTC node to catch up with the external datasources before assuming the node is eclipsed | `1000` | No |
+| `ECLIPSE_BTC_WAIT_POLLING_MS_INTERVAL` | Polling interval in ms to check our BTC node when is out of sync with the external data sources | `500` | No |
+| `ECLIPSE_ALERT_COOLDOWN_SECONDS` | Number of seconds after an eclipsed node detection that the watcher will wait to start checking again | `3600` | No |
 
 ## AWS variables
 You may notice that in [`sample-config.env`](https://github.com/rsksmart/liquidity-provider-server/blob/master/sample-config.env) there are some environment variables that are related to AWS. These variables are required to use AWS services, however, they are not listed in the table as the AWS SDK has the functionality to load them from multiple sources. For that reason, they are not accessed directly from the code and are not listed in the table above.
