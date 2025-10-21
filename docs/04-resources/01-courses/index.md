@@ -2,24 +2,13 @@
 sidebar_label: Courses on Rootstock
 sidebar_position: 2
 title: Courses on Rootstock
-tags: [rsk, faqs, help, support, course, rootstock, ambassador-program]
-description: "Welcome to Rootstock Courses;  Explore learning materials and courses to enable you get started on building on Rootstock and RIF Technologies."
+tags: [rsk, faqs, help, support, course, rootstock, ambassador-program, rootcamp]
+description: "Welcome to Rootstock Courses;  Explore learning opportunities to help you get started building on Rootstock and RIF Technologies."
 ---
 
-Explore learning materials and courses to enable you get started on building on Rootstock and RIF Technologies.
-
 <Card
-  image="/img/courses/welcome.jpg"
-  title="Rootstock Blockchain Developer Course"
-  description="Learn how to write, test, secure, deploy and verify smart contracts on the Rootstock blockchain network."
-  link="https://rsk.thinkific.com/courses/blockchain-developer/"
-/>
-
-<br></br>
-
-<Card
-  image="/img/courses/user-course-modules/welcome.jpg"
-  title="Rootstock User Course"
-  description="Learn how to use and interact with the Rootstock blockchain network."
-  link="https://rsk.thinkific.com/courses/blockchain-user"
+  image="/img/courses/builder-rootcamp/welcome.jpg"
+  title="Builder Rootcamp"
+  description="An exclusive, 10-week learn-and-earn experience for developers ready to build on the world's most secure blockchain and unlock new career opportunities."
+  link="https://rootstock.io/rootcamp/"
 />
