@@ -3,10 +3,8 @@ sidebar_label: Courses on Rootstock
 sidebar_position: 2
 title: Courses on Rootstock
 tags: [rsk, faqs, help, support, course, rootstock, ambassador-program]
-description: "Welcome to Rootstock Courses;  Explore learning materials and courses to enable you get started on building on Rootstock and RIF Technologies."
+description: "Welcome to Rootstock Courses;  Explore learning opportunities to help you get started building on Rootstock and RIF Technologies."
 ---
-
-Explore learning materials and courses to enable you get started on building on Rootstock and RIF Technologies.
 
 <Card
   image="/img/courses/builder-rootcamp/welcome.jpg"
