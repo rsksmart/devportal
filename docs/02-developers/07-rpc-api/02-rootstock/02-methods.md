@@ -1374,3 +1374,276 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
     "result": "0x47173285a8d7341e5e972fc677286384f802f8ef42a5ec5f03bbfa254cb01fad"
 }
 ```
+
+## eth_subscribe
+
+- _Method:_ `eth_subscribe`
+  - Creates a new subscription for particular events. The node returns a subscription ID. For each event that matches the subscription, a notification with relevant data is sent together with the subscription ID.
+- _Params:_
+  - `subscription`: String, required. The type of subscription to create. Supported subscription types:
+    - **newHeads**: Subscribing to this returns a notification each time a new header is appended to the chain, including chain reorganizations. In a chain reorganization, the subscription emits all new headers for the new chain. Therefore the subscription can emit multiple headers at the same height.
+    - **logs**: Returns logs that are included in new imported blocks and match the given filter criteria. In case of a chain reorganization, previously sent logs that are on the old chain are resent with the removed property set to `true`. Logs from transactions that ended up in the new chain are emitted. Therefore a subscription can emit logs for the same transaction multiple times.
+    - **newPendingTransactions**: Returns the hash for all transactions that are added to the pending state and are signed with a key that's available in the node. When a transaction that was previously part of the canonical chain isn't part of the new canonical chain after a reorganization, it's emitted again.
+    - **syncing**: Indicates when the node starts or stops synchronizing with the network.
+  - `filter`: Object, optional. Filter criteria for logs subscription. Contains:
+    - **address**: String or Array, optional. Either an address or an array of addresses. Only logs that are created from these addresses are returned.
+    - **topics**: Array, optional. Only logs that match these specified topics are returned.
+- _Returns:_
+  - **subscription ID**: String. The ID of the newly created subscription on the node.
+- _Note:_ This method requires a WebSocket connection. HTTP connections will return an error.
+
+:::info[Recommendation]
+We strongly recommend specifying a filter (`address` or `topics` or both) when subscribing to the `logs` event.
+:::
+
+### newHeads Subscription
+
+- **Description**: Subscribing to this returns a notification each time a new header is appended to the chain, including chain reorganizations. In a chain reorganization, the subscription emits all new headers for the new chain. Therefore the subscription can emit multiple headers at the same height.
+- **Example Request:**
+
+```shell
+wscat -c wss://rpc.testnet.rootstock.io/<api-key>
+```
+
+```json
+{
+    "jsonrpc": "2.0",
+    "method": "eth_subscribe",
+    "params": ["newHeads"],
+    "id": 1
+}
+```
+
+- **Example Response:**
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": "0x9cef478923ff08bf67fde6c64013158d"
+}
+```
+
+- **Example Notification:**
+
+```js
+{
+    "jsonrpc": "2.0",
+    "method": "eth_subscription",
+    "params": {
+        "subscription": "0x39272296274706424fa7e81489b96d02",
+        "result": {
+            "difficulty": "0xfa02664f",
+            "extraData": "0xce018c524545442d61303266376265",
+            "gasLimit": "0x67c280",
+            "gasUsed": "0x2384e",
+            "logsBloom": "0x00000000000000000000400000000000000000000000000000000000000000000000400000000000000000000000000000000000010000000000000000000000000080000000000000000000000800001000008000000000000000000200000000000000000200000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000000400100004000000000080100000000000000010000000000000000000001001000000000000000001040000000000000000000000000020000000000084200000100000000000000000000000000000000020000000080000000000000000000000000000",
+            "miner": "0xad418c1d48780005f6d847ef0a5e3bd93ea09090",
+            "number": "0x69da35",
+            "parentHash": "0xf5cc7facc8c008b1d0eb9df0e25a1c289ff14ec2b08ebc18a2a244b7b36f7fdb",
+            "receiptsRoot": "0x5776dd4f58720744f39f73caef7fe16250cfbd28d0b32b7c6e7a2586762f924b",
+            "sha3Uncles": "0x7ae3129c05b3da951a77d543c2a9860d047f51582c3f710137d2912920fc7153",
+            "stateRoot": "0x083bbec675f24464681b69c3124929badd4d79cd6975b9e531c9dbd8a4775dd3",
+            "timestamp": "0x68f261df",
+            "transactionsRoot": "0x2c7873627f6a4f693127ce68644275aa4566e1a1e154de3baeee7ebc13451931",
+            "hash": "0x207b0e0ab7352871ca933693e2c7b9e7bab22d00e316eb71b8fa9e96174b5997"
+        }
+    }
+}
+```
+
+### logs Subscription
+
+- **Description**: Returns logs that are included in new imported blocks and match the given filter criteria. In case of a chain reorganization, previously sent logs that are on the old chain are resent with the removed property set to `true`. Logs from transactions that ended up in the new chain are emitted. Therefore a subscription can emit logs for the same transaction multiple times.
+- **Example Request:**
+
+```json
+{
+    "jsonrpc": "2.0",
+    "method": "eth_subscribe",
+    "params": [
+        "logs",
+        {
+            "address": "0x7f62ed5ffed1ddf15fb44632fae33f33712e31b5",
+            "topics": ["0x000000000000000000000000000000006d696e696e675f6665655f746f706963"]
+        }
+    ],
+    "id": 1
+}
+```
+
+- **Example Response:**
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": "0x4a8a4c0517381924f9838102c5a4dcb7"
+}
+```
+
+- **Example Notification (normal log):**
+
+```js
+{
+    "jsonrpc": "2.0",
+    "method": "eth_subscription",
+    "params": {
+        "subscription": "0x79e74533e032fe94fe5b70d50507777a",
+        "result": {
+            "transactionIndex": "0x2",
+            "removed": false,
+            "logIndex": "0x5",
+            "blockNumber": "0x69d9f8",
+            "topics": [
+                "0x000000000000000000000000000000006d696e696e675f6665655f746f706963",
+                "0x000000000000000000000000b774aa2876145b2f6f3de27e5e6ac970aa12d771"
+            ],
+            "address": "0x0000000000000000000000000000000001000008",
+            "data": "0xe8a0542bdd23300b27a1f00b5a89d254b4fb3fa8557579b74910733e353d2e27be9b8603615054545b",
+            "transactionHash": "0x89907f5d4dd95ed73160999cc6ab19c502b78b33ac19f0510dead96229c4b09d",
+            "blockHash": "0x637aa66e83c0489c2ee1386448559b4da8679ac6b27cd114fb3c03c77953cda6"
+        }
+    }
+}
+```
+
+- **Example Notification (log from chain reorganization):**
+
+```js
+{
+    "jsonrpc": "2.0",
+    "method": "eth_subscription",
+    "params": {
+        "subscription": "0x79e74533e032fe94fe5b70d50507777a",
+        "result": {
+            "transactionIndex": "0x2",
+            "removed": true,
+            "logIndex": "0x5",
+            "blockNumber": "0x69d9f8",
+            "topics": [
+                "0x000000000000000000000000000000006d696e696e675f6665655f746f706963",
+                "0x000000000000000000000000b774aa2876145b2f6f3de27e5e6ac970aa12d771"
+            ],
+            "address": "0x0000000000000000000000000000000001000008",
+            "data": "0xe8a0542bdd23300b27a1f00b5a89d254b4fb3fa8557579b74910733e353d2e27be9b8603615054545b",
+            "transactionHash": "0x89907f5d4dd95ed73160999cc6ab19c502b78b33ac19f0510dead96229c4b09d",
+            "blockHash": "0x637aa66e83c0489c2ee1386448559b4da8679ac6b27cd114fb3c03c77953cda6"
+        }
+    }
+}
+```
+
+### newPendingTransactions Subscription
+
+- **Description**: Returns the hash for all transactions that are added to the pending state and are signed with a key that's available in the node. When a transaction that was previously part of the canonical chain isn't part of the new canonical chain after a reorganization, it's emitted again.
+- **Example Request:**
+
+```json
+{
+    "jsonrpc": "2.0",
+    "method": "eth_subscribe",
+    "params": ["newPendingTransactions"],
+    "id": 1
+}
+```
+
+- **Example Response:**
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": "0xc3b33aa549fb9a60e95d21862596617c"
+}
+```
+
+- **Example Notification:**
+
+```js
+{
+    "jsonrpc": "2.0",
+    "method": "eth_subscription",
+    "params": {
+        "subscription": "0xc3b33aa549fb9a60e95d21862596617c",
+        "result": "0x359f6010957a25b885387e3201c9262c71f91e47ff487c49e5168a54fc8ea110"
+    }
+}
+```
+
+### syncing Subscription
+
+- **Description**: Indicates when the node starts or stops synchronizing with the network.
+- **Example Request:**
+
+```json
+{
+    "jsonrpc": "2.0",
+    "method": "eth_subscribe",
+    "params": ["syncing"],
+    "id": 1
+}
+```
+
+- **Example Response:**
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": "0x4"
+}
+```
+
+- **Example Notification (when syncing):**
+
+```js
+{
+    "jsonrpc": "2.0",
+    "method": "eth_subscription",
+    "params": {
+        "subscription": "0x4",
+        "result": {
+            "startingBlock": "0x0",
+            "currentBlock": "0x4bdcfc",
+            "highestBlock": "0x4bdd00"
+        }
+    }
+}
+```
+
+- **Example Notification (when not syncing):**
+
+```js
+{
+    "jsonrpc": "2.0",
+    "method": "eth_subscription",
+    "params": {
+        "subscription": "0x4",
+        "result": false
+    }
+}
+```
+
+### Unsubscribing
+
+To unsubscribe from a subscription, use the `eth_unsubscribe` method:
+
+```json
+{
+    "jsonrpc": "2.0",
+    "method": "eth_unsubscribe",
+    "params": ["0x9cef478923ff08bf67fde6c64013158d"],
+    "id": 1
+}
+```
+
+- **Example Response:**
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": true
+}
+```
