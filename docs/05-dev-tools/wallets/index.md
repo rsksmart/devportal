@@ -59,6 +59,7 @@ In the following matrix you can see the different features by wallet.
 |  [AirGap](https://airgap.it/) | ✔ | ✔ | -  | -  | Mainnet |
 |  [Zerion](https://zerion.io/) | ✔ | ✔ | -  | Chrome  | Mainnet, Testnet|
 |  [Rainbow Wallet](https://rainbow.me/en/) | ✔ | ✔ | -  | Chrome  | Mainnet, Testnet|
+|  [Coinomi](https://www.coinomi.com/) | - | - | -  | Desktop, Mobile  | Mainnet |
 
 
 
