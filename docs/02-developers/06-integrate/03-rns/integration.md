@@ -7,7 +7,7 @@ tags: [rns, integrate, integration guide, rif, sdk]
 ---
 
 This guide explains how to integrate the **RIF Name Service (RNS)** into your dApp to enable human-readable names for blockchain addresses.  
-By integrating RNS, you can let users register new domains, resolve existing ones, and simplify wallet or marketplace interactions by replacing long hexadecimal addresses with simple names.
+By integrating RNS, you enable users register new domains, resolve existing ones, and simplify wallet or marketplace interactions by replacing long hexadecimal addresses with simple names.
 
 ## Introduction
 
