@@ -9,7 +9,7 @@ import Card from '/src/components/Card'
 
 RIF Name Service (RNS) is a decentralised service that allows users to register and manage human-readable domain names on the blockchain. It is part of the [Rootstock Infrastructure Framework (RIF)](https://rif.technology/) and is designed to simplify the use of blockchain addresses by replacing complex alphanumeric strings with easy-to-remember names.
 
-For example, `alice.rsk` can be mapped to wallet address `0x6746f241e80d3ee1036ce57e1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa`. So therefore,i nstead of sharing the long alphanumeric string, she can share this domain name `alice.rsk`.
+For example, the domain name `alice.rsk` is a human-readable alternative to the long wallet address  `0x6746f241e80d3ee1036ce57e1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa`. Therefore, Alice can share her domain name instead of the alphanumeric string.
 
 ## Why it Matters
 
