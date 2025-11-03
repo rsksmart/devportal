@@ -3,7 +3,7 @@ sidebar_label: Overview
 sidebar_position: 100
 title: RIF Name Service(RNS) - Overview
 description: RNS Overview.
-tags: [rns, integrate, integration guide]
+tags: [rns, rif, rootstock, wallet, integrate, integration guide, domain name service]
 ---
 import Card from '/src/components/Card'
 
