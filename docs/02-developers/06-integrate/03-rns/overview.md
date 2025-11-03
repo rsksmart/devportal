@@ -15,7 +15,7 @@ For example, the domain name `alice.rsk` is a human-readable alternative to the 
 
  Here are the major reasons RNS exists and its purpose:
 
-1. **User Experience**: RNS enhances user experience by making blockchain interactions more user-friendly. Users can easily remember and share their blockchain addresses. Hence, making blockchain interactions more intuitive and accessible.
+1. **User Experience**: RNS provides an enhanced and user-friendly way for users to remember and share their blockchain addresses. This ensures interactions with the blockchain are intuitive and accessible.
 
 2. **Adoption**: By simplifying blockchain addresses, RNS can help drive the adoption of blockchain technology among non-technical users.
 
