@@ -24,7 +24,7 @@ For example, the domain name `alice.rsk` is a human-readable alternative to the 
 <Card
   index={1}
   title="RIF RNS: RIF Name Service"
-  description="You can learn more about RNS here"
+  description="Learn more about RNS"
   color="orange"
   icon="rocket"
   link={{ href: "/concepts/rif-suite/rns/", title: "Open docs" }}
