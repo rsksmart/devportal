@@ -17,7 +17,7 @@ For example, the domain name `alice.rsk` is a human-readable alternative to the 
 
 1. **User Experience**: RNS provides an enhanced and user-friendly way for users to remember and share their blockchain addresses. This ensures interactions with the blockchain are intuitive and accessible.
 
-2. **Adoption**: By simplifying blockchain addresses, RNS can help drive the adoption of blockchain technology among non-technical users.
+2. **Adoption**: By simplifying blockchain addresses, RNS can drive the adoption of blockchain technology for non-technical users.
 
 3. **Versatility**: RNS can be used for various purposes, such as creating custom domain names for websites, wallet addresses, and other blockchain-based services. This versatility makes it a valuable tool in the blockchain ecosystem.
 
