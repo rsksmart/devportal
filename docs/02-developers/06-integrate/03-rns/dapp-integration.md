@@ -6,7 +6,7 @@ description: Learn how to integrate RNS into your dApp
 tags: [rns, integrate, integration guide, rif, sdk]
 ---
 
-This guide explains how to integrate the **RIF Name Service (RNS)** into your dApp to enable human-readable names for blockchain addresses.  
+This guide demonstrates how to integrate the **RIF Name Service (RNS)** into your dApp to enable human-readable names for blockchain addresses.
 By integrating RNS, you enable users register new domains, resolve existing ones, and simplify wallet or marketplace interactions by replacing long hexadecimal addresses with simple names.
 
 ## Introduction
@@ -29,3 +29,6 @@ Before starting, ensure you have the following:
 - A wallet preferably MetaMask configured for **Rootstock Mainnet** or **Testnet**  
 - Basic understanding of Solidity and Web3.js or ethers.js
 - [Rootstock Testnet Faucet](https://faucet.rootstock.io/)
+
+
+
