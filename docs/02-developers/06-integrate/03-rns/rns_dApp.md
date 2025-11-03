@@ -11,7 +11,7 @@ This guide helps to quickly get started with setting up your environment to use 
 
 ## 1. Project Setup
 
-Before we begin, make sure you have a React app set up. If not, you can create one with:
+Before we begin, ensure you have a React app set up. If not, create one with:
 
 ```bash
 npx create-react-app rns-dApp
