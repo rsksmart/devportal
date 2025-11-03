@@ -18,7 +18,7 @@ npx create-react-app rns-dApp
 cd rns-dApp
 ```
 
-Then install the required dependencies:
+Install the required dependencies:
 
 ```bash
 npm install web3 @rsksmart/rns
