@@ -7,7 +7,7 @@ tags: [rns, integrate, integration guide, rif, frontend]
 ---
 import Card from '/src/components/Card'
 
-This guide helps to quickly get started with setting up your environment to use RNS Javascript SDK and also use the sample dApp to test how RNS SDK works.
+This guide helps to quickly get started with setting up your environment to use RNS Javascript SDK and also how to use the sample dApp to test how RNS SDK works.
 
 ## 1. Project Setup
 
