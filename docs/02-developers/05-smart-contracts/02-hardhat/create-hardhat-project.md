@@ -24,7 +24,7 @@ Run the following command in the project root.
   npm install
 ```
 
-> The quick start repo already comes pre-installed with hardhat. The `master` branch has the intial setup and barebones project and the `feat/complete` branch has the complete state of the hardhat project. You can view the diff in the initial and complete state branches of the repo at any point in time while going through this material. To run the full project, checkout into feat/complete branch, install the dependencies and run the command: `npx http-server`.
+> The quick start repo already comes pre-installed with hardhat. The `master` branch has the initial setup and barebones project and the `feat/complete` branch has the complete state of the hardhat project. You can view the diff in the initial and complete state branches of the repo at any point in time while going through this material. To run the full project, checkout into feat/complete branch, install the dependencies and run the command: `npx http-server`.
 
 ### Verify Hardhat Installation
 
