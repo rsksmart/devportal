@@ -158,7 +158,6 @@ const handleCheckSubdomain = async () => {
 };
 ```
 
-
 #### d. Get content hash of a Domain
 
 To get the content hash associated with a domain name:
@@ -233,6 +232,117 @@ return (
   </div>
 );
 ```
+
+#### a. Full code 
+
+    Here is the full code:
+
+    ```jsx
+
+    const handleBTCResolve = async () => {
+      if (!rns) return;
+      try {
+        setLoading(true);
+        const btcAddr = await rns.addr(domain, ChainId.BITCOIN);
+        setResult(btcAddr || "No Bitcoin address found for this domain");
+      } catch (err) {
+        setResult("Error: " + err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+    const handleCheckAvailable = async () => {
+      if (!rns) return;
+      try {
+        setLoading(true);
+        const available = await rns.available(domain);
+        setResult(
+          available ? "Domain is available" : "Domain is already registered"
+        );
+      } catch (err) {
+        setResult("Error: " + err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    //check subdomain availability
+    const handleCheckSubdomain = async () => {
+      if (!rns) return;
+      try {
+        setLoading(true);
+        const available = await rns.subdomains.available(domain, subdomain);
+        setResult(
+          available ? "Subdomain is available" : "Subdomain is taken"
+        );
+      } catch (err) {
+        setResult("Error: " + err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+    const handleGetContentHash = async () => {
+      if (!rns) return;
+      try {
+        setLoading(true);
+        await rns.compose();
+        const registry = rns.contracts.registry;
+        const namehash = await rns.contenthash(domain);
+        const domainOwner = await registry.methods.owner(namehash).call();
+        setOwner(domainOwner || "No owner found");
+        setResult("Owner address retrieved successfully");
+      } catch (err) {
+        setResult("Error getting owner: " + err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+    return (
+      <div>
+        <div>
+          <h1>Rootstock Name Service (RNS)</h1>
+        
+          <input
+            type="text"
+            value={domain}
+            onChange={(e) => setDomain(e.target.value)}
+            placeholder="Enter domain (e.g. testing.rsk)"
+            style={styles.input}
+          />
+
+          <div>
+            <button onClick={handleResolve} disabled={loading}>
+              Resolve RSK Address
+            </button>
+            <button onClick={handleBTCResolve} disabled={loading}>
+              Resolve BTC Address
+            </button>
+          </div>
+
+          <button onClick={handleCheckAvailable} disabled={loading}>
+            Check Domain Availability
+          </button>
+
+          <div>
+            <input
+              type="text"
+              value={subdomain}
+              onChange={(e) => setSubdomain(e.target.value)}
+              placeholder="Subdomain (e.g. example)"
+            />
+            <button onClick={handleCheckSubdomain} disabled={loading}>
+              Check Subdomain
+            </button>
+          </div>
+
+          <button onClick={handleGetContentHash} disabled={loading}>
+            Get Content hash
+          </button>
+          <div>{loading ? "Loading..." : result}</div>
+        </div>
+      </div>
+    );
+    ```
 
 ### 6. Start local developement server
 
