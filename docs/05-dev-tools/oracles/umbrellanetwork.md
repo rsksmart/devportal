@@ -6,31 +6,32 @@ description: "Umbrella Network provides decentralized and scalable oracles desig
 tags: [Umbrella Network, developer tools, rsk, rootstock, ethereum, dApps, smart contracts, testnet, Oracles]
 ---
 
-Umbrella Network provides decentralized and scalable oracles designed for high-performance blockchain applications. 
+Umbrella Network is a decentralized oracle service platform providing scalable, secure and customizable real world on-chain data for Web3. It is compatible with Rootstock and other blockchains including Ethereum, BNB Chain.
 
-The platform combines a decentralized architecture with seamless integration options to deliver reliable data feeds. It is compatible with 12 major blockchains, including Rootstock, Ethereum, BNB Chain, ensuring extensive support for various blockchain projects.
+Umbrella Network is currently supported on: <Shield title="mainnet" color="orange" /> <Shield title="testnet" color="orange" />
 
 ## Requirements
-[foundry](https://dev.rootstock.io/dev-tools/dev-environments/foundry/)
-
+- [Foundry](https://dev.rootstock.io/dev-tools/dev-environments/foundry/)
+- [Foundry Starter Kit](https://dev.rootstock.io/developers/quickstart/foundry/)
+- [Latest version of Node.js 22 or later](https://nodejs.org/) 
 
 ## Umbrella Network Architecture
 Umbrella Network is made up of validator nodes that fetch off-chain data and prove that the data is valid and unchanged.<br></br>
-Nodes stake a certain amount of UMB token to act as collateral in case of a malicious actor.<br></br>
+Nodes stake a certain amount of [UMB token](https://umbrella-network.github.io/technical-documentation/umbrella-network/docs/umb-token-contracts.html#umb-token) to act as collateral in case of a malicious actor.<br></br>
 Many independent validator nodes pull high quality data from defined APIs and submit it offchain to Umbrella's layer-2 network.<br></br>
-Several validator nodes are then elected as leaders, which means they are in charge of agreeing on the final value (consensus) of the data to be submitted to the various supported blockchains.<br></br>
+Several validator nodes are then elected as leaders, which means they are in charge of agreeing on the final value ([consensus](https://umbrella-network.github.io/technical-documentation/umbrella-network/docs/umbrella-network-architecture.html#consensus)) of the data to be submitted to Rootstock and other supported blockchains.<br></br>
 Once consensus has been reached, a cryptographic proof is added to the data to prevent tampering.<br></br>
-The data is then broadcast to supported networks and updated in the appropriate smart contracts.<br></br>
+The data is then broadcast to supported networks including Rootstock and updated in the appropriate smart contracts.<br></br>
 Usually, data from high quality sources has minimal to no deviation. A big difference in one oracle's value from the rest of the values indicates a faulty or malicious validator which then gets their stake slashed.<br></br>
 
 
-## Read data from Umbrella Network smart contracts using Foundry
+## Umbrella Network Smart Contracts
 There are several smart contracts involved when reading data from Umbrella Network, which we will briefly describe and use:
-- Umbrella Registry
-- UmbrellaFeeds
+- [Umbrella Registry](https://umbrella-network.github.io/technical-documentation/umbrella-network/docs/umb-token-contracts.html#contract-registry)
+- [UmbrellaFeeds](https://umbrella-network.github.io/technical-documentation/umbrella-network/docs/umb-token-contracts.html#umbrellafeeds-and-chain-smart-contracts)
 - Reader contracts
 
-To read data directly, only the first two are used.<br></br>
+To read data directly, only the Registry and Feeds are utilised.<br></br>
 In some cases, however, you might want to use another contract as a proxy to read the same data, for which you need to deploy another contract to do that (reader contract).
 
 
@@ -40,6 +41,15 @@ The actual data is found in the `Umbrella Feeds` smart contract. However, you mu
 It is recommended to run the commands below on mainnet because
 - We are only reading from the contracts, no gas will be used unless you are deploying your own [reader contract](#reader-contracts).
 - Most price feeds are not available on testnet.
+Here are the [price feeds](https://umbrella-network.github.io/technical-documentation/umbrella-network/docs/price-feeds.html#mainnets) available on Rootstock mainnet:
+  - WRBTC-rUSDT
+  - BITP-WRBTC
+  - SOV-WRBTC
+  - RIF-rUSDT
+  - USDRIF-rUSDT
+  - DOC-rUSDT
+  - rUSDT-DOC
+  - RIFPro-USD
 :::
 
 
@@ -47,7 +57,10 @@ It is recommended to run the commands below on mainnet because
 This is a smart contract that contains the addresses of other related smart contracts.
 We can interact with it using `cast`.<br></br>
 
-Get the registry contract address for your chosen blockchain [here](https://umbrella-network.github.io/technical-documentation/umbrella-network/docs/umb-token-contracts.html#contract-registry)<br></br>
+Below are the [Registry Contract addresses](https://umbrella-network.github.io/technical-documentation/umbrella-network/docs/umb-token-contracts.html#contract-registry) for Rootstock:
+- Rootstock Mainnet - `0x4A28406ECE8fFd7A91789738a5ac15DAc44bFa1b`
+- Rootstock Testnet - `0x92010e763d476a732021191562134c488ca92a1f`
+
 Open your terminal and run the following command with the appropriate inputs:
 ```bash
 cast interface --chain <CHAIN_ID> <CONTRACT_ADDRESS>
@@ -56,7 +69,7 @@ cast interface --chain <CHAIN_ID> <CONTRACT_ADDRESS>
 This generates an interface file from the contract's ABI, allowing us to look through the available functions and parameters available like below.
 
 ```solidity
-mash@debby:~/Desktop/oracle$ cast interface --chain 30 0x4A28406ECE8fFd7A91789738a5ac15DAc44bFa1b
+$ cast interface --chain 30 0x4A28406ECE8fFd7A91789738a5ac15DAc44bFa1b
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.4;
 
@@ -92,23 +105,24 @@ cast call <REGISTRY_CONTRACT_ADDRESS> "getAddress(bytes32)(address)" $(cast --fo
 
 The output is the address of the `UmbrellaFeeds` smart contract in the next section.
 ```bash
-mash@debby:~$ cast call 0x4A28406ECE8fFd7A91789738a5ac15DAc44bFa1b "getAddress(bytes32)(address)" $(cast --format-bytes32-string "UmbrellaFeeds") --rpc-url https://public-node.rsk.co
+$ cast call 0x4A28406ECE8fFd7A91789738a5ac15DAc44bFa1b "getAddress(bytes32)(address)" $(cast --format-bytes32-string "UmbrellaFeeds") --rpc-url https://public-node.rsk.co
 
 0xDc823570a5673E4D386242249EAfA086c436AB9c
 ```
 
+## Getting Price Feed Data for Your dApp
 
 ### UmbrellaFeeds
 This contract contains the actual data to be used in the dApp such as the price of RIF to USD.<br></br>
-Check [here](https://umbrella-network.github.io/technical-documentation/umbrella-network/docs/price-feeds.html#mainnets) for the list of available price feeds on Rootstock.<br></br>
-Pick a random one from the list. For this example I will pick `USDRIF-rUSDT`.<br></br>
-Get the interface of the contract with `cast` and look at the functions available.
+View the [Price Feeds](https://umbrella-network.github.io/technical-documentation/umbrella-network/docs/price-feeds.html#mainnets) for the list of available price feeds on Rootstock.<br></br>
+Pick a random feed from the list. For this example I will pick `USDRIF-rUSDT`.<br></br>
+Get the interface of the contract with `cast` and view the available functions.
 ```bash
 cast interface --chain <CHAIN_ID> <CONTRACT_ADDRESS>
 ```
 
 ```solidity
-mash@debby:~$ cast interface --chain 30 0xDc823570a5673E4D386242249EAfA086c436AB9c
+$ cast interface --chain 30 0xDc823570a5673E4D386242249EAfA086c436AB9c
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.4;
 
@@ -175,6 +189,8 @@ interface UmbrellaFeeds {
 }
 ```
 
+
+#### Get Price Data by Name
 Note the struct `PriceData` above. That is the format of the expected value.
 ```solidity
 struct PriceData {
@@ -185,7 +201,6 @@ struct PriceData {
 }
 ```
 
-
 Now we can use the `getPriceDataByName` method to get the desired currency pair on the terminal with `cast`.
 ```bash
 cast call <CONTRACT_ADDRESS> "getPriceDataByName(string) returns (uint8,uint24,uint32,uint128)" "USDRIF-rUSDT" --rpc-url <ROOTSTOCK_RPC_URL>
@@ -194,7 +209,7 @@ cast call <CONTRACT_ADDRESS> "getPriceDataByName(string) returns (uint8,uint24,u
 Extract the price from the output (the fourth variable in the struct).
 
 ```bash
-mash@debby:~$ cast call 0xDc823570a5673E4D386242249EAfA086c436AB9c "getPriceDataByName(string) returns (uint8,uint24,uint32,uint128)" "USDRIF-rUSDT" --rpc-url https://public-node.rsk.co
+$ cast call 0xDc823570a5673E4D386242249EAfA086c436AB9c "getPriceDataByName(string) returns (uint8,uint24,uint32,uint128)" "USDRIF-rUSDT" --rpc-url https://public-node.rsk.co
 
 0
 86400 [8.64e4]
@@ -202,14 +217,17 @@ mash@debby:~$ cast call 0xDc823570a5673E4D386242249EAfA086c436AB9c "getPriceData
 98785892 [9.878e7] //price
 ```
 
+#### Read Decimal Numbers From Contract
 Finally, read the number of decimals from the contract with this function `function DECIMALS() external view returns (uint8);`
 ```bash
 cast call <CONTRACT_ADDRESS> "DECIMALS() returns (uint8)" --rpc-url <ROOTSTOCK_RPC_URL>
 ```
 
 ```bash
-mash@debby:~$ cast call 0xDc823570a5673E4D386242249EAfA086c436AB9c "DECIMALS() returns (uint8)" --rpc-url https://public-node.rsk.co
-
+$ cast call 0xDc823570a5673E4D386242249EAfA086c436AB9c "DECIMALS() returns (uint8)" --rpc-url https://public-node.rsk.co
+```
+Response:
+```bash
 8
 ```
 
@@ -229,7 +247,7 @@ cast call <REGISTRY_CONTRACT_ADDRESS> "getAddress(bytes32)(address)" $(cast --fo
 The output is the address of the `ReaderFactory` contract. 
 
 ```bash
-mash@debby:~$ cast call 0x4A28406ECE8fFd7A91789738a5ac15DAc44bFa1b "getAddress(bytes32)(address)" $(cast --format-bytes32-string "UmbrellaFeedsReaderFactory") --rpc-url https://public-node.rsk.co
+$ cast call 0x4A28406ECE8fFd7A91789738a5ac15DAc44bFa1b "getAddress(bytes32)(address)" $(cast --format-bytes32-string "UmbrellaFeedsReaderFactory") --rpc-url https://public-node.rsk.co
 
 0xD12EbD0892BC812218688Dcd90DD6FE160aE092A
 ```
@@ -240,7 +258,7 @@ cast interface --chain <ROOTSTOCK_CHAIN_ID> <READER_FACTORY_CONTRACT_ADDRESS>
 ```
 
 ```solidity
-mash@debby:~$ cast interface --chain 30 0xD12EbD0892BC812218688Dcd90DD6FE160aE092A
+$ cast interface --chain 30 0xD12EbD0892BC812218688Dcd90DD6FE160aE092A
 
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.4;
@@ -266,24 +284,24 @@ The `deploy` function creates a new reader contract associated with a specific p
 cast call <READER_FACTORY_CONTRACT_ADDRESS> "deployed(string) returns (address)" <CURRENCY_PAIR> --rpc-url <ROOTSTOCK_RPC_URL>
 ```
 
-A zero address indicates no reader contract is present for RIF-rUSDT. In this case, you can deploy your own reader using instructions on the Umbrella docs [here](https://umbrella-network.github.io/technical-documentation/umbrella-network/docs/integration-details.html#via-reader).
+A zero address indicates no reader contract is present for RIF-rUSDT. In this case, you can deploy your own reader using instructions on the [Umbrella docs](https://umbrella-network.github.io/technical-documentation/umbrella-network/docs/integration-details.html#via-reader).
 
 ```bash
-mash@debby:~$ cast call 0xD12EbD0892BC812218688Dcd90DD6FE160aE092A "deployed(string) returns (address)" "RIF-rUSDT" --rpc-url https://public-node.rsk.co
+$ cast call 0xD12EbD0892BC812218688Dcd90DD6FE160aE092A "deployed(string) returns (address)" "RIF-rUSDT" --rpc-url https://public-node.rsk.co
 
 0x0000000000000000000000000000000000000000
 ```
 
 Any other valid address as the output is the contract we need.
 ```bash
-mash@debby:~$ cast call 0xD12EbD0892BC812218688Dcd90DD6FE160aE092A "deployed(string) returns (address)" "SOV-WRBTC" --rpc-url https://public-node.rsk.co
+$ cast call 0xD12EbD0892BC812218688Dcd90DD6FE160aE092A "deployed(string) returns (address)" "SOV-WRBTC" --rpc-url https://public-node.rsk.co
 
 0xD19C320012060fbF9A91E86456941D965bB51C90
 ```
 <br></br>
 Check the interface of the reader contract
 ```solidity
-mash@debby:~$ cast interface --chain 30 0xD19C320012060fbF9A91E86456941D965bB51C90
+$ cast interface --chain 30 0xD19C320012060fbF9A91E86456941D965bB51C90
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.4;
 
@@ -317,7 +335,7 @@ cast call <READER_ADDRESS> "decimals() returns (uint8)" --rpc-url <ROOTSTOCK_RPC
 ```
 
 ```bash
-mash@debby:~$ cast call 0xD19C320012060fbF9A91E86456941D965bB51C90 "decimals() returns (uint8)" --rpc-url https://public-node.rsk.co
+$ cast call 0xD19C320012060fbF9A91E86456941D965bB51C90 "decimals() returns (uint8)" --rpc-url https://public-node.rsk.co
 
 8
 ```
@@ -329,7 +347,7 @@ cast call <READER_CONTRACT_ADDRESS> "getPriceData() returns (uint8,uint24,uint32
 ```
 
 ```bash
-mash@debby:~$ cast call 0xD19C320012060fbF9A91E86456941D965bB51C90 "getPriceData() returns (uint8,uint24,uint32,uint128)" --rpc-url https://public-node.rsk.co
+$ cast call 0xD19C320012060fbF9A91E86456941D965bB51C90 "getPriceData() returns (uint8,uint24,uint32,uint128)" --rpc-url https://public-node.rsk.co
 
 0
 86400 [8.64e4]
@@ -345,7 +363,7 @@ yarn create vite
 ```
 
 ```bash
-mash@debby:~/Desktop$ yarn create vite
+$ yarn create vite
 
 yarn create v1.22.22
 [1/4] Resolving packages...
@@ -395,7 +413,7 @@ $ vite
   ➜  press h + enter to show help
 ```
 
-Enter the newly created folder, go to `src/App.tsx` and delete most of the starter content
+Open the newly created folder in your code editor, go to `src/App.tsx` and delete most of the starter content
 
 ```typescript
 function App() {
@@ -415,11 +433,11 @@ Install `viem`, this will be used to interact with the smart contracts from the 
 yarn add viem
 ```
 
-Check the currency pairs available on Rootstock [here](https://umbrella-network.github.io/technical-documentation/umbrella-network/docs/price-feeds.html#mainnets).
+View the currency pairs available on Rootstock [here](https://umbrella-network.github.io/technical-documentation/umbrella-network/docs/price-feeds.html#mainnets).
 These will be passed as options to the component of the app used to switch between available currencies.<br></br>
 
-Get the ABIs of the smart contracts which we will interact with (Registry contract, UmbrellaFeeds contract) on a supported block explorer of your choice such as [Blockscout](https://dev.rootstock.io/dev-tools/explorers/blockscout/).<br></br>
-A minimal ABI has been provided for the example.
+Get the ABIs of the smart contracts which we will interact with (Registry contract, UmbrellaFeeds contract) on any supported block explorer, such as [Blockscout](https://dev.rootstock.io/dev-tools/explorers/blockscout/).<br></br>
+A minimal ABI has been provided for this example.
 
 ```typescript
 import { createPublicClient, http } from 'viem'
@@ -527,9 +545,8 @@ function App() {
 export default App
 ```
 
-Use the various functions provided by viem to interact with the contracts.<br></br>
-Create the dropdown select for the currency pairs and a button to fetch the specific pair.<br></br>
-Below is the complete component with some utility functions that you can paste and run.<br></br>
+### Complete Demo Code
+Below is the complete demo code that you can paste into `App.tsx` and run.<br></br>
 
 ```typescript
 import { createPublicClient, http, pad, stringToHex } from 'viem'
@@ -780,8 +797,53 @@ function App() {
 export default App
 ```
 
+Here is an image of the price feeds dApp we just created
 <div align="center"><img width="100%" src="/img/tools/oracles/umbrella/demo_dapp.png" alt="Demo dApp with Umbrella Network"/></div>
 
+## Troubleshooting
+````mdx-code-block
+<Accordion>
+  <Accordion.Item eventKey="0">
+    <Accordion.Header as="h3">Incompatible node version</Accordion.Header>
+    <Accordion.Body>
+    ```bash
+    $ yarn create vite
+
+    yarn create v1.22.22
+    [1/4] Resolving packages...
+    [2/4] Fetching packages...
+    error create-vite@8.0.2: The engine "node" is incompatible with this module. Expected version "^20.19.0 || >=22.12.0". Got "18.20.8"
+    error Found incompatible module.
+    info Visit https://yarnpkg.com/en/docs/cli/create for documentation about this command.
+    ```
+
+    Use the latest node.js 22 version or later. Check the version on your terminal by running the following command
+    ```bash
+    $ node -v
+
+    v22.21.0
+    ```
+    </Accordion.Body>
+  </Accordion.Item>
+
+  <Accordion.Item eventKey="1">
+    <Accordion.Header as="h3">[Price data output](#get-price-data-by-name) consists of four 0s</Accordion.Header>
+    <Accordion.Body>
+    ```bash
+    $ cast call 0xDc823570a5673E4D386242249EAfA086c436AB9c "getPriceDataByName(string) returns (uint8,uint24,uint32,uint128)" "USD-USDT" --rpc-url https://public-node.rsk.co
+
+    0
+    0
+    0
+    0
+    ```
+
+    Make sure the selected currency pair is available on your selected chain. If you are on testnet, try switching to mainnet where you are more likely to find updated feeds.
+
+    </Accordion.Body>
+  </Accordion.Item>
+</Accordion>
+````
 
 ## **Developer Resources**
 - [Smart Contract Addresses](https://umbrella-network.github.io/technical-documentation/umbrella-network/docs/umb-token-contracts.html#contract-registry)
