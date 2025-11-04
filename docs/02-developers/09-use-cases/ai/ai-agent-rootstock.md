@@ -12,7 +12,7 @@ In this guide, we will build a lightweight dApp that connects a conversational A
 
 The tech stack used in this tutorial is:
 - [NextJS](https://nextjs.org/) as the development framework.
-- The [Rootstock Next Reown starter kit](https://github.com/rsksmart/reown-next-wagmi) and Wagmi to handle wallet connections and blockchain interactions.
+- The [Rootstock Reown Next Starter Kit](https://github.com/rsksmart/rsk-reown-next-starter-kit) and Wagmi to handle wallet connections and blockchain interactions.
 - [Groq’s](https://groq.com/) LLM API, for the natural language interface.
 - [Shadcn](https://ui.shadcn.com/) as UI library.
 
