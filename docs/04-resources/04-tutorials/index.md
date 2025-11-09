@@ -143,5 +143,13 @@ color="orange"
 linkHref="/resources/tutorials/hyperlane-bridge/"
 description="Hyperlane is the first universal and permissionless interoperability layer built for the modular blockchain stack. Learn how to run Hyperlane on Rootstock blockchain."
 />
+<FilterItem
+value="advanced"
+title="zk proofs"
+subtitle="Viem"
+color="orange"
+linkHref="/resources/tutorials/zk-proofs/"
+description="zk proofs."
+/>
 </Filter>
 ````
