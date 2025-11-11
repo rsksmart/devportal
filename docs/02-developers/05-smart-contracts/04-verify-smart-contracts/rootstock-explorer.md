@@ -21,7 +21,7 @@ Key reasons for verifying a smart contract
 - **Enables proper tooling**:
   - Many development and analysis tools, such as those from Tenderly, require the contract's source code to be verified to function correctly.
 - **Provides public interaction**:
-  - Verification allows users to interact with the contract through block explorers like Etherscan, even if other user interfaces are unavailable.
+  - Verification allows users to interact with the contract on the Rootstock Explorer.
 - **Confirms code integrity**:
   - The verification process proves that the bytecode on the blockchain was generated from a specific, known source code, ensuring the contract hasn't been tampered with.
 - **Helps with compliance**: 
