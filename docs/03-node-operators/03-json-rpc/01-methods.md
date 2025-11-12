@@ -96,7 +96,7 @@ Here are the supported JSON-RPC Methods.
 | `rsk`      | `rsk_protocolVersion`                                                                 | YES       |                                                                       |
 | `trace`    | `trace_transaction`                                                                   | YES       |                                                                       |
 | `trace`    | `trace_block`                                                                         | YES       |                                                                       |
-| `trace`    | [`trace_filter`](#trace_filter)                                                                        | YES       |                                                                       |
+| `trace`    | [`trace_filter`](#trace_filter)                                                       | YES       |                                                                       |
 | `txpool`   | `txpool_content`                                                                      | YES       |                                                                       |
 | `txpool`   | `txpool_inspect`                                                                      | YES       |                                                                       |
 | `txpool`   | `txpool_status`                                                                       | YES       |                                                                       |
