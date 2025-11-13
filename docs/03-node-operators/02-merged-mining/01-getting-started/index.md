@@ -54,6 +54,33 @@ Rootstock's average block time is 30 seconds, which is faster than Bitcoin's 10 
 Use the [`mnr_submitBitcoinBlockPartialMerkle`](/node-operators/json-rpc/methods) method from Rootstock node's JSON-RPC API. That method has optimum performance, and is preferred among other available methods.
 Other submission methods and information about the pros and cons between them can be found in the [Mining JSON-RPC API documentation](/node-operators/json-rpc).
 
+## Transaction Execution Planning
+
+With the implementation of parallel transaction execution ([RSKIP-144](https://github.com/rsksmart/RSKIPs/blob/master/IPs/RSKIP144.md)), miners have an additional responsibility when creating blocks:
+
+### How Miners Create Execution Plans
+
+When executing transactions to build a block, miners must partition transactions into sublists for parallel execution:
+
+- **Parallel Sublists**: Transactions are divided into multiple parallel sublists (up to 4 by default) that can be executed simultaneously
+- **Sequential Sublist**: Transactions that cannot be parallelized are placed in a sequential sublist that executes after all parallel sublists complete
+
+### Transaction Assignment Process
+
+As miners execute transactions serially during block creation, they track which storage keys each transaction reads and writes. Based on this analysis:
+
+1. **Independent transactions** are assigned to parallel sublists (distributed across available sublists)
+2. **Connected transactions** (those accessing the same storage keys) must be in the same sublist or in the sequential sublist
+3. **REMASC transaction** must always be the last transaction in the sequential sublist
+
+### Execution Plan in Block Header
+
+The transaction partition is recorded in the block header extension field `txExecutionSublistsEdges`, which specifies where each sublist ends in the transaction list. This allows full nodes to execute the transactions in parallel according to the miner's plan.
+
+### Gas Limits
+
+Each sublist has its own gas limit (block gas limit divided by number of sublists + 1), ensuring fair distribution of resources across parallel execution threads.
+
 ## Influence on Bitcoin
 
 As a result of Rootstock's implementation of merged mining, the Bitcoin network does not get filled up with merged mining information. Only a minimal amount of information is stored: An extra output on the coinbase transaction.
