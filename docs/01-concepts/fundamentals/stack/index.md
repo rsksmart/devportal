@@ -9,8 +9,6 @@ description: "Learn about how Rootstock combines the security of Bitcoin PoW wit
 
 Rootstock virtual machine (RVM) is the core of the Smart Contract platform. Smart Contracts are executed by all network full nodes. The result of the execution of a Smart Contract can be the processing of inter-contract messages, creating monetary transactions and changing the state of contract-persistent memory. The RVM is compatible with EVM at the op-code level, allowing Ethereum contracts to run flawlessly on Rootstock.
 
-Rootstock implements parallel transaction execution ([RSKIP-144](https://github.com/rsksmart/RSKIPs/blob/master/IPs/RSKIP144.md)) to improve scalability and throughput. Miners partition transactions into disjoint sets based on their storage access patterns and create an execution plan included in the block header. Full nodes then execute these partitioned transactions simultaneously across multiple CPU cores. This approach allows increasing the block gas limit without proportionally increasing block execution time, significantly enhancing the network's transaction processing capacity.
-
 Currently, the VM is executed by interpretation. In a future network upgrade, the Rootstock community is aiming to improve the VM performance substantially. One proposal is to emulate the EVM by dynamically retargeting EVM opcodes to a subset of Java-like bytecode, and a security-hardened and memory restricted Java-like VM will become the new VM (RVM2). This may bring Rootstock code execution to a performance close to native code.
 
 ## Main features:
