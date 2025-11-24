@@ -71,7 +71,7 @@ module.exports = {
   etherscan: {
     apiKey: {
       // Is not required by Blockscout or Rootstock explorers, 
-      // but must be any non-empty string, si leave it as "rootstock".
+      // but must be any non-empty string, so leave it as "rootstock".
       rskTestnet: 'rootstock',
       rskMainnet: 'rootstock',
     },
@@ -80,7 +80,7 @@ module.exports = {
         network: 'rskTestnet',
         chainId: 31,
         urls: {
-          apiURL: 'https://be.explorer.testnet.rootstock.io/api/v3/',
+          apiURL: 'https://be.explorer.testnet.rootstock.io/api/v3/etherscan',
           browserURL: 'https://explorer.testnet.rootstock.io/',
         },
       },
@@ -88,7 +88,7 @@ module.exports = {
         network: 'rskMainnet',
         chainId: 30,
         urls: {
-          apiURL: 'https://be.explorer.rootstock.io/api/v3/',
+          apiURL: 'https://be.explorer.rootstock.io/api/v3/etherscan',
           browserURL: 'https://explorer.rootstock.io/',
         },
       },
