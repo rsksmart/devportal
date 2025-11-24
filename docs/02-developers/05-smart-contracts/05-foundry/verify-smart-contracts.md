@@ -8,12 +8,13 @@ tags: [guides, developers, smart contracts, rsk, rootstock, foundry, dApps, veri
 
 In this section, you'll verify your `counter` smart contract to the Rootstock Explorer using Foundry, so the users of you dApp can be able to see the actual code of your contract to analyze that it doesn't have malicious code, and they can also interact with it.
 
+## Verify simple contract
+
 After you have deployed your smart contract, you can verify it using Foundry with a simple command.
 
 ```bash
 forge verify-contract \
     --chain-id 31 \
-    --num-of-optimizations 0 \
     --watch \
     --compiler-version v0.8.24 \
     --verifier custom \
@@ -42,4 +43,36 @@ Contract verification status:
 Response: `OK`
 Details: `Pass - Verified`
 Contract successfully verified
+```
+
+## Verify with constructor arguments
+
+If your contract has constructor arguments, you must pass them in order to successfully verify it. Foundry accepts the constructor arguments as ABI encoded.
+
+For that, you can use the [cast abi-encode](https://getfoundry.sh/cast/reference/abi-encode/) foundry tool.
+
+As an example, for a contract that has a constructor argument like `constructor(uint256 initialSupply)`, initialized with the value of `1000` at the contract deploy, you can execute the following command:
+
+```bash
+cast abi-encode "constructor(uint)" 1000
+```
+
+result:
+
+```bash
+0x00000000000000000000000000000000000000000000000000000000000003e8
+```
+
+And, then, you can run the verification command passing the constructor argment as ABI encoded:
+
+```bash
+forge verify-contract \
+    --constructor-args 0x00000000000000000000000000000000000000000000000000000000000003e8
+    --chain-id 31 \
+    --watch \
+    --compiler-version v0.8.24 \
+    --verifier custom \
+    --verifier-url https://be.explorer.testnet.rootstock.io/api/v3/etherscan \
+    0x499e802a6825d30482582d9b9dd669ba82ba8ba4 \
+    src/Counter.sol:Counter
 ```
