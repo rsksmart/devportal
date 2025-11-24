@@ -138,16 +138,16 @@ npx hardhat verify --network rskMainnet DEPLOYED_CONTRACT_ADDRESS CONSTRUCTOR_AR
 
 **The response should look like this:**
 ```bash
-npx hardhat verify --network rskTestnet 0x1b4951c57ce2c53addcfa173d1106b5e12f11e38 1000 MyToken23 MTK23
+npx hardhat verify --network rskTestnet 0x28eb8D29e4713E211D1dDab19dF3de16086BB8fa 1000
 Successfully submitted source code for contract
-contracts/MyToken.sol:MyToken at 0x1b4951c57ce2c53addcfa173d1106b5e12f11e38
+contracts/MyToken.sol:MyToken at 0x28eb8D29e4713E211D1dDab19dF3de16086BB8fa
 for verification on the block explorer. Waiting for verification result...
 
 Successfully verified contract MyToken on the block explorer.
-https://explorer.testnet.rootstock.io/address/0x1b4951c57ce2c53addcfa173d1106b5e12f11e38#code
+https://explorer.testnet.rootstock.io/address/0x28eb8D29e4713E211D1dDab19dF3de16086BB8fa#code
 
 Successfully verified contract MyToken on the block explorer.
-https://rootstock-testnet.blockscout.com/address/0x1b4951c57ce2c53addcfa173d1106b5e12f11e38#code
+https://rootstock-testnet.blockscout.com/address/0x28eb8D29e4713E211D1dDab19dF3de16086BB8fa#code
 ```
 
 With that, the contract has been successfully verified in both block explorers.
