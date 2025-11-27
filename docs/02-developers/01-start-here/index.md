@@ -38,6 +38,11 @@ This section introduces foundational concepts needed to understand blockchain ne
 - Overview of the Ethereum Virtual Machine (EVM)  
 - Differences between Bitcoin and EVM-compatible chains  
 
+### Resources
+
+- [Mastering Ethereum →](https://masteringethereum.xyz/)
+
+
 ---
 
 ## 2. Introduction to Rootstock
