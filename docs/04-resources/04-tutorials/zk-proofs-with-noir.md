@@ -10,14 +10,15 @@ tags: [zk, noir, zero-knowledge, privacy, tutorial, solidity, dapp, rootstock]
 
 Zero-knowledge proofs let a user prove they know something (a secret code, a credential, ownership) without ever revealing the secret itself. On Rootstock — the Bitcoin-secured, EVM-compatible smart contract chain — this unlocks real privacy while keeping Bitcoin-level security.
 
-This hands-on tutorial teaches you how to use **Noir** (a developer-friendly ZK DSL-Domain Specific Language) to build a **Secret NFT Club**: users mint an exclusive membership NFT only by proving they know the secret password — the password never appears on-chain or in the browser console.
+This hands-on tutorial teaches you how to use **Noir** (a developer-friendly ZK DSL-Domain Specific Language) to build a **Secret NFT Club**: users get an exclusive membership only by proving they know the secret password — the password never appears on-chain or in the browser console.
 
 ## What You'll Build
 
 A privacy-preserving membership system where:
+
 - Users prove they know a secret password without revealing it
 - The proof is verified on-chain using zero-knowledge cryptography
-- Members receive an NFT badge upon successful verification
+- Members are able to join the club upon successful verification
 - The password never appears in transactions, logs, or browser console
 
 **Privacy guarantee:** Even if someone inspects all blockchain data, they cannot determine the secret password.
@@ -29,7 +30,7 @@ A privacy-preserving membership system where:
 - MetaMask wallet with tRBTC on Rootstock Testnet ([Get tRBTC from Faucet](https://faucet.rootstock.io/))
 - Basic knowledge of Solidity and React/Next.js
 
-:::info[Note]
+:::warning[Note]
 
 🚨 Windows Users: Noir (nargo, bb) isn’t natively supported on Windows. Please install and run Noir inside WSL (Windows Subsystem for Linux) using Ubuntu 24.04.. 🚨
 
@@ -90,6 +91,7 @@ fn main(secret: Field, public_hash: pub Field) {
 ```
 
 **What this does:**
+
 - Takes a `secret` (private input - never revealed)
 - Takes a `public_hash` (public input - visible to everyone)
 - Computes Pedersen hash of the secret
@@ -116,6 +118,7 @@ echo -n "supersecret2025" | sha256sum | awk '{print "0x"$1}'
 ```
 
 Expected Output:
+
 ```
 0x04e94fe643fe9000c83dd91f0be27855aa2cd791a3dfc1e05775749e89f4693e
 ```
@@ -131,7 +134,7 @@ use std::hash::pedersen_hash;
 fn main(secret: Field, public_hash: pub Field) {
     let computed_hash = pedersen_hash([secret]);
 
-    println(computed_hash); // we added this line to print the perderson hash 
+    println(computed_hash); // we added this line to print the perderson hash
 
     assert(computed_hash == public_hash);
 }
@@ -145,14 +148,16 @@ fn test_main() {
 }
 ```
 
-Then in your terminal, run the command 
-```bash 
+Then in your terminal, run the command
+
+```bash
 nargo test --show-output
 ```
 
 Look for the **test_main stdout** in the output - this is your Pedersen hash!
 
 Example output:
+
 ```
 --- test_main stdout ---
 0x297fad8a9bc7f877e7ae8ab582a32a16ec2d11cc57cd77ecab97d2c775fa29e8
@@ -160,17 +165,23 @@ Example output:
 ```
 
 **Save this hash!** You'll need it for:
+
 - Smart contract deployment
 - Frontend configuration
 - Testing
-
 
 Compile and Execute: these generate the `secret_club.json` and `secret_club.gz` files respectively, which will be used as we proceed
 
 ```bash
 nargo compile
-nargo execute 
+nargo execute
 ```
+
+:::warning[Note]
+
+🚨🚨 Always delete the files in the target folder when you change your circuit or inputs to ensure a clean setup. Whenever the circuit changes, you must also regenerate and replace the verifier smart contract in your Solidity project. 🚨🚨
+
+:::
 
 ### Step 5: Generate the Solidity Verifier
 
@@ -200,6 +211,50 @@ cd smart-contracts
 npx hardhat --init
 ```
 
+You should see somethig like this below;
+
+```bash
+➜  smart-contracts git:(main) npx hardhat --init
+
+ █████  █████                         ███  ███                  ███      ██████
+░░███  ░░███                         ░███ ░███                 ░███     ███░░███
+ ░███   ░███   ██████  ████████   ███████ ░███████    ██████  ███████  ░░░  ░███
+ ░██████████  ░░░░░███░░███░░███ ███░░███ ░███░░███  ░░░░░███░░░███░      ████░
+ ░███░░░░███   ███████ ░███ ░░░ ░███ ░███ ░███ ░███   ███████  ░███      ░░░░███
+ ░███   ░███  ███░░███ ░███     ░███ ░███ ░███ ░███  ███░░███  ░███ ███ ███ ░███
+ █████  █████░░███████ █████    ░░███████ ████ █████░░███████  ░░█████ ░░██████
+░░░░░  ░░░░░  ░░░░░░░ ░░░░░      ░░░░░░░ ░░░░ ░░░░░  ░░░░░░░    ░░░░░   ░░░░░░
+
+👷 Welcome to Hardhat v3.0.16 👷
+
+✔ Which version of Hardhat would you like to use? · hardhat-3
+✔ Where would you like to initialize the project?
+
+Please provide either a relative or an absolute path: · ./
+✔ What type of project would you like to initialize? · mocha-ethers
+✨ Template files copied ✨
+✔ You need to install the necessary dependencies using the following command:
+npm install --save-dev "hardhat@^3.0.16" "@nomicfoundation/hardhat-toolbox-mocha-ethers@^3.0.1" "@nomicfoundation/hardhat-ethers@^4.0.2" "@nomicfoundation/hardhat-ignition@^3.0.5" "@types/chai@^4.2.0" "@types/chai-as-promised@^8.0.1" "@types/mocha@>=10.0.10" "@types/node@^22.8.5" "chai@^5.1.2" "ethers@^6.14.0" "forge-std@foundry-rs/forge-std#v1.9.4" "mocha@^11.0.0" "typescript@~5.8.0"
+
+Do you want to run it now? (Y/n) · true
+
+npm install --save-dev "hardhat@^3.0.16" "@nomicfoundation/hardhat-toolbox-mocha-ethers@^3.0.1" "@nomicfoundation/hardhat-ethers@^4.0.2" "@nomicfoundation/hardhat-ignition@^3.0.5" "@types/chai@^4.2.0" "@types/chai-as-promised@^8.0.1" "@types/mocha@>=10.0.10" "@types/node@^22.8.5" "chai@^5.1.2" "ethers@^6.14.0" "forge-std@foundry-rs/forge-std#v1.9.4" "mocha@^11.0.0" "typescript@~5.8.0"
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated glob@7.1.7: Glob versions prior to v9 are no longer supported
+
+added 275 packages, and audited 276 packages in 57s
+
+71 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+✨ Dependencies installed ✨
+Give Hardhat a star on Github if you're enjoying it! ⭐️✨
+
+     https://github.com/NomicFoundation/hardhat
+➜  smart-contracts git:(main) ✗
+```
+
 Create `contracts/SecretNFTClub.sol`:
 
 ```solidity
@@ -216,51 +271,54 @@ interface IVerifier {
 contract SecretNFTClub {
     IVerifier public immutable verifier;
     bytes32 public immutable secretHash;
-    
+
     mapping(address => bool) public hasJoined;
     mapping(address => uint256) public memberTokenId;
-    
+
     uint256 private _nextTokenId;
-    
+
     event MemberJoined(address indexed member, uint256 indexed tokenId);
-    
+
     error AlreadyMember();
     error InvalidProof();
-    
+
     constructor(bytes32 _secretHash, address _verifier) {
         secretHash = _secretHash;
         verifier = IVerifier(_verifier);
     }
-    
+
     function join(bytes calldata proof) external {
         if (hasJoined[msg.sender]) revert AlreadyMember();
-        
+
         // Prepare public inputs (just the secret hash)
         bytes32[] memory publicInputs = new bytes32[](1);
         publicInputs[0] = secretHash;
-        
+
         // Verify the zero-knowledge proof
         if (!verifier.verify(proof, publicInputs)) revert InvalidProof();
-        
+
         // Proof verified! Grant membership
         uint256 tokenId = _nextTokenId++;
         hasJoined[msg.sender] = true;
         memberTokenId[msg.sender] = tokenId;
-        
+
         emit MemberJoined(msg.sender, tokenId);
     }
-    
+
     function isMember(address account) external view returns (bool) {
         return hasJoined[account];
     }
-    
+
     function totalMembers() external view returns (uint256) {
         return _nextTokenId;
     }
 }
 ```
 
+Make sure to also copy the the `Verifier` contract from `./target/Verifier.sol` into your smart-contracts directory in a new file `contracts/Verifier.sol`. This contract will also be deployed and will be used on our `SecretNFTClub` contract to verify a proof.
+
 **Design decisions:**
+
 - Simple mapping-based membership (more gas-efficient than ERC721)
 - Immutable verifier and hash (gas optimization + security)
 - Custom errors (saves gas over require strings)
@@ -272,14 +330,13 @@ contract SecretNFTClub {
 
 **Rootstock Testnet Details:**
 
-| Parameter | Value |
-|-----------|-------|
-| RPC URL | `https://public-node.testnet.rsk.co` |
-| Chain ID | `31` |
-| Currency | tRBTC |
-| Block Explorer | `https://explorer.testnet.rootstock.io` |
-| Faucet | `https://faucet.rootstock.io` |
-
+| Parameter      | Value                                       |
+| -------------- | ------------------------------------------- |
+| RPC URL        | `https://public-node.testnet.rsk.co`        |
+| Chain ID       | `31`                                        |
+| Currency       | tRBTC                                       |
+| Block Explorer | `https://rootstock-testnet.blockscout.com/` |
+| Faucet         | `https://faucet.rootstock.io`               |
 
 Configure `hardhat.config.ts`:
 
@@ -344,34 +401,35 @@ Create `scripts/deploy.js`:
 
 ```javascript
 import { network } from "hardhat";
-import fs from 'fs';
+import fs from "fs";
 
 const { ethers, networkName } = await network.connect();
 
 async function main() {
   console.log("🚀 Deploying to Rootstock Testnet...\n");
-  
+
   // Deploy HonkVerifier
   console.log("📝 Deploying HonkVerifier...");
   const Verifier = await ethers.getContractFactory("HonkVerifier");
   const verifier = await Verifier.deploy();
   await verifier.waitForDeployment();
-  
+
   const verifierAddress = await verifier.getAddress();
   console.log("✅ HonkVerifier deployed:", verifierAddress);
-  
+
   // IMPORTANT: Replace with YOUR computed Pedersen hash from Step 4
-  const SECRET_HASH = "0x297fad8a9bc7f877e7ae8ab582a32a16ec2d11cc57cd77ecab97d2c775fa29e8";
-  
+  const SECRET_HASH =
+    "0x297fad8a9bc7f877e7ae8ab582a32a16ec2d11cc57cd77ecab97d2c775fa29e8";
+
   // Deploy SecretNFTClub
   console.log("\n📝 Deploying SecretNFTClub...");
   const Club = await ethers.getContractFactory("SecretNFTClub");
   const club = await Club.deploy(SECRET_HASH, verifierAddress);
   await club.waitForDeployment();
-  
+
   const clubAddress = await club.getAddress();
   console.log("✅ SecretNFTClub deployed:", clubAddress);
-  
+
   // Summary
   console.log("\n" + "=".repeat(50));
   console.log("📋 DEPLOYMENT SUMMARY");
@@ -380,17 +438,27 @@ async function main() {
   console.log("Club:        ", clubAddress);
   console.log("Secret Hash: ", SECRET_HASH);
   console.log("Network:     ", "Rootstock Testnet");
-  console.log("Explorer:    ", `https://explorer.testnet.rootstock.io/address/${clubAddress}`);
+  console.log(
+    "Explorer:    ",
+    `https://explorer.testnet.rootstock.io/address/${clubAddress}`
+  );
   console.log("=".repeat(50));
-  
+
   // Save addresses for frontend
-  fs.writeFileSync('deployment.json', JSON.stringify({
-    verifier: verifierAddress,
-    club: clubAddress,
-    secretHash: SECRET_HASH,
-    network: 'rootstock'
-  }, null, 2));
-  
+  fs.writeFileSync(
+    "deployment.json",
+    JSON.stringify(
+      {
+        verifier: verifierAddress,
+        club: clubAddress,
+        secretHash: SECRET_HASH,
+        network: "rootstock",
+      },
+      null,
+      2
+    )
+  );
+
   console.log("\n✅ Addresses saved to deployment.json");
 }
 
@@ -409,6 +477,7 @@ npx hardhat run scripts/deploy.js --build-profile production --network rootstock
 ```
 
 Expected output:
+
 ```
 🚀 Deploying to Rootstock Testnet...
 
@@ -835,13 +904,18 @@ npm run dev
 
 Open http://localhost:5173 in your browser.
 
+<Video url="/video/resources/tutorials/zk-proofs-with-noir/01-secret-nft-club-dapp-demo.mp4" />
+
 **Testing the flow:**
+
 1. Click "Connect Wallet"
 2. Click "Join Club (ZK Proof)"
 3. Enter password: `supersecret2025`
 4. Wait for proof generation (~10-20 seconds first time)
 5. Confirm MetaMask transaction
 6. Success! You're now a member
+
+![Secret NFT Club - Valid member](/img/resources/tutorials/zk-proofs-with-noir/01-secret-nft-club-valid-member.png)
 
 ## Understanding the System
 
@@ -868,13 +942,13 @@ Open http://localhost:5173 in your browser.
 
 ### Performance Metrics
 
-| Operation | Duration | Gas Cost |
-|-----------|----------|----------|
-| First proof (key download) | 10-20 seconds | - |
-| Subsequent proofs | 3-7 seconds | - |
-| Verifier deployment | - | ~321,823 |
-| Club deployment | - | ~321,823|
-| Join verification | - | ~4,127,651 |
+| Operation                  | Duration      | Gas Cost   |
+| -------------------------- | ------------- | ---------- |
+| First proof (key download) | 10-20 seconds | -          |
+| Subsequent proofs          | 3-7 seconds   | -          |
+| Verifier deployment        | -             | ~321,823   |
+| Club deployment            | -             | ~321,823   |
+| Join verification          | -             | ~4,127,651 |
 
 ### Gas Optimization Tips
 
@@ -888,12 +962,14 @@ Open http://localhost:5173 in your browser.
 ### Circuit Security
 
 ✅ **Do:**
+
 - Audit circuits before production deployment
 - Use established hash functions (Pedersen, Poseidon)
 - Test edge cases thoroughly
 - Document circuit logic clearly
 
 ❌ **Don't:**
+
 - Implement custom cryptography
 - Skip constraint checks
 - Use unaudited circuits with funds
@@ -902,12 +978,14 @@ Open http://localhost:5173 in your browser.
 ### Smart Contract Security
 
 ✅ **Do:**
+
 - Use OpenZeppelin when possible
 - Implement access controls
 - Add emergency pause mechanism
 - Test extensively on testnet
 
 ❌ **Don't:**
+
 - Skip external audits for production
 - Allow unbounded loops
 - Ignore reentrancy risks
@@ -916,12 +994,14 @@ Open http://localhost:5173 in your browser.
 ### Frontend Security
 
 ✅ **Do:**
+
 - Validate all inputs
 - Use HTTPS in production
 - Implement rate limiting
 - Cache proofs securely in memory
 
 ❌ **Don't:**
+
 - Log sensitive data
 - Store secrets in localStorage
 - Trust user input blindly
@@ -941,16 +1021,17 @@ Open http://localhost:5173 in your browser.
 **Symptoms:** Transaction reverts with InvalidProof error
 
 **Causes:**
+
 - Wrong password entered
 - Hash mismatch between circuit and contract
 - Corrupt proof data
 
 **Solutions:**
+
 1. Verify SECRET_HASH in deployment.json matches circuit
 2. Check password spelling
 3. Regenerate proof
 4. Verify circuit compilation
-
 
 ### Proof generation freezes browser
 
@@ -970,7 +1051,7 @@ Open http://localhost:5173 in your browser.
 
 ```javascript
 const tx = await club.join(proof.proof, {
-  gasLimit: 5000000
+  gasLimit: 5000000,
 });
 ```
 
@@ -992,7 +1073,7 @@ fn main(
     // Verify secret knowledge
     let computed_hash = pedersen_hash([secret]);
     assert(computed_hash == public_hash);
-    
+
     // Verify age requirement
     assert(age >= min_age);
 }
@@ -1010,17 +1091,17 @@ function batchJoin(
     address[] calldata members
 ) external onlyOwner {
     require(proofs.length == members.length, "Length mismatch");
-    
+
     bytes32[] memory publicInputs = new bytes32[](1);
     publicInputs[0] = secretHash;
-    
+
     for (uint i = 0; i < proofs.length; i++) {
         require(!hasJoined[members[i]], "Already member");
         require(verifier.verify(proofs[i], publicInputs), "Invalid proof");
-        
+
         hasJoined[members[i]] = true;
         memberTokenId[members[i]] = _nextTokenId++;
-        
+
         emit MemberJoined(members[i], _nextTokenId - 1);
     }
 }
@@ -1037,7 +1118,7 @@ use dep::std;
 fn test_valid_secret() {
     let secret = 0x4c9d6d4e8b8e4c8a5e3b7f2d9c8a6e5b4d3c2a1f9e8d7c6b5a4938271605f4e3d;
     let expected_hash = std::hash::pedersen_hash([secret]);
-    
+
     // This should pass
     main(secret, expected_hash);
 }
@@ -1046,7 +1127,7 @@ fn test_valid_secret() {
 fn test_invalid_secret() {
     let secret = 0x1234;
     let wrong_hash = 0x5678;
-    
+
     // This should fail
     main(secret, wrong_hash); // Will panic with assertion failure
 }
@@ -1063,23 +1144,27 @@ nargo test
 Before deploying to mainnet, ensure:
 
 ### Security Audits
+
 - [ ] Circuit audited by ZK security firm
 - [ ] Smart contract audited by Solidity experts
 - [ ] Frontend security review completed
 - [ ] Penetration testing performed
 
 ### Testing
+
 - [ ] All unit tests passing
 - [ ] Integration tests cover all flows
 - [ ] Load testing completed
 
 ### Documentation
+
 - [ ] Circuit logic fully documented
 - [ ] API documentation complete
 - [ ] User guide written
 - [ ] Emergency procedures documented
 
 ### Monitoring
+
 - [ ] Error logging configured
 - [ ] Metrics collection setup
 - [ ] Alert system configured
@@ -1150,12 +1235,12 @@ fn main(
 ) {
     // Prove amount is under limit
     assert(amount <= max_amount);
-    
+
     // Prove recipient not in blocked countries
     for i in 0..5 {
         assert(recipient_country != blocked_countries[i]);
     }
-    
+
     // Prove sender is KYC verified
     assert(sender_status == 1);
 }
@@ -1172,27 +1257,27 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 
 contract SecretNFTClub is ERC721URIStorage {
     // ... existing code ...
-    
+
     function join(bytes calldata proof) external {
         if (hasJoined[msg.sender]) revert AlreadyMember();
-        
+
         bytes32[] memory publicInputs = new bytes32[](1);
         publicInputs[0] = secretHash;
-        
+
         if (!verifier.verify(proof, publicInputs)) revert InvalidProof();
-        
+
         uint256 tokenId = _nextTokenId++;
         hasJoined[msg.sender] = true;
-        
+
         _safeMint(msg.sender, tokenId);
         _setTokenURI(tokenId, generateMetadata(tokenId));
-        
+
         emit MemberJoined(msg.sender, tokenId);
     }
-    
+
     function generateMetadata(uint256 tokenId) private pure returns (string memory) {
         return string(abi.encodePacked(
-            "ipfs://Qm.../", 
+            "ipfs://Qm.../",
             Strings.toString(tokenId),
             ".json"
         ));
@@ -1216,7 +1301,7 @@ constructor(
     address _verifier
 ) ERC721("Secret Club", "SCLUB") {
     verifier = UltraVerifier(_verifier);
-    
+
     for (uint i = 0; i < _secretHashes.length; i++) {
         secretTiers[_secretHashes[i]] = _tiers[i];
     }
@@ -1225,15 +1310,15 @@ constructor(
 function join(bytes calldata proof, bytes32 secretHash) external {
     require(!hasJoined[msg.sender], "Already member");
     require(secretTiers[secretHash] != Tier(0), "Invalid tier");
-    
+
     bytes32[] memory publicInputs = new bytes32[](1);
     publicInputs[0] = secretHash;
-    
+
     require(verifier.verify(proof, publicInputs), "Invalid proof");
-    
+
     memberTier[msg.sender] = secretTiers[secretHash];
     hasJoined[msg.sender] = true;
-    
+
     _safeMint(msg.sender, _nextTokenId++);
 }
 ```
@@ -1252,10 +1337,10 @@ function rotateSecret(bytes32 newHash) external onlyOwner {
         block.timestamp >= lastRotation + ROTATION_PERIOD,
         "Too soon"
     );
-    
+
     secretHash = newHash;
     lastRotation = block.timestamp;
-    
+
     emit SecretRotated(newHash, block.timestamp);
 }
 ```
@@ -1263,29 +1348,34 @@ function rotateSecret(bytes32 newHash) external onlyOwner {
 ## Resources & Community
 
 ### Official Documentation
+
 - **Noir Language:** https://noir-lang.org/docs
 - **Noir Examples:** https://github.com/noir-lang/noir-examples
 - **Barretenberg:** https://github.com/AztecProtocol/barretenberg
 
 ### Rootstock Resources
+
 - **Developer Portal:** https://dev.rootstock.io
 - **Testnet Faucet:** https://faucet.rootstock.io
 - **Block Explorer:** https://explorer.testnet.rootstock.io
 - **Discord Community:** https://discord.gg/rootstock
 
 ### Learning Resources
+
 - **ZK Whiteboard Sessions:** https://zkhack.dev/whiteboard
 - **ZK Learning Resources:** https://zkp.science
 - **Cryptography Course:** https://www.coursera.org/learn/crypto
 
 ### Tools & Libraries
+
 - **Hardhat:** https://hardhat.org
 - **Vite:** https://vitejs.dev
 - **Ethers.js:** https://docs.ethers.org
 
 ### Getting Help
-- **Noir Discord:** https://discord.gg/aztec (ask in #noir)
-- **Rootstock Discord:** https://discord.gg/rootstock (ask in #dev-zk)
+
+- **Noir Discord:** https://discord.gg/aztec
+- **Rootstock Discord:** https://discord.gg/rootstock
 - **Stack Overflow:** Tag questions with `noir-lang` or `rootstock`
 
 ## Conclusion
@@ -1298,6 +1388,7 @@ You've now built a complete privacy-preserving membership system using:
 ✅ **Modern Web Stack** - React + Vite + Ethers.js
 
 **What you've learned:**
+
 - Creating ZK circuits with Noir
 - Generating and verifying proofs
 - Deploying to Rootstock
@@ -1305,6 +1396,7 @@ You've now built a complete privacy-preserving membership system using:
 - Integrating ZK proofs in frontends
 
 **Next steps:**
+
 - Deploy to Rootstock Mainnet
 - Add more complex verification logic
 - Build a production-ready UI
