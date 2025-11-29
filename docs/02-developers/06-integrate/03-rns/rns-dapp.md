@@ -233,7 +233,7 @@ return (
 );
 ```
 
-#### a. Full code 
+#### a. Full code
 
     Here is the full code:
 
