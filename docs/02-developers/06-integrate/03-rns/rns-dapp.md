@@ -1,17 +1,19 @@
 ---
 sidebar_label: Sample dApp Integration
 sidebar_position: 400
-title: Sample dApp RNS Integration 
+title: Sample dApp RNS Integration
 description: RNS Integration Guide into Frontend
 tags: [rns, integrate, integration guide, rif, frontend]
 ---
+
 import Card from '/src/components/Card'
 
-This guide helps you quickly set up your environment to use the RNS JavaScript SDK and test it with a simple sample dApp.
+This guide helps you quickly set up your environment to use RNS with ethers.js and test it with a simple sample dApp.
 
 :::note
 All the code snippets shown in this guide will be added inside your `App.jsx` file.
 :::
+
 ### 1. Project Setup
 
 Before you begin, ensure you have a React app set up. If not, create one with:
@@ -24,7 +26,7 @@ cd rns-dapp
 Then install the required dependencies:
 
 ```bash
-npm install web3 @rsksmart/rns
+npm install ethers @ethersproject/providers @ethersproject/contracts @ethersproject/constants @ethersproject/hash
 ```
 
 ### 2. Import the Required Modules
@@ -32,331 +34,549 @@ npm install web3 @rsksmart/rns
 Open your `App.jsx` file and import the following modules:
 
 ```js
-import { useEffect, useState } from "react";
-import Web3 from "web3";
-import RNS from "@rsksmart/rns";
-import { ChainId } from "@rsksmart/rns/types";
+import { useState, useCallback, useMemo } from "react";
+import { JsonRpcProvider } from "@ethersproject/providers";
+import { Contract } from "@ethersproject/contracts";
+import { AddressZero } from "@ethersproject/constants";
+import { namehash } from "@ethersproject/hash";
 ```
 
 ### 3. Initialize RNS
 
-Next, set up the RNS SDK using the RNS Registry Contract Address and the [RSK Testnet RPC URL](https://public-node.testnet.rsk.co). 
+Next, set up RNS using the RNS Registry Contract Address and the [RSK Testnet RPC URL](https://public-node.testnet.rsk.co).
 
-To do add the following code inside `App.jsx`: 
-
-    ```js
-    useEffect(() => {
-      const init = async () => {
-        try {
-          const web3 = new Web3("https://public-node.testnet.rsk.co");
-
-          const rnsInstance = new RNS(web3, {
-            networkId: 31, // Testnet (use 30 for Mainnet)
-            contractAddresses: {
-              registry: "0x7d284aaac6e925aad802a53c0c69efe3764597b8", //RNS Registry Contract Address
-            },
-          });
-
-          await rnsInstance.compose();
-          setRns(rnsInstance);
-          console.log("RNS initialized successfully");
-        } catch (err) {
-          console.error("RNS initialization failed:", err);
-          setResult("Failed to initialize RNS: " + err.message);
-        }
-      };
-
-      init();
-    }, []);
-    ```
-
-What this does:
-
-- Connects to the RSK Testnet.
-
-- Initializes the RNS SDK.
-
-- Loads the internal contracts needed for lookups.
-
-### 4. Domain Lookup Functions
-
-Still inside `App.jsx`, add the functions that handle different RNS operations.
-
-#### a. Resolve a Rootstock Address
-
-To looks up the RSK address linked to a given RNS domain:
+Add the following code inside `App.jsx`:
 
 ```js
-const handleResolve = async () => {
-  if (!rns) return;
-  try {
-    setLoading(true);
-    const addr = await rns.addr(domain);
-    setResult(addr || "No RSK address found for this domain");
-  } catch (err) {
-    setResult("Error: " + err.message);
-  } finally {
-    setLoading(false);
-  }
-};
-```
+// Rootstock Testnet RPC
+const ROOTSTOCK_RPC_NODE = "https://public-node.testnet.rsk.co";
 
-#### b. Resolve a Bitcoin Address
+// RNS registry (testnet)
+const RNS_REGISTRY_ADDRESS = "0x7d284aaac6e925aad802a53c0c69efe3764597b8";
 
-To fetche the Bitcoin address if the domain has one:
+// Bitcoin chain ID for multichain resolver
+const BITCOIN_CHAIN_ID = 0;
 
-```js
-const handleBTCResolve = async () => {
-  if (!rns) return;
-  try {
-    setLoading(true);
-    const btcAddr = await rns.addr(domain, ChainId.BITCOIN);
-    setResult(btcAddr || "No Bitcoin address found for this domain");
-  } catch (err) {
-    setResult("Error: " + err.message);
-  } finally {
-    setLoading(false);
-  }
-};
-```
+// ABIs
+const RNS_REGISTRY_ABI = [
+  "function resolver(bytes32 node) view returns (address)",
+  "function owner(bytes32 node) view returns (address)",
+];
 
-#### c. Check Domain and Subdomain Availability
+const RNS_ADDR_RESOLVER_ABI = [
+  "function addr(bytes32 node) view returns (address)",
+  "function addr(bytes32 node, uint coinType) view returns (bytes)",
+];
 
-To check if a domain or subdomain is available before registering it:
+const RNS_NAME_RESOLVER_ABI = [
+  "function name(bytes32 node) view returns (string)",
+];
 
-```js
-// check domain avaliablity
-const handleCheckAvailable = async () => {
-  if (!rns) return;
-  try {
-    setLoading(true);
-    const available = await rns.available(domain);
-    setResult(
-      available ? "Domain is available" : "Domain is already registered"
-    );
-  } catch (err) {
-    setResult("Error: " + err.message);
-  } finally {
-    setLoading(false);
-  }
-};
+const provider = new JsonRpcProvider(ROOTSTOCK_RPC_NODE);
 
-//check subdomain availability
-const handleCheckSubdomain = async () => {
-  if (!rns) return;
-  try {
-    setLoading(true);
-    const available = await rns.subdomains.available(domain, subdomain);
-    setResult(
-      available ? "Subdomain is available" : "Subdomain is taken"
-    );
-  } catch (err) {
-    setResult("Error: " + err.message);
-  } finally {
-    setLoading(false);
-  }
-};
-```
-
-#### d. Get content hash of a Domain
-
-To get the content hash associated with a domain name:
-
-```js
-const handleGetContentHash = async () => {
-  if (!rns) return;
-  try {
-    setLoading(true);
-    await rns.compose();
-    const registry = rns.contracts.registry;
-    const namehash = await rns.contenthash(domain);
-    const domainOwner = await registry.methods.owner(namehash).call();
-    setOwner(domainOwner || "No owner found");
-    setResult("Owner address retrieved successfully");
-  } catch (err) {
-    setResult("Error getting owner: " + err.message);
-  } finally {
-    setLoading(false);
-  }
-};
-```
-
-### 5. User Interface
-
-Finally, to reflect all these functions, add the following code inside `App.jsx`
-
-```js
-return (
-  <div>
-    <div>
-      <h1>Rootstock Name Service (RNS)</h1>
-     
-      <input
-        type="text"
-        value={domain}
-        onChange={(e) => setDomain(e.target.value)}
-        placeholder="Enter domain (e.g. testing.rsk)"
-        style={styles.input}
-      />
-
-      <div>
-        <button onClick={handleResolve} disabled={loading}>
-          Resolve RSK Address
-        </button>
-        <button onClick={handleBTCResolve} disabled={loading}>
-          Resolve BTC Address
-        </button>
-      </div>
-
-      <button onClick={handleCheckAvailable} disabled={loading}>
-        Check Domain Availability
-      </button>
-
-      <div>
-        <input
-          type="text"
-          value={subdomain}
-          onChange={(e) => setSubdomain(e.target.value)}
-          placeholder="Subdomain (e.g. example)"
-        />
-        <button onClick={handleCheckSubdomain} disabled={loading}>
-          Check Subdomain
-        </button>
-      </div>
-
-      <button onClick={handleGetContentHash} disabled={loading}>
-        Get Content hash
-      </button>
-      <div>{loading ? "Loading..." : result}</div>
-    </div>
-  </div>
+const registry = new Contract(
+  RNS_REGISTRY_ADDRESS,
+  RNS_REGISTRY_ABI,
+  provider
 );
 ```
 
-#### a. Full code
+What this does:
+- Connects to the RSK Testnet
+- Initializes the RNS Registry contract
+- Sets up the provider for contract interactions
 
-    Here is the full code:
+### 4. Utility Functions
 
-    ```jsx
+Add a utility function to strip the hex prefix from addresses:
 
-    const handleBTCResolve = async () => {
-      if (!rns) return;
-      try {
-        setLoading(true);
-        const btcAddr = await rns.addr(domain, ChainId.BITCOIN);
-        setResult(btcAddr || "No Bitcoin address found for this domain");
-      } catch (err) {
-        setResult("Error: " + err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-    const handleCheckAvailable = async () => {
-      if (!rns) return;
-      try {
-        setLoading(true);
-        const available = await rns.available(domain);
-        setResult(
-          available ? "Domain is available" : "Domain is already registered"
-        );
-      } catch (err) {
-        setResult("Error: " + err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
+```js
+const stripHexPrefix = (hex: string): string => hex.slice(2);
+```
 
-    //check subdomain availability
-    const handleCheckSubdomain = async () => {
-      if (!rns) return;
-      try {
-        setLoading(true);
-        const available = await rns.subdomains.available(domain, subdomain);
-        setResult(
-          available ? "Subdomain is available" : "Subdomain is taken"
-        );
-      } catch (err) {
-        setResult("Error: " + err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-    const handleGetContentHash = async () => {
-      if (!rns) return;
-      try {
-        setLoading(true);
-        await rns.compose();
-        const registry = rns.contracts.registry;
-        const namehash = await rns.contenthash(domain);
-        const domainOwner = await registry.methods.owner(namehash).call();
-        setOwner(domainOwner || "No owner found");
-        setResult("Owner address retrieved successfully");
-      } catch (err) {
-        setResult("Error getting owner: " + err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-    return (
-      <div>
-        <div>
-          <h1>Rootstock Name Service (RNS)</h1>
-        
+### 5. Core RNS Functions
+
+Add the core functions that handle different RNS operations.
+
+#### a. Resolve a Rootstock Address
+
+Looks up the RSK address linked to a given RNS domain:
+
+```js
+const resolveRnsName = async (name: string): Promise<string | null> => {
+  try {
+    const nameHash = namehash(name);
+    const resolverAddress = await registry.resolver(nameHash);
+
+    if (resolverAddress === AddressZero) {
+      return null;
+    }
+
+    const addrResolverContract = new Contract(
+      resolverAddress,
+      RNS_ADDR_RESOLVER_ABI,
+      provider
+    );
+
+    // Use the functions property to call overloaded functions
+    const [address] = await addrResolverContract.functions["addr(bytes32)"](nameHash);
+
+    if (!address || address === AddressZero) {
+      return null;
+    }
+
+    return address.toLowerCase();
+  } catch (e) {
+    console.error("resolveRnsName error", e);
+    return null;
+  }
+};
+```
+
+:::tip Important Note on Overloaded Functions
+When working with overloaded contract functions in ethers.js, you must use the `functions` property with the full function signature (e.g., `functions["addr(bytes32)"]`). This is necessary because the RNS resolver contract has multiple `addr` functions with different parameters.
+:::
+
+#### b. Resolve a Bitcoin Address
+
+Fetches the Bitcoin address if the domain has one:
+
+```js
+const resolveBitcoinAddress = async (name: string): Promise<string | null> => {
+  try {
+    const hash = namehash(name);
+    const resolver = await registry.resolver(hash);
+
+    if (resolver === AddressZero) return null;
+
+    const resolverContract = new Contract(
+      resolver,
+      RNS_ADDR_RESOLVER_ABI,
+      provider
+    );
+
+    const [btcBytes] = await resolverContract.functions[
+      "addr(bytes32,uint256)"
+    ](hash, BITCOIN_CHAIN_ID);
+
+    if (!btcBytes || btcBytes === "0x") return null;
+
+    return btcBytes;
+  } catch (e) {
+    console.error("resolveBitcoinAddress error", e);
+    return null;
+  }
+};
+```
+
+#### c. Reverse Lookup (Address to Name)
+
+Looks up the RNS name associated with an address:
+
+```js
+const lookupAddress = async (address: string): Promise<string | null> => {
+  try {
+    const reverseHash = namehash(
+      `${stripHexPrefix(address)}.addr.reverse`
+    );
+
+    const resolver = await registry.resolver(reverseHash);
+
+    if (resolver === AddressZero) return null;
+
+    const resolverContract = new Contract(
+      resolver,
+      RNS_NAME_RESOLVER_ABI,
+      provider
+    );
+
+    const name = await resolverContract.name(reverseHash);
+    return name || null;
+  } catch (e) {
+    console.error("lookupAddress error", e);
+    return null;
+  }
+};
+```
+
+#### d. Get Domain Owner
+
+Retrieves the owner address of a domain:
+
+```js
+const getDomainOwner = async (domain: string): Promise<string | null> => {
+  try {
+    const hash = namehash(domain);
+    const owner = await registry.owner(hash);
+
+    if (!owner || owner === AddressZero) return null;
+
+    return owner.toLowerCase();
+  } catch (e) {
+    console.error("owner error", e);
+    return null;
+  }
+};
+```
+
+#### e. Check Domain Availability
+
+Checks if a domain is available for registration:
+
+```js
+const checkDomainAvailability = async (domain: string): Promise<boolean> => {
+  try {
+    const hash = namehash(domain);
+    const owner = await registry.owner(hash);
+    return owner === AddressZero;
+  } catch (e) {
+    console.error("availability error", e);
+    return false;
+  }
+};
+```
+
+#### f. Check Subdomain Availability
+
+Checks if a subdomain is available:
+
+```js
+const checkSubdomainAvailability = async (
+  domain: string,
+  subdomain: string
+): Promise<boolean> => {
+  return checkDomainAvailability(`${subdomain}.${domain}`);
+};
+```
+
+### 6. Custom RNS Hook
+
+Create a custom hook to encapsulate all RNS functionality:
+
+```js
+const useRns = () => {
+  const getAddressByRns = useCallback(async (name: string) => {
+    return await resolveRnsName(name);
+  }, []);
+
+  const getBitcoinAddressByRns = useCallback(async (name: string) => {
+    return await resolveBitcoinAddress(name);
+  }, []);
+
+  const getRnsName = useCallback(async (address: string) => {
+    return await lookupAddress(address);
+  }, []);
+
+  const getOwner = useCallback(async (domain: string) => {
+    return await getDomainOwner(domain);
+  }, []);
+
+  const checkAvailability = useCallback(async (domain: string) => {
+    return await checkDomainAvailability(domain);
+  }, []);
+
+  const checkSubdomain = useCallback(
+    async (domain: string, subdomain: string) => {
+      return await checkSubdomainAvailability(domain, subdomain);
+    },
+    []
+  );
+
+  return useMemo(
+    () => ({
+      getAddressByRns,
+      getBitcoinAddressByRns,
+      getRnsName,
+      getOwner,
+      checkAvailability,
+      checkSubdomain,
+    }),
+    [
+      getAddressByRns,
+      getBitcoinAddressByRns,
+      getRnsName,
+      getOwner,
+      checkAvailability,
+      checkSubdomain,
+    ]
+  );
+};
+```
+
+### 7. Main Component
+
+Create the main component with UI and event handlers:
+
+```js
+export default function App() {
+  const {
+    getAddressByRns,
+    getBitcoinAddressByRns,
+    getRnsName,
+    getOwner,
+    checkAvailability,
+    checkSubdomain,
+  } = useRns();
+
+  const [domain, setDomain] = useState("");
+  const [subdomain, setSubdomain] = useState("");
+  const [address, setAddress] = useState("");
+  const [result, setResult] = useState("");
+  const [owner, setOwner] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const wrap = async (fn: () => Promise<void>) => {
+    setLoading(true);
+    setResult("");
+    setOwner("");
+    try {
+      await fn();
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div style={styles.container}>
+      <div style={styles.card}>
+        <h1 style={styles.heading}>Rootstock Name Service Lookup</h1>
+
+        <input
+          style={styles.input}
+          value={domain}
+          onChange={(e) => setDomain(e.target.value)}
+          placeholder="Enter domain like example.rsk"
+        />
+
+        <div style={styles.buttonGroup}>
+          <button
+            style={styles.button}
+            disabled={loading}
+            onClick={() =>
+              wrap(async () => {
+                const addr = await getAddressByRns(domain);
+                setResult(addr || "No RSK address found");
+              })
+            }
+          >
+            Resolve RSK
+          </button>
+
+          <button
+            style={styles.buttonAlt}
+            disabled={loading}
+            onClick={() =>
+              wrap(async () => {
+                const btc = await getBitcoinAddressByRns(domain);
+                setResult(btc || "No Bitcoin address found");
+              })
+            }
+          >
+            Resolve BTC
+          </button>
+        </div>
+
+        <button
+          style={styles.buttonWide}
+          disabled={loading}
+          onClick={() =>
+            wrap(async () => {
+              const available = await checkAvailability(domain);
+              setResult(
+                available ? "✅ Domain is available" : "❌ Domain is taken"
+              );
+            })
+          }
+        >
+          Check Availability
+        </button>
+
+        <div style={{ display: "flex", gap: "8px" }}>
           <input
-            type="text"
-            value={domain}
-            onChange={(e) => setDomain(e.target.value)}
-            placeholder="Enter domain (e.g. testing.rsk)"
-            style={styles.input}
+            style={{ ...styles.input, flex: 1 }}
+            value={subdomain}
+            onChange={(e) => setSubdomain(e.target.value)}
+            placeholder="Enter subdomain"
           />
-
-          <div>
-            <button onClick={handleResolve} disabled={loading}>
-              Resolve RSK Address
-            </button>
-            <button onClick={handleBTCResolve} disabled={loading}>
-              Resolve BTC Address
-            </button>
-          </div>
-
-          <button onClick={handleCheckAvailable} disabled={loading}>
-            Check Domain Availability
+          <button
+            style={styles.buttonAlt}
+            disabled={loading}
+            onClick={() =>
+              wrap(async () => {
+                const available = await checkSubdomain(domain, subdomain);
+                setResult(
+                  available ? "✅ Subdomain is available" : "❌ Subdomain is taken"
+                );
+              })
+            }
+          >
+            Check Subdomain
           </button>
+        </div>
 
-          <div>
-            <input
-              type="text"
-              value={subdomain}
-              onChange={(e) => setSubdomain(e.target.value)}
-              placeholder="Subdomain (e.g. example)"
-            />
-            <button onClick={handleCheckSubdomain} disabled={loading}>
-              Check Subdomain
-            </button>
+        <button
+          style={styles.buttonWide}
+          disabled={loading}
+          onClick={() =>
+            wrap(async () => {
+              const ownerAddr = await getOwner(domain);
+              if (ownerAddr) {
+                setOwner(ownerAddr);
+                setResult("Owner found");
+              } else {
+                setResult("No owner found");
+              }
+            })
+          }
+        >
+          Get Owner
+        </button>
+
+        {owner && (
+          <div style={styles.ownerBox}>
+            <strong>Owner:</strong> {owner}
           </div>
+        )}
 
-          <button onClick={handleGetContentHash} disabled={loading}>
-            Get Content hash
-          </button>
-          <div>{loading ? "Loading..." : result}</div>
+        <hr style={styles.divider} />
+
+        <input
+          style={styles.input}
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
+          placeholder="Reverse lookup (address)"
+        />
+
+        <button
+          style={styles.buttonWide}
+          disabled={loading}
+          onClick={() =>
+            wrap(async () => {
+              const name = await getRnsName(address);
+              setResult(name || "No reverse entry found");
+            })
+          }
+        >
+          Reverse Lookup
+        </button>
+
+        <div style={styles.resultBox}>
+          {loading ? "Loading..." : result}
         </div>
       </div>
-    );
-    ```
+    </div>
+  );
+}
+```
 
-### 6. Start local developement server
+### 8. Add Styles
 
-To preview this application, open your terminal and run the following command: 
+Add the styling for your component:
 
-  ```bash
-  npm run start
-  ```
+```js
+const styles: Record<string, React.CSSProperties> = {
+  container: {
+    minHeight: "100vh",
+    backgroundColor: "#f5f6fa",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "20px",
+    fontFamily: "Arial, sans-serif",
+  },
+  card: {
+    backgroundColor: "#fff",
+    padding: "25px",
+    borderRadius: "10px",
+    maxWidth: "520px",
+    width: "100%",
+    boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
+  },
+  heading: {
+    textAlign: "center",
+    marginBottom: "20px",
+    fontSize: "22px",
+  },
+  input: {
+    padding: "10px",
+    width: "100%",
+    borderRadius: "6px",
+    border: "1px solid #ccc",
+    marginBottom: "10px",
+    boxSizing: "border-box",
+  },
+  buttonGroup: {
+    display: "flex",
+    gap: "10px",
+    marginBottom: "10px",
+  },
+  button: {
+    flex: 1,
+    padding: "10px",
+    backgroundColor: "#388e3c",
+    color: "#fff",
+    border: "none",
+    borderRadius: "6px",
+    cursor: "pointer",
+  },
+  buttonAlt: {
+    flex: 1,
+    padding: "10px",
+    backgroundColor: "#1976d2",
+    color: "#fff",
+    border: "none",
+    borderRadius: "6px",
+    cursor: "pointer",
+  },
+  buttonWide: {
+    width: "100%",
+    padding: "10px",
+    backgroundColor: "#5e35b1",
+    color: "#fff",
+    border: "none",
+    borderRadius: "6px",
+    marginTop: "10px",
+    cursor: "pointer",
+  },
+  ownerBox: {
+    padding: "10px",
+    backgroundColor: "#e8f5e9",
+    borderRadius: "6px",
+    border: "1px solid #c8e6c9",
+    margin: "10px",
+    wordBreak: "break-all",
+    fontSize: "14px",
+  },
+  divider: {
+    margin: "20px 0",
+    border: "none",
+    borderTop: "1px solid #e0e0e0",
+  },
+  resultBox: {
+    marginTop: "10px",
+    padding: "10px",
+    backgroundColor: "#f9f9f9",
+    border: "1px solid #ddd",
+    borderRadius: "6px",
+    wordBreak: "break-all",
+    fontSize: "14px",
+  },
+};
+```
 
-  This is how your UI should look:
+### 9. Start Local Development Server
 
-  ![RNS dApp](/img/rns/rns-dapp.png)
+To preview this application, open your terminal and run the following command:
 
-  It should also function properly, as shown in the demo below:
+```bash
+npm run start
+```
+
+This is how your UI should look:
+
+![RNS dApp](/img/rns/rns-dapp.png)
+
+It should also function properly, as shown in the demo below:
 
   <video width="100%" height="400" controls>
     <source src="/video/rns-dapp-demo.mp4" type="video/mp4" />
@@ -364,19 +584,21 @@ To preview this application, open your terminal and run the following command:
 
 ## Conclusion
 
-In this guide, you've learnt how to integrate RNS JavaScript SDK into your react app. This guide also shows you how to use the available functions such as: 
+In this guide, you've learned how to integrate RNS into your React app using ethers.js. You now understand how to:
 
-  1. `rns.addr`
-  2. `rns.available`
-  3. `rns.subdomains.available`
-  4. `rns.contenthash`
+1. Set up RNS with ethers.js providers and contracts
+2. Handle overloaded contract functions properly
+3. Create reusable functions for RNS operations
+4. Build a custom React hook for RNS functionality
+5. Implement a complete UI for RNS lookups and checks
 
+This pattern can be easily extended or modified for your specific use case.
 
 <Card
-  index={1}
-  title="RNS Smart Contract Integration"
-  description="Learn how to integrate RNS contract into your smart contract"
-  color="orange"
-  icon="rocket"
-  link={{ href: "/developers/integrate/rns/smart-contract", title: "Open docs" }}
+index={1}
+title="RNS Smart Contract Integration"
+description="Learn how to integrate RNS contract into your smart contract"
+color="orange"
+icon="rocket"
+link={{ href: "/developers/integrate/rns/smart-contract", title: "Open docs" }}
 />

@@ -29,6 +29,3 @@ Before starting, ensure you have the following:
 - A wallet preferably MetaMask configured for **Rootstock Mainnet** or **Testnet**  
 - Basic understanding of Solidity and Web3.js or ethers.js
 - [Rootstock Testnet Faucet](https://faucet.rootstock.io/)
-
-
-
