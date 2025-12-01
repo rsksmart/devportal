@@ -57,7 +57,7 @@ const config = {
     },
     newsHighlight : [
       {
-        title : '📣 We‘re spotlighting builders using Replit; Only Replit-forked ideas will be accepted during this December.',
+        title : '📣 We‘re spotlighting builders using Replit; Only Replit-forked ideas will be accepted during the month of December, 2025.',
         url : 'https://rootstock.hashnode.dev/rootstock-hacktivator-december-special-edition-fork-build-with-replit '
       }
     ]
