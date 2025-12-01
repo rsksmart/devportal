@@ -57,8 +57,8 @@ const config = {
     },
     newsHighlight : [
       {
-        title : '📣 Hacktivator is live! Contribute, propose ideas and earn rewards.',
-        url : '/resources/contribute/hacktivator/'
+        title : '📣 We‘re spotlighting builders using Replit; Only Replit-forked ideas will be accepted during this December.',
+        url : 'https://rootstock.hashnode.dev/rootstock-hacktivator-december-special-edition-fork-build-with-replit '
       }
     ]
   },
