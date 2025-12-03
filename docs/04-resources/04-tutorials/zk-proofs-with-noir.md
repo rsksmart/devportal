@@ -8,9 +8,9 @@ tags: [zk, noir, zero-knowledge, privacy, tutorial, solidity, dapp, rootstock]
 
 # Zero-Knowledge Proofs on Rootstock with Noir
 
-Zero-knowledge proofs let a user prove they know something (a secret code, a credential, ownership) without ever revealing the secret itself. On Rootstock — the Bitcoin-secured, EVM-compatible smart contract chain — this unlocks real privacy while keeping Bitcoin-level security.
+[Zero-knowledge proofs](https://en.wikipedia.org/wiki/Zero-knowledge_proof) let a user prove they know something (a secret code, a credential, ownership) without ever revealing the secret itself. On Rootstock — the Bitcoin-secured, EVM-compatible smart contract chain — this unlocks real privacy while preserving Bitcoin-level security.
 
-This hands-on tutorial teaches you how to use **Noir** (a developer-friendly ZK DSL-Domain Specific Language) to build a **Secret NFT Club**: users get an exclusive membership only by proving they know the secret password — the password never appears on-chain or in the browser console.
+This hands-on tutorial teaches you how to use **[Noir](https://noir-lang.org/)** (a developer-friendly ZK DSL - Domain Specific Language) to build a **Secret NFT Club**: users get an exclusive membership only by proving they know the secret password — the password never appears on-chain or in the browser console.
 
 ## What You'll Build
 
@@ -56,7 +56,7 @@ nargo --version
 
 ### Step 2: Install Barretenberg Backend
 
-Barretenberg is the proving backend that generates and verifies zero-knowledge proofs.
+[Barretenberg](https://github.com/AztecProtocol/barretenberg) is the proving backend that generates and verifies zero-knowledge proofs. We use it for key operations such as generating proofs, producing and checking verification keys, and generating the verifier smart contract. Without Barretenberg, our dApp wouldn’t be able to let users prove they know the club’s secret code privately, without ever revealing the code itself.
 
 ```bash
 curl -L https://raw.githubusercontent.com/AztecProtocol/aztec-packages/refs/heads/master/barretenberg/bbup/install | bash
@@ -64,6 +64,7 @@ bbup -v 0.82.2
 ```
 
 Verify:
+Make sure to open a new terminal to verify your installation if you get the error `bb command not found`
 
 ```bash
 bb --version
@@ -94,7 +95,7 @@ fn main(secret: Field, public_hash: pub Field) {
 
 - Takes a `secret` (private input - never revealed)
 - Takes a `public_hash` (public input - visible to everyone)
-- Computes Pedersen hash of the secret
+- Computes [Pedersen hash](https://iden3-docs.readthedocs.io/en/latest/iden3_repos/research/publications/zkproof-standards-workshop-2/pedersen-hash/pedersen.html) of the secret
 - Asserts they match (proof succeeds only if user knows the correct secret)
 
 Compile the circuit:
@@ -170,12 +171,36 @@ Example output:
 - Frontend configuration
 - Testing
 
-Compile and Execute: these generate the `secret_club.json` and `secret_club.gz` files respectively, which will be used as we proceed
+Before we can proceed to run the `nargo execute` command, we need to generate a `Prover.toml` file.
+This file holds the witness values (i.e. the `secret` and the `public_hash`).
+To generate it, we start by running:
+
+```bash
+nargo check
+```
+
+Running `nargo check` creates a new `Prover.toml` file, prefilled based on the inputs defined in the main function of our `main.nr` circuit:
+
+```toml
+public_hash = ""
+secret = ""
+```
+
+Now we can fill in these fields with our actual witness values — the hashed `secret` (for example, the SHA-256 hash of 'supersecret2025') and the `public_hash` (the corresponding Pedersen hash):
+
+```toml
+public_hash = "0x297fad8a9bc7f877e7ae8ab582a32a16ec2d11cc57cd77ecab97d2c775fa29e8"
+secret = "0x04e94fe643fe9000c83dd91f0be27855aa2cd791a3dfc1e05775749e89f4693e"
+```
+
+Once the `Prover.toml` file is filled, you can proceed to compile and execute the circuit:
 
 ```bash
 nargo compile
 nargo execute
 ```
+
+These commands generate the `secret_club.json` and `secret_club.gz` files, which we will use moving forward.
 
 :::warning[Note]
 
