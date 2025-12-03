@@ -8,7 +8,7 @@ tags: [hardhat, tutorial, developers, quick starts, rsk, rootstock]
 
 Smart contracts are the backbone of decentralized applications (dApps). They automate agreements and processes, but their code can be complex and prone to errors. Verifying your smart contracts is crucial to ensure they function as intended.
 
-This tutorial will guide you through verifying your contracts using the Hardhat Verification Plugin on the Rootstock Blockscout Explorer. This plugin simplifies the verification of Solidity smart contracts deployed on the Rootstock network. By verifying the contracts, you allow Blockscout, an open-source block explorer, to link your contract's source code with its deployed bytecode on the blockchain, allowing for more trustless interaction with the code.
+This tutorial will guide you through verifying your contracts using the Hardhat Verification Plugin on the Rootstock Explorer and Blockscout Explorer with a single command. This plugin simplifies the verification of Solidity smart contracts deployed on the Rootstock network. By verifying the contracts, you allow block explorers like Rootstock and Blockscout to link your contract's source code with its deployed bytecode on the blockchain, allowing for more trustless interaction with the code.
 
 In this tutorial, we'll do the following steps:
 - Set up your hardhat config environment in your project
@@ -29,9 +29,7 @@ A [Hardhat Starter dApp](https://github.com/rsksmart/rootstock-hardhat-starterki
 ## What is hardhat-verify?
 
 [Hardhat](https://hardhat.org/) is a full-featured development environment for contract compilation, deployment and verification. 
-The [hardhat-verify plugin](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-verify) supports contract verification on the [Rootstock Blockscout Explorer](https://rootstock.blockscout.com/).
-
-> Note: The `hardhat-verify` plugin will be available soon on the [Rootstock Explorer](https://explorer.rootstock.io/).
+The [hardhat-verify plugin](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-verify) supports contract verification on the [Rootstock Explorer](https://explorer.rootstock.io/) and [Rootstock Blockscout Explorer](https://rootstock.blockscout.com/).
 
 ### Installation
 
@@ -53,112 +51,120 @@ import "@nomicfoundation/hardhat-verify";
 
 ### Usage
 
-You need to add the following Etherscan config to your `hardhat.config.ts` file and To obtain a Rootstock API key, follow the steps outlined in the [Obtaining a Rootstock API Key from Blockscout](/developers/smart-contracts/verify-smart-contracts/foundry-blockscout/) guide:
+You need to add the following Etherscan config to your `hardhat.config.ts` file:
 
 
 ```bash
-// Hardhat configuration
-const config: HardhatUserConfig = {
-    defaultNetwork: "hardhat",
-    networks: {
-        hardhat: {
-            // If you want to do some forking, uncomment this
-            // forking: {
-            //   url: MAINNET_RPC_URL
-            // }
-        },
-        localhost: {
-            url: "http://127.0.0.1:8545",
-        },
-        rskMainnet: {
-            url: RSK_MAINNET_RPC_URL,
-            chainId: 30,
-            gasPrice: 60000000,
-            accounts:[PRIVATE_KEY]
-        },
-        rskTestnet: {
-            url: RSK_TESTNET_RPC_URL, 
-            chainId: 31,
-            gasPrice: 60000000,
-            accounts:[PRIVATE_KEY]
-        },
-    },
-    namedAccounts: {
-        deployer: {
-            default: 0, // Default is the first account
-            mainnet: 0,
-        },
-        owner: {
-            default: 0,
-        },
-    },
-    solidity: {
-        compilers: [
-            {
-                version: "0.8.25",
-            },
-        ],
-    },
-    sourcify: {
-        enabled: false
-      },      
-    etherscan: {    
-        apiKey: {
-          // Is not required by blockscout. Can be any non-empty string
-          rskTestnet: 'RSK_TESTNET_RPC_URL',
-          rskMainnet: 'RSK_MAINNET_RPC_URL'
-        },
-        customChains: [
-          {
-            network: "rskTestnet",
-            chainId: 31,
-            urls: {
-              apiURL: "https://rootstock-testnet.blockscout.com/api/",
-              browserURL: "https://rootstock-testnet.blockscout.com/",
-            }
-          },
-          {
-            network: "rskMainnet",
-            chainId: 30,
-            urls: {
-              apiURL: "https://rootstock.blockscout.com/api/",
-              browserURL: "https://rootstock.blockscout.com/",
-            }
-          },
+require('@nomicfoundation/hardhat-toolbox');
+require('@nomicfoundation/hardhat-verify');
+require('dotenv').config();
 
-        ]
+module.exports = {
+  defaultNetwork: 'rootstockTestnet',
+  networks: {
+    rootstockMainnet: {
+      url: 'https://public-node.rsk.co',
+      chainId: 30,
+      accounts: [PRIVATE_KEY],
+    },
+    rootstockTestnet: {
+      url: 'https://public-node.testnet.rsk.co',
+      chainId: 31,
+      accounts: [PRIVATE_KEY],
+    },
+  },
+  solidity: {
+    compilers: [
+      {
+        version: '0.8.25',
       },
+    ],
+  },
+  sourcify: {
+    enabled: false,
+  },
+  etherscan: {
+    apiKey: {
+      // Is not required by Blockscout or Rootstock explorers, 
+      // but must be any non-empty string, si leave it as "rootstock".
+      rootstockTestnet: 'rootstock',
+      rootstockMainnet: 'rootstock',
+    },
+    customChains: [
+      {
+        network: 'rootstockTestnet',
+        chainId: 31,
+        urls: {
+          apiURL: 'https://be.explorer.testnet.rootstock.io/api/v3/',
+          browserURL: 'https://explorer.testnet.rootstock.io/',
+        },
+      },
+      {
+        network: 'rootstockMainnet',
+        chainId: 30,
+        urls: {
+          apiURL: 'https://be.explorer.rootstock.io/api/v3/',
+          browserURL: 'https://explorer.rootstock.io/',
+        },
+      },
+    ],
+  },
+  blockscout: {
+    enabled: true,
+    customChains: [
+      {
+        network: 'rootstockTestnet',
+        chainId: 31,
+        urls: {
+          apiURL: 'https://rootstock-testnet.blockscout.com/api/',
+          browserURL: 'https://rootstock-testnet.blockscout.com/',
+        },
+      },
+      {
+        network: 'rootstockMainnet',
+        chainId: 30,
+        urls: {
+          apiURL: 'https://rootstock.blockscout.com/api/',
+          browserURL: 'https://rootstock.blockscout.com/',
+        },
+      },
+    ],
+  },
 };
-
-export default config;
 ```
 
 Now, run the verify task, passing the address of the contract, 
-the network where it's deployed, and any other arguments that was used to deploy the contract:
+the network where it's deployed, and the constructor arguments that were used to deploy the contract:
 ```bash
-npx hardhat verify --network rskTestnet DEPLOYED_CONTRACT_ADDRESS
+npx hardhat verify --network rootstockTestnet DEPLOYED_CONTRACT_ADDRESS CONSTRUCTOR_ARGUMENTS
 ```
 or 
 ```bash
-npx hardhat verify --network rskMainnet DEPLOYED_CONTRACT_ADDRESS
+npx hardhat verify --network rootstockMainnet DEPLOYED_CONTRACT_ADDRESS CONSTRUCTOR_ARGUMENTS
 ```
 
 :::tip[Tip]
 
-- Replace `DEPLOYED_CONTRACT_ADDRESS` with the contract address. 
-- This can be gotten from the `MockERC721.json` file containing the addresses and abi under the `deployments/network` folder.
+- Replace `DEPLOYED_CONTRACT_ADDRESS` with the contract address that you want to verify.
 
 :::
 
 **The response should look like this:**
 ```bash
-npx hardhat verify  --network rskTestnet 0x33aC0cc41B11282085ff6db7E1F3C3c757143722 
+npx hardhat verify --network rootstockTestnet 0x1b4951c57ce2c53addcfa173d1106b5e12f11e38 1000 MyToken23 MTK23
 Successfully submitted source code for contract
-contracts/ERC721.sol:MockERC721 at 0x33aC0cc41B11282085ff6db7E1F3C3c757143722
+contracts/MyToken.sol:MyToken at 0x1b4951c57ce2c53addcfa173d1106b5e12f11e38
 for verification on the block explorer. Waiting for verification result...
-Successfully verified contract MockERC721 on the block explorer.
-https://rootstock-testnet.blockscout.com/address/0x33aC0cc41B11282085ff6db7E1F3C3c757143722#code
+
+Successfully verified contract MyToken on the block explorer.
+https://explorer.testnet.rootstock.io/address/0x1b4951c57ce2c53addcfa173d1106b5e12f11e38#code
+
+Successfully verified contract MyToken on the block explorer.
+https://rootstock-testnet.blockscout.com/address/0x1b4951c57ce2c53addcfa173d1106b5e12f11e38#code
 ```
+
+With that, the contract has been successfully verified in both block explorers.
+
 ## Resources
 - [Deploy, Interact and Verify Smart Contracts using Remix and Rootstock Explorer](/developers/quickstart/remix/)
 - Visit [hardhat-verify](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-verify#hardhat-verify)

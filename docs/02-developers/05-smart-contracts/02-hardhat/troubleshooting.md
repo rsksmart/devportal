@@ -1,6 +1,6 @@
 ---
 sidebar_label: Debugging and Troubleshooting
-sidebar_position: 106
+sidebar_position: 108
 title:  Common Errors and Tips
 description: "Learn about some potential issues you can run into and tips on how to resolve them."
 tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethers]

@@ -1,6 +1,6 @@
 ---
 sidebar_label:  Interact with the Smart Contract
-sidebar_position: 106
+sidebar_position: 107
 title:  Interact with the Smart Contract
 description: "Learn how to interact with your smart contract using cast"
 tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethers]
