@@ -305,7 +305,7 @@ const useRns = () => {
 
 ### 7. Main Component
 
-Create the main component with UI and event handlers:
+Create the main component with UI and event handlers inside the same `App.jsx`:
 
 ```js
 export default function App() {
@@ -471,7 +471,7 @@ export default function App() {
 
 ### 8. Add Styles
 
-Add the styling for your component:
+Add the styling for your component(`App.jsx`):
 
 ```js
 const styles: Record<string, React.CSSProperties> = {
@@ -563,6 +563,336 @@ const styles: Record<string, React.CSSProperties> = {
   },
 };
 ```
+
+<details>
+    <summary>Full `App.jsx` code</summary>
+    ```jsx
+    import { useState, useEffect } from "react";
+import { JsonRpcProvider } from "@ethersproject/providers";
+import { Contract } from "@ethersproject/contracts";
+import { namehash } from "@ethersproject/hash";
+import { AddressZero } from "@ethersproject/constants";
+
+const RPC = "https://public-node.testnet.rsk.co";
+
+// Testnet registry
+const RNS_REGISTRY = "0x7d284aaac6e925aad802a53c0c69efe3764597b8";
+
+// Core ABI
+const REGISTRY_ABI = [
+  "function owner(bytes32 node) view returns (address)",
+  "function resolver(bytes32 node) view returns (address)",
+];
+
+const ADDR_RESOLVER_ABI = [
+  "function addr(bytes32 node) view returns (address)",
+  "function addr(bytes32 node, uint256 coinType) view returns (address)",
+];
+
+const NAME_RESOLVER_ABI = ["function name(bytes32 node) view returns (string)"];
+
+const PUBLIC_RESOLVER_SUBDOMAIN_ABI = [
+  "function available(string name, string label) view returns (bool)",
+];
+
+const stripHex = (hex: string) => (hex.startsWith("0x") ? hex.slice(2) : hex);
+
+export default function RnsLookupApp() {
+  const [provider, setProvider] = useState<any>(null);
+  const [registry, setRegistry] = useState<any>(null);
+
+  const [domain, setDomain] = useState("");
+  const [subdomain, setSubdomain] = useState("");
+  const [address, setAddress] = useState("");
+
+  const [result, setResult] = useState("");
+  const [owner, setOwner] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const load = async () => {
+      const p = new JsonRpcProvider(RPC);
+      const r = new Contract(RNS_REGISTRY, REGISTRY_ABI, p);
+      setProvider(p);
+      setRegistry(r);
+    };
+    load();
+  }, []);
+
+  const getResolver = async (node: string) => {
+    const resolver = await registry.resolver(node);
+    if (!resolver || resolver === AddressZero) return null;
+    return new Contract(resolver, ADDR_RESOLVER_ABI, provider);
+  };
+
+  const resolveRSK = async () => {
+    if (!registry) return;
+    try {
+      setLoading(true);
+      const node = namehash(domain);
+      const resolver = await getResolver(node);
+      if (!resolver) {
+        setResult("no resolver set");
+        return;
+      }
+      const addr = await resolver.addr(node);
+      setResult(addr || "no address for this name");
+    } catch (err: any) {
+      setResult(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const resolveBTC = async () => {
+    if (!registry) return;
+    try {
+      setLoading(true);
+      const node = namehash(domain);
+      const resolver = await getResolver(node);
+      if (!resolver) {
+        setResult("no resolver set");
+        return;
+      }
+      const btc = await resolver.addr(node, 0); // coinType=0 for BTC
+      setResult(btc || "no BTC address found");
+    } catch (err: any) {
+      setResult(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const checkAvailable = async () => {
+    if (!registry) return;
+    try {
+      setLoading(true);
+      const owner = await registry.owner(namehash(domain));
+      setResult(
+        owner === AddressZero ? "domain is available" : "domain is taken"
+      );
+    } catch (err: any) {
+      setResult(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const checkSubdomain = async () => {
+    try {
+      setLoading(true);
+      const labelResolver = new Contract(
+        RNS_REGISTRY,
+        PUBLIC_RESOLVER_SUBDOMAIN_ABI,
+        provider
+      );
+      const available = await labelResolver.available(domain, subdomain);
+      setResult(available ? "subdomain available" : "subdomain taken");
+    } catch (err: any) {
+      setResult(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const reverseLookup = async () => {
+    if (!registry) return;
+
+    try {
+      setLoading(true);
+      const node = namehash(`${stripHex(address)}.addr.reverse`);
+      const resolver = await registry.resolver(node);
+      if (resolver === AddressZero) {
+        setResult("no reverse record found");
+        return;
+      }
+
+      const resolverContract = new Contract(
+        resolver,
+        NAME_RESOLVER_ABI,
+        provider
+      );
+      const name = await resolverContract.name(node);
+      setResult(name || "no reverse record found");
+    } catch (err: any) {
+      setResult(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const getOwner = async () => {
+    if (!registry) return;
+    try {
+      setLoading(true);
+      const node = namehash(domain);
+      const address = await registry.owner(node);
+      setOwner(address);
+      setResult("owner retrieved");
+    } catch (err: any) {
+      setResult(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div style={styles.container}>
+      <div style={styles.card}>
+        <h1 style={styles.heading}>Rootstock Name Service Lookup</h1>
+
+        <input
+          style={styles.input}
+          type="text"
+          placeholder="example.rsk"
+          value={domain}
+          onChange={(e) => setDomain(e.target.value)}
+        />
+
+        <div style={styles.buttonGroup}>
+          <button style={styles.button} disabled={loading} onClick={resolveRSK}>
+            Resolve RSK
+          </button>
+          <button
+            style={styles.buttonAlt}
+            disabled={loading}
+            onClick={resolveBTC}
+          >
+            Resolve BTC
+          </button>
+        </div>
+
+        <button
+          style={styles.buttonWide}
+          disabled={loading}
+          onClick={checkAvailable}
+        >
+          Check Domain Availability
+        </button>
+
+        <div style={{ display: "flex", gap: 8, marginTop: 12 }}>
+          <input
+            style={{ ...styles.input, flex: 1 }}
+            value={subdomain}
+            onChange={(e) => setSubdomain(e.target.value)}
+            placeholder="subdomain label"
+          />
+          <button
+            style={styles.buttonAlt}
+            disabled={loading}
+            onClick={checkSubdomain}
+          >
+            Check Subdomain
+          </button>
+        </div>
+
+        <button style={styles.buttonWide} disabled={loading} onClick={getOwner}>
+          Get Domain Owner
+        </button>
+
+        {owner && (
+          <div style={styles.resultBox}>
+            <strong>Owner:</strong> {owner}
+          </div>
+        )}
+
+        <hr style={{ margin: "20px 0" }} />
+
+        <input
+          style={styles.input}
+          type="text"
+          placeholder="0x123..."
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
+        />
+
+        <button
+          style={styles.buttonWide}
+          disabled={loading}
+          onClick={reverseLookup}
+        >
+          Reverse Lookup
+        </button>
+
+        <div style={styles.resultBox}>{loading ? "loading..." : result}</div>
+      </div>
+    </div>
+  );
+}
+
+const styles: Record<string, React.CSSProperties> = {
+  container: {
+    minHeight: "100vh",
+    backgroundColor: "#f5f6fa",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "20px",
+  },
+  card: {
+    maxWidth: 520,
+    width: "100%",
+    background: "#fff",
+    padding: 25,
+    borderRadius: 10,
+    boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
+  },
+  heading: {
+    textAlign: "center",
+    marginBottom: 15,
+    fontSize: "22px",
+  },
+  input: {
+    width: "100%",
+    padding: "10px",
+    marginBottom: "10px",
+    borderRadius: 6,
+    border: "1px solid #ccc",
+  },
+  buttonGroup: {
+    display: "flex",
+    gap: 10,
+    marginBottom: 10,
+  },
+  button: {
+    flex: 1,
+    background: "#388e3c",
+    color: "#fff",
+    padding: "10px",
+    border: "none",
+    borderRadius: 6,
+    cursor: "pointer",
+  },
+  buttonAlt: {
+    flex: 1,
+    background: "#1976d2",
+    color: "#fff",
+    padding: "10px",
+    border: "none",
+    borderRadius: 6,
+    cursor: "pointer",
+  },
+  buttonWide: {
+    width: "100%",
+    padding: "10px",
+    marginTop: 10,
+    background: "#5e35b1",
+    color: "#fff",
+    border: "none",
+    borderRadius: 6,
+    cursor: "pointer",
+  },
+  resultBox: {
+    marginTop: 15,
+    padding: 10,
+    background: "#f9f9f9",
+    border: "1px solid #ddd",
+    borderRadius: 6,
+    wordBreak: "break-all",
+  },
+};
+```
+</details>
 
 ### 9. Start Local Development Server
 
