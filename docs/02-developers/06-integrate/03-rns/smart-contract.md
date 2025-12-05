@@ -88,7 +88,7 @@ console.log(address);
 
 ## Resolving Coin Types
 
-You can resolve addresses for different blockchains by specifying the coin type. For example, resolve a Bitcoin address or RSK address from the same domain.
+You can resolve addresses for different blockchains by specifying the coin type. For example, resolve a Bitcoin address or Rootstock address from the same domain.
 
 ```javascript
 async function resolveCoinAddress(domainName, coinType) {
