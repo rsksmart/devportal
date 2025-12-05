@@ -82,7 +82,7 @@ const registry = new Contract(
 ```
 
 What this does:
-- Connects to the RSK Testnet
+- Connects to the Rootstock Testnet
 - Initializes the RNS Registry contract
 - Sets up the provider for contract interactions
 
