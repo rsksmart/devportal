@@ -6,7 +6,7 @@ description: RNS Javascript SDK
 tags: [rns, integrate, integration guide, rif, sdk]
 ---
 
-The `@rsksmart/rns` package helps you **interact with the RSK Name Service (RNS)**. It lets you:
+The `@rsksmart/rns` package helps you **interact with the Rootstock Name Service (RNS)**. It lets you:
 
 - Check if domains are available
 - Resolve domains to addresses
