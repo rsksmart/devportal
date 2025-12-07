@@ -8,10 +8,21 @@ tags: [rns, integrate, integration guide, rif, frontend]
 
 import Card from '/src/components/Card'
 
-This guide helps you quickly set up your environment to use RNS with ethers.js and test it with a simple sample dApp.
+This guide walks you through building a React dApp that integrates with the **Rootstock Name Service (RNS)** using ethers.js. You'll create a functional application that allows users to resolve domain names to addresses, check domain availability, perform reverse lookups, and more etc.
+
+By the end of this guide, you'll have a dApp that demonstrates core RNS operations and serves as a foundation for building more complex blockchain applications on Rootstock.
+
+## Prerequisites
+
+Before starting, ensure you have the following:
+
+- [Node.js](https://nodejs.org/en/download) and [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/) installed  
+- A wallet preferably MetaMask configured for **Rootstock Mainnet** or **Testnet**  
+- Basic understanding of Solidity and Web3.js or ethers.js
+- [Rootstock Testnet Faucet](https://faucet.rootstock.io/)
 
 :::note
-All the code snippets shown in this guide will be added inside your `App.jsx` file.
+All the code snippets shown in this guide will be added inside your `App.tsx` file.
 :::
 
 ### 1. Project Setup
@@ -26,12 +37,12 @@ cd rns-dapp
 Then install the required dependencies:
 
 ```bash
-npm install ethers @ethersproject/providers @ethersproject/contracts @ethersproject/constants @ethersproject/hash
+npm install ethers @ethersproject/providers @ethersproject/contracts @ethersproject/constants @ethersproject/hash typescript
 ```
 
 ### 2. Import the Required Modules
 
-Open your `App.jsx` file and import the following modules:
+Open your `App.tsx` file and import the following modules:
 
 ```js
 import { useState, useCallback, useMemo } from "react";
@@ -924,11 +935,9 @@ In this guide, you've learned how to integrate RNS into your React app using eth
 
 This pattern can be easily extended or modified for your specific use case.
 
-<Card
-index={1}
-title="RNS Smart Contract Integration"
-description="Learn how to integrate RNS contract into your smart contract"
-color="orange"
-icon="rocket"
-link={{ href: "/developers/integrate/rns/smart-contract", title: "Open docs" }}
-/>
+## Resources
+
+- [RNS Smart Contract Integration](./smart-contract)
+- [RNS Javascript SDK](./js-sdk)
+- [RNS Registry Testnet Contract Address](https://explorer.testnet.rootstock.io/address/0x7d284aaac6e925aad802a53c0c69efe3764597b8?tab=contract)
+- [RNS Registry Mainnet Contract Address](https://explorer.rootstock.io/address/0xcb868aeabd31e2b66f74e9a55cf064abb31a4ad5?tab=contract)
