@@ -1157,7 +1157,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
       "data":"0x08c379a..."
    }
 }
-
+```
 ---
 
 #### eth_estimateGas
