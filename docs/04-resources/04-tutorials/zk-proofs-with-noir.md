@@ -204,7 +204,7 @@ These commands generate the `secret_club.json` and `secret_club.gz` files, which
 
 :::warning[Note]
 
-🚨🚨 Always delete the files in the target folder when you change your circuit or inputs to ensure a clean setup. Whenever the circuit changes, you must also regenerate and replace the verifier smart contract in your Solidity project. 🚨🚨
+🚨🚨 Always delete the files in the `target` folder when you change your circuit or inputs to ensure a clean setup. Whenever the circuit changes, you must also regenerate and replace the verifier smart contract in your Solidity project. 🚨🚨
 
 :::
 
