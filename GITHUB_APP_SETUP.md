@@ -77,47 +77,6 @@ The workflow then:
 - pushes commits
 - creates pull requests via GitHub API
 
-### 2. Configure the Environment Variable
-
-#### For Local Development
-
-Create or update your `.env.local` file in the project root:
-
-```bash
-GH_APP_ID=your_app_id
-GH_APP_PRIVATE_KEY="your_private_key_contents"
-GH_APP_INSTALLATION_ID=your_installation_id
-```
-
-#### For Production Deployment
-
-Set the environment variable in your deployment platform:
-
-**Vercel:**
-1. Go to your project settings
-2. Navigate to "Environment Variables"
-3. Add:
-   - `GH_APP_ID`
-   - `GH_APP_PRIVATE_KEY`
-   - `GH_APP_INSTALLATION_ID`
-
-**Netlify:**
-1. Go to Site settings > Environment variables
-2. Add:
-   - `GH_APP_ID`
-   - `GH_APP_PRIVATE_KEY`
-   - `GH_APP_INSTALLATION_ID`
-
-**Other platforms:**
-Follow your platform's documentation for setting environment variables.
-
-### 3. Restart the Development Server
-
-After adding the environment variable locally:
-
-```bash
-yarn start
-```
 
 ## Verification
 
@@ -137,7 +96,7 @@ yarn start
 
 ### Still seeing sample data after setup?
 
-1. Verify the environment variable names:
+1. Verify the GitHub Actions Secrets are created and security added the corresponding values:
    - `GH_APP_ID`
    - `GH_APP_PRIVATE_KEY`
    - `GH_APP_INSTALLATION_ID`
