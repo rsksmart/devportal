@@ -22,7 +22,7 @@ Before starting, ensure you have the following:
 - [Rootstock Testnet Faucet](https://faucet.rootstock.io/)
 
 :::note
-All the code snippets shown in this guide will be added inside your `App.tsx` file.
+All the code snippets shown in this guide will be added inside your `App.js` file.
 :::
 
 ### 1. Project Setup
@@ -37,15 +37,15 @@ cd rns-dapp
 Then install the required dependencies:
 
 ```bash
-npm install ethers @ethersproject/providers @ethersproject/contracts @ethersproject/constants @ethersproject/hash typescript
+npm install ethers @ethersproject/providers @ethersproject/contracts @ethersproject/constants @ethersproject/hash react-dom react-scripts @rsksmart/rns
 ```
 
 ### 2. Import the Required Modules
 
-Open your `App.tsx` file and import the following modules:
+Open your `App.js` file and import the following modules:
 
 ```js
-import { useState, useCallback, useMemo } from "react";
+import React, { useState, useCallback, useMemo } from "react";
 import { JsonRpcProvider } from "@ethersproject/providers";
 import { Contract } from "@ethersproject/contracts";
 import { AddressZero } from "@ethersproject/constants";
@@ -56,7 +56,7 @@ import { namehash } from "@ethersproject/hash";
 
 Next, set up RNS using the RNS Registry Contract Address and the [RSK Testnet RPC URL](https://public-node.testnet.rsk.co).
 
-Add the following code inside `App.jsx`:
+Add the following code inside `App.js`:
 
 ```js
 // Rootstock Testnet RPC
@@ -105,7 +105,96 @@ Add a utility function to strip the hex prefix from addresses:
 const stripHexPrefix = (hex: string): string => hex.slice(2);
 ```
 
-### 5. Core RNS Functions
+### 5. Style for the UI
+ Add the following style for the UI: 
+
+ ```css
+ const styles = {
+  container: {
+    minHeight: "100vh",
+    backgroundColor: "#f5f6fa",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "20px",
+    fontFamily: "Arial, sans-serif",
+  },
+  card: {
+    backgroundColor: "#fff",
+    padding: "25px",
+    borderRadius: "10px",
+    maxWidth: "520px",
+    width: "100%",
+    boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
+  },
+  heading: {
+    textAlign: "center",
+    marginBottom: "20px",
+    fontSize: "22px",
+  },
+  input: {
+    padding: "10px",
+    width: "100%",
+    borderRadius: "6px",
+    border: "1px solid #ccc",
+    marginBottom: "10px",
+    boxSizing: "border-box",
+  },
+  buttonGroup: {
+    display: "flex",
+    gap: "10px",
+    marginBottom: "10px",
+  },
+  button: {
+    flex: 1,
+    padding: "10px",
+    backgroundColor: "#388e3c",
+    color: "#fff",
+    border: "none",
+    borderRadius: "6px",
+    cursor: "pointer",
+  },
+  buttonAlt: {
+    flex: 1,
+    padding: "10px",
+
+    backgroundColor: "#1976d2",
+    color: "#fff",
+    border: "none",
+    borderRadius: "6px",
+  },
+  buttonWide: {
+    width: "100%",
+    padding: "10px",
+    backgroundColor: "#5e35b1",
+    color: "#fff",
+    border: "none",
+    borderRadius: "6px",
+    margin: "10px",
+    marginBottom: "5px",
+  },
+  ownerBox: {
+    padding: "10px",
+    backgroundColor: "#e8f5e9",
+    borderRadius: "6px",
+    border: "1px solid #c8e6c9",
+    marginTop: "10px",
+  },
+  divider: {
+    margin: "20px 0",
+    borderTop: "1px solid #ddd",
+  },
+  resultBox: {
+    marginTop: "10px",
+    padding: "10px",
+    backgroundColor: "#f9f9f9",
+    border: "1px solid #ddd",
+    borderRadius: "6px",
+  },
+};
+```
+
+### 6. Core RNS Functions
 
 Add the core functions that handle different RNS operations.
 
@@ -114,7 +203,7 @@ Add the core functions that handle different RNS operations.
 Looks up the RSK address linked to a given RNS domain:
 
 ```js
-const resolveRnsName = async (name: string): Promise<string | null> => {
+const resolveRnsName = async (name) => {
   try {
     const nameHash = namehash(name);
     const resolverAddress = await registry.resolver(nameHash);
@@ -130,7 +219,9 @@ const resolveRnsName = async (name: string): Promise<string | null> => {
     );
 
     // Use the functions property to call overloaded functions
-    const [address] = await addrResolverContract.functions["addr(bytes32)"](nameHash);
+    const [address] = await addrResolverContract.functions["addr(bytes32)"](
+      nameHash
+    );
 
     if (!address || address === AddressZero) {
       return null;
@@ -142,6 +233,7 @@ const resolveRnsName = async (name: string): Promise<string | null> => {
     return null;
   }
 };
+
 ```
 
 :::tip Important Note on Overloaded Functions
@@ -153,7 +245,7 @@ When working with overloaded contract functions in ethers.js, you must use the `
 Fetches the Bitcoin address if the domain has one:
 
 ```js
-const resolveBitcoinAddress = async (name: string): Promise<string | null> => {
+const resolveBitcoinAddress = async (name) => {
   try {
     const hash = namehash(name);
     const resolver = await registry.resolver(hash);
@@ -185,11 +277,9 @@ const resolveBitcoinAddress = async (name: string): Promise<string | null> => {
 Looks up the RNS name associated with an address:
 
 ```js
-const lookupAddress = async (address: string): Promise<string | null> => {
+const lookupAddress = async (address) => {
   try {
-    const reverseHash = namehash(
-      `${stripHexPrefix(address)}.addr.reverse`
-    );
+    const reverseHash = namehash(`${stripHexPrefix(address)}.addr.reverse`);
 
     const resolver = await registry.resolver(reverseHash);
 
@@ -215,19 +305,18 @@ const lookupAddress = async (address: string): Promise<string | null> => {
 Retrieves the owner address of a domain:
 
 ```js
-const getDomainOwner = async (domain: string): Promise<string | null> => {
-  try {
-    const hash = namehash(domain);
-    const owner = await registry.owner(hash);
-
-    if (!owner || owner === AddressZero) return null;
-
-    return owner.toLowerCase();
-  } catch (e) {
-    console.error("owner error", e);
-    return null;
-  }
-};
+const getDomainOwner = async (domain) => {
+ try {
+   const hash = namehash(domain);
+   const owner = await registry.owner(hash);
+   if (!owner || owner === AddressZero) return null;
+   return owner.toLowerCase();
+ } catch (e) {
+   console.error("owner error", e);
+   return null;
+ }
+}
+;
 ```
 
 #### e. Check Domain Availability
@@ -235,7 +324,7 @@ const getDomainOwner = async (domain: string): Promise<string | null> => {
 Checks if a domain is available for registration:
 
 ```js
-const checkDomainAvailability = async (domain: string): Promise<boolean> => {
+const checkDomainAvailability = async (domain) => {
   try {
     const hash = namehash(domain);
     const owner = await registry.owner(hash);
@@ -253,10 +342,10 @@ Checks if a subdomain is available:
 
 ```js
 const checkSubdomainAvailability = async (
-  domain: string,
-  subdomain: string
-): Promise<boolean> => {
-  return checkDomainAvailability(`${subdomain}.${domain}`);
+ domain,
+ subdomain
+)=> {
+ return checkDomainAvailability(`${subdomain}.${domain}`);
 };
 ```
 
@@ -266,23 +355,23 @@ Create a custom hook to encapsulate all RNS functionality:
 
 ```js
 const useRns = () => {
-  const getAddressByRns = useCallback(async (name: string) => {
+  const getAddressByRns = useCallback(async (name) => {
     return await resolveRnsName(name);
   }, []);
 
-  const getBitcoinAddressByRns = useCallback(async (name: string) => {
+  const getBitcoinAddressByRns = useCallback(async (name) => {
     return await resolveBitcoinAddress(name);
   }, []);
 
-  const getRnsName = useCallback(async (address: string) => {
+  const getRnsName = useCallback(async (address) => {
     return await lookupAddress(address);
   }, []);
 
-  const getOwner = useCallback(async (domain: string) => {
+  const getOwner = useCallback(async (domain) => {
     return await getDomainOwner(domain);
   }, []);
 
-  const checkAvailability = useCallback(async (domain: string) => {
+  const checkAvailability = useCallback(async (domain) => {
     return await checkDomainAvailability(domain);
   }, []);
 
@@ -316,7 +405,7 @@ const useRns = () => {
 
 ### 7. Main Component
 
-Create the main component with UI and event handlers inside the same `App.jsx`:
+Create the main component with UI and event handlers inside the same `App.js`:
 
 ```js
 export default function App() {
@@ -336,7 +425,7 @@ export default function App() {
   const [owner, setOwner] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const wrap = async (fn: () => Promise<void>) => {
+  const wrap = async (fn) => {
     setLoading(true);
     setResult("");
     setOwner("");
@@ -356,7 +445,7 @@ export default function App() {
           style={styles.input}
           value={domain}
           onChange={(e) => setDomain(e.target.value)}
-          placeholder="Enter domain like example.rsk"
+          placeholder="Enter domain like testing.rsk"
         />
 
         <div style={styles.buttonGroup}>
@@ -416,7 +505,9 @@ export default function App() {
               wrap(async () => {
                 const available = await checkSubdomain(domain, subdomain);
                 setResult(
-                  available ? "✅ Subdomain is available" : "❌ Subdomain is taken"
+                  available
+                    ? "✅ Subdomain is available"
+                    : "❌ Subdomain is taken"
                 );
               })
             }
@@ -471,21 +562,51 @@ export default function App() {
           Reverse Lookup
         </button>
 
-        <div style={styles.resultBox}>
-          {loading ? "Loading..." : result}
-        </div>
+        <div style={styles.resultBox}>{loading ? "Loading..." : result}</div>
       </div>
     </div>
   );
 }
 ```
 
-### 8. Add Styles
+<details>
+    <summary>Full `App.js` code</summary>
+    ```jsx
+    import React, { useState, useCallback, useMemo } from "react";
+import { JsonRpcProvider } from "@ethersproject/providers";
+import { Contract } from "@ethersproject/contracts";
+import { AddressZero } from "@ethersproject/constants";
+import { namehash } from "@ethersproject/hash";
 
-Add the styling for your component(`App.jsx`):
+const ROOTSTOCK_RPC_NODE = "https://public-node.testnet.rsk.co";
 
-```js
-const styles: Record<string, React.CSSProperties> = {
+// RNS registry (testnet)
+const RNS_REGISTRY_ADDRESS = "0x7d284aaac6e925aad802a53c0c69efe3764597b8";
+
+// Bitcoin chain ID for multichain resolver
+const BITCOIN_CHAIN_ID = 0;
+
+// ABIs
+const RNS_REGISTRY_ABI = [
+  "function resolver(bytes32 node) view returns (address)",
+  "function owner(bytes32 node) view returns (address)",
+];
+
+const RNS_ADDR_RESOLVER_ABI = [
+  "function addr(bytes32 node) view returns (address)",
+  "function addr(bytes32 node, uint coinType) view returns (bytes)",
+];
+
+const RNS_NAME_RESOLVER_ABI = [
+  "function name(bytes32 node) view returns (string)",
+];
+
+const provider = new JsonRpcProvider(ROOTSTOCK_RPC_NODE);
+
+const registry = new Contract(RNS_REGISTRY_ADDRESS, RNS_REGISTRY_ABI, provider);
+
+const stripHexPrefix = (hex) => hex.slice(2);
+const styles = {
   container: {
     minHeight: "100vh",
     backgroundColor: "#f5f6fa",
@@ -533,11 +654,11 @@ const styles: Record<string, React.CSSProperties> = {
   buttonAlt: {
     flex: 1,
     padding: "10px",
+
     backgroundColor: "#1976d2",
     color: "#fff",
     border: "none",
     borderRadius: "6px",
-    cursor: "pointer",
   },
   buttonWide: {
     width: "100%",
@@ -546,22 +667,19 @@ const styles: Record<string, React.CSSProperties> = {
     color: "#fff",
     border: "none",
     borderRadius: "6px",
-    marginTop: "10px",
-    cursor: "pointer",
+    margin: "10px",
+    marginBottom: "5px",
   },
   ownerBox: {
     padding: "10px",
     backgroundColor: "#e8f5e9",
     borderRadius: "6px",
     border: "1px solid #c8e6c9",
-    margin: "10px",
-    wordBreak: "break-all",
-    fontSize: "14px",
+    marginTop: "10px",
   },
   divider: {
     margin: "20px 0",
-    border: "none",
-    borderTop: "1px solid #e0e0e0",
+    borderTop: "1px solid #ddd",
   },
   resultBox: {
     marginTop: "10px",
@@ -569,179 +687,199 @@ const styles: Record<string, React.CSSProperties> = {
     backgroundColor: "#f9f9f9",
     border: "1px solid #ddd",
     borderRadius: "6px",
-    wordBreak: "break-all",
-    fontSize: "14px",
   },
 };
-```
 
-<details>
-    <summary>Full `App.jsx` code</summary>
-    ```jsx
-    import { useState, useEffect } from "react";
-import { JsonRpcProvider } from "@ethersproject/providers";
-import { Contract } from "@ethersproject/contracts";
-import { namehash } from "@ethersproject/hash";
-import { AddressZero } from "@ethersproject/constants";
+// Resolve RSK address
+const resolveRnsName = async (name) => {
+  try {
+    const nameHash = namehash(name);
+    const resolverAddress = await registry.resolver(nameHash);
 
-const RPC = "https://public-node.testnet.rsk.co";
+    if (resolverAddress === AddressZero) {
+      return null;
+    }
 
-// Testnet registry
-const RNS_REGISTRY = "0x7d284aaac6e925aad802a53c0c69efe3764597b8";
+    const addrResolverContract = new Contract(
+      resolverAddress,
+      RNS_ADDR_RESOLVER_ABI,
+      provider
+    );
 
-// Core ABI
-const REGISTRY_ABI = [
-  "function owner(bytes32 node) view returns (address)",
-  "function resolver(bytes32 node) view returns (address)",
-];
+    // Use the functions property to call overloaded functions
+    const [address] = await addrResolverContract.functions["addr(bytes32)"](
+      nameHash
+    );
 
-const ADDR_RESOLVER_ABI = [
-  "function addr(bytes32 node) view returns (address)",
-  "function addr(bytes32 node, uint256 coinType) view returns (address)",
-];
+    if (!address || address === AddressZero) {
+      return null;
+    }
 
-const NAME_RESOLVER_ABI = ["function name(bytes32 node) view returns (string)"];
+    return address.toLowerCase();
+  } catch (e) {
+    console.error("resolveRnsName error", e);
+    return null;
+  }
+};
 
-const PUBLIC_RESOLVER_SUBDOMAIN_ABI = [
-  "function available(string name, string label) view returns (bool)",
-];
+// Resolve BTC address
+const resolveBitcoinAddress = async (name) => {
+  try {
+    const hash = namehash(name);
+    const resolver = await registry.resolver(hash);
 
-const stripHex = (hex: string) => (hex.startsWith("0x") ? hex.slice(2) : hex);
+    if (resolver === AddressZero) return null;
 
-export default function RnsLookupApp() {
-  const [provider, setProvider] = useState<any>(null);
-  const [registry, setRegistry] = useState<any>(null);
+    const resolverContract = new Contract(
+      resolver,
+      RNS_ADDR_RESOLVER_ABI,
+      provider
+    );
+
+    const [btcBytes] = await resolverContract.functions[
+      "addr(bytes32,uint256)"
+    ](hash, BITCOIN_CHAIN_ID);
+
+    if (!btcBytes || btcBytes === "0x") return null;
+
+    return btcBytes;
+  } catch (e) {
+    console.error("resolveBitcoinAddress error", e);
+    return null;
+  }
+};
+
+// Reverse lookup (address to name)
+const lookupAddress = async (address) => {
+  try {
+    const reverseHash = namehash(`${stripHexPrefix(address)}.addr.reverse`);
+
+    const resolver = await registry.resolver(reverseHash);
+
+    if (resolver === AddressZero) return null;
+
+    const resolverContract = new Contract(
+      resolver,
+      RNS_NAME_RESOLVER_ABI,
+      provider
+    );
+
+    const name = await resolverContract.name(reverseHash);
+    return name || null;
+  } catch (e) {
+    console.error("lookupAddress error", e);
+    return null;
+  }
+};
+
+// Get owner
+const getDomainOwner = async (domain) => {
+  try {
+    const hash = namehash(domain);
+    const owner = await registry.owner(hash);
+
+    if (!owner || owner === AddressZero) return null;
+
+    return owner.toLowerCase();
+  } catch (e) {
+    console.error("owner error", e);
+    return null;
+  }
+};
+
+// Domain availability
+const checkDomainAvailability = async (domain) => {
+  try {
+    const hash = namehash(domain);
+    const owner = await registry.owner(hash);
+    return owner === AddressZero;
+  } catch (e) {
+    console.error("availability error", e);
+    return false;
+  }
+};
+
+// Subdomain availability
+const checkSubdomainAvailability = async (
+  domain,
+  subdomain
+) => {
+  return checkDomainAvailability(`${subdomain}.${domain}`);
+};
+
+// RNS Hook
+const useRns = () => {
+  const getAddressByRns = useCallback(async (name) => {
+    return await resolveRnsName(name);
+  }, []);
+
+  const getBitcoinAddressByRns = useCallback(async (name) => {
+    return await resolveBitcoinAddress(name);
+  }, []);
+
+  const getRnsName = useCallback(async (address) => {
+    return await lookupAddress(address);
+  }, []);
+
+  const getOwner = useCallback(async (domain) => {
+    return await getDomainOwner(domain);
+  }, []);
+
+  const checkAvailability = useCallback(async (domain) => {
+    return await checkDomainAvailability(domain);
+  }, []);
+
+  const checkSubdomain = useCallback(
+    async (domain, subdomain) => {
+      return await checkSubdomainAvailability(domain, subdomain);
+    },
+    []
+  );
+
+  return useMemo(
+    () => ({
+      getAddressByRns,
+      getBitcoinAddressByRns,
+      getRnsName,
+      getOwner,
+      checkAvailability,
+      checkSubdomain,
+    }),
+    [
+      getAddressByRns,
+      getBitcoinAddressByRns,
+      getRnsName,
+      getOwner,
+      checkAvailability,
+      checkSubdomain,
+    ]
+  );
+};
+
+// UI Component
+export default function App() {
+  const {
+    getAddressByRns,
+    getBitcoinAddressByRns,
+    getRnsName,
+    getOwner,
+    checkAvailability,
+    checkSubdomain,
+  } = useRns();
 
   const [domain, setDomain] = useState("");
   const [subdomain, setSubdomain] = useState("");
   const [address, setAddress] = useState("");
-
   const [result, setResult] = useState("");
   const [owner, setOwner] = useState("");
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    const load = async () => {
-      const p = new JsonRpcProvider(RPC);
-      const r = new Contract(RNS_REGISTRY, REGISTRY_ABI, p);
-      setProvider(p);
-      setRegistry(r);
-    };
-    load();
-  }, []);
-
-  const getResolver = async (node: string) => {
-    const resolver = await registry.resolver(node);
-    if (!resolver || resolver === AddressZero) return null;
-    return new Contract(resolver, ADDR_RESOLVER_ABI, provider);
-  };
-
-  const resolveRSK = async () => {
-    if (!registry) return;
+  const wrap = async (fn) => {
+    setLoading(true);
+    setResult("");
+    setOwner("");
     try {
-      setLoading(true);
-      const node = namehash(domain);
-      const resolver = await getResolver(node);
-      if (!resolver) {
-        setResult("no resolver set");
-        return;
-      }
-      const addr = await resolver.addr(node);
-      setResult(addr || "no address for this name");
-    } catch (err: any) {
-      setResult(err.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const resolveBTC = async () => {
-    if (!registry) return;
-    try {
-      setLoading(true);
-      const node = namehash(domain);
-      const resolver = await getResolver(node);
-      if (!resolver) {
-        setResult("no resolver set");
-        return;
-      }
-      const btc = await resolver.addr(node, 0); // coinType=0 for BTC
-      setResult(btc || "no BTC address found");
-    } catch (err: any) {
-      setResult(err.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const checkAvailable = async () => {
-    if (!registry) return;
-    try {
-      setLoading(true);
-      const owner = await registry.owner(namehash(domain));
-      setResult(
-        owner === AddressZero ? "domain is available" : "domain is taken"
-      );
-    } catch (err: any) {
-      setResult(err.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const checkSubdomain = async () => {
-    try {
-      setLoading(true);
-      const labelResolver = new Contract(
-        RNS_REGISTRY,
-        PUBLIC_RESOLVER_SUBDOMAIN_ABI,
-        provider
-      );
-      const available = await labelResolver.available(domain, subdomain);
-      setResult(available ? "subdomain available" : "subdomain taken");
-    } catch (err: any) {
-      setResult(err.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const reverseLookup = async () => {
-    if (!registry) return;
-
-    try {
-      setLoading(true);
-      const node = namehash(`${stripHex(address)}.addr.reverse`);
-      const resolver = await registry.resolver(node);
-      if (resolver === AddressZero) {
-        setResult("no reverse record found");
-        return;
-      }
-
-      const resolverContract = new Contract(
-        resolver,
-        NAME_RESOLVER_ABI,
-        provider
-      );
-      const name = await resolverContract.name(node);
-      setResult(name || "no reverse record found");
-    } catch (err: any) {
-      setResult(err.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const getOwner = async () => {
-    if (!registry) return;
-    try {
-      setLoading(true);
-      const node = namehash(domain);
-      const address = await registry.owner(node);
-      setOwner(address);
-      setResult("owner retrieved");
-    } catch (err: any) {
-      setResult(err.message);
+      await fn();
     } finally {
       setLoading(false);
     }
@@ -754,20 +892,34 @@ export default function RnsLookupApp() {
 
         <input
           style={styles.input}
-          type="text"
-          placeholder="example.rsk"
           value={domain}
           onChange={(e) => setDomain(e.target.value)}
+          placeholder="Enter domain like testing.rsk"
         />
 
         <div style={styles.buttonGroup}>
-          <button style={styles.button} disabled={loading} onClick={resolveRSK}>
+          <button
+            style={styles.button}
+            disabled={loading}
+            onClick={() =>
+              wrap(async () => {
+                const addr = await getAddressByRns(domain);
+                setResult(addr || "No RSK address found");
+              })
+            }
+          >
             Resolve RSK
           </button>
+
           <button
             style={styles.buttonAlt}
             disabled={loading}
-            onClick={resolveBTC}
+            onClick={() =>
+              wrap(async () => {
+                const btc = await getBitcoinAddressByRns(domain);
+                setResult(btc || "No Bitcoin address found");
+              })
+            }
           >
             Resolve BTC
           </button>
@@ -776,132 +928,94 @@ export default function RnsLookupApp() {
         <button
           style={styles.buttonWide}
           disabled={loading}
-          onClick={checkAvailable}
+          onClick={() =>
+            wrap(async () => {
+              const available = await checkAvailability(domain);
+              setResult(
+                available ? "✅ Domain is available" : "❌ Domain is taken"
+              );
+            })
+          }
         >
-          Check Domain Availability
+          Check Availability
         </button>
 
-        <div style={{ display: "flex", gap: 8, marginTop: 12 }}>
+        <div style={{ display: "flex", gap: "8px" }}>
           <input
             style={{ ...styles.input, flex: 1 }}
             value={subdomain}
             onChange={(e) => setSubdomain(e.target.value)}
-            placeholder="subdomain label"
+            placeholder="Enter subdomain"
           />
           <button
             style={styles.buttonAlt}
             disabled={loading}
-            onClick={checkSubdomain}
+            onClick={() =>
+              wrap(async () => {
+                const available = await checkSubdomain(domain, subdomain);
+                setResult(
+                  available
+                    ? "✅ Subdomain is available"
+                    : "❌ Subdomain is taken"
+                );
+              })
+            }
           >
             Check Subdomain
           </button>
         </div>
 
-        <button style={styles.buttonWide} disabled={loading} onClick={getOwner}>
-          Get Domain Owner
+        <button
+          style={styles.buttonWide}
+          disabled={loading}
+          onClick={() =>
+            wrap(async () => {
+              const ownerAddr = await getOwner(domain);
+              if (ownerAddr) {
+                setOwner(ownerAddr);
+                setResult("Owner found");
+              } else {
+                setResult("No owner found");
+              }
+            })
+          }
+        >
+          Get Owner
         </button>
 
         {owner && (
-          <div style={styles.resultBox}>
+          <div style={styles.ownerBox}>
             <strong>Owner:</strong> {owner}
           </div>
         )}
 
-        <hr style={{ margin: "20px 0" }} />
+        <hr style={styles.divider} />
 
         <input
           style={styles.input}
-          type="text"
-          placeholder="0x123..."
           value={address}
           onChange={(e) => setAddress(e.target.value)}
+          placeholder="Reverse lookup (address)"
         />
 
         <button
           style={styles.buttonWide}
           disabled={loading}
-          onClick={reverseLookup}
+          onClick={() =>
+            wrap(async () => {
+              const name = await getRnsName(address);
+              setResult(name || "No reverse entry found");
+            })
+          }
         >
           Reverse Lookup
         </button>
 
-        <div style={styles.resultBox}>{loading ? "loading..." : result}</div>
+        <div style={styles.resultBox}>{loading ? "Loading..." : result}</div>
       </div>
     </div>
   );
 }
-
-const styles: Record<string, React.CSSProperties> = {
-  container: {
-    minHeight: "100vh",
-    backgroundColor: "#f5f6fa",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: "20px",
-  },
-  card: {
-    maxWidth: 520,
-    width: "100%",
-    background: "#fff",
-    padding: 25,
-    borderRadius: 10,
-    boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
-  },
-  heading: {
-    textAlign: "center",
-    marginBottom: 15,
-    fontSize: "22px",
-  },
-  input: {
-    width: "100%",
-    padding: "10px",
-    marginBottom: "10px",
-    borderRadius: 6,
-    border: "1px solid #ccc",
-  },
-  buttonGroup: {
-    display: "flex",
-    gap: 10,
-    marginBottom: 10,
-  },
-  button: {
-    flex: 1,
-    background: "#388e3c",
-    color: "#fff",
-    padding: "10px",
-    border: "none",
-    borderRadius: 6,
-    cursor: "pointer",
-  },
-  buttonAlt: {
-    flex: 1,
-    background: "#1976d2",
-    color: "#fff",
-    padding: "10px",
-    border: "none",
-    borderRadius: 6,
-    cursor: "pointer",
-  },
-  buttonWide: {
-    width: "100%",
-    padding: "10px",
-    marginTop: 10,
-    background: "#5e35b1",
-    color: "#fff",
-    border: "none",
-    borderRadius: 6,
-    cursor: "pointer",
-  },
-  resultBox: {
-    marginTop: 15,
-    padding: 10,
-    background: "#f9f9f9",
-    border: "1px solid #ddd",
-    borderRadius: 6,
-    wordBreak: "break-all",
-  },
-};
 ```
 </details>
 
