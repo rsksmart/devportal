@@ -40,7 +40,21 @@ Then install the required dependencies:
 npm install ethers @ethersproject/providers @ethersproject/contracts @ethersproject/constants @ethersproject/hash react-dom react-scripts @rsksmart/rns
 ```
 
-### 2. Import the Required Modules
+### 2. Change Index.js to React Dom
+
+Go to `index.js` and change it to the following code:
+
+```js
+import App from './App';
+import './index.css';
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
+``
+
+### 3. Import the Required Modules
 
 Open your `App.js` file and import the following modules:
 
@@ -52,7 +66,7 @@ import { AddressZero } from "@ethersproject/constants";
 import { namehash } from "@ethersproject/hash";
 ```
 
-### 3. Initialize RNS
+### 4. Initialize RNS
 
 Next, set up RNS using the RNS Registry Contract Address and the [RSK Testnet RPC URL](https://public-node.testnet.rsk.co).
 
@@ -97,7 +111,7 @@ What this does:
 - Initializes the RNS Registry contract
 - Sets up the provider for contract interactions
 
-### 4. Utility Functions
+### 5. Utility Functions
 
 Add a utility function to strip the hex prefix from addresses:
 
@@ -105,7 +119,7 @@ Add a utility function to strip the hex prefix from addresses:
 const stripHexPrefix = (hex: string): string => hex.slice(2);
 ```
 
-### 5. Style for the UI
+### 6. Style for the UI
  Add the following style for the UI: 
 
  ```css
@@ -194,7 +208,7 @@ const stripHexPrefix = (hex: string): string => hex.slice(2);
 };
 ```
 
-### 6. Core RNS Functions
+### 7. Core RNS Functions
 
 Add the core functions that handle different RNS operations.
 
@@ -403,7 +417,7 @@ const useRns = () => {
 };
 ```
 
-### 7. Main Component
+### 8. Main Component
 
 Create the main component with UI and event handlers inside the same `App.js`:
 
@@ -1019,7 +1033,7 @@ export default function App() {
 ```
 </details>
 
-### 9. Start Local Development Server
+### 10. Start Local Development Server
 
 To preview this application, open your terminal and run the following command:
 
