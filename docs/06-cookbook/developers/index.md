@@ -54,7 +54,7 @@ New to Rootstock? Start here to set up your environment.
 
 | Tool | Purpose | Command / Link |
 | :--- | :--- | :--- |
-| **Vaults SDK** | Official Yield Integration | `npm install @rootstocklabs/vaults-sdk` |
+| **Vaults SDK** | Official Yield Integration | Coming Soon |
 | **Foundry** | Smart Contract Dev | [Foundry for Rootstock Guide](/developers/quickstart/foundry) |
 | **Hardhat** | Smart Contract Dev | [Hardhat Config Guide](/developers/quickstart/hardhat) |
-| **Rootstock CLI** | Node Management | `npm install -g @rootstock/cli` |
+| **Rootstock CLI** | Node Management | `npm install -g @rsk-cli` |
