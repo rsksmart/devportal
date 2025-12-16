@@ -34,7 +34,7 @@ Use these recipes to integrate the **Bitcoin** and **USDRIF** vaults directly in
 Browse our collection of technical guides by category.
 
 ### Vaults & Yield
-* [**Integrate rBTC Yield Vaults**](/cookbook/developers/integrate) - *The core Bitcoin yield integration.*
+* [**Integrate rBTC Yield Vaults**](/developers/integrate) - *The core Bitcoin yield integration.*
 * [**Querying Vault Data**](/developers/integrate/) - *How to fetch APY, TVL, and user balances via RPC.*
 * [**Building a Yield Dashboard**](/developers/integrate/) - *Frontend patterns for displaying Vault stats.*
 

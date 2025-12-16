@@ -8,7 +8,7 @@ description: "This section provides the architectural blueprints and security fr
 
 Welcome to the Institutional Hub. This section provides the architectural blueprints and security frameworks for financial institutions looking to deploy capital or offer Bitcoin DeFi services to their customers.
 
-Rootstock offers the security of Bitcoin with the programmability of EVM smart contracts, creating a unique environment for **Institutional Bitcoin Finance (BTCFi)**.
+Rootstock offers the security of Bitcoin with the programmability of EVM smart contracts, creating a unique environment for **Institutional Bitcoin Investors (BTCFi)**.
 
 We have tailored strategies for different institutional actors. Select your integration model below.
 
