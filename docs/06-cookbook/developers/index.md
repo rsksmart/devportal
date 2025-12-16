@@ -18,6 +18,7 @@ Use these recipes to integrate the **Bitcoin** and **USDRIF** vaults directly in
     subtitle="USDRIF"
     color="green"
     description="Mint and redeem USDRIF stablecoins or integrate the RIF savings rate."
+    linkHref="/cookbook/developers/integrate/"
     linkTitle="Learn more"
   />
   <CardsGridItem
