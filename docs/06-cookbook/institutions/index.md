@@ -6,11 +6,30 @@ tags: [rsk, rootstock, solutions, guides, tutorials, institutions]
 description: "This section provides the architectural blueprints and security frameworks for financial institutions looking to deploy capital or offer Bitcoin DeFi services to their customers."
 ---
 
-Welcome to the Institutional Hub. This section provides the architectural blueprints and security frameworks for financial institutions looking to deploy capital or offer Bitcoin DeFi services to their customers.
+This section provides the architectural blueprints and security frameworks for financial institutions looking to deploy capital or offer Bitcoin DeFi services to their customers.
 
 Rootstock offers the security of Bitcoin with the programmability of EVM smart contracts, creating a unique environment for **Institutional Bitcoin Investors (BTCFi)**.
 
 We have tailored strategies for different institutional actors. Select your integration model below.
+
+<CardsGrid>
+  <CardsGridItem
+    title="Partners"
+    subtitle="custodial"
+    color="green"
+    description="Integrate the Bitcoin Vault directly into your user interface to offer white-labeled yield products to your customers."
+    linkHref="/developers/integrate/"
+    linkTitle="Learn more"
+  />
+  <CardsGridItem
+    title="Liquidity Providers"
+    subtitle="rBTC"
+    color="cyan"
+    linkHref="/developers/integrate/"
+    linkTitle="Learn more"
+    description="Deploy capital into secure Lending & Borrowing protocols or provide liquidity to DEXs to earn swap fees and rewards."
+  />
+</CardsGrid>
 
 <!-- <div class="card-grid">
 
@@ -38,13 +57,13 @@ We have tailored strategies for different institutional actors. Select your inte
 
 Generate Organic Yield through protocol fees and lending demand, rather than inflationary token emissions.
 
-### The Bitcoin Engine (rBTC)
+### Generate Yield on Bitcoin (rBTC)
 For institutions holding Bitcoin on their balance sheet or on behalf of clients:
 * **Yield Source:** The Bitcoin Vault (Phase 3 rBTC Strategy) generates yield through protocol-native lending and borrowing demand.
 * **Security:** Anchored by the [PowPeg](/concepts/powpeg), which is secured by over 50% of Bitcoin's hashrate.
 * **Integration:** [View the Vault Integration Guide](/developers/integrate/).
 
-### The Dollar Engine (USDRIF)
+### Generate Yield on Stablecoins (USDRIF)
 For institutions seeking stablecoin yield or USD-denominated exposure:
 * **Yield Source:** Demand for USDRIF borrowing drives value back to the ecosystem, creating sustainable stablecoin yield strategies.
 * **Assets:** [USDRIF](/concepts/rif), [DOC (Dollar on Chain)](/concepts/rif), and USDT.

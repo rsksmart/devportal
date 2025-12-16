@@ -30,6 +30,6 @@ Welcome to the **Rootstock Cookbook**. This is your central hub for practical, a
 <Card
   title="🏦 Institutional Liquidity"
   description="I represent an exchange or custodian. I want to deploy capital into secure Bitcoin layers."
-  link="/cookbook/users/"
+  link="/cookbook/institutions/"
   />
 

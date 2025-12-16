@@ -6,7 +6,7 @@ tags: [rsk, rootstock, solutions, guides, tutorials, users]
 description: "This section contains practical, non-technical recipes for investors who want to put their Bitcoin and stablecoins to work."
 ---
 
-Welcome to the User Hub. This section contains practical, non-technical recipes for investors who want to put their Bitcoin and stablecoins to work. 
+This section contains practical, non-technical recipes for investors who want to put their Bitcoin and stablecoins to work. 
 
 Rootstock is the **DeFi Layer for Bitcoin**. Whether you are a long-term Bitcoin holder or a DeFi yield farmer, these guides will help you navigate the ecosystem securely.
 

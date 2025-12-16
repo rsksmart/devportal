@@ -6,8 +6,8 @@ tags: [rsk, rootstock, solutions, guides, tutorials, developers]
 description: "Here you will find hands-on code examples to help you integrate Rootstock's core features into your dApps, wallets, and services."
 ---
 
-Welcome to the Developer Kitchen. Here you will find hands-on code examples ("recipes") to help you integrate Rootstock's core features into your dApps, wallets, and services.
-<!-- 
+Here you will find hands-on code examples ("recipes") to help you integrate Rootstock's core features into your dApps, wallets, and services.
+
 ## The Yield Engines
 
 Use these recipes to integrate the **Bitcoin** and **USDRIF** vaults directly into your application.
@@ -17,17 +17,18 @@ Use these recipes to integrate the **Bitcoin** and **USDRIF** vaults directly in
     title="Integrate USDRIF"
     subtitle="USDRIF"
     color="green"
-    description="The Bitcoin Engine. Learn how to programmatically deposit rBTC and read APY data using the Vaults SDK."
+    description="Mint and redeem USDRIF stablecoins or integrate the RIF savings rate."
+    linkTitle="Learn more"
   />
   <CardsGridItem
     title="Integrate rBTC Yield"
     subtitle="rBTC"
     color="cyan"
-    linkHref="/cookbook/developers/integrate-rbtc-vault"
+    linkHref="/cookbook/developers/integrate/"
     linkTitle="Learn more"
-    description="The Bitcoin Engine. Learn how to programmatically deposit rBTC and read APY data using the Vaults SDK."
+    description="Learn how to programmatically deposit rBTC and read APY data using the Vaults SDK."
   />
-</CardsGrid> -->
+</CardsGrid>
 
 ## Getting Started
 
