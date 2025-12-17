@@ -3,49 +3,49 @@ sidebar_position: 1
 title: Cookbook
 sidebar_label: Overview
 tags: [rsk, rootstock, solutions, guides, tutorials, institutions, users, developers]
-description: "Step-by-step recipes to build, integrate, and earn on the Bitcoin Yield Layer."
+description: "Step-by-step recipes to build BTCFi dApps and integrate white-label yield infrastructure."
 ---
 
-Welcome to the **Rootstock Cookbook**. This is your central hub for practical, action-oriented guides. Whether you are a developer building the next generation of Bitcoin dApps or a partner looking to integrate Bitcoin Yield, we have a recipe for you.
+Welcome to the **Rootstock Cookbook**. This is your central hub for practical, action-oriented guides. Whether you are a developer building the next generation of Bitcoin DeFi or a partner looking to integrate our white-label yield infrastructure, we have a recipe for you.
 
 ## Choose Your Path
 
 <CardsGrid>
   <CardsGridItem
-    title="🏦 Institutional Yield"
-    subtitle="Institutions & Partners"
+    title="🏦 Institutional Integrations"
+    subtitle="Partners & Custodians"
     color="cyan"
     linkHref="/cookbook/institutions/"
-    linkTitle="Integrate Vaults"
-    description="Integrate the Bitcoin Vaults into your product or deploy capital."
+    linkTitle="View Integrations"
+    description="Integrate the white-label rBTC and USDRIF Yield Vaults into your product."
   />
   <CardsGridItem
-    title="👷 Build dApps"
+    title="👷 Build BTCFi dApps"
     subtitle="Developers"
     color="green"
-    description="Build permissionless DeFi applications, deploy smart contracts, and access infrastructure."
-    linkTitle="Build DeFi"
+    description="Build permissionless Bitcoin Finance applications, deploy smart contracts, and access infrastructure."
+    linkTitle="Start Building"
     linkHref="/cookbook/developers/"
   />
   <CardsGridItem
     title="📈 User Guides"
     subtitle="Users"
     color="cyan"
-    linkHref="/cookbook/users/"
-    linkTitle="Explore Ecosystem"
-    description="Learn how to bridge assets, set up wallets, and interact with the public Rootstock ecosystem."
+    linkHref="https://rootstock.io/ecosystem/"
+    linkTitle="Go to Rootstock.io"
+    description="Explore wallets, bridges, and the public dApp ecosystem on the main Rootstock site."
   />
 </CardsGrid>
 
-## For Institutions: The Bitcoin Yield Engine
+## For Institutions: White-Label Vault Infrastructure
 
-Rootstock Vaults are available for Institutional Partners and Liquidity Providers.
+Rootstock provides the infrastructure for partners to offer yield products to their customers.
 
 * [**Partner Integration Playbook**](/cookbook/institutions/integrate-vault/)
-* [**The Institutional Yield Thesis**](/cookbook/institutions/yield-thesis/)
-* [**Liquidity Deployment Strategies**](/cookbook/institutions/liquidity-strategy/)
+* [**The rBTC Yield Vault**](/cookbook/institutions/#1-rbtc-yield-vault)
+* [**The USDRIF Yield Vault**](/cookbook/institutions/#2-usdrif-yield-vault)
 
-## For Developers: Permissionless dApps
+## For Developers: Build BTCFi
 
 Build on the open ecosystem today using our universal tools.
 

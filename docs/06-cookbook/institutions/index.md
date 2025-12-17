@@ -1,80 +1,58 @@
 ---
-sidebar_position: 300
-title: The Institutional Hub
-sidebar_label: Institutions & Partners
+sidebar_position: 100
+title: Institutional Integrations
+sidebar_label: Institutional Integrations
 tags: [rsk, rootstock, solutions, guides, tutorials, institutions]
-description: "Architectural blueprints and security frameworks for financial institutions looking to deploy capital or offer Bitcoin DeFi services."
+description: "White-label infrastructure for partners to integrate Bitcoin yield products."
 ---
 
-This section provides the architectural blueprints and security frameworks for financial institutions looking to deploy capital or offer Bitcoin DeFi services to their customers.
+This section provides the architectural blueprints for **Distribution Partners** (Wallets, Exchanges, Custodians) looking to integrate Bitcoin yield products into their user interface.
 
-Rootstock offers the security of Bitcoin with the programmability of EVM smart contracts, creating a unique environment for **Institutional Bitcoin Finance (BTCFi)**.
+Rootstock offers a **White-Label Vault Infrastructure**. As a partner, you integrate the technology, while a dedicated Fund Manager handles the operational complexity (KYC, Compliance, and Asset Management).
 
-## Integration Models
+## Integration Model
 
-We have tailored strategies for different institutional actors. Select your integration model below.
+We offer a streamlined path for partners to "switch on" yield for their users.
 
 <CardsGrid>
   <CardsGridItem
     title="Distribution Partners"
     subtitle="Wallets & Custodians"
     color="green"
-    description="Integrate the Bitcoin Vault SDK directly into your UI to offer white-labeled yield products to your customers."
+    description="Integrate the Vault SDK directly into your UI to offer white-labeled yield products to your customers."
     linkHref="/cookbook/institutions/integrate-vault/"
     linkTitle="View Integration Playbook"
   />
-  <CardsGridItem
-    title="Liquidity Providers"
-    subtitle="Market Makers & Funds"
-    color="cyan"
-    description="Deploy capital into secure Lending & Borrowing protocols or provide liquidity to DEXs to earn swap fees."
-    linkHref="/cookbook/institutions/liquidity-strategy/"
-    linkTitle="View Capital Deployment"
-  />
 </CardsGrid>
 
-## The Yield Strategies
+## The Yield Vaults
 
-Generate organic yield through protocol fees and lending demand.
+Our infrastructure supports two primary engines. These are designed as white-label products that partners can surface to their end-users.
 
-### 1. Bitcoin Yield (rBTC)
-For institutions holding Bitcoin on their balance sheet or on behalf of clients.
-* **Yield Source:** The Bitcoin Vault generates yield through protocol-native lending and borrowing demand.
-* **Security:** Anchored by the [PowPeg](/concepts/powpeg/), which is secured by over 60% of Bitcoin's hashrate.
-* **Implementation:** [Integrate the rBTC Vault SDK](/cookbook/institutions/integrate-vault/).
+### 1. rBTC Yield Vault
+A secure yield engine for Bitcoin holders.
+* **Strategy:** Generates organic yield through protocol-native lending and borrowing demand.
+* **Infrastructure:** The Vault smart contracts handle the accounting and yield distribution.
+* **Compliance:** Managed by the Fund Manager (middleman) who oversees KYC and regulatory requirements.
 
-### 2. Stablecoin Yield (USDRIF)
-For institutions seeking stablecoin yield or USD-denominated exposure.
-* **Yield Source:** Demand for USDRIF borrowing drives value back to the ecosystem.
-* **Assets:** [USDRIF](/tokens/usdrif), [DOC (Dollar on Chain)](/tokens/doc), and USDT.
+### 2. USDRIF Yield Vault
+A stablecoin yield engine for dollar-denominated returns.
+* **Strategy:** Captures yield from the demand for USDRIF borrowing and ecosystem utility.
+* **Assets:** Powered by **USDRIF** (RIF-backed stablecoin).
 
 ## Partner Resources
 
-Technical guides for integrating the Vaults and managing data.
+Technical guides for integrating the white-label infrastructure.
 
-* [**Partner Integration Playbook**](/cookbook/institutions/integrate-vault/) - Best practices for Wallets and Custodians integrating the SDK.
-* [**Vaults SDK Reference**](/cookbook/developers/vaults-sdk/) - Full technical documentation, methods, and installation (Developer Hub).
-* [**Building a Yield Dashboard**](/cookbook/developers/yield-dashboard/) - Frontend patterns for displaying Vault stats.
+* [**Partner Integration Playbook**](/cookbook/institutions/integrate-vault/) - *Best practices for Wallets and Custodians integrating the SDK.*
+* [**Vaults SDK Reference**](/cookbook/developers/vaults-sdk/) - *Full technical documentation (Developer Hub).*
 
-## Risk & Compliance
+## Security & Infrastructure
 
-Due diligence is critical for institutional deployment. Use these resources to evaluate the Rootstock security model.
+* [**The PowPeg Security Model**](/concepts/powpeg/) - *Secured by over 60% of Bitcoin's hashrate.*
+* [**Audits & Bug Bounties**](/resources/security/audits/) - *Comprehensive reports for the core protocols.*
 
-* [**Audits & Bug Bounties**](/resources/security/audits/) - Comprehensive reports for the Bridge, Vaults, and core protocols.
-* [**The PowPeg Security Model**](/concepts/powpeg/) - Technical deep-dive into the 2-Way Peg architecture.
-* [**Network Stats**](http://stats.rootstock.io/) - Real-time hashrate, TVL, and node distribution.
-
-## Infrastructure for Scale
-
-Running institutional-grade services requires robust infrastructure.
-
-| Component | Recommendation | Resource |
-| :--- | :--- | :--- |
-| **Nodes** | Run a dedicated Node for high throughput | [Run a Node](/node-operators/setup) |
-| **Data Indexing** | Use The Graph for historical data queries | [The Graph Integration](/cookbook/developers/the-graph) |
-| **Oracles** | Integration with API3, DIA, or Chainlink | [Oracle Providers](/cookbook/developers/oracles) |
-
-:::info Contact Solutions Team
-Looking to deploy significant capital or require a custom integration plan? 
-[**Contact Institutional Sales**](https://rootstock.io/contact/) for partner onboarding and support.
+:::info Partner Onboarding
+Access to the production Vault Infrastructure requires onboarding with the Fund Manager for compliance purposes.
+[**Contact Solutions Team**](https://rootstock.io/contact/) to begin the process.
 :::

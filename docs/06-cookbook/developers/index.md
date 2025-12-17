@@ -1,32 +1,32 @@
 ---
 sidebar_position: 200
-title: Developer Hub
-sidebar_label: Developers 
+title: Build BTCFi dApps
+sidebar_label: Build BTCFi dApps
 tags: [rsk, rootstock, solutions, guides, tutorials, developers]
-description: "Here you will find hands-on code examples to help you integrate Rootstock's core features into your dApps, wallets, and services."
+description: "Hands-on recipes to build Bitcoin Finance (BTCFi) applications on Rootstock."
 ---
 
-Here you will find hands-on code examples ("recipes") to help you integrate Rootstock's core features into your dApps, wallets, and services.
+Here you will find hands-on code examples ("recipes") to help you build **BTCFi (Bitcoin Finance)** applications. Whether you are building a lending protocol, a DEX, or a Yield Dashboard, these guides will get you started.
 
-## The Yield Engines
+## Vault Integration (BTCFi)
 
 Use the **Vaults SDK** to build yield-bearing applications on the Bitcoin and Dollar engines.
 
 <CardsGrid>
   <CardsGridItem
-    title="Integrate USDRIF"
-    subtitle="Stablecoins"
+    title="Integrate USDRIF Yield"
+    subtitle="USDRIF Yield Vault"
     color="green"
     description="Mint and redeem USDRIF stablecoins or integrate the RIF savings rate into your dApp."
-    linkHref="/cookbook/developers/"
+    linkHref="/cookbook/developers/integrate-usdrif/"
     linkTitle="View Recipe"
   />
   <CardsGridItem
     title="Integrate rBTC Yield"
-    subtitle="Bitcoin"
+    subtitle="rBTC Yield Vault"
     color="orange"
     description="Use the Vaults SDK to programmatically deposit rBTC and display yield data in your UI."
-    linkHref="/cookbook/institutions/"
+    linkHref="/cookbook/developers/vaults-sdk/"
     linkTitle="SDK Guide"
   />
 </CardsGrid>
@@ -36,22 +36,13 @@ Use the **Vaults SDK** to build yield-bearing applications on the Bitcoin and Do
 Browse our collection of technical guides by category.
 
 ### Vaults & Yield
-
 Technical resources for the Rootstock Vaults SDK.
-
 * [**Vaults SDK Reference**](/cookbook/developers/vaults-sdk/) - *Installation, initialization, and core methods.*
 * [**Querying Vault Data**](/cookbook/developers/query-vault-data/) - *How to fetch APY, TVL, and user balances via RPC.*
-* [**Building a Yield Dashboard**](/cookbook/developers/yield-dashboard/) - *Frontend patterns for displaying Vault stats.*
 
-### DeFi Guides
+### DeFi Primitives
 * [**Swapping Tokens (Uniswap v3)**](/resources/tutorials/oku-rootstock/) - *Interact with the Rootstock v3 router.*
 * [**Lending & Borrowing**](/resources/tutorial/sumbiosis-rootstock/) - *Integrate with MoneyOnChain or Trov.*
-* [**Flash Loans**](/developers/integrate) - *Execute atomic arbitrage strategies.*
-
-### Infrastructure & Tooling Guides
-* [**Connect to RPC Nodes**](/developers/rpc-api/) - *Public and private endpoints for Mainnet/Testnet.*
-* [**Indexing with The Graph**](/dev-tools/data/thegraph/) - *Querying on-chain data with subgraphs.*
-* [**Oracles & Price Feeds**](/dev-tools/oracles/) - *Using DIA or API3 for price data.*
 
 ## Quick Start
 
