@@ -1,80 +1,68 @@
 ---
 sidebar_position: 300
-title: Institutions
-sidebar_label: Institutions
+title: The Institutional Hub
+sidebar_label: Institutions & Partners
 tags: [rsk, rootstock, solutions, guides, tutorials, institutions]
-description: "This section provides the architectural blueprints and security frameworks for financial institutions looking to deploy capital or offer Bitcoin DeFi services to their customers."
+description: "Architectural blueprints and security frameworks for financial institutions looking to deploy capital or offer Bitcoin DeFi services."
 ---
 
 This section provides the architectural blueprints and security frameworks for financial institutions looking to deploy capital or offer Bitcoin DeFi services to their customers.
 
-Rootstock offers the security of Bitcoin with the programmability of EVM smart contracts, creating a unique environment for **Institutional Bitcoin Investors (BTCFi)**.
+Rootstock offers the security of Bitcoin with the programmability of EVM smart contracts, creating a unique environment for **Institutional Bitcoin Finance (BTCFi)**.
+
+## Integration Models
 
 We have tailored strategies for different institutional actors. Select your integration model below.
 
 <CardsGrid>
   <CardsGridItem
-    title="Partners"
-    subtitle="custodial"
+    title="Distribution Partners"
+    subtitle="Wallets & Custodians"
     color="green"
-    description="Integrate the Bitcoin Vault directly into your user interface to offer white-labeled yield products to your customers."
-    linkHref="/developers/integrate/"
-    linkTitle="Learn more"
+    description="Integrate the Bitcoin Vault SDK directly into your UI to offer white-labeled yield products to your customers."
+    linkHref="/cookbook/institutions/integrate-vault/"
+    linkTitle="View Integration Playbook"
   />
   <CardsGridItem
     title="Liquidity Providers"
-    subtitle="rBTC"
+    subtitle="Market Makers & Funds"
     color="cyan"
-    linkHref="/developers/integrate/"
-    linkTitle="Learn more"
-    description="Deploy capital into secure Lending & Borrowing protocols or provide liquidity to DEXs to earn swap fees and rewards."
+    description="Deploy capital into secure Lending & Borrowing protocols or provide liquidity to DEXs to earn swap fees."
+    linkHref="/cookbook/institutions/liquidity-strategy/"
+    linkTitle="View Capital Deployment"
   />
 </CardsGrid>
 
-<!-- <div class="card-grid">
+## The Yield Strategies
 
-  <a href="/cookbook/institutions/distribution-partners" class="card">
-    <h3>🤝 Distribution Partners</h3>
-    <p><strong>Exchanges, Wallets & Custodians.</strong> Integrate the "Bitcoin Vault" directly into your user interface to offer white-labeled yield products to your customers.</p>
-    <ul>
-      <li>Vault SDK Integration</li>
-      <li>White-label Yield UI</li>
-    </ul>
-  </a>
+Generate organic yield through protocol fees and lending demand.
 
-  <a href="/cookbook/institutions/liquidity-provision" class="card">
-    <h3>🌊 Liquidity Providers</h3>
-    <p><strong>Market Makers & Funds.</strong> Deploy capital into secure Lending & Borrowing protocols or provide liquidity to DEXs to earn swap fees and rewards.</p>
-    <ul>
-      <li>Market Making on Rootstock</li>
-      <li>Institutional Lending Pools</li>
-    </ul>
-  </a>
+### 1. Bitcoin Yield (rBTC)
+For institutions holding Bitcoin on their balance sheet or on behalf of clients.
+* **Yield Source:** The Bitcoin Vault generates yield through protocol-native lending and borrowing demand.
+* **Security:** Anchored by the [PowPeg](/concepts/powpeg/), which is secured by over 60% of Bitcoin's hashrate.
+* **Implementation:** [Integrate the rBTC Vault SDK](/cookbook/institutions/integrate-vault/).
 
-</div> -->
+### 2. Stablecoin Yield (USDRIF)
+For institutions seeking stablecoin yield or USD-denominated exposure.
+* **Yield Source:** Demand for USDRIF borrowing drives value back to the ecosystem.
+* **Assets:** [USDRIF](/tokens/usdrif), [DOC (Dollar on Chain)](/tokens/doc), and USDT.
 
-## The Secure Yield Standard
+## Partner Resources
 
-Generate Organic Yield through protocol fees and lending demand, rather than inflationary token emissions.
+Technical guides for integrating the Vaults and managing data.
 
-### Generate Yield on Bitcoin (rBTC)
-For institutions holding Bitcoin on their balance sheet or on behalf of clients:
-* **Yield Source:** The Bitcoin Vault (Phase 3 rBTC Strategy) generates yield through protocol-native lending and borrowing demand.
-* **Security:** Anchored by the [PowPeg](/concepts/powpeg), which is secured by over 50% of Bitcoin's hashrate.
-* **Integration:** [View the Vault Integration Guide](/developers/integrate/).
+* [**Partner Integration Playbook**](/cookbook/institutions/integrate-vault/) - Best practices for Wallets and Custodians integrating the SDK.
+* [**Vaults SDK Reference**](/cookbook/developers/vaults-sdk/) - Full technical documentation, methods, and installation (Developer Hub).
+* [**Building a Yield Dashboard**](/cookbook/developers/yield-dashboard/) - Frontend patterns for displaying Vault stats.
 
-### Generate Yield on Stablecoins (USDRIF)
-For institutions seeking stablecoin yield or USD-denominated exposure:
-* **Yield Source:** Demand for USDRIF borrowing drives value back to the ecosystem, creating sustainable stablecoin yield strategies.
-* **Assets:** [USDRIF](/concepts/rif), [DOC (Dollar on Chain)](/concepts/rif), and USDT.
-
-## Risk & Compliance Resources
+## Risk & Compliance
 
 Due diligence is critical for institutional deployment. Use these resources to evaluate the Rootstock security model.
 
-* [**Audits & Bug Bounties**](/resources/) - *Comprehensive reports for the Bridge, Vaults, and core protocols.*
-* [**The PowPeg Security Model**](/concepts/powpeg) - *Technical deep-dive into the 2-Way Peg architecture.*
-* [**Network Stats**](http://stats.rootstock.io/) - *Real-time hashrate, TVL, and node distribution.*
+* [**Audits & Bug Bounties**](/resources/security/audits/) - Comprehensive reports for the Bridge, Vaults, and core protocols.
+* [**The PowPeg Security Model**](/concepts/powpeg/) - Technical deep-dive into the 2-Way Peg architecture.
+* [**Network Stats**](http://stats.rootstock.io/) - Real-time hashrate, TVL, and node distribution.
 
 ## Infrastructure for Scale
 
@@ -85,3 +73,8 @@ Running institutional-grade services requires robust infrastructure.
 | **Nodes** | Run a dedicated Node for high throughput | [Run a Node](/node-operators/setup) |
 | **Data Indexing** | Use The Graph for historical data queries | [The Graph Integration](/cookbook/developers/the-graph) |
 | **Oracles** | Integration with API3, DIA, or Chainlink | [Oracle Providers](/cookbook/developers/oracles) |
+
+:::info Contact Solutions Team
+Looking to deploy significant capital or require a custom integration plan? 
+[**Contact Institutional Sales**](https://rootstock.io/contact/) for partner onboarding and support.
+:::
