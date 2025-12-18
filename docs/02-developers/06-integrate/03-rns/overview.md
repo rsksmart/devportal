@@ -21,16 +21,16 @@ For example, the domain name `alice.rsk` is a human-readable alternative to the 
 
 3. **Versatility**: RNS can be used for various purposes, such as creating custom domain names for websites, wallet addresses, and other blockchain-based services. This versatility makes it a valuable tool in the blockchain ecosystem.
 
-## How to Integrate RNS 
+## How to Integrate RNS
 
 There are two main ways to integrate RNS into your dApp:
 
-- [**Javascript SDK:**](./03-rns/js-sdk)
+- [**Javascript SDK:**](/developers/integrate/rns/js-sdk)
 
-  This involves using the [RNS JavaScript SDK](https://www.npmjs.com/package/@rsksmart/rns) directly from your web interface.  
+  This involves using the [RNS JavaScript SDK](https://www.npmjs.com/package/@rsksmart/rns-sdk) directly from your web interface.  
   With a few function calls, you can resolve domains to addresses, check availability, or perform reverse lookups.
 
-- [**Smart contract integration:**](./smart-contract)  
+- [**Smart contract integration:**](/developers/integrate/rns/smart-contract)  
   This involves when your dApp interact directly with the RNS registry or resolver directly on-chain(contract address).  
   It’s ideal for cases like marketplaces or identity systems that store or verify domain ownership at the contract level.
 
