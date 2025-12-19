@@ -230,6 +230,8 @@ This creates `Verifier.sol` in the `./target/Verifier.sol`. The vk is embedded i
 
 Install dependencies:
 
+Make sure to run these commands in the existing `secret_club` folder.
+
 ```bash
 mkdir smart-contracts
 cd smart-contracts
@@ -279,8 +281,9 @@ Give Hardhat a star on Github if you're enjoying it! ⭐️✨
      https://github.com/NomicFoundation/hardhat
 ➜  smart-contracts git:(main) ✗
 ```
+You can delete all the existing template files in the `contracts` folder, i.e. the `Counter.sol` and the `Counter.t.sol` files.
 
-Create `contracts/SecretNFTClub.sol`:
+Then, create a new contract; `contracts/SecretNFTClub.sol`:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -352,6 +355,11 @@ Make sure to also copy the the `Verifier` contract from `./target/Verifier.sol` 
 ## Part 3: Deployment
 
 ### Step 7: Deploy to Rootstock Testnet
+:::info[Note]
+
+These details can be configured on your software wallet(i.e. Metamask, Rabby), you can see this page: [Configure MetaMask Wallet for Rootstock](https://dev.rootstock.io/dev-tools/wallets/metamask/)
+
+:::
 
 **Rootstock Testnet Details:**
 
@@ -363,8 +371,13 @@ Make sure to also copy the the `Verifier` contract from `./target/Verifier.sol` 
 | Block Explorer | `https://rootstock-testnet.blockscout.com/` |
 | Faucet         | `https://faucet.rootstock.io`               |
 
-Configure `hardhat.config.ts`:
+Then, we'll need to install `dotenv` for the environment variables we're going to be using in the `hardhat.config.ts`.
+We'll do that by running the command:
+```bash
+npm install dotenv
+```
 
+Configure `hardhat.config.ts`:
 ```javascript
 import hardhatToolboxMochaEthersPlugin from "@nomicfoundation/hardhat-toolbox-mocha-ethers";
 import { configVariable, defineConfig } from "hardhat/config";
@@ -442,7 +455,7 @@ async function main() {
   const verifierAddress = await verifier.getAddress();
   console.log("✅ HonkVerifier deployed:", verifierAddress);
 
-  // IMPORTANT: Replace with YOUR computed Pedersen hash from Step 4
+  // IMPORTANT: Replace wnvdjfbjfnejrfg rewhi gfignrkndknfdkwnkdnfjwfn owj nrwb grujwbzzzZZith YOUR computed Pedersen hash from Step 4
   const SECRET_HASH =
     "0x297fad8a9bc7f877e7ae8ab582a32a16ec2d11cc57cd77ecab97d2c775fa29e8";
 
@@ -500,6 +513,7 @@ Deploy:
 ```bash
 npx hardhat run scripts/deploy.js --build-profile production --network rootstock
 ```
+This command runs your deployment script using the [hardhat `production` build profile](https://hardhat.org/docs/guides/writing-contracts/build-profiles#choosing-a-build-profile) and deploys the contracts to the **Rootstock testnet** network.
 
 Expected output:
 
@@ -513,16 +527,48 @@ Expected output:
 ✅ SecretNFTClub deployed: 0x5678...
 ```
 
+##### Deployment Summary
+
+This script takes care of deploying two smart contracts `HonkVerifier` and `SecretNFTClub` to the Rootstock Testnet. Once the deployment is complete, it provides a helpful summary so you can quickly confirm everything went as expected.
+
+##### What the summary shows
+
+After both contracts are successfully deployed, the script prints out:
+
+- The contract address of the `HonkVerifier`
+- The contract address of the `SecretNFTClub`
+- The secret hash used during verification
+- The network name (Rootstock Testnet)
+- A direct explorer link to view the `SecretNFTClub` contract on the **Rootstock Testnet**
+
+This makes it easy to immediately verify the deployment and locate your contracts on-chain.
+
+##### Saving deployment details
+
+In addition to logging the details to the console, the script also saves all relevant deployment information to a deployment.json file. This file can be reused by your frontend or other scripts to interact with the deployed contracts without hardcoding addresses or configuration values.
+
+##### Why this matters
+
+The deployment summary serves as a quick checkpoint: it confirms a successful deployment, gives you instant access to important contract details, and creates a reliable reference for future development, testing, or debugging.
+
+
 ## Part 4: Frontend Integration
 
 ### Step 8: Setup Frontend Project
 
 Create a new Vite + React project:
 
+:::info[Note]
+You can open a new terminal tab and run these commands to begin implementing the frontend.
+:::
+
+
 ```bash
 npm create vite@latest secret-club-frontend -- --template react
 cd secret-club-frontend
 ```
+
+Make sure to run these commands in the existing `secret_club` folder.
 
 Install dependencies:
 
@@ -942,7 +988,7 @@ Open http://localhost:5173 in your browser.
 
 ![Secret NFT Club - Valid member](/img/resources/tutorials/zk-proofs-with-noir/01-secret-nft-club-valid-member.png)
 
-## Understanding the System
+## Understanding the Architecture
 
 ### The Zero-Knowledge Flow
 
@@ -1103,12 +1149,19 @@ fn main(
     assert(age >= min_age);
 }
 ```
-
 This proves: "I know the secret AND I'm over 18" without revealing either value.
+
+:::info[Note]
+
+When adding more complex proofs, always delete the files in your `target` folder before recompiling. After updating your circuit, run `nargo compile` and `nargo execute` to ensure your changes are correctly applied and all artifacts are up to date.
+
+:::
+
+
 
 ### Batch Verification
 
-To verify multiple proofs efficiently:
+To verify multiple proofs efficiently, you can add a `batchJoin` function to your `SecretNFTClub.sol` contract:
 
 ```solidity
 function batchJoin(
@@ -1163,6 +1216,13 @@ Run tests:
 ```bash
 nargo test
 ```
+
+:::info[Note]
+
+Make sure you are in the root directory of your circuit project (e.g., `secret_club`) before running the following commands.
+
+:::
+
 
 ## Production Deployment Checklist
 
