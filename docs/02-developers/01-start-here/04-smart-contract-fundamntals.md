@@ -1,6 +1,6 @@
 ---
-title: Beginner Developer: Smart Contract Fundamentals
-description: Learn about how smart contracts work on Rootstock.
+title: "Beginner Developer: Smart Contract Fundamentals"
+description: "Learn about how smart contracts work on Rootstock."
 tags: [guides, developers, blockchain, rsk, rootstock]
 ---
 

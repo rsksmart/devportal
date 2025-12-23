@@ -1,7 +1,7 @@
 ---
-title: Beginner Developer: Blockchain Basics
-sidebar_label: Beginner Path
-description: Learn about how the blockchain works.
+title: "Beginner Developer: Blockchain Basics"
+sidebar_label: "Beginner Path"
+description: "Learn about how the blockchain works."
 tags: [guides, developers, blockchain, rsk, rootstock]
 ---
 

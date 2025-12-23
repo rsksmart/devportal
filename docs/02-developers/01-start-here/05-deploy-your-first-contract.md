@@ -1,7 +1,7 @@
 ---
-title: Beginner Developer: Deploy Your First Contract
-sidebar_label: Beginner Path
-description: Learn about how to deploy your first smart contract on Rootstock.
+title: "Beginner Developer: Deploy Your First Contract"
+sidebar_label: "Beginner Path"
+description: "Learn about how to deploy your first smart contract on Rootstock."
 tags: [guides, developers, blockchain, rsk, rootstock]
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: Beginner Developer: Build Your First Rootstock DApp (Frontend + Smart Contract)
-sidebar_label: Beginner Path
-description: Learn about how to build a simple decentralized application (dApp) on Rootstock.
+title: "Beginner Developer: Build Your First Rootstock DApp (Frontend + Smart Contract)"
+sidebar_label: "Beginner Path"
+description: "Learn about how to build a simple decentralized application (dApp) on Rootstock."
 tags: [guides, developers, blockchain, rsk, rootstock]
 ---
 

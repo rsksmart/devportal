@@ -1,7 +1,7 @@
 ---
-title: Beginner Developer: Rootstock Architecture
-sidebar_label: Beginner Path
-description: Learn about how Rootstock works under the hood.
+title: "Beginner Developer: Rootstock Architecture"
+sidebar_label: "Beginner Path"
+description: "Learn about how Rootstock works under the hood."
 tags: [guides, developers, blockchain, rsk, rootstock]
 ---
 

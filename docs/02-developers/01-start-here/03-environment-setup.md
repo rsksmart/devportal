@@ -1,7 +1,7 @@
 ---
-title: Beginner Developer: Environment Setup
-sidebar_label: Beginner Path
-description: Learn about how to set up your environment to build on Rootstock.
+title: "Beginner Developer: Environment Setup"
+sidebar_label: "Beginner Path"
+description: "Learn about how to set up your environment to build on Rootstock."
 tags: [guides, developers, blockchain, rsk, rootstock]
 ---
 
