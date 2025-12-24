@@ -40,25 +40,19 @@ jobs:
         run: |
           echo "🔍 Checking broken links for locale: ${{ matrix.locale }}"
           
-          # Build with strict link checking
-          BUILD_ARGS="docusaurus build"
-          if [ "${{ matrix.locale }}" != "en" ]; then
-            BUILD_ARGS="$BUILD_ARGS --locale ${{ matrix.locale }}"
-          fi
-          
-          # Capture build output
+          # Run the check-links script for this locale
           set +e
-          yarn $BUILD_ARGS 2>&1 | tee build-output.txt
+          yarn check-links:${{ matrix.locale }} 2>&1 | tee build-output.txt
           BUILD_EXIT_CODE=${PIPESTATUS[0]}
           set -e
           
-          # Parse broken links from output
-          BROKEN_LINKS=$(grep -E "(Broken link|broken link)" build-output.txt || true)
+          # Parse broken links and anchors from output
+          BROKEN=$(grep -E "(Broken link|Broken anchor|-> linking to)" build-output.txt || true)
           
-          if [ $BUILD_EXIT_CODE -ne 0 ] && [ -n "$BROKEN_LINKS" ]; then
+          if [ $BUILD_EXIT_CODE -ne 0 ] && [ -n "$BROKEN" ]; then
             echo "has_broken=true" >> $GITHUB_OUTPUT
             echo "broken_links<<EOF" >> $GITHUB_OUTPUT
-            echo "$BROKEN_LINKS" >> $GITHUB_OUTPUT
+            echo "$BROKEN" >> $GITHUB_OUTPUT
             echo "EOF" >> $GITHUB_OUTPUT
           else
             echo "has_broken=false" >> $GITHUB_OUTPUT
@@ -66,8 +60,6 @@ jobs:
           
           exit $BUILD_EXIT_CODE
         env:
-          DOCUSAURUS_BROKEN_LINKS: throw
-          DOCUSAURUS_BROKEN_MARKDOWN_LINKS: throw
           MENDABLE_KEY: ${{ secrets.MENDABLE_KEY }}
           COOKBOOK_PUBLIC_API_KEY: ${{ secrets.COOKBOOK_PUBLIC_API_KEY }}
           GTM_CONTAINER_ID: ${{ secrets.GTM_CONTAINER_ID }}
@@ -76,12 +68,12 @@ jobs:
         if: failure() && steps.check-links.outputs.has_broken == 'true'
         run: |
           cat << 'EOF' > broken-links-comment.md
-          ## 🔗 Broken Links Found in ${{ matrix.locale }}
+          ## 🔗 Broken Links/Anchors Found in ${{ matrix.locale }}
           
-          The build failed due to broken internal links.
+          The build found broken internal links or anchors.
           
           <details>
-          <summary>View broken links</summary>
+          <summary>View broken links/anchors</summary>
           
           ```
           ${{ steps.check-links.outputs.broken_links }}
