@@ -46,13 +46,17 @@ jobs:
           BUILD_EXIT_CODE=${PIPESTATUS[0]}
           set -e
           
-          # Parse broken links and anchors from output
-          BROKEN=$(grep -E "(Broken link|Broken anchor|-> linking to)" build-output.txt || true)
+          # Parse broken links and anchors separately from output
+          BROKEN_LINKS=$(grep -A1 "Broken link on source page path" build-output.txt | grep -E "(Broken link|-> linking to)" || true)
+          BROKEN_ANCHORS=$(grep -A1 "Broken anchor on source page path" build-output.txt | grep -E "(Broken anchor|-> linking to)" || true)
           
-          if [ $BUILD_EXIT_CODE -ne 0 ] && [ -n "$BROKEN" ]; then
+          if [ $BUILD_EXIT_CODE -ne 0 ] && ([ -n "$BROKEN_LINKS" ] || [ -n "$BROKEN_ANCHORS" ]); then
             echo "has_broken=true" >> $GITHUB_OUTPUT
             echo "broken_links<<EOF" >> $GITHUB_OUTPUT
-            echo "$BROKEN" >> $GITHUB_OUTPUT
+            echo "$BROKEN_LINKS" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+            echo "broken_anchors<<EOF" >> $GITHUB_OUTPUT
+            echo "$BROKEN_ANCHORS" >> $GITHUB_OUTPUT
             echo "EOF" >> $GITHUB_OUTPUT
           else
             echo "has_broken=false" >> $GITHUB_OUTPUT
@@ -67,16 +71,25 @@ jobs:
       - name: Create comment body
         if: failure() && steps.check-links.outputs.has_broken == 'true'
         run: |
-          cat << 'EOF' > broken-links-comment.md
+          cat << 'ENDOFFILE' > broken-links-comment.md
           ## 🔗 Broken Links/Anchors Found in ${{ matrix.locale }}
           
           The build found broken internal links or anchors.
           
           <details>
-          <summary>View broken links/anchors</summary>
+          <summary>🔗 Broken Links</summary>
           
           ```
           ${{ steps.check-links.outputs.broken_links }}
+          ```
+          
+          </details>
+          
+          <details>
+          <summary>⚓ Broken Anchors</summary>
+          
+          ```
+          ${{ steps.check-links.outputs.broken_anchors }}
           ```
           
           </details>
@@ -87,7 +100,8 @@ jobs:
           2. Update the link to the correct URL
           3. If the page was moved, update to the new location
           4. If the page was deleted, remove the link
-          EOF
+          5. For anchors, verify the heading ID exists on the target page
+          ENDOFFILE
 
       - name: Comment on PR
         if: failure() && steps.check-links.outputs.has_broken == 'true'
