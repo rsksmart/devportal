@@ -143,5 +143,13 @@ color="orange"
 linkHref="/resources/tutorials/hyperlane-bridge/"
 description="Hyperlane is the first universal and permissionless interoperability layer built for the modular blockchain stack. Learn how to run Hyperlane on Rootstock blockchain."
 />
+<FilterItem
+value="beginner, advanced"
+title="Integrating x402 Payments with Rootstock"
+subtitle="Http 402"
+color="orange"
+linkHref="/resources/tutorials/integrate-x402/"
+description="Build a decentralized pay-per-use API on Rootstock using the x402 protocol standards. This guide covers implementing a Sovereign Mode Node.js server that verifies on-chain tRBTC payments directly"
+/>
 </Filter>
 ````
