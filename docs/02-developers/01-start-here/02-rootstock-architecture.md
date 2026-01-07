@@ -18,7 +18,7 @@ Rootstock is a smart contract platform that is:
 
 - **EVM-compatible**  
 - **Secured via Bitcoin merge-mining**  
-- **Uses RBTC as the native token**  
+- **Uses rBTC as the native token**  
 - **Connected to Bitcoin via the 2-Way Peg (PowPeg)**
 
 Rootstock is part of the broader BTCFi ecosystem, designed to bring DeFi and programmable assets to Bitcoin.
@@ -38,13 +38,13 @@ Every Rootstock block is tied to Bitcoin’s PoW via this process, giving Rootst
 ## The 2-Way Peg (PowPeg)
 
 The **PowPeg** is Rootstock’s trust-minimized bridge to Bitcoin.  
-It enables the transfer of BTC ↔ RBTC.
+It enables the transfer of BTC ↔ rBTC.
 
 Process:
 
 1. User sends BTC to a multisig address controlled by PowHSMs.  
-2. Once confirmed, the equivalent RBTC is released on Rootstock.  
-3. When sending back to Bitcoin, RBTC is locked and BTC is released.
+2. Once confirmed, the equivalent rBTC is released on Rootstock.  
+3. When sending back to Bitcoin, rBTC is locked and BTC is released.
 
 PowPeg is secured by:
 
@@ -62,9 +62,9 @@ For a more detailed understanding of PowPeg's architecture, please refer to the 
 
 ---
 
-## RBTC: Rootstock’s Gas Token
+## rBTC: Rootstock’s Gas Token
 
-RBTC is pegged 1:1 with BTC and is used to:
+rBTC is pegged 1:1 with BTC and is used to:
 
 - Pay gas fees  
 - Deploy contracts  
@@ -106,7 +106,7 @@ This allows developers to port Ethereum dApps to Rootstock with minimal changes.
            PowPeg
                |
 +--------------v---------------+
-|              RBTC            |
+|              rBTC            |
 +------------------------------+
 
 
