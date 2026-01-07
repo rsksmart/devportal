@@ -36,12 +36,12 @@ Configure Rootstock Testnet in your wallet:
 **Rootstock Testnet**:
 - RPC: https://public-node.testnet.rsk.co
 - Chain ID: 31
-- Symbol: tRBTC
+- Symbol: trBTC
 - Block Explorer: https://explorer.testnet.rootstock.io
 
-### Get Test RBTC
+### Get Test rBTC
 
-- You need tRBTC to deploy and test contracts on Rootstock Testnet.
+- You need trBTC to deploy and test contracts on Rootstock Testnet.
 - Use the official faucet: https://faucet.rootstock.io/
 - Enter your wallet address → receive test tokens.
 

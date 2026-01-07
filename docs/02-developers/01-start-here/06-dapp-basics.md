@@ -1,11 +1,11 @@
 ---
-title: "Beginner Developer: Build Your First Rootstock DApp (Frontend + Smart Contract)"
+title: "Beginner Developer: Build Your First Rootstock dApp (Frontend + Smart Contract)"
 sidebar_label: "Beginner Path"
 description: "Learn about how to build a simple decentralized application (dApp) on Rootstock."
 tags: [guides, developers, blockchain, rsk, rootstock]
 ---
 
-# Module 6 — Build Your First Rootstock DApp (Frontend + Smart Contract)
+# Module 6 — Build Your First Rootstock dApp (Frontend + Smart Contract)
 
 This module walks you through building a simple decentralized application (dApp) on Rootstock. You'll integrate a deployed smart contract with a frontend using Ethers.js and a wallet provider (MetaMask or Rabby). By the end, you'll have a fully functional dApp where users can read/write data on the Rootstock Testnet.
 
@@ -39,8 +39,8 @@ If you deployed the example contract from Module 5, you already have everything 
 Create a fresh project:
 
 ```bash
-npx create-next-app rootstock-dapp
-cd rootstock-dapp
+npx create-next-app rootstock-dApp
+cd rootstock-dApp
 npm install ethers
 ```
 
@@ -127,7 +127,7 @@ export function getContract(provider) {
 }
 ```
 
-## 7. DApp UI (Read + Write)
+## 7. dApp UI (Read + Write)
 
 Modify your homepage:
 
@@ -172,7 +172,7 @@ export default function Home() {
 
   return (
     <main style={{ padding: 40 }}>
-      <h1>Hello Rootstock DApp</h1>
+      <h1>Hello Rootstock dApp</h1>
 
       {account ? (
         <p>Connected: {account}</p>
@@ -195,7 +195,7 @@ export default function Home() {
 }
 ```
 
-## 8. Run the DApp
+## 8. Run the dApp
 
 Start the local server:
 
@@ -221,12 +221,12 @@ This is the first meaningful end-to-end Rootstock experience.
 ### ❗ Wallet doesn't connect
 Ensure Rootstock Testnet is configured in your MetaMask:
 - Chain ID: 31
-- Currency: tRBTC
+- Currency: trBTC
 - RPC: https://public-node.testnet.rsk.co
 
 ### ❗ Transaction fails
 Check your Testnet balance:
-- You must have tRBTC from the faucet (covered earlier).
+- You must have trBTC from the faucet (covered earlier).
 
 ### ❗ Read works but write doesn't
 Your wallet may not be connected as signer.
@@ -236,7 +236,7 @@ Verify the provider:
 const signer = await provider.getSigner();
 ```
 
-For further practice, check out the [Dapp Tutorial](https://hackernoon.com/how-to-build-dapp-on-rootstock-with-nextjs-typescript-and-solidity).
+For further practice, check out the [dApp Tutorial](https://hackernoon.com/how-to-build-dApp-on-rootstock-with-nextjs-typescript-and-solidity).
 
 
 ## 10. Summary

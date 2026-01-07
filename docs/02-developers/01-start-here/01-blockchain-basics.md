@@ -54,7 +54,7 @@ Examples: MetaMask, Rabby, Rootstock Web Wallet.
 ## Gas, Transactions, and Blocks
 
 Every transaction must pay **gas** to compensate miners/validators.  
-For EVM chains like Rootstock, gas is paid in RBTC.
+For EVM chains like Rootstock, gas is paid in rBTC.
 
 A transaction flows through three steps:
 
