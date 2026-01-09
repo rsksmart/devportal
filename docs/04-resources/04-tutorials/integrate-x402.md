@@ -10,7 +10,7 @@ tags: [rsk, rootstock, tutorials, x402, payments, agents]
 
 The **x402 protocol** (deriving from HTTP Status `402 Payment Required`) is emerging as the standard for **Agentic Commerce**. It allows AI agents, automated scripts, and browsers to autonomously negotiate and pay for resources, such as premium APIs, gated content, or computational tasks, without human intervention.
 
-While some chains rely on centralized facilitators, **Rootstock (RSK)** is uniquely positioned for **Sovereign Mode** integration. As the EVM-compatible Bitcoin sidechain, Rootstock allows you to verify payments with Bitcoin-level security directly on your server.
+While some chains rely on centralized facilitators, **Rootstock** is uniquely positioned for [**Sovereign Mode**](#the-protocol-flow) integration. As the EVM-compatible Bitcoin sidechain, Rootstock allows you to verify payments with Bitcoin-level security directly on your server.
 
 In this guide, we will build a **Sovereign x402 Server** that:
 1.  **Intercepts** requests to premium endpoints.
@@ -36,7 +36,7 @@ Unlike hosted solutions, "Sovereign Mode" means your API acts as its own payment
 * **Rootstock Testnet Wallet** funded with `tRBTC`.
     * [**Rootstock Faucet**](https://faucet.rootstock.io/)
 * **RPC Endpoint:** * Testnet: `https://public-node.testnet.rsk.co`
-    * *Recommendation:* For production, use a dedicated RPC key from providers like pure RPC or QuickNode to avoid rate limits.
+    * *Recommendation:* For production, use a dedicated RPC key from providers like pure RPC or QuickNode (see [RPC Nodes tools](https://dev.rootstock.io/dev-tools/node-rpc/)) to avoid rate limits.
 
 
 ## 1. Project Setup
@@ -91,7 +91,7 @@ In this section, we will build `server.js` step-by-step. Instead of a single blo
 
 ### Step 3.1: Imports and Initialization
 
-First, we set up our environment. We use `express` for the API, `web3` to talk to the Rootstock blockchain, and `redis` to remember which payments have already been spent.
+First, we set up our environment. We use `express` for the API, `web3` to communicate to the Rootstock blockchain, and `redis` to remember which payments have already been spent.
 
 ```javascript
 // server.js
@@ -258,7 +258,7 @@ The payment is valid! We mark it as spent and let the user through.
 
 ### Step 3.4: The Protected Route
 
-Finally, we apply our middleware to the route.
+Finally, apply the middleware to the route.
 
 ```javascript
 // Apply 'verifyPayment' middleware to this route
@@ -278,6 +278,157 @@ app.listen(process.env.PORT, () => {
 
 ```
 
+## Complete server.js code 
+For your convenience, here is the complete, copy-pasteable source code for server.js
+
+```javascript
+import express from 'express';
+import Web3 from 'web3';
+import dotenv from 'dotenv';
+import { createClient } from 'redis'; 
+
+dotenv.config();
+
+const app = express();
+app.use(express.json());
+
+// 2. Setup Redis Client
+const redis = createClient({
+  url: process.env.REDIS_URL || 'redis://localhost:6379'
+});
+
+// Handle Redis errors
+redis.on('error', (err) => console.log('Redis Client Error', err));
+
+// Connect to Redis immediately
+await redis.connect();
+
+const web3 = new Web3(process.env.RSK_NODE_RPC);
+
+const RECEIVER = process.env.RECEIVER_ADDRESS.toLowerCase();
+const MIN_PRICE_WEI = web3.utils.toWei('0.00001', 'ether');
+const REQUIRED_CONFIRMATIONS = 1;
+
+/* ───────────────────────────────────────────── */
+/* Payment Verification Middleware               */
+/* ───────────────────────────────────────────── */
+
+const verifyPayment = async (req, res, next) => {
+  const txHash = req.headers['x-payment'];
+
+  // Basic format check
+  if (!txHash || !/^0x([A-Fa-f0-9]{64})$/.test(txHash)) {
+    return res.status(402).json({
+      error: 'Payment Required',
+      payTo: RECEIVER,
+      amount: '0.00001',
+      asset: 'tRBTC',
+      network: 'rootstock-testnet',
+      instructions:
+        'Send tRBTC and retry with the transaction hash in X-PAYMENT header',
+    });
+  }
+
+  try {
+    // 3. IDEMPOTENCY CHECK (Anti-Replay)
+    // We check Redis BEFORE making the slow RPC call
+    const isUsed = await redis.get(`x402:spent:${txHash}`);
+    
+    if (isUsed) {
+      return res.status(409).json({ // 409 Conflict is appropriate for replay
+        error: 'Transaction already used',
+        message: 'This payment proof has already been exchanged for content.'
+      });
+    }
+
+    // 1️⃣ Fetch receipt FIRST (best practice)
+    const receipt = await web3.eth.getTransactionReceipt(txHash);
+
+    if (!receipt) {
+      return res.status(402).json({
+        error: 'Transaction not found or still pending',
+      });
+    }
+
+    if (!receipt.status) {
+      return res.status(402).json({
+        error: 'Transaction failed',
+      });
+    }
+
+    // 2️⃣ Confirmations check
+    const latestBlock = await web3.eth.getBlockNumber();
+    const confirmations = latestBlock - receipt.blockNumber;
+
+    if (confirmations < REQUIRED_CONFIRMATIONS) {
+      return res.status(402).json({
+        error: 'Transaction needs more confirmations',
+        confirmations,
+      });
+    }
+
+    // 3️⃣ Fetch transaction details
+    const tx = await web3.eth.getTransaction(txHash);
+
+    if (!tx || !tx.to) {
+      return res.status(402).json({
+        error: 'Invalid transaction',
+      });
+    }
+    
+    if (tx.to.toLowerCase() !== RECEIVER) {
+      return res.status(402).json({
+        error: 'Incorrect payment recipient',
+      });
+    }
+    
+    // ✅ Web3 v4 safe BigInt comparison
+    if (BigInt(tx.value) < BigInt(MIN_PRICE_WEI)) {
+      return res.status(402).json({
+        error: 'Insufficient payment amount',
+      });
+    }
+
+    // 4. MARK AS SPENT
+    // Save to Redis with a TTL (Time To Live) of 30 days (2592000 seconds)
+    // This prevents the database from growing infinitely
+    await redis.set(`x402:spent:${txHash}`, 'true', {
+      EX: 2592000 
+    });
+
+    // ✅ Payment verified
+    next();
+  } catch (err) {
+    if (err.message?.includes('Transaction not found')) {
+      return res.status(402).json({
+        error: 'Transaction not found on Rootstock testnet',
+      });
+    }
+
+    console.error('Verification error:', err);
+    res.status(500).json({ error: 'Blockchain verification error' });
+  }
+};
+
+/* ───────────────────────────────────────────── */
+/* Protected Route                               */
+/* ───────────────────────────────────────────── */
+
+app.get('/api/premium-content', verifyPayment, (req, res) => {
+  res.json({
+    success: true,
+    message: 'Premium content unlocked 🔓',
+    data: 'Protected by Rootstock x402-style payments',
+    timestamp: new Date().toISOString(),
+  });
+});
+
+/* ───────────────────────────────────────────── */
+
+app.listen(process.env.PORT, () => {
+  console.log(`x402 Paywall server running on port ${process.env.PORT}`);
+});
+```
 
 ## 4. Testing the Integration
 
@@ -341,12 +492,12 @@ curl -i http://localhost:4000/api/premium-content \
 ## Troubleshooting
 
 * **`Transaction not found`**: Rootstock block times are ~30 seconds. Ensure the tx is mined before the client sends the proof.
-* **`Chain ID mismatch`**: Ensure your wallet is connected to **RSK Testnet (ID: 31)** and not Mainnet (ID: 30) or Ethereum.
+* **`Chain ID mismatch`**: Ensure your wallet is connected to **Rootstock Testnet (ID: 31)** and not Mainnet (ID: 30) or Ethereum.
 
 
 ## Resources
 
-* **[Rootstock Developers Portal](https://dev.rootstock.io/)** - The central hub for RSK documentation.
+* **[Rootstock Developers Portal](https://dev.rootstock.io/)** - The central hub for Rootstock documentation.
 * **[x402 Protocol Specification](https://x402.org)** - Standards for HTTP 402.
 * **[Rootstock Faucet](https://faucet.rootstock.io/)** - Get free tRBTC for testing.
 * **[Web3.js Documentation](https://web3js.readthedocs.io/)** - Reference for the library used in this guide.
