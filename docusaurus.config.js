@@ -100,6 +100,22 @@ const config = {
   ],
   plugins: [
     [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: "api", // Unique ID for the plugin
+        docsPluginId: "classic", // Refers to the preset-classic Docusaurus setup
+        config: {
+          petstore: {
+            specPath: "open-api/rpcapi.yaml", // Path to your OpenAPI YAML file
+            outputDir: "docs/06-rpcapi", // Where the generated API docs will be stored
+            sidebarOptions: {
+              groupPathsBy: "tag", // Group endpoints by tags in the sidebar
+            },
+          },
+        }
+      },
+    ],
+    [
       'docusaurus-plugin-sass', {
       sassOptions: {
         // Disable deprecation warnings
@@ -141,6 +157,7 @@ const config = {
       },
     ],
   ],
+  themes: ["docusaurus-theme-openapi-docs"], // Add the OpenAPI theme for visual styling
   presets: [
     [
       'classic',
@@ -148,6 +165,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi
           routeBasePath: '/', // Serve the docs at the site's root
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,

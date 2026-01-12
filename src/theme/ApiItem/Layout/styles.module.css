@@ -1,0 +1,13 @@
+.docItemContainer {
+  max-width: 100%;
+}
+
+.docItemCol {
+  max-width: 100%;
+}
+
+@media (min-width: 997px) {
+  .docItemCol {
+    max-width: calc(100% - var(--doc-sidebar-width, 300px));
+  }
+}
