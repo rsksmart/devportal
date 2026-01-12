@@ -124,13 +124,13 @@ export default function ApiItem(props) {
       <DocProvider content={props.content}>
         <HtmlClassNameProvider className={docHtmlClassName}>
           <DocItemMetadata />
-          <ApiItemLayout hideAside={true}>
+          <ApiItemLayout hideAside={true} disableMarkdownStyles={true}>
             <Provider store={store2}>
               <div className={clsx('row', 'theme-api-markdown')}>
-                <div className="col col-lg-7 openapi-left-panel__container">
+                <div className="col col-lg-6 openapi-left-panel__container">
                   <MDXComponent />
                 </div>
-                <div className="col col-lg-5 openapi-right-panel__container">
+                <div className="col col-lg-6 openapi-right-panel__container">
                   <BrowserOnly fallback={<SkeletonLoader size="lg" />}>
                     {() => {
                       return <ApiExplorer item={api} infoPath={infoPath} />;
@@ -148,7 +148,7 @@ export default function ApiItem(props) {
       <DocProvider content={props.content}>
         <HtmlClassNameProvider className={docHtmlClassName}>
           <DocItemMetadata />
-          <ApiItemLayout hideAside={true}>
+          <ApiItemLayout hideAside={true} disableMarkdownStyles={true}>
             <div className={clsx('row', 'theme-api-markdown')}>
               <div className="col col-lg-7 openapi-left-panel__container schema">
                 <MDXComponent />

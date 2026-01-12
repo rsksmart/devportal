@@ -28,7 +28,7 @@ function useDocTOC() {
   };
 }
 
-export default function ApiItemLayout({ children, hideAside = false }) {
+export default function ApiItemLayout({ children, hideAside = false, disableMarkdownStyles = false }) {
   const docTOC = useDocTOC();
   const { metadata } = useDoc();
 
@@ -44,7 +44,7 @@ export default function ApiItemLayout({ children, hideAside = false }) {
             <DocItemHeaderMobile />
             <DocVersionBadge />
             {docTOC.mobile}
-            <DocItemContent>{children}</DocItemContent>
+            <DocItemContent disableMarkdownStyles={disableMarkdownStyles}>{children}</DocItemContent>
             <DocItemFooter />
           </article>
           <DocItemPaginator />

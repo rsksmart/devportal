@@ -24,11 +24,11 @@ function useSyntheticTitle() {
   }
   return metadata.title;
 }
-export default function DocItemContent({children}) {
+export default function DocItemContent({children, disableMarkdownStyles = false}) {
   const syntheticTitle = useSyntheticTitle();
 
   return (
-    <div className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown')}>
+    <div className={clsx(ThemeClassNames.docs.docMarkdown, disableMarkdownStyles ? '' : 'markdown')}>
       {syntheticTitle && (
         <header className={`mb-30`}>
           <Heading as="h1">{syntheticTitle}</Heading>

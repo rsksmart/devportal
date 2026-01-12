@@ -105,13 +105,25 @@ const config = {
         id: "api", // Unique ID for the plugin
         docsPluginId: "classic", // Refers to the preset-classic Docusaurus setup
         config: {
-          petstore: {
+          rpcapi: {
             specPath: "open-api/rpcapi.yaml", // Path to your OpenAPI YAML file
             outputDir: "docs/06-rpcapi", // Where the generated API docs will be stored
             sidebarOptions: {
               groupPathsBy: "tag", // Group endpoints by tags in the sidebar
             },
           },
+          petstore: {
+            specPath: "open-api/petstore.yaml",
+            proxy: "https://cors.pan.dev",
+            outputDir: "docs/petstore",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag",
+            },
+            downloadUrl: "/petstore.yaml",
+            hideSendButton: false,
+            showSchemas: true,
+          }
         }
       },
     ],

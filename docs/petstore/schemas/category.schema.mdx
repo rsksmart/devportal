@@ -1,0 +1,33 @@
+---
+id: category
+title: "Category"
+description: ""
+sidebar_label: "Category"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: {"id":0,"name":"string","sub":{"prop1":"string"}}
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Category"}
+>
+</Heading>
+
+
+
+
+
+<Schema
+  schema={{"type":"object","properties":{"id":{"description":"Category ID","allOf":[{"type":"integer","format":"int64","readOnly":true,"title":"Id"}]},"name":{"description":"Category name","type":"string","minLength":1},"sub":{"description":"Test Sub Category","type":"object","properties":{"prop1":{"type":"string","description":"Dumb Property"}}}},"xml":{"name":"Category"},"title":"Category"}}
+  schemaType={"response"}
+>
+  
+</Schema>
+            

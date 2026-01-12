@@ -1,0 +1,33 @@
+---
+id: tag
+title: "Tag"
+description: "A pet tag"
+sidebar_label: "Tag"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: {"id":0,"name":"string"}
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Tag"}
+>
+</Heading>
+
+
+
+A pet tag
+
+<Schema
+  schema={{"type":"object","description":"A pet tag","properties":{"id":{"description":"Tag ID","allOf":[{"type":"integer","format":"int64","readOnly":true,"title":"Id"}]},"name":{"description":"Tag name","type":"string","minLength":1}},"xml":{"name":"Tag"},"title":"Tag"}}
+  schemaType={"response"}
+>
+  
+</Schema>
+            

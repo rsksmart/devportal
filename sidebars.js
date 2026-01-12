@@ -12,10 +12,14 @@
 // @ts-check
 
 import {createSidebars} from './src/_utils/utils.js';
+import petstoreApiSidebar from './docs/petstore/sidebar.ts';
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 // @ts-ignore
 const sidebars = createSidebars('./docs');
+
+// Override petstore sidebar with the OpenAPI-generated one
+sidebars['petstoreSidebar'] = petstoreApiSidebar;
 
 export default sidebars;
 

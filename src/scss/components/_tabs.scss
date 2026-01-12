@@ -1,4 +1,10 @@
-ul.tabs {
+ul.tabs{
+  padding: 0;
+  scrollbar-width: thin;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+ul.tabs:not([class*='openapi-tabs']) {
   color: var(--ifm-tabs-color);
   display: flex;
   font-weight: var(--ifm-font-weight-bold);
@@ -30,7 +36,7 @@ ul.tabs {
   }
 }
 
-.tabs__item {
+.tabs__item:not([class*='openapi-tabs']) {
   font: 700 1rem/1.25 var(--bs-body-font-family);
   letter-spacing: -0.01em;
   border: none;
