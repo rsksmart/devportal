@@ -2,11 +2,21 @@
 sidebar_position: 4
 title: Tutorials
 sidebar_label: Tutorials
-tags: [rsk, rootstock, beginner, quick starts, advanced, port to rootstock, tutorials]
+tags:
+  [
+    rsk,
+    rootstock,
+    beginner,
+    quick starts,
+    advanced,
+    port to rootstock,
+    tutorials,
+    zero knowledge proofs,
+  ]
 description: "Tutorials and learning resources"
 ---
 
-````mdx-code-block
+```mdx-code-block
 <Filter
 values={[
 {label: 'Beginner', value: 'beginner'},
@@ -30,6 +40,14 @@ subtitle="oku"
 color="orange"
 linkHref="/resources/tutorials/oku-rootstock/"
 description="This tutorial demonstrates how to securely and efficiently bridge USDRIF on Rootstock to USDC on Ethereum using OKU."
+/>
+<FilterItem
+value="beginner, advanced"
+title="Zero-Knowledge Proofs on Rootstock with Noir"
+subtitle="zero knowledge proofs"
+color="orange"
+linkHref="/resources/tutorials/zk-prrofs-with-noir/"
+description="Building private decentralized applications (dApps) on Rootstock is key to ensuring user confidentiality and security. Zero-Knowledge Proofs (ZK proofs) and Noir form a powerful combination, blending advanced cryptography with a developer-friendly language to create privacy-focused solutions."
 />
 <FilterItem
 value="beginner, advanced"
@@ -144,4 +162,4 @@ linkHref="/resources/tutorials/hyperlane-bridge/"
 description="Hyperlane is the first universal and permissionless interoperability layer built for the modular blockchain stack. Learn how to run Hyperlane on Rootstock blockchain."
 />
 </Filter>
-````
+```
