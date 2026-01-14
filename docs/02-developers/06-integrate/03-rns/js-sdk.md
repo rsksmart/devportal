@@ -6,7 +6,7 @@ description: RNS Javascript SDK for domain registration, management, and resolut
 tags: [rns, integrate, integration guide, rif, sdk]
 ---
 
-The `@rsksmart/rns-sdk` package helps you **interact with the Rootstock Name Service (RNS)**. It lets you:
+The `[@rsksmart/rns-sdk](https://github.com/rsksmart/rns-sdk)` package helps you **interact with the Rootstock Name Service (RNS)**. You can:
 
 - Register .rsk domains
 - Check domain and subdomain availability
