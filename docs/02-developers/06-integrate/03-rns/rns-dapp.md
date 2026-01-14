@@ -97,7 +97,7 @@ const ADDRESSES = {
 ```
 
 :::tip Mainnet Addresses
-For RSK Mainnet, use these addresses instead:
+For Rootstock Mainnet, use these addresses instead:
 
 | Contract | Mainnet Address |
 |----------|-----------------|
