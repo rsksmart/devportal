@@ -109,7 +109,7 @@ For Rootstock Mainnet, use these addresses instead:
 
 ## 4. Initialize the Provider
 
-Create a JSON-RPC provider to connect to the RSK network:
+Create a JSON-RPC provider to connect to the Rootstock network:
 
 ```js
 const provider = new JsonRpcProvider(ROOTSTOCK_RPC_NODE);
