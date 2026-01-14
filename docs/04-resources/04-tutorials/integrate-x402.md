@@ -6,8 +6,6 @@ description: Build a decentralized pay-per-use API on Rootstock using the x402 p
 tags: [rsk, rootstock, tutorials, x402, payments, agents]
 ---
 
-# Integrating x402 Payments with Rootstock
-
 The **x402 protocol** (deriving from HTTP Status `402 Payment Required`) is emerging as the standard for **Agentic Commerce**. It allows AI agents, automated scripts, and browsers to autonomously negotiate and pay for resources, such as premium APIs, gated content, or computational tasks, without human intervention.
 
 While some chains rely on centralized facilitators, **Rootstock** is uniquely positioned for [**Sovereign Mode**](#the-protocol-flow) integration. As the EVM-compatible Bitcoin sidechain, Rootstock allows you to verify payments with Bitcoin-level security directly on your server.
@@ -74,7 +72,7 @@ PORT=4000
 REDIS_URL=redis://127.0.0.1:6379
 
 # Rootstock Testnet RPC
-RSK_NODE_RPC=[https://public-node.testnet.rsk.co](https://public-node.testnet.rsk.co)
+RSK_NODE_RPC=https://rpc.testnet.rootstock.io/<YOUR_API_KEY>
 
 # The address that receives the funds
 RECEIVER_ADDRESS=0xYourWalletAddressHere
