@@ -77,7 +77,7 @@ import { RNS, AddrResolver, RSKRegistrar } from "@rsksmart/rns-sdk";
 
 ## 3. Configure Network and Contract Addresses
 
-Add the configuration for connecting to RSK Testnet:
+Add the configuration for connecting to Rootstock Testnet:
 
 ```js
 const ROOTSTOCK_RPC_NODE = "https://public-node.testnet.rsk.co";
