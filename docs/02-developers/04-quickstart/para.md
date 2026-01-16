@@ -140,4 +140,5 @@ See the full working example with [Para + Rootstock here](https://github.com/rsk
 ## Resources
 - [Para Docs](https://docs.getpara.com/v2/introduction/welcome)
 - [Rootstock Walkthrough](https://docs.getpara.com/v2/walkthroughs/rootstock)
+- [Para Dev Portal](https://developer.getpara.com/)
 
