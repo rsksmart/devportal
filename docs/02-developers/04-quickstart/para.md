@@ -8,12 +8,12 @@ tags: [rsk, para, developers, developer tools, wallet, rootstock, testing, dApps
 
 [Para Wallet](https://www.getpara.com/) is a modern, non-custodial wallet infrastructure for fintech and crypto, offering a comprehensive wallet and authentication suite for web3 apps. It enables secure access and transactions without seed phrases or browser extensions, while keeping users fully in control of their assets.
 
-This walkthrough explores how to use Para in Rootstock Chain using Para SDK.
+This walkthrough explores how to use Para in Rootstock using Para SDK.
 
 ## Prerequisites
-- Before integrating Para with Roostock, ensure you have:
-- A Para API key from the Para Developer Portal
-- Roostock RPC API Account
+- Before integrating Para with Rootstock, ensure you have:
+- A Para API key from the [Para Developer Portal](https://developer.getpara.com/)
+- Rootstock RPC API Account
 - Node.js 18+ and Next.js development environment
 - Basic familiarity with React and TypeScript
 
@@ -21,7 +21,7 @@ This walkthrough explores how to use Para in Rootstock Chain using Para SDK.
 ```node
 npm install @getpara/react-sdk
 ``` 
-> **Important Note:** Please make sure to be on version 2.2.0
+> **Important Note:** Please make sure to be at least @getpara/react-sdk version 2.2.0
 
 ## Setup Para Provider
 Create a ParaSDKProvider that communicates with Rootstock.
@@ -134,11 +134,11 @@ export function ParaProvider({ children }: { children: React.ReactNode }) {
 This integration provides a way to use Para Wallet with Rootstock adding custom tokens.
 ​
 ## Complete Example
-See the full working example with [Para + Rootstock here](https://github.com/rsksmart/examples-hub).
+See the full working example with [Para and Rootstock](https://github.com/rsksmart/examples-hub).
 
 
 ## Resources
 - [Para Docs](https://docs.getpara.com/v2/introduction/welcome)
 - [Rootstock Walkthrough](https://docs.getpara.com/v2/walkthroughs/rootstock)
-- [Para Dev Portal](https://developer.getpara.com/)
+- [Para Developer Portal](https://developer.getpara.com/)
 
