@@ -40,19 +40,39 @@ cd rns-dapp
 b. Install the required dependencies:
 
 ```bash
-npm install @rsksmart/rns-sdk @ethersproject/providers ethers react-dom react-scripts
+npm install @rsksmart/rns-sdk @ethersproject/providers ethers react-dom react-scripts 
+
+npm install -D buffer
+```
+
+After installation, your `package.json` should include these dependencies (versions may vary based on the latest releases):
+
+```json
+{
+  "dependencies": {
+    "@rsksmart/rns-sdk": "^1.0.0",
+    "@ethersproject/providers": "^5.7.2",
+    "ethers": "^5.7.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1"
+  }
+}
 ```
 
 c. Go to `index.js` and change it to the following code:
 
 ```js
+import React from 'react';
+import { createRoot } from 'react-dom/client';
 import App from './App';
 import './index.css';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+// Polyfill Buffer for browser environment
+window.Buffer = window.Buffer || require('buffer').Buffer;
+
+const root = createRoot(document.getElementById('root'));
+root.render(<App />);
 ```
 
 ## 2. Import Required Modules
@@ -80,7 +100,7 @@ import { RNS, AddrResolver, RSKRegistrar } from "@rsksmart/rns-sdk";
 Add the configuration for connecting to Rootstock Testnet:
 
 ```js
-const ROOTSTOCK_RPC_NODE = "https://public-node.testnet.rsk.co";
+const ROOTSTOCK_RPC_NODE = 'https://rpc.rootstock.io/';
 
 // Contract addresses for RSK Testnet
 // See: https://github.com/rsksmart/rns-sdk
@@ -96,15 +116,14 @@ const ADDRESSES = {
 };
 ```
 
-:::tip Mainnet Addresses
-For Rootstock Mainnet, use these addresses instead:
+:::tip For Mainnet, use the following addresses instead:
 
 | Contract | Mainnet Address |
-|----------|-----------------|
-| Registry | `0xcb868aeabd31e2b66f74e9a55cf064abb31a4ad5` |
-| RSK Owner | `0x45d3e4fb311982a06ba52359d44cb4f5980e0ef1` |
-| FIFS Addr Registrar | `0xd9c79ced86ecf49f5e4a973594634c83197c35ab` |
-| RIF Token | `0x2acc95758f8b5f583470ba265eb685a8f45fc9d5` |
+| ---------- | --------------- |
+| `Registry` | `0xcb868aeabd31e2b66f74e9a55cf064abb31a4ad5` |
+| `RSK Owner` | `0x45d3e4fb311982a06ba52359d44cb4f5980e0ef1` |
+| `FIFS Addr Registrar` | `0xd9c79ced86ecf49f5e4a973594634c83197c35ab`|
+| `RIF Token` | `0x2acc95758f8b5f583470ba265eb685a8f45fc9d5` |
 :::
 
 ## 4. Initialize the Provider
@@ -916,7 +935,6 @@ It should also function properly, as shown in the demo below:
     <source src="/video/rns-dapp-demo.mp4" type="video/mp4" />
   </video>
 
-
 ## Troubleshooting
 
 if you experience buffer error like this in your browser:
@@ -943,7 +961,7 @@ This mean the library uses a dependency that requires Buffer to be available glo
 npm install -D buffer
 ```
 
-2. Add the following to your webpack config:
+2. If you have a `webpack.config.js` file in your project root, add this configuration to it:
 
 ```js
 const webpackConfig = {
@@ -966,6 +984,16 @@ OR add this to your `index.js` file
 window.Buffer = window.Buffer || require('buffer/').Buffer;
 ```
 
+OR if you're using Next.js, add it to `next.config.js`:
+
+    ```js
+    module.exports = {
+        webpack: (config) => {
+            config.resolve.fallback = { buffer:     require.resolve('buffer/') };
+            return config;
+        },
+    };
+    ```
 ## Extending the dApp
 
 ### Adding Write Operations

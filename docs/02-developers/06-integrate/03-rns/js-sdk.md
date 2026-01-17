@@ -6,7 +6,11 @@ description: RNS Javascript SDK for domain registration, management, and resolut
 tags: [rns, integrate, integration guide, rif, sdk]
 ---
 
+<<<<<<< Updated upstream
 The `[@rsksmart/rns-sdk](https://github.com/rsksmart/rns-sdk)` package helps you **interact with the Rootstock Name Service (RNS)**. You can:
+=======
+The `[@rsksmart/rns-sdk](https://github.com/rsksmart/rns-sdk)` package helps you **interact with the Rootstock Name Service (RNS)**. It lets you:
+>>>>>>> Stashed changes
 
 - Register .rsk domains
 - Check domain and subdomain availability
@@ -27,13 +31,32 @@ npm install @rsksmart/rns-sdk ethers
 
 You will need these addresses to initialize the SDK:
 
-| Contract | RSK Mainnet | RSK Testnet |
+| Contract | Mainnet | Rootstock Testnet |
 |----------|-------------|-------------|
 | RNS Registry | `0xcb868aeabd31e2b66f74e9a55cf064abb31a4ad5` | `0x7d284aaac6e925aad802a53c0c69efe3764597b8` |
 | RIF Token | `0x2acc95758f8b5f583470ba265eb685a8f45fc9d5` | `0x19f64674d8a5b4e652319f5e239efd3bc969a1fe` |
 | RSK Owner | `0x45d3e4fb311982a06ba52359d44cb4f5980e0ef1` | `0xca0a477e19bac7e0e172ccfd2e3c28a7200bdb71` |
 | FIFS Addr Registrar | `0xd9c79ced86ecf49f5e4a973594634c83197c35ab` | `0x90734bd6bf96250a7b262e2bc34284b0d47c1e8d` |
 | Partner Registrar | - | `0x8104d97f6d82a7d3afbf45f72118fad51f190c42` |
+
+## Initialization
+
+After obtaining the contract addresses from the table above, initialize the SDK by creating instances of the desired classes, passing the relevant addresses as constructor parameters. You'll also need a signer (e.g., from ethers.js) connected to the Rootstock network.
+
+For example, to initialize the `RNS` class for mainnet:
+
+```js
+import { ethers } from 'ethers';
+import { RNS } from '@rsksmart/rns-sdk';
+
+const provider = new ethers.providers.JsonRpcProvider('https://public-node.rsk.co');
+const signer = new ethers.Wallet('your-private-key', provider);
+const registryAddress = '0xcb868aeabd31e2b66f74e9a55cf064abb31a4ad5' // RNS Registry Mainnet address
+
+const rns = new RNS(registryAddress, signer);
+```
+
+See the individual class sections below for more details on constructors and required addresses.
 
 ## SDK Classes
 
@@ -54,6 +77,7 @@ The SDK provides five main classes:
 The `RNS` class handles domain management operations.
 
 ### Constructor
+The SD
 
 ```js
 import { Signer } from 'ethers'
@@ -65,7 +89,7 @@ const rns = new RNS(registryAddress, signer)
 
 ### Methods
 
-#### 1. `getOwner(domain)`
+#### 1. `[getOwner(domain)](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#owner)`
 
 Gets the controller/owner of a domain.
 
@@ -74,7 +98,7 @@ const owner = await rns.getOwner('mydomain.rsk')
 console.log('Owner:', owner)
 ```
 
-#### 2. `setOwner(domain, newController)`
+#### 2. `[setOwner(domain, newController)](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#owner)`
 
 Transfers domain ownership to a new controller.
 
@@ -87,7 +111,7 @@ await tx.wait()
 console.log('Ownership transferred!')
 ```
 
-#### 3. `resolver(domain)`
+#### 3. `[resolver(domain)](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#resolver)`
 
 Gets the resolver contract address for a domain.
 
@@ -96,7 +120,7 @@ const resolverAddress = await rns.resolver('mydomain.rsk')
 console.log('Resolver:', resolverAddress)
 ```
 
-#### 4. `setResolver(domain, resolverAddress)`
+#### 4. `[setResolver(domain, resolverAddress)](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#resolver)`
 
 Sets a new resolver contract for the domain.
 
@@ -109,7 +133,7 @@ await tx.wait()
 console.log('Resolver updated!')
 ```
 
-#### 5. `getSubdomainAvailability(domain, label)`
+#### 5. `[getSubdomainAvailability(domain, label)](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#subdomains)`
 
 Checks if a subdomain is available under a parent domain.
 
@@ -118,7 +142,7 @@ const isAvailable = await rns.getSubdomainAvailability('mydomain.rsk', 'blog')
 console.log(isAvailable ? 'Subdomain available!' : 'Subdomain taken')
 ```
 
-#### 6. `setSubdomainOwner(domain, label, ownerAddress)`
+#### 6. `[setSubdomainOwner(domain, label, ownerAddress)](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#subdomains)`
 
 Creates a subdomain and assigns ownership.
 
@@ -140,7 +164,7 @@ You must own the parent domain to create subdomains.
 
 ## 2. AddrResolver Class
 
-The `AddrResolver` class handles address resolution for domains.
+The `[AddrResolver](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#address-resolution)` class handles address resolution for domains.
 
 ### Constructor
 
@@ -154,7 +178,7 @@ const addrResolver = new AddrResolver(registryAddress, signer)
 
 ### Methods
 
-#### 1. `addr(domain)`
+#### 1. `[addr(domain)](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#address-resolution)`
 
 Resolves a domain to its linked address.
 
@@ -163,7 +187,7 @@ const address = await addrResolver.addr('mydomain.rsk')
 console.log('Address:', address)
 ```
 
-#### 2. `setAddr(domain, address)`
+#### 2. `[setAddr(domain, address)](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#address-resolution)`
 
 Sets or updates the address a domain points to.
 
@@ -184,7 +208,7 @@ You must own the domain to set its address.
 
 ## 3. RSKRegistrar Class
 
-The `RSKRegistrar` class handles standard `.rsk` domain registration using RIF tokens.
+The `[RSKRegistrar](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#1-using-the-rskregistrar)` class handles standard `.rsk` domain registration using RIF tokens.
 
 ### Constructor
 
