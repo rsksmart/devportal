@@ -57,7 +57,11 @@ After installation, your `package.json` should include these dependencies (versi
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1"
   }
-}
+},
+
+"devDependencies": {
+    "buffer": "^6.0.3"
+  },
 ```
 
 c. Go to `index.js` and change it to the following code:
