@@ -77,7 +77,6 @@ The SDK provides five main classes:
 The `RNS` class handles domain management operations.
 
 ### Constructor
-The SD
 
 ```js
 import { Signer } from 'ethers'
