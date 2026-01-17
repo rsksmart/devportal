@@ -6,11 +6,7 @@ description: RNS Javascript SDK for domain registration, management, and resolut
 tags: [rns, integrate, integration guide, rif, sdk]
 ---
 
-<<<<<<< Updated upstream
-The `[@rsksmart/rns-sdk](https://github.com/rsksmart/rns-sdk)` package helps you **interact with the Rootstock Name Service (RNS)**. You can:
-=======
-The `[@rsksmart/rns-sdk](https://github.com/rsksmart/rns-sdk)` package helps you **interact with the Rootstock Name Service (RNS)**. It lets you:
->>>>>>> Stashed changes
+The [`@rsksmart/rns-sdk`](https://github.com/rsksmart/rns-sdk) package helps you **interact with the Rootstock Name Service (RNS)**. It lets you:
 
 - Register .rsk domains
 - Check domain and subdomain availability
@@ -32,7 +28,7 @@ npm install @rsksmart/rns-sdk ethers
 You will need these addresses to initialize the SDK:
 
 | Contract | Mainnet | Rootstock Testnet |
-|----------|-------------|-------------|
+| ---------- | ------------- | ------------- |
 | RNS Registry | `0xcb868aeabd31e2b66f74e9a55cf064abb31a4ad5` | `0x7d284aaac6e925aad802a53c0c69efe3764597b8` |
 | RIF Token | `0x2acc95758f8b5f583470ba265eb685a8f45fc9d5` | `0x19f64674d8a5b4e652319f5e239efd3bc969a1fe` |
 | RSK Owner | `0x45d3e4fb311982a06ba52359d44cb4f5980e0ef1` | `0xca0a477e19bac7e0e172ccfd2e3c28a7200bdb71` |
@@ -63,7 +59,7 @@ See the individual class sections below for more details on constructors and req
 The SDK provides five main classes:
 
 | Class | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `RNS` | Domain management (owner, resolver, subdomains) |
 | `AddrResolver` | Address resolution |
 | `RSKRegistrar` | Standard .rsk domain registration |
@@ -88,7 +84,7 @@ const rns = new RNS(registryAddress, signer)
 
 ### Methods
 
-#### 1. `[getOwner(domain)](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#owner)`
+#### 1. [`getOwner(domain)`](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#owner)
 
 Gets the controller/owner of a domain.
 
@@ -97,7 +93,7 @@ const owner = await rns.getOwner('mydomain.rsk')
 console.log('Owner:', owner)
 ```
 
-#### 2. `[setOwner(domain, newController)](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#owner)`
+#### 2. [`setOwner(domain, newController)`](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#owner)
 
 Transfers domain ownership to a new controller.
 
@@ -110,7 +106,7 @@ await tx.wait()
 console.log('Ownership transferred!')
 ```
 
-#### 3. `[resolver(domain)](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#resolver)`
+#### 3. [`resolver(domain)`](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#resolver)
 
 Gets the resolver contract address for a domain.
 
@@ -119,7 +115,7 @@ const resolverAddress = await rns.resolver('mydomain.rsk')
 console.log('Resolver:', resolverAddress)
 ```
 
-#### 4. `[setResolver(domain, resolverAddress)](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#resolver)`
+#### 4. [`setResolver(domain, resolverAddress)`](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#resolver)
 
 Sets a new resolver contract for the domain.
 
@@ -132,7 +128,7 @@ await tx.wait()
 console.log('Resolver updated!')
 ```
 
-#### 5. `[getSubdomainAvailability(domain, label)](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#subdomains)`
+#### 5. [`getSubdomainAvailability(domain, label)`](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#subdomains)
 
 Checks if a subdomain is available under a parent domain.
 
@@ -141,7 +137,7 @@ const isAvailable = await rns.getSubdomainAvailability('mydomain.rsk', 'blog')
 console.log(isAvailable ? 'Subdomain available!' : 'Subdomain taken')
 ```
 
-#### 6. `[setSubdomainOwner(domain, label, ownerAddress)](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#subdomains)`
+#### 6. [`setSubdomainOwner(domain, label, ownerAddress)`](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#subdomains)
 
 Creates a subdomain and assigns ownership.
 
@@ -163,7 +159,7 @@ You must own the parent domain to create subdomains.
 
 ## 2. AddrResolver Class
 
-The `[AddrResolver](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#address-resolution)` class handles address resolution for domains.
+The [`AddrResolver`](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#address-resolution) class handles address resolution for domains.
 
 ### Constructor
 
@@ -177,7 +173,7 @@ const addrResolver = new AddrResolver(registryAddress, signer)
 
 ### Methods
 
-#### 1. `[addr(domain)](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#address-resolution)`
+#### 1. [`addr(domain)`](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#address-resolution)
 
 Resolves a domain to its linked address.
 
@@ -186,7 +182,7 @@ const address = await addrResolver.addr('mydomain.rsk')
 console.log('Address:', address)
 ```
 
-#### 2. `[setAddr(domain, address)](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#address-resolution)`
+#### 2. [`setAddr(domain, address)`](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#address-resolution)
 
 Sets or updates the address a domain points to.
 
@@ -207,7 +203,7 @@ You must own the domain to set its address.
 
 ## 3. RSKRegistrar Class
 
-The `[RSKRegistrar](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#1-using-the-rskregistrar)` class handles standard `.rsk` domain registration using RIF tokens.
+The [`RSKRegistrar`](https://github.com/rsksmart/rns-sdk?tab=readme-ov-file#1-using-the-rskregistrar) class handles standard `.rsk` domain registration using RIF tokens.
 
 ### Constructor
 
@@ -274,7 +270,7 @@ console.log('Commitment made! Wait ~1 minute before registering.')
 **Returns:**
 
 | Property | Description |
-|----------|-------------|
+| ---------- | ------------- |
 | `makeCommitmentTransaction` | The commitment transaction object |
 | `secret` | Secret needed for registration (save this!) |
 | `canReveal()` | Function to check if ready to register |
@@ -384,7 +380,7 @@ const partnerRegistrar = new PartnerRegistrar(signer, 'localhost', {
 **Network Options:**
 
 | Value | Description |
-|-------|-------------|
+| ------- | ------------- |
 | `'mainnet'` | RSK Mainnet (uses default addresses) |
 | `'testnet'` | RSK Testnet (uses default addresses) |
 | `'localhost'` | Local network (requires custom addresses) |
