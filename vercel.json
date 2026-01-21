@@ -657,10 +657,7 @@
     {"source": "/developers/use-cases/ai-agent-rootstock/", "destination": "/developers/use-cases/ai/ai-agent-rootstock/"},
     {"source": "/developers/use-cases/ai/ai-agent-rootstock/", "destination": "/use-cases/ai-emerging/ai-agent-rootstock/"},
     {"source": "/developers/use-cases/ai/mcp-rootstock/", "destination": "/use-cases/ai-emerging/mcp-rootstock/"},
-    {"source": "/developers/use-cases/defi/rootstock-layerzero/", "destination": "/use-cases/interoperability/rootstock-layerzero/"},
-    
-
-
-
+    {"source": "/developers/use-cases/defi/rootstock-layerzero/", "destination": "/use-cases/interoperability/rootstock-layerzero/"}
+  
   ]
 }
