@@ -653,14 +653,14 @@
     {"source": "/resources/guides/eas/", "destination": "/dev-tools/attestations/eas/"},
     {"source": "/resources/guides/eas/overview/", "destination": "/dev-tools/attestations/eas/overview/"},
     {"source": "/resources/guides/eas/user-guide/", "destination": "/dev-tools/attestations/eas/user-guide/"},
-    {"source": "/resources/guides/runes-rootstock/", "destination": "/developers/use-cases/runes-rootstock/"},
-    {"source": "/resources/guides/runes-rootstock/overview/", "destination": "/developers/use-cases/runes-rootstock/overview/"},
-    {"source": "/resources/guides/runes-rootstock/runes-setup/", "destination": "/developers/use-cases/runes-rootstock/runes-setup/"},
-    {"source": "/resources/guides/runes-rootstock/mock-contract-walthrough/", "destination": "/developers/use-cases/runes-rootstock/mock-contract-walthrough/"},
-    {"source": "/resources/guides/runes-rootstock/deploy-mockbridge-contract/", "destination": "/developers/use-cases/runes-rootstock/deploy-mockbridge-contract/"},
-    {"source": "/resources/guides/runes-rootstock/airdrop-giveaway-machine/", "destination": "/developers/use-cases/runes-rootstock/airdrop-giveaway-machine/"},
-    {"source": "/resources/guides/runes-rootstock/governance-dashboard/", "destination": "/developers/use-cases/runes-rootstock/governance-dashboard/"},
     {"source": "/developers/use-cases/rootstock-layerzero/", "destination": "/developers/use-cases/defi/rootstock-layerzero/"},
-    {"source": "/developers/use-cases/ai-agent-rootstock/", "destination": "/developers/use-cases/ai/ai-agent-rootstock/"}
+    {"source": "/developers/use-cases/ai-agent-rootstock/", "destination": "/developers/use-cases/ai/ai-agent-rootstock/"},
+    {"source": "/developers/use-cases/ai/ai-agent-rootstock/", "destination": "/use-cases/ai-emerging/ai-agent-rootstock/"},
+    {"source": "/developers/use-cases/ai/mcp-rootstock/", "destination": "/use-cases/ai-emerging/mcp-rootstock/"},
+    {"source": "/developers/use-cases/defi/rootstock-layerzero/", "destination": "/use-cases/interoperability/rootstock-layerzero/"},
+    
+
+
+
   ]
 }

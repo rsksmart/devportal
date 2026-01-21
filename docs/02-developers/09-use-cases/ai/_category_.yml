@@ -1,7 +1,0 @@
-
-label: AI
-position: 200
-link:
-  type: generated-index
-  slug: /developers/use-cases/ai/
-  description: "Leverage AI Clients and tools to interact, build and deploy smart contracts on Rootstock."
