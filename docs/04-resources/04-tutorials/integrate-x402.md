@@ -6,13 +6,13 @@ description: Build a decentralized pay-per-use API on Rootstock using the x402 p
 tags: [rsk, rootstock, tutorials, x402, payments, agents]
 ---
 
-The **x402 protocol** (deriving from HTTP Status `402 Payment Required`) is emerging as the standard for **Agentic Commerce**. It allows AI agents, automated scripts, and browsers to autonomously negotiate and pay for resources, such as premium APIs, gated content, or computational tasks, without human intervention.
+The **x402 protocol** (deriving from HTTP Status _402 Payment Required_) is emerging as the standard for **Agentic Commerce**. It allows AI agents, automated scripts, and browsers to autonomously negotiate and pay for resources, such as premium APIs, gated content, or computational tasks, without human intervention.
 
 While some chains rely on centralized facilitators, **Rootstock** is uniquely positioned for [**Sovereign Mode**](#the-protocol-flow) integration. As the EVM-compatible Bitcoin sidechain, Rootstock allows you to verify payments with Bitcoin-level security directly on your server.
 
 In this guide, we will build a **Sovereign x402 Server** that:
 1.  **Intercepts** requests to premium endpoints.
-2.  **Challenges** unpaid requests with a `402` status and payment metadata.
+2.  **Challenges** unpaid requests with a _402_ status and payment metadata.
 3.  **Verifies** on-chain tRBTC transaction proofs directly against the Rootstock ledger.
 4.  **Enforces** idempotency via Redis to prevent replay attacks.
 
@@ -21,9 +21,9 @@ In this guide, we will build a **Sovereign x402 Server** that:
 
 Unlike hosted solutions, "Sovereign Mode" means your API acts as its own payment processor. This eliminates middleman fees and reliance on third-party gateways.
 
-1.  **Challenge (Handshake):** The client requests a resource (e.g., `/api/premium`). The server detects a missing payment header and responds with `402 Payment Required`. Crucially, it returns a `WWW-Authenticate` header containing the **Price**, **Asset (tRBTC)**, and **Target Address**.
+1.  **Challenge (Handshake):** The client requests a resource (e.g., **/api/premium**). The server detects a missing payment header and responds with _402 Payment Required_. Crucially, it returns a _WWW-Authenticate_ header containing the **Price**, **Asset (tRBTC)**, and **Target Address**.
 2.  **Execution:** The client (or AI Agent) parses these details, signs a transaction, and broadcasts it to the Rootstock network.
-3.  **Proof:** The client retries the original request, this time including the **Transaction Hash** in the `X-Payment` (or `Payment-Signature`) header.
+3.  **Proof:** The client retries the original request, this time including the **Transaction Hash** in the _X-Payment_ (or _Payment-Signature_) header.
 4.  **Settlement:** The server validates the transaction on-chain, ensures it hasn't been used before (via Redis), and serves the content.
 
 
@@ -31,7 +31,7 @@ Unlike hosted solutions, "Sovereign Mode" means your API acts as its own payment
 
 * **Node.js** (v18.x or higher)
 * **Redis** (Required for replay protection/idempotency)
-* **Rootstock Testnet Wallet** funded with `tRBTC`.
+* **Rootstock Testnet Wallet** funded with tRBTC.
     * [**Rootstock Faucet**](https://faucet.rootstock.io/)
 * **RPC Endpoint:** * Testnet: `https://public-node.testnet.rsk.co`
     * *Recommendation:* For production, use a dedicated RPC key from providers like pure RPC or QuickNode (see [RPC Nodes tools](https://dev.rootstock.io/dev-tools/node-rpc/)) to avoid rate limits.
@@ -39,7 +39,7 @@ Unlike hosted solutions, "Sovereign Mode" means your API acts as its own payment
 
 ## 1. Project Setup
 
-Initialize a strictly typed Node.js environment. We will use `web3.js` for blockchain interaction and `redis` for state management.
+Initialize a strictly typed Node.js environment. We will use **web3.js** for blockchain interaction and **Redis** for state management.
 
 ```bash
 mkdir rootstock-x402
@@ -89,7 +89,7 @@ In this section, we will build `server.js` step-by-step. Instead of a single blo
 
 ### Step 3.1: Imports and Initialization
 
-First, we set up our environment. We use `express` for the API, `web3` to communicate to the Rootstock blockchain, and `redis` to remember which payments have already been spent.
+First, we set up our environment. We use **express** for the API, **web3** to communicate to the Rootstock blockchain, and **redis** to remember which payments have already been spent.
 
 ```javascript
 // server.js
@@ -441,16 +441,16 @@ curl -i http://localhost:4000/api/premium-content
 
 ```
 
-**Expected Response:** `402 Payment Required`
+**Expected Response:** _402 Payment Required_
 
 *Observe the JSON body for the payment destination and price.*
 
 ### Step 2: Perform Payment
 
-Using a wallet (MetaMask or a script), send `0.00001 tRBTC` to the address provided in your `.env`.
+Using a wallet (MetaMask or a script), send _0.00001 tRBTC_ to the address provided in your `.env`.
 
 * **Wait** for the transaction to be mined (approx. 30 seconds on Rootstock).
-* **Copy** the resulting Transaction Hash (e.g., `0xabc...`).
+* **Copy** the resulting Transaction Hash (e.g., _0xabc..._).
 
 ### Step 3: Access with Proof
 
@@ -463,7 +463,7 @@ curl -i http://localhost:4000/api/premium-content \
 
 ```
 
-**Expected Response:** `200 OK`
+**Expected Response:** _200 OK_
 *You will receive the protected JSON payload.*
 
 
@@ -483,14 +483,14 @@ curl -i http://localhost:4000/api/premium-content \
 
 
 4. **CORS:**
-* If calling this API from a browser, ensure you expose the custom headers. Add `cors` middleware with `exposedHeaders: ['WWW-Authenticate', 'X-Payment']`.
+* If calling this API from a browser, ensure you expose the custom headers. Add **cors** middleware with `exposedHeaders: ['WWW-Authenticate', 'X-Payment']`.
 
 
 
 ## Troubleshooting
 
-* **`Transaction not found`**: Rootstock block times are ~30 seconds. Ensure the tx is mined before the client sends the proof.
-* **`Chain ID mismatch`**: Ensure your wallet is connected to **Rootstock Testnet (ID: 31)** and not Mainnet (ID: 30) or Ethereum.
+* **_Transaction not found_**: Rootstock block times are ~30 seconds. Ensure the tx is mined before the client sends the proof.
+* **_Chain ID mismatch_**: Ensure your wallet is connected to **Rootstock Testnet (ID: 31)** and not Mainnet (ID: 30) or Ethereum.
 
 
 ## Resources
