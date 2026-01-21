@@ -4,12 +4,14 @@ This document describes how to use the broken links checker for the Rootstock De
 
 ## Overview
 
-The broken links checker uses **Docusaurus built-in link checking** to validate all internal links and anchors across the documentation. It supports:
+The broken links checker validates all links across the documentation. It supports:
 
+- **Internal links**: Uses Docusaurus built-in link checking during build
+- **External links**: Uses linkinator to check external URLs (local only)
 - Checking all locales (loaded dynamically from `docusaurus.config.js`)
 - Checking individual locales (use for fast local testing)
 - Detecting broken internal links and broken anchors
-- Automatic PR comments with broken links report
+- Automatic PR comments with broken links report (internal links only)
 
 ## How It Works
 
@@ -33,17 +35,81 @@ yarn install
 
 ### Commands
 
-| Command               | Description         |
-|-----------------------|---------------------|
-| `yarn check-links`    | Check all locales   |
-| `yarn check-links:en` | Check English only  |
-| `yarn check-links:es` | Check Spanish only  |
-| `yarn check-links:ja` | Check Japanese only |
-| `yarn check-links:ko` | Check Korean only   |
+#### Internal Links (Docusaurus)
+
+| Command               | Description                    |
+|-----------------------|--------------------------------|
+| `yarn check-links`    | Check all locales              |
+| `yarn check-links:en` | Check English only             |
+| `yarn check-links:es` | Check Spanish only             |
+| `yarn check-links:ja` | Check Japanese only            |
+| `yarn check-links:ko` | Check Korean only              |
 
 > **Note:** Locales are loaded dynamically from `docusaurus.config.js`. If you add new locales, they will be automatically available.
 
 > **Tip:** Use individual locale commands (e.g., `yarn check-links:en`) for faster builds during local testing.
+
+#### External Links (Linkinator)
+
+| Command                    | Description                              |
+|----------------------------|------------------------------------------|
+| `yarn check-links:external` | Check external links (requires build first) |
+
+> **Note:** External link checking requires a built site. Run `yarn build` first.
+
+> **Warning:** External link checking can take several minutes depending on the number of links.
+
+### How External Link Checker Works
+
+The external link checker uses [linkinator](https://github.com/JustinBeckwith/linkinator) to crawl the built site and verify all external URLs.
+
+**Prerequisites:** You must build the project first:
+
+```bash
+yarn build
+```
+
+Then run the external link checker:
+
+```bash
+yarn check-links:external
+```
+
+**Process:**
+
+1. **Starts a local server** to serve the built site
+2. **Crawls all pages** recursively to find external links
+3. **Checks each external URL** by making HTTP requests
+4. **Reports results** categorized as broken (4xx/5xx), redirects (3xx), or unreachable
+
+#### Link Categories
+
+| Category      | Description                                                    |
+|---------------|----------------------------------------------------------------|
+| **Broken**    | Links returning HTTP 4xx or 5xx status codes (404, 500, etc.)  |
+| **Redirects** | Links returning HTTP 3xx status codes (301, 302, etc.)         |
+| **Unreachable** | Links that timeout or fail to connect (not counted as broken) |
+
+#### Why Results May Vary Between Runs
+
+External link checking may show different results on each run due to:
+
+- **Network variability** - External sites may respond differently (timeouts, temporary errors)
+- **Rate limiting** - Some sites limit requests and may block or slow responses
+- **Bot detection** - Sites with Cloudflare or similar protection may block automated requests
+- **Server load** - External servers under heavy load may timeout intermittently
+
+The checker uses retry logic (2 retries with jitter) to minimize false positives, but some variation is expected.
+
+#### Skipped Links
+
+The following links are automatically skipped to avoid false positives:
+
+- Links to the site itself (from `docusaurus.config.js` url)
+- Social media sites that block bots (Twitter, LinkedIn, Facebook, Instagram)
+- Google Tag Manager links
+- `mailto:`, `tel:`, and `javascript:` links
+- Example/placeholder URLs
 
 ### Example Output
 
