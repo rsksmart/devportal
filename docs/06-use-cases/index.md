@@ -15,8 +15,8 @@ Use the interactive filters below to find the specific guide for your developmen
 <Filter
 values={[
   {label: 'Institutional', value: 'institutional'},
-  {label: 'BTCFi & Yield', value: 'btcfi'},
-  {label: 'UX & Onboarding', value: 'ux'},
+  {label: 'BTCFi', value: 'btcfi'},
+  {label: 'Onboarding', value: 'ux'},
   {label: 'AI & Emerging', value: 'emerging'},
   {label: 'Interoperability', value: 'interop'}
 ]}>
