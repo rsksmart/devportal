@@ -1,6 +1,6 @@
 ---
 sidebar_label: Blockchain Overview
-sidebar_position: 200
+sidebar_position: 1
 title: "Getting Started with Rootstock (RSK) Development"
 description: "Learn how to interact with Rootstock in your web browser, how to look at Rootstock transactions, develop and deploy your very first smart contract to the Rootstock network."
 tags:

@@ -1,6 +1,6 @@
 ---
 sidebar_label: Using Rootstock in Browser
-sidebar_position: 300
+sidebar_position: 4
 title: 'Using Rootstock with a Browser Extension'
 description: 'Learn how to interact with Rootstock in your web browser, how to look at Rootstock transactions, develop and deploy your very first smart contract to the Rootstock network.'
 tags: [quick-starts, rsk, rootstock, blockchain, browser wallets, developers, beginners]

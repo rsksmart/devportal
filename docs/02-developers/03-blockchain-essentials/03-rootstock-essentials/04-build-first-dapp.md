@@ -1,15 +1,16 @@
 ---
-title: "Beginner Developer: Build Your First Rootstock dApp (Frontend + Smart Contract)"
-sidebar_label: "Beginner Path"
-description: "Learn about how to build a simple decentralized application (dApp) on Rootstock."
-tags: [guides, developers, blockchain, rsk, rootstock]
+title: "Build Your First dApp"
+sidebar_label: "Build Your First dApp"
+sidebar_position: 4
+description: "Build a simple decentralized application on Rootstock with a frontend and smart contract."
+tags: [guides, developers, blockchain, rsk, rootstock, dapp, nextjs, ethers]
 ---
 
-# Module 6 — Build Your First Rootstock dApp (Frontend + Smart Contract)
+# Build Your First dApp
 
 This module walks you through building a simple decentralized application (dApp) on Rootstock. You'll integrate a deployed smart contract with a frontend using Ethers.js and a wallet provider (MetaMask or Rabby). By the end, you'll have a fully functional dApp where users can read/write data on the Rootstock Testnet.
 
-## 1. Overview: What We Are Building
+## Overview: What We Are Building
 
 You will build a minimal dApp that:
 - Connects to Rootstock Testnet
@@ -20,10 +21,10 @@ You will build a minimal dApp that:
 
 This is the first "real" end-to-end Rootstock project — contract, deployment, and frontend.
 
-## 2. Prerequisites
+## Prerequisites
 
 Before starting, ensure you have:
-- A deployed contract on Rootstock Testnet (from Module 5)
+- A deployed contract on Rootstock Testnet (from the previous module)
 - Node.js installed
 - Basic familiarity with React or Next.js
 - MetaMask or Rabby wallet configured for Rootstock Testnet
@@ -32,9 +33,7 @@ Before starting, ensure you have:
   - ABI
   - Testnet RPC
 
-If you deployed the example contract from Module 5, you already have everything needed.
-
-## 3. Project Setup (Next.js)
+## Project Setup (Next.js)
 
 Create a fresh project:
 
@@ -46,7 +45,7 @@ npm install ethers
 
 This gives you a clean React/Next environment with zero noise.
 
-## 4. Add Your Contract ABI
+## Add Your Contract ABI
 
 Inside your project, create:
 ```
@@ -74,7 +73,7 @@ Paste your contract ABI from the compiled Hardhat/Foundry output:
 ]
 ```
 
-## 5. Wallet Connection (Ethers.js)
+## Wallet Connection (Ethers.js)
 
 Create a reusable wallet connection hook:
 
@@ -105,7 +104,7 @@ export default function useWallet() {
 }
 ```
 
-## 6. Contract Interaction Code
+## Contract Interaction Code
 
 Create a helper file:
 
@@ -127,7 +126,7 @@ export function getContract(provider) {
 }
 ```
 
-## 7. dApp UI (Read + Write)
+## dApp UI (Read + Write)
 
 Modify your homepage:
 
@@ -195,7 +194,7 @@ export default function Home() {
 }
 ```
 
-## 8. Run the dApp
+## Run the dApp
 
 Start the local server:
 
@@ -214,9 +213,7 @@ You should now be able to:
 - Write/update on-chain
 - See the value update live
 
-This is the first meaningful end-to-end Rootstock experience.
-
-## 9. Troubleshooting
+## Troubleshooting
 
 ### ❗ Wallet doesn't connect
 Ensure Rootstock Testnet is configured in your MetaMask:
@@ -238,8 +235,7 @@ const signer = await provider.getSigner();
 
 For further practice, check out the [dApp Tutorial](https://hackernoon.com/how-to-build-dApp-on-rootstock-with-nextjs-typescript-and-solidity).
 
-
-## 10. Summary
+## Summary
 
 In this module you learned how to:
 - Build a simple Rootstock dApp using Next.js
@@ -248,4 +244,4 @@ In this module you learned how to:
 - Send transactions to update contract data
 - Structure frontend + blockchain interactions cleanly
 
-This module transitions a learner from contract developer to full dApp builder , the skillset required for all advanced Rootstock applications.
+This module transitions a learner from contract developer to full dApp builder — the skillset required for all advanced Rootstock applications.

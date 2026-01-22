@@ -1,17 +1,14 @@
 ---
-title: "Beginner Developer: Deploy Your First Contract"
-sidebar_label: "Beginner Path"
-description: "Learn about how to deploy your first smart contract on Rootstock."
-tags: [guides, developers, blockchain, rsk, rootstock]
+title: "Deploy Your First Contract"
+sidebar_label: "Deploy Your First Contract"
+sidebar_position: 3
+description: "Write, compile, deploy, and interact with your first smart contract on Rootstock Testnet."
+tags: [guides, developers, blockchain, rsk, rootstock, deploy, hardhat]
 ---
 
-# 04 — Deploy Your First Contract on Rootstock
-
-
+# Deploy Your First Contract
 
 In this module, you will write, compile, deploy, and interact with your first smart contract on the Rootstock Testnet.
-
----
 
 ## Step 1 — Write the Contract
 
@@ -129,3 +126,5 @@ You now know how to:
 - Configure Hardhat for Rootstock
 - Deploy to Testnet
 - Interact via terminal
+
+**Next:** [Build Your First dApp](/developers/blockchain-essentials/rootstock-essentials/build-first-dapp/)

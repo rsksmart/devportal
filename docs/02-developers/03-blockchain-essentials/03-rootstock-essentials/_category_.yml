@@ -1,0 +1,6 @@
+label: Rootstock Essentials
+position: 3
+link:
+  type: generated-index
+  slug: /developers/blockchain-essentials/rootstock-essentials/
+  description: "Learn Rootstock-specific architecture, tooling, and how to build your first smart contracts and dApps."

@@ -1,14 +1,17 @@
 ---
-title: "Beginner Developer: Smart Contract Fundamentals"
-description: "Learn about how smart contracts work on Rootstock."
-tags: [guides, developers, blockchain, rsk, rootstock]
+title: "Smart Contract Fundamentals"
+sidebar_label: "Smart Contract Fundamentals"
+sidebar_position: 2
+description: "Learn the foundational concepts of smart contracts on Rootstock."
+tags: [guides, developers, blockchain, rsk, rootstock, solidity, smart-contracts]
 ---
 
-## Smart Contract Fundamentals on Rootstock
+# Smart Contract Fundamentals
 
 Smart contracts on Rootstock behave similarly to Ethereum because Rootstock is EVM-compatible. This module gives you the foundational concepts you must understand before writing or deploying your first contract.
 
-### 1. What Are Smart Contracts?
+## What Are Smart Contracts?
+
 Smart contracts are programs stored on the blockchain that run exactly as written.
 
 **Key traits on Rootstock:**
@@ -18,7 +21,8 @@ Smart contracts are programs stored on the blockchain that run exactly as writte
 - Store and manage state
 - Written primarily in Solidity
 
-### 2. The EVM & Rootstock Compatibility
+## The EVM & Rootstock Compatibility
+
 Rootstock uses the Ethereum Virtual Machine (EVM), meaning:
 - Solidity code compiles the same way
 - Same opcodes
@@ -28,7 +32,8 @@ Rootstock uses the Ethereum Virtual Machine (EVM), meaning:
 
 What differs is the network layer (mining, consensus, gas costs), not the programming model.
 
-### 3. Solidity File Structure
+## Solidity File Structure
+
 Every `.sol` file follows the same high-level structure:
 
 ```solidity
@@ -44,7 +49,8 @@ contract Example {
 }
 ```
 
-### 4. State Variables
+## State Variables
+
 State variables live on-chain. They cost gas. They persist.
 
 ```solidity
@@ -53,7 +59,8 @@ address public owner;
 mapping(address => uint256) public balances;
 ```
 
-### 5. Functions: External, Public, Internal, Private
+## Functions: External, Public, Internal, Private
+
 Function visibility matters.
 
 ```solidity
@@ -63,14 +70,16 @@ function _calc() internal {}
 function helper() private {}
 ```
 
-### 6. Events
+## Events
+
 Events are your logging system. They don't store data on-chain; they emit logs users and dApps can track.
 
 ```solidity
 event Transfer(address indexed from, address indexed to, uint256 amount);
 ```
 
-### 7. Modifiers
+## Modifiers
+
 Reusable access control logic.
 
 ```solidity
@@ -80,7 +89,8 @@ modifier onlyOwner() {
 }
 ```
 
-### 8. Constructor
+## Constructor
+
 Runs one time at deployment.
 
 ```solidity
@@ -89,7 +99,8 @@ constructor() {
 }
 ```
 
-### 9. Error Handling
+## Error Handling
+
 Use explicit errors for better gas efficiency and debugging.
 
 ```solidity
@@ -100,7 +111,8 @@ function withdraw() external {
 }
 ```
 
-### 10. Contract Structure Best Practices
+## Contract Structure Best Practices
+
 Follow this pattern for clean, maintainable contracts:
 1. Imports
 2. Errors
@@ -111,4 +123,4 @@ Follow this pattern for clean, maintainable contracts:
 7. Core Functions
 8. Internal Logic
 
----
+**Next:** [Deploy Your First Contract](/developers/blockchain-essentials/rootstock-essentials/deploy-first-contract/)
