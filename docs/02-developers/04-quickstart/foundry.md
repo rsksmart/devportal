@@ -17,7 +17,7 @@ Whether you’re a seasoned developer or just starting your journey into smart c
 
 Rootstock is fully EVM (Ethereum Virtual Machine) compatible. It brings the power of smart contracts to Bitcoin, allowing developers to leverage Bitcoin’s security while benefiting from Ethereum’s ecosystem.
 
-In this tutorial, you'll learn how to set up your Foundry development environment, connect to a Rootstock network, write and test smart contracts, deploy them to the Rootstock blockchain, and interact with them. We'll guide you through every step, from installation to minting your first token.
+In this tutorial, you will learn how to set up your Foundry development environment, connect to a Rootstock network, write and test smart contracts, deploy them to the Rootstock blockchain, and interact with them. We will guide you through every step, from installation to minting your first token.
 
 ## Prerequisites
 
