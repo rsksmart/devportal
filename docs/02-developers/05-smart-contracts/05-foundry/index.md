@@ -23,5 +23,6 @@ tags: [rsk, foundry, developers, developer tools, rootstock, testing, dApps, sma
 | [Smart Contract](/developers/smart-contracts/foundry/smart-contracts/) | Check foundry demo smart contract.|
 | [Test Smart Contract](/developers/smart-contracts/foundry/test-smart-contracts/) | Learn how to test your smart contract using `forge`. |
 | [Deploy Smart Contract](/developers/smart-contracts/foundry/deploy-smart-contracts/) | Learn how to deploy your smart contract using `forge`. |
+| [Verify Smart Contract](/developers/smart-contracts/foundry/verify-smart-contracts/) | Learn how to verify your smart contract using `forge`. |
 | [Interact with Smart Contract](/developers/smart-contracts/foundry/interact-with-contract/) | Learn how to interact with your smart contract using `cast`. |
 | [Debugging and Troubleshooting Tips](/developers/smart-contracts/foundry/troubleshooting/) | Learn about the common issues you can come across while building following this guide and how you can solve them. |
