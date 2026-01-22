@@ -55,14 +55,13 @@ When building BTCFi dApps, you interact with the **Rootstock Virtual Machine (RV
             <div className="sub-module">YIELD VAULTS</div>
             <div className="sub-module">STAKING</div>
             <div className="sub-module">AI AGENTS</div>
-            <div className="sub-module">DAOs</div>
         </div>
     </div>
     {/* Tooling Layer */}
     <div className="stack-layer">
         <div className="layer-label" style={{ backgroundColor: '#9E76FF' }}>DEVTOOL</div> 
         <div className="layer-content bg-purple" style={{ gridTemplateColumns: '1fr', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '700', letterSpacing: '2px' }}>
-            REMIX • HARDHAT • FOUNDRY • OPENZEPPELIN
+            REMIX • HARDHAT • FOUNDRY • OPENZEPPELIN • DAO SDK
         </div>
     </div>
     {/* Infrastructure Layer */}
@@ -72,7 +71,7 @@ When building BTCFi dApps, you interact with the **Rootstock Virtual Machine (RV
             <div className="sub-module">RIF RELAY</div>
             <div className="sub-module">RNS</div>
             <div className="sub-module">FLYOVER</div>
-            <div className="sub-module">MCP SERVERS</div>
+            <div className="sub-module">COLLECTIVE DAO</div>
         </div>
     </div>
     {/* Execution Layer */}
