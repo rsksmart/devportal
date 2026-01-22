@@ -1,6 +1,5 @@
-label: "Payments & Assets"
+label: "Payments"
 position: 7
 link:
-  type: generated-index
-  title: "Payments & Asset Solutions"
-  description: "Advanced recipes for managing custom tokens, crypto payments, and crowdfunding."
+  type: doc
+  id: use-cases/payments-assets/index

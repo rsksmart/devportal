@@ -1,14 +1,12 @@
 ---
 sidebar_position: 2
 sidebar_label: Launching a Token
-title: Launching a Custom RRC-20 Token on Rootstock
-description: "A developer guide for deploying and managing fungible tokens using the RRC-20 standard." 
-tags: [payments, tokens, rrc-20, smart-contracts]
+title: Launching a Custom ERC-20 Token on Rootstock
+description: "A developer guide for deploying and managing fungible tokens using the ERC-20 standard." 
+tags: [payments, tokens, erc-20, smart-contracts]
 ---
 
-# Launching a Custom RRC-20 Token
-
-The RRC-20 standard is Rootstock's implementation of the ERC-20 standard. Because Rootstock is fully EVM-compatible, you can use the same Solidity code and tools (Hardhat, Foundry, Remix) to launch tokens that benefit from Bitcoin's security and Rootstock's low transaction costs.
+Rootstock is fully EVM-compatible, this means you can use the same Solidity code and tools (Hardhat, Foundry, Remix) to launch tokens that benefit from Bitcoin's security and Rootstock's low transaction costs.
 
 ## Prerequisites
 

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 sidebar_label: Liquid Staking (LST)
 title: Integrating Liquid Staking (st-rBTC) into your dApp
 description: "Learn how to allow users to earn Bitcoin yield while keeping their assets liquid." 

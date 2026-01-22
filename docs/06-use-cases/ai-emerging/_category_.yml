@@ -1,6 +1,5 @@
 label: "AI & Emerging Tech"
 position: 4
 link:
-  type: generated-index
-  title: "AI & Emerging Tech Solutions"
-  description: "Integrating AI Agents and MCP servers with the Rootstock blockchain."
+  type: doc
+  id: use-cases/ai-emerging/index

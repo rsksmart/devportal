@@ -1,6 +1,5 @@
-label: "Interoperability & Bridges"
+label: "Interoperability"
 position: 5
 link:
-  type: generated-index
-  title: "Interoperability Solutions"
-  description: "Moving assets between Bitcoin and Rootstock with trust-minimized bridges."
+  type: doc
+  id: use-cases/interoperability/index

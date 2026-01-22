@@ -6,7 +6,7 @@ tags: [rsk, rootstock, use cases, solutions, guides, tutorials, institutions, us
 description: "Real-world implementation guides for building on Rootstock."
 ---
 
-Welcome to the Rootstock Use Cases Library. This hub is designed to help you move from an idea to a live implementation. Each use case provides a conceptual overview, technical prerequisites, and a step-by-step integration guide.
+Welcome to the Rootstock **Use Cases Library**. This hub is designed to help you move from an idea to a live implementation. Each use case provides a conceptual overview, technical prerequisites, and a step-by-step integration guide.
 
 ## Explore by Use Cases
 
@@ -14,11 +14,11 @@ Use the interactive filters below to find the specific guide for your developmen
 
 <Filter
 values={[
+  {label: 'Institutional', value: 'institutional'},
   {label: 'BTCFi & Yield', value: 'btcfi'},
-  {label: 'Interoperability', value: 'interop'},
   {label: 'UX & Onboarding', value: 'ux'},
   {label: 'AI & Emerging', value: 'emerging'},
-  {label: 'Institutional', value: 'institutional'}
+  {label: 'Interoperability', value: 'interop'}
 ]}>
 
 <FilterItem

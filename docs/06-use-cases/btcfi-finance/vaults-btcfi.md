@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 sidebar_label: ERC-4626 Vaults
 title: Implementing an ERC-4626 Tokenized Vault on Rootstock
 description: "A technical guide to building standardized, yield-bearing vaults for rBTC." 
@@ -70,4 +70,4 @@ src/RootstockVault.sol:RootstockVault \
 
 - Institutional Integration Hub
 
-- Managing RRC-20 Assets
+- Managing ERC-20 Assets

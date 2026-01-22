@@ -1,6 +1,5 @@
-label: "Onboarding & UX"
+label: "Onboarding"
 position: 3
 link:
-  type: generated-index
-  title: "Onboarding & UX Solutions"
-  description: "Humanizing the Web3 experience with smart wallets, domains, and gasless flows."
+  type: doc
+  id: use-cases/onboarding-ux/index
