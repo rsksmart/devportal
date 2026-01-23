@@ -1,12 +1,10 @@
 ---
 sidebar_position: 3
-sidebar_label: Accept Crypto Payments
-title: Integrating rBTC and USDRIF Payments into Your dApp
+sidebar_label: x402 Agentic Payments
+title: x402 Agentic Payments
 description: "Learn how to build a payment checkout flow for native rBTC and stablecoins." 
 tags: [payments, checkout, rbtc, usdrif, e-commerce]
 ---
-
-# Integrating Crypto Payments
 
 Accepting payments on Rootstock allows you to offer your users near-instant settlement with significantly lower fees than the Bitcoin mainnet. This guide covers how to implement a payment listener for both native rBTC and the USDRIF stablecoin.
 

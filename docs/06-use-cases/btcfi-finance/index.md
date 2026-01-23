@@ -1,13 +1,13 @@
 ---
 sidebar_position: 2
-title: BTCFi & Finance Fundamentals
+title: Generate Yield
 sidebar_label: Overview
 description: "Understanding the role of Rootstock in the Bitcoin Finance (BTCFi) ecosystem."
 ---
 
 BTCFi refers to the ecosystem of decentralized financial services such as lending, borrowing, and yield generation, built specifically for Bitcoin holders.
 
-On Rootstock, users can earn yield, provide liquidity, and borrow against their Bitcoin without ever giving up the security of the Bitcoin network.
+<!-- On Rootstock, users can earn yield, provide liquidity, and borrow against their Bitcoin without ever giving up the security of the Bitcoin network.
 
 ## The Purpose: Why BTCFi?
 For years, Bitcoiners had to choose between holding their BTC securely or wrapping it on centralized exchanges to earn interest. BTCFi on Rootstock removes this trade-off by providing decentralized, smart-contract-based financial services that are anchored directly to [Bitcoin’s hash power](https://stats.rootstock.io).
@@ -69,9 +69,9 @@ When building BTCFi dApps, you are interacting with the **Rootstock Virtual Mach
         </div>
     </div>
 </div>
-</details>
+</details> -->
 
-## Core Pillars of Rootstock BTCFi
+## Core Pillars
 
 | Pillar | Description | Primary Tool/Protocol |
 | :--- | :--- | :--- |

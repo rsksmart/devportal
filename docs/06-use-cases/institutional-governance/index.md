@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Institutional & Governance Fundamentals
+title: Governance
 sidebar_label: Overview
 description: "Blueprints for institutional-grade custody and decentralized coordination on Rootstock."
 tags: [institutional, governance, dao, safe, multi-sig, fundamentals]
@@ -8,7 +8,7 @@ tags: [institutional, governance, dao, safe, multi-sig, fundamentals]
 
 For institutions and decentralized organizations, security and transparency are not optional—they are foundational. **Institutional & Governance** on Rootstock provides the tools to move beyond single-key risks toward programmable, multi-signature custody and verifiable on-chain governance.
 
-On Rootstock, institutional-grade security is backed by the planet's most secure settlement layer: Bitcoin.
+<!-- On Rootstock, institutional-grade security is backed by the planet's most secure settlement layer: Bitcoin.
 
 ## The Purpose: Why Institutions & Governance?
 Entities managing significant capital or community mandates require robust "checks and balances." Institutional frameworks on Rootstock eliminate single points of failure through multi-signature workflows and allow for decentralized coordination where stakeholders—not a central authority—dictate the future of the treasury.
@@ -67,9 +67,9 @@ When building institutional solutions, you utilize Vaults Whitelabel infrastruct
         </div>
     </div>
 </div>
-</details>
+</details> -->
 
-## Core Pillars of Rootstock Governance
+## Core Pillars
 
 | Pillar | Description | Primary Tool/Protocol |
 | :--- | :--- | :--- |

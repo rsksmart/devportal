@@ -6,7 +6,7 @@ const useCaseData = {
   description: null,
   cards: [
     {
-      title: <Translate>BTCFi</Translate>,
+      title: <Translate>Generate Yield</Translate>,
       color: 'orange', 
       description: (
         <Translate>Transform Bitcoin from a passive asset into productive capital with yield-bearing vaults and staking mechanisms.</Translate>
@@ -23,7 +23,7 @@ const useCaseData = {
       ],
     },
     {
-      title: <Translate>Interoperability</Translate>,
+      title: <Translate>Bridge Assets</Translate>,
       color: 'cyan',
       description: (
         <Translate>Securely bridge assets between Bitcoin and Rootstock using trust-minimized protocols.</Translate>
@@ -40,7 +40,7 @@ const useCaseData = {
       ],
     },
     {
-      title: <Translate>Onboarding</Translate>,
+      title: <Translate>Onboard Users</Translate>,
       color: 'green', 
       description: (
         <Translate>Remove onboarding friction with gasless transactions, social login, and human-readable names.</Translate>
@@ -57,7 +57,7 @@ const useCaseData = {
       ],
     },
     {
-      title: <Translate>AI & Emerging</Translate>,
+      title: <Translate>Build AI Agents</Translate>,
       color: 'pink',
       description: (
         <Translate>Connect AI models to on-chain data and deploy autonomous agents for intelligent portfolio management.</Translate>

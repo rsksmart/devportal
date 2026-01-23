@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: UX & Onboarding Fundamentals
+title: Onboard Users
 sidebar_label: Overview
 description: "Mastering the tools that make Bitcoin dApps as seamless as Web2."
 tags: [ux, onboarding, rif-relay, rns, account-abstraction, fundamentals]
@@ -8,10 +8,10 @@ tags: [ux, onboarding, rif-relay, rns, account-abstraction, fundamentals]
 
 Blockchain technology often comes with high friction: seed phrases, gas fees, and long hexadecimal addresses. Enhancing the UX and Onboarding on Rootstock is about abstracting this complexity. By leveraging core devtools compatible with Rootstock such as [Para Wallet](/developers/quickstart/para), [Reown](/developers/quickstart/reown), developers can build applications that feel like standard web apps while retaining the security of Bitcoin.
 
-## The Purpose: Why UX Matters?
-Mainstream adoption requires a seamless blockchain experience. Users should be able to sign up with an email, pay transaction fees in the tokens they already hold (like USDRIF), and interact with human-readable names rather than 42-character strings.
+<!-- ## The Purpose: Why UX Matters?
+Mainstream adoption requires a seamless blockchain experience. Users should be able to sign up with an email, pay transaction fees in the tokens they already hold (like USDRIF), and interact with human-readable names rather than 42-character strings. -->
 
-## The Role of Rootstock
+<!-- ## The Role of Rootstock
 Rootstock provides the core identity and relay infrastructure needed to bridge the gap between Web2 convenience and Web3 security.
 
 * **Frictionless Entry:** Support for **Social Login** means users don't need to manage private keys immediately.
@@ -65,9 +65,9 @@ When building onboarding flows, you utilize **RIF Services** and **Smart Contrac
         </div>
     </div>
 </div>
-</details>
+</details> -->
 
-## Core Pillars of Rootstock Onboarding
+## Core Pillars
 
 | Pillar | Description | Primary Tool/Protocol |
 | :--- | :--- | :--- |

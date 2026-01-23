@@ -1,16 +1,16 @@
 ---
 sidebar_position: 1
-title: Interoperability & Bridges Fundamentals
+title: Bridge Assets
 sidebar_label: Overview
 description: "Understanding how Rootstock connects Bitcoin to the world of programmable finance."
 tags: [interoperability, bridges, powpeg, flyover, bitvmx, fundamentals]
 ---
 
-Interoperability is the ability for Bitcoin to move seamlessly between its native layer and programmable smart contract environments. Without secure bridges, Bitcoin remains a siloed asset. Rootstock provides the infrastructure to transform Bitcoin into a multi-chain asset while maintaining its core security principles.
+Interoperability is the ability for Bitcoin to move seamlessly between its native layer and programmable smart contract environments. Rootstock provides the infrastructure to transform Bitcoin into a multi-chain asset while maintaining its core security principles.
 
-On Rootstock, interoperability is not just about moving tokens; it is about extending Bitcoin’s security to decentralized applications.
+<!-- On Rootstock, interoperability is not just about moving tokens; it is about extending Bitcoin’s security to decentralized applications. -->
 
-## The Purpose: Why Interoperability?
+<!-- ## The Purpose: Why Interoperability?
 Bitcoin is the most secure network in the world, but it lacks a native environment for complex logic. Interoperability allows users to port their BTC value into Rootstock to access lending, trading, and yield without selling their original asset. This "Layer 2" approach ensures that Bitcoin remains the ultimate settlement layer.
 
 ## Technical Architecture
@@ -61,9 +61,9 @@ Interoperability on Rootstock is handled at the protocol level through the **Bri
         </div>
     </div>
 </div>
-</details>
+</details> -->
 
-## Core Pillars of Rootstock Interoperability
+## Core Pillars
 
 | Pillar | Description | Best Use Case |
 | :--- | :--- | :--- |

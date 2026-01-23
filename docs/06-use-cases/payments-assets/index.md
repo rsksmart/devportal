@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Payments & Assets Fundamentals
+title: Automate Payments
 sidebar_label: Overview
 description: "A technical foundation for launching custom tokens and integrating Bitcoin-native payments."
 tags: [payments, assets, erc-20, stablecoins, checkout, fundamentals]
@@ -8,13 +8,13 @@ tags: [payments, assets, erc-20, stablecoins, checkout, fundamentals]
 
 The ability to move value instantly and programmatically is the core promise of the blockchain. **Payments & Assets** on Rootstock allows developers to leverage the world’s most secure network—Bitcoin—for everyday commerce. Whether you are launching a custom ERC-20 token or integrating a stablecoin checkout flow, Rootstock provides the infrastructure for fast, low-cost, and final settlement.
 
-On Rootstock, every payment is more than a transaction; it is an exchange backed by the security of the Bitcoin network.
+<!-- On Rootstock, every payment is more than a transaction; it is an exchange backed by the security of the Bitcoin network.
 
 ## The Purpose: Why Payments & Assets?
 
-Global commerce requires assets that are borderless, permissionless, and resistant to censorship. While Bitcoin's base layer is the ultimate store of value, its 10-minute block times make it impractical for point-of-sale transactions. Rootstock solves this by providing a high-performance execution layer that settles in seconds while remaining anchored to Bitcoin’s proof-of-work.
+Global commerce requires assets that are borderless, permissionless, and resistant to censorship. While Bitcoin's base layer is the ultimate store of value, its 10-minute block times make it impractical for point-of-sale transactions. Rootstock solves this by providing a high-performance execution layer that settles in seconds while remaining anchored to Bitcoin’s proof-of-work. -->
 
-## The Role of Rootstock
+<!-- ## The Role of Rootstock
 Rootstock acts as the **Value Exchange Layer** for the Bitcoin ecosystem. 
 * **Custom Tokenization:** Deploy fungible (ERC-20) or non-fungible (ERC-721) tokens that inherit Bitcoin’s security.
 * **Stablecoin Utility:** Access USD-pegged assets like **USDRIF** to eliminate the volatility of crypto-payments while maintaining decentralization.
@@ -70,16 +70,13 @@ When building payment solutions, you deploy **ERC-20 smart contracts** and utili
         </div>
     </div>
 </div>
-</details>
+</details> -->
 
-## Core Pillars of Rootstock Payments
+## Core Pillars
 
 | Pillar | Description | Primary Tool/Protocol |
 | :--- | :--- | :--- |
-| **Token Standards** | Deploying custom assets using the ERC-20 standard for maximum interoperability. | [OpenZeppelin Contracts](#) |
-| **Stablecoin Integration** | Using USDRIF to provide price stability for e-commerce and payroll. | [RIF On Chain](https://rifonchain.com/) |
-| **Checkout UX** | Creating seamless payment interfaces that abstract away blockchain complexity. | [RIF Relay](/use-cases/onboarding-ux/gasless-transactions-relay) |
-| **Fast Settlement** | Leveraging bridges to move value between chains in minutes. | [Flyover SDK](/use-cases/interoperability/flyover-fast-bridge) |
+| **Token Standards** | Deploying custom assets using the ERC-20 and x402 Agentic Payments standard. | [OpenZeppelin Contracts](#) |
 
 ## Key Concepts
 

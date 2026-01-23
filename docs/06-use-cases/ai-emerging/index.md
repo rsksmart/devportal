@@ -1,14 +1,14 @@
 ---
 sidebar_position: 1
-title: AI & Emerging Tech Fundamentals
+title: Build AI Agents
 sidebar_label: Overview
 description: "Exploring the convergence of Artificial Intelligence and Bitcoin-native smart contracts."
 tags: [ai, mcp, agents, autonomous-finance, emerging-tech, fundamentals]
 ---
 
-The convergence of Artificial Intelligence and blockchain is the next frontier of decentralized technology. **AI & Emerging Tech** on Rootstock focuses on giving AI agents "eyes" to read the chain and "hands" to execute transactions. By combining Rootstock's security with the Model Context Protocol (MCP), we enable autonomous agents to manage Bitcoin assets intelligently.
+**AI & Emerging Tech** on Rootstock focuses on giving AI agents capabilities to read the chain and "hands" to execute transactions. By combining Rootstock's security with the Model Context Protocol (MCP), we enable autonomous agents to manage Bitcoin assets intelligently.
 
-On Rootstock, AI is more than a chatbot; it is a participant in the economy.
+<!-- On Rootstock, AI is more than a chatbot; it is a participant in the economy.
 
 ## The Purpose: Why AI on Bitcoin?
 As AI models become more capable, they require a secure value layer to store capital and execute financial logic. Bitcoin is the world’s premier neutral money, and Rootstock is the programmable layer that allows AI to interact with it. Whether it is a portfolio rebalancing agent or a DAO governor, AI needs the trust-minimized execution that only Rootstock provides.
@@ -66,9 +66,9 @@ When building AI solutions, you utilize [MCP Server](/use-cases/ai-emerging/mcp-
         </div>
     </div>
 </div>
-</details>
+</details> -->
 
-## Core Pillars of Rootstock AI
+## Core Pillars
 
 | Pillar | Description | Primary Tool/Protocol |
 | :--- | :--- | :--- |

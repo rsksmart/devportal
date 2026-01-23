@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
-sidebar_label: Launching a Token
-title: Launching a Custom ERC-20 Token on Rootstock
+sidebar_label: Programmable Transfers
+title: Programmable Transfers
 description: "A developer guide for deploying and managing fungible tokens using the ERC-20 standard." 
 tags: [payments, tokens, erc-20, smart-contracts]
 ---

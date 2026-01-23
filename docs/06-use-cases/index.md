@@ -14,11 +14,12 @@ Use the interactive filters below to find the specific guide for your developmen
 
 <Filter
 values={[
-  {label: 'Institutional', value: 'institutional'},
-  {label: 'BTCFi', value: 'btcfi'},
-  {label: 'Onboarding', value: 'ux'},
-  {label: 'AI & Emerging', value: 'emerging'},
-  {label: 'Interoperability', value: 'interop'}
+  {label: 'Governance', value: 'institutional'},
+  {label: 'Generate Yield', value: 'btcfi'},
+  {label: 'Onboard Users', value: 'ux'},
+  {label: 'Build AI Agents', value: 'emerging'},
+  {label: 'Bridge Assets', value: 'interop'},
+  {label: 'Automate Payments', value: 'interop'}
 ]}>
 
 <FilterItem
