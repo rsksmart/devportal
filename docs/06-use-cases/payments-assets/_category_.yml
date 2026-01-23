@@ -1,0 +1,5 @@
+label: "Automate Payments"
+position: 7
+link:
+  type: doc
+  id: use-cases/payments-assets/index

@@ -1,0 +1,5 @@
+label: "Onboard Users"
+position: 3
+link:
+  type: doc
+  id: use-cases/onboarding-ux/index

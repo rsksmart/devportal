@@ -12,7 +12,7 @@ In this tutorial, you will learn how to interact with AI clients to automate, bu
 
 :::info[Model Context Protocols on Rootstock]
 
-Not sure about what MCPs are or how they work? Read the [guide to MCPs on Rootstock](/developers/use-cases/ai/mcp-rootstock).
+Not sure about what MCPs are or how they work? Read the [guide to MCPs on Rootstock](/use-cases/ai-emerging/mcp-rootstock).
 
 :::
 
@@ -402,4 +402,4 @@ _Error: `rsk-mcp-server disconnected`_
 ## Related Resources
 * [MCP Starter Kit NPM Package](https://www.npmjs.com/package/@rsksmart/rsk-mcp-server)
 * [MCP Server Starter Kit](https://github.com/rsksmart/rsk-mcp-server)
-* [Build Conversational AI Agents on Rootstock](/developers/use-cases/ai/ai-agent-rootstock/)
+* [Build Conversational AI Agents on Rootstock](/use-cases/ai-emerging/ai-agent-rootstock/)

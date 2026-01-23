@@ -70,7 +70,7 @@ value="advanced, defi"
 title="Build an Omnichain Fungible Token (OFT) on Rootstock with Layerzero"
 subtitle="Cross chain"
 color="orange"
-linkHref="/developers/use-cases/defi/rootstock-layerzero/"
+linkHref="/use-cases/interoperability/rootstock-layerzero/"
 description="This guide demonstrates implementing cross-chain token transfers using OFT (Omnichain Fungible Token) between Rootstock Testnet and Ethereum Sepolia Testnet via LayerZero's OFT V2 protocol."
 />
 <FilterItem
@@ -78,7 +78,7 @@ value="ai"
 title="Build a Conversational AI Agent with Blockchain Actions on Rootstock"
 subtitle="ai agents"
 color="orange"
-linkHref="/developers/use-cases/ai/ai-agent-rootstock"
+linkHref="/use-cases/ai-emerging/ai-agent-rootstock"
 description="This guide demonstrates how to build a lightweight dApp that connects a conversational AI agent to the Rootstock testnet, allowing users to perform DeFi actions like checking token balances and sending tRBTC simply by chatting."
 />
 <FilterItem

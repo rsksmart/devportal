@@ -32,11 +32,5 @@ RIF Relay is built in modules, the entire system is made up by 3 modules.
 
 Each module has instructions for development and usage.
 
-[Deprecated Docs](docs/README.md)
-
-
 ## Contribution Guidelines
 * Please refer to the Rootstock Contribution Guidelines for more information on how to contribute to this project.
-
-## License:
-MIT License - Copyright (c) 2023 Rootstock

@@ -6,6 +6,7 @@ import HomepageSectionGuides from "/src/components/Homepage/HomepageSectionGuide
 import HomepageSectionWelcome from "/src/components/Homepage/HomepageSectionWelcome";
 import HomepageSectionDevTools from "/src/components/Homepage/HomepageSectionDevTools";
 import HomepageSectionProducts from "/src/components/Homepage/HomepageSectionProducts";
+import HomepageSectionUseCases from "/src/components/Homepage/HomepageSectionUseCases";
 import HomepageSectionCommunity from "/src/components/Homepage/HomepageSectionCommunity";
 import HomepageAside from "/src/components/Homepage/Aside";
 import React from "react";
@@ -22,6 +23,7 @@ export default function Home() {
             <HomepageSectionWelcome />
             <HomepageSectionGuides />
             <HomepageSectionDevTools />
+            <HomepageSectionUseCases />
             <HomepageSectionProducts />
             <HomepageSectionCommunity />
           </div>

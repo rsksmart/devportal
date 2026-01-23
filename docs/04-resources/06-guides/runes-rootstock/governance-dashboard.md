@@ -6,7 +6,7 @@ tags: [Governance Voting Dashboard, rootstock, tutorials, rsk, ERC20, blockchain
 description: "This project is a Governance Voting Dashboard built on the Rootstock blockchain. It allows users to create and vote for teams using governance tokens (ERC20 tokens)."
 ---
 
-This project is a **Governance Voting Dashboard** built on the **Rootstock blockchain**. It allows users to create and vote for teams using governance tokens [ERC20 tokens](/concepts/glossary/#e).
+This project is a **Governance Voting Dashboard** built on the **Rootstock blockchain**. It allows users to create and vote for teams using governance tokens [ERC20 tokens](/concepts/glossary/#erc1155).
 
 The voting is managed by a smart contract, making it decentralized and transparent. Each team has a unique name, a governance token, and a leader, and users can vote by transferring tokens to their preferred teams.
 

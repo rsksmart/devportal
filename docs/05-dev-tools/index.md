@@ -725,7 +725,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="Layerzero"
     subtitle="Cross Chain Bridges"
     color="orange"
-    linkHref="/developers/use-cases/defi/rootstock-layerzero/"
+    linkHref="/use-cases/interoperability/rootstock-layerzero/"
     linkTitle="Build Cross Chain dApps"
     description="LayerZero, a cross-chain messaging protocol enables the seamless movement of Bitcoin-backed assets from Rootstock to other blockchains, allowing developers to build omnichain applications (OApps) that interact across multiple chains as if they were one."
   />

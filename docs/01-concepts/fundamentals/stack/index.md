@@ -13,11 +13,11 @@ Currently, the VM is executed by interpretation. In a future network upgrade, th
 
 ## Main features:
 * Independent virtual machine, that is highly compatible with EVM at the opcode level
-* Run Ethereum DApps with the security of the Bitcoin network
+* Run Ethereum dApps with the security of the Bitcoin network
 * Performance improvement pipeline documented in numerous RSKIPs created by the Rootstock community
     * See the [Rootstock Improvement Proposals](https://github.com/rsksmart/RSKIPs).
 
-![Rootstock Technology Stack - High Level](/img/concepts/rootstock-tech-stack.svg)
+<!-- ![Rootstock Technology Stack - High Level](/img/concepts/rootstock-tech-stack.svg) -->
 
 <section>
 <div class="row">
@@ -42,3 +42,50 @@ The more hashing power they provide, the more secure the network is.</p>
     </div>
 </div>
 </section>
+
+## The Stack
+
+When building BTCFi dApps, you interact with the **Rootstock Virtual Machine (RVM)**.Because the RVM is fully EVM-compatible, you can use industry-standard tools like **Remix, Hardhat, and Foundry** to manage Bitcoin-native assets.
+
+<div className="rootstock-stack-container">
+    {/* Application Layer */}
+    <div className="stack-layer">
+        <div className="layer-label" style={{ backgroundColor: '#FF71E1' }}>APPLICATIONS</div>
+        <div className="layer-content bg-pink">
+            <div className="sub-module">YIELD VAULTS</div>
+            <div className="sub-module">STAKING</div>
+            <div className="sub-module">AI AGENTS</div>
+        </div>
+    </div>
+    {/* Tooling Layer */}
+    <div className="stack-layer">
+        <div className="layer-label" style={{ backgroundColor: '#9E76FF' }}>DEVTOOL</div> 
+        <div className="layer-content bg-purple" style={{ gridTemplateColumns: '1fr', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '700', letterSpacing: '2px' }}>
+            REMIX • HARDHAT • FOUNDRY • OPENZEPPELIN • DAO SDK
+        </div>
+    </div>
+    {/* Infrastructure Layer */}
+    <div className="stack-layer">
+        <div className="layer-label" style={{ backgroundColor: '#08FFD0' }}>RIF SERVICES</div>
+        <div className="layer-content bg-cyan">
+            <div className="sub-module">RIF RELAY</div>
+            <div className="sub-module">RNS</div>
+            <div className="sub-module">FLYOVER</div>
+            <div className="sub-module">COLLECTIVE DAO</div>
+        </div>
+    </div>
+    {/* Execution Layer */}
+    <div className="stack-layer">
+        <div className="layer-label" style={{ backgroundColor: '#79C600' }}>EXECUTION</div>
+        <div className="layer-content bg-green" style={{ gridTemplateColumns: '1fr' }}>
+            <div className="sub-module">ROOTSTOCK VIRTUAL MACHINE (EVM-COMPATIBLE)</div>
+        </div>
+    </div>
+    {/* Security Layer */}
+    <div className="stack-layer">
+        <div className="layer-label" style={{ backgroundColor: '#FF9100' }}>SECURITY</div>
+        <div className="layer-content bg-orange" style={{ gridTemplateColumns: '1fr' }}>
+            <div className="sub-module">BITCOIN: MERGED MINING</div>
+        </div>
+    </div>
+</div>

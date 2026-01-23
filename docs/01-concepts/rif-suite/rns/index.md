@@ -1,7 +1,7 @@
 ---
 sidebar_label: RNS
 sidebar_position: 400
-title: "RIF RNS: RIF Name Service"
+title: "RIF Name Service (RNS)"
 tags: [rif, rns, rif-name-service, rsk, rootstock]
 description: "Information about the RIF Name Service, specs, how to use and integrate."
 ---
@@ -10,7 +10,7 @@ RNS provides an architecture which enables the identification of blockchain addr
 
 <RNSDomainSearch />
 
-<div className="row rif_blue_text">
+<!-- <div className="row rif_blue_text">
   <div className="col">
     <div className="rns-index-box">
       <a href="try-rns">Try the service</a>
@@ -19,7 +19,7 @@ RNS provides an architecture which enables the identification of blockchain addr
       <p>Register a domain in the Testnet, for free.</p>
     </div>
   </div>
-  <!-- <div className="col">
+  <div className="col">
     <div className="rns-index-box">
       <a href="./integrate">Integrate with RNS</a>
       <br />
@@ -44,8 +44,8 @@ RNS provides an architecture which enables the identification of blockchain addr
       <br />
       <p>Use simple libraries to interact with RNS service.</p>
     </div>
-  </div> -->
-</div>
+  </div>
+</div> -->
 
 ## The stack
 

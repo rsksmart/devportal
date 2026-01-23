@@ -6,7 +6,6 @@ tags: [rsk, rootstock, rif, flyover, integrate, integration guide, rbtc, powpeg]
 description: The RBTC Flyover enables fast, trust-minimized onboarding of users into the Rootstock ecosystem from Bitcoin with less friction. It improves the usability for bitcoiners and integrators to interact with the Rootstock ecosystem via the Powpeg and Flyover SDK.
 ---
 
-
 Its main goal is to accelerate getting into Rootstock from Bitcoin by significantly reducing the wait times associated with the current PowPeg time. Developers, integrators or Liquidity Providers (LP) looking to provide RBTC access, Cross-chain swaps, and access to liquidity pools can integrate the Flyover SDK. Visit the [ LP integration section](/developers/integrate/flyover/LP/) to get started.
 
 ## Features of the Flyover
@@ -67,7 +66,7 @@ For more information, see [LP Onboarding](/developers/integrate/flyover/LP/) sec
 
 ### Converting BTC to RBTC - General Users
 
-Flyover is integrated in the [PowPeg App](http://powpeg.rootstock.io) which provides a user-friendly UI for Bitcoiners to use the native Rootstock PowPeg protocol to Peg in and out, as well as to easily perform trust-minimized BTC and RBTC transfers between Bitcoin and Rootstock using Flyover. See section on [Using the PowPeg App](/developers/integrate/flyover/powpeg/) to learn about how you can convert BTC - RBTC and vice versa.
+Flyover is integrated in the [PowPeg App](http://powpeg.rootstock.io) which provides a user-friendly UI for Bitcoiners to use the native Rootstock PowPeg protocol to Peg in and out, as well as to easily perform trust-minimized BTC and RBTC transfers between Bitcoin and Rootstock using Flyover.
 
 
 ## Resources
