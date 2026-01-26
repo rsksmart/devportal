@@ -45,7 +45,7 @@ RNS provides an architecture which enables the identification of blockchain addr
       <p>Use simple libraries to interact with RNS service.</p>
     </div>
   </div> -->
-<!-- </div> --> -->
+<!-- </div> -->
 
 ## The stack
 
