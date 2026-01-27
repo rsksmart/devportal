@@ -10,10 +10,10 @@ RNS provides an architecture which enables the identification of blockchain addr
 
 <RNSDomainSearch />
 
-<!-- <div className="row rif_blue_text">
+<div className="row rif_blue_text">
   <div className="col">
     <div className="rns-index-box">
-      <a href="try-rns">Try the service</a>
+      <a href="https://testnet.manager.rns.rifos.org/">Try the service</a>
       <br />
       <br />
       <p>Register a domain in the Testnet, for free.</p>
@@ -45,7 +45,7 @@ RNS provides an architecture which enables the identification of blockchain addr
       <p>Use simple libraries to interact with RNS service.</p>
     </div>
   </div> -->
-<!-- </div> -->
+</div>
 
 ## The stack
 
