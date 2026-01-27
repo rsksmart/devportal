@@ -156,15 +156,6 @@ description: Rootstock에서 스마트 컨트랙트를 개발하고 배포하는
     description="dRPC는 분산된 노드 프로바이더 네트워크에 접속할 수 있는 서비스를 제공합니다."
   />
 <FilterItem
-    value="rpc"
-    title="Blast API"
-    subtitle="JSON RPC"
-    color="orange"
-    linkHref="/dev-tools/node-rpc/blast-api/"
-    linkTitle="첫번째 API 호출하기"
-    description="Blast API는 지연 시간이 짧고 비용 효율적인 RPC 서비스를 제공하는 블록체인 특화 클라우드 인프라입니다."
-  />
-<FilterItem
     value="wallet, sc"
     title="MetaMask"
     subtitle="지갑"

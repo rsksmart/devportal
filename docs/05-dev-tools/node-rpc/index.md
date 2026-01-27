@@ -15,7 +15,7 @@ Imagine a vast library filled with information about everything happening on the
 ## How Node Providers Work
 
 * Full Nodes: Node providers operate by running full nodes on the Rootstock blockchain. These full nodes download and store the complete history of the blockchain, enabling them to verify transactions and maintain a consistent view of the network.  To interact with these full nodes, developers and applications utilize a remote procedure call (RPC) mechanism, specifically the JSON-RPC protocol. This protocol allows remote communication with the node, enabling the submission of requests and the receipt of responses.
-* API Access: Node providers like the Rootstock RPC API, Alchemy, GetBlock, NOWNodes, dRPC, and Blast API etc offer an interface (API) that developers can use to communicate with these nodes and request specific data. This eliminates the need for developers to download the entire blockchain themselves, saving time and resources.
+* API Access: Node providers like the Rootstock RPC API, Alchemy, GetBlock, NOWNodes, and dRPC, offers an interface (API) that developers can use to communicate with these nodes and request specific data. This eliminates the need for developers to download the entire blockchain themselves, saving time and resources.
 
 ## RPC Node Providers on Rootstock
 
@@ -60,14 +60,6 @@ Here you can find a list of rpc node providers on Rootstock.
     color="cyan"
     description="dRPC provides access to a distributed network of node providers."
     linkHref="/dev-tools/node-rpc/drpc/"
-    linkTitle="Make First API Call"
-  />
-<CardsGridItem
-    title="Blast API"
-    subtitle="node-rpc"
-    color="cyan"
-    description="Blast API is a Blockchain-optimized cloud infrastructure for low-latency, cost-effective RPC services on Rootstock."
-    linkHref="/dev-tools/node-rpc/blast-api/"
     linkTitle="Make First API Call"
   />
 </CardsGrid>
