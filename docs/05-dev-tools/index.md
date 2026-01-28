@@ -756,6 +756,15 @@ description: "Explore a curated selection of smart contract development tools an
     linkTitle="Use the CLI"
     description="The Rootstock Go CLI (rsk-cli) tool for interacting with Rootstock blockchain."
   />
+  <FilterItem
+    value="wallet, sc"
+    title="Para"
+    subtitle="wallets"
+    color="orange"
+    linkHref="/developers/quickstart/para/"
+    linkTitle="Use Para"
+    description="Para is a modern wallet infrastructure for fintech and crypto applications. It provides a comprehensive wallet and authentication suite for crypto developers and apps."
+  />
   <!-- <FilterItem
     value="cli"
     title="Rootstock Rust CLI"

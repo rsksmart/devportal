@@ -60,6 +60,7 @@ In the following matrix you can see the different features by wallet.
 |  [Zerion](https://zerion.io/) | ✔ | ✔ | -  | Chrome  | Mainnet, Testnet|
 |  [Rainbow Wallet](https://rainbow.me/en/) | ✔ | ✔ | -  | Chrome  | Mainnet, Testnet|
 |  [Coinomi](https://www.coinomi.com/) | - | - | -  | Desktop, Mobile  | Mainnet |
+|  [Para Wallet](https://www.getpara.com/) | - | - | -  | Desktop, Mobile  | Mainnet, Testnet |
 
 
 
