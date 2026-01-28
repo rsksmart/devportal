@@ -509,10 +509,10 @@ false],
   - transactions - Array of transaction objects - please see eth_getTransactionByHash for exact shape.
   - uncles - Array of uncle hashes.
   - minimumGasPrice: minimum gas price a transaction should have in order to be included in that block.
-  - bitcoinMergedMiningHeader: It is the Bitcoin block header of the block that was used for merged mining the RSK block.
-  - bitcoinMergedMiningCoinbaseTransaction: It is the coinbase transaction of the Bitcoin block that was used for merged mining the RSK block.
+  - bitcoinMergedMiningHeader: It is the Bitcoin block header of the block that was used for merged mining the Rootstock block.
+  - bitcoinMergedMiningCoinbaseTransaction: It is the coinbase transaction of the Bitcoin block that was used for merged mining the Rootstock block.
   - bitcoinMergedMiningMerkleProof: It is the Merkle proof that links the Bitcoin block's Merkle root with the coinbase transaction.
-  - hashForMergedMining: It is a hash that is calculated from various fields in the RSK block header.
+  - hashForMergedMining: It is a hash that is calculated from various fields in the Rootstock block header.
   - paidFees: It represents the total amount of fees paid by all transactions included in the block.
   - cumulativeDifficulty: It represents the total difficulty of the chain up to the current block.
 - **Example Request:**

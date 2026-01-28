@@ -35,10 +35,10 @@ but does earn a reward from the merged mining.
 > Check out [https://rootstock.io/mine-btc-with-rootstock/](https://rootstock.io/mine-btc-with-rootstock/) to learn more about mining.
 
 
-### Powpeg with Bitcoin
+### PowPeg with Bitcoin
 
 The second point of contact is the
-[Powpeg](/concepts/powpeg/),
+PowPeg,
 also known as the bridge.
 
 This component connects both networks to allow

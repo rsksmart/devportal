@@ -171,7 +171,7 @@ This is a platform where users can trade cryptocurrencies and other digital asse
 
 ## Faucet
 
-This is a tool that distributes small amounts of cryptocurrency for testing purposes on test networks, allowing developers and users to experiment without financial risk. In the context of Rootstock, faucets can be used to obtain test RBTC (tRBTC), enabling developers to test their applications in a realistic environment. This practice is crucial for ensuring that dApps function correctly before deployment on the mainnet.
+This is a tool that distributes small amounts of cryptocurrency for testing purposes on test networks, allowing developers and users to experiment without financial risk. In the context of Rootstock, faucets can be used to obtain test rBTC (tRBTC), enabling developers to test their applications in a realistic environment. This practice is crucial for ensuring that dApps function correctly before deployment on the mainnet.
 
 <Button size="sm" href="/dev-tools/additional-tools/#faucets">Get tRBTC</Button>
 
@@ -302,9 +302,9 @@ A unique code granting access to a blockchain account. It must remain secret, as
 
 # R
 
-## RBTC
+## rBTC 
 
-[RBTC](/concepts/rbtc/) is the native cryptocurrency of the Rootstock network, designed to be pegged 1:1 to Bitcoin. This ensures that RBTC maintains a value equivalent to Bitcoin, allowing seamless interactions between both networks.
+[rBTC](/concepts/rbtc/) is the native cryptocurrency of the Rootstock network, designed to be pegged 1:1 to Bitcoin. This ensures that rBTC maintains a value equivalent to Bitcoin, allowing seamless interactions between both networks.
 
 ## Remix IDE 
 
