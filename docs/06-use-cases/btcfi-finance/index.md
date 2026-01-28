@@ -75,10 +75,10 @@ When building BTCFi dApps, you are interacting with the **Rootstock Virtual Mach
 
 | Pillar | Description | Primary Tool/Protocol |
 | :--- | :--- | :--- |
-| **Yield Engines** | Standardized vaults that generate organic yield on rBTC or stablecoins. | [Rootstock Vaults SDK](/use-cases/btcfi-finance/vaults-btcfi/) |
+| **Automate Yield Vaults** | Learn to build and manage automated yield strategies on Bitcoin using the Rootstock Vaults SDK. | [Rootstock Vaults SDK](/use-cases/btcfi-finance/automate-yield-vaults/) |
+| **Deploy Your First Organic Yield Vaul** | Build an ERC-4626 compliant yield engine using the Rootstock Vaults SDK. | [Rootstock Vaults SDK](/use-cases/btcfi-finance/deploy-yield-vaults/) |
 | **Stablecoins** | Bitcoin-backed stablecoins (USDRIF) that provide a hedge against volatility. | [RIF On Chain](https://rifonchain.com/) |
-| **Lending & Borrowing** | Using your BTC as collateral to borrow assets without selling your Bitcoin. | [Tropykus](https://tropykus.com/) |
-| **Liquid Staking** | Staking BTC to secure the network while receiving a liquid token (st-rBTC) in return. | [st-rBTC Protocol](#) |
+
 
 ## Key Concepts
 

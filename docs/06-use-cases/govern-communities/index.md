@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Governance
+title: Govern Communities
 sidebar_label: Overview
 description: "Blueprints for institutional-grade custody and decentralized coordination on Rootstock."
 tags: [institutional, governance, dao, safe, multi-sig, fundamentals]
@@ -73,10 +73,8 @@ When building institutional solutions, you utilize Vaults Whitelabel infrastruct
 
 | Pillar | Description | Primary Tool/Protocol |
 | :--- | :--- | :--- |
-| **Institutional Custody** | Eliminating single points of failure with multi-signature smart contracts. | [Safe &#123;Wallet&#125;](https://safe.rootstock.io/) |
+| **On Chain Voting** | A guide to staking RIF, minting stRIF, and voting on ecosystem proposals. | [Collective SDK]([https://github.com/rsksmart/collective-sdk](https://github.com/rsksmart/collective-sdk)) |
 | **On-Chain Governance** | Managing ecosystem upgrades and treasuries through decentralized voting. | [RootstockCollective](https://app.rootstockcollective.xyz/) |
-| **Compliance & Audit** | Tools for generating immutable transaction logs for regulatory reporting. | [The Graph / Explorer APIs](#) |
-| **Asset Issuance** | Deploying compliant ERC-20 tokens with specific permission logic. | [OpenZeppelin Contracts](#) |
 
 ## Key Concepts
 

@@ -76,7 +76,8 @@ When building payment solutions, you deploy **ERC-20 smart contracts** and utili
 
 | Pillar | Description | Primary Tool/Protocol |
 | :--- | :--- | :--- |
-| **Token Standards** | Deploying custom assets using the ERC-20 and x402 Agentic Payments standard. | [OpenZeppelin Contracts](#) |
+| **Agentic Commerce with x402 Payment Standard** | Utilize the x402 standard to enable autonomous fund deposits and automated settlements for AI agents on Rootstock. | [x402 Getting Started](https://dev.rootstock.io/resources/tutorials/integrate-x402/) |
+| **Mock (USDT0) for Testnet Development** | Simulate USDT0 and USDRIF liquidity to harden your financial logic and test protocol stability on the Rootstock Testnet. | [Getting Started](./stablecoin-mock-usdt0) |
 
 ## Key Concepts
 

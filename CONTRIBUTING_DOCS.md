@@ -11,6 +11,7 @@ In this guide, I will outline steps to follow as a new user to our developer doc
 * **Node Operators:** This section caters to those managing the infrastructure of your product. It will cover setup, maintenance, troubleshooting, and other operational aspects.
 * **Resources:** This section will house additional materials like tutorials, case studies, whitepapers, and other supporting documents.
 * **Devtools:** This section will provide tools and utilities to aid developers in their work.
+* **Use Cases:** This section provides detailed step by step guides on developer outcomes, answering key questions and developer painpoints.
 
 ### **Content Placement and Categorization**
 

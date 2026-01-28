@@ -71,10 +71,9 @@ When building onboarding flows, you utilize **RIF Services** and **Smart Contrac
 
 | Pillar | Description | Primary Tool/Protocol |
 | :--- | :--- | :--- |
-| **Gasless Tx** | Sponsored transactions where users pay zero gas or pay in ERC-20 tokens. | [RIF Relay](/use-cases/onboarding-ux/gasless-transactions-relay) |
+<!-- | **Gasless Tx** | Sponsored transactions where users pay zero gas or pay in ERC-20 tokens. | [RIF Relay](/use-cases/onboarding-ux/gasless-transactions-relay) | -->
 | **Identity** | Transforming hex addresses into readable, portable Bitcoin identities. | [RIF Name Service (RNS)](https://rns.rifos.org/) |
-| **Smart Wallets** | Contract-based accounts that enable social recovery and complex permissions. | [Safe (Gnosis)](https://safe.rootstock.io/) |
-| **Fiat On-ramps** | Direct paths for users to purchase rBTC or USDRIF using local currency. | [Mt Pelerin / Ramp](#) |
+| **Smart Wallets** | Remove seed phrases and gas hurdles using Para SDK's MPC-based social login and Account Abstraction on Rootstock. | [Para SDK](https://dev.rootstock.io/developers/quickstart/para/) |
 
 ## Key Concepts
 

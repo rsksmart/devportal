@@ -6,7 +6,7 @@ description: "Exploring the convergence of Artificial Intelligence and Bitcoin-n
 tags: [ai, mcp, agents, autonomous-finance, emerging-tech, fundamentals]
 ---
 
-**AI & Emerging Tech** on Rootstock focuses on giving AI agents capabilities to read the chain and "hands" to execute transactions. By combining Rootstock's security with the Model Context Protocol (MCP), we enable autonomous agents to manage Bitcoin assets intelligently.
+This section focuses on giving AI agents capabilities to read the chain and "hands" to execute transactions. By combining Rootstock's security with the Model Context Protocol (MCP), we enable autonomous agents to manage Bitcoin assets intelligently.
 
 <!-- On Rootstock, AI is more than a chatbot; it is a participant in the economy.
 
@@ -73,9 +73,9 @@ When building AI solutions, you utilize [MCP Server](/use-cases/ai-emerging/mcp-
 | Pillar | Description | Primary Tool/Protocol |
 | :--- | :--- | :--- |
 | **Connectivity** | Standardized servers that allow LLMs like Claude or GPT to "read" Rootstock data. | [Rootstock MCP Server](https://github.com/rsksmart/rootstock-mcp-server) |
+| **SDK** | Equip your AI agents with the eyes to read the chain and the hands to execute Bitcoin-native transactions. | [Rootstock SDK]( [https://github.com/rsksmart/sdk-base](https://github.com/rsksmart/sdk-base)) |
 | **Autonomy** | Granting AI agents the power to execute transactions within user-defined guardrails. | [Spend Permissions](/use-cases/ai-emerging/autonomous-agents-btcfi) |
 | **Intelligence** | Using on-chain data to train or fine-tune models specifically for the Bitcoin ecosystem. | [The Graph / Indexers](/dev-tools/data/thegraph/) |
-| **Verifiability** | Proof of decision-making, ensuring that an agent's actions match its programmed logic. | [Smart Contract Audits](#) |
 
 ## Key Concepts
 

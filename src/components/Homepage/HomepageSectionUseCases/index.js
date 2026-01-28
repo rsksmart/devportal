@@ -7,18 +7,18 @@ const useCaseData = {
   cards: [
     {
       title: <Translate>Generate Yield</Translate>,
-      color: 'orange', 
+      color: 'orange',
       description: (
         <Translate>Transform Bitcoin from a passive asset into productive capital with yield-bearing vaults and staking mechanisms.</Translate>
       ),
       list: [
         {
-          title: <Translate>ERC-4626 Yield Vaults</Translate>,
-          href: '/use-cases/btcfi-finance/vaults-btcfi',
+          title: <Translate>Deploying Your First Organic Yield Vault</Translate>,
+          href: '/use-cases/btcfi-finance/yield-vaults',
         },
         {
-          title: <Translate>Liquid Staking (st-rBTC)</Translate>,
-          href: '/use-cases/btcfi-finance/liquid-staking-rbtc',
+          title: <Translate>Building Automated Yield Vaults</Translate>,
+          href: '/use-cases/btcfi-finance/automate-yield-vault',
         },
       ],
     },
@@ -30,29 +30,25 @@ const useCaseData = {
       ),
       list: [
         {
-          title: <Translate>Union Bridge (BitVMX)</Translate>,
-          href: '/use-cases/interoperability/union-bridge-bitvmx',
+          title: <Translate>Super Bridge SDK</Translate>,
+          href: '/use-cases/interoperability/integrate-super-bridge-sdk',
         },
         {
-          title: <Translate>Flyover Fast Bridge</Translate>,
-          href: '/use-cases/interoperability/flyover-fast-bridge',
+          title: <Translate>Layerzero OFTs</Translate>,
+          href: '/use-cases/interoperability/rootstock-layerzero',
         },
       ],
     },
     {
       title: <Translate>Onboard Users</Translate>,
-      color: 'green', 
+      color: 'green',
       description: (
-        <Translate>Remove onboarding friction with gasless transactions, social login, and human-readable names.</Translate>
+        <Translate>Remove onboarding friction with social login, smart wallets, and human-readable names.</Translate>
       ),
       list: [
         {
-          title: <Translate>Gasless Relay</Translate>,
-          href: '/use-cases/onboarding-ux/gasless-transactions-relay',
-        },
-        {
-          title: <Translate>Smart Wallet Onboarding</Translate>,
-          href: '/use-cases/onboarding-ux/smart-wallet-onboarding',
+          title: <Translate>Smart Wallet Onboarding with Para SDK</Translate>,
+          href: '/use-cases/onboarding-ux/smart-wallet-para-sdk',
         },
       ],
     },
@@ -64,12 +60,42 @@ const useCaseData = {
       ),
       list: [
         {
-          title: <Translate>MCP Server Integration</Translate>,
-          href: '/use-cases/ai-emerging/mcp-server-setup',
+          title: <Translate>Conversational AI Agent with Blockchain Actions</Translate>,
+          href: '/use-cases/ai-agents/ai-agent-rootstock',
         },
         {
-          title: <Translate>Autonomous Agents</Translate>,
-          href: '/use-cases/ai-emerging/autonomous-agents-btcfi',
+          title: <Translate>Integrating SDK Logic into Agentic Workflows</Translate>,
+          href: '/use-cases/ai-agents/integrate-rootstock-sdk',
+        },
+      ],
+    },
+    {
+      title: <Translate>Govern Communities</Translate>,
+      color: 'cyan',
+      description: (
+        <Translate>Manage shared treasuries and protocol parameters with on-chain voting and the Collective SDK.</Translate>
+      ),
+      list: [
+        {
+          title: <Translate>On-Chain Voting with Collective SDK</Translate>,
+          href: '/use-cases/govern-communities/onchain-voting-collective-sdk',
+        },
+      ],
+    },
+    {
+      title: <Translate>Automate Payments</Translate>,
+      color: 'orange',
+      description: (
+        <Translate>Launch custom tokens and integrate Bitcoin-native payments, stablecoins, and agentic commerce.</Translate>
+      ),
+      list: [
+        {
+          title: <Translate>Agentic Commerce with x402</Translate>,
+          href: '/use-cases/payments-assets/agentic-commerce',
+        },
+        {
+          title: <Translate>Mock USDT0 for Testnet</Translate>,
+          href: '/use-cases/payments-assets/stablecoin-mock-usdt0',
         },
       ],
     },
