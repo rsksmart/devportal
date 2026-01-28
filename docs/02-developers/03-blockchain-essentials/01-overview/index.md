@@ -1,12 +1,11 @@
 ---
 sidebar_label: Blockchain Overview
 sidebar_position: 1
-title: "Getting Started with Rootstock (RSK) Development"
+title: "Getting Started with Rootstock Development"
 description: "Learn how to interact with Rootstock in your web browser, how to look at Rootstock transactions, develop and deploy your very first smart contract to the Rootstock network."
 tags:
   [
     quick-starts,
-    rsk,
     rootstock,
     blockchain,
     browser wallets,
@@ -40,9 +39,9 @@ Rootstock is also compatible with Ethereum in terms of its virtual machine (whic
 as well as the RPC (external API) that it exposes.
 Let’s briefly look at each of these areas.
 
-## Powpeg
+## PowPeg
 
-The second point of contact is the [Powpeg](/concepts/powpeg/).
+The second point of contact is the PowPeg.
 This component connects both networks to allow the transfer of bitcoins to Rootstock,
 thereby allowing developers to interact with smart contracts.
 They pay gas using the same bitcoin, the smart bitcoin.
