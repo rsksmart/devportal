@@ -2,7 +2,7 @@
 sidebar_position: 1
 title: Concepts Overview
 sidebar_label: Overview
-tags: [rsk, rootstock, concepts, glossary, resources]
+tags: [rootstock, concepts, glossary, resources, rsk]
 description: "This section of the documentation covers the core concepts about the Rootstock blockchain. Working with Rootstock requires an understanding of blockchain technology, bitcoin and smart contracts."
 ---
 
@@ -17,10 +17,10 @@ This section equips you with the fundamental knowledge required to navigate the 
 | [Rootstock Blockchain Overview](/concepts/fundamentals/) | Gain a comprehensive understanding of the Rootstock platform. |
 | [Rootstock Stack](/concepts/fundamentals/stack/) |  Learn about how Rootstock combines the security of Bitcoin PoW with Ethereum's smart contract functionality.|
 | [Glossary](/concepts/glossary/) |  This glossary provides essential definitions for key terms related to Rootstock and blockchain technology.|
-| [RBTC Token](/concepts/rbtc/) | The RBTC token fuels transactions on the Rootstock network. Converting BTC to RBTC is straightforward using various methods. Visit the RBTC section for a comprehensive list of exchanges and applications facilitating RBTC acquisition. Visit the [RBTC section](https://rootstock.io/rbtc/) for a list of exchanges and apps to get RBTC.|
+| [rBTC Token](/concepts/rbtc/) | The rBTC token fuels transactions on the Rootstock network. Converting BTC to rBTC is straightforward using various methods. Visit the rBTC section for a comprehensive list of exchanges and applications facilitating rBTC acquisition. Visit the [rBTC section](https://rootstock.io/rbtc/) for a list of exchanges and apps to get rBTC.|
 | [RIF Suite](/concepts/rif-suite/) | Learn about the Rootstock Infrastructure Framework, a comprehensive set of Open-source tools and technologies designed to streamline and incentivize development on Bitcoin.|
-| [Rootstock Security](/concepts/powpeg/security-model/) | The Rootstock platform uses a security mechanism called the [Powpeg](/concepts/powpeg/), it is based on a layered security model, called “defence-in-depth”.|
-| [Powpeg HSM Firmware](/concepts/powpeg/hsm-firmware-attestation/) | Learn how to verify Powpeg nodes using the HSM Firmware Attestation. |
+| [Rootstock Security](/concepts/powpeg/security-model/) | The Rootstock platform uses a security mechanism called the [PowPeg](/concepts/powpeg/), it is based on a layered security model, called “defence-in-depth”.|
+| [PowPeg HSM Firmware](/concepts/powpeg/hsm-firmware-attestation/) | Learn how to verify PowPeg nodes using the HSM Firmware Attestation. |
 | [Account Based Addresses](/concepts/account-based-addresses/) | EIP-1191 chainId is used in Rootstock addresses as a checksum. m/44'/137'/0'/0 is the derivation path used for BIP-44 compatible wallets. |
 
 ## Next Steps
