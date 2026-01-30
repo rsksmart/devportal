@@ -1,9 +1,9 @@
 ---
 sidebar_position: 300
 title: How to submit a dApp to the Explorer
-sidebar_label: Explorer dApps
-tags: [hyperlane, rootstock, tutorials, rsk, blockchain, interoperability, cross chain bridge, defi]
-description: "Hyperlane is the open interoperability framework to connect anywhere onchain. Build dApps that seamlessly communicates between Rootstock to other EVM-compatible chains."
+sidebar_label: Add dApps to the Rootstock Explorer
+tags: [dApp, token, rootstock, tutorials, rsk, blockchain]
+description: "This guide explains how developers and project owners can submit their dApp and related tokens for listing on the Explorer dApps page, ensuring correct and complete display."
 ---
 
 
