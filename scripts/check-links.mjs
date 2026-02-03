@@ -489,7 +489,7 @@ async function checkExternalLinks() {
         // Skip links to own site (from docusaurus.config.js url)
         siteUrlPattern,
         // Skip services links
-        /public-node\.rsk\.co/
+        /public-node\.rsk\.co/,
         // Skip common false positives
         /example\.com/,
         /placeholder/,
