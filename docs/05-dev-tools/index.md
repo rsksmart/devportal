@@ -172,15 +172,6 @@ description: "Explore a curated selection of smart contract development tools an
     description="dRPC provides access to a distributed network of node providers."
   />
 <FilterItem
-    value="rpc"
-    title="Blast API"
-    subtitle="json rpc"
-    color="orange"
-    linkHref="/dev-tools/node-rpc/blast-api/"
-    linkTitle="Make First API Call"
-    description="Blast API is a Blockchain-optimized cloud infrastructure for low-latency, cost-effective RPC services."
-  />
-<FilterItem
     value="wallet, sc"
     title="MetaMask"
     subtitle="wallets"
@@ -386,15 +377,6 @@ description: "Explore a curated selection of smart contract development tools an
     linkHref="https://faucet.rifos.org/"
     linkTitle="Get tRIF"
     description="Get tRIF on the RIF Testnet Faucet"
-  />
-<FilterItem
-    value="faucet"
-    title="Blast Faucet"
-    subtitle="faucets"
-    color="orange"
-    linkHref="https://blastapi.io/faucets/rootstock-testnet"
-    linkTitle="Get tRBTC"
-    description="This faucet offers a convenient way to get free test RBTC tokens for development and testing. It has a higher max daily token allocation of `0.1` tRBTC."
   />
 <FilterItem
     value="faucet"
@@ -755,6 +737,15 @@ description: "Explore a curated selection of smart contract development tools an
     linkHref="https://github.com/rsksmart/rsk-go-cli"
     linkTitle="Use the CLI"
     description="The Rootstock Go CLI (rsk-cli) tool for interacting with Rootstock blockchain."
+  />
+  <FilterItem
+    value="wallet, sc"
+    title="Para"
+    subtitle="wallets"
+    color="orange"
+    linkHref="/developers/quickstart/para/"
+    linkTitle="Use Para"
+    description="Para is a modern wallet infrastructure for fintech and crypto applications. It provides a comprehensive wallet and authentication suite for crypto developers and apps."
   />
   <!-- <FilterItem
     value="cli"

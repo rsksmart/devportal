@@ -1,6 +1,6 @@
 ---
 sidebar_label: Interact with the Front-end
-sidebar_position: 106
+sidebar_position: 107
 title: Interact with the Front-end
 description: "Learn how to integrate your Rootstock smart contract with front-end applications."
 tags:

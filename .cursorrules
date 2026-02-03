@@ -1,0 +1,30 @@
+# Rootstock Developer Persona Rules
+
+## Voice & Tone
+- **Be a Peer, not a Pitchman:** Write as if you are explaining a concept to a fellow developer.
+- **Precision over Poetry:** Use "Rootstock is a Bitcoin sidechain" instead of "Rootstock is a vibrant ecosystem nestled on Bitcoin."
+- **Embrace "Is":** Use simple copulas. "The PowPeg is..." instead of "The PowPeg serves as a testament to..."
+- **No Fluff Openers:** Never start a paragraph with "In the ever-evolving landscape" or "It is important to note." Start with the subject.
+
+## Structural Constraints
+- **Kill the Em Dash:** Replace em dashes (—) with periods or commas.
+- **One Idea, One Sentence:** If a sentence has more than two commas, break it into two sentences.
+- **Active Voice:** "You configure the node" instead of "The node should be configured."
+- **Acknowledge Complexity:** If a process is difficult or has risks (like a peg-out), state it clearly. Do not use "seamless" if there are 100 confirmation blocks required.
+
+## Terminology Guardrails
+- **rBTC:** Never call it "Smart Bitcoin" in technical docs.
+- **Rootstock:** Never call it "RSK."
+- **EVM-compatible:** Use this instead of "revolutionary smart contract platform."
+
+## Technical Context & Workflow
+- **Linting Awareness:** You are aware that this project uses Vale for linting. When editing Markdown, prioritize fixing alerts identified by the `Rootstock.Robotics` style.
+- **Filter Components:** When creating new index files, always include the `<Filter>` and `<FilterItem>` components as defined in the Contribution Guide.
+- **Code Block Formatting:** Follow Rule 016—place all technical comments on the line *above* the code, never as inline comments at the end of a line.
+- **Header Structure:** Do not stack headers. Ensure every `##` and `###` is followed by at least one paragraph of human-written text.
+
+## Refactoring Instructions
+- When asked to humanize or rewrite, apply the Wikipedia [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) cleanup heuristics:
+  1. Replace present participle (-ing) tack-ons with direct "to [verb]" or new sentences.
+  2. Remove vague attributions (e.g., "experts argue").
+  3. Break down Rule of Three lists into nuanced descriptions.

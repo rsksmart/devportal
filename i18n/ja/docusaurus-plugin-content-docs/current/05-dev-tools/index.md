@@ -156,15 +156,6 @@ description: スマートコントラクト開発ツールと言語のキュレ�
     description="dRPCは、分散型ノードプロバイダーネットワークへのアクセスを提供します。"
 />
 <FilterItem
-    value="rpc"
-    title="Blast API"
-    subtitle="JSON RPC"
-    color="orange"
-    linkHref="/dev-tools/node-rpc/blast-api/"
-    linkTitle="最初のAPIコールを実行"
-    description="Blast APIは、低遅延・低コストなRPCサービスのためのブロックチェーン最適化クラウドインフラです。"
-/>
-<FilterItem
     value="wallet, sc"
     title="MetaMask"
     subtitle="ウォレット"

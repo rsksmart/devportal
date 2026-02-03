@@ -80,6 +80,18 @@ export default function MoreActions({editUrl}) {
           <RequestArticle label={links.requestArticle.title} form={links.requestArticle.form} />
         </li>
       )}
+         {links.devCheatsheet && (
+        <li className={`py-3`}>
+          <Link to={links.devCheatsheet.url} className={`link-base d-inline-flex gap-8 align-items-center`}>
+            <IconCommunity/>
+            <Translate
+              id="theme.moreLinks.devCheatsheet"
+            >
+              {links.devCheatsheet.title}
+            </Translate>
+          </Link>
+        </li>
+      )}
     </ul>
   </div>
 }

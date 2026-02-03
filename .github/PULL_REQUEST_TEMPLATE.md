@@ -1,29 +1,28 @@
 ## Title
-
-* Clear and concise description of the change
+* Clear and concise description of the change (e.g., "Docs: Add Tutorial for PowPeg Node Setup")
 
 ## Description
-
-* Briefly explain the purpose of the change.
-* If applicable, describe the issue that was resolved or the feature that was added.
-* Highlight the specific changes made to the documentation.
+* **Purpose:** Briefly explain the reason for this change.
+* **Context:** Describe the issue resolved or the feature added.
+* **Changes:** Summarize the specific updates made to the documentation.
 
 ## Screenshots/GIFs
+* Include any relevant visuals to demonstrate changes in layout or components.
 
-* Include any relevant screenshots or GIFs to visually demonstrate the changes.
+## 🧪 Testing
+* **Verification:** How did you test these changes? (e.g., ran `yarn build` to check for broken links).
+* **Output:** Paste any relevant terminal output or local build logs.
+* *Use N/A if not applicable.*
 
-## Testing
+## Quality Checklist
+* Please confirm the following standards have been met:
 
-* Describe how you tested the changes to ensure they are correct and do not introduce new issues. See how to test build outputs and broken links in [README.md](/README.md) using the `yarn build`command.
-* Use N/A, if not applicable
-
-## Checklist
-
-- [ ] I have read and understood the contributing guidelines.
-- [ ] I have followed the style guide and formatting guidelines.
-- [ ] I have added appropriate comments to explain the changes.
-- [ ] I have tested my changes thoroughly.
+- [ ] **Guidelines:** I have read and followed the [Contributing Guidelines](/CONTRIBUTING.md).
+- [ ] **Vale Linter:** I have run `vale` locally and resolved all `Rootstock.AIisms` and style warnings.
+- [ ] **Engineer Voice:** I have removed AI-style "fluff" (e.g., *unleash, delve into, testament to, ever-evolving landscape*).
+- [ ] **Structural Clarity:** I have replaced **em dashes (—)** with commas or periods and ensured there are no **stacked headings**.
+- [ ] **Code Quality (Rule 016):** Technical comments are placed **above** the code line, not inline at the end.
+- [ ] **Terminology:** I am using `rBTC` (not Smart Bitcoin) and `Rootstock` (not RSK).
 
 ## Refs
-
-* Related links to issues, tickets, etc.
+* Related links to issues, tickets, or external discussions.

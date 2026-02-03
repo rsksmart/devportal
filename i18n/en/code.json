@@ -352,6 +352,9 @@
   "theme.moreLinks.requestArticle": {
     "message": "Request an Article"
   },
+   "theme.moreLinks.devCheatsheet": {
+    "message": "Developer Cheatsheet"
+  },
   "theme.moreLinks.requestArticle.form.title": {
     "message": "Request a New Article",
     "description": "Request an Article form title"
