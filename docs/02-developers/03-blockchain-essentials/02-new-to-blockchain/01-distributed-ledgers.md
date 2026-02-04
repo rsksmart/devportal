@@ -6,8 +6,6 @@ description: "Learn the fundamental concepts of blockchain technology: what bloc
 tags: [guides, developers, blockchain, rsk, rootstock, beginners]
 ---
 
-# Understanding Distributed Ledgers
-
 This module introduces the core concepts a developer must understand before building on Rootstock. Even if you are familiar with Ethereum, this serves as a unified foundation for the course.
 
 ## What Is a Blockchain?

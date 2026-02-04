@@ -6,11 +6,9 @@ description: "Build a simple decentralized application on Rootstock with a front
 tags: [guides, developers, blockchain, rsk, rootstock, dapp, nextjs, ethers]
 ---
 
-# Build Your First dApp
-
 This module walks you through building a simple decentralized application (dApp) on Rootstock. You'll integrate a deployed smart contract with a frontend using Ethers.js and a wallet provider (MetaMask or Rabby). By the end, you'll have a fully functional dApp where users can read/write data on the Rootstock Testnet.
 
-## Overview: What We Are Building
+## Overview
 
 You will build a minimal dApp that:
 - Connects to Rootstock Testnet
@@ -31,7 +29,7 @@ Before starting, ensure you have:
 - Your contract's:
   - address
   - ABI
-  - Testnet RPC
+  - [Testnet RPC](https://rpc.rootstock.io/)
 
 ## Project Setup (Next.js)
 

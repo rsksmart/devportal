@@ -6,8 +6,6 @@ description: "Write, compile, deploy, and interact with your first smart contrac
 tags: [guides, developers, blockchain, rsk, rootstock, deploy, hardhat]
 ---
 
-# Deploy Your First Contract
-
 In this module, you will write, compile, deploy, and interact with your first smart contract on the Rootstock Testnet.
 
 ## Step 1 — Write the Contract

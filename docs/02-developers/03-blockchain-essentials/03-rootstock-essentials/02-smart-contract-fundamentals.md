@@ -6,8 +6,6 @@ description: "Learn the foundational concepts of smart contracts on Rootstock."
 tags: [guides, developers, blockchain, rsk, rootstock, solidity, smart-contracts]
 ---
 
-# Smart Contract Fundamentals
-
 Smart contracts on Rootstock behave similarly to Ethereum because Rootstock is EVM-compatible. This module gives you the foundational concepts you must understand before writing or deploying your first contract.
 
 ## What Are Smart Contracts?

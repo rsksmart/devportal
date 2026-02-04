@@ -6,8 +6,6 @@ description: "Learn how transactions work, what gas is, and how the EVM executes
 tags: [guides, developers, blockchain, rsk, rootstock, beginners, gas, evm]
 ---
 
-# Understanding Gas and Transactions
-
 This module explains how transactions flow through the network, what gas is, and how the Ethereum Virtual Machine (EVM) executes smart contracts.
 
 ## Gas, Transactions, and Blocks

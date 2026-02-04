@@ -6,11 +6,15 @@ description: "Learn how cryptographic keys and wallets work in blockchain system
 tags: [guides, developers, blockchain, rsk, rootstock, beginners, wallets]
 ---
 
-# Understanding Keys and Wallets
-
 This module explains how users interact with blockchains through cryptographic key pairs and wallet software.
 
+
 ## Public/Private Keys
+
+:::info
+For a more detailed guide on this topic, see [Private Keys and Public Keys](/developers/blockchain-essentials/browser/#private-keys-and-public-keys).
+:::
+
 
 Every user interacts with a blockchain through a cryptographic key pair:
 
@@ -53,9 +57,7 @@ A wallet is a tool (software or hardware) that:
 
 ### Recommended Wallets for Rootstock
 
-- **MetaMask** — Most popular, works with Rootstock
-- **Rabby** — Developer-friendly alternative
-- **Rootstock Web Wallet** — Official Rootstock wallet
+For a list of recommended wallets and setup guides, see the [Wallets](/dev-tools/wallets/) section.
 
 ## Summary
 
