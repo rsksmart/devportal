@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "engines": {
-    "node": ">=18.0"
+    "node": "24"
   },
   "scripts": {
     "docusaurus": "docusaurus",
@@ -18,7 +18,13 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "crowdin": "crowdin"
+    "crowdin": "crowdin",
+    "check-links": "node --no-warnings scripts/check-links.mjs",
+    "check-links:en": "node --no-warnings scripts/check-links.mjs --locale=en",
+    "check-links:es": "node --no-warnings scripts/check-links.mjs --locale=es",
+    "check-links:ja": "node --no-warnings scripts/check-links.mjs --locale=ja",
+    "check-links:ko": "node --no-warnings scripts/check-links.mjs --locale=ko",
+    "check-links:external": "node --no-warnings scripts/check-links.mjs --external"
   },
   "dependencies": {
     "@cookbookdev/docsbot": "^4.24.7",
@@ -47,7 +53,8 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.8.0",
     "@docusaurus/types": "^3.8.0",
-    "dotenv": "16.4.7"
+    "dotenv": "16.4.7",
+    "linkinator": "^7.5.3"
   },
   "browserslist": {
     "production": [
