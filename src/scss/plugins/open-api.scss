@@ -216,6 +216,8 @@
 
     &__schema, &__discriminator, &__schema-list-container{
       border-bottom: 1px solid var(--ifm-toc-border-color);
+      scrollbar-width: thin;
+      scrollbar-color: var(--bs-primary) transparent;
     }
     &__schema-item, &__discriminator-item{
       font:700 #{$f16}/1.2 $font-family-base;
@@ -268,7 +270,7 @@
       pre{
         margin-top: 4px;
         scrollbar-width: thin;
-        scrollbar-color: var(--bs-primary) transpare;
+        scrollbar-color: var(--bs-primary) transparent;
         border-radius: 8px;
         border:1px solid var(--ifm-toc-border-color);
         font-size: $f12;
