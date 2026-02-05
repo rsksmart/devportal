@@ -156,6 +156,9 @@
     --ifm-code-background: #{$purple-4};
     --ifm-code-color: #{$purple-light};
 
+    &.alert{
+      padding: unset;
+    }
     [data-theme='dark']:root &{
       --ifm-code-background: #{$purple-3};
       --ifm-code-color: #{$purple};
