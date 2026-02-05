@@ -305,7 +305,7 @@
     background: var(--bs-body-bg);
     border-radius: 20px;
     position: relative;
-    box-shadow: none;
+    box-shadow: none !important;
   }
   .openapi-tabs__code-container:not(.openapi-tabs__code-container-inner){
     padding: 19px;
