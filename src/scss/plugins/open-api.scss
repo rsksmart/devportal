@@ -308,10 +308,10 @@
   .openapi-tabs__code-container:not(.openapi-tabs__code-container-inner){
     padding: 19px;
     //padding: 19px 0;
-    //.theme-code-block{
-    //  padding: 0 19px;
-    //  margin-top: -16px;
-    //}
+    .theme-code-block{
+      //padding: 0 19px;
+      margin-top: -16px;
+    }
   }
   .openapi-tabs__code-container:last-child{
     margin-bottom: 0;
