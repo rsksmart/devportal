@@ -3,7 +3,7 @@
 .menu__list-item {
   &.api-method {
     position: relative;
-
+    padding-left: 10px;
     .menu__link {
       display: flex;
       align-items: center;
@@ -13,67 +13,66 @@
       &:before {
         position: absolute;
         right: 100%;
-        margin-right: 4px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        font-size: 10px;
-        font-weight: 600;
-        text-transform: uppercase;
+        min-width: 42px;
+        top: 0.3em;
+        padding: 2px 4px;
         border-radius: 4px;
-        padding: 2px 6px;
-        min-width: 45px;
-        height: 20px;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.05em;
+        font: 500 #{$f8}/1 var(--bs-body-font-family);
+        text-transform: uppercase;
+        color: var(--bs-body-bg);
+        background-color: var(--ifm-badge-background-color, var(--bs-green));
+
       }
     }
 
     // GET method - teal/cyan
     &.get .menu__link:before {
+      --ifm-badge-background-color: var(--bs-cyan);
       content: 'GET';
-      background-color: #0d9488;
-      color: #fff;
     }
 
     // POST method - green
     &.post .menu__link:before {
+      --ifm-badge-background-color: var(--bs-green);
       content: 'POST';
-      background-color: #16a34a;
-      color: #fff;
     }
 
     // PUT method - blue
     &.put .menu__link:before {
       content: 'PUT';
-      background-color: #2563eb;
-      color: #fff;
+      --ifm-badge-background-color: var(--bs-purple);
     }
 
     // DELETE method - red
     &.delete .menu__link:before {
       content: 'DEL';
-      background-color: #dc2626;
-      color: #fff;
+      --ifm-badge-background-color: var(--bs-danger);
     }
 
     // PATCH method - purple
     &.patch .menu__link:before {
       content: 'PATCH';
-      background-color: #9333ea;
-      color: #fff;
+      --ifm-badge-background-color: var(--bs-purple);
     }
 
     // EVENT method - orange
     &.event .menu__link:before {
       content: 'EVENT';
-      background-color: #ea580c;
-      color: #fff;
+      --ifm-badge-background-color: var(--bs-primary);
     }
   }
 
   // Schema items with badge
   &.schema {
+    padding-left: 10px;
+
     .menu__link {
+      position: relative;
+
       display: flex;
       align-items: center;
       gap: 8px;
@@ -81,21 +80,21 @@
       &:before {
         position: absolute;
         right: 100%;
-        margin-right: 4px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        font-size: 8px;
-        font-weight: 600;
-        text-transform: uppercase;
+        min-width: 42px;
+
+        top: 0.3em;
+
+        padding: 2px 4px;
         border-radius: 4px;
-        padding: 1px 6px;
-        min-width: 45px;
-        height: 20px;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.05em;
+        font: 500 #{$f8}/1 var(--bs-body-font-family);
+        text-transform: uppercase;
+        color: var(--bs-body-bg);
+        background-color: var(--bs-body-color);
         content: 'SCHEMA';
-        background-color: #6b7280;
-        color: #fff;
       }
     }
   }
@@ -110,3 +109,128 @@
 .openapi-tabs__schema-item, .openapi-tabs__discriminator-item{
   color: var(--bs-body-color);
 }
+.theme-api-markdown{
+  --ifm-color-success: var(--bs-green);
+
+  .openapi__heading{
+    margin-bottom: 18px !important;
+  }
+  .openapi__method-endpoint {
+    padding: 8px 12px;
+    border: none;
+    background: var(--ifm-code-background);
+
+    .badge{
+      padding: 1px 4px;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+      color: var(--bs-body-bg);
+      font: 500 #{$f8}/1 var(--bs-body-font-family);
+      text-transform: uppercase;
+
+      &--success{
+        --ifm-badge-background-color: var(--bs-green);
+      }
+      &--info{
+        --ifm-badge-background-color: var(--bs-purple);
+      }
+      &--primary{
+        --ifm-badge-background-color: var(--bs-cyan);
+      }
+      &--danger{
+        --ifm-badge-background-color: var(--bs-danger);
+      }
+      &--secondary{
+        --ifm-badge-background-color: var(--bs-primary);
+      }
+    }
+  }
+  .openapi__method-endpoint-path{
+    color: var(--bs-purple);
+    font:500 #{$f14}/1.28 $font-family-base;
+    margin-left: 8px;
+  }
+
+  .openapi-markdown__details{
+    --ifm-code-background: #{$purple-4};
+    --ifm-code-color: #{$purple-light};
+
+    [data-theme='dark']:root &{
+      --ifm-code-background: #{$purple-3};
+      --ifm-code-color: #{$purple};
+    }
+    & > summary::before{
+      top: 0.35em;
+    }
+
+    &.response > summary::before{
+      top: 0.15em;
+    }
+  }
+  .openapi-left-panel__container > .openapi-markdown__details > summary::before, .openapi-markdown__details.mime > summary::before{
+    top: 0.05em;
+  }
+  .openapi-tabs{
+    &__response-code-item{
+      font:700 #{$f14}/1.28 $font-family-base;
+      border-color: var(--bs-border-color);
+      color: var(--bs-border-color);
+
+      &:not(.active){
+        opacity: 1;
+      }
+
+      &.active{
+        border-color: transparent;
+
+        &.succes{
+          border-color: var(--ifm-color-success);
+        }
+        &.danger{
+          border-color: var(--ifm-color-danger);
+        }
+
+      }
+    }
+
+    &__mime{
+
+    }
+    &__mime-item{
+      font:700 #{$f14}/1.28 $font-family-base;
+      padding: 10px 16px;
+      border-color: var(--bs-border-color);
+      margin-right: 12px;
+      transition: 0.2s;
+
+      &.active{
+        border-color: var(--bs-primary);
+        background-color: var(--bs-primary);
+        color: var(--bs-white);
+      }
+    }
+
+    &__schema, &__discriminator, &__schema-list-container{
+      border-bottom: 1px solid var(--ifm-toc-border-color);
+    }
+    &__schema-item, &__discriminator-item{
+      font:700 #{$f16}/1.2 $font-family-base;
+      letter-spacing: -0.01em;
+      border: 2px solid transparent;
+      border-width: 0 0 2px 0 !important;
+      border-radius: 0;
+      padding: 8px 0;
+      margin-right: 12px;
+      &.active{
+        border-color: var(--bs-primary)
+      }
+    }
+
+    &__discriminator-item{
+      font-size: $f14;
+    }
+
+  }
+}
+
+

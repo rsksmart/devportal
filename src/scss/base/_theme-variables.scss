@@ -38,6 +38,8 @@ html:root {
   --ifm-code-font-size: 95%;
   --ifm-color-content-secondary: #{$gray-600};
 
+  --ifm-color-danger: var(--bs-danger);
+
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
   //Search

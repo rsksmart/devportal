@@ -59,6 +59,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .text-body{
   color: var(--bs-body-color) !important;
 }
+.text-body2-md{
+  font:500 #{$f14}/1.28 $font-family-base;
+}
 .subtitle-1{
   font: 700 #{$f20}/1.2 $font-family-base;
   letter-spacing: -0.024em;
