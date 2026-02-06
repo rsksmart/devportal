@@ -6,11 +6,9 @@ description: "Building private decentralized applications (dApps) on Rootstock i
 tags: [zk, noir, zero-knowledge, privacy, tutorial, solidity, dapp, rootstock]
 ---
 
-# Zero-Knowledge Proofs on Rootstock with Noir
+[Zero-knowledge proofs](https://en.wikipedia.org/wiki/Zero-knowledge_proof) let a user prove they know something (a secret code, a credential, ownership) without ever revealing the secret itself on Rootstock.
 
-[Zero-knowledge proofs](https://en.wikipedia.org/wiki/Zero-knowledge_proof) let a user prove they know something (a secret code, a credential, ownership) without ever revealing the secret itself. On Rootstock — the Bitcoin-secured, EVM-compatible smart contract chain — this unlocks real privacy while preserving Bitcoin-level security.
-
-This hands-on tutorial teaches you how to use **[Noir](https://noir-lang.org/)** (a developer-friendly ZK DSL - Domain Specific Language) to build a **Secret NFT Club**: users get an exclusive membership only by proving they know the secret password — the password never appears on-chain or in the browser console.
+This hands-on tutorial teaches you how to use **[Noir](https://noir-lang.org/)** (a developer-friendly ZK DSL - Domain Specific Language) to build a **Secret NFT Club**: users get an exclusive membership only by proving they know the secret password, the password never appears on-chain or in the browser console.
 
 ## What You'll Build
 

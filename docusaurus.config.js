@@ -42,6 +42,12 @@ const config = {
         title: 'Join the Community',
         url : 'http://discord.gg/rootstock',
       },
+      devCheatsheet : {
+        title: 'Developer Cheatsheet',
+        url : 'https://dev.rootstock.io/Rootstock_Developer_Cheatsheet.pdf',
+        target: '_blank',
+        rel: "noopener noreferrer"
+      },
       reportIssue : {
         title: 'Report an Issue',
         url : 'https://github.com/rsksmart/devportal/issues',
@@ -57,8 +63,8 @@ const config = {
     },
     newsHighlight : [
       {
-        title : 'In December, only Replit-forked ideas will be accepted for the Hacktivator. Learn more',
-        url : 'https://rootstock.hashnode.dev/rootstock-hacktivator-december-special-edition-fork-build-with-replit '
+        title : 'Builder Rootcamp Cohort 1 Kicks Off — January 26, 2026!',
+        url : 'https://rootstock.io/rootcamp/'
       }
     ]
   },
@@ -67,8 +73,9 @@ const config = {
   organizationName: 'rsksmart', // Usually your GitHub org/user name.
   projectName: 'devportal', // Usually your repo name.
 
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: process.env.DOCUSAURUS_BROKEN_LINKS || 'warn',
+  onBrokenMarkdownLinks: process.env.DOCUSAURUS_BROKEN_MARKDOWN_LINKS || 'warn',
+  onBrokenAnchors: process.env.DOCUSAURUS_BROKEN_ANCHORS || 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
