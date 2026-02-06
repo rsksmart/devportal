@@ -661,6 +661,8 @@
     {"source": "/resources/guides/runes-rootstock/airdrop-giveaway-machine/", "destination": "/developers/use-cases/runes-rootstock/airdrop-giveaway-machine/"},
     {"source": "/resources/guides/runes-rootstock/governance-dashboard/", "destination": "/developers/use-cases/runes-rootstock/governance-dashboard/"},
     {"source": "/developers/use-cases/rootstock-layerzero/", "destination": "/developers/use-cases/defi/rootstock-layerzero/"},
-    {"source": "/developers/use-cases/ai-agent-rootstock/", "destination": "/developers/use-cases/ai/ai-agent-rootstock/"}
+    {"source": "/developers/use-cases/ai-agent-rootstock/", "destination": "/developers/use-cases/ai/ai-agent-rootstock/"},
+    {"source": "  /dev-tools/node-rpc/blast-api/", "destination": "  /dev-tools/node-rpc/"}
+  
   ]
 }

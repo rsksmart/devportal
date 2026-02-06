@@ -104,9 +104,9 @@ import { RNS, AddrResolver, RSKRegistrar } from "@rsksmart/rns-sdk";
 Add the configuration for connecting to Rootstock Testnet:
 
 ```js
-const ROOTSTOCK_RPC_NODE = 'https://rpc.rootstock.io/';
+const ROOTSTOCK_RPC_NODE = 'https://rpc.testnet.rootstock.io/${APIKEY}';
 
-// Contract addresses for RSK Testnet
+// Contract addresses for Rootstock Testnet
 // See: https://github.com/rsksmart/rns-sdk
 const ADDRESSES = {
   // RNS Registry (testnet)
