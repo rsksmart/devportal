@@ -49,4 +49,12 @@ To understand how block explorers work, read the complete guide on [exploring bl
     linkHref="/dev-tools/explorers/blockchair/"
     linkTitle="Use the Explorer"
   />
+    <CardsGridItem
+    title="Tenderly"
+    subtitle="explorers"
+    color="cyan"
+    description="Tenderly is full-stack Web3 development infrastructure that helps developers build, stage, test, debug, and monitor decentralized applications."
+    linkHref="https://docs.tenderly.co/developer-explorer"
+    linkTitle="Use the Explorer"
+  />
 </CardsGrid>

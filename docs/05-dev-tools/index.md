@@ -277,7 +277,7 @@ description: "Explore a curated selection of smart contract development tools an
     color="orange"
     linkHref="https://tenderly.co/"
     linkTitle="Access on-chain data"
-    description="Tenderly helps developers build, monitor, and improve smart contracts by providing a set of tools to boost productivity, save time, and ensure efficient smart contracts functionality."
+    description="Tenderly is full-stack Web3 development infrastructure that helps developers build, stage, test, debug, and monitor decentralized applications."
   />
 <FilterItem
     value="deploy, sc, sdk, demos, dev-tools"
