@@ -71,7 +71,7 @@ Set up your wallet to connect with Rootstock networks:
     - **Mainnet:** `m/44'/137'/0'/0/N`
     - **Testnet:** `m/44'/37310'/0'/0/N`
 
- *See the [Account-Based Addresses](#account-based-addresses) section for guidance on address verification.*
+ *See the [Account-Based Addresses](/concepts/account-based-addresses/) section for guidance on address verification.*
 
 :::info Info
 
@@ -84,17 +84,17 @@ See [Account based addresses](/concepts/account-based-addresses/) section for mo
 <Step title="Faucets">
 
 Get test tokens on Rootstock:
-* [Rootstock Faucet](https://faucet.rootstock.io/): Get free test RBTC tokens for development and testing.
-* [RIF Testnet Faucet](https://faucet.rifos.org/): Obtain free RIF testnet tokens to explore the RIF ecosystem.
-* [Thirdweb Faucet](https://thirdweb.com/rootstock-testnet): Get free test RBTC tokens for development and testing.
-* [Blast Faucet](https://blastapi.io/faucets/rootstock-testnet): Get free test RBTC tokens for development and testing.
+* [Rootstock Faucet](https://faucet.rootstock.io/): Get free test rBTC tokens for development and testing.
+* [RIF Testnet Faucet](https://faucet.rif.technology/): Obtain free RIF testnet tokens to explore the RIF ecosystem.
+* [Thirdweb Faucet](https://thirdweb.com/rootstock-testnet): Get free test rBTC tokens for development and testing.
+* [Blast Faucet](https://blastapi.io/faucets/rootstock-testnet): Get free test rBTC tokens for development and testing.
 
 </Step>
 
 <Step title="Contract Addresses">
 
 Understand and reference key contract addresses for development:
-- Access the full list of **[Rootstock Contract Addresses](#contract-addresses)**.
+- Access the full list of **[Rootstock Contract Addresses](/developers/smart-contracts/contract-addresses/)**.
 
 </Step>
 
@@ -104,7 +104,7 @@ Choose one of the following environments to build and deploy your contracts:
 
 - **Hardhat:**
   - A popular framework for managing smart contract development and testing.
-  - Use the [Hardhat Starter Kit](#hardhat-starter-kit) to jumpstart your project.
+  - Use the [Hardhat Starter Kit](/developers/quickstart/hardhat) to jumpstart your project.
 
 - **Foundry:**
   - A lightweight, fast alternative to Hardhat.

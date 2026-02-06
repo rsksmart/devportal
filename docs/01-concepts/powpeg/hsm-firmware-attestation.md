@@ -2,9 +2,9 @@
 title: "PowPeg HSM Firmware Attestation"
 sidebar_position: 250
 sidebar_label: Verify PowPeg Nodes
-tags: [rsk, rootstock, rbtc, btc, peg, powpeg, hsm]
-description: "Learn how to verify Powpeg nodes using the HSM Firmware Attestation."
-render_features: 'powpeg-hsm-attestation-frame'
+tags: [rootstock, rBTC, btc, peg, PowPeg, hsm, rsk]
+description: "Learn how to verify PowPeg nodes using the HSM Firmware Attestation."
+render_features: 'PowPeg-hsm-attestation-frame'
 ---
 
 To verify the PowPeg protocol nodes, follow the HSM firmware attestation process using the steps below. See the [Attestation README](https://github.com/rsksmart/rsk-powhsm/blob/2.3.5/docs/attestation.md).
