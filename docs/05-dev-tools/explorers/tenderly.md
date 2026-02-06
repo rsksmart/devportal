@@ -1,6 +1,6 @@
 ---
 sidebar_position: 7
-sidebar_label: Tenderly Developer Explorer
+sidebar_label: Tenderly
 title: Get Started with the Tenderly Developer Explorer
 tags: [rsk, explorer, rootstock, tenderly, smart contracts, transactions, tools]
 ---
