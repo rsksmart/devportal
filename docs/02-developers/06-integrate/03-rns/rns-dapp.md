@@ -120,7 +120,7 @@ const ADDRESSES = {
 };
 ```
 
-:::tip For Mainnet, use the following addresses instead:
+For Mainnet, use the following addresses instead:
 
 | Contract | Mainnet Address |
 | ---------- | --------------- |
@@ -129,7 +129,6 @@ const ADDRESSES = {
 | FIFS Addr Registrar | 0xd9c79ced86ecf49f5e4a973594634c83197c35ab |
 | RIF Token | 0x2acc95758f8b5f583470ba265eb685a8f45fc9d5 |
 
-:::
 
 ## 4. Initialize the Provider
 
