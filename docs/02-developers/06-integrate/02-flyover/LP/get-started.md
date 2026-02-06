@@ -200,6 +200,9 @@ The service is configured in `docker-compose/monitoring/src/config.ts` and suppo
 
 The service can be configured to monitor other addresses by modifying the `MONITORED_ADDRESSES` array in `docker-compose/monitoring/src/config.ts`.
 
+## Additional clarifications
+- The liquidity provider server is designed to run with an exclusive wallet. Horizontal scaling requires a separate wallet per instance. This codebase assumes a non-shared wallet.
+
 ## More Information
 
 If you're looking forward to integrate with Flyover Protocol then you can check the [Flyover SDK repository](https://github.com/rsksmart/flyover-sdk/blob/main/README.md).
