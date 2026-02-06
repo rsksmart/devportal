@@ -17,7 +17,7 @@ Before diving into the architecture, ensure you have read the [Blockchain Overvi
 Rootstock combines the best of both worlds: Bitcoin's industry-leading security and Ethereum's powerful smart contract capabilities. This is achieved through three main architectural pillars:
 
 - **[Merge-Mining](/developers/blockchain-essentials/overview/#merged-mining):** Allows Bitcoin miners to secure the Rootstock network simultaneously.
-- **[PowPeg](/developers/blockchain-essentials/overview/#PowPeg):** A trust-minimized bridge enabling 2-way transfers between BTC and rBTC.
+- **[PowPeg](/developers/blockchain-essentials/overview/#powpeg):** A trust-minimized bridge enabling 2-way transfers between BTC and rBTC.
 - **[Rootstock Virtual Machine (RVM)](/developers/blockchain-essentials/overview/#evm-compatible-smart-contracts):** An EVM-compatible execution environment for smart contracts.
 
 This architecture ensures that Rootstock remains the most secure and functional smart contract platform tied to the Bitcoin ecosystem.
