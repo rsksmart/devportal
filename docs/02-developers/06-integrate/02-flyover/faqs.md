@@ -1,11 +1,10 @@
 ---
-
-## sidebar_label: FAQs
-
+sidebar_label: FAQs
 sidebar_position: 250  
 title: Frequently Asked Questions  
 tags: [rsk, rootstock, rif, flyover, integrate, integration guide, rbtc, powpeg]  
 description: Frequently asked questions about the rBTC Flyover.
+---
 
 Here you can find a list of frequently asked questions (FAQs) about the rBTC Flyover.
 
@@ -121,10 +120,3 @@ Here you can find a list of frequently asked questions (FAQs) about the rBTC Fly
   </Accordion.Item>
 </Accordion>
 ```
-
-ustody of
-
-```
-
-```
-

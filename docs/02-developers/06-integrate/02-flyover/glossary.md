@@ -1,11 +1,10 @@
 ---
-
-## sidebar_label: Glossary
-
+sidebar_label: Glossary
 sidebar_position: 245  
 title: Glossary  
 tags: [rsk, rootstock, rif, flyover, integrate, integration guide, rbtc, powpeg]  
 description: Glossary of terms for the rBTC Flyover protocol
+---
 
 See a list of terms about the Flyover and their meanings.
 
@@ -14,7 +13,7 @@ See a list of terms about the Flyover and their meanings.
   <Accordion.Item eventKey="flyover">
     <Accordion.Header as="h3">rBTC Flyover</Accordion.Header>
     <Accordion.Body>
-      The rBTC Flyover is a protocol built on the Rootstock PowPeg that speeds up BTC–rBTC transfers by using a pool of Liquidity Providers (LPs) while preserving trust. In a peg-in, user funds go to the PowPeg federation (a decentralized multi-signature entity). In a peg-out, user funds go to the Liquidity Bridge Contract (LBC), a smart contract. The Liquidity Provider never receives or holds custody of user funds. Flyover inherits the same security guarantees as the PowPeg.
+      The rBTC Flyover is a protocol built on the Rootstock PowPeg that speeds up BTC–rBTC transfers by using a pool of Liquidity Providers (LPs) while preserving trust. It inherits the same security guarantees as the PowPeg. In a peg-in, user funds go to the PowPeg federation (a decentralized multi-signature entity). In a peg-out, user funds go to the Liquidity Bridge Contract (LBC), a smart contract. The Liquidity Provider never receives or holds custody of user funds.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="0">
@@ -38,7 +37,7 @@ See a list of terms about the Flyover and their meanings.
   <Accordion.Item eventKey="2">
     <Accordion.Header as="h3">Liquidity Providers (LP)</Accordion.Header>
     <Accordion.Body>
-      LPs are entities that supply BTC and rBTC liquidity so the Flyover can offer faster transfers. They do not receive or custody user funds. On peg-in, the federation receives the user's BTC. On peg-out, the Liquidity Bridge Contract holds and releases funds. LPs are repaid by the protocol after fulfilling a transfer and can earn configurable fees.
+      LPs are entities that supply BTC and rBTC liquidity so the Flyover can offer faster transfers. They do not receive or hold user funds. On peg-in, the federation receives the user's BTC. On peg-out, the Liquidity Bridge Contract holds and releases funds. LPs are repaid by the protocol after fulfilling a transfer and can earn configurable fees.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="3">
