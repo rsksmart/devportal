@@ -1,7 +1,7 @@
 ---
-sidebar_label: Model Context Protocols (MCP) | Overview
+sidebar_label: Introduction to MCPs
 sidebar_position: 200
-title: Understanding Model Context Protocols (MCPs)
+title: Introducing Model Context Protocols (MCPs) on Rootstock
 tags: [rsk, rootstock, mcp, ai agents, ai]
 description: "This section demonstrates how to interact with the Rootstock blockchain to build and deploy innovative AI-enabled dApps."
 ---

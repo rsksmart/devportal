@@ -6,7 +6,7 @@ description: "Exploring the convergence of Artificial Intelligence and Bitcoin-n
 tags: [ai, mcp, agents, autonomous-finance, emerging-tech, fundamentals]
 ---
 
-**AI & Emerging Tech** on Rootstock focuses on giving AI agents capabilities to read the chain and "hands" to execute transactions. By combining Rootstock's security with the Model Context Protocol (MCP), we enable autonomous agents to manage Bitcoin assets intelligently.
+Focus on giving AI agents capabilities to read the chain and power to execute transactions. By combining Rootstock's security with the Model Context Protocol (MCP), we enable autonomous agents to manage Bitcoin assets intelligently.
 
 <!-- On Rootstock, AI is more than a chatbot; it is a participant in the economy.
 

@@ -14,7 +14,6 @@ Use the interactive filters below to find the specific guide for your developmen
 
 <Filter
 values={[
-  {label: 'Governance', value: 'institutional'},
   {label: 'Generate Yield', value: 'btcfi'},
   {label: 'Onboard Users', value: 'ux'},
   {label: 'Build AI Agents', value: 'emerging'},
@@ -101,17 +100,6 @@ values={[
   linkTitle="View Guide"
   description="Connect AI models to Rootstock data using the Model Context Protocol (MCP) for real-time on-chain analysis."
 />
-
-<FilterItem
-  value="institutional"
-  title="DAO-as-a-Service"
-  subtitle="Governance"
-  color="cyan"
-  linkHref="/use-cases/institutional-governance/dao-rootstock-collective"
-  linkTitle="View Guide"
-  description="Launch on-chain governance systems and manage institutional treasuries via RootstockCollective."
-/>
-
 </Filter>
 
 ## 💡 Help Us Expand the Library
