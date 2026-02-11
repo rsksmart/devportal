@@ -9,9 +9,12 @@ description: "This guide explains how developers and project owners can submit t
 
 This guide explains how developers and project owners can submit their dApp and associated tokens to be listed on the Explorer dApps page, ensuring the project is displayed correctly with all required data.
 
+### Why submit your dApp?
+Submitting your dApp allows it to be properly listed on the Explorer dApps page, ensuring accurate data, better visibility, and a trusted experience for users interacting with your project.
+
 ## 1. Visit the Rootstock Explorer
 
-To start submitting a dApp go to the [Rootstock Explorer Testnet](https://explorer.testnet.rootstock.io/) or [Rootstock Explorer Mainnet](https://explorer.rootstock.io/)
+To start submitting a dApp, go to the [Rootstock Explorer Testnet](https://explorer.testnet.rootstock.io/) or [Rootstock Explorer Mainnet](https://explorer.rootstock.io/)
 
 ## 2. Navigate to the dApps Page
 
