@@ -64,41 +64,46 @@ const useCaseData = {
           href: '/use-cases/ai-agents/ai-agent-rootstock',
         },
         {
-          title: <Translate>Integrating SDK Logic into Agentic Workflows</Translate>,
-          href: '/use-cases/ai-agents/integrate-rootstock-sdk',
-        },
-      ],
-    },
-    {
-      title: <Translate>Govern Communities</Translate>,
-      color: 'cyan',
-      description: (
-        <Translate>Manage shared treasuries and protocol parameters with on-chain voting and the Collective SDK.</Translate>
-      ),
-      list: [
-        {
-          title: <Translate>On-Chain Voting with Collective SDK</Translate>,
-          href: '/use-cases/govern-communities/onchain-voting-collective-sdk',
-        },
-      ],
-    },
-    {
-      title: <Translate>Automate Payments</Translate>,
-      color: 'orange',
-      description: (
-        <Translate>Launch custom tokens and integrate Bitcoin-native payments, stablecoins, and agentic commerce.</Translate>
-      ),
-      list: [
-        {
           title: <Translate>Agentic Commerce with x402</Translate>,
           href: '/use-cases/payments-assets/agentic-commerce',
         },
         {
-          title: <Translate>Mock USDT0 for Testnet</Translate>,
-          href: '/use-cases/payments-assets/stablecoin-mock-usdt0',
+          title: <Translate>Integrating SDK Logic into Agentic Workflows</Translate>,
+          href: '/use-cases/ai-agents/integrate-rootstock-sdk',
         },
+        
       ],
     },
+    // {
+    //   title: <Translate>Govern Communities</Translate>,
+    //   color: 'cyan',
+    //   description: (
+    //     <Translate>Manage shared treasuries and protocol parameters with on-chain voting and the Collective SDK.</Translate>
+    //   ),
+    //   list: [
+    //     {
+    //       title: <Translate>On-Chain Voting with Collective SDK</Translate>,
+    //       href: '/use-cases/govern-communities/onchain-voting-collective-sdk',
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: <Translate>Automate Payments</Translate>,
+    //   color: 'orange',
+    //   description: (
+    //     <Translate>Launch custom tokens and integrate Bitcoin-native payments, stablecoins, and agentic commerce.</Translate>
+    //   ),
+    //   list: [
+    //     {
+    //       title: <Translate>Agentic Commerce with x402</Translate>,
+    //       href: '/use-cases/payments-assets/agentic-commerce',
+    //     },
+    //     {
+    //       title: <Translate>Mock USDT0 for Testnet</Translate>,
+    //       href: '/use-cases/payments-assets/stablecoin-mock-usdt0',
+    //     },
+    //   ],
+    // },
   ]
 };
 

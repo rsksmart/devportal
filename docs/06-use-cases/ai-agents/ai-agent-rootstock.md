@@ -1,5 +1,5 @@
 ---
-sidebar_label: AI Agents
+sidebar_label: Conversational AI Agents
 sidebar_position: 200
 title: Conversational AI Agent with Blockchain Actions on Rootstock
 tags: [rsk, rootstock, ai agents, ai]

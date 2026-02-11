@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Govern Communities
+title: Integrate RIF Tools
 sidebar_label: Overview
 description: "Blueprints for institutional-grade custody and decentralized coordination on Rootstock."
 tags: [institutional, governance, dao, safe, multi-sig, fundamentals]
