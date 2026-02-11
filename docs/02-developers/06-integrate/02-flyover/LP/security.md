@@ -6,28 +6,40 @@ tags: [rsk, rootstock, rif, flyover, integrate, integration guide, rbtc, powpeg,
 description: Learn about the security process for the Liquidity Provider Server in the Flyover protocol, including vulnerability reporting, disclosure policies, and public keys.
 ---
 
-# RootstockLabs's Security Process
+# Liquidity Provider Server Security Process
 
 We are committed to conduct our security process in a professional and civil manner. Public shaming, under-reporting or misrepresentation of vulnerabilities will not be tolerated.
 
 ## Responsible Disclosure
 
-For all security related issues, RootstockLabs has two main points of contact. Reach us at <security@rootstocklabs.com> or refer to our [Bug Bounty Program](https://www.rootstocklabs.com/bug-bounty-program/). **Do not open up a GitHub issue if the bug is a security vulnerability**
+For all security related issues, Liquidity Provider Server has two main points of contact. Reach us at `security@rootstocklabs.com` or refer to our [Bug Bounty Program](https://www.rootstocklabs.com/bug-bounty-program). **Do not open up a GitHub issue if the bug is a security vulnerability**
 
 **Ensure the bug was not already reported** by searching on GitHub under [Issues](https://github.com/rsksmart/liquidity-provider-server/issues).
 
-## Disclosure Policy
+## Vulnerability Handling
 
-- Follow Immunefi's [disclosure guidelines](https://immunefi.com/responsible-publication/).
-- Public disclosure of a vulnerability makes it ineligible for a bounty. If the user reports the vulnerability to other security teams (e.g. Ethereum or ETC) but reports to RootstockLabs with considerable delay, then RootstockLabs may reduce or cancel the bounty.
+### Response Time
 
-For more information, check RootstockLabs bounty program policy at [Immunefi](https://immunefi.com/bug-bounty/rootstocklabs/information)
+RootstockLabs will make a best effort to meet the following response times for reported vulnerabilities:
+
+* Time to first response (from report submit) - 5 business days
+* Time to triage (from report submit) - 7 business days
+* Time to bounty (from triage) - 15 business days
+
+We'll try to keep you informed about our progress throughout the process.
+
+### Disclouse Policy
+
+* Follow HackerOne's [disclosure guidelines](https://www.hackerone.com/disclosure-guidelines).
+* Public disclosure of a vulnerability makes it ineligible for a bounty. If the user reports the vulnerability to other security teams (e.g. Ethereum or ETC) but reports to RootstockLabs with considerable delay, then RootstockLabs may reduce or cancel the bounty.
+
+For more information check RootstockLabs bounty program policy at [HackerOne](https://hackerone.com/rootstocklabs)
 
 ## Public Keys
 
 ### Security
 
-```gpg
+```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v2
 
