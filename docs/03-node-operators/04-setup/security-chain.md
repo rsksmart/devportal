@@ -53,7 +53,7 @@ The file`SHA256SUMS.asc` is signed with Rootstock public key and includes SHA256
 _Note: Ensure to `cd` into the [`rskj`](https://github.com/rsksmart/rskj) directory_ before executing the commands below.
 
 ```bash
-gpg --verify SHA256SUMS.asc
+gpg --verify SHA256SUMS.asc 
 ```
 
 The output should look like this:
@@ -77,7 +77,6 @@ The authenticity of the script `configure.sh` is checked using the `sha256sum` c
 
 Linux - Windows (bash console)
 
-````mdx-code-block
 <Tabs>
   <TabItem value="linux" label="Linux" default>
     ```bash
@@ -90,11 +89,9 @@ Linux - Windows (bash console)
    ```
   </TabItem>
 </Tabs>
-````
 
 ## Run configure script to configure secure environment
 
-````mdx-code-block
 <Tabs>
   <TabItem value="linux" label="Linux, Mac OSX" default>
     ```bash
@@ -102,4 +99,3 @@ Linux - Windows (bash console)
     ```
   </TabItem>
 </Tabs>
-````

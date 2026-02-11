@@ -120,15 +120,15 @@ const ADDRESSES = {
 };
 ```
 
-:::tip For Mainnet, use the following addresses instead:
+For Mainnet, use the following addresses instead:
 
 | Contract | Mainnet Address |
 | ---------- | --------------- |
-| `Registry` | `0xcb868aeabd31e2b66f74e9a55cf064abb31a4ad5` |
-| `RSK Owner` | `0x45d3e4fb311982a06ba52359d44cb4f5980e0ef1` |
-| `FIFS Addr Registrar` | `0xd9c79ced86ecf49f5e4a973594634c83197c35ab`|
-| `RIF Token` | `0x2acc95758f8b5f583470ba265eb685a8f45fc9d5` |
-:::
+| Registry | 0xcb868aeabd31e2b66f74e9a55cf064abb31a4ad5 |
+| RSK Owner | 0x45d3e4fb311982a06ba52359d44cb4f5980e0ef1 |
+| FIFS Addr Registrar | 0xd9c79ced86ecf49f5e4a973594634c83197c35ab |
+| RIF Token | 0x2acc95758f8b5f583470ba265eb685a8f45fc9d5 |
+
 
 ## 4. Initialize the Provider
 
