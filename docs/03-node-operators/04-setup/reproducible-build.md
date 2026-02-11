@@ -39,7 +39,6 @@ See how to [Setup and Run RSKj using Java](/node-operators/setup/installation/ja
 
 Create a ```Dockerfile``` to setup the build environment.
 
-````mdx-code-block
 <Tabs>
   <TabItem value="linux" label="Linux" default>
       ```bash
@@ -81,7 +80,6 @@ Create a ```Dockerfile``` to setup the build environment.
       ```
   </TabItem>
 </Tabs>
-````
 
 **Response:**
 
@@ -118,10 +116,10 @@ if you run into any problems, ensure you're running the commands on the right fo
 :::
 
 This may take several minutes to complete. What is done is:
-- Place in the RSKj repository root because we need Gradle and the project.
-- Runs the [secure chain verification process](/node-operators/setup/security-chain/).
-- Compile a reproducible RSKj node.
-- `./gradlew clean build -x test` builds without running tests.
+- Place in the RSKj repository root because we need Gradle and the project
+- Runs the [secure chain verification process](/node-operators/setup/security-chain/)
+- Compile a reproducible RSKj node
+- `./gradlew clean build -x test` builds without running tests
 
 
 ## Verify Build

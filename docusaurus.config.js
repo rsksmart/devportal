@@ -73,8 +73,9 @@ const config = {
   organizationName: 'rsksmart', // Usually your GitHub org/user name.
   projectName: 'devportal', // Usually your repo name.
 
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: process.env.DOCUSAURUS_BROKEN_LINKS || 'warn',
+  onBrokenMarkdownLinks: process.env.DOCUSAURUS_BROKEN_MARKDOWN_LINKS || 'warn',
+  onBrokenAnchors: process.env.DOCUSAURUS_BROKEN_ANCHORS || 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you

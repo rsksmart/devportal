@@ -210,14 +210,6 @@ sync {
 
 Describes the configuration for the RPC protocol.
 
-* `rpc.allowCallStateOverride = boolean`
-  Whether to allow StateOverride in eth_call or not.
-* `rpc.maxAccountOverrides = int`
-  Maximum amount of account overrides to perform on eth_call's state override
-* `rpc.maxOverridableCodeSize = int`
-  Maximum size (in bytes) of code to be overridden on eth_call's state override
-* `rpc.maxStateOverrideChanges = int`
-  Maximum amount of state changes allowed on eth_call's state override.
 * `rpc.providers = []`
   lists the different providers (up to this moment, just `web`).
   `rpc.providers.web` has a global setting for every web provider,
