@@ -1,42 +1,41 @@
 ---
 sidebar_label: FAQs
-sidebar_position: 250
-title: Frequently Asked Questions
-tags: [rsk, rootstock, rif, flyover, integrate, integration guide, rbtc, powpeg]
-description: The PowPeg is a user-friendly interface for the conversion of BTC to rBTC and vice versa. It is secured by the powpeg protocol, which is a unique 2-way peg system that allows users to natively transfer bitcoins from the Bitcoin blockchain to the Rootstock blockchain and vice versa, creating a token called rBTC that is pegged to the value of Bitcoin.
+sidebar_position: 250  
+title: Frequently Asked Questions  
+tags: [rsk, rootstock, rif, flyover, integrate, integration guide, rbtc, powpeg]  
+description: Frequently asked questions about the rBTC Flyover.
 ---
 
-Here, you can find a list of frequently asked questions (FAQs) about the rBTC Flyover.
+Here you can find a list of frequently asked questions (FAQs) about the rBTC Flyover.
 
 ## General
 
-````mdx-code-block
+```mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">1. What is rBTC Flyover?</Accordion.Header>
     <Accordion.Body>
-      - rBTC Flyover is an innovative protocol built on top of the Rootstock network that significantly speeds up the process of transferring Bitcoin (BTC) to Rootstock Bitcoin (rBTC). It achieves this by leveraging a pool of liquidity providers who hold both BTC and rBTC, enabling near-instantaneous transfers with minimal confirmations.
+      rBTC Flyover is a protocol built on the Rootstock PowPeg that speeds up BTC–rBTC transfers using a pool of Liquidity Providers (LPs) while preserving trust-minimization. User funds never go to the LP. On peg-in, the PowPeg federation (a decentralized multi-signature entity) receives the user's BTC. On peg-out, the Liquidity Bridge Contract (smart contract) receives and releases the user's rBTC. Flyover offers faster transfer times with minimal confirmations while inheriting the PowPeg's security model.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
     <Accordion.Header as="h3">2. How does Flyover compare to the traditional PowPeg?</Accordion.Header>
     <Accordion.Body>
-      - The PowPeg requires a lengthy 100-block confirmation period for security, resulting in transfer times of around 16 hours. Flyover, on the other hand, can be configured by the Liquidity Provider to be as low as 2 block confirmations (depending on the liquidity provider), reducing transfer times significantly to as low as 10-20 minutes.
-      - Note: For peg outs, LPs will need to wait for 2 Bitcoin block confirmations before receiving a refund.
+      The PowPeg requires a 100-block confirmation period for security, so transfer times are around 16 hours. Flyover can be configured by the Liquidity Provider to use as few as 2 Bitcoin block confirmations for peg-in, reducing transfer times to about 10–20 minutes. For peg-outs, LPs wait for 2 Bitcoin block confirmations before receiving a refund.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">
     <Accordion.Header as="h3">3. Is Flyover secure?</Accordion.Header>
     <Accordion.Body>
-      - Yes, Flyover is built on top of the proven security of the PowPeg. It inherits the same security guarantees while offering significantly faster transfer speeds.
+      Yes. Flyover is built on the PowPeg and inherits the same security guarantees. Trust-minimization is preserved: in both peg-in and peg-out, a decentralized entity receives the funds. On peg-in, the federation receives the user's BTC. On peg-out, the smart contract (Liquidity Bridge Contract) holds and releases the funds. The Liquidity Provider never receives or holds custody of user funds. This design is relevant for institutional users who require clear custody and security.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
-````
+```
 
 ## For Developers
 
-````mdx-code-block
+```mdx-code-block
 <Accordion>
 <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">4. How can I integrate Flyover in my dApp? </Accordion.Header>
@@ -57,11 +56,11 @@ Here, you can find a list of frequently asked questions (FAQs) about the rBTC Fl
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
-````
+```
 
 ## For Liquidity Providers
 
-````mdx-code-block
+```mdx-code-block
 <Accordion>
 <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">7. How do I become a Liquidity Provider?</Accordion.Header>
@@ -99,7 +98,7 @@ Here, you can find a list of frequently asked questions (FAQs) about the rBTC Fl
 
 ## For Users - Converting BTC to rBTC and vice versa
 
-````mdx-code-block
+```mdx-code-block
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">11. How can I use Flyover to transfer BTC to rBTC?</Accordion.Header>
@@ -120,4 +119,4 @@ Here, you can find a list of frequently asked questions (FAQs) about the rBTC Fl
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
-````
+```
