@@ -104,7 +104,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="Rootstock Explorer"
     subtitle="Explorers"
     color="orange"
-    linkHref="/dev-tools/explorers/rootstock/"
+    linkHref="/dev-tools/explorers/rootstock-explorer/"
     linkTitle="Use the Explorer"
     description="Explore transactions, blocks, addresses, tokens, stats and interact with smart contracts on the Rootstock Explorer."
   />

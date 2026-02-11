@@ -47,7 +47,7 @@ value="beginner, advanced"
 title="Zero-Knowledge Proofs on Rootstock with Noir"
 subtitle="zero knowledge proofs"
 color="orange"
-linkHref="/resources/tutorials/zk-prrofs-with-noir/"
+linkHref="/resources/tutorials/zk-proofs-with-noir/"
 description="Building private decentralized applications (dApps) on Rootstock is key to ensuring user confidentiality and security. Zero-Knowledge Proofs (ZK proofs) and Noir form a powerful combination, blending advanced cryptography with a developer-friendly language to create privacy-focused solutions."
 />
 <FilterItem

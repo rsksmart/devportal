@@ -1,12 +1,12 @@
 ---
-sidebar_position: 3
-sidebar_label: Rootstock
-title: Get Started with the Rootstock Explorer
+sidebar_position: 200
+sidebar_label: Navigate the Explorer
+title: Navigate the Rootstock Explorer
 tags: [overview, explorer, rootstock, smart contracts, transactions, developer tools]
 description: Explore blocks, transactions, addresses, tokens, and smart contracts on the Rootstock blockchain.
 ---
 
-The [Rootstock Explorer](https://explorer.rootstock.io/) is a block explorer for the Rootstock mainnet. You use it to look up transactions, blocks, addresses, and tokens, to read and interact with verified smart contracts, and to inspect attestations and dApps. You can also add a token to MetaMask from the top navigation or from a token page.
+The [Rootstock Explorer](https://explorer.rootstock.io/) is a block explorer for the Rootstock mainnet and [testnet](https://explorer.testnet.rootstock.io/). In this guide, you will learn how to use the explorer to look up transactions, blocks, addresses, and tokens, to read and interact with verified smart contracts, and to inspect attestations and dApps. You can also add a token to MetaMask from the top navigation or from a token page.  
 
 ## Getting Started
 
