@@ -67,9 +67,11 @@ Interoperability on Rootstock is handled at the protocol level through the **Bri
 
 | Pillar | Description | Best Use Case |
 | :--- | :--- | :--- |
+| **Superbridge SDK** | Enable secure movement of assets between Bitcoin and Rootstock using the Super Bridge SDK. | Trustless DeFi & L2 interoperability. |
 | **PowPeg** | The decentralized, native bridge secured by the hardware security modules of the federation. | Institutional & high-value transfers. |
 | **Flyover** | A liquidity-based fast bridge that uses LPs to front the funds for the user. | Retail users & fast dApp onboarding. |
 | **Union (BitVMX)** | A trust-minimized 1-of-N bridge that uses optimistic fraud proofs on Bitcoin. | Trustless DeFi & L2 interoperability. |
+| **Layerzero** | Build Omnichain Fungible Token (OFTs) on Rootstock with Layerzero. | Trustless DeFi & L2 interoperability. |
 
 ## Key Concepts
 

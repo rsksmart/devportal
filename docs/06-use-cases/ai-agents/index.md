@@ -73,9 +73,9 @@ When building AI solutions, you utilize [MCP Server](/use-cases/ai-emerging/mcp-
 | Pillar | Description | Primary Tool/Protocol |
 | :--- | :--- | :--- |
 | **Connectivity** | Standardized servers that allow LLMs like Claude or GPT to "read" Rootstock data. | [Rootstock MCP Server](https://github.com/rsksmart/rootstock-mcp-server) |
+| **SDK** | Equip your AI agents with the eyes to read the chain and the hands to execute Bitcoin-native transactions. | [Rootstock SDK]( [https://github.com/rsksmart/sdk-base](https://github.com/rsksmart/sdk-base)) |
 | **Autonomy** | Granting AI agents the power to execute transactions within user-defined guardrails. | [Spend Permissions](/use-cases/ai-emerging/autonomous-agents-btcfi) |
 | **Intelligence** | Using on-chain data to train or fine-tune models specifically for the Bitcoin ecosystem. | [The Graph / Indexers](/dev-tools/data/thegraph/) |
-| **Verifiability** | Proof of decision-making, ensuring that an agent's actions match its programmed logic. | [Smart Contract Audits](#) |
 
 ## Key Concepts
 
