@@ -21,9 +21,9 @@ To understand how block explorers work, read the complete guide on [exploring bl
     title="Rootstock Explorer"
     subtitle="explorers"
     color="cyan"
-    description="The Rootstock Explorer provides a UI for exploring and verifying transactions, blocks, addresses, tokens, stats, and interacting with smart contracts."
-    linkHref="/dev-tools/explorers/rootstock/"
-    linkTitle="Use the Explorer"
+    description="Look up transactions, blocks, addresses, and tokens on mainnet or testnet. View network stats and interact with verified smart contracts."
+    linkHref="/dev-tools/explorers/rootstock-explorer/"
+    linkTitle="Explorer Tutorials"
   />
    <CardsGridItem
     title="Blockscout Explorer"

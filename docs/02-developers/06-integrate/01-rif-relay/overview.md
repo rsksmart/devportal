@@ -32,7 +32,7 @@ RIF Relay is built in modules, the entire system is made up by 3 modules.
 
 Each module has instructions for development and usage.
 
-[Deprecated Docs](docs/README.md)
+[Deprecated Docs](https://github.com/rsksmart/rif-relay)
 
 
 ## Contribution Guidelines

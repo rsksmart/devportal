@@ -467,7 +467,7 @@ Response:
 ```bash
 Transaction sent! Hash: 0x5658d438fb900b070df70f7298ab2d666926d051a38ec4bb16a89e3915bd1b1f
 ```
-Search the transaction hash in the respective [block explorer](https://dev.rootstock.io/dev-tools/explorers/rootstock/) for a more detailed result of the execution.
+Search the transaction hash in the respective [block explorer](https://dev.rootstock.io/dev-tools/explorers/rootstock-explorer/) for a more detailed result of the execution.
 
 
 ## Troubleshooting

@@ -22,6 +22,7 @@ values={[
 {label: 'Beginner', value: 'beginner'},
 {label: 'Advanced', value: 'advanced'},
 {label: 'Port to Rootstock', value: 'port-dapps'},
+{label: 'Explorer', value: 'explorer'},
 {label: 'DeFi', value: 'defi'},
 {label: 'AI', value: 'ai'}
 ]}>
@@ -46,7 +47,7 @@ value="beginner, advanced"
 title="Zero-Knowledge Proofs on Rootstock with Noir"
 subtitle="zero knowledge proofs"
 color="orange"
-linkHref="/resources/tutorials/zk-prrofs-with-noir/"
+linkHref="/resources/tutorials/zk-proofs-with-noir/"
 description="Building private decentralized applications (dApps) on Rootstock is key to ensuring user confidentiality and security. Zero-Knowledge Proofs (ZK proofs) and Noir form a powerful combination, blending advanced cryptography with a developer-friendly language to create privacy-focused solutions."
 />
 <FilterItem
@@ -160,6 +161,14 @@ subtitle="payments"
 color="orange"
 linkHref="/resources/tutorials/integrate-x402/"
 description="Build a decentralized pay-per-use API on Rootstock using the x402 protocol standards. This guide covers implementing a Sovereign Mode Node.js server that verifies on-chain tRBTC payments directly"
+/>
+<FilterItem
+value="beginner, advanced, explorer"
+title="Rootstock Explorer tutorials"
+subtitle="explorer"
+color="orange"
+linkHref="/dev-tools/explorers/rootstock-explorer/"
+description="Use the Rootstock Explorer to look up blocks, transactions, addresses, and tokens. These tutorials cover the main features."
 />
 </Filter>
 ```

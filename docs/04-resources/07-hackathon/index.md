@@ -97,7 +97,7 @@ For more information on specific requirements for developing on Rootstock, Visit
 <Card
   title="Rootstock Hackathon Cheatsheet"
   description="The Rootstock Hackathon Cheatsheet is a concise reference guide for developers aiming to deploy decentralized applications (dApps) on the Rootstock network."
-  link="/Rootstock_Developer_Cheatsheet.pdf"
+  link="https://dev.rootstock.io/Rootstock_Developer_Cheatsheet.pdf"
 />
 
 <br></br>

@@ -88,7 +88,7 @@ description: Rootstock에서 스마트 컨트랙트를 개발하고 배포하는
     title="Rootstock 익스플로러"
     subtitle="익스플로러"
     color="orange"
-    linkHref="/dev-tools/explorers/rootstock/"
+    linkHref="/dev-tools/explorers/rootstock-explorer/"
     linkTitle="익스플로러 사용"
     description="Rootstock 익스플로러를 통해 트랜잭션, 블록, 주소, 토큰, 통계를 조회하고 스마트 컨트랙트와 상호작용할 수 있습니다."
   />
