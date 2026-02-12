@@ -20,7 +20,7 @@ See the [FAQs](/resources/guides/tokenbridge/faq/) to learn more about how it wo
 
 
 The bridge contracts are upgradeable, this enables a smoother move to a more decentralized bridge in the future. This is the
-[token bridge repository](https://github.com/rsksmart/unified-bridges-ui)
+[token bridge repository](https://github.com/rsksmart/tokenbridge)
 
 ## Usage
 
@@ -45,4 +45,4 @@ The ABI to interact with the contracts are in the 'abis folder'.
 ### Federation
 
 There is a federation in charge of notifying the events that have happened in the bridge between one chain and the other. The federation is composed of the creators of the token contracts who want to enable their token for crossing.
-See in the ['token bridge federator repository'](https://github.com/rsksmart/unified-bridges-sdk/tree/main/packages/tokenbridge-sdk/src/blockchain/federation) for more information.
+See the [Token Bridge SDK repository](https://github.com/rsksmart/tokenbridge) for federation and token bridge implementation details.

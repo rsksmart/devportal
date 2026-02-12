@@ -34,14 +34,6 @@ To understand how block explorers work, read the complete guide on [exploring bl
     linkTitle="Use the Explorer"
   />
   <CardsGridItem
-    title="3xpl"
-    subtitle="explorers"
-    color="cyan"
-    description="3xpl (short for 3xplor3r) is a super-fast, universal explorer for most popular public blockchains. It offers an easy-to-understand block explorer interface for ordinary crypto users, as well as lots of professional features for developers and analysts."
-    linkHref="/dev-tools/explorers/3xpl/"
-    linkTitle="Use the Explorer"
-  />
-  <CardsGridItem
     title="Blockchair"
     subtitle="explorers"
     color="cyan"

@@ -8,7 +8,7 @@ tags: [rsk, rootstock, smart contracts, dApps, tokens, fungible-tokens]
 
 ## ERCs vs EIPs vs RSKIPs
 
-[Ethereum Requests for Comment (ERCs)](https://docs.ethhub.io/built-on-ethereum/erc-token-standards/what-are-erc-tokens/),
+Ethereum Requests for Comment ERCs,
 and [Ethereum Improvement Proposals (EIPs)](https://eips.ethereum.org/erc)
 refer to the same thing - they were originally called ERCs,
 and then subsequently renamed to EIPs.

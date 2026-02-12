@@ -6,7 +6,7 @@ tags: [rsk, rootstock, resources, tutorials,  setup, dRPC, dApps, BaaS, RPC, API
 description: dRPC is a next-generation RPC platform that simplifies and optimizes communication with blockchain nodes. Built for Web3, dRPC provides low-latency, high-reliability access to blockchain data and operations.
 ---
 
-[dRPC](https://www.drpc.org) is a next-generation RPC platform that simplifies and optimizes communication with blockchain nodes. Built for Web3, dRPC provides low-latency, high-reliability access to blockchain data and operations.
+[dRPC](https://drpc.org) is a next-generation RPC platform that simplifies and optimizes communication with blockchain nodes. Built for Web3, dRPC provides low-latency, high-reliability access to blockchain data and operations.
 
 ### Why Choose dRPC?
 - **High Performance:** Optimized for speed and low latency.
@@ -32,7 +32,7 @@ dRPC supports various blockchain networks, including:
 
 <Steps>
   <Step title="Sign Up and Get an API Key">
-   - Create an account on [dRPC Website](https://www.drpc.org).
+   - Create an account on [dRPC website](https://drpc.org).
    - Generate your API key from the dashboard.
 
   </Step>

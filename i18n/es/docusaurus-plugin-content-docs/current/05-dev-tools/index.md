@@ -128,15 +128,6 @@ linkTitle="Haga su primera llamada de API"
 description="NOWNodes es una solución empresarial de blockchain como servicio que permite a los usuarios acceder a nodos completos y a los exploradores de Blockbook a través de una API."
 />
 <FilterItem
-value="rpc, smart contracts"
-title="dRPC"
-subtitle="json rpc"
-color="orange"
-linkHref="https://drpc.org/chainlist/rootstock?utm_source=docs&utm_medium=rootstock"
-linkTitle="Haga su primera llamada de API"
-description="dRPC permite acceder a una red distribuida de proveedores de nodos."
-/>
-<FilterItem
 value="wallet, sc"
 title="MetaMask"
 subtitle="wallets"
@@ -263,15 +254,6 @@ linkTitle="Construya una dApp sin código"
 description="Cree una dApp en Rootstock utilizando las herramientas sin código de Forward Protocol."
 />
 <FilterItem
-value="no-code, platform-infra, sc"
-title="CryptoDO"
-subtitle="no-code"
-color="orange"
-linkHref="https://www.cryptodo.app/"
-linkTitle="Construya una dApp multicadena sin escribir código"
-description="CryptoDo es un constructor de soluciones web3 multicadena para empresas que no requiere escribir código."
-/>
-<FilterItem
 value="library, sdk, rifp, abs"
 title="RIF Relay"
 subtitle="sdks"
@@ -297,15 +279,6 @@ color="orange"
 linkHref="/developers/libraries/rif-wallet-libs/"
 linkTitle="Integre RIF Wallet"
 description="RIF Wallet es una billetera DeFi totalmente programable y extensible que permite a los desarrolladores y a las empresas crear experiencias Web3 intuitivas y seguras para sus usuarios finales."
-/>
-<FilterItem
-value="gas"
-title="Estación de Gas"
-subtitle="gas"
-color="orange"
-linkHref="https://rskgasstation.info/?AspxAutoDetectCookieSupport=1"
-linkTitle="Vea el precio del Gas"
-description="Estación de Gas de Rootstock."
 />
 <FilterItem
 value="data"
@@ -414,15 +387,6 @@ color="orange"
 linkHref="https://vottun.com"
 linkTitle="Cómo empezar"
 description="La arquitectura interoperable multiblockchain de Vottun está diseñada para facilitar el desarrollo de aplicaciones Web3 sin necesidad de comprender en profundidad la tecnología blockchain subyacente."
-/>
-<FilterItem
-value="platform-infra"
-title="WakeUp Labs"
-subtitle="infra"
-color="orange"
-linkHref="https://platform.wakeuplabs.io"
-linkTitle="Cómo empezar"
-description="WakeUp Labs es un estudio de desarrollo de software que ayuda a las blockchains compatibles con la Máquina virtual de Ethereum (EVM), DAO y organizaciones tradicionales a superar desafíos técnicos y agilizar el desarrollo de productos."
 />
 <FilterItem
 value="bridge, sc"

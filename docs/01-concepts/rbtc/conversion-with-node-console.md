@@ -30,7 +30,7 @@ Read the [lock requirements](/concepts/rbtc/networks#mainnet-conversion)
 1. With your Bitcoin address,
    send a BTC transaction to the Rootstock Federation Address. See how to get the [Federation Address](/concepts/rbtc/networks/#btc-to-rbtc-conversion).
 2. Using your preferred BTC block explorer
-   (e.g. [Blocktrail](https://www.blocktrail.com/BTC)),
+   (e.g. [Blocktrail](https://www.blockchain.com/explorer)),
    follow your transaction and wait the stipulated time.
 3. Convert the private key to Rootstock format with this tool:
    [https://github.com/rsksmart/utils](https://github.com/rsksmart/utils)),

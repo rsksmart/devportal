@@ -116,14 +116,6 @@ description="In this guide, we will use the Remix IDE to write, compile, deploy,
 />
 <FilterItem
 value="beginner, advanced"
-title="Add Rootstock to Metamask Programmatically"
-subtitle="metamask"
-color="orange"
-linkHref="/resources/tutorials/rootstock-metamask/"
-description="Learn how to add and initiate a network switch on Metamask from a website."
-/>
-<FilterItem
-value="beginner, advanced"
 title="dApp Automation with Cucumber and Playwright"
 subtitle="dapp-automation"
 color="orange"

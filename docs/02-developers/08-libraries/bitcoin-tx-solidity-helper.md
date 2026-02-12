@@ -35,7 +35,7 @@ To check the NPM package, please check [Bitcoin Solidity Helper NPM Package.](ht
 
 ## Prerequisites
 * Knowledge of Solidity and how to write smart contracts.
-* [Bitcoin Solidity Helper Package.](https://github.com/rsksmart/btc-transaction-solidity-helper/pkgs/npm/btc-transaction-solidity-helper)
+* [Bitcoin Solidity Helper package](https://github.com/rsksmart/btc-transaction-solidity-helper) ([npm](https://www.npmjs.com/package/@rsksmart/btc-transaction-solidity-helper))
 
 ## Setup
 To setup the Solidity helper library in your project, run the following npm command:

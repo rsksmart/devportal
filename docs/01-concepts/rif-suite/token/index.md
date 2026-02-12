@@ -126,7 +126,7 @@ See [supported wallets](/dev-tools/wallets/).
 
 ### ERC677 token standard
 
-An [ERC20](https://github.com/ethereum/EIPs/issues/20)
+An [ERC20](https://eips.ethereum.org/EIPS/eip-20)
 token transaction between a regular/non-contract address and contract are two different transactions: You should call `approve` on the token contract and then call `transferFrom` on the other contract when you want to deposit your tokens into it.
 
 [ERC677](https://github.com/ethereum/EIPs/issues/677)

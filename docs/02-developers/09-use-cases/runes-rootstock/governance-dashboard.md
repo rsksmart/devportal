@@ -6,7 +6,7 @@ tags: [Governance Voting Dashboard, rootstock, tutorials, rsk, ERC20, blockchain
 description: "This project is a Governance Voting Dashboard built on the Rootstock blockchain. It allows users to create and vote for teams using governance tokens (ERC20 tokens)."
 ---
 
-This project is a **Governance Voting Dashboard** built on the **Rootstock blockchain**. It allows users to create and vote for teams using governance tokens [ERC20 tokens](/concepts/glossary/#e).
+This project is a **Governance Voting Dashboard** built on the **Rootstock blockchain**. It allows users to create and vote for teams using governance tokens [ERC20 tokens](/concepts/glossary/).
 
 The voting is managed by a smart contract, making it decentralized and transparent. Each team has a unique name, a governance token, and a leader, and users can vote by transferring tokens to their preferred teams.
 
@@ -18,7 +18,7 @@ Before you begin your journey into deploying smart contracts on the Rootstock bl
 
 -  **Node.js**
 
-You will need Node.js installed on your machine to run the project locally. [Download](https://nodejs.org/en/download/package-manager) the latest LTS version, which is recommended for most users.
+You will need Node.js installed on your machine to run the project locally. [Download NodeJS](https://nodejs.org/en/download) the latest LTS version, which is recommended for most users.
 
 - **Web3 Wallet (Metamask)**
 

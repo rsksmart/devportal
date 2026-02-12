@@ -11,8 +11,14 @@ tags: [Covalent, indexers, data, dApps, smart contracts, developers, developer t
 The Covalent API maintains a full archival copy of every supported blockchain, meaning every balance, transaction, log event, and NFT asset data is available from the genesis block. 
 
 This data is available <Shield label="mainnet" title="testnet" tooltip="Supported on Mainnet and Testnet" color="orange" /> via:
-1. [Unified API](#unified-api) - Incorporate blockchain data into your app with a familiar REST API
-2. [Increment](#increment) - Create and embed custom charts with no-code analytics
+
+## Unified API {#unified-api}
+
+Incorporate blockchain data into your app with a familiar REST API.
+
+## Increment {#increment}
+
+Create and embed custom charts with no-code analytics.
 
 <Button size="sm" href="https://www.covalenthq.com/platform/?utm_source=rootstock&utm_medium=partner-docs">Sign up for free</Button>
 

@@ -388,7 +388,7 @@ See detailed functionality and supported operations in the [README](https://gith
 
 _Error: `rsk-mcp-server disconnected`_
 
-\> Ensure to edit and replace Arguments in .json text file with the correct absolute path to the [index.js](http://index.js) file, delete the current config pointing to incorrect path and add the text file.
+\> Ensure to edit and replace Arguments in .json text file with the correct absolute path to the `index.js` file, delete the current config pointing to incorrect path and add the text file.
 
 ![Troubleshooting](/img/developers/use-cases/ai/4-mcp-troubleshooting.png)
 

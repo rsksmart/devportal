@@ -391,6 +391,18 @@ async function checkExternalLinks() {
   const unreachableUrlsReported = new Set(); // Track already reported unreachable URLs
   const redirectUrlsReported = new Set(); // Track already reported redirect URLs
 
+  // Catch timeout/abort from internal streams so the script exits cleanly instead of crashing
+  const timeoutHandler = (err) => {
+    if (err?.message && /timeout|aborted|TimeoutError/i.test(err.message)) {
+      console.warn('\n   ⚠️  External link check hit a timeout; exiting with partial results.');
+    } else {
+      console.error('\n❌ Uncaught error during link check:', err?.message || err);
+    }
+    server.close();
+    process.exit(1);
+  };
+  process.on('uncaughtException', timeoutHandler);
+
   checker.on('link', (result) => {
     checkedCount++;
 
@@ -416,15 +428,22 @@ async function checkExternalLinks() {
       // Check for redirects (3xx status codes)
       const isRedirect = result.status >= 300 && result.status < 400;
 
-      // Broken with real error status (4xx or 5xx)
+      // Broken with real error status (4xx or 5xx); ignore 401/403/429 (geo, bot-block, rate-limit)
       const isReallyBroken = result.state === 'BROKEN' &&
                              result.status &&
-                             result.status >= 400;
+                             result.status >= 400 &&
+                             result.status !== 401 &&
+                             result.status !== 403 &&
+                             result.status !== 429;
+
+      // Known broken redirect targets: we link to canonical URL (e.g. drpc.org) but server redirects to www and that returns 404
+      const brokenRedirectTargetSkip = [/^https:\/\/www\.drpc\.org\/?$/];
+      const skipAsBroken = brokenRedirectTargetSkip.some(re => re.test(result.url));
 
       // Unreachable - marked as broken but no status (timeout, connection error, bot-blocked)
       const isUnreachable = result.state === 'BROKEN' && !result.status;
 
-      if (isReallyBroken) {
+      if (isReallyBroken && !skipAsBroken) {
         const cleanParent = result.parent ? result.parent.replace(/^http:\/\/localhost:\d+/, '') : '';
 
         // Only add if not already in broken links (deduplicate by URL)
@@ -489,7 +508,9 @@ async function checkExternalLinks() {
         // Skip links to own site (from docusaurus.config.js url)
         siteUrlPattern,
         // Skip services links
-        /public-node\.rsk\.co/,
+        /public-node\.(testnet\.)?rsk\.co/,
+        // Skip Rootstock RPC endpoints (testnet/mainnet; JSON-RPC, not HTTP page)
+        /^https?:\/\/rpc\.(testnet\.)?rootstock\.io(?:\/|$)/,
         // Skip common false positives
         /example\.com/,
         /placeholder/,
@@ -502,20 +523,24 @@ async function checkExternalLinks() {
         /linkedin\.com/,
         /facebook\.com/,
         /instagram\.com/,
+        // Skip The Graph gateway APIs (auth/rate-limit when crawled)
+        /^https?:\/\/network\.thegraph\.com\b/,
         // Skip mailto and tel links
         /^mailto:/,
         /^tel:/,
         /^javascript:/,
       ],
-      timeout: 10000,
-      concurrency: 5,
+      timeout: 30000,
+      concurrency: 4,
       retry: true,
       retryErrors: true,
-      retryErrorsCount: 1,
-      retryErrorsJitter: 500,
+      retryErrorsCount: 2,
+      retryErrorsJitter: 1000,
     });
   } catch (error) {
     console.error(`\n❌ Error during link checking: ${error.message}`);
+  } finally {
+    process.off('uncaughtException', timeoutHandler);
   }
 
   // Stop the server

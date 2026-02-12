@@ -71,7 +71,5 @@ In addition to Mocha and Chai, you can use several other frameworks and approach
 
 - Jest - JavaScript Testing Framework
   - [Jest](https://jestjs.io/) is popular for its delightful syntax and focus on simplicity. It works well for testing both frontend and backend JavaScript applications.
-- Waffle - Ethereum Smart Contract Testing Library
-  - [Waffle](https://getwaffle.io/) is a library for writing and testing smart contracts. It is often used with ethers.js and is known for its fluent syntax.
-- Cucumber DApps Automation
+- Cucumber dApp Automation
   - [dApp Automation with Cucumber](/resources/tutorials/dapp-automation-cucumber/)

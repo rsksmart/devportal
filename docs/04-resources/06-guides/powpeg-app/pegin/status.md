@@ -27,7 +27,7 @@ Click on transaction status.
 
 **Step 2: Enter Transaction ID**
 
-Copy the transaction ID derived in [Step 12: Performing a Pegin transaction with Ledger](#performing-a-peg-in-transaction-with-ledger), paste into the field as shown below, click on enter or click on the search icon or click on Enter.
+Copy the transaction ID derived in [Step 12: Performing a Pegin transaction with Ledger](/resources/guides/powpeg-app/pegin/ledger/#performing-a-peg-in-transaction-with-ledger), paste into the field as shown below, click on enter or click on the search icon or click on Enter.
 
 ![Transaction status field](/img/resources/powpeg/transaction-status-field.png)
 

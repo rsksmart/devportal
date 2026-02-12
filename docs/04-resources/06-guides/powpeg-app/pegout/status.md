@@ -24,7 +24,7 @@ After finish a pegout you can search for the current status in the [status page]
 
 **Step 2: Enter Transaction ID**
 
-Copy the transaction ID derived in [Step 12: Performing a Pegout transaction with Ledger](#performing-a-peg-in-transaction-with-ledger), paste into the field as shown below, click on enter or click on the search icon or click on Enter.
+Copy the transaction ID derived in [Step 12: Performing a Pegout transaction with Ledger](/resources/guides/powpeg-app/pegout/ledger/#performing-a-peg-in-transaction-with-ledger), paste into the field as shown below, click on enter or click on the search icon or click on Enter.
 
 ![Transaction status field](/img/resources/powpeg/transaction-status-field.png)
 

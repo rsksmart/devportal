@@ -24,7 +24,7 @@ During the **pegout** process, the destination address of your BTC is derived fr
 - [Electrum](https://electrum.org/#download)
 - [Rootstock Utils](https://github.com/rsksmart/utils)
 
-## How to view a derived address
+## How to view a derived address {#how-to-view-advanced-details}
 
 A derived address is the BTC address derived from the RBTC account. When using the PowPeg app, it is important to know which address you will receive your BTCs. See [Viewing advanced details](#how-to-view-advanced-details).
 
@@ -58,13 +58,13 @@ We will learn how to view a derived address using [Metamask](#using-metamask) to
     <img src="/img/resources/powpeg/metamask/copy_assets.png"  title="metamask - copy_assets" width="50%"/>
 </center>
 
-### Converting RBTC to BTC
+### Converting RBTC to BTC {#converting-btc-to-rbtc}
 
 Before converting the funds, we need to convert the private key into a [Wallet Import Format (WIF)](https://learnmeabitcoin.com/technical/wif). A WIF private key is just another way of representing your original private key. If you have a WIF private key, you can always convert it back in to its original format.
 
 For more info on WIF, see the [Bitcoin Wiki](https://en.bitcoin.it/wiki/Wallet_import_format)
 
-#### Using Rootstock Utils (Recommended)
+#### Using Rootstock Utils (Recommended) {#using-rootstock-utils}
 
 [Rootstock Utils](https://github.com/rsksmart/utils#rsk-utils) is used to convert keys from BTC to Rootstock.
 

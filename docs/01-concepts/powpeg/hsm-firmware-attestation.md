@@ -17,6 +17,8 @@ For a comprehensive list of attestations, see the [PowPeg HSM Firmware Attestati
 :::
 
 
+### PowPeg HSM Firmware Attestation — Sovryn {#powpeg-hsm-firmware-attestation---sovryn}
+
 ````mdx-code-block
 <Tabs>
   <TabItem value="sovryn" label="Sovryn" default>

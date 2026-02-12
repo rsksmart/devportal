@@ -102,15 +102,6 @@ description: Rootstock에서 스마트 컨트랙트를 개발하고 배포하는
     description="Blockchair Explorer는 Rootstock을 포함해 40개 이상의 블록체인을 지원하는 검색 및 분석 엔진입니다. 다양한 블록체인을 하나의 검색 엔진에서 통합적으로 조회할 수 있습니다."
   />
 <FilterItem
-    value="explorer, sc"
-    title="3xpl"
-    subtitle="익스플로러"
-    color="orange"
-    linkHref="/dev-tools/explorers/3xpl/"
-    linkTitle="익스플로러 사용"
-    description="3xpl(3xplor3r의 약자)은 Rootstock용으로 설계된 매우 빠르고 범용적인 블록 익스플로러입니다. 초보 사용자도 쉽게 이해할 수 있는 직관적인 인터페이스를 제공하며, 개발자와 분석가를 위한 다양한 고급 기능도 함께 지원합니다."
-  />
-<FilterItem
     value="rpc"
     title="RPC API"
     subtitle="JSON RPC"
@@ -145,15 +136,6 @@ description: Rootstock에서 스마트 컨트랙트를 개발하고 배포하는
     linkHref="/dev-tools/node-rpc/nownodes/"
     linkTitle="첫번째 API 호출하기"
     description="NOWNodes는 블록체인 풀노드와 Blockbook Explorer에 API를 통해 접속할 수 있도록 지원하는 BaaS(서비스형 블록체인) 솔루션입니다."
-  />
-<FilterItem
-    value="rpc, smart contracts"
-    title="dRPC"
-    subtitle="JSON RPC"
-    color="orange"
-    linkHref="/dev-tools/node-rpc/drpc/"
-    linkTitle="첫번째 API 호출하기"
-    description="dRPC는 분산된 노드 프로바이더 네트워크에 접속할 수 있는 서비스를 제공합니다."
   />
 <FilterItem
     value="wallet, sc"
@@ -290,15 +272,6 @@ description: Rootstock에서 스마트 컨트랙트를 개발하고 배포하는
     linkHref="https://forwardprotocol.io/"
     linkTitle="노코드 dApp 개발"
     description="Forward Protocol의 노코드 툴을 활용해 Rootstock 위에 dApp을 개발하세요."
-  />
-<FilterItem
-    value="no-code, platform-infra, sc"
-    title="CryptoDO"
-    subtitle="노코드"
-    color="orange"
-    linkHref="https://www.cryptodo.app/"
-    linkTitle="노코드 멀티체인 dApp 개발"
-    description="CryptoDo는 기업을 위한 멀티체인 기반의 노코드 Web3 솔루션 빌더입니다."
   />
 <FilterItem
     value="library, sdk, rifp, abs"
@@ -461,15 +434,6 @@ description: Rootstock에서 스마트 컨트랙트를 개발하고 배포하는
     linkHref="https://vottun.com"
     linkTitle="시작하기"
     description="Vottun의 상호운용 가능한 멀티 블록체인 아키텍처는 복잡한 블록체인 기술을 깊이 이해하지 않아도 Web3 애플리케이션을 쉽게 개발할 수 있도록 설계되었습니다."
-  />
-<FilterItem
-    value="platform-infra"
-    title="WakeUp Labs"
-    subtitle="인프라"
-    color="orange"
-    linkHref="https://platform.wakeuplabs.io"
-    linkTitle="시작하기"
-    description="WakeUp Labs는 EVM 호환 블록체인, DAO, 그리고 전통적인 조직들이 기술적인 문제를 해결하고 제품 개발 속도를 높일 수 있도록 지원하는 소프트웨어 개발 스튜디오입니다."
   />
 <FilterItem
     value="bridge, sc"

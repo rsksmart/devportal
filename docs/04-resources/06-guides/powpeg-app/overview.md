@@ -54,7 +54,7 @@ The PowPeg App, has two primary features, they are:
     - **Flyover pegout transaction time to completion, deppends on the Liquidity Provider conditions**.
     - See [Glossary](/resources/guides/powpeg-app/glossary/) page for more explanation. 
 
-## Why use the PowPeg App?
+## Why use the PowPeg App? {#why-use-the-powpeg}
 
 The PowPeg App has lots of benefits, these include:
  

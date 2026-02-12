@@ -49,7 +49,7 @@ This guide is designed to help both beginners and experienced developers get sta
     <ol>
       <li>
         <strong>Knowledge of Blockchain and Smart Contracts</strong><br />
-        You should be comfortable with <strong>[blockchain principles](https://rsk.thinkific.com/courses/blockchain-developer)</strong> and <strong>decentralized networks</strong>.
+        You should be comfortable with <strong>[blockchain principles](https://rootstock.thinkific.com/courses/blockchain-dev-course/)</strong> and <strong>decentralized networks</strong>.
       </li>
       <li>
         <strong>Experience with Web3 Development Tools</strong><br />
