@@ -40,9 +40,9 @@ Testnet: m/44'/37310'/0'/0/N
 
 ## Checksum
 
-Rootstock implements [EIP-1191](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1191.md) to protect users from losing funds by mixing addresses of different Ethereum based networks.
+Rootstock implements [EIP-1191](https://github.com/ethereum/ercs/blob/master/ERCS/erc-1191.md) to protect users from losing funds by mixing addresses of different Ethereum based networks.
 
-[In this document](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1191.md), you can find out how to apply the checksum and validate an address. This EIP is also supported by Web3 and hardware wallets.
+[In the ERC document](https://github.com/ethereum/ercs/blob/master/ERCS/erc-1191.md), you can find out how to apply the checksum and validate an address. This EIP is also supported by Web3 and hardware wallets.
 
 ## ChainId
 

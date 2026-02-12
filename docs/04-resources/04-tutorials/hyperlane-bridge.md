@@ -20,7 +20,7 @@ Some example dApps that can be developed using Hyperlane bridge:
 
 The Hyperlane CLI is the official command-line tool for deploying Hyperlane contracts to new chains. It also includes utilities for interacting with deployed contracts and registries.
 
-Both Rootstock testnet and mainnet are integrated in the CLI via the [Hyperlane registry](https://github.com/hyperlane-xyz/hyperlane-registry).
+Both Rootstock testnet and mainnet are integrated in the CLI via the [Hyperlane registry](https://github.com/hyperlane-xyz/hyperlane-registry/tree/main/chains).
 
 To get started, install the hyperlane cli using [npm](https://www.npmjs.com/package/@hyperlane-xyz/cli).
 
@@ -239,7 +239,7 @@ Validators provide the security for messages sent from your chain to remote chai
 - Build and run the [validator](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/README.md#running-locally) using the steps listed in the README.md.
 - Use the reference script below to build and run the validator for Rootstock.
 - Add rootstock contract addresses and metadata in `./config/testnet4_config.json` file located in your filesystem inside the Rust project.
-- [Example config.json file](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/main/config/testnet_config.json)
+- [Example config.json](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/main/config/testnet_config.json)
 
 
 To run a validator node, enter the following commands:
@@ -260,7 +260,7 @@ Relayers deliver interchain messages sent between the local and remote chains. L
 - Build and run the [relayer](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/README.md)
 - Use the reference script below to build and run the relayer for Rootstock.
 - Add rootstock contract addresses and metadata in `./config/testnet4_config.json` file located in your filesystem inside the Rust project.
-- [Example config.json file](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/main/config/testnet_config.json)
+- [Example config.json](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/main/config/testnet_config.json)
 
 
 To run a relayer node, enter the following commands:

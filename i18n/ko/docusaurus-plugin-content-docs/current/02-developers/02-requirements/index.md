@@ -147,7 +147,7 @@ CLI 도구를 활용하면 생산성을 높일 수 있습니다:
         - 설치하려면 [NVM 설치 스크립트](https://github.com/nvm-sh/nvm#install--update-script)를 사용합니다.
   </TabItem>
   <TabItem value="windows" label="Windows">
-    1. Node.js 다운로드](https://nodejs.org/en/download)에서 Node.js 인스톨러를 다운로드합니다.
+    1. [Node.js 다운로드 페이지](https://nodejs.org/en/download)에서 Node.js 인스톨러를 다운로드합니다.
     2. 2. 설치 프로그램을 실행하고 화면의 지시를 따릅니다.
     3. 명령 프롬프트 또는 PowerShell을 열고 `node -v` 및 `npm -v`로 버전을 확인합니다.
         - Posix 호환 셸을 참조하세요.

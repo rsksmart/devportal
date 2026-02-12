@@ -553,7 +553,7 @@ In this guide, we learnt how to use the Web3.py library to deploy, interact with
         ```
         - Note: The cause of the error on the deployment is that the Web3.py module is set to use the private keys of the RPC provider (Hosted Keys), which is a legacy way to use accounts, and is not supported by modern RPC providers, as they do not store private keys.
         - Methods like `web3.eth.send_transaction` do not work with RPC providers, because they rely on a node state and all modern nodes are stateless, which underneath make JSON-RPC calls to methods like  `eth_accounts` and `eth_sendTransaction`. You must always use local private keys when working with nodes hosted by someone else.
-        - If unfamiliar, note that you can [export your private keys from Metamask](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) and other wallets. Remember to never share your private keys, and do not put it on your code or repository.
+        - If unfamiliar, note that you can [export your private keys from MetaMask](https://support.metamask.io/configure/accounts/how-to-export-an-accounts-private-key/) and other wallets. Remember to never share your private keys, and do not put it on your code or repository.
         - In order to successfully deploy the contract, the developer needs to set up Web3.py to use his Local Private Keys, and to build and pre-sign the transaction before sending it, so the module uses `eth_sendRawTransaction` instead.
         - To allow Web3.py to use the local keys, we have to use the Signing middleware to add the Private Key to the signing keychain.
         ```bash
@@ -617,8 +617,8 @@ In this guide, we learnt how to use the Web3.py library to deploy, interact with
 
 #### Resources
 - [Web3.py: Gas Price Strategy](https://web3py.readthedocs.io/en/stable/gas_price.html#gas-price)
-- [Infura: eth_accounts](https://docs.metamask.io/wallet/reference/json-rpc-methods/eth_accounts/)
-- [Infura: eth_sendTransaction](https://docs.metamask.io/wallet/reference/json-rpc-methods/eth_sendtransaction/)
+- [eth_accounts](https://docs.metamask.io/wallet/reference/json-rpc-methods/eth_accounts/)
+- [eth_sendTransaction](https://docs.metamask.io/wallet/reference/json-rpc-methods/eth_sendtransaction/)
 - [Web3.py: Working with Local Private Keys](https://web3py.readthedocs.io/en/stable/web3.eth.account.html#working-with-local-private-keys)
 - [Web3.py: Contract Deployment Example](https://web3py.readthedocs.io/en/stable/web3.contract.html)
 - [Web3.py: Sign a Contract Transaction](https://web3py.readthedocs.io/en/stable/providers.html)

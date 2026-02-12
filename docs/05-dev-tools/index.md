@@ -145,6 +145,15 @@ description: "Explore a curated selection of smart contract development tools an
     description="GetBlock provides instant connection to blockchain nodes including Rootstock, Bitcoin (BTC), Ethereum (ETH), among others."
   />
 <FilterItem
+    value="rpc"
+    title="dRPC"
+    subtitle="json rpc"
+    color="orange"
+    linkHref="/dev-tools/node-rpc/drpc/"
+    linkTitle="Make First API Call"
+    description="dRPC is a next-generation RPC platform that simplifies and optimizes communication with blockchain nodes. Built for Web3, with low-latency, high-reliability access to blockchain data and operations."
+  />
+<FilterItem
     value="rpc, smart contracts"
     title="NOWNodes"
     subtitle="json rpc"

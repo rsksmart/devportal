@@ -15,7 +15,7 @@ It offers the following products that can be used independently or in conjunctio
 This data is available on: <Shield title="mainnet" tooltip="Supported on Mainnet" color="orange" />
 
 ## Prerequisites
-* [Node.js](http://node.js) <Shield version="18" /> or newer
+* [Node.js](https://nodejs.org/en/download) <Shield version="18" /> or newer
 
 ## Installation
 Install the goldsky CLI

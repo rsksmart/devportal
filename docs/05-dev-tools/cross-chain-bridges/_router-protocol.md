@@ -38,8 +38,7 @@ To ensure robust security, the Crosstalk Framework incorporates Additional Secur
 ## Build your first iDapp
 Creating your first interoperable decentralized application (iDapp) with Router Protocol is a straightforward two-step process:
 
-- [Create Your Cross-Chain NFT Contract](https://docs.routerprotocol.com/develop/message-transfer-via-crosstalk/evm-guides/your-first-crosschain-nft-contract/creating-your-nft-contract/)
-- [Deploy and Test Your NFT Contract](https://docs.routerprotocol.com/develop/message-transfer-via-crosstalk/evm-guides/your-first-crosschain-nft-contract/deploying-your-nft-contract/)
+- [Router Protocol Crosstalk docs](https://docs.routerprotocol.com/) for cross-chain NFT and message-transfer guides.
 
 
 <Button size="sm" href="https://docs.routerprotocol.com/">Try Router Protocol</Button>

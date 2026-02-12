@@ -43,7 +43,7 @@ cd rootstock-rs
 cargo add alloy --git https://github.com/alloy-rs/alloy
 ```
 
-Find more about [Alloy setup using meta crate](https://alloy.rs/getting-started/installation.html)
+Find more about [Alloy setup](https://github.com/alloy-rs/alloy#readme) and the [Alloy book](https://alloy.rs/).
 
 > Note: All the dependencies required are mentioned in the `.toml` file below. Copy and paste into the `cargo.toml` file.
 
@@ -64,7 +64,7 @@ tokio = { version = "1", features = ["full"] }
 
 ## Connect to the Rootstock node
 
-To connect to the Rootstock node., we will require a provider setup. A [Provider](https://alloy.rs/rpc-providers/introduction) is an abstraction of a connection to the Rootstock network, it provides a concise, and consistent interface to standard Ethereum node functionality. 
+To connect to the Rootstock node., we will require a provider setup. A [Provider](https://alloy.rs/) is an abstraction of a connection to the Rootstock network, it provides a concise, and consistent interface to standard Ethereum node functionality. 
 
 To run this program, use `cargo run` in the root of the project:
 

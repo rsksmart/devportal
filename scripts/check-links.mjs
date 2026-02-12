@@ -428,16 +428,22 @@ async function checkExternalLinks() {
       // Check for redirects (3xx status codes)
       const isRedirect = result.status >= 300 && result.status < 400;
 
-      // Broken with real error status (4xx or 5xx); ignore 403 (often geo/bot-blocked, not broken)
+      // Broken with real error status (4xx or 5xx); ignore 401/403/429 (geo, bot-block, rate-limit)
       const isReallyBroken = result.state === 'BROKEN' &&
                              result.status &&
                              result.status >= 400 &&
-                             result.status !== 403;
+                             result.status !== 401 &&
+                             result.status !== 403 &&
+                             result.status !== 429;
+
+      // Known broken redirect targets: we link to canonical URL (e.g. drpc.org) but server redirects to www and that returns 404
+      const brokenRedirectTargetSkip = [/^https:\/\/www\.drpc\.org\/?$/];
+      const skipAsBroken = brokenRedirectTargetSkip.some(re => re.test(result.url));
 
       // Unreachable - marked as broken but no status (timeout, connection error, bot-blocked)
       const isUnreachable = result.state === 'BROKEN' && !result.status;
 
-      if (isReallyBroken) {
+      if (isReallyBroken && !skipAsBroken) {
         const cleanParent = result.parent ? result.parent.replace(/^http:\/\/localhost:\d+/, '') : '';
 
         // Only add if not already in broken links (deduplicate by URL)
