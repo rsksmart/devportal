@@ -510,7 +510,7 @@ async function checkExternalLinks() {
         // Skip services links
         /public-node\.(testnet\.)?rsk\.co/,
         // Skip Rootstock RPC endpoints (testnet/mainnet; JSON-RPC, not HTTP page)
-        /rpc\.(testnet\.)?rootstock\.io/,
+        /^https?:\/\/rpc\.(testnet\.)?rootstock\.io(?:\/|$)/,
         // Skip common false positives
         /example\.com/,
         /placeholder/,
@@ -524,7 +524,7 @@ async function checkExternalLinks() {
         /facebook\.com/,
         /instagram\.com/,
         // Skip The Graph gateway APIs (auth/rate-limit when crawled)
-        /network\.thegraph\.com/,
+        /^https?:\/\/network\.thegraph\.com\b/,
         // Skip mailto and tel links
         /^mailto:/,
         /^tel:/,
