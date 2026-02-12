@@ -52,7 +52,7 @@ In this guide, we will explore how to use the Rootstock CLI to create a wallet, 
   <Accordion.Item eventKey="7">
     <Accordion.Header as="h3">5. Deploying Smart Contracts</Accordion.Header>
     <Accordion.Body>
-      The <code>deploy</code> command allows users to deploy smart contracts on the blockchain by providing the ABI [Application Binary Interface](/concepts/glossary/#a) and bytecode files.
+      The <code>deploy</code> command allows users to deploy smart contracts on the blockchain by providing the ABI [Application Binary Interface](/concepts/glossary/) and bytecode files.
       This is supported on both mainnet and testnet.
     </Accordion.Body>
   </Accordion.Item>

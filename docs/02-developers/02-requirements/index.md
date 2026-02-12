@@ -143,7 +143,7 @@ Boost productivity with these CLI tools:
 </Tabs>
 
 
-### Installing Node.js and NPM
+### Installing Node.js and NPM {#installing-nodejs-and-npm}
 
 <Tabs>
   <TabItem value="nvm" label="NVM" default>

@@ -11,7 +11,9 @@ This glossary contains key terms and definitions to help you better understand t
 
 Whether you're building on the Rootstock platform or simply exploring, these definitions will provide clarity on essential terms commonly used in the Rootstock Ecosystem.
 
-# A
+<a id="a"></a>
+
+# A {#a}
 
 ## ABI (Application Binary Interface)
 The Application Binary Interface (ABI) defines the interface between two binary program modules, typically between a smart contract and the external applications that interact with it. On the blockchain, an ABI specifies the functions and parameters called on a smart contract and the data exchange structure. It is essential for interacting with smart contracts programmatically.
@@ -115,7 +117,9 @@ This is a type of cryptocurrency exchange that operates without a central author
 
 This is an application that operates on a decentralized network, typically leveraging blockchain technology. Unlike traditional applications that rely on centralized servers, dApps use smart contracts to execute their backend logic, providing greater transparency, security, and resilience against censorship. 
 
-# E
+<a id="e"></a>
+
+# E {#e}
 
 ## ERC1155 
 

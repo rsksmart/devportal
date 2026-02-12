@@ -16,7 +16,7 @@ Rootstock’s **PowPeg** protocol, has matured from its inception in 2018 as a f
 - Read [Introducing Fast Mode: Getting rBTC via the PowPeg, but Faster](https://blog.rootstock.io/noticia/get-rbtc-fast-mode/) to learn about the difference between Native Mode and Fast Modes when using the PowPeg.
 :::
 
-## The History of the PowPeg Protocol
+## The History of the PowPeg Protocol {#the-history-of-the-powpeg-protocol}
 
 Two blockchains with distinct block formats can communicate in a fully decentralized manner if each one can evaluate the other blockchain’s consensus rules, and if cross-chain messages are not censored for long periods of time. Currently, only platforms with “Turing-complete” smart contracts can evaluate other blockchain consensus rules. Bitcoin, for better or for worse, lacks the ability to unlock coins over arbitrary predicates. Therefore, when Rootstock was created, it had to use the only existing technology in Bitcoin to distribute trust among parties: multi-signatures. With a multi-signature it is possible to give a group of notaries the task to protect locked bitcoins, tolerating a certain amount of malicious, hacked or unavailable parties.
 

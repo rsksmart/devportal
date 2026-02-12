@@ -138,7 +138,7 @@ CLI 도구를 활용하면 생산성을 높일 수 있습니다:
 </Tabs>
 
 
-### Node.js 및 NPM 설치하기
+### Node.js 및 NPM 설치하기 {#installing-nodejs-and-npm}
 
 
 <Tabs>
