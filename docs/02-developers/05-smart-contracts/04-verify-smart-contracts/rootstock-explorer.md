@@ -8,9 +8,13 @@ tags: [Explorer, tutorial, developers, quick starts, rsk, rootstock]
 
 Contract verification is essential in the Rootstock ecosystem. It allows Rootstock Explorer users to inspect and validate the source code of deployed smart contracts.
 
-The Rootstock Explorer provides a transparent view of the Rootstock blockchain, showing transactions, blocks, and deployed contracts. This transparency, enabled by verification, builds trust and understanding in decentralized applications.
+The Rootstock Explorer provides a transparent view of the Rootstock blockchain, showing transactions, blocks, and deployed contracts. This transparency, enabled by verification, builds trust and understanding in decentralized applications. 
 
-Key reasons for verifying a smart contract
+:::tip[Tip]
+See [Rootstock Explorer guides](/dev-tools/explorers/rootstock-explorer/) to navigate the explorer and submit dApps.
+:::
+
+**Key reasons for verifying a smart contract**
 
 - **Builds trust**:
   - Verification allows anyone to see the source code of a deployed smart contract, which fosters trust with users and the community.

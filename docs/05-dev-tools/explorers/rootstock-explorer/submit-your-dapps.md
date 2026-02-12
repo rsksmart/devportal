@@ -1,11 +1,10 @@
 ---
 sidebar_position: 300
+sidebar_label: Submit a dApp
 title: How to submit a dApp to the Explorer
-sidebar_label: Add dApps to the Rootstock Explorer
 tags: [dApp, token, rootstock, tutorials, rsk, blockchain]
 description: "This guide explains how developers and project owners can submit their dApp and related tokens for listing on the Explorer dApps page, ensuring correct and complete display."
 ---
-
 
 This guide explains how developers and project owners can submit their dApp and associated tokens to be listed on the Explorer dApps page, ensuring the project is displayed correctly with all required data.
 

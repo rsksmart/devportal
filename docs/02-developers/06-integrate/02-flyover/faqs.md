@@ -110,7 +110,7 @@ Here, you can find a list of frequently asked questions (FAQs) about the rBTC Fl
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">12. Does it cost money to use the PowPeg? </Accordion.Header>
     <Accordion.Body>
-        - The Flyover protocol maintains consistent fees across all integrated applications including the [PowPeg](/developers/integrate/flyover/powpeg/). Fee variations arise primarily from the specific Liquidity Provider (LP) chosen and the network transaction fees.
+        - The Flyover protocol maintains consistent fees across all integrated applications including the [PowPeg App](/resources/guides/powpeg-app/). Fee variations arise primarily from the specific Liquidity Provider (LP) chosen and the network transaction fees.
     </Accordion.Body>
   </Accordion.Item>
     <Accordion.Item eventKey="12">

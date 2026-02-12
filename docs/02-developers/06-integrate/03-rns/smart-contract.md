@@ -248,7 +248,7 @@ async function setReverseDomain(domainName, signer) {
 
 ## Resources
 
-- [RNS Javascript SDK](./js-sdk)
+- [RNS Javascript SDK](/developers/integrate/rns/js-sdk/)
 - [RNS Overview](/developers/integrate/rns/)
 - [RNS Contract](https://explorer.rootstock.io/address/0xcb868aeabd31e2b66f74e9a55cf064abb31a4ad5?tab=contract)
 - [Ethers.js Documentation](https://docs.ethers.org/)
