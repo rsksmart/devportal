@@ -102,15 +102,6 @@ description: スマートコントラクト開発ツールと言語のキュレ�
     description="Blockchairエクスプローラーは、Rootstockを含む40以上のチェーンを統合したブロックチェーン検索・分析エンジンです。"
 />
 <FilterItem
-    value="explorer, sc"
-    title="3xpl"
-    subtitle="エクスプローラー"
-    color="orange"
-    linkHref="/dev-tools/explorers/3xpl/"
-    linkTitle="エクスプローラーを使う"
-    description="3xpl（3xplor3rの略）は、Rootstock用の超高速でユニバーサルなエクスプローラーです。初心者でもわかりやすいインターフェースと、開発者・アナリスト向けの多くのプロ機能を備えています。"
-/>
-<FilterItem
     value="rpc"
     title="RPC API"
     subtitle="JSON RPC"
@@ -145,15 +136,6 @@ description: スマートコントラクト開発ツールと言語のキュレ�
     linkHref="/dev-tools/node-rpc/nownodes/"
     linkTitle="最初のAPIコールを実行"
     description="NOWNodesは、API経由でフルノードおよびブロックブックエクスプローラーへのアクセスを提供するブロックチェーン・アズ・ア・サービスソリューションです。"
-/>
-<FilterItem
-    value="rpc, smart contracts"
-    title="dRPC"
-    subtitle="JSON RPC"
-    color="orange"
-    linkHref="/dev-tools/node-rpc/drpc/"
-    linkTitle="最初のAPIコールを実行"
-    description="dRPCは、分散型ノードプロバイダーネットワークへのアクセスを提供します。"
 />
 <FilterItem
     value="wallet, sc"
@@ -289,15 +271,6 @@ description: スマートコントラクト開発ツールと言語のキュレ�
     linkHref="https://forwardprotocol.io/"
     linkTitle="ノーコードdAppを構築"
     description="Forward Protocolのノーコードツールを使用してRootstock上でdAppを構築。"
-/>
-<FilterItem
-    value="no-code, platform-infra, sc"
-    title="CryptoDO"
-    subtitle="ノーコード"
-    color="orange"
-    linkHref="https://www.cryptodo.app/"
-    linkTitle="ノーコードマルチチェーンdAppを構築"
-    description="CryptoDoは、企業向けのマルチチェーンノーコードWeb3ソリューションビルダーです。"
 />
 <FilterItem
     value="library, sdk, rifp, abs"
@@ -460,15 +433,6 @@ description: スマートコントラクト開発ツールと言語のキュレ�
     linkHref="https://vottun.com"
     linkTitle="始める"
     description="Vottunの相互運用可能なマルチブロックチェーンアーキテクチャは、基盤技術を深く理解せずにWeb3アプリを開発しやすくします。"
-/>
-<FilterItem
-    value="platform-infra"
-    title="WakeUp Labs"
-    subtitle="インフラ"
-    color="orange"
-    linkHref="https://platform.wakeuplabs.io"
-    linkTitle="始める"
-    description="WakeUp Labsは、EVM互換ブロックチェーン、DAO、伝統的組織が技術的課題を克服し、製品開発を迅速化できるよう支援するソフトウェア開発スタジオです。"
 />
 <FilterItem
     value="bridge, sc"

@@ -18,7 +18,7 @@ Before you begin your journey into deploying smart contracts on the Rootstock bl
 
 -  **Node.js**
 
-You will need Node.js installed on your machine to run the project locally. [Download](https://nodejs.org/en/download/package-manager) the latest LTS version, which is recommended for most users.
+You will need Node.js installed on your machine to run the project locally. [Download](https://nodejs.org/en/download) the latest LTS version, which is recommended for most users.
 
 - **Web3 Wallet (Metamask)**
 

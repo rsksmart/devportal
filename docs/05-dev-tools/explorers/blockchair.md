@@ -2,7 +2,7 @@
 sidebar_position: 6
 sidebar_label: Blockchair
 title: Get Started with the Blockchair Explorer
-tags: [rsk, explorer, rootstock, 3xpl, smart contracts, transactions, tools]
+tags: [rsk, explorer, rootstock, smart contracts, transactions, tools]
 ---
 
 [Blockchair explorer] is a blockchain search and analytics engine for Rootstock and 40+ chains. It incorporates a multitude of different blockchains into one search engine. It focuses on making blockchain data understandable and accessible for a wide and varied audience, interested in both blockchain and crypto, while maintaining and securing the privacy of users.

@@ -38,14 +38,6 @@ Imagine different islands, each with its own unique economy and currency. To tra
     linkTitle="Start Bridging"
   />
   <CardsGridItem
-    title="Router Protocol"
-    subtitle="cross-chain"
-    color="green"
-    description="Router Protocol enables communication and interaction between different networks (Layer 1) regardless of their underlying technology."
-    linkHref="/dev-tools/cross-chain-bridges/router-protocol/"
-    linkTitle="Start Bridging"
-  />
-  <CardsGridItem
     title="Wormhole"
     subtitle="cross-chain"
     color="green"

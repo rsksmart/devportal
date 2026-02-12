@@ -118,15 +118,6 @@ description: "Explore a curated selection of smart contract development tools an
     description="Blockchair explorer is a blockchain search and analytics engine for Rootstock and 40+ chains. It incorporates a multitude of different blockchains into one search engine."
   />
 <FilterItem
-    value="explorer, sc"
-    title="3xpl"
-    subtitle="Explorers"
-    color="orange"
-    linkHref="/dev-tools/explorers/3xpl/"
-    linkTitle="Use the Explorer"
-    description="3xpl (short for 3xplor3r) is a super-fast, universal explorer for Rootstock. It offers an easy-to-understand block explorer interface for beginner crypto users, as well as lots of professional features for developers and analysts."
-  />
-<FilterItem
     value="rpc"
     title="RPC API"
     subtitle="json rpc"
@@ -161,15 +152,6 @@ description: "Explore a curated selection of smart contract development tools an
     linkHref="/dev-tools/node-rpc/nownodes/"
     linkTitle="Make First API Call"
     description="NOWNodes is a blockchain-as-a-service enterprise solution that lets users get access to full Nodes and blockbook Explorers via an API."
-  />
-<FilterItem
-    value="rpc, smart contracts"
-    title="dRPC"
-    subtitle="json rpc"
-    color="orange"
-    linkHref="/dev-tools/node-rpc/drpc/"
-    linkTitle="Make First API Call"
-    description="dRPC provides access to a distributed network of node providers."
   />
 <FilterItem
     value="wallet, sc"
@@ -305,15 +287,6 @@ description: "Explore a curated selection of smart contract development tools an
     linkHref="https://forwardprotocol.io/"
     linkTitle="Build a no-code dApp"
     description="Build a dApp on Rootstock using Forward Protocol's no-code tools."
-  />
-<FilterItem
-    value="no-code, deploy, sc"
-    title="CryptoDO"
-    subtitle="no-code"
-    color="orange"
-    linkHref="https://www.cryptodo.app/"
-    linkTitle="Build a no-code Multichain dApp"
-    description="CryptoDo is a multichain, no-code web3 solution builder for businesses."
   />
 <FilterItem
     value="library, sdk, rifp, abs"

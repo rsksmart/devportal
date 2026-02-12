@@ -227,8 +227,8 @@ Under $HOME/.hyperlane/chains you will find a new folder named with your custom 
 
 Here is the Rootstock metadata and addresses.yml:
 
-- [Rootstock testnet metadata](https://github.com/hyperlane-xyz/hyperlane-registry/tree/main/chains/rootstocktestnet)
-- [Rootstock mainnet metadata](https://github.com/hyperlane-xyz/hyperlane-registry/tree/main/chains/rootstock)
+- [Rootstock testnet metadata](https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/rootstocktestnet/metadata.yaml)
+- [Rootstock mainnet metadata](https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/rootstockmainnet/metadata.yaml)
 
 We have successfully deployed the Hyperlane contracts on Rootstock testnet. The next step is to run Hyperlane relayer and validator nodes so that the message could be sent from source chain to destination chain.
 
@@ -239,7 +239,7 @@ Validators provide the security for messages sent from your chain to remote chai
 - Build and run the [validator](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/README.md#running-locally) using the steps listed in the README.md.
 - Use the reference script below to build and run the validator for Rootstock.
 - Add rootstock contract addresses and metadata in `./config/testnet4_config.json` file located in your filesystem inside the Rust project.
-- [Example config.json file](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/config/testnet_config.json)
+- [Example config.json file](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/main/config/testnet_config.json)
 
 
 To run a validator node, enter the following commands:
@@ -260,7 +260,7 @@ Relayers deliver interchain messages sent between the local and remote chains. L
 - Build and run the [relayer](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/README.md)
 - Use the reference script below to build and run the relayer for Rootstock.
 - Add rootstock contract addresses and metadata in `./config/testnet4_config.json` file located in your filesystem inside the Rust project.
-- [Example config.json file](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/config/testnet_config.json)
+- [Example config.json file](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/main/config/testnet_config.json)
 
 
 To run a relayer node, enter the following commands:

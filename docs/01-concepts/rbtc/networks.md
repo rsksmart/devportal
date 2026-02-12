@@ -140,7 +140,7 @@ Instructions on how to do a Testnet peg-in.
   <Accordion.Item eventKey="1">
     <Accordion.Header as="h3">2. Get test Bitcoin from Testnet Faucet</Accordion.Header>
     <Accordion.Body>
-      There are a few options to get Bitcoin on Testnet. We use [https://testnet-faucet.mempool.co/](https://testnet-faucet.mempool.co/).
+      There are a few options to get Bitcoin on Testnet. Use [https://bitcoinfaucet.uo1.net/](https://bitcoinfaucet.uo1.net/).
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">

@@ -596,7 +596,7 @@ In this guide, we learnt how to use the Web3.py library to deploy, interact with
             w3.eth.set_gas_price_strategy(gas_price_strategy)
             ```
             - Using `eth_gasPrice` method:
-            - Makes a call to the [JSON-RPC eth_gasPrice method](https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_gasprice) which returns the gas price configured by the connected Ethereum node.
+            - Makes a call to the [JSON-RPC eth_gasPrice method](https://ethereum-json-rpc.com/?method=eth_gasPrice) which returns the gas price configured by the connected Ethereum node.
             ```bash
                 from web3.gas_strategies.rpc import rpc_gas_price_strategy
                 from web3 import Web3, HTTPProvider
@@ -617,8 +617,8 @@ In this guide, we learnt how to use the Web3.py library to deploy, interact with
 
 #### Resources
 - [Web3.py: Gas Price Strategy](https://web3py.readthedocs.io/en/stable/gas_price.html#gas-price)
-- [Infura: eth_accounts](https://docs.infura.io/api/networks/ethereum/json-rpc-methods/eth_accounts)
-- [Infura: eth_sendTransaction](https://docs.infura.io/api/networks/ethereum/json-rpc-methods/eth_sendtransaction)
+- [Infura: eth_accounts](https://docs.metamask.io/wallet/reference/json-rpc-methods/eth_accounts/)
+- [Infura: eth_sendTransaction](https://docs.metamask.io/wallet/reference/json-rpc-methods/eth_sendtransaction/)
 - [Web3.py: Working with Local Private Keys](https://web3py.readthedocs.io/en/stable/web3.eth.account.html#working-with-local-private-keys)
 - [Web3.py: Contract Deployment Example](https://web3py.readthedocs.io/en/stable/web3.contract.html)
 - [Web3.py: Sign a Contract Transaction](https://web3py.readthedocs.io/en/stable/providers.html)

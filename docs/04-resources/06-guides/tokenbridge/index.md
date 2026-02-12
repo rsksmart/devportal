@@ -20,7 +20,7 @@ See the [FAQs](/resources/guides/tokenbridge/faq/) to learn more about how it wo
 
 
 The bridge contracts are upgradeable, this enables a smoother move to a more decentralized bridge in the future. This is the
-[token bridge repository](https://github.com/rsksmart/unified-bridges-ui)
+[token bridge repository](https://github.com/rsksmart/tokenbridge)
 
 ## Usage
 
