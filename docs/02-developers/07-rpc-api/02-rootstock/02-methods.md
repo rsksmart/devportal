@@ -204,7 +204,7 @@ During the simulation, the method calculates the exact amount of gas that would 
 **Prior to Arrowhead 6.5.0**, there was a difference in Rootstock compared to Ethereum:
 
 - If one of the steps of the simulated transaction fails, the node would return the gas estimation needed for the transaction
-- On Ethereum, the node would return an error instead of the gas estimation. 
+- On Ethereum, the node would return an error instead of the gas estimation.
 
 **Starting with Arrowhead 6.5.0:**
 
@@ -309,7 +309,7 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
 	"jsonrpc":"2.0",
 	"method":"eth_getBalance",
 	"params":[
-	"0x1fab9a0e24ffc209b01faa5a61ad4366982d0b7f", 
+	"0x1fab9a0e24ffc209b01faa5a61ad4366982d0b7f",
 	"0x6444bb"
 	],
 	"id":0
@@ -1407,10 +1407,10 @@ wscat -c wss://rpc.testnet.rootstock.io/<api-key>
 
 ```json
 {
-    "jsonrpc": "2.0",
-    "method": "eth_subscribe",
-    "params": ["newHeads"],
-    "id": 1
+  "jsonrpc": "2.0",
+  "method": "eth_subscribe",
+  "params": ["newHeads"],
+  "id": 1
 }
 ```
 
@@ -1459,16 +1459,18 @@ wscat -c wss://rpc.testnet.rootstock.io/<api-key>
 
 ```json
 {
-    "jsonrpc": "2.0",
-    "method": "eth_subscribe",
-    "params": [
-        "logs",
-        {
-            "address": "0x7f62ed5ffed1ddf15fb44632fae33f33712e31b5",
-            "topics": ["0x000000000000000000000000000000006d696e696e675f6665655f746f706963"]
-        }
-    ],
-    "id": 1
+  "jsonrpc": "2.0",
+  "method": "eth_subscribe",
+  "params": [
+    "logs",
+    {
+      "address": "0x7f62ed5ffed1ddf15fb44632fae33f33712e31b5",
+      "topics": [
+        "0x000000000000000000000000000000006d696e696e675f6665655f746f706963"
+      ]
+    }
+  ],
+  "id": 1
 }
 ```
 
@@ -1541,10 +1543,10 @@ wscat -c wss://rpc.testnet.rootstock.io/<api-key>
 
 ```json
 {
-    "jsonrpc": "2.0",
-    "method": "eth_subscribe",
-    "params": ["newPendingTransactions"],
-    "id": 1
+  "jsonrpc": "2.0",
+  "method": "eth_subscribe",
+  "params": ["newPendingTransactions"],
+  "id": 1
 }
 ```
 
@@ -1578,10 +1580,10 @@ wscat -c wss://rpc.testnet.rootstock.io/<api-key>
 
 ```json
 {
-    "jsonrpc": "2.0",
-    "method": "eth_subscribe",
-    "params": ["syncing"],
-    "id": 1
+  "jsonrpc": "2.0",
+  "method": "eth_subscribe",
+  "params": ["syncing"],
+  "id": 1
 }
 ```
 
@@ -1631,10 +1633,10 @@ To unsubscribe from a subscription, use the `eth_unsubscribe` method:
 
 ```json
 {
-    "jsonrpc": "2.0",
-    "method": "eth_unsubscribe",
-    "params": ["0x9cef478923ff08bf67fde6c64013158d"],
-    "id": 1
+  "jsonrpc": "2.0",
+  "method": "eth_unsubscribe",
+  "params": ["0x9cef478923ff08bf67fde6c64013158d"],
+  "id": 1
 }
 ```
 
@@ -1645,5 +1647,225 @@ To unsubscribe from a subscription, use the `eth_unsubscribe` method:
     "jsonrpc": "2.0",
     "id": 1,
     "result": true
+}
+```
+
+## trace_block
+
+- _Method:_ `trace_block`
+  - It can be used to get a trace of all the transactions in a given block. This can be useful for debugging purposes or for analyzing the behavior of a blockchain.
+- _Params:_
+  - **Block:** String: required, either the hexadecimal value of a **blockNumber**, OR a **blockHash**, OR one of the following block tags:
+    - `latest`: the most recent block the client has available.
+    - `earliest`: the lowest numbered block the client has available.
+- _Returns:_
+  - **Array**: Array. An array of block traces. It includes the traces for every transaction in the given block.
+
+- **Example:**
+
+```shell
+curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
+--request POST \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--data '{
+    "jsonrpc":"2.0",
+    "method":"trace_block",
+    "params":["0x677b78"],
+    "id":0
+}'
+```
+
+- **Example Response:**
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 3,
+    "result": [
+        {
+            "action": {
+                "callType": "call",
+                "from": "0x5e9127dd60377cd56c58d93a454b687d6612b0c8",
+                "to": "0x641487cf1fca15d7a0ba1fcb5068840fd822f4cf",
+                "gas": "0x7473",
+                "input": "0x095ea7b3000000000000000000000000e84a6b3cd3b736a4f26a2fb54f60b73fcd233f6f0000000000000000000000000000000000000000000000004563918244f40000",
+                "value": "0x0"
+            },
+            "blockHash": "0xb4c74f621aeede6a242d250666a81c394678a469fa62c7a44b4a42c8d0cfd784",
+            "blockNumber": 6781816,
+            "transactionHash": "0x79825731fd5acf9fc078ad5a35267be4c1bc5997103d63311ec057a0b35c08c0",
+            "transactionPosition": 0,
+            "type": "call",
+            "subtraces": 0,
+            "traceAddress": [],
+            "result": {
+                "gasUsed": "0x7473",
+                "output": "0x"
+            }
+        },
+    ...
+    ]
+}
+```
+
+## trace_transaction
+
+- _Method:_ `trace_transaction`
+  - It can be used to get the traces of a previously executed transaction. This can be useful for debugging purposes, or for understanding how a transaction works.
+- _Params:_
+  - **Transaction Hash:** String, required. A string representing the hash (32 bytes) of a transaction.
+- _Returns:_
+  - **Array**: Array. An array of traces for the transaction.
+
+- **Example:**
+
+```shell
+curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
+--request POST \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--data '{
+    "jsonrpc":"2.0",
+    "method":"trace_transaction",
+    "params":["0x5be397900442f9a5f491839bc0683dab48acd5d0fa8fd588af312c432b242295"],
+    "id":0
+}'
+```
+
+- **Example Response:**
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 3,
+    "result": [
+        {
+            "action": {
+                "callType": "call",
+                "from": "0xf813c5dfe9602fb4b76ad71305788e9ca1649f31",
+                "to": "0x45eda601198db28413fa7653300c52d5e4db9b8b",
+                "gas": "0x16a54",
+                "input": "0xcbf83a0400000000000000000000000000000000000000000000000000000000000000035249465553440000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007fa2f7497d70ae000000000000000000000000f813c5dfe9602fb4b76ad71305788e9ca1649f31000000000000000000000000000000000000000000000000000000000070146b0000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000018000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000003000000000000000000000000000000000000000000000000000000000000001b000000000000000000000000000000000000000000000000000000000000001c000000000000000000000000000000000000000000000000000000000000001b0000000000000000000000000000000000000000000000000000000000000003ae4de56750faaf024d070b9dc728f110778090bfe5388a6eb86339b9eae57f1a4d95c4e05c867ba5daa8213be1e5a22866207c4b3283b254134b0addfac9870dbc56def79ca5157e3a8be27b4b3ed6da0a8bc0f3ca8b9c3029c67a651b586875000000000000000000000000000000000000000000000000000000000000000366a93d3e35a6c08298e5bc620621e66bea4a82e589d3c58618e43fa71f81d7da33df0940804cc6bfafcb1399095a50ac806e067e4f86fd4f0aaf3e89c3788a5b68761017dbcae18f423bde3b89bb31c4e14123364396c98ce09f66a6bc1c9616",
+                "value": "0x0"
+            },
+            "blockHash": "0xb4eea0022471167e0874b106981156a6916601b317b2550b41d7423f74ec6005",
+            "blockNumber": 7345262,
+            "transactionHash": "0x5be397900442f9a5f491839bc0683dab48acd5d0fa8fd588af312c432b242295",
+            "transactionPosition": 2,
+            "type": "call",
+            "subtraces": 1,
+            "traceAddress": [],
+            "result": null,
+            "error": "Reverted"
+        },
+    ...
+    ]
+}
+```
+
+## trace_filter
+
+- _Method:_ `trace_filter`
+  - It allows users to get the traces of multiple transactions in a single request based on the filters provided. You can specify a range of block numbers (`fromBlock` and `toBlock`), and a set of origin and destination addresses (`fromAddress` and `toAddress`). This is useful for debugging purposes or for monitoring specific addresses.
+- _Params:_
+  - **Filter Object:** Object, required. An object with the following properties:
+    - `fromBlock`: String: optional (defaults to `latest` block number), either the hexadecimal value of a **blockNumber**, OR a **blockHash**, OR one of the following block tags:
+      - `latest`: the most recent block the client has available.
+      - `earliest`: the lowest numbered block the client has available.
+    - `toBlock`: String: optional (defaults to `latest` block number), either the hexadecimal value of a **blockNumber**, OR a **blockHash**, OR one of the following block tags:
+      - `latest`: the most recent block the client has available.
+      - `earliest`: the lowest numbered block the client has available.
+    - `fromAddress`: String / Array of Strings, optional - 20 Bytes (type: account). The address from which the transaction is sent. It can be one or more addresses.
+    - `toAddress`: String / Array of Strings, optional - 20 Bytes (type: account). The address to which the transaction is sent. It can be one or more addresses.
+    - `after`: Number, optional. The offset trace number. Defaults to 0.
+    - `count`: Number, optional. Integer number of traces to return. Defaults to 100, and the limit is 100.
+- _Returns:_
+  - **Array**: Array. Traces of transactions based on the given filters.
+
+:::info[Recommendation]
+The maximum allowed block range is 2000 blocks. If block numbers are not passes in the request, `fromBlock` and `toBlock` default to `latest` block number.
+:::
+
+- **Example:**
+
+```shell
+curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
+--request POST \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--data '{
+    "jsonrpc":"2.0",
+    "method":"trace_transaction",
+    "params":[{
+        "fromBlock": "0x6FE8CA",
+        "toBlock": "0x6FF09A",
+        "fromAddress": ["0xCF8E22c13116CA63d837EC4AC0d4FD4FC4b1498A", "0x1313055a13cf2e89E26dB20f1DE340793B72A100"],
+        "toAddress": ["0x45EDa601198dB28413Fa7653300c52D5e4Db9B8B", "0x39192498fCf1dbE11653040Bb49308e09A1056aC"],
+        "count": 100,
+        "after": 500
+        }],
+    "id":3
+}'
+```
+
+- **Example Response:**
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 3,
+    "result": [
+        {
+            "action": {
+                "callType": "staticcall",
+                "from": "0x45eda601198db28413fa7653300c52d5e4db9b8b",
+                "to": "0x493eefbb8f0a22f85708c0c890e7b531e61a7018",
+                "gas": "0x65b0",
+                "input": "0xc6cd9cd6000000000000000000000000f813c5dfe9602fb4b76ad71305788e9ca1649f31",
+                "value": "0x0"
+            },
+            "blockHash": "0x6110ffd2912ef8801881b88ec3f83fb3adecf2f5fc71766a124efcc1466d34af",
+            "blockNumber": 7334200,
+            "transactionHash": "0x807574576291478394438844118d8edbc025a8c47b07e4573c4ffb9f7a123a2a",
+            "transactionPosition": 3,
+            "type": "call",
+            "subtraces": 1,
+            "traceAddress": [
+                0,
+                5
+            ],
+            "result": {
+                "gasUsed": "0x90a",
+                "output": "0x00000000000000000000000017f9fbb707fa50eb98d7ec32cfeda33d0924f1a1"
+            }
+        },
+        {
+            "action": {
+                "callType": "delegatecall",
+                "from": "0x493eefbb8f0a22f85708c0c890e7b531e61a7018",
+                "to": "0x6ef810908a2a75577926133799d19b7d37bedd81",
+                "gas": "0x5fb9",
+                "input": "0xc6cd9cd6000000000000000000000000f813c5dfe9602fb4b76ad71305788e9ca1649f31",
+                "value": "0x0"
+            },
+            "blockHash": "0x6110ffd2912ef8801881b88ec3f83fb3adecf2f5fc71766a124efcc1466d34af",
+            "blockNumber": 7334200,
+            "transactionHash": "0x807574576291478394438844118d8edbc025a8c47b07e4573c4ffb9f7a123a2a",
+            "transactionPosition": 3,
+            "type": "call",
+            "subtraces": 0,
+            "traceAddress": [
+                0,
+                5,
+                0
+            ],
+            "result": {
+                "gasUsed": "0x2e7",
+                "output": "0x00000000000000000000000017f9fbb707fa50eb98d7ec32cfeda33d0924f1a1"
+            }
+        },
+    ...
+    ]
 }
 ```
