@@ -27,7 +27,7 @@ To ensure a successful transaction, please verify that your amount meets the req
 | Provider | Minimum Peg-In | Minimum Peg-Out |
 | :--- | :---: | ---: |
 | Flyover - Teks | 0.00500001 BTC | 0.004 rBTC |
-| Changelly | Equivalent of 30 USD| Equivalent of 30 USD |
+| Changelly | Equivalent of 30 USD | Equivalent of 30 USD |
 | Boltz | 0.00001 BTC | 0.00001 rBTC |
 | Native | 0.005 BTC | 0.004 rBTC |
 
