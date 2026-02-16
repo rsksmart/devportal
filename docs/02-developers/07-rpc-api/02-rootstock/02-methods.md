@@ -1659,7 +1659,7 @@ To unsubscribe from a subscription, use the `eth_unsubscribe` method:
     - `latest`: the most recent block the client has available.
     - `earliest`: the lowest numbered block the client has available.
 - _Returns:_
-  - **Array**: Array. An array of block traces. It includes the traces for every transaction in the given block.
+  - **Block traces**: Array. An array of block traces. It includes the traces for every transaction in the given block.
 
 - **Example:**
 
@@ -1716,7 +1716,7 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
 - _Params:_
   - **Transaction Hash:** String, required. A string representing the hash (32 bytes) of a transaction.
 - _Returns:_
-  - **Array**: Array. An array of traces for the transaction.
+  - **Traces**: Array. An array of traces for the transaction.
 
 - **Example:**
 
@@ -1781,10 +1781,10 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
     - `after`: Number, optional. The offset trace number. Defaults to 0.
     - `count`: Number, optional. Integer number of traces to return. Defaults to 100, and the limit is 100.
 - _Returns:_
-  - **Array**: Array. Traces of transactions based on the given filters.
+  - **Traces**: Array. Traces of transactions based on the given filters.
 
 :::info[Recommendation]
-The maximum allowed block range is 2000 blocks. If block numbers are not passes in the request, `fromBlock` and `toBlock` default to `latest` block number.
+The maximum allowed block range is 2000 blocks. If block numbers are not passed in the request, `fromBlock` and `toBlock` default to `latest` block number.
 :::
 
 - **Example:**
@@ -1796,7 +1796,7 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
 --header 'Content-Type: application/json' \
 --data '{
     "jsonrpc":"2.0",
-    "method":"trace_transaction",
+    "method":"trace_filter",
     "params":[{
         "fromBlock": "0x6FE8CA",
         "toBlock": "0x6FF09A",
