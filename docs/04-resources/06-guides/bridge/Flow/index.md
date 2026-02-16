@@ -2,7 +2,7 @@
 sidebar_position: 1000
 sidebar_label: How to use Super Bridge
 title: "How to use Super Bridge"
-description: "Frequently asked questions about the SuperBride App."
+description: "Frequently asked questions about the SuperBridge App."
 tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
@@ -65,11 +65,11 @@ tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 
 2. **Select the desired pair**
 - Choose source and destination assets. One side must always be a Rootstock token (e.g. rBTC, trBTC). The other is the asset on the other chain (e.g. BTC, ETH, USDT).  
-- See *Mainnet* and *Testnet available swaps* in the [User Guide](user-guide.md) for supported pairs.
+- See *Mainnet* and *Testnet available swaps* in the [User Guide](../index.md) for supported pairs.
 
 3. **Enter the amount**
 - Type the amount you want to bridge.  
-- If no providers appear, your amount may be below the minimum — check **Minimum Transaction Amounts** in the [User Guide](user-guide.md) and adjust.
+- If no providers appear, your amount may be below the minimum — check **Minimum Transaction Amounts** in the [User Guide](../index.md) and adjust.
 
 4. **Choose a provider**
 - The bridge lists all available providers for your pair and amount.  
@@ -78,7 +78,7 @@ tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 5. **Complete the transaction**
 After selecting a provider, finish in one of two ways:  
    - **With a wallet**
-    — Connect a compatible wallet (e.g. MetaMask for RSK) and authorize the transaction when prompted.  
+    — Connect a compatible wallet (e.g. MetaMask for Rootstock) and authorize the transaction when prompted.  
    - **Without a wallet**
     — Complete via **QR code**: scan and follow the provider’s instructions; no wallet connection required.
 

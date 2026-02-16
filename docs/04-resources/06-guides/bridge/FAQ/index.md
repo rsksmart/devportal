@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1000
+sidebar_position: 900
 sidebar_label: FAQ
 title: "FAQ"
-description: "Frequently asked questions about the SuperBride App."
+description: "Frequently asked questions about the SuperBridge App."
 tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
@@ -32,7 +32,7 @@ BTC bridged to Rootstock is secured through Rootstock’s **PowPeg mechanism**, 
 
 ### How long does the bridging process take?
 
-The process depends on **network confirmations**, which can take from several minutes to a few hours depending on network conditions. You can monitor the progress directly in the bridge interface. Here are some estiamtes by provider:
+The process depends on **network confirmations**, which can take from several minutes to a few hours depending on network conditions. You can monitor the progress directly in the bridge interface. Here are some estimates by provider:
 
 | Provider | Peg-In | Peg-Out |
 | :--- | :---: | :---: |

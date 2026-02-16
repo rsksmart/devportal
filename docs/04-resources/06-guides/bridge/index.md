@@ -8,7 +8,7 @@ description: "How to Bridge Tokens in and out of Rootstock?"
 
 # Super Bridge
 
-[Super Bridge](https://github.com/rsksmart/bridge) is a  platform is a cross-chain bridge designed for the Rootstock ecosystem. It provides a seamless way for users to move assets between Rootstock and other blockchain networks.
+[Super Bridge](https://github.com/rsksmart/bridge) is a cross-chain bridge designed for the Rootstock ecosystem. It provides a seamless way for users to move assets between Rootstock and other blockchain networks.
 
 - Peg-In (Move In): Transfer assets from other chains (like Bitcoin) into the Rootstock network.
 
@@ -55,7 +55,7 @@ To ensure a successful transaction, please verify that your amount meets the req
 
 ## What is rBTC?
 
-**rBTC** is the native Bitcoin-pegged asset on Rootstock. For every BTC you bridge in, an equal amount of rBTC is minted on the RSK network.
+**rBTC** is the native Bitcoin-pegged asset on Rootstock. For every BTC you bridge in, an equal amount of rBTC is minted on the Rootstock network.
 Once you have rBTC, you can:
 
 * Pay gas fees on Rootstock
@@ -74,7 +74,7 @@ Once you have rBTC, you can:
 3. **Choose a provider** — The bridge will list all available providers for your pair and amount. Compare rates, fees, and conditions, then select the provider you want to use.
 
 4. **Complete the transaction** — After selecting a provider you can finish in one of two ways:
-   - **With a wallet** — Connect a compatible wallet (e.g. MetaMask or another web3 wallet that supports RSK) and authorize the transaction when prompted.
+   - **With a wallet** — Connect a compatible wallet (e.g. MetaMask or another web3 wallet that supports Rootstock) and authorize the transaction when prompted.
    - **Without a wallet (QR code)** — Complete the transaction by scanning a QR code and following the provider’s instructions; no wallet connection is required.
 
 5. **Review and confirm** — Check all details (fees, destination address, amounts) before confirming. Then wait for confirmations; due to blockchain (e.g. Bitcoin) block times, this may take from minutes to several hours. Use the bridge UI to track status. ([rootstock.io][1])
@@ -111,12 +111,17 @@ Once BTC is successfully bridged and you have rBTC:
 
 If you run into issues or need guidance:
 
-* Check the official guides and rootstock.io content
-* Join community channels (Discord, forums)
-* Look for help in the **#tokenbridge** or ecosystem channels
+* Check the official guides and [Rootstock.io content][2] and the [bridging guide][1]
+* Join the community on [Rootstock Discord](https://discord.gg/rootstock) and the [Rootstock Research & Community Forum](https://research.rootstock.io)
+* For bridge-specific questions, ask in the **#tokenbridge** channel on Discord or in related ecosystem channels
 
 ## Resources
+
+- [Get rBTC: Comprehensive Guide to Bridging to Rootstock][1]
+- [Rootstock: the most secure and advanced Bitcoin layer][2]
+- [rBTC: Smart Bitcoin powering the RSK network - Rootstock][3]
+- [Release Notes](https://github.com/rsksmart/bridge/releases)
+
 [1]: https://rootstock.io/blog/get-rbtc-comprehensive-guide-to-bridging-to-rootstock/ "Get rBTC: Comprehensive Guide to Bridging to Rootstock"
 [2]: https://rootstock.io/technology/ "Rootstock: the most secure and advanced Bitcoin layer | Rootstock (RSK)"
 [3]: https://rootstock.io/rbtc/ "rBTC: Smart Bitcoin powering the RSK network - Rootstock"
-- [Release Notes](https://github.com/rsksmart/bridge/releases)
