@@ -3,7 +3,7 @@ sidebar_position: 1000
 sidebar_label: How to use Super Bridge
 title: "How to use Super Bridge"
 description: "Frequently asked questions about the SuperBridge App."
-tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [rsk, rootstock, bridge, atlas, flyover, powpeg]
 ---
 
 ## How to use Super Bridge

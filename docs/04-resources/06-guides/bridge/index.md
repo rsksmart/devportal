@@ -86,7 +86,7 @@ Bridging BTC to Rootstock depends on confirmations on the Bitcoin blockchain. Ea
 | Provider | Peg-In | Peg-Out |
 | :--- | :---: | :---: |
 | Flyover - Teks | 20m | 20m |
-| Flyover - RSK | 20m | 20m |
+| Flyover - Rootstock | 20m | 20m |
 | Changelly | 15m | 15m |
 | Boltz | 1m | 5m |
 | Native | 17h | 34h |
@@ -119,9 +119,9 @@ If you run into issues or need guidance:
 
 - [Get rBTC: Comprehensive Guide to Bridging to Rootstock][1]
 - [Rootstock: the most secure and advanced Bitcoin layer][2]
-- [rBTC: Smart Bitcoin powering the RSK network - Rootstock][3]
+- [rBTC: Smart Bitcoin powering network Rootstock][3]
 - [Release Notes](https://github.com/rsksmart/bridge/releases)
 
 [1]: https://rootstock.io/blog/get-rbtc-comprehensive-guide-to-bridging-to-rootstock/ "Get rBTC: Comprehensive Guide to Bridging to Rootstock"
-[2]: https://rootstock.io/technology/ "Rootstock: the most secure and advanced Bitcoin layer | Rootstock (RSK)"
-[3]: https://rootstock.io/rbtc/ "rBTC: Smart Bitcoin powering the RSK network - Rootstock"
+[2]: https://rootstock.io/technology/ "Rootstock: the most secure and advanced Bitcoin layer | Rootstock"
+[3]: https://rootstock.io/rbtc/ "rBTC: Smart Bitcoin powering Rootstock network"

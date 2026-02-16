@@ -3,7 +3,7 @@ sidebar_position: 900
 sidebar_label: FAQ
 title: "FAQ"
 description: "Frequently asked questions about the SuperBridge App."
-tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
+tags: [rsk, rootstock, bridge, atlas, flyover, powpeg]
 ---
 
 ## Frequently Asked Questions (FAQs)
@@ -37,7 +37,7 @@ The process depends on **network confirmations**, which can take from several mi
 | Provider | Peg-In | Peg-Out |
 | :--- | :---: | :---: |
 | Flyover - Teks | 20m | 20m |
-| Flyover - RSK | 20m | 20m |
+| Flyover - Rootstock | 20m | 20m |
 | Changelly | 15m | 15m |
 | Boltz | 1m | 5m |
 | Native | 17h | 34h |
