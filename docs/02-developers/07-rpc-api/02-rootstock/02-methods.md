@@ -1653,11 +1653,11 @@ To unsubscribe from a subscription, use the `eth_unsubscribe` method:
 ## trace_block
 
 - _Method:_ `trace_block`
-  - It can be used to get a trace of all the transactions in a given block. This can be useful for debugging purposes or for analyzing the behavior of a blockchain.
+  - Returns traces of all transactions in a given block. This can be useful for debugging purposes or for analyzing the behavior of a blockchain.
 - _Params:_
   - **Block:** String: required, either the hexadecimal value of a **blockNumber**, OR a **blockHash**, OR one of the following block tags:
-    - `latest`: the most recent block the client has available.
-    - `earliest`: the lowest numbered block the client has available.
+    - **latest:** the most recent block the client has available.
+    - **earliest:** the lowest numbered block the client has available.
 - _Returns:_
   - **Block traces**: Array. An array of block traces. It includes the traces for every transaction in the given block.
 
@@ -1712,7 +1712,7 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
 ## trace_transaction
 
 - _Method:_ `trace_transaction`
-  - It can be used to get the traces of a previously executed transaction. This can be useful for debugging purposes, or for understanding how a transaction works.
+  - Returns the traces of a previously executed transaction. This can be useful for debugging purposes, or for understanding how a transaction works.
 - _Params:_
   - **Transaction Hash:** String, required. A string representing the hash (32 bytes) of a transaction.
 - _Returns:_
@@ -1767,15 +1767,15 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
 ## trace_filter
 
 - _Method:_ `trace_filter`
-  - It allows users to get the traces of multiple transactions in a single request based on the filters provided. You can specify a range of block numbers (`fromBlock` and `toBlock`), and a set of origin and destination addresses (`fromAddress` and `toAddress`). This is useful for debugging purposes or for monitoring specific addresses.
+  - Returns traces of multiple transactions in a single request based on the filters provided. You can specify a range of block numbers (`fromBlock` and `toBlock`), and a set of origin and destination addresses (`fromAddress` and `toAddress`). This is useful for debugging purposes or for monitoring specific addresses.
 - _Params:_
   - **Filter Object:** Object, required. An object with the following properties:
     - `fromBlock`: String: optional (defaults to `latest` block number), either the hexadecimal value of a **blockNumber**, OR one of the following block tags:
-      - `latest`: the most recent block the client has available.
-      - `earliest`: the lowest numbered block the client has available.
+      - **latest:** the most recent block the client has available.
+      - **earliest:** the lowest numbered block the client has available.
     - `toBlock`: String: optional (defaults to `latest` block number), either the hexadecimal value of a **blockNumber**, OR one of the following block tags:
-      - `latest`: the most recent block the client has available.
-      - `earliest`: the lowest numbered block the client has available.
+      - **latest:** the most recent block the client has available.
+      - **earliest:** the lowest numbered block the client has available.
     - `fromAddress`: String / Array of Strings, optional - 20 Bytes (type: account). The address from which the transaction is sent. It can be one or more addresses.
     - `toAddress`: String / Array of Strings, optional - 20 Bytes (type: account). The address to which the transaction is sent. It can be one or more addresses.
     - `after`: Number, optional. The offset trace number. Defaults to 0.
@@ -1814,7 +1814,7 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
 ```js
 {
     "jsonrpc": "2.0",
-    "id": 3,
+    "id": 0,
     "result": [
         {
             "action": {
