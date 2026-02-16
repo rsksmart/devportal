@@ -35,8 +35,8 @@ To ensure a successful transaction, please verify that your amount meets the req
 
 - rBTC → BTC (L1)
 - BTC (L1) → rBTC
-- rBTC → BTC (Lighting)
-- BTC (Lighting) → rBTC
+- rBTC → BTC (Lightning)
+- BTC (Lightning) → rBTC
 - ETH → rBTC
 - USDT → rBTC
 - USDC → rBTC
