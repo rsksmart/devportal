@@ -1681,7 +1681,7 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
 ```js
 {
     "jsonrpc": "2.0",
-    "id": 3,
+    "id": 0,
     "result": [
         {
             "action": {
