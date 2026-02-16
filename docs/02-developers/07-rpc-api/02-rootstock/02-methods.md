@@ -1770,10 +1770,10 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
   - It allows users to get the traces of multiple transactions in a single request based on the filters provided. You can specify a range of block numbers (`fromBlock` and `toBlock`), and a set of origin and destination addresses (`fromAddress` and `toAddress`). This is useful for debugging purposes or for monitoring specific addresses.
 - _Params:_
   - **Filter Object:** Object, required. An object with the following properties:
-    - `fromBlock`: String: optional (defaults to `latest` block number), either the hexadecimal value of a **blockNumber**, OR a **blockHash**, OR one of the following block tags:
+    - `fromBlock`: String: optional (defaults to `latest` block number), either the hexadecimal value of a **blockNumber**, OR one of the following block tags:
       - `latest`: the most recent block the client has available.
       - `earliest`: the lowest numbered block the client has available.
-    - `toBlock`: String: optional (defaults to `latest` block number), either the hexadecimal value of a **blockNumber**, OR a **blockHash**, OR one of the following block tags:
+    - `toBlock`: String: optional (defaults to `latest` block number), either the hexadecimal value of a **blockNumber**, OR one of the following block tags:
       - `latest`: the most recent block the client has available.
       - `earliest`: the lowest numbered block the client has available.
     - `fromAddress`: String / Array of Strings, optional - 20 Bytes (type: account). The address from which the transaction is sent. It can be one or more addresses.
