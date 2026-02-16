@@ -69,7 +69,7 @@ tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 
 3. **Enter the amount**
 - Type the amount you want to bridge.  
-- If no providers appear, your amount may be below the minimum — check **Minimum Transaction Amounts** in the [User Guide](../index.md) and adjust.
+- If no providers appear, your amount may be below the minimum, check **Minimum Transaction Amounts** in the [User Guide](../index.md) and adjust.
 
 4. **Choose a provider**
 - The bridge lists all available providers for your pair and amount.  
@@ -77,10 +77,8 @@ tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 
 5. **Complete the transaction**
 After selecting a provider, finish in one of two ways:  
-   - **With a wallet**
-    — Connect a compatible wallet (e.g. MetaMask for Rootstock) and authorize the transaction when prompted.  
-   - **Without a wallet**
-    — Complete via **QR code**: scan and follow the provider’s instructions; no wallet connection required.
+   - **With a wallet** Connect a compatible wallet (e.g. MetaMask for Rootstock) and authorize the transaction when prompted.  
+   - **Without a wallet** Complete via **QR code**: scan and follow the provider’s instructions; no wallet connection required.
 
 6. **Review and confirm**
 - Check fees, destination address, and amounts before confirming.  
