@@ -1805,7 +1805,7 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
         "count": 100,
         "after": 500
         }],
-    "id":3
+    "id":0
 }'
 ```
 
