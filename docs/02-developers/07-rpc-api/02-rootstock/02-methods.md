@@ -1703,8 +1703,8 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
                 "gasUsed": "0x7473",
                 "output": "0x"
             }
-        },
-    ...
+        }
+        // ... more trace entries ...
     ]
 }
 ```
@@ -1758,8 +1758,8 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
             "traceAddress": [],
             "result": null,
             "error": "Reverted"
-        },
-    ...
+        }
+        // ... additional trace entries ...
     ]
 }
 ```
@@ -1864,8 +1864,7 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
                 "gasUsed": "0x2e7",
                 "output": "0x00000000000000000000000017f9fbb707fa50eb98d7ec32cfeda33d0924f1a1"
             }
-        },
-    ...
+        }
     ]
 }
 ```
