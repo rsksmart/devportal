@@ -2,7 +2,7 @@
 sidebar_position: 1000
 sidebar_label: How to use Super Bridge
 title: "How to use Super Bridge"
-description: "Frequently asked questions about the SuperBridge App."
+description: "How to use SuperBridge App."
 tags: [rsk, rootstock, bridge, atlas, flyover, powpeg]
 ---
 
