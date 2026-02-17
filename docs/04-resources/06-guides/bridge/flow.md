@@ -1,12 +1,60 @@
 ---
-sidebar_position: 1000
+sidebar_position: 200
 sidebar_label: How to use Super Bridge
 title: "How to use Super Bridge"
-description: "How to use SuperBridge App."
+description: "How to use Super Bridge App."
 tags: [rsk, rootstock, bridge, atlas, flyover, powpeg]
 ---
 
-## How to use Super Bridge
+> To exchange on Super Bridge you need enough funds in a crypto wallet. See **Minimum Transaction Amounts** in the [User Guide](../index.md) for limits per provider.
+
+## Step-by-Step
+
+1. **Open Super Bridge App**
+- Go to **[https://bridge.rootstock.io](https://bridge.rootstock.io)** (or testnet if applicable).  
+- You do **not** need to connect a wallet to start.
+
+2. **Select the desired pair**
+- Choose source and destination assets. One side must always be a Rootstock token (e.g. rBTC, trBTC). The other is the asset on the other chain (e.g. BTC, ETH, USDT).  
+- See *Mainnet* and *Testnet available swaps* in the [User Guide](../index.md) for supported pairs.
+
+3. **Enter the amount**
+- Type the amount you want to bridge.  
+- If no providers appear, your amount may be below the minimum, confirm **Minimum Transaction Amounts** in the [User Guide](../index.md) and adjust.
+
+4. **Choose a provider**
+- The bridge lists all available providers for your pair and amount.  
+- Compare rates, fees, and conditions, then select the provider you want.
+
+5. **Complete the transaction**
+After selecting a provider, finish in one of two ways:  
+   - **With a wallet** Connect a compatible wallet (e.g. MetaMask for Rootstock) and authorize the transaction when prompted.  
+   - **Without a wallet** Complete via **QR code**: scan and follow the provider’s instructions; no wallet connection required.
+
+6. **Review and confirm**
+- Check fees, destination address, and amounts before confirming.  
+- Wait for confirmations (may take minutes to hours depending on the chain).  
+- Track progress in the bridge UI.
+
+7. **Done**
+✅ You receive the asset on the destination network (e.g. rBTC on Rootstock).  
+🚀 Use it for gas, DeFi, swaps, and dApps.
+
+## Warning: Important Visual Warnings (UI Callouts)
+
+```text
+⚠️ Do NOT send BTC from an exchange
+⚠️ Only use wallets you control
+⚠️ Always verify the destination address
+⚠️ Bitcoin transactions are irreversible
+```
+
+## Status Indicators Users Will See
+
+* 🟡 **Waiting for network confirmations**
+* 🟡 **Processing bridge transaction**
+* 🟢 **Completed successfully**
+* 🔴 **Action required / error**
 
 ```text
 ┌──────────────┐
@@ -26,8 +74,6 @@ tags: [rsk, rootstock, bridge, atlas, flyover, powpeg]
        ▼
 ┌────────────────────────────────────┐
 │ 2. Enter amount                    │
-│    (check Minimum Transaction      │
-│     Amounts if no providers show)  │
 └──────┬─────────────────────────────┘
        │
        ▼
@@ -56,51 +102,3 @@ tags: [rsk, rootstock, bridge, atlas, flyover, powpeg]
 │    Track status in bridge UI       │
 └────────────────────────────────────┘
 ```
-
-## Step-by-Step (User View)
-
-1. **Open the bridge**
-- Go to **[https://bridge.rootstock.io](https://bridge.rootstock.io)** (or testnet if applicable).  
-- You do **not** need to connect a wallet to start.
-
-2. **Select the desired pair**
-- Choose source and destination assets. One side must always be a Rootstock token (e.g. rBTC, trBTC). The other is the asset on the other chain (e.g. BTC, ETH, USDT).  
-- See *Mainnet* and *Testnet available swaps* in the [User Guide](../index.md) for supported pairs.
-
-3. **Enter the amount**
-- Type the amount you want to bridge.  
-- If no providers appear, your amount may be below the minimum, check **Minimum Transaction Amounts** in the [User Guide](../index.md) and adjust.
-
-4. **Choose a provider**
-- The bridge lists all available providers for your pair and amount.  
-- Compare rates, fees, and conditions, then select the provider you want.
-
-5. **Complete the transaction**
-After selecting a provider, finish in one of two ways:  
-   - **With a wallet** Connect a compatible wallet (e.g. MetaMask for Rootstock) and authorize the transaction when prompted.  
-   - **Without a wallet** Complete via **QR code**: scan and follow the provider’s instructions; no wallet connection required.
-
-6. **Review and confirm**
-- Check fees, destination address, and amounts before confirming.  
-- Wait for confirmations (may take minutes to hours depending on the chain).  
-- Track progress in the bridge UI.
-
-7. **Done**
-✅ You receive the asset on the destination network (e.g. rBTC on Rootstock).  
-🚀 Use it for gas, DeFi, swaps, and dApps.
-
-## Important Visual Warnings (UI Callouts)
-
-```text
-⚠️ Do NOT send BTC from an exchange
-⚠️ Only use wallets you control
-⚠️ Always verify the destination address
-⚠️ Bitcoin transactions are irreversible
-```
-
-## Status Indicators Users Will See
-
-* 🟡 **Waiting for network confirmations**
-* 🟡 **Processing bridge transaction**
-* 🟢 **Completed successfully**
-* 🔴 **Action required / error**

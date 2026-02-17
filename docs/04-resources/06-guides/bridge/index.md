@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 100
 title: Bridge tokens with Rootstock
 sidebar_label: Super Bridge
 tags: [rsk, rootstock, bridge, atlas, flyover, powpeg]
@@ -8,13 +8,11 @@ description: "How to Bridge Tokens in and out of Rootstock?"
 
 # Super Bridge
 
-[Super Bridge](https://github.com/rsksmart/bridge) is a cross-chain bridge designed for the Rootstock ecosystem. It provides a seamless way for users to move assets between Rootstock and other blockchain networks.
+Super Bridge is a cross-chain bridge designed for the Rootstock ecosystem. It provides a seamless way for users to move assets between Rootstock and other blockchain networks.
 
 - Peg-In (Move In): Transfer assets from other chains (like Bitcoin) into the Rootstock network.
 
 - Peg-Out (Move Out): Transfer your assets from Rootstock back to their native or other supported chains.
-
----
 
 ## What the Bridge Does
 Our interface is built for maximum simplicity. You can explore all available exchange options, check rates, and view provider details before you even need to connect your wallet. This allows you to plan your transaction privately and securely.
@@ -30,6 +28,8 @@ To ensure a successful transaction, please verify that your amount meets the req
 | Changelly | Equivalent of 30 USD | Equivalent of 30 USD |
 | Boltz | 0.00001 BTC | 0.00001 rBTC |
 | Native | 0.005 BTC | 0.004 rBTC |
+
+> For some providers, the minimum amounts above do not include fees. Ensure your wallet balance covers both the transfer amount and fees.
 
 ### [Mainnet](https://bridge.rootstock.io/) available swaps
 
@@ -63,21 +63,21 @@ Once you have rBTC, you can:
 * Use DeFi protocols (lending, staking, liquidity provision)
 * Interact with decentralized applications (dApps) ([rootstock.io][3])
 
-## How to Use the Bridge (General Overview)
+## How to Use the Bridge
 
-> This is a general step-by-step guide. Always follow on-screen instructions carefully. You do **not** need to connect a wallet to start — you can explore options and complete the flow first, then connect or pay via QR when you are ready.
+> This is a general step-by-step guide. Always follow on-screen instructions carefully. You do **not** need to connect a wallet to start. You can explore options and complete the flow first, then connect or pay via QR when you are ready.
 
-1. **Select the desired pair** — Choose the source and destination assets. One side of the pair must always be a token from the Rootstock network (e.g. rBTC, trBTC, or other supported Rootstock tokens). The other side is the asset on the other chain (e.g. BTC, ETH, USDT). See *Mainnet* and *Testnet available swaps* above for supported pairs.
+1. **Select the desired pair**: Choose the source and destination assets. One side of the pair must always be a token from the Rootstock network (e.g. rBTC, trBTC, or other supported Rootstock tokens). The other side is the asset on the other chain (e.g. BTC, ETH, USDT). See *Mainnet* and *Testnet available swaps* above for supported pairs.
 
-2. **Enter the amount** — Type the amount you want to bridge. Each provider has minimum (and possibly maximum) limits; if no providers appear, your amount may be below the minimum. See **Minimum Transaction Amounts** above for provider limits and adjust your amount if needed.
+2. **Enter the amount**: Type the amount you want to bridge. Each provider has minimum (and possibly maximum) limits; if no providers appear, your amount may be below the minimum. See **Minimum Transaction Amounts** above for provider limits and adjust your amount if needed.
 
-3. **Choose a provider** — The bridge will list all available providers for your pair and amount. Compare rates, fees, and conditions, then select the provider you want to use.
+3. **Choose a provider**: The bridge will list all available providers for your pair and amount. Compare rates, fees, and conditions, then select the provider you want to use.
 
-4. **Complete the transaction** — After selecting a provider you can finish in one of two ways:
-   - **With a wallet** — Connect a compatible wallet (e.g. MetaMask or another web3 wallet that supports Rootstock) and authorize the transaction when prompted.
-   - **Without a wallet (QR code)** — Complete the transaction by scanning a QR code and following the provider’s instructions; no wallet connection is required.
+4. **Complete the transaction**: After selecting a provider you can finish in one of two ways:
+   - **With a wallet**: Connect a compatible wallet (e.g. MetaMask or another web3 wallet that supports Rootstock) and authorize the transaction when prompted.
+   - **Without a wallet (QR code)**: Complete the transaction by scanning a QR code and following the provider’s instructions; no wallet connection is required.
 
-5. **Review and confirm** — Check all details (fees, destination address, amounts) before confirming. Then wait for confirmations; due to blockchain (e.g. Bitcoin) block times, this may take from minutes to several hours. Use the bridge UI to track status. ([rootstock.io][1])
+5. **Review and confirm**: Check all details (fees, destination address, amounts) before confirming. Then wait for confirmations; due to blockchain (e.g. Bitcoin) block times, this may take from minutes to several hours. Use the bridge UI to track status. ([rootstock.io][1])
 
 ## Expected Time & Confirmations
 
