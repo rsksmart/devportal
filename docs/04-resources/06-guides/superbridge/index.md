@@ -3,10 +3,8 @@ sidebar_position: 100
 title: Bridge tokens with Rootstock
 sidebar_label: Super Bridge
 tags: [rsk, rootstock, bridge, atlas, flyover, powpeg]
-description: "How to Bridge Tokens in and out of Rootstock?"
+description: "How to Bridge Tokens in and out of Rootstock"
 ---
-
-# Super Bridge
 
 Super Bridge is a cross-chain bridge designed for the Rootstock ecosystem. It provides a seamless way for users to move assets between Rootstock and other blockchain networks.
 
@@ -15,7 +13,7 @@ Super Bridge is a cross-chain bridge designed for the Rootstock ecosystem. It pr
 - Peg-Out (Move Out): Transfer your assets from Rootstock back to their native or other supported chains.
 
 ## What the Bridge Does
-Our interface is built for maximum simplicity. You can explore all available exchange options, check rates, and view provider details before you even need to connect your wallet. This allows you to plan your transaction privately and securely.
+The Super Bridge interface is built for maximum simplicity. You can explore all available exchange options, check rates, and view provider details before you even need to connect your wallet. This allows you to plan your transaction privately and securely.
 
 ### Minimum Transaction Amounts
 If you are having trouble finding an available provider, it is likely because the amount you wish to transfer is below the minimum limit required by the providers.

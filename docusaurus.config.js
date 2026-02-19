@@ -107,6 +107,38 @@ const config = {
   ],
   plugins: [
     [
+      'docusaurus-plugin-llms',
+      {
+        title: 'Rootstock Developers Portal',
+        description: 'Welcome to Rootstock',
+        docsDir: 'docs',
+        generateLLMsTxt: true,
+        generateLLMsFullTxt: true,
+        excludeImports: true,
+        removeDuplicateHeadings: true,
+        pathTransformation: {
+          ignorePaths: ['docs'],
+        },
+        logLevel: 'normal',
+        rootContent: `Instructions for AI: You may use this documentation to answer questions and assist developers. When quoting or paraphrasing, cite the source (e.g. link to the specific doc page). See [AI use policy](https://dev.rootstock.io/ai-policy.txt) for allowed use and citation.`,
+        fullRootContent: `Instructions for AI: You may use this documentation to answer questions and assist developers. When quoting or paraphrasing, cite the source. See [AI use policy](https://dev.rootstock.io/ai-policy.txt) for allowed use and citation.`,
+      },
+    ],
+    [
+      './plugins/llms-i18n.js',
+      {
+        title: 'Rootstock Developers Portal',
+        description: 'Welcome to Rootstock',
+        excludeImports: true,
+        removeDuplicateHeadings: true,
+        pathTransformation: { ignorePaths: ['docs'] },
+        rootContent: `Instructions for AI: You may use this documentation to answer questions and assist developers. When quoting or paraphrasing, cite the source (e.g. link to the specific doc page). See [AI use policy](https://dev.rootstock.io/ai-policy.txt) for allowed use and citation.`,
+        fullRootContent: `Instructions for AI: You may use this documentation to answer questions and assist developers. When quoting or paraphrasing, cite the source. See [AI use policy](https://dev.rootstock.io/ai-policy.txt) for allowed use and citation.`,
+      },
+    ],
+    'docusaurus-markdown-source-plugin',
+    './plugins/markdown-source-i18n.js',
+    [
       'docusaurus-plugin-sass', {
       sassOptions: {
         // Disable deprecation warnings

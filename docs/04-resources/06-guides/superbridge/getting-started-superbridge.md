@@ -7,7 +7,7 @@ tags: [rsk, rootstock, bridge, atlas, flyover, powpeg]
 ---
 
 :::tip[Tip]
-To exchange on Super Bridge you need enough funds in a crypto wallet. See [Minimum Transaction Amounts](/resources/guides/bridge) for limits per provider.
+To exchange on Super Bridge you need enough funds in a crypto wallet. See [Minimum Transaction Amounts](/resources/guides/superbridge) for limits per provider.
 :::
 
 ## Getting Started
@@ -19,12 +19,12 @@ To exchange on Super Bridge you need enough funds in a crypto wallet. See [Minim
 
 2. **Select the desired pair**
 - Choose source and destination assets. One side must always be a Rootstock token (e.g. rBTC, trBTC). The other is the asset on the other chain (e.g. BTC, ETH, USDT).  
-- See *Mainnet* and *Testnet available swaps* in the [User Guide](/resources/guides/bridge) for supported pairs.
+- See *Mainnet* and *Testnet available swaps* in the [User Guide](/resources/guides/superbridge) for supported pairs.
 <img src="/img/resources/bridge/select-token.png" alt="Select tokens"/>
 
 3. **Enter the amount**
 - Type the amount you want to bridge.  
-- If no providers appear, your amount may be below the minimum, confirm [Minimum Transaction Amounts](/resources/guides/bridge) and adjust.
+- If no providers appear, your amount may be below the minimum, confirm [Minimum Transaction Amounts](/resources/guides/superbridge) and adjust.
 
 <img src="/img/resources/bridge/input-amount.gif" alt="Input amount"/>
 
@@ -47,7 +47,7 @@ After selecting a provider, and accepting Terms and Conditions, finish in one of
 
 7. **Review and confirm**
 - Check fees, destination address, and amounts before confirming.
-- Wait for confirmations. See [Expected Time & Confirmations](/resources/guides/bridge).
+- Wait for confirmations. See [Expected Time & Confirmations](/resources/guides/superbridge).
 - Track progress in the bridge UI.
 
 8. **Done**
