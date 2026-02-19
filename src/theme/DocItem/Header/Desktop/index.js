@@ -2,7 +2,6 @@ import React from 'react';
 
 import DocBreadcrumbs from "@theme/DocBreadcrumbs";
 import ReadingTime from "@theme/DocItem/ReadingTime";
-import MarkdownPageActions from "@theme/DocItem/MarkdownPageActions";
 
 export default function DocItemHeaderDesktop() {
 
