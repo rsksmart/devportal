@@ -1,15 +1,21 @@
 ---
 sidebar_label: Glossary
-sidebar_position: 245
-title: Glossary
-tags: [rsk, rootstock, rif, flyover, integrate, integration guide, rbtc, powpeg]
-description: The PowPeg is a user-friendly interface for the conversion of BTC to rBTC and vice versa. It is secured by the powpeg protocol, which is a unique 2-way peg system that allows users to natively transfer bitcoins from the Bitcoin blockchain to the Rootstock blockchain and vice versa, creating a token called rBTC that is pegged to the value of Bitcoin.
+sidebar_position: 245  
+title: Glossary  
+tags: [rsk, rootstock, rif, flyover, integrate, integration guide, rbtc, powpeg]  
+description: Glossary of terms for the rBTC Flyover protocol
 ---
 
-See a list of terms about/related to the Flyover and their meanings.
+See a list of terms about the Flyover and their meanings.
 
-````mdx-code-block
+```mdx-code-block
 <Accordion>
+  <Accordion.Item eventKey="flyover">
+    <Accordion.Header as="h3">rBTC Flyover</Accordion.Header>
+    <Accordion.Body>
+      The rBTC Flyover is a protocol built on the Rootstock PowPeg that speeds up BTC–rBTC transfers by using a pool of Liquidity Providers (LPs) while preserving trust. It inherits the same security guarantees as the PowPeg. In a peg-in, user funds go to the PowPeg federation (a decentralized multi-signature entity). In a peg-out, user funds go to the Liquidity Bridge Contract (LBC), a smart contract. The Liquidity Provider never receives or holds custody of user funds.
+    </Accordion.Body>
+  </Accordion.Item>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">rBTC</Accordion.Header>
     <Accordion.Body>
@@ -19,7 +25,7 @@ See a list of terms about/related to the Flyover and their meanings.
   <Accordion.Item eventKey="1">
     <Accordion.Header as="h3">PowPeg App</Accordion.Header>
     <Accordion.Body>
-      - The PowPeg app is a a user-friendly interface developed by Rootstock that allows users to interact with both the traditional PowPeg protocol and the faster Flyover system for Bitcoin-Rootstock transfers. It uses the traditional powpeg protocol that allows users to natively transfer bitcoins from the Bitcoin blockchain to the Rootstock blockchain and vice versa, creating a token called rBTC that is pegged to the value of Bitcoin.
+      - The PowPeg App is a user-friendly interface developed by Rootstock that allows users to interact with both the traditional PowPeg protocol and the faster Flyover system for Bitcoin-Rootstock transfers. It uses the traditional powpeg protocol that allows users to natively transfer bitcoins from the Bitcoin blockchain to the Rootstock blockchain and vice versa, creating a token called rBTC that is pegged to the value of Bitcoin.
     </Accordion.Body>
   </Accordion.Item>
     <Accordion.Item eventKey="2">
@@ -31,7 +37,7 @@ See a list of terms about/related to the Flyover and their meanings.
   <Accordion.Item eventKey="2">
     <Accordion.Header as="h3">Liquidity Providers (LP)</Accordion.Header>
     <Accordion.Body>
-      - Also known as LPs, these are entities that supply both Bitcoin (BTC) and Rootstock Bitcoin (rBTC) to the Flyover protocol to facilitate fast and secure transfers between the two networks.
+      LPs are entities that supply BTC and rBTC liquidity so the Flyover can offer faster transfers. They do not receive or hold user funds. On peg-in, the federation receives the user's BTC. On peg-out, the Liquidity Bridge Contract holds and releases funds. LPs are repaid by the protocol after fulfilling a transfer and can earn configurable fees.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="3">
@@ -43,14 +49,13 @@ See a list of terms about/related to the Flyover and their meanings.
   <Accordion.Item eventKey="4">
     <Accordion.Header as="h3">Peg-in</Accordion.Header>
     <Accordion.Body>
-      - A conversion from BTC to rBTC is known as a peg-in. In this process, the user sends Bitcoin (BTC) to a designated address and receives an equivalent amount of Rootstock Bitcoin (rBTC) within the Rootstock blockchain network. **The peg-in process is irreversible**. When using the **Faster Option (Flyover)**, this process typically requires 2 Bitcoin block confirmations, which is approximately 20 minutes.
-      - Note that Bitcoin block confirmation times can vary, particularly during periods of network congestion. This may result in delays for transactions to be included in the first block.
+      A peg-in is a conversion from BTC to rBTC. The user sends BTC to a designated address and receives rBTC on Rootstock. In Flyover, the recipient of the user's BTC is the PowPeg federation (a decentralized multi-signature entity), not the Liquidity Provider. The peg-in process is irreversible. With Flyover, the process typically requires about 2 Bitcoin block confirmations (around 20 minutes). Bitcoin block confirmation times can vary during network congestion.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="5">
     <Accordion.Header as="h3">Peg-out</Accordion.Header>
     <Accordion.Body>
-      - A conversion from rBTC to BTC involves locking rBTC on the Rootstock network and releasing BTC on the Bitcoin network. When using the **Faster Option (Flyover)**, this process typically requires 10 Rootstock block confirmations (approximately 5 minutes) for users to receive their funds.
+      A peg-out is a conversion from rBTC to BTC. rBTC is locked on Rootstock and BTC is released on Bitcoin. In Flyover, the user's rBTC is locked in the Liquidity Bridge Contract (smart contract). The LP never receives or holds custody of the user's funds. With Flyover, users typically receive BTC after about 10 Rootstock block confirmations (around 5 minutes).
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="6">
@@ -62,8 +67,9 @@ See a list of terms about/related to the Flyover and their meanings.
    <Accordion.Item eventKey="7">
     <Accordion.Header as="h3">Liquidity Provider Server</Accordion.Header>
     <Accordion.Body>
-      - A Liquidity Provider Server (LPS) acts as a key component of the Flyover protocol by managing liquidity between the Bitcoin and Rootstock networks. Interacting directly with the [Liquidity Bridge Contract (LBC)](https://github.com/rsksmart/liquidity-bridge-contract), the LP server fulfills requests for token swaps by holding reserves of both BTC and rBTC. It executes complex operations such as collateral management, fund transfers, and fee adjustments.
+      The Liquidity Provider Server (LPS) manages an LP's liquidity and interacts with the [Liquidity Bridge Contract (LBC)](https://github.com/rsksmart/liquidity-bridge-contract). The LPS fulfills swap requests using the LP's reserves. User funds in Flyover always go to the federation (peg-in) or the LBC (peg-out), not to the LPS or LP wallets.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
-````
+```
+
