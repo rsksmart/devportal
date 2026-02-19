@@ -122,7 +122,18 @@ const config = {
         logLevel: 'normal',
       },
     ],
+    [
+      './plugins/llms-i18n.js',
+      {
+        title: 'Rootstock Developers Portal',
+        description: 'Welcome to Rootstock',
+        excludeImports: true,
+        removeDuplicateHeadings: true,
+        pathTransformation: { ignorePaths: ['docs'] },
+      },
+    ],
     'docusaurus-markdown-source-plugin',
+    './plugins/markdown-source-i18n.js',
     [
       'docusaurus-plugin-sass', {
       sassOptions: {

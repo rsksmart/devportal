@@ -239,6 +239,36 @@
   "theme.DocItem.Header.shareLabel": {
     "message": "Share"
   },
+  "theme.DocItem.Markdown.copying": {
+    "message": "Copying…"
+  },
+  "theme.DocItem.Markdown.copied": {
+    "message": "Copied!"
+  },
+  "theme.DocItem.Markdown.copyPage": {
+    "message": "Copy page"
+  },
+  "theme.DocItem.Markdown.copyPageDesc": {
+    "message": "Copy page as Markdown for LLMs"
+  },
+  "theme.DocItem.Markdown.viewAsMarkdown": {
+    "message": "View as Markdown"
+  },
+  "theme.DocItem.Markdown.viewAsMarkdownDesc": {
+    "message": "View this page as plain text"
+  },
+  "theme.DocItem.Markdown.llmsTxtIndex": {
+    "message": "LLM index (llms.txt)"
+  },
+  "theme.DocItem.Markdown.llmsTxtIndexDesc": {
+    "message": "Open the LLM index for this locale"
+  },
+  "theme.DocItem.Markdown.llmsTxtFull": {
+    "message": "LLM full (llms-full.txt)"
+  },
+  "theme.DocItem.Markdown.llmsTxtFullDesc": {
+    "message": "Open the full LLM export for this locale"
+  },
   "theme.blog.sorting": {
     "message": "Filters"
   },

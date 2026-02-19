@@ -239,6 +239,36 @@
   "theme.DocItem.Header.shareLabel": {
     "message": "Compartir"
   },
+  "theme.DocItem.Markdown.copying": {
+    "message": "Copiando…"
+  },
+  "theme.DocItem.Markdown.copied": {
+    "message": "¡Copiado!"
+  },
+  "theme.DocItem.Markdown.copyPage": {
+    "message": "Copiar página"
+  },
+  "theme.DocItem.Markdown.copyPageDesc": {
+    "message": "Copiar página como Markdown para LLMs"
+  },
+  "theme.DocItem.Markdown.viewAsMarkdown": {
+    "message": "Ver como Markdown"
+  },
+  "theme.DocItem.Markdown.viewAsMarkdownDesc": {
+    "message": "Ver esta página como texto plano"
+  },
+  "theme.DocItem.Markdown.llmsTxtIndex": {
+    "message": "Índice LLM (llms.txt)"
+  },
+  "theme.DocItem.Markdown.llmsTxtIndexDesc": {
+    "message": "Abrir el índice LLM de este idioma"
+  },
+  "theme.DocItem.Markdown.llmsTxtFull": {
+    "message": "LLM completo (llms-full.txt)"
+  },
+  "theme.DocItem.Markdown.llmsTxtFullDesc": {
+    "message": "Abrir la exportación LLM completa de este idioma"
+  },
   "theme.blog.sorting": {
     "message": "Filtros"
   },

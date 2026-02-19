@@ -239,6 +239,36 @@
   "theme.DocItem.Header.shareLabel": {
     "message": "공유하기"
   },
+  "theme.DocItem.Markdown.copying": {
+    "message": "복사 중…"
+  },
+  "theme.DocItem.Markdown.copied": {
+    "message": "복사됨!"
+  },
+  "theme.DocItem.Markdown.copyPage": {
+    "message": "페이지 복사"
+  },
+  "theme.DocItem.Markdown.copyPageDesc": {
+    "message": "LLM용 Markdown으로 페이지 복사"
+  },
+  "theme.DocItem.Markdown.viewAsMarkdown": {
+    "message": "Markdown으로 보기"
+  },
+  "theme.DocItem.Markdown.viewAsMarkdownDesc": {
+    "message": "이 페이지를 일반 텍스트로 보기"
+  },
+  "theme.DocItem.Markdown.llmsTxtIndex": {
+    "message": "LLM 인덱스 (llms.txt)"
+  },
+  "theme.DocItem.Markdown.llmsTxtIndexDesc": {
+    "message": "이 언어의 LLM 인덱스 열기"
+  },
+  "theme.DocItem.Markdown.llmsTxtFull": {
+    "message": "LLM 전체 (llms-full.txt)"
+  },
+  "theme.DocItem.Markdown.llmsTxtFullDesc": {
+    "message": "이 언어의 전체 LLM 내보내기 열기"
+  },
   "theme.blog.sorting": {
     "message": "필터"
   },

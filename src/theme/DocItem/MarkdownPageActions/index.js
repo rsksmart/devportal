@@ -6,21 +6,23 @@ import clsx from 'clsx';
 
 /**
  * Build the URL path to this doc's raw markdown file.
- * The markdown plugin copies docs/<path> to build/<path> using the actual
- * file path (e.g. 05-dev-tools/smart-contract/index.md). The doc id is the
- * slug and can differ (e.g. dev-tools/smart-contract), so we must use
- * metadata.source (e.g. @site/docs/05-dev-tools/smart-contract/index.md)
- * and strip the @site/docs/ prefix to get the correct URL.
+ * The markdown plugin copies docs (and i18n/<locale>/.../current) into the
+ * build. metadata.source can be @site/docs/... or
+ * @site/i18n/<locale>/docusaurus-plugin-content-docs/current/...
+ * We strip the prefix so the path is relative to the locale base.
  */
 function useMarkdownUrl() {
   const { metadata } = useDoc();
   const baseUrl = useBaseUrl('/');
   const source = metadata?.source;
   if (!source || typeof source !== 'string') return null;
-  const docsRelative = source.replace(/^@site\/docs\//i, '').replace(/^docs\//i, '');
+  let docsRelative = source
+    .replace(/^@site\/docs\//i, '')
+    .replace(/^docs\//i, '')
+    .replace(/^@site\/i18n\/[^/]+\/docusaurus-plugin-content-docs\/current\//i, '');
   if (!docsRelative || !docsRelative.endsWith('.md')) return null;
-  const path = `${baseUrl.replace(/\/+$/, '')}/${docsRelative}`;
-  return path.replace(/\/+/g, '/');
+  const urlPath = `${baseUrl.replace(/\/+$/, '')}/${docsRelative}`;
+  return urlPath.replace(/\/+/g, '/');
 }
 
 function IconCopy() {
@@ -49,6 +51,8 @@ function IconExternal() {
 
 export default function MarkdownPageActions() {
   const mdUrl = useMarkdownUrl();
+  const llmsTxtUrl = useBaseUrl('/llms.txt');
+  const llmsFullTxtUrl = useBaseUrl('/llms-full.txt');
   const [copyState, setCopyState] = useState('idle'); // 'idle' | 'copying' | 'copied'
   const [open, setOpen] = useState(false);
   const containerRef = useRef(null);
@@ -107,7 +111,7 @@ export default function MarkdownPageActions() {
       >
         <button
           type="button"
-          className="markdown-actions-copy-btn btn btn-outline btn-sm btn-muted"
+          className="markdown-actions-copy-btn btn btn-outline btn-sm"
           onClick={handleCopy}
           disabled={copyState === 'copying'}
           aria-busy={copyState === 'copying'}
@@ -118,7 +122,7 @@ export default function MarkdownPageActions() {
         </button>
         <button
           type="button"
-          className="markdown-actions-trigger btn btn-outline btn-sm btn-muted dropdown__trigger"
+          className="markdown-actions-trigger btn btn-outline btn-sm dropdown__trigger"
           aria-label="More options"
           aria-expanded={open}
           aria-haspopup="true"
@@ -179,6 +183,46 @@ export default function MarkdownPageActions() {
                 </span>
                 <span className="markdown-actions-item-desc">
                   <Translate id="theme.DocItem.Markdown.viewAsMarkdownDesc">View this page as plain text</Translate>
+                </span>
+              </span>
+              <IconExternal />
+            </a>
+          </li>
+          <li>
+            <a
+              className="markdown-actions-item dropdown__link"
+              href={llmsTxtUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+            >
+              <IconMarkdown />
+              <span className="markdown-actions-item-text">
+                <span className="markdown-actions-item-title">
+                  <Translate id="theme.DocItem.Markdown.llmsTxtIndex">LLM index (llms.txt)</Translate>
+                </span>
+                <span className="markdown-actions-item-desc">
+                  <Translate id="theme.DocItem.Markdown.llmsTxtIndexDesc">Open the LLM index for this locale</Translate>
+                </span>
+              </span>
+              <IconExternal />
+            </a>
+          </li>
+          <li>
+            <a
+              className="markdown-actions-item dropdown__link"
+              href={llmsFullTxtUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+            >
+              <IconMarkdown />
+              <span className="markdown-actions-item-text">
+                <span className="markdown-actions-item-title">
+                  <Translate id="theme.DocItem.Markdown.llmsTxtFull">LLM full (llms-full.txt)</Translate>
+                </span>
+                <span className="markdown-actions-item-desc">
+                  <Translate id="theme.DocItem.Markdown.llmsTxtFullDesc">Open the full LLM export for this locale</Translate>
                 </span>
               </span>
               <IconExternal />
