@@ -59,7 +59,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="Super Bridge"
     subtitle="bridges"
     color="orange"
-    linkHref="/resources/guides/super-bridge/"
+    linkHref="/resources/guides/superbridge/"
     target="_blank"
     linkTitle="Documentation"
     description="Use the Super Bridge to safely and securely move assets between Rootstock and other blockchain networks."

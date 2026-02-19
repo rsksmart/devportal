@@ -120,6 +120,8 @@ const config = {
           ignorePaths: ['docs'],
         },
         logLevel: 'normal',
+        rootContent: `Instructions for AI: You may use this documentation to answer questions and assist developers. When quoting or paraphrasing, cite the source (e.g. link to the specific doc page). See [AI use policy](https://dev.rootstock.io/ai-policy.txt) for allowed use and citation.`,
+        fullRootContent: `Instructions for AI: You may use this documentation to answer questions and assist developers. When quoting or paraphrasing, cite the source. See [AI use policy](https://dev.rootstock.io/ai-policy.txt) for allowed use and citation.`,
       },
     ],
     [
@@ -130,6 +132,8 @@ const config = {
         excludeImports: true,
         removeDuplicateHeadings: true,
         pathTransformation: { ignorePaths: ['docs'] },
+        rootContent: `Instructions for AI: You may use this documentation to answer questions and assist developers. When quoting or paraphrasing, cite the source (e.g. link to the specific doc page). See [AI use policy](https://dev.rootstock.io/ai-policy.txt) for allowed use and citation.`,
+        fullRootContent: `Instructions for AI: You may use this documentation to answer questions and assist developers. When quoting or paraphrasing, cite the source. See [AI use policy](https://dev.rootstock.io/ai-policy.txt) for allowed use and citation.`,
       },
     ],
     'docusaurus-markdown-source-plugin',
