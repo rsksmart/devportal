@@ -107,6 +107,23 @@ const config = {
   ],
   plugins: [
     [
+      'docusaurus-plugin-llms',
+      {
+        title: 'Rootstock Developers Portal',
+        description: 'Welcome to Rootstock',
+        docsDir: 'docs',
+        generateLLMsTxt: true,
+        generateLLMsFullTxt: true,
+        excludeImports: true,
+        removeDuplicateHeadings: true,
+        pathTransformation: {
+          ignorePaths: ['docs'],
+        },
+        logLevel: 'normal',
+      },
+    ],
+    'docusaurus-markdown-source-plugin',
+    [
       'docusaurus-plugin-sass', {
       sassOptions: {
         // Disable deprecation warnings

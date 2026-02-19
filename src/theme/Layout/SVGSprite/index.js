@@ -81,6 +81,10 @@ export default function SVGSprite() {
           <path fill="currentColor" d="m19.27 6.97-5.24-5.25a.68.68 0 0 0-.53-.22H6c-.83 0-1.5.67-1.5 1.5v18c0 .82.67 1.5 1.5 1.5h12c.82 0 1.5-.68 1.5-1.5V7.5a.68.68 0 0 0-.23-.53ZM13.5 3.3l4.2 4.2h-4.2V3.3ZM18 21H6V3h6v4.5c0 .82.68 1.5 1.5 1.5H18v12Z"/>
           <path fill="currentColor" d="M16.5 16.5h-9V18h9v-1.5ZM16.5 12h-9v1.5h9V12Z"/>
         </symbol>
+        <symbol id="icon-markdown" viewBox="0 0 24 24" fill="none">
+          <path fill="currentColor" d="M19 4H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 14H5V6h14v12Z"/>
+          <path fill="currentColor" d="M7 10h2v4H7v-4Zm4 0h2v4h-2v-4Zm-6 6h10v1.5H5V16Z"/>
+        </symbol>
         <symbol id="icon-search" viewBox="0 0 20 20" fill="none">
           <path d="m18.63 17.28-4.15-4.15a.4.4 0 0 0-.29-.12h-.45a7.1 7.1 0 1 0-.73.73v.45c0 .11.04.21.12.3l4.15 4.14c.16.16.42.16.58 0l.77-.77a.41.41 0 0 0 0-.58ZM8.36 13.83a5.47 5.47 0 1 1 0-10.94 5.47 5.47 0 0 1 0 10.94Z" fill="currentColor"/>
         </symbol>
