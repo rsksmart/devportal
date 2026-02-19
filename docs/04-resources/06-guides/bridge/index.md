@@ -31,7 +31,8 @@ To ensure a successful transaction, please verify that your amount meets the req
 
 > For some providers, the minimum amounts above do not include fees. Ensure your wallet balance covers both the transfer amount and fees.
 
-### [Mainnet](https://bridge.rootstock.io/) available swaps
+### Mainnet
+Below are available swaps on [Mainnet](https://bridge.rootstock.io/).
 
 - rBTC → BTC (L1)
 - BTC (L1) → rBTC
@@ -48,7 +49,8 @@ To ensure a successful transaction, please verify that your amount meets the req
 - rBTC → BNB
 - rBTC → WBTC
 
-### [Testnet](https://bridge.testnet.rootstock.io/) available swaps
+### Testnet
+Below are available swaps on [Testnet](https://bridge.testnet.rootstock.io/).
 
 - trBTC → BTC (L1)
 - BTC (L1) → trBTC
@@ -62,22 +64,6 @@ Once you have rBTC, you can:
 * Swap or trade assets
 * Use DeFi protocols (lending, staking, liquidity provision)
 * Interact with decentralized applications (dApps) ([rootstock.io][3])
-
-## How to Use the Bridge
-
-> This is a general step-by-step guide. Always follow on-screen instructions carefully. You do **not** need to connect a wallet to start. You can explore options and complete the flow first, then connect or pay via QR when you are ready.
-
-1. **Select the desired pair**: Choose the source and destination assets. One side of the pair must always be a token from the Rootstock network (e.g. rBTC, trBTC, or other supported Rootstock tokens). The other side is the asset on the other chain (e.g. BTC, ETH, USDT). See *Mainnet* and *Testnet available swaps* above for supported pairs.
-
-2. **Enter the amount**: Type the amount you want to bridge. Each provider has minimum (and possibly maximum) limits; if no providers appear, your amount may be below the minimum. See **Minimum Transaction Amounts** above for provider limits and adjust your amount if needed.
-
-3. **Choose a provider**: The bridge will list all available providers for your pair and amount. Compare rates, fees, and conditions, then select the provider you want to use.
-
-4. **Complete the transaction**: After selecting a provider you can finish in one of two ways:
-   - **With a wallet**: Connect a compatible wallet (e.g. MetaMask or another web3 wallet that supports Rootstock) and authorize the transaction when prompted.
-   - **Without a wallet (QR code)**: Complete the transaction by scanning a QR code and following the provider’s instructions; no wallet connection is required.
-
-5. **Review and confirm**: Check all details (fees, destination address, amounts) before confirming. Then wait for confirmations; due to blockchain (e.g. Bitcoin) block times, this may take from minutes to several hours. Use the bridge UI to track status. ([rootstock.io][1])
 
 ## Expected Time & Confirmations
 
