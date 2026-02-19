@@ -51,8 +51,6 @@ function IconExternal() {
 
 export default function MarkdownPageActions() {
   const mdUrl = useMarkdownUrl();
-  const llmsTxtUrl = useBaseUrl('/llms.txt');
-  const llmsFullTxtUrl = useBaseUrl('/llms-full.txt');
   const [copyState, setCopyState] = useState('idle'); // 'idle' | 'copying' | 'copied'
   const [open, setOpen] = useState(false);
   const containerRef = useRef(null);
@@ -183,46 +181,6 @@ export default function MarkdownPageActions() {
                 </span>
                 <span className="markdown-actions-item-desc">
                   <Translate id="theme.DocItem.Markdown.viewAsMarkdownDesc">View this page as plain text</Translate>
-                </span>
-              </span>
-              <IconExternal />
-            </a>
-          </li>
-          <li>
-            <a
-              className="markdown-actions-item dropdown__link"
-              href={llmsTxtUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setOpen(false)}
-            >
-              <IconMarkdown />
-              <span className="markdown-actions-item-text">
-                <span className="markdown-actions-item-title">
-                  <Translate id="theme.DocItem.Markdown.llmsTxtIndex">LLM index (llms.txt)</Translate>
-                </span>
-                <span className="markdown-actions-item-desc">
-                  <Translate id="theme.DocItem.Markdown.llmsTxtIndexDesc">Open the LLM index for this locale</Translate>
-                </span>
-              </span>
-              <IconExternal />
-            </a>
-          </li>
-          <li>
-            <a
-              className="markdown-actions-item dropdown__link"
-              href={llmsFullTxtUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setOpen(false)}
-            >
-              <IconMarkdown />
-              <span className="markdown-actions-item-text">
-                <span className="markdown-actions-item-title">
-                  <Translate id="theme.DocItem.Markdown.llmsTxtFull">LLM full (llms-full.txt)</Translate>
-                </span>
-                <span className="markdown-actions-item-desc">
-                  <Translate id="theme.DocItem.Markdown.llmsTxtFullDesc">Open the full LLM export for this locale</Translate>
                 </span>
               </span>
               <IconExternal />
