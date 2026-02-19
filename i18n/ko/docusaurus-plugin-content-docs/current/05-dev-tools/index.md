@@ -617,15 +617,6 @@ description: Rootstock에서 스마트 컨트랙트를 개발하고 배포하는
   />
 <FilterItem
     value="sc, oracles, data"
-    title="Umbrella Network"
-    subtitle="오라클"
-    color="orange"
-    linkHref="https://umb.network/"
-    linkTitle="온체인 데이터 액세스"
-    description="Rootstock에서 스마트 컨트랙트를 위한 온체인 데이터에 액세스하세요."
-  />
-<FilterItem
-    value="sc, oracles, data"
     title="Redstone Finance"
     subtitle="오라클"
     color="orange"
