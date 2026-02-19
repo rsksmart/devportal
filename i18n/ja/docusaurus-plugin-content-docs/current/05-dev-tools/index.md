@@ -616,15 +616,6 @@ description: スマートコントラクト開発ツールと言語のキュレ�
 />
 <FilterItem
     value="sc, oracles, data"
-    title="Umbrella Network"
-    subtitle="オラクル"
-    color="orange"
-    linkHref="https://umb.network/"
-    linkTitle="オンチェーンデータにアクセス"
-    description="Rootstock上のスマートコントラクト向けのオンチェーンデータにアクセス。"
-/>
-<FilterItem
-    value="sc, oracles, data"
     title="Redstone Finance"
     subtitle="オラクル"
     color="orange"

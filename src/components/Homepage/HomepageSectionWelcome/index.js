@@ -14,7 +14,7 @@ const content = {
     },
     {
       title: <Translate>Explore Docs</Translate>,
-      url: '/concepts/fundamentals/',
+      url: '/developers/blockchain-essentials/',
     }
   ]
 };

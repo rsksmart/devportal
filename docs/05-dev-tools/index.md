@@ -650,15 +650,6 @@ description: "Explore a curated selection of smart contract development tools an
   />
 <FilterItem
     value="sc, oracles, data"
-    title="Umbrella Network"
-    subtitle="Oracles"
-    color="orange"
-    linkHref="https://umb.network/"
-    linkTitle="Access On-chain Data"
-    description="Access On-Chain data for your smart contracts on Rootstock."
-  />
-<FilterItem
-    value="sc, oracles, data"
     title="Redstone Finance"
     subtitle="Oracles"
     color="orange"
