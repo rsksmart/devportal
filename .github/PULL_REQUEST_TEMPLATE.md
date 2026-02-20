@@ -9,7 +9,7 @@
 ## Screenshots/GIFs
 * Include any relevant visuals to demonstrate changes in layout or components.
 
-## 🧪 Testing
+## Testing
 * **Verification:** How did you test these changes? (e.g., ran `yarn build` or `yarn check-links:external`  to check for broken internal / external links).
 * **Output:** Paste any relevant terminal output or local build logs.
 * *Use N/A if not applicable.*
