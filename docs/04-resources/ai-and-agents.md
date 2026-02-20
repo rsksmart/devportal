@@ -1,7 +1,7 @@
 ---
 sidebar_position: 8
 title: For AI and Agents
-sidebar_label: For AI and Agents
+sidebar_label: AI and Agents
 description: "How Agents, AI tools, and LLMs can discover and use Rootstock developer documentation."
 tags: [rootstock, rsk, llms, ai, agents, llms.txt, documentation, crawl]
 ---
