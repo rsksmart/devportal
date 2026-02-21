@@ -1,0 +1,26 @@
+- _Method:_ `eth_blockNumber`
+  - Returns the number of the most recent block.
+- _Params:_ None
+
+```shell
+curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
+--request POST \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--data '{
+    "jsonrpc":"2.0",
+    "method":"eth_blockNumber",
+    "params":[],
+    "id":0
+}'
+```
+
+- Example Response:
+
+```json
+{
+    "jsonrpc": "2.0",
+    "id": 0,
+    "result": "0x4bdcfb"
+}
+```
