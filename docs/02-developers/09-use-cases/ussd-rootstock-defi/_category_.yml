@@ -1,0 +1,7 @@
+
+label: USSD Rootstock DeFi
+position: 4
+link:
+  type: generated-index
+  slug: /developers/use-cases/ussd-rootstock-defi/
+  description: "Use USSD to interact with DeFi protocols Rootstock."
