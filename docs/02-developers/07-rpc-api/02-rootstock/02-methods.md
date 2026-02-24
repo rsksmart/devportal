@@ -307,13 +307,13 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
 --header 'accept: application/json' \
 --header 'Content-Type: application/json' \
 --data '{
-	"jsonrpc":"2.0",
-	"method":"eth_getBalance",
-	"params":[
-	"0x1fab9a0e24ffc209b01faa5a61ad4366982d0b7f",
-	"0x6444bb"
-	],
-	"id":0
+    "jsonrpc":"2.0",
+    "method":"eth_getBalance",
+    "params":[
+        "0x1fab9a0e24ffc209b01faa5a61ad4366982d0b7f",
+        "0x6444bb"
+    ],
+    "id":0
 }'
 ```
 
@@ -338,9 +338,9 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
     "jsonrpc":"2.0",
     "method":"eth_getBalance",
     "params":[
-"0x1fab9a0e24ffc209b01faa5a61ad4366982d0b7f",
-"0x98e7878cc686d5ca61ca2339bda064004c82a6bbf7b6d43d7674897f775edc91"
-],
+        "0x1fab9a0e24ffc209b01faa5a61ad4366982d0b7f",
+        "0x98e7878cc686d5ca61ca2339bda064004c82a6bbf7b6d43d7674897f775edc91"
+    ],
     "id":0
 }'
 ```
@@ -366,9 +366,9 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
     "jsonrpc":"2.0",
     "method":"eth_getBalance",
     "params":[
-"0x1fab9a0e24ffc209b01faa5a61ad4366982d0b7f",
-"latest"
-],
+        "0x1fab9a0e24ffc209b01faa5a61ad4366982d0b7f",
+        "latest"
+    ],
     "id":0
 }'
 ```
@@ -430,8 +430,9 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
     "jsonrpc":"2.0",
     "method":"eth_getBlockByHash",
     "params":[
-"0xcca8612942582f1a890231a25245174d6947b7e2e990adf74e84c035c52b104f",
-false],
+        "0xcca8612942582f1a890231a25245174d6947b7e2e990adf74e84c035c52b104f",
+        false
+    ],
     "id":0
 }'
 ```
@@ -481,13 +482,13 @@ false],
 - _Method:_ `eth_getBlockByNumber`
   - Returns information about a block by blockNumber.
 - _Params:_
-  - Block: String: required, either the hexadecimal value of a blockNumber, OR one of the following block tags:
-    - latest: the most recent block the client has available.
-    - earliest: the lowest numbered block the client has available.
-    - pending: A sample next block built by the client on top of latest and containing the set of transactions usually taken from a local mempool. Intuitively, you can think of these as blocks that have not been mined yet.
-  - Option: Boolean, optional.
-    - false: returns only the hashes of the transactions (default)
-    - true: returns the full transactions object
+  - **Block:** String, required. Either the hexadecimal value of a **blockNumber**, OR one of the following block tags:
+    - **latest:** the most recent block the client has available.
+    - **earliest:** the lowest numbered block the client has available.
+    - **pending:** A sample next block built by the client on top of latest and containing the set of transactions usually taken from a local mempool. Intuitively, you can think of these as blocks that have not been mined yet.
+  - **Option:** Boolean, optional.
+    - **false:** returns only the hashes of the transactions (default)
+    - **true:** returns the full transactions objects
 - _Returns:_
   - **object:** A block object, or null when no block was found. The returned object has the following properties:
     - **number:** The block number of the requested block encoded as a hexadecimal string. null if pending.
@@ -526,9 +527,9 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
     "jsonrpc":"2.0",
     "method":"eth_getBlockByNumber",
     "params":[
-"0xfcea",
-false
-],
+        "0xfcea",
+        false
+    ],
     "id":0
 }'
 ```
@@ -578,11 +579,11 @@ false
 - _Method:_ `eth_getCode`
   - Returns the compiled byte code of a smart contract, if any, at a given address.
 - _Params:_
-  - Address: String: required, address
-  - Block: String, required, either the hexadecimal value of a blockNumber, OR a blockHash, OR one of the following block tags:
-    - latest: the most recent block the client has available.
-    - earliest: the lowest numbered block the client has available.
-    - pending: A sample next block built by the client on top of latest and containing the set of transactions usually taken from a local mempool. Intuitively, you can think of these as blocks that have not been mined yet.
+  - **Address:** String, required. The address of the smart contract.
+  - **Block:** String, required. Either the hexadecimal value of a **blockNumber**, OR a **blockHash**, OR one of the following block tags:
+    - **latest:** the most recent block the client has available.
+    - **earliest:** the lowest numbered block the client has available.
+    - **pending:** A sample next block built by the client on top of latest and containing the set of transactions usually taken from a local mempool. Intuitively, you can think of these as blocks that have not been mined yet.
 - **Example Request:**
 
 ```shell
@@ -594,9 +595,9 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
     "jsonrpc":"2.0",
     "method":"eth_getCode",
     "params":[
-"0xebea27d994371cd0cb9896ae4c926bc5221f6317",
-"latest"
-],
+        "0xebea27d994371cd0cb9896ae4c926bc5221f6317",
+        "latest"
+    ],
     "id":0
 }'
 ```
@@ -607,7 +608,7 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
 {
     "jsonrpc": "2.0",
     "id": 0,
-    "result": "0x608060405260043610610...."
+    "result": "0x608060405260043610610..."
 }
 ```
 
@@ -816,9 +817,10 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
     "jsonrpc":"2.0",
     "method":"eth_getStorageAt",
     "params":[
-"0x295a70b2de5e3953354a6a8344e616ed314d7251",
-"0x0",
-"latest"],
+        "0x295a70b2de5e3953354a6a8344e616ed314d7251",
+        "0x0",
+        "latest"
+    ],
     "id":0
 }'
 ```
@@ -866,7 +868,7 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
 --data '{
     "jsonrpc":"2.0",
     "method":"eth_getTransactionByHash",
-"params":["0x359f6010957a25b885387e3201c9262c71f91e47ff487c49e5168a54fc8ea110"],
+    "params":["0x359f6010957a25b885387e3201c9262c71f91e47ff487c49e5168a54fc8ea110"],
     "id":0
 }'
 ```
@@ -888,10 +890,10 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
         "gas": "0x20cfb",
         "gasPrice": "0x387ee40",
         "value": "0x0",
-        "input": "0xcc6ebc8b00000000000000000000000000",
+        "input": "0xcc6ebc8b00000000000000000000000000000000000000000000000000000000000003e900000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000",
         "v": "0x62",
-        "r": "0x1f8bb5859d8194eebfb781ed6d12de95d44b66ecf",
-        "s": "0x4a98b84d16a534681c5a639318b1ceffe967ce751458f51",
+        "r": "0x1f8bb5859d8194eebfb781ed6d56fd246912ee0bf83fee2a312de95d44b66ecf",
+        "s": "0x4a98b84d16a534681c5a639318b1c63f7bff6f5ca7554ceffe967ce751458f51",
         "type": "0x0"
     }
 }
@@ -920,7 +922,7 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
 --data '{
     "jsonrpc":"2.0",
     "method":"eth_getTransactionCount",
-"params":["0x4495768e683423a4299d6a7f02a0689a6ff5a0a4", "latest"],
+    "params":["0x4495768e683423a4299d6a7f02a0689a6ff5a0a4", "latest"],
     "id":0
 }'
 ```
@@ -969,9 +971,9 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
 --data '{
     "jsonrpc":"2.0",
     "method":"eth_getTransactionReceipt",
-"params":[
-"0x359f6010957a25b885387e3201c9262c71f91e47ff487c49e5168a54fc8ea110"
-],
+    "params":[
+        "0x359f6010957a25b885387e3201c9262c71f91e47ff487c49e5168a54fc8ea110"
+    ],
     "id":0
 }'
 ```
@@ -1287,8 +1289,8 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
     "jsonrpc":"2.0",
     "method":"eth_sendRawTransaction",
     "params":[
-    "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675"
-],
+        "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675"
+    ],
     "id":0
 }'
 ```
