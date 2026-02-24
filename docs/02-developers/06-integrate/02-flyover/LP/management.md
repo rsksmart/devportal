@@ -95,7 +95,7 @@ The full details of the endpoints and how to call them can be found in the [Open
 
 ## Wallet Management
 
-The LPS performs operations on behalf of the LP during the protocol process, which means it requires access to both the LP's Bitcoin and Rootstock wallets. Specifically, it requires access to the Rootstock wallet of the LP, and by having it, it also has access to the BTC wallet associated with that Rootstock wallet.
+The LPS performs operations on behalf of the LP during the protocol process, which means it requires access to both the LP's Bitcoin and Rootstock wallets. Specifically, it requires access to the RSK wallet of the LP, and by having it, it also has access to the BTC wallet associated with that RSK wallet.
 
 The LPS has the following options to be provided with access to that wallet, and depending on the option picked by the LP (set with the value of the `WALLET` environment variable), the LP will need to manage those wallets in a different way:
 
@@ -105,9 +105,9 @@ With this option, the LPS needs access to the [keystore file](https://ethereum.o
 
 With this, the LPS would keep the wallet in memory and sign the Rootstock and Bitcoin transactions with it. It's important to note that with this approach, the knowledge of the private key is inside the organization running the LPS.
 
-Through the Management UI, the LPS allows the LP to perform all the necessary operations related to the protocol. Regarding the wallet itself, the LPS informs both Rootstock and Bitcoin addresses to which the LP should send funds in order to add liquidity to the wallets.
+Through the Management UI, the LPS allows the LP to perform all the necessary operations related to the protocol. Regarding the wallet itself, the LPS informs both RSK and BTC addresses to which the LP should send funds in order to add liquidity to the wallets.
 
-If the LP wants to perform any additional operations **non-related to the Flyover protocol** in the Rootstock network, then they need to get the keystore file and password and import the account to a wallet of their choice, such as MetaMask (in the case of MetaMask by following [these steps](https://support.metamask.io/start/use-an-existing-wallet/)). In the case that the LP wants to perform any additional operations **non-related to the Flyover protocol** in the BTC network, then they need to export the private key of the account (in the case of MetaMask by following [these steps](https://support.metamask.io/configure/accounts/how-to-export-an-accounts-private-key/)) and convert it to Wallet Import Format (WIF). Then, import it to any wallet of their choice as explained in the [Rootstock developer portal](https://developers.rsk.co/rsk/rbtc/conversion/networks/).
+If the LP wants to perform any additional operations **non-related to the Flyover protocol** in the RSK network, then they need to get the keystore file and password and import the account to a wallet of their choice, such as MetaMask (in the case of MetaMask by following [these steps](https://support.metamask.io/hc/en-us/articles/360015289452-Importing-an-Account)). In the case that the LP wants to perform any additional operations **non-related to the Flyover protocol** in the BTC network, then they need to export the private key of the account (in the case of MetaMask by following [these steps](https://support.metamask.io/hc/en-us/articles/360015289632-Exporting-your-Private-Key)) and convert it to Wallet Import Format (WIF). Then, import it to any wallet of their choice as explained in the [Rootstock developer portal](https://developers.rsk.co/rsk/rbtc/conversion/networks/).
 
 ### Run LPS using Fireblocks service integration
 
