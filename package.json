@@ -24,8 +24,9 @@
     "check-links:es": "node --no-warnings scripts/check-links.mjs --locale=es",
     "check-links:ja": "node --no-warnings scripts/check-links.mjs --locale=ja",
     "check-links:ko": "node --no-warnings scripts/check-links.mjs --locale=ko",
-    "check-links:external": "node --no-warnings scripts/check-links.mjs --external"
-  },
+"check-links:external": "node --no-warnings scripts/check-links.mjs --external",
+    "verify-llms-build": "node scripts/verify-llms-build.mjs"
+},
   "dependencies": {
     "@cookbookdev/docsbot": "^4.24.7",
     "@crowdin/cli": "^4.7.0",
@@ -48,12 +49,14 @@
     "react-dom": "^18.2.0",
     "react-file-type-icons": "^1.0.1",
     "react-tooltip": "^5.28.0",
+    "docusaurus-markdown-source-plugin": "^2.0.1",
     "sass": "^1.77.3"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.8.0",
     "@docusaurus/types": "^3.8.0",
     "dotenv": "16.4.7",
+    "docusaurus-plugin-llms": "^0.3.0",
     "linkinator": "^7.5.3"
   },
   "browserslist": {

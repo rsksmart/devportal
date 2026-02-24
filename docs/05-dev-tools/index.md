@@ -55,6 +55,16 @@ description: "Explore a curated selection of smart contract development tools an
     description="Use the Token Bridge to safely and securely move ERC20 tokens from Ethereum to Rootstock and vice-versa."
   />
 <FilterItem
+    value="bridge, cc"
+    title="Super Bridge"
+    subtitle="bridges"
+    color="orange"
+    linkHref="/resources/guides/superbridge/"
+    target="_blank"
+    linkTitle="Documentation"
+    description="Use the Super Bridge to safely and securely move assets between Rootstock and other blockchain networks."
+  />
+<FilterItem
     value="dev-tools, sc, deploy"
     title="Foundry"
     subtitle="Dev Tools"
@@ -647,15 +657,6 @@ description: "Explore a curated selection of smart contract development tools an
     linkHref="/resources/tutorials/dapp-automation-cucumber/"
     linkTitle="Automate dApps"
     description="Learn how to automate dApp using Cucumber and Playwright."
-  />
-<FilterItem
-    value="sc, oracles, data"
-    title="Umbrella Network"
-    subtitle="Oracles"
-    color="orange"
-    linkHref="https://umb.network/"
-    linkTitle="Access On-chain Data"
-    description="Access On-Chain data for your smart contracts on Rootstock."
   />
 <FilterItem
     value="sc, oracles, data"

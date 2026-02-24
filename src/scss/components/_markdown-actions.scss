@@ -1,0 +1,224 @@
+// Markdown Actions Dropdown (View/Copy as Markdown) - docusaurus-markdown-source-plugin
+article .markdown header {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  overflow: visible;
+  width: 100%;
+}
+
+article .markdown header h1 {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+}
+
+/* Container fixed at end of row so button position does not shift with title length */
+.markdown-actions-container {
+  flex-shrink: 0;
+  margin-left: auto;
+  position: relative;
+  overflow: visible;
+}
+
+.markdown-actions-container .dropdown {
+  position: relative;
+  overflow: visible;
+}
+
+/* Single pill: only the wrapper has rounded corners; inner buttons are square so the container clips them to one shape */
+.markdown-actions-split {
+  display: inline-flex;
+  align-items: stretch;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid var(--bs-body-color);
+  background: var(--bs-body-bg);
+}
+
+.markdown-actions-split .markdown-actions-copy-btn,
+.markdown-actions-split .markdown-actions-trigger {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.markdown-actions-split .markdown-actions-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  border-right: 1px solid var(--bs-body-color) !important;
+  background: transparent;
+  color: var(--bs-body-color);
+}
+
+.markdown-actions-split .markdown-actions-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  background: transparent;
+  color: var(--bs-body-color);
+}
+
+.markdown-actions-split .markdown-actions-chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.markdown-actions-split .markdown-actions-trigger:focus-visible,
+.markdown-actions-copy-btn:focus-visible {
+  outline: 2px solid var(--ifm-color-primary, #3578e5);
+  outline-offset: 2px;
+}
+
+.markdown-actions-copy-btn:disabled {
+  cursor: wait;
+  opacity: 0.9;
+}
+
+.markdown-actions-container .dropdown__menu {
+  z-index: 1000;
+  min-width: 280px;
+  right: auto;
+  left: 0;
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.markdown-actions-item.dropdown__link {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 14px;
+  text-align: left;
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: var(--bs-body-color);
+  font: inherit;
+  cursor: pointer;
+}
+
+.markdown-actions-item.dropdown__link:hover {
+  background-color: var(--ifm-hover-overlay);
+}
+
+.markdown-actions-item.dropdown__link:disabled {
+  opacity: 0.8;
+  cursor: wait;
+}
+
+.markdown-actions-item .markdown-actions-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.markdown-actions-item .markdown-actions-item-title {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.markdown-actions-item .markdown-actions-item-desc {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.markdown-actions-item > svg:first-child {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.markdown-actions-item.dropdown__link > svg:last-child {
+  flex-shrink: 0;
+  margin-left: auto;
+  margin-top: 2px;
+}
+
+.markdown-actions-toast {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  transform: translate(-50%, -6px);
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  background: var(--ifm-color-primary);
+  color: var(--ifm-font-color-base-inverse);
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.dropdown__link:hover {
+  background-color: var(--ifm-hover-overlay);
+}
+
+@media (max-width: 768px) {
+  article .markdown header {
+    flex-wrap: wrap;
+  }
+
+  .markdown-actions-container {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    flex-basis: 100%;
+    order: 1;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  article .markdown header h1 {
+    flex-basis: 100%;
+    order: 0;
+  }
+
+  .markdown-actions-split .markdown-actions-copy-btn,
+  .markdown-actions-split .markdown-actions-trigger {
+    min-height: 44px;
+    padding: 10px 14px;
+  }
+
+  .markdown-actions-split .markdown-actions-trigger {
+    padding: 10px 12px;
+  }
+
+  .markdown-actions-container .dropdown__menu {
+    left: 0;
+    right: auto;
+    min-width: min(280px, calc(100vw - 2rem));
+    max-width: calc(100vw - 2rem);
+    padding: 0.5rem 0 0.75rem;
+  }
+}
+
+[dir="rtl"] .markdown-actions-container {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+[dir="rtl"] .markdown-actions-container .dropdown__menu {
+  right: auto;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  [dir="rtl"] .markdown-actions-container {
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: flex-end;
+  }
+
+  [dir="rtl"] .markdown-actions-container .dropdown__menu {
+    left: auto;
+    right: 0;
+  }
+}

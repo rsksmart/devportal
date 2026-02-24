@@ -507,15 +507,6 @@ description="Aprenda a automatizar una dApp usando Cucumber y Playwright."
 />
 <FilterItem
 value="sc, oracles, data"
-title="Umbrella Network"
-subtitle="Oráculo"
-color="orange"
-linkHref="https://umb.network/"
-linkTitle="Acceda a datos de la cadena"
-description="Acceda a los datos de la cadena para sus contratos inteligentes en Rootstock."
-/>
-<FilterItem
-value="sc, oracles, data"
 title="Redstone Finance"
 subtitle="Oráculo"
 color="orange"
