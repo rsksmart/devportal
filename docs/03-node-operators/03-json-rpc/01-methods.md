@@ -96,7 +96,7 @@ Here are the supported JSON-RPC Methods.
 | `rsk`      | `rsk_protocolVersion`                                                                 | YES       |                                                                       |
 | `trace`    | `trace_transaction`                                                                   | YES       |                                                                       |
 | `trace`    | `trace_block`                                                                         | YES       |                                                                       |
-| `trace`    | `trace_filter`                                                                        | YES       |                                                                       |
+| `trace`    | [`trace_filter`](#trace_filter)                                                       | YES       |                                                                       |
 | `txpool`   | `txpool_content`                                                                      | YES       |                                                                       |
 | `txpool`   | `txpool_inspect`                                                                      | YES       |                                                                       |
 | `txpool`   | `txpool_status`                                                                       | YES       |                                                                       |
@@ -2168,3 +2168,117 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getProof","params":["0x12345
   }
 }
 ```
+
+---
+
+#### trace_filter
+
+Returns traces matching the given filter.
+
+##### Parameters
+
+1. `Object` - Filter object to match traces:
+
+- `fromBlock`: `QUANTITY|TAG` - (optional, default: `"earliest"`) Starting block for the trace filter (inclusive). Can be a block number (hex string) or tag (`"earliest"`, `"latest"`, `"pending"`).
+- `toBlock`: `QUANTITY|TAG` - (optional, default: `"latest"`) Ending block for the trace filter (inclusive). Can be a block number (hex string) or tag (`"earliest"`, `"latest"`, `"pending"`). Note: `fromBlock` must be less than or equal to `toBlock`.
+- `fromAddress`: `Array of DATA`, 20 Bytes - (optional) Array of sender addresses to filter. Only traces from these addresses will be included.
+- `toAddress`: `Array of DATA`, 20 Bytes - (optional) Array of recipient addresses to filter. Only traces to these addresses will be included.
+- `after`: `QUANTITY` - (optional, default: `0`) Number of traces to skip from the result set (for pagination). Must be non-negative and cannot exceed the configured maximum (default: 10000).
+- `count`: `QUANTITY` - (optional, default: configured maximum) Maximum number of traces to return (for pagination). Cannot exceed the configured maximum (default: 10000).
+
+##### Example Parameters
+
+```js
+params: [
+  {
+    fromBlock: "0x1",
+    toBlock: "0x2",
+  },
+];
+```
+
+##### Returns
+
+`Array` - Array of transaction traces matching the filter criteria. Each trace object contains:
+
+- `action`: `Object` - Action performed in the trace (e.g., call, create).
+- `blockHash`: `DATA`, 32 Bytes - Hash of the block containing this trace.
+- `blockNumber`: `QUANTITY` - Number of the block containing this trace.
+- `result`: `Object` - Result of the action execution.
+- `subtraces`: `QUANTITY` - Number of sub-traces created by this trace.
+- `traceAddress`: `Array` - Position of this trace in the call tree.
+- `transactionHash`: `DATA`, 32 Bytes - Hash of the transaction containing this trace.
+- `transactionPosition`: `QUANTITY` - Position of the transaction in the block.
+- `type`: `String` - Type of trace (e.g., `"call"`, `"create"`).
+- `error`: `String` - (optional) Error message if the trace failed.
+
+##### Example
+
+```js
+// Request
+curl -X POST --data '{
+  "jsonrpc":"2.0",
+  "method":"trace_filter",
+  "params":[{
+    "fromBlock":"0x1",
+    "toBlock":"0x2"
+  }],
+  "id":1
+}'
+
+// Result
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result": [
+    {
+      "action": {
+        "callType": "call",
+        "from": "0x0000000000000000000000000000000000000000",
+        "to": "0x0000000000000000000000000000000001000008",
+        "gas": "0x0",
+        "input": "0x",
+        "value": "0x0"
+      },
+      "blockHash": "0x2422043c4210153a91b974edcd8091b7f40f1cc8ec082ce2a47bc9c613811256",
+      "blockNumber": 1,
+      "transactionHash": "0x4aa0649fdc1a4b0e07b64c26e43138400c84d6a127d0242027226b7ade17a53e",
+      "transactionPosition": 0,
+      "type": "call",
+      "subtraces": 0,
+      "traceAddress": [],
+      "result": {
+        "gasUsed": "0x0",
+        "output": "0x"
+      }
+    },
+    {
+      "action": {
+        "callType": "call",
+        "from": "0x0000000000000000000000000000000000000000",
+        "to": "0x0000000000000000000000000000000001000008",
+        "gas": "0x0",
+        "input": "0x",
+        "value": "0x0"
+      },
+      "blockHash": "0x6ea4991b1f506297188f864c05e231e4f5b57341f52c5a1fc6cb81b29e0b523a",
+      "blockNumber": 2,
+      "transactionHash": "0x2508efeddbab2f46ce53e0fb5ed61df9ac1ce696311941207833d7365194dacd",
+      "transactionPosition": 0,
+      "type": "call",
+      "subtraces": 0,
+      "traceAddress": [],
+      "result": {
+        "gasUsed": "0x0",
+        "output": "0x"
+      }
+    }
+  ]
+}
+```
+
+:::info[Info]
+
+The maximum number of traces per request is configurable via the `rpc.trace.maxTracesPerRequest` configuration parameter (default: 10000). Use the `after` and `count` parameters for pagination when dealing with large result sets.
+
+:::
