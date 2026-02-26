@@ -1305,100 +1305,6 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
 }
 ```
 
-## net_version
-
-- _Method:_ `net_version`
-  - Returns the number of the network, in decimal value.
-- _Params:_ None
-- **Responses:**
-  - `31` -> Rootstock Testnet
-  - `30` -> Rootstock Mainnet
-- **Example:**
-
-```shell
-curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
---request POST \
---header 'accept: application/json' \
---header 'Content-Type: application/json' \
---data '{
-    "jsonrpc":"2.0",
-    "method":"net_version",
-    "params":[],
-    "id":0
-}'
-```
-
-- **Example Response:**
-
-```js
-{
-    "jsonrpc": "2.0",
-    "id": 0,
-    "result": "31"
-}
-```
-
-## web3_clientVersion
-
-- _Method:_ `web3_clientVersion`
-  - Returns the current client version.
-- _Params:_ None
-- **Example:**
-
-```shell
-curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
---request POST \
---header 'accept: application/json' \
---header 'Content-Type: application/json' \
---data '{
-    "jsonrpc":"2.0",
-    "method":"web3_clientVersion",
-    "params":[],
-    "id":0
-}'
-```
-
-- **Example Response:**
-
-```js
-{
-    "jsonrpc": "2.0",
-    "id": 0,
-    "result": "RskJ/6.2.0/Linux/Java1.8/ARROWHEAD-45eb751"
-}
-```
-
-## web3_sha3
-
-- _Method:_ `web3_sha3`
-  - Returns Keccak-256 (not the standardized SHA3-256) hash of the given data.
-- _Params:_
-  - `data`: Required, string: The data in hexadecimal form to convert into a SHA3 hash
-- **Example:**
-
-```shell
-curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
---request POST \
---header 'accept: application/json' \
---header 'Content-Type: application/json' \
---data '{
-    "jsonrpc":"2.0",
-    "method":"web3_sha3",
-    "params":["0x68656c6c6f20776f726c64"],
-    "id":0
-}'
-```
-
-- **Example Response:**
-
-```js
-{
-    "jsonrpc": "2.0",
-    "id": 0,
-    "result": "0x47173285a8d7341e5e972fc677286384f802f8ef42a5ec5f03bbfa254cb01fad"
-}
-```
-
 ## eth_subscribe
 
 - _Method:_ `eth_subscribe`
@@ -1674,6 +1580,213 @@ To unsubscribe from a subscription, use the `eth_unsubscribe` method:
 }
 ```
 
+## net_version
+
+- _Method:_ `net_version`
+  - Returns the number of the network, in decimal value.
+- _Params:_ None
+- **Responses:**
+  - `31` -> Rootstock Testnet
+  - `30` -> Rootstock Mainnet
+- **Example:**
+
+```shell
+curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
+--request POST \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--data '{
+    "jsonrpc":"2.0",
+    "method":"net_version",
+    "params":[],
+    "id":0
+}'
+```
+
+- **Example Response:**
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 0,
+    "result": "31"
+}
+```
+
+## rsk_getRawBlockHeaderByHash
+
+- _Method:_ `rsk_getRawBlockHeaderByHash`
+  - Returns the RLP-encoded block header for a given block hash. This is the raw byte representation of the block header, useful for clients that need to verify block data independently or build Merkle proofs.
+- _Params:_
+  - **blockHash:** String, required. The hash (32 bytes) of the block.
+- _Returns:_
+  - **rawBlockHeader:** String. The RLP-encoded block header as a hexadecimal string, or `null` if no block was found.
+- **Example:**
+
+```shell
+curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
+--request POST \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--data '{
+    "jsonrpc":"2.0",
+    "method":"rsk_getRawBlockHeaderByHash",
+    "params":[
+        "0xcca8612942582f1a890231a25245174d6947b7e2e990adf74e84c035c52b104f"
+    ],
+    "id":0
+}'
+```
+
+- **Example Response:**
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 0,
+    "result": "0xf90225a0b004f5597ac7eedb515079d33e5b805818fab26c269aa6094fbfea4d99845405a0ff84b3163df46a90bc9414e86bfb70ddb15ecb67834eb87528f8a8abbddc23e0941fab9a0e24ffc209b01faa5a61ad4366982d0b7fa01e07d7d8c5e82f40ef338816c777f5f67a445f904dbcf785647dde1bc24512eaa03db27be7411aed7534c14990298234782ad91e2b7964be25bb081fc014d49583a011422b4b5228ed3bed9eae08bb64bbad7230e9b85ef4f74b75964d17dcdecc66b90100000000080000008000000000000000000000000000000000000000000000080000000000000400000000000000000000500000000000000000000000000000000000000000000000000000000050000000100080000000001000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000002000000000002000000000000010400000000000004000000000000000000001000000000000000100000000000000000000010000000000000010000010000000000000000000000000000200000000000802000001000000000000000000000000000000000000000000800000000000000000000000000008424aa890782fcea8367c28080845d404bf080800001b85000000020ec6f391bfb4fbad152de916fcf40868295b82d96533ce2329501000000000000fc38d5be8687dc934c89b3ae2a6ad3e8f77efdad192b9ceef737399fcffb1ff30c4c405df421031a441284ce"
+}
+```
+
+## rsk_getRawBlockHeaderByNumber
+
+- _Method:_ `rsk_getRawBlockHeaderByNumber`
+  - Returns the RLP-encoded block header for a given block number or block tag. Like `rsk_getRawBlockHeaderByHash`, this returns the raw byte representation of the header.
+- _Params:_
+  - **blockNumber:** String, required. The block number in hexadecimal, OR one of the following block tags:
+    - **latest:** the most recent block the client has available.
+    - **earliest:** the lowest numbered block the client has available.
+    - **pending:** A sample next block built by the client on top of latest and containing the set of transactions usually taken from a local mempool. Intuitively, you can think of these as blocks that have not been mined yet.
+- _Returns:_
+  - **rawBlockHeader:** String. The RLP-encoded block header as a hexadecimal string, or `null` if no block was found.
+- **Example:**
+
+```shell
+curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
+--request POST \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--data '{
+    "jsonrpc":"2.0",
+    "method":"rsk_getRawBlockHeaderByNumber",
+    "params":["0x677b78"],
+    "id":0
+}'
+```
+
+- **Example Response:**
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 0,
+    "result": "0xf90242a028b4d9c06f33011ebb6e6f709c15d01cab58f9221677a330e07bdd574170895aa00277913dcdf8b5f414f81772aa35f7bc689a7e26bf0b8826e3e4659e41b50532941fab9a0e24ffc209b01faa5a61ad4366982d0b7fa040cce40ac804d47361aa79025167a2bec2e2788e9a71515807442c25dcf5dfc5a01a0150967764e9ce870dcece131d3ecd80daf841dc1323951ad15ff4ed1cfbcea0f04a1b299d8291c2f8f83634757db367fa3ef61ae4b243b4d4cc3fb3c85ac3f0b901000000000000000000000000000000000000000000000000000000000000000000000000000404000000000000000000000000000000002000000000000020000000000000000000000000000000800200000000800000000000000000000000000000000000020000000000000000000000800000000000000000000000000000000008000000000000000000020000000000000004000000000000040000000002000000000010000000000000001800000000000000000000100000000000000000000100000020000200000000000000002000000000008020000010000000001000000000000000000000000000000008000000000000000000000000000084288b3e9b83677b788367c2808274738468b6cc1391d0018e4c4f56454c4c2d626632363766638520fb1adfaa8341ea690280b85000000020071905876277aadb0cfe654c2ef578ceb02e7a35b230fe9e4989f2a8000000002b592e56d583bea3a2fddc0cff4cbc641fb34596fdc868fc9062cb691046373b22ccb668e1e9001ac128d843"
+}
+```
+
+## rsk_getRawTransactionReceiptByHash
+
+- _Method:_ `rsk_getRawTransactionReceiptByHash`
+  - Returns the RLP-encoded transaction receipt for a given transaction hash. The receipt is retrieved from the main chain only. This is useful for clients that need to independently verify receipt data or construct Merkle proofs.
+- _Params:_
+  - **transactionHash:** String, required. The hash (32 bytes) of the transaction.
+- _Returns:_
+  - **rawReceipt:** String. The RLP-encoded transaction receipt as a hexadecimal string, or `null` if no receipt was found.
+- **Example:**
+
+```shell
+curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
+--request POST \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--data '{
+    "jsonrpc":"2.0",
+    "method":"rsk_getRawTransactionReceiptByHash",
+    "params":["0x359f6010957a25b885387e3201c9262c71f91e47ff487c49e5168a54fc8ea110"],
+    "id":0
+}'
+```
+
+- **Example Response:**
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 0,
+    "result": "0xf9010e0183015efcb9010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c083015efc01"
+}
+```
+
+## rsk_getTransactionReceiptNodesByHash
+
+- _Method:_ `rsk_getTransactionReceiptNodesByHash`
+  - Returns the Merkle proof nodes for a transaction receipt within a block's receipts trie. The result is an array of RLP-encoded trie nodes that form the path from the trie root to the receipt. This is useful for light clients that need to verify a receipt's inclusion in a block without downloading the full block data.
+- _Params:_
+  - **blockHash:** String, required. The hash (32 bytes) of the block containing the transaction.
+  - **transactionHash:** String, required. The hash (32 bytes) of the transaction whose receipt proof is requested.
+- _Returns:_
+  - **nodes:** Array of Strings. An array of hex-encoded trie nodes forming the Merkle proof, or `null` if the transaction was not found in the given block.
+- **Example:**
+
+```shell
+curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
+--request POST \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--data '{
+    "jsonrpc":"2.0",
+    "method":"rsk_getTransactionReceiptNodesByHash",
+    "params":[
+        "0xf0b093db64e06ff6b94cd3cfc06d85d3664d7b021bef36c4471475b4f1d8b2b9",
+        "0x359f6010957a25b885387e3201c9262c71f91e47ff487c49e5168a54fc8ea110"
+    ],
+    "id":0
+}'
+```
+
+- **Example Response:**
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 0,
+    "result": [
+        "0x700600c2d84607471d23e1b66ff5be0626e51c7e6dacf28ebbd9a899d0a72cb1b553c1000111",
+        "0x4f267006027fcad12dc6e650408058ba29ad7a6fb3d4c2340f29972f56baf575320287274700042426700600c2d84607471d23e1b66ff5be0626e51c7e6dacf28ebbd9a899d0a72cb1b553c1000111fd8105"
+    ]
+}
+```
+
+## rsk_protocolVersion
+
+- _Method:_ `rsk_protocolVersion`
+  - Returns the current Rootstock protocol version in hexadecimal.
+- _Params:_ None
+- **Example:**
+
+```shell
+curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
+--request POST \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--data '{
+    "jsonrpc":"2.0",
+    "method":"rsk_protocolVersion",
+    "params":[],
+    "id":0
+}'
+```
+
+- **Example Response:**
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 0,
+    "result": "0x3e"
+}
+```
+
 ## trace_block
 
 - _Method:_ `trace_block`
@@ -1888,5 +2001,66 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
             }
         }
     ]
+}
+```
+
+## web3_clientVersion
+
+- _Method:_ `web3_clientVersion`
+  - Returns the current client version.
+- _Params:_ None
+- **Example:**
+
+```shell
+curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
+--request POST \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--data '{
+    "jsonrpc":"2.0",
+    "method":"web3_clientVersion",
+    "params":[],
+    "id":0
+}'
+```
+
+- **Example Response:**
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 0,
+    "result": "RskJ/6.2.0/Linux/Java1.8/ARROWHEAD-45eb751"
+}
+```
+
+## web3_sha3
+
+- _Method:_ `web3_sha3`
+  - Returns Keccak-256 (not the standardized SHA3-256) hash of the given data.
+- _Params:_
+  - `data`: Required, string: The data in hexadecimal form to convert into a SHA3 hash
+- **Example:**
+
+```shell
+curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
+--request POST \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--data '{
+    "jsonrpc":"2.0",
+    "method":"web3_sha3",
+    "params":["0x68656c6c6f20776f726c64"],
+    "id":0
+}'
+```
+
+- **Example Response:**
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 0,
+    "result": "0x47173285a8d7341e5e972fc677286384f802f8ef42a5ec5f03bbfa254cb01fad"
 }
 ```
