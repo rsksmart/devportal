@@ -20,7 +20,7 @@ values={[
 <FilterItem
 value="ussd"
 title="USSD-Based Decentralized Finance System on Rootstock"
-subtitle="ussd"
+subtitle="USSD"
 color="orange"
 linkHref="/developers/use-cases/ussd-rootstock-defi"
 description="This guide demonstrates a USSD-based integration architecture for Rootstock, enabling internet-free decentralized financial services like P2P transfers and micro-loans for users on legacy GSM phones."

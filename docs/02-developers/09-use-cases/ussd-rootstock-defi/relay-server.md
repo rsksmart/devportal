@@ -3,19 +3,19 @@ sidebar_label: Relay Server & Gateway Integration
 sidebar_position: 4
 title: Building the USSD Relay Server & Gateway Integration
 tags: [rsk, rootstock, developers, nodejs, ussd]
-description: Build the Node.js Express relay server that bridges Africa's Talking USSD sessions to the InclusiveDeFi smart contract on RSK Testnet using ethers.js.
+description: Build the Node.js Express relay server that bridges Africa's Talking USSD sessions to the InclusiveDeFi smart contract on Rootstock Testnet using ethers.js.
 ---
 
 # Relay Server & Gateway Integration
 
-This page covers building the Node.js Express server that acts as the bridge between the Africa's Talking USSD gateway and the `InclusiveDeFi` contract on RSK Testnet. It also covers registering your USSD callback with Africa's Talking and exposing your local server to the internet using ngrok.
+This page covers building the Node.js Express server that acts as the bridge between the Africa's Talking USSD gateway and the `InclusiveDeFi` contract on Rootstock Testnet. It also covers registering your USSD callback with Africa's Talking and exposing your local server to the internet using ngrok.
 
 
 ## How the Relay Server Works
 
-The relay server is a stateless HTTP server with a single `POST /ussd` endpoint. Every time a user presses a key on their feature phone, Africa's Talking sends an HTTP POST to this endpoint. The server reads the accumulated session input from the `text` field, determines what the user wants, calls the appropriate contract function, and returns a `CON` (continue) or `END` (terminate) response string.
+The relay server is a stateless HTTP server exposing a single `POST /ussd` endpoint. Each keypress on a user's feature phone triggers Africa's Talking to send an HTTP POST request to this endpoint. The server reads the accumulated session input from the `text` field, determines user intent, calls the appropriate contract function, and returns either a `CON` (continue) or `END` (terminate) response string.
 
-There is no database, no session store, and no authentication layer in this proof of concept. The entire session state is encoded in the `text` field of the incoming request.
+This proof of concept includes no database, no session store, and no authentication layer. The entire session state lives in the `text` field of each incoming request.
 
 ## Creating the Relay Server
 
@@ -232,6 +232,7 @@ Tx: ${tx.hash.substring(0, 12)}...
 app.listen(3000, () => {
   console.log("RSK-USSD Bridge running on port 3000");
 });
+
 ```
 
 ## Understanding the USSD State Machine
@@ -252,16 +253,13 @@ This table driven pattern is the canonical way to implement multi-depth USSD men
 ## Running the Server
 
 Start the relay server with:
-
 ```bash
 npm run start-bridge
 ```
-
 You should see:
-
 <img src="/img/developers/use-cases/ussd/1-start-bridge.png"/>
 
-The server is now listening on `http://localhost:3000/ussd`. Africa's Talking requires a **publicly reachable HTTPS URL** to send USSD callbacks. During local development, use ngrok to tunnel your local port to the internet.
+The server is now listening on `http://localhost:3000/ussd`. Africa's Talking requires a `publicly reachable HTTPS URL` to send USSD callbacks. During local development, use ngrok to tunnel your local port to the internet.
 
 ## Exposing the Server with ngrok
 
@@ -270,14 +268,13 @@ Install ngrok from [ngrok.com](https://ngrok.com) and run:
 ```bash
 ngrok http 3000
 ```
-
 ngrok will output a forwarding URL like:
 
-```
+```plaintext
 Forwarding  https://abc123.ngrok-free.app → http://localhost:3000
 ```
 
-Copy the `https://` URL you will register this as your USSD callback in the next step. Note that on the ngrok free tier, this URL changes every time you restart ngrok.
+Copy the `https://` URL and register it as your USSD callback in the next step. Note that on the ngrok free tier, the URL changes each time you restart ngrok.
 
 ## Registering with Africa's Talking
 
@@ -290,9 +287,9 @@ Copy the `https://` URL you will register this as your USSD callback in the next
 
 1. In your Africa's Talking dashboard, go to **USSD** in the left sidebar.
 2. Click **Create Channel**.
-3. Set a shortcode — for sandbox use any value like `*384#`.
+3. Set a shortcode for sandbox use any value like `*384#`.
 4. Set the **Callback URL** to your ngrok HTTPS URL with the path:
-   ```
+   ```bash
    https://abc123.ngrok-free.app/ussd
    ```
 5. Set the **HTTP Method** to `POST`.
@@ -310,21 +307,21 @@ To use it:
 4. The simulator will fire HTTP POSTs to your callback URL and display the USSD responses in real time.
 
 :::note
-Keep your ngrok tunnel and relay server running in separate terminal windows while testing. ngrok's web interface at `http://localhost:4040` lets you inspect every incoming HTTP request and response in real time use this to debug USSD payloads.
+Keep your ngrok tunnel and relay server running in separate windows terminal while testing. Use ngrok’s web interface at `http://localhost:4040` to view every incoming HTTP request and response in real time. This helps you debug USSD payloads easily.
 :::
 
 ## What Each Transaction Looks Like On-Chain
 
-When the relay server calls a write function (transfer or applyForLoan), ethers.js:
+When the relay server calls a write function (transfer or applyForLoan), ethers.js performs the following steps:
 
 1. Encodes the function call using the ABI.
-2. Estimates gas using the RSK node's `eth_estimateGas` RPC method.
+2. Estimates gas using the Rootstock node's `eth_estimateGas` RPC method.
 3. Signs the transaction with the relayer wallet's private key.
-4. Broadcasts it via `eth_sendRawTransaction` to the RSK public node.
+4. Broadcasts it via `eth_sendRawTransaction` to the Rootstock public node.
 5. Polls for a receipt using `eth_getTransactionReceipt` until the block is confirmed.
 
-The `await tx.wait()` call blocks until the transaction is included in a block. RSK's average block time on testnet is approximately **30 seconds**. This means write operations will have a noticeable delay before the USSD session returns. Africa's Talking's default session timeout is 180 seconds, which is sufficient for most cases, but monitor this carefully under real network conditions.
+The `await tx.wait()` call blocks until the transaction is included in a block. Rootstock testnet has an average block time of approximately `30 seconds`, meaning write operations will have a noticeable delay before the USSD session returns. Africa's Talking's default session timeout is `180 seconds`, which is sufficient for most cases, but monitor this carefully under real network conditions.
 
 ## Next Steps
 
-With the relay server running and connected to the Africa's Talking gateway, proceed to [Demo & Testing](../demo-and-testing) to validate the full USSD flow end-to-end, run curl-based tests, and verify transactions on the RSK Testnet Explorer.
+With the relay server running, proceed to [Demo & Testing](../demo-and-testing) to test and validate the USSD flow, and verify transactions on the Rootstock Testnet Explorer.
