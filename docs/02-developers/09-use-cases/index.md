@@ -14,8 +14,17 @@ Explore dApp use case guides and tutorials for building DeFi on Bitcoin, AI, and
 values={[
 {label: 'DeFi', value: 'defi'},
 {label: 'AI/MCP', value: 'ai'},
-{label: 'Runes', value: 'runes'}
+{label: 'Runes', value: 'runes'},
+{label: 'USSD', value: 'ussd'}
 ]}>
+<FilterItem
+value="ussd"
+title="USSD-Based Decentralized Finance System on Rootstock"
+subtitle="USSD"
+color="orange"
+linkHref="/developers/use-cases/ussd-rootstock-defi"
+description="This guide demonstrates a USSD-based integration architecture for Rootstock, enabling internet-free decentralized financial services like P2P transfers and micro-loans for users on legacy GSM phones."
+/>
 <FilterItem
 value="advanced, defi"
 title="Build Omnichain Fungible Token (OFTs) on Rootstock with Layerzero"
