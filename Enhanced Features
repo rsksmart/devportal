@@ -1,0 +1,8 @@
+The changelog page includes several enhanced features:
+
+- **Smart Link Parsing**: Automatically converts plain URLs in release descriptions to clickable links
+- **New Tab Links**: All links in release descriptions open in new tabs for a better user experience
+- **MDX Rendering**: Release descriptions support full markdown formatting
+- **Responsive Design**: Optimized for all screen sizes with filtering and sorting capabilities
+- **Infinite Scroll**: Loads more releases automatically as you scroll
+- **Error Handling**: Graceful fallback to sample data when API limits are reached

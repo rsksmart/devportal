@@ -29,9 +29,14 @@ const config = {
     keys : {
       mendable : process.env.MENDABLE_KEY,
       cookbook : process.env.COOKBOOK_PUBLIC_API_KEY,
+      github : process.env.GITHUB_TOKEN,
     },
     homePage: {
       editUrl: 'https://github.com/rsksmart/devportal/tree/main/',
+    },
+    changelog : {
+      title: 'Changelog',
+      description: 'Stay informed about the latest product updates on Rootstock.',
     },
     moreLinks : {
       changelog : {
@@ -153,32 +158,6 @@ const config = {
         ]
       }
     }],
-    [
-      '@docusaurus/plugin-content-blog',
-      {
-        blogTitle: 'Changelog',
-        blogDescription:
-          'Stay informed about the latest product updates on Rootstock.',
-        blogSidebarCount: 'ALL',
-        blogSidebarTitle: 'Changelog',
-        showReadingTime: false,
-        onInlineAuthors: 'ignore',
-        onUntruncatedBlogPosts: 'ignore',
-        /**
-         * Required for any multi-instance plugin
-         */
-        id: 'changelog',
-        /**
-         * URL route for the blog section of your site.
-         * *DO NOT* include a trailing slash.
-         */
-        routeBasePath: 'changelog',
-        /**
-         * Path to data on filesystem relative to site dir.
-         */
-        path: './changelog',
-      },
-    ],
   ],
   presets: [
     [
