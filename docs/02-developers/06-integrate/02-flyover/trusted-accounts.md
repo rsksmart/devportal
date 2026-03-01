@@ -11,14 +11,12 @@ If you wish to suggest changes on this document, please open a PR on the [Liquid
 :::
 
 
-## 🧠 Summary
+## Summary
 The **Liquidity Provider Trusted Accounts** feature extends the existing **Liquidity Provider Server (LPS)** and **FlyoverSDK** to allow Liquidity Providers (LPs) to configure a set of trusted Rootstock accounts that can bypass certain validation checks — such as the **reCAPTCHA** verification — during **PegIn** or **PegOut** operations.
 
 This functionality is part of the **Flyover Protocol**, aimed at enabling automated integrations for partners and liquidity providers who operate frequently.
 
----
-
-## 🏗 Architecture and Design
+## Architecture and Design
 
 ### Components
 This feature adds functionality to two existing components:
@@ -29,9 +27,7 @@ This feature adds functionality to two existing components:
 - Backward compatible with existing FlyoverSDK versions `>= v1.7.0` and LPS versions `>= v2.3.0`.
 - The account paying for the operation doesn’t need to be the same as the whitelisted account, but a valid signature of the quote hash from the trusted account must be provided.
 
----
-
-## ⚙️ Setup and Configuration
+## Setup and Configuration
 
 ### Environment Requirements
 - **FlyoverSDK:** `>= v1.70`
@@ -41,9 +37,7 @@ This feature adds functionality to two existing components:
 - The LP must configure authorized trusted accounts in their **LPS instance**.
 - No additional `.env` variables or feature flags are required.
 
----
-
-## 🔌 API / Interface Details
+## API / Interface Details
 
 ### FlyoverSDK Methods
 
@@ -64,9 +58,7 @@ Both error types are raised as **`FlyoverError`** instances:
 | Invalid Signature | The provided signature does not match a whitelisted account. |
 | Locking Cap Exceeded | The account exceeded its assigned BTC/RBTC locking cap. |
 
----
-
-## 🧭 Integration Guide
+## Integration Guide
 
 To integrate this feature:
 
@@ -86,9 +78,7 @@ Trust is based solely on account whitelisting and signature verification.
 - Primary integration via **FlyoverSDK**
 - No direct API calls required
 
----
-
-## 🧪 Testing
+## Testing
 
 ### Local Testing Setup
 - Deploy a **local LPS instance**.
@@ -102,15 +92,12 @@ Example tests and automation demos can be found in:
 ### Notes
 Follow the documentation in the above repository for commands and setup steps.
 
----
-
 ## 🧾 Changelog
 | Component | Version | Release Link |
 |------------|----------|---------------|
 | FlyoverSDK | v1.7.0 | [GitHub Release](https://github.com/rsksmart/flyover-sdk/releases/tag/v1.7.0) |
 | LPS | v2.3.0 | [GitHub Release](https://github.com/rsksmart/liquidity-provider-server/releases/tag/v2.3.0) |
 
----
 
 ## 📦 Related Resources
 - **Flyover SDK (npm):** [@rsksmart/flyover-sdk](https://www.npmjs.com/package/@rsksmart/flyover-sdk)
