@@ -17,31 +17,7 @@ The user can deposit RBTC from the Rootstock blockchain and borrow USDT0 (ERC-20
 
 **Project illustration:**
 
-              +---------------------------+
-              |      LendingPool.sol      |
-              |---------------------------|
-              | - accepts RBTC deposits   |
-User -------> | - tracks collateral       |
-              | - handles USDT0 debt      |
-              +--------------+------------+
-                             |
-                             | requests price
-                             v
-                 +----------------------------+
-                 |   Price Oracle Adapter     |
-                 |----------------------------|
-                 | returns USD price (1e18)   |
-                 +--------------+-------------+
-                             |
-                             | price result
-                             v
-              +-------------------------------+
-              |  LendingPool computes:        |
-              |  - collateral USD value       |
-              |  - debt USD value             |
-              |  - max borrowable USDT0       |
-              +-------------------------------+
-
+<img width="1536" height="1024" alt="Project Illustration" src="https://github.com/user-attachments/assets/1e288f88-29d2-4ad3-926b-5bb5b5ba3203" />
 
 
 
