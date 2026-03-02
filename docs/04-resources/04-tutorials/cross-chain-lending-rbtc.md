@@ -1,14 +1,14 @@
 ---
 sidebar_label: Cross-Chain RBTC Lending Starter Kit
 sidebar_position: 3
-title: Cross-Chain RBTC-Backed Lending & USDT0 Stablecoin Starter Kit
-description: 'A minimal RBTC-collateralized lending starter kit for Rootstock. Includes mock oracle integration, USDT0 ERC-20 support, and guidance for extending the system with LayerZero and Umbrella/RedStone price feeds.'
+title: Cross-Chain rBTC-Backed Lending & USDT0 Stablecoin Starter Kit
+description: 'A minimal rBTC-collateralized lending starter kit for Rootstock. Includes mock oracle integration, USDT0 ERC-20 support, and guidance for extending the system with LayerZero and Umbrella/RedStone price feeds.'
 tags: [rsk, rootstock, lending, cross-chain, layerzero, umbrella, redstone, smart contracts, tutorials]
 ---
 
 # RBTC-USDT0 Cross‑Chain Starter‑Kit Guide
 
-> This document is the **comprehensive tutorial** for the RBTC-USDT0 cross‑chain lending starter kit.
+> This document is the **comprehensive tutorial** for the rBTC-USDT0 cross‑chain lending starter kit.
 
 ## Table of Contents
 
@@ -38,7 +38,7 @@ tags: [rsk, rootstock, lending, cross-chain, layerzero, umbrella, redstone, smar
 
 13. [Oracle setup and pricing model](#oracle-setup-and-pricing-model)
 
-14. [Cross‑chain flow explained](#cross-chain-flow-explained)
+14. [Cross-chain flow explained](#cross-chain-flow-explained)
 
 15. [Known limitations](#known-limitations)
 
@@ -70,7 +70,7 @@ A screenshot of the finished UI (the target end‑state for this guide) is shown
 
 ![Screenshot of the demo dApp](https://github.com/user-attachments/assets/6a27ce27-d680-437a-82c2-1b8538e16569)
 
-*Figure 1: Demo dApp UI after a successful borrow (RBTC 0.00025 collateral, 1 USDT0 debt, $65k RBTC price).*
+*Figure 1: Demo dApp UI after a successful borrow (rBTC 0.00025 collateral, 1 USDT0 debt, $65k rBTC price).*
 
 Below is an architecture illustration showing the high-level system flow:
 
@@ -82,7 +82,7 @@ Below is an architecture illustration showing the high-level system flow:
 
 Rootstock (RSK) is an L2 solution secured by Bitcoin's mining power. Key benefits for developers:
 
-* **Bitcoin compatibility:** smart contracts can rely on RBTC and the Bitcoin security model.
+* **Bitcoin compatibility:** smart contracts can rely on rBTC and the Bitcoin security model.
 * **EVM compatibility:** use the same Solidity, Hardhat, ethers.js, Metamask, etc.
 * **Low fees & high throughput:** test cheaply and scale without congestion.
 * **Open source tooling:** the entire stack is public and free to use.
@@ -94,13 +94,13 @@ This starter kit demonstrates a cross‑chain over‑collateralized lending flow
 The protocol is intentionally minimal. It consists of three logical layers:
 
 1. **Cross‑chain messaging:** `LZSender` and `LZReceiver` using LayerZero to teleport collateral signals.
-2. **Lending logic:** `LendingPool` manages RBTC collateral and USDT0 debt with LTV checks.
+2. **Lending logic:** `LendingPool` manages rBTC collateral and USDT0 debt with LTV checks.
 3. **Oracle routing:** `OracleRouter` delegates price requests to adapters (e.g., `UmbrellaOracleAdapter` or `FixedPriceOracle`).
   
 
 ### Key contract responsibilities  
 
-* **`LZSender` / `LZBorrowSender` / `LZRepaySender`:** source‑chain entry points. They accept RBTC, encode the user address + amount, and call `endpoint.send(...)` with one of three message types (deposit, borrow, repay). Look at `contracts/crosschain/LZSender.sol` for the encoding logic; messages are simply `(uint8 msgType, address user, uint256 amount)`.
+* **`LZSender` / `LZBorrowSender` / `LZRepaySender`:** source‑chain entry points. They accept rBTC, encode the user address + amount, and call `endpoint.send(...)` with one of three message types (deposit, borrow, repay). Look at `contracts/crosschain/LZSender.sol` for the encoding logic; messages are simply `(uint8 msgType, address user, uint256 amount)`.
 * **`LZReceiver`:** destination chain validator. It enforces replay protection, verifies `trustedRemote` addresses, and dispatches the payload to the pool. The three message types are handled in `lzReceive`, which conditionally calls `depositRBTC`, `borrowUSDT0For` or `repayUSDT0For`. See the implementation below:
   
 
@@ -123,7 +123,7 @@ if (msgType == MSG_DEPOSIT) {
 }
 ``` 
 
-* **`LendingPool`:** the core accounting engine. It stores two mappings (`collateralRBTC` and `debtUSDT0`) keyed by user address and exposes public methods for deposit, withdraw, borrow and repay. The `onlyDepositor` modifier restricts cross‑chain deposit/borrow/repay calls to the `crossChainDepositor` address (set to the `LZReceiver`). Solvency is calculated in `_isSolvent`, which fetches the RBTC price from the oracle router and applies the configured `ltvBps`.
+* **`LendingPool`:** the core accounting engine. It stores two mappings (`collateralRBTC` and `debtUSDT0`) keyed by user address and exposes public methods for deposit, withdraw, borrow and repay. The `onlyDepositor` modifier restricts cross‑chain deposit/borrow/repay calls to the `crossChainDepositor` address (set to the `LZReceiver`). Solvency is calculated in `_isSolvent`, which fetches the rBTC price from the oracle router and applies the configured `ltvBps`.
 
 
 ```solidity
@@ -332,13 +332,13 @@ pm run dev # launches at http://localhost:3000
 
 3. If you deployed a mock, it will automatically request ERC20 approvals when interacting.
 
-4. You can read the current RBTC price (fixed or umbrella-based).
+4. You can read the current rBTC price (fixed or umbrella-based).
 
 5. Use the "deposit" button (or developer "devDepositRBTC" if testnet faucet is empty).
 
 6. Borrow USDT0, repay, and withdraw. The UI shows your collateral and debt balances.
 
-> The UI is intentionally minimal and educational; it demonstrates contract calls without production‑level polish. The screenshot at the top of this guide shows a typical state after the user has deposited a small amount of RBTC, borrowed 1 USDT0, and the fixed price oracle reports $65 000 per RBTC. The message banner and buttons correspond directly to functions in `App.jsx`.
+> The UI is intentionally minimal and educational; it demonstrates contract calls without production‑level polish. The screenshot at the top of this guide shows a typical state after the user has deposited a small amount of rBTC, borrowed 1 USDT0, and the fixed price oracle reports $65 000 per rBTC. The message banner and buttons correspond directly to functions in `App.jsx`.
 
 ### Frontend wiring details
 
@@ -359,7 +359,7 @@ export function getContracts(provider, addresses) {
 
 ABIs are imported directly from the Hardhat `artifacts/` directory, which is why a successful compile is required before `npm run dev`. The `.env` file in the frontend simply exports the addresses consumed by this module.
 
-Proper MetaMask configuration is essential. Make sure an RSK testnet network entry exists and the current account holds at least 0.001 RBTC. Use the Rootstock faucet to top up if necessary.
+Proper MetaMask configuration is essential. Make sure an RSK testnet network entry exists and the current account holds at least 0.001 rBTC. Use the Rootstock faucet to top up if necessary.
 
 ### Frontend folder structure
 
@@ -386,7 +386,7 @@ Once the `LendingPool` has credited collateral (via either an on‑chain deposit
 pool.borrowUSDT0(500 * 1e6); // 500 USDT0 (6 decimals)
 ```
 
-The pool checks solvency using the current RBTC price. If the position would become under‑collateralized, the call reverts.
+The pool checks solvency using the current rBTC price. If the position would become under‑collateralized, the call reverts.
 
 ### Repayment logic
 
@@ -401,7 +401,7 @@ The contract reduces the stored debt amount accordingly.
 
 ### Collateral withdrawal
 
-Users may withdraw RBTC as long as the resulting position remains solvent:
+Users may withdraw rBTC as long as the resulting position remains solvent:
 
 ```solidity
 pool.withdrawRBTC(0.01 ether);
@@ -431,7 +431,7 @@ This two‑step process prevents misconfiguration during deployment.
 
 ## Oracle setup and pricing model
 
-The protocol distinguishes between **market assets** (RBTC) and **accounting units** (USDT0). Only market assets require external price feeds.
+The protocol distinguishes between **market assets** (rBTC) and **accounting units** (USDT0). Only market assets require external price feeds.
 
 ### Price sources
 
@@ -439,7 +439,7 @@ The protocol distinguishes between **market assets** (RBTC) and **accounting uni
 
 |-------|--------------|-------|
 
-| RBTC | UmbrellaOracleAdapter or FixedPriceOracle | fixed oracle is used on testnet for deterministic behaviour |
+| rBTC | UmbrellaOracleAdapter or FixedPriceOracle | fixed oracle is used on testnet for deterministic behaviour |
 
 | USDT0 | Protocol invariant (1 USD) | no oracle required |
 
@@ -459,7 +459,7 @@ Adapters must be bound to a single asset upon construction and perform decimal n
 
 The repository supports two deployment modes controlled by the `USE_FIXED_ORACLE` environment variable.
 
-* **Testnet mode (default)**: deploys `FixedPriceOracle` with a constant price (e.g., $1000 per RBTC). This ensures the end‑to‑end lending flow works even when Umbrella feeds are unavailable.
+* **Testnet mode (default)**: deploys `FixedPriceOracle` with a constant price (e.g., $1000 per rBTC). This ensures the end‑to‑end lending flow works even when Umbrella feeds are unavailable.
 * **Mainnet mode**: deploys `UmbrellaOracleAdapter` wired to the on‑chain Umbrella price reader. Use this when targeting Rootstock mainnet.
 
 Setting `USE_FIXED_ORACLE=true` in your `.env` (or command line) triggers the fixed oracle path.
@@ -467,13 +467,13 @@ Setting `USE_FIXED_ORACLE=true` in your `.env` (or command line) triggers the fi
   
   
 
-## Cross‑chain flow explained
+## Cross-chain flow explained
 
 ### User action
 
-On the source chain (any EVM), the user invokes `LZSender.sendRBTC()` attaching RBTC value. The sender contract:
+On the source chain (any EVM), the user invokes `LZSender.sendRBTC()` attaching rBTC value. The sender contract:
 
-* Locks the RBTC (e.g., via `receive()` or `payable` function)
+* Locks the rBTC (e.g., via `receive()` or `payable` function)
 * Constructs a payload containing the recipient address and amount
 * Calls the LayerZero endpoint's `send()` method with the payload and native value
 
@@ -484,13 +484,13 @@ On Rootstock, the `LZReceiver` contract implements `lzReceive()` (called by Laye
 
 * **Replay protection**: computes a hash of `(srcChainId, srcAddress, nonce)` and ensures it hasn't been processed
 * **Authenticity**: checks that `srcAddress` matches the configured `trustedRemote` for `srcChainId`
-* **Execution**: forwards the RBTC value and the `onBehalfOf` address to `lendingPool.depositRBTC{value: amount}(onBehalfOf)`
+* **Execution**: forwards the rBTC value and the `onBehalfOf` address to `lendingPool.depositRBTC{value: amount}(onBehalfOf)`
 
 ### Deposit and borrow
 
 `LendingPool.depositRBTC()` increases the user's collateral balance and emits an event. After deposit, the user can call `borrowUSDT0()` directly on Rootstock.
 
-> ⚠️ The system operates on **signaling** rather than bridging. The RBTC is already on Rootstock; you are only sending a message to credit the collateral.
+> ⚠️ The system operates on **signaling** rather than bridging. The rBTC is already on Rootstock; you are only sending a message to credit the collateral.
 
 ### Timing risk
 
@@ -505,7 +505,7 @@ Before extending or publishing this code, be aware of the starter kit's intentio
 * **Mocked messaging:** the `MockLZEndpoint` in tests does not represent a real bridge. Cross‑chain behaviour is simulated; your production system must deploy real LayerZero endpoints and manage assets accordingly.
 * **No liquidations:** there is no mechanism to seize collateral. Under‑collateralized positions simply block further borrowing or withdrawals.
 * **No interest or governance:** debt does not accrue interest, and there is no on‑chain administration beyond the owner of the router and receiver.
-* **Faucet restrictions:** Rootstock testnet faucet limits to ≈0.001 RBTC/day, so the `devDepositRBTC()` helper and small borrow amounts exist to work around this.
+* **Faucet restrictions:** Rootstock testnet faucet limits to ≈0.001 rBTC/day, so the `devDepositRBTC()` helper and small borrow amounts exist to work around this.
 
 These limitations are deliberate for educational clarity; the tutorial explains how to remove each one when moving toward production.
 
@@ -526,7 +526,7 @@ The README's security section is reproduced here with extra context:
 ## Troubleshooting and tips
 
 * **Tests failing after ABI changes:** delete `artifacts/` and `cache/` then recompile (`npx hardhat compile`).
-* **Deployment errors:** confirm that your `.env` private key has RBTC on testnet (`npx hardhat account` shows balances). The public faucet limits 0.001 RBTC/day.
+* **Deployment errors:** confirm that your `.env` private key has rBTC on testnet (`npx hardhat account` shows balances). The public faucet limits 0.001 rBTC/day.
 * **Frontend shows `contract not deployed`:** double‑check addresses in `frontend/.env` and recompile if necessary.
 * **LayerZero trusted remote mismatches:** you must set the trusted remote pairs on both sender and receiver after deployment; mismatches cause message reverts.
 * **Oracle price reverts on testnet:** Umbrella feeds are often unavailable on testnet. Use fixed oracle mode or deploy your own data feed.
@@ -548,7 +548,7 @@ A: USDT0 is a protocol‑defined accounting unit equal to one U.S. dollar. It is
 
 **Q: Can I move to Rootstock mainnet?**
 
-A: Yes. Update `ROOTSTOCK_RPC_URL` to a mainnet node, change `USE_FIXED_ORACLE` to `false`, and ensure you have real RBTC. Mainnet Umbrella feeds will be available for live pricing.
+A: Yes. Update `ROOTSTOCK_RPC_URL` to a mainnet node, change `USE_FIXED_ORACLE` to `false`, and ensure you have real rBTC. Mainnet Umbrella feeds will be available for live pricing.
 
 **Next steps & roadmap**
 
