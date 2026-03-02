@@ -17,8 +17,9 @@ The user can deposit RBTC from the Rootstock blockchain and borrow USDT0 (ERC-20
 
 **Project illustration:**
 
-<img width="1536" height="1024" alt="Project Illustration" src="https://github.com/user-attachments/assets/1e288f88-29d2-4ad3-926b-5bb5b5ba3203" />
+![Project illustration](https://github.com/user-attachments/assets/1e288f88-29d2-4ad3-926b-5bb5b5ba3203)
 
+![High-level Contract Illustration](https://github.com/user-attachments/assets/c4fba95d-0f8f-4dc8-b11c-1baa38ba3476)
 
 
 
