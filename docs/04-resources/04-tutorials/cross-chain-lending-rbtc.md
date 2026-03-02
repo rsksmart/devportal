@@ -6,203 +6,560 @@ description: 'A minimal RBTC-collateralized lending starter kit for Rootstock. I
 tags: [rsk, rootstock, lending, cross-chain, layerzero, umbrella, redstone, smart contracts, tutorials]
 ---
 
+# RBTC-USDT0 Cross‑Chain Starter‑Kit Guide
 
-This starter kit provides a minimal RBTC-backed USDT0 lending example on Rootstock. It includes a mock oracle that simulates Umbrella and Redstone price feeds. It is designed to be extended with LayerZero for cross-chain collateral flows. 
+> This document is the **comprehensive tutorial** for the RBTC-USDT0 cross‑chain lending starter kit.
 
-## What This Project Does 
+## Table of Contents
 
-This project consists of the lending pool contract that manages the lending process. It has an adapter contract that simulates the Umbrella oracle, so you can replace it with a real oracle integration when building out for real users. It also has a mock USDT0 token contract that mimics a stablecoin that you might want to interact with when creating your app. LendingPool accepts native RBTC as collateral and uses an ERC-20 (USDT0) as the borrowable asset.
+1. [Introduction](#introduction)
 
-The user can deposit RBTC from the Rootstock blockchain and borrow USDT0 (ERC-20 on Rootstock). The LendingPool contract accepts the RBTC deposit and calculates the USD value of collateral and debt, and determines how much USDT0 the user can safely borrow. The LendingPool is modular and oracle-agnostic. LayerZero is an interoperability protocol that allows multiple chains to send messages. By adding a LayerZero receiver, you can extend the LendingPool to credit collateral from other blockchains. 
+2. [Why build on Rootstock?](#why-build-on-rootstock)
 
-**Project illustration:**
+3. [Core architecture](#core-architecture)
 
-![Project illustration](https://github.com/user-attachments/assets/1e288f88-29d2-4ad3-926b-5bb5b5ba3203)
+4. [Prerequisites](#prerequisites)
 
-![High-level Contract Illustration](https://github.com/user-attachments/assets/c4fba95d-0f8f-4dc8-b11c-1baa38ba3476)
+5. [Cloning and initial setup](#cloning-and-initial-setup)
+
+6. [Environment configuration](#environment-configuration)
+
+7. [Installing dependencies](#installing-dependencies)
+
+8. [Compiling contracts and generating ABIs](#compiling-contracts-and-generating-abis)
+
+9. [Running the test suite](#running-the-test-suite)
+
+10. [Deployment walkthrough](#deployment-walkthrough)
+
+11. [Using the frontend dApp](#using-the-frontend-dapp)
+
+12. [Protocol mechanics](#protocol-mechanics)
+
+13. [Oracle setup and pricing model](#oracle-setup-and-pricing-model)
+
+14. [Cross‑chain flow explained](#cross-chain-flow-explained)
+
+15. [Known limitations](#known-limitations)
+
+16. [Security considerations](#security-considerations)
+
+17. [Troubleshooting and tips](#troubleshooting-and-tips)
+
+18. [FAQ & next steps](#faq--next-steps)
+
+19. [Credits](#credits)
+
+---
+
+## Introduction
+
+This guide walks you through building, deploying, and using a minimal over‑collateralized lending protocol on Rootstock. Whether you're an Ethereum developer exploring Bitcoin‑backed DeFi or new to Rootstock, this hands‑on tutorial covers everything: from cloning the code to interacting with the deployed contracts via a UI.
+
+No prior knowledge of LayerZero or cross‑chain protocols is required. We'll explain every architectural decision and code pattern, with a particular focus on the teleport‑style messaging model that powers collateral transfer, the oracle routing pattern that separates price feeds from lending logic, and the Loan‑to‑Value (LTV) solvency checks that protect the protocol.
+
+By the end of this tutorial you will have:
+
+* Deployed a complete lending protocol on Rootstock testnet
+* Understood how cross–chain messaging works via LayerZero
+* Learned the oracle router pattern for decoupled price feeds
+* Tested the system end–to–end with the React/Vite frontend
+* Built a mental model for extending the starter kit toward production
+
+A screenshot of the finished UI (the target end‑state for this guide) is shown below:
+
+![Screenshot of the demo dApp](https://github.com/user-attachments/assets/6a27ce27-d680-437a-82c2-1b8538e16569)
+
+*Figure 1: Demo dApp UI after a successful borrow (RBTC 0.00025 collateral, 1 USDT0 debt, $65k RBTC price).*
+
+Below is an architecture illustration showing the high-level system flow:
+
+![Project architecture illustration](https://github.com/user-attachments/assets/1e288f88-29d2-4ad3-926b-5bb5b5ba3203)
+
+*Figure 2: Cross-chain lending architecture from source chain deposit to destination chain borrowing on Rootstock.*
+
+## Why build on Rootstock?
+
+Rootstock (RSK) is an L2 solution secured by Bitcoin's mining power. Key benefits for developers:
+
+* **Bitcoin compatibility:** smart contracts can rely on RBTC and the Bitcoin security model.
+* **EVM compatibility:** use the same Solidity, Hardhat, ethers.js, Metamask, etc.
+* **Low fees & high throughput:** test cheaply and scale without congestion.
+* **Open source tooling:** the entire stack is public and free to use.
+
+This starter kit demonstrates a cross‑chain over‑collateralized lending flow that leverages RSK's features while remaining easy to understand.
+
+## Core architecture
+
+The protocol is intentionally minimal. It consists of three logical layers:
+
+1. **Cross‑chain messaging:** `LZSender` and `LZReceiver` using LayerZero to teleport collateral signals.
+2. **Lending logic:** `LendingPool` manages RBTC collateral and USDT0 debt with LTV checks.
+3. **Oracle routing:** `OracleRouter` delegates price requests to adapters (e.g., `UmbrellaOracleAdapter` or `FixedPriceOracle`).
+  
+
+### Key contract responsibilities  
+
+* **`LZSender` / `LZBorrowSender` / `LZRepaySender`:** source‑chain entry points. They accept RBTC, encode the user address + amount, and call `endpoint.send(...)` with one of three message types (deposit, borrow, repay). Look at `contracts/crosschain/LZSender.sol` for the encoding logic; messages are simply `(uint8 msgType, address user, uint256 amount)`.
+* **`LZReceiver`:** destination chain validator. It enforces replay protection, verifies `trustedRemote` addresses, and dispatches the payload to the pool. The three message types are handled in `lzReceive`, which conditionally calls `depositRBTC`, `borrowUSDT0For` or `repayUSDT0For`. See the implementation below:
+  
+
+```solidity
+// excerpt from LZReceiver.lzReceive
+(uint8 msgType, address user, uint256 amount) =
+abi.decode(_payload, (uint8, address, uint256));
+
+if (msgType == MSG_DEPOSIT) {
+   lendingPool.depositRBTC{value: amount}(user);
+
+} else if (msgType == MSG_BORROW) {
+   lendingPool.borrowUSDT0For(user, amount);
+
+} else if (msgType == MSG_REPAY) {
+   lendingPool.repayUSDT0For(user, amount);
+
+} else {
+   revert("INVALID_MSG");
+}
+``` 
+
+* **`LendingPool`:** the core accounting engine. It stores two mappings (`collateralRBTC` and `debtUSDT0`) keyed by user address and exposes public methods for deposit, withdraw, borrow and repay. The `onlyDepositor` modifier restricts cross‑chain deposit/borrow/repay calls to the `crossChainDepositor` address (set to the `LZReceiver`). Solvency is calculated in `_isSolvent`, which fetches the RBTC price from the oracle router and applies the configured `ltvBps`.
 
 
+```solidity
+function _isSolvent(uint256 collateralWei, uint256 debtAmount) internal view returns (bool) {
+   uint256 rbtcPrice;
+   try oracle.getPrice(address(0)) returns (uint256 price) {
+      rbtcPrice = price;
+   } catch {
+      rbtcPrice = 65_000e18; // testnet fallback
+   }
+   uint256 collateralUsd = (collateralWei * rbtcPrice) / 1e18;
+   uint256 debtUsd = (debtAmount * 1e18) / USDT0_SCALE;
+   uint256 maxDebtUsd = (collateralUsd * ltvBps) / 10_000;
+   return debtUsd <= maxDebtUsd;
+}
+```
 
-### Cross-chain Data flow
+* **`OracleRouter`:** simple ownership‑controlled mapping of asset→oracle. The router delegations allow you to swap out price feeds without touching the pool.  
 
-Although the boilerplate is Rootstock-native, it can be extended to other chains using LayerZero.  RBTC is the underlying collateral asset, but LayerZero allows deposits to originate on other chains. Cross-chain communication does not mean sending RBTC across chains. The system sends messages instead of bridging tokens directly. The LendingPool contract has to be able to receive the LayerZero "credit collateral" message. Other source chains can be integrated into the system as LayerZero senders. 
+```solidity
+function getPrice(address asset) external view returns (uint256) {
+   IPriceOracle oracle = oracles[asset];
+   require(address(oracle) != address(0), "NO_ORACLE");
+   return oracle.getPrice(asset);
+}
 
-Essentially, the flow follows the following steps.
+```
 
-1. User interacts with a vault that holds "wrapped RBTC" on a source chain (e.g., Ethereum)
-2. User deposits or locks rBTC-equivalent collateral
-3. The dApp uses LayerZero to send a message to Rootstock
-4. The message includes:
-    - user address
-    - amount of collateral
-5. Rootstock receives the message through a LayerZero Receiver contract
-6. The Receiver contract calls LendingPool to increase `collateralRBTC[user]`
-7. User can now borrow USDT0 on Rootstock
+* **Adapters:** `UmbrellaOracleAdapter` implements the `IPriceOracle` interface and wraps the Umbrella on‑chain reader. It normalizes decimals and enforces `MAX_DELAY`. A `FixedPriceOracle` simply returns a hard‑coded value and is used for testnet demonstrations.
 
-**NB:** 
-- A wrapped RBTC is the representation of RBTC on a non-Rootstock chain.
+These contracts, together with a handful of mocks (`MockLZEndpoint`, `MockUSDT0`, etc.), make up the entire logic of the starter kit. Supporting contracts include mocks for testing and a simple React frontend that consumes the deployed contracts. A high‑level diagram is shown as follows:
 
-- This boilerplate does **not** include the LayerZero sender or receiver contracts.  
-You must implement a LayerZero receiver on Rootstock that calls the LendingPool  
-`creditCollateral()` internally. The LendingPool does not currently include  
-this function; you must add it.
+![Figure 3: High-level Illustration of Contract Interaction](https://github.com/user-attachments/assets/c4fba95d-0f8f-4dc8-b11c-1baa38ba3476)
 
-- You must also implement a LayerZero sender contract on the remote chain to send  
-the `{user, collateralAmount}` payload.
- 
-
-**Cross-chain data flow illustration:**
-
-User (Chain A)
-   | sends wrapped-rBTC + LZ message
-   v
-LayerZero Endpoint
-   | forwards payload
-   v
-LZ Receiver Contract (Rootstock)
-   | credit collateral event
-   v
-LendingPool.sol updates collateralRBTC[user]
+*Figure 3: High-level illustration of contract interaction*
 
 
 ## Prerequisites
 
-* Node.js and `npm`
-* Hardhat
-* Rootstock RPC
-* Wallet with tRBTC
-* Basic Solidity knowledge
+Install the following tools before you begin. Versions shown are examples; newer versions are usually fine.
 
-> See [how to install Node and NPM](https://dev.rootstock.io/developers/requirements/#installing-nodejs-and-npm).
+* **Git:** `git --version` should print ≥ 2.20
+* **Node.js:** v18 or later (`node -v`)
+* **npm or yarn:** package manager
+* **Hardhat:** installed locally (no global install needed)
+* **MetaMask:** or similar Web3 wallet, configured with Rootstock testnet
+
+  
+## Cloning and initial setup
+
+Start by cloning the repository and moving into it:
 
 
-
-## Quick Setup
-
-To run the project, you can clone the repo with the following command:
 ```bash
-git clone https://github.com/rsksmart/rbtc-usdt0-lending-boilerplate
+git clone https://github.com/entuziaz/rbtc-usdt0-crosschain-starter-kit.git
+cd rbtc-usdt0-crosschain-starter-kit
 ```
 
-Then, navigate into the cloned directory and install the Node dependencies
-```bash
-cd rbtc-usdt0-lending-boilerplate
-npm install
+  
+
+The project root contains a Hardhat config, scripts, contracts, tests, and a `frontend/` subdirectory for the React UI.
+  
+
+## Environment configuration
+
+Create a `.env` file in the project root. This file is ignored by git and will store sensitive data such as keys and RPC URLs.
+
+```text
+# .env
+PRIVATE_KEY=0xYOUR_TESTNET_PRIVATE_KEY # account that will deploy contracts
+ROOTSTOCK_RPC_URL=https://public-node.testnet.rsk.co
+LZ_ENDPOINT=0xB6318... # LayerZero testnet endpoint for RSK
+USE_FIXED_ORACLE=true # force deterministic pricing on testnet
+USE_MOCK_USDT0=true # deploy a mock USDT0 token
+LTV_BPS=7000 # 70% Loan-to-Value ratio (in basis points)
 ```
 
-Run the demo script to see the app in action:
+> ⚠️ Never commit this file. In production you would use a secrets manager or hardware wallet.
+
+The Hardhat config (`hardhat.config.cjs`) reads the above variables to define the `rsktest` network, deployer account and other behaviour. You can inspect it if you want to customise gas settings or add more networks.
+
+## Installing dependencies
+
+Install JS packages in both root and frontend directories:
+
 ```bash
-npm run demo
+npm install # root for contracts & deploy scripts
+cd frontend && npm install # frontend UI dependencies
+cd .. # back to project root
 ```
 
+This populates `node_modules/` and ensures Hardhat and ethers are available.
 
-You should get the following output:
+  
+## Compiling contracts and generating ABIs
+
+Contracts are written in Solidity (`contracts/` subfolders). To compile them:
+
 ```bash
-> rbtc-usdt0-lending-boilerplate@0.1.0 demo
-> hardhat run scripts/demo.js
-
-Compiled 13 Solidity files successfully (evm target: paris).
-Deployer: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
-Alice   : 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
-USDT0  : 0x5FbDB2315678afecb367f032d93F642f64180aa3
-Oracle : 0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
-Pool   : 0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9
-Alice deposited 0.01 RBTC
-
-== After deposit ==
-Collateral (RBTC): 0.01
-Debt (USDT0)     : 0.0
-Collateral USD   : 650.0
-Debt USD         : 0.0
-Max Debt USD     : 455.0
-Health Factor    : 115792089237316195423570985008687907853269984665640564039457.584007913129639935
-Alice borrowed 400 USDT0
-
-== After borrow ==
-Collateral (RBTC): 0.01
-Debt (USDT0)     : 400.0
-Collateral USD   : 650.0
-Debt USD         : 400.0
-Max Debt USD     : 455.0
-Health Factor    : 1.1375
-Alice repaid 200 USDT0
-
-== After repay ==
-Collateral (RBTC): 0.01
-Debt (USDT0)     : 200.0
-Collateral USD   : 650.0
-Debt USD         : 200.0
-Max Debt USD     : 455.0
-Health Factor    : 2.275
-Alice withdrew 0.002 RBTC
-
-== After withdraw ==
-Collateral (RBTC): 0.008
-Debt (USDT0)     : 200.0
-Collateral USD   : 520.0
-Debt USD         : 200.0
-Max Debt USD     : 364.0
-Health Factor    : 1.82
-
-Demo complete ✅
+npx hardhat compile
 ```
 
-In the output, a user, Alice, deposits 0.01 RBTC as collateral, which is equivalent to 650 USD. 
-She is entitled to borrow up to 455 USD, so she borrowed 400 USDT0. 
-After borrowing, she repaid 200 USDT0 and withdrew 0.002 RBTC of her collateral. 
-She now has 0.008 RBTC remaining as collateral and a 364 USD maximum-debt allowance. 
+Compilation output (bytecode, ABI, metadata) appears in `artifacts/` and `cache/`. The frontend imports ABIs directly from `artifacts/`; therefore, you must compile before starting the UI or it will fail to locate ABIs.
+
+> You can re‑compile anytime, and the React app will hot‑reload the updated ABI if running.
+
+## Running the test suite
+
+A comprehensive test suite lives in `test/` and uses Mocha/Chai. Run all tests with:
+
+```bash
+npx hardhat test
+```
+
+Key test files:
+
+* **`lending/LendingPool.test.js`:** sanity checks for collateral, debt, borrow, repay, withdrawal and solvency math.
+* **`integration/LendingPoolWithRouter.test.js`:** ensures the OracleRouter wiring returns the correct price.
+* **`crosschain/LZReceiver.test.js`:** verifies message validation, replay protection, and receiver behaviour.
+* **`crosschain/CrossChainBorrow.test.js`:** end‑to‑end cross‑chain borrow flow using mocked LayerZero endpoints.
+
+The mocks directory contains `MockLZEndpoint.sol`, `MockOracle.sol`, `MockUSDT0.sol` etc., which simulate external systems so tests can run quickly offline. Example invocation of a single file:
 
 
-### Some Deployment Tips
+```bash
+npx hardhat test test/crosschain/CrossChainBorrow.test.js
+```
 
- Getting tRBTC: you can follow the following steps to get tRBTC to if you want to deploy to the testnet:
+All tests should pass. If they fail, delete `artifacts/` and `cache/` and try again. Sometimes stale compiled artifacts cause mismatch errors.
 
-1. Go to the [Rootstock faucet](https://faucet.rootstock.io/)
-2. Enter your wallet address
-3. Complete the captcha and request funds
-4. Wait a few minutes for the transaction to be confirmed
-5. Follow the [testnet deployment guide](https://dev.rootstock.io/developers/smart-contracts/hardhat/deploy-smart-contracts/) on the Rootstock website to deploy to testnet.
+## Deployment walkthrough
+
+### Deploy script
+
+`scripts/deploy.js` deploys the protocol contracts in order:
+
+1. `OracleRouter` and either `FixedPriceOracle` or `UmbrellaOracleAdapter` depending on `USE_FIXED_ORACLE`
+2. `MockUSDT0` (if `USE_MOCK_USDT0` is true) and mints an initial supply
+3. `LendingPool` and deploys `LZReceiver` with an unlinked pool address
+4. Links the receiver to the pool via `receiver.setLendingPool(lendingPool.address)`
+5. Optionally seeds the pool with USDT0 for testing
+
+All addresses printed by the script are needed for the frontend.
+  
+```bash
+npx hardhat run scripts/deploy.js --network rsktest
+```
+
+A sample output looks like:
+
+```
+Deploying with: 0x...
+
+OracleRouter: 0x...
+Fixed Oracle: 0x...
+RBTC oracle registered
+
+Mock USDT0: 0x...
+Minted 1,000,000 USDT0 to deployer
+
+LZReceiver: 0x...
+LendingPool: 0x...
+Receiver linked to LendingPool
+
+Seeded pool with 500,000 USDT0
+Deployment complete ✅
+```
+> Addresses will vary; keep them for the frontend or explorer verification.
+
+#### Verifying on Explorer
+
+Optionally verify contracts on the Rootstock testnet explorer:
+
+```bash
+npx hardhat verify --network rsktest <ADDRESS> "<constructor args>"
+```
+
+### Manual setup of environment variables for frontend
+
+After deployment, create a `.env` file inside `frontend/` with the contract addresses:
+  
+
+```text
+VITE_ORACLE_ROUTER="0x..."
+VITE_LENDING_POOL="0x..."
+VITE_USDT0="0x..." # only if using mock USDT0
+```
+
+This file is read by Vite during build.
+
+## Using the frontend dApp
+
+The React app illustrates a full deposit/borrow/repay cycle.
+
+Start it by running:
+
+```bash
+cd frontend
+env
+pm run dev # launches at http://localhost:3000
+```
+
+1. Open the URL in your browser.
+
+2. Connect MetaMask (make sure the network is set to RSK Testnet).
+
+3. If you deployed a mock, it will automatically request ERC20 approvals when interacting.
+
+4. You can read the current RBTC price (fixed or umbrella-based).
+
+5. Use the "deposit" button (or developer "devDepositRBTC" if testnet faucet is empty).
+
+6. Borrow USDT0, repay, and withdraw. The UI shows your collateral and debt balances.
+
+> The UI is intentionally minimal and educational; it demonstrates contract calls without production‑level polish. The screenshot at the top of this guide shows a typical state after the user has deposited a small amount of RBTC, borrowed 1 USDT0, and the fixed price oracle reports $65 000 per RBTC. The message banner and buttons correspond directly to functions in `App.jsx`.
+
+### Frontend wiring details
+
+`frontend/src/contracts.js` creates ethers contract instances using the deployed addresses and ABI files:
+
+```js
+
+import { ethers } from "ethers";
+import LendingPoolAbi from "../artifacts/contracts/core/LendingPool.sol/LendingPool.json";
+
+export function getContracts(provider, addresses) {
+   return {
+      lendingPool: new ethers.Contract(addresses.lendingPool, LendingPoolAbi.abi, provider.getSigner()),
+   /* ... other contracts ... */
+   };
+}
+``` 
+
+ABIs are imported directly from the Hardhat `artifacts/` directory, which is why a successful compile is required before `npm run dev`. The `.env` file in the frontend simply exports the addresses consumed by this module.
+
+Proper MetaMask configuration is essential. Make sure an RSK testnet network entry exists and the current account holds at least 0.001 RBTC. Use the Rootstock faucet to top up if necessary.
+
+### Frontend folder structure
+
+```
+frontend/
+├─ index.html
+├─ vite.config.js
+└─ src/
+   ├─ main.jsx
+   ├─ App.jsx
+   └─ contracts.js
+```
+
+Notice that `contracts.js` exports the frontend-friendly contract objects using the ABIs from `artifacts/`.
+
+## Protocol mechanics
+
+### Borrowing logic
+
+Once the `LendingPool` has credited collateral (via either an on‑chain deposit or cross‑chain message), a user can borrow USDT0:
+
+```solidity
+// called on Rootstock
+pool.borrowUSDT0(500 * 1e6); // 500 USDT0 (6 decimals)
+```
+
+The pool checks solvency using the current RBTC price. If the position would become under‑collateralized, the call reverts.
+
+### Repayment logic
+
+To repay, the user must approve the pool (for USDT0) then call:
+
+```solidity
+usdt0.approve(address(pool), 100 * 1e6);
+pool.repayUSDT0(100 * 1e6);
+```  
+
+The contract reduces the stored debt amount accordingly.
+
+### Collateral withdrawal
+
+Users may withdraw RBTC as long as the resulting position remains solvent:
+
+```solidity
+pool.withdrawRBTC(0.01 ether);
+```
+
+Internally this triggers the same `_isSolvent` check with the reduced collateral amount.
+
+### Solvency math
+
+Solvency is maintained using a fixed LTV expressed in basis points (BPS). The internal check is:
+
+```text
+debtUSD ≤ collateralUSD × (LTV / 10,000)
+```
+
+Where collateralUSD = collateralRBTC × RBTC_USD_price and debtUSD = debtUSDT0 × $1 (invariant). The `LendingPool` implements the logic in `_isSolvent` which is used during borrow and withdrawal operations.
+
+### One‑time receiver wiring
+
+`LZReceiver` is deployed without a pool address. After deployment the owner must link it:
+
+```solidity
+receiver.setLendingPool(lendingPool.address);
+```
+
+This two‑step process prevents misconfiguration during deployment.
+
+## Oracle setup and pricing model
+
+The protocol distinguishes between **market assets** (RBTC) and **accounting units** (USDT0). Only market assets require external price feeds.
+
+### Price sources
+
+| Asset | Price Source | Notes |
+
+|-------|--------------|-------|
+
+| RBTC | UmbrellaOracleAdapter or FixedPriceOracle | fixed oracle is used on testnet for deterministic behaviour |
+
+| USDT0 | Protocol invariant (1 USD) | no oracle required |
+
+The `OracleRouter` maintains a mapping from asset address to an adapter contract. This allows the owner to upgrade or change price sources without touching the lending logic.
+
+#### Registering an oracle
+
+In deployment (or manually), register an oracle:
+
+```javascript
+await oracleRouter.setOracle(rbtcAddress, adapter.address);
+```
+
+Adapters must be bound to a single asset upon construction and perform decimal normalization.
+
+### Testnet vs mainnet mode
+
+The repository supports two deployment modes controlled by the `USE_FIXED_ORACLE` environment variable.
+
+* **Testnet mode (default)**: deploys `FixedPriceOracle` with a constant price (e.g., $1000 per RBTC). This ensures the end‑to‑end lending flow works even when Umbrella feeds are unavailable.
+* **Mainnet mode**: deploys `UmbrellaOracleAdapter` wired to the on‑chain Umbrella price reader. Use this when targeting Rootstock mainnet.
+
+Setting `USE_FIXED_ORACLE=true` in your `.env` (or command line) triggers the fixed oracle path.
+
+  
+  
+
+## Cross‑chain flow explained
+
+### User action
+
+On the source chain (any EVM), the user invokes `LZSender.sendRBTC()` attaching RBTC value. The sender contract:
+
+* Locks the RBTC (e.g., via `receive()` or `payable` function)
+* Constructs a payload containing the recipient address and amount
+* Calls the LayerZero endpoint's `send()` method with the payload and native value
 
 
+### Receiver validation
+
+On Rootstock, the `LZReceiver` contract implements `lzReceive()` (called by LayerZero). It performs:
+
+* **Replay protection**: computes a hash of `(srcChainId, srcAddress, nonce)` and ensures it hasn't been processed
+* **Authenticity**: checks that `srcAddress` matches the configured `trustedRemote` for `srcChainId`
+* **Execution**: forwards the RBTC value and the `onBehalfOf` address to `lendingPool.depositRBTC{value: amount}(onBehalfOf)`
+
+### Deposit and borrow
+
+`LendingPool.depositRBTC()` increases the user's collateral balance and emits an event. After deposit, the user can call `borrowUSDT0()` directly on Rootstock.
+
+> ⚠️ The system operates on **signaling** rather than bridging. The RBTC is already on Rootstock; you are only sending a message to credit the collateral.
+
+### Timing risk
+
+Because the collateral value is validated on the **destination chain** using the current price, rapid price swings between the send and receive events can cause the borrow to fail. This is a deliberate safety feature.
 
 
-### Umbrella / RedStone Integration Guide
+## Known limitations
 
-The `UmbrellaOracleAdapter` in the boilerplate is a mock and not a real oracle feed. It manually stores prices with `setPriceE18()` or `setBatch()`. This works for local and testnet development. The `getPrice(asset)` currently reads from a mapping `mapping(address => uint256) public pricesE18;`.
+Before extending or publishing this code, be aware of the starter kit's intentional constraints: 
 
-If you plan to go into production, you will have to revamp it and write a real oracle adapter. You would likely still keep the `IPriceOracle` interface but replace the internal logic of `getPrice(asset)` by calling the real Umbrella on-chain feed instead of reading from the mapping. The return value must be normalized to **1e18 decimals**. You can maintain the LendingPool contract or extend it to meet your design.
+* **Testnet oracle availability:** Umbrella price feeds are often unavailable on Rootstock testnet; the fixed oracle is used instead. On testnet `getPrice()` may revert, and the UI switches to a default value. This is why the deployment script exposes `USE_FIXED_ORACLE`.
+* **Mocked messaging:** the `MockLZEndpoint` in tests does not represent a real bridge. Cross‑chain behaviour is simulated; your production system must deploy real LayerZero endpoints and manage assets accordingly.
+* **No liquidations:** there is no mechanism to seize collateral. Under‑collateralized positions simply block further borrowing or withdrawals.
+* **No interest or governance:** debt does not accrue interest, and there is no on‑chain administration beyond the owner of the router and receiver.
+* **Faucet restrictions:** Rootstock testnet faucet limits to ≈0.001 RBTC/day, so the `devDepositRBTC()` helper and small borrow amounts exist to work around this.
 
-Alternatively, you can use the RedStone price feed oracles. You would have to implement a RedStone adapter that also exposes `getPrice(address)` and returns `uint256 priceE18`. RedStone adapters generally read signed price data from calldata.  
-LendingPool uses the `IPriceOracle` interface in a plug-and-play manner and not the adapter-specific logic. This enables you to easily change the adapter without affecting the lending logic.
+These limitations are deliberate for educational clarity; the tutorial explains how to remove each one when moving toward production.
 
+## Security considerations
 
-## **Contracts Breakdown Section**
+The README's security section is reproduced here with extra context:
 
-- `LendingPool.sol`: The lending pool contract handles deposit, borrow, repayment, and withdrawal. It calculates collateral and debt in USD and applies the health-factor logic.
+* **Role isolation**: only `LZReceiver` may call `depositRBTC` thanks to the `onlyDepositor` modifier. Do **not** set this to an EOA.
+* **Oracle staleness**: adapters enforce `MAX_DELAY` to avoid using outdated prices. Adjust this to match your feed's heartbeat.
+* **Bridge trust**: the protocol assumes real liquidity backing the teleport messages. In practice, ensure the `LendingPool` holds enough USDT0 to cover all deposits before going public.
+* **No liquidations**: this starter kit has no mechanism for taking collateral when positions become unsafe. For production you must implement a `liquidate()` function.
+* **No interest rates**: borrowed amounts do not accrue interest. Add your own rate model if needed.
+* **Owner privileges**: the owner (or multisig) of `OracleRouter` can change oracles. Protect this key vigorously.
 
-- `UmbrellaOracleAdapter.sol`: A mock oracle adapter that stores and sets prices manually. This is a simplified version meant only for local/testnet development. You must integrate a real Umbrella or RedStone adapter for production use.
+> 🔐 **Important**: this code is **not audited**. Treat it as educational scaffolding; do not deploy it with real funds without extensive review and modifications.
+  
 
-- `MockUSDT0.sol`: A mock ERC-20 token used for local development. You must replace this with the real USDT0 contract address when deploying to testnet or mainnet.
+## Troubleshooting and tips
 
-- `IPriceOracle.sol`: Interface that ensures any oracle implementation fits the LendingPool. It simply returns a USD price with 18 decimals.
-
-- **Scripts:**
-	- `demo.js` runs the full flow locally with Hardhat, deploying the mock USDT0, the mock oracle, and the LendingPool contract. It demonstrates the deposit → borrow → repay → withdraw lifecycle.
-
-	- `demo-testnet.js` is similar but runs on the Rootstock testnet using tRBTC.
-
-
-## Use Cases 
-
-* Cross-chain stablecoin borrowing: with LayerZero integration, you can extend the boilerplate to build a cross-chain lending platform, allowing your users to use RBTC to borrow against assets on other blockchains.
-* Yield strategies: you can extend the starter kit to set up staking, yield farming, and liquidity-providing systems.
-* Developer projects: developers can use this project as a starter kit for experimenting with different lending protocol designs.
-
-
-## Repo & Resources
-
-* GitHub repo: https://github.com/rsksmart/rbtc-usdt0-lending-boilerplate/
-* Rootstock docs: https://dev.rootstock.io/
+* **Tests failing after ABI changes:** delete `artifacts/` and `cache/` then recompile (`npx hardhat compile`).
+* **Deployment errors:** confirm that your `.env` private key has RBTC on testnet (`npx hardhat account` shows balances). The public faucet limits 0.001 RBTC/day.
+* **Frontend shows `contract not deployed`:** double‑check addresses in `frontend/.env` and recompile if necessary.
+* **LayerZero trusted remote mismatches:** you must set the trusted remote pairs on both sender and receiver after deployment; mismatches cause message reverts.
+* **Oracle price reverts on testnet:** Umbrella feeds are often unavailable on testnet. Use fixed oracle mode or deploy your own data feed.
 
 
+## FAQ & next steps
 
+**Q: Can I add interest or liquidations?**
+
+A: Yes. The pool has hooks (`onCollateralChanged`, `onDebtChanged`) that you can extend. Add a `liquidate()` method that allows third parties to close under‑collateralized accounts.
+
+**Q: How do I support another source chain?**
+
+A: Deploy `LZSender` on your chosen chain with the appropriate LZ endpoint. Configure the `receiver.setTrustedRemote` mapping on Rootstock with the sender's address and chain ID.
+
+**Q: What is USDT0?**
+
+A: USDT0 is a protocol‑defined accounting unit equal to one U.S. dollar. It is not an ERC‑20 token; the `LendingPool` simply tracks numerical balances. MockUSDT0 is provided for tests and the frontend.
+
+**Q: Can I move to Rootstock mainnet?**
+
+A: Yes. Update `ROOTSTOCK_RPC_URL` to a mainnet node, change `USE_FIXED_ORACLE` to `false`, and ensure you have real RBTC. Mainnet Umbrella feeds will be available for live pricing.
+
+**Next steps & roadmap**
+
+1. **Liquidations:** implement and test a liquidation mechanism.
+
+2. **Interest rate model:** add utilisation‑based rates for borrowed USDT0.
+
+3. **Multi‑asset support:** enable multiple collateral tokens using the same router pattern.
+
+4. **Stargate/OFT integration:** explore LayerZero's Omnichain Fungible Token standard for asset bridging.
+
+## Credits
+
+This tutorial and starter kit were originally created by [@entuziaz](https://github.com/entuziaz) during the Rootstock Hacktivator program. This documentation was inspired by the [Rootstock Vyper Starter Kit](https://github.com/rsksmart/devportal/pull/196) from the Rootstock Hacktivator.
