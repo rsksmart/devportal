@@ -1,56 +1,16 @@
 ---
 sidebar_label: Cross-Chain RBTC Lending Starter Kit
 sidebar_position: 3
-title: Cross-Chain rBTC-Backed Lending & USDT0 Stablecoin Starter Kit
+title: Build a Cross-Chain Lending dApp using rBTC & USDT0 on Rootstock  
 description: 'A minimal rBTC-collateralized lending starter kit for Rootstock. Includes mock oracle integration, USDT0 ERC-20 support, and guidance for extending the system with LayerZero and Umbrella/RedStone price feeds.'
-tags: [rsk, rootstock, lending, cross-chain, layerzero, umbrella, redstone, smart contracts, tutorials]
+tags: [rsk, rootstock, rbtc, usdt0, lending, cross-chain, layerzero, umbrella, redstone, smart contracts, tutorials]
 ---
 
-# RBTC-USDT0 Cross‑Chain Starter‑Kit Guide
+:::info[Info]
 
-> This document is the **comprehensive tutorial** for the rBTC-USDT0 cross‑chain lending starter kit.
+This is the **comprehensive tutorial** for the rBTC-USDT0 cross‑chain lending starter kit.
 
-## Table of Contents
-
-1. [Introduction](#introduction)
-
-2. [Why build on Rootstock?](#why-build-on-rootstock)
-
-3. [Core architecture](#core-architecture)
-
-4. [Prerequisites](#prerequisites)
-
-5. [Cloning and initial setup](#cloning-and-initial-setup)
-
-6. [Environment configuration](#environment-configuration)
-
-7. [Installing dependencies](#installing-dependencies)
-
-8. [Compiling contracts and generating ABIs](#compiling-contracts-and-generating-abis)
-
-9. [Running the test suite](#running-the-test-suite)
-
-10. [Deployment walkthrough](#deployment-walkthrough)
-
-11. [Using the frontend dApp](#using-the-frontend-dapp)
-
-12. [Protocol mechanics](#protocol-mechanics)
-
-13. [Oracle setup and pricing model](#oracle-setup-and-pricing-model)
-
-14. [Cross-chain flow explained](#cross-chain-flow-explained)
-
-15. [Known limitations](#known-limitations)
-
-16. [Security considerations](#security-considerations)
-
-17. [Troubleshooting and tips](#troubleshooting-and-tips)
-
-18. [FAQ & next steps](#faq--next-steps)
-
-19. [Credits](#credits)
-
----
+:::
 
 ## Introduction
 
@@ -87,7 +47,7 @@ Rootstock (RSK) is an L2 solution secured by Bitcoin's mining power. Key benefit
 * **Low fees & high throughput:** test cheaply and scale without congestion.
 * **Open source tooling:** the entire stack is public and free to use.
 
-This starter kit demonstrates a cross‑chain over‑collateralized lending flow that leverages RSK's features while remaining easy to understand.
+This starter kit demonstrates a cross‑chain over‑collateralized lending flow that leverages Rootstock's features while remaining easy to understand.  
 
 ## Core architecture
 
@@ -194,14 +154,19 @@ Create a `.env` file in the project root. This file is ignored by git and will s
 ```text
 # .env
 PRIVATE_KEY=0xYOUR_TESTNET_PRIVATE_KEY # account that will deploy contracts
-ROOTSTOCK_RPC_URL=https://public-node.testnet.rsk.co
+ROOTSTOCK_RPC_URL=https://rpc.testnet.rootstock.io/<RPC_API_KEY>
 LZ_ENDPOINT=0xB6318... # LayerZero testnet endpoint for RSK
 USE_FIXED_ORACLE=true # force deterministic pricing on testnet
 USE_MOCK_USDT0=true # deploy a mock USDT0 token
 LTV_BPS=7000 # 70% Loan-to-Value ratio (in basis points)
 ```
+You can get your Rootstock RPC API URL by following the official guide on [Getting Started with the Rootstock RPC API](https://dev.rootstock.io/developers/rpc-api/rootstock/setup/).
 
-> ⚠️ Never commit this file. In production you would use a secrets manager or hardware wallet.
+:::warning[Warning]
+
+Never commit this file. In production you would use a secrets manager or hardware wallet.
+
+:::
 
 The Hardhat config (`hardhat.config.cjs`) reads the above variables to define the `rsktest` network, deployer account and other behaviour. You can inspect it if you want to customise gas settings or add more networks.
 
@@ -316,19 +281,21 @@ This file is read by Vite during build.
 
 ## Using the frontend dApp
 
-The React app illustrates a full deposit/borrow/repay cycle.
-
-Start it by running:
+The React app illustrates a full deposit/borrow/repay cycle. Navigate to the app directory on the terminal with the following command:
 
 ```bash
 cd frontend
-env
-pm run dev # launches at http://localhost:3000
+```
+
+Then, run the client with the following command:
+
+```bash
+npm run dev # launches at http://localhost:3000
 ```
 
 1. Open the URL in your browser.
 
-2. Connect MetaMask (make sure the network is set to RSK Testnet).
+2. Connect MetaMask (make sure the network is set to Rootstock Testnet).  
 
 3. If you deployed a mock, it will automatically request ERC20 approvals when interacting.
 
@@ -562,7 +529,9 @@ A: Yes. Update `ROOTSTOCK_RPC_URL` to a mainnet node, change `USE_FIXED_ORACLE` 
 
 
 :::info[Credit]
+
 1. This tutorial and [starter kit](https://github.com/entuziaz/rbtc-usdt0-crosschain-starter-kit) were originally created by [@entuziaz](https://github.com/entuziaz) during the Rootstock Hacktivator program. 
 2. This project extends the RBTC/USDT0 Simple Lending [Boilerplate](https://github.com/rsksmart/rbtc-usdt0-lending-boilerplate)
 3. This documentation was inspired by the [Rootstock Vyper Starter Kit](https://github.com/rsksmart/devportal/pull/196) from the Rootstock Hacktivator.
+
 :::
