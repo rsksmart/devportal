@@ -155,7 +155,7 @@ Create a `.env` file in the project root. This file is ignored by git and will s
 # .env
 PRIVATE_KEY=0xYOUR_TESTNET_PRIVATE_KEY # account that will deploy contracts
 ROOTSTOCK_RPC_URL=https://rpc.testnet.rootstock.io/<RPC_API_KEY>
-LZ_ENDPOINT=0xB6318... # LayerZero testnet endpoint for RSK
+LZ_ENDPOINT=0xB6318... # LayerZero testnet endpoint for Rootstock
 USE_FIXED_ORACLE=true # force deterministic pricing on testnet
 USE_MOCK_USDT0=true # deploy a mock USDT0 token
 LTV_BPS=7000 # 70% Loan-to-Value ratio (in basis points)
@@ -326,7 +326,7 @@ export function getContracts(provider, addresses) {
 
 ABIs are imported directly from the Hardhat `artifacts/` directory, which is why a successful compile is required before `npm run dev`. The `.env` file in the frontend simply exports the addresses consumed by this module.
 
-Proper MetaMask configuration is essential. Make sure an RSK testnet network entry exists and the current account holds at least 0.001 rBTC. Use the Rootstock faucet to top up if necessary.
+Proper MetaMask configuration is essential. Make sure an Rootstock testnet network entry exists and the current account holds at least 0.001 rBTC. Use the Rootstock faucet to top up if necessary.
 
 ### Frontend folder structure
 
