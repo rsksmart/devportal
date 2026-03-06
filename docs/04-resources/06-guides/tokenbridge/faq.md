@@ -5,6 +5,12 @@ title: "Token Bridge FAQs"
 tags: [resources, tokenbridge, blockchain, bridges, tokens, ethereum, rootstock, rsk]
 ---
 
+:::warning[Token Bridge deprecation]
+
+The Token Bridge will no longer support moving assets between Ethereum and Rootstock. For other options, see [cross-chain bridges](/dev-tools/cross-chain-bridges/).
+
+:::
+
 Find a list of frequently asked questions about the Token Bridge.
 
 ````mdx-code-block
