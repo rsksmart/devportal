@@ -199,7 +199,7 @@ linkHref="/dev-tools/data/thegraph/"
 linkTitle="Acceda a datos de la cadena"
 description="Obtenga datos históricos sobre contratos inteligentes al crear dApps."
 />
-<FilterItem
+<!-- <FilterItem
 value="data"
 title="Covalent"
 subtitle="Datos y Analítica"
@@ -207,7 +207,7 @@ color="orange"
 linkHref="https://www.covalenthq.com/docs/networks/rootstock/?utm_source=rootstock&utm_medium=partner-docs"
 linkTitle="Acceda a datos de la cadena"
 description="Covalent es una solución alojada de datos de blockchain que proporciona acceso a datos históricos y actuales en la cadena para más de 100 blockchains compatibles, incluido Rootstock."
-/>
+/> -->
 <FilterItem
 value="data"
 title="DefiLlama"

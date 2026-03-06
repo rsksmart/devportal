@@ -218,7 +218,7 @@ description: Rootstock에서 스마트 컨트랙트를 개발하고 배포하는
     linkTitle="온체인 데이터 액세스"
     description="dApp을 개발할 때 스마트 컨트랙트의 기록 데이터를 조회해보세요."
   />
-<FilterItem
+<!-- <FilterItem
     value="data"
     title="Covalent"
     subtitle="데이터 및 분석"
@@ -226,7 +226,7 @@ description: Rootstock에서 스마트 컨트랙트를 개발하고 배포하는
     linkHref="https://www.covalenthq.com/docs/networks/rootstock/?utm_source=rootstock&utm_medium=partner-docs"
     linkTitle="온체인 데이터 액세스"
     description="Covalent는 Rootstock을 포함한 100개 이상의 블록체인을 지원하며, 과거부터 현재까지의 온체인 데이터에 접근할 수 있는 호스팅형 블록체인 데이터 솔루션입니다."
-  />
+  /> -->
 <FilterItem
     value="data"
     title="DefiLlama"

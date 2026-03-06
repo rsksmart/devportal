@@ -33,14 +33,6 @@ Data indexers act like librarians for blockchain data, organizing and storing in
     linkHref="/dev-tools/data/envio/"
     linkTitle="Get Started"
   />
-   <CardsGridItem
-    title="Covalent"
-    subtitle="data indexers"
-    color="green"
-    description="Covalent provides the industry-leading Unified API bringing visibility to billions of Web3 data points. Developers use Covalent to build exciting multi-chain applications like crypto wallets, NFT galleries, and investor dashboard tools utilizing data from 100+ blockchains including Rootstock."
-    linkHref="/dev-tools/data/covalent/"
-    linkTitle="Get Started"
-  />
   <CardsGridItem
     title="Goldsky"
     subtitle="data indexers"

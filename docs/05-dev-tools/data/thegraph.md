@@ -138,7 +138,7 @@ Here’s an example from the [CryptoPunks Ethereum subgraph](https://thegraph.co
 
 The query URL for this subgraph is:
 
-* [https://gateway-arbitrum.network.thegraph.com/api/](https://gateway-arbitrum.network.thegraph.com/api/)
+* `https://gateway-arbitrum.network.thegraph.com/api/`
 
 * **[api-key]:** `/subgraphs/id/HdVdERFUe8h61vm2fDyycHgxjsde5PbB832NHgJfZNqK`
 

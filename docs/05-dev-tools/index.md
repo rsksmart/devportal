@@ -253,7 +253,7 @@ description: "Explore a curated selection of smart contract development tools an
     linkTitle="Access on-chain data"
     description="Get historical data on smart contracts when building dApps."
   />
-<FilterItem
+<!-- <FilterItem
     value="data"
     title="Covalent"
     subtitle="data & analytics"
@@ -261,7 +261,7 @@ description: "Explore a curated selection of smart contract development tools an
     linkHref="https://www.covalenthq.com/docs/networks/rootstock/?utm_source=rootstock&utm_medium=partner-docs"
     linkTitle="Access on-chain data"
     description="Covalent is a hosted blockchain data solution providing access to historical and current on-chain data for 100+ supported blockchains, including Rootstock."
-  />
+  /> -->
 <FilterItem
     value="data"
     title="DefiLlama"
