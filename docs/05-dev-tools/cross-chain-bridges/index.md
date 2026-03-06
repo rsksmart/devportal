@@ -22,14 +22,14 @@ Imagine different islands, each with its own unique economy and currency. To tra
 
 <CardsGrid>
   <CardsGridItem
-    title="Token Bridge"
+    title="Stargate"
     subtitle="cross-chain"
     color="green"
-    description="Token Bridge dApp allow for easy movement your ERC-20 tokens (tokens on the Ethereum network) between Ethereum and Rootstock using the user-friendly Tokenbridge dApp."
-    linkHref="/resources/guides/tokenbridge/"
+    description="Bridge RBTC, DOC, MOC, USDRIF, USDT0, and more from Rootstock to other chains."
+    linkHref="https://stargate.finance/"
     linkTitle="Start Bridging"
   />
-   <CardsGridItem
+  <CardsGridItem
     title="PowPeg App"
     subtitle="cross-chain"
     color="green"
