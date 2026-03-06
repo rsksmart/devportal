@@ -5,6 +5,12 @@ title: Rootstock Token Bridge
 tags: [resources, tokenbridge, blockchain, bridges, tokens, ethereum, rootstock, rsk]
 ---
 
+:::warning[Token Bridge deprecation]
+
+The Token Bridge will no longer support moving assets between Ethereum and Rootstock. For other options, see [cross-chain bridges](/dev-tools/cross-chain-bridges/).
+
+:::
+
 Safely move your ERC20 tokens between Rootstock and Ethereum with the Tokenbridge dApp. This user-friendly interface lets you interact with the Token Bridge contracts directly. It is available on [Mainnet](https://dapp.tokenbridge.rootstock.io/) or [Testnet](https://dapp.testnet.bridges.rootstock.io/).
 
 ## Rationale

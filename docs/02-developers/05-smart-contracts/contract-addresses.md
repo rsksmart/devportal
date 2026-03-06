@@ -11,7 +11,6 @@ For info on derivation paths, see [Account based addresses](/concepts/account-ba
 
 :::note[Note]
 - [Rootstock Mainnet OFT Quickstart](https://docs.layerzero.network/v2/deployments/evm-chains/rootstock-mainnet-oft-quickstart)
-- [Rootstock Testnet OFT Quickstart](https://docs.layerzero.network/v2/deployments/evm-chains/rootstock-testnet-oft-quickstart)		
 - [Rootstock Contract Metadata](https://github.com/rsksmart/rsk-contract-metadata)
 - [Rootstock Testnet Contract Metadata](https://github.com/rsksmart/rsk-testnet-contract-metadata) 
 - [Rootstock - DefiLlama](https://defillama.com/chain/Rootstock)			
@@ -39,7 +38,7 @@ For info on derivation paths, see [Account based addresses](/concepts/account-ba
 
 The Omnichain Fungible Token (OFT) Standard allows fungible tokens to be transferred across multiple blockchains without asset wrapping or middlechains. See [LayerZero V2 OFT Quickstart](https://docs.layerzero.network/v2/developers/evm/oft/quickstart). 
 
-- Mint and transfer a lightweight [Omnichain Fungible Token (OFT) between Rootstock Testnet](https://docs.layerzero.network/v2/deployments/evm-chains/rootstock-testnet-oft-quickstart) and other supported chains.	
+- Mint and transfer a lightweight [Omnichain Fungible Token (OFT) between Rootstock Mainnet](https://docs.layerzero.network/v2/deployments/evm-chains/rootstock-mainnet-oft-quickstart#rootstock-mainnet-oft-quickstart) and other supported chains.	
 
 - Mint and transfer a lightweight [Omnichain Fungible Token (OFT) between Rootstock Mainnet](https://docs.layerzero.network/v2/deployments/evm-chains/rootstock-mainnet-oft-quickstart) and other supported chains.
 

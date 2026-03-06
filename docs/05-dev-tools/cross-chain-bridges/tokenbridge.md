@@ -6,6 +6,12 @@ description: "The Rootstock Token Bridge is an interoperability solution that al
 tags: [token bridge, bridges, developer tools, testnet, rsk, rootstock, ethereum, dApps, smart contracts]
 ---
 
+:::warning[Token Bridge deprecation]
+
+The Token Bridge will no longer support moving assets between Ethereum and Rootstock. For other options, see [cross-chain bridges](/dev-tools/cross-chain-bridges/).
+
+:::
+
 The Rootstock Token Bridge is an interoperability solution that allows you to transfer ERC-20 tokens seamlessly between Ethereum and Rootstock networks. 
 
 This decentralized application (dApp) provides a user-friendly interface for interacting directly with the Token Bridge smart contracts, enabling secure and efficient cross-chain transactions.

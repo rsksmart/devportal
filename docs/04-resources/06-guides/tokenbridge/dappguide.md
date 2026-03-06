@@ -5,6 +5,12 @@ title: "Getting Started with the Token Bridge"
 tags: [resources, tokenbridge, blockchain, bridges, tokens, ethereum, rootstock, rsk]
 ---
 
+:::warning[Token Bridge deprecation]
+
+The Token Bridge will no longer support moving assets between Ethereum and Rootstock. For other options, see [cross-chain bridges](/dev-tools/cross-chain-bridges/).
+
+:::
+
 This guide describes the steps to transfer tokens using the Web Interface for the [Rootstock Token Bridge dApp](https://dapp.tokenbridge.rootstock.io/). Please refer to the project documentation, if you’d like to know more about how this bridge works. It is possible to test the transfer of tokens between Rootstock Testnet and Sepolia networks, or Rootstock Mainnet and Ethereum networks using the Rootstock Tokenbridge web interface.
 
 ## Prerequisites

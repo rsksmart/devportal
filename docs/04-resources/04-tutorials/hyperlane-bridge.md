@@ -250,7 +250,7 @@ CONFIG_FILES=./config/testnet4_config.json
 ./target/release/validator --validator.key 0x... --db ./hyperlane_db --originChainName rootstock --reorgPeriod 2 --checkpointSyncer.type localStorage --checkpointSyncer.path ./checkpointSyncer
 ```
 
-View full validator configurations in [Run a Validator](https://docs.hyperlane.xyz/docs/guides/deploy-hyperlane-local-agents#3-run-a-validator)
+View full validator configurations in [Run a Validator](https://docs.hyperlane.xyz/docs/guides/chains/deploy-hyperlane-with-local-agents#3-run-a-validator).
 
 ## Running a Relayer node
 
@@ -269,7 +269,7 @@ To run a relayer node, enter the following commands:
 CONFIG_FILES=./config/testnet4_config.json ./target/release/relayer --db ./hperlane_db --relayChains rootstock,bsctestnet --defaultSigner.key 0x... --allowLocalCheckpointSyncers true --checkpointSyncer.type localStorage --checkpointSyncer.path ./hyperlaneSyncer --gasPaymentEnforcement '[{"type": "none", "matchingList": []}, {"type": "minimum", "payment": 0}]'
 ```
 
-View the full [relayer configurations](https://docs.hyperlane.xyz/docs/guides/deploy-hyperlane-local-agents#4-run-a-relayer)
+View the full [relayer configurations](https://docs.hyperlane.xyz/docs/guides/chains/deploy-hyperlane-with-local-agents#4-run-a-relayer)
 
 ## Sending a message 
 
@@ -287,15 +287,14 @@ See more details [here](https://docs.hyperlane.xyz/docs/your-first-message) abou
 
 Until now we have a Hyperlane mailbox and core contracts deployed on Rootstock, it’s time to set up token bridging between Rootstock chain and other Hyperlane chains.
 
-See the [full guide](https://docs.hyperlane.xyz/docs/guides/deploy-warp-route) for how to do a wrap route setup.
+See the [full guide](https://docs.hyperlane.xyz/docs/guides/warp-routes/evm-cosmos-warp-route-guide#step-2-deploy-the-warp-route) for how to do a wrap route setup.
 
 ## Useful Resources
 
 - [How Hyperlane Works](https://docs.hyperlane.xyz/docs/protocol/protocol-overview)
 - [Hyperlane Explorer](https://explorer.hyperlane.xyz/)
-- [Deployed Addresses](https://docs.hyperlane.xyz/docs/reference/contract-addresses)
 - [Hyperlane Github Repos](https://github.com/hyperlane-xyz)
-- [Hyperlane Cli](https://docs.hyperlane.xyz/docs/reference/cli)
+- [Hyperlane Cli](https://docs.hyperlane.xyz/docs/reference/developer-tools/cli#hyperlane-cli)
 - [Hyperlane Registries](https://docs.hyperlane.xyz/docs/reference/registries)
 - [Hyperlane Validators](https://docs.hyperlane.xyz/docs/operate/validators/run-validators)
 - [Hyperlane Relayers](https://docs.hyperlane.xyz/docs/operate/relayer/run-relayer)
