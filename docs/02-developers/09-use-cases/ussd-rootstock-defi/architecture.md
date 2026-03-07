@@ -1,7 +1,7 @@
 ---
 sidebar_label: Architecture & Data Flow
 sidebar_position: 2
-title: USSD-RSK Architecture & Data Flow
+title: USSD-Rootstock Architecture & Data Flow
 tags: [rsk, rootstock, developers, architecture, ussd]
 description: Understand the complete USSD session lifecycle, relay server architecture, and how the Rootstock JSON-RPC layer connects feature phone interactions to on-chain smart contract execution.
 ---
