@@ -8,7 +8,7 @@ description: Learn how to build internet-free decentralized financial services o
 
 # USSD-Based Decentralized Finance on Rootstock
 
-This guide introduces a novel integration architecture that connects **legacy GSM feature phones** to the Rootstock(rsk) blockchain network via USSD (Unstructured Supplementary Service Data). The system enables decentralized financial services, including P2P transfers and micro-loans, for users without smartphone or internet access.
+This guide introduces a novel integration architecture that connects **legacy GSM feature phones** to the Rootstock(RSK) blockchain network via USSD (Unstructured Supplementary Service Data). The system enables decentralized financial services, including P2P transfers and micro-loans, for users without smartphone or internet access.
 
 :::note
 USSD is a real-time communication protocol built into every GSM network globally. It works on any mobile phone, requires no internet, no app installation, and no data plan, making it one of the most accessible communication channels in the world.
@@ -32,7 +32,7 @@ This documentation is intended for developers building financial inclusion tools
 - Node.js backend development.
 - Basic telecom concepts, including USSD session flows.
 
-## System At a Glance
+## Architecture
 
 Three layers power this solution, working together to bridge feature phones and the blockchain:
 
