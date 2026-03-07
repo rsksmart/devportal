@@ -230,7 +230,7 @@ Tx: ${tx.hash.substring(0, 12)}...
 /* -------------------------------------------------------------------------- */
 
 app.listen(3000, () => {
-  console.log("RSK-USSD Bridge running on port 3000");
+  console.log("Rootstock-USSD Bridge running on port 3000");
 });
 
 ```
@@ -239,7 +239,7 @@ app.listen(3000, () => {
 
 The `text` field from Africa's Talking accumulates all user inputs for the session, joined by `*`. The relay server splits on `*` and uses array index to determine the current menu depth:
 
-| `text` value | `input` array | State | Action |
+| Text value | Input array | State | Action |
 |---|---|---|---|
 | `""` | `[""]` | Entry | Show main menu |
 | `"1"` | `["1"]` | Balance selected | Call `getBalance()`, end session |

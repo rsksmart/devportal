@@ -3,7 +3,7 @@ sidebar_label: Project Setup & Smart Contract Deployment
 sidebar_position: 3
 title: Project Setup & Smart Contract Deployment
 tags: [rsk, rootstock, developers, solidity, hardhat]
-description: Scaffold the USSD-RSK project using Hardhat 3, write the InclusiveDeFi smart contract, configure the Roostock Testnet network, and deploy using Hardhat Ignition.
+description: Scaffold the USSD-Rootstock project using Hardhat 3, write the InclusiveDeFi smart contract, configure the Roostock Testnet network, and deploy using Hardhat Ignition.
 ---
 
 # Project Setup & Smart Contract Deployment
