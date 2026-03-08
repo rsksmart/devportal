@@ -6,8 +6,6 @@ tags: [rsk, rootstock, developers, defi, ussd]
 description: Validate the USSD-RSK bridge end-to-end using the Africa's Talking simulator and curl. Verify on-chain transactions via the Rootstock Testnet Explorer and understand current limitations.
 ---
 
-# Demo, Testing & Limitations
-
 This page walks through end-to-end validation of the USSD-RSK bridge using the Africa's Talking sandbox simulator, raw `curl` commands, and on-chain verification via the Roostock Testnet Explorer. It also documents the current known limitations of the proof-of-concept and recommended improvements required before any production deployment.
 
 ## Live Demo Overview
@@ -43,8 +41,6 @@ Selecting option `3` immediately calls `applyForLoan()`. If the address has no e
 ### On-Chain Transaction Confirmation
 
 Every write operation (transfer, loan) produces a transaction that can be verified on the Rootstock Testnet Explorer. The screenshot below shows a confirmed `applyForLoan` transaction.
-
----
 
 ## Testing Without a Phone Using curl
 
@@ -175,8 +171,6 @@ For end-to-end testing with the real USSD protocol (including session ID managem
 4. Navigate the menu and observe the responses.
 
 The ngrok inspector at `http://localhost:4040` will show you every raw HTTP POST from Africa's Talking and every response your server returns. This is essential for debugging unexpected session terminations or malformed responses.
-
----
 
 ## Known Limitations and Recommended Improvements
 

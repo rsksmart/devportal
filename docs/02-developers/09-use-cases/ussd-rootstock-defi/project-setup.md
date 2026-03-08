@@ -6,9 +6,8 @@ tags: [rsk, rootstock, developers, solidity, hardhat]
 description: Scaffold the USSD-Rootstock project using Hardhat 3, write the InclusiveDeFi smart contract, configure the Roostock Testnet network, and deploy using Hardhat Ignition.
 ---
 
-# Project Setup & Smart Contract Deployment
-
 This page covers everything from scaffolding the project to deploying the `InclusiveDeFi` contract on Rootstock Testnet. By the end of this page, you will have a live contract address on Chain ID 31 that the relay server can interact with.
+
 :::note
 `InclusiveDeFi` is just a name of the contract; developers can change it as needed.
 :::
@@ -20,7 +19,7 @@ Before starting, ensure you have the following:
 - Node.js v18+
 - `npm` or `pnpm`
 - A funded Rootstock Testnet wallet. Get tRBTC from the [Rootstock Testnet Faucet](https://faucet.rootstock.io).
-- Basic familiarity with Solidity and Hardhat is recommended.
+- Basic familiarity with [Solidity](https://soliditylang.org/) and [Hardhat](https://hardhat.org/) is recommended.
 
 ## Scaffolding the Project
 
@@ -30,7 +29,7 @@ Run the following in your terminal to scaffold a new Hardhat 3 project:
 
 ```bash
 mkdir ussd-rsk && cd ussd-rsk
-npx hardhat@next init
+npx hardhat --init
 ```
 When prompted, select the TypeScript + mocha + ethers template. Hardhat will generate the base project structure:
 
@@ -59,6 +58,9 @@ npm install express dotenv
 ```bash
 npm install --save-dev @types/express tsx
 ```
+```bash
+npm install --save-dev @nomicfoundation/hardhat-toolbox-mocha-ethers
+```
 
 Your final `package.json` should look like this:
 
@@ -75,11 +77,12 @@ Your final `package.json` should look like this:
     "express": "^5.2.1"
   },
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^3.0.2",
+    "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^3.0.3",
     "@types/express": "^5.0.6",
     "@types/node": "^22.19.11",
+    "chai": "^5.1.2",
     "ethers": "^6.16.0",
-    "hardhat": "^3.1.9",
+    "hardhat": "^3.1.11",
     "tsx": "^4.21.0",
     "typescript": "~5.8.0"
   }
@@ -92,7 +95,7 @@ Add a `.env` file to the project root with the following variables:
 
 ```dotenv
 PRIVATE_KEY=your_relayer_wallet_private_key_here
-RSK_TESTNET_RPC=https://public-node.testnet.rsk.co
+RSK_TESTNET_RPC=https://rpc.rootstock.io/
 ```
 
 :::warning
@@ -152,7 +155,7 @@ export default defineConfig({
     rskTestnet: {
       type: "http",
       chainType: "l1",
-      url: "https://public-node.testnet.rsk.co",
+      url: "https://rpc.rootstock.io/",
       chainId: 31,
       accounts: [process.env.PRIVATE_KEY!],
     },
@@ -161,7 +164,7 @@ export default defineConfig({
 ```
 
 :::note
-Rootstock is fully EVM-compatible; therefore, set `chainType: "l1"`. The public node at `https://public-node.testnet.rsk.co` is rate-limited and intended for development only. Use a dedicated RPC endpoint for production environments.
+Rootstock is fully EVM-compatible; therefore, set `chainType: "l1"`. The public node at `https://rpc.rootstock.io/` is rate-limited and intended for development only. Use a dedicated RPC endpoint for production environments.
 :::
 
 ## The Smart Contract

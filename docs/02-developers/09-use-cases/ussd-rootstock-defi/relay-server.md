@@ -6,10 +6,7 @@ tags: [rsk, rootstock, developers, nodejs, ussd]
 description: Build the Node.js Express relay server that bridges Africa's Talking USSD sessions to the InclusiveDeFi smart contract on Rootstock Testnet using ethers.js.
 ---
 
-# Relay Server & Gateway Integration
-
 This page covers building the Node.js Express server that acts as the bridge between the Africa's Talking USSD gateway and the `InclusiveDeFi` contract on Rootstock Testnet. It also covers registering your USSD callback with Africa's Talking and exposing your local server to the internet using ngrok.
-
 
 ## How the Relay Server Works
 
@@ -232,7 +229,6 @@ Tx: ${tx.hash.substring(0, 12)}...
 app.listen(3000, () => {
   console.log("Rootstock-USSD Bridge running on port 3000");
 });
-
 ```
 
 ## Understanding the USSD State Machine
@@ -256,6 +252,15 @@ Start the relay server with:
 ```bash
 npm run start-bridge
 ```
+
+:::warning
+Before running the server, ensure you have:
+1. Deployed the smart contract and replaced `YOUR_DEPLOYED_CONTRACT_ADDRESS` in `index.ts` with your actual `0x...` contract address
+2. Added `"start-bridge": "tsx index.ts"` to the `scripts` section of your `package.json`
+
+Skipping step 1 will cause an ENS resolution error on Rootstock.
+:::
+
 You should see:
 <img src="/img/developers/use-cases/ussd/1-start-bridge.png"/>
 
@@ -277,6 +282,8 @@ Forwarding  https://abc123.ngrok-free.app → http://localhost:3000
 Copy the `https://` URL and register it as your USSD callback in the next step. Note that on the ngrok free tier, the URL changes each time you restart ngrok.
 
 ## Registering with Africa's Talking
+
+Africa's Talking is the service that connects a phone's USSD request to our server. When a user dials the USSD code, Africa's Talking sends that request to our relay server and returns the response back to the phone.
 
 ### Creating a Sandbox Account
 

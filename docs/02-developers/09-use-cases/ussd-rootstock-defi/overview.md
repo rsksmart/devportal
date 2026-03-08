@@ -1,12 +1,10 @@
 ---
 sidebar_label: Overview
 sidebar_position: 1
-title: USSD-Based Decentralized Finance on Rootstock
+title: How to Build Internet-Free DeFi on Rootstock using USSD
 tags: [rsk, rootstock, developers, defi, ussd]
 description: Learn how to build internet-free decentralized financial services on Rootstock using USSD, enabling P2P transfers and micro-loans on feature phones without internet access.
 ---
-
-# USSD-Based Decentralized Finance on Rootstock
 
 This guide introduces a novel integration architecture that connects **legacy GSM feature phones** to the Rootstock(RSK) blockchain network via USSD (Unstructured Supplementary Service Data). The system enables decentralized financial services, including P2P transfers and micro-loans, for users without smartphone or internet access.
 

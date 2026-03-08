@@ -19,7 +19,7 @@ values={[
 ]}>
 <FilterItem
 value="ussd"
-title="USSD-Based Decentralized Finance System on Rootstock"
+title="How to Build Internet-Free DeFi on Rootstock using USSD"
 subtitle="USSD"
 color="orange"
 linkHref="/developers/use-cases/ussd-rootstock-defi"
