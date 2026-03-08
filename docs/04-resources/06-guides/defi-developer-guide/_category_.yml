@@ -1,0 +1,8 @@
+label: 'Rootstock DeFi Developer Guide'
+position: 5 
+collapsible: true
+collapsed: false
+link:
+  type: generated-index
+  title: 'Rootstock DeFi Developer Guide'
+  description: 'Learn to build and integrate DeFi applications on Rootstock: oracles, AMMs, token standards, security patterns, and example templates.'
