@@ -147,7 +147,7 @@ The project root contains a Hardhat config, scripts, contracts, tests, and a `fr
 
 ## Environment configuration
 
-Create a `.env` file in the project root. This file is ignored by git and will store sensitive data such as keys and RPC URLs. You can copy the sample `.env.example` file from the project root and fill in the actual values.
+Create a `.env` file in the project root. This file is ignored by git and will store sensitive data such as keys and RPC URLs. You can copy the content of the sample `.env.example` file from the project root into your `.env` file and fill in the actual values of the environment variables.
 
 ```text
 # .env
