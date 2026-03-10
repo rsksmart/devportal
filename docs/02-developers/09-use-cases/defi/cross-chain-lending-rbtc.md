@@ -8,7 +8,7 @@ tags: [rsk, rootstock, rbtc, usdt0, lending, cross-chain, layerzero, umbrella, r
 
 :::info[Info]
 
-This is the **comprehensive tutorial** for the rBTC-USDT0 cross‑chain lending starter kit.
+This is the **comprehensive tutorial** for the rBTC-USDT0 cross‑chain lending [starter kit]((https://github.com/rsksmart/rbtc-usdt0-crosschain-starter-kit)).
 
 :::
 
@@ -18,7 +18,7 @@ This guide walks you through building, deploying, and using a minimal over‑col
 
 No prior knowledge of LayerZero or cross‑chain protocols is required. We'll explain every architectural decision and code pattern, with a particular focus on the teleport‑style messaging model that powers collateral transfer, the oracle routing pattern that separates price feeds from lending logic, and the Loan‑to‑Value (LTV) solvency checks that protect the protocol.
 
-By the end of this tutorial you will have:
+By the end of this tutorial, you will have:
 
 * Deployed a complete lending protocol on Rootstock testnet
 * Understood how cross–chain messaging works via LayerZero
@@ -134,22 +134,20 @@ Install the following tools before you begin. Versions shown are examples; newer
   
 ## Cloning and initial setup
 
-Start by cloning the repository and moving into it:
+Clone the repository and `cd` into it:
 
 
 ```bash
-git clone https://github.com/entuziaz/rbtc-usdt0-crosschain-starter-kit.git
+git clone https://github.com/rsksmart/rbtc-usdt0-crosschain-starter-kit.git
 cd rbtc-usdt0-crosschain-starter-kit
 ```
-
-  
 
 The project root contains a Hardhat config, scripts, contracts, tests, and a `frontend/` subdirectory for the React UI.
   
 
 ## Environment configuration
 
-Create a `.env` file in the project root. This file is ignored by git and will store sensitive data such as keys and RPC URLs.
+Create a `.env` file in the project root. This file is ignored by git and will store sensitive data such as keys and RPC URLs. You can copy the sample `.env.example` file from the project root and fill in the actual values.
 
 ```text
 # .env
@@ -168,7 +166,7 @@ Never commit this file. In production you would use a secrets manager or hardwar
 
 :::
 
-The Hardhat config (`hardhat.config.cjs`) reads the above variables to define the `rsktest` network, deployer account and other behaviour. You can inspect it if you want to customise gas settings or add more networks.
+The Hardhat config (`hardhat.config.cjs`) reads the above variables to define the `rootstock_testnet` network, deployer account and other behaviour. You can inspect it if you want to customise gas settings or add more networks.
 
 ## Installing dependencies
 
@@ -193,7 +191,11 @@ npx hardhat compile
 
 Compilation output (bytecode, ABI, metadata) appears in `artifacts/` and `cache/`. The frontend imports ABIs directly from `artifacts/`; therefore, you must compile before starting the UI or it will fail to locate ABIs.
 
-> You can re‑compile anytime, and the React app will hot‑reload the updated ABI if running.
+:::tip[Tip]
+
+ You can re‑compile anytime, and the React app will hot‑reload the updated ABI if running.
+
+:::
 
 ## Running the test suite
 
@@ -234,7 +236,7 @@ All tests should pass. If they fail, delete `artifacts/` and `cache/` and try ag
 All addresses printed by the script are needed for the frontend.
   
 ```bash
-npx hardhat run scripts/deploy.js --network rsktest
+npx hardhat run scripts/deploy.js --network rootstock_testnet
 ```
 
 A sample output looks like:
@@ -256,7 +258,12 @@ Receiver linked to LendingPool
 Seeded pool with 500,000 USDT0
 Deployment complete ✅
 ```
-> Addresses will vary; keep them for the frontend or explorer verification.
+
+:::tip[Tip]
+
+Addresses will vary; keep them for the frontend or explorer verification.
+
+:::
 
 #### Verifying on Explorer
 
@@ -305,7 +312,11 @@ npm run dev # launches at http://localhost:3000
 
 6. Borrow USDT0, repay, and withdraw. The UI shows your collateral and debt balances.
 
-> The UI is intentionally minimal and educational; it demonstrates contract calls without production‑level polish. The screenshot at the top of this guide shows a typical state after the user has deposited a small amount of rBTC, borrowed 1 USDT0, and the fixed price oracle reports $65 000 per rBTC. The message banner and buttons correspond directly to functions in `App.jsx`.
+:::info[Info]
+
+The UI is intentionally minimal and educational; it demonstrates contract calls without production‑level polish. The screenshot at the top of this guide shows a typical state after the user has deposited a small amount of rBTC, borrowed 1 USDT0, and the fixed price oracle reports $65 000 per rBTC. The message banner and buttons correspond directly to functions in `App.jsx`.
+
+:::
 
 ### Frontend wiring details
 
@@ -330,15 +341,15 @@ Proper MetaMask configuration is essential. Make sure an Rootstock testnet netwo
 
 ### Frontend folder structure
 
-```
-frontend/
-├─ index.html
-├─ vite.config.js
-└─ src/
-   ├─ main.jsx
-   ├─ App.jsx
-   └─ contracts.js
-```
+<FileTree>
+  -- ==frontend==
+  ---- index.html
+  ---- vite.config.js
+  ---- ==src==
+  ------ main.jsx
+  ------ App.jsx
+  ------ contracts.js
+</FileTree>
 
 Notice that `contracts.js` exports the frontend-friendly contract objects using the ABIs from `artifacts/`.
 
@@ -403,11 +414,8 @@ The protocol distinguishes between **market assets** (rBTC) and **accounting uni
 ### Price sources
 
 | Asset | Price Source | Notes |
-
 |-------|--------------|-------|
-
 | rBTC | UmbrellaOracleAdapter or FixedPriceOracle | fixed oracle is used on testnet for deterministic behaviour |
-
 | USDT0 | Protocol invariant (1 USD) | no oracle required |
 
 The `OracleRouter` maintains a mapping from asset address to an adapter contract. This allows the owner to upgrade or change price sources without touching the lending logic.
@@ -431,8 +439,6 @@ The repository supports two deployment modes controlled by the `USE_FIXED_ORACLE
 
 Setting `USE_FIXED_ORACLE=true` in your `.env` (or command line) triggers the fixed oracle path.
 
-  
-  
 
 ## Cross-chain flow explained
 
@@ -457,7 +463,11 @@ On Rootstock, the `LZReceiver` contract implements `lzReceive()` (called by Laye
 
 `LendingPool.depositRBTC()` increases the user's collateral balance and emits an event. After deposit, the user can call `borrowUSDT0()` directly on Rootstock.
 
-> ⚠️ The system operates on **signaling** rather than bridging. The rBTC is already on Rootstock; you are only sending a message to credit the collateral.
+:::info[Info]
+
+The system operates on **signaling** rather than bridging. The rBTC is already on Rootstock; you are only sending a message to credit the collateral.
+
+:::
 
 ### Timing risk
 
@@ -480,22 +490,26 @@ These limitations are deliberate for educational clarity; the tutorial explains 
 
 The README's security section is reproduced here with extra context:
 
-* **Role isolation**: only `LZReceiver` may call `depositRBTC` thanks to the `onlyDepositor` modifier. Do **not** set this to an EOA.
-* **Oracle staleness**: adapters enforce `MAX_DELAY` to avoid using outdated prices. Adjust this to match your feed's heartbeat.
-* **Bridge trust**: the protocol assumes real liquidity backing the teleport messages. In practice, ensure the `LendingPool` holds enough USDT0 to cover all deposits before going public.
-* **No liquidations**: this starter kit has no mechanism for taking collateral when positions become unsafe. For production you must implement a `liquidate()` function.
-* **No interest rates**: borrowed amounts do not accrue interest. Add your own rate model if needed.
-* **Owner privileges**: the owner (or multisig) of `OracleRouter` can change oracles. Protect this key vigorously.
+* **Role isolation**: Only `LZReceiver` may call `depositRBTC` made possible by the `onlyDepositor` modifier. Do **not** set this to an EOA.
+* **Oracle staleness**: Adapters enforce `MAX_DELAY` to avoid using outdated prices. Adjust this to match your feed's heartbeat.
+* **Bridge trust**: The protocol assumes real liquidity backing the teleport messages. In practice, ensure the `LendingPool` holds enough USDT0 to cover all deposits before deploying to mainnet.
+* **No liquidations**: This starter kit has no mechanism for taking collateral when positions become unsafe. For production you must implement a `liquidate()` function.
+* **No interest rates**: Borrowed amounts do not accrue interest. Add your own rate model if needed.
+* **Owner privileges**: The owner (or multisig) of `OracleRouter` can change oracles. Protect this key vigorously.
 
-> 🔐 **Important**: this code is **not audited**. Treat it as educational scaffolding; do not deploy it with real funds without extensive review and modifications.
+:::info[Important]
+
+This code is **not audited**. Treat it as educational scaffolding; do not deploy it with real funds without extensive review and modifications.
+
+:::
   
 
 ## Troubleshooting and tips
 
-* **Tests failing after ABI changes:** delete `artifacts/` and `cache/` then recompile (`npx hardhat compile`).
-* **Deployment errors:** confirm that your `.env` private key has rBTC on testnet (`npx hardhat account` shows balances). The public faucet limits 0.001 rBTC/day.
-* **Frontend shows `contract not deployed`:** double‑check addresses in `frontend/.env` and recompile if necessary.
-* **LayerZero trusted remote mismatches:** you must set the trusted remote pairs on both sender and receiver after deployment; mismatches cause message reverts.
+* **Tests failing after ABI changes:** Delete the **artifacts** and **cache** folders then recompile (`npx hardhat compile`).
+* **Deployment errors:** Confirm that your `.env` private key has rBTC on testnet (`npx hardhat account` shows balances). The public faucet limits 0.001 rBTC/day.
+* **Frontend shows `contract not deployed`:** Double‑check addresses in frontend/.env and recompile if necessary.
+* **LayerZero trusted remote mismatches:** You must set the trusted remote pairs on both sender and receiver after deployment; mismatches cause message reverts.
 * **Oracle price reverts on testnet:** Umbrella feeds are often unavailable on testnet. Use fixed oracle mode or deploy your own data feed.
 
 
@@ -519,18 +533,18 @@ A: Yes. Update `ROOTSTOCK_RPC_URL` to a mainnet node, change `USE_FIXED_ORACLE` 
 
 **Next steps & roadmap**
 
-1. **Liquidations:** implement and test a liquidation mechanism.
+1. **Liquidations:** Implement and test a liquidation mechanism.
 
-2. **Interest rate model:** add utilisation‑based rates for borrowed USDT0.
+2. **Interest rate model:** Add utilisation‑based rates for borrowed USDT0.
 
-3. **Multi‑asset support:** enable multiple collateral tokens using the same router pattern.
+3. **Multi‑asset support:** Enable multiple collateral tokens using the same router pattern.
 
-4. **Stargate/OFT integration:** explore LayerZero's Omnichain Fungible Token standard for asset bridging.
+4. **Stargate/OFT integration:** Explore LayerZero's Omnichain Fungible Token standard for asset bridging.
 
 
 :::info[Credit]
 
-1. This tutorial and [starter kit](https://github.com/entuziaz/rbtc-usdt0-crosschain-starter-kit) were originally created by [@entuziaz](https://github.com/entuziaz) during the Rootstock Hacktivator program. 
+1. This tutorial and [starter kit](https://github.com/rsksmart/rbtc-usdt0-crosschain-starter-kit) were originally created by [JekayinOluwa Olabemiwo](https://github.com/entuziaz) during the Rootstock Hacktivator program. 
 2. This project extends the RBTC/USDT0 Simple Lending [Boilerplate](https://github.com/rsksmart/rbtc-usdt0-lending-boilerplate)
 3. This documentation was inspired by the [Rootstock Vyper Starter Kit](https://github.com/rsksmart/devportal/pull/196) from the Rootstock Hacktivator.
 
