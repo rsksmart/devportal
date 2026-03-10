@@ -546,6 +546,6 @@ A: Yes. Update `ROOTSTOCK_RPC_URL` to a mainnet node, change `USE_FIXED_ORACLE` 
 
 1. This tutorial and [starter kit](https://github.com/rsksmart/rbtc-usdt0-crosschain-starter-kit) were originally created by [JekayinOluwa Olabemiwo](https://github.com/entuziaz) during the Rootstock Hacktivator program. 
 2. This project extends the RBTC/USDT0 Simple Lending [Boilerplate](https://github.com/rsksmart/rbtc-usdt0-lending-boilerplate)
-3. This documentation was inspired by the [Rootstock Vyper Starter Kit](https://github.com/rsksmart/devportal/pull/196) from the Rootstock Hacktivator.
+3. This documentation was inspired by the [Rootstock Vyper Starter Kit](https://dev.rootstock.io/developers/quickstart/rootstock-vyper/) from the Rootstock Hacktivator.
 
 :::
