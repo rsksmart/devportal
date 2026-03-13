@@ -215,7 +215,7 @@ This method is strongly recommended for:
 npx hardhat compile --show-stack-traces
 ```
 
-Then locate the standard-json file inside Hardhat's internal `artifacts/build-info/*.json`.
+Then locate the Hardhat build-info file under `artifacts/build-info/*.json`; this file contains the Standard JSON compiler input in its `input` field.
 
 - How to Extract the Standard JSON Input:
 
