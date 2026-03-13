@@ -194,7 +194,7 @@ During verification, the explorer will reconstruct the compilation environment u
 
 ### 3. **Standard JSON input**
 
-The **Standard JSON** Input method is the most reliable and exact verification approach. It reproduces the full Solidity compiler configuration used during deployment by providing a complete standard-json object, exactly as consumed by solc --standard-json.
+The **Standard JSON** Input method is the most reliable and exact verification approach. It reproduces the full Solidity compiler configuration used during deployment by providing a complete standard-json object, exactly as consumed by `solc --standard-json`.
 
 This method is strongly recommended for:
 
