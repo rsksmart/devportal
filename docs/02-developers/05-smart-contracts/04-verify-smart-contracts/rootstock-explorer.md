@@ -337,7 +337,7 @@ Run the verification command in the terminal:
 forge verify-contract \
     --chain-id 31 \
     --watch \
-    --compiler-version v0.8.24 \
+    --compiler-version v0.8.28 \
     --verifier custom \
     --verifier-url https://be.explorer.testnet.rootstock.io/api/v3/etherscan \
     <contract-address> \
