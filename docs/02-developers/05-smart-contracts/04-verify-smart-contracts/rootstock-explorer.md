@@ -31,10 +31,10 @@ See [Rootstock Explorer guides](/dev-tools/explorers/rootstock-explorer/) to nav
 - **Helps with compliance**:
   - Verification is essential for meeting certain compliance and regulatory requirements.
 
-## What does verification do?:
+## What does verification do?
 
 - Adds a Verified badge to the contract page, confirming that the published source code matches the deployed bytecode.
-- Enables human-readable interaction with the contract — allowing users to view and call its functions directly.
+- Enables human-readable interaction with the contract. It allows users to view and call its functions directly.
 - Allows downloading the contract's Application Binary Interface (ABI).
 
 ## Prerequisites
@@ -46,8 +46,6 @@ See [Rootstock Explorer guides](/dev-tools/explorers/rootstock-explorer/) to nav
   - Number of optimization runs.
 - Constructor parameters (if applicable).
 - Library addresses (if used).
-
-> In summary, this guide will help you verify your smart contract, allowing you to leverage these benefits and contribute to a more transparent and trustworthy decentralized environment on Rootstock.
 
 ## Getting Started
 
@@ -63,7 +61,7 @@ See [Rootstock Explorer guides](/dev-tools/explorers/rootstock-explorer/) to nav
 
 Rootstock Explorer offers 5 main methods for contract verification:
 
-### 1. **Single File**
+### 1. Single File
 
 The Solidity (**Single File**) method is intended for verifying contracts that exist entirely within a single `.sol` file, or where the developer has already flattened all imports into one file. This method recompiles the provided contract and compares the resulting bytecode to the deployed contract on Rootstock.
 
@@ -80,7 +78,7 @@ Follow the steps below to successfully complete the verification process.
 
 - **Optimization**: `Runs` tells the Solidity optimizer how many times your contract will be executed. You must use the same runs value in verification that you used when compiling.
   - If you used optimization run when compiling/deploying, enable it during verification and set the same runs (default 200).
-  - If you didn’t use optimization, leave it disabled and don’t enter any runs.
+  - If you didn't use optimization, leave it disabled and don't enter any runs.
 
   ![runs](/img/developers/smart-contracts/rsk-explorer/runs.png)
 
@@ -99,19 +97,19 @@ Follow the steps below to successfully complete the verification process.
 - **Constructor Arguments**: You must enter constructor arguments separated by commas if you have more than one.
   - Suppose your Solidity constructor looks like this:
 
-  ```bash
+  ```solidity
   constructor(address owner, uint256 maxSupply)
   ```
 
   - To verify the contract, enter the arguments like this:
 
-  ```bash
+  ```text
   0xACa52b1Ab7dA04532127d22D47Dc3d34CFe0Cd5e,1000
   ```
 
   Example:
   ![args](/img/developers/smart-contracts/rsk-explorer/args.png)
-  - If you already have them in ABI-encoded format, enable the “ABI encoded” checkbox and paste the encoded string instead.
+  - If you already have them in ABI-encoded format, enable the "ABI encoded" checkbox and paste the encoded string instead.
 
   ![encoded](/img/developers/smart-contracts/rsk-explorer/encoded.png)
 
@@ -125,7 +123,7 @@ Follow the steps below to successfully complete the verification process.
 
   const encoded = coder.encode(
     ["address", "uint256"],
-    ["0xaca52b1ab7da04532127d22d47dc3d34cfe0cd5e","1000"]
+    ["0xaca52b1ab7da04532127d22d47dc3d34cfe0cd5e", "1000"],
   );
 
   console.log(encoded);
@@ -133,7 +131,7 @@ Follow the steps below to successfully complete the verification process.
 
   Result:
 
-  ```bash
+  ```text
   0x000000000000000000000000aca52b1ab7da04532127d22d47dc3d34cfe0cd5e00000000000000000000000000000000000000000000000000000000000003e8
   ```
 
@@ -144,13 +142,26 @@ Follow the steps below to successfully complete the verification process.
   ```js
   web3.eth.abi.encodeParameters(
     ["address", "uint256"],
-    ["0xaca52b1ab7da04532127d22d47dc3d34cfe0cd5e", "1000"]
-  )
+    ["0xaca52b1ab7da04532127d22d47dc3d34cfe0cd5e", "1000"],
+  );
   ```
 
   Result:
 
+  ```text
+  0x000000000000000000000000aca52b1ab7da04532127d22d47dc3d34cfe0cd5e00000000000000000000000000000000000000000000000000000000000003e8
+  ```
+
+  - ABI-ENCODING with Foundry (cast):
+
   ```bash
+  cast abi-encode "constructor(address,uint256)" \
+      0xaca52b1ab7da04532127d22d47dc3d34cfe0cd5e 1000
+  ```
+
+  Result:
+
+  ```text
   0x000000000000000000000000aca52b1ab7da04532127d22d47dc3d34cfe0cd5e00000000000000000000000000000000000000000000000000000000000003e8
   ```
 
@@ -164,7 +175,7 @@ Follow the steps below to successfully complete the verification process.
 
 ![lib](/img/developers/smart-contracts/rsk-explorer/lib.png)
 
-### **2. Multiple Files**
+### 2. Multiple Files
 
 The Solidity (**Multiple Files**) method is designed for more complex contracts that use imports, have multiple `.sol` files, or cannot be flattened safely. This method allows you to upload all your Solidity source files exactly as they exist in your project.
 
@@ -183,16 +194,16 @@ Important rules:
 - Every imported file must be included.
 - Filenames must match exactly (case-sensitive).
 - Folder structure should reflect your project layout.
-- Do not flatten the files — this method expects multi-file compilation.
+- Do not flatten the files. This method expects multi-file compilation.
 
 During verification, the explorer will reconstruct the compilation environment using the files you provide.
 
 ![multiple](/img/developers/smart-contracts/rsk-explorer/multiple.png)
 
 - **Other Settings**:
-  All other fields (compiler version, EVM version, optimization, contract name, constructor arguments, libraries.) work exactly the same as described in the **Single File** Verification section.
+  All other fields (compiler version, EVM version, optimization, contract name, constructor arguments, libraries) work exactly the same as described in the **Single File** section.
 
-### 3. **Standard JSON input**
+### 3. Standard JSON
 
 The **Standard JSON** Input method is the most reliable and exact verification approach. It reproduces the full Solidity compiler configuration used during deployment by providing a complete standard-json object, exactly as consumed by `solc --standard-json`.
 
@@ -205,7 +216,7 @@ This method is strongly recommended for:
 
 ![json](/img/developers/smart-contracts/rsk-explorer/json.png)
 
-- **Other Settings**: All other fields (compiler version, optimization, contract name, constructor arguments, libraries.) work exactly the same as described in the **Single File** Verification section.
+- **Other Settings**: All other fields (compiler version, optimization, contract name, constructor arguments, libraries) work exactly the same as described in the **Single File** section.
 
 **How to Generate Standard JSON Input**
 
@@ -291,9 +302,9 @@ Replace:
 
 > The `> <contract-name>.json` at the end of the command redirects the Standard JSON input output into a file in the current directory, which can then be uploaded as-is to the Rootstock Explorer verification tool.
 
-### 4. **Hardhat Verification**
+### 4. Hardhat Verification
 
-Select Hardhat as your verification method to verify contracts directly from your Hardhat project. This method does not require uploading files through the interface — instead, verification is performed using the Hardhat CLI.
+Select Hardhat as your verification method to verify contracts directly from your Hardhat project. This method does not require uploading files through the interface. Instead, verification is performed using the Hardhat CLI.
 
 ![hardhat](/img/developers/smart-contracts/rsk-explorer/hardhat.png)
 
@@ -324,13 +335,13 @@ Replace:
 
 > Once it completes successfully, your contract will be verified on the Rootstock Explorer.
 
-To see a detailed explanation on how to verify contracts using Hardhat, visit [here](https://dev.rootstock.io/developers/smart-contracts/verify-smart-contracts/hardhat-verify-plugin/)
+For a detailed walkthrough, see [Verify Smart Contracts using the Hardhat Verify Plugin](/developers/smart-contracts/verify-smart-contracts/hardhat-verify-plugin/).
 
-### 5. **Foundry Verification**
+### 5. Foundry Verification
 
 Select **Foundry** as your verification method to verify contracts using the forge verify-contract command.
 
-This method integrates Foundry directly with the Rootstock Explorer’s verification API, allowing you to verify a deployed contract from your local environment.
+This method integrates Foundry directly with the Rootstock Explorer's verification API, allowing you to verify a deployed contract from your local environment.
 
 Run the verification command in the terminal:
 
@@ -353,7 +364,7 @@ Replace:
 
 Once the command finishes, your contract will appear as Verified on the Rootstock Explorer.
 
-To see a detailed explanation on how to verify contracts using Foundry, visit [here](https://dev.rootstock.io/developers/smart-contracts/foundry/verify-smart-contracts/)
+For a detailed walkthrough, see [Verify Smart Contracts using Foundry](/developers/smart-contracts/foundry/verify-smart-contracts/).
 
 ## Submit and Validate
 
@@ -423,7 +434,9 @@ Once you have entered all the details, click "Verify Contract".
   </Accordion.Item>
 </Accordion>
 
-> 💡 **Tip:** If verification keeps failing, try matching the compiler settings directly from your Hardhat or Foundry build artifacts.
+:::tip[Tip]
+If verification keeps failing, try matching the compiler settings directly from your Hardhat or Foundry build artifacts.
+:::
 
 ## Resources
 
