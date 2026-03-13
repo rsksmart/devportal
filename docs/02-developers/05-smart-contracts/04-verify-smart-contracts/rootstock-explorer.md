@@ -279,7 +279,7 @@ forge verify-contract \
     --show-standard-json-input \
     <contract-address> \
     <contract-file>:<contract-name> \
-    <contract-name>.json
+    > <contract-name>.json
 ```
 
 Replace:
@@ -288,7 +288,7 @@ Replace:
 - `<contract-file>` → path to the Solidity file inside your project.
 - `<contract-name>` → name of the contract inside that file.
 
-> Foundry will export the Standard JSON input file to the same directory, which can uploaded as it is to the Rootstock Explorer verification tool.
+> The `> <contract-name>.json` at the end of the command redirects the Standard JSON input output into a file in the current directory, which can then be uploaded as-is to the Rootstock Explorer verification tool.
 
 ### 4. **Hardhat Verification**
 
