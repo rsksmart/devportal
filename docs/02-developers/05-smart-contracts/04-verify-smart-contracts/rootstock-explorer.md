@@ -170,7 +170,7 @@ The Solidity (**Multiple Files**) method is designed for more complex contracts 
 
 Only the parts that differ from **Single File** are described below.
 
-- **Sources Files**: Upload all Solidity files required to compile your contract, preserving the original folder structure.
+- **Source Files**: Upload all Solidity files required to compile your contract, preserving the original folder structure.
 
 You can:
 
