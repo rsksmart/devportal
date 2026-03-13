@@ -275,7 +275,7 @@ Then locate the standard-json file inside Hardhat's internal `artifacts/build-in
 forge verify-contract \
     --chain-id 31 \
     --watch \
-    --compiler-version v0.8.28 \
+    --compiler-version <compiler-version> \
     --show-standard-json-input \
     <contract-address> \
     <contract-file>:<contract-name> \
@@ -287,6 +287,7 @@ Replace:
 - `<contract-address>` → the deployed contract address.
 - `<contract-file>` → path to the Solidity file inside your project.
 - `<contract-name>` → name of the contract inside that file.
+- `<compiler-version>` → the Solidity compiler version used to compile and deploy the contract (for example, `v0.8.28`).
 
 > The `> <contract-name>.json` at the end of the command redirects the Standard JSON input output into a file in the current directory, which can then be uploaded as-is to the Rootstock Explorer verification tool.
 
