@@ -118,7 +118,7 @@ Follow the steps below to successfully complete the verification process.
 - How to encode arguments:
   - ABI-ENCODING with Ethers.js
 
-  ```bash
+  ```ts
   import { AbiCoder } from "ethers";
 
   const coder = AbiCoder.defaultAbiCoder();
@@ -141,7 +141,7 @@ Follow the steps below to successfully complete the verification process.
     - Open remix - Console
     - Paste
 
-  ```bash
+  ```js
   web3.eth.abi.encodeParameters(
     ["address", "uint256"],
     ["0xaca52b1ab7da04532127d22d47dc3d34cfe0cd5e", "1000"]
