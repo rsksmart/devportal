@@ -138,8 +138,8 @@ Follow the steps below to successfully complete the verification process.
   ```
 
   - ABI-ENCODING from Remix:
-    - Open remix - Console
-    - Paste
+    - Open the Remix console
+    - Paste the following into the console:
 
   ```js
   web3.eth.abi.encodeParameters(
