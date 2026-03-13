@@ -295,7 +295,7 @@ Warning: Only use unchecked when you have mathematically proven that overflow ca
 
 ## SafeMath for Older Versions
 
-If you're working with an older Solidity version (<0.8), you must use a library like OpenZeppelin's SafeMath to prevent overflows.
+If you're working with an older Solidity version (`<0.8`), you must use a library like OpenZeppelin's SafeMath to prevent overflows.
 
 ```solidity
 import "@openzeppelin/contracts/math/SafeMath.sol";
