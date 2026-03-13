@@ -96,7 +96,7 @@ Follow the steps below to successfully complete the verification process.
   - **Upload file**: Upload a `.sol` file directly from your computer.
     ![sol](/img/developers/smart-contracts/rsk-explorer/sol.png)
 
-- **Constructor Arguments**: You must enter constructor arguments separate by comma if you have more than one.
+- **Constructor Arguments**: You must enter constructor arguments separated by commas if you have more than one.
   - Suppose your Solidity constructor looks like this:
 
   ```bash
