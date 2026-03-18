@@ -26,6 +26,15 @@ values={[
 />
 <FilterItem
   value="basics"
+  title="How to Read a Transaction in the Rootstock Explorer"
+  subtitle="explorer"
+  color="orange"
+  linkHref="/dev-tools/explorers/rootstock-explorer/understanding-transactions/"
+  linkTitle="Understanding Transactions"
+  description="Learn what a Rootstock transaction is, how to find it in the explorer, and how to interpret the main fields on a transaction page."
+/>
+<FilterItem
+  value="basics"
   title="Submit a dApp to the Rootstock Explorer"
   subtitle="dApps"
   color="orange"
