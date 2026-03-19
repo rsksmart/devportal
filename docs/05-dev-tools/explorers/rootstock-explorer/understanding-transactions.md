@@ -14,7 +14,7 @@ A transaction is a signed instruction that moves value or triggers a change on t
 
 ## How Transactions Work on Rootstock
 
-When you send rBTC or interact with a contract from your wallet, you create a transaction. Your wallet signs it and broadcasts it to the network. Miners (or validators) pick it up, run it, and include it in a block. The block is then appended to the chain. Rootstock is EVM-compatible, so the flow is similar to Ethereum: you pay gas (in rBTC) for the work the network does to process your transaction. The higher the gas price you set, the more likely miners are to include your transaction quickly when the network is busy.
+When you send rBTC or interact with a contract from your wallet, you create a transaction. Your wallet signs it and broadcasts it to the network. Miners pick it up, run it, and include it in a block. The block is then appended to the chain. Rootstock is EVM-compatible, so the flow is similar to Ethereum: you pay gas (in rBTC) for the work the network does to process your transaction. The higher the gas price you set, the more likely miners are to include your transaction quickly when the network is busy.
 
 ## Finding a Transaction in the Rootstock Explorer
 
@@ -40,7 +40,7 @@ The timestamp shows when the block that contains this transaction was produced. 
 
 The status indicates whether the transaction was executed successfully. 
 - **Success**: (green) means execution completed. 
-- **Failed**: (often shown in red) means the transaction was included in a block but reverted, for example due to a revert in a smart contract or insufficient gas; the sender still pays the transaction fee. 
+- **Failed**: (often shown in red) means the transaction was included in a block but reverted, for example due to a revert in a smart contract or insufficient gas. The sender still pays the transaction fee. 
 - **Pending**: transactions are not yet in a block and may still be dropped or replaced.
 
 ### Block
@@ -71,45 +71,47 @@ The nonce is a counter for the "From" address. Each transaction from that addres
 
 ### To
 
-**To** The destination address of the transaction. It can be a wallet (for transfers) or a contract (for interactions).
+**To** is the destination address of the transaction. It can be a wallet (for transfers) or a contract (for interactions).
 
 ### Value
 
-Value is the amount of rBTC sent in the transaction (the `value` field). For a simple transfer, it is the amount the sender paid to the "To" address. For a contract call, it can be **0 RBTC** (no rBTC sent) or the rBTC sent along with the call (e.g. when depositing into a contract).
+Value is the amount of rBTC sent in the transaction (the `value` field). For a simple transfer, it is the amount the sender paid to the "To" address. For a contract call, it can be **0 rBTC** (no rBTC sent) or the rBTC sent along with the call (e.g. when depositing into a contract).
 
 ### Transaction Fee
 
-The transaction fee is the total amount of rBTC paid to the network for processing the transaction. It is computed as gas used × gas price (and may include a priority fee if the explorer accounts for it). This is deducted from the "From" address balance in addition to any value transferred.
+The transaction fee is the amount of rBTC paid to the network to process and include a transaction in a block. It is calculated as: `gas used × gas price`.
+
+The fee depends on how much computation the transaction requires (gas used) and the price per unit of gas (gas price). This cost is always paid by the sender ("From" address), in addition to any value transferred.
 
 ### Gas Price
 
-Gas price is the price per unit of gas for this transaction. The explorer may show it in rBTC and in Gwei (e.g. `0.03127872 Gwei`). Miners use gas price to prioritize transactions when the network is busy; higher gas price usually means faster inclusion.
+Gas price is the price per unit of gas for this transaction. The explorer may show it in rBTC and in Gwei (e.g. `0.03127872 Gwei`). Miners use gas price to prioritize transactions when the network is busy. A higher gas price usually means faster inclusion.
 
 ### Gas used & limit by txn
 
-This line shows **gas used** (e.g. 30,589) and **gas limit** (e.g. 220,976). The gas limit is the maximum gas the sender allowed for the transaction; the network will not use more than this. Gas used is the amount actually consumed. The percentage (e.g. 13.84%) is used ÷ limit. Unused gas is not charged. If execution had needed more than the limit, the transaction would have failed (out of gas).
+This line shows **gas used** (e.g. 30,589) and **gas limit** (e.g. 220,976). The gas limit is the maximum gas the sender allowed for the transaction. The network will not use more than this. Gas used is the amount actually consumed. The percentage (e.g. 13.84%) is used ÷ limit. Unused gas is not charged. If execution had needed more than the limit, the transaction would have failed (out of gas).
 
 ### Input
 
 The raw data sent to the "To" address.  
-For simple RBTC transfers, it is empty (`0x`). For smart contract interactions, it contains the function being called (method selector) and its parameters, encoded in hexadecimal.  
+For simple rBTC transfers, it is empty (`0x`). For smart contract interactions, it contains the function being called (method selector) and its parameters, encoded in hexadecimal.  
 If the contract is verified, the explorer may show a decoded, human-readable version.
 
 ## Simple Transfers vs Smart Contract Interactions
 
 **Simple transfer:**  
-A transaction that sends RBTC from one externally owned address (EOA) to another.  
+A transaction that sends rBTC from one externally owned address (EOA) to another.  
 The "To" field is a wallet address, the "Value" is the amount transferred, and the "Input data" is typically empty. The main cost is the transaction fee (gas).
 
 **Smart contract interaction:**  
 A transaction where the "To" address is a smart contract.  
-It may send 0 or some RBTC and includes input data that encodes a function call. The contract executes code (e.g., transferring tokens, swapping, staking). Gas usage is usually higher, and the transaction may fail (revert) depending on the contract logic. Token transfers (e.g., ERC-20) appear as contract interactions, where the "Value" may be 0 and the actual transfer is recorded in events/logs.
+It may send 0 or some rBTC and includes input data that encodes a function call. The contract executes code (e.g., transferring tokens, swapping, staking). Gas usage is usually higher, and the transaction may fail (revert) depending on the contract logic. Token transfers (e.g., ERC-20) appear as contract interactions, where the "Value" may be 0 and the actual transfer is recorded in events/logs.
 
 ### **Key Differences**
 
 | Feature                | Simple Transfer        | Smart Contract Interaction |
 |-----------------------|----------------------|----------------------------|
-| Purpose               | Send RBTC            | Execute contract logic     |
+| Purpose               | Send rBTC            | Execute contract logic     |
 | Input Data            | Empty                | Contains method + params   |
 | Complexity            | Low                  | Higher                     |
 | Gas Usage             | Lower                | Usually higher             |
@@ -118,14 +120,14 @@ It may send 0 or some RBTC and includes input data that encodes a function call.
 
 The screenshot below shows a real transaction on the Rootstock Testnet explorer. Walking through it shows how the Overview fields describe a simple rBTC transfer.
 
-<div align="center"><img width="100%" src="/img/tools/explorer/rootstock/tx-example-normal.png" alt="Example transaction details: normal type, 0.000001 RBTC value, 21,000 gas used, input 0x"/></div>
+<div align="center"><img width="100%" src="/img/tools/explorer/rootstock/tx-example-normal.png" alt="Example transaction details: normal type, 0.000001 rBTC value, 21,000 gas used, input 0x"/></div>
 
 - **Status** is **Success**, so the transaction was included in a block and executed correctly.
-- **Type** is **normal**. That means no smart contract was involved; this is a direct transfer of rBTC from one address to another.
+- **Type** is **normal**. That means no smart contract was involved. This is a direct transfer of rBTC from one address to another.
 - **Block** is 7314085. Click it to see other transactions in the same block.
 - **Nonce** is 133. It is the 134th transaction sent from the **From** address (nonces start at 0).
 - **From** is the sender’s address (`0xAcA5...0CD5e`). **To** is the recipient’s address (`0x5F1a...76F6B`). Both are externally owned addresses (wallets), not contracts.
-- **Value** is **0.000001 RBTC**. That is the amount of rBTC sent from From to To.
-- **Transaction fee** is **0.00000126 RBTC**. The sender paid this to the network in addition to the 0.000001 RBTC sent to the recipient.
-- **Gas price** is 0.06 Gwei. **Gas used & limit by txn** is 21,000 out of 100,000 (21%). A simple transfer always uses 21,000 gas on Rootstock. The sender set a limit of 100,000; the unused gas was not charged.
-- **Input** is `0x`. Empty input confirms there was no contract call; only rBTC was moved.
+- **Value** is **0.000001 rBTC**. That is the amount of rBTC sent from From to To.
+- **Transaction fee** is **0.00000126 rBTC**. The sender paid this to the network in addition to the 0.000001 rBTC sent to the recipient.
+- **Gas price** is 0.06 Gwei. **Gas used & limit by txn** is 21,000 out of 100,000 (21%). A simple transfer always uses 21,000 gas on Rootstock. The sender set a limit of 100,000. The unused gas was not charged.
+- **Input** is `0x`. Empty input confirms there was no contract call. Only rBTC was moved.
