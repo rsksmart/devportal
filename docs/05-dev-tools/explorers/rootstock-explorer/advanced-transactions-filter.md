@@ -39,8 +39,6 @@ Follow these steps to build and apply a filter on the Transactions page.
 4. If you set both **From address** and **To address**, choose **AND** or **OR** under **Address logic** so the explorer applies the combination you intend.
 5. Apply or search to refresh the list. Clear or reset the form when you want to start over.
 
-Exact control labels may match the screenshots you add to this page. The sections below describe what each option does.
-
 ## Filter options
 
 ### Transaction type
@@ -57,7 +55,7 @@ Limits rows to one kind of transaction. The explorer classifies activity into th
 
 ### Status
 
-filters by execution outcome. You can choose **Success** or **Failed**.
+Filters by execution outcome. You can choose **Success** or **Failed**.
 
 - **Success:** The transaction was included in a block and executed without revert.
 - **Failed:** The transaction was included in a block but execution reverted (for example, contract revert or out-of-gas). The sender still pays the transaction fee.
@@ -124,7 +122,7 @@ The following examples show how to combine filters. Adjust addresses, dates, and
 3. Set **From address** to the wallet you investigate.
 4. Set **Date** to the last 24 hours or today’s date range.
 
-<div align="center"><img width="100%" src="/img/tools/explorer/rootstock/txs/example1.png" alt="Advanced Transactions Filter: Address Logic"/></div>
+<div align="center"><img width="100%" src="/img/tools/explorer/rootstock/txs/example1.png" alt="Advanced Transactions Filter: transaction type Contract call, status Failed, From address, and Date range"/></div>
 
 You get a list of reverted or failed calls from that sender, which helps when you debug failed transactions.
 
