@@ -35,6 +35,15 @@ values={[
 />
 <FilterItem
   value="basics"
+  title="Use the Advanced Transactions Filter"
+  subtitle="explorer"
+  color="orange"
+  linkHref="/dev-tools/explorers/rootstock-explorer/advanced-transactions-filter/"
+  linkTitle="Advanced Transactions Filter"
+  description="Filter the transaction list by type, status, block, date, from and to addresses, and AND/OR address logic."
+/>
+<FilterItem
+  value="basics"
   title="Submit a dApp to the Rootstock Explorer"
   subtitle="dApps"
   color="orange"
