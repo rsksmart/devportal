@@ -72,6 +72,7 @@ Clicking the **MetaMask** icon passes the **contract address**, **symbol**, and 
 - Always verify the token contract address to avoid scams.
 - Use the official Rootstock Explorer to find trusted tokens.
 - Ensure MetaMask is connected to the Rootstock network.
+- If you need wallet setup steps, see the [MetaMask wallet setup guide](/dev-tools/wallets/metamask/).
 
 ## Conclusion
 
