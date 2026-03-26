@@ -3,7 +3,7 @@ sidebar_position: 240
 sidebar_label: Add Rootstock Network to MetaMask
 title: Add the Rootstock Network to MetaMask
 tags: [dev tools, rsk, rootstock, explorer, metamask]
-description: "Add Rootstock mainnet or testnet to MetaMask from the explorer using Add Rootstock to MetaMask so chain ID, node URL, and currency are prefilled."
+description: "Add Rootstock mainnet or testnet to MetaMask from the explorer using Add Rootstock to MetaMask so chain ID, RPC URL, and currency are prefilled."
 ---
 
 To interact with decentralized applications and assets on Rootstock, users need to connect their wallet to the Rootstock network. **MetaMask** does not include Rootstock by default, so it must be added manually or through supported integrations.
@@ -14,7 +14,7 @@ The Rootstock Explorer provides a quick way to add the network using the **Add R
 
 Connecting MetaMask to Rootstock allows you to:
 
-- Send and receive rBTC.
+- Send and receive RBTC.
 - Interact with smart contracts and applications.
 - View transactions and balances on the Rootstock network.
 
@@ -23,7 +23,7 @@ Connecting MetaMask to Rootstock allows you to:
 MetaMask supports multiple blockchain networks. Each network requires specific configuration details, such as:
 
 - **Network name**.
-- **Node URL**.
+- **RPC URL**.
 - **Chain ID**.
 - **Currency symbol** (RBTC on Rootstock).
 
@@ -41,11 +41,11 @@ The Rootstock Explorer simplifies this process by automatically providing these 
 
 In the network approval screen:
 
-1. Review the Rootstock network details (chain ID, node URL, symbol).
+1. Review the Rootstock network details (chain ID, **RPC URL**, symbol).
 2. Choose **Approve** or **Confirm**.
 3. Use **Switch network** if MetaMask offers it so you start using Rootstock right away.
 
-<div align="center"><img width="100%" src="/img/tools/explorer/rootstock/add-network.png" alt="Add Network"/></div>
+<div align="center"><img width="100%" src="/img/tools/explorer/rootstock/add-network.png" alt="MetaMask network approval dialog showing the Rootstock network details with Approve and Switch network options"/></div>
 
 ## Verify the Connection
 
@@ -55,11 +55,11 @@ In the network approval screen:
 
 You can now sign transactions and read balances for that network.
 
-<div align="center"><img width="100%" src="/img/tools/explorer/rootstock/added-network.png" alt="Added Network"/></div>
+<div align="center"><img width="100%" src="/img/tools/explorer/rootstock/added-network.png" alt="MetaMask network selector showing Rootstock network added and selected"/></div>
 
 ## What the Explorer Sends
 
-**Add Rootstock to MetaMask** uses MetaMask’s API to propose a network with **chain ID**, **node URL**, **network name**, and **currency symbol** (RBTC). MetaMask then asks you to approve. You always confirm in MetaMask before anything changes.
+**Add Rootstock to MetaMask** uses MetaMask’s API to propose a network with **chain ID**, **RPC URL**, **network name**, and **currency symbol** (RBTC). MetaMask then asks you to approve. You always confirm in MetaMask before anything changes.
 
 ## Troubleshooting
 
