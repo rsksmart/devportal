@@ -3,7 +3,7 @@ sidebar_position: 240
 sidebar_label: Add Rootstock Network to MetaMask
 title: Add the Rootstock Network to MetaMask
 tags: [dev tools, rsk, rootstock, explorer, metamask]
-description: "Add Rootstock mainnet or testnet to MetaMask from the explorer using Add Rootstock to MetaMask so chain ID, RPC URL, and currency are prefilled."
+description: "Add Rootstock mainnet or testnet to MetaMask from the explorer so the RPC URL, chain ID, and symbol are prefilled."
 ---
 
 To interact with decentralized applications and assets on Rootstock, users need to connect their wallet to the Rootstock network. **MetaMask** does not include Rootstock by default, so it must be added manually or through supported integrations.
@@ -20,7 +20,7 @@ Connecting MetaMask to Rootstock allows you to:
 
 ## What MetaMask Needs for a Network
 
-MetaMask supports multiple blockchain networks. Each network requires specific configuration details, such as:
+MetaMask supports multiple blockchain networks including Rootstock. Each network requires specific configuration details, such as:
 
 - **Network name**.
 - **RPC URL**.
