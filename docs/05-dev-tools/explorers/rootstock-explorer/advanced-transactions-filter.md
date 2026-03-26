@@ -2,7 +2,7 @@
 sidebar_position: 255
 sidebar_label: Advanced Transactions Filter
 title: Use the Advanced Transactions Filter in the Rootstock Explorer
-tags: [explorer, rootstock, transactions, dev tools, blockchain, tutorials]
+tags: [explorer, rootstock, transactions, dev tools, blockchain]
 description: "Learn how to use the Advanced Transactions Filter on the Transactions page to search by type, status, block, date, addresses, and AND/OR logic."
 ---
 
@@ -25,7 +25,7 @@ The Advanced Transactions Filter helps you:
 
 ## Overview of the Advanced Transactions Filter
 
-The Advanced Transactions Filter is available on the Transactions page and allows users to refine results based on several parameters such as transaction type, status, block number, date, and addresses.
+The Advanced Transactions Filter is available on the Transactions page and lets you refine results by transaction type, status, block number, date, and addresses.
 
 <div align="center"><img width="100%" src="/img/tools/explorer/rootstock/txs/tx-page.png" alt="Advanced Transactions Filter panel with fields for type, status, block, date, addresses, and address logic"/></div>
 
@@ -45,7 +45,7 @@ Follow these steps to build and apply a filter on the Transactions page.
 
 Limits rows to one kind of transaction. The explorer classifies activity into the types below. Pick the one that matches what you are looking for.
 
-- **Remasc:** Rootstock reward and fee distribution transactions produced by the network.
+- **Remasc:** Rootstock reward and fee distribution transactions.
 - **Bridge:** Transactions that move assets across chains.
 - **Normal:** Standard value transfers between addresses.
 - **Contract deploy:** Transactions that deploy a new smart contract.
@@ -66,9 +66,9 @@ Filters by execution outcome. You can choose **Success** or **Failed**.
 
 Filtering ties results to where transactions were included.
 
-- **Specific blocks** to match one block, or enter **several block numbers separated by commas** (for example, `100, 200, 300`) to match transactions in any of those blocks.
+- Use **Specific blocks** to match one block, or enter **several block numbers separated by commas** (for example, `100, 200, 300`) to match transactions in any of those blocks.
 <div align="center"><img width="100%" src="/img/tools/explorer/rootstock/txs/tx-specific-block.png" alt="Advanced Transactions Filter: Specific Block"/></div>
-- **Range blocks**: Define a start and end block (for example, from block 100 to 200).
+- **Range blocks**: Define a start and end block (for example, from block `100` to `200`).
 <div align="center"><img width="100%" src="/img/tools/explorer/rootstock/txs/range-blocks.png" alt="Advanced Transactions Filter: Range Blocks"/></div>
 
 
@@ -76,7 +76,7 @@ Filtering ties results to where transactions were included.
 
 Filter transactions by time:
 
-Choose an **audit window** preset to limit results to recent activity:
+Choose a preset date range to limit results to recent activity:
 
 - **1h:** Last hour
 - **1d:** Last day

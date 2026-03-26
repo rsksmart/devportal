@@ -11,9 +11,6 @@ description: "Guides to use the Rootstock Explorer: navigate the UI, search, and
 values={[
   {label: 'Explorer Basics', value: 'basics'},
   {label: 'Contracts and Verification', value: 'sc'},
-   /* {{label: 'dApp & Ecosystem', value: 'dapps'},
-  {label: 'Debugging & Advanced', value: 'debug'},
-  {label: 'Cross Chain', value: 'cc'} } */
 ]}>
 <FilterItem
   value="basics"
