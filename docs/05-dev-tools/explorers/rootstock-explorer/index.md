@@ -44,6 +44,15 @@ values={[
 />
 <FilterItem
   value="basics"
+  title="Add the Rootstock Network to MetaMask"
+  subtitle="MetaMask"
+  color="orange"
+  linkHref="/dev-tools/explorers/rootstock-explorer/add-rootstock-network-to-metamask/"
+  linkTitle="Add Rootstock Network"
+  description="Add Rootstock mainnet or testnet to MetaMask from the explorer with Add Rootstock to MetaMask so RPC URL, chain ID, and symbol are prefilled."
+/>
+<FilterItem
+  value="basics"
   title="Submit a dApp to the Rootstock Explorer"
   subtitle="dApps"
   color="orange"
