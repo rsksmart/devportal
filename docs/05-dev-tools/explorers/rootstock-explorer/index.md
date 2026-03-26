@@ -40,7 +40,7 @@ values={[
   color="orange"
   linkHref="/dev-tools/explorers/rootstock-explorer/add-token-to-metamask/"
   linkTitle="Add Token to MetaMask"
-  description="Import ERC-20 tokens into MetaMask from a token page by clicking the MetaMask icon so the explorer sends contract address, symbol, and decimals."
+  description="Import ERC-20 tokens into MetaMask from a token page by clicking the MetaMask icon so the explorer sends the token’s contract address, symbol, and decimals."
 />
 <FilterItem
   value="basics"

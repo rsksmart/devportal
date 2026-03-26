@@ -8,7 +8,7 @@ description: "Import ERC-20 tokens into MetaMask from a token page by clicking t
 
 When interacting with tokens on the Rootstock network, some tokens may not appear automatically in your MetaMask wallet. In these cases, you need to manually add the token so it becomes visible and usable in your wallet.
 
-The Rootstock Explorer simplifies this process by providing an **MetaMask** icon directly from each token.
+The Rootstock Explorer simplifies this process by providing a **MetaMask** icon directly from each token.
 
 ## Why Add Tokens Manually?
 
@@ -23,14 +23,14 @@ MetaMask does not list every token automatically. After you add a token, you can
 To add a token manually, MetaMask requires the following details:
 
 - Contract Address.
-- Token Symbol (e.g., RBTC, DOC).
+- Token Symbol (e.g., DOC, RIF, USDRIF).
 - Decimals of Precision.
 
 The Rootstock Explorer automatically provides this information, so you don’t need to enter it manually when using the built-in feature.
 
 ## Find the Token in the Explorer
 
-1. Open the [Rootstock Explorer Mainnet](https://explorer.rootstock.io/) or [Rootstock Explorer Testnet](https://explorer.testnet.rootstock.io/) .
+1. Open the [Rootstock Explorer Mainnet](https://explorer.rootstock.io/) or [Rootstock Explorer Testnet](https://explorer.testnet.rootstock.io/).
 2. Use the search bar to enter the **token name**, **symbol**, or **contract address**.
 3. Choose the token from the results and open its token page.
 
@@ -43,7 +43,7 @@ The Rootstock Explorer automatically provides this information, so you don’t n
 2. Find the **MetaMask** icon next to the token contract address on that page.
 3. Click the icon. MetaMask opens with a prompt to add the token.
 
-<div align="center"><img width="100%" src="/img/tools/explorer/rootstock/add-token.png" alt="MetaMask icon next to the token contract address on the Rootstock Explorer token page"/></div>
+<div align="center"><img width="100%" src="/img/tools/explorer/rootstock/add-token.png" alt="MetaMask Add Token confirmation popup showing the token details to be imported from the Rootstock Explorer"/></div>
 
 ## Confirm in MetaMask
 
