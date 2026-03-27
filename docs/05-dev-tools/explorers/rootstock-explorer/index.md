@@ -11,9 +11,6 @@ description: "Guides to use the Rootstock Explorer: navigate the UI, search, and
 values={[
   {label: 'Explorer Basics', value: 'basics'},
   {label: 'Contracts and Verification', value: 'sc'},
-   /* {{label: 'dApp & Ecosystem', value: 'dapps'},
-  {label: 'Debugging & Advanced', value: 'debug'},
-  {label: 'Cross Chain', value: 'cc'} } */
 ]}>
 <FilterItem
   value="basics"
@@ -32,6 +29,15 @@ values={[
   linkHref="/dev-tools/explorers/rootstock-explorer/understanding-transactions/"
   linkTitle="Understanding Transactions"
   description="Learn what a Rootstock transaction is, how to find it in the explorer, and how to interpret the main fields on a transaction page."
+/>
+<FilterItem
+  value="basics"
+  title="Use the Advanced Transactions Filter"
+  subtitle="explorer"
+  color="orange"
+  linkHref="/dev-tools/explorers/rootstock-explorer/advanced-transactions-filter/"
+  linkTitle="Advanced Transactions Filter"
+  description="Filter the transaction list by type, status, block, date, from and to addresses, and AND/OR address logic."
 />
 <FilterItem
   value="basics"
