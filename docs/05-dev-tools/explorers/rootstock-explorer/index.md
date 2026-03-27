@@ -32,6 +32,15 @@ values={[
 />
 <FilterItem
   value="basics"
+  title="Add a Token to MetaMask"
+  subtitle="MetaMask"
+  color="orange"
+  linkHref="/dev-tools/explorers/rootstock-explorer/add-token-to-metamask/"
+  linkTitle="Add Token to MetaMask"
+  description="Import ERC-20 tokens into MetaMask from a token page by clicking the MetaMask icon so the explorer sends the token’s contract address, symbol, and decimals."
+/>
+<FilterItem
+  value="basics"
   title="Use the Advanced Transactions Filter"
   subtitle="explorer"
   color="orange"
