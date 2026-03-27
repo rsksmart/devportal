@@ -11,9 +11,6 @@ description: "Guides to use the Rootstock Explorer: navigate the UI, search, and
 values={[
   {label: 'Explorer Basics', value: 'basics'},
   {label: 'Contracts and Verification', value: 'sc'},
-   /* {{label: 'dApp & Ecosystem', value: 'dapps'},
-  {label: 'Debugging & Advanced', value: 'debug'},
-  {label: 'Cross Chain', value: 'cc'} } */
 ]}>
 <FilterItem
   value="basics"
@@ -41,6 +38,15 @@ values={[
   linkHref="/dev-tools/explorers/rootstock-explorer/add-token-to-metamask/"
   linkTitle="Add Token to MetaMask"
   description="Import ERC-20 tokens into MetaMask from a token page by clicking the MetaMask icon so the explorer sends the token’s contract address, symbol, and decimals."
+/>
+<FilterItem
+  value="basics"
+  title="Use the Advanced Transactions Filter"
+  subtitle="explorer"
+  color="orange"
+  linkHref="/dev-tools/explorers/rootstock-explorer/advanced-transactions-filter/"
+  linkTitle="Advanced Transactions Filter"
+  description="Filter the transaction list by type, status, block, date, from and to addresses, and AND/OR address logic."
 />
 <FilterItem
   value="basics"
