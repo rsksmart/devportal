@@ -46,23 +46,13 @@ description: "Explore a curated selection of smart contract development tools an
   />
 <FilterItem
     value="bridge, cc"
-    title="Token Bridge"
+    title="Atlas Bridge"
     subtitle="bridges"
     color="orange"
-    linkHref="/resources/guides/tokenbridge/"
+    linkHref="/resources/guides/atlas/"
     target="_blank"
     linkTitle="Documentation"
-    description="Use the Token Bridge to safely and securely move ERC20 tokens from Ethereum to Rootstock and vice-versa."
-  />
-<FilterItem
-    value="bridge, cc"
-    title="Super Bridge"
-    subtitle="bridges"
-    color="orange"
-    linkHref="/resources/guides/superbridge/"
-    target="_blank"
-    linkTitle="Documentation"
-    description="Use the Super Bridge to safely and securely move assets between Rootstock and other blockchain networks."
+    description="Use Atlas Bridge to compare providers and move supported assets between Rootstock and other networks."
   />
 <FilterItem
     value="dev-tools, sc, deploy"
@@ -299,15 +289,6 @@ description: "Explore a curated selection of smart contract development tools an
     description="Build a dApp on Rootstock using useDApp React library."
   />
 <FilterItem
-    value="no-code, deploy, sc"
-    title="Forward Protocol"
-    subtitle="no-code"
-    color="orange"
-    linkHref="https://forwardprotocol.io/"
-    linkTitle="Build a no-code dApp"
-    description="Build a dApp on Rootstock using Forward Protocol's no-code tools."
-  />
-<FilterItem
     value="library, sdk, rifp, abs"
     title="RIF Relay"
     subtitle="sdks"
@@ -432,15 +413,6 @@ description: "Explore a curated selection of smart contract development tools an
     linkHref="https://sourcify.dev"
     linkTitle="Verify Smart Contracts"
     description="Verify smart contracts on Rootstock, Sourcify enables transparent and human-readable smart contract interactions through automated Solidity contract verification, contract metadata."
-  />
-<FilterItem
-    value="sc, rollups, aa, deploy"
-    title="Gelato"
-    subtitle="infra"
-    color="orange"
-    linkHref="https://gelato.network"
-    linkTitle="Deploy Rollups"
-    description="Deploy production-grade & fully-serviced L2 rollups on Rootstock, natively integrated with tools like oracles, bridges, data indexers and Account Abstraction."
   />
 <FilterItem
     value="mine, deploy"

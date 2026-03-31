@@ -8,7 +8,13 @@ tags: [guides, developers, blockchain, rsk, rootstock, deploy, hardhat]
 
 In this module, you will write, compile, deploy, and interact with your first smart contract on the Rootstock Testnet.
 
-## Step 1 — Write the Contract
+:::tip[Starter Kits]
+
+Get started with ready-made templates and starter guides for easy development and deployment on Rootstock. View our [quick starts](/developers/quickstart).
+
+:::
+
+## Step 1 - Write the Contract
 
 Create: `contracts/HelloRootstock.sol` 
 

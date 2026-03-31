@@ -48,13 +48,13 @@ description: Rootstock에서 스마트 컨트랙트를 개발하고 배포하는
   />
 <FilterItem
     value="bridge, cc"
-    title="토큰 브릿지"
+    title="Atlas Bridge"
     subtitle="브릿지"
     color="orange"
-    linkHref="/resources/guides/tokenbridge/"
+    linkHref="/resources/guides/atlas/"
     target="_blank"
     linkTitle="문서"
-    description="토큰 브릿지를 사용해 ERC20 토큰을 Ethereum과 Rootstock 간에 안전하고 간편하게 이동하세요.."
+    description="Atlas Bridge에서 제공자를 비교하고 Rootstock과 다른 네트워크 간 지원 자산을 이동할 수 있습니다."
   />
 <FilterItem
     value="dev-environment, sc, platform-infra"

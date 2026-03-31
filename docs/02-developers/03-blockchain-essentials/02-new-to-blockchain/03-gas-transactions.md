@@ -64,6 +64,12 @@ Rootstock merges Bitcoin's security guarantees with Ethereum-compatible smart co
 
 Rootstock sits at the intersection: **Bitcoin-backed security + EVM programmability.**
 
+:::tip[Understanding Gas Differences]
+
+Read more about [Gas differences on Rootstock](/developers/blockchain-essentials/overview/#gas-differences).
+
+:::
+
 ## Summary
 
 Before moving forward, ensure you understand:
