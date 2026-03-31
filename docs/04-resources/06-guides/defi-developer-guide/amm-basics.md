@@ -260,9 +260,58 @@ The sqrt function implements the Babylonian method (Newton's method) for integer
 Deploying and Testing with Hardhat
 Now we'll write tests to ensure our AMM works correctly.
 
+### Prerequisites
+
+First, make sure you have the necessary testing dependencies installed:
+
+```bash
+npm install --save-dev hardhat @nomiclabs/hardhat-ethers ethers chai
+```
+
+Your `hardhat.config.js` should include:
+
+```javascript
+require("@nomiclabs/hardhat-ethers");
+
+module.exports = {
+  solidity: "0.8.0",
+};
+```
+
 ### Test Setup
 
-We'll use Hardhat with ethers. First, create a test file test/SimpleAMM.test.js.
+We'll use Hardhat with ethers and Chai for testing. First, create a test file `test/SimpleAMM.test.js`.
+
+You'll also need a mock ERC20 token for testing. Create `contracts/ERC20Mock.sol`:
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+
+contract ERC20Mock is ERC20 {
+    constructor(
+        string memory name,
+        string memory symbol,
+        uint8 decimals
+    ) ERC20(name, symbol) {
+        _setupDecimals(decimals);
+    }
+    
+    function mint(address to, uint256 amount) external {
+        _mint(to, amount);
+    }
+    
+    function _setupDecimals(uint8 decimals_) internal {
+        _decimals = decimals_;
+    }
+    
+    uint8 private _decimals;
+}
+```
+
+Now create the test file:
 
 ```javascript
 const { expect } = require("chai");
@@ -304,7 +353,7 @@ it("Should add initial liquidity", async function () {
     await amm.addLiquidity(ethers.utils.parseEther("100"), ethers.utils.parseEther("100"));
     expect(await amm.reserveA()).to.equal(ethers.utils.parseEther("100"));
     expect(await amm.reserveB()).to.equal(ethers.utils.parseEther("100"));
-    expect(await amm.totalLiquidity()).to.equal(ethers.utils.parseEther("100")); // sqrt(100*100)=100
+    expect(await amm.totalLiquidity()).to.equal(ethers.utils.parseEther("100")); // sqrt(100e18 * 100e18) = 100e18
 });
 ```
 
@@ -339,7 +388,6 @@ it("Should revert if slippage too high", async function () {
     // Set minimum out higher than expected
     await expect(amm.swapAforB(amountIn, expectedOut.add(1))).to.be.revertedWith("Slippage too high");
 });
-```
 
 ### Test: Removing Liquidity
 
@@ -353,7 +401,6 @@ it("Should remove liquidity", async function () {
     expect(await tokenA.balanceOf(owner.address)).to.equal(ethers.utils.parseEther("1000"));
     expect(await tokenB.balanceOf(owner.address)).to.equal(ethers.utils.parseEther("1000"));
 });
-```
 
 ## Integrating with a React Frontend
 
@@ -364,6 +411,16 @@ ethers.js or web3.js
 AMM contract address and ABI
 
 User's wallet (e.g., MetaMask)
+
+### Getting the Contract ABI
+
+First, compile your Solidity contract to generate the ABI:
+
+```bash
+npx hardhat compile
+```
+
+This will create the ABI in `artifacts/contracts/SimpleAMM.sol/SimpleAMM.json`. Copy this file to your frontend project and import it as shown below.
 
 ### Example: Swap Component
 
@@ -423,17 +480,9 @@ const Swap = ({ ammAddress }) => {
 };
 ```
 
-### Key steps:
+### Getting the Contract Address
 
-- Connect to wallet.
-
-- Approve the AMM to spend the input token.
-
-- Fetch reserves and compute expected output (with slippage tolerance).
-
-- Call the swap function.
-
-- Wait for confirmation.
+After deploying your contract, you'll get the contract address from the deployment output. Save this address and use it in your frontend component's `ammAddress` prop. You can also find it in the deployment transaction logs or by checking the block explorer for the network you deployed to.
 
 ### Security Considerations
 

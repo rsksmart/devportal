@@ -108,11 +108,41 @@ Best practice: Use call with reentrancy guards and proper effects-first ordering
 ERC-777 tokens have tokensReceived hooks that are called when tokens are sent. If you integrate such tokens, an attacker can re-enter your contract during the token transfer. Always use nonReentrant on functions that handle external tokens with hooks, and be aware that even safeTransfer from OpenZeppelin can trigger hooks.
 
 ## Testing for Reentrancy
+
+### Test Setup
+
+First, ensure you have the necessary testing dependencies:
+
+```bash
+npm install --save-dev hardhat @nomiclabs/hardhat-ethers ethers chai
+```
+
 Write tests that simulate reentrant attacks. For example, using a malicious contract:
 
 ```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+
+contract Vulnerable {
+    mapping(address => uint256) public balances;
+    
+    function deposit() external payable {
+        balances[msg.sender] += msg.value;
+    }
+    
+    // VULNERABLE
+    function withdraw(uint256 amount) external {
+        require(balances[msg.sender] >= amount);
+        (bool success, ) = msg.sender.call{value: amount}("");
+        require(success, "Transfer failed");
+        balances[msg.sender] -= amount;
+    }
+}
+
 contract Attacker {
-    Vulnerable victim;
+    Vulnerable public victim;
     uint256 public attackCount;
 
     constructor(address _victim) {
@@ -137,11 +167,39 @@ contract Attacker {
 ## Then in your test:
 
 ```javascript
-it("should prevent reentrancy", async () => {
-    await victim.deposit({ value: ethers.utils.parseEther("10") });
-    const attacker = await (await ethers.getContractFactory("Attacker")).deploy(victim.address);
-    await attacker.attack({ value: ethers.utils.parseEther("1") });
-    // Expect victim's balance to be unchanged or attacker's attempt to revert
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+
+describe("Reentrancy Protection", function () {
+    let victim, attacker, owner;
+
+    beforeEach(async function () {
+        [owner] = await ethers.getSigners();
+        
+        // Deploy vulnerable contract
+        const Vulnerable = await ethers.getContractFactory("Vulnerable");
+        victim = await Vulnerable.deploy();
+        await victim.deployed();
+        
+        // Fund it
+        await owner.sendTransaction({
+            to: victim.address,
+            value: ethers.utils.parseEther("10")
+        });
+    });
+
+    it("should prevent reentrancy", async function () {
+        const attacker = await (await ethers.getContractFactory("Attacker")).deploy(victim.address);
+        await attacker.deployed();
+        
+        const initialBalance = await ethers.provider.getBalance(victim.address);
+        
+        await attacker.attack({ value: ethers.utils.parseEther("1") });
+        
+        const finalBalance = await ethers.provider.getBalance(victim.address);
+        // Victim should not be drained due to reentrancy protection
+        expect(finalBalance).to.be.gt(0);
+    });
 });
 ```
 

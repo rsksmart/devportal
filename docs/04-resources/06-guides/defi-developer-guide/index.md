@@ -82,12 +82,34 @@ npx hardhat
 ```
 Choose "Create a basic sample project" and follow the prompts.
 
-## 3. Install OpenZeppelin contracts
+#### 3. Set up the test environment
+
+To ensure all JavaScript test snippets execute correctly, make sure your test environment is properly configured:
+
+```bash
+# Install additional testing dependencies if needed
+npm install --save-dev hardhat @nomiclabs/hardhat-ethers ethers chai
+```
+
+Your `hardhat.config.js` should include:
+
+```javascript
+require("@nomiclabs/hardhat-ethers");
+
+module.exports = {
+  solidity: "0.8.0",
+};
+```
+
+This ensures that all test files can properly import `chai`, `ethers`, and use the `describe`/`it` testing structure without execution errors.
+
+#### 4. Install OpenZeppelin contracts
 
 ```bash
 npm install @openzeppelin/contracts
 ```
-## 4. Configure Hardhat for Rootstock
+
+#### 5. Configure Hardhat for Rootstock
 
 Edit hardhat.config.js to add Rootstock networks:
 
@@ -117,14 +139,14 @@ Create a .env file to store your private key (never commit this):
 ```text
 PRIVATE_KEY=your_testnet_private_key_here
 ```
-## 5. Get tRBTC from the Rootstock testnet faucet
+
+#### 6. Get tRBTC from the Rootstock testnet faucet
 
 Visit the Rootstock Testnet Faucet and request tRBTC to your testnet address. You'll need this to pay for gas when deploying contracts.
 
 **[Rootstock Testnet Explorer](https://explorer.testnet.rootstock.io)**
 
-
-## 6. (Optional) Set up a frontend with React
+#### 7. (Optional) Set up a frontend with React
 
 #### If you plan to build a dApp, create a React app:
 

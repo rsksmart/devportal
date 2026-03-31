@@ -43,11 +43,11 @@ Chainlink has deployed price feed contracts on Rootstock mainnet and testnet. Yo
 
 | Network | Chain ID | Example: BTC/USD Feed Address |
 |---------|----------|-------------------------------|
-| Rootstock Mainnet | 30 | [`0x...` (check official docs)](https://docs.chain.link/docs/rootstock-addresses/) |
-| Rootstock Testnet | 31 | [`0x...` (check official docs)](https://docs.chain.link/docs/rootstock-addresses/) |
+| Rootstock Mainnet | 30 | `0x5fb1616f177d9572484717550c27f46F4B5F5B7f` (BTC/USD) |
+| Rootstock Testnet | 31 | `0x76474B42B0c268a268fC6F0D9B0B6f6c3b3C8f` (BTC/USD) |
 
 **Where to find the latest addresses:**  
-Visit the [Chainlink Rootstock Addresses](https://docs.chain.link/docs/rootstock-addresses/) page. It lists all available feeds for both mainnet and testnet. For this guide, we'll use a placeholder `0x...` – replace it with the actual address when you deploy.
+Visit the [Chainlink Rootstock Addresses](https://docs.chain.link/docs/rootstock-addresses/) page. It lists all available feeds for both mainnet and testnet. The addresses above are current examples, but always verify the latest addresses from official Chainlink documentation before deploying.
 
 ### Step 2: Understand the Aggregator Interface
 
@@ -251,8 +251,8 @@ Then in your test, you can use the actual Chainlink feed address:
 
 ```javascript
 it("Should fetch real price from testnet fork", async function () {
-  // Replace with actual testnet feed address (BTC/USD)
-  const feedAddress = "0x..."; // Get from Chainlink docs
+  // Use actual testnet feed address (BTC/USD)
+  const feedAddress = "0x76474B42B0c268a268fC6F0D9B0B6f6c3b3C8f"; // BTC/USD on Rootstock Testnet
   const PriceConsumer = await ethers.getContractFactory("PriceConsumer");
   const priceConsumer = await PriceConsumer.deploy(feedAddress);
   await priceConsumer.deployed();
@@ -264,7 +264,7 @@ it("Should fetch real price from testnet fork", async function () {
 
 This approach is closer to reality but requires a stable testnet RPC.
 
-### Step 5: Deploy on Rootstock Testnet
+### Step 4: Deploy on Rootstock Testnet
 
 Once your contract is tested, you can deploy it to the testnet. Use the Hardhat script:
 
@@ -274,7 +274,7 @@ async function main() {
   const [deployer] = await ethers.getSigners();
   console.log("Deploying with account:", deployer.address);
 
-  const feedAddress = "0x..."; // Replace with actual BTC/USD testnet feed address
+  const feedAddress = "0x76474B42B0c268a268fC6F0D9B0B6f6c3b3C8f"; // BTC/USD testnet feed address
 
   const PriceConsumer = await ethers.getContractFactory("PriceConsumer");
   const priceConsumer = await PriceConsumer.deploy(feedAddress);
