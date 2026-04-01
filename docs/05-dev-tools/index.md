@@ -55,6 +55,16 @@ description: "Explore a curated selection of smart contract development tools an
     description="Use the Token Bridge to safely and securely move ERC20 tokens from Ethereum to Rootstock and vice-versa."
   />
 <FilterItem
+    value="bridge, cc"
+    title="Super Bridge"
+    subtitle="bridges"
+    color="orange"
+    linkHref="/resources/guides/superbridge/"
+    target="_blank"
+    linkTitle="Documentation"
+    description="Use the Super Bridge to safely and securely move assets between Rootstock and other blockchain networks."
+  />
+<FilterItem
     value="dev-tools, sc, deploy"
     title="Foundry"
     subtitle="Dev Tools"
@@ -104,7 +114,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="Rootstock Explorer"
     subtitle="Explorers"
     color="orange"
-    linkHref="/dev-tools/explorers/rootstock/"
+    linkHref="/dev-tools/explorers/rootstock-explorer/"
     linkTitle="Use the Explorer"
     description="Explore transactions, blocks, addresses, tokens, stats and interact with smart contracts on the Rootstock Explorer."
   />
@@ -116,15 +126,6 @@ description: "Explore a curated selection of smart contract development tools an
     linkHref="/dev-tools/explorers/blockchair/"
     linkTitle="Use the Explorer"
     description="Blockchair explorer is a blockchain search and analytics engine for Rootstock and 40+ chains. It incorporates a multitude of different blockchains into one search engine."
-  />
-<FilterItem
-    value="explorer, sc"
-    title="3xpl"
-    subtitle="Explorers"
-    color="orange"
-    linkHref="/dev-tools/explorers/3xpl/"
-    linkTitle="Use the Explorer"
-    description="3xpl (short for 3xplor3r) is a super-fast, universal explorer for Rootstock. It offers an easy-to-understand block explorer interface for beginner crypto users, as well as lots of professional features for developers and analysts."
   />
 <FilterItem
     value="rpc"
@@ -154,6 +155,15 @@ description: "Explore a curated selection of smart contract development tools an
     description="GetBlock provides instant connection to blockchain nodes including Rootstock, Bitcoin (BTC), Ethereum (ETH), among others."
   />
 <FilterItem
+    value="rpc"
+    title="dRPC"
+    subtitle="json rpc"
+    color="orange"
+    linkHref="/dev-tools/node-rpc/drpc/"
+    linkTitle="Make First API Call"
+    description="dRPC is a next-generation RPC platform that simplifies and optimizes communication with blockchain nodes. Built for Web3, with low-latency, high-reliability access to blockchain data and operations."
+  />
+<FilterItem
     value="rpc, smart contracts"
     title="NOWNodes"
     subtitle="json rpc"
@@ -161,24 +171,6 @@ description: "Explore a curated selection of smart contract development tools an
     linkHref="/dev-tools/node-rpc/nownodes/"
     linkTitle="Make First API Call"
     description="NOWNodes is a blockchain-as-a-service enterprise solution that lets users get access to full Nodes and blockbook Explorers via an API."
-  />
-<FilterItem
-    value="rpc, smart contracts"
-    title="dRPC"
-    subtitle="json rpc"
-    color="orange"
-    linkHref="/dev-tools/node-rpc/drpc/"
-    linkTitle="Make First API Call"
-    description="dRPC provides access to a distributed network of node providers."
-  />
-<FilterItem
-    value="rpc"
-    title="Blast API"
-    subtitle="json rpc"
-    color="orange"
-    linkHref="/dev-tools/node-rpc/blast-api/"
-    linkTitle="Make First API Call"
-    description="Blast API is a Blockchain-optimized cloud infrastructure for low-latency, cost-effective RPC services."
   />
 <FilterItem
     value="wallet, sc"
@@ -261,7 +253,7 @@ description: "Explore a curated selection of smart contract development tools an
     linkTitle="Access on-chain data"
     description="Get historical data on smart contracts when building dApps."
   />
-<FilterItem
+<!-- <FilterItem
     value="data"
     title="Covalent"
     subtitle="data & analytics"
@@ -269,7 +261,7 @@ description: "Explore a curated selection of smart contract development tools an
     linkHref="https://www.covalenthq.com/docs/networks/rootstock/?utm_source=rootstock&utm_medium=partner-docs"
     linkTitle="Access on-chain data"
     description="Covalent is a hosted blockchain data solution providing access to historical and current on-chain data for 100+ supported blockchains, including Rootstock."
-  />
+  /> -->
 <FilterItem
     value="data"
     title="DefiLlama"
@@ -286,7 +278,7 @@ description: "Explore a curated selection of smart contract development tools an
     color="orange"
     linkHref="https://tenderly.co/"
     linkTitle="Access on-chain data"
-    description="Tenderly helps developers build, monitor, and improve smart contracts by providing a set of tools to boost productivity, save time, and ensure efficient smart contracts functionality."
+    description="Tenderly is full-stack Web3 development infrastructure that helps developers build, stage, test, debug, and monitor decentralized applications."
   />
 <FilterItem
     value="deploy, sc, sdk, demos, dev-tools"
@@ -314,15 +306,6 @@ description: "Explore a curated selection of smart contract development tools an
     linkHref="https://forwardprotocol.io/"
     linkTitle="Build a no-code dApp"
     description="Build a dApp on Rootstock using Forward Protocol's no-code tools."
-  />
-<FilterItem
-    value="no-code, deploy, sc"
-    title="CryptoDO"
-    subtitle="no-code"
-    color="orange"
-    linkHref="https://www.cryptodo.app/"
-    linkTitle="Build a no-code Multichain dApp"
-    description="CryptoDo is a multichain, no-code web3 solution builder for businesses."
   />
 <FilterItem
     value="library, sdk, rifp, abs"
@@ -389,15 +372,6 @@ description: "Explore a curated selection of smart contract development tools an
   />
 <FilterItem
     value="faucet"
-    title="Blast Faucet"
-    subtitle="faucets"
-    color="orange"
-    linkHref="https://blastapi.io/faucets/rootstock-testnet"
-    linkTitle="Get tRBTC"
-    description="This faucet offers a convenient way to get free test RBTC tokens for development and testing. It has a higher max daily token allocation of `0.1` tRBTC."
-  />
-<FilterItem
-    value="faucet"
     title="Thirdweb Faucet"
     subtitle="faucets"
     color="orange"
@@ -410,7 +384,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="Ethers.js"
     subtitle="library"
     color="orange"
-    linkHref="https://web3js.readthedocs.io/en/v1.10.0/"
+    linkHref="https://docs.ethers.org/v5/"
     linkTitle="Use Ethers.js Library"
     description="A library for Interacting with the Rootstock Virtual Machine."
   />
@@ -419,7 +393,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="Web3.js"
     subtitle="library"
     color="orange"
-    linkHref="https://docs.ethers.org/v5/"
+    linkHref="https://web3js.readthedocs.io/en/v1.10.0/"
     linkTitle="Use Web3.js Library"
     description="A library for Interacting with the Rootstock Virtual Machine."
   />
@@ -686,15 +660,6 @@ description: "Explore a curated selection of smart contract development tools an
   />
 <FilterItem
     value="sc, oracles, data"
-    title="Umbrella Network"
-    subtitle="Oracles"
-    color="orange"
-    linkHref="https://umb.network/"
-    linkTitle="Access On-chain Data"
-    description="Access On-Chain data for your smart contracts on Rootstock."
-  />
-<FilterItem
-    value="sc, oracles, data"
     title="Redstone Finance"
     subtitle="Oracles"
     color="orange"
@@ -755,6 +720,15 @@ description: "Explore a curated selection of smart contract development tools an
     linkHref="https://github.com/rsksmart/rsk-go-cli"
     linkTitle="Use the CLI"
     description="The Rootstock Go CLI (rsk-cli) tool for interacting with Rootstock blockchain."
+  />
+  <FilterItem
+    value="wallet, sc"
+    title="Para"
+    subtitle="wallets"
+    color="orange"
+    linkHref="/developers/quickstart/para/"
+    linkTitle="Use Para"
+    description="Para is a modern wallet infrastructure for fintech and crypto applications. It provides a comprehensive wallet and authentication suite for crypto developers and apps."
   />
   <!-- <FilterItem
     value="cli"

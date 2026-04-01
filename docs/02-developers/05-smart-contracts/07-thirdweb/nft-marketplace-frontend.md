@@ -198,7 +198,7 @@ That’s it, you’ve got a fully functional NFT marketplace up and running on R
 To add features like auctions, user restrictions, or royalty logic, MarketplaceV3 supports all of that out of the box. Planning to scale or customize further? Check it out.
 
 - [Thirdweb Docs](https://portal.thirdweb.com/)
-- [MarketplaceV3 Overview](https://portal.thirdweb.com/contracts/prebuilt/marketplace/overview)
+- [MarketplaceV3 Overview](https://portal.thirdweb.com/tokens/explore/pre-built-contracts/marketplace#creating--configuring-the-marketplace)
 - [Thirdweb Marketplace V3: Thirdweb Documentation](https://thirdweb.com/thirdweb.eth/MarketplaceV3)
 - [Thirdweb TS SDK: Thirdweb Github](https://github.com/thirdweb-dev/js/tree/main#readme)
 - [Rootstock NFT Marketplace Starter Kit](https://github.com/rsksmart/rsk-thirdweb-marketplace)

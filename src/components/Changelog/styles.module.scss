@@ -1,0 +1,8 @@
+.sidebar {
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+  @media (min-width: 992px) {
+    border-bottom: none;
+    min-height: 100vh;
+    border-right: 1px solid var(--ifm-toc-border-color);
+  }
+}

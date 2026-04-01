@@ -1,0 +1,32 @@
+[
+  {
+    "name": "RSKj",
+    "owner": "rsksmart",
+    "repo": "rskj"
+  },
+  {
+    "name": "Rootstock CLI",
+    "owner": "rsksmart",
+    "repo": "rsk-cli"
+  },
+  {
+    "name": "Rootstock Explorer",
+    "owner": "rsksmart",
+    "repo": "rsk-explorer-api"
+  },
+  {
+    "name": "Two Way Peg App",
+    "owner": "rsksmart",
+    "repo": "2wp-app"
+  },
+  {
+    "name": "Faucet",
+    "owner": "rsksmart",
+    "repo": "rbtc-faucet"
+  },
+  {
+    "name": "PowPeg node",
+    "owner": "rsksmart",
+    "repo": "powpeg-node"
+  }
+]

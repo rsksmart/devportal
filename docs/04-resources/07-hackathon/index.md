@@ -10,7 +10,7 @@ This guide details the necessary hardware and software requirements for developi
 
 It includes setup instructions for essential tools such as Java, Node.js, Hardhat, and RSKj, ensuring developers have a clear path to prepare their environment for Rootstock projects, whether for local development, testing, or deployment. 
 
-For IRL hackathons and events, download the [Hackathon Cheatsheet PDF with QR Codes](/rootstock-cheatsheet.pdf).
+For IRL hackathons and events, download the [Hackathon Cheatsheet PDF with QR Codes](https://dev.rootstock.io/Rootstock_Developer_Cheatsheet.pdf).
 
 ## Prerequisites
 
@@ -49,7 +49,7 @@ This guide is designed to help both beginners and experienced developers get sta
     <ol>
       <li>
         <strong>Knowledge of Blockchain and Smart Contracts</strong><br />
-        You should be comfortable with <strong>[blockchain principles](https://rsk.thinkific.com/courses/blockchain-developer)</strong> and <strong>decentralized networks</strong>.
+        You should be comfortable with <strong>[blockchain principles](https://rootstock.thinkific.com/courses/blockchain-dev-course/)</strong> and <strong>decentralized networks</strong>.
       </li>
       <li>
         <strong>Experience with Web3 Development Tools</strong><br />
@@ -97,7 +97,7 @@ For more information on specific requirements for developing on Rootstock, Visit
 <Card
   title="Rootstock Hackathon Cheatsheet"
   description="The Rootstock Hackathon Cheatsheet is a concise reference guide for developers aiming to deploy decentralized applications (dApps) on the Rootstock network."
-  link="https://cheatography.com/devrelrootstock/cheat-sheets/rootstock-dev/"
+  link="https://dev.rootstock.io/Rootstock_Developer_Cheatsheet.pdf"
 />
 
 <br></br>

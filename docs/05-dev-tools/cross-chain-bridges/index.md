@@ -22,27 +22,19 @@ Imagine different islands, each with its own unique economy and currency. To tra
 
 <CardsGrid>
   <CardsGridItem
-    title="Token Bridge"
+    title="Stargate"
     subtitle="cross-chain"
     color="green"
-    description="Token Bridge dApp allow for easy movement your ERC-20 tokens (tokens on the Ethereum network) between Ethereum and Rootstock using the user-friendly Tokenbridge dApp."
-    linkHref="/resources/guides/tokenbridge/"
+    description="Bridge RBTC, DOC, MOC, USDRIF, USDT0, and more from Rootstock to other chains."
+    linkHref="https://stargate.finance/"
     linkTitle="Start Bridging"
   />
-   <CardsGridItem
+  <CardsGridItem
     title="PowPeg App"
     subtitle="cross-chain"
     color="green"
     description="Convert BTC to RBTC and vice versa. It is secured by the PowPeg protocol, which is a unique protocol that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus."
     linkHref="https://powpeg.rootstock.io/"
-    linkTitle="Start Bridging"
-  />
-  <CardsGridItem
-    title="Router Protocol"
-    subtitle="cross-chain"
-    color="green"
-    description="Router Protocol enables communication and interaction between different networks (Layer 1) regardless of their underlying technology."
-    linkHref="/dev-tools/cross-chain-bridges/router-protocol/"
     linkTitle="Start Bridging"
   />
   <CardsGridItem

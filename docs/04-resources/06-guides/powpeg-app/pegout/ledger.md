@@ -6,6 +6,8 @@ description: "Here, we will learn how to perform a peg-out using Ledger Hardware
 tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
+### Performing a peg-in transaction with Ledger {#performing-a-peg-in-transaction-with-ledger}
+
 ![PowPeg App (peg-out)](/img/resources/powpeg/pegout.gif)
 
 ## Performing a peg-out transaction using rLogin(Trezor and Ledger)

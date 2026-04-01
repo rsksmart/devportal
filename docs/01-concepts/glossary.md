@@ -11,7 +11,9 @@ This glossary contains key terms and definitions to help you better understand t
 
 Whether you're building on the Rootstock platform or simply exploring, these definitions will provide clarity on essential terms commonly used in the Rootstock Ecosystem.
 
-# A
+<a id="a"></a>
+
+# A {#a}
 
 ## ABI (Application Binary Interface)
 The Application Binary Interface (ABI) defines the interface between two binary program modules, typically between a smart contract and the external applications that interact with it. On the blockchain, an ABI specifies the functions and parameters called on a smart contract and the data exchange structure. It is essential for interacting with smart contracts programmatically.
@@ -115,7 +117,9 @@ This is a type of cryptocurrency exchange that operates without a central author
 
 This is an application that operates on a decentralized network, typically leveraging blockchain technology. Unlike traditional applications that rely on centralized servers, dApps use smart contracts to execute their backend logic, providing greater transparency, security, and resilience against censorship. 
 
-# E
+<a id="e"></a>
+
+# E {#e}
 
 ## ERC1155 
 
@@ -171,7 +175,7 @@ This is a platform where users can trade cryptocurrencies and other digital asse
 
 ## Faucet
 
-This is a tool that distributes small amounts of cryptocurrency for testing purposes on test networks, allowing developers and users to experiment without financial risk. In the context of Rootstock, faucets can be used to obtain test RBTC (tRBTC), enabling developers to test their applications in a realistic environment. This practice is crucial for ensuring that dApps function correctly before deployment on the mainnet.
+This is a tool that distributes small amounts of cryptocurrency for testing purposes on test networks, allowing developers and users to experiment without financial risk. In the context of Rootstock, faucets can be used to obtain test rBTC (tRBTC), enabling developers to test their applications in a realistic environment. This practice is crucial for ensuring that dApps function correctly before deployment on the mainnet.
 
 <Button size="sm" href="/dev-tools/additional-tools/#faucets">Get tRBTC</Button>
 
@@ -302,9 +306,9 @@ A unique code granting access to a blockchain account. It must remain secret, as
 
 # R
 
-## RBTC
+## rBTC 
 
-[RBTC](/concepts/rbtc/) is the native cryptocurrency of the Rootstock network, designed to be pegged 1:1 to Bitcoin. This ensures that RBTC maintains a value equivalent to Bitcoin, allowing seamless interactions between both networks.
+[rBTC](/concepts/rbtc/) is the native cryptocurrency of the Rootstock network, designed to be pegged 1:1 to Bitcoin. This ensures that rBTC maintains a value equivalent to Bitcoin, allowing seamless interactions between both networks.
 
 ## Remix IDE 
 
@@ -330,7 +334,7 @@ This is a tool that enables users to log into applications using their preferred
 
 Rootstock is the first and longest-lasting Bitcoin sidechain. It is the only layer 2 solution that combines the security of Bitcoin's proof of work with Ethereum's smart contract capabilities. The platform is open-source, EVM-compatible, and secured by over 60% of Bitcoin’s hashing power, This robust security model empowers developers to build trustless, innovative dApps within a thriving ecosystem.
 
-<Button size="sm" href="https://rsk.thinkific.com/courses/blockchain-user">Enroll for the Rootstock User Course</Button>
+<Button size="sm" href="https://rootstock.thinkific.com/courses/blockchain-dev-course">Enroll for the Rootstock Dev Course</Button>
 <br/>
 <br/>
 
@@ -372,7 +376,7 @@ This is a template or boilerplate project that provides developers with the basi
 
 This is the primary programming language for writing smart contracts on Ethereum and EVM-compatible blockchains. It is a statically typed, high-level language that enables developers to create complex smart contracts and dApps.
 
-<Button size="sm" href="https://rsk.thinkific.com/courses/blockchain-developer/">Enroll for Blockchain Developer Course</Button>
+<Button size="sm" href="https://rootstock.thinkific.com/courses/blockchain-dev-course/">Enroll for Blockchain Developer Course</Button>
 <br/>
 <br/>
 

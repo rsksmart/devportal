@@ -24,7 +24,6 @@ Las siguientes billeteras son compatibles con los tokens [RBTC](/concepts/rbtc/)
 <CarouselItem image="/img/rsk/wallets/Exodus_logo_white.png" href="https://www.exodus.com/" />
 <CarouselItem image="/img/rsk/wallets/mew.svg" href="https://www.myetherwallet.com/" />
 <CarouselItem image="/img/rsk/wallets/enkrypt-logo.png" href="https://www.enkrypt.com/networks/rootstock-wallet/" />
-<CarouselItem image="/img/rsk/wallets/block-wallet.png" href="https://blockwallet.io/" />
 <CarouselItem image="/img/rsk/wallets/taho.png" href="https://taho.xyz" />
 <CarouselItem image="/img/rsk/wallets/testtwo.png" href="https://rabby.io" />
 <CarouselItem image="/img/rsk/wallets/subwallet.svg" href="https://www.subwallet.app/" />
@@ -55,7 +54,6 @@ En la siguiente matriz, puede ver las diferentes características de cada billet
 | [SafePal](https://www.safepal.com/en/extension)               | ✔                                 | ✔                  | -                    | Chrome, Móvil             | Rootstock (RBTC), Mainnet                                 |
 | [Wallby](https://wallby.app/)                                 | ✔                                 | ✔                  | -                    | Móvil                     | Rootstock (RBTC), Bitcoin                                 |
 | [MathWallet](https://blog.mathwallet.org/?p=1625)             | ✔                                 | ✔                  | -                    | Chrome, Escritorio, Móvil | Mainnet                                                                      |
-| [Block Wallet](https://blockwallet.io/)                       | ✔                                 | ✔                  | -                    | Chrome                    | Mainnet                                                                      |
 | [MtPelerin Bridge](https://www.mtpelerin.com/bridge-wallet)   | ✔                                 | ✔                  | -                    | Escritorio, Móvil         | Rootstock (Mainnet), Bitcoin (Testnet) |
 | [Exodus](https://www.exodus.com/)                             | ✔                                 | ✔                  | -                    | Chrome, Escritorio, Móvil | Mainnet                                                                      |
 | [SubWallet](https://www.subwallet.app/)                       | ✔                                 | ✔                  | -                    | Chrome                    | Mainnet, Testnet                                                             |

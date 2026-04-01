@@ -16,7 +16,7 @@ Developers can choose whether they want to start from a template (e.g. Blank, ER
 
 The following are the prerequisite packages required for Envio:
 
-* [Node.js](http://node.js) <Shield version="18" /> or newer
+* [Node.js](https://nodejs.org/en/download) <Shield version="18" /> or newer
 * [pnpm](https://pnpm.io/installation) <Shield version="8" /> or newer
 * [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 

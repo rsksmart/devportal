@@ -66,8 +66,7 @@ For more information, see [LP Onboarding](/developers/integrate/flyover/LP/) sec
 
 ### Converting BTC to RBTC - General Users
 
-Flyover is integrated in the [PowPeg App](http://powpeg.rootstock.io) which provides a user-friendly UI for Bitcoiners to use the native Rootstock PowPeg protocol to Peg in and out, as well as to easily perform trust-minimized BTC and RBTC transfers between Bitcoin and Rootstock using Flyover.
-
+Flyover is integrated in the [PowPeg App](http://powpeg.rootstock.io) which provides a user-friendly UI for Bitcoiners to use the native Rootstock PowPeg protocol to Peg in and out, as well as to easily perform trust-minimized BTC and RBTC transfers between Bitcoin and Rootstock using Flyover. See section on [Using the PowPeg App](/resources/guides/powpeg-app/) to learn about how you can convert BTC - RBTC and vice versa.
 
 ## Resources
 - [Release Notes](https://github.com/rsksmart/flyover-sdk/releases)

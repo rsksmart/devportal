@@ -18,14 +18,6 @@ Oracles act as bridges, securely bringing external data onto the Rootstock block
 ## Oracles on Rootstock
 
 <CardsGrid>
-  <CardsGridItem
-    title="Umbrella Network"
-    subtitle="oracles"
-    color="cyan"
-    description="Umbrella Network provides access to reliable and secure data verified by Umbrella's decentralized network. Utilize Umbrella's Data Layer to build customizable and composable data streams on demand on Rootstock."
-    linkHref="https://umb.network//"
-    linkTitle="Access on-chain data"
-  />
    <CardsGridItem
     title="Redstone Finance"
     subtitle="oracles"

@@ -655,9 +655,19 @@
     {"source": "/resources/guides/eas/user-guide/", "destination": "/dev-tools/attestations/eas/user-guide/"},
     {"source": "/developers/use-cases/rootstock-layerzero/", "destination": "/developers/use-cases/defi/rootstock-layerzero/"},
     {"source": "/developers/use-cases/ai-agent-rootstock/", "destination": "/developers/use-cases/ai/ai-agent-rootstock/"},
-    {"source": "/developers/use-cases/ai/ai-agent-rootstock/", "destination": "/use-cases/ai-emerging/ai-agent-rootstock/"},
-    {"source": "/developers/use-cases/ai/mcp-rootstock/", "destination": "/use-cases/ai-emerging/mcp-rootstock/"},
-    {"source": "/developers/use-cases/defi/rootstock-layerzero/", "destination": "/use-cases/interoperability/rootstock-layerzero/"}
-  
+    {"source": "/dev-tools/node-rpc/blast-api/", "destination": "  /dev-tools/node-rpc/"},
+    {"source": "/dev-tools/no-code/cryptodo/", "destination": "/dev-tools/no-code/"},
+    {"source": "/dev-tools/oracles/umbrellanetwork/", "destination": "/dev-tools/oracles/"}
+  ],
+  "headers": [
+    {
+      "source": "/(.*)\\.md",
+      "headers": [
+        {"key": "Content-Type", "value": "text/plain; charset=utf-8"},
+        {"key": "X-Content-Type-Options", "value": "nosniff"},
+        {"key": "X-Robots-Tag", "value": "googlebot: noindex, nofollow, bingbot: noindex, nofollow"},
+        {"key": "Cache-Control", "value": "public, max-age=3600, must-revalidate"}
+      ]
+    }
   ]
 }

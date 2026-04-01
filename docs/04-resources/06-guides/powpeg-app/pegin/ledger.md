@@ -6,7 +6,17 @@ description: "Here, we will learn how to perform a peg-in transaction using the 
 tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
+### Performing a peg-in transaction with Ledger {#performing-a-peg-in-transaction-with-ledger}
+
 ## Using hardware wallets
+
+### Requirements {#requirements}
+
+Ensure your Ledger has a PIN set and the Bitcoin app installed.
+
+### Supported addresses {#supported-addresses}
+
+See the [supported addresses](/resources/guides/powpeg-app/advanced-operations/supported-addresses/) section for compatible address types.
 
 In this guide, we will be using the PowPeg on [PowPeg - Testnet](https://powpeg.testnet.rootstock.io/) for learning purposes, for transactions using real tokens, please use the [PowPeg - Mainnet](https://powpeg.rootstock.io/) App.
 
@@ -16,7 +26,7 @@ Ensure to complete the steps in [prerequisites](/resources/guides/powpeg-app/pre
 
 :::
 
-### Ledger Hardware Wallet
+### Ledger Hardware Wallet {#ledger-hardware-wallet}
 
 A peg-in is the process of exchanging BTC for RBTC. See the [glossary](/resources/guides/powpeg-app/glossary/) section for more information.
 

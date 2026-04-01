@@ -41,7 +41,7 @@ and [Testnet](https://explorer.testnet.rootstock.io/address/0x1820a4b7618bde71dc
 
 Original:
 
-- [EIP1820](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1820.md)
+- [EIP1820](https://github.com/ethereum/ercs/blob/master/ERCS/erc-1820.md)
 - Comparing [ERC777 to ERC20](https://hackernoon.com/erc777-is-the-new-token-standard-replacing-the-erc20-fd6319c3b13)
 - Comparing [ERC777 and ERC223 to ERC20](https://101blockchains.com/erc20-vs-erc223-vs-erc777/)
 

@@ -1,0 +1,23 @@
+# Rootstock Developer Documentation – AI use policy
+
+This file describes how AI systems, agents, and LLMs may use the Rootstock Developers Portal (https://dev.rootstock.io/).
+
+## Allowed use
+
+- You may use the documentation content to answer questions, generate code examples, and assist developers building on Rootstock.
+- Use is permitted for inference (e.g. real-time assistance, RAG, in-IDE tools) and for building developer tools that reference this documentation.
+
+## Citation and attribution
+
+- When you quote or closely paraphrase content from this site, cite the source. Prefer linking to the specific doc page (e.g. https://dev.rootstock.io/01-concepts/glossary/).
+- In generated text, you may use inline references such as "Rootstock Developers Portal" or "dev.rootstock.io docs."
+
+## Machine-readable entry points
+
+- LLM index: https://dev.rootstock.io/llms.txt
+- LLM full export: https://dev.rootstock.io/llms-full.txt
+- Human-facing guide for agents: https://dev.rootstock.io/04-resources/ai-and-agents/
+
+## Updates
+
+This policy may be updated. The canonical version is at https://dev.rootstock.io/ai-policy.txt.

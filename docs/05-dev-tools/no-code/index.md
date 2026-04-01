@@ -26,14 +26,6 @@ No-code tools offer a variety of advantages for businesses and developers:
 Rootstock, a leading Bitcoin sidechain, offers a user-friendly approach to web3 development with its no-code tools:
 
 <CardsGrid>
-  <CardsGridItem
-    title="CryptoDO"
-    subtitle="no-code"
-    color="cyan"
-    description="CryptoDo is a multichain, no-code web3 solution builder for businesses."
-    linkHref="https://www.cryptodo.app/"
-    linkTitle="Build a No Code dApp"
-  />
    <CardsGridItem
     title="Forward protocol"
     subtitle="no-code"

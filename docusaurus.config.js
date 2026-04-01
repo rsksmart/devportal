@@ -29,9 +29,14 @@ const config = {
     keys : {
       mendable : process.env.MENDABLE_KEY,
       cookbook : process.env.COOKBOOK_PUBLIC_API_KEY,
+      github : process.env.GITHUB_TOKEN,
     },
     homePage: {
       editUrl: 'https://github.com/rsksmart/devportal/tree/main/',
+    },
+    changelog : {
+      title: 'Changelog',
+      description: 'Stay informed about the latest product updates on Rootstock.',
     },
     moreLinks : {
       changelog : {
@@ -41,6 +46,12 @@ const config = {
       joinCommunity : {
         title: 'Join the Community',
         url : 'http://discord.gg/rootstock',
+      },
+      devCheatsheet : {
+        title: 'Developer Cheatsheet',
+        url : 'https://dev.rootstock.io/Rootstock_Developer_Cheatsheet.pdf',
+        target: '_blank',
+        rel: "noopener noreferrer"
       },
       reportIssue : {
         title: 'Report an Issue',
@@ -57,8 +68,8 @@ const config = {
     },
     newsHighlight : [
       {
-        title : 'In December, only Replit-forked ideas will be accepted for the Hacktivator. Learn more',
-        url : 'https://rootstock.hashnode.dev/rootstock-hacktivator-december-special-edition-fork-build-with-replit '
+        title : 'Builder Rootcamp Cohort 1 Kicks Off — January 26, 2026!',
+        url : 'https://rootstock.io/rootcamp/'
       }
     ]
   },
@@ -67,8 +78,9 @@ const config = {
   organizationName: 'rsksmart', // Usually your GitHub org/user name.
   projectName: 'devportal', // Usually your repo name.
 
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: process.env.DOCUSAURUS_BROKEN_LINKS || 'warn',
+  onBrokenMarkdownLinks: process.env.DOCUSAURUS_BROKEN_MARKDOWN_LINKS || 'warn',
+  onBrokenAnchors: process.env.DOCUSAURUS_BROKEN_ANCHORS || 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -100,6 +112,38 @@ const config = {
   ],
   plugins: [
     [
+      'docusaurus-plugin-llms',
+      {
+        title: 'Rootstock Developers Portal',
+        description: 'Welcome to Rootstock',
+        docsDir: 'docs',
+        generateLLMsTxt: true,
+        generateLLMsFullTxt: true,
+        excludeImports: true,
+        removeDuplicateHeadings: true,
+        pathTransformation: {
+          ignorePaths: ['docs'],
+        },
+        logLevel: 'normal',
+        rootContent: `Instructions for AI: You may use this documentation to answer questions and assist developers. When quoting or paraphrasing, cite the source (e.g. link to the specific doc page). See [AI use policy](https://dev.rootstock.io/ai-policy.txt) for allowed use and citation.`,
+        fullRootContent: `Instructions for AI: You may use this documentation to answer questions and assist developers. When quoting or paraphrasing, cite the source. See [AI use policy](https://dev.rootstock.io/ai-policy.txt) for allowed use and citation.`,
+      },
+    ],
+    [
+      './plugins/llms-i18n.js',
+      {
+        title: 'Rootstock Developers Portal',
+        description: 'Welcome to Rootstock',
+        excludeImports: true,
+        removeDuplicateHeadings: true,
+        pathTransformation: { ignorePaths: ['docs'] },
+        rootContent: `Instructions for AI: You may use this documentation to answer questions and assist developers. When quoting or paraphrasing, cite the source (e.g. link to the specific doc page). See [AI use policy](https://dev.rootstock.io/ai-policy.txt) for allowed use and citation.`,
+        fullRootContent: `Instructions for AI: You may use this documentation to answer questions and assist developers. When quoting or paraphrasing, cite the source. See [AI use policy](https://dev.rootstock.io/ai-policy.txt) for allowed use and citation.`,
+      },
+    ],
+    'docusaurus-markdown-source-plugin',
+    './plugins/markdown-source-i18n.js',
+    [
       'docusaurus-plugin-sass', {
       sassOptions: {
         // Disable deprecation warnings
@@ -114,32 +158,6 @@ const config = {
         ]
       }
     }],
-    [
-      '@docusaurus/plugin-content-blog',
-      {
-        blogTitle: 'Changelog',
-        blogDescription:
-          'Stay informed about the latest product updates on Rootstock.',
-        blogSidebarCount: 'ALL',
-        blogSidebarTitle: 'Changelog',
-        showReadingTime: false,
-        onInlineAuthors: 'ignore',
-        onUntruncatedBlogPosts: 'ignore',
-        /**
-         * Required for any multi-instance plugin
-         */
-        id: 'changelog',
-        /**
-         * URL route for the blog section of your site.
-         * *DO NOT* include a trailing slash.
-         */
-        routeBasePath: 'changelog',
-        /**
-         * Path to data on filesystem relative to site dir.
-         */
-        path: './changelog',
-      },
-    ],
   ],
   presets: [
     [

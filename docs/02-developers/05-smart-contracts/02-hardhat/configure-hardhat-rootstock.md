@@ -69,7 +69,7 @@ To configure your `rskMainnet` and `rskTestnet` private keys, you'll need to upd
 > See how to [Get an API Key from the RPC API](/developers/rpc-api/rootstock/setup/)
 
 
-> Replace `"your_mainnet_private_key"` and `"your_testnet_private_key"` with your private keys. For information on how to retrieve your private keys, see [How to export an account's private key](https://support.metamask.io/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key).
+> Replace `"your_mainnet_private_key"` and `"your_testnet_private_key"` with your private keys. For information on how to retrieve your private keys, see [How to export an account's private key](https://support.metamask.io/configure/accounts/how-to-export-an-accounts-private-key/).
 
 ### Step 3: Fund Your Accounts
 - Mainnet

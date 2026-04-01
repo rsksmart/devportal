@@ -20,19 +20,11 @@ Before starting the dApp, make sure to have the following prerequisites:
 2. **Node.js and Hardhat Installed:**
    - Ensure you have Node.js installed on your system. See the [prerequisites section](/developers/requirements/#installing-nodejs-and-npm).
 
-3. **Install Hardhat Shorthand:**
-- We recommend installing `hh` autocomplete to use `hh` shorthand globally.
+3. **MetaMask set up for Rootstock:**
+   - Install the MetaMask browser extension if you haven’t already.
+   - Configure MetaMask to connect to the Rootstock network. See [MetaMask integration](/dev-tools/wallets/metamask/).
 
-     ```bash
-     npm i -g hardhat-shorthand
-     ```
-- For more details, refer to their [official guide](https://hardhat.org/guides/shorthand.html).
-
-4. **Metamask Setup with Rootstock:**
-- Install the Metamask browser extension if you haven’t already.
-- Configure Metamask to connect to the Rootstock network. Visit the [MetaMask Integration on the Rootstock Dev Portal](/dev-tools/wallets/metamask/).
-
-5. **Basic Knowledge of Hardhat:**
+4. **Basic knowledge of Hardhat:**
 - Familiarity with Hardhat's core concepts and functionalities is recommended. If you're new to Hardhat, refer to the [Rootstock Hardhat Guide](/developers/smart-contracts/hardhat/).
 
 :::tip[Rootstock Blockchain Developer Course]

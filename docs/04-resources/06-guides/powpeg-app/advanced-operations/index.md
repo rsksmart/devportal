@@ -6,7 +6,11 @@ description: "See how to perform advanced operations on the PowPeg App"
 tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-This section contains detailed instructions on how to perform advanced operations on the PowPeg App. 
+This section contains detailed instructions on how to perform advanced operations on the PowPeg App.
+
+## Electrum hardware wallets {#electrum-hardware-wallets}
+
+See [viewing a derived address](/resources/guides/powpeg-app/pegout/deriving-electrum) and [import a key in Electrum](/resources/guides/powpeg-app/pegout/deriving-electrum#import-key-in-electrum) for using Electrum with hardware wallets.
 
 These operations include;
 

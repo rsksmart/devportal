@@ -21,9 +21,9 @@ To understand how block explorers work, read the complete guide on [exploring bl
     title="Rootstock Explorer"
     subtitle="explorers"
     color="cyan"
-    description="The Rootstock Explorer provides a UI for exploring and verifying transactions, blocks, addresses, tokens, stats, and interacting with smart contracts."
-    linkHref="/dev-tools/explorers/rootstock/"
-    linkTitle="Use the Explorer"
+    description="Look up transactions, blocks, addresses, and tokens on mainnet or testnet. View network stats and interact with verified smart contracts."
+    linkHref="/dev-tools/explorers/rootstock-explorer/"
+    linkTitle="Explorer Tutorials"
   />
    <CardsGridItem
     title="Blockscout Explorer"
@@ -34,19 +34,19 @@ To understand how block explorers work, read the complete guide on [exploring bl
     linkTitle="Use the Explorer"
   />
   <CardsGridItem
-    title="3xpl"
-    subtitle="explorers"
-    color="cyan"
-    description="3xpl (short for 3xplor3r) is a super-fast, universal explorer for most popular public blockchains. It offers an easy-to-understand block explorer interface for ordinary crypto users, as well as lots of professional features for developers and analysts."
-    linkHref="/dev-tools/explorers/3xpl/"
-    linkTitle="Use the Explorer"
-  />
-  <CardsGridItem
     title="Blockchair"
     subtitle="explorers"
     color="cyan"
     description="Blockchair explorer is a blockchain search and analytics engine for Rootstock and 40+ chains. It incorporates a multitude of different blockchains into one search engine. It focuses on making blockchain data understandable and accessible for a wide and varied audience, interested in both blockchain and crypto, while maintaining and securing the privacy of users."
     linkHref="/dev-tools/explorers/blockchair/"
+    linkTitle="Use the Explorer"
+  />
+    <CardsGridItem
+    title="Tenderly"
+    subtitle="explorers"
+    color="cyan"
+    description="Tenderly is full-stack Web3 development infrastructure that helps developers build, stage, test, debug, and monitor decentralized applications."
+    linkHref="https://docs.tenderly.co/developer-explorer"
     linkTitle="Use the Explorer"
   />
 </CardsGrid>

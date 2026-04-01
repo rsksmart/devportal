@@ -43,7 +43,7 @@ cd rootstock-rs
 cargo add alloy --git https://github.com/alloy-rs/alloy
 ```
 
-Find more about [Alloy setup using meta crate](https://alloy.rs/getting-started/installation.html)
+Find more about [Alloy setup](https://github.com/alloy-rs/alloy#readme) and the [Alloy book](https://alloy.rs/).
 
 > Note: All the dependencies required are mentioned in the `.toml` file below. Copy and paste into the `cargo.toml` file.
 
@@ -64,7 +64,7 @@ tokio = { version = "1", features = ["full"] }
 
 ## Connect to the Rootstock node
 
-To connect to the Rootstock node., we will require a provider setup. A [Provider](https://alloy-rs.github.io/alloy/alloy_provider/provider/trait/trait.Provider.html) is an abstraction of a connection to the Rootstock network, it provides a concise, and consistent interface to standard Ethereum node functionality. 
+To connect to the Rootstock node., we will require a provider setup. A [Provider](https://alloy.rs/) is an abstraction of a connection to the Rootstock network, it provides a concise, and consistent interface to standard Ethereum node functionality. 
 
 To run this program, use `cargo run` in the root of the project:
 
@@ -419,13 +419,12 @@ PRIVATE_KEY=0x12... cargo run
 
 > Note to replace `PRIVATE_KEY` with your private key in the command above to run this program.
 
-For more details, see the [complete code example](https://alloy.rs/examples/transactions/transfer_erc20.html)
+For more details, see the [complete code example](https://github.com/alloy-rs/examples/blob/f223a201c72334216bef763331a8924636021e38/examples/transactions/examples/transfer_erc20.rs)
 
 See [foundry](https://github.com/foundry-rs/foundry) codebase for more advanced usage of Rust and Alloy to interact with EVM compatible blockchains including Rootstock.
 
 ## Useful Resources
 
-- [Alloy website](https://www.paradigm.xyz/oss/alloy)
-- See [Alloy reference documentation](https://alloy.rs/index.html)
+- See [Alloy reference documentation](https://github.com/alloy-rs)
 - Code examples using Alloy [visit this repo](https://github.com/alloy-rs/examples)
 - Alloy GitHub [repo](https://github.com/alloy-rs)

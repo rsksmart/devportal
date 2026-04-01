@@ -1,0 +1,5 @@
+label: "Rootstock Explorer"
+position: 2
+link:
+  type: doc
+  id: dev-tools/explorers/rootstock-explorer/index

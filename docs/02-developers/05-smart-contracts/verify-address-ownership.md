@@ -83,7 +83,7 @@ You have the option to manually add
 [Rootstock Mainnet network configuration to MetaMask](/dev-tools/wallets/metamask/).
 
 Alternatively, you can do this automatically,
-by visiting [identity.rifos.org](https://identity.rifos.org/),
+by visiting [https://rif.technology/](https://rif.technology/),
 and when you attempt to connect using MetaMask,
 you will get presented with the following:
 
@@ -138,32 +138,6 @@ the URL will be `https://explorer.rsk.co/address/0xdfc0e6361fd1846a223e2d7834a5e
 Here you may see "Not Found".
 This does not necessarily mean that the account does not exist.
 Instead, it means that there simply are no transactions on the blockchain at this address.
-
-### Visit RIF Identity Manager
-
-So far, not so good, right?
-... Nothing we've seen thus far assures you
-that you do indeed control this address.
-
-This is where the RIF Identity Manager comes in!
-This DApp allows you to verify whether we control this address.
-You'll do this by signing a message that is **not** a blockchain transaction.
-
-Visit [identity.rifos.org](https://identity.rifos.org/).
-
-![](/img/developers/verify-address-ownership/rif-identity-metamask-visit.png)
-
-Click on "Connect your Wallet"
-
-![](/img/developers/verify-address-ownership/rif-identity-metamask-connect-wallet.png)
-
-Select "MetaMask"
-
-> Note that if you have multiple Web3 browser extensions installed,
-> disable all of them except for one.
-> If not, this confuses most DApps including RIF Identity Manager,
-> and you may not see MetaMask here as a result.
-> See the "before you begin" section for details.
 
 ### MetaMask site connection permission
 

@@ -26,11 +26,11 @@ Running foundryup by itself will install the latest (nightly) precompiled binari
 
 ## Create a foundry project
 
-To start a new project with Foundry, use [forge init](https://book.getfoundry.sh/reference/forge/forge-init.html).
+To start a new project with Foundryup, use [Foundryup](https://www.getfoundry.sh/introduction/installation).
 
 ```bash
 forge init hello_foundry
 ```
 
-> See more details on how to [create a new project](https://book.getfoundry.sh/projects/creating-a-new-project) using the Foundry guide.
+> See more details on how to [create a new project](https://www.getfoundry.sh/projects#creating-a-project) using the Foundry guide.
 

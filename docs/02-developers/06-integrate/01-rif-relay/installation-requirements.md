@@ -25,7 +25,7 @@ To set up the RIF Relay system running locally there are some tools that are req
         nvm install 18
         nvm use 18
         ```
-        To use Node without `nvm`, follow the installation instructions on Node's [official website](https://nodejs.org/en/). After installation, verify it by executing `node -v` in your command line, which will display the installed Node version. This step ensures Node is correctly installed on your system.
+        To use Node without `nvm`, follow the installation instructions on [Node's official website](https://nodejs.org/en/). After installation, verify it by executing `node -v` in your command line, which will display the installed Node version. This step ensures Node is correctly installed on your system.
     - **Ethers:** The interaction with the blockchain is done using [Ethers v5](https://docs.ethers.org/v5/).
 
 ## Getting Started with RIF Relay

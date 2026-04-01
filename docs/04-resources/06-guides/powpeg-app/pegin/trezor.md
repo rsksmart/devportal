@@ -24,7 +24,7 @@ In this guide, we will be performing a peg in transaction using the [PowPeg App]
 
 ![Connect Trezor](/img/resources/powpeg/pegin-wallets.png)
 
-## Trezor Hardware Wallet
+## Trezor Hardware Wallet {#ledger-hardware-wallet}
 
 ![Connect Trezor](/img/resources/powpeg/pegin-connect-your-trezor.png)
 
@@ -102,6 +102,10 @@ To confirm successful connection to the PowPeg, you will be directed to the scre
 <center>
     <img src="/img/resources/powpeg/4-confirm-connection-testnet.png"  title="Peg-in screen" width="50%"/>
 </center>
+
+### Supported addresses {#supported-addresses}
+
+See the [supported addresses](/resources/guides/powpeg-app/advanced-operations/supported-addresses/) section for the meaning of segwit, legacy, and native segwit account types.
 
 > - The balance of the accounts in your hardware wallet will be loaded, and this shows the balance of 3 different types of accounts: segwit, legacy, native segwit. See the [supported addresses](#supported-addresses) for the meaning of these types of accounts.
 

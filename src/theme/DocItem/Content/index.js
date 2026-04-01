@@ -4,6 +4,7 @@ import {ThemeClassNames} from '@docusaurus/theme-common';
 import {useDoc} from '@docusaurus/plugin-content-docs/client';
 import Heading from '@theme/Heading';
 import MDXContent from '@theme/MDXContent';
+import MarkdownPageActions from '@theme/DocItem/MarkdownPageActions';
 
 /**
  Title can be declared inside md content or declared through
@@ -29,11 +30,10 @@ export default function DocItemContent({children}) {
 
   return (
     <div className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown')}>
-      {syntheticTitle && (
-        <header className={`mb-30`}>
-          <Heading as="h1">{syntheticTitle}</Heading>
-        </header>
-      )}
+      <header className={`mb-30`}>
+        {syntheticTitle && <Heading as="h1">{syntheticTitle}</Heading>}
+        <MarkdownPageActions />
+      </header>
       <MDXContent>{children}</MDXContent>
     </div>
   );

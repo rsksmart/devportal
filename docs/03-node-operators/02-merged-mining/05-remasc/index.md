@@ -4,6 +4,8 @@ title: REMASC
 tags: [rsk, rootstock, mining, bitcoin, remasc]
 ---
 
+## Top {#top}
+
 Reward Manager Smart Contract (REMASC) is a pre-compiled smart-contract that is executed on every block and has the responsibility to fairly distribute rewards collected from transaction fees into several participants of the network. However the distribution of rewards of a block is only performed once the block reaches a certain maturity. In other words, the rewards are paid only after a  fixed number of blocks have confirmed a block. With the exception of the first blocks in the blockchain after genesis, every time a block is added to the blockchain, another previous block reaches maturity and its rewards are paid.
 
 REMASC is an implementation of [DECOR+](https://scalingbitcoin.org/papers/DECOR-LAMI.pdf).

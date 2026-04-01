@@ -21,4 +21,5 @@ The Rootstock Resources section serves as a comprehensive knowledge base compris
 | [Tutorials](/resources/tutorials/) | Tutorials on Rootstock.|
 | [Guides](/resources/guides/) | User Guides on Rootstock.|
 | [Hackathons](/resources/hackathon/) | Hackathon and Workshop Resources.|
+| [For AI and Agents](/resources/ai-and-agents/) | How agents, AI tools, and LLMs can discover and use this documentation.|
 | [Rootstock Improvement Proposals (RSKIPs)](https://github.com/rsksmart/RSKIPs) | Rootstock Improvement Proposals.|

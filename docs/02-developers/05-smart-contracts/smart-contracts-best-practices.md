@@ -428,5 +428,5 @@ By prioritizing security measures, optimizing gas usage, and ensuring thorough t
 
 ## Resources
 
-- [Rootstock Blockchain Developer Course](https://rsk.thinkific.com/courses/blockchain-developer)
+- [Rootstock Blockchain Developer Course](https://rootstock.thinkific.com/courses/blockchain-dev-course/)
 - [Rootstock Developer Tools](https://dev.rootstock.io/dev-tools/)

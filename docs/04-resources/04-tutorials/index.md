@@ -2,16 +2,27 @@
 sidebar_position: 4
 title: Tutorials
 sidebar_label: Tutorials
-tags: [rsk, rootstock, beginner, quick starts, advanced, port to rootstock, tutorials]
+tags:
+  [
+    rsk,
+    rootstock,
+    beginner,
+    quick starts,
+    advanced,
+    port to rootstock,
+    tutorials,
+    zero knowledge proofs,
+  ]
 description: "Tutorials and learning resources"
 ---
 
-````mdx-code-block
+```mdx-code-block
 <Filter
 values={[
 {label: 'Beginner', value: 'beginner'},
 {label: 'Advanced', value: 'advanced'},
 {label: 'Port to Rootstock', value: 'port-dapps'},
+{label: 'Explorer', value: 'explorer'},
 {label: 'DeFi', value: 'defi'},
 {label: 'AI', value: 'ai'}
 ]}>
@@ -30,6 +41,14 @@ subtitle="oku"
 color="orange"
 linkHref="/resources/tutorials/oku-rootstock/"
 description="This tutorial demonstrates how to securely and efficiently bridge USDRIF on Rootstock to USDC on Ethereum using OKU."
+/>
+<FilterItem
+value="beginner, advanced"
+title="Zero-Knowledge Proofs on Rootstock with Noir"
+subtitle="zero knowledge proofs"
+color="orange"
+linkHref="/resources/tutorials/zk-proofs-with-noir/"
+description="Building private decentralized applications (dApps) on Rootstock is key to ensuring user confidentiality and security. Zero-Knowledge Proofs (ZK proofs) and Noir form a powerful combination, blending advanced cryptography with a developer-friendly language to create privacy-focused solutions."
 />
 <FilterItem
 value="beginner, advanced"
@@ -97,14 +116,6 @@ description="In this guide, we will use the Remix IDE to write, compile, deploy,
 />
 <FilterItem
 value="beginner, advanced"
-title="Add Rootstock to Metamask Programmatically"
-subtitle="metamask"
-color="orange"
-linkHref="/resources/tutorials/rootstock-metamask/"
-description="Learn how to add and initiate a network switch on Metamask from a website."
-/>
-<FilterItem
-value="beginner, advanced"
 title="dApp Automation with Cucumber and Playwright"
 subtitle="dapp-automation"
 color="orange"
@@ -143,5 +154,21 @@ color="orange"
 linkHref="/resources/tutorials/hyperlane-bridge/"
 description="Hyperlane is the first universal and permissionless interoperability layer built for the modular blockchain stack. Learn how to run Hyperlane on Rootstock blockchain."
 />
+<FilterItem
+value="beginner, advanced"
+title="Integrating x402 Payments with Rootstock"
+subtitle="payments"
+color="orange"
+linkHref="/resources/tutorials/integrate-x402/"
+description="Build a decentralized pay-per-use API on Rootstock using the x402 protocol standards. This guide covers implementing a Sovereign Mode Node.js server that verifies on-chain tRBTC payments directly"
+/>
+<FilterItem
+value="beginner, advanced, explorer"
+title="Rootstock Explorer tutorials"
+subtitle="explorer"
+color="orange"
+linkHref="/dev-tools/explorers/rootstock-explorer/"
+description="Use the Rootstock Explorer to look up blocks, transactions, addresses, and tokens. These tutorials cover the main features."
+/>
 </Filter>
-````
+```

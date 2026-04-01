@@ -7,6 +7,11 @@ tags: [resources, tokenbridge, blockchain, bridges, tokens, ethereum, rootstock,
 
 Here, you can find a list of mainnet, testnet addresses, and ABIs used by the Token Bridge.
 
+:::warning[Token Bridge deprecation]
+
+The Token Bridge will no longer support moving assets between Ethereum and Rootstock. For other options, see [cross-chain bridges](/dev-tools/cross-chain-bridges/).
+
+:::
 
 ## Token Addresses
     - USDT: 0xEf213441a85DF4d7acBdAe0Cf78004E1e486BB96

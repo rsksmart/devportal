@@ -20,7 +20,7 @@ Some example dApps that can be developed using Hyperlane bridge:
 
 The Hyperlane CLI is the official command-line tool for deploying Hyperlane contracts to new chains. It also includes utilities for interacting with deployed contracts and registries.
 
-Both Rootstock testnet and mainnet are integrated in the CLI via the [Hyperlane registry](https://github.com/hyperlane-xyz/hyperlane-registry).
+Both Rootstock testnet and mainnet are integrated in the CLI via the [Hyperlane registry](https://github.com/hyperlane-xyz/hyperlane-registry/tree/main/chains).
 
 To get started, install the hyperlane cli using [npm](https://www.npmjs.com/package/@hyperlane-xyz/cli).
 
@@ -227,8 +227,8 @@ Under $HOME/.hyperlane/chains you will find a new folder named with your custom 
 
 Here is the Rootstock metadata and addresses.yml:
 
-- [Rootstock testnet metadata](https://github.com/hyperlane-xyz/hyperlane-registry/tree/main/chains/rootstocktestnet)
-- [Rootstock mainnet metadata](https://github.com/hyperlane-xyz/hyperlane-registry/tree/main/chains/rootstock)
+- [Rootstock testnet metadata](https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/rootstocktestnet/metadata.yaml)
+- [Rootstock mainnet metadata](https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/rootstockmainnet/metadata.yaml)
 
 We have successfully deployed the Hyperlane contracts on Rootstock testnet. The next step is to run Hyperlane relayer and validator nodes so that the message could be sent from source chain to destination chain.
 
@@ -239,7 +239,7 @@ Validators provide the security for messages sent from your chain to remote chai
 - Build and run the [validator](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/README.md#running-locally) using the steps listed in the README.md.
 - Use the reference script below to build and run the validator for Rootstock.
 - Add rootstock contract addresses and metadata in `./config/testnet4_config.json` file located in your filesystem inside the Rust project.
-- [Example config.json file](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/config/testnet_config.json)
+- [Example config.json](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/main/config/testnet_config.json)
 
 
 To run a validator node, enter the following commands:
@@ -250,7 +250,7 @@ CONFIG_FILES=./config/testnet4_config.json
 ./target/release/validator --validator.key 0x... --db ./hyperlane_db --originChainName rootstock --reorgPeriod 2 --checkpointSyncer.type localStorage --checkpointSyncer.path ./checkpointSyncer
 ```
 
-View full validator configurations in [Run a Validator](https://docs.hyperlane.xyz/docs/guides/deploy-hyperlane-local-agents#3-run-a-validator)
+View full validator configurations in [Run a Validator](https://docs.hyperlane.xyz/docs/guides/chains/deploy-hyperlane-with-local-agents#3-run-a-validator).
 
 ## Running a Relayer node
 
@@ -260,7 +260,7 @@ Relayers deliver interchain messages sent between the local and remote chains. L
 - Build and run the [relayer](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/README.md)
 - Use the reference script below to build and run the relayer for Rootstock.
 - Add rootstock contract addresses and metadata in `./config/testnet4_config.json` file located in your filesystem inside the Rust project.
-- [Example config.json file](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/config/testnet_config.json)
+- [Example config.json](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/main/config/testnet_config.json)
 
 
 To run a relayer node, enter the following commands:
@@ -269,7 +269,7 @@ To run a relayer node, enter the following commands:
 CONFIG_FILES=./config/testnet4_config.json ./target/release/relayer --db ./hperlane_db --relayChains rootstock,bsctestnet --defaultSigner.key 0x... --allowLocalCheckpointSyncers true --checkpointSyncer.type localStorage --checkpointSyncer.path ./hyperlaneSyncer --gasPaymentEnforcement '[{"type": "none", "matchingList": []}, {"type": "minimum", "payment": 0}]'
 ```
 
-View the full [relayer configurations](https://docs.hyperlane.xyz/docs/guides/deploy-hyperlane-local-agents#4-run-a-relayer)
+View the full [relayer configurations](https://docs.hyperlane.xyz/docs/guides/chains/deploy-hyperlane-with-local-agents#4-run-a-relayer)
 
 ## Sending a message 
 
@@ -287,15 +287,14 @@ See more details [here](https://docs.hyperlane.xyz/docs/your-first-message) abou
 
 Until now we have a Hyperlane mailbox and core contracts deployed on Rootstock, it’s time to set up token bridging between Rootstock chain and other Hyperlane chains.
 
-See the [full guide](https://docs.hyperlane.xyz/docs/guides/deploy-warp-route) for how to do a wrap route setup.
+See the [full guide](https://docs.hyperlane.xyz/docs/guides/warp-routes/evm-cosmos-warp-route-guide#step-2-deploy-the-warp-route) for how to do a wrap route setup.
 
 ## Useful Resources
 
 - [How Hyperlane Works](https://docs.hyperlane.xyz/docs/protocol/protocol-overview)
 - [Hyperlane Explorer](https://explorer.hyperlane.xyz/)
-- [Deployed Addresses](https://docs.hyperlane.xyz/docs/reference/contract-addresses)
 - [Hyperlane Github Repos](https://github.com/hyperlane-xyz)
-- [Hyperlane Cli](https://docs.hyperlane.xyz/docs/reference/cli)
+- [Hyperlane Cli](https://docs.hyperlane.xyz/docs/reference/developer-tools/cli#hyperlane-cli)
 - [Hyperlane Registries](https://docs.hyperlane.xyz/docs/reference/registries)
 - [Hyperlane Validators](https://docs.hyperlane.xyz/docs/operate/validators/run-validators)
 - [Hyperlane Relayers](https://docs.hyperlane.xyz/docs/operate/relayer/run-relayer)

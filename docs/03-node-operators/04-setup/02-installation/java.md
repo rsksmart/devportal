@@ -55,7 +55,6 @@ mv ~/Downloads/rskj-core-7.0.0-LOVELL-all.jar SHA256SUMS.asc /Users/{user}/rskj-
 
 ### Run the Node
 
-````mdx-code-block
 <Tabs>
   <TabItem value="1" label="Linux, Mac OSX" default>
     ```shell
@@ -68,7 +67,6 @@ mv ~/Downloads/rskj-core-7.0.0-LOVELL-all.jar SHA256SUMS.asc /Users/{user}/rskj-
     ```
   </TabItem>
 </Tabs>
-````
 
 :::tip[Tip]
 
@@ -79,7 +77,6 @@ Replace `<PATH-TO-THE-RSKJ-JAR>` with the actual path to your JAR file. For exam
 
 Instead of the default synchronization, you can use import sync to import a pre-synchronized database from a trusted origin, which is significantly faster.
 
-````mdx-code-block
 <Tabs>
   <TabItem value="3" label="Linux, Mac OSX" default>
     ```shell
@@ -92,13 +89,11 @@ Instead of the default synchronization, you can use import sync to import a pre-
     ```
   </TabItem>
 </Tabs>
-````
 
 ### Resolving memory issues
 
 **Memory Issues?** If you encounter memory errors and meet the [minimum hardware requirements](/node-operators/setup/requirements/), consider using `-Xmx4G` flag to allocate more memory as shown below:
 
-````mdx-code-block
 <Tabs>
   <TabItem value="5" label="Linux, Mac OSX" default>
     ```shell
@@ -111,7 +106,6 @@ Instead of the default synchronization, you can use import sync to import a pre-
     ```
   </TabItem>
 </Tabs>
-````
 
 :::tip[Tip]
 
@@ -127,7 +121,6 @@ After starting the node, if there's no output, this means it's running correctly
 
 1. To confirm, open a new console tab (it is important you do not close this tab or interrupt the process) and test the node's RPC server. A sample cURL request:
 
-````mdx-code-block
 <Tabs>
   <TabItem value="7" label="Linux, Mac OSX" default>
     ```shell
@@ -140,7 +133,6 @@ After starting the node, if there's no output, this means it's running correctly
     ```
   </TabItem>
 </Tabs>
-````
 
 Output:
 
@@ -150,7 +142,6 @@ Output:
 
 2. To check the block number:
 
-````mdx-code-block
 <Tabs>
   <TabItem value="9" label="Linux, Mac OSX" default>
      ```shell
@@ -163,7 +154,6 @@ Output:
     ```
   </TabItem>
 </Tabs>
-````
 
 Output:
 ```jsx

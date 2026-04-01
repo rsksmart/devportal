@@ -1,4 +1,8 @@
 User-agent: *
 Disallow:
 
+# LLM-friendly content (llmstxt.org). Index and full export for agents and AI tools.
+# LLM-index: https://dev.rootstock.io/llms.txt
+# LLM-full: https://dev.rootstock.io/llms-full.txt
+
 Sitemap: https://dev.rootstock.io/sitemap.xml

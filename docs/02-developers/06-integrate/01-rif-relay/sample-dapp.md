@@ -20,7 +20,7 @@ Refer to the [Rootstock Node Installation Guide](/node-operators/setup/installat
 
 ### Step 2: Add network to Metamask
 
-To interact with the Rootstock network, you need to add it to Metamask. Since we're using the node on `--regtest mode`, follow the Metatmask guide on [How to add a custom network RPC](https://support.metamask.io/hc/en-us/articles/360043227612-How-to-add-a-custom-network-RPC) and add the Rootstock RegTest  Network to Metamask with the following data:
+To interact with the Rootstock network, you need to add it to Metamask. Since we're using the node on `--regtest mode`, follow the Metatmask guide on [How to add a custom network RPC](https://support.metamask.io/configure/networks/how-to-add-a-custom-network-rpc/) and add the Rootstock RegTest  Network to Metamask with the following data:
 
 ```text
 - Network name: RSK regtest

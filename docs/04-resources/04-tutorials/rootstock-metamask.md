@@ -36,7 +36,7 @@ To follow along in this tutorial, you will need the following;
 
 In this section, we will do the following;
 
-- Clone the [initial state of the repo](https://github.com/rsksmart/demo-code-snippets/tree/switch-metamask-to-rsk-init-state/switch-network-to-rsk)
+- Clone the [initial state of the repo](https://github.com/rsksmart/demo-code-snippets/tree/master/switch-network-to-rsk)
 - [List configuration files](#list-configuration-files)
 - [Configure networks](#configure-networks)
 - [Configure index.js](#configure-indexjs)
@@ -45,7 +45,7 @@ In this section, we will do the following;
 
 ### Clone the initial state of the repository
 
-To get started, clone the [demo-code-snippets](https://github.com/rsksmart/demo-code-snippets) repository and navigate to the [switch-network-to-rsk](https://github.com/rsksmart/demo-code-snippets/tree/switch-metamask-to-rsk-init-state/switch-network-to-rsk) directory.
+To get started, clone the [demo-code-snippets](https://github.com/rsksmart/demo-code-snippets) repository and navigate to the [switch-network-to-rsk](https://github.com/rsksmart/demo-code-snippets/tree/master/switch-network-to-rsk) directory.
 
 ### List Configuration Files
 

@@ -299,10 +299,10 @@ Transaction hash: 0xe77899b28a43345fae8006ee5ee86210fedc890076cc934302f36b7db7d9
 Waiting for transaction confirmation...
 Transaction confirmed in block 6406912
 
-Tokens sent successfully! View on LayerZero Scan: https://layerzeroscan.com/tx/0xe77899b28a43345fae8006ee5ee86210fedc890076cc934302f36b7db7d99345
+Tokens sent successfully! View on [LayerZero Scan](https://testnet.layerzeroscan.com/tx/0xe77899b28a43345fae8006ee5ee86210fedc890076cc934302f36b7db7d99345)
 ```
 
-Once the contract is executed, it returns the link to [view on Layerzero scan](https://layerzeroscan.com/tx/0xe77899b28a43345fae8006ee5ee86210fedc890076cc934302f36b7db7d99345), there you can find the transaction details. Note: Transactions on mainnet might take longer times because of the dedicated resources)
+Once the contract is executed, it returns the link to [view on Layerzero scan](https://testnet.layerzeroscan.com/tx/0xe77899b28a43345fae8006ee5ee86210fedc890076cc934302f36b7db7d99345), there you can find the transaction details. Note: Transactions on mainnet might take longer times because of the dedicated resources)
 
 To monitor your cross-chain transactions:
 

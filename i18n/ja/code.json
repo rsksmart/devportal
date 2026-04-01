@@ -239,6 +239,36 @@
   "theme.DocItem.Header.shareLabel": {
     "message": "共有"
   },
+  "theme.DocItem.Markdown.copying": {
+    "message": "コピー中…"
+  },
+  "theme.DocItem.Markdown.copied": {
+    "message": "コピーしました！"
+  },
+  "theme.DocItem.Markdown.copyPage": {
+    "message": "ページをコピー"
+  },
+  "theme.DocItem.Markdown.copyPageDesc": {
+    "message": "LLM用にMarkdownとしてページをコピー"
+  },
+  "theme.DocItem.Markdown.viewAsMarkdown": {
+    "message": "Markdownで表示"
+  },
+  "theme.DocItem.Markdown.viewAsMarkdownDesc": {
+    "message": "このページをプレーンテキストで表示"
+  },
+  "theme.DocItem.Markdown.llmsTxtIndex": {
+    "message": "LLMインデックス (llms.txt)"
+  },
+  "theme.DocItem.Markdown.llmsTxtIndexDesc": {
+    "message": "この言語のLLMインデックスを開く"
+  },
+  "theme.DocItem.Markdown.llmsTxtFull": {
+    "message": "LLM完全版 (llms-full.txt)"
+  },
+  "theme.DocItem.Markdown.llmsTxtFullDesc": {
+    "message": "この言語の完全なLLMエクスポートを開く"
+  },
   "theme.blog.sorting": {
     "message": "フィルタ"
   },

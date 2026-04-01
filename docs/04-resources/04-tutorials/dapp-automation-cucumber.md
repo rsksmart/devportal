@@ -42,7 +42,7 @@ secretWordsOrPrivateKey=test test test test test test test test test test test
 testpassword=Tester@1234
 ```
 
-> To export a private key on Metamask, see [How to export an account private key](https://support.metamask.io/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key#:~:text=Click%20the%20three%20vertical%20dots,to%20display%20your%20private%20key.).
+> To export a private key on Metamask, see [How to export an account private key](https://support.metamask.io/configure/accounts/how-to-export-an-accounts-private-key/).
 > - Please note that this is sensitive information, even if it is stored locally in the .env file. If shared anyhow, you could potentially lose all your funds. Ensure the provided wallet is for testing purposes only. 
 > - Metamask version can be provided either in the .env file or in the `src/hooks/fixtures.js` file as follows:
 
