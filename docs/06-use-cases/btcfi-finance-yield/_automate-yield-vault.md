@@ -108,6 +108,6 @@ Automation sits at the top of the stack, leveraging the RVM for logic and Bitcoi
 
 Automating your vault is only the beginning. You can now integrate more complex logic:
 
-* [Integrating AI Agents for Intelligent Rebalancing](./build-ai-agents)
-* [Securing Your Vault with Multi-Sig Governance](./govern-communities)
-* [Using the Rootstock Explorer to Verify Strategy Executions](./navigate-the-chain)
+* [Automation and AI on Rootstock](/use-cases/ai-automation/)
+* [RIF economy and governance](/use-cases/integrate-rif-economy/)
+* [Rootstock Explorer](/dev-tools/explorers/rootstock/)

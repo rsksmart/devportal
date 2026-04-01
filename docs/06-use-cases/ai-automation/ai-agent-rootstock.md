@@ -1,6 +1,6 @@
 ---
 sidebar_label: Conversational AI Agents
-sidebar_position: 200
+sidebar_position: 205
 title: Conversational AI Agent with Blockchain Actions on Rootstock
 tags: [rsk, rootstock, ai agents, ai]
 description: "This tutorial demonstrates how to build a lightweight dApp that connects a conversational AI agent to the Rootstock testnet, allowing users to perform DeFi actions like checking token balances and sending tRBTC simply by chatting."

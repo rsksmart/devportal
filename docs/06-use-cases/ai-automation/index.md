@@ -1,12 +1,12 @@
 ---
 sidebar_position: 1
-title: Build AI Agents
+title: Automation and AI
 sidebar_label: Overview
-description: "Exploring the convergence of Artificial Intelligence and Bitcoin-native smart contracts."
+description: "Connect automation and AI tooling to Rootstock for read and write flows with clear guardrails."
 tags: [ai, mcp, agents, autonomous-finance, emerging-tech, fundamentals]
 ---
 
-Focus on giving AI agents capabilities to read the chain and power to execute transactions. By combining Rootstock's security with the Model Context Protocol (MCP), we enable autonomous agents to manage Bitcoin assets intelligently.
+This section is for builders who want **read access** to chain data and **limited writes** from automated workflows. MCP servers, SDK modules, and explicit permission scopes support that pattern. They do not replace a threat model: you still decide what an agent may spend, to which addresses, and for how long.
 
 <!-- On Rootstock, AI is more than a chatbot; it is a participant in the economy.
 
@@ -19,7 +19,7 @@ Rootstock acts as the **Standardized Interface** between Large Language Models a
 * **Connectivity:** Through the **Model Context Protocol (MCP)**, LLMs can query Rootstock balances and contracts in real-time.
 
 ## Technical Architecture
-When building AI solutions, you utilize [MCP Server](/use-cases/ai-emerging/mcp-rootstock/) to provide context to the LLM and **Smart Contract Permissions** to execute actions via the RVM. Refer to [The Rootstock MCP Server](/concepts/fundamentals/stack).
+When you connect an LLM to Rootstock, you usually pair an [MCP-based server](/use-cases/ai-automation/mcp-rootstock/) for context with explicit transaction permissions for anything that moves value. See the [stack overview](/concepts/fundamentals/stack/) for where MCP fits.
 
 <details>
 <summary>Click to expand full architecture stack</summary>
@@ -68,33 +68,37 @@ When building AI solutions, you utilize [MCP Server](/use-cases/ai-emerging/mcp-
 </div>
 </details> -->
 
-## Core Pillars
+## Core pillars
 
-| Pillar | Description | Primary Tool/Protocol |
+| Pillar | Description | Primary tool |
 | :--- | :--- | :--- |
-| **Connectivity** | Standardized servers that allow LLMs like Claude or GPT to "read" Rootstock data. | [Rootstock MCP Server](https://github.com/rsksmart/rootstock-mcp-server) |
-| **SDK** | Equip your AI agents with the eyes to read the chain and the hands to execute Bitcoin-native transactions. | [Rootstock SDK]( [https://github.com/rsksmart/sdk-base](https://github.com/rsksmart/sdk-base)) |
-| **Autonomy** | Granting AI agents the power to execute transactions within user-defined guardrails. | [Spend Permissions](/use-cases/ai-emerging/autonomous-agents-btcfi) |
-| **Intelligence** | Using on-chain data to train or fine-tune models specifically for the Bitcoin ecosystem. | [The Graph / Indexers](/dev-tools/data/thegraph/) |
+| **Connectivity** | Expose chain reads and scoped actions to MCP clients. | [Rootstock MCP Server](https://github.com/rsksmart/rootstock-mcp-server) |
+| **SDK** | Read state and submit guarded transactions from your stack. | [Rootstock SDK base](https://github.com/rsksmart/sdk-base) |
+| **Indexing** | Historical and aggregate data for dashboards and automation. | [The Graph on Rootstock](/dev-tools/data/thegraph/) |
 
-## Key Concepts
+## Key concepts
 
 ### 1. Model Context Protocol (MCP)
-MCP is an open standard that connects AI models to external data sources. The **Rootstock MCP Server** allows an AI to fetch account balances, read contract states, and even estimate gas fees, providing the real-time context needed for autonomous action.
 
-### 2. Spend Permissions & Session Keys
-To protect users, AI agents should never have full access to a private key. Instead, they use "Spend Permissions"—limited authorizations that allow an agent to move a specific amount of tokens between specific vaults for a limited time.
+MCP connects clients to tools and data sources. The **Rootstock MCP Server** can read balances, contract state, and gas estimates so responses reflect current chain data. Writes still need user-approved keys or policies you control.
 
-### 3. Autonomous Portfolio Management
-By combining market data context with spend permissions, agents can autonomously move BTC into yield-bearing vaults (BTCFi) when certain APY thresholds are met, rebalancing a user's portfolio 24/7 without manual intervention.
+### 2. Spend permissions and session keys
 
-## Top Tools for Developers
-* **Rootstock MCP Server SDK:** The essential tool for giving AI models access to the Rootstock network.
-* **LangChain / Eliza:** Frameworks for building agentic workflows that can be connected to the RVM.
-* **Safe SDK:** Used to manage the complex permissioning required for autonomous agent accounts.
+Automation should not hold an unrestricted private key. Use spend permissions or session scopes that limit amount, destination, and duration for any transfer a model can request.
 
-## Implementation Guides
-Explore the recipes below to start building the future of AI on Bitcoin.
+### 3. Rules-based actions
+
+With clear rules and permissions, a workflow can react to on-chain signals (for example vault or price conditions). You own the policy, monitoring, and rollback path. No guide here guarantees returns or strategy performance.
+
+## Tools
+
+* **Rootstock MCP Server:** Exposes chain reads and safe actions to MCP clients.
+* **LangChain / Eliza:** Orchestration frameworks you can point at Rootstock RPC and wallets.
+* **Safe SDK:** Multi-sig and policy-based execution for high-value automation.
+
+## Implementation guides
+
+Published guides in this section are listed below.
 
 import DocCardList from '@theme/DocCardList';
 

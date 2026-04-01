@@ -3,99 +3,142 @@ sidebar_position: 1
 title: Use Cases
 sidebar_label: Overview
 tags: [rsk, rootstock, use cases, solutions, guides, tutorials, institutions, users, developers]
-description: "Real-world implementation guides for building on Rootstock."
+description: "Implementation guides for building and integrating on Rootstock."
 ---
 
-Welcome to the Rootstock **Use Cases Library**. This hub is designed to help you move from an idea to a live implementation. Each use case provides a conceptual overview, technical prerequisites, and a step-by-step integration guide. It solves the dev dilemma: What can I build for my users?. 
+The **Use Cases** hub groups tasks you can ship: onboarding, bridging, automation, governance, and payments. Each published guide states prerequisites, flags risks where they matter, and walks through concrete steps.
 
-## Explore by Use Cases
+Vault and BTCFi material here is for **people who build integrations**. **Who can use a live vault product** (including institutional programs) depends on the program, jurisdiction, and phase. Treat contract calls in tutorials as **testnet or integration exercises** unless the guide explicitly targets mainnet.
 
-Use the interactive filters below to find the specific guide for your development goal.
+## Explore by use case
+
+Use the filters to narrow by goal. Links go only to **published** guides or section overviews.
 
 <Filter
 values={[
   {label: 'Generate Yield', value: 'btcfi'},
   {label: 'Onboard Users', value: 'ux'},
-  {label: 'Build AI Agents', value: 'agents'},
+  {label: 'Automation and AI', value: 'agents'},
   {label: 'Bridge Assets', value: 'interop'},
-  {label: 'Automate Payments', value: 'payments'}
+  {label: 'RIF economy and governance', value: 'rif'},
+  {label: 'Payments', value: 'payments'}
 ]}>
 
 <FilterItem
   value="btcfi"
-  title="Deploying Your First Organic Yield Vault"
+  title="Generate Yield overview"
   subtitle="BTCFi"
   color="orange"
-  linkHref="/use-cases/btcfi-finance/yield-vaults"
-  linkTitle="View Guide"
-  description="Build an ERC-4626 compliant yield engine using the Rootstock Vaults SDK."
-/>
-
-<FilterItem
-  value="btcfi"
-  title="Building Automated Yield Vaults"
-  subtitle="BTCFi"
-  color="orange"
-  linkHref="/use-cases/btcfi-finance/automate-yield-vault"
-  linkTitle="View Guide"
-  description="Learn to build and manage automated yield strategies on Bitcoin using the Rootstock Vaults SDK."
+  linkHref="/use-cases/btcfi-finance-yield/"
+  linkTitle="View section"
+  description="How Rootstock fits BTCFi, rBTC, and vault-related work. Vaults SDK tutorials are not published in this section yet."
 />
 
 <FilterItem
   value="interop"
-  title="Building Multi-Chain dApps with Super Bridge"
+  title="Bridge Assets"
   subtitle="Interoperability"
   color="cyan"
-  linkHref="/use-cases/interoperability/integrate-super-bridge-sdk"
-  linkTitle="View Guide"
-  description="Enable secure movement of assets between Bitcoin and Rootstock using the Super Bridge SDK."
+  linkHref="/use-cases/interoperability/"
+  linkTitle="View section"
+  description="Peg-in, peg-out, liquidity routes, and cross-chain messaging. End-user peg flows live under Resources. Atlas Bridge SDK tutorial is not on the portal yet."
 />
 
 <FilterItem
   value="interop"
-  title="Build Omnichain Fungible Token (OFTs) with Layerzero"
+  title="Build Omnichain Fungible Tokens (OFTs) with LayerZero"
   subtitle="Interoperability"
   color="cyan"
-  linkHref="/use-cases/interoperability/rootstock-layerzero"
-  linkTitle="View Guide"
-  description="Implement cross-chain token transfers using OFT between Rootstock and Ethereum Sepolia via LayerZero."
+  linkHref="/use-cases/interoperability/rootstock-layerzero/"
+  linkTitle="View guide"
+  description="Cross-chain token transfers between Rootstock and Ethereum Sepolia using LayerZero OFT."
 />
 
 <FilterItem
   value="ux"
-  title="Smart Wallet Onboarding with Para SDK"
+  title="Getting Started with Para"
   subtitle="Onboarding"
   color="green"
-  linkHref="/use-cases/onboarding-ux/smart-wallet-para-sdk"
-  linkTitle="View Guide"
-  description="Remove seed phrases and gas hurdles using Para SDK's MPC-based social login and Account Abstraction on Rootstock."
+  linkHref="/use-cases/onboarding-ux/para/"
+  linkTitle="View guide"
+  description="Para SDK provider setup, Rootstock testnet config, and modal options for social login and external wallets."
+/>
+
+<FilterItem
+  value="ux"
+  title="Internet-Free DeFi with USSD"
+  subtitle="Onboarding"
+  color="green"
+  linkHref="/use-cases/onboarding-ux/ussd-rootstock-defi/"
+  linkTitle="View guide"
+  description="Relay server and smart contract pattern for feature-phone users on GSM networks without mobile data."
 />
 
 <FilterItem
   value="agents"
-  title="Conversational AI Agent with Blockchain Actions"
-  subtitle="AI Agents"
+  title="Conversational App with On-Chain Actions"
+  subtitle="Automation and AI"
   color="pink"
-  linkHref="/use-cases/ai-agents/ai-agent-rootstock"
-  linkTitle="View Guide"
-  description="Build a dApp that connects a conversational AI agent to Rootstock testnet for DeFi actions via chat."
+  linkHref="/use-cases/ai-automation/ai-agent-rootstock/"
+  linkTitle="View guide"
+  description="Connect a chat-style UI to Rootstock testnet for balance checks and simple transactions."
 />
+
+<!-- <FilterItem
+  value="agents"
+  title="Integrate SDK Logic into Agent Workflows"
+  subtitle="Automation and AI"
+  color="pink"
+  linkHref="/use-cases/ai-automation/integrate-rootstock-sdk/"
+  linkTitle="View guide"
+  description="Wire Rootstock SDK layers so automation can read chain state and submit guarded transactions."
+/> -->
 
 <FilterItem
   value="agents"
-  title="Integrating SDK Logic into Agentic Workflows"
-  subtitle="AI Agents"
+  title="Model Context Protocol (MCP) on Rootstock"
+  subtitle="Automation and AI"
   color="pink"
-  linkHref="/use-cases/ai-agents/integrate-rootstock-sdk"
-  linkTitle="View Guide"
-  description="Equip your AI agents with the eyes to read the chain and the hands to execute Bitcoin-native transactions."
+  linkHref="/use-cases/ai-automation/mcp-rootstock/"
+  linkTitle="View guide"
+  description="How MCP connects AI clients to Rootstock reads and scoped actions."
+/>
+
+<FilterItem
+  value="rif"
+  title="DAO Voting with the Collective SDK"
+  subtitle="RIF economy and governance"
+  color="green"
+  linkHref="/use-cases/integrate-rif-economy/build-dao-voting-collective-sdk/"
+  linkTitle="View guide"
+  description="Stake RIF, read proposals, simulate writes, and vote using the Collective SDK."
+/>
+
+<FilterItem
+  value="payments"
+  title="Automate Payments"
+  subtitle="Payments"
+  color="orange"
+  linkHref="/use-cases/payments-assets/"
+  linkTitle="View section"
+  description="Tokens, rBTC settlement, and programmable payment patterns. Dedicated use-case guides for mocks and agentic commerce are in draft."
+/>
+
+<FilterItem
+  value="payments"
+  title="Integrating x402 Payments with Rootstock"
+  subtitle="Tutorials"
+  color="orange"
+  linkHref="/resources/tutorials/integrate-x402/"
+  linkTitle="View tutorial"
+  description="HTTP 402 style pay-per-use APIs on Rootstock (Resources tutorial)."
 />
 </Filter>
 
-## Expand the Library
+## Expand the library
 
-The Rootstock ecosystem is evolving with faster block times and parallel execution. If you have built a unique solution or want to see a specific guide added to this hub, we want to hear from you.
+If you want a new guide in this hub, use the links below.
 
-* [**Request a Use Case Guide**](https://github.com/rsksmart/devportal/issues)
-* [**Submit an Idea on the Hacktivator Marketplace**](https://hacktivator-marketplace.rootstock.io/)
-* [**Join the Discord Community**](https://discord.gg/rootstock)
+* [**Request a use case guide**](https://github.com/rsksmart/devportal/issues)
+* [**Hacktivator Marketplace**](https://hacktivator-marketplace.rootstock.io/)
+* [**Rootstock Discord**](https://discord.gg/rootstock)

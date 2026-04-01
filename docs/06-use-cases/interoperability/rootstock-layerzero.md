@@ -6,9 +6,9 @@ tags: [rsk, rootstock, layerzero, omnichain, cross chain, oft, defi on bitcoin, 
 description: "This tutorial demonstrates implementing cross-chain token transfers using OFT (Omnichain Fungible Token) between Rootstock Testnet and Ethereum Sepolia Testnet via LayerZero's OFT V2 protocol."
 ---
 
-Rootstock now integrates with LayerZero, a cross-chain messaging protocol. This integration enables the seamless movement of Bitcoin-backed assets from Rootstock to other blockchains, allowing developers to build [omnichain applications (OApps)](https://docs.layerzero.network/v2/developers/evm/oapp/overview) that interact across multiple chains as if they were one. Users can now move their Bitcoin across different DeFi ecosystems without complicated bridges, high fees, or slow transactions.
+Rootstock supports [LayerZero](https://docs.layerzero.network/), a cross-chain messaging protocol. You can build [omnichain applications (OApps)](https://docs.layerzero.network/v2/developers/evm/oapp/overview) that send messages and tokens between Rootstock and other EVM chains. Fees, latency, and trust assumptions still depend on each route and endpoint configuration.
 
-This tutorial demonstrates how to implement cross-chain token transfers using OFT (Omnichain Fungible Token) between Rootstock Testnet and Ethereum Sepolia Testnet via LayerZero's OFT V2 protocol.
+This tutorial shows how to implement OFT (Omnichain Fungible Token) transfers between Rootstock Testnet and Ethereum Sepolia using LayerZero OFT V2.
 
 ## What you'll learn
 - Set up Hardhat for cross-chain deployments
@@ -29,26 +29,24 @@ To complete this tutorial, you'll need:
 
 > Important: Ensure you have sufficient test tokens on both networks.
 
-## Benefits of building cross-chain dApps on Rootstock 
+## Why teams use LayerZero on Rootstock
 
-- Simplified Cross-Chain Asset Transfers: Eliminate the need for cumbersome and often risky bridging mechanisms. rBTC and RIF can flow freely between Rootstock and other supported chains.
-- Enhanced Capital Efficiency: Lower transaction costs and faster confirmation times, driven by LayerZero and Stargate, optimize capital utilization and improve the user experience.
-- Expanded DeFi Accessibility: Unlock Bitcoin's liquidity and security for use across a wide range of DeFi protocols on major chains like Ethereum, Base, Arbitrum, and beyond.
-- Unified Liquidity: Aggregate liquidity across multiple chains, creating deeper pools and improving trading efficiency.
-- Atomic Transactions: Facilitate secure and reliable cross-chain transactions with LayerZero's guaranteed message delivery.
-- Programmable Cross-Chain Logic: Construct complex, multi-chain workflows and applications with LayerZero's flexible messaging framework.
+- **Asset movement:** You route value through LayerZero’s OFT and related patterns instead of ad hoc bridges. Each path still has its own fees, latency, and trust model.
+- **Cost and speed:** Rootstock and the destination chain set gas and confirmation time. Compare endpoints before you commit user flows to a route.
+- **Reach:** You can surface Rootstock assets on other EVM chains where your users already hold wallets and liquidity.
+- **Liquidity:** Omnichain designs let you reference liquidity on multiple chains. Depth and slippage depend on how you split pools and incentives.
+- **Delivery semantics:** LayerZero documents message delivery and executor behavior. Read the path config for your deployment. Do not assume “guaranteed” delivery without checking DVNs and limits.
+- **Composable flows:** OApps can chain sends, receives, and off-chain steps. Complexity and failure modes grow with each hop, so design retries and monitoring explicitly.
 
-## Use cases for building cross-chain dApps on Rootstock
+## Use cases for cross-chain dApps on Rootstock
 
-The integration with Layerzero opens up a vast array of innovative use cases, extending beyond simple asset transfers. 
+LayerZero messaging supports more than simple transfers. Typical patterns include:
 
-Developers can now build sophisticated applications that leverage Bitcoin's security and Rootstock's EVM compatibility across multiple chains:
-
-- Decentralized Exchanges (DEXs) with Cross-Chain Liquidity Pools: Build DEXs that aggregate liquidity from various chains, enabling seamless trading of rBTC and other assets.
-- Cross-Chain Lending and Borrowing Protocols: Allow users to lend and borrow rBTC and other assets across different chains, maximizing capital utilization.
-- Omnichain Governance Systems: Enable decentralized governance models that span multiple chains, allowing token holders to participate in decision-making regardless of their preferred blockchain.
-- Cross-Chain Yield Aggregators: Develop yield optimization platforms that automatically allocate rBTC and other assets to the most profitable opportunities across multiple chains.
-- NFT Marketplaces with Cross-Chain Interoperability: Create NFT marketplaces that allow users to buy, sell, and transfer NFTs across different chains, leveraging Bitcoin's security.
+- **Cross-chain DEX liquidity:** Pool liquidity across chains. Trading rBTC and other assets still follows each pool’s rules and bridge path.
+- **Cross-chain lending and borrowing:** Users supply or borrow on one chain while collateral or settlement lives on another. You must align liquidation, oracles, and bridge timing with your risk model.
+- **Omnichain governance:** Votes and execution can span chains when you wire proposals to LayerZero messages. Latency and quorum rules need explicit handling per chain.
+- **Cross-chain yield:** Vaults can rebalance across chains. Yield and principal risk depend on each venue’s contracts and the bridge path you use.
+- **NFTs across chains:** Marketplaces can list or settle on different chains than mint. Bitcoin finality on Rootstock does not remove smart contract or bridge risk on the other side.
 
 ## Getting started
 
@@ -165,7 +163,7 @@ https://repo.sourcify.dev/contracts/full_match/11155111/0xa3725eAC59776F075dC5bb
     
 ## Configuring the Omni-chain App (OApp)
     
-LayerZero configures and validates communication between smart contracts across different blockchains. This is done by defining a connection pathway that sets the required send and receive libraries, message verification settings ([DVNs and Executors](https://docs.layerzero.network/v2/developers/evm/developer-overview)), and execution parameters (like gas and value limits). These configurations ensure that the contracts can securely and reliably send and receive messages, allowing for seamless cross-chain interoperability.
+LayerZero configures how contracts on different chains talk to each other. You define a pathway with send and receive libraries, verification settings ([DVNs and Executors](https://docs.layerzero.network/v2/developers/evm/developer-overview)), and execution parameters such as gas and value limits. Misconfiguration can strand messages or expose funds, so treat pathway review as part of deployment, not an afterthought.
 
 
 ### Initialize your OApp configurations by running
@@ -222,7 +220,7 @@ info:    There are 10 transactions required to configure the OApp
 ...
 ``` 
 
-Once completed, the contracts are now connected, this allows the transfer of tokens from one chain to another.
+When wiring finishes, the contracts can move tokens between chains according to the OFT logic and limits you set.
 
 ### Functions
 
@@ -302,7 +300,7 @@ Transaction confirmed in block 6406912
 Tokens sent successfully! View on [LayerZero Scan](https://testnet.layerzeroscan.com/tx/0xe77899b28a43345fae8006ee5ee86210fedc890076cc934302f36b7db7d99345)
 ```
 
-Once the contract is executed, it returns the link to [view on Layerzero scan](https://testnet.layerzeroscan.com/tx/0xe77899b28a43345fae8006ee5ee86210fedc890076cc934302f36b7db7d99345), there you can find the transaction details. Note: Transactions on mainnet might take longer times because of the dedicated resources)
+After execution, the CLI prints a link such as [LayerZero Scan](https://layerzeroscan.com/tx/0xe77899b28a43345fae8006ee5ee86210fedc890076cc934302f36b7db7d99345) for that transaction. Mainnet runs can take longer than testnet because of gas markets, executor load, and chain conditions.
 
 To monitor your cross-chain transactions:
 

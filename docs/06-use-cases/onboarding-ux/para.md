@@ -1,32 +1,38 @@
 ---
-sidebar_position: 320
+sidebar_position: 3
 sidebar_label: Para
 title: Getting Started with Para
-description: 'Para is a modern wallet infrastructure for fintech and crypto applications. It provides a comprehensive wallet and authentication suite for crypto developers and apps.'
-tags: [rsk, para, developers, developer tools, wallet, rootstock, testing, dApps, smart contracts]
+slug: /use-cases/onboarding-ux/para
+description: Para is a modern wallet infrastructure for fintech and crypto applications. It provides a comprehensive wallet and authentication suite for crypto developers and apps on Rootstock.
+tags: [onboarding, para, wallet, rootstock, account-abstraction, dapps]
 ---
 
-[Para Wallet](https://www.getpara.com/) is a modern, non-custodial wallet infrastructure for fintech and crypto, offering a comprehensive wallet and authentication suite for web3 apps. It enables secure access and transactions without seed phrases or browser extensions, while keeping users fully in control of their assets.
+[Para Wallet](https://www.getpara.com/) is a modern, non-custodial wallet infrastructure for fintech and crypto. It offers a wallet and authentication suite for web3 apps. Users can access and transact without seed phrases or browser extensions while keeping control of their assets.
 
-This walkthrough explores how to use Para in Rootstock using Para SDK.
+This walkthrough shows how to use Para on Rootstock with the Para SDK.
 
 ## Prerequisites
-- Before integrating Para with Rootstock, ensure you have:
+
+Before integrating Para with Rootstock, ensure you have:
+
 - A Para API key from the [Para Developer Portal](https://developer.getpara.com/)
-- Rootstock RPC API Account
-- Node.js 18+ and Next.js development environment
+- A Rootstock RPC API account
+- Node.js 18+ and a Next.js development environment
 - Basic familiarity with React and TypeScript
 
 ## Installation
-```node
+
+```bash
 npm install @getpara/react-sdk
-``` 
-> **Important Note:** Please make sure to be at least @getpara/react-sdk version 2.2.0
+```
+
+**Note:** Use `@getpara/react-sdk` version **2.2.0** or newer.
 
 ## Setup Para Provider
-Create a ParaSDKProvider that communicates with Rootstock.
 
-```node
+Create a `ParaSDKProvider` that communicates with Rootstock. Import `ParaSDKProvider` and related types from `@getpara/react-sdk` per the [Para React SDK docs](https://docs.getpara.com/).
+
+```tsx
 import { rootstockTestnet } from "viem/chains";
 
 const ROOTSTOCK_TESTNET = {
@@ -130,15 +136,16 @@ export function ParaProvider({ children }: { children: React.ReactNode }) {
 }
 ```
 
-## Key Features
-This integration provides a way to use Para Wallet with Rootstock adding custom tokens.
-​
-## Complete Example
-See the full working example with [Para and Rootstock](https://github.com/rsksmart/examples-hub).
+## Key features
 
+This integration lets you use Para Wallet on Rootstock and surface custom tokens in the modal.
+
+## Complete example
+
+See the working sample in the [Para and Rootstock examples hub](https://github.com/rsksmart/examples-hub).
 
 ## Resources
-- [Para Docs](https://docs.getpara.com/v2/introduction/welcome)
-- [Rootstock Walkthrough](https://docs.getpara.com/v2/walkthroughs/rootstock)
-- [Para Developer Portal](https://developer.getpara.com/)
 
+- [Para Docs](https://docs.getpara.com/v2/introduction/welcome)
+- [Rootstock walkthrough (Para)](https://docs.getpara.com/v2/walkthroughs/rootstock)
+- [Para Developer Portal](https://developer.getpara.com/)

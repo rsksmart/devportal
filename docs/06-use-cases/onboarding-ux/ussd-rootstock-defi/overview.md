@@ -6,7 +6,7 @@ tags: [rsk, rootstock, developers, defi, ussd]
 description: Learn how to build internet-free decentralized financial services on Rootstock using USSD, enabling P2P transfers and micro-loans on feature phones without internet access.
 ---
 
-This guide introduces a novel integration architecture that connects **legacy GSM feature phones** to the Rootstock(RSK) blockchain network via USSD (Unstructured Supplementary Service Data). The system enables decentralized financial services, including P2P transfers and micro-loans, for users without smartphone or internet access.
+This guide introduces an integration architecture that connects **legacy GSM feature phones** to the Rootstock blockchain network via USSD (Unstructured Supplementary Service Data). The system enables decentralized financial services, including P2P transfers and micro-loans, for users without smartphone or internet access.
 
 :::note
 USSD is a real-time communication protocol built into every GSM network globally. It works on any mobile phone, requires no internet, no app installation, and no data plan, making it one of the most accessible communication channels in the world.
@@ -16,7 +16,7 @@ USSD is a real-time communication protocol built into every GSM network globally
 
 Web3 services today are largely gated behind smartphones and reliable internet connectivity. Across large parts of Africa, South Asia, and Latin America, hundreds of millions of people still rely on basic feature phones for communication. This creates a clear contradiction because blockchain offers financial inclusion, yet its interfaces exclude the very populations who need it most.
 
-This architecture removes that barrier. By routing USSD sessions through an off-chain relay server that communicates with the Roostock network, anyone with a basic GSM phone and a SIM card can access the following capabilities:
+This architecture removes that barrier. By routing USSD sessions through an off-chain relay server that communicates with the Rootstock network, anyone with a basic GSM phone and a SIM card can access the following capabilities:
 
 - Check their on-chain token balance.
 - Send peer-to-peer transfers to other wallet addresses.
@@ -41,4 +41,4 @@ A feature phone initiates a USSD session by dialing a shortcode (for example, `*
 A Node.js Express server receives the USSD payload from a telecom gateway such as Africa's Talking, interprets the user's menu choices, and constructs the appropriate blockchain transaction or read call.
 
 3. **On-Chain Layer**  
-A Solidity smart contract deployed on the Roostock Testnet manages balances, P2P transfers, and micro-loan logic. The Off-Chain Relay Layer acts as a funded relayer wallet that signs and broadcasts transactions on behalf of the user.
+A Solidity smart contract deployed on the Rootstock Testnet manages balances, P2P transfers, and micro-loan logic. The off-chain relay layer acts as a funded relayer wallet that signs and broadcasts transactions on behalf of the user.

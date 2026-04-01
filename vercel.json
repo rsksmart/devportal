@@ -653,21 +653,25 @@
     {"source": "/resources/guides/eas/", "destination": "/dev-tools/attestations/eas/"},
     {"source": "/resources/guides/eas/overview/", "destination": "/dev-tools/attestations/eas/overview/"},
     {"source": "/resources/guides/eas/user-guide/", "destination": "/dev-tools/attestations/eas/user-guide/"},
+    {"source": "/developers/quickstart/para", "destination": "/use-cases/onboarding-ux/para/"},
+    {"source": "/developers/quickstart/para/", "destination": "/use-cases/onboarding-ux/para/"},
+    {"source": "/use-cases/onboarding-ux/smart-wallet-para-sdk/", "destination": "/use-cases/onboarding-ux/para/"},
     {"source": "/developers/use-cases/rootstock-layerzero/", "destination": "/developers/use-cases/defi/rootstock-layerzero/"},
     {"source": "/developers/use-cases/ai-agent-rootstock/", "destination": "/developers/use-cases/ai/ai-agent-rootstock/"},
-    {"source": "/dev-tools/node-rpc/blast-api/", "destination": "  /dev-tools/node-rpc/"},
-    {"source": "/dev-tools/no-code/cryptodo/", "destination": "/dev-tools/no-code/"},
-    {"source": "/dev-tools/oracles/umbrellanetwork/", "destination": "/dev-tools/oracles/"}
-  ],
-  "headers": [
-    {
-      "source": "/(.*)\\.md",
-      "headers": [
-        {"key": "Content-Type", "value": "text/plain; charset=utf-8"},
-        {"key": "X-Content-Type-Options", "value": "nosniff"},
-        {"key": "X-Robots-Tag", "value": "googlebot: noindex, nofollow, bingbot: noindex, nofollow"},
-        {"key": "Cache-Control", "value": "public, max-age=3600, must-revalidate"}
-      ]
-    }
+    {"source": "/developers/use-cases/ai/ai-agent-rootstock/", "destination": "/use-cases/ai-automation/ai-agent-rootstock/"},
+    {"source": "/developers/use-cases/ai/mcp-rootstock/", "destination": "/use-cases/ai-automation/mcp-rootstock/"},
+    {"source": "/developers/use-cases/defi/rootstock-layerzero/", "destination": "/use-cases/interoperability/rootstock-layerzero/"},
+    {"source": "/developers/use-cases/ussd-rootstock-defi/:path*", "destination": "/use-cases/onboarding-ux/ussd-rootstock-defi/:path*"},
+    {"source": "/developers/use-cases/", "destination": "/use-cases/"},
+    {"source": "/use-cases/ai-emerging/ai-agent-rootstock/", "destination": "/use-cases/ai-automation/ai-agent-rootstock/"},
+    {"source": "/use-cases/ai-emerging/mcp-rootstock/", "destination": "/use-cases/ai-automation/mcp-rootstock/"},
+    {"source": "/use-cases/ai-agents/:path*", "destination": "/use-cases/ai-automation/:path*"},
+    {"source": "/use-cases/btcfi-finance/:path*", "destination": "/use-cases/btcfi-finance-yield/:path*"},
+    {"source": "/use-cases/interoperability/integrate-super-bridge-sdk/", "destination": "/use-cases/interoperability/"},
+    {"source": "/use-cases/interoperability/integrate-atlas-bridge-sdk/", "destination": "/use-cases/interoperability/"},
+    {"source": "/use-cases/btcfi-finance-yield/yield-vaults/", "destination": "/use-cases/btcfi-finance-yield/"},
+    {"source": "/use-cases/btcfi-finance-yield/automate-yield-vault/", "destination": "/use-cases/btcfi-finance-yield/"},
+    {"source": "/use-cases/payments-assets/agentic-commerce/", "destination": "/use-cases/payments-assets/"}
+  
   ]
 }

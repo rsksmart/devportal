@@ -1,12 +1,12 @@
 ---
 sidebar_position: 3
-title: "Build AI Agents: Integrating SDK Logic into Agentic Workflows"
-sidebar_label: Integrating SDK Logic
-description: "Equip your AI agents with the eyes to read the chain and the hands to execute Bitcoin-native transactions."
+title: "Integrate Rootstock SDK logic into automated workflows"
+sidebar_label: Integrating SDK logic
+description: "Use Rootstock SDK layers so automation can read chain state and submit guarded transactions."
 tags: [ai, agents, mcp, sdk, btcfi, automation, x402]
 ---
 
-Autonomous agents require access to real-time blockchain data to make informed decisions. The Rootstock SDK provides a modular framework to connect Large Language Models (LLMs) to the Rootstock Virtual Machine (RVM). This tutorial explains how to use the SDK layers to give an agent the ability to read chain state and execute transactions.
+Automation that reacts to markets or user chat needs fresh chain data and a safe path to submit transactions. The Rootstock SDK splits that work into a Web3 core layer, shared helpers, and domain modules. This tutorial explains how to wire those pieces so a workflow can read balances and vault state, then execute writes only inside the limits you configure.
 
 ## Architecture Overview
 The Rootstock SDK uses a three-layer pattern to separate blockchain logic from business logic:
@@ -69,11 +69,8 @@ const status = await core.checkConfirmations(txHash);
 
 Ensure to implement spend permissions if the agent acts autonomously. These permissions limit the amount of rBTC an agent can move without a new manual signature.
 
-## Next Steps
-Now that your agent can interact with the SDK, you should explore specific logic modules:
+## Next steps
 
-* Implementing Governance Voting with Collective SDK
-
-* Managing Automated Vaults with Vaults SDK
-
-* Automating Payments using the x402 Standard
+* [DAO voting with the Collective SDK](/use-cases/integrate-rif-economy/build-dao-voting-collective-sdk/)
+* [Generate Yield overview](/use-cases/btcfi-finance-yield/) (vault SDK tutorials on the portal are not published yet)
+* [Integrating x402 payments with Rootstock](/resources/tutorials/integrate-x402/)

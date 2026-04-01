@@ -10,7 +10,7 @@ Yield vaults turn rBTC into a productive asset by automating interest-bearing st
 
 ## Vaults SDK Architecture
 
-The Vaults SDK sits on top of the Web3 Core Layer to manage financial logic. It uses a modular pattern to separate chain communication from vault-specific functions[cite: 908].
+The Vaults SDK sits on top of the Web3 Core Layer to manage financial logic. It uses a modular pattern to separate chain communication from vault-specific functions.
 
 1.  **Web3 Core Layer:** It provides the connection to the Rootstock network.
 2.  **Vaults Module:** It contains functions to read vault data and execute deposits.
@@ -129,6 +129,6 @@ Yield generation is the primary outcome of the BTCFi ecosystem. The following di
 
 After you deploy your first vault interaction, you should improve your application:
 
-* [Automating Portfolio Rebalancing with AI Agents](./build-ai-agents)
-* [Implementing Multi-Sig Treasury Management](./govern-communities)
-* [Monitoring Vault Events on the Rootstock Explorer](./navigate-the-chain)
+* [Automation and AI on Rootstock](/use-cases/ai-automation/)
+* [RIF economy and governance](/use-cases/integrate-rif-economy/)
+* [Rootstock Explorer](/dev-tools/explorers/rootstock/)

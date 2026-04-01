@@ -2,10 +2,12 @@
 sidebar_position: 2
 title: Generate Yield
 sidebar_label: Overview
-description: "Understanding the role of Rootstock in the Bitcoin Finance (BTCFi) ecosystem."
+description: "BTCFi on Rootstock: rBTC, vaults, and stable units of account for builders."
 ---
 
-BTCFi refers to the ecosystem of decentralized financial services such as lending, borrowing, and yield generation, built specifically for Bitcoin holders.
+BTCFi on Rootstock means lending, borrowing, yield, and liquidity apps that use rBTC and other assets on an EVM-compatible chain anchored to Bitcoin.
+
+This section is for **builders** who implement strategies and vault integrations. **Who may use a live vault product** depends on the program, jurisdiction, and whether access is institutional, retail, or partner-only.
 
 <!-- On Rootstock, users can earn yield, provide liquidity, and borrow against their Bitcoin without ever giving up the security of the Bitcoin network.
 
@@ -71,33 +73,38 @@ When building BTCFi dApps, you are interacting with the **Rootstock Virtual Mach
 </div>
 </details> -->
 
-## Core Pillars
+## Core pillars
 
-| Pillar | Description | Primary Tool/Protocol |
+| Pillar | Description | Where to go |
 | :--- | :--- | :--- |
-| **Automate Yield Vaults** | Learn to build and manage automated yield strategies on Bitcoin using the Rootstock Vaults SDK. | [Rootstock Vaults SDK](/use-cases/btcfi-finance/automate-yield-vaults/) |
-| **Deploy Your First Organic Yield Vaul** | Build an ERC-4626 compliant yield engine using the Rootstock Vaults SDK. | [Rootstock Vaults SDK](/use-cases/btcfi-finance/deploy-yield-vaults/) |
-| **Stablecoins** | Bitcoin-backed stablecoins (USDRIF) that provide a hedge against volatility. | [RIF On Chain](https://rifonchain.com/) |
+| **Vaults SDK** | ERC-4626 style flows and automation patterns for yield products. | Step-by-step Dev Portal guides are not published yet. Use your protocol docs and the Vaults SDK package until those pages ship. |
+| **Stable units of account** | USD-pegged assets such as USDRIF for pricing and debt. | [RIF On Chain](https://rifonchain.com/) |
+| **Liquidity and credit** | Lending and borrowing markets on top of rBTC and stable assets. | Protocol documentation for the venues you integrate (for example [Tropykus](https://app.tropykus.com/), [Money on Chain](https://moneyonchain.com/)) |
 
 
 ## Key Concepts
 
-### 1. rBTC (Programmable Bitcoin)
-rBTC is the native token of Rootstock. It is not a"wrapped token in the traditional sense; it is a 1:1 representation of BTC. When you [Peg-In](/resources/guides/powpeg-app/pegin/), your BTC is locked on the Bitcoin chain, and rBTC is minted for you on Rootstock. It is used to pay for gas and as the primary collateral for all DeFi activities.
+### 1. rBTC (Bitcoin-pegged gas and collateral)
 
-### 2. USDRIF & Stablecoins
-Because Bitcoin is volatile, BTCFi requires stable units of account. **USDRIF** is a decentralized stablecoin pegged to the US Dollar and over-collateralized by Bitcoin-backed assets. This allows users to lock in value or borrow "cash" against their BTC holdings.
+rBTC is the native asset on Rootstock. It is pegged 1:1 with BTC through the PowPeg. When you [peg in](/resources/guides/powpeg-app/pegin/), BTC is locked on Bitcoin and rBTC is available on Rootstock. You pay gas in rBTC and use it as collateral in DeFi protocols.
 
-### 3. Liquid Staking (st-rBTC)
-**Liquid Staking Tokens (LSTs)** have become the foundation of BTCFi. By staking rBTC, you receive a receipt token (like `st-rBTC`). This token earns protocol rewards automatically while remaining "liquid," meaning you can still use it as collateral in other dApps.
+### 2. USDRIF and stablecoins
 
-## Top Tools for Developers
-* **Vaults SDK:** The primary toolkit for building yield products.
-* **MoneyOnChain:** The protocol for Bitcoin-backed stablecoins and decentralized leverage.
-* **Tropykus:** Leading protocols for non-custodial lending and borrowing.
+Bitcoin is volatile, so many apps need a stable unit of account. **USDRIF** is a decentralized, USD-pegged asset with Bitcoin-backed collateral. Read the issuer and pool documentation before you integrate it in production.
 
-## Implementation Guides
-Explore the recipes below to start building your financial application on Rootstock.
+### 3. Liquid staking (LSTs)
+
+Some protocols issue receipt tokens when you stake rBTC (for example `st-rBTC`). Behavior, rewards, and risk depend on each protocol. Read the contract and liquidation rules before you treat an LST as collateral elsewhere.
+
+## Tools developers use
+
+* **Vaults SDK:** Yield and vault UX on Rootstock.
+* **Money on Chain:** Bitcoin-backed stablecoins and leverage products.
+* **Tropykus:** Lending and borrowing markets.
+
+## Implementation guides
+
+When you publish a guide in this folder (remove the leading `_` from the filename), it appears as a card below. Until then this section stays empty.
 
 import DocCardList from '@theme/DocCardList';
 

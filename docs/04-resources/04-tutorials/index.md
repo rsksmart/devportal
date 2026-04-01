@@ -76,11 +76,11 @@ description="This guide demonstrates implementing cross-chain token transfers us
 />
 <FilterItem
 value="ai"
-title="Build a Conversational AI Agent with Blockchain Actions on Rootstock"
+title="Conversational app with on-chain actions on Rootstock"
 subtitle="ai agents"
 color="orange"
-linkHref="/use-cases/ai-emerging/ai-agent-rootstock"
-description="This guide demonstrates how to build a lightweight dApp that connects a conversational AI agent to the Rootstock testnet, allowing users to perform DeFi actions like checking token balances and sending tRBTC simply by chatting."
+linkHref="/use-cases/ai-automation/ai-agent-rootstock/"
+description="Build a small dApp that connects a chat UI to Rootstock testnet so users can check balances and send tRBTC from conversation."
 />
 <FilterItem
 value="advanced"

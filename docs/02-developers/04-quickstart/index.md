@@ -17,7 +17,8 @@ values={[
 {label: 'Reown', value: 'reown'},
 {label: 'On-chain data', value: 'data'},
 {label: 'RPC API', value: 'rpc'},
-{label: 'Port to Rootstock', value: 'port-dapps'}
+{label: 'Port to Rootstock', value: 'port-dapps'},
+{label: 'Governance', value: 'governance'}
 ]}>
 <FilterItem
     value="beginner, Advanced"
@@ -135,6 +136,15 @@ values={[
     linkHref="/developers/quickstart/rootstock-etherspot/"
     linkTitle="Use the Kit"
     description="Account Abstraction Starter Kit using Etherspot."
+  />
+<FilterItem
+    value="governance, wagmi, advanced"
+    title="Rootstock Collective DAO Starter Kit"
+    subtitle="quickstart"
+    color="orange"
+    linkHref="/developers/quickstart/collective/"
+    linkTitle="Use the Kit"
+    description="Sample dApp for staking RIF, listing proposals, and voting with the Collective SDK. Full clone and env steps are in the GitHub README; the portal links to the repo and the deep-dive use case guide."
   />
 <FilterItem
     value="advanced"

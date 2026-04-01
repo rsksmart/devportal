@@ -3,7 +3,7 @@ sidebar_label: Project Setup & Smart Contract Deployment
 sidebar_position: 3
 title: Project Setup & Smart Contract Deployment
 tags: [rsk, rootstock, developers, solidity, hardhat]
-description: Scaffold the USSD-Rootstock project using Hardhat 3, write the InclusiveDeFi smart contract, configure the Roostock Testnet network, and deploy using Hardhat Ignition.
+description: Scaffold the USSD-Rootstock project using Hardhat 3, write the InclusiveDeFi smart contract, configure the Rootstock Testnet network, and deploy using Hardhat Ignition.
 ---
 
 This page covers everything from scaffolding the project to deploying the `InclusiveDeFi` contract on Rootstock Testnet. By the end of this page, you will have a live contract address on Chain ID 31 that the relay server can interact with.

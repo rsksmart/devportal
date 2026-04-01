@@ -1,12 +1,12 @@
 ---
 sidebar_position: 1
-title: Integrate RIF Tools
+title: RIF economy and governance
 sidebar_label: Overview
-description: "Blueprints for institutional-grade custody and decentralized coordination on Rootstock."
+description: "Multi-sig custody, Collective governance, and RIF utility patterns on Rootstock."
 tags: [institutional, governance, dao, safe, multi-sig, fundamentals]
 ---
 
-For institutions and decentralized organizations, security and transparency are not optional—they are foundational. **Institutional & Governance** on Rootstock provides the tools to move beyond single-key risks toward programmable, multi-signature custody and verifiable on-chain governance.
+This section is for teams that need **shared control of funds** and **on-chain governance** on Rootstock. Common building blocks are multi-sig wallets (for example Safe), the Collective SDK for RIF staking and votes, and indexers for operations and reporting. Compliance and policy are still your responsibility; the chain gives you transparent history, not legal sign-off.
 
 <!-- On Rootstock, institutional-grade security is backed by the planet's most secure settlement layer: Bitcoin.
 
@@ -69,31 +69,36 @@ When building institutional solutions, you utilize Vaults Whitelabel infrastruct
 </div>
 </details> -->
 
-## Core Pillars
+## Core pillars
 
-| Pillar | Description | Primary Tool/Protocol |
+| Pillar | Description | Primary tool |
 | :--- | :--- | :--- |
-| **On Chain Voting** | A guide to staking RIF, minting stRIF, and voting on ecosystem proposals. | [Collective SDK]([https://github.com/rsksmart/collective-sdk](https://github.com/rsksmart/collective-sdk)) |
-| **On-Chain Governance** | Managing ecosystem upgrades and treasuries through decentralized voting. | [RootstockCollective](https://app.rootstockcollective.xyz/) |
+| **On-chain voting** | Stake RIF, mint stRIF, and vote on ecosystem proposals. | [Collective SDK](https://github.com/rsksmart/collective-sdk) · [Quick start](/developers/quickstart/collective/) · [Use case guide](/use-cases/integrate-rif-economy/build-dao-voting-collective-sdk/) |
+| **Governance apps** | Proposals, treasury moves, and delegation through RootstockCollective. | [RootstockCollective](https://app.rootstockcollective.xyz/) |
 
-## Key Concepts
+## Key concepts
 
-### 1. Multi-Signature Security (Safe)
-A multi-sig wallet requires multiple independent signatures to authorize a transaction. This is the industry standard for institutional custody, ensuring that assets cannot be moved without collective institutional approval.
+### 1. Multi-signature custody (Safe)
 
-### 2. stRIF & Delegated Voting
-In the RootstockCollective, governance power is tied to **stRIF** (Staked RIF). Participants can vote directly on ecosystem proposals or delegate their power to expert "Shepherds" to ensure informed decision-making.
+A multi-sig wallet needs a threshold of signatures before a transaction executes. That pattern limits single-key theft and matches how many teams run treasuries. You still define who holds keys and how rotation works.
 
-### 3. Proof of Auditability
-Unlike traditional finance, blockchain allows for real-time auditability. Institutions can use indexers and explorer APIs to prove solvency and track every movement of funds without relying on 3rd-party audits.
+### 2. stRIF and delegated voting
 
-## Top Tools for Developers
-* **Safe SDK:** The primary library for building and managing multi-sig infrastructure.
-* **Tally:** Standard governance dashboards for tracking and casting DAO votes.
-* **Rootstock Subgraphs:** Custom indexing services for extracting compliance-ready data.
+In RootstockCollective, voting power is tied to **stRIF** (staked RIF). Holders vote on proposals or delegate to others. Rules and epochs are defined by the contracts; read them before you promise users a specific voting timeline.
 
-## Implementation Guides
-Explore the recipes below to start building secure governance and custody systems on Rootstock.
+### 3. On-chain history and your reporting
+
+Explorers and indexers give you a public history of transfers and events. That helps operations and internal controls. It does not replace accounting, tax, or regulatory workflows your jurisdiction requires.
+
+## Tools
+
+* **Safe SDK:** Multi-sig and policy-based custody.
+* **Tally:** Governance dashboards for proposals and votes (where supported).
+* **Subgraphs / indexers:** Query events for dashboards and internal reporting.
+
+## Implementation guides
+
+Published guides in this section are listed below.
 
 import DocCardList from '@theme/DocCardList';
 
