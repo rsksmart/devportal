@@ -6,7 +6,7 @@ description: "Multi-sig custody, Collective governance, and RIF utility patterns
 tags: [institutional, governance, dao, safe, multi-sig, fundamentals]
 ---
 
-This section is for teams that need **shared control of funds** and **on-chain governance** on Rootstock. Common building blocks are multi-sig wallets (for example Safe), the Collective SDK for RIF staking and votes, and indexers for operations and reporting. Compliance and policy are still your responsibility; the chain gives you transparent history, not legal sign-off.
+This section is for teams that need **shared control of funds** and **on-chain governance** on Rootstock. Common building blocks are multi-sig wallets (for example Safe), the Collective SDK for RIF staking and votes, and indexers for operations and reporting. Compliance and policy are still your responsibility, the chain gives you transparent history, not legal sign-off.
 
 <!-- On Rootstock, institutional-grade security is backed by the planet's most secure settlement layer: Bitcoin.
 
@@ -73,6 +73,7 @@ When building institutional solutions, you utilize Vaults Whitelabel infrastruct
 
 | Pillar | Description | Primary tool |
 | :--- | :--- | :--- |
+| **RIF Token** | The RIF (Rootstock Infrastructure Framework) token makes it easier, faster and more rewarding to build on Bitcoin. It also enables governance on RootstockCollective DAO. | [Token](/concepts/rif-suite/token) · [Stake RIF](https://app.rootstockcollective.xyz/) |
 | **On-chain voting** | Stake RIF, mint stRIF, and vote on ecosystem proposals. | [Collective SDK](https://github.com/rsksmart/collective-sdk) · [Quick start](/developers/quickstart/collective/) · [Use case guide](/use-cases/integrate-rif-economy/build-dao-voting-collective-sdk/) |
 | **Governance apps** | Proposals, treasury moves, and delegation through RootstockCollective. | [RootstockCollective](https://app.rootstockcollective.xyz/) |
 
