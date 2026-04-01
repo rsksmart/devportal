@@ -6,9 +6,17 @@ tags: [rsk, rootstock, use cases, solutions, guides, tutorials, institutions, us
 description: "Implementation guides for building and integrating on Rootstock."
 ---
 
-The **Use Cases** hub groups tasks you can ship: onboarding, bridging, automation, governance, and payments. Each published guide states prerequisites, flags risks where they matter, and walks through concrete steps.
+The **Use Cases** hub groups tasks you can ship: onboarding, bridging, automation, governance, and payments. Each published guide states prerequisites, flags risks where they matter, and walks through concrete steps for integration on Rootstock.
 
-Vault and BTCFi material here is for **people who build integrations**. **Who can use a live vault product** (including institutional programs) depends on the program, jurisdiction, and phase. Treat contract calls in tutorials as **testnet or integration exercises** unless the guide explicitly targets mainnet.
+:::note[Expand the library]
+
+If you want a new guide in this hub, use the links below.
+
+* Request a use case article using the Request Article on the right navigation options on this page.
+* [**Submit on Idea on the Hacktivator Marketplace**](https://hacktivator-marketplace.rootstock.io/)
+* [**Rootstock Discord**](https://discord.gg/rootstock)
+
+:::
 
 ## Explore by use case
 
@@ -134,11 +142,3 @@ values={[
   description="HTTP 402 style pay-per-use APIs on Rootstock (Resources tutorial)."
 />
 </Filter>
-
-## Expand the library
-
-If you want a new guide in this hub, use the links below.
-
-* [**Request a use case guide**](https://github.com/rsksmart/devportal/issues)
-* [**Hacktivator Marketplace**](https://hacktivator-marketplace.rootstock.io/)
-* [**Rootstock Discord**](https://discord.gg/rootstock)

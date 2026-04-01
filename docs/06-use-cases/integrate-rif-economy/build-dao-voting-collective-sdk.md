@@ -50,11 +50,11 @@ Those are ideal "build next" paths for teams that need custom business logic.
 
 ## Getting Started
 
-**Canonical setup:** Clone, environment variables, `npm install`, and `npm run dev` live in the [rootstock-collective-starter-kit README](https://github.com/rsksmart/rootstock-collective-starter-kit) (Setup). The Dev Portal does not copy those steps here. When the kit changes, update the README once and both the [quick start](/developers/quickstart/collective/) and this guide stay accurate.
+- **Setup:** Clone, environment variables, `npm install`, and `npm run dev` live in the [rootstock-collective-starter-kit README](https://github.com/rsksmart/rootstock-collective-starter-kit) (Setup). The Dev Portal does not copy those steps here. When the kit changes, update the README once and both the [quick start](/developers/quickstart/collective/) and this guide stay accurate.
 
-**Fast path:** Use [Collective DAO starter kit (quick start)](/developers/quickstart/collective/) for links to the repo and a minimal run checklist.
+- **Quick start:** Use [Collective DAO starter kit](/developers/quickstart/collective/) for links to the repo and a minimal run checklist.
 
-**Deep dive:** Continue with [About the SDK](#about-the-sdk) for how Collective SDK methods map to files in the kit, simulation, FAQs, and a production checklist.
+- **Deep dive:** Continue with [About the SDK](#about-the-sdk) for how Collective SDK methods map to files in the kit, simulation, FAQs, and a production checklist.
 
 ## About the SDK
 
@@ -101,8 +101,7 @@ const sdk = new CollectiveSDK({
 })
 ```
 
-Implementation notes:
-
+What it does:
 - File: `src/hooks/useCollective.ts`
 - Method: `new CollectiveSDK({ chainId, rpcUrl, contractAddresses })`
 - Guardrails: return `isReady: false` when wallet is disconnected or chain is not Rootstock.
@@ -130,8 +129,7 @@ const stakeTx = await sdk.staking.stakeRIF(walletClient, value, address)
 await stakeTx.wait()
 ```
 
-Implementation notes:
-
+What it does:
 - File: `src/components/dao/StakingCard.tsx`
 - Methods: `getStakingInfo`, `approveRIF`, `stakeRIF`, `unstakeRIF`
 - UX detail: stake progress timeline in component state.
@@ -146,7 +144,7 @@ The list view fetches proposals and renders proposal state plus votes.
 const result = await sdk.proposals.getProposals({ limit: 20 })
 ```
 
-Implementation notes:
+What it does:
 
 - File: `src/components/dao/ProposalList.tsx`
 - Method: `sdk.proposals.getProposals({ limit: 20 })`
@@ -164,13 +162,13 @@ const voteTx = await sdk.proposals.castVote(walletClient, proposalId, support)
 await voteTx.wait()
 ```
 
-Implementation notes:
+What it does:
 
 - File: `src/components/dao/VoteButton.tsx`
 - Method: `sdk.proposals.castVote(walletClient, proposalId, support)`
 - Enum: `VoteSupport.For | VoteSupport.Against | VoteSupport.Abstain`
 
-## Simulation Before Write Is Required
+## Simulation before Write is Required
 
 Write calls can fail for predictable reasons. The starter kit simulates every write and stops early on failure.
 
@@ -192,7 +190,7 @@ This pattern protects users from avoidable gas spend and gives clear feedback fo
 
 > Implement one additional flow, backing, rewards, or proposal creation.
 
-## Error Handling That Helps Developers
+## Error Handling for Builders
 
 The guide should teach error semantics, not only toast UI.
 
@@ -206,10 +204,9 @@ return `${current}Voting power is based on your stRIF at the proposal snapshot (
 
 This is important for governance UX. Users often assume staking now means voting now. Proposal snapshots can invalidate that expectation.
 
-## Production Checklist for Teams
+## Production Checklist for Builders
 
 Before publishing your own Collective-based dApp:
-
 - Confirm wallet chain updates trigger state refresh for balances and SDK flows.
 - Verify RIF and stRIF addresses per chain in `constants/contracts.ts`.
 - Keep simulation before all writes, including proposal creation if you add it.
@@ -218,7 +215,7 @@ Before publishing your own Collective-based dApp:
 - Test insufficient VP and allowance failures intentionally.
 - Test wallet reconnect and account switching.
 
-## Build-Next Use Cases from This Base
+## Extend the Use Cases from this Base
 
 This section ties directly to RIF utility strategy.
 
@@ -265,9 +262,9 @@ Business impact:
 
 - Expands from participation to DAO operations.
 
-## FAQ from Real Starter Kit Integration Pain Points
+## Frequently Asked Questions
 
-This FAQ is based on issues that surfaced while implementing and testing the starter kit.
+This FAQ is based on issues that may surface while implementing and testing the starter kit.
 
 ### Why does the app not react when I switch networks in MetaMask?
 
@@ -309,7 +306,11 @@ Reuse the existing `useCollective` hook. Add a proposal form component. Keep sim
 
 Use the **Environment** subsection under **Setup** in the [starter kit README](https://github.com/rsksmart/rootstock-collective-starter-kit#setup). Variable names and required vs optional keys are defined only there so they do not drift from this guide.
 
-> Fork the starter kit and open a PR with your custom use case. Install `@rsksmart/collective-sdk` and ship your first governance action on Rootstock.
+:::tip[Submit a Use Case]
+
+Fork the starter kit and open a PR with your custom use case. Install `@rsksmart/collective-sdk` and ship your first governance action on Rootstock.
+
+:::
 
 ## References
 
@@ -317,7 +318,6 @@ Use these links in the published article and sidebar.
 
 - [Collective SDK on npm](https://www.npmjs.com/package/@rsksmart/collective-sdk)
 - [Collective SDK source](https://github.com/rsksmart/collective-sdk)
-- [Rootstock Collective starter kit](https://github.com/rsksmart/rootstock-collective-starter-kit) (install and env)
+- [Rootstock Collective starter kit](https://github.com/rsksmart/rootstock-collective-starter-kit)
 - [Rootstock Developers Portal](https://dev.rootstock.io/)
-- [This guide on the Dev Portal](/use-cases/integrate-rif-economy/build-dao-voting-collective-sdk/)
 - [Rootstock Collective](https://rootstockcollective.xyz/)
