@@ -6,7 +6,7 @@ description: "Use the Rootstock Vaults SDK and viem to read vault state, approve
 tags: [btcfi, yield, vault, sdk, usdrif, dev-tutorial]
 ---
 
-The [Vaults SDK](https://github.com/rsksmart/vaults-sdk) is a TypeScript client for the **USDRIF yield vault** on Rootstock. The vault follows ERC-4626 style accounting: you deposit USDRIF, hold shares, and redeem or withdraw back to USDRIF. Refer to the [repository README](https://github.com/rsksmart/vaults-sdk) as the source of truth for installation steps, contract addresses, and the full API.
+The [Vaults SDK](https://github.com/rsksmart/vaults-sdk) is a TypeScript client for the **USDRIF yield vault** on Rootstock. You can deposit USDRIF, hold shares, and redeem or withdraw back to USDRIF using the Vault SDK. Refer to the [repository README](https://github.com/rsksmart/vaults-sdk) as the source of truth for installation steps, and contract addresses.
 
 ## What you are integrating
 
