@@ -1,7 +1,0 @@
-
-label: DeFi on Rootstock
-position: 300
-link:
-  type: generated-index
-  slug: /developers/use-cases/defi/
-  description: "Build and deploy DeFi dApps on Rootstock."

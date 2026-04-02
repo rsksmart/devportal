@@ -35,6 +35,6 @@ Esta sección permite a los desarrolladores iniciarse en la blockchain de Rootst
 | [Guías de integración](/developers/integrate/)                           | Profundice su conocimiento con guías detalladas y tutoriales informativos que cubren diversos aspectos del desarrollo de Rootstock.   |
 | [JSON-RPC](/developers/rpc-api/)                                         | Pruebe sus dApp en testnet antes de implementarlas en mainnet utilizando los proveedores de la API RPC en Rootstock.                  |
 | [Bibliotecas](/developers/libraries/)                                    | Acceda a herramientas y bibliotecas indispensables para agilizar su proceso de desarrollo.                                            |
-| [Casos de Uso](/developers/use-cases/)                                   | Explore las guías de casos de uso y tutoriales de la dApp de Rootstock para crear DeFi en Bitcoin, IA y soluciones de cadena cruzada. |
+| [Casos de uso](/use-cases/)                                   | Guías y tutoriales de casos de uso para DeFi, incorporación de usuarios, puentes y automatización en Rootstock. |
 
 
