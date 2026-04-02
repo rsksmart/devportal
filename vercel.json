@@ -669,7 +669,8 @@
     {"source": "/use-cases/btcfi-finance/:path*", "destination": "/use-cases/btcfi-finance-yield/:path*"},
     {"source": "/use-cases/interoperability/integrate-super-bridge-sdk/", "destination": "/use-cases/interoperability/"},
     {"source": "/use-cases/interoperability/integrate-atlas-bridge-sdk/", "destination": "/use-cases/interoperability/"},
-    {"source": "/use-cases/btcfi-finance-yield/yield-vaults/", "destination": "/use-cases/btcfi-finance-yield/"},
+    {"source": "/use-cases/btcfi-finance-yield/yield-vaults", "destination": "/use-cases/btcfi-finance-yield/yield-vaults-sdk/"},
+    {"source": "/use-cases/btcfi-finance-yield/yield-vaults/", "destination": "/use-cases/btcfi-finance-yield/yield-vaults-sdk/"},
     {"source": "/use-cases/btcfi-finance-yield/automate-yield-vault/", "destination": "/use-cases/btcfi-finance-yield/"},
     {"source": "/use-cases/payments-assets/agentic-commerce/", "destination": "/use-cases/payments-assets/"}
   

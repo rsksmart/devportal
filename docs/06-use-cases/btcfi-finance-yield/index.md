@@ -77,7 +77,7 @@ When building BTCFi dApps, you are interacting with the **Rootstock Virtual Mach
 
 | Pillar | Description | Where to go |
 | :--- | :--- | :--- |
-| **Vaults SDK** | ERC-4626 style flows and automation patterns for yield products. | Step-by-step Dev Portal guides are not published yet. Use your protocol docs and the Vaults SDK package until those pages ship. |
+| **Vaults SDK** | ERC-4626 style flows for the USDRIF vault on Rootstock. | [Integrate USDRIF Vault](/use-cases/btcfi-finance-yield/yield-vaults-sdk/). Install and API details stay in the [Vaults SDK README](https://github.com/rsksmart/vaults-sdk). |
 | **Stable units of account** | USD-pegged assets such as USDRIF for pricing and debt. | [RIF On Chain](https://rifonchain.com/) |
 | **Liquidity and credit** | Lending and borrowing markets on top of rBTC and stable assets. | Protocol documentation for the venues you integrate (for example [Tropykus](https://app.tropykus.com/), [Money on Chain](https://moneyonchain.com/)) |
 

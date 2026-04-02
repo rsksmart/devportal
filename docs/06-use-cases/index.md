@@ -34,12 +34,12 @@ values={[
 
 <FilterItem
   value="btcfi"
-  title="Generate Yield overview"
+  title="Generate Yield"
   subtitle="BTCFi"
   color="orange"
   linkHref="/use-cases/btcfi-finance-yield/"
   linkTitle="View section"
-  description="How Rootstock fits BTCFi, rBTC, and vault-related work. Vaults SDK tutorials are not published in this section yet."
+  description="How Rootstock fits BTCFi, rBTC, and vault-related work. See Generate Yield for the USDRIF Vaults SDK walkthrough."
 />
 
 <FilterItem

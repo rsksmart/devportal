@@ -72,5 +72,5 @@ Ensure to implement spend permissions if the agent acts autonomously. These perm
 ## Next steps
 
 * [DAO voting with the Collective SDK](/use-cases/integrate-rif-economy/build-dao-voting-collective-sdk/)
-* [Generate Yield overview](/use-cases/btcfi-finance-yield/) (vault SDK tutorials on the portal are not published yet)
+* [Generate Yield overview](/use-cases/btcfi-finance-yield/) (includes [USDRIF Vaults SDK walkthrough](/use-cases/btcfi-finance-yield/yield-vaults-sdk/))
 * [Integrating x402 payments with Rootstock](/resources/tutorials/integrate-x402/)
