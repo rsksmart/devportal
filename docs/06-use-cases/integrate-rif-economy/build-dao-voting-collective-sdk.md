@@ -192,7 +192,7 @@ This pattern protects users from avoidable gas spend and gives clear feedback fo
 
 ## Error Handling for Builders
 
-The guide should teach error semantics, not only toast UI.
+In your app, pair UI feedback with clear failure semantics, say what failed and why, not only a toast.
 
 In `src/lib/errors.ts`, insufficient voting power is handled with context:
 
