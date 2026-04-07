@@ -13,6 +13,7 @@
 
 import {createSidebars} from './src/_utils/utils.js';
 import petstoreApiSidebar from './docs/petstore/sidebar.ts';
+import rskjApiSidebar from './docs/rskj/sidebar.ts';
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 // @ts-ignore
@@ -20,6 +21,7 @@ const sidebars = createSidebars('./docs');
 
 // Override petstore sidebar with the OpenAPI-generated one
 sidebars['petstoreSidebar'] = petstoreApiSidebar;
+sidebars['rskjSidebar'] = rskjApiSidebar;
 
 export default sidebars;
 

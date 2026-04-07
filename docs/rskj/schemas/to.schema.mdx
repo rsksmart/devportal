@@ -1,0 +1,33 @@
+---
+id: to
+title: "To"
+description: "Destination address of the transaction. Null if it was a contract create."
+sidebar_label: "To"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: "string"
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"To"}
+>
+</Heading>
+
+
+
+Destination address of the transaction. Null if it was a contract create.
+
+<Schema
+  schema={{"title":"To","description":"Destination address of the transaction. Null if it was a contract create.","oneOf":[{"title":"address","type":"string","description":"EOA or Contract address","pattern":"^0x[a-fA-F\\d]{40}$"},{"title":"Null Value","type":"null","description":"Null"}]}}
+  schemaType={"response"}
+>
+  
+</Schema>
+            

@@ -1,0 +1,33 @@
+---
+id: peer-scoring
+title: "peer scoring"
+description: "Object defining peer scoring"
+sidebar_label: "peer scoring"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: {"successfulHandshakes":"string","failedHandshakes":"string","invalidNetworks":"string","repeatedMessages":"string","validBlocks":"string","validTransactions":"string","invalidBlocks":"string","invalidTransactions":"string","invalidMessages":"string","timeoutMessages":"string","unexpectedMessages":"string","invalidHeader":"string","score":"string","punishments":"string","goodReputation":true,"punishedUntil":"string","id":"string","type":"string"}
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"peer scoring"}
+>
+</Heading>
+
+
+
+Object defining peer scoring
+
+<Schema
+  schema={{"title":"peer scoring","type":"object","description":"Object defining peer scoring","properties":{"successfulHandshakes":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"failedHandshakes":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"invalidNetworks":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"repeatedMessages":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"validBlocks":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"validTransactions":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"invalidBlocks":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"invalidTransactions":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"invalidMessages":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"timeoutMessages":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"unexpectedMessages":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"invalidHeader":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"score":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"punishments":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"goodReputation":{"title":"goodReputation","type":"boolean"},"punishedUntil":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"id":{"title":"Node Id","type":"string","description":"Hex representing Node Id"},"type":{"title":"type","type":"string","description":"Either 'node' or 'address' depending on what the system is using to score the peer"}}}}
+  schemaType={"response"}
+>
+  
+</Schema>
+            

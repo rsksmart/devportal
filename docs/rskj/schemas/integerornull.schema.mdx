@@ -1,0 +1,33 @@
+---
+id: integerornull
+title: "integerOrNull"
+description: ""
+sidebar_label: "integerOrNull"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: "string"
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"integerOrNull"}
+>
+</Heading>
+
+
+
+
+
+<Schema
+  schema={{"title":"integerOrNull","oneOf":[{"title":"integer hex","type":"string","pattern":"^0x[a-fA-F0-9]+$","description":"Hex representation of the integer"},{"title":"Null Value","type":"null","description":"Null"}]}}
+  schemaType={"response"}
+>
+  
+</Schema>
+            

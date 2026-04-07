@@ -1,0 +1,33 @@
+---
+id: bloomfilter
+title: "bloomFilter"
+description: "A 2048 bit bloom filter from the logs of the transaction. Each log sets 3 bits though taking the low-order 11 bits of each of the first three pairs of bytes in a Keccak 256 hash of the log's byte series"
+sidebar_label: "bloomFilter"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: "string"
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"bloomFilter"}
+>
+</Heading>
+
+
+
+A 2048 bit bloom filter from the logs of the transaction. Each log sets 3 bits though taking the low-order 11 bits of each of the first three pairs of bytes in a Keccak 256 hash of the log's byte series
+
+<Schema
+  schema={{"title":"bloomFilter","type":"string","description":"A 2048 bit bloom filter from the logs of the transaction. Each log sets 3 bits though taking the low-order 11 bits of each of the first three pairs of bytes in a Keccak 256 hash of the log's byte series"}}
+  schemaType={"response"}
+>
+  
+</Schema>
+            

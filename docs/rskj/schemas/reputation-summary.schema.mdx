@@ -1,0 +1,33 @@
+---
+id: reputation-summary
+title: "reputation summary"
+description: "Object defining an aggregated reputation summary"
+sidebar_label: "reputation summary"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: {"count":"string","successfulHandshakes":"string","failedHandshakes":"string","invalidHeader":"string","invalidBlocks":"string","validTransactions":"string","invalidTransactions":"string","invalidNetworks":"string","invalidMessages":"string","repeatedMessages":"string","timeoutMessages":"string","unexpectedMessages":"string","peersTotalScore":"string","punishments":"string","goodReputation":true,"badReputationCount":"string"}
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"reputation summary"}
+>
+</Heading>
+
+
+
+Object defining an aggregated reputation summary
+
+<Schema
+  schema={{"title":"reputation summary","type":"object","description":"Object defining an aggregated reputation summary","properties":{"count":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"successfulHandshakes":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"failedHandshakes":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"invalidHeader":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"invalidBlocks":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"validTransactions":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"invalidTransactions":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"invalidNetworks":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"invalidMessages":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"repeatedMessages":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"timeoutMessages":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"unexpectedMessages":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"peersTotalScore":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"punishments":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"},"goodReputation":{"title":"goodReputation","type":"boolean"},"badReputationCount":{"title":"integer dec","type":"string","pattern":"^[0-9]+$","description":"Decimal representation of the integer"}}}}
+  schemaType={"response"}
+>
+  
+</Schema>
+            

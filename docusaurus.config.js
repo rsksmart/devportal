@@ -105,6 +105,16 @@ const config = {
         id: "api", // Unique ID for the plugin
         docsPluginId: "classic", // Refers to the preset-classic Docusaurus setup
         config: {
+          rskj: {
+            specPath: "open-api/rootstock-openapi.yaml", // Path to your OpenAPI YAML file
+            outputDir: "docs/rskj", // Where the generated API docs will be stored
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag",
+            },
+            hideSendButton: false,
+            showSchemas: true,
+          },
           rpcapi: {
             specPath: "open-api/rpcapi.yaml", // Path to your OpenAPI YAML file
             outputDir: "docs/06-rpcapi", // Where the generated API docs will be stored

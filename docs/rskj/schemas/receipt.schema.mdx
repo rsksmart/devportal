@@ -1,0 +1,33 @@
+---
+id: receipt
+title: "receipt"
+description: "The receipt of a transaction"
+sidebar_label: "receipt"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: {"blockHash":"string","blockNumber":"string","contractAddress":"string","cumulativeGasUsed":"string","from":"string","gasUsed":"string","logs":[{"address":"string","blockHash":"string","blockNumber":"string","data":"string","logIndex":"string","removed":true,"topics":["string"],"transactionHash":"string","transactionIndex":"string"}],"logsBloom":"string","to":"string","transactionHash":"string","transactionIndex":"string","postTransactionState":"string","status":true,"type":"string","effectiveGasPrice":"string","root":"string"}
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"receipt"}
+>
+</Heading>
+
+
+
+The receipt of a transaction
+
+<Schema
+  schema={{"title":"receipt","type":"object","description":"The receipt of a transaction","required":["blockHash","blockNumber","contractAddress","cumulativeGasUsed","from","gasUsed","logs","logsBloom","to","transactionHash","transactionIndex","type","effectiveGasPrice"],"properties":{"blockHash":{"title":"blockHash","type":"string","pattern":"^0x[a-fA-F\\d]{64}$","description":"The hex representation of the Keccak 256 of the RLP encoded block"},"blockNumber":{"title":"blockNumberHex","type":"string","description":"The hex representation of the block's height","pattern":"^0x[a-fA-F0-9]+$"},"contractAddress":{"title":"addressOrNull","oneOf":[{"title":"address","type":"string","description":"EOA or Contract address","pattern":"^0x[a-fA-F\\d]{40}$"},{"title":"Null Value","type":"null","description":"Null"}],"description":"The contract address created, if the transaction was a contract creation, otherwise null"},"cumulativeGasUsed":{"title":"integer hex","type":"string","pattern":"^0x[a-fA-F0-9]+$","description":"Hex representation of the integer"},"from":{"title":"address","type":"string","description":"EOA or Contract address","pattern":"^0x[a-fA-F\\d]{40}$"},"gasUsed":{"title":"integer hex","type":"string","pattern":"^0x[a-fA-F0-9]+$","description":"Hex representation of the integer"},"logs":{"title":"logs","type":"array","description":"An array of all the logs triggered during the transaction","items":{"title":"log","type":"object","description":"An indexed event generated during a transaction","properties":{"address":{"title":"address","type":"string","description":"EOA or Contract address","pattern":"^0x[a-fA-F\\d]{40}$"},"blockHash":{"title":"blockHash","type":"string","pattern":"^0x[a-fA-F\\d]{64}$","description":"The hex representation of the Keccak 256 of the RLP encoded block"},"blockNumber":{"title":"blockNumberHex","type":"string","description":"The hex representation of the block's height","pattern":"^0x[a-fA-F0-9]+$"},"data":{"title":"bytes","type":"string","description":"Hex representation of a variable length byte array","pattern":"^0x([a-fA-F0-9]?)+$"},"logIndex":{"title":"integer hex","type":"string","pattern":"^0x[a-fA-F0-9]+$","description":"Hex representation of the integer"},"removed":{"title":"logIsRemoved","description":"Whether or not the log was orphaned off the main chain","type":"boolean"},"topics":{"title":"LogTopics","description":"Topics are order-dependent. Each topic can also be an array of DATA with `or` options.","type":"array","items":{"title":"topic","description":"32 Bytes DATA of indexed log arguments. (In solidity: The first topic is the hash of the signature of the event (e.g. Deposit(address,bytes32,uint256))","type":"string","pattern":"^0x([a-fA-F\\d]{64})?$"}},"transactionHash":{"title":"transactionHash","type":"string","description":"Keccak 256 Hash of the RLP encoding of a transaction","pattern":"^0x[a-fA-F\\d]{64}$"},"transactionIndex":{"title":"transactionIndex","description":"The index of the transaction. null when its pending","oneOf":[{"title":"integer hex","type":"string","pattern":"^0x[a-fA-F0-9]+$","description":"Hex representation of the integer"},{"title":"Null Value","type":"null","description":"Null"}]}}}},"logsBloom":{"title":"bloomFilter","type":"string","description":"A 2048 bit bloom filter from the logs of the transaction. Each log sets 3 bits though taking the low-order 11 bits of each of the first three pairs of bytes in a Keccak 256 hash of the log's byte series"},"to":{"title":"To","description":"Destination address of the transaction. Null if it was a contract create.","oneOf":[{"title":"address","type":"string","description":"EOA or Contract address","pattern":"^0x[a-fA-F\\d]{40}$"},{"title":"Null Value","type":"null","description":"Null"}]},"transactionHash":{"title":"transactionHash","type":"string","description":"Keccak 256 Hash of the RLP encoding of a transaction","pattern":"^0x[a-fA-F\\d]{64}$"},"transactionIndex":{"title":"transactionIndex","description":"The index of the transaction. null when its pending","oneOf":[{"title":"integer hex","type":"string","pattern":"^0x[a-fA-F0-9]+$","description":"Hex representation of the integer"},{"title":"Null Value","type":"null","description":"Null"}]},"postTransactionState":{"title":"keccak","type":"string","description":"Hex representation of a Keccak 256 hash","pattern":"^0x[a-fA-F\\d]{64}$"},"status":{"title":"ReceiptStatus","description":"Whether or not the transaction threw an error.","type":"boolean"},"type":{"title":"ReceiptType","description":"is a positive unsigned 8-bit number that represents the type of the transaction.","type":"string"},"effectiveGasPrice":{"title":"integer hex","type":"string","pattern":"^0x[a-fA-F0-9]+$","description":"Hex representation of the integer"},"root":{"title":"Receipt Root","description":"32 bytes of post-transaction `stateroot` (pre Byzantium).","type":"string"}}}}
+  schemaType={"response"}
+>
+  
+</Schema>
+            

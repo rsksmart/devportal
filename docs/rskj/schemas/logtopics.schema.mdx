@@ -1,0 +1,33 @@
+---
+id: logtopics
+title: "LogTopics"
+description: "Topics are order-dependent. Each topic can also be an array of DATA with `or` options."
+sidebar_label: "LogTopics"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: ["string"]
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"LogTopics"}
+>
+</Heading>
+
+
+
+Topics are order-dependent. Each topic can also be an array of DATA with `or` options.
+
+<Schema
+  schema={{"title":"LogTopics","description":"Topics are order-dependent. Each topic can also be an array of DATA with `or` options.","type":"array","items":{"title":"topic","description":"32 Bytes DATA of indexed log arguments. (In solidity: The first topic is the hash of the signature of the event (e.g. Deposit(address,bytes32,uint256))","type":"string","pattern":"^0x([a-fA-F\\d]{64})?$"}}}
+  schemaType={"response"}
+>
+  
+</Schema>
+            

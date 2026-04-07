@@ -1,0 +1,33 @@
+---
+id: ip-addresses
+title: "IP addresses"
+description: "List of IP addresses or blocks"
+sidebar_label: "IP addresses"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: ["string"]
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"IP addresses"}
+>
+</Heading>
+
+
+
+List of IP addresses or blocks
+
+<Schema
+  schema={{"title":"IP addresses","type":"array","description":"List of IP addresses or blocks","items":{"title":"IP address or block","type":"string","description":"IP address or block of addresses","pattern":"^[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+(\\/[0-9]{1,3})?$"}}}
+  schemaType={"response"}
+>
+  
+</Schema>
+            

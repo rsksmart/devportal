@@ -1,0 +1,33 @@
+---
+id: addresses
+title: "addresses"
+description: "List of contract addresses from which to monitor events"
+sidebar_label: "addresses"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: ["string"]
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"addresses"}
+>
+</Heading>
+
+
+
+List of contract addresses from which to monitor events
+
+<Schema
+  schema={{"title":"addresses","type":"array","description":"List of contract addresses from which to monitor events","items":{"title":"address","type":"string","description":"EOA or Contract address","pattern":"^0x[a-fA-F\\d]{40}$"}}}
+  schemaType={"response"}
+>
+  
+</Schema>
+            

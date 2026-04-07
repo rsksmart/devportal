@@ -1,0 +1,73 @@
+---
+id: eth-get-filter-changes
+title: "Polling method for a filter, which returns an array of logs which occurred since last poll."
+description: "**`eth_getFilterChanges`** - Polling method for a filter, which returns an array of logs which occurred since last poll."
+sidebar_label: "Polling method for a filter, which returns an array of logs which occurred since last poll."
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: rskj/rskj-json-rpc
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Polling method for a filter, which returns an array of logs which occurred since last poll."}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/eth_getFilterChanges"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+**`eth_getFilterChanges`** - Polling method for a filter, which returns an array of logs which occurred since last poll.
+
+Send a **JSON-RPC 2.0** request (`jsonrpc`, `method`, `params`, `id`) as in the example below.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["jsonrpc","method","params","id"],"properties":{"jsonrpc":{"type":"string","enum":["2.0"]},"method":{"type":"string","enum":["eth_getFilterChanges"]},"params":{"type":"array","description":"Ordered JSON array of positional parameters for this method.","minItems":1,"maxItems":1,"items":{"oneOf":[{"title":"filterId","type":"string","description":"An identifier used to reference the filter."}]}},"id":{"oneOf":[{"type":"integer"},{"type":"string"}],"example":1}}},"example":{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":["0x16"],"id":1}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful JSON-RPC 2.0 response over HTTP. The return value is in `result`. On failure, nodes typically still respond with HTTP 200 and an `error` object instead of `result`.","content":{"application/json":{"schema":{"type":"object","required":["jsonrpc","id","result"],"properties":{"jsonrpc":{"type":"string","enum":["2.0"]},"id":{"oneOf":[{"type":"integer"},{"type":"string"}]},"result":{"title":"logResult","type":"array","description":"Array of log objects, or an empty array if nothing has changed since last poll. For more info check https://developers.rsk.co/rsk/node/architecture/json-rpc/","items":{"title":"log","type":"object","description":"An indexed event generated during a transaction","properties":{"address":{"title":"address","type":"string","description":"EOA or Contract address","pattern":"^0x[a-fA-F\\d]{40}$"},"blockHash":{"title":"blockHash","type":"string","pattern":"^0x[a-fA-F\\d]{64}$","description":"The hex representation of the Keccak 256 of the RLP encoded block"},"blockNumber":{"title":"blockNumberHex","type":"string","description":"The hex representation of the block's height","pattern":"^0x[a-fA-F0-9]+$"},"data":{"title":"bytes","type":"string","description":"Hex representation of a variable length byte array","pattern":"^0x([a-fA-F0-9]?)+$"},"logIndex":{"title":"integer hex","type":"string","pattern":"^0x[a-fA-F0-9]+$","description":"Hex representation of the integer"},"removed":{"title":"logIsRemoved","description":"Whether or not the log was orphaned off the main chain","type":"boolean"},"topics":{"title":"LogTopics","description":"Topics are order-dependent. Each topic can also be an array of DATA with `or` options.","type":"array","items":{"title":"topic","description":"32 Bytes DATA of indexed log arguments. (In solidity: The first topic is the hash of the signature of the event (e.g. Deposit(address,bytes32,uint256))","type":"string","pattern":"^0x([a-fA-F\\d]{64})?$"}},"transactionHash":{"title":"transactionHash","type":"string","description":"Keccak 256 Hash of the RLP encoding of a transaction","pattern":"^0x[a-fA-F\\d]{64}$"},"transactionIndex":{"title":"transactionIndex","description":"The index of the transaction. null when its pending","oneOf":[{"title":"integer hex","type":"string","pattern":"^0x[a-fA-F0-9]+$","description":"Hex representation of the integer"},{"title":"Null Value","type":"null","description":"Null"}]}}}}}},"example":{"jsonrpc":"2.0","id":1,"result":[{"logIndex":"0x1","blockNumber":"0x1b4","blockHash":"0x8216c5785ac562ff41e2dcfdf5785ac562ff41e2dcfdf829c5a142f1fccd7d","transactionHash":"0xdf829c5a142f1fccd7d8216c5785ac562ff41e2dcfdf5785ac562ff41e2dcf","transactionIndex":"0x0","address":"0x16c5785ac562ff41e2dcfdf829c5a142f1fccd7d","data":"0x0000000000000000000000000000000000000000000000000000000000000000","topics":["0x59ebeb90bc63057b6515673c3ecf9438e5058bca0f92585014eced636878c9a5"]}]}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

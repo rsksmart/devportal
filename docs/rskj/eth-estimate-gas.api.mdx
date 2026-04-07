@@ -1,0 +1,75 @@
+---
+id: eth-estimate-gas
+title: "Calculates an estimate of how much gas is necessary to allow the transaction to complete"
+description: "Generates and returns an estimate of how much gas is necessary to allow the transaction to complete. The transaction will not be added to the blockchain. Note that the estimate may be significantly more than the amount of gas actually used by the transaction, for a variety of reasons including EVM mechanics and node performance."
+sidebar_label: "Calculates an estimate of how much gas is necessary to allow the transaction to complete"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: rskj/rskj-json-rpc
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Calculates an estimate of how much gas is necessary to allow the transaction to complete"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/eth_estimateGas"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Generates and returns an estimate of how much gas is necessary to allow the transaction to complete. The transaction will not be added to the blockchain. Note that the estimate may be significantly more than the amount of gas actually used by the transaction, for a variety of reasons including EVM mechanics and node performance. 
+
+ See `eth_call` parameters, expect that all properties are optional. If no gas limit is specified geth uses the block gas limit from the pending block as an upper bound. As a result the returned estimate might not be enough to executed the call/transaction when the amount of gas is higher than the pending block gas limit.
+
+Send a **JSON-RPC 2.0** request (`jsonrpc`, `method`, `params`, `id`) as in the example below.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["jsonrpc","method","params","id"],"properties":{"jsonrpc":{"type":"string","enum":["2.0"]},"method":{"type":"string","enum":["eth_estimateGas"]},"params":{"type":"array","description":"Ordered JSON array of positional parameters for this method.","minItems":1,"maxItems":1,"items":{"oneOf":[{"title":"transaction","type":"object","required":["from","data"],"properties":{"from":{"title":"From","description":"The address the transaction is send from","type":"string","pattern":"^0x[a-fA-F\\d]{40}$"},"to":{"description":"The address the transaction is directed to. Optional when creating new contract.","title":"To","oneOf":[{"title":"address","type":"string","description":"EOA or Contract address","pattern":"^0x[a-fA-F\\d]{40}$"},{"title":"Null Value","type":"null","description":"Null"}]},"gas":{"title":"transactionGas","type":"string","description":"Integer of the gas provided for the transaction execution. It will return unused gas. Default: 90000."},"gasPrice":{"title":"transactionGasPrice","type":"string","description":"Integer of the gasPrice used for each paid gas."},"value":{"title":"transactionValue","description":"Integer of the value sent with this transaction","type":"string","pattern":"^0x[a-fA-F0-9]+$"},"data":{"title":"transactionData","description":"The compiled code of a contract OR the hash of the invoked method signature and encoded parameters. For details see https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI or https://docs.soliditylang.org/en/latest/abi-spec.html.","type":"string","pattern":"^0x([a-fA-F0-9]?)+$"},"nonce":{"title":"transactionNonce","description":"The total number of prior transactions made by the sender","type":"string","pattern":"^0x[a-fA-F0-9]+$"}}}]}},"id":{"oneOf":[{"type":"integer"},{"type":"string"}],"example":1}}},"example":{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{"from":"0xa7d9ddbe1f17865597fbd27ec712455208b6b76d","to":"0xf02c1c8e6114b1dbe8937a39260b5b0a374432bb","gas":"0xc350","gasPrice":"0x4a817c800","value":"0xf3dbb76162000","data":"0x0000000000000000000000000000000000000000000000000000000000000000"}],"id":1}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful JSON-RPC 2.0 response over HTTP. The return value is in `result`. On failure, nodes typically still respond with HTTP 200 and an `error` object instead of `result`.","content":{"application/json":{"schema":{"type":"object","required":["jsonrpc","id","result"],"properties":{"jsonrpc":{"type":"string","enum":["2.0"]},"id":{"oneOf":[{"type":"integer"},{"type":"string"}]},"result":{"title":"integer hex","type":"string","pattern":"^0x[a-fA-F0-9]+$","description":"Hex representation of the integer"}}},"example":{"jsonrpc":"2.0","id":1,"result":"0x5208"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

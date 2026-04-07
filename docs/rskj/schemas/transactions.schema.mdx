@@ -1,0 +1,33 @@
+---
+id: transactions
+title: "transactions"
+description: "An array of transactions"
+sidebar_label: "transactions"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: [{"blockHash":"string","blockNumber":"string","from":"string","gas":"string","gasPrice":"string","hash":"string","input":"string","nonce":"string","to":"string","transactionIndex":"string","value":"string","v":"string","r":"string","s":"string","type":"string"}]
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"transactions"}
+>
+</Heading>
+
+
+
+An array of transactions
+
+<Schema
+  schema={{"title":"transactions","description":"An array of transactions","type":"array","items":{"title":"transaction","type":"object","required":["gas","gasPrice","nonce"],"properties":{"blockHash":{"title":"blockHashOrNull","description":"The block hash or null when its the pending block","oneOf":[{"title":"keccak","type":"string","description":"Hex representation of a Keccak 256 hash","pattern":"^0x[a-fA-F\\d]{64}$"},{"title":"Null Value","type":"null","description":"Null"}]},"blockNumber":{"title":"blockNumberOrNull","description":"The block number or null when its the pending block","oneOf":[{"title":"blockNumberHex","type":"string","description":"The hex representation of the block's height","pattern":"^0x[a-fA-F0-9]+$"},{"title":"Null Value","type":"null","description":"Null"}]},"from":{"title":"address","type":"string","description":"EOA or Contract address","pattern":"^0x[a-fA-F\\d]{40}$"},"gas":{"title":"transactionGas","type":"string","description":"The gas limit provided by the sender in Wei"},"gasPrice":{"title":"transactionGasPrice","type":"string","description":"The gas price willing to be paid by the sender in Wei"},"hash":{"title":"transactionHash","type":"string","description":"Keccak 256 Hash of the RLP encoding of a transaction","pattern":"^0x[a-fA-F\\d]{64}$"},"input":{"title":"transactionInput","type":"string","description":"The data field sent with the transaction"},"nonce":{"title":"nonce","description":"A number only to be used once","type":"string","pattern":"^0x[a-fA-F0-9]+$"},"to":{"title":"To","description":"Destination address of the transaction. Null if it was a contract create.","oneOf":[{"title":"address","type":"string","description":"EOA or Contract address","pattern":"^0x[a-fA-F\\d]{40}$"},{"title":"Null Value","type":"null","description":"Null"}]},"transactionIndex":{"title":"transactionIndex","description":"The index of the transaction. null when its pending","oneOf":[{"title":"integer hex","type":"string","pattern":"^0x[a-fA-F0-9]+$","description":"Hex representation of the integer"},{"title":"Null Value","type":"null","description":"Null"}]},"value":{"title":"integer hex","type":"string","pattern":"^0x[a-fA-F0-9]+$","description":"Hex representation of the integer"},"v":{"title":"transactionSigV","type":"string","description":"ECDSA recovery id"},"r":{"title":"transactionSigR","type":"string","description":"ECDSA signature r"},"s":{"title":"transactionSigS","type":"string","description":"ECDSA signature s"},"type":{"title":"ReceiptType","description":"is a positive unsigned 8-bit number that represents the type of the transaction.","type":"string"}}}}}
+  schemaType={"response"}
+>
+  
+</Schema>
+            

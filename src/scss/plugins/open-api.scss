@@ -112,7 +112,12 @@
 .theme-api-markdown{
   --ifm-color-success: var(--bs-green);
   --openapi-card-background-color: rgba(var(--bs-body-color-rgb), 0.05) !important;
-
+  div > li{
+    list-style: none;
+  }
+  pre{
+    scrollbar-width: thin;
+  }
   .openapi__heading{
     margin-bottom: 18px !important;
   }

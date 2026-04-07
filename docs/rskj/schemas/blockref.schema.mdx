@@ -1,0 +1,33 @@
+---
+id: blockref
+title: "blockRef"
+description: "Object defining block references"
+sidebar_label: "blockRef"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: {"blockHash":"string","blockNumber":"string"}
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"blockRef"}
+>
+</Heading>
+
+
+
+Object defining block references
+
+<Schema
+  schema={{"title":"blockRef","type":"object","description":"Object defining block references","properties":{"blockHash":{"title":"blockHash","type":"string","pattern":"^0x[a-fA-F\\d]{64}$","description":"The hex representation of the Keccak 256 of the RLP encoded block"},"blockNumber":{"title":"blockNumberHex","type":"string","description":"The hex representation of the block's height","pattern":"^0x[a-fA-F0-9]+$"}}}}
+  schemaType={"response"}
+>
+  
+</Schema>
+            

@@ -1,0 +1,33 @@
+---
+id: blockhashornull
+title: "blockHashOrNull"
+description: "The block hash or null when its the pending block"
+sidebar_label: "blockHashOrNull"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: "string"
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"blockHashOrNull"}
+>
+</Heading>
+
+
+
+The block hash or null when its the pending block
+
+<Schema
+  schema={{"title":"blockHashOrNull","description":"The block hash or null when its the pending block","oneOf":[{"title":"keccak","type":"string","description":"Hex representation of a Keccak 256 hash","pattern":"^0x[a-fA-F\\d]{64}$"},{"title":"Null Value","type":"null","description":"Null"}]}}
+  schemaType={"response"}
+>
+  
+</Schema>
+            

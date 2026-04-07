@@ -1,0 +1,33 @@
+---
+id: addressornull
+title: "addressOrNull"
+description: ""
+sidebar_label: "addressOrNull"
+hide_title: true
+hide_table_of_contents: true
+schema: true
+sample: "string"
+custom_edit_url: null
+---
+
+import Schema from "@theme/Schema";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"addressOrNull"}
+>
+</Heading>
+
+
+
+
+
+<Schema
+  schema={{"title":"addressOrNull","oneOf":[{"title":"address","type":"string","description":"EOA or Contract address","pattern":"^0x[a-fA-F\\d]{40}$"},{"title":"Null Value","type":"null","description":"Null"}]}}
+  schemaType={"response"}
+>
+  
+</Schema>
+            
