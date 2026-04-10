@@ -11,7 +11,8 @@ export default function AskCookbook() {
     siteConfig: { customFields },
   } = useDocusaurusContext();
   const { keys } = customFields;
-  const COOKBOOK_PUBLIC_API_KEY = keys.cookbook;
+  const COOKBOOK_PUBLIC_API_KEY = keys.cookbook || null;
+  if (!COOKBOOK_PUBLIC_API_KEY) return null;
 
   useEffect(() => {
     const observer = new MutationObserver((mutations, obs) => {

@@ -37,6 +37,3 @@ Each module has instructions for development and usage.
 
 ## Contribution Guidelines
 * Please refer to the Rootstock Contribution Guidelines for more information on how to contribute to this project.
-
-## License:
-MIT License - Copyright (c) 2023 Rootstock

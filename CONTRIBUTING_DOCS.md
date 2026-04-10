@@ -35,6 +35,17 @@ This section will cover the theoretical aspects and foundational concepts releva
   * **Integrations guides:** These will be part of the "Developers" section, detailing how to integrate the product with other systems.
   * **User guides:** These belong under the "Concept" section as they explain how to use the product rather than integrate with it.
 
+### Quick Starts vs Use Cases (avoid duplicate maintenance)
+
+Some starter kits appear in **Developers → Quick Starts** and also have a **Use Cases** guide (for example Collective DAO). Follow these rules so install instructions do not diverge:
+
+1. **Canonical setup for a public repo:** Keep `git clone`, `.env` / `.env.example`, `npm install`, and `npm run dev` in the **GitHub README** for that repository. Treat it as the single source of truth for environment variables and versions.
+2. **`/developers/quickstart/...` page:** Use a **short** quick start: goal in one or two sentences, prerequisites summary, link to the README for Setup, and a link to the **Use Cases** article for architecture, code maps, and checklists. Do not paste full env tables or multi-step install blocks if the README already has them.
+3. **`/use-cases/...` page:** Focus on the **job to be done**, SDK usage, file mapping, risks, and FAQs. Link to the README (and optionally the quick start page) under **Getting Started** instead of duplicating install steps.
+4. **Before adding content:** Search existing Quick Starts and the kit README. Prefer **one new paragraph plus links** over copying blocks into two portal locations.
+
+If you add a new starter kit to both areas, add a **Quick Starts** hub card and a **Use Cases** guide that references the same README pattern above.
+
 
 ### Node Operators Section
 

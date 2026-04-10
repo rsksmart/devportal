@@ -35,6 +35,6 @@ Rootstockの開発者向け概要セクションへようこそ。
 | [統合ガイド](/developers/integrate/)                   | Rootstock開発のさまざまな側面を説明する詳細なガイドと有益なチュートリアルで、知識を深めます。                          |
 | [JSON-RPC](/developers/rpc-api/)                  | メインネットにデプロイする前に、RootstockのRPC APIプロバイダーを活用して、数分以内にテストネットでdAppsをテストします。       |
 | [ライブラリ](/developers/libraries/)                   | 開発プロセスの効率化に必須のツールとライブラリにアクセスします。                                             |
-| [使用例](/developers/use-cases/)                     | ビットコイン、AI、クロスチェーンソリューションでDeFiを構築するためのRootstock dAppユースケースガイドとチュートリアルをご覧ください。 |
+| [ユースケース](/use-cases/)                     | Rootstock上のDeFi、オンボーディング、ブリッジ、自動化に関するユースケースガイドとチュートリアル。 |
 
 

@@ -82,6 +82,12 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
     - **latest:** the most recent block the client has available.
     - **earliest:** the lowest numbered block the client has available.
     - **pending:** A sample next block built by the client on top of latest and containing the set of transactions usually taken from a local mempool. Intuitively, you can think of these as blocks that have not been mined yet.
+  - `stateOverride`: Object, optional. Overrides account state for the call. Available only by request; if unsupported, omit this parameter. Each key is an address; each value is an object that can include:
+    - **balance:** String, hex. Override the account balance.
+    - **nonce:** String, hex. Override the account nonce.
+    - **code:** String, hex. Override the account contract code.
+    - **stateDiff:** Object. Map of storage slot (hex) to value (hex). Override specific storage slots for the account.
+    - **state:** Object. Same shape as stateDiff; replaces the full storage for the account.
 - **Example:**
 
 ```shell
@@ -113,6 +119,79 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
     "result": "0x"
 }
 ```
+
+### State override (optional)
+
+You can override account state for the call by passing a third parameter, `stateOverride`. This is useful to simulate different balances, storage, or code without changing chain state. Support for this parameter depends on your RPC Service Subscription.
+
+**Example: `balanceOf()` without state override**
+
+Request:
+
+```json
+{
+  "jsonrpc": "2.0",
+  "method": "eth_call",
+  "params": [
+    {
+      "to": "0xa423e580dbe727151e98576d770fd3538677801c",
+      "data": "0x70a082310000000000000000000000003b32a6463bd0837fbf428bbc2a4c8b4c022e5077"
+    },
+    "latest"
+  ],
+  "id": 0
+}
+```
+
+Response:
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 0,
+    "result": "0x00000000000000000000000000000000000000000000003154c9729d05780000"
+}
+```
+
+The result is the balance in hex. Convert to decimal to get the human-readable value (e.g. `0x...3154c9729d05780000` → 910000000000000000000).
+
+**Example: `balanceOf()` with state override**
+
+Request (same call with a `stateOverride` that sets a storage slot for the contract):
+
+```json
+{
+  "jsonrpc": "2.0",
+  "method": "eth_call",
+  "params": [
+    {
+      "to": "0xa423e580dbe727151e98576d770fd3538677801c",
+      "data": "0x70a082310000000000000000000000003b32a6463bd0837fbf428bbc2a4c8b4c022e5077"
+    },
+    "latest",
+    {
+      "0xa423e580dbe727151e98576d770fd3538677801c": {
+        "stateDiff": {
+          "0x8d1e5f9a8a0b1c7a6dff2f1c7c17a0f4a9a5a7d4df90cfe45bcb6b0d6fa7c7f4": "0x7E37BE2022C0914B2680000000"
+        }
+      }
+    }
+  ],
+  "id": 0
+}
+```
+
+Response:
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 0,
+    "result": "0x00000000000000000000000000000000000000000000003154c9729d05780000"
+}
+```
+
+Convert the result hex to decimal as needed (e.g. 910000000000000000000).
 
 ## eth_chainId
 
