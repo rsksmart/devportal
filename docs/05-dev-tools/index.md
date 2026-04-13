@@ -77,7 +77,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="Agents"
     subtitle="Dev Tools"
     color="orange"
-    linkHref="/developers/use-cases/ai/ai-agent-rootstock/"
+    linkHref="/use-cases/ai-automation/ai-agent-rootstock/"
     linkTitle="Create AI Agent"
     description="This guide demonstrates how to build a lightweight dApp that connects a conversational AI agent to the Rootstock testnet, allowing users to perform DeFi actions like checking token balances and sending tRBTC simply by chatting."
   />
@@ -662,7 +662,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="Layerzero"
     subtitle="Cross Chain Bridges"
     color="orange"
-    linkHref="/developers/use-cases/defi/rootstock-layerzero/"
+    linkHref="/use-cases/interoperability/rootstock-layerzero/"
     linkTitle="Build Cross Chain dApps"
     description="LayerZero, a cross-chain messaging protocol enables the seamless movement of Bitcoin-backed assets from Rootstock to other blockchains, allowing developers to build omnichain applications (OApps) that interact across multiple chains as if they were one."
   />
@@ -698,7 +698,7 @@ description: "Explore a curated selection of smart contract development tools an
     title="Para"
     subtitle="wallets"
     color="orange"
-    linkHref="/developers/quickstart/para/"
+    linkHref="/use-cases/onboarding-ux/para/"
     linkTitle="Use Para"
     description="Para is a modern wallet infrastructure for fintech and crypto applications. It provides a comprehensive wallet and authentication suite for crypto developers and apps."
   />

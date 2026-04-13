@@ -66,7 +66,7 @@ Imagine different islands, each with its own unique economy and currency. To tra
     subtitle="cross-chain"
     color="green"
     description="LayerZero is a cross-chain messaging protocol for moving Bitcoin-backed assets from Rootstock to other blockchains so developers can build omnichain applications (OApps) across multiple chains."
-    linkHref="/developers/use-cases/defi/rootstock-layerzero/"
+    linkHref="/use-cases/interoperability/rootstock-layerzero/"
     linkTitle="Start Bridging"
   />
 </CardsGrid>

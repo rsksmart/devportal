@@ -1,0 +1,5 @@
+label: "Bridge Assets"
+position: 5
+link:
+  type: doc
+  id: use-cases/interoperability/index

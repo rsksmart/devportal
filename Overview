@@ -1,0 +1,12 @@
+_From your repository:_
+
+1. A GitHub Actions workflow is triggered on an Approval event.
+2. The workflow:
+- Generates a GitHub App installation token.
+- Clones the rsksmart/devportal repository using that token.
+- Transforms your local file(s) into the format/layout expected by the DevPortal.
+-- Commits and pushes a branch to rsksmart/devportal.
+-- Creates a Pull Request in rsksmart/devportal.
+3. Once the PR is merged, the DevPortal `/changelog` page reflects the new content.
+
+Everything is done through the GitHub App.

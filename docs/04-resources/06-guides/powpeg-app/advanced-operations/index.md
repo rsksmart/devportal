@@ -15,7 +15,7 @@ See [viewing a derived address](/resources/guides/powpeg-app/pegout/deriving-ele
 These operations include;
 
 * How to review funds in Bitcoin after a pegout by [viewing a derived address](/resources/guides/powpeg-app/pegout/deriving-electrum), 
-* Convert RBTC - BTC and import a [key in Electrum](/resources/guides/powpeg-app/pegout/deriving-electrum#import-key-in-electrum), import in Electrum if you are using [hardware wallets](/resources/guides/powpeg-app/pegout/deriving-electrum#import-key-in-electrum-using-hardware-wallets)
+* Convert RBTC - BTC and import a [key in Electrum](/resources/guides/powpeg-app/pegout/deriving-electrum#import-key-in-electrum), import in Electrum if you are using [hardware wallets](/resources/guides/powpeg-app/pegout/deriving-electrum)
 * Selecting different accounts
 * Viewing advanced details
 * Adjusting network fees
