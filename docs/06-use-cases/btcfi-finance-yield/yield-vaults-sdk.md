@@ -1,14 +1,14 @@
 ---
 sidebar_position: 4
 sidebar_label: Integrate USDRIF Vault
-title: "Integrate Your First USDRIF Vault on Rootstock"
+title: "Integrate USDRIF Vault on Rootstock"
 description: "Use the Rootstock Vaults SDK and viem to read vault state, approve USDRIF, and deposit with slippage protection."
 tags: [btcfi, yield, vault, sdk, usdrif, dev-tutorial]
 ---
 
 The [Vaults SDK](https://github.com/rsksmart/vaults-sdk) is a TypeScript client for the **USDRIF yield vault** on Rootstock. You can deposit USDRIF, hold shares, and redeem or withdraw back to USDRIF using the Vault SDK. Refer to the [repository README](https://github.com/rsksmart/vaults-sdk) as the source of truth for installation steps, and contract addresses.
 
-## What you are integrating
+## About the SDK
 
 You connect a **viem** `WalletClient` and optional `PublicClient` to the SDK. **Read** calls go through `sdk.vault` (vault metrics, strategies, user position, previews, allowance). **Write** calls go through `sdk.write` (approve USDRIF, deposit, withdraw, redeem, including slippage-protected variants).
 
