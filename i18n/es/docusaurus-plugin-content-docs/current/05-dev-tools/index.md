@@ -47,13 +47,13 @@ description="Conecte Bitcoin y Rootstock usando la app 2 Way Peg."
 />
 <FilterItem
 value="bridge, cc"
-title="Token Bridge"
+title="Atlas Bridge"
 subtitle="bridges"
 color="orange"
-linkHref="/resources/guides/tokenbridge/"
+linkHref="/resources/guides/atlas/"
 target="_blank"
 linkTitle="Documentación"
-description="Utilice el Token Bridge para mover de forma segura tokens ERC20 de Ethereum a Rootstock y viceversa."
+description="Use Atlas Bridge para comparar proveedores y mover activos admitidos entre Rootstock y otras redes."
 />
 <FilterItem
 value="dev-environment, sc, platform-infra"

@@ -13,7 +13,7 @@ The **Use Cases** hub groups tasks you can ship: onboarding, bridging, automatio
 If you want a new guide in this hub, use the links below.
 
 * Request a use case article using the Request Article on the right navigation options on this page.
-* [**Submit on Idea on the Hacktivator Marketplace**](https://hacktivator-marketplace.rootstock.io/)
+* [**Submit an Idea on the Hacktivator Marketplace**](https://hacktivator-marketplace.rootstock.io/)
 * [**Rootstock Discord**](https://discord.gg/rootstock)
 
 :::

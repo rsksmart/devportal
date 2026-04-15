@@ -21,10 +21,10 @@ This guide provides clear instructions for developers on the supported Solidity 
 <Steps>
  <Step title="Software Requirements:">
 
-Set up the necessary software for a seamless development experience:
+Set up the necessary software for a easy development on Rootstock:
 
 - **Solidity Version:**
-  - Supported compiler version: **`solc 0.8.25`**.
+  - Supported compiler version: **`solc 0.8.34`**.
   - Use compatible versions to avoid deployment errors.
 
 - **Node RPC Access:**

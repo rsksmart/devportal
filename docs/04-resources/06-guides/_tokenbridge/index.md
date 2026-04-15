@@ -20,7 +20,7 @@ Cross chain events are very important in the future of cryptocurrencies. Exchang
 ## Overview
 
 We have a bridge smart contract on each network, the bridge on one chain will receive and lock the ERC20 tokens, then it will emit an event that will be served to the bridge on the other chain. There is a Federation in charge of sending the event from one contract to the other. Once the bridge on the other chain receives the event from the Federation, it mints the tokens on the mirror ERC20 contract.
-See the [FAQs](/resources/guides/tokenbridge/faq/) to learn more about how it works!
+See the [FAQs](./faq.md) to learn more about how it works!
 
 <img src="/img/resources/tokenbridge/token-bridge-diagram.jpg"/>
 
@@ -32,16 +32,16 @@ The bridge contracts are upgradeable, this enables a smoother move to a more dec
 
 You can use the ['Token Bridge dApp'](https://dapp.tokenbridge.rootstock.io/) together with [Metamask with custom network](/dev-tools/wallets/metamask/) to move tokens between networks.
 
-Follow the [dApp guide](/resources/guides/tokenbridge/dappguide/) for more details on how to use the token bridge.
+Follow the [dApp guide](./dappguide.md) for more details on how to use the token bridge.
 
-Alternatively, you can use a wallet or web3js with the ABI of the contracts. See ['interaction guide using MyCrypto'](/resources/guides/tokenbridge/usingmycrypto/) for more information on how to use the bridge.
+Alternatively, you can use a wallet or web3js with the ABI of the contracts. See the [interaction guide using MyCrypto](./usingmycrypto.md) for more information on how to use the bridge.
 
 
 ## Developers
 
 ### Contracts
 
-Here are the ['addresses'](/resources/guides/tokenbridge/contractaddresses/) of the deployed contracts in the different networks.
+Here are the [addresses](./contractaddresses.md) of the deployed contracts in the different networks.
 
 The smart contracts used by the bridge and the deploy instructions are in the token bridge repository in the 'bridge folder'.
 

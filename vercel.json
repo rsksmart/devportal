@@ -226,7 +226,7 @@
     {"source" : "/tutorials/deploy-smart-contracts/", "destination" : "/developers/smart-contracts/hardhat/deploy-smart-contracts"},
     {"source" : "/kb/first-frontend-web3-injected/", "destination" : "/developers/smart-contracts/hardhat/interact-with-frontend"},
     {"source" : "/rsk/", "destination" : "/concepts/"},
-    {"source" : "/tools/tokenbridge/", "destination" : "/resources/guides/tokenbridge/"},
+    {"source" : "/tools/tokenbridge/", "destination" : "/resources/guides/atlas/"},
     {"source" : "/guides/get-crypto-on-rsk/rbtc-exchanges/", "destination" : "https://rootstock.io/rbtc/"},
     {"source" : "/kb/frontend-web3-local/", "destination" : "/developers/smart-contracts/hardhat/interact-with-frontend"},
     {"source" : "/rsk/node/use/", "destination" : "/node-operators/setup/"},
@@ -250,7 +250,7 @@
     {"source" : "/solutions/sovryn/", "destination" : "https://rootstock.io/ecosystem/"},
     {"source" : "/kb/remix-and-metamask-with-rsk-testnet/", "destination" : "/developers/quickstart/remix/"},
     {"source" : "/rsk/architecture/account-based/", "destination" : "/concepts/account-based-addresses/"},
-    {"source" : "/tools/tokenbridge/faq/", "destination" : "/resources/guides/tokenbridge/faq/"},
+    {"source" : "/tools/tokenbridge/faq/", "destination" : "/resources/guides/atlas/"},
     {"source" : "/rsk/architecture/mining/", "destination" : "/concepts/merged-mining/"},
     {"source" : "/kb/send-tokens-through-metamask/", "destination" : "/resources/tutorials/"},
     {"source" : "/guides/stablecoin/how-to-get-stablecoins/", "destination" : "https://blog.rootstock.io/"},
@@ -260,7 +260,7 @@
     {"source" : "/solutions/fireblocks/", "destination" : "https://rootstock.io/ecosystem/"},
     {"source" : "/kb/deploy-smart-contracts/", "destination" : "/developers/smart-contracts/hardhat/"},
     {"source" : "/rif/rns/", "destination" : "/developers/integrate/"},
-    {"source" : "/tools/tokenbridge/contractaddresses/", "destination" : "/resources/guides/tokenbridge/contractaddresses/"},
+    {"source" : "/tools/tokenbridge/contractaddresses/", "destination" : "/resources/guides/atlas/"},
     {"source" : "/guides/stablecoin/how-to-use-rsk-tokenbridge/", "destination" : "https://blog.rootstock.io/"},
     {"source" : "/tools/explorer/", "destination" : "/dev-tools/explorers/"},
     {"source" : "/develop/wallet/use/ledger/", "destination" : "/dev-tools/wallets/"},
@@ -268,7 +268,7 @@
     {"source" : "/guides/full-stack-dapp-on-rsk/part1-overview/", "destination" : "/developers/smart-contracts/"},
     {"source" : "/quick-start/step1-install-rsk-local-node", "destination" : "/developers/rpc-api/setup/"},
     {"source" : "/kb/create-a-token/", "destination" : "/resources/tutorials/"},
-    {"source" : "/tools/tokenbridge/dappguide/", "destination" : "/resources/guides/tokenbridge/dappguide/"},
+    {"source" : "/tools/tokenbridge/dappguide/", "destination" : "/resources/guides/atlas/"},
     {"source" : "/rsk/node/configure/reference/", "destination" : "/node-operators/setup/configuration/reference/"},
     {"source" : "/guides/stablecoin/overview/", "destination" : "https://blog.rootstock.io/"},
     {"source" : "/rsk/rbtc/conversion/with-ledger/", "destination" : "/concepts/rbtc/conversion-with-ledger/"},
@@ -310,7 +310,7 @@
     {"source" : "/solutions/liquality/", "destination" : "https://rootstock.io/ecosystem/"},
     {"source" : "/solutions/defiant/", "destination" : "https://rootstock.io/ecosystem/"},
     {"source" : "/kb/rootstock-metamask/", "destination" : "/resources/tutorials/rootstock-metamask/"},
-    {"source" : "/kb/tokenbridge-troubleshooting/", "destination" : "/resources/guides/tokenbridge/troubleshooting/"},
+    {"source" : "/kb/tokenbridge-troubleshooting/", "destination" : "/resources/guides/atlas/"},
     {"source" : "/kb/rskj/", "destination" : "/developers/rpc-api/setup/"},
     {"source" : "/develop/wallet/use/json-rpc/", "destination" : "/dev-tools/wallets/"},
     {"source" : "/rsk/node/configure/cli/", "destination" : "/node-operators/setup/configuration/cli/"},
@@ -482,7 +482,7 @@
     {"source" : "/rif/rns/libs/Android/", "destination" : "/developers/integrate/"},
     {"source" : "/rif/relay/gas-costs/", "destination" : "/developers/integrate/"},
     {"source" : "/rif/rns/operations/resolve/", "destination" : "/developers/integrate/"},
-    {"source" : "/tools/tokenbridge/usingmycrypto/", "destination" : "/resources/guides/tokenbridge/usingmycrypto/"},
+    {"source" : "/tools/tokenbridge/usingmycrypto/", "destination" : "/resources/guides/atlas/"},
     {"source" : "/contribute/", "destination" : "/resources/contribute/"},
     {"source" : "/webinars/", "destination" : "https://rootstock.io/events?_gl=1*1804h96*_gcl_au*NTk3NjcxMTguMTcxOTE0NzgyNw.."},
     {"source" : "/guides/two-way-peg-app/glossary/", "destination" : "/resources/guides/two-way-peg-app/glossary/"},
@@ -672,7 +672,28 @@
     {"source": "/use-cases/btcfi-finance-yield/yield-vaults", "destination": "/use-cases/btcfi-finance-yield/yield-vaults-sdk/"},
     {"source": "/use-cases/btcfi-finance-yield/yield-vaults/", "destination": "/use-cases/btcfi-finance-yield/yield-vaults-sdk/"},
     {"source": "/use-cases/btcfi-finance-yield/automate-yield-vault/", "destination": "/use-cases/btcfi-finance-yield/"},
-    {"source": "/use-cases/payments-assets/agentic-commerce/", "destination": "/use-cases/payments-assets/"}
-  
+    {"source": "/use-cases/payments-assets/agentic-commerce/", "destination": "/use-cases/payments-assets/"},
+    {"source": "/dev-tools/node-rpc/blast-api/", "destination": "/dev-tools/node-rpc/"},
+    {"source": "/dev-tools/no-code/cryptodo/", "destination": "/dev-tools/no-code/"},
+    {"source": "/dev-tools/oracles/umbrellanetwork/", "destination": "/dev-tools/oracles/"},
+    {"source": "/dev-tools/cross-chain-bridges/tokenbridge/", "destination": "/dev-tools/cross-chain-bridges/atlas/"},
+    {"source": "/resources/guides/tokenbridge/", "destination": "/resources/guides/atlas/"},
+    {"source": "/resources/guides/tokenbridge/faq/", "destination": "/resources/guides/atlas/"},
+    {"source": "/resources/guides/tokenbridge/dappguide/", "destination": "/resources/guides/atlas/"},
+    {"source": "/resources/guides/tokenbridge/contractaddresses/", "destination": "/resources/guides/atlas/"},
+    {"source": "/resources/guides/tokenbridge/troubleshooting/", "destination": "/resources/guides/atlas/"},
+    {"source": "/resources/guides/tokenbridge/usingmycrypto/", "destination": "/resources/guides/atlas/"},
+    {"source": "/dev-tools/no-code/forward-protocol/", "destination": "/dev-tools/"}
+  ],
+  "headers": [
+    {
+      "source": "/(.*)\\.md",
+      "headers": [
+        {"key": "Content-Type", "value": "text/plain; charset=utf-8"},
+        {"key": "X-Content-Type-Options", "value": "nosniff"},
+        {"key": "X-Robots-Tag", "value": "googlebot: noindex, nofollow, bingbot: noindex, nofollow"},
+        {"key": "Cache-Control", "value": "public, max-age=3600, must-revalidate"}
+      ]
+    }
   ]
 }
