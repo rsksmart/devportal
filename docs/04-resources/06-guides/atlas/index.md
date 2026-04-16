@@ -11,7 +11,7 @@ Atlas Bridge is a cross-chain bridge for the Rootstock ecosystem. You can use it
 - Peg-in means you move assets into Rootstock.
 - Peg-out means you move assets out of Rootstock.
 
-## Before you start
+## Prerequisites
 You need a wallet for the source network and a wallet address for the destination network. You also need enough balance to cover both transfer amount and fees.
 
 Do not send funds from exchange deposit addresses. Use wallets you control.
@@ -19,7 +19,7 @@ Do not send funds from exchange deposit addresses. Use wallets you control.
 ## Getting Started
 To get started, read [How to use Atlas Bridge](/resources/guides/atlas/getting-started-atlas/). Find and resolve common errors in the [FAQ](/resources/guides/atlas/faq/).
 
-## What Atlas shows before you bridge
+## Before you bridge
 Atlas lets you compare provider routes, amounts, and estimated completion times before you connect a wallet. This helps you choose a route that matches your amount, speed target, and fee tolerance.
 
 ### Minimum Transaction Amounts
@@ -32,7 +32,10 @@ If Atlas shows no provider for your amount, your amount is often below a provide
 | Boltz | 0.00001 BTC | 0.00001 rBTC |
 | Native | 0.005 BTC | 0.004 rBTC |
 
+:::tip[Tip]
+
 For some providers, minimums do not include fees. Keep extra balance in the source wallet.
+:::
 
 ### Mainnet
 Available swaps on [Mainnet](https://atlas.rootstock.io/):

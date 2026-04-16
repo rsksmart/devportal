@@ -27,7 +27,7 @@ Use the filters to narrow by goal. Links go only to **published** guides or sect
 values={[
   {label: 'Generate Yield', value: 'btcfi'},
   {label: 'Onboard Users', value: 'ux'},
-  {label: 'Automation and AI', value: 'agents'},
+  {label: 'AI Agents', value: 'agents'},
   {label: 'Bridge Assets', value: 'interop'},
   {label: 'RIF economy and governance', value: 'rif'},
   {label: 'Payments', value: 'payments'}
@@ -50,7 +50,7 @@ values={[
   color="cyan"
   linkHref="/use-cases/interoperability/"
   linkTitle="View section"
-  description="Peg-in, peg-out, liquidity routes, and cross-chain messaging. End-user peg flows live under Resources. Atlas Bridge SDK tutorial is not on the portal yet."
+  description="Peg-in, peg-out, liquidity routes, and cross-chain messaging."
 />
 
 <FilterItem
@@ -119,7 +119,7 @@ values={[
   color="orange"
   linkHref="/use-cases/payments-assets/"
   linkTitle="View section"
-  description="Tokens, rBTC settlement, and programmable payment patterns. Dedicated use-case guides for mocks and agentic commerce are in draft."
+  description="Tokens, rBTC settlement, and programmable payment patterns."
 />
 
 <FilterItem
@@ -129,6 +129,6 @@ values={[
   color="orange"
   linkHref="/use-cases/payments-assets/integrate-x402/"
   linkTitle="View tutorial"
-  description="HTTP 402 style pay-per-use APIs on Rootstock (Resources tutorial)."
+  description="HTTP 402 style pay-per-use APIs on Rootstock."
 />
 </Filter>

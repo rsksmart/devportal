@@ -6,15 +6,15 @@ description: "Mastering the tools that make Bitcoin dApps as seamless as Web2."
 tags: [ux, onboarding, rif-relay, rns, account-abstraction, fundamentals]
 ---
 
-Blockchain technology often comes with high friction, such as hard to remember seed phrases, gas fees, and long hexadecimal addresses. Enhancing the UX and Onboarding on Rootstock is about abstracting this complexity. By leveraging core devtools compatible with Rootstock such as [Para Wallet](/developers/quickstart/para), [Reown](/developers/quickstart/reown), developers can build applications that feel like standard web apps while retaining the security of Bitcoin.
+Blockchain technology often comes with high friction, such as hard to remember seed phrases, gas fees, and long hexadecimal addresses. Enhancing the UX and Onboarding on Rootstock is about abstracting this complexity. By leveraging core [DevTools](/dev-tools/) compatible with Rootstock such as [Para Wallet](/developers/quickstart/para), [Reown](/developers/quickstart/reown), developers can build applications that feel like standard web apps while retaining the security of Bitcoin.
 
 ## Core Pillars
 
 | Pillar | Description | Primary Tool/Protocol |
 | :--- | :--- | :--- |
-<!-- | **Gasless Tx** | Sponsored transactions where users pay zero gas or pay in ERC-20 tokens. | [RIF Relay](/use-cases/onboarding-ux/gasless-transactions-relay) | -->
 | **Identity** | Transforming hex addresses into readable, portable Bitcoin identities. | [RIF Name Service (RNS)](https://rns.rifos.org/) |
-| **Smart Wallets** | Remove seed phrases and gas hurdles using Para SDK's MPC-based social login and Account Abstraction on Rootstock. | [Para SDK](https://dev.rootstock.io/developers/quickstart/para/) |
+| **Smart Wallets** | Remove seed phrases and gas hurdles using Para SDK's MPC-based social login and Account Abstraction on Rootstock. | [Para SDK](/use-cases/onboarding-ux/para/) |
+| **Onboard users via USSD** | Use USSD to interact with DeFi protocols on Rootstock. | [USSD DeFi Guide](/use-cases/onboarding-ux/ussd-rootstock-defi/) |
 
 ## Key Concepts
 
