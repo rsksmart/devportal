@@ -6,15 +6,16 @@ tags: [rsk, rootstock, use cases, solutions, guides, tutorials, institutions, us
 description: "Implementation guides for building and integrating on Rootstock."
 ---
 
-The **Use Cases** hub groups tasks you can ship: onboarding, bridging, automation, governance, and payments. Each published guide states prerequisites, flags risks where they matter, and walks through concrete steps for integration on Rootstock.
+The **Use Cases** hub organizes implementation guides for Rootstock. You use them for yield, onboarding, bridging, AI and automation, RIF economy, governance, and payments.
+
+Each guide lists prerequisites and highlights possible risks when building. It documents concrete steps you follow to build and deploy.
 
 :::note[Expand the library]
 
 If you want a new guide in this hub, use the links below.
 
-* Request a use case article using the Request Article on the right navigation options on this page.
-* [**Submit an Idea on the Hacktivator Marketplace**](https://hacktivator-marketplace.rootstock.io/)
-* [**Rootstock Discord**](https://discord.gg/rootstock)
+* [**Submit a Docs / Tooling Idea on the Hacktivator Marketplace**](https://hacktivator-marketplace.rootstock.io/)
+* [**Join the Rootstock Discord**](https://discord.gg/rootstock)
 
 :::
 
@@ -91,21 +92,10 @@ values={[
   linkTitle="View guide"
   description="Connect a chat-style UI to Rootstock testnet for balance checks and simple transactions."
 />
-
-<!-- <FilterItem
-  value="agents"
-  title="Integrate SDK Logic into Agent Workflows"
-  subtitle="Automation and AI"
-  color="pink"
-  linkHref="/use-cases/ai-automation/integrate-rootstock-sdk/"
-  linkTitle="View guide"
-  description="Wire Rootstock SDK layers so automation can read chain state and submit guarded transactions."
-/> -->
-
 <FilterItem
   value="agents"
   title="Model Context Protocol (MCP) on Rootstock"
-  subtitle="Automation and AI"
+  subtitle="AI Agents"
   color="pink"
   linkHref="/use-cases/ai-automation/mcp-rootstock/"
   linkTitle="View guide"
