@@ -14,13 +14,15 @@ By the end of this tutorial, you will have:
 - A Hardhat test suite that validates add/remove liquidity and swaps
 - A basic example of how to wire the contract into a frontend
 
-**Prerequisites**: Follow the [Shared Setup Guide](../_shared-setup.md) before starting.
+## Prerequisites
+
+**Prerequisites**: Follow the [Shared Setup Guide](../shared-setup.md) before starting.
 
 For background concepts, token standards, and security review, see [Rootstock DeFi 101](/resources/guides/defi-101/).
 
-::::warning[Educational only]
+:::warning[Educational only]
 This tutorial is a minimal implementation for learning and experimentation. Before shipping to production, review [Rootstock DeFi 101](/resources/guides/defi-101/) and get professional audits.
-::::
+:::
 
 ## Our SimpleAMM Contract
 
@@ -249,7 +251,7 @@ Now we'll write tests to ensure our AMM works correctly.
 
 ### Prerequisites
 
-**Prerequisites**: Follow the [Shared Setup Guide](../_shared-setup.md) before starting.
+**Prerequisites**: Follow the [Shared Setup Guide](../shared-setup.md) before starting.
 
 ### Test Setup
 
@@ -479,7 +481,7 @@ Rounding Errors: The sqrt function may have small rounding errors. For a real AM
 #### Then run:
 
 ```bash
-npx hardhat run scripts/deploy.js --network rsktestnet
+npx hardhat run scripts/deploy.js --network rootstockTestnet
 ```
 
 ## Conclusion

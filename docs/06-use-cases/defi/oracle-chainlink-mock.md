@@ -14,7 +14,9 @@ By the end of this tutorial, you will have:
 - A local test setup using a **mock** price feed (no real oracle dependency)
 - A deployment flow you can run on **Rootstock testnet**
 
-**Prerequisites**: Follow the [Shared Setup Guide](../_shared-setup.md) before starting.
+## Prerequisites
+
+**Prerequisites**: Follow the [Shared Setup Guide](../shared-setup.md) before starting.
 
 For background concepts and security review, see [Rootstock DeFi 101](/resources/guides/defi-101/).
 
@@ -243,7 +245,7 @@ main().catch((error) => {
 ### Run it with:
 
 ```bash
-npx hardhat run scripts/deploy-price-consumer.js --network rsktestnet
+npx hardhat run scripts/deploy-price-consumer.js --network rootstockTestnet
 ```
 
 ## Additional Resources
