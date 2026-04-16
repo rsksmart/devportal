@@ -113,6 +113,16 @@ values={[
 />
 
 <FilterItem
+  value="btcfi"
+  title="DeFi tutorials (AMM + oracles)"
+  subtitle="DeFi"
+  color="orange"
+  linkHref="/use-cases/defi/"
+  linkTitle="View section"
+  description="Practical Rootstock testnet tutorials for a constant-product AMM and a mock Chainlink-style oracle consumer."
+/>
+
+<FilterItem
   value="rif"
   title="DAO Voting with the Collective SDK"
   subtitle="RIF economy and governance"
