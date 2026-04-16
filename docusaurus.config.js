@@ -11,6 +11,18 @@ import {createNavItems} from './src/_utils/utils.js';
 
 const mainNavItems = createNavItems('./docs');
 
+/**
+ * @param {string | undefined} value
+ * @returns {'warn' | 'ignore' | 'log' | 'throw'}
+ */
+function reportingSeverityFromEnv(value) {
+  const v = (value || 'warn').toLowerCase();
+  if (v === 'ignore' || v === 'log' || v === 'throw' || v === 'warn') {
+    return v;
+  }
+  return 'warn';
+}
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   noIndex: false, // set to false to enable search engine indexing
@@ -66,21 +78,23 @@ const config = {
         }
       },
     },
-    newsHighlight : [
-      {
-        title : 'Builder Rootcamp Cohort 1 Kicks Off — January 26, 2026!',
-        url : 'https://rootstock.io/rootcamp/'
-      }
-    ]
+    // newsHighlight : [
+    //   {
+    //     title : 'Builder Rootcamp Cohort 1 Kicks Off — January 26, 2026!',
+    //     url : 'https://rootstock.io/rootcamp/'
+    //   }
+    // ]
   },
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'rsksmart', // Usually your GitHub org/user name.
   projectName: 'devportal', // Usually your repo name.
 
-  onBrokenLinks: process.env.DOCUSAURUS_BROKEN_LINKS || 'warn',
-  onBrokenMarkdownLinks: process.env.DOCUSAURUS_BROKEN_MARKDOWN_LINKS || 'warn',
-  onBrokenAnchors: process.env.DOCUSAURUS_BROKEN_ANCHORS || 'warn',
+  onBrokenLinks: reportingSeverityFromEnv(process.env.DOCUSAURUS_BROKEN_LINKS),
+  onBrokenMarkdownLinks: reportingSeverityFromEnv(
+    process.env.DOCUSAURUS_BROKEN_MARKDOWN_LINKS,
+  ),
+  onBrokenAnchors: reportingSeverityFromEnv(process.env.DOCUSAURUS_BROKEN_ANCHORS),
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -107,8 +121,9 @@ const config = {
       },
     },
   },
-  clientModules:[
-    '/src/clientModules/renderEquations.js'
+  clientModules: [
+    './src/clientModules/renderEquations.js',
+    './src/clientModules/docsearch-css.js',
   ],
   plugins: [
     [

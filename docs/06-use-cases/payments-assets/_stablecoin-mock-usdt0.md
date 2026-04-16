@@ -9,6 +9,7 @@ tags: [btcfi, stablecoins, mocking, testnet, dev-tutorial, rbtc]
 Financial logic requires testing against assets with different decimal precisions and liquidity profiles. Real USDT0 on Rootstock Testnet might be scarce or difficult to acquire in large volumes for stress testing. This tutorial explains how to deploy and use a mock stablecoin contract to simulate high-liquidity environments.
 
 ## The Purpose of Mocking
+
 Testing a protocol with real testnet tokens often limits the scope of your simulations. Mocking allows you to:
 
 * Control Supply: Mint arbitrary amounts of tokens to test large-scale liquidations.

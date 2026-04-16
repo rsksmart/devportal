@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-sidebar_label: Para
+sidebar_label: Onboard using Para SDK
 title: Getting Started with Para
 slug: /use-cases/onboarding-ux/para
 description: Para is a modern wallet infrastructure for fintech and crypto applications. It provides a comprehensive wallet and authentication suite for crypto developers and apps on Rootstock.
