@@ -1,6 +1,6 @@
 ---
 sidebar_label: Integrating x402 Payments
-sidebar_position: 13
+sidebar_position: 2
 title: Integrating x402 Payments with Rootstock
 description: Build a decentralized pay-per-use API on Rootstock using the x402 protocol standards. This guide covers implementing a Sovereign Mode Node.js server that verifies on-chain tRBTC payments directly.
 tags: [rsk, rootstock, tutorials, x402, payments, agents]

@@ -137,7 +137,7 @@ values={[
   title="Integrating x402 Payments with Rootstock"
   subtitle="Tutorials"
   color="orange"
-  linkHref="/resources/tutorials/integrate-x402/"
+  linkHref="/use-cases/payments-assets/integrate-x402/"
   linkTitle="View tutorial"
   description="HTTP 402 style pay-per-use APIs on Rootstock (Resources tutorial)."
 />
