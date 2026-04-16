@@ -107,8 +107,9 @@ const config = {
       },
     },
   },
-  clientModules:[
-    '/src/clientModules/renderEquations.js'
+  clientModules: [
+    './src/clientModules/renderEquations.js',
+    './src/clientModules/docsearch-css.js',
   ],
   plugins: [
     [
