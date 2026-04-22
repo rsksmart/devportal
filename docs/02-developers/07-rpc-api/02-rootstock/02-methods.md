@@ -1796,6 +1796,65 @@ curl --location 'https://rpc.testnet.rootstock.io/<api-key>' \
 }
 ```
 
+## rsk_getStorageBytesAt
+
+- _Method:_ `rsk_getStorageBytesAt`
+  - Returns raw bytes from a storage position at a given address and block.
+  - This is a Rootstock-specific RPC method. It is not part of the Ethereum JSON-RPC specification.
+  - Availability can be restricted.
+  - It is primarily used for bridge data inspection (for example UTXOs and peg-out related state), but it can be used for any contract storage.
+  - This method was introduced to preserve Ethereum compatibility in `eth_getStorageAt` while still allowing retrieval of storage values larger than 32 bytes.
+- _Params:_
+  - **Address:** String, required. Contract address to read from.
+  - **Position:** String, required. Storage position key (hex bytes).
+  - **Block:** String or Number, required. Block identifier at which to read state (for example hex block number).
+- _Note:_
+  - `Position` can be either:
+    - a direct storage slot key in hex, or
+    - an ASCII identifier encoded as hex (for example, `nextPegoutHeight` -> `0x6e6578745065676f7574486569676874`) used by bridge state mappings.
+- _Returns:_
+  - **Bytes:** String. Raw bytes from the requested storage position, hex-encoded.
+
+- **Example request:**
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 4207034673815346,
+  "method": "rsk_getStorageBytesAt",
+  "params": [
+    "0x0000000000000000000000000000000001000006",
+    "0x6e6578745065676f7574486569676874",
+    "0x32"
+  ]
+}
+```
+
+- **Example request (bridge storage key):**
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 0,
+  "method": "rsk_getStorageBytesAt",
+  "params": [
+    "0x0000000000000000000000000000000001000006",
+    "0x00000072656c6561736552657175657374517565756557697468547848617368",
+    "0x140"
+  ]
+}
+```
+
+- **Example response:**
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 0,
+    "result": "0xf8ae94f7ee9ab7297134a0ccc76f3d50e94def17488f2c8310c8e0a04c06412341fefcd7416934acbc686fa2f4a86dd2f264299e7355d12db2d2e62794f7ee9ab7297134a0ccc76f3d50e94def17488f2c8310c8e0a06d9d917d2c058548212136e937bcc8691a6b476c754847996dd3a3d39d681e3e94f7ee9ab7297134a0ccc76f3d50e94def17488f2c8310c8e0a097711c76e1239be03af54a071eded8917a67aff6cebdb61debd70c15a76fc936"
+}
+```
+
 ## rsk_getTransactionReceiptNodesByHash
 
 - _Method:_ `rsk_getTransactionReceiptNodesByHash`
