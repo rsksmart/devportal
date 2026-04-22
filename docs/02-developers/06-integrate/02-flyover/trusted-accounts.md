@@ -92,12 +92,13 @@ Example tests and automation demos can be found in:
 ### Notes
 Follow the documentation in the above repository for commands and setup steps.
 
-## Changelog
+## 🧾 Changelog
 | Component | Version | Release Link |
 |------------|----------|---------------|
 | FlyoverSDK | v1.7.0 | [GitHub Release](https://github.com/rsksmart/flyover-sdk/releases/tag/v1.7.0) |
 | LPS | v2.3.0 | [GitHub Release](https://github.com/rsksmart/liquidity-provider-server/releases/tag/v2.3.0) |
 
-## Related Resources
+
+## 📦 Related Resources
 - **Flyover SDK (npm):** [@rsksmart/flyover-sdk](https://www.npmjs.com/package/@rsksmart/flyover-sdk)
 - **GitHub Repo:** [Flyover SDK](https://github.com/rsksmart/flyover-sdk)
