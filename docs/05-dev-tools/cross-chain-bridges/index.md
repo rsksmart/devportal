@@ -69,4 +69,12 @@ Imagine different islands, each with its own unique economy and currency. To tra
     linkHref="/use-cases/interoperability/rootstock-layerzero/"
     linkTitle="Start Bridging"
   />
+  <CardsGridItem
+    title="Wormhole Messaging"
+    subtitle="cross-chain"
+    color="green"
+    description="Send arbitrary byte payloads between Rootstock and any Wormhole-supported network using Verified Action Approvals (VAAs) and the Wormhole Core Contract."
+    linkHref="/dev-tools/cross-chain-bridges/wormhole-messaging/"
+    linkTitle="Read the Guide"
+  />
 </CardsGrid>
