@@ -16,7 +16,7 @@ By the end of this tutorial, you will have:
 
 ## Prerequisites
 
-**Prerequisites**: Follow the [Shared Setup Guide](../shared-setup.md) before starting.
+**Prerequisites**: Follow the [Shared Setup Guide](/use-cases/interoperability/shared-setup/) before starting.
 
 For background concepts and security review, see [Rootstock DeFi 101](/resources/guides/defi-101/).
 

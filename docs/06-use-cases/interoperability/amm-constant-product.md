@@ -8,6 +8,8 @@ tags: [rsk, rootstock, defi, amm, uniswap, solidity, testnet]
 
 # Build a Constant-Product AMM on Rootstock (Testnet)
 
+A Constant-Product Automated Market Maker (AMM) is a decentralized exchange mechanism that maintains liquidity using the formula x * y = k, where the product of two token reserves remains constant after swaps.
+
 By the end of this tutorial, you will have:
 
 - A working `SimpleAMM` constant‑product AMM contract deployed on **Rootstock testnet**
@@ -16,7 +18,7 @@ By the end of this tutorial, you will have:
 
 ## Prerequisites
 
-**Prerequisites**: Follow the [Shared Setup Guide](../shared-setup.md) before starting.
+**Prerequisites**: Follow the [Shared Setup Guide](/use-cases/interoperability/shared-setup/) before starting.
 
 For background concepts, token standards, and security review, see [Rootstock DeFi 101](/resources/guides/defi-101/).
 
@@ -251,7 +253,7 @@ Now we'll write tests to ensure our AMM works correctly.
 
 ### Prerequisites
 
-**Prerequisites**: Follow the [Shared Setup Guide](../shared-setup.md) before starting.
+**Prerequisites**: Follow the [Shared Setup Guide](/use-cases/interoperability/shared-setup/) before starting.
 
 ### Test Setup
 

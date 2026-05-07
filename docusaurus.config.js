@@ -108,7 +108,7 @@ const config = {
     },
   },
   clientModules:[
-    '/src/clientModules/renderEquations.js'
+    './src/clientModules/renderEquations.js'
   ],
   plugins: [
     [

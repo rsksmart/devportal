@@ -42,7 +42,7 @@ Build a simple constant-product AMM from scratch. Understand liquidity pools, sw
 ### 4. [Security Patterns](/resources/guides/defi-developer-guide/security-patterns)
 Explore essential security practices for DeFi: reentrancy protection, access control, integer safety, upgradeability, circuit breakers, and flash loan resistance. Learn how to audit your code and avoid common pitfalls.
 
-### 5. [Example Templates](./05-example-templates.md)
+### 5. Example Templates
 Get started quickly with full-stack templates. Each template includes smart contracts, Hardhat deployment scripts, and a React frontend with ethers.js integration. Templates cover price oracles, AMMs, ERC-20 with permit, yield vaults (ERC-4626), and upgradeable contracts.
 
 ## Target Audience

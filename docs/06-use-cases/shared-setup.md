@@ -1,5 +1,6 @@
 ---
 title: Shared Setup Guide (Rootstock Testnet)
+slug: /use-cases/interoperability/shared-setup
 sidebar_position: 0
 description: Install Hardhat, configure Rootstock testnet, get tRBTC, and set up OpenZeppelin dependencies for Rootstock use-case tutorials.
 tags: [rsk, rootstock, use cases, hardhat, testnet, solidity]
@@ -36,6 +37,13 @@ npx hardhat
 ```
 
 If you already have a Hardhat project, you can skip initialization and only install the dependencies you need.
+
+## Recommended quickstarts (official)
+
+If you prefer to follow the official Rootstock walkthroughs for Hardhat setup:
+
+- [Rootstock Hardhat quickstart](https://dev.rootstock.io/developers/quickstart/hardhat/)
+- [Hardhat Ignition quickstart](https://dev.rootstock.io/developers/quickstart/hardhat-ignition/)
 
 ## Dependencies
 
@@ -85,7 +93,7 @@ module.exports = {
 };
 ```
 
-## tRBTC usage (testnet gas fees)
+## Get Test RBTC
 
 You’ll need **tRBTC** to pay gas fees when you deploy and test contracts on Rootstock testnet.
 
@@ -94,7 +102,7 @@ You’ll need **tRBTC** to pay gas fees when you deploy and test contracts on Ro
 
 After you request tRBTC, verify the funds arrived by searching your address on the explorer. If you run out of tRBTC, your deployments and transactions will fail due to insufficient gas.
 
-## OpenZeppelin explanation
+## Install OpenZeppelin
 
 Install OpenZeppelin contracts:
 

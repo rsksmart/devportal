@@ -9,9 +9,9 @@ This document is a DeFi 101 catalog – it lists common token standards, vulnera
 
 If you want step‑by‑step practical tutorials that run on Rootstock testnet:
 
-- AMM tutorial: [Constant‑Product AMM on Rootstock testnet](../../06-use-cases/defi/amm-constant-product.md)
-- Oracle tutorial: [Chainlink oracle (mock) on Rootstock testnet](../../06-use-cases/defi/oracle-chainlink-mock.md)
-- Shared setup: [Shared Setup Guide (Rootstock testnet)](../../06-use-cases/_shared-setup.md)
+- AMM tutorial: [Constant‑Product AMM on Rootstock testnet](/use-cases/interoperability/amm-constant-product/)
+- Oracle tutorial: [Chainlink oracle (mock) on Rootstock testnet](/use-cases/interoperability/oracle-chainlink-mock/)
+- Shared setup: [Shared Setup Guide (Rootstock testnet)](/use-cases/interoperability/shared-setup/)
 
 ---
 

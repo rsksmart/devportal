@@ -117,7 +117,7 @@ values={[
   title="DeFi tutorials (AMM + oracles)"
   subtitle="DeFi"
   color="orange"
-  linkHref="/use-cases/defi/"
+  linkHref="/use-cases/interoperability/"
   linkTitle="View section"
   description="Practical Rootstock testnet tutorials for a constant-product AMM and a mock Chainlink-style oracle consumer."
 />
