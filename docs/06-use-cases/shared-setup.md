@@ -1,7 +1,7 @@
 ---
-title: Shared Setup Guide (Rootstock Testnet)
+title: Shared Setup
 slug: /use-cases/interoperability/shared-setup
-sidebar_position: 0
+sidebar_position: 999
 description: Install Hardhat, configure Rootstock testnet, get tRBTC, and set up OpenZeppelin dependencies for Rootstock use-case tutorials.
 tags: [rsk, rootstock, use cases, hardhat, testnet, solidity]
 ---
