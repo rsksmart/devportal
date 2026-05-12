@@ -40,7 +40,7 @@ Find a list of frequently asked questions about the Token Bridge.
   <Accordion.Item eventKey="3">
     <Accordion.Header as="h3">Will the supply of the original token will increase as a result of Side Tokens?</Accordion.Header>
     <Accordion.Body>
-      - No! It’s important to note that there will be no increase in the original tokens. The existing amount of circulating original tokens will stay the same and simply be distributed across 2 networks (Rootstock Network & Ethereum network) instead of 1.
+      - No! It's important to note that there will be no increase in the original tokens. The existing amount of circulating original tokens will stay the same and simply be distributed across 2 networks (Rootstock Network & Ethereum network) instead of 1.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="4">
@@ -53,13 +53,13 @@ Find a list of frequently asked questions about the Token Bridge.
     <Accordion.Header as="h3">What is the Side Token Contract Address, Symbol, and # of Decimal Places in order to add it as a Custom Coin on MyEtherWallet?</Accordion.Header>
     <Accordion.Body>
       - The symbol of the Side Token is the original token symbol with an `r` prefix if it is created in Rootstock or an `e` prefix if it is created in Ethereum. For example, if we cross the `RIF` token from Rootstock to Ethereum, the Side Token symbol would be `eRIF`.
-      - The number of decimal places will be 18. These are the ['addresses'](/resources/guides/tokenbridge/contractaddresses/) of the deployed contracts in the different networks.
+      - The number of decimal places will be 18. These are the [addresses](./contractaddresses.md) of the deployed contracts in the different networks.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="6">
     <Accordion.Header as="h3">How do I transform my original tokens to Side Tokens?</Accordion.Header>
     <Accordion.Body>
-      - The Token Bridge will be a public dApp where users will be able to access by using Liquality Wallet or Metamask. You will be able to send your original tokens and receive an equivalent amount of Side Tokens on the other network. By toggling the network on Metamask, you’re also able to transfer the other way around, by sending Side Tokens and receive original tokens.
+      - The Token Bridge will be a public dApp where users will be able to access by using Liquality Wallet or Metamask. You will be able to send your original tokens and receive an equivalent amount of Side Tokens on the other network. By toggling the network on Metamask, you're also able to transfer the other way around, by sending Side Tokens and receive original tokens.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="7">
@@ -71,13 +71,13 @@ Find a list of frequently asked questions about the Token Bridge.
   <Accordion.Item eventKey="8">
     <Accordion.Header as="h3">Is there a limit on how many tokens can be bridged over?</Accordion.Header>
     <Accordion.Body>
-      - Visit the [token crossing limit page](/resources/guides/tokenbridge/troubleshooting/) to view the min/max values.
+      - Visit the [token crossing limit page](./troubleshooting.md) to view the min/max values.
     </Accordion.Body>
   </Accordion.Item>
    <Accordion.Item eventKey="9">
     <Accordion.Header as="h3">Can any token be bridged over?</Accordion.Header>
     <Accordion.Body>
-      - Only whitelisted tokens can cross the bridge, this curated list is used to avoid malicious contracts and DDoS attacks. See the [list of supported tokens](/resources/guides/tokenbridge/troubleshooting/)
+      - Only whitelisted tokens can cross the bridge, this curated list is used to avoid malicious contracts and DDoS attacks. See the [list of supported tokens](./troubleshooting.md).
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="10">
@@ -89,7 +89,7 @@ Find a list of frequently asked questions about the Token Bridge.
    <Accordion.Item eventKey="11">
     <Accordion.Header as="h3">How many confirmations are required to convert the original tokens to Side tokens and vice-versa?</Accordion.Header>
     <Accordion.Body>
-      - Confirmations depends on the amount being crossed. See the [Troubleshooting guide](/resources/guides/tokenbridge/troubleshooting/) for more information.
+      - Confirmations depends on the amount being crossed. See the [Troubleshooting guide](./troubleshooting.md) for more information.
       - You can see these amounts defined in the [Token List](https://dapp.testnet.bridges.rootstock.io/list).
     </Accordion.Body>
   </Accordion.Item>
@@ -107,5 +107,4 @@ Find a list of frequently asked questions about the Token Bridge.
   </Accordion.Item>
 </Accordion>
 ````
-
 

@@ -220,7 +220,7 @@ info:    There are 10 transactions required to configure the OApp
 ...
 ``` 
 
-When wiring finishes, the contracts can move tokens between chains according to the OFT logic and limits you set.
+When wiring is completed, the contracts can move tokens between chains according to the OFT logic and limits you set.
 
 ### Functions
 

@@ -112,7 +112,7 @@ Then connect to the Bridge's Sidechain contract using the corresponding address 
 
 ## Validating result
 
-Using the address obtained from the previous step (`0x1684e1C7bd0225917C48F60FbdC7f47b2982a3C2`), and the IERC20 ABI interface, let’s connect to the contract.
+Using the address obtained from the previous step (`0x1684e1C7bd0225917C48F60FbdC7f47b2982a3C2`), and the IERC20 ABI interface, let's connect to the contract.
 
 !["Access Contract Sidetoken"](/img/resources/tokenbridge/access_contract_sidetoken.png "Access Contract Sidetoken")
 
@@ -124,6 +124,6 @@ To confirm that the transfer was successful, verify the balance of the account u
 
 ---
 
-Similarly, verify the contract `symbol`. Notice that in this case the value is `eMAIN` where ‘e’ refers to a transfer to the Ethereum Sidechain.
+Similarly, verify the contract `symbol`. Notice that in this case the value is `eMAIN` where 'e' refers to a transfer to the Ethereum Sidechain.
 
 !["Contract Symbol"](/img/resources/tokenbridge/contract_symbol.png "Contract Symbol")

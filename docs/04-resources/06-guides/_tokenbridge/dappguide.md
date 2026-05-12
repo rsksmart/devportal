@@ -11,7 +11,7 @@ The Token Bridge will no longer support moving assets between Ethereum and Roots
 
 :::
 
-This guide describes the steps to transfer tokens using the Web Interface for the [Rootstock Token Bridge dApp](https://dapp.tokenbridge.rootstock.io/). Please refer to the project documentation, if you’d like to know more about how this bridge works. It is possible to test the transfer of tokens between Rootstock Testnet and Sepolia networks, or Rootstock Mainnet and Ethereum networks using the Rootstock Tokenbridge web interface.
+This guide describes the steps to transfer tokens using the Web Interface for the [Rootstock Token Bridge dApp](https://dapp.tokenbridge.rootstock.io/). Please refer to the project documentation, if you'd like to know more about how this bridge works. It is possible to test the transfer of tokens between Rootstock Testnet and Sepolia networks, or Rootstock Mainnet and Ethereum networks using the Rootstock Tokenbridge web interface.
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ This will require the use of either Chrome or Chromium web browser, with one of 
 
 :::tip[Tip]
 - See the Tools Section for a list of [wallets compatible with Rootstock](/dev-tools/)
-- See the [Contract addresses](/resources/guides/tokenbridge/contractaddresses/) section for a list of contract addresses.
+- See the [Contract addresses](./contractaddresses.md) section for a list of contract addresses.
 :::
 
 ## Get Started
@@ -68,7 +68,7 @@ As soon as the process starts, you will see a loader and a popup from Metamask a
 
 <img src="/img/resources/tokenbridge/dapp-image4.png" alt="token bridge wait for transaction" />
 
-Once the tokens have crossed, **you need to claim them on the Sepolia network**., you will be asked to switch network to Sepolia. Click on **switch network to Sepolia** and approve in MetaMask.
+Once the tokens have crossed, **you need to claim them on the Sepolia network.**, you will be asked to switch network to Sepolia. Click on **switch network to Sepolia** and approve in MetaMask.
 
 > Switching to the opposite network is important in order to claim your tokens.
 

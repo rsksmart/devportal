@@ -12,8 +12,7 @@ Programmable payments on Rootstock are normal EVM contracts with Bitcoin-anchore
 
 | Pillar | Description | Where to go |
 | :--- | :--- | :--- |
-| **x402 and agentic commerce** | Machine clients pay for HTTP resources with on-chain settlement. | [Integrating x402 Payments with Rootstock](/resources/tutorials/integrate-x402/) (Resources tutorial) |
-| **Testnet mocks (USDT0)** | Practice liquidity and settlement logic on testnet without mainnet risk. | Dev Portal guide not published yet. |
+| **x402 and agentic commerce** | Machine clients pay for HTTP resources with on-chain settlement. | [Integrating x402 Payments with Rootstock](/use-cases/payments-assets/integrate-x402/)|
 | **ERC-20 and rBTC** | Fungible tokens and native rBTC for checkout, escrow, and streaming. | Contract patterns in your stack (Hardhat, Foundry) plus [RIF Relay](/developers/integrate/rif-relay/overview/) when you need sponsored gas. |
 
 ## Key concepts
@@ -37,8 +36,6 @@ Contracts can hold funds, release them on conditions, or stream them over time. 
 * **Explorers and indexers:** Confirm settlement and build support tooling.
 
 ## Implementation guides
-
-When you publish a guide in this folder (remove the leading `_` from the filename), it appears as a card below. Until then this section stays empty.
 
 import DocCardList from '@theme/DocCardList';
 

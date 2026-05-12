@@ -10,7 +10,7 @@ Imagine different islands, each with its own unique economy and currency. To tra
 
 ## Why do we need cross-chain bridges?
 
-* Seamless Asset Movement: Just like you can move money between different bank accounts, cross-chain bridges allow you to move your digital assets (like cryptocurrencies or NFTs) between different blockchains.
+* Asset movement across chains: Cross-chain bridges let you move digital assets between different blockchains, similar to transfers between bank accounts but with chain-specific risks and wait times.
 * Expanded Opportunities: By connecting different blockchains, you can access a wider range of financial services, decentralized applications (dApps), and investment opportunities.
 
 ## How do cross-chain bridges work?
@@ -25,15 +25,23 @@ Imagine different islands, each with its own unique economy and currency. To tra
     title="Stargate"
     subtitle="cross-chain"
     color="green"
-    description="Bridge RBTC, DOC, MOC, USDRIF, USDT0, and more from Rootstock to other chains."
+    description="Bridge rBTC, DOC, MOC, USDRIF, USDT0, and more from Rootstock to other chains."
     linkHref="https://stargate.finance/"
+    linkTitle="Start Bridging"
+  />
+   <CardsGridItem
+    title="Atlas"
+    subtitle="cross-chain"
+    color="green"
+    description="Bridge supported assets between Rootstock and other networks using provider routes shown in Atlas."
+    linkHref="https://atlas.rootstock.io"
     linkTitle="Start Bridging"
   />
   <CardsGridItem
     title="PowPeg App"
     subtitle="cross-chain"
     color="green"
-    description="Convert BTC to RBTC and vice versa. It is secured by the PowPeg protocol, which is a unique protocol that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus."
+    description="Convert BTC to rBTC and vice versa. The PowPeg protocol secures locked bitcoin using Bitcoin hashrate that also supports Rootstock consensus."
     linkHref="https://powpeg.rootstock.io/"
     linkTitle="Start Bridging"
   />
@@ -49,7 +57,7 @@ Imagine different islands, each with its own unique economy and currency. To tra
     title="Hyperlane Bridge"
     subtitle="cross-chain"
     color="green"
-    description="Build dApps that seamlessly communicates between Rootstock to other EVM-compatible chains."
+    description="Build dApps that communicate between Rootstock and other EVM-compatible chains."
     linkHref="/resources/tutorials/hyperlane-bridge/"
     linkTitle="Start Bridging"
   />
@@ -57,7 +65,7 @@ Imagine different islands, each with its own unique economy and currency. To tra
     title="Layerzero"
     subtitle="cross-chain"
     color="green"
-    description="LayerZero, a cross-chain messaging protocol enables the seamless movement of Bitcoin-backed assets from Rootstock to other blockchains, allowing developers to build omnichain applications (OApps) that interact across multiple chains as if they were one."
+    description="LayerZero is a cross-chain messaging protocol for moving Bitcoin-backed assets from Rootstock to other blockchains so developers can build omnichain applications (OApps) across multiple chains."
     linkHref="/use-cases/interoperability/rootstock-layerzero/"
     linkTitle="Start Bridging"
   />

@@ -40,7 +40,7 @@ Before you start this guide, make sure you have the following:
 
 ## Getting Started
 
-To access the **Alchemy** tools, visit its [Dashboard Portal](https://www.alchemy.com/).  If you don't already have an account, you can sign up for free.  And then, simply log in to get started.
+To access the **Alchemy** tools, visit its [Dashboard Portal](https://dashboard.alchemy.com/?utm_source=chain_partner&utm_medium=referral&utm_campaign=rootstock).  If you don't already have an account, you can sign up for free.  And then, simply log in to get started.
 
 ### Step 1: Create New App
 After logging in, you'll be directed to the main dashboard.  From there, you have different options for interacting with **Alchemy** tools.

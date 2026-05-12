@@ -31,6 +31,12 @@ Before starting, ensure you have:
   - ABI
   - [Testnet RPC](https://rpc.rootstock.io/)
 
+:::tip[Rootstock Development]
+
+Read more about the development [prerequisites](/developers/requirements/) and configurations needed to ensure your smart contracts are deployed on the Rootstock network.
+
+:::
+
 ## Project Setup (Next.js)
 
 Create a fresh project:
@@ -230,8 +236,6 @@ Verify the provider:
 ```javascript
 const signer = await provider.getSigner();
 ```
-
-For further practice, check out the [dApp Tutorial](https://hackernoon.com/how-to-build-dApp-on-rootstock-with-nextjs-typescript-and-solidity).
 
 ## Summary
 

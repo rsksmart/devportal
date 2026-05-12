@@ -1,5 +1,5 @@
 ---
-sidebar_label: Conversational AI Agents
+sidebar_label: Build Conversational AI Agents
 sidebar_position: 205
 title: Conversational AI Agent with Blockchain Actions on Rootstock
 tags: [rsk, rootstock, ai agents, ai]

@@ -2,46 +2,40 @@
 sidebar_position: 1
 title: Bridge Assets
 sidebar_label: Overview
-description: "How Rootstock connects Bitcoin to programmable finance and other chains."
+description: "Understanding how Rootstock connects Bitcoin to the world of programmable finance."
 tags: [interoperability, bridges, powpeg, flyover, bitvmx, fundamentals]
 ---
 
-Interoperability is how BTC and rBTC move between Bitcoin, Rootstock, and other chains. Peg-ins, peg-outs, liquidity bridges, and messaging protocols differ by trust model, speed, and cost. Your job is to pick a path that matches your risk budget and to explain that choice to users.
+Interoperability is the ability for Bitcoin to move seamlessly between its native layer and programmable smart contract environments. Rootstock provides the infrastructure that combines the security of Bitcoin's proof of work with Ethereum's smart contract capabilities.
 
-## Core pillars
+## Core Pillars
 
-| Pillar | Description | Typical use |
+| Pillar | Description | Best Use Case |
 | :--- | :--- | :--- |
-| **Atlas** | Product UI for comparing bridge routes between Bitcoin and Rootstock. | [atlas.rootstock.io](https://atlas.rootstock.io/) for operators and users. The Dev Portal Atlas Bridge SDK tutorial is not published yet. |
-| **PowPeg** | Two-way peg with federation and HSM-backed signers. | High-value BTC and rBTC moves when you follow protocol rules and confirmations. |
-| **Flyover** | Liquidity providers can front funds for faster peg-side flows. | Faster UX when LPs are available on your route. |
-| **Union (BitVMX)** | Designs that target lower trust via optimistic checks on Bitcoin. | Advanced integrations, not a generic default. |
-| **LayerZero** | Omnichain tokens and messaging to other EVM networks. | Token portability beyond Bitcoin and Rootstock. Published guide: [LayerZero on Rootstock](/use-cases/interoperability/rootstock-layerzero/). |
+| **[Swap SDK](https://github.com/rsksmart/rsk-swap-sdk)** | Enable secure movement of assets between Bitcoin and Rootstock using the Swap SDK. | Trustless DeFi & L2 interoperability. |
+| **[PowPeg](https://github.com/rsksmart/powpeg-sdk)** | SDK for creating native peg-in and peg-out transactions following the PowPeg protocol. | Institutional & high-value transfers. |
+| **[Flyover SDK](https://github.com/rsksmart/flyover-sdk)** | A liquidity-based fast bridge that uses LPs to front the funds for the user. | Retail users & fast dApp onboarding. |
+| **[Union (BitVMX)](https://github.com/rsksmart/union-bridge-contracts)** | A trust-minimized 1-of-N bridge that uses optimistic fraud proofs on Bitcoin. | Trustless DeFi & L2 interoperability. |
+| **[Layerzero](/use-cases/interoperability/rootstock-layerzero/)** | Build Omnichain Fungible Token (OFTs) on Rootstock with Layerzero. | Trustless DeFi & L2 interoperability. |
 
-## Key concepts
+## Key Concepts
 
-### 1. Peg-in (Bitcoin to Rootstock)
+### 1. Peg-In (Bitcoin to Rootstock)
+A Peg-In occurs when you send native BTC to a designated vault address on the Bitcoin network. Once confirmed, the Rootstock network mints an equivalent amount of rBTC to your Rootstock address.
 
-You send BTC to a peg-in path on Bitcoin. After enough confirmations, Rootstock credits rBTC to your Rootstock address. Time and fees depend on Bitcoin congestion and policy.
+### 2. Peg-Out (Rootstock to Bitcoin)
+A Peg-Out is the reverse process: rBTC is burned on Rootstock, and the bridge infrastructure releases native BTC to your Bitcoin address.
 
-### 2. Peg-out (Rootstock to Bitcoin)
+### 3. Trust-Minimized Security (BitVMX)
+With the advent of **[BitVMX](https://bitvmx.org/)**, Rootstock bridges are moving toward an optimistic verification model. This allows for Bitcoin-native fraud proofs, meaning that as long as one participant is honest, the bridge remains secure.
 
-You burn or lock rBTC on Rootstock according to the peg-out flow. Native BTC is released on Bitcoin after protocol delays. Peg-outs are **not instant**.
+## Top Tools for Developers
+* **[Flyover SDK](https://github.com/rsksmart/flyover-sdk):** The primary library for integrating near-instant bridging into your frontend.
+* **[Swap SDK](https://github.com/rsksmart/rsk-swap-sdk):** Atlas Bridge is a cross-chain bridge for the Rootstock ecosystem. You can use it to move assets between Rootstock and other supported networks.
+* **[Rootstock Explorer](http://explorer.rootstock.io/):** Visually track cross-chain transactions and bridge health.
 
-### 3. Trust and verification
-
-Some bridges optimize for speed with liquidity or federation assumptions. Others target stronger trust minimization with more moving parts. Pick the path that matches your risk model and disclose it to users.
-
-## Tools
-
-* **Flyover SDK:** Fast peg flows where the protocol is supported.
-* **Explorers:** Trace peg-in, peg-out, and bridge transactions for support.
-* **Atlas:** Route comparison at [atlas.rootstock.io](https://atlas.rootstock.io/).
-* **PowPeg app:** User-facing peg walkthroughs under [Resources → PowPeg app](/resources/guides/powpeg-app/overview/). This section targets builders and cross-chain integration patterns.
-
-## Implementation guides
-
-Published tutorials in this section are listed below. Draft bridge SDK pages stay out of the sidebar until they are renamed for release.
+## Implementation Guides
+Explore the recipes below to start integrating bridging solutions into your application.
 
 import DocCardList from '@theme/DocCardList';
 

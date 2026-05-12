@@ -1,5 +1,6 @@
 ---
 title: Build DAO Voting and RIF Utility on Rootstock with the Collective SDK
+label: Build DAO Voting
 description: Learn how to build Rootstock governance dApps with the Collective SDK. Use the starter kit to stake RIF, fetch proposals, simulate writes, and cast votes safely.
 slug: /use-cases/integrate-rif-economy/build-dao-voting-collective-sdk
 sidebar_label: DAO Voting with Collective SDK

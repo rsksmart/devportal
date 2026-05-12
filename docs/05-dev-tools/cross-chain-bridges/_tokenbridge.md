@@ -2,7 +2,7 @@
 sidebar_position: 4
 sidebar_label: Token Bridge
 title: Token Bridge
-description: "The Rootstock Token Bridge is an interoperability solution that allows you to transfer ERC-20 tokens seamlessly between Ethereum and Rootstock networks. " 
+description: "The Rootstock Token Bridge was an interoperability solution for ERC-20 tokens between Ethereum and Rootstock. Use Atlas for current bridging options." 
 tags: [token bridge, bridges, developer tools, testnet, rsk, rootstock, ethereum, dApps, smart contracts]
 ---
 
@@ -12,12 +12,12 @@ The Token Bridge will no longer support moving assets between Ethereum and Roots
 
 :::
 
-The Rootstock Token Bridge is an interoperability solution that allows you to transfer ERC-20 tokens seamlessly between Ethereum and Rootstock networks. 
+The Rootstock Token Bridge was an interoperability solution for ERC-20 tokens between Ethereum and Rootstock. For current options, see the [Atlas Bridge guide](/resources/guides/atlas/).
 
 This decentralized application (dApp) provides a user-friendly interface for interacting directly with the Token Bridge smart contracts, enabling secure and efficient cross-chain transactions.
 
-## **Why Use the Rootstock Token Bridge?**
-- **Seamless Asset Movement**: Easily move your assets across Ethereum and Rootstock without complex setups, opening up new use cases for decentralized applications and DeFi ecosystems.
+## **Why the Token Bridge existed**
+- **Cross-network asset movement**: Move ERC-20 representations between Ethereum and Rootstock when the bridge was active, subject to limits and confirmations.
 
 - **Cost-Effective and Secure**: The bridge leverages Rootstock's robust blockchain infrastructure, ensuring safe transactions at minimal cost.
 
@@ -25,8 +25,8 @@ This decentralized application (dApp) provides a user-friendly interface for int
 
 > The Token Bridge supports transactions on both the <Shield label="Mainnet" title="Testnet" color="green" />, making it versatile for developers and users.
 
-## For General Users
-- Visit the [Rootstock Token Bridge dApp](https://dapp.tokenbridge.rootstock.io/) and begin transferring your ERC-20 tokens or follow the [User Guide Docs](/resources/guides/tokenbridge/dappguide/). 
+## For general users
+- Historical dApp: [Rootstock Token Bridge dApp](https://dapp.tokenbridge.rootstock.io/). For current bridging steps, use the [Atlas Bridge guide](/resources/guides/atlas/).
 
-## For Developers
-- [Token Bridge Addresses](/resources/guides/tokenbridge/contractaddresses/)
+## For developers
+- Contract reference lived in the token bridge repository. For integration guidance today, start from [Atlas Bridge](/resources/guides/atlas/) and [cross-chain bridges](/dev-tools/cross-chain-bridges/).

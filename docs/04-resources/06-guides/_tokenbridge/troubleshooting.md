@@ -13,7 +13,7 @@ The Token Bridge will no longer support moving assets between Ethereum and Roots
 
 ## Crossing Tokens on Mainnet
 
-View the [Token Bridge FAQs](https://dev.rootstock.io/resources/guides/tokenbridge/faq/)
+View the [Token Bridge FAQs](./faq.md)
 
 Find the min/max values for [crossing tokens on Mainnet](https://dapp.tokenbridge.rootstock.io/) using the Tokenbridge.
 

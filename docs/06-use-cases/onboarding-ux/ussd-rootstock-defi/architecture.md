@@ -6,8 +6,6 @@ tags: [rsk, rootstock, developers, architecture, ussd]
 description: Understand the complete USSD session lifecycle, relay server architecture, and how the Rootstock JSON-RPC layer connects feature phone interactions to on-chain smart contract execution.
 ---
 
-## Architecture & Data Flow
-
 This page describes the full architecture of the USSD-Rootstock bridge how a user interaction on a feature phone translates into a signed blockchain transaction on the Rootstock network.
 
 ## Components Overview

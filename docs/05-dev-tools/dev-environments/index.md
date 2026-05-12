@@ -33,14 +33,14 @@ Here are supported dev environments for building and deploying smart contracts o
     linkHref="/dev-tools/dev-environments/foundry/"
     linkTitle="Get Started"
   />
-  <CardsGridItem
+  <!-- <CardsGridItem
     title="Gelato"
     subtitle="dev-environments"
     color="cyan"
     description="Deploy production-grade & fully-serviced L2 rollups on Rootstock, natively integrated with tools like oracles, bridges, data indexers and Account Abstraction."
     linkHref="/dev-tools/dev-environments/gelato/"
     linkTitle="Get Started"
-  />
+  /> -->
    <CardsGridItem
     title="Remix"
     subtitle="dev-environments"
