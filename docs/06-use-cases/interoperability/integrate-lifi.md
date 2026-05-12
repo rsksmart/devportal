@@ -5,15 +5,13 @@ title: Omnichain Liquidity Routing on Rootstock with LI.FI
 tags: [interoperability, bridges, lifi, widget, sdk, cross-chain, omnichain]
 description: "Integrate LI.FI into your Rootstock dApp to enable one-transaction cross-chain liquidity routing from Ethereum, Arbitrum, Base, and more directly into your EVM-compatible contracts."
 ---
-Rootstock (Chain ID: 30) is natively supported by [LI.FI](https://li.fi), the leading cross-chain liquidity aggregator. LI.FI routes swaps and bridges across dozens of chains and protocols, including Hop, Stargate, Across, and Gas.zip. It delivers the exact token your users need, straight to Rootstock, in a single transaction.
+Rootstock is natively supported by [LI.FI](https://li.fi), a cross-chain liquidity aggregator. LI.FI routes swaps and bridges across dozens of chains and protocols, including Hop, Stargate, Across, and Gas.zip. It delivers the specific destination token your users select (for example, bridged USDC on Rootstock), straight to Rootstock, in a single transaction.
 
 This guide covers three integration paths:
 
 1. **LI.FI Widget** - embed a pre-configured, customizable UI component
 2. **`@lifi/sdk`** - fetch quotes and execute routes programmatically
 3. **`getContractCallsQuote`** (Advanced) - bridge assets and call a Rootstock contract atomically in one user click
-
----
 
 ## Prerequisites
 
@@ -23,14 +21,12 @@ This guide covers three integration paths:
 - LI.FI API access (no API key required for basic rate limits; register at [portal.li.fi](https://portal.li.fi/signup) for higher limits)
 
 :::info[Note on Rootstock Assets]
-Rootstock does not have native USDC issued by Circle. USDC on Rootstock is bridged from other networks via protocols such as LayerZero or Stargate. Always verify the exact contract address of the bridged asset you wish to interact with on Rootstock before deploying.
+Rootstock does not have native USDC issued by Circle. USDC on Rootstock is bridged from other networks via protocols such as [LayerZero](/use-cases/interoperability/rootstock-layerzero/) or Stargate. Always verify the exact contract address of the bridged asset you wish to interact with on Rootstock before deploying.
 :::
-
----
 
 ## Integration 1: The LI.FI Widget
 
-The LI.FI Widget is a self-contained React component. Lock the destination chain to Rootstock so users always land on Chain ID 30. The widget handles wallet connection, route selection, approvals, and transaction execution automatically.
+The [LI.FI](https://li.fi/widget/) Widget is a self-contained React component. Lock the destination chain to Rootstock so users always land on Chain ID 30. The widget handles wallet connection, route selection, approvals, and transaction execution automatically.
 
 ### Install
 
@@ -82,8 +78,6 @@ If your dApp already uses Wagmi, wrap the widget inside your `WagmiProvider`. Th
 :::
 
 Users pick a source chain and token, and the widget routes everything to Rootstock. Visit the [LI.FI Playground](https://playground.li.fi) to preview customization options before shipping.
-
----
 
 ## Integration 2: The `@lifi/sdk`
 
@@ -172,8 +166,6 @@ export async function bridgeUsdcToRootstock(userAddress: `0x${string}`) {
 :::warning[Exchange Rate Changes]
 Always implement `acceptExchangeRateUpdateHook` in production. Without it, routes where the exchange rate shifts during execution abort silently.
 :::
-
----
 
 ## Integration 3: Advanced Destination Calls via the Composer
 
@@ -392,8 +384,6 @@ export function BridgeAndDepositButton() {
 
 The user connects on Arbitrum, clicks the button, approves one transaction, and their funds arrive deposited into the Rootstock yield vault. No manual bridging. No second transaction.
 
----
-
 ## Troubleshooting
 
 **"No routes found" from `getQuote`**
@@ -412,8 +402,6 @@ Confirm that `toApprovalAddress` in `contractCalls` matches the address that cal
 
 The LI.FI Diamond address differs per chain. Read the `transactionRequest.to` field from the quote response to get the correct Rootstock address, and set it as `lifiDiamond` in your constructor at deploy time.
 
----
-
 ## Reference
 
 | Parameter | Value |
@@ -428,12 +416,10 @@ The LI.FI Diamond address differs per chain. Read the `transactionRequest.to` fi
 | LI.FI route explorer | [explorer.li.fi](https://explorer.li.fi) |
 | LI.FI widget playground | [playground.li.fi](https://playground.li.fi) |
 
----
-
 ## Next Steps
 
 - Explore the [LI.FI API reference](https://docs.li.fi/api-reference/introduction) to filter routes by bridge, fee, or speed.
-- Review the [Rootstock token registry](https://dev.rootstock.io/resources/tokenbridge/faqs/) for canonical bridged token addresses on Rootstock.
+- Review the [Atlas FAQ](https://dev.rootstock.io/resources/guides/atlas/faq/) for canonical bridged token addresses on Rootstock.
 - Test on Rootstock Testnet (Chain ID: 31) before deploying to mainnet.
 - Read the [LI.FI SDK v2 to v3 migration guide](https://docs.li.fi/sdk/migrate-v2-to-v3) if you are upgrading an existing integration.
 - Register your integrator name at the [LI.FI partner portal](https://portal.li.fi/signup) to unlock higher API rate limits and transaction analytics.
