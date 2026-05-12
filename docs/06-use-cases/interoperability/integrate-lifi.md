@@ -28,6 +28,10 @@ Rootstock does not have native USDC issued by Circle. USDC on Rootstock is bridg
 
 The [LI.FI](https://li.fi/widget/) Widget is a self-contained React component. Lock the destination chain to Rootstock so users always land on Chain ID 30. The widget handles wallet connection, route selection, approvals, and transaction execution automatically.
 
+### Set Up a Project
+
+Before installing the widget, you need a Next.js or React project with a configured wallet provider. If you do not already have one, start from a Rootstock quick start such as the [Rootstock Dynamic starter kit](https://github.com/rsksmart/rootstock-dynamic), which ships with Wagmi, viem, and wallet connection wired up out of the box.
+
 ### Install
 
 ```bash
@@ -72,6 +76,10 @@ export default function BridgePage() {
   );
 }
 ```
+
+Once rendered, the widget appears as a self-contained bridge UI in your app:
+
+![LI.FI Widget rendered in a Rootstock dApp](/img/developers/use-cases/lifi/widget-preview.png)
 
 :::tip[Using Your Own Wallet Provider]
 If your dApp already uses Wagmi, wrap the widget inside your `WagmiProvider`. The widget detects the existing context and reuses your wallet setup automatically, with no extra configuration required.
