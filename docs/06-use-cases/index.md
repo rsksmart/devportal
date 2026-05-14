@@ -64,6 +64,16 @@ values={[
 />
 
 <FilterItem
+  value="interop"
+  title="Omnichain Liquidity Routing with LI.FI"
+  subtitle="Interoperability"
+  color="cyan"
+  linkHref="/use-cases/interoperability/integrate-lifi/"
+  linkTitle="View guide"
+  description="Integrate LI.FI into your Rootstock dApp for single-transaction cross-chain liquidity."
+/>
+
+<FilterItem
   value="ux"
   title="Getting Started with Para"
   subtitle="Onboarding"
