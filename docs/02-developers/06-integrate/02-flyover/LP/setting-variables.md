@@ -21,6 +21,7 @@ These are the environment variables required by the liquidity provider server (L
 | `AWS_LOCAL_ENDPOINT` | Endpoint for the AWS local instance (localstack). Only required if LPS is running in regtest mode. | `http://localhost:4444` | NO |
 | `WALLET` | Type of the wallet management implementation. To know more read the wallet management section of the [LP Management file](https://github.com/rsksmart/liquidity-provider-server/blob/master/docs/LP-Management.md#context). | One of the following: `native` | YES |
 | `SECRET_SRC` | Source of the secrets required for the wallet management. To know more read the secrets management section of the [LP Management file](https://github.com/rsksmart/liquidity-provider-server/blob/master/docs/LP-Management.md#context). | One of the following: `aws env` | YES |
+| `ALLOWED_ORIGINS` | Comma separated domains to allow CORS | `http://domain1.com,http://domain2.com` | YES |
 | `MONGODB_USER` | User to connect to MongoDB. | `root` | YES |
 | `MONGODB_PASSWORD` | Password to connect to MongoDB. | `<any password>` | YES |
 | `MONGODB_HOST` | Host to connect to MongoDB. | `localhost` | YES |
@@ -33,7 +34,6 @@ These are the environment variables required by the liquidity provider server (L
 | `ERP_KEYS` | Keys that are used as a secondary multisig that would be allowed to spend UTXOs after a year they were created. |`0216c23b2ea8e4f11c3f9e22711addb1d16a93964796913830856b568cc3ea21d3`,`0275562901dd8faae20de0a4166362a4f82188db77dbed4ca887422ea1ec185f14`,`034db69f2112f4fb1bb6141bf6e2bd6631f0484d0bd95b16767902c9fe219d4a6f` | YES |
 | `USE_SEGWIT_FEDERATION` | Wether to generate the federation address as a P2SH-P2WSH or not | true | NO |
 | `ACCOUNT_NUM` | The keystore account number to use. If not provided default value will be 0. | `0` | NO |
-| `DAO_FEE_COLLECTOR_ADDRESS` | Address of the DAO fee collector. | `0x86B6534687A176A476C16083a373fB9Fe4FAb449` | YES |
 | `KEY_SECRET` | Name of the secret of AWS secrets manager that contains the encrypted json of the liquidity provider RSK account. Only required if `SECRET_SRC` is `aws`. | `FlyoverTestEnv/LPS-KEY` | NO |
 | `PASSWORD_SECRET` | Name of the secret of AWS secrets manager that contains the password of the encrypted json of the liquidity provider RSK account. Only required if `SECRET_SRC` is `aws`. | `FlyoverTestEnv/LPS-PASSWORD` | NO |
 | `KEYSTORE_FILE` | Name of the file that contains the encrypted json of the liquidity provider RSK account. Only required if `SECRET_SRC` is `env`. | `geth_keystore/UTC--2024-01-29T16-36-09.688642000Z--9d93929a9099be4355fc2389fbf253982f9df47c` | NO |
