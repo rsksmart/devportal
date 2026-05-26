@@ -385,6 +385,10 @@
    "theme.moreLinks.devCheatsheet": {
     "message": "Developer Cheatsheet"
   },
+  "theme.moreLinks.trbtcFaucet": {
+    "message": "tRBTC Faucet",
+    "description": "tRBTC Faucet link label in sidebar"
+  },
   "theme.moreLinks.requestArticle.form.title": {
     "message": "Request a New Article",
     "description": "Request an Article form title"

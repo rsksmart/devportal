@@ -390,6 +390,10 @@
     "message": "¿Busca información que no hayamos cubierto? Rellene el siguiente formulario para solicitar un nuevo artículo, y lo tendremos en cuenta en futuras actualizaciones.",
     "description": "Request an Article form description"
   },
+  "theme.moreLinks.trbtcFaucet": {
+    "message": "Faucet de tRBTC",
+    "description": "tRBTC Faucet link label in sidebar"
+  },
   "theme.navbar.mobileLanguageDropdown.label": {
     "message": "Idiomas",
     "description": "The label for the mobile language switcher dropdown"

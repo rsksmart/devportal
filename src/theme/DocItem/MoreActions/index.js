@@ -11,9 +11,11 @@ import EditThisPage from '@theme/EditThisPage';
 import IconPaste from "@theme/Icon/Paste";
 import IconCommunity from "@theme/Icon/Community";
 import IconChangelog from "@theme/Icon/Changelog";
+import IconFaucet from "../../Icon/Faucet";
 
 import Link from '@docusaurus/Link';
 import { RequestArticle } from '../../../components/RequestArticle'
+import { pushDataLayer } from '../../../_utils/analytics'
 
 export default function MoreActions({editUrl}) {
 
@@ -88,6 +90,25 @@ export default function MoreActions({editUrl}) {
               id="theme.moreLinks.devCheatsheet"
             >
               {links.devCheatsheet.title}
+            </Translate>
+          </Link>
+        </li>
+      )}
+      {links.trbtcFaucet && (
+        <li className={`py-3`}>
+          <Link
+            to={links.trbtcFaucet.url}
+            className={`link-base d-inline-flex gap-8 align-items-center`}
+            onClick={() => pushDataLayer('trbtcFaucetClick', {
+              componentId: 'trbtc-faucet-link',
+              componentLabel: links.trbtcFaucet.title,
+            })}
+          >
+            <IconFaucet/>
+            <Translate
+              id="theme.moreLinks.trbtcFaucet"
+            >
+              {links.trbtcFaucet.title}
             </Translate>
           </Link>
         </li>
