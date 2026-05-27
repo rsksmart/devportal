@@ -390,6 +390,10 @@
     "message": "掲載されていない情報をお探しですか？ 下のフォームにご記入いただければ、新しい記事としてリクエストを受け付け、今後のアップデートで検討させていただきます。",
     "description": "Request an Article form description"
   },
+  "theme.moreLinks.trbtcFaucet": {
+    "message": "tRBTCフォーセット",
+    "description": "tRBTC Faucet link label in sidebar"
+  },
   "theme.navbar.mobileLanguageDropdown.label": {
     "message": "言語",
     "description": "The label for the mobile language switcher dropdown"
