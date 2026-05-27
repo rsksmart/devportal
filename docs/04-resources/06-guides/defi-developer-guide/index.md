@@ -33,10 +33,10 @@ This guide is divided into five main sections, each building on the previous:
 ### 1. [Token Standards & Best Practices](/resources/guides/defi-developer-guide/token-standards)
 Learn how to implement and extend ERC-20, ERC-721, and ERC-4626 tokens on Rootstock. Understand wrapping RBTC (wRBTC), gas optimization, and security considerations specific to token development.
 
-### 2. [Oracle Integration](/resources/guides/defi-developer-guide/oracle-integration)
+### 2. [Oracle Integration](/use-cases/interoperability/oracle-chainlink-mock/)
 Discover how to fetch reliable off-chain data using Chainlink or other oracles. Implement price feeds, randomness (VRF), and secure oracle patterns to protect your protocol from manipulation.
 
-### 3. [Automated Market Makers (AMM) Basics](/resources/guides/defi-developer-guide/amm-basics)
+### 3. [Automated Market Makers (AMM) Basics](/use-cases/interoperability/amm-constant-product/)
 Build a simple constant-product AMM from scratch. Understand liquidity pools, swap mechanics, fees, and slippage. Test your contract with Hardhat and integrate it with a React frontend.
 
 ### 4. [Security Patterns](/resources/guides/defi-developer-guide/security-patterns)

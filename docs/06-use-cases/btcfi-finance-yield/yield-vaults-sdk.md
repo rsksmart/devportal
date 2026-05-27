@@ -80,4 +80,4 @@ The [README full example](https://github.com/rsksmart/vaults-sdk) wires `getAllo
 * Re-read allocator and issuer documentation for **USDRIF** before you expose APY or TVL to end users.
 * [Automation and AI on Rootstock](/use-cases/ai-automation/)
 * [RIF economy and governance](/use-cases/integrate-rif-economy/)
-* [Rootstock Explorer](/dev-tools/explorers/rootstock/)
+* [Rootstock Explorer](/dev-tools/explorers/rootstock-explorer/)

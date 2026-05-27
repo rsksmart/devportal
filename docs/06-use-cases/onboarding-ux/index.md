@@ -6,7 +6,7 @@ description: "Mastering the tools that make Bitcoin dApps as seamless as Web2."
 tags: [ux, onboarding, rif-relay, rns, account-abstraction, fundamentals]
 ---
 
-Blockchain technology often comes with high friction, such as hard to remember seed phrases, gas fees, and long hexadecimal addresses. Enhancing the UX and Onboarding on Rootstock is about abstracting this complexity. By leveraging core [DevTools](/dev-tools/) compatible with Rootstock such as [Para Wallet](/developers/quickstart/para), [Reown](/developers/quickstart/reown), developers can build applications that feel like standard web apps while retaining the security of Bitcoin.
+Blockchain technology often comes with high friction, such as hard to remember seed phrases, gas fees, and long hexadecimal addresses. Enhancing the UX and Onboarding on Rootstock is about abstracting this complexity. By leveraging core [DevTools](/dev-tools/) compatible with Rootstock such as [Para Wallet](/use-cases/onboarding-ux/para/), [Reown](/developers/quickstart/reown), developers can build applications that feel like standard web apps while retaining the security of Bitcoin.
 
 ## Core Pillars
 
