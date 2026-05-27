@@ -11,7 +11,7 @@ Wormhole supports general-purpose cross-chain communication, not just token tran
 
 ## Architecture Overview
 
-The Wormhole protocol uses three components: Emitters, Guardians, and Receivers. Each component plays a specific role in the cross-chain message lifecycle as it applies to Rootstock.
+The Wormhole protocol uses three components: Emitters, Guardians, and Receivers. Each component has a specific job in the cross-chain message lifecycle for Rootstock.
 
 ### Emitter
 
@@ -23,7 +23,7 @@ The Guardian Network is a set of 19 independent validators. Each Guardian runs a
 
 A VAA packages the original payload with Guardian signatures and key metadata: the source chain ID, the emitter address, a sequence number, and a unique hash. Your Receiver contract uses this hash for replay protection.
 
-The Guardian Network now also uses Zero-Knowledge (ZK) proofs to validate message inclusion. This reduces VAA availability latency on high-throughput source chains.
+The Guardian Network now also uses Zero-Knowledge (ZK) proofs to validate message inclusion, helping to reduce VAA availability latency on high-throughput source chains.
 
 ### Receiver
 
@@ -35,7 +35,9 @@ The table below lists the deployed Wormhole Core Contract addresses for Rootstoc
 |---|---|
 | Rootstock Mainnet | `0xbebdb6C8ddC678FfA9f8748f85C815C556Dd8ac6` |
 
-**Note on testnet:** Wormhole does not currently have a public Core Contract deployment on Rootstock Testnet. Use Rootstock Mainnet for testing inbound messages, or check the [official Wormhole contract addresses page](https://wormhole.com/docs/build/reference/contract-addresses/) for future updates.
+:::note[Testnet availability]
+Wormhole does not currently have a public Core Contract deployment on Rootstock Testnet. Use Rootstock Mainnet for testing inbound messages, or check the [official Wormhole contract addresses page](https://wormhole.com/docs/build/reference/contract-addresses/) for future updates.
+:::
 
 ### Message Lifecycle
 
@@ -52,7 +54,7 @@ The following Solidity contracts form a complete, deployable receiver for Rootst
 
 ### IWormhole Interface
 
-You need a minimal interface for the Wormhole Core Contract. Copy the snippet below into your project, or install the [Wormhole Solidity SDK](https://github.com/wormhole-foundation/wormhole-solidity-sdk) for the full set of types.
+You need a minimal interface for the Wormhole Core Contract. Copy the snippet below into your project, or install the [Wormhole Solidity SDK repository](https://github.com/wormhole-foundation/wormhole-solidity-sdk) for the full set of types.
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -223,7 +225,7 @@ The `receiveMessage` function follows the checks-effects-interactions pattern. I
 
 Rootstock has a longer average block time than chains like Arbitrum or Base. When you publish a message from a source chain targeting Rootstock, set a `consistencyLevel` that gives the Guardian Network enough block confirmations to treat the source transaction as final.
 
-A higher `consistencyLevel` causes Guardians to wait for more source-chain confirmations before co-signing the VAA. This prevents your Receiver from processing a message that gets orphaned in a source-chain reorg. Check the [Wormhole documentation](https://wormhole.com/docs/build/start-building/supported-networks/evm/#rootstock) for the recommended `consistencyLevel` per source chain when Rootstock is your destination.
+A higher `consistencyLevel` causes Guardians to wait for more source-chain confirmations before co-signing the VAA. This prevents your Receiver from processing a message that is orphaned in a source-chain reorg. Check the [Wormhole documentation](https://wormhole.com/docs/build/start-building/supported-networks/evm/#rootstock) for the recommended `consistencyLevel` per source chain when Rootstock is your destination.
 
 ## Integration Quick Start
 
@@ -295,8 +297,12 @@ async function processMessage() {
   const RECEIVER_ADDRESS = "0xYourWormholeReceiverContractAddress";
   const EMITTER_ADDRESS = "0xYourEmitterContractOnSourceChain";
 
-  // Use an environment variable or a hardware wallet for the private key in production
-  const wallet = new ethers.Wallet(process.env.PRIVATE_KEY!, provider);
+  // For production environments, use an environment variable or a hardware wallet for the private key
+  const privateKey = process.env.PRIVATE_KEY;
+  if (!privateKey) {
+    throw new Error("PRIVATE_KEY environment variable is not set");
+  }
+  const wallet = new ethers.Wallet(privateKey, provider);
 
   // Fetch the VAA for sequence number 1 emitted from the Ethereum source contract
   const vaaBytes = await fetchSignedVaa("Ethereum", EMITTER_ADDRESS, 1n);
