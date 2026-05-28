@@ -15,7 +15,7 @@ import IconFaucet from "../../Icon/Faucet";
 
 import Link from '@docusaurus/Link';
 import { RequestArticle } from '../../../components/RequestArticle'
-import { pushDataLayer } from '../../../_utils/analytics'
+import TrackedLink from '../../../components/TrackedLink'
 
 export default function MoreActions({editUrl}) {
 
@@ -96,13 +96,12 @@ export default function MoreActions({editUrl}) {
       )}
       {links.trbtcFaucet && (
         <li className={`py-3`}>
-          <Link
-            to={links.trbtcFaucet.url}
+          <TrackedLink
+            href={links.trbtcFaucet.url}
+            event="trbtcFaucetClick"
+            componentId="trbtc-faucet-link"
+            componentLabel={links.trbtcFaucet.title}
             className={`link-base d-inline-flex gap-8 align-items-center`}
-            onClick={() => pushDataLayer('trbtcFaucetClick', {
-              componentId: 'trbtc-faucet-link',
-              componentLabel: links.trbtcFaucet.title,
-            })}
           >
             <IconFaucet/>
             <Translate
@@ -110,7 +109,7 @@ export default function MoreActions({editUrl}) {
             >
               {links.trbtcFaucet.title}
             </Translate>
-          </Link>
+          </TrackedLink>
         </li>
       )}
     </ul>
