@@ -131,6 +131,7 @@ const config = {
     './src/clientModules/docsearch-css.js',
   ],
   plugins: [
+    './plugins/webpack-polyfills.js',
     [
       'docusaurus-plugin-llms',
       {

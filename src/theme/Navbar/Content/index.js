@@ -15,6 +15,7 @@ import Link from '@docusaurus/Link';
 
 import AIButton from "@theme/Navbar/AIButton";
 import LocaleDropdown from "@theme/Navbar/LocaleDropdown";
+import ConnectButton from "@site/src/components/ConnectButton";
 
 function useNavbarItems() {
   // TODO temporary casting until ThemeConfig type is improved
@@ -86,6 +87,7 @@ export default function NavbarContent() {
             </div> */}
           </div>
           <RightNavbarItems items={rightItems} />
+          <ConnectButton />
           <LocaleDropdown />
           <NavbarColorModeToggle />
         </div>
