@@ -72,25 +72,17 @@ curl https://api.symbiosis.finance/crosschain/v1/chains
 
 ```ts
 // lib/symbiosis-quote.ts
-const SYMBIOSIS_API = "https://api.symbiosis.finance/crosschain";
+const SYMBIOSIS_API = "https://api.symbiosis.finance//crosschain";
 
-// Symbiosis treats the native gas token as the zero address
-const NATIVE_TOKEN = "0x0000000000000000000000000000000000000000";
 
 export async function quoteUsdcArbitrumToRbtc(userAddress: `0x${string}`) {
   const body = {
     tokenAmountIn: {
       chainId: 42161, // Arbitrum One
-      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831", // native USDC
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831...", // native USDC
       amount: "25000000",                                    // 25 USDC, 6 decimals
       decimals: 6,
       symbol: "USDC",
-    },
-    tokenOut: {
-      chainId: 30,                  // Rootstock
-      address: NATIVE_TOKEN,        // native RBTC
-      decimals: 18,
-      symbol: "RBTC",
     },
     from: userAddress,
     to: userAddress,
@@ -143,7 +135,6 @@ The two fields you must use:
 
 ```ts
 // lib/symbiosis-execute.ts
-import { ethers } from "ethers";
 import { quoteUsdcArbitrumToRbtc } from "./symbiosis-quote";
 
 const ERC20_ABI = [
@@ -191,7 +182,7 @@ export async function waitForSymbiosisSwap(sourceChainId: number, txHash: string
     // status.status is one of: "pending", "success", "stucked", "reverted"
     if (status.status === "success") return status;
     if (status.status === "stucked" || status.status === "reverted") {
-      throw new Error(`Swap ${status.status}: ${status.error ?? "see explorer"}`);
+      //throw new Error(`Swap ${status.status}: ${status.error ?? "see explorer"}`);
     }
     await new Promise((r) => setTimeout(r, 5000));
   }
@@ -217,7 +208,7 @@ const swap = await fetch(`${SYMBIOSIS_API}/v2/swap`, {
       address: "0x0000000000000000000000000000000000000000",
       amount: "100000",      // 0.001 BTC, 8 decimals
       decimals: 8,
-      symbol: "BTC",
+     // symbol: "BTC",
     },
     tokenOut: {
       chainId: 30,           // Rootstock
@@ -265,7 +256,6 @@ The example below quotes **USDT on BNB Chain → RBTC on Rootstock** and signs t
 ```ts
 // lib/symbiosis-sdk.ts
 import { Symbiosis, Token, TokenAmount } from "symbiosis-js-sdk";
-import { ethers } from "ethers";
 
 // "mainnet" + a unique client identifier for analytics & support
 const symbiosis = new Symbiosis("mainnet", "my-rootstock-dapp");
@@ -324,7 +314,6 @@ export async function quoteBnbUsdtToRbtc(wallet: ethers.Wallet) {
 ```ts
 // lib/symbiosis-execute-sdk.ts
 import { ethers } from "ethers";
-import { Symbiosis } from "symbiosis-js-sdk";
 import { quoteBnbUsdtToRbtc } from "./symbiosis-sdk";
 
 const ERC20_ABI = [
