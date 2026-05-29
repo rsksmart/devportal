@@ -65,6 +65,16 @@ values={[
 
 <FilterItem
   value="interop"
+  title="Cross-Chain Swaps on Rootstock with Symbiosis Finance"
+  subtitle="Interoperability"
+  color="cyan"
+  linkHref="/use-cases/interoperability/integrate-symbiosis/"
+  linkTitle="View guide"
+  description="Integrate symbiosis into your Rootstock dApp for cross-chain liquidity, swaps."
+/>
+
+<FilterItem
+  value="interop"
   title="Omnichain Liquidity Routing with LI.FI"
   subtitle="Interoperability"
   color="cyan"
