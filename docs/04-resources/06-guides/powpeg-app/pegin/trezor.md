@@ -65,9 +65,15 @@ Enter a pin for your Trezor, displayed on your hardware wallet. Click **confirm*
     <img src="/img/resources/powpeg/36-enter-passphrase.png"  title="Enter passphrase" width="50%"/>
 </center>
 
+:::note[BIP39 passphrase]
+
+The BIP39 passphrase is optional. It extends your seed and is not your Trezor PIN. If you do not use a passphrase wallet, leave both fields empty and confirm. If you use one, enter the same passphrase you use in Trezor Suite. See [Trezor passphrase in Electrum](/resources/guides/powpeg-app/pegout/deriving-electrum#trezor-passphrase-in-electrum) for the same rule when you verify peg-out funds.
+
+:::
+
 Step 5:
-- Type Trezor passphrase
-- Trezor will display the message: 'Please enter your passphrase using the computer's keyboard'.
+- If you use a BIP39 passphrase, type it here. Trezor will display the message: 'Please enter your passphrase using the computer's keyboard'.
+- If you do not use a passphrase, leave both fields empty and confirm.
 
 <center>
     <img src="/img/resources/powpeg/36a-enter-passphrase-keyboard.png"  title="Enter Passphrase using Keyboard" width="50%"/>

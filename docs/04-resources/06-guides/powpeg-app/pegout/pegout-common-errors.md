@@ -10,6 +10,17 @@ tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 
 You may encounter the following errors when trying out the application:
 
+## BTC not visible after a peg-out (Trezor and Electrum)
+
+The peg-out can succeed on chain while your balance still shows zero in Trezor Suite or Electrum.
+
+**Cause:** Trezor Suite does not support the custom derivation path for peg-out Bitcoin addresses. Electrum is required to view those funds. A common mistake is to enter a BIP39 passphrase in Electrum when you do not use one on Trezor. That opens a different wallet than the one used for the peg-out.
+
+**What to do:**
+
+1. Confirm the Bitcoin transaction on a block explorer using the destination address from the [PowPeg status page](https://powpeg.rootstock.io/).
+2. Follow [Viewing a derived bitcoin address](/resources/guides/powpeg-app/pegout/deriving-electrum/#import-key-in-electrum-using-hardware-wallets) with path `m/44'/137'/0'` on Mainnet.
+3. Leave the Electrum passphrase fields empty if you do not use a BIP39 passphrase on Trezor. See [Trezor passphrase in Electrum](/resources/guides/powpeg-app/pegout/deriving-electrum#trezor-passphrase-in-electrum).
 
 ## Resources
 * PowPeg App frontend [repo](https://github.com/rsksmart/2wp-app)

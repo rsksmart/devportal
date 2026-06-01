@@ -40,6 +40,12 @@ See a list of terms about/related to the PowPeg App and their meanings.
       - A hardware wallet is a special-purpose device configured to accept supported cryptocurrencies and tokens. Hardware wallets usually take the form of a physical device. Examples of hardware wallets are [Ledger](https://shop.ledger.com/products/ledger-nano-s-plus) and [Trezor](https://shop.trezor.io/).
     </Accordion.Body>
   </Accordion.Item>
+  <Accordion.Item eventKey="20">
+    <Accordion.Header as="h3">BIP39 passphrase</Accordion.Header>
+    <Accordion.Body>
+      - An optional word or phrase that extends a hardware wallet seed. It is sometimes called the 25th word. It is not the device PIN and it is not the password that encrypts an Electrum wallet file on your computer. A different passphrase derives a different set of addresses. See [Trezor passphrase in Electrum](/resources/guides/powpeg-app/pegout/deriving-electrum#trezor-passphrase-in-electrum).
+    </Accordion.Body>
+  </Accordion.Item>
   <Accordion.Item eventKey="5">
     <Accordion.Header as="h3">Legacy address</Accordion.Header>
     <Accordion.Body>

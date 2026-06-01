@@ -111,13 +111,22 @@ Here, you can find a list of frequently asked questions (FAQs) about the PowPeg 
     </Accordion.Body>
   </Accordion.Item>
    <Accordion.Item eventKey="15">
-    <Accordion.Header as="h3">16.When using **Trezor** i'm receiving the error **Forbidden key path** ?</Accordion.Header>
+    <Accordion.Header as="h3">16.When using **Trezor** I'm receiving the error **Forbidden key path** ?</Accordion.Header>
     <Accordion.Body>
         > - The latest versions of Trezor Suite have implemented a security rule to disable its use with non-standard key paths. Therefore, the user must explicitly set **Perform Safety Checks** to **PROMPT** option in **Trezor Suite** in order to use the **Trezor wallet** in the PowPeg application.
         > - If is not enabled you will receive this error ![Trezor Error Key Path](/img/resources/powpeg/trezor-error.png)
         > - This video explains how to enable **Perform Safety Checks** to **PROMPT** on **Trezor Suite** [Enabling Prompt for Key Path](/img/resources/powpeg/trezor-error-fixed.mp4)
         <Video url="/img/resources/powpeg/trezor-error-fixed.mp4" thumbnail="/img/resources/powpeg/trezor-error.png" />
 
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="16">
+    <Accordion.Header as="h3">17. I completed a peg-out but I do not see my BTC in Trezor Suite or Electrum</Accordion.Header>
+    <Accordion.Body>
+        > - Trezor Suite cannot show peg-out Bitcoin addresses at the custom derivation path. Use Electrum as described in [Viewing a derived bitcoin address](/resources/guides/powpeg-app/pegout/deriving-electrum/).
+        > - If you do not use a BIP39 passphrase on Trezor, leave the passphrase fields empty in Electrum. Entering a value there opens a different wallet and the balance can look like zero.
+        > - Electrum may prompt for a passphrase if **Passphrase** is enabled in Trezor Suite (**Settings** → **Device** → **Passphrase**). You can still leave the fields empty when you do not use a passphrase wallet.
+        > - See [Troubleshooting: peg-out completed but balance is zero](/resources/guides/powpeg-app/pegout/deriving-electrum#troubleshooting-zero-balance) and [common errors](/resources/guides/powpeg-app/pegout/pegout-common-errors#btc-not-visible-after-a-peg-out-trezor-and-electrum).
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>

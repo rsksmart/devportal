@@ -10,9 +10,9 @@ tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 
 ## Get started with Trezor
 
-To perform a peg-out transaction using the Ledger device directly, follow the steps below:
+To perform a peg-out transaction using the Trezor device directly, follow the steps below:
 
-* Step 1: Plug the Ledger device into the computer
+* Step 1: Plug the Trezor device into the computer
 
 * Step 2: Verify if you have enabled **Perform Safety Checks** to **PROMPT**
 
@@ -46,8 +46,13 @@ To perform a peg-out transaction using the Ledger device directly, follow the st
 * Step 8: Insert the pin and click on confirm button
 ![insert-confirm](/img/resources/powpeg/using-hd-wallets/insert-confirm.png)
 
-* Step 9: Insert the passphrase
+* Step 9: Passphrase (Trezor Connect)
+
+If you use a [BIP39 passphrase](/resources/guides/powpeg-app/glossary/) on Trezor, enter it when prompted. If you do not use a passphrase, leave the fields empty and confirm.
+
 ![insert-passphrase](/img/resources/powpeg/using-hd-wallets/pass.png)
+
+For the same rule when you verify peg-out funds in Electrum, see [Trezor passphrase in Electrum](/resources/guides/powpeg-app/pegout/deriving-electrum#trezor-passphrase-in-electrum).
 
 * Step 10: Follow instructions on your device <br/>
 ![verify-device](/img/resources/powpeg/using-hd-wallets/follow-device.png)

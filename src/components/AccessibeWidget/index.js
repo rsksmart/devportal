@@ -7,8 +7,12 @@ export default function AccessibeWidget () {
       const h    = document.querySelector('head') || document.body;
       s.src    = 'https://acsbapp.com/apps/app/dist/js/app.js';
       s.async  = true;
-      s.onload = function(){
-        acsbJS.init({
+      s.onload = function () {
+        const acsb = window.acsbJS;
+        if (typeof acsb?.init !== 'function') {
+          return;
+        }
+        acsb.init({
           statementLink    : '',
           footerHtml       : '',
           hideMobile       : false,
@@ -34,6 +38,9 @@ export default function AccessibeWidget () {
             triggerRadius    : '50%'
           }
         });
+      };
+      s.onerror = function () {
+        // Third-party script may be blocked by network policy or an extension.
       };
       h.appendChild(s);
     }
