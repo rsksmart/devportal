@@ -64,6 +64,16 @@ values={[
 />
 
 <FilterItem
+  value="interop"
+  title="Omnichain Liquidity Routing with LI.FI"
+  subtitle="Interoperability"
+  color="cyan"
+  linkHref="/use-cases/interoperability/integrate-lifi/"
+  linkTitle="View guide"
+  description="Integrate LI.FI into your Rootstock dApp for single-transaction cross-chain liquidity."
+/>
+
+<FilterItem
   value="ux"
   title="Getting Started with Para"
   subtitle="Onboarding"
@@ -100,6 +110,16 @@ values={[
   linkHref="/use-cases/ai-automation/mcp-rootstock/"
   linkTitle="View guide"
   description="How MCP connects AI clients to Rootstock reads and scoped actions."
+/>
+
+<FilterItem
+  value="btcfi"
+  title="DeFi tutorials (AMM + oracles)"
+  subtitle="DeFi"
+  color="orange"
+  linkHref="/use-cases/interoperability/"
+  linkTitle="View section"
+  description="Practical Rootstock testnet tutorials for a constant-product AMM and a mock Chainlink-style oracle consumer."
 />
 
 <FilterItem

@@ -6,17 +6,15 @@ tags: [rsk, rootstock, rif, flyover, integrate, integration guide, rbtc, powpeg]
 description: The Flyover protocol allows fast Bitcoin to Rootstock transfers without giving custody of funds to third parties. Learn about the system design and workflow.
 ---
 
+
 The Flyover system allows a user to transfer BTC from Bitcoin to Rootstock and vice versa in a fast way, where a third party takes the risk to advance the payment for the user. Flyover also provides the new feature to transfer BTC from Bitcoin directly to a smart contract in Rootstock.
 
-The outstanding feature of the Flyover system is that it accomplishes the above without giving any third party custody
-of the transferred funds. This is an outstanding security guarantee to the user. The system comprises one or more
-liquidity providers (LPs) that store their BTC in RSK and Bitcoin. The first version of the Flyover protocol supports only the
-peg-in process (BTC to RBTC). Later versions will also support the peg-out process (RBTC to BTC).
-
+The outstanding feature of the Flyover system is that it accomplishes the above without giving any third party custody of the transferred funds. This is an outstanding security guarantee to the user. The system comprises one or more liquidity providers (LPs) that store their BTC in Rootstock and Bitcoin. The first version of the Flyover protocol supports only the peg-in process (BTC to RBTC). Later versions will also support the peg-out process (RBTC to BTC).
 
 ## Workflow
 
-The following diagram shows the interaction of the different components during the peg-in process. Note that the call to `isOperational` could be performed at a different time:
+The following diagram shows the interaction of the different components during the peg-in process. Note that the call
+to isOperational could be performed at a different time:
 
 ![Flyover Sequence Diagram](https://raw.githubusercontent.com/rsksmart/liquidity-provider-server/refs/heads/master/docs/diagrams/flyover-sd.png)
 

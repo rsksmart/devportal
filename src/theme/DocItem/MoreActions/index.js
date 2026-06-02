@@ -11,9 +11,11 @@ import EditThisPage from '@theme/EditThisPage';
 import IconPaste from "@theme/Icon/Paste";
 import IconCommunity from "@theme/Icon/Community";
 import IconChangelog from "@theme/Icon/Changelog";
+import IconFaucet from "../../Icon/Faucet";
 
 import Link from '@docusaurus/Link';
 import { RequestArticle } from '../../../components/RequestArticle'
+import TrackedLink from '../../../components/TrackedLink'
 
 export default function MoreActions({editUrl}) {
 
@@ -90,6 +92,24 @@ export default function MoreActions({editUrl}) {
               {links.devCheatsheet.title}
             </Translate>
           </Link>
+        </li>
+      )}
+      {links.trbtcFaucet && (
+        <li className={`py-3`}>
+          <TrackedLink
+            href={links.trbtcFaucet.url}
+            event="trbtcFaucetClick"
+            componentId="trbtc-faucet-link"
+            componentLabel={links.trbtcFaucet.title}
+            className={`link-base d-inline-flex gap-8 align-items-center`}
+          >
+            <IconFaucet/>
+            <Translate
+              id="theme.moreLinks.trbtcFaucet"
+            >
+              {links.trbtcFaucet.title}
+            </Translate>
+          </TrackedLink>
         </li>
       )}
     </ul>

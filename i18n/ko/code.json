@@ -390,6 +390,10 @@
     "message": "원하는 정보가 없으신가요? 아래 양식을 작성해 요청해 주세요. 새로운 게시물 작성 시 참고하여 반영하도록 하겠습니다.",
     "description": "Request an Article form description"
   },
+  "theme.moreLinks.trbtcFaucet": {
+    "message": "tRBTC 파우셋",
+    "description": "tRBTC Faucet link label in sidebar"
+  },
   "theme.navbar.mobileLanguageDropdown.label": {
     "message": "언어",
     "description": "The label for the mobile language switcher dropdown"

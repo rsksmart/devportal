@@ -1,6 +1,7 @@
 import React, { useEffect, Suspense } from "react";
 import BrowserOnly from "@docusaurus/BrowserOnly";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import { pushDataLayer } from "../../../_utils/analytics";
 
 const BaseAskCookbook = React.lazy(() =>
   import("@cookbookdev/docsbot/react-fixed")
@@ -23,15 +24,9 @@ export default function AskCookbook() {
           // Prevent duplicate listeners
           if (!btn.dataset.listenerAttached) {
             btn.addEventListener("click", () => {
-              window.dataLayer = window.dataLayer || [];
-              window.dataLayer.push({
-                event: "askCookbookClick",
+              pushDataLayer("askCookbookClick", {
                 componentId: "ask-cookbook-button",
                 componentLabel: btn.innerText.trim() || "Ask Cookbook",
-                pageUrl: window.location.href,
-                pagePath: window.location.pathname,
-                pageTitle: document.title,
-                timestamp: new Date().toISOString(),
               });
               console.log("✅ askCookbookClick event fired.");
             });

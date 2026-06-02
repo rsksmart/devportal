@@ -77,6 +77,10 @@ const config = {
           description : 'Looking for information we haven’t covered? Fill out the form below to request a new article, and we’ll consider it in future updates.',
         }
       },
+      trbtcFaucet : {
+        title: 'tRBTC Faucet',
+        url : 'https://faucet.rootstock.io/',
+      },
     },
     // newsHighlight : [
     //   {
@@ -121,6 +125,7 @@ const config = {
       },
     },
   },
+
   clientModules: [
     './src/clientModules/renderEquations.js',
     './src/clientModules/docsearch-css.js',
