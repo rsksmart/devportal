@@ -17,6 +17,7 @@ Interoperability is the ability for Bitcoin to move seamlessly between its nativ
 | **[Flyover SDK](https://github.com/rsksmart/flyover-sdk)** | A liquidity-based fast bridge that uses LPs to front the funds for the user. | Retail users & fast dApp onboarding. |
 | **[Union (BitVMX)](https://github.com/rsksmart/union-bridge-contracts)** | A trust-minimized 1-of-N bridge that uses optimistic fraud proofs on Bitcoin. | Trustless DeFi & L2 interoperability. |
 | **[Layerzero](/use-cases/interoperability/rootstock-layerzero/)** | Build Omnichain Fungible Token (OFTs) on Rootstock with Layerzero. | Trustless DeFi & L2 interoperability. |
+| **[Wormhole](/use-cases/interoperability/rootstock-wormhole-messaging/)** | Send arbitrary cross-chain messages to Rootstock using Verified Action Approvals (VAAs). | Cross-chain governance, data sync & multi-chain app logic. |
 
 ## Key Concepts
 

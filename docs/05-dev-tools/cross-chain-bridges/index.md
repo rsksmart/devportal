@@ -74,7 +74,7 @@ Imagine different islands, each with its own unique economy and currency. To tra
     subtitle="cross-chain"
     color="green"
     description="A step-by-step Rootstock integration guide for sending arbitrary byte payloads between chains using Verified Action Approvals (VAAs) and the Wormhole Core Contract."
-    linkHref="/dev-tools/cross-chain-bridges/wormhole-messaging/"
+    linkHref="/use-cases/interoperability/rootstock-wormhole-messaging/"
     linkTitle="Read the Guide"
   />
 </CardsGrid>
