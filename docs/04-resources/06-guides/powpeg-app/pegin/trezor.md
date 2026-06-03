@@ -20,6 +20,12 @@ In this guide, we will be performing a peg in transaction using the [PowPeg App]
     > - This video explains how to enable **Perform Safety Checks** to **PROMPT** on **Trezor Suite** [Enabling Prompt for Key Path](/img/resources/powpeg/trezor-error-fixed.mp4) 
     <Video url="/img/resources/powpeg/trezor-error-fixed.mp4" thumbnail="/img/resources/powpeg/trezor-error.png" />
 
+:::note[Trezor Connect pop-up]
+
+The PowPeg App opens Trezor Connect in a browser pop-up. If Chrome or Brave blocks it, Trezor will not connect. [Allow pop-ups for the PowPeg App](/resources/guides/powpeg-app/pegout/pegout-common-errors#trezor-connect-popups) before you continue.
+
+:::
+
 ## Select Trezor Wallet
 
 ![Connect Trezor](/img/resources/powpeg/pegin-wallets.png)

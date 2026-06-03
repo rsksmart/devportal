@@ -111,7 +111,7 @@ Here, you can find a list of frequently asked questions (FAQs) about the PowPeg 
     </Accordion.Body>
   </Accordion.Item>
    <Accordion.Item eventKey="15">
-    <Accordion.Header as="h3">16.When using **Trezor** I'm receiving the error **Forbidden key path** ?</Accordion.Header>
+    <Accordion.Header as="h3">16. When using **Trezor** I'm receiving the error **Forbidden key path** ?</Accordion.Header>
     <Accordion.Body>
         > - The latest versions of Trezor Suite have implemented a security rule to disable its use with non-standard key paths. Therefore, the user must explicitly set **Perform Safety Checks** to **PROMPT** option in **Trezor Suite** in order to use the **Trezor wallet** in the PowPeg application.
         > - If is not enabled you will receive this error ![Trezor Error Key Path](/img/resources/powpeg/trezor-error.png)
@@ -120,8 +120,16 @@ Here, you can find a list of frequently asked questions (FAQs) about the PowPeg 
 
     </Accordion.Body>
   </Accordion.Item>
-  <Accordion.Item eventKey="16">
-    <Accordion.Header as="h3">17. I completed a peg-out but I do not see my BTC in Trezor Suite or Electrum</Accordion.Header>
+  <Accordion.Item eventKey="17">
+    <Accordion.Header as="h3">17. I cannot connect my Trezor to the PowPeg App</Accordion.Header>
+    <Accordion.Body>
+        > - The PowPeg App uses Trezor Connect in a browser pop-up. Allow pop-ups for `https://powpeg.rootstock.io` (Mainnet) or `https://powpeg.testnet.rootstock.io` (Testnet). See [Trezor will not connect (browser pop-up blocked)](/resources/guides/powpeg-app/pegout/pegout-common-errors#trezor-connect-popups).
+        > - Confirm **Perform Safety Checks** is set to **PROMPT** in Trezor Suite. See FAQ 16 below.
+        > - Unplug and replug your Trezor, unlock it with your PIN, and click **Retry** in the PowPeg App.
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="18">
+    <Accordion.Header as="h3">18. I completed a peg-out but I do not see my BTC in Trezor Suite or Electrum</Accordion.Header>
     <Accordion.Body>
         > - Trezor Suite cannot show peg-out Bitcoin addresses at the custom derivation path. Use Electrum as described in [Viewing a derived bitcoin address](/resources/guides/powpeg-app/pegout/deriving-electrum/).
         > - If you do not use a BIP39 passphrase on Trezor, leave the passphrase fields empty in Electrum. Entering a value there opens a different wallet and the balance can look like zero.

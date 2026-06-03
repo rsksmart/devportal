@@ -74,6 +74,8 @@ To get started with the 2-way peg app, ensure you have the following:
         - For Ledger Nano X setup, see [Set up your Ledger Nano X](https://support.ledger.com/hc/en-us/articles/360018784134-Set-up-your-Ledger-Nano-X?docs=true).
     - **Trezor Wallet:**
         - Follow the [setup guide](https://trezor.io/guides/trezor-devices/trezor-safe-5/get-started-with-the-trezor-safe-5) for Trezor hardware wallet.
+        - In Chrome or Brave, [allow pop-ups for the PowPeg App](/resources/guides/powpeg-app/pegout/pegout-common-errors#trezor-connect-popups) so Trezor Connect can open.
+        - In Trezor Suite, set **Perform Safety Checks** to **PROMPT**. See [Peg-in using Trezor](/resources/guides/powpeg-app/pegin/trezor/).
     - **Liquality Software Wallet (Peg-out Requirements only):**
         - Setup the Liquality software wallet by visiting [Liquality's website](https://www.liquality.io/).
     - **Metamask Wallet (Peg-out Requirements only):**
