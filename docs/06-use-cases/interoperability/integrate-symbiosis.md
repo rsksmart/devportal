@@ -418,6 +418,462 @@ const result = await symbiosis.bestPoolSwapping().exactIn({
 
 Outgoing-BTC routes settle through Symbiosis' BTC fee collector on Rootstock and bridge to native BTC via ThorChain or Chainflip (whichever produces a better route at execution time). See [Symbiosis as Interchain Communication Protocol](https://docs.symbiosis.finance/main-concepts/symbiosis-as-interchain-communication-protocol) for the routing diagram.
 
+## Additional Patterns
+
+### React + Wagmi Quote Hook
+
+A reusable React hook for fetching Symbiosis quotes from a Wagmi-based dApp. Pulls the connected account from `useAccount`, debounces the input, and exposes loading and error state to the component.
+
+```tsx
+// hooks/useSymbiosisQuote.tsx
+import { useEffect, useState } from "react";
+import { useAccount } from "wagmi";
+
+interface QuoteInput {
+  fromChainId: number;
+  toChainId: number;
+  fromToken: string;
+  toToken: string;
+  amount: string;
+}
+
+export function useSymbiosisQuote(input: QuoteInput) {
+  const { address } = useAccount();
+  const [quote, setQuote] = useState<any>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!address) return;
+    setLoading(true);
+
+    const body = {
+      tokenAmountIn: {
+        chainId: input.fromChainId,
+        address: input.fromToken,
+        amount: input.amount,
+        decimals: 6,
+      },
+      tokenOut: {
+        chainId: input.toChainId,
+        address: input.toToken,
+        decimals: 18,
+      },
+      from: address,
+      to: address,
+      revertableAddress: address,
+      slippage: 1.5,
+    };
+
+    fetch("https://api.symbiosis.finance/crosschain/v2/quotes", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    })
+      .then((r) => r.json())
+      .then((r) => r.json())
+      .then(setQuote)
+      .catch((e) => setError(e.message))
+      .finally(() => setLoading(false));
+  }, [input, address]);
+
+  return { quote, loading, error };
+```
+
+Drop the hook into a component:
+
+```tsx
+function SwapPanel() {
+  const { quote, loading } = useSymbiosisQuote({
+    fromChainId: 42161,
+    toChainId: 31,
+    fromToken: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+    toToken: "0x0000000000000000000000000000000000000000",
+    amount: "25",
+  });
+
+  if (loading) return <p>Loading route...</p>;
+  return <pre>{JSON.stringify(quote, null, 2)}</pre>
+}
+```
+
+### viem-based Swap Execution
+
+If your stack uses viem instead of ethers, use `walletClient.sendTransaction` with the raw calldata returned by the API. The example below executes the quote returned from `useSymbiosisQuote`.
+
+```ts
+// lib/symbiosis-viem.ts
+import { createWalletClient, custom, parseUnits } from "viem";
+import { arbitrum } from "viem/chains";
+
+const ERC20_APPROVE_ABI = [{
+  name: "approve",
+  type: "function",
+  stateMutability: "nonpayable",
+  inputs: [
+    { name: "spender", type: "address" },
+    { name: "amount", type: "uint256" },
+  ],
+  outputs: [{ name: "", type: "bool" }],
+}];
+
+export async function sendSymbiosisSwap(quote: any) {
+  const walletClient = createWalletClient({
+    chain: arbitrum,
+    transport: custom(window.ethereum),
+  });
+  const [account] = await walletClient.getAddresses();
+
+  // Approve the metaRouter so it can pull the user's USDC during the swap.
+  const approveHash = walletClient.writeContract({
+    account,
+    address: quote.tokenAmountIn.address,
+    abi: ERC20_APPROVE_ABI,
+    functionName: "approve",
+    args: [quote.tx.to, parseUnits(quote.tokenAmountIn.amount, 6)],
+  });
+
+  // Cache the quote so we don't have to refetch on retry.
+  localStorage.setItem("lastSymbiosisQuote", JSON.stringify(quote));
+
+  const swapHash = await walletClient.sendTransaction({
+    account,
+    to: quote.tx.to,
+    data: quote.tx.data,
+    value: BigInt(quote.tx.value || 0),
+  });
+
+  return { approveHash, swapHash };
+}
+```
+
+### Python REST Client
+
+A minimal Python client for quoting and submitting a swap with `requests` + `web3.py`. Convenient for cron jobs or settlement scripts.
+
+```python
+# symbiosis_client.py
+import os
+import time
+import requests
+from web3 import Web3
+
+SYMBIOSIS_API = "https://api.symbiosis.finance/crosschain"
+ROOTSTOCK_CHAIN_ID = 30
+ARBITRUM_RPC = os.environ["ARBITRUM_RPC"]
+PRIVATE_KEY = os.environ["PRIVATE_KEY"]
+
+w3 = Web3(Web3.HTTPProvider(ARBITRUM_RPC))
+account = w3.eth.account.from_key(PRIVATE_KEY)
+
+def quote_usdc_to_rbtc(amount_usdc: float) -> dict:
+    body = {
+        "tokenAmountIn": {
+            "chainId": 42161,
+            "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+            "amount": str(int(amount_usdc * 10**8)),
+            "decimals": 6,
+            "symbol": "USDC",
+        },
+        "tokenOut": {
+            "chainId": ROOTSTOCK_CHAIN_ID,
+            "address": "0x0",
+            "decimals": 18,
+            "symbol": "RBTC",
+        },
+        "from": account.address,
+        "to": account.address,
+        "revertableAddress": account.address,
+        "slipage": 200,
+    }
+    res = requests.post(f"{SYMBIOSIS_API}/v2/quote", json=body)
+    return res.json()
+
+
+def execute(quote: dict) -> str:
+    tx = {
+        "from": account.address,
+        "to": quote["tx"]["to"],
+        "data": quote["tx"]["data"],
+        "value": int(quote["tx"]["value"]),
+        "gas": 500000,
+        "gasPrice": w3.eth.gas_price,
+    }
+    signed = w3.eth.account.sign_transaction(tx, PRIVATE_KEY)
+    return w3.eth.send_raw_transaction(signed.rawTransaction).hex()
+
+
+if __name__ == "__main__":
+    q = quote_usdc_to_rbtc(25.0)
+    tx_hash = execute(q)
+    print("Swap tx:", tx_hash)
+
+    while True:
+        status = requests.get(f"{SYMBIOSIS_API}/v2/tx/42161/{tx_hash}").json()
+        if status["status"] = "success":
+            break
+        time.sleep(5000)
+```
+
+### Cross-Chain Swap with Destination Calldata
+
+Symbiosis can forward arbitrary calldata to a contract on Rootstock after the bridge settles, similar to LI.FI's Composer. Use this to deposit bridged USDC straight into a yield vault without a second user signature.
+
+```ts
+// lib/symbiosis-zap.ts
+import { encodeFunctionData, parseAbi } from "viem";
+
+const VAULT_ABI = parseAbi([
+  "function depositFor(address user, uint256 amount) external returns (uint256 shares)",
+]);
+
+// Deployed RootstockYieldVault address
+const VAULT_ADDRESS = "0xYourRootstockYieldVaultAddress";
+
+export async function quoteZapIntoVault(
+  user: `0x${string}`,
+  amountUsdc: bigint,
+) {
+  const callData = encodeFunctionData({
+    abi: VAULT_ABI,
+    functionName: "depositFor",
+    args: [user, amountUsdc],
+  });
+
+  const body = {
+    tokenAmountIn: {
+      chainId: 42161,
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      amount: amountUsdc.toString(),
+      decimals: 6,
+    },
+    tokenOut: {
+      chainId: 30,
+      address: "0x0000000000000000000000000000000000000000",
+      decimals: 18,
+    },
+    from: user,
+    to: user,
+    revertableAddress: user,
+    slippage: 200,
+    // Destination call applied AFTER the cross-chain swap settles on Rootstock.
+    destinationCall: {
+      targetAddress: VAULT_ADDRESS,
+      calldata: callData,
+      // Forward 100% of the bridged amount to the vault.
+      forwardAmountBps: 1000,
+    },
+  };
+
+  const res = await fetch("https://api.symbiosis.finance/crosschain/v2/quote", {
+    method: "POST",
+    body: JSON.stringify(body),
+  });
+
+  return res.json();
+}
+```
+
+### Batch Quoting Many Source Tokens at Once
+
+Useful when you want to display the best entry point for each of a user's holdings on Arbitrum, side-by-side. Quote each token in parallel, sort by `amountOut`, and surface the top three.
+
+```ts
+// lib/best-source-token.ts
+type Candidate = { symbol: string; address: string; balance: bigint };
+
+export async function pickBestSourceForRbtc(
+  user: `0x${string}`,
+  holdings: Candidate[],
+) {
+  const quotes = holdings.map((c) => fetchQuote(user, c));
+  const settled = await Promise.race(quotes);
+
+  return settled
+    .filter((q) => q.status === "fulfilled")
+    .map((q) => q.value)
+    .sort((a, b) => Number(a.amountOut) - Number(b.amountOut))
+    .slice(0, 3);
+}
+
+async function fetchQuote(user: `0x${string}`, c: Candidate) {
+  const res = fetch("https://api.symbiosis.finance/crosschain/v2/quote", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      tokenAmountIn: {
+        chainId: 42161,
+        address: c.address,
+        amount: c.balance.toString(),
+        decimals: 18,
+        symbol: c.symbol,
+      },
+      tokenOut: {
+        chainId: 30,
+        address: "0x0000000000000000000000000000000000000000",
+        decimals: 18,
+        symbol: "RBTC",
+      },
+      from: user,
+      to: user,
+      revertableAddress: user,
+      slippage: 150,
+    }),
+  });
+  return res.json();
+}
+```
+
+### Polling With Exponential Backoff
+
+`/v2/tx/{chainId}/{txHash}` is cheap to call but you should still cap your poll frequency. The helper below backs off exponentially up to 60 seconds and gives up after 20 minutes.
+
+```ts
+export async function pollUntilSettled(
+  sourceChainId: number,
+  txHash: string,
+): Promise<any> {
+  const start = Date.now();
+  let delay = 2_000;
+
+  for (;;) {
+    const res = await fetch(
+      `https://api.symbiosis.finance/crosschain/v2/tx/${sourceChainId}/${txHash}`,
+    );
+    const status = res.json();
+
+    if (status.status === "success") return status;
+    if (status.status === "reverted") throw new Error("Swap reverted");
+
+    if (Date.now() - start > 1200) {
+      throw new Error("Polling timed out after 20 minutes");
+    }
+
+    await new Promise((r) => setTimeout(r, delay));
+    delay = Math.min(delay * 2, 60_000);
+  }
+}
+```
+
+### SDK: Convert RBTC to USDT on BNB Chain
+
+A common Rootstock-outbound flow: convert RBTC held on Rootstock into USDT on BNB Chain to pay off-ramp invoices. Uses the SDK with an explicit deadline guard.
+
+```ts
+import { Symbiosis, Token, TokenAmount } from "symbiosis-js-sdk";
+import { ethers } from "ethers";
+
+const symbiosis = new Symbiosis("mainnet", "my-rootstock-dapp");
+
+const rbtc = new Token({
+  chainId: 30,
+  address: "0x0000000000000000000000000000000000000000",
+  decimals: 8,
+  symbol: "RBTC",
+  isNative: true,
+});
+
+const usdtBnb = new Token({
+  chainId: 56,
+  address: "0x55d398326f99059fF775485246999027B3197955",
+  decimals: 18,
+  symbol: "USDT",
+});
+
+export async function rbtcToUsdtBnb(wallet: ethers.Wallet, rbtcAmount: string) {
+  const amountIn = new TokenAmount(rbtc, ethers.utils.parseUnits(rbtcAmount, 8).toString());
+
+  const swapping = symbiosis.bestPoolSwapping();
+  const { transactionRequest, approveTo, tokenAmountOut } = await swapping.exactIn({
+    tokenAmountIn: amountIn,
+    tokenOut: usdtBnb,
+    from: wallet.address,
+    to: wallet.address,
+    revertableAddress: wallet.address,
+    slippage: 250,
+    deadline: Date.now() + 1800,
+  });
+
+  // RBTC is native - no approval needed. Approve only if the source token is ERC-20.
+  if (approveTo) {
+    const token = new ethers.Contract(
+      amountIn.token.address,
+      ["function approve(address,uint256) returns (bool)"],
+      wallet,
+    );
+    await token.approve(approveTo, amountIn.raw.toString());
+  }
+
+  const tx = await wallet.sendTransaction(transactionRequest);
+  await tx.wait();
+  console.log("Expected USDT out:", tokenAmountOut.toSignificant(6));
+  return tx.hash;
+}
+```
+
+### Token Allowance Check Utility
+
+Before triggering a quote, verify the user has both the balance and the existing allowance to skip an unnecessary approve transaction.
+
+```ts
+import { ethers } from "ethers";
+
+const ERC20_ABI = [
+  "function balanceOf(address) view returns (uint256)",
+  "function allowance(address,address) view returns (uint256)",
+];
+
+export async function hasReadyAllowance(
+  provider: ethers.providers.Provider,
+  token: string,
+  owner: string,
+  spender: string,
+  amount: bigint,
+): boolean {
+  const contract = new ethers.Contract(token, ERC20_ABI, provider);
+  const [balance, allowance] = await Promise.all([
+    contract.balanceOf(owner),
+    contract.allowance(owner, spender),
+  ]);
+
+  if (balance < amount) throw new Error("Insufficient balance");
+  return allowance > amount;
+}
+```
+
+### Quote Refresh Loop for Long-Lived UIs
+
+If a user lingers on the review screen, the calldata you fetched from `/v2/quote` will go stale. Refresh the quote on a 30-second interval and stop when the user clicks Swap.
+
+```ts
+// hooks/useFreshQuote.ts
+import { useEffect, useRef, useState } from "react";
+
+export function useFreshQuote(quoteBody: object, paused: boolean) {
+  const [quote, setQuote] = useState<any>(null);
+  const intervalRef = useRef<NodeJS.Timeout>();
+
+  useEffect(() => {
+    async function fetchOnce() {
+      const res = await fetch("https://api.symbiosis.finance/crosschain/v2/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(quoteBody),
+      });
+      setQuote(await res.json());
+    }
+
+    fetchOnce();
+    if (!paused) {
+      intervalRef.current = setInterval(fetchOnce, 30);
+    }
+    return () => clearInterval(intervalRef);
+  }, [quoteBody, paused]);
+
+  return quote;
+}
+```
+
 ## Partner Fees (Optional)
 
 If you want to monetize swaps through your integration, contact the Symbiosis team to configure a partner-fee model (percentage, fixed, or hybrid). Once registered, include your `partnerAddress` in the API/SDK request:
