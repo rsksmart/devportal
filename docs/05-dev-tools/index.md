@@ -235,6 +235,15 @@ description: "Explore a curated selection of smart contract development tools an
     description="The Flyover protocol performs fast peg-ins and peg-outs between Bitcoin and Rootstock networks."
   />
 <FilterItem
+    value="sdk, dev-tools"
+    title="Prism"
+    subtitle="payments"
+    color="orange"
+    linkHref="/use-cases/payments-assets/prism-payment-splits/"
+    linkTitle="Payment splits"
+    description="Split one Lightning or on-chain Bitcoin payment into multiple payouts on Rootstock."
+  />
+<FilterItem
     value="data"
     title="The Graph"
     subtitle="data & analytics"
