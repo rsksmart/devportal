@@ -185,7 +185,7 @@ Only the parts that differ from **Single File** are described below.
 
 You can:
 
-- Drag and drop multiple .sol files.
+- Drag and drop multiple `.sol` files.
 - Upload an entire folder containing your contracts.
 - Combine both approaches if needed.
 
@@ -222,7 +222,7 @@ This method is strongly recommended for:
 
 **Hardhat**:
 
-```
+```bash
 npx hardhat compile --show-stack-traces
 ```
 
@@ -282,7 +282,7 @@ Then locate the Hardhat build-info file under `artifacts/build-info/*.json`; thi
 
 **Foundry**:
 
-```
+```bash
 forge verify-contract \
     --chain-id 31 \
     --watch \
