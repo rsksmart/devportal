@@ -361,6 +361,7 @@ Replace:
 - `<contract-address>` → the deployed contract address.
 - `<contract-file>` → path to the Solidity file inside your project.
 - `<contract-name>` → name of the contract inside that file.
+- `<compiler-version>` → the Solidity compiler version used to compile and deploy the contract (for example, `v0.8.28`).
 
 Once the command finishes, your contract will appear as Verified on the Rootstock Explorer.
 
