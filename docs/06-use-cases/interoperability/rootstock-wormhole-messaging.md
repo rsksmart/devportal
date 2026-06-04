@@ -343,7 +343,3 @@ Use the table below to diagnose the most common failures when fetching and submi
 | `ReplayDetected` revert | The VAA was already processed by the Receiver. | This is expected behavior. Each VAA can be submitted only once. Fetch a new message with a higher sequence number. |
 | `Unauthorized` revert | A non-owner account called an `onlyOwner` function such as `setTrustedEmitter`. | Submit the transaction from the account that deployed the contract, or transfer ownership to the intended administrator. |
 | RPC errors or dropped transactions | The public RPC endpoint is rate-limited or unavailable. | Switch to a dedicated [Rootstock RPC provider](/developers/rpc-api/rootstock/) and verify your account has enough rBTC for gas. |
-
-:::note[Testnet availability]
-Wormhole does not currently have a public Core Contract deployment on Rootstock Testnet. All live testing targets Rootstock Mainnet. Check the [official Wormhole contract addresses page](https://wormhole.com/docs/build/reference/contract-addresses/) for future updates.
-:::
