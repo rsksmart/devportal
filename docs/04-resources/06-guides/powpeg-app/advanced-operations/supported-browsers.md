@@ -13,7 +13,7 @@ The PowPeg App supports these desktop browsers:
 
 :::note[Trezor and browser pop-ups]
 
-If you connect a Trezor hardware wallet, the browser must allow pop-ups for the PowPeg App. Trezor Connect opens in a separate window. See [Trezor will not connect (browser pop-up blocked)](/resources/guides/powpeg-app/pegout/pegout-common-errors#trezor-connect-popups).
+If you connect a Trezor hardware wallet, the browser must allow pop-ups for the PowPeg App. Trezor Connect opens in a separate window. See [Trezor won't connect (browser pop-up blocked)](/resources/guides/powpeg-app/pegout/pegout-common-errors#trezor-connect-popups).
 
 :::
 

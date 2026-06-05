@@ -21,8 +21,7 @@ In this guide, we will be performing a peg in transaction using the [PowPeg App]
     <Video url="/img/resources/powpeg/trezor-error-fixed.mp4" thumbnail="/img/resources/powpeg/trezor-error.png" />
 
 :::note[Trezor Connect pop-up]
-
-The PowPeg App opens Trezor Connect in a browser pop-up. If Chrome or Brave blocks it, Trezor will not connect. [Allow pop-ups for the PowPeg App](/resources/guides/powpeg-app/pegout/pegout-common-errors#trezor-connect-popups) before you continue.
+The PowPeg App opens Trezor Connect in a browser pop-up. If Chrome or Brave blocks it, Trezor won't connect. [Allow pop-ups for the PowPeg App](/resources/guides/powpeg-app/pegout/pegout-common-errors#trezor-connect-popups) before you continue.
 
 :::
 
@@ -73,7 +72,7 @@ Enter a pin for your Trezor, displayed on your hardware wallet. Click **confirm*
 
 :::note[BIP39 passphrase]
 
-The BIP39 passphrase is optional. It extends your seed and is not your Trezor PIN. If you do not use a passphrase wallet, leave both fields empty and confirm. If you use one, enter the same passphrase you use in Trezor Suite. See [Trezor passphrase in Electrum](/resources/guides/powpeg-app/pegout/deriving-electrum#trezor-passphrase-in-electrum) for the same rule when you verify peg-out funds.
+The BIP39 passphrase is optional. It extends your seed and isn't your Trezor PIN. If you don't use a passphrase wallet, leave both fields empty and confirm. If you use one, enter the same passphrase you use in Trezor Suite. See [Trezor passphrase in Electrum](/resources/guides/powpeg-app/pegout/deriving-electrum#trezor-passphrase-in-electrum) for the same rule when you verify peg-out funds.
 
 :::
 

@@ -6,11 +6,7 @@ description: 'Essential security practices for DeFi: reentrancy, access control,
 tags: [rsk, rootstock, defi, security, solidity, audits]
 ---
 
-:::danger[Security First]
-DeFi protocols handle valuable assets. A single vulnerability can lead to catastrophic losses. Always follow these patterns and get professional audits.
-:::
-
-# Security Patterns for DeFi dApps
+DeFi protocols handle valuable assets. A single vulnerability can lead to catastrophic losses. Always follow these patterns and get professional audits before deploying to Mainnet.
 
 ## 1. Reentrancy Protection
 
