@@ -18,6 +18,7 @@ Interoperability is the ability for Bitcoin to move seamlessly between its nativ
 | **[Union (BitVMX)](https://github.com/rsksmart/union-bridge-contracts)** | A trust-minimized 1-of-N bridge that uses optimistic fraud proofs on Bitcoin. | Trustless DeFi & L2 interoperability. |
 | **[Layerzero](/use-cases/interoperability/rootstock-layerzero/)** | Build Omnichain Fungible Token (OFTs) on Rootstock with Layerzero. | Trustless DeFi & L2 interoperability. |
 | **[LI.FI](/use-cases/interoperability/integrate-lifi/)** | Omnichain liquidity routing from Ethereum, Arbitrum, Base, and more directly to Rootstock. | Single-transaction cross-chain liquidity. |
+| **[Wormhole](/use-cases/interoperability/rootstock-wormhole-messaging/)** | Send arbitrary cross-chain messages to Rootstock using Verified Action Approvals (VAAs). | Cross-chain governance, data sync & multi-chain app logic. |
 
 ## Key Concepts
 

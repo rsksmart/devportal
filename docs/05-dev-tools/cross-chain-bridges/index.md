@@ -6,17 +6,17 @@ description: "Explore cross-chain bridging solutions on Rootstock."
 tags: [cross chain, bridges, developer tools, rsk, rootstock, ethereum, dApps, smart contracts]
 ---
 
-Imagine different islands, each with its own unique economy and currency. To trade with each other, these islands need bridges to connect them. In the world of blockchain, these islands are different blockchains, and the bridges are called cross-chain bridges.
+Imagine different islands, each with its own unique economy and currency. To trade with each other, these islands need bridges to connect them. In the world of blockchain, these islands are different blockchains, and the bridges are called cross-chain bridges. Unlike physical bridges, cross-chain bridges carry chain-specific risks and wait times that you should understand before moving assets or messages between networks.
 
 ## Why do we need cross-chain bridges?
 
-* Asset movement across chains: Cross-chain bridges let you move digital assets between different blockchains, similar to transfers between bank accounts but with chain-specific risks and wait times.
+* Asset movement across chains: Cross-chain bridges allow users to move digital assets between different blockchains, similar to transfers between bank accounts but with chain-specific risks and wait times.
 * Expanded Opportunities: By connecting different blockchains, you can access a wider range of financial services, decentralized applications (dApps), and investment opportunities.
 
 ## How do cross-chain bridges work?
 
-* Lock and Mint: When you want to move assets from one blockchain (let's call it Chain A) to another (Chain B), the bridge locks your assets on Chain A and mints a corresponding amount of wrapped assets on Chain B.
-* Transfer and Burn: You can then transfer these wrapped assets on Chain B. Once you're ready to move them back to Chain A, the bridge burns the wrapped assets on Chain B and releases your original assets on Chain A.
+* Lock and Mint: When you want to move assets from one blockchain (e.g., Chain A) to another (e.g., Chain B), the bridge locks your assets on Chain A and mints a corresponding amount of wrapped assets on Chain B.
+* Transfer and Burn: You can then transfer these wrapped assets on Chain B. Once you're ready to move them back to Chain A, the bridge burns the wrapped assets on Chain B and releases your original assets on Chain A. Because each bridge handles custody and verification differently, review the chain-specific risks and wait times before initiating a transfer.
 
 ## Cross-Chain Bridging Solutions on Rootstock
 
@@ -49,7 +49,7 @@ Imagine different islands, each with its own unique economy and currency. To tra
     title="Wormhole"
     subtitle="cross-chain"
     color="green"
-    description="Wormhole provides developers with all the resources and tools they need to create dApps that leverage the power of multiple blockchains, including Rootstock."
+    description="The Wormhole platform overview and supported-network reference for developers building dApps that use multiple blockchains, including Rootstock."
     linkHref="https://wormhole.com/docs/build/start-building/supported-networks/evm/#rootstock"
     linkTitle="Start Bridging"
   />
@@ -68,5 +68,13 @@ Imagine different islands, each with its own unique economy and currency. To tra
     description="LayerZero is a cross-chain messaging protocol for moving Bitcoin-backed assets from Rootstock to other blockchains so developers can build omnichain applications (OApps) across multiple chains."
     linkHref="/use-cases/interoperability/rootstock-layerzero/"
     linkTitle="Start Bridging"
+  />
+  <CardsGridItem
+    title="Wormhole Messaging"
+    subtitle="cross-chain"
+    color="green"
+    description="A step-by-step Rootstock integration guide for sending arbitrary byte payloads between chains using Verified Action Approvals (VAAs) and the Wormhole Core Contract."
+    linkHref="/use-cases/interoperability/rootstock-wormhole-messaging/"
+    linkTitle="Read the Guide"
   />
 </CardsGrid>
