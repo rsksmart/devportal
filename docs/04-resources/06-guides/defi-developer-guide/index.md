@@ -2,21 +2,17 @@
 sidebar_position: 1
 sidebar_label: Overview
 title: 'Rootstock DeFi Developer Guide'
-description: 'A structured guide for building DeFi protocols on Rootstock – token standards, oracles, AMMs, security, and templates.'
+description: 'A structured guide for building DeFi protocols – token standards, oracles, AMMs, security, and templates. A DeFi 101 catalog of token standards and security patterns to review before deploying to production on Rootstock.'
 tags: [rsk, rootstock, defi, solidity, web3, developer-guide]
 ---
 
+Welcome to the **Rootstock DeFi Developer Guide**! This guide is your one-stop resource for building decentralized finance (DeFi) applications on Rootstock. Whether you're a seasoned Ethereum developer or new to DeFi, these guides will help you navigate the unique opportunities and considerations when deploying on Rootstock.
+
+This guide provides practical workflows, example code, and best practices for building DeFi protocols on Rootstock.
+
 :::tip[Prerequisites]
-This guide assumes you have basic knowledge of Solidity, blockchain fundamentals, and the Rootstock ecosystem. You should have a development environment set up (Hardhat, Foundry, or Truffle) and a testnet wallet with tRBTC.
+This guide assumes you have basic knowledge of Solidity, blockchain fundamentals, and the Rootstock ecosystem. You should have a development environment set up (Hardhat or Foundry) and a testnet wallet with tRBTC. See [Shared Setup](/use-cases/interoperability/shared-setup/).
 :::
-
-# Rootstock DeFi Developer Guide
-
-Welcome to the **Rootstock DeFi Developer Guide**! This guide is your one-stop resource for building decentralized finance (DeFi) applications on Rootstock, the world's most secure Bitcoin sidechain. Whether you're a seasoned Ethereum developer or new to DeFi, this guide will help you navigate the unique opportunities and considerations of developing on Rootstock.
-
-Rootstock brings smart contracts to Bitcoin, combining the security of Bitcoin's proof-of-work with Ethereum's flexibility. With full EVM compatibility, you can deploy your existing Solidity contracts with minimal changes, while leveraging Bitcoin's liquidity and user base.
-
-The Rootstock DeFi ecosystem is growing rapidly, but developers often lack a structured path to build and integrate DeFi applications. This guide fills that gap by providing practical workflows, example code, and best practices for creating DeFi protocols on Rootstock.
 
 ## Why Rootstock for DeFi?
 

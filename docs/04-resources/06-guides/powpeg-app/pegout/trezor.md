@@ -10,9 +10,9 @@ tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 
 ## Get started with Trezor
 
-To perform a peg-out transaction using the Ledger device directly, follow the steps below:
+To perform a peg-out transaction using the Trezor device directly, follow the steps below:
 
-* Step 1: Plug the Ledger device into the computer
+* Step 1: Plug the Trezor device into the computer
 
 * Step 2: Verify if you have enabled **Perform Safety Checks** to **PROMPT**
 
@@ -20,6 +20,11 @@ To perform a peg-out transaction using the Ledger device directly, follow the st
     > - This video explains how to enable **Perform Safety Checks** to **PROMPT** on **Trezor Suite** [Enabling Prompt for Key Path](/img/resources/powpeg/trezor-error-fixed.mp4) 
     <Video url="/img/resources/powpeg/trezor-error-fixed.mp4" thumbnail="/img/resources/powpeg/trezor-error.png" />
 
+:::note[Trezor Connect pop-up]
+
+The PowPeg App opens Trezor Connect in a browser pop-up. If Chrome or Brave blocks it, Trezor will not connect. [Allow pop-ups for the PowPeg App](/resources/guides/powpeg-app/pegout/pegout-common-errors#trezor-connect-popups) before you continue.
+
+:::
 
 * Step 3: Access **peg-out** screen:
 ![pegout screen](/img/resources/powpeg/pegout-button.png)
@@ -37,33 +42,38 @@ To perform a peg-out transaction using the Ledger device directly, follow the st
 
 ![network](/img/resources/powpeg/using-hd-wallets/network.png)
 
-* Step 6: Plugin your Trezor device:<br/>
+* Step 7: Plug in your Trezor device:<br/>
 ![plugin](/img/resources/powpeg/using-hd-wallets/plugin.png)
 
-* Step 7: The trezor window will open to insert the pin and export the addresses
+* Step 8: The Trezor window will open to insert the PIN and export the addresses
 ![pin-and-address](/img/resources/powpeg/using-hd-wallets/pin-and-address.png)
 
-* Step 8: Insert the pin and click on confirm button
+* Step 9: Insert the PIN and click on the confirm button
 ![insert-confirm](/img/resources/powpeg/using-hd-wallets/insert-confirm.png)
 
-* Step 9: Insert the passphrase
+* Step 10: Passphrase (Trezor Connect)
+
+If you use a [BIP39 passphrase](/resources/guides/powpeg-app/glossary/) on Trezor, enter it when prompted. If you do not use a passphrase, leave the fields empty and confirm.
+
 ![insert-passphrase](/img/resources/powpeg/using-hd-wallets/pass.png)
 
-* Step 10: Follow instructions on your device <br/>
+For the same rule when you verify peg-out funds in Electrum, see [Trezor passphrase in Electrum](/resources/guides/powpeg-app/pegout/deriving-electrum#trezor-passphrase-in-electrum).
+
+* Step 11: Follow instructions on your device <br/>
 ![verify-device](/img/resources/powpeg/using-hd-wallets/follow-device.png)
 
 ​> - Note the trezor app screen will be opened some times, because the system will ask for addresses, each ask will open again the trezor screen, and the user will need to inform the [trezor-pin](/img/resources/powpeg/using-hd-wallets/pass.png).
 
-* Step 11: Select account 
+* Step 12: Select account 
 
 <br/>
 
 ![select-account](/img/resources/powpeg/using-hd-wallets/trezor-select-account.png)
 
-* Step 12: Success
+* Step 13: Success
 
 ![success](/img/resources/powpeg/using-hd-wallets/trezor-sucess.png)
 
-* Step 13: Continue filling in the other fields as amount and click on the Send button
+* Step 14: Continue filling in the other fields as amount and click on the Send button
 
-* Step 14: After finish the pegout transaction creation, click here to see how to see the steps to access to Bitcoin derived address in hardware wallet using [Electrum](/resources/guides/powpeg-app/pegout/deriving-electrum)
+* Step 15: After you finish creating the peg-out transaction, see how to access the Bitcoin derived address in your hardware wallet using [Electrum](/resources/guides/powpeg-app/pegout/deriving-electrum)

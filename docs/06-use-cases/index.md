@@ -151,4 +151,14 @@ values={[
   linkTitle="View tutorial"
   description="HTTP 402 style pay-per-use APIs on Rootstock."
 />
+
+<FilterItem
+  value="payments"
+  title="Prism payment splits"
+  subtitle="Payments"
+  color="orange"
+  linkHref="/use-cases/payments-assets/prism-payment-splits/"
+  linkTitle="View guide"
+  description="Split one Lightning or on-chain Bitcoin payment into multiple non-custodial payouts on Rootstock."
+/>
 </Filter>

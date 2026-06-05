@@ -16,6 +16,8 @@ These operations include;
 
 * How to review funds in Bitcoin after a pegout by [viewing a derived address](/resources/guides/powpeg-app/pegout/deriving-electrum), 
 * Convert RBTC - BTC and import a [key in Electrum](/resources/guides/powpeg-app/pegout/deriving-electrum#import-key-in-electrum), import in Electrum if you are using [hardware wallets](/resources/guides/powpeg-app/pegout/deriving-electrum)
+* [Trezor passphrase in Electrum](/resources/guides/powpeg-app/pegout/deriving-electrum#trezor-passphrase-in-electrum) and [troubleshooting a zero balance after peg-out](/resources/guides/powpeg-app/pegout/deriving-electrum#troubleshooting-zero-balance)
+* [Allow Trezor Connect pop-ups in your browser](/resources/guides/powpeg-app/pegout/pegout-common-errors#trezor-connect-popups)
 * Selecting different accounts
 * Viewing advanced details
 * Adjusting network fees

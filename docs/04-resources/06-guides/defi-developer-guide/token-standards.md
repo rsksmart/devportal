@@ -6,11 +6,7 @@ description: 'Implement ERC-20, ERC-721, and Rootstock-specific token patterns w
 tags: [rsk, rootstock, defi, erc20, erc721, solidity]
 ---
 
-:::tip[Token Standards]
-Tokens are the lifeblood of DeFi. Rootstock is fully EVM-compatible, so all Ethereum token standards work seamlessly. This section covers ERC-20, ERC-721, and important extensions like ERC-20 Permit, ERC-4626, and RBTC wrapping.
-:::
-
-# Token Standards & Best Practices
+Tokens are the lifeblood of DeFi. This section covers ERC-20, ERC-721, and important extensions like ERC-20 Permit, ERC-4626, and rBTC wrapping.
 
 ## 1. ERC-20 Tokens
 

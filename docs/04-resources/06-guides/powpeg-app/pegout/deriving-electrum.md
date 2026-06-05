@@ -171,7 +171,7 @@ Step 6: Create a new wallet password and click on the “Next” button
 
 ## Import key in Electrum using Hardware Wallets
 
-[Electrum](https://electrum.org/#download) is used to verify a derived address, this address will then be used to receive and verify the converted funds (RBTC - BTC) when the pegout process is finished.
+[Electrum](https://electrum.org/#download) verifies the Bitcoin address that receives your peg-out funds. After a native peg-out, Trezor Suite cannot show that address because it does not support the custom derivation path. Use Electrum with the same hardware wallet device you used in the [PowPeg App](https://powpeg.rootstock.io/).
 
 Step 1: Download Electrum for your OS from the [website](https://electrum.org/#download).
 
@@ -194,13 +194,13 @@ Step 4: Select “Standard wallet” option and click on “Next” button
     <img src="/img/resources/powpeg/using-hd-wallets/electrum-hdw-1.png"  title="wallet - electrum" width="100%"/>
 </center>
 
-Step 4: Select “Use a hardware device” option and click on “Next” button
+Step 5: Select “Use a hardware device” option and click on “Next” button
 
 <center>
     <img src="/img/resources/powpeg/using-hd-wallets/electrum-hdw-2.png"  title="wallet - electrum-hardware-device" width="100%"/>
 </center>
 
-Step 5: Select the hardware wallet and click on “Next” button
+Step 6: Select the hardware wallet and click on “Next” button
 
 > NOTE: The follow screen is an example of usage the Trezor Hardware Wallet
 
@@ -214,12 +214,26 @@ Step 5: Select the hardware wallet and click on “Next” button
     <img src="/img/resources/powpeg/using-hd-wallets/electrum-hdw-4.png"  title="wallet - electrum-hardware-device-ledger" width="100%"/>
 </center>
 
-Step 6: Select “legacy (p2pkh)” option, fill out a custom derivation path field and click on “Next” button
+Step 7: Complete the passphrase step when Electrum prompts you. See [Trezor passphrase in Electrum](#trezor-passphrase-in-electrum).
+
+Step 8: Select “legacy (p2pkh)” option, fill out a custom derivation path field and click on “Next” button
 
 ```text
 Custom derivation path:
 Mainnet: m/44'/137'/0'
 ```
+
+:::note[Derivation path in the PowPeg App]
+
+When you select an account in the PowPeg App, you may see a path such as `m/44'/137'/0'/0/0`. That path identifies your Rootstock (RBTC) account.
+
+<center>
+    <img src="/img/resources/powpeg/using-hd-wallets/powpeg-account-derivation-path.png"  title="PowPeg App account selector showing derivation path m/44'/137'/0'/0/0" width="80%"/>
+</center>
+
+In Electrum you use `m/44'/137'/0'` to view the legacy Bitcoin address that receives peg-out funds. The paths differ by purpose. Both are correct for their step. Note that the UI will match your browser language.
+
+:::
 
 <center>
     <img src="/img/resources/powpeg/using-hd-wallets/electrum-hdw-5.png"  title="wallet - electrum-derivation-pathx" width="100%"/>
@@ -237,14 +251,58 @@ Mainnet: m/44'/137'/0'
     <img src="/img/resources/powpeg/using-hd-wallets/electrum-hdw-7.png"  title="wallet - electrum-ledger-confirmation" width="100%"/>
 </center>
 
-Step 7:  Check “Encrypt wallet file” option and click on “Next” button
+Step 9: Optionally check “Encrypt wallet file” and click on “Next” button. This password encrypts the Electrum wallet file on your computer. It is not the Trezor BIP39 passphrase from Step 7.
 
 <center>
     <img src="/img/resources/powpeg/using-hd-wallets/electrum-hdw-8.png"  title="wallet - electrum-encrypt" width="100%"/>
 </center>
 
-Step 8: Finally in Electrum go to “Addresses” tab and you can see your funds
+Step 10: Open the “Addresses” tab in Electrum to view your funds.
 
 <center>
     <img src="/img/resources/powpeg/using-hd-wallets/electrum-hdw-9.png"  title="wallet - electrum-show-funds" width="100%"/>
 </center>
+
+### Trezor passphrase in Electrum {#trezor-passphrase-in-electrum}
+
+During setup, Electrum may show an **Enter a passphrase** dialog when you connect a Trezor. The BIP39 passphrase is an optional extension to your seed. It is not your Trezor PIN. It is not a password that only locks the Electrum app.
+
+If you enter a passphrase that you do not use on Trezor, Electrum derives a different wallet. Your peg-out funds can look missing even though the Bitcoin transaction succeeded.
+
+<center>
+    <img src="/img/resources/powpeg/using-hd-wallets/electrum-trezor-passphrase-en.png"  title="Electrum passphrase dialog in English" width="80%"/>
+</center>
+
+#### If you do not use a passphrase on Trezor
+
+Leave both passphrase fields empty and click **OK**. Do not type a new password into these fields.
+
+Electrum may still show this dialog if you turned on **Passphrase** in Trezor Suite (**Settings** → **Device** → **Passphrase**). That setting only enables the feature on the device. You can leave the Electrum fields empty unless you already use a BIP39 passphrase wallet.
+
+#### If you use a BIP39 passphrase on Trezor
+
+Enter the same passphrase you use in Trezor Suite or in the PowPeg App when you connect your Trezor. A different passphrase shows a different set of addresses.
+
+#### Electrum in Spanish
+
+In the Spanish Electrum UI, the dialog title refers to a passphrase, but the input labels may say **Contraseña** (password). Treat those fields as the BIP39 passphrase, not as a local Electrum login.
+
+<center>
+    <img src="/img/resources/powpeg/using-hd-wallets/electrum-trezor-passphrase-es.png"  title="Electrum passphrase dialog in Spanish" width="80%"/>
+</center>
+
+### Troubleshooting: peg-out completed but balance is zero {#troubleshooting-zero-balance}
+
+Your BTC may have arrived even when Electrum shows a zero balance. Work through these checks in order.
+
+1. Confirm the transaction on a block explorer using the destination Bitcoin address from the [PowPeg status page](https://powpeg.rootstock.io/).
+2. Confirm the custom derivation path in Electrum is `m/44'/137'/0'` on Mainnet (see Step 8 above).
+3. If you do not use a BIP39 passphrase on Trezor, leave the Electrum passphrase fields empty. See [Trezor passphrase in Electrum](#trezor-passphrase-in-electrum).
+4. If you use a passphrase on Trezor, enter the same value in Electrum.
+5. If the balance is still wrong, delete the Electrum wallet file and repeat the steps in this section with the correct passphrase and path.
+
+:::warning[Funds are tied to the passphrase]
+
+If you created a peg-out with an empty passphrase but opened Electrum with a passphrase (or the reverse), you are viewing a different wallet. Your BTC is not lost. Find the address on a block explorer and match the passphrase and path you used in the PowPeg App.
+
+:::

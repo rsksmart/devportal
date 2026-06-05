@@ -2,16 +2,17 @@
 sidebar_position: 1
 title: Automate Payments
 sidebar_label: Overview
-description: "Tokens, rBTC settlement, and programmable payment patterns on Rootstock."
+description: "Programmable payments on Rootstock: Prism splits, x402, ERC-20, rBTC, and RIF Relay."
 tags: [payments, assets, erc-20, stablecoins, checkout, fundamentals]
 ---
 
-Programmable payments on Rootstock are normal EVM contracts with Bitcoin-anchored finality. Gas costs and confirmation time depend on network load and how you batch work. **USDRIF**, **RIF Relay**, and HTTP 402 style flows each solve different jobs; pick the stack that matches your product and disclose fees and settlement time to users.
+Programmable payments on Rootstock are normal EVM contracts with Bitcoin-anchored finality. Gas costs and confirmation time depend on network load and how you batch work. **USDRIF**, **RIF Relay**, HTTP 402 flows, and **Prism** splits each solve different jobs. Pick the stack that matches your product and disclose fees and settlement time to users.
 
 ## Core pillars
 
 | Pillar | Description | Where to go |
 | :--- | :--- | :--- |
+| **Prism payment splits** | One Lightning or on-chain payment splits to multiple recipients on Rootstock. | [Prism payment splits](/use-cases/payments-assets/prism-payment-splits/) |
 | **x402 and agentic commerce** | Machine clients pay for HTTP resources with on-chain settlement. | [Integrating x402 Payments with Rootstock](/use-cases/payments-assets/integrate-x402/)|
 | **ERC-20 and rBTC** | Fungible tokens and native rBTC for checkout, escrow, and streaming. | Contract patterns in your stack (Hardhat, Foundry) plus [RIF Relay](/developers/integrate/rif-relay/overview/) when you need sponsored gas. |
 
