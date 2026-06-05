@@ -20,10 +20,10 @@ By the end of this tutorial, you will have:
 
 **Prerequisites**: Follow the [Shared Setup Guide](/use-cases/interoperability/shared-setup/) before starting.
 
-For background concepts, token standards, and security review, see [Rootstock DeFi 101](/resources/guides/defi-101/).
+For background concepts, token standards, and security review, see [Rootstock DeFi Developer Guide](/resources/guides/defi-developer-guide/).
 
 :::warning[Educational only]
-This tutorial is a minimal implementation for learning and experimentation. Before shipping to production, review [Rootstock DeFi 101](/resources/guides/defi-101/) and get professional audits.
+This tutorial is a minimal implementation for learning and experimentation. Before shipping to production, review [Rootstock DeFi Developer Guide](/resources/guides/defi-developer-guide/) and get professional audits.
 :::
 
 ## Our SimpleAMM Contract

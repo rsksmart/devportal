@@ -18,7 +18,7 @@ By the end of this tutorial, you will have:
 
 **Prerequisites**: Follow the [Shared Setup Guide](/use-cases/interoperability/shared-setup/) before starting.
 
-For background concepts and security review, see [Rootstock DeFi 101](/resources/guides/defi-101/).
+For background concepts and security review, see [Rootstock DeFi Developer Guide](/resources/guides/defi-developer-guide/).
 
 :::caution
 **This guide uses a mock Chainlink price feed for educational purposes only. Chainlink Price Feeds and VRF are not officially supported on Rootstock mainnet at this time – only CCIP is confirmed. Do not deploy price feed or VRF consumers on mainnet without checking official Chainlink documentation.**
