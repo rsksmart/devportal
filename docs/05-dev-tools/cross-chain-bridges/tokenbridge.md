@@ -8,7 +8,7 @@ tags: [token bridge, bridges, developer tools, testnet, rsk, rootstock, ethereum
 
 :::warning[Token Bridge deprecation]
 
-The Token Bridge will no longer support moving assets between Ethereum and Rootstock. For other options, see [cross-chain bridges](/dev-tools/cross-chain).
+The Token Bridge will no longer support moving assets between Ethereum and Rootstock. For other options, see [cross-chain bridges](/dev-tools/cross-chain-bridges/).
 
 :::
 
