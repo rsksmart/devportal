@@ -42,6 +42,8 @@ const config = {
       mendable : process.env.MENDABLE_KEY,
       cookbook : process.env.COOKBOOK_PUBLIC_API_KEY,
       github : process.env.GITHUB_TOKEN,
+      flowiseApiHost : process.env.FLOWISE_API_HOST,
+      flowiseChatflowId : process.env.FLOWISE_CHATFLOW_ID,
     },
     homePage: {
       editUrl: 'https://github.com/rsksmart/devportal/tree/main/',
