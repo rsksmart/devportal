@@ -135,6 +135,28 @@ function buildShadowCSS(isDark) {
         to right, ${DARK.brand} 0%, ${LIGHT.brand} 50%, ${DARK.brand} 100%
       ) !important;
     }
+
+    /* Replicate flowise's own "already rated" state (what a page reload shows).
+       flowise never updates its in-memory rating during a session, so we apply it
+       via CSS keyed off a data-fb-rating marker we set on the action row:
+       hide the opposite thumb, keep the chosen one disabled + recolored. */
+    [data-fb-rating] button[title="Thumbs Up"],
+    [data-fb-rating] button[title="Thumbs Down"] {
+      pointer-events: none !important;
+      cursor: not-allowed !important;
+    }
+    [data-fb-rating="up"] button[title="Thumbs Down"],
+    [data-fb-rating="down"] button[title="Thumbs Up"] {
+      display: none !important;
+    }
+    [data-fb-rating="up"] button[title="Thumbs Up"] svg,
+    [data-fb-rating="up"] button[title="Thumbs Up"] svg * {
+      stroke: #006400 !important; /* matches flowise THUMBS_UP color */
+    }
+    [data-fb-rating="down"] button[title="Thumbs Down"] svg,
+    [data-fb-rating="down"] button[title="Thumbs Down"] svg * {
+      stroke: #8B0000 !important; /* matches flowise THUMBS_DOWN color */
+    }
   `;
 }
 
@@ -142,9 +164,60 @@ function isDarkMode() {
   return document.documentElement.getAttribute('data-theme') === 'dark';
 }
 
+// Patches feedback (thumbs up/down) buttons to disable after a rating is given.
+//
+// Root cause (flowise-embed 3.1.6): a message's rating is read via
+//   c() = messageRatings?.[id] ?? message.rating ?? ""
+// but the live click handler never updates messageRatings (prop not wired) nor
+// mutates message.rating in memory — it only writes to localStorage. So c() stays
+// "" for the whole session, the `if ("" === c())` guard keeps passing, and the
+// thumbs stay active → the same response can be rated/submitted repeatedly.
+// (On reload it works because message.rating is restored from localStorage.)
+//
+// flowise renders the thumbs as <button title="Thumbs Up|Thumbs Down">. We mark
+// the action row with data-fb-rating="up"|"down" so injected CSS can reproduce the
+// rated look (hide the opposite thumb, recolor + disable the chosen one), and also
+// toggle the native `disabled` attribute as a non-CSS safeguard.
+function setupFeedbackPatch(shadowRoot) {
+  if (shadowRoot._feedbackPatched) return;
+  shadowRoot._feedbackPatched = true;
+
+  const UP = 'button[title="Thumbs Up"]';
+  const DOWN = 'button[title="Thumbs Down"]';
+  const THUMB_SEL = `${UP}, ${DOWN}`;
+
+  // Clicking a thumb always creates the feedback record (flowise POSTs and writes
+  // localStorage on click, not on comment submit — so a reload shows it rated even
+  // without a comment). Reproduce that rated state immediately. Defer to the next
+  // tick so flowise's own click handler fires the POST first; disabling the button
+  // synchronously here could suppress its handler and the rating would never send.
+  shadowRoot.addEventListener('click', (e) => {
+    const btn = e.target?.closest(THUMB_SEL);
+    if (!btn) return;
+
+    const rating = btn.getAttribute('title') === 'Thumbs Up' ? 'up' : 'down';
+
+    setTimeout(() => {
+      // Climb to the nearest ancestor that holds both thumbs (the action row),
+      // so the marker covers both buttons regardless of how SolidJS wraps each one.
+      let row = btn.parentElement;
+      while (row && row !== shadowRoot && row.querySelectorAll(THUMB_SEL).length < 2) {
+        row = row.parentElement;
+      }
+      if (!row || row === shadowRoot) row = btn.parentElement;
+      if (!row) return;
+
+      row.dataset.fbRating = rating;
+      row.querySelectorAll(THUMB_SEL).forEach((b) => { b.disabled = true; });
+    }, 0);
+  }, true);
+}
+
 function applyTheme() {
   const el = document.querySelector('flowise-chatbot');
   if (!el?.shadowRoot) return;
+
+  setupFeedbackPatch(el.shadowRoot);
 
   const dark = isDarkMode();
   const t = dark ? DARK : LIGHT;
