@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useColorMode } from '@docusaurus/theme-common';
+import { pushDataLayer } from '/src/_utils/analytics';
 
 // Portal design system tokens (from src/scss/abstracts/_variables.scss)
 const LIGHT = {
@@ -178,6 +179,30 @@ function isDarkMode() {
 // the action row with data-fb-rating="up"|"down" so injected CSS can reproduce the
 // rated look (hide the opposite thumb, recolor + disable the chosen one), and also
 // toggle the native `disabled` attribute as a non-CSS safeguard.
+// Tracks when the user opens the chat via the floating button.
+// The floating button has no title attribute (unlike Close/Reset/Thumbs), so we
+// identify it by exclusion. We only fire on open (not close) by checking that
+// the chat window is currently hidden before the click.
+function setupFloatingButtonPatch(shadowRoot) {
+  if (shadowRoot._floatingPatched) return;
+  shadowRoot._floatingPatched = true;
+
+  const TITLED = 'button[title]';
+
+  shadowRoot.addEventListener('click', (e) => {
+    const btn = e.target?.closest('button');
+    if (!btn || btn.matches(TITLED)) return;
+
+    // Only 1 untitled button exists when chat is closed (the floating toggle).
+    // When chat is open there are 2 (toggle + send). Guard: fire only if it's
+    // the sole untitled button, meaning the chat is currently closed.
+    const untitled = shadowRoot.querySelectorAll(`button:not(${TITLED})`);
+    if (untitled.length !== 1) return;
+
+    pushDataLayer('aiChatbotOpen', { componentId: 'flowise-chatbot-floating-button' });
+  }, true);
+}
+
 function setupFeedbackPatch(shadowRoot) {
   if (shadowRoot._feedbackPatched) return;
   shadowRoot._feedbackPatched = true;
@@ -207,6 +232,7 @@ function setupFeedbackPatch(shadowRoot) {
       if (!row || row === shadowRoot) row = btn.parentElement;
       if (!row) return;
 
+      pushDataLayer('aiChatbotFeedback', { componentId: 'flowise-chatbot-feedback', rating });
       row.dataset.fbRating = rating;
       row.querySelectorAll(THUMB_SEL).forEach((b) => { b.disabled = true; });
     }, 0);
@@ -217,6 +243,7 @@ function applyTheme() {
   const el = document.querySelector('flowise-chatbot');
   if (!el?.shadowRoot) return;
 
+  setupFloatingButtonPatch(el.shadowRoot);
   setupFeedbackPatch(el.shadowRoot);
 
   const dark = isDarkMode();

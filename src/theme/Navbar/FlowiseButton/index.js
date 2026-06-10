@@ -1,6 +1,8 @@
 import React from 'react';
+import { pushDataLayer } from '/src/_utils/analytics';
 
 function openChat() {
+  pushDataLayer('aiChatbotOpen', { componentId: 'flowise-chatbot-button' });
   document
     .querySelector('flowise-chatbot')
     ?.shadowRoot
