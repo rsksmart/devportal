@@ -72,7 +72,7 @@ curl https://api.symbiosis.finance/crosschain/v1/chains
 
 ```ts
 // lib/symbiosis-quote.ts
-const SYMBIOSIS_API = "https://api.symbiosis.finance/crosschain";
+const SYMBIOSIS_API = "https://api.symbiosis.finance//crosschain";
 
 
 export async function quoteUsdcArbitrumToRbtc(userAddress: `0x${string}`) {
