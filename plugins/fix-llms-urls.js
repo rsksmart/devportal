@@ -34,13 +34,20 @@ function fixLlmsFilesInDir(dir) {
   let fixed = 0;
   for (const filename of ['llms.txt', 'llms-full.txt']) {
     const filePath = path.join(dir, filename);
-    if (!fs.existsSync(filePath)) {
-      continue;
+    let original;
+    try {
+      original = fs.readFileSync(filePath, 'utf8');
+    } catch (err) {
+      if (err.code === 'ENOENT') {
+        continue;
+      }
+      throw err;
     }
-    const original = fs.readFileSync(filePath, 'utf8');
     const updated = fixLlmsFileContent(original);
     if (updated !== original) {
-      fs.writeFileSync(filePath, updated, 'utf8');
+      const tempPath = `${filePath}.tmp`;
+      fs.writeFileSync(tempPath, updated, 'utf8');
+      fs.renameSync(tempPath, filePath);
       fixed += 1;
     }
   }

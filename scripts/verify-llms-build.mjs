@@ -22,7 +22,7 @@ function pathForLocale(locale) {
   return path.join(BUILD_DIR, locale);
 }
 
-const NUMBERED_PATH_PATTERN = /dev\.rootstock\.io\/(?:es|ja|ko\/)?\d+-/;
+const NUMBERED_PATH_PATTERN = /https?:\/\/dev\.rootstock\.io\/(?:(?:es|ja|ko)\/)?\d+-/;
 
 function checkLlmsUrls(filePath) {
   if (!fs.existsSync(filePath)) {
