@@ -15,7 +15,7 @@ This guide covers two integration paths:
 
 ## Prerequisites
 
-- Use Node.js 18+ version
+- Use Node.js 18+ version.
 - A wallet provider (ethers v5/v6, viem, or Wagmi)
 - Familiarity with EVM token approvals of ERC20 tokens
 - (Optional) A `clientId` / `partnerId` string to attribute swaps to your integration. No registration required to start; contact Symbiosis to enable partner-fee collection.
