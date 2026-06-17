@@ -1,8 +1,8 @@
 ---
 sidebar_label: Privy
 sidebar_position: 109
-title: Privy Starter Kit
-description: 'The Rootstock Privy Starter Kit empowers developers to onboard users with social logins and self custodial wallets while preserving control, privacy, and flexibility for dApps when building on Rootstock.'
+title: Onboard Users with Privy on Rootstock
+description: 'Onboard users with social logins and self-custodial wallets on Rootstock using Privy. Secured by over 85% of Bitcoin''s hash power through merge mining.'
 tags: [rsk, rootstock, developers, privy, wagmi, quickstart, dApps, Smart Contracts]
 ---
 
@@ -18,6 +18,12 @@ With Privy, you can:
 - Manage permissions, and choose between out of the box UI components or low level API access depending on your choice of control.
 
 In this guide, you'll learn how to set up a React project that uses Privy for authentication and Wagmi for on-chain interactions.
+
+## What you'll achieve
+
+- Configure Privy authentication with social logins and embedded wallets
+- Connect users to Rootstock through Wagmi hooks
+- Send transactions and read contract state from your dApp frontend
 
 ## Getting Started
 
@@ -124,7 +130,7 @@ import { useState, useRef, useEffect } from 'react';
 
 When handling authentication on Privy, the following applies:
 
-- `usePrivy()` gives access to core auth functions — checking if the user is ready or authenticated, and handling login/logout.
+- `usePrivy()` gives access to core auth functions. Use it to check if the user is ready or authenticated, and to handle login and logout.
 - `useWallets()` returns wallets managed by Privy, including addresses and connection status.
 
 ```javascript
@@ -202,8 +208,8 @@ Navigate to your app's settings in the Privy Dashboard:
 
 ![Enable Social Logins Privy](/img/developers/quickstart/privy/7-privy-enable-social-logins.png)
 
-To keep the onboarding simple and accessible, we’ll start by enabling email login, one of the default methods available in Privy’s Basics tab in the Authentication menu.
-This setup allows users to authenticate without needing a wallet or external identity provider — a great starting point for broader access. Social logins and other methods (like SMS or passkeys) can be configured later from the Socials and Advanced tabs as needed. For full details, refer to [Privy’s guide](https://docs.privy.io/basics/get-started/dashboard/configure-login-methods#email-login) to login methods.
+To keep onboarding simple, start by enabling email login in Privy’s Basics tab under Authentication.
+Users can authenticate without a separate wallet or external identity provider. Social logins and other methods (SMS, passkeys) can be configured later from the Socials and Advanced tabs. For full details, refer to [Privy’s guide](https://docs.privy.io/basics/get-started/dashboard/configure-login-methods#email-login) to login methods.
 
 Congratulations, we have successfully learnt how to setup Privy, configure components like Wagmi, handle authentication, customize app logo, enable social logins, etc.
 With extensive configuration options, support for multiple login strategies, and seamless integration with embedded wallets, Privy adapts to a wide range of environments and use cases. As a secure and customizable solution, Privy is well suited for onboarding users and powering reliable wallet experiences. Integrating it into your app is a strong step toward bringing more users into the Rootstock ecosystem with simplicity and confidence.

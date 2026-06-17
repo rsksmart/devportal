@@ -15,7 +15,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">What is Rootstock?</Accordion.Header>
     <Accordion.Body>
-      Rootstock is the first and longest-lasting Bitcoin sidechain. It is the only layer 2 solution that combines the security of Bitcoin's proof of work with Ethereum's smart contract capabilities. The platform is open-source, EVM-compatible, and secured by over 60% of Bitcoin’s hashing power, making it the gateway to a vibrant ecosystem of dApps that continues to evolve to become fully trustless.
+      Rootstock is the first and longest-lasting Bitcoin sidechain. It combines the security of Bitcoin's proof of work with Ethereum's smart contract capabilities. The platform is open-source, EVM-compatible, and secured by over 85% of Bitcoin's hash power through merge mining.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">

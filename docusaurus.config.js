@@ -77,6 +77,12 @@ const config = {
           description : 'Looking for information we haven’t covered? Fill out the form below to request a new article, and we’ll consider it in future updates.',
         }
       },
+      getRbtc : {
+        title: 'Get RBTC',
+        url : 'https://rootstock.io/rbtc/',
+        target: '_blank',
+        rel: 'noopener noreferrer',
+      },
       trbtcFaucet : {
         title: 'tRBTC Faucet',
         url : 'https://faucet.rootstock.io/',
@@ -135,7 +141,7 @@ const config = {
       'docusaurus-plugin-llms',
       {
         title: 'Rootstock Developers Portal',
-        description: 'Welcome to Rootstock',
+        description: 'Build EVM-compatible smart contracts on Rootstock, secured by over 85% of Bitcoin\'s hash power through merge mining.',
         docsDir: 'docs',
         generateLLMsTxt: true,
         generateLLMsFullTxt: true,
@@ -153,7 +159,7 @@ const config = {
       './plugins/llms-i18n.js',
       {
         title: 'Rootstock Developers Portal',
-        description: 'Welcome to Rootstock',
+        description: 'Build EVM-compatible smart contracts on Rootstock, secured by over 85% of Bitcoin\'s hash power through merge mining.',
         excludeImports: true,
         removeDuplicateHeadings: true,
         pathTransformation: { ignorePaths: ['docs'] },
@@ -178,6 +184,8 @@ const config = {
         ]
       }
     }],
+    './plugins/fix-llms-urls.js',
+    './plugins/llms-txt-markdown-directive.js',
   ],
   presets: [
     [

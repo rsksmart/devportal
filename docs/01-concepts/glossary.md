@@ -332,7 +332,7 @@ This is a tool that enables users to log into applications using their preferred
 
 ## Rootstock
 
-Rootstock is the first and longest-lasting Bitcoin sidechain. It is the only layer 2 solution that combines the security of Bitcoin's proof of work with Ethereum's smart contract capabilities. The platform is open-source, EVM-compatible, and secured by over 60% of Bitcoin’s hashing power, This robust security model empowers developers to build trustless, innovative dApps within a thriving ecosystem.
+Rootstock is the first and longest-lasting Bitcoin sidechain. It combines the security of Bitcoin's proof of work with Ethereum's smart contract capabilities. The platform is open-source, EVM-compatible, and secured by over 85% of Bitcoin's hash power through merge mining.
 
 <Button size="sm" href="https://rootstock.thinkific.com/courses/blockchain-dev-course">Enroll for the Rootstock Dev Course</Button>
 <br/>

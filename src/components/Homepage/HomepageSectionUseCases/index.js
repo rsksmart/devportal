@@ -5,7 +5,9 @@ import styles from './styles.module.scss';
 
 const useCaseData = {
   title: <Translate>Browse by Use Cases</Translate>,
-  description: null,
+  description: (
+    <Translate>Implementation guides for lending, payments, onboarding, interoperability, and automation on Rootstock.</Translate>
+  ),
   cards: [
     {
       title: <Translate>Generate Yield</Translate>,
@@ -52,7 +54,7 @@ const useCaseData = {
         },
         {
           title: (
-            <Translate>Use USSD to interact with DeFi protocols on Rootstock.</Translate>
+            <Translate>Use USSD to interact with DeFi protocols on Rootstock</Translate>
           ),
           href: '/use-cases/onboarding-ux/ussd-rootstock-defi/',
         },
@@ -62,22 +64,20 @@ const useCaseData = {
       title: <Translate>AI Agents</Translate>,
       color: 'pink',
       description: (
-        <Translate>Connect AI models to on-chain data and deploy autonomous agents for intelligent portfolio management.</Translate>
+        <Translate>Connect AI models to on-chain data and deploy autonomous agents on Rootstock.</Translate>
       ),
       list: [
+        {
+          title: (
+            <Translate>MCP on Rootstock</Translate>
+          ),
+          href: '/use-cases/ai-automation/mcp-rootstock/',
+        },
         {
           title: (
             <Translate>Conversational AI Agent with Blockchain Actions</Translate>
           ),
           href: '/use-cases/ai-automation/ai-agent-rootstock/',
-        },
-        {
-          title: (
-            <Translate>
-              Introduction to Model Context Protocol (MCP) on Rootstock
-            </Translate>
-          ),
-          href: '/use-cases/ai-automation/mcp-rootstock/',
         },
       ],
     },
@@ -85,12 +85,16 @@ const useCaseData = {
       title: <Translate>Automate Payments</Translate>,
       color: 'orange',
       description: (
-        <Translate>Launch custom tokens and integrate Bitcoin-native payments, stablecoins, and agentic commerce using payment standards like x402.</Translate>
+        <Translate>Launch tokens and Bitcoin-native payments, stablecoins, and agentic commerce with standards like x402.</Translate>
       ),
       list: [
         {
           title: <Translate>x402 Payments with Rootstock</Translate>,
           href: '/use-cases/payments-assets/integrate-x402/',
+        },
+        {
+          title: <Translate>Geyser Prism payment splits</Translate>,
+          href: '/use-cases/payments-assets/prism-payment-splits/',
         },
       ],
     },

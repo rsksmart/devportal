@@ -1,15 +1,17 @@
-import Card from "/src/components/Card";
-import Translate from "@docusaurus/core/lib/client/exports/Translate";
+import Card from '/src/components/Card';
+import Translate from '@docusaurus/core/lib/client/exports/Translate';
 
 const data = {
   title: <Translate>Browse by Products</Translate>,
-  description: null,
+  description: (
+    <Translate>Rootstock-native products and infrastructure for bridges, wallets, RIF, and RPC.</Translate>
+  ),
   cards: [
     {
       title: <Translate>Bridges</Translate>,
       color: 'orange',
       description: (
-        <Translate>Bridge in/out of Rootstock.</Translate>
+        <Translate>Move assets in and out of Rootstock.</Translate>
       ),
       list: [
         {
@@ -25,13 +27,12 @@ const data = {
           href: 'https://dapp.tokenbridge.rootstock.io',
         },
       ],
-
     },
     {
       title: <Translate>Wallets</Translate>,
       color: 'green',
       description: (
-        <Translate>View wallets compatible with the Rootstock platform.</Translate>
+        <Translate>Wallets compatible with Rootstock.</Translate>
       ),
       list: [
         {
@@ -41,7 +42,7 @@ const data = {
         {
           title: <Translate>Wallets on Rootstock</Translate>,
           href: '/dev-tools/wallets/',
-        }
+        },
       ],
     },
     {
@@ -50,7 +51,7 @@ const data = {
       ),
       color: 'pink',
       description: (
-        <Translate>Explore Open-source tools and technologies for faster, and more rewarding ways to build on Bitcoin.</Translate>
+        <Translate>Open-source RIF tools for names, relay, and Bitcoin-native UX.</Translate>
       ),
       list: [
         {
@@ -67,7 +68,7 @@ const data = {
       title: <Translate>RPC API</Translate>,
       color: 'yellow',
       description: (
-        <Translate>Deploy and interact with EVM compatible smart contracts on Rootstock using JSON RPC methods using the Rootstock RPC API.</Translate>
+        <Translate>Deploy and interact with contracts via JSON-RPC on Rootstock.</Translate>
       ),
       list: [
         {
@@ -77,10 +78,10 @@ const data = {
         {
           title: <Translate>View JSON RPC Methods</Translate>,
           href: '/developers/rpc-api/rootstock/methods/',
-        }
+        },
       ],
     },
-  ]
+  ],
 };
 
 export default function HomepageSectionProducts() {
@@ -99,7 +100,13 @@ export default function HomepageSectionProducts() {
       <div className="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-16 g-lg-24">
         {data.cards.map((item, idx) => (
           <div className={`col`} key={idx}>
-            <Card index={`${idx + 1}.`} title={item.title} color={item.color} description={item.description} list={item.list}/>
+            <Card
+              index={`${idx + 1}.`}
+              title={item.title}
+              color={item.color}
+              description={item.description}
+              list={item.list}
+            />
           </div>
         ))}
       </div>

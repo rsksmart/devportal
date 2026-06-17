@@ -3,12 +3,20 @@ sidebar_label: MCP Server
 sidebar_position: 201
 title: Deploy and Interact with Rootstock using the MCP Server
 tags: [rsk, rootstock, mcp, ai agents, ai]
-description: "This quick start tutorial demonstrates how to interact with AI clients to automate, build and deploy innovative AI-enabled dApps on Rootstock."
+description: "Connect AI clients to Rootstock through the MCP Server. Secured by over 85% of Bitcoin's hash power through merge mining."
 ---
 
-Rootstock MCP Server is a Model Context Protocol (MCP) server that provides advanced tools for interacting with the Rootstock blockchain. This project enables AI clients to seamlessly connect and execute blockchain operations.
+Rootstock MCP Server is a Model Context Protocol (MCP) server that provides tools for interacting with the Rootstock blockchain. AI clients connect through it to run blockchain operations.
 
-In this tutorial, you will learn how to interact with AI clients to automate, build and deploy innovative AI-enabled dApps on Rootstock.
+In this tutorial, you will learn how to connect AI clients to Rootstock to automate builds and deploy dApps.
+
+## What you'll achieve
+
+Complete these outcomes by the end of this guide:
+
+- Install and configure the Rootstock MCP Server for mainnet or testnet
+- Connect Cursor or Claude to Rootstock blockchain tools
+- Query balances, deploy contracts, and run on-chain operations from an AI client
 
 :::info[Model Context Protocols on Rootstock]
 
@@ -17,8 +25,8 @@ Not sure what MCPs are or how they work? Read the [guide to MCPs on Rootstock](/
 :::
 
 ## Who is it for?
-* For non developers: You can now interact with Rootstock directly from an AI client — no coding required.
-* For developers: Seamlessly integrate Rootstock into Cursor or Claude to speed up your workflow, get smart assistance, and simplify on-chain development tasks.
+* For non-developers: You can interact with Rootstock from an AI client without writing code.
+* For developers: Integrate Rootstock into Cursor or Claude to speed up your workflow and simplify on-chain tasks.
 
 ## Prerequisites
 

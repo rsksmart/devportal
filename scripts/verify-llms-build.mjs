@@ -22,6 +22,19 @@ function pathForLocale(locale) {
   return path.join(BUILD_DIR, locale);
 }
 
+const NUMBERED_PATH_PATTERN = /dev\.rootstock\.io\/(?:es|ja|ko\/)?\d+-/;
+
+function checkLlmsUrls(filePath) {
+  if (!fs.existsSync(filePath)) {
+    return { ok: false, message: 'missing' };
+  }
+  const content = fs.readFileSync(filePath, 'utf8');
+  if (NUMBERED_PATH_PATTERN.test(content)) {
+    return { ok: false, message: 'contains numbered path prefixes (e.g. /01-concepts/)' };
+  }
+  return { ok: true, message: 'urls ok' };
+}
+
 const requiredFiles = ['llms.txt', 'llms-full.txt'];
 
 let failed = false;
@@ -39,6 +52,12 @@ for (const locale of LOCALES) {
     const status = exists ? '✓' : '✗ MISSING';
     if (!exists) failed = true;
     console.log(`  ${status} ${file}`);
+    if (exists) {
+      const urlCheck = checkLlmsUrls(filePath);
+      const urlStatus = urlCheck.ok ? '✓' : '✗ INVALID URLS';
+      if (!urlCheck.ok) failed = true;
+      console.log(`  ${urlStatus} ${file} URL check (${urlCheck.message})`);
+    }
   }
 
   const mdCount = countMarkdownFiles(base);
@@ -49,7 +68,7 @@ for (const locale of LOCALES) {
 }
 
 if (failed) {
-  console.error('Some required files are missing. Run `yarn build` and ensure docusaurus-plugin-llms is configured.');
+  console.error('LLM artifact verification failed. Run `yarn build` and check docusaurus-plugin-llms output.');
   process.exit(1);
 }
 

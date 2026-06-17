@@ -3,7 +3,7 @@ sidebar_label: Quick Starts
 sidebar_position: 4
 title: Quick Starts
 tags: [rsk, rootstock, beginner, quick starts, developers, advanced, port to rootstock, tutorials]
-description: "Quick starts, demos and starter kits to develop on Rootstock."
+description: "Quick starts and starter kits to deploy on Rootstock, secured by over 85% of Bitcoin's hash power through merge mining."
 ---
 
 ````mdx-code-block
@@ -45,106 +45,106 @@ values={[
     color="orange"
     linkHref="/developers/quickstart/mcp/"
     linkTitle="Use the Kit"
-    description="Rootstock MCP Server is a Model Context Protocol (MCP) server that provides advanced tools for interacting with the Rootstock blockchain. This project enables AI clients to seamlessly connect and execute blockchain operations."
+    description="Connect AI clients to Rootstock through the MCP Server. Secured by over 85% of Bitcoin's hash power."
   />
 <FilterItem
     value="beginner, Advanced"
-    title="Vyper Starter Kit"
+    title="Deploy Vyper Smart Contracts on Rootstock"
     subtitle="quickstart"
     color="orange"
     linkHref="/developers/quickstart/rootstock-vyper/"
     linkTitle="Use the Kit"
-    description="The Rootstock Vyper Starter Kit demonstrates how to deploy smart contracts written in Vyper to the Rootstock network."
+    description="Deploy Vyper smart contracts to Rootstock testnet with Python and Web3.py."
   />
   <FilterItem
     value="beginner, Advanced"
-    title="Privy Starter Kit"
+    title="Onboard Users with Privy on Rootstock"
     subtitle="quickstart"
     color="orange"
     linkHref="/developers/quickstart/privy/"
     linkTitle="Use the Kit"
-    description="The Rootstock Privy Starter Kit empowers developers to onboard users with social logins and self custodial wallets while preserving control, privacy, and flexibility for dApps when building on Rootstock."
+    description="Onboard users with social logins and self-custodial wallets on Rootstock using Privy."
   />
   <FilterItem
     value="dynamic, wagmi, advanced"
-    title="Dynamic Starter Kit"
+    title="Integrate Dynamic Wallets with Wagmi on Rootstock"
     subtitle="quickstart"
     color="orange"
     linkHref="/developers/quickstart/dynamic/"
     linkTitle="Use the Kit"
-    description="The Dynamic Starter Kit uses the Wagmi library for faster integration of Web3 features into a Next.js application."
+    description="Integrate Dynamic embedded wallets and Wagmi hooks in a Next.js dApp on Rootstock."
   />
   <FilterItem
     value="beginner, web3auth, advanced"
-    title="Web3Auth Starter Kit"
+    title="Build Passwordless dApps with Web3Auth on Rootstock"
     subtitle="web3auth"
     color="orange"
     linkHref="/developers/quickstart/web3auth/"
     linkTitle="Get Started"
-    description="A step-to-step guide for developers to build and deploy passwordless dApps on Rootstock using Web3Auth and Wagmi."
+    description="Build and deploy passwordless dApps on Rootstock with Web3Auth and Wagmi."
   />
 <FilterItem
     value="wagmi, beginner"
-    title="Wagmi Starter Kit"
+    title="Build a dApp with Wagmi on Rootstock"
     subtitle="quickstart"
     color="orange"
     linkHref="/developers/quickstart/wagmi/"
     linkTitle="Use the Kit"
-    description="This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Wagmi and Shadcn libraries."
+    description="Build a React dApp on Rootstock with Wagmi and Shadcn."
   />
 <FilterItem
     value="reown, beginner"
-    title="Reown Starter Kit"
+    title="Build a dApp with Reown and Wagmi on Rootstock"
     subtitle="quickstart"
     color="orange"
     linkHref="/developers/quickstart/reown/"
     linkTitle="Use the Kit"
-    description="This starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Reown, Wagmi and Shadcn libraries."
+    description="Build a React dApp on Rootstock with Reown, Wagmi, and Shadcn."
   />
 <FilterItem
     value="hardhat, beginner"
-    title="Hardhat Starter Kit"
+    title="Deploy Smart Contracts with Hardhat on Rootstock"
     subtitle="quickstart"
     color="orange"
     linkHref="/developers/quickstart/hardhat/"
     linkTitle="Use the Kit"
-    description="Smart Contract examples, Tests, Deployments and Tasks for Common ERC Standards (ERC20, ERC721, ERC1155)."
+    description="Deploy and test ERC smart contracts on Rootstock with Hardhat."
   />
 <FilterItem
     value="hardhat, beginner"
-    title="Hardhat Ignition Starter Kit"
+    title="Deploy Smart Contracts with Hardhat Ignition on Rootstock"
     subtitle="quickstart"
     color="orange"
     linkHref="/developers/quickstart/hardhat-ignition/"
     linkTitle="Use the Kit"
-    description="This guide is designed to help you deploy smart contracts on the Rootstock blockchain, with a focus on using Hardhat Ignition."
+    description="Deploy smart contracts on Rootstock with Hardhat Ignition."
   />
 <FilterItem
     value="foundry, sc, beginner"
-    title="Foundry Starter Kit"
+    title="Deploy Smart Contracts with Foundry on Rootstock"
     subtitle="quickstart"
     color="orange"
     linkHref="/developers/quickstart/foundry/"
     linkTitle="Use the Kit"
-    description="Smart Contract examples, Tests, Deployments and Tasks for Common ERC Standards (ERC20, ERC721, ERC1155)."
+    description="Deploy and test smart contracts on Rootstock with Foundry."
   />
 <FilterItem
     value="wagmi, sc, advanced"
-    title="Account Abstraction Kit"
+    title="Deploy Account Abstraction dApps with Etherspot on Rootstock"
     subtitle="quickstart"
     color="orange"
     linkHref="/developers/quickstart/rootstock-etherspot/"
     linkTitle="Use the Kit"
-    description="Account Abstraction Starter Kit using Etherspot."
+    description="Deploy an Account Abstraction dApp on Rootstock with the Etherspot Prime SDK."
   />
 <FilterItem
     value="governance, wagmi, advanced"
-    title="Rootstock Collective DAO Starter Kit"
+    title="Build with the Collective DAO Starter Kit on Rootstock"
     subtitle="quickstart"
     color="orange"
     linkHref="/developers/quickstart/collective/"
     linkTitle="Use the Kit"
-    description="Sample dApp for staking RIF, listing proposals, and voting with the Collective SDK. Full clone and env steps are in the GitHub README; the portal links to the repo and the deep-dive use case guide."
+    description="Run the Collective sample dApp with staking, proposals, and voting on Rootstock."
   />
 <FilterItem
     value="advanced"
@@ -175,12 +175,12 @@ values={[
   />
 <FilterItem
     value="beginner"
-    title="Get Started with Web3.py"
+    title="Deploy Smart Contracts with Web3.py on Rootstock"
     subtitle="Web3.py"
     color="orange"
     linkHref="/developers/quickstart/web3-python/"
     linkTitle="Get Started"
-    description="Get started with deploying and interacting with smart contracts on Rootstock using Web3.py."
+    description="Deploy and interact with smart contracts on Rootstock using Web3.py."
   />
   <FilterItem
     value="beginner, advanced, port-dapps"
@@ -193,12 +193,12 @@ values={[
   />
   <FilterItem
     value="beginner, advanced"
-    title="Getting Started with Apeworx"
+    title="Compile and Deploy Smart Contracts with Ape on Rootstock"
     subtitle="Ape"
     color="orange"
     linkHref="/developers/quickstart/ape/"
     linkTitle="Use Ape"
-    description="Learn how to compile, deploy, and intereact with smart contracts with Ape on Rootstock"
+    description="Compile, deploy, and interact with smart contracts on Rootstock using the Ape Framework."
   />
   <FilterItem
     value="beginner, rpc"

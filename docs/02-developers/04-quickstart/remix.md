@@ -1,14 +1,20 @@
 ---
 sidebar_label: Remix
 sidebar_position: 105
-title: Deploy, Interact and Verify Smart Contracts using Remix and Rootstock Explorer
-description: 'In this guide, we will use the Remix IDE to write, compile, deploy, interact and verify a smart contract on the Rootstock Explorer.'
+title: Deploy and Verify Smart Contracts with Remix on Rootstock
+description: 'Write, compile, deploy, and verify smart contracts on Rootstock using Remix IDE. Secured by over 85% of Bitcoin''s hash power through merge mining.'
 tags: [rsk, rootstock, developers, quick starts, rootstock explorer, dApps, remix]
 ---
 
 The process of writing, compiling and deploying Solidity contracts can be tedious or a bit obscure at the beginning, if you try to do it programmatically or using terminals. Get started writing, compiling, and deploying Solidity contracts quickly with Remix. Remix offers an [online IDE](https://remix.ethereum.org/) that allows for writing, compiling, interacting and deploying smart contracts to any network.
 
 In this guide, we will use the Remix online IDE to write, compile, deploy, interact and verify a smart contract on the [Rootstock Testnet Explorer](https://explorer.testnet.rootstock.io/).
+
+## What you'll achieve
+
+- Write and compile a Solidity contract in Remix IDE
+- Deploy the contract to Rootstock testnet through MetaMask
+- Verify the contract on Rootstock Explorer
 
 ## Prerequisites
 1. Remix online IDE, go to the [Remix online IDE](https://remix.ethereum.org/)

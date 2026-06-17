@@ -2,8 +2,56 @@
   "Rootstock Documentation": {
     "message": "Rootstock ドキュメント"
   },
-  "Explore guides, quick starts, and SDKs to build and integrate your dApps.": {
-    "message": "dAppsの構築と統合に役立つガイド、クイックスタート、SDKをご覧ください。"
+  "components.llmsTxtDirective.text": {
+    "message": "完全なドキュメント索引については"
+  },
+  "Rootstock is the Bitcoin sidechain secured by over 85% of Bitcoin's hash power through merge mining. Build EVM-compatible smart contracts and financial applications with Bitcoin-grade security and familiar Ethereum tooling.": {
+    "message": "Rootstockは、マージマイニングによってBitcoinのハッシュパワーの85%以上で保護されるBitcoinサイドチェーンです。Bitcoin級のセキュリティと使い慣れたEthereumツールで、EVM互換のスマートコントラクトと金融アプリケーションを構築できます。"
+  },
+  "Institutions": {
+    "message": "機関向け"
+  },
+  "Evaluate Bitcoin-grade security and production infrastructure for financial applications on Rootstock.": {
+    "message": "Rootstock上の金融アプリケーション向けに、ビットコイン級のセキュリティと本番インフラを評価します。"
+  },
+  "Explore Institutional": {
+    "message": "機関向けを見る"
+  },
+  "Builders": {
+    "message": "ビルダー"
+  },
+  "Deploy smart contracts and Bitcoin-powered products with EVM-compatible tooling and starter kits.": {
+    "message": "EVM互換ツールとスターターキットでスマートコントラクトとBitcoinベースのプロダクトをデプロイします。"
+  },
+  "View quick starts": {
+    "message": "クイックスタートを見る"
+  },
+  "Read the security model": {
+    "message": "セキュリティモデルを読む"
+  },
+  "Deploy with Hardhat": {
+    "message": "Hardhatでデプロイ"
+  },
+  "Integrate": {
+    "message": "統合"
+  },
+  "Connect wallets, custody, oracles, payments, and bridging infrastructure to Rootstock.": {
+    "message": "ウォレット、カストディ、オラクル、決済、ブリッジインフラをRootstockに接続します。"
+  },
+  "Browse dev tools": {
+    "message": "開発ツールを見る"
+  },
+  "View integration guides": {
+    "message": "統合ガイドを見る"
+  },
+  "Build with AI": {
+    "message": "AIで構築"
+  },
+  "Install Rootstock's MCP Server and connect Cursor or Claude to deploy contracts, query chain data, and run on-chain operations from your editor.": {
+    "message": "Rootstock MCPサーバーをインストールし、CursorまたはClaudeを接続して、エディタからコントラクトのデプロイ、チェーンデータの照会、オンチェーン操作を実行します。"
+  },
+  "Get started with MCP": {
+    "message": "MCPを始める"
   },
   "Quick Start": {
     "message": "クイックスタート"
@@ -11,8 +59,143 @@
   "Explore Docs": {
     "message": "ドキュメントを探索する"
   },
-  "Guides for Builders": {
-    "message": "ビルダー向けガイド"
+  "Grants and Collective": {
+    "message": "助成金とCollective"
+  },
+  "Apply for grants and join governance programs that fund builders on Rootstock.": {
+    "message": "助成金に申請し、Rootstockのビルダーを支援するガバナンスプログラムに参加します。"
+  },
+  "Specialized paths": {
+    "message": "特化パス"
+  },
+  "Onboarding, node operations, and ecosystem funding outside the standard build flow.": {
+    "message": "標準的なビルドフロー以外のオンボーディング、ノード運用、エコシステム資金調達。"
+  },
+  "New to Rootstock?": {
+    "message": "Rootstockは初めてですか？"
+  },
+  "Core concepts and structured learning before you deploy.": {
+    "message": "デプロイ前にコア概念と体系的な学習。"
+  },
+  "Rootstock fundamentals": {
+    "message": "Rootstockの基礎"
+  },
+  "Developer course": {
+    "message": "開発者コース"
+  },
+  "Operate a Rootstock node or use merge-mining infrastructure.": {
+    "message": "Rootstockノードを運用するか、マージマイニングインフラを使用します。"
+  },
+  "Merged mining guide": {
+    "message": "マージマイニングガイド"
+  },
+  "Grow with Rootstock": {
+    "message": "Rootstockで成長する"
+  },
+  "Grants, Collective programs, and ecosystem support for new projects.": {
+    "message": "新規プロジェクト向けのグラント、Collectiveプログラム、エコシステム支援。"
+  },
+  "Apply for a grant": {
+    "message": "グラントに申請"
+  },
+  "Rootstock Collective": {
+    "message": "Rootstock Collective"
+  },
+  "Wallets, RPC, and EVM-compatible tooling to build and run applications on Rootstock.": {
+    "message": "Rootstockでアプリケーションを構築・実行するためのウォレット、RPC、EVM互換ツール。"
+  },
+  "Get RBTC through the PowPeg App, on/off ramps, or exchanges.": {
+    "message": "PowPeg App、オン/オフランプ、または取引所でRBTCを取得します。"
+  },
+  "Hardhat, Foundry, Wagmi, wallets, oracles, and deployment tooling for Rootstock.": {
+    "message": "Rootstock向けHardhat、Foundry、Wagmi、ウォレット、オラクル、デプロイツール。"
+  },
+  "Rootstock-native products and infrastructure for bridges, wallets, RIF, and RPC.": {
+    "message": "ブリッジ、ウォレット、RIF、RPC向けのRootstockネイティブ製品とインフラ。"
+  },
+  "Move assets in and out of Rootstock.": {
+    "message": "Rootstockの内外で資産を移動します。"
+  },
+  "Wallets compatible with Rootstock.": {
+    "message": "Rootstock互換ウォレット。"
+  },
+  "Open-source RIF tools for names, relay, and Bitcoin-native UX.": {
+    "message": "名前、リレー、BitcoinネイティブUX向けのオープンソースRIFツール。"
+  },
+  "Deploy and interact with contracts via JSON-RPC on Rootstock.": {
+    "message": "RootstockでJSON-RPC経由でコントラクトをデプロイし、操作します。"
+  },
+  "Browse by Use Cases": {
+    "message": "ユースケース別に見る"
+  },
+  "Implementation guides for lending, payments, onboarding, interoperability, and automation on Rootstock.": {
+    "message": "Rootstockでのレンディング、決済、オンボーディング、相互運用性、自動化の実装ガイド。"
+  },
+  "Generate Yield": {
+    "message": "イールドを生成"
+  },
+  "Transform Bitcoin from a passive asset into productive capital with yield-bearing vaults and staking mechanisms.": {
+    "message": "イールド型ボルトとステーキングで、Bitcoinを受動的資産から生産的資本へ転換します。"
+  },
+  "Integrate USDRIF Vault on Rootstock": {
+    "message": "RootstockにUSDRIF Vaultを統合"
+  },
+  "Bridge Assets": {
+    "message": "アセットをブリッジ"
+  },
+  "Securely bridge assets between Bitcoin and Rootstock using trust-minimized protocols.": {
+    "message": "信頼最小化プロトコルでBitcoinとRootstock間のアセットを安全にブリッジします。"
+  },
+  "Atlas Bridge SDK": {
+    "message": "Atlas Bridge SDK"
+  },
+  "Omnichain Fungible Token (OFTs) on Rootstock with Layerzero": {
+    "message": "LayerzeroによるRootstock上のオムニチェーン代替可能トークン（OFT）"
+  },
+  "Onboard Users": {
+    "message": "ユーザーをオンボード"
+  },
+  "Remove onboarding friction with social login, smart wallets, and human-readable names.": {
+    "message": "ソーシャルログイン、スマートウォレット、読みやすい名前でオンボーディングの摩擦を減らします。"
+  },
+  "Smart Wallet Onboarding with Para SDK": {
+    "message": "Para SDKによるスマートウォレットオンボーディング"
+  },
+  "Use USSD to interact with DeFi protocols on Rootstock": {
+    "message": "USSDでRootstockのDeFiプロトコルと連携"
+  },
+  "AI Agents": {
+    "message": "AIエージェント"
+  },
+  "Conversational AI Agent with Blockchain Actions": {
+    "message": "ブロックチェーンアクション付き会話型AIエージェント"
+  },
+  "Automate Payments": {
+    "message": "決済を自動化"
+  },
+  "x402 Payments with Rootstock": {
+    "message": "Rootstockでのx402決済"
+  },
+  "Connect AI models to on-chain data and deploy autonomous agents on Rootstock.": {
+    "message": "AIモデルをオンチェーンデータに接続し、Rootstockで自律エージェントをデプロイします。"
+  },
+  "MCP on Rootstock": {
+    "message": "RootstockのMCP"
+  },
+  "Launch tokens and Bitcoin-native payments, stablecoins, and agentic commerce with standards like x402.": {
+    "message": "x402などの標準でトークン、Bitcoinネイティブ決済、ステーブルコイン、エージェントコマースを開始します。"
+  },
+  "Geyser Prism payment splits": {
+    "message": "Geyser Prism決済分割"
+  },
+  "Join the Rootstock developer community on Discord.": {
+    "message": "DiscordでRootstock開発者コミュニティに参加します。"
+  },
+  "Open source tools, starter kits, and this documentation repo.": {
+    "message": "オープンソースツール、スターターキット、このドキュメントリポジトリ。"
+  },
+  "Events, community calls, and webinars.": {
+    "message": "イベント、コミュニティコール、ウェビナー。"
   },
   "Beginner to Web3?": {
     "message": "Web3初心者ですか？"
@@ -389,6 +572,10 @@
   "theme.moreLinks.requestArticle.form.description": {
     "message": "掲載されていない情報をお探しですか？ 下のフォームにご記入いただければ、新しい記事としてリクエストを受け付け、今後のアップデートで検討させていただきます。",
     "description": "Request an Article form description"
+  },
+  "theme.moreLinks.getRbtc": {
+    "message": "RBTCを取得",
+    "description": "Get RBTC link label in sidebar"
   },
   "theme.moreLinks.trbtcFaucet": {
     "message": "tRBTCフォーセット",
