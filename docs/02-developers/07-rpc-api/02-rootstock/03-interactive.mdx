@@ -1,0 +1,59 @@
+---
+sidebar_label: Rootstock Interactive RPC API
+sidebar_position: 103
+title: Rootstock Interactive RPC API
+tags: [rsk, rootstock, rpc, json-rpc, developers, api, interactive, mainnet, testnet]
+description: "Explore and test Rootstock JSON-RPC methods directly in your browser with the Interactive RPC API."
+---
+
+import TrackedLink from '/src/components/TrackedLink';
+
+Browse, test, and copy working code for every Rootstock JSON-RPC method — directly in your browser, no setup required.
+
+<div style={{display: 'flex', justifyContent: 'center', margin: '2rem 0'}}>
+  <TrackedLink href="https://rpc.rootstock.io/documentation" event="rpcInteractiveApiClick" componentId="interactive-rpc-api-hero-cta" componentLabel="Explore the Rootstock Interactive RPC API" className="btn">
+    Explore the Rootstock Interactive RPC API
+  </TrackedLink>
+</div>
+
+:::info[Info]
+The [Rootstock Interactive RPC API](https://rpc.rootstock.io/documentation) is available on <Shield label="mainnet" title="testnet" tooltip="Available on Mainnet and Testnet" color="orange" />. To make live requests, you will need an API key — follow the [Getting Started guide](/developers/rpc-api/rootstock/setup/) to create a free account and generate one.
+:::
+
+## How to Use the Interactive RPC API
+
+<Steps>
+  <Step title="Open the documentation">
+    Navigate to [rpc.rootstock.io/documentation](https://rpc.rootstock.io/documentation). The home screen gives you an overview of what JSON-RPC is and how methods work on Rootstock, along with a searchable sidebar listing all available methods organized by category.
+
+    Use **Try a method** to jump straight into the explorer, or **Open settings** to configure your API key and network before making requests.
+
+    <div align="center">
+      <img width="100%" src="/img/tools/rpc-api-interactive/rpc-interactive-docs-home.png" alt="Rootstock Interactive RPC API — documentation home"/>
+    </div>
+  </Step>
+
+  <Step title="Configure your network and API key">
+    Click **RPC Configuration** in the left sidebar to open the Settings page. Here you select which network your requests will be sent to — **Testnet** (chain 31) or **Mainnet** (chain 30) — and paste the corresponding API key.
+
+    Each network has its own key slot. The **Request URL preview** at the bottom updates automatically to show the exact endpoint that will be used. If no key is set yet, click **Get an API key** to create one from the [Rootstock RPC dashboard](https://rpc.rootstock.io/).
+
+    <div align="center">
+      <img width="100%" src="/img/tools/rpc-api-interactive/rpc-interactive-docs-configuration.png" alt="Rootstock Interactive RPC API — RPC configuration settings"/>
+    </div>
+  </Step>
+
+  <Step title="Select a method and run it">
+    Browse the method categories in the left sidebar or use the search bar to find a method. Each method page shows:
+
+    - A description of what it returns and any required parameters.
+    - **Tips** and **Notes** with practical guidance — for example, `eth_blockNumber` returns the block number in hexadecimal, so use `parseInt(result, 16)` to convert it to decimal.
+    - A **Request Example** panel on the right with a ready-to-copy cURL, JavaScript, or Python snippet pre-filled with your endpoint.
+
+    Click **Try it** to execute a live request against the selected network and see the JSON response directly in the **Response** panel below.
+
+    <div align="center">
+      <img width="100%" src="/img/tools/rpc-api-interactive/rpc-interactive-docs-method.png" alt="Rootstock Interactive RPC API — method detail and request example"/>
+    </div>
+  </Step>
+</Steps>
