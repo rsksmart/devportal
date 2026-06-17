@@ -13,6 +13,7 @@ const BUILD_DIR = path.join(__dirname, '..', 'build');
 const require = createRequire(import.meta.url);
 const { fixLlmsFilesInDir } = require('../plugins/fix-llms-urls.js');
 const { injectLlmsDirectivesInBuild } = require('../plugins/llms-txt-markdown-directive.js');
+const { copyMarkdownToCleanPaths } = require('../plugins/copy-markdown-clean-paths.js');
 
 let fixed = fixLlmsFilesInDir(BUILD_DIR);
 for (const locale of ['es', 'ja', 'ko']) {
@@ -20,6 +21,8 @@ for (const locale of ['es', 'ja', 'ko']) {
 }
 
 const mdUpdated = injectLlmsDirectivesInBuild(BUILD_DIR);
+const mdCopied = copyMarkdownToCleanPaths(BUILD_DIR);
 
 console.log(`[fix-llms-urls] Normalized llms URLs under ${BUILD_DIR} (${fixed} file(s) updated).`);
 console.log(`[llms-txt-markdown-directive] Injected llms.txt blockquote into ${mdUpdated} markdown file(s).`);
+console.log(`[copy-markdown-clean-paths] Mirrored ${mdCopied} markdown file(s) onto clean public routes.`);

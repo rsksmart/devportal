@@ -21,6 +21,10 @@ function useMarkdownUrl() {
     .replace(/^docs\//i, '')
     .replace(/^@site\/i18n\/[^/]+\/docusaurus-plugin-content-docs\/current\//i, '');
   if (!docsRelative || !docsRelative.endsWith('.md')) return null;
+  docsRelative = docsRelative
+    .split('/')
+    .map((segment) => segment.replace(/^\d+-/, ''))
+    .join('/');
   const urlPath = `${baseUrl.replace(/\/+$/, '')}/${docsRelative}`;
   return urlPath.replace(/\/+/g, '/');
 }
