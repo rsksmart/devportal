@@ -8,7 +8,7 @@ tags: [rsk, rootstock, rbtc, usdt0, lending, cross-chain, layerzero, umbrella, r
 
 :::info[Info]
 
-This is the **comprehensive tutorial** for the rBTC-USDT0 cross‑chain lending [starter kit]((https://github.com/rsksmart/rbtc-usdt0-crosschain-starter-kit)).
+This is the **comprehensive tutorial** for the rBTC-USDT0 cross‑chain lending [starter kit](https://github.com/rsksmart/rbtc-usdt0-crosschain-starter-kit).
 
 :::
 
