@@ -5,7 +5,7 @@ sidebar_label: Overview
 description: "BTCFi on Rootstock: rBTC, vaults, and stable units of account for builders."
 ---
 
-BTCFi on Rootstock is lending, borrowing, yield, and liquidity built with rBTC and other on-chain assets, with EVM-compatible smart contracts secured by 85% of Bitcoin’s hash power.
+BTCFi on Rootstock is lending, borrowing, yield, and liquidity built with rBTC and other on-chain assets, with EVM-compatible smart contracts secured by over 85% of Bitcoin's hash power through merge mining.
 
 This hub enables builders integrate vault flows, strategies, and external market protocols.
 

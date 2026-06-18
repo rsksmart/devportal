@@ -98,7 +98,7 @@ Desde la actualización a IRIS 3.0.0, los valores mínimos requeridos para peg-i
 
 ## Descentralización - Construcción de una vetocracia
 
-El uso de PowHSMs en una federación es un paso adelante en la descentralización, porque un funcionario comprometido remotamente no compromete el elemento principal para la seguridad de la clavija: una clave privada multisig. Dado que Rootstock tiene una gran parte del hashrate minado por fusión de Bitcoin, que actualmente supera el 51%, parece extremadamente improbable que un nuevo grupo de mineros por fusión pueda secuestrar el consenso el tiempo suficiente para forzar a los PowHSM a realizar un peg-out malicioso. Pero la comunidad Rootstock no debería dormirse en los laureles.  En su lugar, la comunidad Rootstock planea aplicar una vez más un enfoque por capas que conduzca a una mayor "seguridad aditiva".
+El uso de PowHSMs en una federación es un paso adelante en la descentralización, porque un funcionario comprometido remotamente no compromete el elemento principal para la seguridad de la clavija: una clave privada multisig. Dado que Rootstock está protegida por más del 85% de la potencia de hash de Bitcoin mediante merge mining, parece extremadamente improbable que un nuevo grupo de mineros por fusión pueda secuestrar el consenso el tiempo suficiente para forzar a los PowHSM a realizar un peg-out malicioso. Pero la comunidad Rootstock no debería dormirse en los laureles.  En su lugar, la comunidad Rootstock planea aplicar una vez más un enfoque por capas que conduzca a una mayor "seguridad aditiva".
 
 ## La resistencia a la censura de PowPeg
 
