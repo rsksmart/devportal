@@ -22,14 +22,34 @@ function pathForLocale(locale) {
   return path.join(BUILD_DIR, locale);
 }
 
-const NUMBERED_PATH_PATTERN = /https?:\/\/dev\.rootstock\.io\/(?:(?:es|ja|ko)\/)?\d+-/;
+const LLMS_URL_PATTERN = /https?:\/\/[^\s)\]]+/g;
+const NUMBERED_SEGMENT_PATTERN = /^\d+-/;
+
+function contentHasNumberedDocPaths(content) {
+  for (const match of content.matchAll(LLMS_URL_PATTERN)) {
+    let parsed;
+    try {
+      parsed = new URL(match[0]);
+    } catch {
+      continue;
+    }
+    if (parsed.hostname !== 'dev.rootstock.io') {
+      continue;
+    }
+    const segments = parsed.pathname.split('/').filter(Boolean);
+    if (segments.some((segment) => NUMBERED_SEGMENT_PATTERN.test(segment))) {
+      return true;
+    }
+  }
+  return false;
+}
 
 function checkLlmsUrls(filePath) {
   if (!fs.existsSync(filePath)) {
     return { ok: false, message: 'missing' };
   }
   const content = fs.readFileSync(filePath, 'utf8');
-  if (NUMBERED_PATH_PATTERN.test(content)) {
+  if (contentHasNumberedDocPaths(content)) {
     return { ok: false, message: 'contains numbered path prefixes (e.g. /01-concepts/)' };
   }
   return { ok: true, message: 'urls ok' };
