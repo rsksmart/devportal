@@ -1,9 +1,9 @@
 ---
 sidebar_label: Cross-Chain RBTC Lending Starter Kit
-sidebar_position: 3
+sidebar_position: 5
 title: Build a Cross-Chain Lending dApp using rBTC & USDT0 on Rootstock  
 description: 'A minimal rBTC-collateralized lending starter kit for Rootstock. Includes mock oracle integration, USDT0 ERC-20 support, and guidance for extending the system with LayerZero and Umbrella/RedStone price feeds.'
-tags: [rsk, rootstock, rbtc, usdt0, lending, cross-chain, layerzero, umbrella, redstone, smart contracts, tutorials]
+tags: [btcfi, rsk, rootstock, rbtc, usdt0, lending, cross-chain, layerzero, umbrella, redstone, smart contracts, tutorials]
 ---
 
 :::info[Info]

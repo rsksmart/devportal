@@ -25,7 +25,7 @@ refer to the official [Dynamic Embedded Wallets Documentation](https://www.dynam
 
 ## **What is Dynamic?**
 
-**Dynamic** is a tool that simplifies wallet management and integration for Web3 applications. It provides developers with an "Embedded Wallet" solution, allowing seamless wallet interactions directly within the app without requiring users to switch to external wallet apps.
+**Dynamic** is a tool that simplifies wallet management and integration for Web3 applications. It provides developers with an "Embedded Wallet" solution, so users can sign transactions and manage keys inside the app without switching to external wallet apps.
 
 This makes it easier to create a smooth user experience and improves accessibility, particularly for those new to blockchain.
 
@@ -37,7 +37,7 @@ The **wagmi** library offers a set of React hooks specifically designed for Web3
 
  1. **Wallet Connection**
 
-This supports connecting wallets like **MetaMask** and **WalletConnect** to provide users with a seamless login into the dApp. MetaMask is a popular browser wallet, while WalletConnect enables connection to a variety of mobile wallets through QR code scanning. With wagmi hooks, handling wallet connections becomes simple, allowing users to securely and easily access the dApp. This removes the need for custom connection logic, making the process quick and straightforward.
+This supports connecting wallets like **MetaMask** and **WalletConnect** so users can log in without leaving the dApp. MetaMask is a popular browser wallet, while WalletConnect enables connection to a variety of mobile wallets through QR code scanning. With wagmi hooks, handling wallet connections becomes simple, allowing users to securely and easily access the dApp. This removes the need for custom connection logic, making the process quick and straightforward.
 
 2. **Balance Retrieval**
 
@@ -45,7 +45,7 @@ Retrieving token balances is essential for users to monitor their assets. It ena
 
 3. **Token Transfers**
 
-Token transfers allow users to send assets to other addresses directly from the dApp. This feature lets users select a token, specify an amount, and input a recipient address to complete the transfer. With wagmi’s transaction hooks, token transfers are handled seamlessly, removing the need for complex contract interactions. This functionality is useful for dApps where peer-to-peer payments or transfers are common, like in DeFi or tipping applications.
+Token transfers allow users to send assets to other addresses directly from the dApp. This feature lets users select a token, specify an amount, and input a recipient address to complete the transfer. With wagmi's transaction hooks, you can submit transfers without writing custom contract call logic. This functionality is useful for dApps where peer-to-peer payments or transfers are common, like in DeFi or tipping applications.
 
 4. **Message Signing and Verification**
 

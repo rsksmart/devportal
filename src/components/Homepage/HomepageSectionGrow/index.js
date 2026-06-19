@@ -2,28 +2,25 @@ import Card from '/src/components/Card';
 import Translate from '@docusaurus/core/lib/client/exports/Translate';
 
 const data = {
-  title: <Translate>Grow with Rootstock</Translate>,
+  title: <Translate>Funding and governance</Translate>,
   description: (
-    <Translate>Grants, Collective programs, and ecosystem support for new projects.</Translate>
+    <Translate>
+      Rootstock Collective runs grants, governance, and builder programs on Rootstock.
+    </Translate>
   ),
   card: {
-    title: <Translate>Grants and Collective</Translate>,
+    title: <Translate>Rootstock Collective</Translate>,
     color: 'pink',
     description: (
-      <Translate>Apply for grants and join governance programs that fund builders on Rootstock.</Translate>
+      <Translate>
+        Apply for grants, join builder programs, and participate in Collective governance.
+      </Translate>
     ),
-    list: [
-      {
-        title: <Translate>Apply for a grant</Translate>,
-        href: 'https://rootstock.io/grants/',
-        target: '_blank',
-      },
-      {
-        title: <Translate>Rootstock Collective</Translate>,
-        href: 'https://rootstockcollective.xyz/',
-        target: '_blank',
-      },
-    ],
+    link: {
+      title: <Translate>Open Rootstock Collective</Translate>,
+      href: 'https://rootstockcollective.xyz/',
+      target: '_blank',
+    },
   },
 };
 
@@ -41,12 +38,12 @@ export default function HomepageSectionGrow() {
         )}
       </div>
       <div className="row g-16 g-lg-24">
-        <div className="col-12 col-md-6">
+        <div className="col-12">
           <Card
             title={data.card.title}
             color={data.card.color}
             description={data.card.description}
-            list={data.card.list}
+            link={data.card.link}
           />
         </div>
       </div>

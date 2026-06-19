@@ -308,6 +308,8 @@ html:root {
   --bs-body-bg: var(--bs-black);
   --bs-body-color-rgb: 255, 255, 255;
   --bs-body-bg-rgb: 0, 0, 0;
+  --bs-secondary-color: #{$gray-400};
+  --bs-tertiary-color: #{$gray-500};
   --bs-link-color-rgb: 255, 145, 0;
 
   --ifm-menu-color: var(--bs-body-color);

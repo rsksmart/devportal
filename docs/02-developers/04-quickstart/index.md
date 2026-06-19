@@ -45,7 +45,7 @@ values={[
     color="orange"
     linkHref="/developers/quickstart/mcp/"
     linkTitle="Use the Kit"
-    description="Connect AI clients to Rootstock through the MCP Server. Secured by over 85% of Bitcoin's hash power."
+    description="Connect AI clients to Rootstock through the MCP Server. Secured by over 85% of Bitcoin's hash power through merge mining."
   />
 <FilterItem
     value="beginner, Advanced"
@@ -54,7 +54,7 @@ values={[
     color="orange"
     linkHref="/developers/quickstart/rootstock-vyper/"
     linkTitle="Use the Kit"
-    description="Deploy Vyper smart contracts to Rootstock testnet with Python and Web3.py."
+    description="Deploy Vyper smart contracts to Rootstock testnet with Python and Web3.py. Secured by over 85% of Bitcoin's hash power through merge mining."
   />
   <FilterItem
     value="beginner, Advanced"
@@ -63,7 +63,7 @@ values={[
     color="orange"
     linkHref="/developers/quickstart/privy/"
     linkTitle="Use the Kit"
-    description="Onboard users with social logins and self-custodial wallets on Rootstock using Privy."
+    description="Onboard users with social logins and self-custodial wallets on Rootstock using Privy. Secured by over 85% of Bitcoin's hash power through merge mining."
   />
   <FilterItem
     value="dynamic, wagmi, advanced"
@@ -72,7 +72,7 @@ values={[
     color="orange"
     linkHref="/developers/quickstart/dynamic/"
     linkTitle="Use the Kit"
-    description="Integrate Dynamic embedded wallets and Wagmi hooks in a Next.js dApp on Rootstock."
+    description="Integrate Dynamic embedded wallets and Wagmi hooks in a Next.js dApp on Rootstock. Secured by over 85% of Bitcoin's hash power through merge mining."
   />
   <FilterItem
     value="beginner, web3auth, advanced"
@@ -81,7 +81,7 @@ values={[
     color="orange"
     linkHref="/developers/quickstart/web3auth/"
     linkTitle="Get Started"
-    description="Build and deploy passwordless dApps on Rootstock with Web3Auth and Wagmi."
+    description="Build and deploy passwordless dApps on Rootstock with Web3Auth and Wagmi. Secured by over 85% of Bitcoin's hash power through merge mining."
   />
 <FilterItem
     value="wagmi, beginner"
@@ -90,7 +90,7 @@ values={[
     color="orange"
     linkHref="/developers/quickstart/wagmi/"
     linkTitle="Use the Kit"
-    description="Build a React dApp on Rootstock with Wagmi and Shadcn."
+    description="Build a React dApp on Rootstock with Wagmi and Shadcn. Secured by over 85% of Bitcoin's hash power through merge mining."
   />
 <FilterItem
     value="reown, beginner"
@@ -99,7 +99,7 @@ values={[
     color="orange"
     linkHref="/developers/quickstart/reown/"
     linkTitle="Use the Kit"
-    description="Build a React dApp on Rootstock with Reown, Wagmi, and Shadcn."
+    description="Build a React dApp on Rootstock with Reown, Wagmi, and Shadcn. Secured by over 85% of Bitcoin's hash power through merge mining."
   />
 <FilterItem
     value="hardhat, beginner"
@@ -108,7 +108,7 @@ values={[
     color="orange"
     linkHref="/developers/quickstart/hardhat/"
     linkTitle="Use the Kit"
-    description="Deploy and test ERC smart contracts on Rootstock with Hardhat."
+    description="Deploy and test ERC smart contracts on Rootstock with Hardhat. Secured by over 85% of Bitcoin's hash power through merge mining."
   />
 <FilterItem
     value="hardhat, beginner"
@@ -117,7 +117,7 @@ values={[
     color="orange"
     linkHref="/developers/quickstart/hardhat-ignition/"
     linkTitle="Use the Kit"
-    description="Deploy smart contracts on Rootstock with Hardhat Ignition."
+    description="Deploy smart contracts on Rootstock with Hardhat Ignition. Secured by over 85% of Bitcoin's hash power through merge mining."
   />
 <FilterItem
     value="foundry, sc, beginner"
@@ -126,7 +126,7 @@ values={[
     color="orange"
     linkHref="/developers/quickstart/foundry/"
     linkTitle="Use the Kit"
-    description="Deploy and test smart contracts on Rootstock with Foundry."
+    description="Deploy and test smart contracts on Rootstock with Foundry. Secured by over 85% of Bitcoin's hash power through merge mining."
   />
 <FilterItem
     value="wagmi, sc, advanced"
@@ -135,7 +135,7 @@ values={[
     color="orange"
     linkHref="/developers/quickstart/rootstock-etherspot/"
     linkTitle="Use the Kit"
-    description="Deploy an Account Abstraction dApp on Rootstock with the Etherspot Prime SDK."
+    description="Deploy an Account Abstraction dApp on Rootstock with the Etherspot Prime SDK. Secured by over 85% of Bitcoin's hash power through merge mining."
   />
 <FilterItem
     value="governance, wagmi, advanced"
@@ -144,7 +144,7 @@ values={[
     color="orange"
     linkHref="/developers/quickstart/collective/"
     linkTitle="Use the Kit"
-    description="Run the Collective sample dApp with staking, proposals, and voting on Rootstock."
+    description="Run the Rootstock Collective sample dApp with staking, proposals, and voting. Secured by over 85% of Bitcoin's hash power through merge mining."
   />
 <FilterItem
     value="advanced"
@@ -180,7 +180,7 @@ values={[
     color="orange"
     linkHref="/developers/quickstart/web3-python/"
     linkTitle="Get Started"
-    description="Deploy and interact with smart contracts on Rootstock using Web3.py."
+    description="Deploy and interact with smart contracts on Rootstock using Web3.py. Secured by over 85% of Bitcoin's hash power through merge mining."
   />
   <FilterItem
     value="beginner, advanced, port-dapps"
@@ -198,7 +198,7 @@ values={[
     color="orange"
     linkHref="/developers/quickstart/ape/"
     linkTitle="Use Ape"
-    description="Compile, deploy, and interact with smart contracts on Rootstock using the Ape Framework."
+    description="Compile, deploy, and interact with smart contracts on Rootstock using the Ape Framework. Secured by over 85% of Bitcoin's hash power through merge mining."
   />
   <FilterItem
     value="beginner, rpc"

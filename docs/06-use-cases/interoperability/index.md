@@ -1,12 +1,12 @@
 ---
 sidebar_position: 1
-title: Bridge Assets
+title: Bridge
 sidebar_label: Overview
-description: "Understanding how Rootstock connects Bitcoin to the world of programmable finance."
+description: "Cross-chain bridges, peg-in and peg-out, and messaging on Rootstock."
 tags: [interoperability, bridges, powpeg, flyover, bitvmx, fundamentals]
 ---
 
-Interoperability is the ability for Bitcoin to move seamlessly between its native layer and programmable smart contract environments. Rootstock provides the infrastructure that combines the security of Bitcoin's proof of work with Ethereum's smart contract capabilities.
+Interoperability covers how assets and messages move between Bitcoin, Rootstock, and other networks. Rootstock connects Bitcoin proof-of-work security to EVM-compatible smart contracts through bridges and messaging protocols.
 
 ## Core Pillars
 

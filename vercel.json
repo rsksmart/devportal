@@ -661,6 +661,8 @@
     {"source": "/developers/use-cases/ai/ai-agent-rootstock/", "destination": "/use-cases/ai-automation/ai-agent-rootstock/"},
     {"source": "/developers/use-cases/ai/mcp-rootstock/", "destination": "/use-cases/ai-automation/mcp-rootstock/"},
     {"source": "/developers/use-cases/defi/rootstock-layerzero/", "destination": "/use-cases/interoperability/rootstock-layerzero/"},
+    {"source": "/developers/use-cases/defi/cross-chain-lending-rbtc/", "destination": "/use-cases/btcfi-finance-yield/cross-chain-lending-rbtc/"},
+    {"source": "/developers/use-cases/defi/cross-chain-lending-rbtc", "destination": "/use-cases/btcfi-finance-yield/cross-chain-lending-rbtc/"},
     {"source": "/developers/use-cases/ussd-rootstock-defi", "destination": "/use-cases/onboarding-ux/ussd-rootstock-defi/"},
     {"source": "/developers/use-cases/ussd-rootstock-defi/(.*)", "destination": "/use-cases/onboarding-ux/ussd-rootstock-defi/$1"},
     {"source": "/developers/use-cases/", "destination": "/use-cases/"},

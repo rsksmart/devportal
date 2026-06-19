@@ -1,13 +1,17 @@
 ---
 sidebar_position: 2
-title: Generate Yield
+title: Bitcoin DeFi
 sidebar_label: Overview
-description: "BTCFi on Rootstock: rBTC, vaults, and stable units of account for builders."
+description: "Bitcoin DeFi on Rootstock: rBTC, vaults, lending, and stable units of account for builders."
 ---
 
-BTCFi on Rootstock is lending, borrowing, yield, and liquidity built with rBTC and other on-chain assets, with EVM-compatible smart contracts secured by over 85% of Bitcoin's hash power through merge mining.
+Bitcoin DeFi on Rootstock is lending, borrowing, yield, and liquidity built with rBTC and other on-chain assets, with EVM-compatible smart contracts secured by over 85% of Bitcoin's hash power through merge mining.
 
-This hub enables builders integrate vault flows, strategies, and external market protocols.
+This hub helps builders integrate vault flows, lending patterns, strategies, and external market protocols.
+
+## Foundations
+
+Before you integrate vault or lending flows, review token standards, security patterns, and protocol basics in the [Rootstock DeFi developer guide](/resources/guides/defi-developer-guide/). Oracle and AMM walkthroughs in that guide link to related use case tutorials.
 
 ## Core pillars
 
@@ -40,7 +44,7 @@ Some protocols issue receipt tokens when you stake rBTC (for example `st-rBTC`).
 
 ## Implementation guides
 
-When you publish a guide in this folder (remove the leading `_` from the filename), it appears as a card below. Until then this section stays empty.
+Explore the guides below to integrate vault flows, cross-chain lending, and yield patterns on Rootstock.
 
 import DocCardList from '@theme/DocCardList';
 

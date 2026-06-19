@@ -108,7 +108,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
   <Accordion.Item eventKey="10">
     <Accordion.Header as="h3">How is Rootstock different from Lightning?</Accordion.Header>
     <Accordion.Body>
-      - Rootstock and Lightning are both layer-2 solutions that aim to improve the scalability and functionality of Bitcoin, but they have different approaches and trade-offs. Some of the main differences are:
+      - Rootstock is a Bitcoin sidechain. Lightning is a layer-2 payment network. Both aim to improve the scalability and functionality of Bitcoin, but they use different approaches and trade-offs. Some of the main differences are:
       > - **Architecture:** Rootstock is a sidechain connected to the Bitcoin mainchain through a 2 way peg mechanism, allowing users to lock and unlock bitcoins on both chains. Lightning is a network of payment channels built on the Bitcoin mainchain, allowing users to send and receive bitcoins off-chain.
       > - **Smart contracts:** Rootstock supports Turing-complete smart contracts and is compatible with the Ethereum Virtual Machine, which enables a wide range of decentralized applications and use cases on the Bitcoin network. Lightning only supports simple scripts, and transactions mainly focus on fast and cheap payments.
       > - **Security and Liveness:** Rootstock is secured by merge-mining with Bitcoin, which means that Rootstock blocks are validated by the same miners and hash power as Bitcoin. The Bitcoin mainchain, the ultimate arbiter and enforcer of the payment channel, secures Lightning. Rootstock has greater liveness guarantees than Lightning. Lightning requires the cooperation of the parties sharing the payment channels and the existence of channel paths to destination addresses for payments to succeed. Rootstock blocks are always being produced, and as long as the Rootstock gas price specified in a transaction is adequate, transactions always get confirmed. Lightning security relies on parties checking their channels occasionally to avoid malicious closures. Rootstock security does not require the users to be active online or monitor their wallets continuously.
@@ -133,7 +133,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
   <Accordion.Item eventKey="1">
     <Accordion.Header as="h3">What is the rBTC token, and what is its purpose?</Accordion.Header>
     <Accordion.Body>
-      - Smart Bitcoin (rBTC) is the native token of the Rootstock network. rBTC is pegged 1:1 to BTC, enabling Bitcoin transactions on the Rootstock and networks. It can be converted to and from BTC through the PowPeg protocol.
+      - rBTC is the native token of the Rootstock network. rBTC is pegged 1:1 to BTC, enabling Bitcoin transactions on Rootstock and connected networks. It can be converted to and from BTC through the PowPeg protocol.
       - rBTC is used as gas to pay for executing transactions and smart contracts on the Rootstock network, rewarding miners and nodes, enabling interoperability among Bitcoin-based applications, and supporting the development of new solutions such as RIF Products.
     </Accordion.Body>
   </Accordion.Item>
@@ -146,12 +146,12 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
   <Accordion.Item eventKey="3">
     <Accordion.Header as="h3">What is the Rootstock Collective?</Accordion.Header>
     <Accordion.Body>
-      - [Rootstock Collective](https://rootstockcollective.xyz/), or The Collective, is a DAO (Decentralized Autonomous Organization) designed to develop the Rootstock ecosystem by empowering and rewarding builders and users of Rootstock, and RIF token holders. As a merged-mined Bitcoin sidechain, Rootstock’s heartbeat is inextricably linked to Bitcoin. With blocks separated by seconds, instead of minutes, the Rootstock network ‘beats’ a lot faster, and serves as a scaling solution for Bitcoin. On Rootstock, developers are able to build rich, EVM-compatible, web3 apps – and they can do this using Bitcoin as the native currency, in the form of rBTC.
+      - [Rootstock Collective](https://rootstockcollective.xyz/), or The Collective, is a DAO (Decentralized Autonomous Organization) designed to develop the Rootstock ecosystem by empowering and rewarding builders and users of Rootstock, and RIF token holders. As a merge-mined Bitcoin sidechain, Rootstock's heartbeat is inextricably linked to Bitcoin. With blocks separated by seconds, instead of minutes, the Rootstock network produces blocks continuously for smart contract execution. On Rootstock, developers are able to build rich, EVM-compatible, web3 apps using Bitcoin as the native currency, in the form of rBTC.
       - View the [Rootstock Collective Whitepaper](https://wiki.rootstockcollective.xyz/2c6e3b87b49f4c1e9225b713e1b49538?v=819168fca4964319896c19e8299a8ea0) or read the [Rootstock Collective Whitepaper FAQs](https://wiki.rootstockcollective.xyz/RootstockCollective-FAQ-1031ca6b0b02808c95d3dcb5a0074f4b).
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="4">
-    <Accordion.Header as="h3">What can I join the Rootstock Collective?</Accordion.Header>
+    <Accordion.Header as="h3">How can I join the Rootstock Collective?</Accordion.Header>
     <Accordion.Body>
       To join Rootstock Collective, you will need to have RIF tokens, and then stake them into stRIF governance tokens. These stRIF tokens give you voting rights and participation in the DAO’s governance and decision-making process. You can become part of the Rootstock Collective in three steps:
         * Install [MetaMask and add Rootstock](/dev-tools/wallets/metamask/)
@@ -296,7 +296,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
   <Accordion.Item eventKey="6">
     <Accordion.Header as="h3">What is rBTC Flyover?</Accordion.Header>
     <Accordion.Body>
-      - The [rBTC Flyover](/developers/integrate/flyover/) is an innovative protocol built on top of the Rootstock network that significantly speeds up the process of transferring Bitcoin (BTC) to Rootstock Bitcoin (rBTC). It achieves this by leveraging a pool of liquidity providers who hold both BTC and rBTC, enabling near-instantaneous transfers with minimal confirmations.
+      - The [rBTC Flyover](/developers/integrate/flyover/) protocol on Rootstock speeds up transfers of Bitcoin (BTC) to rBTC. It uses a pool of liquidity providers who hold both BTC and rBTC, enabling near-instantaneous transfers with minimal confirmations.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="7">
@@ -323,7 +323,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     <Accordion.Item eventKey="2">
     <Accordion.Header as="h3">How does the PowPeg work?</Accordion.Header>
     <Accordion.Body>
-      - The Rootstock peg has several modes to accomplish transfers: version 1, version 2, and the rBTC flyover. The version 1 protocol is quite simple. When a Bitcoin user wants to use the PowPeg, he sends a peg-in transaction to a multisig wallet whose funds are secured by the PowPeg. The same public key associated with Bitcoin addresses related to the source bitcoins in a peg-in transaction is used on the Rootstock chain to obtain the destination address where the Smart Bitcoins are received. Although both Bitcoin and Rootstock's public and private keys are similar, each blockchain encodes the address in a different format. This means that the addresses on both blockchains are different but can be proven to belong to the same person.
+      - The Rootstock peg has several modes to accomplish transfers: version 1, version 2, and the rBTC flyover. The version 1 protocol is quite simple. When a Bitcoin user wants to use the PowPeg, he sends a peg-in transaction to a multisig wallet whose funds are secured by the PowPeg. The same public key associated with Bitcoin addresses related to the source bitcoins in a peg-in transaction is used on the Rootstock chain to obtain the destination address where the rBTC is received. Although both Bitcoin and Rootstock's public and private keys are similar, each blockchain encodes the address in a different format. This means that the addresses on both blockchains are different but can be proven to belong to the same person.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="3">

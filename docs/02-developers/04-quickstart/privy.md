@@ -188,7 +188,7 @@ const { data: balanceData } = useBalance({ address });
 
 #### 1. Using the custom connect button
 
-The custom connect button preserves Privy’s seamless login flow while giving you full control over what users see once they're connected. It’s a clean way to personalize wallet interactions and display key account details in your app’s interface. You can explore the full implementation in `ConnectButton.tsx`.
+The custom connect button preserves Privy's built-in login flow while giving you full control over what users see once they're connected. It is a clean way to personalize wallet interactions and display key account details in your app's interface. You can explore the full implementation in `ConnectButton.tsx`.
 
 
 ```javascript
@@ -212,4 +212,4 @@ To keep onboarding simple, start by enabling email login in Privy’s Basics tab
 Users can authenticate without a separate wallet or external identity provider. Social logins and other methods (SMS, passkeys) can be configured later from the Socials and Advanced tabs. For full details, refer to [Privy’s guide](https://docs.privy.io/basics/get-started/dashboard/configure-login-methods#email-login) to login methods.
 
 Congratulations, we have successfully learnt how to setup Privy, configure components like Wagmi, handle authentication, customize app logo, enable social logins, etc.
-With extensive configuration options, support for multiple login strategies, and seamless integration with embedded wallets, Privy adapts to a wide range of environments and use cases. As a secure and customizable solution, Privy is well suited for onboarding users and powering reliable wallet experiences. Integrating it into your app is a strong step toward bringing more users into the Rootstock ecosystem with simplicity and confidence.
+With extensive configuration options, support for multiple login strategies, and direct integration with embedded wallets, Privy adapts to a wide range of environments and use cases. As a secure and customizable solution, Privy is well suited for onboarding users and powering reliable wallet experiences. Integrating it into your app is a strong step toward bringing more users into the Rootstock ecosystem with simplicity and confidence.

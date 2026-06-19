@@ -1,230 +1,166 @@
-import React, {useRef, useState, useEffect, useCallback} from 'react';
 import Card from '/src/components/Card';
+import Link from '/src/components/Link';
 import Translate from '@docusaurus/core/lib/client/exports/Translate';
-import styles from './styles.module.scss';
 
 const useCaseData = {
-  title: <Translate>Browse by Use Cases</Translate>,
+  title: <Translate>Browse by use case</Translate>,
   description: (
-    <Translate>Implementation guides for lending, payments, onboarding, interoperability, and automation on Rootstock.</Translate>
+    <Translate>
+      Step-by-step guides for Bitcoin DeFi, Bridge, Onboard, Pay, and AI.
+    </Translate>
   ),
   cards: [
     {
-      title: <Translate>Generate Yield</Translate>,
+      title: <Translate>Bitcoin DeFi</Translate>,
       color: 'orange',
       description: (
-        <Translate>Transform Bitcoin from a passive asset into productive capital with yield-bearing vaults and staking mechanisms.</Translate>
+        <Translate>
+          Lending, vaults, and stablecoin flows with rBTC and on-chain assets.
+        </Translate>
       ),
       list: [
         {
-          title: <Translate>Integrate USDRIF Vault on Rootstock</Translate>,
+          title: <Translate>Rootstock DeFi developer guide</Translate>,
+          href: '/resources/guides/defi-developer-guide/',
+        },
+        {
+          title: <Translate>Integrate USDRIF Vault</Translate>,
           href: '/use-cases/btcfi-finance-yield/yield-vaults-sdk/',
+        },
+        {
+          title: <Translate>Cross-chain rBTC lending</Translate>,
+          href: '/use-cases/btcfi-finance-yield/cross-chain-lending-rbtc/',
+        },
+        {
+          title: <Translate>View Bitcoin DeFi guides</Translate>,
+          href: '/use-cases/btcfi-finance-yield/',
         },
       ],
     },
     {
-      title: <Translate>Bridge Assets</Translate>,
+      title: <Translate>Bridge</Translate>,
       color: 'cyan',
       description: (
-        <Translate>Securely bridge assets between Bitcoin and Rootstock using trust-minimized protocols.</Translate>
+        <Translate>
+          Move assets between Bitcoin, Rootstock, and other networks.
+        </Translate>
       ),
       list: [
         {
-          title: <Translate>Atlas Bridge SDK</Translate>,
+          title: <Translate>Atlas Bridge guide</Translate>,
           href: '/resources/guides/atlas/',
         },
         {
-          title: (
-            <Translate>Omnichain Fungible Token (OFTs) on Rootstock with Layerzero</Translate>
-          ),
+          title: <Translate>LayerZero OFT on Rootstock</Translate>,
           href: '/use-cases/interoperability/rootstock-layerzero/',
+        },
+        {
+          title: <Translate>View Bridge guides</Translate>,
+          href: '/use-cases/interoperability/',
         },
       ],
     },
     {
-      title: <Translate>Onboard Users</Translate>,
+      title: <Translate>Onboard</Translate>,
       color: 'green',
       description: (
-        <Translate>Remove onboarding friction with social login, smart wallets, and human-readable names.</Translate>
+        <Translate>
+          Wallet connection, social login, and low-connectivity onboarding patterns.
+        </Translate>
       ),
       list: [
         {
-          title: <Translate>Smart Wallet Onboarding with Para SDK</Translate>,
+          title: <Translate>Para smart wallet onboarding</Translate>,
           href: '/use-cases/onboarding-ux/para/',
         },
         {
-          title: (
-            <Translate>Use USSD to interact with DeFi protocols on Rootstock</Translate>
-          ),
+          title: <Translate>USSD DeFi relay</Translate>,
           href: '/use-cases/onboarding-ux/ussd-rootstock-defi/',
         },
-      ],
-    },
-    {
-      title: <Translate>AI Agents</Translate>,
-      color: 'pink',
-      description: (
-        <Translate>Connect AI models to on-chain data and deploy autonomous agents on Rootstock.</Translate>
-      ),
-      list: [
         {
-          title: (
-            <Translate>MCP on Rootstock</Translate>
-          ),
-          href: '/use-cases/ai-automation/mcp-rootstock/',
-        },
-        {
-          title: (
-            <Translate>Conversational AI Agent with Blockchain Actions</Translate>
-          ),
-          href: '/use-cases/ai-automation/ai-agent-rootstock/',
+          title: <Translate>View Onboard guides</Translate>,
+          href: '/use-cases/onboarding-ux/',
         },
       ],
     },
     {
-      title: <Translate>Automate Payments</Translate>,
-      color: 'orange',
+      title: <Translate>Pay</Translate>,
+      color: 'yellow',
       description: (
-        <Translate>Launch tokens and Bitcoin-native payments, stablecoins, and agentic commerce with standards like x402.</Translate>
+        <Translate>
+          Programmable payments, splits, and pay-per-use APIs on Rootstock.
+        </Translate>
       ),
       list: [
         {
-          title: <Translate>x402 Payments with Rootstock</Translate>,
+          title: <Translate>x402 payments on Rootstock</Translate>,
           href: '/use-cases/payments-assets/integrate-x402/',
         },
         {
-          title: <Translate>Geyser Prism payment splits</Translate>,
+          title: <Translate>Prism payment splits</Translate>,
           href: '/use-cases/payments-assets/prism-payment-splits/',
+        },
+        {
+          title: <Translate>View Pay guides</Translate>,
+          href: '/use-cases/payments-assets/',
+        },
+      ],
+    },
+    {
+      title: <Translate>AI</Translate>,
+      color: 'pink',
+      description: (
+        <Translate>
+          Install the Rootstock MCP Server, then build agents with scoped on-chain reads and actions.
+        </Translate>
+      ),
+      list: [
+        {
+          title: <Translate>MCP quickstart</Translate>,
+          href: '/developers/quickstart/mcp/',
+        },
+        {
+          title: <Translate>AI agent with on-chain actions</Translate>,
+          href: '/use-cases/ai-automation/ai-agent-rootstock/',
+        },
+        {
+          title: <Translate>View AI guides</Translate>,
+          href: '/use-cases/ai-automation/',
         },
       ],
     },
   ],
 };
 
-function getScrollStepPx(viewportEl) {
-  const trackEl = viewportEl.firstElementChild;
-  const slide = viewportEl.querySelector('[data-rsk-slide]');
-  if (!slide || !trackEl) {
-    return viewportEl.clientWidth * 0.25;
-  }
-  const cs = getComputedStyle(trackEl);
-  const gapRaw = cs.columnGap || cs.gap || '16px';
-  const gap = parseFloat(gapRaw) || 16;
-  return slide.offsetWidth + gap;
-}
-
-function RootstockCarouselArrow() {
-  return (
-    <span className={styles.arrowOuter} aria-hidden="true">
-      <span className={styles.arrowRingShadow} />
-      <span className={styles.arrowRing} />
-      <svg
-        className={styles.arrowIcon}
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M9 6l6 6-6 6"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    </span>
-  );
-}
-
 export default function HomepageSectionUseCases() {
-  const trackRef = useRef(null);
-  const [hasOverflow, setHasOverflow] = useState(false);
-  const [canScrollNext, setCanScrollNext] = useState(false);
-
-  const updateScrollState = useCallback(() => {
-    const el = trackRef.current;
-    if (!el) {
-      return;
-    }
-    const maxScroll = el.scrollWidth - el.clientWidth;
-    const overflow = maxScroll > 2;
-    setHasOverflow(overflow);
-    setCanScrollNext(overflow && el.scrollLeft < maxScroll - 2);
-  }, []);
-
-  useEffect(() => {
-    const el = trackRef.current;
-    if (!el) {
-      return undefined;
-    }
-    updateScrollState();
-    el.addEventListener('scroll', updateScrollState, {passive: true});
-    const ro = new ResizeObserver(() => updateScrollState());
-    ro.observe(el);
-    window.addEventListener('resize', updateScrollState);
-    return () => {
-      el.removeEventListener('scroll', updateScrollState);
-      window.removeEventListener('resize', updateScrollState);
-      ro.disconnect();
-    };
-  }, [updateScrollState]);
-
-  const scrollNext = useCallback(() => {
-    const el = trackRef.current;
-    if (!el) {
-      return;
-    }
-    const maxScroll = el.scrollWidth - el.clientWidth;
-    if (el.scrollLeft >= maxScroll - 2) {
-      return;
-    }
-    const step = getScrollStepPx(el);
-    el.scrollBy({left: step, behavior: 'smooth'});
-  }, []);
-
   return (
     <section className="mb-64">
-      <div className="mb-32">
-        {useCaseData.title && (
-          <h2 className="h1 mb-0">{useCaseData.title}</h2>
-        )}
-        {useCaseData.description && (
-          <div className="markdown mt-12">{useCaseData.description}</div>
-        )}
+      <div className="mb-32 d-flex flex-column flex-md-row align-items-md-end justify-content-md-between gap-16">
+        <div>
+          {useCaseData.title && (
+            <h2 className="h1 mb-0">{useCaseData.title}</h2>
+          )}
+          {useCaseData.description && (
+            <div className="markdown mt-12">{useCaseData.description}</div>
+          )}
+        </div>
+        <Link href="/use-cases/" className="fw-bold flex-shrink-0">
+          <Translate>All use case guides</Translate>
+        </Link>
       </div>
 
-      <div className={styles.carousel}>
-        <div ref={trackRef} className={styles.viewport}>
-          <div className={styles.track}>
-            {useCaseData.cards.map((item, idx) => (
-              <div className={styles.slide} key={idx} data-rsk-slide>
-                <Card
-                  index={`${idx + 1}.`}
-                  title={item.title}
-                  color={item.color}
-                  description={item.description}
-                  list={item.list}
-                />
-              </div>
-            ))}
+      <div className="row row-cols-1 row-cols-md-2 g-16 g-lg-24">
+        {useCaseData.cards.map((item, idx) => (
+          <div className="col" key={idx}>
+            <Card
+              index={`${idx + 1}.`}
+              title={item.title}
+              color={item.color}
+              description={item.description}
+              list={item.list}
+            />
           </div>
-        </div>
-
-        {hasOverflow && (
-          <div className={styles.arrowWrap}>
-            <button
-              type="button"
-              className={styles.arrowBtn}
-              disabled={!canScrollNext}
-              onClick={scrollNext}
-              aria-label={
-                canScrollNext
-                  ? 'Scroll use cases to the right'
-                  : 'End of use cases list'
-              }>
-              <RootstockCarouselArrow />
-            </button>
-          </div>
-        )}
+        ))}
       </div>
     </section>
   );
