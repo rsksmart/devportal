@@ -46,7 +46,9 @@ To configure an ERC20 token, copy the code snippet below and paste it in your to
 This contract defines an `ERC20` token named `MyToken` with the symbol `MTK`, using OpenZeppelin's ERC20 standard implementation.
 
 :::info[Try this contract in Remix]
-Want to deploy and interact with `MyToken.sol` without any local setup? Open it directly in the Remix IDE and connect to Rootstock Testnet in a few clicks.
+Want to deploy and interact with `MyToken.sol` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for MyToken.sol: https://remix.ethereum.org/#url=https://github.com/rsksmart/rootstock-quick-start-guide/blob/feat/complete/contracts/MyToken.sol */}
 
 <RemixLaunchButton />
 :::
