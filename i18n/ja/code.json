@@ -98,9 +98,6 @@
   "Apply for a grant": {
     "message": "グラントに申請"
   },
-  "Rootstock Collective": {
-    "message": "Rootstock Collective"
-  },
   "Wallets, RPC, and EVM-compatible tooling to build and run applications on Rootstock.": {
     "message": "Rootstockでアプリケーションを構築・実行するためのウォレット、RPC、EVM互換ツール。"
   },
@@ -1087,14 +1084,8 @@
   "RIF Relay integration": {
     "message": "RIF Relay integration"
   },
-  "Rootstock Collective runs grants, ecosystem programs, and governance for builders on Rootstock.": {
-    "message": "Rootstock Collective runs grants, ecosystem programs, and governance for builders on Rootstock."
-  },
   "Apply for funding, join ecosystem programs, and participate in Collective governance.": {
     "message": "Apply for funding, join ecosystem programs, and participate in Collective governance."
-  },
-  "Explore Rootstock Collective": {
-    "message": "Rootstock Collective を見る"
   },
   "Build": {
     "message": "ビルド"
@@ -1156,14 +1147,8 @@
   "Connect wallets, bridges, oracles, and third-party SDKs to an existing product.": {
     "message": "ウォレット、ブリッジ、オラクル、サードパーティ SDK を既存のプロダクトに接続します。"
   },
-  "Rootstock Collective runs grants, governance, and builder programs on Rootstock.": {
-    "message": "Rootstock Collective は Rootstock 上で grants、ガバナンス、ビルダープログラムを運営しています。"
-  },
   "Apply for grants, join builder programs, and participate in Collective governance.": {
     "message": "grants の申請、ビルダープログラムへの参加、Collective ガバナンスへの参加ができます。"
-  },
-  "Open Rootstock Collective": {
-    "message": "Rootstock Collective を開く"
   },
   "Install the Rootstock MCP Server, then build agents with scoped on-chain reads and actions.": {
     "message": "Rootstock MCP Server をインストールし、スコープ付きのオンチェーン読み取りとアクションでエージェントを構築します。"
@@ -1206,5 +1191,14 @@
   },
   "Step-by-step guides for Bitcoin DeFi, Bridge, Onboard, Pay, and AI.": {
     "message": "Bitcoin DeFi、Bridge、Onboard、Pay、AI のステップバイステップガイド。"
+  },
+  "RootstockCollective": {
+    "message": "RootstockCollective"
+  },
+  "RootstockCollective runs grants, governance, and builder programs on Rootstock.": {
+    "message": "RootstockCollective は Rootstock 上で grants、ガバナンス、ビルダープログラムを運営しています。"
+  },
+  "Open RootstockCollective": {
+    "message": "RootstockCollective を開く"
   }
 }

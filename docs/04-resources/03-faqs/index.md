@@ -140,20 +140,20 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
   <Accordion.Item eventKey="2">
     <Accordion.Header as="h3">What is the RIF token, and what is its purpose?</Accordion.Header>
     <Accordion.Body>
-      - The RIF (Rootstock Infrastructure Framework) token makes it easier, faster and more rewarding to build on Bitcoin. It also enables governance on [RootstockCollective DAO](https://rootstockcollective.xyz/). By staking RIF, users can mint stRIF; the governance token of the RootstockCollective used for voting, proposal creation, and rewards allocation. For more information, read the [Rootstock Collective Whitepaper](https://wiki.rootstockcollective.xyz/).
+      - The RIF (Rootstock Infrastructure Framework) token makes it easier, faster and more rewarding to build on Bitcoin. It also enables governance on [RootstockCollective DAO](https://rootstockcollective.xyz/). By staking RIF, users can mint stRIF; the governance token of the RootstockCollective used for voting, proposal creation, and rewards allocation. For more information, read the [RootstockCollective Whitepaper](https://wiki.rootstockcollective.xyz/).
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="3">
-    <Accordion.Header as="h3">What is the Rootstock Collective?</Accordion.Header>
+    <Accordion.Header as="h3">What is RootstockCollective?</Accordion.Header>
     <Accordion.Body>
-      - [Rootstock Collective](https://rootstockcollective.xyz/), or The Collective, is a DAO (Decentralized Autonomous Organization) designed to develop the Rootstock ecosystem by empowering and rewarding builders and users of Rootstock, and RIF token holders. As a merge-mined Bitcoin sidechain, Rootstock's heartbeat is inextricably linked to Bitcoin. With blocks separated by seconds, instead of minutes, the Rootstock network produces blocks continuously for smart contract execution. On Rootstock, developers are able to build rich, EVM-compatible, web3 apps using Bitcoin as the native currency, in the form of rBTC.
-      - View the [Rootstock Collective Whitepaper](https://wiki.rootstockcollective.xyz/2c6e3b87b49f4c1e9225b713e1b49538?v=819168fca4964319896c19e8299a8ea0) or read the [Rootstock Collective Whitepaper FAQs](https://wiki.rootstockcollective.xyz/RootstockCollective-FAQ-1031ca6b0b02808c95d3dcb5a0074f4b).
+      - [RootstockCollective](https://rootstockcollective.xyz/), or The Collective, is a DAO (Decentralized Autonomous Organization) designed to develop the Rootstock ecosystem by empowering and rewarding builders and users of Rootstock, and RIF token holders. As a merge-mined Bitcoin sidechain, Rootstock's heartbeat is inextricably linked to Bitcoin. With blocks separated by seconds, instead of minutes, the Rootstock network produces blocks continuously for smart contract execution. On Rootstock, developers are able to build rich, EVM-compatible, web3 apps using Bitcoin as the native currency, in the form of rBTC.
+      - View the [RootstockCollective Whitepaper](https://wiki.rootstockcollective.xyz/2c6e3b87b49f4c1e9225b713e1b49538?v=819168fca4964319896c19e8299a8ea0) or read the [RootstockCollective Whitepaper FAQs](https://wiki.rootstockcollective.xyz/RootstockCollective-FAQ-1031ca6b0b02808c95d3dcb5a0074f4b).
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="4">
-    <Accordion.Header as="h3">How can I join the Rootstock Collective?</Accordion.Header>
+    <Accordion.Header as="h3">How can I join RootstockCollective?</Accordion.Header>
     <Accordion.Body>
-      To join Rootstock Collective, you will need to have RIF tokens, and then stake them into stRIF governance tokens. These stRIF tokens give you voting rights and participation in the DAO’s governance and decision-making process. You can become part of the Rootstock Collective in three steps:
+      To join RootstockCollective, you will need to have RIF tokens, and then stake them into stRIF governance tokens. These stRIF tokens give you voting rights and participation in the DAO’s governance and decision-making process. You can become part of the RootstockCollective in three steps:
         * Install [MetaMask and add Rootstock](/dev-tools/wallets/metamask/)
         * Get rBTC
         * Get RIF
@@ -260,14 +260,14 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
     <Accordion.Body>
       - [Rootstock Infrastructure Framework](/concepts/rif-suite/) (RIF) is a suite of open and decentralized infrastructure protocols that enable faster, easier, and more scalable distributed application development (dApps) within a unified environment. RIF  is built on the Rootstock smart contract network, the first general-purpose smart contract secured by the Bitcoin network. RIF  includes support for decentralized, third-party, off-chain payment networks; and easy-to-use interfaces for developers.
       - RIF aims to bridge the gap between blockchain technologies and their mass-market adoption by providing developers and users access to various services across multiple crypto-economies.
-      -  The RIF (Rootstock Infrastructure Framework) token makes it easier, faster and more rewarding to build on Bitcoin. It also enables governance on [RootstockCollective DAO](https://rootstockcollective.xyz/). By staking RIF, users can mint stRIF; the governance token of the RootstockCollective used for voting, proposal creation, and rewards allocation. For more information, read the [Rootstock Collective Whitepaper](https://wiki.rootstockcollective.xyz/).
+      -  The RIF (Rootstock Infrastructure Framework) token makes it easier, faster and more rewarding to build on Bitcoin. It also enables governance on [RootstockCollective DAO](https://rootstockcollective.xyz/). By staking RIF, users can mint stRIF; the governance token of the RootstockCollective used for voting, proposal creation, and rewards allocation. For more information, read the [RootstockCollective Whitepaper](https://wiki.rootstockcollective.xyz/).
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">
     <Accordion.Header as="h3">What exactly is the value proposition of RIF?</Accordion.Header>
     <Accordion.Body>
       - RIF is a service layer built on the Rootstock blockchain, offering open, decentralized tools and technologies. With RIF, developers can create scalable DeFi products quickly and easily.
-      - The RIF (Rootstock Infrastructure Framework) token makes it easier, faster and more rewarding to build on Bitcoin. It also enables governance on [RootstockCollective DAO](https://rootstockcollective.xyz/). By staking RIF, users can mint stRIF; the governance token of the RootstockCollective used for voting, proposal creation, and rewards allocation. For more information, read the [Rootstock Collective Whitepaper](https://wiki.rootstockcollective.xyz/).
+      - The RIF (Rootstock Infrastructure Framework) token makes it easier, faster and more rewarding to build on Bitcoin. It also enables governance on [RootstockCollective DAO](https://rootstockcollective.xyz/). By staking RIF, users can mint stRIF; the governance token of the RootstockCollective used for voting, proposal creation, and rewards allocation. For more information, read the [RootstockCollective Whitepaper](https://wiki.rootstockcollective.xyz/).
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="3">

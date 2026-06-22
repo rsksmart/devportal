@@ -5,11 +5,11 @@ const data = {
   title: <Translate>Funding and governance</Translate>,
   description: (
     <Translate>
-      Rootstock Collective runs grants, governance, and builder programs on Rootstock.
+      RootstockCollective runs grants, governance, and builder programs on Rootstock.
     </Translate>
   ),
   card: {
-    title: <Translate>Rootstock Collective</Translate>,
+    title: <Translate>RootstockCollective</Translate>,
     color: 'pink',
     description: (
       <Translate>
@@ -17,7 +17,7 @@ const data = {
       </Translate>
     ),
     link: {
-      title: <Translate>Open Rootstock Collective</Translate>,
+      title: <Translate>Open RootstockCollective</Translate>,
       href: 'https://rootstockcollective.xyz/',
       target: '_blank',
     },

@@ -98,9 +98,6 @@
   "Apply for a grant": {
     "message": "Apply for a grant"
   },
-  "Rootstock Collective": {
-    "message": "Rootstock Collective"
-  },
   "Wallets, RPC, and EVM-compatible tooling to build and run applications on Rootstock.": {
     "message": "Wallets, RPC, and EVM-compatible tooling to build and run applications on Rootstock."
   },
@@ -1090,14 +1087,8 @@
   "RIF Relay integration": {
     "message": "RIF Relay integration"
   },
-  "Rootstock Collective runs grants, ecosystem programs, and governance for builders on Rootstock.": {
-    "message": "Rootstock Collective runs grants, ecosystem programs, and governance for builders on Rootstock."
-  },
   "Apply for funding, join ecosystem programs, and participate in Collective governance.": {
     "message": "Apply for funding, join ecosystem programs, and participate in Collective governance."
-  },
-  "Explore Rootstock Collective": {
-    "message": "Explore Rootstock Collective"
   },
   "View quickstarts": {
     "message": "View quickstarts"
@@ -1159,14 +1150,8 @@
   "Connect wallets, bridges, oracles, and third-party SDKs to an existing product.": {
     "message": "Connect wallets, bridges, oracles, and third-party SDKs to an existing product."
   },
-  "Rootstock Collective runs grants, governance, and builder programs on Rootstock.": {
-    "message": "Rootstock Collective runs grants, governance, and builder programs on Rootstock."
-  },
   "Apply for grants, join builder programs, and participate in Collective governance.": {
     "message": "Apply for grants, join builder programs, and participate in Collective governance."
-  },
-  "Open Rootstock Collective": {
-    "message": "Open Rootstock Collective"
   },
   "Install the Rootstock MCP Server, then build agents with scoped on-chain reads and actions.": {
     "message": "Install the Rootstock MCP Server, then build agents with scoped on-chain reads and actions."
@@ -1209,5 +1194,14 @@
   },
   "Step-by-step guides for Bitcoin DeFi, Bridge, Onboard, Pay, and AI.": {
     "message": "Step-by-step guides for Bitcoin DeFi, Bridge, Onboard, Pay, and AI."
+  },
+  "RootstockCollective": {
+    "message": "RootstockCollective"
+  },
+  "RootstockCollective runs grants, governance, and builder programs on Rootstock.": {
+    "message": "RootstockCollective runs grants, governance, and builder programs on Rootstock."
+  },
+  "Open RootstockCollective": {
+    "message": "Open RootstockCollective"
   }
 }

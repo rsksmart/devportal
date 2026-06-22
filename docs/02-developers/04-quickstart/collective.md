@@ -2,11 +2,11 @@
 sidebar_position: 113
 sidebar_label: Collective DAO
 title: Build with the Collective DAO Starter Kit on Rootstock
-description: Run the Rootstock Collective sample dApp with staking, proposals, and voting. Secured by over 85% of Bitcoin's hash power through merge mining.
+description: Run the RootstockCollective sample dApp with staking, proposals, and voting. Secured by over 85% of Bitcoin's hash power through merge mining.
 tags: [quickstart, collective-sdk, dao, governance, rootstock, wagmi, rif]
 ---
 
-This quick start points to the [Rootstock Collective starter kit](https://github.com/rsksmart/rootstock-collective-starter-kit), a sample dApp that uses [`@rsksmart/collective-sdk`](https://www.npmjs.com/package/@rsksmart/collective-sdk) for staking RIF, listing proposals, and voting on Rootstock Mainnet or Testnet.
+This quick start points to the [RootstockCollective starter kit](https://github.com/rsksmart/rootstock-collective-starter-kit), a sample dApp that uses [`@rsksmart/collective-sdk`](https://www.npmjs.com/package/@rsksmart/collective-sdk) for staking RIF, listing proposals, and voting on Rootstock Mainnet or Testnet.
 
 ## What you'll achieve
 
@@ -35,4 +35,4 @@ For how SDK calls map to `src/` files, simulation before writes, governance UX e
 
 - [rootstock-collective-starter-kit on GitHub](https://github.com/rsksmart/rootstock-collective-starter-kit)
 - [Collective SDK source](https://github.com/rsksmart/collective-sdk)
-- [Rootstock Collective app](https://app.rootstockcollective.xyz/)
+- [RootstockCollective app](https://app.rootstockcollective.xyz/)

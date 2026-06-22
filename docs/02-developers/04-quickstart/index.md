@@ -144,7 +144,7 @@ values={[
     color="orange"
     linkHref="/developers/quickstart/collective/"
     linkTitle="Use the Kit"
-    description="Run the Rootstock Collective sample dApp with staking, proposals, and voting. Secured by over 85% of Bitcoin's hash power through merge mining."
+    description="Run the RootstockCollective sample dApp with staking, proposals, and voting. Secured by over 85% of Bitcoin's hash power through merge mining."
   />
 <FilterItem
     value="advanced"
