@@ -6,6 +6,23 @@ description: "Learn how to write a smart contract using Solidity and OpenZeppell
 tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethers]
 ---
 
+import CodeBlock from '@theme/CodeBlock';
+
+export const counterSource = `// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.13;
+
+contract Counter {
+    uint256 public number;
+
+    function setNumber(uint256 newNumber) public {
+        number = newNumber;
+    }
+
+    function increment() public {
+        number++;
+    }
+}`;
+
 ## Folder Structure
 
 Let’s view the file structure for a default foundry project:
@@ -25,22 +42,13 @@ $ tree . -d -L 1
 ## Demo smart contract
 In the `src` folder, you will find a simple smart contract called `counter.sol`. Which contains a simple counter contract.
 
-```solidity
-// SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+<CodeBlock language="solidity">{counterSource}</CodeBlock>
 
-contract Counter {
-    uint256 public number;
+:::info[Try this contract in Remix]
+Want to deploy and interact with `Counter.sol` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
 
-    function setNumber(uint256 newNumber) public {
-        number = newNumber;
-    }
-
-    function increment() public {
-        number++;
-    }
-}
-```
+<RemixLaunchButton code={counterSource} />
+:::
 
 ## Compile the Contract
 To build the contract, run the following command in the project's root directory.

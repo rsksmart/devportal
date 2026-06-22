@@ -2,8 +2,30 @@ import React, { useState } from 'react'
 import Modal from 'react-bootstrap/Modal'
 import { pushDataLayer } from '/src/_utils/analytics'
 
-const REMIX_URL =
-  'https://remix.ethereum.org/#url=https://github.com/rsksmart/rootstock-quick-start-guide/blob/feat/complete/contracts/MyToken.sol'
+// `#url=` loads a file from a URL; `?#code=` loads a base64-encoded snippet.
+const REMIX_URL_BASE = 'https://remix.ethereum.org/#url='
+const REMIX_CODE_BASE = 'https://remix.ethereum.org/?#code='
+
+// Default Solidity file used when neither `contractUrl` nor `code` is provided.
+const DEFAULT_CONTRACT_URL =
+  'https://github.com/rsksmart/rootstock-quick-start-guide/blob/feat/complete/contracts/MyToken.sol'
+
+// UTF-8 safe base64 encode (btoa alone breaks on non-ASCII characters).
+function encodeBase64(source) {
+  return btoa(String.fromCharCode(...new TextEncoder().encode(source)))
+}
+
+// Build the Remix deep-link. A GitHub `contractUrl` takes precedence; otherwise
+// a raw Solidity `code` snippet is base64-encoded and passed via `?#code=`.
+function buildRemixUrl({ contractUrl, code }) {
+  if (contractUrl) {
+    return `${REMIX_URL_BASE}${contractUrl}`
+  }
+  if (code) {
+    return `${REMIX_CODE_BASE}${encodeURIComponent(encodeBase64(code))}`
+  }
+  return `${REMIX_URL_BASE}${DEFAULT_CONTRACT_URL}`
+}
 
 const STEPS = [
   {
@@ -42,8 +64,13 @@ const STEPS = [
   },
 ]
 
-export default function RemixLaunchButton({ label = 'Try in Remix IDE' }) {
+export default function RemixLaunchButton({
+  label = 'Try in Remix IDE',
+  contractUrl,
+  code,
+}) {
   const [show, setShow] = useState(false)
+  const remixUrl = buildRemixUrl({ contractUrl, code })
 
   return (
     <>
@@ -51,7 +78,7 @@ export default function RemixLaunchButton({ label = 'Try in Remix IDE' }) {
         type="button"
         className="btn btn-primary mt-8"
         onClick={() => {
-          pushDataLayer('remixLaunchModalOpen', { contractUrl: REMIX_URL })
+          pushDataLayer('remixLaunchModalOpen', { contractUrl: remixUrl })
           setShow(true)
         }}
       >
@@ -103,12 +130,12 @@ export default function RemixLaunchButton({ label = 'Try in Remix IDE' }) {
 
           <div className="d-flex gap-16 flex-wrap">
             <a
-              href={REMIX_URL}
+              href={remixUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary"
               onClick={() => {
-                pushDataLayer('remixLaunchConfirm', { contractUrl: REMIX_URL })
+                pushDataLayer('remixLaunchConfirm', { contractUrl: remixUrl })
                 setShow(false)
               }}
             >
