@@ -6,6 +6,8 @@ description: 'Essential security practices for DeFi: reentrancy, access control,
 tags: [rsk, rootstock, defi, security, solidity, audits]
 ---
 
+import CodeBlock from '@theme/CodeBlock';
+
 DeFi protocols handle valuable assets. A single vulnerability can lead to catastrophic losses. Always follow these patterns and get professional audits before deploying to Mainnet.
 
 ## 1. Reentrancy Protection
@@ -65,8 +67,10 @@ Now, if the attacker tries to re-enter, their balance is already reduced, so the
 
 For extra safety, especially when you have multiple functions that could be re-entered, use ReentrancyGuard. It provides a nonReentrant modifier that prevents a function from being called while it is already executing.
 
-```solidity
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+export const secureContractSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import "@openzeppelin/contracts@5.6.1/utils/ReentrancyGuard.sol";
 
 contract SecureContract is ReentrancyGuard {
     mapping(address => uint256) public balances;
@@ -77,8 +81,18 @@ contract SecureContract is ReentrancyGuard {
         (bool success, ) = msg.sender.call{value: amount}("");
         require(success, "Transfer failed");
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{secureContractSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `SecureContract` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for SecureContract: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvdXRpbHMvUmVlbnRyYW5jeUd1YXJkLnNvbCI7Cgpjb250cmFjdCBTZWN1cmVDb250cmFjdCBpcyBSZWVudHJhbmN5R3VhcmQgewogICAgbWFwcGluZyhhZGRyZXNzID0%2BIHVpbnQyNTYpIHB1YmxpYyBiYWxhbmNlczsKCiAgICBmdW5jdGlvbiB3aXRoZHJhdyh1aW50MjU2IGFtb3VudCkgZXh0ZXJuYWwgbm9uUmVlbnRyYW50IHsKICAgICAgICByZXF1aXJlKGJhbGFuY2VzW21zZy5zZW5kZXJdID49IGFtb3VudCk7CiAgICAgICAgYmFsYW5jZXNbbXNnLnNlbmRlcl0gLT0gYW1vdW50OwogICAgICAgIChib29sIHN1Y2Nlc3MsICkgPSBtc2cuc2VuZGVyLmNhbGx7dmFsdWU6IGFtb3VudH0oIiIpOwogICAgICAgIHJlcXVpcmUoc3VjY2VzcywgIlRyYW5zZmVyIGZhaWxlZCIpOwogICAgfQp9 */}
+
+<RemixLaunchButton code={secureContractSource} />
+:::
+
 The modifier uses a uint256 status variable (0 = unlocked, 1 = locked) and reverts if locked. It is gas-efficient and prevents reentrancy across all nonReentrant functions.
 
 ### Advanced Considerations
@@ -115,11 +129,10 @@ npm install --save-dev hardhat @nomiclabs/hardhat-ethers ethers chai
 
 Write tests that simulate reentrant attacks. For example, using a malicious contract:
 
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+export const reentrancyTestContractsSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
 
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import "@openzeppelin/contracts@5.6.1/utils/ReentrancyGuard.sol";
 
 contract Vulnerable {
     mapping(address => uint256) public balances;
@@ -157,8 +170,17 @@ contract Attacker {
         victim.deposit{value: 1 ether}(); // deposit first
         victim.withdraw(1 ether);
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{reentrancyTestContractsSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with the `Vulnerable` and `Attacker` contracts without any local setup? Use the button below to open them directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for Vulnerable + Attacker: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvdXRpbHMvUmVlbnRyYW5jeUd1YXJkLnNvbCI7Cgpjb250cmFjdCBWdWxuZXJhYmxlIHsKICAgIG1hcHBpbmcoYWRkcmVzcyA9PiB1aW50MjU2KSBwdWJsaWMgYmFsYW5jZXM7CiAgICAKICAgIGZ1bmN0aW9uIGRlcG9zaXQoKSBleHRlcm5hbCBwYXlhYmxlIHsKICAgICAgICBiYWxhbmNlc1ttc2cuc2VuZGVyXSArPSBtc2cudmFsdWU7CiAgICB9CiAgICAKICAgIC8vIFZVTE5FUkFCTEUKICAgIGZ1bmN0aW9uIHdpdGhkcmF3KHVpbnQyNTYgYW1vdW50KSBleHRlcm5hbCB7CiAgICAgICAgcmVxdWlyZShiYWxhbmNlc1ttc2cuc2VuZGVyXSA%2BPSBhbW91bnQpOwogICAgICAgIChib29sIHN1Y2Nlc3MsICkgPSBtc2cuc2VuZGVyLmNhbGx7dmFsdWU6IGFtb3VudH0oIiIpOwogICAgICAgIHJlcXVpcmUoc3VjY2VzcywgIlRyYW5zZmVyIGZhaWxlZCIpOwogICAgICAgIGJhbGFuY2VzW21zZy5zZW5kZXJdIC09IGFtb3VudDsKICAgIH0KfQoKY29udHJhY3QgQXR0YWNrZXIgewogICAgVnVsbmVyYWJsZSBwdWJsaWMgdmljdGltOwogICAgdWludDI1NiBwdWJsaWMgYXR0YWNrQ291bnQ7CgogICAgY29uc3RydWN0b3IoYWRkcmVzcyBfdmljdGltKSB7CiAgICAgICAgdmljdGltID0gVnVsbmVyYWJsZShfdmljdGltKTsKICAgIH0KCiAgICByZWNlaXZlKCkgZXh0ZXJuYWwgcGF5YWJsZSB7CiAgICAgICAgaWYgKGFkZHJlc3ModmljdGltKS5iYWxhbmNlID49IDEgZXRoZXIgJiYgYXR0YWNrQ291bnQgPCA1KSB7CiAgICAgICAgICAgIGF0dGFja0NvdW50Kys7CiAgICAgICAgICAgIHZpY3RpbS53aXRoZHJhdygxIGV0aGVyKTsKICAgICAgICB9CiAgICB9CgogICAgZnVuY3Rpb24gYXR0YWNrKCkgZXh0ZXJuYWwgcGF5YWJsZSB7CiAgICAgICAgcmVxdWlyZShtc2cudmFsdWUgPj0gMSBldGhlcik7CiAgICAgICAgdmljdGltLmRlcG9zaXR7dmFsdWU6IDEgZXRoZXJ9KCk7IC8vIGRlcG9zaXQgZmlyc3QKICAgICAgICB2aWN0aW0ud2l0aGRyYXcoMSBldGhlcik7CiAgICB9Cn0%3D */}
+
+<RemixLaunchButton code={reentrancyTestContractsSource} />
+:::
 
 ## Then in your test:
 
@@ -208,15 +230,29 @@ Access control ensures that only authorized users can execute sensitive function
 ### Simple Ownership (Ownable)
 OpenZeppelin's Ownable contract provides a basic access control mechanism with a single owner.
 
-```solidity
-import "@openzeppelin/contracts/access/Ownable.sol";
+export const ownableContractSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import "@openzeppelin/contracts@5.6.1/access/Ownable.sol";
 
 contract MyContract is Ownable {
+    // OZ v5 Ownable requires the initial owner in the constructor
+    constructor() Ownable(msg.sender) {}
+
     function mint(address to, uint256 amount) public onlyOwner {
         // only owner can mint
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{ownableContractSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `MyContract` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for MyContract (Ownable): https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvYWNjZXNzL093bmFibGUuc29sIjsKCmNvbnRyYWN0IE15Q29udHJhY3QgaXMgT3duYWJsZSB7CiAgICAvLyBPWiB2NSBPd25hYmxlIHJlcXVpcmVzIHRoZSBpbml0aWFsIG93bmVyIGluIHRoZSBjb25zdHJ1Y3RvcgogICAgY29uc3RydWN0b3IoKSBPd25hYmxlKG1zZy5zZW5kZXIpIHt9CgogICAgZnVuY3Rpb24gbWludChhZGRyZXNzIHRvLCB1aW50MjU2IGFtb3VudCkgcHVibGljIG9ubHlPd25lciB7CiAgICAgICAgLy8gb25seSBvd25lciBjYW4gbWludAogICAgfQp9 */}
+
+<RemixLaunchButton code={ownableContractSource} />
+:::
 
 **Limitations**:
 
@@ -229,8 +265,10 @@ Cannot grant granular permissions (e.g., some users can mint, others can pause).
 ### Role-Based Access Control (AccessControl)
 OpenZeppelin's AccessControl provides a flexible, multi-role system based on the standard from Ethereum (EIP-5982). You define roles as bytes32 constants and grant them to addresses.
 
-```solidity
-import "@openzeppelin/contracts/access/AccessControl.sol";
+export const accessControlContractSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import "@openzeppelin/contracts@5.6.1/access/AccessControl.sol";
 
 contract MyProtocol is AccessControl {
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
@@ -249,8 +287,17 @@ contract MyProtocol is AccessControl {
     function pause() public onlyRole(PAUSER_ROLE) {
         // pause logic
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{accessControlContractSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `MyProtocol` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for MyProtocol (AccessControl): https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvYWNjZXNzL0FjY2Vzc0NvbnRyb2wuc29sIjsKCmNvbnRyYWN0IE15UHJvdG9jb2wgaXMgQWNjZXNzQ29udHJvbCB7CiAgICBieXRlczMyIHB1YmxpYyBjb25zdGFudCBNSU5URVJfUk9MRSA9IGtlY2NhazI1NigiTUlOVEVSX1JPTEUiKTsKICAgIGJ5dGVzMzIgcHVibGljIGNvbnN0YW50IFBBVVNFUl9ST0xFID0ga2VjY2FrMjU2KCJQQVVTRVJfUk9MRSIpOwoKICAgIGNvbnN0cnVjdG9yKCkgewogICAgICAgIF9ncmFudFJvbGUoREVGQVVMVF9BRE1JTl9ST0xFLCBtc2cuc2VuZGVyKTsgLy8gYWRtaW4gY2FuIGdyYW50L3Jldm9rZSByb2xlcwogICAgICAgIF9ncmFudFJvbGUoTUlOVEVSX1JPTEUsIG1zZy5zZW5kZXIpOwogICAgICAgIF9ncmFudFJvbGUoUEFVU0VSX1JPTEUsIG1zZy5zZW5kZXIpOwogICAgfQoKICAgIGZ1bmN0aW9uIG1pbnQoYWRkcmVzcyB0bywgdWludDI1NiBhbW91bnQpIHB1YmxpYyBvbmx5Um9sZShNSU5URVJfUk9MRSkgewogICAgICAgIC8vIG1pbnQgbG9naWMKICAgIH0KCiAgICBmdW5jdGlvbiBwYXVzZSgpIHB1YmxpYyBvbmx5Um9sZShQQVVTRVJfUk9MRSkgewogICAgICAgIC8vIHBhdXNlIGxvZ2ljCiAgICB9Cn0%3D */}
+
+<RemixLaunchButton code={accessControlContractSource} />
+:::
 
 ## Key features:
 
@@ -347,21 +394,29 @@ for (uint256 i = 0; i < 1000; ) {
 ```
 Warning: Only use unchecked when you have mathematically proven that overflow cannot occur. Misuse can reintroduce vulnerabilities.
 
-## SafeMath for Older Versions
+## SafeMath Is No Longer Needed
 
-If you're working with an older Solidity version (`<0.8`), you must use a library like OpenZeppelin's SafeMath to prevent overflows.
+On older Solidity versions (`<0.8`) you needed a library like OpenZeppelin's SafeMath to prevent overflows. SafeMath was removed in OpenZeppelin Contracts v5, because Solidity 0.8+ reverts on overflow and underflow by default. Write plain arithmetic and the compiler inserts the checks for you.
 
-```solidity
-import "@openzeppelin/contracts/math/SafeMath.sol";
+export const safeMathContractSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
 
 contract MyContract {
-    using SafeMath for uint256;
-
     function safeAdd(uint256 a, uint256 b) public pure returns (uint256) {
-        return a.add(b); // Reverts on overflow
+        // Solidity 0.8+ reverts automatically on overflow, no SafeMath required
+        return a + b;
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{safeMathContractSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `MyContract` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for MyContract (checked math): https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmNvbnRyYWN0IE15Q29udHJhY3QgewogICAgZnVuY3Rpb24gc2FmZUFkZCh1aW50MjU2IGEsIHVpbnQyNTYgYikgcHVibGljIHB1cmUgcmV0dXJucyAodWludDI1NikgewogICAgICAgIC8vIFNvbGlkaXR5IDAuOCsgcmV2ZXJ0cyBhdXRvbWF0aWNhbGx5IG9uIG92ZXJmbG93LCBubyBTYWZlTWF0aCByZXF1aXJlZAogICAgICAgIHJldHVybiBhICsgYjsKICAgIH0KfQ%3D%3D */}
+
+<RemixLaunchButton code={safeMathContractSource} />
+:::
 
 ## 4. Secure Randomness
 
@@ -383,42 +438,63 @@ Generating unpredictable random numbers on a deterministic blockchain is challen
 
 Chainlink VRF provides provably fair randomness using cryptographic proofs. You request randomness, and Chainlink's oracle returns it with a proof that can be verified on-chain.
 
+Chainlink VRF is not currently deployed on Rootstock. The example below targets a VRF-supported testnet (Ethereum Sepolia). Check the [VRF supported networks](https://docs.chain.link/vrf/v2-5/supported-networks) for the coordinator and key hash on your chosen network, and consider a Rootstock-native randomness source for production on Rootstock.
+
 ## Basic Example:
 
-```solidity
-import "@chainlink/contracts/src/v0.8/VRFConsumerBaseV2.sol";
-import "@chainlink/contracts/src/v0.8/interfaces/VRFCoordinatorV2Interface.sol";
+export const vrfConsumerContractSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
 
-contract RandomNumberConsumer is VRFConsumerBaseV2 {
-    VRFCoordinatorV2Interface COORDINATOR;
-    uint64 s_subscriptionId;
-    bytes32 keyHash = 0x...; // gas lane key hash
+import {VRFConsumerBaseV2Plus} from "@chainlink/contracts@1.5.0/src/v0.8/vrf/dev/VRFConsumerBaseV2Plus.sol";
+import {VRFV2PlusClient} from "@chainlink/contracts@1.5.0/src/v0.8/vrf/dev/libraries/VRFV2PlusClient.sol";
+
+contract RandomNumberConsumer is VRFConsumerBaseV2Plus {
+    uint256 s_subscriptionId;
+    // Ethereum Sepolia testnet 500 gwei gas lane. Chainlink VRF is not deployed on
+    // Rootstock, so deploy this on a VRF-supported network. Look up the keyHash and
+    // coordinator for your network at https://docs.chain.link/vrf/v2-5/supported-networks
+    bytes32 keyHash = 0x787d74caea10b2b357790d5b5247c2f63d1d91572a9846f780606e4d953677ae;
     uint32 callbackGasLimit = 100000;
     uint16 requestConfirmations = 3;
     uint32 numWords = 1;
 
     uint256 public s_randomWord;
 
-    constructor(uint64 subscriptionId, address vrfCoordinator) VRFConsumerBaseV2(vrfCoordinator) {
-        COORDINATOR = VRFCoordinatorV2Interface(vrfCoordinator);
+    // VRFConsumerBaseV2Plus takes the VRF v2.5 coordinator address
+    constructor(uint256 subscriptionId, address vrfCoordinator) VRFConsumerBaseV2Plus(vrfCoordinator) {
         s_subscriptionId = subscriptionId;
     }
 
     function requestRandomWord() external returns (uint256 requestId) {
-        requestId = COORDINATOR.requestRandomWords(
-            keyHash,
-            s_subscriptionId,
-            requestConfirmations,
-            callbackGasLimit,
-            numWords
+        requestId = s_vrfCoordinator.requestRandomWords(
+            VRFV2PlusClient.RandomWordsRequest({
+                keyHash: keyHash,
+                subId: s_subscriptionId,
+                requestConfirmations: requestConfirmations,
+                callbackGasLimit: callbackGasLimit,
+                numWords: numWords,
+                // set nativePayment to true to pay for VRF requests with native tokens
+                extraArgs: VRFV2PlusClient._argsToBytes(
+                    VRFV2PlusClient.ExtraArgsV1({nativePayment: false})
+                )
+            })
         );
     }
 
-    function fulfillRandomWords(uint256 requestId, uint256[] memory randomWords) internal override {
+    function fulfillRandomWords(uint256 requestId, uint256[] calldata randomWords) internal override {
         s_randomWord = randomWords[0];
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{vrfConsumerContractSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `RandomNumberConsumer` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for RandomNumberConsumer: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmltcG9ydCB7VlJGQ29uc3VtZXJCYXNlVjJQbHVzfSBmcm9tICJAY2hhaW5saW5rL2NvbnRyYWN0c0AxLjUuMC9zcmMvdjAuOC92cmYvZGV2L1ZSRkNvbnN1bWVyQmFzZVYyUGx1cy5zb2wiOwppbXBvcnQge1ZSRlYyUGx1c0NsaWVudH0gZnJvbSAiQGNoYWlubGluay9jb250cmFjdHNAMS41LjAvc3JjL3YwLjgvdnJmL2Rldi9saWJyYXJpZXMvVlJGVjJQbHVzQ2xpZW50LnNvbCI7Cgpjb250cmFjdCBSYW5kb21OdW1iZXJDb25zdW1lciBpcyBWUkZDb25zdW1lckJhc2VWMlBsdXMgewogICAgdWludDI1NiBzX3N1YnNjcmlwdGlvbklkOwogICAgLy8gRXRoZXJldW0gU2Vwb2xpYSB0ZXN0bmV0IDUwMCBnd2VpIGdhcyBsYW5lLiBDaGFpbmxpbmsgVlJGIGlzIG5vdCBkZXBsb3llZCBvbgogICAgLy8gUm9vdHN0b2NrLCBzbyBkZXBsb3kgdGhpcyBvbiBhIFZSRi1zdXBwb3J0ZWQgbmV0d29yay4gTG9vayB1cCB0aGUga2V5SGFzaCBhbmQKICAgIC8vIGNvb3JkaW5hdG9yIGZvciB5b3VyIG5ldHdvcmsgYXQgaHR0cHM6Ly9kb2NzLmNoYWluLmxpbmsvdnJmL3YyLTUvc3VwcG9ydGVkLW5ldHdvcmtzCiAgICBieXRlczMyIGtleUhhc2ggPSAweDc4N2Q3NGNhZWExMGIyYjM1Nzc5MGQ1YjUyNDdjMmY2M2QxZDkxNTcyYTk4NDZmNzgwNjA2ZTRkOTUzNjc3YWU7CiAgICB1aW50MzIgY2FsbGJhY2tHYXNMaW1pdCA9IDEwMDAwMDsKICAgIHVpbnQxNiByZXF1ZXN0Q29uZmlybWF0aW9ucyA9IDM7CiAgICB1aW50MzIgbnVtV29yZHMgPSAxOwoKICAgIHVpbnQyNTYgcHVibGljIHNfcmFuZG9tV29yZDsKCiAgICAvLyBWUkZDb25zdW1lckJhc2VWMlBsdXMgdGFrZXMgdGhlIFZSRiB2Mi41IGNvb3JkaW5hdG9yIGFkZHJlc3MKICAgIGNvbnN0cnVjdG9yKHVpbnQyNTYgc3Vic2NyaXB0aW9uSWQsIGFkZHJlc3MgdnJmQ29vcmRpbmF0b3IpIFZSRkNvbnN1bWVyQmFzZVYyUGx1cyh2cmZDb29yZGluYXRvcikgewogICAgICAgIHNfc3Vic2NyaXB0aW9uSWQgPSBzdWJzY3JpcHRpb25JZDsKICAgIH0KCiAgICBmdW5jdGlvbiByZXF1ZXN0UmFuZG9tV29yZCgpIGV4dGVybmFsIHJldHVybnMgKHVpbnQyNTYgcmVxdWVzdElkKSB7CiAgICAgICAgcmVxdWVzdElkID0gc192cmZDb29yZGluYXRvci5yZXF1ZXN0UmFuZG9tV29yZHMoCiAgICAgICAgICAgIFZSRlYyUGx1c0NsaWVudC5SYW5kb21Xb3Jkc1JlcXVlc3QoewogICAgICAgICAgICAgICAga2V5SGFzaDoga2V5SGFzaCwKICAgICAgICAgICAgICAgIHN1YklkOiBzX3N1YnNjcmlwdGlvbklkLAogICAgICAgICAgICAgICAgcmVxdWVzdENvbmZpcm1hdGlvbnM6IHJlcXVlc3RDb25maXJtYXRpb25zLAogICAgICAgICAgICAgICAgY2FsbGJhY2tHYXNMaW1pdDogY2FsbGJhY2tHYXNMaW1pdCwKICAgICAgICAgICAgICAgIG51bVdvcmRzOiBudW1Xb3JkcywKICAgICAgICAgICAgICAgIC8vIHNldCBuYXRpdmVQYXltZW50IHRvIHRydWUgdG8gcGF5IGZvciBWUkYgcmVxdWVzdHMgd2l0aCBuYXRpdmUgdG9rZW5zCiAgICAgICAgICAgICAgICBleHRyYUFyZ3M6IFZSRlYyUGx1c0NsaWVudC5fYXJnc1RvQnl0ZXMoCiAgICAgICAgICAgICAgICAgICAgVlJGVjJQbHVzQ2xpZW50LkV4dHJhQXJnc1YxKHtuYXRpdmVQYXltZW50OiBmYWxzZX0pCiAgICAgICAgICAgICAgICApCiAgICAgICAgICAgIH0pCiAgICAgICAgKTsKICAgIH0KCiAgICBmdW5jdGlvbiBmdWxmaWxsUmFuZG9tV29yZHModWludDI1NiByZXF1ZXN0SWQsIHVpbnQyNTZbXSBjYWxsZGF0YSByYW5kb21Xb3JkcykgaW50ZXJuYWwgb3ZlcnJpZGUgewogICAgICAgIHNfcmFuZG9tV29yZCA9IHJhbmRvbVdvcmRzWzBdOwogICAgfQp9 */}
+
+<RemixLaunchButton code={vrfConsumerContractSource} />
+:::
 
 ## Commit-Reveal Schemes
 For simple applications (like a lottery), you can use a commit-reveal scheme where users commit a hashed secret and later reveal it. The final random number can be a combination of all revealed secrets (e.g., XOR or hash of concatenation). This prevents last-minute manipulation but requires multiple transactions.
@@ -438,19 +514,33 @@ DeFi protocols often need upgrades. Use proxy patterns (UUPS or Transparent) fro
 
 ## Example: UUPS Proxy
 
-```solidity
-import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
+export const uupsContractSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import "@openzeppelin/contracts-upgradeable@5.6.1/proxy/utils/Initializable.sol";
+import "@openzeppelin/contracts-upgradeable@5.6.1/proxy/utils/UUPSUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable@5.6.1/access/OwnableUpgradeable.sol";
 
 contract MyContractV1 is Initializable, UUPSUpgradeable, OwnableUpgradeable {
     function initialize() public initializer {
-        __Ownable_init();
+        // OZ v5 OwnableUpgradeable takes the initial owner as an argument
+        __Ownable_init(msg.sender);
         __UUPSUpgradeable_init();
     }
 
     function _authorizeUpgrade(address newImplementation) internal override onlyOwner {}
-}
-```
+}`;
+
+<CodeBlock language="solidity">{uupsContractSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `MyContractV1` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for MyContractV1 (UUPS): https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHMtdXBncmFkZWFibGVANS42LjEvcHJveHkvdXRpbHMvSW5pdGlhbGl6YWJsZS5zb2wiOwppbXBvcnQgIkBvcGVuemVwcGVsaW4vY29udHJhY3RzLXVwZ3JhZGVhYmxlQDUuNi4xL3Byb3h5L3V0aWxzL1VVUFNVcGdyYWRlYWJsZS5zb2wiOwppbXBvcnQgIkBvcGVuemVwcGVsaW4vY29udHJhY3RzLXVwZ3JhZGVhYmxlQDUuNi4xL2FjY2Vzcy9Pd25hYmxlVXBncmFkZWFibGUuc29sIjsKCmNvbnRyYWN0IE15Q29udHJhY3RWMSBpcyBJbml0aWFsaXphYmxlLCBVVVBTVXBncmFkZWFibGUsIE93bmFibGVVcGdyYWRlYWJsZSB7CiAgICBmdW5jdGlvbiBpbml0aWFsaXplKCkgcHVibGljIGluaXRpYWxpemVyIHsKICAgICAgICAvLyBPWiB2NSBPd25hYmxlVXBncmFkZWFibGUgdGFrZXMgdGhlIGluaXRpYWwgb3duZXIgYXMgYW4gYXJndW1lbnQKICAgICAgICBfX093bmFibGVfaW5pdChtc2cuc2VuZGVyKTsKICAgICAgICBfX1VVUFNVcGdyYWRlYWJsZV9pbml0KCk7CiAgICB9CgogICAgZnVuY3Rpb24gX2F1dGhvcml6ZVVwZ3JhZGUoYWRkcmVzcyBuZXdJbXBsZW1lbnRhdGlvbikgaW50ZXJuYWwgb3ZlcnJpZGUgb25seU93bmVyIHt9Cn0%3D */}
+
+<RemixLaunchButton code={uupsContractSource} />
+:::
+
 ### Upgrade script:
 
 ```javascript
@@ -496,8 +586,10 @@ Chainlink provides aggregated price data from multiple high-quality sources. But
 
 **Safe Chainlink Integration:**
 
-```solidity
-import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
+export const priceConsumerContractSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import "@chainlink/contracts@1.5.0/src/v0.8/shared/interfaces/AggregatorV3Interface.sol";
 
 contract PriceConsumer {
     AggregatorV3Interface internal priceFeed;
@@ -526,8 +618,18 @@ contract PriceConsumer {
 
         return price;
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{priceConsumerContractSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `PriceConsumer` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for PriceConsumer: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmltcG9ydCAiQGNoYWlubGluay9jb250cmFjdHNAMS41LjAvc3JjL3YwLjgvc2hhcmVkL2ludGVyZmFjZXMvQWdncmVnYXRvclYzSW50ZXJmYWNlLnNvbCI7Cgpjb250cmFjdCBQcmljZUNvbnN1bWVyIHsKICAgIEFnZ3JlZ2F0b3JWM0ludGVyZmFjZSBpbnRlcm5hbCBwcmljZUZlZWQ7CgogICAgY29uc3RydWN0b3IoYWRkcmVzcyBmZWVkQWRkcmVzcykgewogICAgICAgIHByaWNlRmVlZCA9IEFnZ3JlZ2F0b3JWM0ludGVyZmFjZShmZWVkQWRkcmVzcyk7CiAgICB9CgogICAgZnVuY3Rpb24gZ2V0TGF0ZXN0UHJpY2UoKSBwdWJsaWMgdmlldyByZXR1cm5zIChpbnQyNTYpIHsKICAgICAgICAoCiAgICAgICAgICAgIHVpbnQ4MCByb3VuZElELAogICAgICAgICAgICBpbnQyNTYgcHJpY2UsCiAgICAgICAgICAgICwKICAgICAgICAgICAgdWludDI1NiB1cGRhdGVkQXQsCiAgICAgICAgICAgIHVpbnQ4MCBhbnN3ZXJlZEluUm91bmQKICAgICAgICApID0gcHJpY2VGZWVkLmxhdGVzdFJvdW5kRGF0YSgpOwoKICAgICAgICAvLyAxLiBDaGVjayBmcmVzaG5lc3MKICAgICAgICByZXF1aXJlKGJsb2NrLnRpbWVzdGFtcCAtIHVwZGF0ZWRBdCA8PSAxIGhvdXJzLCAiUHJpY2UgaXMgc3RhbGUiKTsKCiAgICAgICAgLy8gMi4gRW5zdXJlIHRoZSByb3VuZCBpcyBjb21wbGV0ZQogICAgICAgIHJlcXVpcmUoYW5zd2VyZWRJblJvdW5kID49IHJvdW5kSUQsICJSb3VuZCBpbmNvbXBsZXRlIik7CgogICAgICAgIC8vIDMuIFByaWNlIHNob3VsZCBiZSBwb3NpdGl2ZQogICAgICAgIHJlcXVpcmUocHJpY2UgPiAwLCAiSW52YWxpZCBwcmljZSIpOwoKICAgICAgICByZXR1cm4gcHJpY2U7CiAgICB9Cn0%3D */}
+
+<RemixLaunchButton code={priceConsumerContractSource} />
+:::
+
 ## Additional checks:
 
 Compare the price against a deviation threshold (e.g., not more than 10% from last price).
@@ -717,10 +819,16 @@ it("should resist flash loan price manipulation", async () => {
 
 Implement pause functionality to stop the protocol in case of emergency.
 
-```solidity
-import "@openzeppelin/contracts/security/Pausable.sol";
+export const pausableContractSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
 
-contract MyProtocol is Pausable {
+import "@openzeppelin/contracts@5.6.1/utils/Pausable.sol";
+import "@openzeppelin/contracts@5.6.1/access/Ownable.sol";
+
+contract MyProtocol is Pausable, Ownable {
+    // OZ v5 Ownable requires the initial owner in the constructor
+    constructor() Ownable(msg.sender) {}
+
     function swap() external whenNotPaused {
         // ...
     }
@@ -728,8 +836,18 @@ contract MyProtocol is Pausable {
     function pause() external onlyOwner {
         _pause();
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{pausableContractSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `MyProtocol` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for MyProtocol (Pausable): https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvdXRpbHMvUGF1c2FibGUuc29sIjsKaW1wb3J0ICJAb3BlbnplcHBlbGluL2NvbnRyYWN0c0A1LjYuMS9hY2Nlc3MvT3duYWJsZS5zb2wiOwoKY29udHJhY3QgTXlQcm90b2NvbCBpcyBQYXVzYWJsZSwgT3duYWJsZSB7CiAgICAvLyBPWiB2NSBPd25hYmxlIHJlcXVpcmVzIHRoZSBpbml0aWFsIG93bmVyIGluIHRoZSBjb25zdHJ1Y3RvcgogICAgY29uc3RydWN0b3IoKSBPd25hYmxlKG1zZy5zZW5kZXIpIHt9CgogICAgZnVuY3Rpb24gc3dhcCgpIGV4dGVybmFsIHdoZW5Ob3RQYXVzZWQgewogICAgICAgIC8vIC4uLgogICAgfQoKICAgIGZ1bmN0aW9uIHBhdXNlKCkgZXh0ZXJuYWwgb25seU93bmVyIHsKICAgICAgICBfcGF1c2UoKTsKICAgIH0KfQ%3D%3D */}
+
+<RemixLaunchButton code={pausableContractSource} />
+:::
+
 ## 9. Input Validation
 
 Always validate user inputs, especially addresses and amounts. Use require statements.
