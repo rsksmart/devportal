@@ -13,6 +13,7 @@ description: "Explore a curated selection of smart contract development tools an
     {label: 'Starter Kits', value: 'demos'},
     {label: 'AI', value: 'ai'},
     {label: 'Wallets', value: 'wallet'},
+    {label: 'Payments', value: 'payments'},
     {label: 'CLI', value: 'cli'},
     {label: 'Exchanges', value: 'exchange'},
     {label: 'Explorers', value: 'explorer'},
@@ -235,13 +236,13 @@ description: "Explore a curated selection of smart contract development tools an
     description="The Flyover protocol performs fast peg-ins and peg-outs between Bitcoin and Rootstock networks."
   />
 <FilterItem
-    value="sdk, dev-tools"
-    title="Prism"
+    value="payments, sdk, dev-tools"
+    title="Geyser"
     subtitle="payments"
     color="orange"
     linkHref="/use-cases/payments-assets/prism-payment-splits/"
-    linkTitle="Payment splits"
-    description="Split one Lightning or on-chain Bitcoin payment into multiple payouts on Rootstock."
+    linkTitle="Geyser Prism on Rootstock"
+    description="Geyser crowdfunding with Prism payment splits. Route one Lightning or on-chain Bitcoin payment to multiple recipients on Rootstock."
   />
 <FilterItem
     value="data"
@@ -710,6 +711,15 @@ description: "Explore a curated selection of smart contract development tools an
     linkHref="/use-cases/onboarding-ux/para/"
     linkTitle="Use Para"
     description="Para is a modern wallet infrastructure for fintech and crypto applications. It provides a comprehensive wallet and authentication suite for crypto developers and apps."
+  />
+  <FilterItem
+    value="wallet, sc"
+    title="BitTasker"
+    subtitle="wallets"
+    color="orange"
+    linkHref="/dev-tools/wallets/bittasker/"
+    linkTitle="Use BitTasker Wallet SDK"
+    description="Open-source @bittasker/wallet-core SDK for embedded rBTC wallets with Lightning and Liquid swaps on Rootstock."
   />
   <!-- <FilterItem
     value="cli"
