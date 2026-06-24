@@ -87,6 +87,23 @@ for (const locale of LOCALES) {
   console.log('');
 }
 
+const requiredMarkdownPaths = [
+  'index.md',
+  'concepts/glossary/index.md',
+  'developers/quickstart/index.md',
+  'developers/integrate/flyover/index.md',
+];
+
+for (const relPath of requiredMarkdownPaths) {
+  const filePath = path.join(BUILD_DIR, relPath);
+  if (!fs.existsSync(filePath)) {
+    failed = true;
+    console.error(`✗ Missing markdown artifact: build/${relPath}`);
+  } else {
+    console.log(`✓ build/${relPath}`);
+  }
+}
+
 if (failed) {
   console.error('LLM artifact verification failed. Run `yarn build` and check docusaurus-plugin-llms output.');
   process.exit(1);

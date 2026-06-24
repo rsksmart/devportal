@@ -38,9 +38,22 @@ function walkMarkdownFiles(dir, callback, relativeBase = dir) {
   }
 }
 
+function stripNumberedPrefix(segment) {
+  return segment.replace(/^\d+-/, '');
+}
+
+/** Strip numeric sort prefixes from each path segment (e.g. 04-quickstart → quickstart). */
+function toCleanRelativePath(relPath) {
+  return relPath
+    .split(path.sep)
+    .map(stripNumberedPrefix)
+    .join(path.sep);
+}
+
 /**
  * Mirror markdown from numbered doc folders (01-concepts, etc.) onto clean public
- * routes (concepts, etc.). Numbered paths are kept for backward compatibility.
+ * routes (concepts, etc.). Nested folder prefixes (04-quickstart) are stripped to
+ * match Docusaurus slugs (quickstart).
  */
 function copyMarkdownToCleanPaths(outDir) {
   let copied = 0;
@@ -54,17 +67,17 @@ function copyMarkdownToCleanPaths(outDir) {
       }
 
       walkMarkdownFiles(srcRoot, (srcPath, relPath) => {
-        const normalized = relPath.split(path.sep).join('/');
-        copyFileEnsuringDir(srcPath, path.join(cleanRoot, normalized));
+        const cleanRelative = toCleanRelativePath(relPath).split(path.sep).join('/');
+        copyFileEnsuringDir(srcPath, path.join(cleanRoot, cleanRelative));
         copied += 1;
 
         // Doc slug files (e.g. glossary.md) also get index.md for trailingSlash routes.
-        if (!normalized.endsWith('/index.md') && !normalized.includes('/')) {
-          const slug = path.basename(normalized, '.md');
+        if (!cleanRelative.endsWith('/index.md') && !cleanRelative.includes('/')) {
+          const slug = path.basename(cleanRelative, '.md');
           copyFileEnsuringDir(srcPath, path.join(cleanRoot, slug, 'index.md'));
           copied += 1;
-        } else if (normalized.endsWith('.md') && !normalized.endsWith('/index.md')) {
-          const parts = normalized.split('/');
+        } else if (cleanRelative.endsWith('.md') && !cleanRelative.endsWith('/index.md')) {
+          const parts = cleanRelative.split('/');
           const slug = parts.pop().replace(/\.md$/, '');
           const parent = parts.join('/');
           copyFileEnsuringDir(
@@ -85,4 +98,9 @@ function copyMarkdownToCleanPaths(outDir) {
   return copied;
 }
 
-module.exports = {copyMarkdownToCleanPaths, NUMBERED_TO_CLEAN};
+module.exports = {
+  copyMarkdownToCleanPaths,
+  NUMBERED_TO_CLEAN,
+  stripNumberedPrefix,
+  toCleanRelativePath,
+};
