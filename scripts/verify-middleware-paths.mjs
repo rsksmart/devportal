@@ -10,6 +10,7 @@ import { fileURLToPath } from 'url';
 import {
   DOC_SECTIONS,
   LOCALES,
+  MIDDLEWARE_MATCHERS,
   resolveMarkdownPath,
   wantsMarkdownAccept,
 } from '../lib/markdown-negotiation-paths.js';
@@ -17,6 +18,10 @@ import {
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const middlewareSource = fs.readFileSync(
   path.join(__dirname, '..', 'middleware.js'),
+  'utf8',
+);
+const libSource = fs.readFileSync(
+  path.join(__dirname, '..', 'lib', 'markdown-negotiation-paths.js'),
   'utf8',
 );
 
@@ -73,19 +78,55 @@ if (wantsMarkdownAccept('text/html')) {
   console.error('✗ wantsMarkdownAccept should reject html-only Accept');
 }
 
-if (!middlewareSource.includes(`(?:${DOC_SECTIONS})`)) {
+if (!middlewareSource.includes('MIDDLEWARE_MATCHERS')) {
   failed = true;
-  console.error('✗ middleware.js matcher is out of sync with DOC_SECTIONS');
+  console.error('✗ middleware.js must set config.matcher to MIDDLEWARE_MATCHERS');
 }
 
-if (!middlewareSource.includes(`(?:${LOCALES})/`)) {
+const sections = DOC_SECTIONS.split('|');
+const locales = LOCALES.split('|');
+
+if (MIDDLEWARE_MATCHERS[0] !== '/') {
   failed = true;
-  console.error('✗ middleware.js matcher is out of sync with LOCALES');
+  console.error('✗ MIDDLEWARE_MATCHERS must start with "/"');
+}
+
+for (const section of sections) {
+  const expected = `/${section}/:path*`;
+  if (!MIDDLEWARE_MATCHERS.includes(expected)) {
+    failed = true;
+    console.error(`✗ MIDDLEWARE_MATCHERS missing ${expected}`);
+  }
+}
+
+for (const locale of locales) {
+  for (const section of sections) {
+    const expected = `/${locale}/${section}/:path*`;
+    if (!MIDDLEWARE_MATCHERS.includes(expected)) {
+      failed = true;
+      console.error(`✗ MIDDLEWARE_MATCHERS missing ${expected}`);
+    }
+  }
+}
+
+if (!libSource.includes('/:path*')) {
+  failed = true;
+  console.error('✗ MIDDLEWARE_MATCHERS must be built with path-to-regexp /:path* segments');
 }
 
 if (/\$\{DOC_SECTIONS\}|\$\{LOCALES\}/.test(middlewareSource)) {
   failed = true;
-  console.error('✗ middleware.js matcher must use static literals, not template expressions');
+  console.error('✗ middleware.js matcher must not use template expressions');
+}
+
+const sectionCount = DOC_SECTIONS.split('|').length;
+const localeCount = LOCALES.split('|').length;
+const expectedMatcherCount = 1 + sectionCount + sectionCount * localeCount;
+if (MIDDLEWARE_MATCHERS.length !== expectedMatcherCount) {
+  failed = true;
+  console.error(
+    `✗ MIDDLEWARE_MATCHERS length ${MIDDLEWARE_MATCHERS.length}, expected ${expectedMatcherCount}`,
+  );
 }
 
 if (failed) {

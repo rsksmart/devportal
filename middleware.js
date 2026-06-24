@@ -5,6 +5,7 @@
  */
 
 import {
+  MIDDLEWARE_MATCHERS,
   resolveMarkdownPath,
   wantsMarkdownAccept,
 } from './lib/markdown-negotiation-paths.js';
@@ -55,12 +56,6 @@ export default async function middleware(request) {
   });
 }
 
-// Matcher paths must be static literals (Vercel does not support template expressions here).
-// Keep in sync with DOC_SECTIONS and LOCALES in lib/markdown-negotiation-paths.js.
 export const config = {
-  matcher: [
-    '/',
-    '/(?:concepts|developers|node-operators|resources|dev-tools|use-cases)(?:/.*)?',
-    '/(?:es|ja|ko)/(?:concepts|developers|node-operators|resources|dev-tools|use-cases)(?:/.*)?',
-  ],
+  matcher: MIDDLEWARE_MATCHERS,
 };
