@@ -8,8 +8,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import {
-  DOC_SECTIONS,
-  LOCALES,
   MIDDLEWARE_MATCHERS,
   resolveMarkdownPath,
   wantsMarkdownAccept,
@@ -20,10 +18,17 @@ const middlewareSource = fs.readFileSync(
   path.join(__dirname, '..', 'middleware.js'),
   'utf8',
 );
-const libSource = fs.readFileSync(
-  path.join(__dirname, '..', 'lib', 'markdown-negotiation-paths.js'),
-  'utf8',
-);
+
+function extractMiddlewareMatchers(source) {
+  const blockMatch = source.match(/matcher:\s*\[([\s\S]*?)\n\s*\],/);
+  if (!blockMatch) {
+    return null;
+  }
+
+  return [...blockMatch[1].matchAll(/'([^']+)'|"([^"]+)"/g)].map(
+    (match) => match[1] ?? match[2],
+  );
+}
 
 const cases = [
   {
@@ -78,55 +83,39 @@ if (wantsMarkdownAccept('text/html')) {
   console.error('✗ wantsMarkdownAccept should reject html-only Accept');
 }
 
-if (!middlewareSource.includes('MIDDLEWARE_MATCHERS')) {
+const inlineMatchers = extractMiddlewareMatchers(middlewareSource);
+if (!inlineMatchers) {
   failed = true;
-  console.error('✗ middleware.js must set config.matcher to MIDDLEWARE_MATCHERS');
-}
-
-const sections = DOC_SECTIONS.split('|');
-const locales = LOCALES.split('|');
-
-if (MIDDLEWARE_MATCHERS[0] !== '/') {
+  console.error('✗ middleware.js must declare config.matcher as a string literal array');
+} else if (inlineMatchers.length !== MIDDLEWARE_MATCHERS.length) {
   failed = true;
-  console.error('✗ MIDDLEWARE_MATCHERS must start with "/"');
-}
-
-for (const section of sections) {
-  const expected = `/${section}/:path*`;
-  if (!MIDDLEWARE_MATCHERS.includes(expected)) {
-    failed = true;
-    console.error(`✗ MIDDLEWARE_MATCHERS missing ${expected}`);
-  }
-}
-
-for (const locale of locales) {
-  for (const section of sections) {
-    const expected = `/${locale}/${section}/:path*`;
-    if (!MIDDLEWARE_MATCHERS.includes(expected)) {
+  console.error(
+    `✗ middleware.js matcher count ${inlineMatchers.length}, expected ${MIDDLEWARE_MATCHERS.length}`,
+  );
+} else {
+  for (let i = 0; i < MIDDLEWARE_MATCHERS.length; i += 1) {
+    if (inlineMatchers[i] !== MIDDLEWARE_MATCHERS[i]) {
       failed = true;
-      console.error(`✗ MIDDLEWARE_MATCHERS missing ${expected}`);
+      console.error(`✗ middleware.js matcher[${i}] mismatch`);
+      console.error(`  expected: ${JSON.stringify(MIDDLEWARE_MATCHERS[i])}`);
+      console.error(`  actual:   ${JSON.stringify(inlineMatchers[i])}`);
     }
   }
 }
 
-if (!libSource.includes('/:path*')) {
+if (/matcher:\s*MIDDLEWARE_MATCHERS/.test(middlewareSource)) {
   failed = true;
-  console.error('✗ MIDDLEWARE_MATCHERS must be built with path-to-regexp /:path* segments');
+  console.error('✗ middleware.js config.matcher must be a literal array, not an identifier');
 }
 
-if (/\$\{DOC_SECTIONS\}|\$\{LOCALES\}/.test(middlewareSource)) {
+if (/\(\?:/.test(middlewareSource)) {
+  failed = true;
+  console.error('✗ middleware.js matcher must use path-to-regexp syntax, not regex (?:...)');
+}
+
+if (/\$\{/.test(middlewareSource)) {
   failed = true;
   console.error('✗ middleware.js matcher must not use template expressions');
-}
-
-const sectionCount = DOC_SECTIONS.split('|').length;
-const localeCount = LOCALES.split('|').length;
-const expectedMatcherCount = 1 + sectionCount + sectionCount * localeCount;
-if (MIDDLEWARE_MATCHERS.length !== expectedMatcherCount) {
-  failed = true;
-  console.error(
-    `✗ MIDDLEWARE_MATCHERS length ${MIDDLEWARE_MATCHERS.length}, expected ${expectedMatcherCount}`,
-  );
 }
 
 if (failed) {
@@ -135,3 +124,4 @@ if (failed) {
 }
 
 console.log(`✓ ${cases.length} path resolution checks passed`);
+console.log(`✓ ${inlineMatchers.length} middleware matcher paths in sync`);
