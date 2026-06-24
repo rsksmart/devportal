@@ -5,6 +5,8 @@ title: Omnichain Liquidity Routing on Rootstock with LI.FI
 tags: [interoperability, bridges, lifi, widget, sdk, cross-chain, omnichain]
 description: "Integrate LI.FI into your Rootstock dApp to enable one-transaction cross-chain liquidity routing from Ethereum, Arbitrum, Base, and more directly into your EVM-compatible contracts."
 ---
+import CodeBlock from '@theme/CodeBlock';
+
 Rootstock is natively supported by [LI.FI](https://li.fi), a cross-chain liquidity aggregator. LI.FI routes swaps and bridges across dozens of chains and protocols, including Hop, Stargate, Across, and Gas.zip. It delivers the specific destination token your users select (for example, bridged USDC on Rootstock), straight to Rootstock, in a single transaction.
 
 This guide covers three integration paths:
@@ -190,11 +192,10 @@ This integration uses `getContractCallsQuote` from the SDK v3. It bridges tokens
 
 Deploy a contract that accepts the bridged token and executes your protocol logic. The LI.FI Composer transfers the token to your contract and then calls your function.
 
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+export const yieldReceiverSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
 
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "@openzeppelin/contracts@5.6.1/token/ERC20/IERC20.sol";
 
 // IYieldProtocol is a placeholder for any Rootstock yield vault interface
 interface IYieldProtocol {
@@ -245,8 +246,17 @@ contract RootstockYieldReceiver {
 
         emit Deposited(recipient, amount, shares);
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{yieldReceiverSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `RootstockYieldReceiver` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for RootstockYieldReceiver: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvdG9rZW4vRVJDMjAvSUVSQzIwLnNvbCI7CgovLyBJWWllbGRQcm90b2NvbCBpcyBhIHBsYWNlaG9sZGVyIGZvciBhbnkgUm9vdHN0b2NrIHlpZWxkIHZhdWx0IGludGVyZmFjZQppbnRlcmZhY2UgSVlpZWxkUHJvdG9jb2wgewogICAgZnVuY3Rpb24gZGVwb3NpdCh1aW50MjU2IGFtb3VudCwgYWRkcmVzcyByZWNlaXZlcikgZXh0ZXJuYWwgcmV0dXJucyAodWludDI1NiBzaGFyZXMpOwp9Cgpjb250cmFjdCBSb290c3RvY2tZaWVsZFJlY2VpdmVyIHsKICAgIC8vIFRoZSBMSS5GSSBEaWFtb25kIGFkZHJlc3Mgb24gUm9vdHN0b2NrLCB1c2VkIHRvIGF1dGhvcml6ZSBpbmNvbWluZyBDb21wb3NlciBjYWxscwogICAgLy8gUmVhZCB0aGlzIGZyb20gdGhlIHF1b3RlIHJlc3BvbnNlIHRyYW5zYWN0aW9uUmVxdWVzdC50byBmaWVsZCBhdCBkZXBsb3kgdGltZQogICAgLy8gRG8gTk9UIGhhcmRjb2RlIHRoaXMgYWNyb3NzIGRpZmZlcmVudCBuZXR3b3JrcyAtIHRoZSBhZGRyZXNzIHZhcmllcyBwZXIgY2hhaW4KICAgIGFkZHJlc3MgcHVibGljIGltbXV0YWJsZSBsaWZpRGlhbW9uZDsKCiAgICAvLyBUaGUgeWllbGQgdmF1bHQgdGhhdCBhY2NlcHRzIFVTREMgZGVwb3NpdHMgb24gUm9vdHN0b2NrCiAgICBJWWllbGRQcm90b2NvbCBwdWJsaWMgaW1tdXRhYmxlIHlpZWxkVmF1bHQ7CgogICAgLy8gRW1pdCBhbiBldmVudCBzbyBmcm9udGVuZHMgY2FuIHRyYWNrIHN1Y2Nlc3NmdWwgZGVwb3NpdHMKICAgIGV2ZW50IERlcG9zaXRlZChhZGRyZXNzIGluZGV4ZWQgdXNlciwgdWludDI1NiBhbW91bnQsIHVpbnQyNTYgc2hhcmVzKTsKCiAgICBlcnJvciBVbmF1dGhvcml6ZWRDYWxsZXIoYWRkcmVzcyBjYWxsZXIpOwoKICAgIGNvbnN0cnVjdG9yKGFkZHJlc3MgX2xpZmlEaWFtb25kLCBhZGRyZXNzIF95aWVsZFZhdWx0KSB7CiAgICAgICAgbGlmaURpYW1vbmQgPSBfbGlmaURpYW1vbmQ7CiAgICAgICAgeWllbGRWYXVsdCA9IElZaWVsZFByb3RvY29sKF95aWVsZFZhdWx0KTsKICAgIH0KCiAgICAvLyBMSS5GSSBDb21wb3NlciBjYWxscyB0aGlzIGZ1bmN0aW9uIGFmdGVyIGJyaWRnaW5nIHRva2VucyB0byB0aGlzIGNvbnRyYWN0CiAgICAvLyB0b2tlbiAgICAgLSB0aGUgYnJpZGdlZCB0b2tlbiBhZGRyZXNzIChicmlkZ2VkIFVTREMgb24gUm9vdHN0b2NrKQogICAgLy8gYW1vdW50ICAgIC0gdGhlIGFtb3VudCByZWNlaXZlZCBhZnRlciBicmlkZ2luZyBmZWVzCiAgICAvLyByZWNpcGllbnQgLSB0aGUgb3JpZ2luYWwgdXNlciBhZGRyZXNzIHBhc3NlZCBpbiBmcm9tIHRoZSBzb3VyY2UgY2hhaW4KICAgIGZ1bmN0aW9uIHN3YXBBbmREZXBvc2l0KAogICAgICAgIGFkZHJlc3MgdG9rZW4sCiAgICAgICAgdWludDI1NiBhbW91bnQsCiAgICAgICAgYWRkcmVzcyByZWNpcGllbnQKICAgICkgZXh0ZXJuYWwgewogICAgICAgIC8vIFJlc3RyaWN0IGNhbGxzIHRvIHRoZSBMSS5GSSBEaWFtb25kIG9ubHkKICAgICAgICBpZiAobXNnLnNlbmRlciAhPSBsaWZpRGlhbW9uZCkgewogICAgICAgICAgICByZXZlcnQgVW5hdXRob3JpemVkQ2FsbGVyKG1zZy5zZW5kZXIpOwogICAgICAgIH0KCiAgICAgICAgLy8gUHVsbCB0aGUgYnJpZGdlZCB0b2tlbnMgZnJvbSB0aGUgQ29tcG9zZXIgaW50byB0aGlzIGNvbnRyYWN0CiAgICAgICAgSUVSQzIwKHRva2VuKS50cmFuc2ZlckZyb20obXNnLnNlbmRlciwgYWRkcmVzcyh0aGlzKSwgYW1vdW50KTsKCiAgICAgICAgLy8gQXBwcm92ZSB0aGUgeWllbGQgdmF1bHQgdG8gc3BlbmQgdGhlIGJyaWRnZWQgdG9rZW5zCiAgICAgICAgSUVSQzIwKHRva2VuKS5hcHByb3ZlKGFkZHJlc3MoeWllbGRWYXVsdCksIGFtb3VudCk7CgogICAgICAgIC8vIERlcG9zaXQgaW50byB0aGUgdmF1bHQgYW5kIGNyZWRpdCB0aGUgeWllbGQgc2hhcmVzIHRvIHRoZSBvcmlnaW5hbCB1c2VyCiAgICAgICAgdWludDI1NiBzaGFyZXMgPSB5aWVsZFZhdWx0LmRlcG9zaXQoYW1vdW50LCByZWNpcGllbnQpOwoKICAgICAgICBlbWl0IERlcG9zaXRlZChyZWNpcGllbnQsIGFtb3VudCwgc2hhcmVzKTsKICAgIH0KfQ%3D%3D */}
+
+<RemixLaunchButton code={yieldReceiverSource} />
+:::
 
 :::warning[Security Notice]
 Always restrict who can call your receiver function. Validate `msg.sender` against the LI.FI Diamond address as shown above. The Diamond address varies per chain. Fetch it from the quote response `transactionRequest.to` field and set it at constructor time for the target network.

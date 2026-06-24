@@ -6,6 +6,8 @@ description: 'Implement ERC-20, ERC-721, and Rootstock-specific token patterns w
 tags: [rsk, rootstock, defi, erc20, erc721, solidity]
 ---
 
+import CodeBlock from '@theme/CodeBlock';
+
 Tokens are the lifeblood of DeFi. This section covers ERC-20, ERC-721, and important extensions like ERC-20 Permit, ERC-4626, and rBTC wrapping.
 
 ## 1. ERC-20 Tokens
@@ -16,15 +18,14 @@ The ERC-20 standard is the foundation of fungible tokens on Ethereum-compatible 
 
 OpenZeppelin provides battle-tested, audited implementations. Always use these instead of writing your own from scratch.
 
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+export const myTokenSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
 
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts@5.6.1/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts@5.6.1/access/Ownable.sol";
 
 contract MyToken is ERC20, Ownable {
-    constructor() ERC20("MyToken", "MTK") {
+    constructor() ERC20("MyToken", "MTK") Ownable(msg.sender) {
         // Mint initial supply to the contract deployer
         _mint(msg.sender, 1000000 * 10 ** decimals());
     }
@@ -33,8 +34,17 @@ contract MyToken is ERC20, Ownable {
     function mint(address to, uint256 amount) public onlyOwner {
         _mint(to, amount);
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{myTokenSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `MyToken` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for MyToken: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvdG9rZW4vRVJDMjAvRVJDMjAuc29sIjsKaW1wb3J0ICJAb3BlbnplcHBlbGluL2NvbnRyYWN0c0A1LjYuMS9hY2Nlc3MvT3duYWJsZS5zb2wiOwoKY29udHJhY3QgTXlUb2tlbiBpcyBFUkMyMCwgT3duYWJsZSB7CiAgICBjb25zdHJ1Y3RvcigpIEVSQzIwKCJNeVRva2VuIiwgIk1USyIpIE93bmFibGUobXNnLnNlbmRlcikgewogICAgICAgIC8vIE1pbnQgaW5pdGlhbCBzdXBwbHkgdG8gdGhlIGNvbnRyYWN0IGRlcGxveWVyCiAgICAgICAgX21pbnQobXNnLnNlbmRlciwgMTAwMDAwMCAqIDEwICoqIGRlY2ltYWxzKCkpOwogICAgfQoKICAgIC8vIE9wdGlvbmFsOiBhbGxvdyBvd25lciB0byBtaW50IG1vcmUgdG9rZW5zCiAgICBmdW5jdGlvbiBtaW50KGFkZHJlc3MgdG8sIHVpbnQyNTYgYW1vdW50KSBwdWJsaWMgb25seU93bmVyIHsKICAgICAgICBfbWludCh0bywgYW1vdW50KTsKICAgIH0KfQ%3D%3D */}
+
+<RemixLaunchButton code={myTokenSource} />
+:::
 
 ### Key points:
 
@@ -52,15 +62,27 @@ Allows users to approve token spending with a signature, enabling gasless transa
 
 How it works: Users sign a message off-chain containing approval details (spender, amount, deadline, nonce). Anyone can submit that signature to the permit function, which sets the allowance without requiring the token holder to pay gas.
 
-```solidity
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol";
+export const myTokenPermitSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
+
+import "@openzeppelin/contracts@5.6.1/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts@5.6.1/token/ERC20/extensions/ERC20Permit.sol";
 
 contract MyTokenPermit is ERC20, ERC20Permit {
     constructor() ERC20("MyToken", "MTK") ERC20Permit("MyToken") {
         _mint(msg.sender, 1000000 * 10 ** decimals());
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{myTokenPermitSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `MyTokenPermit` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for MyTokenPermit: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvdG9rZW4vRVJDMjAvRVJDMjAuc29sIjsKaW1wb3J0ICJAb3BlbnplcHBlbGluL2NvbnRyYWN0c0A1LjYuMS90b2tlbi9FUkMyMC9leHRlbnNpb25zL0VSQzIwUGVybWl0LnNvbCI7Cgpjb250cmFjdCBNeVRva2VuUGVybWl0IGlzIEVSQzIwLCBFUkMyMFBlcm1pdCB7CiAgICBjb25zdHJ1Y3RvcigpIEVSQzIwKCJNeVRva2VuIiwgIk1USyIpIEVSQzIwUGVybWl0KCJNeVRva2VuIikgewogICAgICAgIF9taW50KG1zZy5zZW5kZXIsIDEwMDAwMDAgKiAxMCAqKiBkZWNpbWFscygpKTsKICAgIH0KfQ%3D%3D */}
+
+<RemixLaunchButton code={myTokenPermitSource} />
+:::
 
 ##### Usage example (frontend):
 
@@ -102,63 +124,116 @@ await token.permit(
 );
 ```
 
-#### ERC20Snapshot
-Creates snapshots of token balances at different points in time. Useful for governance (voting based on past balances) or dividend distribution.
+#### ERC20Votes (historical balances)
+OpenZeppelin v5 removed `ERC20Snapshot`. To track historical balances for governance (voting based on past balances) or dividend distribution, use `ERC20Votes`, which records checkpoints automatically on every transfer. Holders call `delegate` (often to themselves) to start accruing checkpoints.
 
-```solidity
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Snapshot.sol";
+export const myTokenVotesSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
 
-contract MyTokenSnapshot is ERC20, ERC20Snapshot, Ownable {
-    constructor() ERC20("MyToken", "MTK") {}
+import "@openzeppelin/contracts@5.6.1/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts@5.6.1/token/ERC20/extensions/ERC20Permit.sol";
+import "@openzeppelin/contracts@5.6.1/token/ERC20/extensions/ERC20Votes.sol";
+import "@openzeppelin/contracts@5.6.1/access/Ownable.sol";
+import "@openzeppelin/contracts@5.6.1/utils/Nonces.sol";
+
+contract MyTokenVotes is ERC20, ERC20Permit, ERC20Votes, Ownable {
+    constructor()
+        ERC20("MyToken", "MTK")
+        ERC20Permit("MyToken")
+        Ownable(msg.sender)
+    {}
 
     function mint(address to, uint256 amount) public onlyOwner {
         _mint(to, amount);
     }
 
-    function snapshot() public onlyOwner returns (uint256) {
-        return _snapshot();
+    // The following overrides are required by Solidity for ERC20Votes
+    function _update(address from, address to, uint256 value)
+        internal
+        override(ERC20, ERC20Votes)
+    {
+        super._update(from, to, value);
     }
 
-    // Override required functions
-    function _beforeTokenTransfer(address from, address to, uint256 amount)
-        internal
-        override(ERC20, ERC20Snapshot)
+    function nonces(address owner)
+        public
+        view
+        override(ERC20Permit, Nonces)
+        returns (uint256)
     {
-        super._beforeTokenTransfer(from, to, amount);
+        return super.nonces(owner);
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{myTokenVotesSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `MyTokenVotes` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for MyTokenVotes: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvdG9rZW4vRVJDMjAvRVJDMjAuc29sIjsKaW1wb3J0ICJAb3BlbnplcHBlbGluL2NvbnRyYWN0c0A1LjYuMS90b2tlbi9FUkMyMC9leHRlbnNpb25zL0VSQzIwUGVybWl0LnNvbCI7CmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvdG9rZW4vRVJDMjAvZXh0ZW5zaW9ucy9FUkMyMFZvdGVzLnNvbCI7CmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvYWNjZXNzL093bmFibGUuc29sIjsKaW1wb3J0ICJAb3BlbnplcHBlbGluL2NvbnRyYWN0c0A1LjYuMS91dGlscy9Ob25jZXMuc29sIjsKCmNvbnRyYWN0IE15VG9rZW5Wb3RlcyBpcyBFUkMyMCwgRVJDMjBQZXJtaXQsIEVSQzIwVm90ZXMsIE93bmFibGUgewogICAgY29uc3RydWN0b3IoKQogICAgICAgIEVSQzIwKCJNeVRva2VuIiwgIk1USyIpCiAgICAgICAgRVJDMjBQZXJtaXQoIk15VG9rZW4iKQogICAgICAgIE93bmFibGUobXNnLnNlbmRlcikKICAgIHt9CgogICAgZnVuY3Rpb24gbWludChhZGRyZXNzIHRvLCB1aW50MjU2IGFtb3VudCkgcHVibGljIG9ubHlPd25lciB7CiAgICAgICAgX21pbnQodG8sIGFtb3VudCk7CiAgICB9CgogICAgLy8gVGhlIGZvbGxvd2luZyBvdmVycmlkZXMgYXJlIHJlcXVpcmVkIGJ5IFNvbGlkaXR5IGZvciBFUkMyMFZvdGVzCiAgICBmdW5jdGlvbiBfdXBkYXRlKGFkZHJlc3MgZnJvbSwgYWRkcmVzcyB0bywgdWludDI1NiB2YWx1ZSkKICAgICAgICBpbnRlcm5hbAogICAgICAgIG92ZXJyaWRlKEVSQzIwLCBFUkMyMFZvdGVzKQogICAgewogICAgICAgIHN1cGVyLl91cGRhdGUoZnJvbSwgdG8sIHZhbHVlKTsKICAgIH0KCiAgICBmdW5jdGlvbiBub25jZXMoYWRkcmVzcyBvd25lcikKICAgICAgICBwdWJsaWMKICAgICAgICB2aWV3CiAgICAgICAgb3ZlcnJpZGUoRVJDMjBQZXJtaXQsIE5vbmNlcykKICAgICAgICByZXR1cm5zICh1aW50MjU2KQogICAgewogICAgICAgIHJldHVybiBzdXBlci5ub25jZXMob3duZXIpOwogICAgfQp9 */}
+
+<RemixLaunchButton code={myTokenVotesSource} />
+:::
 
 #### ERC20Burnable
 Allows token holders to burn their own tokens, reducing total supply.
 
-```solidity
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
+export const myTokenBurnableSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
+
+import "@openzeppelin/contracts@5.6.1/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts@5.6.1/token/ERC20/extensions/ERC20Burnable.sol";
 
 contract MyTokenBurnable is ERC20, ERC20Burnable {
     constructor() ERC20("MyToken", "MTK") {
         _mint(msg.sender, 1000000 * 10 ** decimals());
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{myTokenBurnableSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `MyTokenBurnable` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for MyTokenBurnable: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvdG9rZW4vRVJDMjAvRVJDMjAuc29sIjsKaW1wb3J0ICJAb3BlbnplcHBlbGluL2NvbnRyYWN0c0A1LjYuMS90b2tlbi9FUkMyMC9leHRlbnNpb25zL0VSQzIwQnVybmFibGUuc29sIjsKCmNvbnRyYWN0IE15VG9rZW5CdXJuYWJsZSBpcyBFUkMyMCwgRVJDMjBCdXJuYWJsZSB7CiAgICBjb25zdHJ1Y3RvcigpIEVSQzIwKCJNeVRva2VuIiwgIk1USyIpIHsKICAgICAgICBfbWludChtc2cuc2VuZGVyLCAxMDAwMDAwICogMTAgKiogZGVjaW1hbHMoKSk7CiAgICB9Cn0%3D */}
+
+<RemixLaunchButton code={myTokenBurnableSource} />
+:::
 
 #### ERC20Capped
 
 Enforces a maximum supply. Useful for creating capped tokens (like a capped sale).
 
-```solidity
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Capped.sol";
+export const myTokenCappedSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
+
+import "@openzeppelin/contracts@5.6.1/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts@5.6.1/token/ERC20/extensions/ERC20Capped.sol";
+import "@openzeppelin/contracts@5.6.1/access/Ownable.sol";
 
 contract MyTokenCapped is ERC20, ERC20Capped, Ownable {
-    constructor(uint256 cap) ERC20("MyToken", "MTK") ERC20Capped(cap * 10 ** decimals()) {
+    constructor(uint256 cap)
+        ERC20("MyToken", "MTK")
+        ERC20Capped(cap * 10 ** decimals())
+        Ownable(msg.sender)
+    {
         _mint(msg.sender, 500000 * 10 ** decimals());
     }
 
     function mint(address to, uint256 amount) public onlyOwner {
         _mint(to, amount);
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{myTokenCappedSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `MyTokenCapped` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for MyTokenCapped: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvdG9rZW4vRVJDMjAvRVJDMjAuc29sIjsKaW1wb3J0ICJAb3BlbnplcHBlbGluL2NvbnRyYWN0c0A1LjYuMS90b2tlbi9FUkMyMC9leHRlbnNpb25zL0VSQzIwQ2FwcGVkLnNvbCI7CmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvYWNjZXNzL093bmFibGUuc29sIjsKCmNvbnRyYWN0IE15VG9rZW5DYXBwZWQgaXMgRVJDMjAsIEVSQzIwQ2FwcGVkLCBPd25hYmxlIHsKICAgIGNvbnN0cnVjdG9yKHVpbnQyNTYgY2FwKQogICAgICAgIEVSQzIwKCJNeVRva2VuIiwgIk1USyIpCiAgICAgICAgRVJDMjBDYXBwZWQoY2FwICogMTAgKiogZGVjaW1hbHMoKSkKICAgICAgICBPd25hYmxlKG1zZy5zZW5kZXIpCiAgICB7CiAgICAgICAgX21pbnQobXNnLnNlbmRlciwgNTAwMDAwICogMTAgKiogZGVjaW1hbHMoKSk7CiAgICB9CgogICAgZnVuY3Rpb24gbWludChhZGRyZXNzIHRvLCB1aW50MjU2IGFtb3VudCkgcHVibGljIG9ubHlPd25lciB7CiAgICAgICAgX21pbnQodG8sIGFtb3VudCk7CiAgICB9Cn0%3D */}
+
+<RemixLaunchButton code={myTokenCappedSource} />
+:::
 ### Security Considerations for ERC-20
 
 Reentrancy: While transfer and transferFrom are not typically vulnerable to reentrancy, if you call external contracts during a transfer (e.g., hooks), use ReentrancyGuard.
@@ -169,8 +244,11 @@ Decimals: Always use decimals() when displaying token amounts; never assume 18.
 
 Return Values: Some old tokens don't return a boolean. OpenZeppelin's SafeERC20 wrapper handles this.
 
-```solidity
-import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
+export const safeERC20Source = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
+
+import "@openzeppelin/contracts@5.6.1/token/ERC20/utils/SafeERC20.sol";
+import "@openzeppelin/contracts@5.6.1/token/ERC20/IERC20.sol";
 
 contract MyContract {
     using SafeERC20 for IERC20;
@@ -178,8 +256,17 @@ contract MyContract {
     function safeTransfer(IERC20 token, address to, uint256 amount) external {
         token.safeTransfer(to, amount);
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{safeERC20Source}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `MyContract` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for MyContract: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvdG9rZW4vRVJDMjAvdXRpbHMvU2FmZUVSQzIwLnNvbCI7CmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvdG9rZW4vRVJDMjAvSUVSQzIwLnNvbCI7Cgpjb250cmFjdCBNeUNvbnRyYWN0IHsKICAgIHVzaW5nIFNhZmVFUkMyMCBmb3IgSUVSQzIwOwoKICAgIGZ1bmN0aW9uIHNhZmVUcmFuc2ZlcihJRVJDMjAgdG9rZW4sIGFkZHJlc3MgdG8sIHVpbnQyNTYgYW1vdW50KSBleHRlcm5hbCB7CiAgICAgICAgdG9rZW4uc2FmZVRyYW5zZmVyKHRvLCBhbW91bnQpOwogICAgfQp9 */}
+
+<RemixLaunchButton code={safeERC20Source} />
+:::
 
 ## 2. Wrapping RBTC (rBTC)
 
@@ -277,18 +364,19 @@ redeem(uint256 shares, address receiver, address owner) – Redeems shares for a
 ### Simple Vault Example
 Here's a minimal vault that simply holds assets and does not generate yield (like a wrapped token). In practice, you'd implement a strategy to generate yield.
 
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+export const simpleVaultSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
 
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC4626.sol";
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts@5.6.1/token/ERC20/extensions/ERC4626.sol";
+import "@openzeppelin/contracts@5.6.1/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts@5.6.1/token/ERC20/IERC20.sol";
+import "@openzeppelin/contracts@5.6.1/access/Ownable.sol";
 
 contract SimpleVault is ERC4626, Ownable {
     constructor(IERC20 asset)
         ERC20("Vault Share", "vToken")
         ERC4626(asset)
+        Ownable(msg.sender)
     {}
 
     // Optional: Override to implement a yield strategy
@@ -301,8 +389,17 @@ contract SimpleVault is ERC4626, Ownable {
     function invest() external onlyOwner {
         // ...
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{simpleVaultSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `SimpleVault` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for SimpleVault: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvdG9rZW4vRVJDMjAvZXh0ZW5zaW9ucy9FUkM0NjI2LnNvbCI7CmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvdG9rZW4vRVJDMjAvRVJDMjAuc29sIjsKaW1wb3J0ICJAb3BlbnplcHBlbGluL2NvbnRyYWN0c0A1LjYuMS90b2tlbi9FUkMyMC9JRVJDMjAuc29sIjsKaW1wb3J0ICJAb3BlbnplcHBlbGluL2NvbnRyYWN0c0A1LjYuMS9hY2Nlc3MvT3duYWJsZS5zb2wiOwoKY29udHJhY3QgU2ltcGxlVmF1bHQgaXMgRVJDNDYyNiwgT3duYWJsZSB7CiAgICBjb25zdHJ1Y3RvcihJRVJDMjAgYXNzZXQpCiAgICAgICAgRVJDMjAoIlZhdWx0IFNoYXJlIiwgInZUb2tlbiIpCiAgICAgICAgRVJDNDYyNihhc3NldCkKICAgICAgICBPd25hYmxlKG1zZy5zZW5kZXIpCiAgICB7fQoKICAgIC8vIE9wdGlvbmFsOiBPdmVycmlkZSB0byBpbXBsZW1lbnQgYSB5aWVsZCBzdHJhdGVneQogICAgZnVuY3Rpb24gdG90YWxBc3NldHMoKSBwdWJsaWMgdmlldyBvdmVycmlkZSByZXR1cm5zICh1aW50MjU2KSB7CiAgICAgICAgLy8gSW4gYSByZWFsIHZhdWx0LCB0aGlzIG1pZ2h0IGluY2x1ZGUgYXNzZXRzIHBsdXMgYWNjcnVlZCB5aWVsZAogICAgICAgIHJldHVybiBzdXBlci50b3RhbEFzc2V0cygpOwogICAgfQoKICAgIC8vIEV4YW1wbGU6IGFsbG93IG93bmVyIHRvIGludmVzdCBhc3NldHMgaW4gYSBsZW5kaW5nIHByb3RvY29sCiAgICBmdW5jdGlvbiBpbnZlc3QoKSBleHRlcm5hbCBvbmx5T3duZXIgewogICAgICAgIC8vIC4uLgogICAgfQp9 */}
+
+<RemixLaunchButton code={simpleVaultSource} />
+:::
 ### Testing ERC-4626
 
 #### Test Example:
@@ -347,17 +444,16 @@ describe("SimpleVault", function () {
 
 OpenZeppelin provides a secure base.
 
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+export const myNFTSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
 
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts@5.6.1/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts@5.6.1/access/Ownable.sol";
 
 contract MyNFT is ERC721, Ownable {
     uint256 private _nextTokenId;
 
-    constructor() ERC721("MyNFT", "MNFT") {}
+    constructor() ERC721("MyNFT", "MNFT") Ownable(msg.sender) {}
 
     function mint(address to) public onlyOwner {
         uint256 tokenId = _nextTokenId++;
@@ -368,8 +464,17 @@ contract MyNFT is ERC721, Ownable {
     function _baseURI() internal pure override returns (string memory) {
         return "https://api.example.com/nft/";
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{myNFTSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `MyNFT` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for MyNFT: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvdG9rZW4vRVJDNzIxL0VSQzcyMS5zb2wiOwppbXBvcnQgIkBvcGVuemVwcGVsaW4vY29udHJhY3RzQDUuNi4xL2FjY2Vzcy9Pd25hYmxlLnNvbCI7Cgpjb250cmFjdCBNeU5GVCBpcyBFUkM3MjEsIE93bmFibGUgewogICAgdWludDI1NiBwcml2YXRlIF9uZXh0VG9rZW5JZDsKCiAgICBjb25zdHJ1Y3RvcigpIEVSQzcyMSgiTXlORlQiLCAiTU5GVCIpIE93bmFibGUobXNnLnNlbmRlcikge30KCiAgICBmdW5jdGlvbiBtaW50KGFkZHJlc3MgdG8pIHB1YmxpYyBvbmx5T3duZXIgewogICAgICAgIHVpbnQyNTYgdG9rZW5JZCA9IF9uZXh0VG9rZW5JZCsrOwogICAgICAgIF9zYWZlTWludCh0bywgdG9rZW5JZCk7CiAgICB9CgogICAgLy8gT3B0aW9uYWw6IGFkZCBtZXRhZGF0YSBVUkkKICAgIGZ1bmN0aW9uIF9iYXNlVVJJKCkgaW50ZXJuYWwgcHVyZSBvdmVycmlkZSByZXR1cm5zIChzdHJpbmcgbWVtb3J5KSB7CiAgICAgICAgcmV0dXJuICJodHRwczovL2FwaS5leGFtcGxlLmNvbS9uZnQvIjsKICAgIH0KfQ%3D%3D */}
+
+<RemixLaunchButton code={myNFTSource} />
+:::
 
 ### ERC-721 Extensions for DeFi
 ERC721Enumerable – Allows enumeration of tokens by owner and total supply (useful for frontends).
@@ -382,8 +487,14 @@ ERC721Burnable – Allows token holders to burn their NFTs.
 
 When you create an NFT that represents a position, you typically store position data (like amounts, ranges, etc.) in the contract and associate it with the token ID.
 
-```solidity
+export const positionNFTSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
+
+import "@openzeppelin/contracts@5.6.1/token/ERC721/ERC721.sol";
+
 contract PositionNFT is ERC721 {
+    uint256 private _nextTokenId;
+
     struct Position {
         uint256 amount;
         uint256 timestamp;
@@ -391,6 +502,8 @@ contract PositionNFT is ERC721 {
     }
 
     mapping(uint256 => Position) public positions;
+
+    constructor() ERC721("PositionNFT", "POS") {}
 
     function mint(address to, uint256 amount, address asset) external returns (uint256) {
         uint256 tokenId = _nextTokenId++;
@@ -400,11 +513,21 @@ contract PositionNFT is ERC721 {
     }
 
     function getPosition(uint256 tokenId) external view returns (Position memory) {
-        require(_exists(tokenId), "Token does not exist");
+        // OZ v5 removed _exists(); _requireOwned reverts if the token does not exist
+        _requireOwned(tokenId);
         return positions[tokenId];
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{positionNFTSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `PositionNFT` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for PositionNFT: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvdG9rZW4vRVJDNzIxL0VSQzcyMS5zb2wiOwoKY29udHJhY3QgUG9zaXRpb25ORlQgaXMgRVJDNzIxIHsKICAgIHVpbnQyNTYgcHJpdmF0ZSBfbmV4dFRva2VuSWQ7CgogICAgc3RydWN0IFBvc2l0aW9uIHsKICAgICAgICB1aW50MjU2IGFtb3VudDsKICAgICAgICB1aW50MjU2IHRpbWVzdGFtcDsKICAgICAgICBhZGRyZXNzIGFzc2V0OwogICAgfQoKICAgIG1hcHBpbmcodWludDI1NiA9PiBQb3NpdGlvbikgcHVibGljIHBvc2l0aW9uczsKCiAgICBjb25zdHJ1Y3RvcigpIEVSQzcyMSgiUG9zaXRpb25ORlQiLCAiUE9TIikge30KCiAgICBmdW5jdGlvbiBtaW50KGFkZHJlc3MgdG8sIHVpbnQyNTYgYW1vdW50LCBhZGRyZXNzIGFzc2V0KSBleHRlcm5hbCByZXR1cm5zICh1aW50MjU2KSB7CiAgICAgICAgdWludDI1NiB0b2tlbklkID0gX25leHRUb2tlbklkKys7CiAgICAgICAgX3NhZmVNaW50KHRvLCB0b2tlbklkKTsKICAgICAgICBwb3NpdGlvbnNbdG9rZW5JZF0gPSBQb3NpdGlvbihhbW91bnQsIGJsb2NrLnRpbWVzdGFtcCwgYXNzZXQpOwogICAgICAgIHJldHVybiB0b2tlbklkOwogICAgfQoKICAgIGZ1bmN0aW9uIGdldFBvc2l0aW9uKHVpbnQyNTYgdG9rZW5JZCkgZXh0ZXJuYWwgdmlldyByZXR1cm5zIChQb3NpdGlvbiBtZW1vcnkpIHsKICAgICAgICAvLyBPWiB2NSByZW1vdmVkIF9leGlzdHMoKTsgX3JlcXVpcmVPd25lZCByZXZlcnRzIGlmIHRoZSB0b2tlbiBkb2VzIG5vdCBleGlzdAogICAgICAgIF9yZXF1aXJlT3duZWQodG9rZW5JZCk7CiAgICAgICAgcmV0dXJuIHBvc2l0aW9uc1t0b2tlbklkXTsKICAgIH0KfQ%3D%3D */}
+
+<RemixLaunchButton code={positionNFTSource} />
+:::
 ## 5. Best Practices for Token Development
 
 ### 5.1 Use OpenZeppelin Contracts
@@ -414,15 +537,31 @@ OpenZeppelin is the industry standard. Their contracts are audited, widely used,
 
 While ERC-20 transfers don't usually call external contracts, if you add hooks (like in ERC-777) or if your token interacts with other protocols during mint/burn, use ReentrancyGuard.
 
-```solidity
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+export const reentrantTokenSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
+
+import "@openzeppelin/contracts@5.6.1/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts@5.6.1/utils/ReentrancyGuard.sol";
 
 contract MyToken is ERC20, ReentrancyGuard {
+    constructor() ERC20("MyToken", "MTK") {
+        _mint(msg.sender, 1000000 * 10 ** decimals());
+    }
+
     function burn(uint256 amount) external nonReentrant {
         _burn(msg.sender, amount);
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{reentrantTokenSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `MyToken` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for MyToken: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvdG9rZW4vRVJDMjAvRVJDMjAuc29sIjsKaW1wb3J0ICJAb3BlbnplcHBlbGluL2NvbnRyYWN0c0A1LjYuMS91dGlscy9SZWVudHJhbmN5R3VhcmQuc29sIjsKCmNvbnRyYWN0IE15VG9rZW4gaXMgRVJDMjAsIFJlZW50cmFuY3lHdWFyZCB7CiAgICBjb25zdHJ1Y3RvcigpIEVSQzIwKCJNeVRva2VuIiwgIk1USyIpIHsKICAgICAgICBfbWludChtc2cuc2VuZGVyLCAxMDAwMDAwICogMTAgKiogZGVjaW1hbHMoKSk7CiAgICB9CgogICAgZnVuY3Rpb24gYnVybih1aW50MjU2IGFtb3VudCkgZXh0ZXJuYWwgbm9uUmVlbnRyYW50IHsKICAgICAgICBfYnVybihtc2cuc2VuZGVyLCBhbW91bnQpOwogICAgfQp9 */}
+
+<RemixLaunchButton code={reentrantTokenSource} />
+:::
 ### 5.3 Handle Decimals Correctly
 
 Always use decimals() when displaying amounts. When performing calculations, assume the token's decimal precision.
@@ -496,8 +635,11 @@ describe("MyToken", function () {
 
 When your contract interacts with arbitrary ERC-20 tokens, use SafeERC20 to handle non-standard implementations.
 
-```solidity
-import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
+export const vaultSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
+
+import "@openzeppelin/contracts@5.6.1/token/ERC20/utils/SafeERC20.sol";
+import "@openzeppelin/contracts@5.6.1/token/ERC20/IERC20.sol";
 
 contract Vault {
     using SafeERC20 for IERC20;
@@ -505,8 +647,17 @@ contract Vault {
     function deposit(IERC20 token, uint256 amount) external {
         token.safeTransferFrom(msg.sender, address(this), amount);
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{vaultSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `Vault` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for Vault: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvdG9rZW4vRVJDMjAvdXRpbHMvU2FmZUVSQzIwLnNvbCI7CmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvdG9rZW4vRVJDMjAvSUVSQzIwLnNvbCI7Cgpjb250cmFjdCBWYXVsdCB7CiAgICB1c2luZyBTYWZlRVJDMjAgZm9yIElFUkMyMDsKCiAgICBmdW5jdGlvbiBkZXBvc2l0KElFUkMyMCB0b2tlbiwgdWludDI1NiBhbW91bnQpIGV4dGVybmFsIHsKICAgICAgICB0b2tlbi5zYWZlVHJhbnNmZXJGcm9tKG1zZy5zZW5kZXIsIGFkZHJlc3ModGhpcyksIGFtb3VudCk7CiAgICB9Cn0%3D */}
+
+<RemixLaunchButton code={vaultSource} />
+:::
 ## 6. Rootstock-Specific Considerations
 
 ### RBTC vs. wRBTC

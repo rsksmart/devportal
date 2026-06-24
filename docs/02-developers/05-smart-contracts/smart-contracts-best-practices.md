@@ -6,6 +6,8 @@ description: 'Best practices for Smart Contract Development on Rootstock'
 tags: [rsk, rootstock, smart contracts, best practices, dApps]
 ---
 
+import CodeBlock from '@theme/CodeBlock';
+
 Smart contracts are self-executing programs that run on blockchain networks, automatically enforcing the terms and conditions of an agreement without the need for intermediaries. On [Rootstock](https://rootstock.io/), smart contracts play a crucial role in building decentralized finance (DeFi) applications and other trustless services. These contracts bring transparency and efficiency but also introduce unique security and good practices challenges.
 
 Since smart contracts operate autonomously and are immutable once deployed, they are particularly susceptible to attacks if not properly designed. Vulnerabilities such as [reentrancy attacks](https://www.cyfrin.io/blog/what-is-a-reentrancy-attack-solidity-smart-contracts#:~:text=A%20Reentrancy%20Attack%20is%20the,is%20a%20Solidity%20reentrancy%20attack%3F), integer overflows, and poorly validated inputs can lead to significant financial losses and data breaches. This is why adhering to best practices is essential to ensure security, reliability, and optimal performance.
@@ -26,7 +28,9 @@ In this section, we will discuss some of the most common vulnerabilities, provid
     
 - **Example:** Here is a simple example of a contract that is susceptible to reentrancy:
     
-```solidity
+export const vulnerableContractSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
+
 // Vulnerable Contract
 
 contract VulnerableContract {
@@ -49,8 +53,17 @@ contract VulnerableContract {
         // State update occurs after external call (unsafe)
         balances[msg.sender] = 0;
     }
-}
-    ```
+}`;
+
+<CodeBlock language="solidity">{vulnerableContractSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+This contract is intentionally vulnerable to reentrancy (it makes the external call before updating state). You can deploy and inspect it in the Remix IDE to understand the attack. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for VulnerableContract: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCi8vIFZ1bG5lcmFibGUgQ29udHJhY3QKCmNvbnRyYWN0IFZ1bG5lcmFibGVDb250cmFjdCB7CiAgICBtYXBwaW5nKGFkZHJlc3MgPT4gdWludCkgcHVibGljIGJhbGFuY2VzOwoKICAgIC8vIEFsbG93cyB1c2VycyB0byBkZXBvc2l0IEV0aGVyIGludG8gdGhlIGNvbnRyYWN0CiAgICBmdW5jdGlvbiBkZXBvc2l0KCkgcHVibGljIHBheWFibGUgewogICAgICAgIGJhbGFuY2VzW21zZy5zZW5kZXJdICs9IG1zZy52YWx1ZTsKICAgIH0KCiAgICAvLyBBbGxvd3MgdXNlcnMgdG8gd2l0aGRyYXcgdGhlaXIgRXRoZXIKICAgIGZ1bmN0aW9uIHdpdGhkcmF3KCkgcHVibGljIHsKICAgICAgICB1aW50IHVzZXJCYWxhbmNlID0gYmFsYW5jZXNbbXNnLnNlbmRlcl07CiAgICAgICAgcmVxdWlyZSh1c2VyQmFsYW5jZSA%2BIDAsICJJbnN1ZmZpY2llbnQgYmFsYW5jZSIpOwoKICAgICAgICAvLyBWdWxuZXJhYmxlIGV4dGVybmFsIGNhbGwgYmVmb3JlIHVwZGF0aW5nIHN0YXRlCiAgICAgICAgKGJvb2wgc3VjY2VzcywgKSA9IG1zZy5zZW5kZXIuY2FsbHt2YWx1ZTogdXNlckJhbGFuY2V9KCIiKTsKICAgICAgICByZXF1aXJlKHN1Y2Nlc3MsICJGYWlsZWQgdG8gc2VuZCBFdGhlciIpOwoKICAgICAgICAvLyBTdGF0ZSB1cGRhdGUgb2NjdXJzIGFmdGVyIGV4dGVybmFsIGNhbGwgKHVuc2FmZSkKICAgICAgICBiYWxhbmNlc1ttc2cuc2VuZGVyXSA9IDA7CiAgICB9Cn0%3D */}
+
+<RemixLaunchButton code={vulnerableContractSource} />
+:::
     
 - **Mitigation:** Use a reentrancy lock, for example, [Open Zeppelin’s Reentrancy Guard](https://docs.openzeppelin.com/contracts/4.x/api/security#ReentrancyGuard) modifier.
 
@@ -99,7 +112,9 @@ contract InsecureVault {
     
 - **Mitigation:** Modify the previous code:
     
-```solidity
+export const secureVaultSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
+
 contract SecureVault {
     mapping(address => uint256) public deposits;
 
@@ -120,8 +135,17 @@ contract SecureVault {
         (bool success, ) = sender.call{value: amount, gas: 2300}("");
         require(success, "Transfer failed");
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{secureVaultSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `SecureVault` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for SecureVault: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmNvbnRyYWN0IFNlY3VyZVZhdWx0IHsKICAgIG1hcHBpbmcoYWRkcmVzcyA9PiB1aW50MjU2KSBwdWJsaWMgZGVwb3NpdHM7CgogICAgLy8gYWxsb3dzIGRlcG9zaXRpbmcgb24gYmVoYWxmIG9mIG90aGVycwogICAgZnVuY3Rpb24gYWRkRnVuZHMoYWRkcmVzcyBfZm9yKSBwdWJsaWMgcGF5YWJsZSB7CiAgICAgICAgZGVwb3NpdHNbX2Zvcl0gKz0gbXNnLnZhbHVlOwogICAgfQoKICAgIC8vIHByb3Blcmx5IHZhbGlkYXRlcyB0aGUgY2FsbGVyIGFuZCB0aGUgYW1vdW50IHRvIHdpdGhkcmF3CiAgICBmdW5jdGlvbiByZWxlYXNlRnVuZHModWludDI1NiBhbW91bnQpIHB1YmxpYyB7CiAgICAgICAgYWRkcmVzcyBwYXlhYmxlIHNlbmRlciA9IHBheWFibGUobXNnLnNlbmRlcik7CiAgICAgICAgcmVxdWlyZShkZXBvc2l0c1tzZW5kZXJdID49IGFtb3VudCwgIkluc3VmZmljaWVudCBmdW5kcyIpOwoKICAgICAgICAvLyBEZWR1Y3QgdGhlIGFtb3VudCBmcm9tIHRoZSBzZW5kZXIncyBiYWxhbmNlIGJlZm9yZSB0cmFuc2ZlcnJpbmcKICAgICAgICBkZXBvc2l0c1tzZW5kZXJdIC09IGFtb3VudDsKCiAgICAgICAgLy8gVXNlIGNhbGwgd2l0aCBsaW1pdGVkIGdhcyB0byBwcmV2ZW50IHJlZW50cmFuY3kgcmlza3MKICAgICAgICAoYm9vbCBzdWNjZXNzLCApID0gc2VuZGVyLmNhbGx7dmFsdWU6IGFtb3VudCwgZ2FzOiAyMzAwfSgiIik7CiAgICAgICAgcmVxdWlyZShzdWNjZXNzLCAiVHJhbnNmZXIgZmFpbGVkIik7CiAgICB9Cn0%3D */}
+
+<RemixLaunchButton code={secureVaultSource} />
+:::
 
 :::tip[Tip]
 
@@ -165,9 +189,20 @@ Front-running is an attack in decentralized finance (DeFi) where malicious actor
     
 - **Example:** The contract below is vulnerable to front-running due to the absence of slippage protection.
 
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+export const vulnerableSwapSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
+
+// Minimal PancakeSwap router interface used by this example
+interface IPancakeRouter02 {
+    function WETH() external pure returns (address);
+
+    function swapExactETHForTokensSupportingFeeOnTransferTokens(
+        uint256 amountOutMin,
+        address[] calldata path,
+        address to,
+        uint256 deadline
+    ) external payable;
+}
 
 contract VulnerableSwap {
     address public pancakeRouter;
@@ -179,8 +214,8 @@ contract VulnerableSwap {
     }
 
     // Vulnerability: This function lacks slippage protection, making it susceptible to frontrunning attacks
-    function swapBNBForSSToken(uint256 amount) private {
-        address;
+    function swapBNBForSSToken(uint256 amount) external {
+        address[] memory path = new address[](2);
         path[0] = IPancakeRouter02(pancakeRouter).WETH();  // First token in the swap path is BNB
         path[1] = ssToken;  // Second token in the swap path is SSToken
 
@@ -189,8 +224,17 @@ contract VulnerableSwap {
             value: amount
         }(0, path, address(this), block.timestamp);  // No slippage protection here (the '0' sets no minimum token output)
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{vulnerableSwapSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+This contract is intentionally vulnerable (no slippage protection). You can deploy and inspect it in the Remix IDE to understand the frontrunning risk. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for VulnerableSwap: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4wOwoKLy8gTWluaW1hbCBQYW5jYWtlU3dhcCByb3V0ZXIgaW50ZXJmYWNlIHVzZWQgYnkgdGhpcyBleGFtcGxlCmludGVyZmFjZSBJUGFuY2FrZVJvdXRlcjAyIHsKICAgIGZ1bmN0aW9uIFdFVEgoKSBleHRlcm5hbCBwdXJlIHJldHVybnMgKGFkZHJlc3MpOwoKICAgIGZ1bmN0aW9uIHN3YXBFeGFjdEVUSEZvclRva2Vuc1N1cHBvcnRpbmdGZWVPblRyYW5zZmVyVG9rZW5zKAogICAgICAgIHVpbnQyNTYgYW1vdW50T3V0TWluLAogICAgICAgIGFkZHJlc3NbXSBjYWxsZGF0YSBwYXRoLAogICAgICAgIGFkZHJlc3MgdG8sCiAgICAgICAgdWludDI1NiBkZWFkbGluZQogICAgKSBleHRlcm5hbCBwYXlhYmxlOwp9Cgpjb250cmFjdCBWdWxuZXJhYmxlU3dhcCB7CiAgICBhZGRyZXNzIHB1YmxpYyBwYW5jYWtlUm91dGVyOwogICAgYWRkcmVzcyBwdWJsaWMgc3NUb2tlbjsKCiAgICBjb25zdHJ1Y3RvcihhZGRyZXNzIF9wYW5jYWtlUm91dGVyLCBhZGRyZXNzIF9zc1Rva2VuKSB7CiAgICAgICAgcGFuY2FrZVJvdXRlciA9IF9wYW5jYWtlUm91dGVyOwogICAgICAgIHNzVG9rZW4gPSBfc3NUb2tlbjsKICAgIH0KCiAgICAvLyBWdWxuZXJhYmlsaXR5OiBUaGlzIGZ1bmN0aW9uIGxhY2tzIHNsaXBwYWdlIHByb3RlY3Rpb24sIG1ha2luZyBpdCBzdXNjZXB0aWJsZSB0byBmcm9udHJ1bm5pbmcgYXR0YWNrcwogICAgZnVuY3Rpb24gc3dhcEJOQkZvclNTVG9rZW4odWludDI1NiBhbW91bnQpIGV4dGVybmFsIHsKICAgICAgICBhZGRyZXNzW10gbWVtb3J5IHBhdGggPSBuZXcgYWRkcmVzc1tdKDIpOwogICAgICAgIHBhdGhbMF0gPSBJUGFuY2FrZVJvdXRlcjAyKHBhbmNha2VSb3V0ZXIpLldFVEgoKTsgIC8vIEZpcnN0IHRva2VuIGluIHRoZSBzd2FwIHBhdGggaXMgQk5CCiAgICAgICAgcGF0aFsxXSA9IHNzVG9rZW47ICAvLyBTZWNvbmQgdG9rZW4gaW4gdGhlIHN3YXAgcGF0aCBpcyBTU1Rva2VuCgogICAgICAgIC8vIFRoaXMgc3dhcCBmdW5jdGlvbiBkb2VzIG5vdCBpbmNsdWRlIGEgc2xpcHBhZ2UgY2hlY2ssIGFsbG93aW5nIGF0dGFja2VycyB0byBmcm9udHJ1biBieSBvYnNlcnZpbmcgbGFyZ2Ugc3dhcHMgaW4gdGhlIG1lbXBvb2wKICAgICAgICBJUGFuY2FrZVJvdXRlcjAyKHBhbmNha2VSb3V0ZXIpLnN3YXBFeGFjdEVUSEZvclRva2Vuc1N1cHBvcnRpbmdGZWVPblRyYW5zZmVyVG9rZW5zewogICAgICAgICAgICB2YWx1ZTogYW1vdW50CiAgICAgICAgfSgwLCBwYXRoLCBhZGRyZXNzKHRoaXMpLCBibG9jay50aW1lc3RhbXApOyAgLy8gTm8gc2xpcHBhZ2UgcHJvdGVjdGlvbiBoZXJlICh0aGUgJzAnIHNldHMgbm8gbWluaW11bSB0b2tlbiBvdXRwdXQpCiAgICB9Cn0%3D */}
+
+<RemixLaunchButton code={vulnerableSwapSource} />
+:::
         
 - **Mitigation:**
     - **Implement slippage restrictions:** Ensure the contract checks for a minimum acceptable amount of tokens during swaps, preventing attackers from exploiting price changes.

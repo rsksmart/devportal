@@ -6,6 +6,8 @@ description: "Write, compile, deploy, and interact with your first smart contrac
 tags: [guides, developers, blockchain, rsk, rootstock, deploy, hardhat]
 ---
 
+import CodeBlock from '@theme/CodeBlock';
+
 In this module, you will write, compile, deploy, and interact with your first smart contract on the Rootstock Testnet.
 
 :::tip[Starter Kits]
@@ -18,9 +20,8 @@ Get started with ready-made templates and starter guides for easy development an
 
 Create: `contracts/HelloRootstock.sol` 
 
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+export const helloRootstockSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
 
 contract HelloRootstock {
     string public message;
@@ -32,8 +33,17 @@ contract HelloRootstock {
     function updateMessage(string memory _newMessage) public {
         message = _newMessage;
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{helloRootstockSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `HelloRootstock` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for HelloRootstock: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmNvbnRyYWN0IEhlbGxvUm9vdHN0b2NrIHsKICAgIHN0cmluZyBwdWJsaWMgbWVzc2FnZTsKCiAgICBjb25zdHJ1Y3RvcihzdHJpbmcgbWVtb3J5IF9tZXNzYWdlKSB7CiAgICAgICAgbWVzc2FnZSA9IF9tZXNzYWdlOwogICAgfQoKICAgIGZ1bmN0aW9uIHVwZGF0ZU1lc3NhZ2Uoc3RyaW5nIG1lbW9yeSBfbmV3TWVzc2FnZSkgcHVibGljIHsKICAgICAgICBtZXNzYWdlID0gX25ld01lc3NhZ2U7CiAgICB9Cn0%3D */}
+
+<RemixLaunchButton code={helloRootstockSource} />
+:::
 
 ## Step 2 — Configure Hardhat
 

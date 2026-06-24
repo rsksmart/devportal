@@ -68,7 +68,7 @@ Now, if the attacker tries to re-enter, their balance is already reduced, so the
 For extra safety, especially when you have multiple functions that could be re-entered, use ReentrancyGuard. It provides a nonReentrant modifier that prevents a function from being called while it is already executing.
 
 export const secureContractSource = `// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.30;
 
 import "@openzeppelin/contracts@5.6.1/utils/ReentrancyGuard.sol";
 
@@ -130,7 +130,7 @@ npm install --save-dev hardhat @nomiclabs/hardhat-ethers ethers chai
 Write tests that simulate reentrant attacks. For example, using a malicious contract:
 
 export const reentrancyTestContractsSource = `// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.30;
 
 import "@openzeppelin/contracts@5.6.1/utils/ReentrancyGuard.sol";
 
@@ -231,7 +231,7 @@ Access control ensures that only authorized users can execute sensitive function
 OpenZeppelin's Ownable contract provides a basic access control mechanism with a single owner.
 
 export const ownableContractSource = `// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.30;
 
 import "@openzeppelin/contracts@5.6.1/access/Ownable.sol";
 
@@ -266,7 +266,7 @@ Cannot grant granular permissions (e.g., some users can mint, others can pause).
 OpenZeppelin's AccessControl provides a flexible, multi-role system based on the standard from Ethereum (EIP-5982). You define roles as bytes32 constants and grant them to addresses.
 
 export const accessControlContractSource = `// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.30;
 
 import "@openzeppelin/contracts@5.6.1/access/AccessControl.sol";
 
@@ -399,7 +399,7 @@ Warning: Only use unchecked when you have mathematically proven that overflow ca
 On older Solidity versions (`<0.8`) you needed a library like OpenZeppelin's SafeMath to prevent overflows. SafeMath was removed in OpenZeppelin Contracts v5, because Solidity 0.8+ reverts on overflow and underflow by default. Write plain arithmetic and the compiler inserts the checks for you.
 
 export const safeMathContractSource = `// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.30;
 
 contract MyContract {
     function safeAdd(uint256 a, uint256 b) public pure returns (uint256) {
@@ -443,7 +443,7 @@ Chainlink VRF is not currently deployed on Rootstock. The example below targets 
 ## Basic Example:
 
 export const vrfConsumerContractSource = `// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.30;
 
 import {VRFConsumerBaseV2Plus} from "@chainlink/contracts@1.5.0/src/v0.8/vrf/dev/VRFConsumerBaseV2Plus.sol";
 import {VRFV2PlusClient} from "@chainlink/contracts@1.5.0/src/v0.8/vrf/dev/libraries/VRFV2PlusClient.sol";
@@ -515,7 +515,7 @@ DeFi protocols often need upgrades. Use proxy patterns (UUPS or Transparent) fro
 ## Example: UUPS Proxy
 
 export const uupsContractSource = `// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.30;
 
 import "@openzeppelin/contracts-upgradeable@5.6.1/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable@5.6.1/proxy/utils/UUPSUpgradeable.sol";
@@ -587,7 +587,7 @@ Chainlink provides aggregated price data from multiple high-quality sources. But
 **Safe Chainlink Integration:**
 
 export const priceConsumerContractSource = `// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.30;
 
 import "@chainlink/contracts@1.5.0/src/v0.8/shared/interfaces/AggregatorV3Interface.sol";
 
@@ -820,7 +820,7 @@ it("should resist flash loan price manipulation", async () => {
 Implement pause functionality to stop the protocol in case of emergency.
 
 export const pausableContractSource = `// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.30;
 
 import "@openzeppelin/contracts@5.6.1/utils/Pausable.sol";
 import "@openzeppelin/contracts@5.6.1/access/Ownable.sol";

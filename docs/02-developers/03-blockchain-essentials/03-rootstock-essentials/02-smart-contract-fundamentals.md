@@ -6,6 +6,8 @@ description: "Learn the foundational concepts of smart contracts on Rootstock."
 tags: [guides, developers, blockchain, rsk, rootstock, solidity, smart-contracts]
 ---
 
+import CodeBlock from '@theme/CodeBlock';
+
 Smart contracts on Rootstock behave similarly to Ethereum because Rootstock is EVM-compatible. This module gives you the foundational concepts you must understand before writing or deploying your first contract.
 
 ## What Are Smart Contracts?
@@ -34,9 +36,8 @@ What differs is the network layer (mining, consensus, gas costs), not the progra
 
 Every `.sol` file follows the same high-level structure:
 
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+export const exampleSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
 
 contract Example {
     uint256 public value;
@@ -44,8 +45,17 @@ contract Example {
     function setValue(uint256 _v) external {
         value = _v;
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{exampleSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `Example` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for Example: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmNvbnRyYWN0IEV4YW1wbGUgewogICAgdWludDI1NiBwdWJsaWMgdmFsdWU7CgogICAgZnVuY3Rpb24gc2V0VmFsdWUodWludDI1NiBfdikgZXh0ZXJuYWwgewogICAgICAgIHZhbHVlID0gX3Y7CiAgICB9Cn0%3D */}
+
+<RemixLaunchButton code={exampleSource} />
+:::
 
 ## State Variables
 

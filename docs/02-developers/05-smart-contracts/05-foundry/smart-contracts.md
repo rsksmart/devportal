@@ -9,7 +9,7 @@ tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethe
 import CodeBlock from '@theme/CodeBlock';
 
 export const counterSource = `// SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.30;
 
 contract Counter {
     uint256 public number;

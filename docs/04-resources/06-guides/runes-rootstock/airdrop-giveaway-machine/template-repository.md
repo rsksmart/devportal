@@ -22,7 +22,7 @@ This contract serves as the base contract for managing administrator roles withi
 
 ```
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.25;
+pragma solidity ^0.8.30;
 
 contract Administrable {
     mapping(address => bool) _admins;
@@ -80,7 +80,7 @@ contract Administrable {
 
 ```
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.25;
+pragma solidity ^0.8.30;
 
 import "./Administrable.sol";
 
@@ -235,7 +235,7 @@ function getTotalAirdropAmount(address airdropAddress) public view returns(uint2
 
 ```
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.25;
+pragma solidity ^0.8.30;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 ```
@@ -464,7 +464,7 @@ This contract likely extends the functionality of `CustomAirdrop1155.sol` by imp
 
 ```
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.25;
+pragma solidity ^0.8.30;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 import { MerkleProof } from "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
@@ -700,7 +700,7 @@ This contract implements the ERC-1155 standard, providing the foundational struc
 ```
 // SPDX-License-Identifier: MIT
 // Compatible with OpenZeppelin Contracts ^5.0.0
-pragma solidity ^0.8.25;
+pragma solidity ^0.8.30;
 
 import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";

@@ -32,7 +32,7 @@ To configure an ERC20 token, copy the code snippet below and paste it in your to
         
 ```shell
     // SPDX-License-Identifier: MIT
-    pragma solidity ^0.8.20;
+    pragma solidity ^0.8.30;
 
     import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 

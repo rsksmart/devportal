@@ -6,6 +6,8 @@ description: 'Compile, deploy, and interact with smart contracts on Rootstock us
 tags: [rsk, ape, apeworx, developers, developer tools, tRBTC, rootstock, testing, dApps, smart contracts]
 ---
 
+import CodeBlock from '@theme/CodeBlock';
+
 The [Ape Framework](https://apeworx.io/framework/) is an easy-to-use Web3 development tool. Developers can compile, test, and interact with smart contracts all in one command line session. With its [modular plugin system](https://github.com/ApeWorX/ape?tab=readme-ov-file#plugin-system), Ape supports multiple contract languages and chains including Rootstock.
 
 In this guide, we will learn about the [Ape Framework](https://apeworx.io/framework/) and its benefits for smart contract development, how to setup your development environment, create a Ape project and execute a deployment script for Rootstock.
@@ -123,9 +125,8 @@ touch contracts/Box.sol
 
 Open the file and add the following contract to it:
 
-```solidity
-// SPDX-License-Identifier: MIT 
-pragma solidity ^0.8.1;
+export const boxSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
 
 contract Box {
     uint256 private value;
@@ -140,8 +141,17 @@ contract Box {
     function retrieve() public view returns (uint256) {
         return value;
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{boxSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `Box` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for Box: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4xOwoKY29udHJhY3QgQm94IHsKICAgIHVpbnQyNTYgcHJpdmF0ZSB2YWx1ZTsKCiAgICBldmVudCBWYWx1ZUNoYW5nZWQodWludDI1NiBuZXdWYWx1ZSk7CgogICAgZnVuY3Rpb24gc3RvcmUodWludDI1NiBuZXdWYWx1ZSkgcHVibGljIHsKICAgICAgICB2YWx1ZSA9IG5ld1ZhbHVlOwogICAgICAgIGVtaXQgVmFsdWVDaGFuZ2VkKG5ld1ZhbHVlKTsKICAgIH0KCiAgICBmdW5jdGlvbiByZXRyaWV2ZSgpIHB1YmxpYyB2aWV3IHJldHVybnMgKHVpbnQyNTYpIHsKICAgICAgICByZXR1cm4gdmFsdWU7CiAgICB9Cn0%3D */}
+
+<RemixLaunchButton code={boxSource} />
+:::
 
 ## Compile the contract
 

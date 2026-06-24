@@ -6,6 +6,8 @@ tags: [rsk, rootstock, resources, tutorials, port to rootstock, Ethereum, dApps,
 description: "Porting an Ethereum decentralized application (dApp) to Rootstock (RSK) presents an exciting opportunity to leverage the benefits of the Rootstock network, a Bitcoin L2 compatible with Ethereum. This guide will walk you through porting an Ethereum dApp to the Rootstock network using the Hardhat Ignition deployment tool and leveraging the compatibility between Solidity (used for Rootstock) and Ethereum."
 ---
 
+import CodeBlock from '@theme/CodeBlock';
+
 Porting an Ethereum decentralized application (dApp) to Rootstock presents an exciting opportunity to leverage the benefits of the Rootstock network, which is a smart contract platform secured by the Bitcoin network.
 
 Rootstock combines Ethereum's flexibility with Bitcoin's security and scalability, offering a compelling environment for dApp development.
@@ -237,9 +239,8 @@ Copy this Ethereum contract and its tests to your Rootstock Hardhat project. Pla
 
 #### `SimpleStorage.sol`
 
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.25;
+export const simpleStorageSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
 
 contract SimpleStorage {
     uint256 public favoriteNumber;
@@ -247,8 +248,17 @@ contract SimpleStorage {
     function store(uint256 _favoriteNumber) public {
         favoriteNumber = _favoriteNumber;
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{simpleStorageSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `SimpleStorage` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for SimpleStorage: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yNTsKCmNvbnRyYWN0IFNpbXBsZVN0b3JhZ2UgewogICAgdWludDI1NiBwdWJsaWMgZmF2b3JpdGVOdW1iZXI7CgogICAgZnVuY3Rpb24gc3RvcmUodWludDI1NiBfZmF2b3JpdGVOdW1iZXIpIHB1YmxpYyB7CiAgICAgICAgZmF2b3JpdGVOdW1iZXIgPSBfZmF2b3JpdGVOdW1iZXI7CiAgICB9Cn0%3D */}
+
+<RemixLaunchButton code={simpleStorageSource} />
+:::
 
 Copy this test code and create a new file named `SimpleStorage.ts` inside the `test` folder. The route will be `test/SimpleStorage.ts`.
 

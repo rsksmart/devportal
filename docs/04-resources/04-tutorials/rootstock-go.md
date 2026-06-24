@@ -6,6 +6,8 @@ tags: [rsk, rootstock, go, golang, go-ethereum, tutorials, resources, smart cont
 description: "Go is an easy to learn language which combines speed and concurrency. It is widely used in web3 development, especially in the ethereum ecosystem. This guide will help developers read from and write to the Rootstock blockchain using Go."
 ---
 
+import CodeBlock from '@theme/CodeBlock';
+
 Go is a fast language with a comparatively simple syntax and is especially popular in backend and DevOps operations.
 <br/>This guide will walk you through reading data from and writing data to the Rootstock blockchain with Go, taking advantage of Rootstock's Ethereum compatibility using the [`go-ethereum`](https://geth.ethereum.org) package.
 
@@ -161,9 +163,8 @@ You can use the deployed contract address provided in the code. It is currently 
 You can also deploy your own smart contract using various [smart contract development guides](https://dev.rootstock.io/developers/smart-contracts/) with tools like [foundry](https://dev.rootstock.io/developers/smart-contracts/foundry/deploy-smart-contracts/), [hardhat](https://dev.rootstock.io/developers/smart-contracts/hardhat/deploy-smart-contracts/), [Rootstock CLI](https://dev.rootstock.io/developers/smart-contracts/rsk-cli/deploy-with-cli/), among others.
 
 
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.13;
+export const storageSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
 
 contract Storage {
     uint256 number;
@@ -175,8 +176,17 @@ contract Storage {
     function retrieve() public view returns (uint256){
         return number;
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{storageSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `Storage` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for Storage: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4xMzsKCmNvbnRyYWN0IFN0b3JhZ2UgewogICAgdWludDI1NiBudW1iZXI7CgogICAgZnVuY3Rpb24gc3RvcmUodWludDI1NiBudW0pIHB1YmxpYyB7CiAgICAgICAgbnVtYmVyID0gbnVtOwogICAgfQoKICAgIGZ1bmN0aW9uIHJldHJpZXZlKCkgcHVibGljIHZpZXcgcmV0dXJucyAodWludDI1Nil7CiAgICAgICAgcmV0dXJuIG51bWJlcjsKICAgIH0KfQ%3D%3D */}
+
+<RemixLaunchButton code={storageSource} />
+:::
 There are two functions in the contract, one to store a number on the blockchain, `function store` (changes state, involves a transaction), another to retrieve the stored number `function retrieve`(no transaction).
 The ABI is provided below.
 ```javascript

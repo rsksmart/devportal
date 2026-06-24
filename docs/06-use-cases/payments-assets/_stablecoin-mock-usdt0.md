@@ -6,6 +6,8 @@ description: "Simulate USDT0 and USDRIF liquidity to harden your financial logic
 tags: [btcfi, stablecoins, mocking, testnet, dev-tutorial, rbtc]
 ---
 
+import CodeBlock from '@theme/CodeBlock';
+
 Financial logic requires testing against assets with different decimal precisions and liquidity profiles. Real USDT0 on Rootstock Testnet might be scarce or difficult to acquire in large volumes for stress testing. This tutorial explains how to deploy and use a mock stablecoin contract to simulate high-liquidity environments.
 
 ## The Purpose of Mocking
@@ -30,11 +32,10 @@ The mocking workflow sits within the Develop layer of the Rootstock stack. You u
 ## Implementation: The Mock USDT0 Contract
 You deploy a simple ERC-20 contract that replicates the interface of USDT0. The key requirement is setting the decimals to 6.
 
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+export const mockUSDT0Source = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
 
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts@5.6.1/token/ERC20/ERC20.sol";
 
 contract MockUSDT0 is ERC20 {
     constructor() ERC20("Mock USDT0", "USDT0") {}
@@ -49,8 +50,17 @@ contract MockUSDT0 is ERC20 {
     function mint(address to, uint256 amount) public {
         _mint(to, amount);
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{mockUSDT0Source}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `MockUSDT0` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for MockUSDT0: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvdG9rZW4vRVJDMjAvRVJDMjAuc29sIjsKCmNvbnRyYWN0IE1vY2tVU0RUMCBpcyBFUkMyMCB7CiAgICBjb25zdHJ1Y3RvcigpIEVSQzIwKCJNb2NrIFVTRFQwIiwgIlVTRFQwIikge30KCiAgICAvLyBPdmVycmlkZSBkZWNpbWFscyB0byBtYXRjaCBwcm9kdWN0aW9uIFVTRFQwCiAgICBmdW5jdGlvbiBkZWNpbWFscygpIHB1YmxpYyB2aWV3IHZpcnR1YWwgb3ZlcnJpZGUgcmV0dXJucyAodWludDgpIHsKICAgICAgICByZXR1cm4gNjsKICAgIH0KCiAgICAvLyBQdWJsaWMgbWludCBmdW5jdGlvbiBmb3IgdGVzdGluZyBwdXJwb3NlcwogICAgLy8gVGhpcyBhbGxvd3MgeW91IHRvIGNyZWF0ZSBsaXF1aWRpdHkgb24gZGVtYW5kCiAgICBmdW5jdGlvbiBtaW50KGFkZHJlc3MgdG8sIHVpbnQyNTYgYW1vdW50KSBwdWJsaWMgewogICAgICAgIF9taW50KHRvLCBhbW91bnQpOwogICAgfQp9 */}
+
+<RemixLaunchButton code={mockUSDT0Source} />
+:::
 
 ## Simulating Liquidity for Stress Testing
 Once you deploy the contract, you must fund your test accounts to simulate a live market. You use the "Write" function sequence to mint tokens directly to your agent or user addresses.
