@@ -1163,7 +1163,7 @@
     "message": "Instale el Rootstock MCP Server y luego construya agentes con lecturas y acciones on-chain acotadas."
   },
   "Choose your path": {
-    "message": "Elija su camino"
+    "message": "Elige tu camino"
   },
   "Pick the stage that matches your work: deploy contracts, connect integrations, or prepare for production.": {
     "message": "Elija la etapa que coincida con su trabajo: desplegar contratos, conectar integraciones o prepararse para producción."
@@ -1206,9 +1206,6 @@
   },
   "Rootstock is a Bitcoin sidechain secured by over 85% of Bitcoin hash power through merge mining. rBTC is pegged to BTC through the PowPeg protocol.": {
     "message": "Rootstock es una sidechain de Bitcoin protegida por más del 85 % del hashrate de Bitcoin mediante merged mining. rBTC está vinculado a BTC a través del protocolo PowPeg."
-  },
-  "Choose Your Path": {
-    "message": "Elige tu camino"
   },
   "Find the right starting point for your journey on Rootstock: build smart contracts, integrate, or prepare for mainnet.": {
     "message": "Encuentra el punto de partida adecuado en Rootstock: desarrolla smart contracts, integra o prepárate para mainnet."

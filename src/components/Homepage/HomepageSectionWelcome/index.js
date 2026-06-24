@@ -17,7 +17,7 @@ const content = {
     url: '/developers/quickstart/',
   },
   goalSection: {
-    title: <Translate>Choose Your Path</Translate>,
+    title: <Translate>Choose your path</Translate>,
     intro: (
       <Translate>
         Find the right starting point for your journey on Rootstock: build smart contracts, integrate, or prepare for mainnet.

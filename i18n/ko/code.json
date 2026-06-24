@@ -1207,9 +1207,6 @@
   "Rootstock is a Bitcoin sidechain secured by over 85% of Bitcoin hash power through merge mining. rBTC is pegged to BTC through the PowPeg protocol.": {
     "message": "Rootstock은 머지 마이닝으로 Bitcoin 해시파워의 85% 이상으로 보호되는 Bitcoin 사이드체인입니다. rBTC는 PowPeg 프로토콜을 통해 BTC와 페깅됩니다."
   },
-  "Choose Your Path": {
-    "message": "Choose Your Path"
-  },
   "Find the right starting point for your journey on Rootstock: build smart contracts, integrate, or prepare for mainnet.": {
     "message": "Rootstock 여정에 맞는 시작점을 찾으세요. 스마트 컨트랙트 빌드, 통합 또는 메인넷 준비."
   },
