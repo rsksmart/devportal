@@ -12,7 +12,7 @@ import React from 'react';
 export default function Home() {
   return (
     <Layout
-      description="Rootstock developer documentation: quickstarts, integration guides, API reference, and use case recipes for building on a Bitcoin sidechain secured by merge mining.">
+      description="Everything you need to build on Bitcoin. Rootstock developer documentation: quickstarts, integration guides, and use case recipes on a Bitcoin sidechain secured by merge mining and the PowPeg protocol.">
       <main>
         <LlmsTxtDirective />
         <div className="row">

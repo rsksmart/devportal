@@ -1093,8 +1093,17 @@
   "Operate": {
     "message": "運用"
   },
-  "View quickstarts": {
-    "message": "Quickstarts を見る"
+  "View all quickstarts": {
+    "message": "すべての Quickstarts を見る"
+  },
+  "Deploy with Foundry": {
+    "message": "Foundry でデプロイ"
+  },
+  "RSK Swap SDK": {
+    "message": "RSK Swap SDK"
+  },
+  "Convert BTC to rBTC": {
+    "message": "BTC を rBTC に変換"
   },
   "Funding and governance": {
     "message": "資金調達とガバナンス"
@@ -1189,8 +1198,50 @@
   "View Bitcoin DeFi guides": {
     "message": "Bitcoin DeFi ガイドを見る"
   },
-  "Step-by-step guides for Bitcoin DeFi, Bridge, Onboard, Pay, and AI.": {
-    "message": "Bitcoin DeFi、Bridge、Onboard、Pay、AI のステップバイステップガイド。"
+  "Step-by-step guides for Bitcoin DeFi, Bridge, Onboard, and AI.": {
+    "message": "Bitcoin DeFi、Bridge、Onboard、AI のステップバイステップガイド。"
+  },
+  "Everything you need to build on Bitcoin": {
+    "message": "Bitcoin 上で構築するために必要なものがすべてここに"
+  },
+  "Rootstock is a Bitcoin sidechain secured by over 85% of Bitcoin hash power through merge mining. rBTC is pegged to BTC through the PowPeg protocol.": {
+    "message": "Rootstock はマージマイニングにより Bitcoin ハッシュパワーの 85% 以上で保護された Bitcoin サイドチェーンです。rBTC は PowPeg プロトコルを通じて BTC とペッグされています。"
+  },
+  "Choose Your Path": {
+    "message": "Choose Your Path"
+  },
+  "Find the right starting point for your journey on Rootstock: build smart contracts, integrate, or prepare for mainnet.": {
+    "message": "Rootstock での旅に合った起点を見つけましょう。スマートコントラクトの構築、統合、またはメインネット準備。"
+  },
+  "Open Rootstock RPC": {
+    "message": "Rootstock RPC を開く"
+  },
+  "Review the PowPeg security model, audit contracts, and configure mainnet deployments.": {
+    "message": "PowPeg のセキュリティモデルを確認し、コントラクトを監査してメインネットデプロイを設定します。"
+  },
+  "PowPeg protocol overview": {
+    "message": "PowPeg プロトコルの概要"
+  },
+  "Lending and on-chain Bitcoin DeFi with rBTC.": {
+    "message": "rBTC を使ったオンチェーンの Bitcoin DeFi とレンディング。"
+  },
+  "Bridges, wallets, RPC access, and the Rootstock Explorer for Rootstock deployments.": {
+    "message": "Rootstock デプロイ向けのブリッジ、ウォレット、RPC アクセス、Rootstock Explorer。"
+  },
+  "Search blocks, transactions, contracts, and dApps on Rootstock mainnet and testnet.": {
+    "message": "Rootstock のメインネットとテストネットでブロック、トランザクション、コントラクト、dApp を検索します。"
+  },
+  "Open Rootstock Explorer": {
+    "message": "Rootstock Explorer を開く"
+  },
+  "Navigate the explorer": {
+    "message": "エクスプローラーを操作する"
+  },
+  "Explorer guides": {
+    "message": "エクスプローラーガイド"
+  },
+  "Rootstock Explorer": {
+    "message": "Rootstock Explorer"
   },
   "RootstockCollective": {
     "message": "RootstockCollective"

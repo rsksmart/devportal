@@ -32,6 +32,9 @@
   "Deploy with Hardhat": {
     "message": "Deploy with Hardhat"
   },
+  "Deploy with Foundry": {
+    "message": "Deploy with Foundry"
+  },
   "Integrate": {
     "message": "Integrate"
   },
@@ -1090,8 +1093,14 @@
   "Apply for funding, join ecosystem programs, and participate in Collective governance.": {
     "message": "Apply for funding, join ecosystem programs, and participate in Collective governance."
   },
-  "View quickstarts": {
-    "message": "View quickstarts"
+  "View all quickstarts": {
+    "message": "View all quickstarts"
+  },
+  "RSK Swap SDK": {
+    "message": "RSK Swap SDK"
+  },
+  "Convert BTC to rBTC": {
+    "message": "Convert BTC to rBTC"
   },
   "Build": {
     "message": "Build"
@@ -1192,8 +1201,50 @@
   "View Bitcoin DeFi guides": {
     "message": "View Bitcoin DeFi guides"
   },
-  "Step-by-step guides for Bitcoin DeFi, Bridge, Onboard, Pay, and AI.": {
-    "message": "Step-by-step guides for Bitcoin DeFi, Bridge, Onboard, Pay, and AI."
+  "Step-by-step guides for Bitcoin DeFi, Bridge, Onboard, and AI.": {
+    "message": "Step-by-step guides for Bitcoin DeFi, Bridge, Onboard, and AI."
+  },
+  "Everything you need to build on Bitcoin": {
+    "message": "Everything you need to build on Bitcoin"
+  },
+  "Rootstock is a Bitcoin sidechain secured by over 85% of Bitcoin hash power through merge mining. rBTC is pegged to BTC through the PowPeg protocol.": {
+    "message": "Rootstock is a Bitcoin sidechain secured by over 85% of Bitcoin hash power through merge mining. rBTC is pegged to BTC through the PowPeg protocol."
+  },
+  "Choose Your Path": {
+    "message": "Choose Your Path"
+  },
+  "Find the right starting point for your journey on Rootstock: build smart contracts, integrate, or prepare for mainnet.": {
+    "message": "Find the right starting point for your journey on Rootstock: build smart contracts, integrate, or prepare for mainnet."
+  },
+  "Open Rootstock RPC": {
+    "message": "Open Rootstock RPC"
+  },
+  "Review the PowPeg security model, audit contracts, and configure mainnet deployments.": {
+    "message": "Review the PowPeg security model, audit contracts, and configure mainnet deployments."
+  },
+  "PowPeg protocol overview": {
+    "message": "PowPeg protocol overview"
+  },
+  "Lending and on-chain Bitcoin DeFi with rBTC.": {
+    "message": "Lending and on-chain Bitcoin DeFi with rBTC."
+  },
+  "Bridges, wallets, RPC access, and the Rootstock Explorer for Rootstock deployments.": {
+    "message": "Bridges, wallets, RPC access, and the Rootstock Explorer for Rootstock deployments."
+  },
+  "Search blocks, transactions, contracts, and dApps on Rootstock mainnet and testnet.": {
+    "message": "Search blocks, transactions, contracts, and dApps on Rootstock mainnet and testnet."
+  },
+  "Open Rootstock Explorer": {
+    "message": "Open Rootstock Explorer"
+  },
+  "Navigate the explorer": {
+    "message": "Navigate the explorer"
+  },
+  "Explorer guides": {
+    "message": "Explorer guides"
+  },
+  "Rootstock Explorer": {
+    "message": "Rootstock Explorer"
   },
   "RootstockCollective": {
     "message": "RootstockCollective"

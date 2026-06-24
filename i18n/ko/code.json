@@ -1093,8 +1093,17 @@
   "Operate": {
     "message": "운영"
   },
-  "View quickstarts": {
-    "message": "Quickstarts 보기"
+  "View all quickstarts": {
+    "message": "모든 Quickstarts 보기"
+  },
+  "Deploy with Foundry": {
+    "message": "Foundry로 배포"
+  },
+  "RSK Swap SDK": {
+    "message": "RSK Swap SDK"
+  },
+  "Convert BTC to rBTC": {
+    "message": "BTC를 rBTC로 변환"
   },
   "Funding and governance": {
     "message": "자금 조달 및 거버넌스"
@@ -1189,8 +1198,50 @@
   "View Bitcoin DeFi guides": {
     "message": "Bitcoin DeFi 가이드 보기"
   },
-  "Step-by-step guides for Bitcoin DeFi, Bridge, Onboard, Pay, and AI.": {
-    "message": "Bitcoin DeFi, Bridge, Onboard, Pay, AI를 위한 단계별 가이드."
+  "Step-by-step guides for Bitcoin DeFi, Bridge, Onboard, and AI.": {
+    "message": "Bitcoin DeFi, Bridge, Onboard, AI를 위한 단계별 가이드."
+  },
+  "Everything you need to build on Bitcoin": {
+    "message": "Bitcoin에서 빌드하는 데 필요한 모든 것"
+  },
+  "Rootstock is a Bitcoin sidechain secured by over 85% of Bitcoin hash power through merge mining. rBTC is pegged to BTC through the PowPeg protocol.": {
+    "message": "Rootstock은 머지 마이닝으로 Bitcoin 해시파워의 85% 이상으로 보호되는 Bitcoin 사이드체인입니다. rBTC는 PowPeg 프로토콜을 통해 BTC와 페깅됩니다."
+  },
+  "Choose Your Path": {
+    "message": "Choose Your Path"
+  },
+  "Find the right starting point for your journey on Rootstock: build smart contracts, integrate, or prepare for mainnet.": {
+    "message": "Rootstock 여정에 맞는 시작점을 찾으세요. 스마트 컨트랙트 빌드, 통합 또는 메인넷 준비."
+  },
+  "Open Rootstock RPC": {
+    "message": "Rootstock RPC 열기"
+  },
+  "Review the PowPeg security model, audit contracts, and configure mainnet deployments.": {
+    "message": "PowPeg 보안 모델을 검토하고, 컨트랙트를 감사한 뒤 메인넷 배포를 구성합니다."
+  },
+  "PowPeg protocol overview": {
+    "message": "PowPeg 프로토콜 개요"
+  },
+  "Lending and on-chain Bitcoin DeFi with rBTC.": {
+    "message": "rBTC로 온체인 Bitcoin DeFi와 렌딩."
+  },
+  "Bridges, wallets, RPC access, and the Rootstock Explorer for Rootstock deployments.": {
+    "message": "Rootstock 배포를 위한 브리지, 지갑, RPC 액세스, Rootstock Explorer."
+  },
+  "Search blocks, transactions, contracts, and dApps on Rootstock mainnet and testnet.": {
+    "message": "Rootstock 메인넷과 테스트넷에서 블록, 트랜잭션, 컨트랙트, dApp을 검색합니다."
+  },
+  "Open Rootstock Explorer": {
+    "message": "Rootstock Explorer 열기"
+  },
+  "Navigate the explorer": {
+    "message": "익스플로러 탐색"
+  },
+  "Explorer guides": {
+    "message": "익스플로러 가이드"
+  },
+  "Rootstock Explorer": {
+    "message": "Rootstock Explorer"
   },
   "RootstockCollective": {
     "message": "RootstockCollective"

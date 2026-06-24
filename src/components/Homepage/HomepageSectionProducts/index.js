@@ -6,7 +6,7 @@ const data = {
   title: <Translate>Infrastructure and tooling</Translate>,
   description: (
     <Translate>
-      Bridges, wallets, RPC access, and RIF infrastructure tools for Rootstock deployments.
+      Bridges, wallets, RPC access, and the Rootstock Explorer for Rootstock deployments.
     </Translate>
   ),
   cards: [
@@ -28,6 +28,7 @@ const data = {
         {
           title: <Translate>PowPeg App</Translate>,
           href: 'https://powpeg.rootstock.io',
+          target: '_blank',
         },
       ],
     },
@@ -56,6 +57,11 @@ const data = {
       ),
       list: [
         {
+          title: <Translate>Open Rootstock RPC</Translate>,
+          href: 'https://rpc.rootstock.io/',
+          target: '_blank',
+        },
+        {
           title: <Translate>First RPC call</Translate>,
           href: '/developers/rpc-api/rootstock/setup/',
         },
@@ -66,21 +72,26 @@ const data = {
       ],
     },
     {
-      title: <Translate>RIF infrastructure</Translate>,
+      title: <Translate>Rootstock Explorer</Translate>,
       color: 'pink',
       description: (
         <Translate>
-          RIF suite tools such as name service and relay. Use these when your product already depends on RIF infrastructure. They are not the default integration entry path.
+          Search blocks, transactions, contracts, and dApps on Rootstock mainnet and testnet.
         </Translate>
       ),
       list: [
         {
-          title: <Translate>RIF Suite overview</Translate>,
-          href: '/concepts/rif-suite/',
+          title: <Translate>Open Rootstock Explorer</Translate>,
+          href: 'https://explorer.rootstock.io/',
+          target: '_blank',
         },
         {
-          title: <Translate>RIF Relay integration</Translate>,
-          href: '/developers/integrate/rif-relay',
+          title: <Translate>Navigate the explorer</Translate>,
+          href: '/dev-tools/explorers/rootstock-explorer/intro-to-explorer/',
+        },
+        {
+          title: <Translate>Explorer guides</Translate>,
+          href: '/dev-tools/explorers/rootstock-explorer/',
         },
       ],
     },

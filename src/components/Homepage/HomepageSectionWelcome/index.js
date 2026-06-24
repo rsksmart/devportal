@@ -4,9 +4,12 @@ import Translate from '@docusaurus/core/lib/client/exports/Translate';
 
 const content = {
   title: <Translate>Rootstock Documentation</Translate>,
-  subtext: (
+  tagline: (
+    <Translate>Everything you need to build on Bitcoin</Translate>
+  ),
+  usp: (
     <Translate>
-      Rootstock is a Bitcoin sidechain secured by over 85% of Bitcoin hash power through merge mining. This portal contains concepts, quickstarts, and integration guides to build and integrate dApps on Rootstock.
+      Rootstock is a Bitcoin sidechain secured by over 85% of Bitcoin hash power through merge mining. rBTC is pegged to BTC through the PowPeg protocol.
     </Translate>
   ),
   cta: {
@@ -14,10 +17,10 @@ const content = {
     url: '/developers/quickstart/',
   },
   goalSection: {
-    title: <Translate>Choose your path</Translate>,
+    title: <Translate>Choose Your Path</Translate>,
     intro: (
       <Translate>
-        Pick the stage that matches your work: deploy contracts, connect integrations, or prepare for production.
+        Find the right starting point for your journey on Rootstock: build smart contracts, integrate, or prepare for mainnet.
       </Translate>
     ),
   },
@@ -32,12 +35,16 @@ const content = {
       ),
       list: [
         {
-          title: <Translate>View quickstarts</Translate>,
+          title: <Translate>View all quickstarts</Translate>,
           href: '/developers/quickstart/',
         },
         {
           title: <Translate>Deploy with Hardhat</Translate>,
           href: '/developers/quickstart/hardhat/',
+        },
+        {
+          title: <Translate>Deploy with Foundry</Translate>,
+          href: '/developers/quickstart/foundry/',
         },
       ],
     },
@@ -65,10 +72,14 @@ const content = {
       color: 'orange',
       description: (
         <Translate>
-          Review the security model, audit and test contracts, and configure mainnet deployments.
+          Review the PowPeg security model, audit contracts, and configure mainnet deployments.
         </Translate>
       ),
       list: [
+        {
+          title: <Translate>PowPeg protocol overview</Translate>,
+          href: '/concepts/powpeg/',
+        },
         {
           title: <Translate>Read the security model</Translate>,
           href: '/concepts/powpeg/security-model/',
@@ -86,12 +97,15 @@ export default function HomepageSectionWelcome() {
   return (
     <section className={`mb-64`}>
       {content.title && (
-        <h1 className='mb-24 fs-56'>
+        <h1 className='mb-16 fs-56'>
           {content.title}
         </h1>
       )}
-      {content.subtext && (
-        <p className={`h2 mb-32`}>{content.subtext}</p>
+      {content.tagline && (
+        <p className={`h2 mb-16`}>{content.tagline}</p>
+      )}
+      {content.usp && (
+        <p className={`markdown mb-32`}>{content.usp}</p>
       )}
       {content.cta && (
         <div className="mb-48">

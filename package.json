@@ -25,7 +25,8 @@
     "check-links:ja": "node --no-warnings scripts/check-links.mjs --locale=ja",
     "check-links:ko": "node --no-warnings scripts/check-links.mjs --locale=ko",
 "check-links:external": "node --no-warnings scripts/check-links.mjs --external",
-    "verify-llms-build": "node scripts/verify-llms-build.mjs"
+    "verify-llms-build": "node scripts/verify-llms-build.mjs",
+    "verify-middleware-paths": "node scripts/verify-middleware-paths.mjs"
 },
   "dependencies": {
     "@cookbookdev/docsbot": "^4.24.7",

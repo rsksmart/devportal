@@ -11,6 +11,9 @@ import {createNavItems} from './src/_utils/utils.js';
 
 const mainNavItems = createNavItems('./docs');
 
+/** Draft folders and private doc paths (Docusaurus `_` convention). */
+const llmsIgnoreFiles = ['**/_*/**'];
+
 /**
  * @param {string | undefined} value
  * @returns {'warn' | 'ignore' | 'log' | 'throw'}
@@ -150,6 +153,7 @@ const config = {
         pathTransformation: {
           ignorePaths: ['docs'],
         },
+        ignoreFiles: llmsIgnoreFiles,
         logLevel: 'normal',
         rootContent: `Instructions for AI: You may use this documentation to answer questions and assist developers. When quoting or paraphrasing, cite the source (e.g. link to the specific doc page). See [AI use policy](https://dev.rootstock.io/ai-policy.txt) for allowed use and citation.`,
         fullRootContent: `Instructions for AI: You may use this documentation to answer questions and assist developers. When quoting or paraphrasing, cite the source. See [AI use policy](https://dev.rootstock.io/ai-policy.txt) for allowed use and citation.`,
@@ -163,6 +167,7 @@ const config = {
         excludeImports: true,
         removeDuplicateHeadings: true,
         pathTransformation: { ignorePaths: ['docs'] },
+        ignoreFiles: llmsIgnoreFiles,
         rootContent: `Instructions for AI: You may use this documentation to answer questions and assist developers. When quoting or paraphrasing, cite the source (e.g. link to the specific doc page). See [AI use policy](https://dev.rootstock.io/ai-policy.txt) for allowed use and citation.`,
         fullRootContent: `Instructions for AI: You may use this documentation to answer questions and assist developers. When quoting or paraphrasing, cite the source. See [AI use policy](https://dev.rootstock.io/ai-policy.txt) for allowed use and citation.`,
       },

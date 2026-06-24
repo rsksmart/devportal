@@ -6,7 +6,7 @@ const useCaseData = {
   title: <Translate>Browse by use case</Translate>,
   description: (
     <Translate>
-      Step-by-step guides for Bitcoin DeFi, Bridge, Onboard, Pay, and AI.
+      Step-by-step guides for Bitcoin DeFi, Bridge, Onboard, and AI.
     </Translate>
   ),
   cards: [
@@ -15,17 +15,13 @@ const useCaseData = {
       color: 'orange',
       description: (
         <Translate>
-          Lending, vaults, and stablecoin flows with rBTC and on-chain assets.
+          Lending and on-chain Bitcoin DeFi with rBTC.
         </Translate>
       ),
       list: [
         {
           title: <Translate>Rootstock DeFi developer guide</Translate>,
           href: '/resources/guides/defi-developer-guide/',
-        },
-        {
-          title: <Translate>Integrate USDRIF Vault</Translate>,
-          href: '/use-cases/btcfi-finance-yield/yield-vaults-sdk/',
         },
         {
           title: <Translate>Cross-chain rBTC lending</Translate>,
@@ -80,29 +76,6 @@ const useCaseData = {
         {
           title: <Translate>View Onboard guides</Translate>,
           href: '/use-cases/onboarding-ux/',
-        },
-      ],
-    },
-    {
-      title: <Translate>Pay</Translate>,
-      color: 'yellow',
-      description: (
-        <Translate>
-          Programmable payments, splits, and pay-per-use APIs on Rootstock.
-        </Translate>
-      ),
-      list: [
-        {
-          title: <Translate>x402 payments on Rootstock</Translate>,
-          href: '/use-cases/payments-assets/integrate-x402/',
-        },
-        {
-          title: <Translate>Prism payment splits</Translate>,
-          href: '/use-cases/payments-assets/prism-payment-splits/',
-        },
-        {
-          title: <Translate>View Pay guides</Translate>,
-          href: '/use-cases/payments-assets/',
         },
       ],
     },
