@@ -4,10 +4,21 @@
  * Usage: node scripts/verify-middleware-paths.mjs
  */
 
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import {
+  DOC_SECTIONS,
+  LOCALES,
   resolveMarkdownPath,
   wantsMarkdownAccept,
 } from '../lib/markdown-negotiation-paths.js';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const middlewareSource = fs.readFileSync(
+  path.join(__dirname, '..', 'middleware.js'),
+  'utf8',
+);
 
 const cases = [
   {
@@ -60,6 +71,21 @@ if (!wantsMarkdownAccept('text/html, text/markdown;q=0.9')) {
 if (wantsMarkdownAccept('text/html')) {
   failed = true;
   console.error('✗ wantsMarkdownAccept should reject html-only Accept');
+}
+
+if (!middlewareSource.includes(`(?:${DOC_SECTIONS})`)) {
+  failed = true;
+  console.error('✗ middleware.js matcher is out of sync with DOC_SECTIONS');
+}
+
+if (!middlewareSource.includes(`(?:${LOCALES})/`)) {
+  failed = true;
+  console.error('✗ middleware.js matcher is out of sync with LOCALES');
+}
+
+if (/\$\{DOC_SECTIONS\}|\$\{LOCALES\}/.test(middlewareSource)) {
+  failed = true;
+  console.error('✗ middleware.js matcher must use static literals, not template expressions');
 }
 
 if (failed) {
