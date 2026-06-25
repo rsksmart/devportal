@@ -92,6 +92,7 @@ const requiredMarkdownPaths = [
   'concepts/glossary/index.md',
   'developers/quickstart/index.md',
   'developers/integrate/flyover/index.md',
+  'dev-tools/additional-tools/index.md',
 ];
 
 for (const relPath of requiredMarkdownPaths) {

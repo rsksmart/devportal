@@ -1201,11 +1201,11 @@
   "Step-by-step guides for Bitcoin DeFi, Bridge, Onboard, and AI.": {
     "message": "Bitcoin DeFi, Bridge, Onboard, AI를 위한 단계별 가이드."
   },
-  "Everything you need to build on Bitcoin": {
-    "message": "Bitcoin에서 빌드하는 데 필요한 모든 것"
+  "Everything you need to build on Bitcoin.": {
+    "message": "Bitcoin에서 빌드하는 데 필요한 모든 것."
   },
-  "Rootstock is a Bitcoin sidechain secured by over 85% of Bitcoin hash power through merge mining. rBTC is pegged to BTC through the PowPeg protocol.": {
-    "message": "Rootstock은 머지 마이닝으로 Bitcoin 해시파워의 85% 이상으로 보호되는 Bitcoin 사이드체인입니다. rBTC는 PowPeg 프로토콜을 통해 BTC와 페깅됩니다."
+  "Build with familiar EVM tools on a network secured by over 85% of Bitcoin's hash power via merge mining.": {
+    "message": "익숙한 EVM 도구로 빌드할 수 있으며, 머지 마이닝으로 Bitcoin 해시파워의 85% 이상으로 보호되는 네트워크입니다."
   },
   "Find the right starting point for your journey on Rootstock: build smart contracts, integrate, or prepare for mainnet.": {
     "message": "Rootstock 여정에 맞는 시작점을 찾으세요. 스마트 컨트랙트 빌드, 통합 또는 메인넷 준비."

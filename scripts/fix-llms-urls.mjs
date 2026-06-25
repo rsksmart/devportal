@@ -14,7 +14,12 @@ const BUILD_DIR = path.join(__dirname, '..', 'build');
 const require = createRequire(import.meta.url);
 const { fixLlmsFilesInDir } = require('../plugins/fix-llms-urls.js');
 const { injectLlmsDirectivesInBuild } = require('../plugins/llms-txt-markdown-directive.js');
-const { copyMarkdownToCleanPaths } = require('../plugins/copy-markdown-clean-paths.js');
+const {
+  copyMarkdownToCleanPaths,
+  copyMdxSourcesToCleanPaths,
+} = require('../plugins/copy-markdown-clean-paths.js');
+
+const PROJECT_ROOT = path.join(__dirname, '..');
 
 function writeHomepageMarkdown(outDir) {
   const homepageMd = `> For the complete documentation index, see [llms.txt](/llms.txt).
@@ -43,10 +48,12 @@ for (const locale of ['es', 'ja', 'ko']) {
   fixed += fixLlmsFilesInDir(path.join(BUILD_DIR, locale));
 }
 
-const mdUpdated = injectLlmsDirectivesInBuild(BUILD_DIR);
 const mdCopied = copyMarkdownToCleanPaths(BUILD_DIR);
+const mdxCopied = copyMdxSourcesToCleanPaths(PROJECT_ROOT, BUILD_DIR);
+const mdUpdated = injectLlmsDirectivesInBuild(BUILD_DIR);
 
 console.log(`[fix-llms-urls] Wrote homepage index.md for content negotiation.`);
 console.log(`[fix-llms-urls] Normalized llms URLs under ${BUILD_DIR} (${fixed} file(s) updated).`);
 console.log(`[llms-txt-markdown-directive] Injected llms.txt blockquote into ${mdUpdated} markdown file(s).`);
 console.log(`[copy-markdown-clean-paths] Mirrored ${mdCopied} markdown file(s) onto clean public routes.`);
+console.log(`[copy-markdown-clean-paths] Exported ${mdxCopied} MDX source file(s) to clean public routes.`);
