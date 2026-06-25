@@ -1,8 +1,8 @@
 ---
 sidebar_label: Reown
 sidebar_position: 108
-title: Rootstock Reown-Wagmi Starter Kit
-description: 'The Rootstock Reown-Wagmi Starter Kit provides a solid foundation for developing decentralized applications (dApps) on the Rootstock blockchain. It streamlines development by leveraging React, Reown, Wagmi, and Shadcn libraries.'
+title: Build a dApp with Reown and Wagmi on Rootstock
+description: 'Build a React dApp on Rootstock with Reown, Wagmi, and Shadcn. Secured by over 85% of Bitcoin''s hash power through merge mining.'
 tags: [rsk, rootstock, developers, reown, wagmi, quickstart, dApps, Smart Contracts]
 ---
 
@@ -12,6 +12,12 @@ It leverages the security of Bitcoin and the flexibility of Ethereum.
 The kit uses [Reown](https://reown.com/) (previously WalletConnect) to handle wallet management, [Wagmi](https://wagmi.sh/), a React Hooks library, to simplify smart contracts and blockchain network interactions, and [Shadcn libraries](https://ui.shadcn.com/), a set of customizable and accessible UI components for React, designed to streamline frontend development. 
 
 > This starter kit is designed to help developers jump-start their dApp development journey on Rootstock.
+
+## What you'll achieve
+
+- Configure Reown AppKit and connect wallets to Rootstock
+- Read contract state and send transactions from a React frontend
+- Customize the UI with Shadcn components for your dApp
 
 ## Prerequisites
 - **Node.js and Git:** Ensure that Node.js and Git are installed on your system. 

@@ -71,4 +71,4 @@ if (status === "released") {
 
 ## Next steps
 
-After value is on Rootstock, connect your app to vaults, DEX contracts, or governance flows using the guides under [Generate Yield](/use-cases/btcfi-finance-yield/) and [RIF economy](/use-cases/integrate-rif-economy/).
+After value is on Rootstock, connect your app to vaults, DEX contracts, or governance flows using the guides under [Bitcoin DeFi](/use-cases/btcfi-finance-yield/) and [RIF economy](/use-cases/integrate-rif-economy/).

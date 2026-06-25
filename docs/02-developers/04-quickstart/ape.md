@@ -1,14 +1,20 @@
 ---
 sidebar_position: 111
 sidebar_label: Ape
-title: Getting Started with Ape
-description: 'How to compile, deploy, and intereact with smart contracts with Ape on Rootstock'
+title: Compile and Deploy Smart Contracts with Ape on Rootstock
+description: 'Compile, deploy, and interact with smart contracts on Rootstock using the Ape Framework. Secured by over 85% of Bitcoin''s hash power through merge mining.'
 tags: [rsk, ape, apeworx, developers, developer tools, tRBTC, rootstock, testing, dApps, smart contracts]
 ---
 
 The [Ape Framework](https://apeworx.io/framework/) is an easy-to-use Web3 development tool. Developers can compile, test, and interact with smart contracts all in one command line session. With its [modular plugin system](https://github.com/ApeWorX/ape?tab=readme-ov-file#plugin-system), Ape supports multiple contract languages and chains including Rootstock.
 
 In this guide, we will learn about the [Ape Framework](https://apeworx.io/framework/) and its benefits for smart contract development, how to setup your development environment, create a Ape project and execute a deployment script for Rootstock.
+
+## What you'll achieve
+
+- Create an Ape project configured for Rootstock testnet
+- Compile and deploy a smart contract with Ape scripts
+- Run tests and interact with contracts from the Ape CLI
 
 ## Prerequisites
 To get started with Ape, ensure the following tools are installed:

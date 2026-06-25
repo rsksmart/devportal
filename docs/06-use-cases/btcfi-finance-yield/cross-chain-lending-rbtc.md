@@ -1,14 +1,14 @@
 ---
 sidebar_label: Cross-Chain RBTC Lending Starter Kit
-sidebar_position: 3
+sidebar_position: 5
 title: Build a Cross-Chain Lending dApp using rBTC & USDT0 on Rootstock  
 description: 'A minimal rBTC-collateralized lending starter kit for Rootstock. Includes mock oracle integration, USDT0 ERC-20 support, and guidance for extending the system with LayerZero and Umbrella/RedStone price feeds.'
-tags: [rsk, rootstock, rbtc, usdt0, lending, cross-chain, layerzero, umbrella, redstone, smart contracts, tutorials]
+tags: [btcfi, rsk, rootstock, rbtc, usdt0, lending, cross-chain, layerzero, umbrella, redstone, smart contracts, tutorials]
 ---
 
 :::info[Info]
 
-This is the **comprehensive tutorial** for the rBTC-USDT0 cross‑chain lending [starter kit]((https://github.com/rsksmart/rbtc-usdt0-crosschain-starter-kit)).
+This is the **comprehensive tutorial** for the rBTC-USDT0 cross‑chain lending [starter kit](https://github.com/rsksmart/rbtc-usdt0-crosschain-starter-kit).
 
 :::
 
@@ -40,7 +40,7 @@ Below is an architecture illustration showing the high-level system flow:
 
 ## Why build on Rootstock?
 
-Rootstock (RSK) is an L2 solution secured by Bitcoin's mining power. Key benefits for developers:
+Rootstock is a Bitcoin sidechain secured by over 85% of Bitcoin's hash power through merge mining. Key benefits for developers:
 
 * **Bitcoin compatibility:** smart contracts can rely on rBTC and the Bitcoin security model.
 * **EVM compatibility:** use the same Solidity, Hardhat, ethers.js, Metamask, etc.

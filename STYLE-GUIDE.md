@@ -15,7 +15,7 @@ title: Rootstock Fundamentals
 
 tags: \[rsk, rootstock, beginner, concepts\]
 
-description: Rootstock is the first and longest-lasting Bitcoin sidechain. It is the only layer 2 solution that combines the security of Bitcoin's proof of work with Ethereum's smart contract capabilities.
+description: Rootstock is the first and longest-lasting Bitcoin sidechain. It combines the security of Bitcoin's proof of work with Ethereum's smart contract capabilities. The platform is open-source, EVM-compatible, and secured by over 85% of Bitcoin's hash power through merge mining.
 
 render\_features: 'powpeg-hsm-attestation-frame'
 

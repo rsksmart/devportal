@@ -2,8 +2,56 @@
   "Rootstock Documentation": {
     "message": "Documentación de Rootstock"
   },
-  "Explore guides, quick starts, and SDKs to build and integrate your dApps.": {
-    "message": "Explora guías, quick starts y SDKs para construir e integrar tus dApps."
+  "components.llmsTxtDirective.text": {
+    "message": "Para el índice completo de documentación, consulte"
+  },
+  "Rootstock is the Bitcoin sidechain secured by over 85% of Bitcoin's hash power through merge mining. Build EVM-compatible smart contracts and financial applications with Bitcoin-grade security and familiar Ethereum tooling.": {
+    "message": "Rootstock es la sidechain de Bitcoin protegida por más del 85% de la potencia de hash de Bitcoin mediante merge mining. Construya contratos inteligentes compatibles con EVM y aplicaciones financieras con seguridad de grado Bitcoin y herramientas familiares de Ethereum."
+  },
+  "Institutions": {
+    "message": "Instituciones"
+  },
+  "Evaluate Bitcoin-grade security and production infrastructure for financial applications on Rootstock.": {
+    "message": "Evalúa la seguridad de nivel Bitcoin y la infraestructura de producción para aplicaciones financieras en Rootstock."
+  },
+  "Explore Institutional": {
+    "message": "Explorar institucional"
+  },
+  "Builders": {
+    "message": "Desarrolladores"
+  },
+  "Deploy smart contracts and Bitcoin-powered products with EVM-compatible tooling and starter kits.": {
+    "message": "Despliega contratos inteligentes y productos impulsados por Bitcoin con herramientas compatibles con EVM y kits de inicio."
+  },
+  "View quick starts": {
+    "message": "Ver inicios rápidos"
+  },
+  "Read the security model": {
+    "message": "Leer el modelo de seguridad"
+  },
+  "Deploy with Hardhat": {
+    "message": "Desplegar con Hardhat"
+  },
+  "Integrate": {
+    "message": "Integrar"
+  },
+  "Connect wallets, custody, oracles, payments, and bridging infrastructure to Rootstock.": {
+    "message": "Conecta wallets, custodia, oráculos, pagos e infraestructura de puentes a Rootstock."
+  },
+  "Browse dev tools": {
+    "message": "Explorar herramientas de desarrollo"
+  },
+  "View integration guides": {
+    "message": "Ver guías de integración"
+  },
+  "Build with AI": {
+    "message": "Construir con IA"
+  },
+  "Install Rootstock's MCP Server and connect Cursor or Claude to deploy contracts, query chain data, and run on-chain operations from your editor.": {
+    "message": "Instala el servidor MCP de Rootstock y conecta Cursor o Claude para desplegar contratos, consultar datos on-chain y ejecutar operaciones desde tu editor."
+  },
+  "Get started with MCP": {
+    "message": "Comenzar con MCP"
   },
   "Quick Start": {
     "message": "Inicio rápido"
@@ -11,8 +59,137 @@
   "Explore Docs": {
     "message": "Explorar documentación"
   },
-  "Guides for Builders": {
-    "message": "Guías para desarrolladores"
+  "Grants and Collective": {
+    "message": "Subvenciones y Collective"
+  },
+  "Apply for grants and join governance programs that fund builders on Rootstock.": {
+    "message": "Solicite subvenciones y únase a programas de gobernanza que financian a los builders en Rootstock."
+  },
+  "Specialized paths": {
+    "message": "Rutas especializadas"
+  },
+  "Onboarding, node operations, and ecosystem funding outside the standard build flow.": {
+    "message": "Incorporación, operación de nodos y financiación del ecosistema fuera del flujo de desarrollo estándar."
+  },
+  "New to Rootstock?": {
+    "message": "¿Nuevo en Rootstock?"
+  },
+  "Core concepts and structured learning before you deploy.": {
+    "message": "Conceptos fundamentales y aprendizaje estructurado antes de desplegar."
+  },
+  "Rootstock fundamentals": {
+    "message": "Fundamentos de Rootstock"
+  },
+  "Developer course": {
+    "message": "Curso para desarrolladores"
+  },
+  "Operate a Rootstock node or use merge-mining infrastructure.": {
+    "message": "Opera un nodo de Rootstock o usa infraestructura de merge mining."
+  },
+  "Merged mining guide": {
+    "message": "Guía de merged mining"
+  },
+  "Grow with Rootstock": {
+    "message": "Crecer con Rootstock"
+  },
+  "Grants, Collective programs, and ecosystem support for new projects.": {
+    "message": "Subvenciones, programas de Collective y apoyo del ecosistema para nuevos proyectos."
+  },
+  "Apply for a grant": {
+    "message": "Solicitar una subvención"
+  },
+  "Wallets, RPC, and EVM-compatible tooling to build and run applications on Rootstock.": {
+    "message": "Wallets, RPC y herramientas compatibles con EVM para construir y ejecutar aplicaciones en Rootstock."
+  },
+  "Get RBTC through the PowPeg App, on/off ramps, or exchanges.": {
+    "message": "Obtén RBTC mediante la PowPeg App, rampas de entrada/salida o exchanges."
+  },
+  "Hardhat, Foundry, Wagmi, wallets, oracles, and deployment tooling for Rootstock.": {
+    "message": "Hardhat, Foundry, Wagmi, wallets, oráculos y herramientas de despliegue para Rootstock."
+  },
+  "Rootstock-native products and infrastructure for bridges, wallets, RIF, and RPC.": {
+    "message": "Productos e infraestructura nativos de Rootstock para puentes, wallets, RIF y RPC."
+  },
+  "Move assets in and out of Rootstock.": {
+    "message": "Mueve activos dentro y fuera de Rootstock."
+  },
+  "Wallets compatible with Rootstock.": {
+    "message": "Wallets compatibles con Rootstock."
+  },
+  "Open-source RIF tools for names, relay, and Bitcoin-native UX.": {
+    "message": "Herramientas RIF de código abierto para nombres, relay y UX nativa de Bitcoin."
+  },
+  "Deploy and interact with contracts via JSON-RPC on Rootstock.": {
+    "message": "Despliega e interactúa con contratos vía JSON-RPC en Rootstock."
+  },
+  "Browse by Use Cases": {
+    "message": "Explorar por casos de uso"
+  },
+  "Implementation guides for lending, payments, onboarding, interoperability, and automation on Rootstock.": {
+    "message": "Guías de implementación para préstamos, pagos, incorporación, interoperabilidad y automatización en Rootstock."
+  },
+  "Transform Bitcoin from a passive asset into productive capital with yield-bearing vaults and staking mechanisms.": {
+    "message": "Convierta Bitcoin de un activo pasivo en capital productivo con bóvedas de rendimiento y mecanismos de staking."
+  },
+  "Integrate USDRIF Vault on Rootstock": {
+    "message": "Integrar USDRIF Vault en Rootstock"
+  },
+  "Bridge Assets": {
+    "message": "Puente de activos"
+  },
+  "Securely bridge assets between Bitcoin and Rootstock using trust-minimized protocols.": {
+    "message": "Transfiera activos de forma segura entre Bitcoin y Rootstock con protocolos de confianza minimizada."
+  },
+  "Atlas Bridge SDK": {
+    "message": "SDK de Atlas Bridge"
+  },
+  "Omnichain Fungible Token (OFTs) on Rootstock with Layerzero": {
+    "message": "Token fungible omnicadena (OFT) en Rootstock con Layerzero"
+  },
+  "Onboard Users": {
+    "message": "Incorporar usuarios"
+  },
+  "Remove onboarding friction with social login, smart wallets, and human-readable names.": {
+    "message": "Reduzca la fricción de incorporación con inicio de sesión social, smart wallets y nombres legibles."
+  },
+  "Smart Wallet Onboarding with Para SDK": {
+    "message": "Incorporación con smart wallet mediante Para SDK"
+  },
+  "Use USSD to interact with DeFi protocols on Rootstock": {
+    "message": "Use USSD para interactuar con protocolos DeFi en Rootstock"
+  },
+  "AI Agents": {
+    "message": "Agentes de IA"
+  },
+  "Conversational AI Agent with Blockchain Actions": {
+    "message": "Agente de IA conversacional con acciones en blockchain"
+  },
+  "Automate Payments": {
+    "message": "Automatizar pagos"
+  },
+  "x402 Payments with Rootstock": {
+    "message": "Pagos x402 con Rootstock"
+  },
+  "Connect AI models to on-chain data and deploy autonomous agents on Rootstock.": {
+    "message": "Conecta modelos de IA a datos on-chain y despliega agentes autónomos en Rootstock."
+  },
+  "MCP on Rootstock": {
+    "message": "MCP en Rootstock"
+  },
+  "Launch tokens and Bitcoin-native payments, stablecoins, and agentic commerce with standards like x402.": {
+    "message": "Lanza tokens y pagos nativos de Bitcoin, stablecoins y comercio agéntico con estándares como x402."
+  },
+  "Geyser Prism payment splits": {
+    "message": "Divisiones de pago con Geyser Prism"
+  },
+  "Join the Rootstock developer community on Discord.": {
+    "message": "Únete a la comunidad de desarrolladores de Rootstock en Discord."
+  },
+  "Open source tools, starter kits, and this documentation repo.": {
+    "message": "Herramientas de código abierto, kits de inicio y este repositorio de documentación."
+  },
+  "Events, community calls, and webinars.": {
+    "message": "Eventos, llamadas comunitarias y webinars."
   },
   "Beginner to Web3?": {
     "message": "¿Eres nuevo en Web3?"
@@ -90,22 +267,22 @@
     "message": "Buscar por producto"
   },
   "Bridges": {
-    "message": "Bridges"
+    "message": "Puentes"
   },
   "Bridge in/out of Rootstock.": {
     "message": "Bridge de entrada y salida de Rootstock."
   },
   "RBTC Flyover": {
-    "message": "Flyover de RBTC"
+    "message": "RBTC Flyover"
   },
   "PowPeg App": {
-    "message": "Aplicación PowPeg"
+    "message": "PowPeg App"
   },
   "Token Bridge": {
     "message": "Token Bridge"
   },
   "Wallets": {
-    "message": "Billeteras"
+    "message": "Wallets"
   },
   "View wallets compatible with the Rootstock platform.": {
     "message": "Consulte las billeteras compatibles con la plataforma de Rootstock."
@@ -389,6 +566,10 @@
   "theme.moreLinks.requestArticle.form.description": {
     "message": "¿Busca información que no hayamos cubierto? Rellene el siguiente formulario para solicitar un nuevo artículo, y lo tendremos en cuenta en futuras actualizaciones.",
     "description": "Request an Article form description"
+  },
+  "theme.moreLinks.getRbtc": {
+    "message": "Obtener RBTC",
+    "description": "Get RBTC link label in sidebar"
   },
   "theme.moreLinks.trbtcFaucet": {
     "message": "Faucet de tRBTC",
@@ -722,5 +903,350 @@
   },
   "Email": {
     "message": "Correo electrónico"
+  },
+  "This portal documents how to build on Rootstock. You will find platform concepts, quickstarts, integration guides, API reference, use case recipes, and node operator docs. Pick a goal below or open Quickstarts to deploy your first contract.": {
+    "message": "Este portal documenta cómo construir en Rootstock. Encontrará conceptos de la plataforma, quickstarts, guías de integración, referencia de API, recetas de casos de uso y documentación para operadores de nodos. Elija un objetivo abajo o abra Quickstarts para desplegar su primer contrato."
+  },
+  "Rootstock is a Bitcoin sidechain secured by over 85% of Bitcoin hash power through merge mining.": {
+    "message": "Rootstock es una sidechain de Bitcoin protegida por más del 85% de la potencia de hash de Bitcoin mediante merge mining."
+  },
+  "Quickstarts": {
+    "message": "Quickstarts"
+  },
+  "Launch": {
+    "message": "Lanzar"
+  },
+  "Write, compile, and deploy smart contracts with EVM tooling and starter kits.": {
+    "message": "Write, compile, and deploy smart contracts with EVM tooling and starter kits."
+  },
+  "Bridge with Atlas": {
+    "message": "Bridge with Atlas"
+  },
+  "Review the security model, run infrastructure, and prepare for production.": {
+    "message": "Review the security model, run infrastructure, and prepare for production."
+  },
+  "Node operators": {
+    "message": "Node operators"
+  },
+  "Connect wallets, bridges, oracles, and partner SDKs to an existing product.": {
+    "message": "Connect wallets, bridges, oracles, and partner SDKs to an existing product."
+  },
+  "How to use these docs": {
+    "message": "Cómo usar esta documentación"
+  },
+  "Each section below maps to a part of the portal. Open the one that matches your task.": {
+    "message": "Cada sección corresponde a una parte del portal. Abra la que coincida con su tarea."
+  },
+  "Learn": {
+    "message": "Aprender"
+  },
+  "Platform fundamentals and security": {
+    "message": "Platform fundamentals and security"
+  },
+  "Quickstarts and smart contract guides": {
+    "message": "Quickstarts and smart contract guides"
+  },
+  "Bridges, wallets, oracles, and SDKs": {
+    "message": "Bridges, wallets, oracles, and SDKs"
+  },
+  "Nodes, merge mining, and RPC": {
+    "message": "Nodes, merge mining, and RPC"
+  },
+  "Reference": {
+    "message": "Referencia"
+  },
+  "RPC methods and dev tools catalog": {
+    "message": "RPC methods and dev tools catalog"
+  },
+  "Resources": {
+    "message": "Recursos"
+  },
+  "Tutorials, FAQ, and contribute": {
+    "message": "Tutorials, FAQ, and contribute"
+  },
+  "Browse by use case": {
+    "message": "Explorar por caso de uso"
+  },
+  "Step-by-step guides grouped by goal. The same categories appear on the Use Cases hub.": {
+    "message": "Step-by-step guides grouped by goal. The same categories appear on the Use Cases hub."
+  },
+  "All use case guides": {
+    "message": "All use case guides"
+  },
+  "Lending, vaults, and stablecoin flows with rBTC and on-chain assets.": {
+    "message": "Lending, vaults, and stablecoin flows with rBTC and on-chain assets."
+  },
+  "Integrate USDRIF Vault": {
+    "message": "Integrate USDRIF Vault"
+  },
+  "Cross-chain rBTC lending": {
+    "message": "Cross-chain rBTC lending"
+  },
+  "Bridge": {
+    "message": "Puente"
+  },
+  "Move assets between Bitcoin, Rootstock, and other networks.": {
+    "message": "Move assets between Bitcoin, Rootstock, and other networks."
+  },
+  "Atlas Bridge guide": {
+    "message": "Atlas Bridge guide"
+  },
+  "LayerZero OFT on Rootstock": {
+    "message": "LayerZero OFT on Rootstock"
+  },
+  "View Bridge guides": {
+    "message": "View Bridge guides"
+  },
+  "Onboard": {
+    "message": "Onboarding"
+  },
+  "Wallet connection, social login, and low-connectivity onboarding patterns.": {
+    "message": "Wallet connection, social login, and low-connectivity onboarding patterns."
+  },
+  "Para smart wallet onboarding": {
+    "message": "Para smart wallet onboarding"
+  },
+  "USSD DeFi relay": {
+    "message": "USSD DeFi relay"
+  },
+  "View Onboard guides": {
+    "message": "View Onboard guides"
+  },
+  "Pay": {
+    "message": "Pagos"
+  },
+  "Programmable payments, splits, and pay-per-use APIs on Rootstock.": {
+    "message": "Programmable payments, splits, and pay-per-use APIs on Rootstock."
+  },
+  "x402 payments on Rootstock": {
+    "message": "x402 payments on Rootstock"
+  },
+  "View Pay guides": {
+    "message": "View Pay guides"
+  },
+  "AI": {
+    "message": "IA"
+  },
+  "MCP server setup and agent patterns for on-chain reads and actions.": {
+    "message": "MCP server setup and agent patterns for on-chain reads and actions."
+  },
+  "AI agent with on-chain actions": {
+    "message": "AI agent with on-chain actions"
+  },
+  "View AI guides": {
+    "message": "View AI guides"
+  },
+  "Install the Rootstock MCP Server to connect Cursor or Claude to chain reads, deployments, and scoped on-chain actions.": {
+    "message": "Install the Rootstock MCP Server to connect Cursor or Claude to chain reads, deployments, and scoped on-chain actions."
+  },
+  "MCP quickstart": {
+    "message": "MCP quickstart"
+  },
+  "MCP use case guide": {
+    "message": "MCP use case guide"
+  },
+  "Infrastructure and tooling": {
+    "message": "Infraestructura y herramientas"
+  },
+  "Bridges, wallets, RPC access, and RIF infrastructure tools for Rootstock deployments.": {
+    "message": "Bridges, wallets, RPC access, and RIF infrastructure tools for Rootstock deployments."
+  },
+  "Move BTC and assets between Bitcoin and Rootstock.": {
+    "message": "Move BTC and assets between Bitcoin and Rootstock."
+  },
+  "Wallets and connection patterns for Rootstock testnet and mainnet.": {
+    "message": "Wallets and connection patterns for Rootstock testnet and mainnet."
+  },
+  "MetaMask on Rootstock": {
+    "message": "MetaMask on Rootstock"
+  },
+  "Wallets catalog": {
+    "message": "Wallets catalog"
+  },
+  "JSON-RPC endpoints and methods for Rootstock nodes.": {
+    "message": "JSON-RPC endpoints and methods for Rootstock nodes."
+  },
+  "First RPC call": {
+    "message": "First RPC call"
+  },
+  "RPC methods reference": {
+    "message": "RPC methods reference"
+  },
+  "RIF infrastructure": {
+    "message": "Infraestructura RIF"
+  },
+  "RIF suite tools such as name service and relay. Use these when your product already depends on RIF infrastructure. They are not the default integration entry path.": {
+    "message": "RIF suite tools such as name service and relay. Use these when your product already depends on RIF infrastructure. They are not the default integration entry path."
+  },
+  "RIF Suite overview": {
+    "message": "RIF Suite overview"
+  },
+  "RIF Relay integration": {
+    "message": "RIF Relay integration"
+  },
+  "Apply for funding, join ecosystem programs, and participate in Collective governance.": {
+    "message": "Apply for funding, join ecosystem programs, and participate in Collective governance."
+  },
+  "Build": {
+    "message": "Construir"
+  },
+  "Operate": {
+    "message": "Operar"
+  },
+  "View all quickstarts": {
+    "message": "Ver todos los quickstarts"
+  },
+  "Deploy with Foundry": {
+    "message": "Desplegar con Foundry"
+  },
+  "RSK Swap SDK": {
+    "message": "RSK Swap SDK"
+  },
+  "Convert BTC to rBTC": {
+    "message": "Convertir BTC a rBTC"
+  },
+  "Funding and governance": {
+    "message": "Financiación y gobernanza"
+  },
+  "Prism payment splits": {
+    "message": "Divisiones de pago Prism"
+  },
+  "This portal documents how to build on Rootstock. You will find platform concepts, quickstarts, integration guides, API reference, use case recipes, and node operator docs. Open Quickstarts to deploy your first contract.": {
+    "message": "Este portal documenta cómo construir en Rootstock. Encontrará conceptos de la plataforma, quickstarts, guías de integración, referencia de API, recetas de casos de uso y documentación para operadores de nodos. Abra Quickstarts para desplegar su primer contrato."
+  },
+  "These sections match the main navigation. Open the one that fits your task.": {
+    "message": "Estas secciones coinciden con la navegación principal. Abra la que se ajuste a su tarea."
+  },
+  "Concepts": {
+    "message": "Conceptos"
+  },
+  "Developers": {
+    "message": "Developers"
+  },
+  "Node Operators": {
+    "message": "Operadores de nodos"
+  },
+  "Dev Tools": {
+    "message": "Dev Tools"
+  },
+  "Use Cases": {
+    "message": "Casos de uso"
+  },
+  "Platform fundamentals, rBTC, PowPeg security, and the Rootstock stack.": {
+    "message": "Fundamentos de la plataforma, rBTC, seguridad PowPeg y el stack de Rootstock."
+  },
+  "Quickstarts, smart contracts, integrations, libraries, and RPC API.": {
+    "message": "Quickstarts, smart contracts, integraciones, bibliotecas y API RPC."
+  },
+  "Node setup, merge mining, JSON-RPC, and network maintenance.": {
+    "message": "Configuración de nodos, merge mining, JSON-RPC y mantenimiento de red."
+  },
+  "Tutorials, guides, FAQ, and how to contribute to these docs.": {
+    "message": "Tutoriales, guías, FAQ y cómo contribuir a esta documentación."
+  },
+  "Wallets, bridges, Hardhat, Foundry, and the tooling catalog.": {
+    "message": "Wallets, puentes, Hardhat, Foundry y el catálogo de herramientas."
+  },
+  "Step-by-step implementation guides grouped by goal.": {
+    "message": "Guías de implementación paso a paso agrupadas por objetivo."
+  },
+  "Rootstock is a Bitcoin sidechain secured by over 85% of Bitcoin hash power through merge mining. Explore guides, Quickstarts, and SDKs to build and integrate dApps on Rootstock.": {
+    "message": "Rootstock es una sidechain de Bitcoin protegida por más del 85% de la potencia de hash de Bitcoin mediante merge mining. Explore guías, quickstarts y SDKs para construir e integrar dApps en Rootstock."
+  },
+  "Connect wallets, bridges, oracles, and third-party SDKs to an existing product.": {
+    "message": "Conecte wallets, puentes, oráculos y SDK de terceros a un producto existente."
+  },
+  "Apply for grants, join builder programs, and participate in Collective governance.": {
+    "message": "Solicite grants, únase a programas para builders y participe en la gobernanza de Collective."
+  },
+  "Install the Rootstock MCP Server, then build agents with scoped on-chain reads and actions.": {
+    "message": "Instale el Rootstock MCP Server y luego construya agentes con lecturas y acciones on-chain acotadas."
+  },
+  "Choose your path": {
+    "message": "Elige tu camino"
+  },
+  "Pick the stage that matches your work: deploy contracts, connect integrations, or prepare for production.": {
+    "message": "Elija la etapa que coincida con su trabajo: desplegar contratos, conectar integraciones o prepararse para producción."
+  },
+  "The sections below match the main navigation. Each one covers a different part of the portal, from core concepts and developer guides to node operations and tooling.": {
+    "message": "Las secciones siguientes coinciden con la navegación principal. Cada una cubre una parte del portal, desde conceptos básicos y guías para developers hasta operación de nodos y herramientas."
+  },
+  "Rootstock is a Bitcoin sidechain secured by over 85% of Bitcoin hash power through merge mining. Explore guides, quickstarts, and SDKs to build, integrate and launch dApps on Rootstock.": {
+    "message": "Rootstock es una sidechain de Bitcoin protegida por más del 85% de la potencia de hash de Bitcoin mediante merge mining. Explore guías, quickstarts y SDKs para construir, integrar y lanzar dApps en Rootstock."
+  },
+  "All Dev Tools guides": {
+    "message": "Todas las guías de Dev Tools"
+  },
+  "Rootstock DeFi developer guide": {
+    "message": "Guía para developers DeFi en Rootstock"
+  },
+  "Review the security model, audit and test contracts, and configure mainnet deployments.": {
+    "message": "Revise el modelo de seguridad, audite y pruebe contratos, y configure despliegues en mainnet."
+  },
+  "Mainnet deployment checklist": {
+    "message": "Lista de verificación para mainnet"
+  },
+  "Rootstock is a Bitcoin sidechain secured by over 85% of Bitcoin hash power through merge mining. This portal contains concepts, quickstarts, integration guides, API reference, use case recipes, and node operator docs.": {
+    "message": "Rootstock es una sidechain de Bitcoin protegida por más del 85% de la potencia de hash de Bitcoin mediante merge mining. Este portal contiene conceptos, quickstarts, guías de integración, referencia de API, recetas de casos de uso y documentación para operadores de nodos."
+  },
+  "Rootstock is a Bitcoin sidechain secured by over 85% of Bitcoin hash power through merge mining. This portal contains concepts, quickstarts, and integration guides to build and integrate dApps on Rootstock.": {
+    "message": "Rootstock es una sidechain de Bitcoin protegida por más del 85% de la potencia de hash de Bitcoin mediante merge mining. Este portal contiene conceptos, quickstarts y guías de integración para crear e integrar dApps en Rootstock."
+  },
+  "Bitcoin DeFi": {
+    "message": "Bitcoin DeFi"
+  },
+  "View Bitcoin DeFi guides": {
+    "message": "Ver guías de Bitcoin DeFi"
+  },
+  "Step-by-step guides for Bitcoin DeFi, Bridge, Onboard, and AI.": {
+    "message": "Guías paso a paso para Bitcoin DeFi, Bridge, Onboard e IA."
+  },
+  "Everything you need to build on Bitcoin": {
+    "message": "Todo lo que necesitas para desarrollar en Bitcoin"
+  },
+  "Rootstock is a Bitcoin sidechain secured by over 85% of Bitcoin hash power through merge mining. rBTC is pegged to BTC through the PowPeg protocol.": {
+    "message": "Rootstock es una sidechain de Bitcoin protegida por más del 85 % del hashrate de Bitcoin mediante merged mining. rBTC está vinculado a BTC a través del protocolo PowPeg."
+  },
+  "Find the right starting point for your journey on Rootstock: build smart contracts, integrate, or prepare for mainnet.": {
+    "message": "Encuentra el punto de partida adecuado en Rootstock: desarrolla smart contracts, integra o prepárate para mainnet."
+  },
+  "Open Rootstock RPC": {
+    "message": "Abrir Rootstock RPC"
+  },
+  "Review the PowPeg security model, audit contracts, and configure mainnet deployments.": {
+    "message": "Revisa el modelo de seguridad de PowPeg, audita contratos y configura despliegues en mainnet."
+  },
+  "PowPeg protocol overview": {
+    "message": "Descripción general del protocolo PowPeg"
+  },
+  "Lending and on-chain Bitcoin DeFi with rBTC.": {
+    "message": "Préstamos y Bitcoin DeFi on-chain con rBTC."
+  },
+  "Bridges, wallets, RPC access, and the Rootstock Explorer for Rootstock deployments.": {
+    "message": "Bridges, wallets, acceso RPC y Rootstock Explorer para despliegues en Rootstock."
+  },
+  "Search blocks, transactions, contracts, and dApps on Rootstock mainnet and testnet.": {
+    "message": "Busca bloques, transacciones, contratos y dApps en mainnet y testnet de Rootstock."
+  },
+  "Open Rootstock Explorer": {
+    "message": "Abrir Rootstock Explorer"
+  },
+  "Navigate the explorer": {
+    "message": "Navegar el explorer"
+  },
+  "Explorer guides": {
+    "message": "Guías del explorer"
+  },
+  "Rootstock Explorer": {
+    "message": "Rootstock Explorer"
+  },
+  "RootstockCollective": {
+    "message": "RootstockCollective"
+  },
+  "RootstockCollective runs grants, governance, and builder programs on Rootstock.": {
+    "message": "RootstockCollective gestiona grants, gobernanza y programas para builders en Rootstock."
+  },
+  "Open RootstockCollective": {
+    "message": "Abrir RootstockCollective"
   }
 }

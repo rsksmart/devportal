@@ -55,7 +55,7 @@ export default function Card({index, title, description, list, color = "orange",
           </svg>
         )}
         {link?.href && (
-          <Button href={link.href} stretched={true} className={`mt-auto`}>
+          <Button href={link.href} target={link.target} stretched={true} className={`mt-auto`}>
             {link.title}
           </Button>
         )}

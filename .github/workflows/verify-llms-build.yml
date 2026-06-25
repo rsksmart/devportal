@@ -1,0 +1,49 @@
+name: Verify LLM Build Artifacts
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - 'i18n/**'
+      - 'plugins/**'
+      - 'lib/**'
+      - 'middleware.js'
+      - 'scripts/fix-llms-urls.mjs'
+      - 'scripts/verify-llms-build.mjs'
+      - 'scripts/verify-middleware-paths.mjs'
+      - 'docusaurus.config.js'
+      - 'vercel.json'
+      - '.github/workflows/verify-llms-build.yml'
+
+jobs:
+  verify-llms:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Verify middleware path resolution
+        run: yarn verify-middleware-paths
+
+      - name: Build site
+        run: yarn build
+        env:
+          MENDABLE_KEY: ${{ secrets.MENDABLE_KEY }}
+          COOKBOOK_PUBLIC_API_KEY: ${{ secrets.COOKBOOK_PUBLIC_API_KEY }}
+          GTM_CONTAINER_ID: ${{ secrets.GTM_CONTAINER_ID }}
+
+      - name: Verify LLM and markdown artifacts
+        run: yarn verify-llms-build

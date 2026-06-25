@@ -6,7 +6,7 @@ tags: [rootstock, concepts, glossary, resources, rsk]
 description: "This section of the documentation covers the core concepts about the Rootstock blockchain. Working with Rootstock requires an understanding of blockchain technology, bitcoin and smart contracts."
 ---
 
-Rootstock is the first and longest-lasting Bitcoin sidechain. It is the only layer 2 solution that combines the security of Bitcoin's proof of work with Ethereum's smart contract capabilities. The platform is open-source, EVM-compatible, and secured by over 60% of Bitcoin’s hashing power, This robust security model empowers developers to build trustless, innovative dApps within a thriving ecosystem.
+Rootstock is the first and longest-lasting Bitcoin sidechain. It combines the security of Bitcoin's proof of work with Ethereum's smart contract capabilities. The platform is open-source, EVM-compatible, and secured by over 85% of Bitcoin's hash power through merge mining.
 
 This section equips you with the fundamental knowledge required to navigate the Rootstock blockchain. Familiarity with blockchain technology, Bitcoin, and smart contracts will be beneficial as you navigate deeper.
 
@@ -29,7 +29,7 @@ Ready to embark on your Rootstock development journey? Explore these sections ta
 
 ### Developers
 
-The [Developers](/developers/) section provides all the necessary guides and information for building secure and scalable dApps on Bitcoin with Rootstock. Leverage your existing knowledge of Solidity and tools like Rust, Hardhat, and Wagmi to deploy and scale your dApps on the pioneering layer 2 solution that combines the best of Bitcoin security and Ethereum Smart Contract capabilities.
+The [Developers](/developers/) section provides guides and reference material for building dApps on Rootstock. Use Solidity and tools like Hardhat and Wagmi to deploy on a Bitcoin sidechain with EVM-compatible smart contracts.
 
 ### Node Operators
 

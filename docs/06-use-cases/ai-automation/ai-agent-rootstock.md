@@ -3,12 +3,10 @@ sidebar_label: Build Conversational AI Agents
 sidebar_position: 205
 title: Conversational AI Agent with Blockchain Actions on Rootstock
 tags: [rsk, rootstock, ai agents, ai]
-description: "This tutorial demonstrates how to build a lightweight dApp that connects a conversational AI agent to the Rootstock testnet, allowing users to perform DeFi actions like checking token balances and sending tRBTC simply by chatting."
+description: "Build a lightweight dApp that connects a conversational AI agent to the Rootstock testnet for balance checks, tRBTC transfers, and other scoped on-chain actions through chat."
 ---
 
-Imagine being able to ask your app, “What’s my token balance?” or “Send 0.01 tRBTC to this address,” and it just… does it. No forms, no buttons—just a conversation with an AI agent that knows how to talk to the blockchain.
-
-In this guide, we will build a lightweight dApp that connects a conversational AI agent to the Rootstock testnet, allowing users to perform DeFi actions like checking token balances and sending tRBTC simply by chatting. This is not just a chatbot—it is a minimal DeFi agent that can reason over wallet data, maintain conversational context, and issue token actions with a human-like touch.
+This guide walks through a minimal dApp that connects a conversational AI agent to the Rootstock testnet. Users check token balances and send tRBTC through chat. The agent reads wallet state, keeps conversational context, and submits scoped on-chain actions through defined tools.
 
 The tech stack used in this tutorial is:
 - [NextJS](https://nextjs.org/) as the development framework.
@@ -23,7 +21,7 @@ The tech stack used in this tutorial is:
 - A chat interface powered by an LLM (via Groq SDK)
 - A fully functioning AI agent that can interpret user intent and call blockchain methods accordingly
 
-Let’s dive into how AI and decentralized infrastructure can come together in a single-page app with real utility.
+Next you wire AI tooling and Rootstock testnet access into a single-page app with wallet connection and scoped transaction tools.
 
 ## Prerequisites
 
@@ -85,7 +83,7 @@ If there is no error and the app is running correctly on the server, we are read
 
 ## Define the AI Agent UI
 
-To set up the AI agent's user interface, we'll focus solely on the visual layer. Since Shadcn is already configured, there's no need to go in-depth here—simply update the `page.tsx` file with the following code:
+To set up the AI agent's user interface, we'll focus solely on the visual layer. Since Shadcn is already configured, there's no need to go in-depth here. Update the `page.tsx` file with the following code:
 
 ```js
 import { ConnectButton } from "@/components/ConnectButton";
@@ -410,7 +408,7 @@ const messages = [
 
 ```
 
-The `getSystemPrompt` function defines how the agent should behave — friendly, brief, and focused on Rootstock testnet. It gives the LLM structure so that it can consistently produce helpful and well-formatted answers.
+The `getSystemPrompt` function defines how the agent should behave: friendly, brief, and focused on Rootstock testnet. It gives the LLM structure so that it can consistently produce helpful and well-formatted answers.
 
 ```js
 function getSystemPrompt() {...}
@@ -418,7 +416,7 @@ function getSystemPrompt() {...}
 ```
 
 
-We take the last 10 messages from the conversation (for context) and add a **system prompt** — this tells the model who it is (a Rootstock agent) and how it should behave.
+We take the last 10 messages from the conversation (for context) and add a **system prompt**. This tells the model who it is (a Rootstock agent) and how it should behave.
 
 ```js
 if (limitedHistory && limitedHistory.length > 0) {
@@ -502,7 +500,7 @@ const response = await groqClient.chat.completions.create({
     });
 ```
 
-Here we call Groq’s chat API with the message history and tool definitions. These tools represent on-chain actions Groq can “call” — like sending tokens or checking balances. When Groq detects that a function is needed, it will return a function call instead of a plain text answer.
+Here we call Groq’s chat API with the message history and tool definitions. These tools represent on-chain actions Groq can “call”, such as sending tokens or checking balances. When Groq detects that a function is needed, it will return a function call instead of a plain text answer.
 
 
 6. Handle function calls (if any)
@@ -858,7 +856,7 @@ export const BLOCK_EXPLORER_URL = "https://explorer.testnet.rootstock.io/tx/";
 
 :::success[Wrapping up]
 
-And that’s it! You’ve just built a conversational AI agent on Rootstock that understands natural language and interacts directly with the blockchain. From querying token balances to executing tRBTC transfers, everything now happens inside a single chat interface—no buttons, no forms, just fluid DeFi actions through words.
+You built a conversational AI agent on Rootstock that interprets natural language and submits scoped on-chain actions. Balance checks and tRBTC transfers run through the chat interface and defined tool handlers.
 
 ✨ This tutorial was inspired by [BitMate](https://github.com/Zero-Labs-Workspace/BitMate), a project originally built for a Web3 hackathon exploring how AI and decentralized infrastructure can work hand in hand.
 
