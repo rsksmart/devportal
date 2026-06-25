@@ -6,6 +6,15 @@ import Translate from '@docusaurus/Translate';
 import RemixLaunchButton from '/src/components/RemixLaunchButton';
 import RemixLaunchMenu from '/src/components/RemixLaunchMenu';
 
+// Inline play triangle (matches the dropdown menu trigger icon).
+function IconPlay() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+      <path d="M4.5 2.5v11a.5.5 0 0 0 .76.43l9-5.5a.5.5 0 0 0 0-.86l-9-5.5a.5.5 0 0 0-.76.43Z" />
+    </svg>
+  );
+}
+
 export default function DocItemTOCDesktop() {
   const {toc, frontMatter} = useDoc();
   // Surface Remix launch controls above "On this page" so readers don't have to
@@ -26,8 +35,13 @@ export default function DocItemTOCDesktop() {
 		  <div className="mb-24">
 			  <RemixLaunchButton
 				  deepLink={remixDeepLink}
-				  label={frontMatter.remix_label || 'Try in Remix IDE'}
-				  className="btn btn-primary btn-sm w-100"
+				  label={
+					  <>
+						  <IconPlay />
+						  {frontMatter.remix_label || 'Try in Remix IDE'}
+					  </>
+				  }
+				  className="remix-launch-btn"
 			  />
 		  </div>
 	  )}
