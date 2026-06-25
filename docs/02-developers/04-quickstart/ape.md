@@ -4,6 +4,8 @@ sidebar_label: Ape
 title: Compile and Deploy Smart Contracts with Ape on Rootstock
 description: 'Compile, deploy, and interact with smart contracts on Rootstock using the Ape Framework. Secured by over 85% of Bitcoin''s hash power through merge mining.'
 tags: [rsk, ape, apeworx, developers, developer tools, tRBTC, rootstock, testing, dApps, smart contracts]
+remix_label: "Try in Remix IDE"
+remix: "https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCmNvbnRyYWN0IEJveCB7CiAgICB1aW50MjU2IHByaXZhdGUgdmFsdWU7CgogICAgZXZlbnQgVmFsdWVDaGFuZ2VkKHVpbnQyNTYgbmV3VmFsdWUpOwoKICAgIGZ1bmN0aW9uIHN0b3JlKHVpbnQyNTYgbmV3VmFsdWUpIHB1YmxpYyB7CiAgICAgICAgdmFsdWUgPSBuZXdWYWx1ZTsKICAgICAgICBlbWl0IFZhbHVlQ2hhbmdlZChuZXdWYWx1ZSk7CiAgICB9CgogICAgZnVuY3Rpb24gcmV0cmlldmUoKSBwdWJsaWMgdmlldyByZXR1cm5zICh1aW50MjU2KSB7CiAgICAgICAgcmV0dXJuIHZhbHVlOwogICAgfQp9"
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -148,7 +150,7 @@ contract Box {
 :::info[Try this contract in Remix]
 Want to deploy and interact with `Box` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
 
-{/* Remix deep-link for Box: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4xOwoKY29udHJhY3QgQm94IHsKICAgIHVpbnQyNTYgcHJpdmF0ZSB2YWx1ZTsKCiAgICBldmVudCBWYWx1ZUNoYW5nZWQodWludDI1NiBuZXdWYWx1ZSk7CgogICAgZnVuY3Rpb24gc3RvcmUodWludDI1NiBuZXdWYWx1ZSkgcHVibGljIHsKICAgICAgICB2YWx1ZSA9IG5ld1ZhbHVlOwogICAgICAgIGVtaXQgVmFsdWVDaGFuZ2VkKG5ld1ZhbHVlKTsKICAgIH0KCiAgICBmdW5jdGlvbiByZXRyaWV2ZSgpIHB1YmxpYyB2aWV3IHJldHVybnMgKHVpbnQyNTYpIHsKICAgICAgICByZXR1cm4gdmFsdWU7CiAgICB9Cn0%3D */}
+{/* Remix deep-link for Box: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCmNvbnRyYWN0IEJveCB7CiAgICB1aW50MjU2IHByaXZhdGUgdmFsdWU7CgogICAgZXZlbnQgVmFsdWVDaGFuZ2VkKHVpbnQyNTYgbmV3VmFsdWUpOwoKICAgIGZ1bmN0aW9uIHN0b3JlKHVpbnQyNTYgbmV3VmFsdWUpIHB1YmxpYyB7CiAgICAgICAgdmFsdWUgPSBuZXdWYWx1ZTsKICAgICAgICBlbWl0IFZhbHVlQ2hhbmdlZChuZXdWYWx1ZSk7CiAgICB9CgogICAgZnVuY3Rpb24gcmV0cmlldmUoKSBwdWJsaWMgdmlldyByZXR1cm5zICh1aW50MjU2KSB7CiAgICAgICAgcmV0dXJuIHZhbHVlOwogICAgfQp9 */}
 
 <RemixLaunchButton code={boxSource} />
 :::

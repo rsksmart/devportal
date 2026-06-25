@@ -4,6 +4,8 @@ sidebar_position: 103
 title: Smart Contract
 description: "Learn how to write a smart contract using Solidity and OpenZeppellin"
 tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethers]
+remix_label: "Try in Remix IDE"
+remix: "https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IFVOTElDRU5TRUQKcHJhZ21hIHNvbGlkaXR5IF4wLjguMzA7Cgpjb250cmFjdCBDb3VudGVyIHsKICAgIHVpbnQyNTYgcHVibGljIG51bWJlcjsKCiAgICBmdW5jdGlvbiBzZXROdW1iZXIodWludDI1NiBuZXdOdW1iZXIpIHB1YmxpYyB7CiAgICAgICAgbnVtYmVyID0gbmV3TnVtYmVyOwogICAgfQoKICAgIGZ1bmN0aW9uIGluY3JlbWVudCgpIHB1YmxpYyB7CiAgICAgICAgbnVtYmVyKys7CiAgICB9Cn0%3D"
 ---
 
 import CodeBlock from '@theme/CodeBlock';

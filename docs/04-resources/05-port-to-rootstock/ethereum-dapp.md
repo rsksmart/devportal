@@ -4,6 +4,8 @@ title: Port an Ethereum dApp to Rootstock
 sidebar_label: Port an Ethereum dApp to Rootstock
 tags: [rsk, rootstock, resources, tutorials, port to rootstock, Ethereum, dApps, smart contracts]
 description: "Porting an Ethereum decentralized application (dApp) to Rootstock (RSK) presents an exciting opportunity to leverage the benefits of the Rootstock network, a Bitcoin L2 compatible with Ethereum. This guide will walk you through porting an Ethereum dApp to the Rootstock network using the Hardhat Ignition deployment tool and leveraging the compatibility between Solidity (used for Rootstock) and Ethereum."
+remix_label: "Try in Remix IDE"
+remix: "https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCmNvbnRyYWN0IFNpbXBsZVN0b3JhZ2UgewogICAgdWludDI1NiBwdWJsaWMgZmF2b3JpdGVOdW1iZXI7CgogICAgZnVuY3Rpb24gc3RvcmUodWludDI1NiBfZmF2b3JpdGVOdW1iZXIpIHB1YmxpYyB7CiAgICAgICAgZmF2b3JpdGVOdW1iZXIgPSBfZmF2b3JpdGVOdW1iZXI7CiAgICB9Cn0%3D"
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -255,7 +257,7 @@ contract SimpleStorage {
 :::info[Try this contract in Remix]
 Want to deploy and interact with `SimpleStorage` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
 
-{/* Remix deep-link for SimpleStorage: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yNTsKCmNvbnRyYWN0IFNpbXBsZVN0b3JhZ2UgewogICAgdWludDI1NiBwdWJsaWMgZmF2b3JpdGVOdW1iZXI7CgogICAgZnVuY3Rpb24gc3RvcmUodWludDI1NiBfZmF2b3JpdGVOdW1iZXIpIHB1YmxpYyB7CiAgICAgICAgZmF2b3JpdGVOdW1iZXIgPSBfZmF2b3JpdGVOdW1iZXI7CiAgICB9Cn0%3D */}
+{/* Remix deep-link for SimpleStorage: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCmNvbnRyYWN0IFNpbXBsZVN0b3JhZ2UgewogICAgdWludDI1NiBwdWJsaWMgZmF2b3JpdGVOdW1iZXI7CgogICAgZnVuY3Rpb24gc3RvcmUodWludDI1NiBfZmF2b3JpdGVOdW1iZXIpIHB1YmxpYyB7CiAgICAgICAgZmF2b3JpdGVOdW1iZXIgPSBfZmF2b3JpdGVOdW1iZXI7CiAgICB9Cn0%3D */}
 
 <RemixLaunchButton code={simpleStorageSource} />
 :::

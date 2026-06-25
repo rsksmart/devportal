@@ -4,9 +4,12 @@ sidebar_label: "Deploy Your First Contract"
 sidebar_position: 3
 description: "Write, compile, deploy, and interact with your first smart contract on Rootstock Testnet."
 tags: [guides, developers, blockchain, rsk, rootstock, deploy, hardhat]
+remix: "https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCmNvbnRyYWN0IEhlbGxvUm9vdHN0b2NrIHsKICAgIHN0cmluZyBwdWJsaWMgbWVzc2FnZTsKCiAgICBjb25zdHJ1Y3RvcihzdHJpbmcgbWVtb3J5IF9tZXNzYWdlKSB7CiAgICAgICAgbWVzc2FnZSA9IF9tZXNzYWdlOwogICAgfQoKICAgIGZ1bmN0aW9uIHVwZGF0ZU1lc3NhZ2Uoc3RyaW5nIG1lbW9yeSBfbmV3TWVzc2FnZSkgcHVibGljIHsKICAgICAgICBtZXNzYWdlID0gX25ld01lc3NhZ2U7CiAgICB9Cn0%3D"
+remix_label: "Try in Remix IDE"
 ---
 
 import CodeBlock from '@theme/CodeBlock';
+
 
 In this module, you will write, compile, deploy, and interact with your first smart contract on the Rootstock Testnet.
 
@@ -40,7 +43,7 @@ contract HelloRootstock {
 :::info[Try this contract in Remix]
 Want to deploy and interact with `HelloRootstock` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
 
-{/* Remix deep-link for HelloRootstock: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yMDsKCmNvbnRyYWN0IEhlbGxvUm9vdHN0b2NrIHsKICAgIHN0cmluZyBwdWJsaWMgbWVzc2FnZTsKCiAgICBjb25zdHJ1Y3RvcihzdHJpbmcgbWVtb3J5IF9tZXNzYWdlKSB7CiAgICAgICAgbWVzc2FnZSA9IF9tZXNzYWdlOwogICAgfQoKICAgIGZ1bmN0aW9uIHVwZGF0ZU1lc3NhZ2Uoc3RyaW5nIG1lbW9yeSBfbmV3TWVzc2FnZSkgcHVibGljIHsKICAgICAgICBtZXNzYWdlID0gX25ld01lc3NhZ2U7CiAgICB9Cn0%3D */}
+{/* Remix deep-link for HelloRootstock: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCmNvbnRyYWN0IEhlbGxvUm9vdHN0b2NrIHsKICAgIHN0cmluZyBwdWJsaWMgbWVzc2FnZTsKCiAgICBjb25zdHJ1Y3RvcihzdHJpbmcgbWVtb3J5IF9tZXNzYWdlKSB7CiAgICAgICAgbWVzc2FnZSA9IF9tZXNzYWdlOwogICAgfQoKICAgIGZ1bmN0aW9uIHVwZGF0ZU1lc3NhZ2Uoc3RyaW5nIG1lbW9yeSBfbmV3TWVzc2FnZSkgcHVibGljIHsKICAgICAgICBtZXNzYWdlID0gX25ld01lc3NhZ2U7CiAgICB9Cn0%3D */}
 
 <RemixLaunchButton code={helloRootstockSource} />
 :::

@@ -4,6 +4,8 @@ sidebar_label: Interact with Rootstock using Go
 sidebar_position: 9
 tags: [rsk, rootstock, go, golang, go-ethereum, tutorials, resources, smart contracts]
 description: "Go is an easy to learn language which combines speed and concurrency. It is widely used in web3 development, especially in the ethereum ecosystem. This guide will help developers read from and write to the Rootstock blockchain using Go."
+remix_label: "Try in Remix IDE"
+remix: "https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCmNvbnRyYWN0IFN0b3JhZ2UgewogICAgdWludDI1NiBudW1iZXI7CgogICAgZnVuY3Rpb24gc3RvcmUodWludDI1NiBudW0pIHB1YmxpYyB7CiAgICAgICAgbnVtYmVyID0gbnVtOwogICAgfQoKICAgIGZ1bmN0aW9uIHJldHJpZXZlKCkgcHVibGljIHZpZXcgcmV0dXJucyAodWludDI1Nil7CiAgICAgICAgcmV0dXJuIG51bWJlcjsKICAgIH0KfQ%3D%3D"
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -183,7 +185,7 @@ contract Storage {
 :::info[Try this contract in Remix]
 Want to deploy and interact with `Storage` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
 
-{/* Remix deep-link for Storage: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4xMzsKCmNvbnRyYWN0IFN0b3JhZ2UgewogICAgdWludDI1NiBudW1iZXI7CgogICAgZnVuY3Rpb24gc3RvcmUodWludDI1NiBudW0pIHB1YmxpYyB7CiAgICAgICAgbnVtYmVyID0gbnVtOwogICAgfQoKICAgIGZ1bmN0aW9uIHJldHJpZXZlKCkgcHVibGljIHZpZXcgcmV0dXJucyAodWludDI1Nil7CiAgICAgICAgcmV0dXJuIG51bWJlcjsKICAgIH0KfQ%3D%3D */}
+{/* Remix deep-link for Storage: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCmNvbnRyYWN0IFN0b3JhZ2UgewogICAgdWludDI1NiBudW1iZXI7CgogICAgZnVuY3Rpb24gc3RvcmUodWludDI1NiBudW0pIHB1YmxpYyB7CiAgICAgICAgbnVtYmVyID0gbnVtOwogICAgfQoKICAgIGZ1bmN0aW9uIHJldHJpZXZlKCkgcHVibGljIHZpZXcgcmV0dXJucyAodWludDI1Nil7CiAgICAgICAgcmV0dXJuIG51bWJlcjsKICAgIH0KfQ%3D%3D */}
 
 <RemixLaunchButton code={storageSource} />
 :::

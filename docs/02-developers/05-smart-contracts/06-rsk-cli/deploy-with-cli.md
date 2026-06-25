@@ -4,7 +4,36 @@ sidebar_label: Deploy Smart Contracts using the Rootstock CLI
 title: Deploy a Smart Contract using the Rootstock CLI
 description: "The Rootstock CLI enables faster deployment of smart contracts to the Rootstock network."
 tags: [Rootstock CLI, developer tools, guides, rsk, rootstock, dApps, smart contracts, solidity, dev-environments]
+remix_label: "Try in Remix IDE"
+remix: "https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCmNvbnRyYWN0IENvbnRhY3RJbmZvIHsKICAgIHN0cmluZyBwdWJsaWMgbmFtZTsKICAgIHN0cmluZyBwdWJsaWMgcGhvbmU7CgogICAgLy8gQ29uc3RydWN0b3IgdG8gaW5pdGlhbGl6ZSBuYW1lIGFuZCBwaG9uZQogICAgY29uc3RydWN0b3Ioc3RyaW5nIG1lbW9yeSBfbmFtZSwgc3RyaW5nIG1lbW9yeSBfcGhvbmUpIHsKICAgICAgICBuYW1lID0gX25hbWU7CiAgICAgICAgcGhvbmUgPSBfcGhvbmU7CiAgICB9CgogICAgLy8gRnVuY3Rpb24gdG8gc2V0IHRoZSBuYW1lIGFuZCBwaG9uZQogICAgZnVuY3Rpb24gc2V0Q29udGFjdEluZm8oc3RyaW5nIG1lbW9yeSBfbmFtZSwgc3RyaW5nIG1lbW9yeSBfcGhvbmUpIHB1YmxpYyB7CiAgICAgICAgbmFtZSA9IF9uYW1lOwogICAgICAgIHBob25lID0gX3Bob25lOwogICAgfQoKICAgIC8vIEZ1bmN0aW9uIHRvIGdldCB0aGUgY29udGFjdCBpbmZvCiAgICBmdW5jdGlvbiBnZXRDb250YWN0SW5mbygpIHB1YmxpYyB2aWV3IHJldHVybnMgKHN0cmluZyBtZW1vcnksIHN0cmluZyBtZW1vcnkpIHsKICAgICAgICByZXR1cm4gKG5hbWUsIHBob25lKTsKICAgIH0KfQ%3D%3D"
 ---
+
+import CodeBlock from '@theme/CodeBlock';
+
+export const contactInfoSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
+
+contract ContactInfo {
+    string public name;
+    string public phone;
+
+    // Constructor to initialize name and phone
+    constructor(string memory _name, string memory _phone) {
+        name = _name;
+        phone = _phone;
+    }
+
+    // Function to set the name and phone
+    function setContactInfo(string memory _name, string memory _phone) public {
+        name = _name;
+        phone = _phone;
+    }
+
+    // Function to get the contact info
+    function getContactInfo() public view returns (string memory, string memory) {
+        return (name, phone);
+    }
+}`;
 
 <Steps>
   <Step title="Set Up Your Hardhat Project">
@@ -35,32 +64,15 @@ npx hardhat
     1. **Create the Smart Contract**:
    * Inside the contracts folder, create a new Solidity file (e.g., `ContactInfo.sol`) and write your smart contract code.
 
-```bash
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.30;
+<CodeBlock language="solidity">{contactInfoSource}</CodeBlock>
 
-contract ContactInfo {
-    string public name;
-    string public phone;
+:::info[Try this contract in Remix]
+Want to deploy and interact with `ContactInfo` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
 
-    // Constructor to initialize name and phone
-    constructor(string memory _name, string memory _phone) {
-        name = _name;
-        phone = _phone;
-    }
+{/* Remix deep-link for ContactInfo: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCmNvbnRyYWN0IENvbnRhY3RJbmZvIHsKICAgIHN0cmluZyBwdWJsaWMgbmFtZTsKICAgIHN0cmluZyBwdWJsaWMgcGhvbmU7CgogICAgLy8gQ29uc3RydWN0b3IgdG8gaW5pdGlhbGl6ZSBuYW1lIGFuZCBwaG9uZQogICAgY29uc3RydWN0b3Ioc3RyaW5nIG1lbW9yeSBfbmFtZSwgc3RyaW5nIG1lbW9yeSBfcGhvbmUpIHsKICAgICAgICBuYW1lID0gX25hbWU7CiAgICAgICAgcGhvbmUgPSBfcGhvbmU7CiAgICB9CgogICAgLy8gRnVuY3Rpb24gdG8gc2V0IHRoZSBuYW1lIGFuZCBwaG9uZQogICAgZnVuY3Rpb24gc2V0Q29udGFjdEluZm8oc3RyaW5nIG1lbW9yeSBfbmFtZSwgc3RyaW5nIG1lbW9yeSBfcGhvbmUpIHB1YmxpYyB7CiAgICAgICAgbmFtZSA9IF9uYW1lOwogICAgICAgIHBob25lID0gX3Bob25lOwogICAgfQoKICAgIC8vIEZ1bmN0aW9uIHRvIGdldCB0aGUgY29udGFjdCBpbmZvCiAgICBmdW5jdGlvbiBnZXRDb250YWN0SW5mbygpIHB1YmxpYyB2aWV3IHJldHVybnMgKHN0cmluZyBtZW1vcnksIHN0cmluZyBtZW1vcnkpIHsKICAgICAgICByZXR1cm4gKG5hbWUsIHBob25lKTsKICAgIH0KfQ%3D%3D */}
 
-    // Function to set the name and phone
-    function setContactInfo(string memory _name, string memory _phone) public {
-        name = _name;
-        phone = _phone;
-    }
-
-    // Function to get the contact info
-    function getContactInfo() public view returns (string memory, string memory) {
-        return (name, phone);
-    }
-}
-```
+<RemixLaunchButton code={contactInfoSource} />
+:::
 
 2. **Compile the Contract**:
 

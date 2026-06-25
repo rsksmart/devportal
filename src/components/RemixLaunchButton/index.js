@@ -15,9 +15,13 @@ function encodeBase64(source) {
   return btoa(String.fromCharCode(...new TextEncoder().encode(source)))
 }
 
-// Build the Remix deep-link. A GitHub `contractUrl` takes precedence; otherwise
-// a raw Solidity `code` snippet is base64-encoded and passed via `?#code=`.
-function buildRemixUrl({ contractUrl, code }) {
+// Build the Remix deep-link. A pre-built `deepLink` wins; otherwise a GitHub
+// `contractUrl` takes precedence, then a raw Solidity `code` snippet that is
+// base64-encoded and passed via `?#code=`.
+function buildRemixUrl({ deepLink, contractUrl, code }) {
+  if (deepLink) {
+    return deepLink
+  }
   if (contractUrl) {
     return `${REMIX_URL_BASE}${contractUrl}`
   }
@@ -68,15 +72,17 @@ export default function RemixLaunchButton({
   label = 'Try in Remix IDE',
   contractUrl,
   code,
+  deepLink,
+  className = 'btn btn-primary mt-8',
 }) {
   const [show, setShow] = useState(false)
-  const remixUrl = buildRemixUrl({ contractUrl, code })
+  const remixUrl = buildRemixUrl({ deepLink, contractUrl, code })
 
   return (
     <>
       <button
         type="button"
-        className="btn btn-primary mt-8"
+        className={className}
         onClick={() => {
           pushDataLayer('remixLaunchModalOpen', { contractUrl: remixUrl })
           setShow(true)
