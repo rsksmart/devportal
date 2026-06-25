@@ -31,18 +31,22 @@ export default function DocItemTOCDesktop() {
 			  />
 		  </div>
 	  )}
-	  <h4 className={`title-s mb-30 text-uppercase`}>
-		  <Translate
-			  id="theme.TOCCollapsible.toggleButtonLabel"
-			  description="The label used by the button on the collapsible TOC component">
-			  On this page
-		  </Translate>
-	  </h4>
-	  <TOC
-		  toc={toc}
-		  minHeadingLevel={frontMatter.toc_min_heading_level}
-		  maxHeadingLevel={frontMatter.toc_max_heading_level}
-		  className={ThemeClassNames.docs.docTocDesktop}
-	  />
+	  {toc.length > 0 && (
+		  <>
+			  <h4 className={`title-s mb-30 text-uppercase`}>
+				  <Translate
+					  id="theme.TOCCollapsible.toggleButtonLabel"
+					  description="The label used by the button on the collapsible TOC component">
+					  On this page
+				  </Translate>
+			  </h4>
+			  <TOC
+				  toc={toc}
+				  minHeadingLevel={frontMatter.toc_min_heading_level}
+				  maxHeadingLevel={frontMatter.toc_max_heading_level}
+				  className={ThemeClassNames.docs.docTocDesktop}
+			  />
+		  </>
+	  )}
   </div>
 }

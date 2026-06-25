@@ -11,6 +11,12 @@ export default function RemixLaunchMenu({ contracts = [], label = 'Try in Remix 
 
   useEffect(() => {
     function handleOutside(e) {
+      // The pre-flight modal renders in a portal on document.body (outside this
+      // ref). Ignore clicks inside the modal/backdrop so selecting a contract
+      // and using the modal doesn't close the menu and unmount the button.
+      if (e.target.closest && e.target.closest('.modal, .modal-backdrop')) {
+        return
+      }
       if (ref.current && !ref.current.contains(e.target)) {
         setOpen(false)
       }
