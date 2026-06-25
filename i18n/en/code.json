@@ -1204,11 +1204,11 @@
   "Step-by-step guides for Bitcoin DeFi, Bridge, Onboard, and AI.": {
     "message": "Step-by-step guides for Bitcoin DeFi, Bridge, Onboard, and AI."
   },
-  "Everything you need to build on Bitcoin": {
-    "message": "Everything you need to build on Bitcoin"
+  "Everything you need to build on Bitcoin.": {
+    "message": "Everything you need to build on Bitcoin."
   },
-  "Rootstock is a Bitcoin sidechain secured by over 85% of Bitcoin hash power through merge mining. rBTC is pegged to BTC through the PowPeg protocol.": {
-    "message": "Rootstock is a Bitcoin sidechain secured by over 85% of Bitcoin hash power through merge mining. rBTC is pegged to BTC through the PowPeg protocol."
+  "Build with familiar EVM tools on a network secured by over 85% of Bitcoin's hash power via merge mining.": {
+    "message": "Build with familiar EVM tools on a network secured by over 85% of Bitcoin's hash power via merge mining."
   },
   "Find the right starting point for your journey on Rootstock: build smart contracts, integrate, or prepare for mainnet.": {
     "message": "Find the right starting point for your journey on Rootstock: build smart contracts, integrate, or prepare for mainnet."

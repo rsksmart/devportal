@@ -5,11 +5,11 @@ import Translate from '@docusaurus/core/lib/client/exports/Translate';
 const content = {
   title: <Translate>Rootstock Documentation</Translate>,
   tagline: (
-    <Translate>Everything you need to build on Bitcoin</Translate>
+    <Translate>Everything you need to build on Bitcoin.</Translate>
   ),
   usp: (
     <Translate>
-      Rootstock is a Bitcoin sidechain secured by over 85% of Bitcoin hash power through merge mining. rBTC is pegged to BTC through the PowPeg protocol.
+      Build with familiar EVM tools on a network secured by over 85% of Bitcoin's hash power via merge mining.
     </Translate>
   ),
   cta: {
