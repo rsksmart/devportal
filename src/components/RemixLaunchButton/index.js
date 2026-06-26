@@ -126,7 +126,7 @@ export default function RemixLaunchButton({
             ))}
           </ol>
 
-          <p className="mb-24 text-muted small">
+          <p className="mb-24 small">
             Need more detail? See the full{' '}
             <a href="/developers/quickstart/remix/" target="_blank" rel="noopener noreferrer">
               Remix + Rootstock guide
