@@ -108,7 +108,7 @@ values={[
   color="cyan"
   linkHref="/use-cases/interoperability/integrate-symbiosis/"
   linkTitle="View guide"
-  description="Integrate symbiosis into your Rootstock dApp for cross-chain liquidity, swaps."
+  description="Integrate Symbiosis into your Rootstock dApp for cross-chain liquidity, swaps."
 />
 
 <FilterItem

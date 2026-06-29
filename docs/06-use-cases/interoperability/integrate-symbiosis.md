@@ -6,7 +6,7 @@ tags: [interoperability, bridges, symbiosis, sdk, api, cross-chain, rbtc, btc]
 description: "Integrate Symbiosis Finance into your Rootstock dApp to enable cross-chain swaps between Rootstock and 30+ EVM and non-EVM networks (including native Bitcoin) using the Symbiosis JS SDK or REST API."
 ---
 
-[Symbiosis Finance](https://symbiosis.finance/) is a cross-chain AMM DEX that aggregates liquidity from L1s, L2s, EVM, and non-EVM networks. Rootstock is natively integrated, which means any token tradable on a DEX in any supported network can be swapped into RBTC, rUSDT, or any Rootstock token, and vice versa, in a single user action. Symbiosis also supports BTC ↔ Rootstock routes through its BTC Fee Collector deployed on Rootstock.
+[Symbiosis Finance](https://symbiosis.finance/) is a cross-chain AMM DEX that aggregates liquidity from L1s, L2s, EVM, and non-EVM networks. Rootstock is natively integrated, which means any token tradable on a DEX in any supported network can be swapped into rBTC, rUSDT, or any Rootstock token, and vice versa, in a single user action. Symbiosis also supports BTC ↔ Rootstock routes through its BTC Fee Collector deployed on Rootstock.
 
 This guide covers two integration paths:
 
@@ -23,7 +23,7 @@ This guide covers two integration paths:
 :::info[Rootstock network parameters]
 | Parameter | Value |
 |---|---|
-| Chain ID (mainnet) | `30` |
+| Chain ID (Mainnet) | `30` |
 | Native gas token | `rBTC` |
 | Rootstock public RPC | `https://public-node.rsk.co` |
 | Symbiosis BTC Fee Collector (Rootstock) | [`0xbba322c98601b707cffb98092010e0b95d538bb7`](https://explorer.rootstock.io/address/0xbba322c98601b707cffb98092010e0b95d538bb7) |
@@ -32,7 +32,7 @@ This guide covers two integration paths:
 :::warning[Mainnet production checklist]
 Before going live, verify all of the following. Skipping any of these steps puts user funds at risk.
 
-1. **Approvals:** Always approve users' ERC-20 tokens to the `metaRouterGateway` contract for the source chain — never the `metaRouter` directly. Read addresses from [the SDK mainnet config](https://github.com/symbiosis-finance/js-sdk/blob/main/src/crosschain/config/mainnet.ts).
+1. **Approvals:** Always approve users' ERC-20 tokens to the `metaRouterGateway` contract for the source chain — never the `metaRouter` directly. Read addresses from [the SDK Mainnet config](https://github.com/symbiosis-finance/js-sdk/blob/main/src/crosschain/config/mainnet.ts).
 2. **Calldata:** Do not modify, cache, or reuse calldata returned by the SDK or API. Regenerate it (every ~30 seconds) before each transaction.
 3. **Contract addresses:** Verify Symbiosis contract addresses against the SDK config at deploy time.
 4. **Post-deploy sanity:** Perform at least one real cross-chain operation after deployment and after each upgrade.
@@ -42,15 +42,15 @@ Before going live, verify all of the following. Skipping any of these steps puts
 
 A Symbiosis cross-chain swap is made of up to three legs:
 
-- **(A) Source-chain on-chain swap** — optional, when the source token is not the transit token used to leave the chain (typically USDC, USDT, WETH, or WBTC).
-- **(B) Host-chain swap** — always performed on the Symbiosis host chain between synthetic sTokens (e.g. `sUSDC` → `sUSDC`).
-- **(C) Destination-chain on-chain swap** — optional, when the destination token is not the transit token.
+- **(A) Source-chain on-chain swap**, optional, when the source token is not the transit token used to leave the chain (typically USDC, USDT, WETH, or WBTC).
+- **(B) Host-chain swap**, always performed on the Symbiosis host chain between synthetic sTokens (e.g. `sUSDC` → `sUSDC`).
+- **(C) Destination-chain on-chain swap**, optional, when the destination token is not the transit token.
 
-The user signs one transaction on the source chain. Symbiosis Relayers and (where deployed) the Solver service finalize legs (B) and (C) automatically. The slippage tolerance the user picks is distributed across these legs — the host leg always reserves at most 0.2%. Refer to [Slippage Tolerance Distribution](https://docs.symbiosis.finance/developer-tools/symbiosis-api/slippage-tolerance-distribution-in-cross-chain-swaps) for the exact formula.
+The user signs one transaction on the source chain. Symbiosis Relayers and (where deployed) the Solver service finalize legs (B) and (C) automatically. The slippage tolerance the user picks is distributed across these legs, the host leg always reserves at most 0.2%. Refer to [Slippage Tolerance Distribution](https://docs.symbiosis.finance/developer-tools/symbiosis-api/slippage-tolerance-distribution-in-cross-chain-swaps) for the exact formula.
 
 ## Integration 1: The Symbiosis REST API
 
-The REST API wraps the SDK and is backward-compatible across SDK upgrades. This is the recommended path for production. The base URL for mainnet is:
+The REST API wraps the SDK and is backward-compatible across SDK upgrades. This is the recommended path for production. The base URL for Mainnet is:
 
 ```
 https://api.symbiosis.finance/crosschain
@@ -68,18 +68,18 @@ curl https://api.symbiosis.finance/crosschain/v1/chains
 
 ### Step 2: Fetch a Quote (`/v2/quote`)
 
-`/v2/quote` returns the best route and calldata for any-to-any swaps except `BTC → Any`. The example below quotes 25 USDC on Arbitrum to native RBTC on Rootstock.
+`/v2/quote` returns the best route and calldata for any-to-any swaps except `BTC → Any`. The example below quotes 25 USDC on Arbitrum to native rBTC on Rootstock.
 
 ```ts
 // lib/symbiosis-quote.ts
-const SYMBIOSIS_API = "https://api.symbiosis.finance//crosschain";
+const SYMBIOSIS_API = "https://api.symbiosis.finance/crosschain";
 
 
 export async function quoteUsdcArbitrumToRbtc(userAddress: `0x${string}`) {
   const body = {
     tokenAmountIn: {
       chainId: 42161, // Arbitrum One
-      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831...", // native USDC
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831", // native USDC
       amount: "25000000",                                    // 25 USDC, 6 decimals
       decimals: 6,
       symbol: "USDC",
@@ -153,7 +153,7 @@ export async function executeSwap(signer: ethers.Signer) {
     signer,
   );
   const allowance = await usdc.allowance(userAddress, quote.approveTo);
-  if (allowance < BigInt(quote.tokenAmountIn.amount)) {
+  if (allowance.lt(quote.tokenAmountIn.amount)) {
     const approveTx = await usdc.approve(quote.approveTo, quote.tokenAmountIn.amount);
     await approveTx.wait();
   }
@@ -174,6 +174,7 @@ Cross-chain settlement happens asynchronously. Poll `/v2/tx/{chainId}/{txHash}` 
 
 ```ts
 export async function waitForSymbiosisSwap(sourceChainId: number, txHash: string) {
+  const start = Date.now();
   while (true) {
     const res = await fetch(
       `${SYMBIOSIS_API}/v2/tx/${sourceChainId}/${txHash}`,
@@ -182,7 +183,10 @@ export async function waitForSymbiosisSwap(sourceChainId: number, txHash: string
     // status.status is one of: "pending", "success", "stucked", "reverted"
     if (status.status === "success") return status;
     if (status.status === "stucked" || status.status === "reverted") {
-      //throw new Error(`Swap ${status.status}: ${status.error ?? "see explorer"}`);
+      throw new Error(`Swap ${status.status}: ${status.error ?? "see explorer"}`);
+    }
+    if (Date.now() - start > 1200000) {
+      throw new Error("Polling timed out after 20 minutes");
     }
     await new Promise((r) => setTimeout(r, 5000));
   }
@@ -251,7 +255,7 @@ npm install symbiosis-js-sdk ethers
 
 ### Initialize and Quote a Cross-Chain Swap
 
-The example below quotes **USDT on BNB Chain → RBTC on Rootstock** and signs the returned `transactionRequest` with ethers.
+The example below quotes **USDT on BNB Chain → rBTC on Rootstock** and signs the returned `transactionRequest` with ethers.
 
 ```ts
 // lib/symbiosis-sdk.ts
@@ -315,6 +319,10 @@ export async function quoteBnbUsdtToRbtc(wallet: ethers.Wallet) {
 // lib/symbiosis-execute-sdk.ts
 import { ethers } from "ethers";
 import { quoteBnbUsdtToRbtc } from "./symbiosis-sdk";
+
+const ROOTSTOCK_CHAIN_ID = 30;
+
+const ROOTSTOCK_CHAIN_ID = 30;
 
 const ERC20_ABI = [
   "function approve(address spender, uint256 amount) returns (bool)",
@@ -462,15 +470,14 @@ export function useSymbiosisQuote(input: QuoteInput) {
       from: address,
       to: address,
       revertableAddress: address,
-      slippage: 1.5,
+      slippage: 100,
     };
 
-    fetch("https://api.symbiosis.finance/crosschain/v2/quotes", {
+    fetch("https://api.symbiosis.finance/crosschain/v2/quote", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     })
-      .then((r) => r.json())
       .then((r) => r.json())
       .then(setQuote)
       .catch((e) => setError(e.message))
@@ -486,7 +493,7 @@ Drop the hook into a component:
 function SwapPanel() {
   const { quote, loading } = useSymbiosisQuote({
     fromChainId: 42161,
-    toChainId: 31,
+    toChainId: 30,
     fromToken: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
     toToken: "0x0000000000000000000000000000000000000000",
     amount: "25",
@@ -524,13 +531,13 @@ export async function sendSymbiosisSwap(quote: any) {
   });
   const [account] = await walletClient.getAddresses();
 
-  // Approve the metaRouter so it can pull the user's USDC during the swap.
-  const approveHash = walletClient.writeContract({
+  // Approve the metaRouterGateway so it can pull the user's USDC during the swap.
+  const approveHash = await walletClient.writeContract({
     account,
     address: quote.tokenAmountIn.address,
     abi: ERC20_APPROVE_ABI,
     functionName: "approve",
-    args: [quote.tx.to, parseUnits(quote.tokenAmountIn.amount, 6)],
+    args: [quote.approveTo, parseUnits(quote.tokenAmountIn.amount, 6)],
   });
 
   // Cache the quote so we don't have to refetch on retry.
@@ -571,7 +578,7 @@ def quote_usdc_to_rbtc(amount_usdc: float) -> dict:
         "tokenAmountIn": {
             "chainId": 42161,
             "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
-            "amount": str(int(amount_usdc * 10**8)),
+            "amount": str(int(amount_usdc * 10**6)),
             "decimals": 6,
             "symbol": "USDC",
         },
@@ -584,7 +591,7 @@ def quote_usdc_to_rbtc(amount_usdc: float) -> dict:
         "from": account.address,
         "to": account.address,
         "revertableAddress": account.address,
-        "slipage": 200,
+        "slippage": 200,
     }
     res = requests.post(f"{SYMBIOSIS_API}/v2/quote", json=body)
     return res.json()
@@ -610,9 +617,9 @@ if __name__ == "__main__":
 
     while True:
         status = requests.get(f"{SYMBIOSIS_API}/v2/tx/42161/{tx_hash}").json()
-        if status["status"] = "success":
+        if status["status"] == "success":
             break
-        time.sleep(5000)
+        time.sleep(5)
 ```
 
 ### Cross-Chain Swap with Destination Calldata
@@ -687,12 +694,12 @@ export async function pickBestSourceForRbtc(
   holdings: Candidate[],
 ) {
   const quotes = holdings.map((c) => fetchQuote(user, c));
-  const settled = await Promise.race(quotes);
+  const settled = await Promise.allSettled(quotes);
 
   return settled
     .filter((q) => q.status === "fulfilled")
     .map((q) => q.value)
-    .sort((a, b) => Number(a.amountOut) - Number(b.amountOut))
+    .sort((a, b) => Number(b.amountOut) - Number(a.amountOut))
     .slice(0, 3);
 }
 
@@ -740,7 +747,7 @@ export async function pollUntilSettled(
     const res = await fetch(
       `https://api.symbiosis.finance/crosschain/v2/tx/${sourceChainId}/${txHash}`,
     );
-    const status = res.json();
+    const status = await res.json();
 
     if (status.status === "success") return status;
     if (status.status === "reverted") throw new Error("Swap reverted");
@@ -755,9 +762,9 @@ export async function pollUntilSettled(
 }
 ```
 
-### SDK: Convert RBTC to USDT on BNB Chain
+### SDK: Convert rBTC to USDT on BNB Chain
 
-A common Rootstock-outbound flow: convert RBTC held on Rootstock into USDT on BNB Chain to pay off-ramp invoices. Uses the SDK with an explicit deadline guard.
+A common Rootstock-outbound flow: convert rBTC held on Rootstock into USDT on BNB Chain to pay off-ramp invoices. Uses the SDK with an explicit deadline guard.
 
 ```ts
 import { Symbiosis, Token, TokenAmount } from "symbiosis-js-sdk";
@@ -791,7 +798,7 @@ export async function rbtcToUsdtBnb(wallet: ethers.Wallet, rbtcAmount: string) {
     to: wallet.address,
     revertableAddress: wallet.address,
     slippage: 250,
-    deadline: Date.now() + 1800,
+    deadline: Math.floor(Date.now() / 1000) + 1800,
   });
 
   // RBTC is native - no approval needed. Approve only if the source token is ERC-20.
@@ -837,7 +844,7 @@ export async function hasReadyAllowance(
   ]);
 
   if (balance < amount) throw new Error("Insufficient balance");
-  return allowance > amount;
+  return allowance >= amount;
 }
 ```
 
@@ -865,9 +872,9 @@ export function useFreshQuote(quoteBody: object, paused: boolean) {
 
     fetchOnce();
     if (!paused) {
-      intervalRef.current = setInterval(fetchOnce, 30);
+      intervalRef.current = setInterval(fetchOnce, 30000);
     }
-    return () => clearInterval(intervalRef);
+    return () => clearInterval(intervalRef.current);
   }, [quoteBody, paused]);
 
   return quote;
@@ -916,31 +923,31 @@ The host leg always reserves at most 0.2%, because slippage there indicates an O
 
 **`approveTo` differs from `tx.to`** — This is expected. Approve the user's ERC-20 to `approveTo` (the `metaRouterGateway`). Sending the swap call goes to `tx.to` (the `metaRouter`). Approving the `metaRouter` directly will result in a failed swap.
 
-**"Calldata expired" / swap reverts at execution** — The quote was held too long. Regenerate the quote every ~30 seconds (the SDK does this internally as part of `exactIn`; for the REST API, refetch before each send).
+**"Calldata expired" / swap reverts at execution**, The quote was held too long. Regenerate the quote every ~30 seconds (the SDK does this internally as part of `exactIn`; for the REST API, refetch before each send).
 
-**User received the transit stablecoin, not the target token** — Destination-leg slippage was exceeded. Increase `slippage` (e.g. `200` → `300`) for volatile pairs, and surface `findTransitTokenSent` (SDK) or check the `transitTokenSent` field on `/v2/tx/...` (API) in your UI.
+**User received the transit stablecoin, not the target token**, Destination-leg slippage was exceeded. Increase `slippage` (e.g. `200` → `300`) for volatile pairs, and surface `findTransitTokenSent` (SDK) or check the `transitTokenSent` field on `/v2/tx/...` (API) in your UI.
 
-**`waitForComplete` never resolves** — Most often a host-leg failure. Call `symbiosis.getPendingRequests(address)` and use `newRevertPending(request).revert()` to refund the user.
+**`waitForComplete` never resolves**, Most often a host-leg failure. Call `symbiosis.getPendingRequests(address)` and use `newRevertPending(request).revert()` to refund the user.
 
-**Rootstock RPC rate limits during status polling** — Use a dedicated endpoint. The public Rootstock RPC is sufficient for low-volume tests; production traffic should use [a Rootstock RPC provider](/dev-tools/node-rpc/) such as Alchemy, dRPC, GetBlock, or NowNodes.
+**Rootstock RPC rate limits during status polling**, Use a dedicated endpoint. The public Rootstock RPC is sufficient for low-volume tests; production traffic should use [a Rootstock RPC provider](/dev-tools/node-rpc/) such as Alchemy, dRPC, GetBlock, or NowNodes.
 
 ## Reference
 
 | Resource | URL |
 |---|---|
 | Symbiosis web app | [app.symbiosis.finance/swap](https://app.symbiosis.finance/swap) |
-| Symbiosis Explorer | [explorer.symbiosis.finance](https://explorer.symbiosis.finance/transactions) |
-| API base URL (mainnet) | `https://api.symbiosis.finance/crosschain` |
+| Symbiosis Explorer | [Rootstock Explorer.symbiosis.finance](https://explorer.symbiosis.finance/transactions) |
+| API base URL (Mainnet) | `https://api.symbiosis.finance/crosschain` |
 | Swagger reference | [api.symbiosis.finance/crosschain/docs](https://api.symbiosis.finance/crosschain/docs/) |
 | JS SDK package | [`symbiosis-js-sdk`](https://www.npmjs.com/package/symbiosis-js-sdk) |
 | JS SDK source | [github.com/symbiosis-finance/js-sdk](https://github.com/symbiosis-finance/js-sdk) |
 | Mainnet contract config | [`src/crosschain/config/mainnet.ts`](https://github.com/symbiosis-finance/js-sdk/blob/main/src/crosschain/config/mainnet.ts) |
-| Partner dashboard | [explorer.symbiosis.finance/partners](https://explorer.symbiosis.finance/partners) |
+| Partner dashboard | [Rootstock Explorer.symbiosis.finance/partners](https://explorer.symbiosis.finance/partners) |
 | Developer docs | [docs.symbiosis.finance/developer-tools/symbiosis-developer-tools](https://docs.symbiosis.finance/developer-tools/symbiosis-developer-tools) |
 
 ## Next Steps
 
-- Quote a sample route from your target source chain to Rootstock via the [Swagger API explorer](https://api.symbiosis.finance/crosschain/docs/) before writing any code.
+- Quote a sample route from your target source chain to Rootstock via the [Swagger API Rootstock Explorer](https://api.symbiosis.finance/crosschain/docs/) before writing any code.
 - Read [Symbiosis: Cross-Chain Swaps](https://docs.symbiosis.finance/main-concepts/symbiosis-cross-chain-swaps) for the full routing model, including the Depository/Solver flow that minimizes transit-token outcomes.
 - For a UI launchpad, use the [Symbiosis WebApp deep link](https://app.symbiosis.finance/swap?chainOut=Rootstock&tokenOut=RBTC) (`?chainOut=Rootstock&tokenOut=RBTC`) to pre-select Rootstock as the destination.
 - Compare with other interoperability paths into Rootstock: [LI.FI](/use-cases/interoperability/integrate-lifi/), [LayerZero](/use-cases/interoperability/rootstock-layerzero/).
