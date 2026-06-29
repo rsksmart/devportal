@@ -49,7 +49,7 @@ In the `src` folder, you will find a simple smart contract called `counter.sol`.
 :::info[Try this contract in Remix]
 Want to deploy and interact with `Counter.sol` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
 
-<RemixLaunchButton code={counterSource} />
+<RemixLaunchButton contractName="counter" code={counterSource} />
 :::
 
 ## Compile the Contract

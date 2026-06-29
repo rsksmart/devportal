@@ -35,6 +35,7 @@ export default function DocItemTOCDesktop() {
 		  <div className="mb-24">
 			  <RemixLaunchButton
 				  deepLink={remixDeepLink}
+				  contractName={frontMatter.remix_contract_name}
 				  label={
 					  <>
 						  <IconPlay />

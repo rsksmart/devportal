@@ -52,7 +52,7 @@ Want to deploy and interact with `MyToken.sol` without any local setup? Use the 
 
 {/* Remix deep-link for MyToken.sol: https://remix.ethereum.org/#url=https://github.com/rsksmart/rootstock-quick-start-guide/blob/feat/complete/contracts/MyToken.sol */}
 
-<RemixLaunchButton contractUrl="https://github.com/rsksmart/rootstock-quick-start-guide/blob/feat/complete/contracts/MyToken.sol" />
+<RemixLaunchButton contractName="MyToken" contractUrl="https://github.com/rsksmart/rootstock-quick-start-guide/blob/feat/complete/contracts/MyToken.sol" />
 :::
 
 ## Compile the Contract

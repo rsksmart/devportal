@@ -259,7 +259,7 @@ Want to deploy and interact with `SimpleStorage` without any local setup? Use th
 
 {/* Remix deep-link for SimpleStorage: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCmNvbnRyYWN0IFNpbXBsZVN0b3JhZ2UgewogICAgdWludDI1NiBwdWJsaWMgZmF2b3JpdGVOdW1iZXI7CgogICAgZnVuY3Rpb24gc3RvcmUodWludDI1NiBfZmF2b3JpdGVOdW1iZXIpIHB1YmxpYyB7CiAgICAgICAgZmF2b3JpdGVOdW1iZXIgPSBfZmF2b3JpdGVOdW1iZXI7CiAgICB9Cn0%3D */}
 
-<RemixLaunchButton code={simpleStorageSource} />
+<RemixLaunchButton contractName="simpleStorage" code={simpleStorageSource} />
 :::
 
 Copy this test code and create a new file named `SimpleStorage.ts` inside the `test` folder. The route will be `test/SimpleStorage.ts`.

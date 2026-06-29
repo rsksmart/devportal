@@ -31,6 +31,22 @@ function buildRemixUrl({ deepLink, contractUrl, code }) {
   return `${REMIX_URL_BASE}${DEFAULT_CONTRACT_URL}`
 }
 
+// Short, low-cardinality label for analytics. We deliberately do NOT send the
+// Remix URL: with `code` it embeds the whole base64 contract, which GA4 would
+// truncate at 100 chars and explode dimension cardinality. Priority:
+// explicit `contractName` > `.sol` filename in the URL > first `contract X`
+// declaration in the snippet > 'unknown'.
+function deriveContractName({ contractName, contractUrl, deepLink, code }) {
+  if (contractName) return contractName
+  const fileMatch = (contractUrl || deepLink || '').match(/([A-Za-z0-9_]+)\.sol\b/)
+  if (fileMatch) return fileMatch[1]
+  if (code) {
+    const declMatch = code.match(/\bcontract\s+([A-Za-z_]\w*)/)
+    if (declMatch) return declMatch[1]
+  }
+  return 'unknown'
+}
+
 const STEPS = [
   {
     title: 'Install MetaMask',
@@ -73,10 +89,18 @@ export default function RemixLaunchButton({
   contractUrl,
   code,
   deepLink,
+  contractName,
   className = 'btn btn-primary mt-8',
 }) {
   const [show, setShow] = useState(false)
   const remixUrl = buildRemixUrl({ deepLink, contractUrl, code })
+
+  // What we report to GA: a stable name + how the contract was loaded.
+  const source = deepLink ? 'deepLink' : contractUrl ? 'url' : code ? 'code' : 'default'
+  const tracking = {
+    contractName: deriveContractName({ contractName, contractUrl, deepLink, code }),
+    source,
+  }
 
   return (
     <>
@@ -84,7 +108,7 @@ export default function RemixLaunchButton({
         type="button"
         className={className}
         onClick={() => {
-          pushDataLayer('remixLaunchModalOpen', { contractUrl: remixUrl })
+          pushDataLayer('remixLaunchModalOpen', tracking)
           setShow(true)
         }}
       >
@@ -141,7 +165,7 @@ export default function RemixLaunchButton({
               rel="noopener noreferrer"
               className="btn btn-primary"
               onClick={() => {
-                pushDataLayer('remixLaunchConfirm', { contractUrl: remixUrl })
+                pushDataLayer('remixLaunchConfirm', tracking)
                 setShow(false)
               }}
             >

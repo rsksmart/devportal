@@ -152,7 +152,7 @@ Want to deploy and interact with `Box` without any local setup? Use the button b
 
 {/* Remix deep-link for Box: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCmNvbnRyYWN0IEJveCB7CiAgICB1aW50MjU2IHByaXZhdGUgdmFsdWU7CgogICAgZXZlbnQgVmFsdWVDaGFuZ2VkKHVpbnQyNTYgbmV3VmFsdWUpOwoKICAgIGZ1bmN0aW9uIHN0b3JlKHVpbnQyNTYgbmV3VmFsdWUpIHB1YmxpYyB7CiAgICAgICAgdmFsdWUgPSBuZXdWYWx1ZTsKICAgICAgICBlbWl0IFZhbHVlQ2hhbmdlZChuZXdWYWx1ZSk7CiAgICB9CgogICAgZnVuY3Rpb24gcmV0cmlldmUoKSBwdWJsaWMgdmlldyByZXR1cm5zICh1aW50MjU2KSB7CiAgICAgICAgcmV0dXJuIHZhbHVlOwogICAgfQp9 */}
 
-<RemixLaunchButton code={boxSource} />
+<RemixLaunchButton contractName="box" code={boxSource} />
 :::
 
 ## Compile the contract

@@ -187,7 +187,7 @@ Want to deploy and interact with `Storage` without any local setup? Use the butt
 
 {/* Remix deep-link for Storage: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCmNvbnRyYWN0IFN0b3JhZ2UgewogICAgdWludDI1NiBudW1iZXI7CgogICAgZnVuY3Rpb24gc3RvcmUodWludDI1NiBudW0pIHB1YmxpYyB7CiAgICAgICAgbnVtYmVyID0gbnVtOwogICAgfQoKICAgIGZ1bmN0aW9uIHJldHJpZXZlKCkgcHVibGljIHZpZXcgcmV0dXJucyAodWludDI1Nil7CiAgICAgICAgcmV0dXJuIG51bWJlcjsKICAgIH0KfQ%3D%3D */}
 
-<RemixLaunchButton code={storageSource} />
+<RemixLaunchButton contractName="storage" code={storageSource} />
 :::
 There are two functions in the contract, one to store a number on the blockchain, `function store` (changes state, involves a transaction), another to retrieve the stored number `function retrieve`(no transaction).
 The ABI is provided below.

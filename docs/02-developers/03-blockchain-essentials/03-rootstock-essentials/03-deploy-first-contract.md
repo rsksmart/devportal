@@ -45,7 +45,7 @@ Want to deploy and interact with `HelloRootstock` without any local setup? Use t
 
 {/* Remix deep-link for HelloRootstock: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCmNvbnRyYWN0IEhlbGxvUm9vdHN0b2NrIHsKICAgIHN0cmluZyBwdWJsaWMgbWVzc2FnZTsKCiAgICBjb25zdHJ1Y3RvcihzdHJpbmcgbWVtb3J5IF9tZXNzYWdlKSB7CiAgICAgICAgbWVzc2FnZSA9IF9tZXNzYWdlOwogICAgfQoKICAgIGZ1bmN0aW9uIHVwZGF0ZU1lc3NhZ2Uoc3RyaW5nIG1lbW9yeSBfbmV3TWVzc2FnZSkgcHVibGljIHsKICAgICAgICBtZXNzYWdlID0gX25ld01lc3NhZ2U7CiAgICB9Cn0%3D */}
 
-<RemixLaunchButton code={helloRootstockSource} />
+<RemixLaunchButton contractName="helloRootstock" code={helloRootstockSource} />
 :::
 
 ## Step 2 — Configure Hardhat

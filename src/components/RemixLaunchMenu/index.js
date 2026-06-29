@@ -80,6 +80,7 @@ export default function RemixLaunchMenu({ contracts = [], label = 'Try in Remix 
                 deepLink={contract.remix}
                 code={contract.code}
                 contractUrl={contract.contractUrl}
+                contractName={contract.contractName || contract.label}
                 className="markdown-actions-item dropdown__link"
                 label={
                   <>
