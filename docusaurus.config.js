@@ -44,7 +44,6 @@ const config = {
       github : process.env.GITHUB_TOKEN,
       flowiseApiHost : process.env.FLOWISE_API_HOST,
       flowiseChatflowId : process.env.FLOWISE_CHATFLOW_ID,
-      flowiseApiKey : process.env.FLOWISE_API_KEY,
     },
     homePage: {
       editUrl: 'https://github.com/rsksmart/devportal/tree/main/',

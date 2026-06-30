@@ -277,7 +277,7 @@ function applyTheme() {
   if (btn) btn.style.setProperty('background-color', t.brand);
 }
 
-function FlowiseChatbotInner({ apiHost, chatflowId, apiKey }) {
+function FlowiseChatbotInner({ apiHost, chatflowId }) {
   const { colorMode } = useColorMode();
 
   useEffect(() => {
@@ -290,11 +290,6 @@ function FlowiseChatbotInner({ apiHost, chatflowId, apiKey }) {
       Chatbot.init({
         chatflowid: chatflowId,
         apiHost,
-        ...(apiKey && {
-          onRequest: async (req) => {
-            req.headers = { ...req.headers, Authorization: `Bearer ${apiKey}` };
-          },
-        }),
         theme: buildTheme(colorMode === 'dark'),
       });
 
@@ -324,14 +319,14 @@ function FlowiseChatbotInner({ apiHost, chatflowId, apiKey }) {
 
 export default function FlowiseChatbot() {
   const { siteConfig: { customFields } } = useDocusaurusContext();
-  const { flowiseApiHost, flowiseChatflowId, flowiseApiKey } = customFields.keys;
+  const { flowiseApiHost, flowiseChatflowId } = customFields.keys;
 
   if (!flowiseApiHost || !flowiseChatflowId) return null;
 
   return (
     <BrowserOnly>
       {() => (
-        <FlowiseChatbotInner apiHost={flowiseApiHost} chatflowId={flowiseChatflowId} apiKey={flowiseApiKey} />
+        <FlowiseChatbotInner apiHost={flowiseApiHost} chatflowId={flowiseChatflowId} />
       )}
     </BrowserOnly>
   );
