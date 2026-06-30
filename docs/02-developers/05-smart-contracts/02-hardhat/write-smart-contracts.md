@@ -67,7 +67,7 @@ This will compile your smart contracts and generate artifacts:
 
 ```shell
 % npx hardhat compile
-Downloading compiler 0.8.20
+Downloading compiler 0.8.30
 Compiled 6 Solidity files successfully (evm target: paris).
 ```
 

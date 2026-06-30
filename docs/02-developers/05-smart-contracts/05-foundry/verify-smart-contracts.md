@@ -16,7 +16,7 @@ After you have deployed your smart contract, you can verify it using Foundry wit
 forge verify-contract \
     --chain-id 31 \
     --watch \
-    --compiler-version v0.8.24 \
+    --compiler-version v0.8.30 \
     --verifier custom \
     --verifier-url https://be.explorer.testnet.rootstock.io/api/v3/etherscan \
     0x499e802a6825d30482582d9b9dd669ba82ba8ba4 \
@@ -27,7 +27,7 @@ The verification will be executed, and you will receive the following response:
 
 ```bash
 Start verifying contract `0x499e802a6825d30482582d9b9dd669ba82ba8ba4` deployed on rsk-testnet
-Compiler version: v0.8.28
+Compiler version: v0.8.30
 Optimizations:    0
 
 Submitting verification for [src/Counter.sol:Counter] 0x499e802a6825d30482582d9b9dd669ba82ba8ba4.
@@ -70,7 +70,7 @@ forge verify-contract \
     --constructor-args 0x00000000000000000000000000000000000000000000000000000000000003e8
     --chain-id 31 \
     --watch \
-    --compiler-version v0.8.24 \
+    --compiler-version v0.8.30 \
     --verifier custom \
     --verifier-url https://be.explorer.testnet.rootstock.io/api/v3/etherscan \
     0x499e802a6825d30482582d9b9dd669ba82ba8ba4 \

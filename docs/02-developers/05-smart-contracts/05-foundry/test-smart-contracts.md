@@ -49,8 +49,8 @@ This will run the test script and display the results in the terminal.
 ```shell
 forge test
 [⠊] Compiling...
-[⠊] Compiling 33 files with Solc 0.8.24
-[⠒] Solc 0.8.24 finished in 947.64ms
+[⠊] Compiling 33 files with Solc 0.8.30
+[⠒] Solc 0.8.30 finished in 947.64ms
 Compiler run successful!
 Ran 2 tests for test/Counter.t.sol:CounterTest
 [PASS] testFuzz_SetNumber(uint256) (runs: 256, μ: 30899, ~: 31288)

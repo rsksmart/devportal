@@ -64,7 +64,7 @@ This will compile your smart contracts and generate `out` directory:
 ```bash
 forge build
 [⠊] Compiling...
-[⠒] Compiling 36 files with Solc 0.8.24
-[⠑] Solc 0.8.24 finished in 1.56s
+[⠒] Compiling 36 files with Solc 0.8.30
+[⠑] Solc 0.8.30 finished in 1.56s
 Compiler run successful!
 ```

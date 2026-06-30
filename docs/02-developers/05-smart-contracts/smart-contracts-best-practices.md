@@ -295,7 +295,7 @@ When compiling and deploying your own contract, it's best to **fix the Solidity 
 **Example:**
 
 ```solidity
-pragma solidity 0.8.25;
+pragma solidity 0.8.30;
 ```
 
 By specifying an exact version, your contract will compile reliably with the expected behavior.

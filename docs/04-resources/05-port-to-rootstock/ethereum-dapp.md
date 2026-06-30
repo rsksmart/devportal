@@ -133,7 +133,7 @@ Before you begin, ensure that you have the following:
     import "@nomicfoundation/hardhat-ignition-ethers";
 
     const config: HardhatUserConfig = {
-      solidity: "0.8.25",
+      solidity: "0.8.30",
   };
 
 export default config;
@@ -214,7 +214,7 @@ import "@nomicfoundation/hardhat-toolbox";
 import "@nomicfoundation/hardhat-ignition-ethers";
 
 const config: HardhatUserConfig = {
-  solidity: "0.8.25", // Set your desired Solidity version
+  solidity: "0.8.30", // Set your desired Solidity version
 
   networks: {
     // Mainnet configuration

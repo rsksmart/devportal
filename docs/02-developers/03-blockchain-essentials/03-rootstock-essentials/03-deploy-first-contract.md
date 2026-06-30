@@ -56,7 +56,7 @@ Edit: `hardhat.config.js`
 require("@nomicfoundation/hardhat-toolbox");
 
 module.exports = {
-  solidity: "0.8.20",
+  solidity: "0.8.30",
   networks: {
     rootstock_testnet: {
       url: "https://public-node.testnet.rsk.co",

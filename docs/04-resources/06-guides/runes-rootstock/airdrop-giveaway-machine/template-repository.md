@@ -34,7 +34,7 @@ contract Administrable {
     }
 }
 ```
-* **License and Version**: The first two lines specify the license type and the Solidity compiler version (0.8.25) being used for this contract.
+* **License and Version**: The first two lines specify the license type and the Solidity compiler version (0.8.30) being used for this contract.
 * **Contract Declaration**: `contract Administrable` declares a new smart contract named `Administrable`.
 * **Mapping**: `mapping(address => bool) _admins;` creates a mapping (a kind of dictionary) where each address (an Ethereum account) is associated with a boolean value. This is used to track whether an address is an admin (true) or not (false).
 * **Constructor**: The constructor function is called when the contract is deployed. It takes an array of addresses (`initialAdmins`) and sets those addresses as admins in the `_admins` mapping.
@@ -240,7 +240,7 @@ pragma solidity ^0.8.30;
 import "@openzeppelin/contracts/access/Ownable.sol";
 ```
 
-* **License and Version**: The first two lines specify the license type (MIT) and the Solidity version (0.8.25) for this contract.
+* **License and Version**: The first two lines specify the license type (MIT) and the Solidity version (0.8.30) for this contract.
 * **Imports**: The contract imports the `Ownable` contract from OpenZeppelin, which provides basic authorization control functions, simplifying the implementation of user permissions.
 
 
@@ -471,7 +471,7 @@ import { MerkleProof } from "@openzeppelin/contracts/utils/cryptography/MerklePr
 
 ```
 
-* **License and Version**: The first two lines specify the license type (MIT) and the Solidity version (0.8.25) for this contract.
+* **License and Version**: The first two lines specify the license type (MIT) and the Solidity version (0.8.30) for this contract.
 * **Imports**: The contract imports:
   * `Ownable` from OpenZeppelin, which provides basic authorization control functions.
   * `MerkleProof`, which includes utilities for verifying Merkle proofs.
