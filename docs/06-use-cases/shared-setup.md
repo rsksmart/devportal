@@ -61,7 +61,7 @@ Your `hardhat.config.js` should include:
 require("@nomiclabs/hardhat-ethers");
 
 module.exports = {
-  solidity: "0.8.0",
+  solidity: "0.8.30",
 };
 ```
 
@@ -82,7 +82,7 @@ require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();
 
 module.exports = {
-  solidity: "0.8.0",
+  solidity: "0.8.30",
   networks: {
     rootstockTestnet: {
       url: process.env.ROOTSTOCK_TESTNET_RPC_URL || "https://public-node.testnet.rsk.co",

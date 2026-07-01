@@ -4,9 +4,17 @@ sidebar_position: 2
 title: Integrate a Chainlink-Style Price Feed (Mock) on Rootstock (Testnet)
 description: Build and test a mock Chainlink-style price feed consumer on Rootstock testnet, with safe read patterns and local testing.
 tags: [rsk, rootstock, defi, oracles, chainlink, solidity, testnet]
+remix_label: "Try in Remix IDE"
+remix_contracts:
+  - label: "PriceConsumer"
+    remix: "https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCi8vIEFnZ3JlZ2F0b3JWM0ludGVyZmFjZSBpbmxpbmVkIHNvIHRoaXMgZmlsZSBpcyBzZWxmLWNvbnRhaW5lZCBmb3IgUmVtaXguCi8vIEluIGEgbXVsdGktZmlsZSBwcm9qZWN0LCBpbXBvcnQgaXQgaW5zdGVhZDogaW1wb3J0ICIuL0FnZ3JlZ2F0b3JWM0ludGVyZmFjZS5zb2wiOwppbnRlcmZhY2UgQWdncmVnYXRvclYzSW50ZXJmYWNlIHsKICAgIGZ1bmN0aW9uIGRlY2ltYWxzKCkgZXh0ZXJuYWwgdmlldyByZXR1cm5zICh1aW50OCk7CiAgICBmdW5jdGlvbiBkZXNjcmlwdGlvbigpIGV4dGVybmFsIHZpZXcgcmV0dXJucyAoc3RyaW5nIG1lbW9yeSk7CiAgICBmdW5jdGlvbiB2ZXJzaW9uKCkgZXh0ZXJuYWwgdmlldyByZXR1cm5zICh1aW50MjU2KTsKICAgIGZ1bmN0aW9uIGxhdGVzdFJvdW5kRGF0YSgpCiAgICAgICAgZXh0ZXJuYWwKICAgICAgICB2aWV3CiAgICAgICAgcmV0dXJucyAoCiAgICAgICAgICAgIHVpbnQ4MCByb3VuZElkLAogICAgICAgICAgICBpbnQyNTYgYW5zd2VyLAogICAgICAgICAgICB1aW50MjU2IHN0YXJ0ZWRBdCwKICAgICAgICAgICAgdWludDI1NiB1cGRhdGVkQXQsCiAgICAgICAgICAgIHVpbnQ4MCBhbnN3ZXJlZEluUm91bmQKICAgICAgICApOwp9Cgpjb250cmFjdCBQcmljZUNvbnN1bWVyIHsKICAgIEFnZ3JlZ2F0b3JWM0ludGVyZmFjZSBpbnRlcm5hbCBwcmljZUZlZWQ7CgogICAgLyoqCiAgICAgKiBAcGFyYW0gX3ByaWNlRmVlZCBBZGRyZXNzIG9mIHRoZSBDaGFpbmxpbmsgcHJpY2UgZmVlZCAoZS5nLiwgQlRDL1VTRCBvbiB0ZXN0bmV0KQogICAgICovCiAgICBjb25zdHJ1Y3RvcihhZGRyZXNzIF9wcmljZUZlZWQpIHsKICAgICAgICBwcmljZUZlZWQgPSBBZ2dyZWdhdG9yVjNJbnRlcmZhY2UoX3ByaWNlRmVlZCk7CiAgICB9CgogICAgLyoqCiAgICAgKiBSZXR1cm5zIHRoZSBsYXRlc3QgcHJpY2Ugd2l0aCBzYWZldHkgY2hlY2tzLgogICAgICogQHJldHVybiBwcmljZSBUaGUgbGF0ZXN0IHByaWNlIGFzIGFuIGludGVnZXIgd2l0aCA4IGRlY2ltYWxzLgogICAgICovCiAgICBmdW5jdGlvbiBnZXRMYXRlc3RQcmljZSgpIHB1YmxpYyB2aWV3IHJldHVybnMgKGludDI1NikgewogICAgICAgICgKICAgICAgICAgICAgdWludDgwIHJvdW5kSWQsCiAgICAgICAgICAgIGludDI1NiBwcmljZSwKICAgICAgICAgICAgLAogICAgICAgICAgICB1aW50MjU2IHVwZGF0ZWRBdCwKICAgICAgICAgICAgdWludDgwIGFuc3dlcmVkSW5Sb3VuZAogICAgICAgICkgPSBwcmljZUZlZWQubGF0ZXN0Um91bmREYXRhKCk7CgogICAgICAgIC8vIDEuIENoZWNrIHN0YWxlbmVzczogcHJpY2Ugc2hvdWxkIGhhdmUgYmVlbiB1cGRhdGVkIGluIHRoZSBsYXN0IGhvdXIuCiAgICAgICAgcmVxdWlyZShibG9jay50aW1lc3RhbXAgLSB1cGRhdGVkQXQgPD0gMSBob3VycywgIlByaWNlIGlzIHN0YWxlIik7CgogICAgICAgIC8vIDIuIEVuc3VyZSB0aGUgcm91bmQgaXMgY29tcGxldGUgKGFuc3dlcmVkSW5Sb3VuZCA%2BPSByb3VuZElkKS4KICAgICAgICByZXF1aXJlKGFuc3dlcmVkSW5Sb3VuZCA%2BPSByb3VuZElkLCAiUm91bmQgaW5jb21wbGV0ZSIpOwoKICAgICAgICAvLyAzLiBQcmljZSBzaG91bGQgYmUgcG9zaXRpdmUuCiAgICAgICAgcmVxdWlyZShwcmljZSA%2BIDAsICJJbnZhbGlkIHByaWNlIik7CgogICAgICAgIHJldHVybiBwcmljZTsKICAgIH0KCiAgICAvKioKICAgICAqIFJldHVybnMgdGhlIG51bWJlciBvZiBkZWNpbWFscyB0aGUgcHJpY2UgZmVlZCB1c2VzLgogICAgICovCiAgICBmdW5jdGlvbiBnZXREZWNpbWFscygpIHB1YmxpYyB2aWV3IHJldHVybnMgKHVpbnQ4KSB7CiAgICAgICAgcmV0dXJuIHByaWNlRmVlZC5kZWNpbWFscygpOwogICAgfQoKICAgIC8qKgogICAgICogUmV0dXJucyBhIGh1bWFuLXJlYWRhYmxlIGRlc2NyaXB0aW9uIG9mIHRoZSBmZWVkLgogICAgICovCiAgICBmdW5jdGlvbiBnZXREZXNjcmlwdGlvbigpIHB1YmxpYyB2aWV3IHJldHVybnMgKHN0cmluZyBtZW1vcnkpIHsKICAgICAgICByZXR1cm4gcHJpY2VGZWVkLmRlc2NyaXB0aW9uKCk7CiAgICB9Cn0%3D"
+  - label: "MockAggregator"
+    remix: "https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCi8vIEFnZ3JlZ2F0b3JWM0ludGVyZmFjZSBpbmxpbmVkIHNvIHRoaXMgZmlsZSBpcyBzZWxmLWNvbnRhaW5lZCBmb3IgUmVtaXguCi8vIEluIGEgbXVsdGktZmlsZSBwcm9qZWN0LCBpbXBvcnQgaXQgaW5zdGVhZDogaW1wb3J0ICIuL0FnZ3JlZ2F0b3JWM0ludGVyZmFjZS5zb2wiOwppbnRlcmZhY2UgQWdncmVnYXRvclYzSW50ZXJmYWNlIHsKICAgIGZ1bmN0aW9uIGRlY2ltYWxzKCkgZXh0ZXJuYWwgdmlldyByZXR1cm5zICh1aW50OCk7CiAgICBmdW5jdGlvbiBkZXNjcmlwdGlvbigpIGV4dGVybmFsIHZpZXcgcmV0dXJucyAoc3RyaW5nIG1lbW9yeSk7CiAgICBmdW5jdGlvbiB2ZXJzaW9uKCkgZXh0ZXJuYWwgdmlldyByZXR1cm5zICh1aW50MjU2KTsKICAgIGZ1bmN0aW9uIGxhdGVzdFJvdW5kRGF0YSgpCiAgICAgICAgZXh0ZXJuYWwKICAgICAgICB2aWV3CiAgICAgICAgcmV0dXJucyAoCiAgICAgICAgICAgIHVpbnQ4MCByb3VuZElkLAogICAgICAgICAgICBpbnQyNTYgYW5zd2VyLAogICAgICAgICAgICB1aW50MjU2IHN0YXJ0ZWRBdCwKICAgICAgICAgICAgdWludDI1NiB1cGRhdGVkQXQsCiAgICAgICAgICAgIHVpbnQ4MCBhbnN3ZXJlZEluUm91bmQKICAgICAgICApOwp9Cgpjb250cmFjdCBNb2NrQWdncmVnYXRvciBpcyBBZ2dyZWdhdG9yVjNJbnRlcmZhY2UgewogICAgdWludDggcHVibGljIG92ZXJyaWRlIGRlY2ltYWxzID0gODsKICAgIHN0cmluZyBwdWJsaWMgb3ZlcnJpZGUgZGVzY3JpcHRpb24gPSAiQlRDL1VTRCBtb2NrIjsKICAgIHVpbnQyNTYgcHVibGljIG92ZXJyaWRlIHZlcnNpb24gPSAxOwoKICAgIGludDI1NiBwcml2YXRlIG1vY2tQcmljZSA9IDMwMDAwICogMWU4OyAvLyAkMzAsMDAwIHdpdGggOCBkZWNpbWFscwoKICAgIGZ1bmN0aW9uIGxhdGVzdFJvdW5kRGF0YSgpIGV4dGVybmFsIHZpZXcgb3ZlcnJpZGUgcmV0dXJucyAoCiAgICAgICAgdWludDgwIHJvdW5kSWQsCiAgICAgICAgaW50MjU2IGFuc3dlciwKICAgICAgICB1aW50MjU2IHN0YXJ0ZWRBdCwKICAgICAgICB1aW50MjU2IHVwZGF0ZWRBdCwKICAgICAgICB1aW50ODAgYW5zd2VyZWRJblJvdW5kCiAgICApIHsKICAgICAgICByZXR1cm4gKDEsIG1vY2tQcmljZSwgYmxvY2sudGltZXN0YW1wLCBibG9jay50aW1lc3RhbXAsIDEpOwogICAgfQoKICAgIC8vIEFsbG93IHRlc3RzIHRvIHVwZGF0ZSB0aGUgbW9jayBwcmljZQogICAgZnVuY3Rpb24gc2V0TW9ja1ByaWNlKGludDI1NiBfcHJpY2UpIGV4dGVybmFsIHsKICAgICAgICBtb2NrUHJpY2UgPSBfcHJpY2U7CiAgICB9Cn0%3D"
 ---
 
 # Integrate a Chainlink-Style Price Feed (Mock) on Rootstock (Testnet)
+
+import CodeBlock from '@theme/CodeBlock';
 
 By the end of this tutorial, you will have:
 
@@ -37,7 +45,7 @@ Chainlink price feeds follow the `AggregatorV3Interface`. Let's look at its key 
 
 ```solidity
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.30;
 
 interface AggregatorV3Interface {
     // Returns the number of decimals the answer is represented in.
@@ -69,11 +77,26 @@ interface AggregatorV3Interface {
 
 Now let's build a contract that fetches the latest price. We'll add safety checks to ensure the price is fresh and valid.
 
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+export const priceConsumerSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
 
-import "./AggregatorV3Interface.sol";
+// AggregatorV3Interface inlined so this file is self-contained for Remix.
+// In a multi-file project, import it instead: import "./AggregatorV3Interface.sol";
+interface AggregatorV3Interface {
+    function decimals() external view returns (uint8);
+    function description() external view returns (string memory);
+    function version() external view returns (uint256);
+    function latestRoundData()
+        external
+        view
+        returns (
+            uint80 roundId,
+            int256 answer,
+            uint256 startedAt,
+            uint256 updatedAt,
+            uint80 answeredInRound
+        );
+}
 
 contract PriceConsumer {
     AggregatorV3Interface internal priceFeed;
@@ -123,8 +146,17 @@ contract PriceConsumer {
     function getDescription() public view returns (string memory) {
         return priceFeed.description();
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{priceConsumerSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `PriceConsumer` without any local setup? Use the button below to open it directly in the Remix IDE (the `AggregatorV3Interface` is inlined so it compiles as a single file). Pass a price-feed address to the constructor, for example a deployed `MockAggregator`. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for PriceConsumer: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCi8vIEFnZ3JlZ2F0b3JWM0ludGVyZmFjZSBpbmxpbmVkIHNvIHRoaXMgZmlsZSBpcyBzZWxmLWNvbnRhaW5lZCBmb3IgUmVtaXguCi8vIEluIGEgbXVsdGktZmlsZSBwcm9qZWN0LCBpbXBvcnQgaXQgaW5zdGVhZDogaW1wb3J0ICIuL0FnZ3JlZ2F0b3JWM0ludGVyZmFjZS5zb2wiOwppbnRlcmZhY2UgQWdncmVnYXRvclYzSW50ZXJmYWNlIHsKICAgIGZ1bmN0aW9uIGRlY2ltYWxzKCkgZXh0ZXJuYWwgdmlldyByZXR1cm5zICh1aW50OCk7CiAgICBmdW5jdGlvbiBkZXNjcmlwdGlvbigpIGV4dGVybmFsIHZpZXcgcmV0dXJucyAoc3RyaW5nIG1lbW9yeSk7CiAgICBmdW5jdGlvbiB2ZXJzaW9uKCkgZXh0ZXJuYWwgdmlldyByZXR1cm5zICh1aW50MjU2KTsKICAgIGZ1bmN0aW9uIGxhdGVzdFJvdW5kRGF0YSgpCiAgICAgICAgZXh0ZXJuYWwKICAgICAgICB2aWV3CiAgICAgICAgcmV0dXJucyAoCiAgICAgICAgICAgIHVpbnQ4MCByb3VuZElkLAogICAgICAgICAgICBpbnQyNTYgYW5zd2VyLAogICAgICAgICAgICB1aW50MjU2IHN0YXJ0ZWRBdCwKICAgICAgICAgICAgdWludDI1NiB1cGRhdGVkQXQsCiAgICAgICAgICAgIHVpbnQ4MCBhbnN3ZXJlZEluUm91bmQKICAgICAgICApOwp9Cgpjb250cmFjdCBQcmljZUNvbnN1bWVyIHsKICAgIEFnZ3JlZ2F0b3JWM0ludGVyZmFjZSBpbnRlcm5hbCBwcmljZUZlZWQ7CgogICAgLyoqCiAgICAgKiBAcGFyYW0gX3ByaWNlRmVlZCBBZGRyZXNzIG9mIHRoZSBDaGFpbmxpbmsgcHJpY2UgZmVlZCAoZS5nLiwgQlRDL1VTRCBvbiB0ZXN0bmV0KQogICAgICovCiAgICBjb25zdHJ1Y3RvcihhZGRyZXNzIF9wcmljZUZlZWQpIHsKICAgICAgICBwcmljZUZlZWQgPSBBZ2dyZWdhdG9yVjNJbnRlcmZhY2UoX3ByaWNlRmVlZCk7CiAgICB9CgogICAgLyoqCiAgICAgKiBSZXR1cm5zIHRoZSBsYXRlc3QgcHJpY2Ugd2l0aCBzYWZldHkgY2hlY2tzLgogICAgICogQHJldHVybiBwcmljZSBUaGUgbGF0ZXN0IHByaWNlIGFzIGFuIGludGVnZXIgd2l0aCA4IGRlY2ltYWxzLgogICAgICovCiAgICBmdW5jdGlvbiBnZXRMYXRlc3RQcmljZSgpIHB1YmxpYyB2aWV3IHJldHVybnMgKGludDI1NikgewogICAgICAgICgKICAgICAgICAgICAgdWludDgwIHJvdW5kSWQsCiAgICAgICAgICAgIGludDI1NiBwcmljZSwKICAgICAgICAgICAgLAogICAgICAgICAgICB1aW50MjU2IHVwZGF0ZWRBdCwKICAgICAgICAgICAgdWludDgwIGFuc3dlcmVkSW5Sb3VuZAogICAgICAgICkgPSBwcmljZUZlZWQubGF0ZXN0Um91bmREYXRhKCk7CgogICAgICAgIC8vIDEuIENoZWNrIHN0YWxlbmVzczogcHJpY2Ugc2hvdWxkIGhhdmUgYmVlbiB1cGRhdGVkIGluIHRoZSBsYXN0IGhvdXIuCiAgICAgICAgcmVxdWlyZShibG9jay50aW1lc3RhbXAgLSB1cGRhdGVkQXQgPD0gMSBob3VycywgIlByaWNlIGlzIHN0YWxlIik7CgogICAgICAgIC8vIDIuIEVuc3VyZSB0aGUgcm91bmQgaXMgY29tcGxldGUgKGFuc3dlcmVkSW5Sb3VuZCA%2BPSByb3VuZElkKS4KICAgICAgICByZXF1aXJlKGFuc3dlcmVkSW5Sb3VuZCA%2BPSByb3VuZElkLCAiUm91bmQgaW5jb21wbGV0ZSIpOwoKICAgICAgICAvLyAzLiBQcmljZSBzaG91bGQgYmUgcG9zaXRpdmUuCiAgICAgICAgcmVxdWlyZShwcmljZSA%2BIDAsICJJbnZhbGlkIHByaWNlIik7CgogICAgICAgIHJldHVybiBwcmljZTsKICAgIH0KCiAgICAvKioKICAgICAqIFJldHVybnMgdGhlIG51bWJlciBvZiBkZWNpbWFscyB0aGUgcHJpY2UgZmVlZCB1c2VzLgogICAgICovCiAgICBmdW5jdGlvbiBnZXREZWNpbWFscygpIHB1YmxpYyB2aWV3IHJldHVybnMgKHVpbnQ4KSB7CiAgICAgICAgcmV0dXJuIHByaWNlRmVlZC5kZWNpbWFscygpOwogICAgfQoKICAgIC8qKgogICAgICogUmV0dXJucyBhIGh1bWFuLXJlYWRhYmxlIGRlc2NyaXB0aW9uIG9mIHRoZSBmZWVkLgogICAgICovCiAgICBmdW5jdGlvbiBnZXREZXNjcmlwdGlvbigpIHB1YmxpYyB2aWV3IHJldHVybnMgKHN0cmluZyBtZW1vcnkpIHsKICAgICAgICByZXR1cm4gcHJpY2VGZWVkLmRlc2NyaXB0aW9uKCk7CiAgICB9Cn0%3D */}
+
+<RemixLaunchButton contractName="priceConsumer" code={priceConsumerSource} />
+:::
 
 **Explanation of safety checks:**
 
@@ -140,16 +172,31 @@ Since this guide is intentionally a **mock** implementation, we’ll test the co
 
 Create a mock aggregator in your test folder.
 
-```solidity
-// test/mocks/MockAggregator.sol
-pragma solidity ^0.8.0;
+export const mockAggregatorSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
 
-import "../../contracts/AggregatorV3Interface.sol";
+// AggregatorV3Interface inlined so this file is self-contained for Remix.
+// In a multi-file project, import it instead: import "./AggregatorV3Interface.sol";
+interface AggregatorV3Interface {
+    function decimals() external view returns (uint8);
+    function description() external view returns (string memory);
+    function version() external view returns (uint256);
+    function latestRoundData()
+        external
+        view
+        returns (
+            uint80 roundId,
+            int256 answer,
+            uint256 startedAt,
+            uint256 updatedAt,
+            uint80 answeredInRound
+        );
+}
 
 contract MockAggregator is AggregatorV3Interface {
-    uint8 public decimals = 8;
-    string public description = "BTC/USD mock";
-    uint256 public version = 1;
+    uint8 public override decimals = 8;
+    string public override description = "BTC/USD mock";
+    uint256 public override version = 1;
 
     int256 private mockPrice = 30000 * 1e8; // $30,000 with 8 decimals
 
@@ -167,8 +214,17 @@ contract MockAggregator is AggregatorV3Interface {
     function setMockPrice(int256 _price) external {
         mockPrice = _price;
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{mockAggregatorSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `MockAggregator` without any local setup? Use the button below to open it directly in the Remix IDE (the `AggregatorV3Interface` is inlined so it compiles as a single file). You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for MockAggregator: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCi8vIEFnZ3JlZ2F0b3JWM0ludGVyZmFjZSBpbmxpbmVkIHNvIHRoaXMgZmlsZSBpcyBzZWxmLWNvbnRhaW5lZCBmb3IgUmVtaXguCi8vIEluIGEgbXVsdGktZmlsZSBwcm9qZWN0LCBpbXBvcnQgaXQgaW5zdGVhZDogaW1wb3J0ICIuL0FnZ3JlZ2F0b3JWM0ludGVyZmFjZS5zb2wiOwppbnRlcmZhY2UgQWdncmVnYXRvclYzSW50ZXJmYWNlIHsKICAgIGZ1bmN0aW9uIGRlY2ltYWxzKCkgZXh0ZXJuYWwgdmlldyByZXR1cm5zICh1aW50OCk7CiAgICBmdW5jdGlvbiBkZXNjcmlwdGlvbigpIGV4dGVybmFsIHZpZXcgcmV0dXJucyAoc3RyaW5nIG1lbW9yeSk7CiAgICBmdW5jdGlvbiB2ZXJzaW9uKCkgZXh0ZXJuYWwgdmlldyByZXR1cm5zICh1aW50MjU2KTsKICAgIGZ1bmN0aW9uIGxhdGVzdFJvdW5kRGF0YSgpCiAgICAgICAgZXh0ZXJuYWwKICAgICAgICB2aWV3CiAgICAgICAgcmV0dXJucyAoCiAgICAgICAgICAgIHVpbnQ4MCByb3VuZElkLAogICAgICAgICAgICBpbnQyNTYgYW5zd2VyLAogICAgICAgICAgICB1aW50MjU2IHN0YXJ0ZWRBdCwKICAgICAgICAgICAgdWludDI1NiB1cGRhdGVkQXQsCiAgICAgICAgICAgIHVpbnQ4MCBhbnN3ZXJlZEluUm91bmQKICAgICAgICApOwp9Cgpjb250cmFjdCBNb2NrQWdncmVnYXRvciBpcyBBZ2dyZWdhdG9yVjNJbnRlcmZhY2UgewogICAgdWludDggcHVibGljIG92ZXJyaWRlIGRlY2ltYWxzID0gODsKICAgIHN0cmluZyBwdWJsaWMgb3ZlcnJpZGUgZGVzY3JpcHRpb24gPSAiQlRDL1VTRCBtb2NrIjsKICAgIHVpbnQyNTYgcHVibGljIG92ZXJyaWRlIHZlcnNpb24gPSAxOwoKICAgIGludDI1NiBwcml2YXRlIG1vY2tQcmljZSA9IDMwMDAwICogMWU4OyAvLyAkMzAsMDAwIHdpdGggOCBkZWNpbWFscwoKICAgIGZ1bmN0aW9uIGxhdGVzdFJvdW5kRGF0YSgpIGV4dGVybmFsIHZpZXcgb3ZlcnJpZGUgcmV0dXJucyAoCiAgICAgICAgdWludDgwIHJvdW5kSWQsCiAgICAgICAgaW50MjU2IGFuc3dlciwKICAgICAgICB1aW50MjU2IHN0YXJ0ZWRBdCwKICAgICAgICB1aW50MjU2IHVwZGF0ZWRBdCwKICAgICAgICB1aW50ODAgYW5zd2VyZWRJblJvdW5kCiAgICApIHsKICAgICAgICByZXR1cm4gKDEsIG1vY2tQcmljZSwgYmxvY2sudGltZXN0YW1wLCBibG9jay50aW1lc3RhbXAsIDEpOwogICAgfQoKICAgIC8vIEFsbG93IHRlc3RzIHRvIHVwZGF0ZSB0aGUgbW9jayBwcmljZQogICAgZnVuY3Rpb24gc2V0TW9ja1ByaWNlKGludDI1NiBfcHJpY2UpIGV4dGVybmFsIHsKICAgICAgICBtb2NrUHJpY2UgPSBfcHJpY2U7CiAgICB9Cn0%3D */}
+
+<RemixLaunchButton contractName="mockAggregator" code={mockAggregatorSource} />
+:::
 
 **Now the test file:**
 

@@ -200,6 +200,69 @@ article .markdown header h1 {
   }
 }
 
+/* Remix launch menu in the doc aside - mirrors the markdown actions look */
+.remix-menu {
+  position: relative;
+  overflow: visible;
+}
+
+.remix-menu .dropdown {
+  position: relative;
+  overflow: visible;
+}
+
+.remix-menu-split {
+  display: flex;
+}
+
+.remix-menu-trigger,
+.remix-launch-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 14px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.4;
+  cursor: pointer;
+  border-radius: 999px;
+  border: 1px solid var(--bs-body-color);
+  background: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  box-shadow: none;
+  transition: background-color 0.15s ease;
+}
+
+.remix-menu-trigger:hover,
+.remix-menu-trigger:focus,
+.remix-launch-btn:hover,
+.remix-launch-btn:focus {
+  background: var(--ifm-hover-overlay);
+  color: var(--bs-body-color);
+  box-shadow: none;
+}
+
+.remix-menu-trigger .remix-menu-trigger-label {
+  flex: 1;
+  text-align: left;
+}
+
+.remix-menu-trigger:focus-visible {
+  outline: 2px solid var(--ifm-color-primary, #3578e5);
+  outline-offset: 2px;
+}
+
+.remix-menu .dropdown__menu {
+  z-index: 1000;
+  min-width: 240px;
+  left: 0;
+  right: auto;
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 [dir="rtl"] .markdown-actions-container {
   margin-left: 0;
   margin-right: auto;

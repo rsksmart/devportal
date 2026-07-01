@@ -18,7 +18,11 @@ const DocTOCDesktop = () => {
 	const {frontMatter, toc} = useDoc();
 	const windowSize = useWindowSize();
 	const hidden = frontMatter.hide_table_of_contents;
-	const canRender = !hidden && toc.length > 0;
+	// Also render the aside (for the "Try in Remix IDE" button) on pages that
+	// have remix front matter but no markdown headings (e.g. pages built with
+	// <Steps>), where toc is empty.
+	const hasRemix = !!(frontMatter.remix || (Array.isArray(frontMatter.remix_contracts) && frontMatter.remix_contracts.length));
+	const canRender = !hidden && (toc.length > 0 || hasRemix);
 	return 		canRender && (windowSize === 'desktop' || windowSize === 'ssr') ? (
 		<DocItemTOCDesktop/>
 	) : undefined;
