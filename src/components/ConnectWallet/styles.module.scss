@@ -1,0 +1,84 @@
+.walletRoot {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.connectBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.connectedBtn {
+  font-variant-numeric: tabular-nums;
+}
+
+.address {
+  font-weight: 700;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--bs-green, #78c700);
+  flex: 0 0 auto;
+}
+
+.chevron,
+.chevronOpen {
+  transition: transform 0.15s ease-in-out;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: var(--ifm-z-index-fixed, 200);
+  min-width: 220px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: var(--ifm-dropdown-background-color, var(--bs-body-bg));
+  border: 1px solid var(--bs-border-color);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+}
+
+.balanceRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.balanceLabel {
+  color: var(--ifm-color-content-secondary);
+  font-size: 0.85rem;
+}
+
+.balanceValue {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.disconnectBtn {
+  width: 100%;
+  justify-content: center;
+}
+
+.error {
+  margin-top: 6px;
+  color: var(--bs-danger, #f25e5e);
+  font-size: 0.8rem;
+  max-width: 220px;
+  text-align: right;
+}
