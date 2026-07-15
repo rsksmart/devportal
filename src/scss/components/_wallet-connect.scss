@@ -1,0 +1,86 @@
+// Wallet connect button (navbar) - mirrors the remix-menu / markdown-actions
+// dropdown look so navbar-adjacent dropdowns stay visually consistent.
+.wallet-connect {
+  position: relative;
+}
+
+.wallet-connect .dropdown {
+  position: relative;
+}
+
+.wallet-connect-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.4;
+  cursor: pointer;
+  border-radius: 999px;
+  border: 1px solid var(--bs-body-color);
+  background: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  white-space: nowrap;
+  transition: background-color 0.15s ease;
+}
+
+.wallet-connect-trigger:hover,
+.wallet-connect-trigger:focus {
+  background: var(--ifm-hover-overlay);
+  color: var(--bs-body-color);
+}
+
+.wallet-connect-trigger:focus-visible {
+  outline: 2px solid var(--ifm-color-primary, #3578e5);
+  outline-offset: 2px;
+}
+
+.wallet-connect-trigger:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.wallet-connect .dropdown__menu {
+  z-index: 1000;
+  min-width: 200px;
+  right: 0;
+  left: auto;
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.wallet-connect-balance {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  font-size: 0.875rem;
+  color: var(--bs-body-color);
+}
+
+.wallet-connect-disconnect {
+  display: flex;
+  width: 100%;
+  padding: 8px 14px;
+  text-align: left;
+  border: none;
+  background: transparent;
+  color: var(--bs-body-color);
+  font: inherit;
+  cursor: pointer;
+}
+
+.wallet-connect-disconnect:hover {
+  background-color: var(--ifm-hover-overlay);
+}
+
+@media (max-width: 768px) {
+  .wallet-connect .dropdown__menu {
+    left: auto;
+    right: 0;
+    min-width: min(220px, calc(100vw - 2rem));
+    max-width: calc(100vw - 2rem);
+  }
+}

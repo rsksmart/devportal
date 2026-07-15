@@ -15,6 +15,7 @@ import Link from '@docusaurus/Link';
 
 import AIButton from "@theme/Navbar/AIButton";
 import LocaleDropdown from "@theme/Navbar/LocaleDropdown";
+import WalletConnectButton from "/src/components/WalletConnectButton";
 
 function useNavbarItems() {
   // TODO temporary casting until ThemeConfig type is improved
@@ -88,6 +89,7 @@ export default function NavbarContent() {
           <RightNavbarItems items={rightItems} />
           <LocaleDropdown />
           <NavbarColorModeToggle />
+          <WalletConnectButton />
         </div>
       }
     />
