@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
-title: Onboard Users
+title: Onboard
 sidebar_label: Overview
-description: "Mastering the tools that make Bitcoin dApps as seamless as Web2."
+description: "Wallet connection, social login, and account abstraction patterns for Rootstock dApps."
 tags: [ux, onboarding, rif-relay, rns, account-abstraction, fundamentals]
 ---
 

@@ -1,8 +1,8 @@
 ---
 sidebar_position: 112
 sidebar_label: Dynamic
-title: Dynamic Starter Kit
-description: "The Rootstock Dynamic Starter Kit uses the wagmi library for faster integration of Web3 features into a Next.js application. It uses Wagmi hooks, ability to connect to wallets, retrieve balances, transfer tokens, and sign messages."
+title: Integrate Dynamic Wallets with Wagmi on Rootstock
+description: "Integrate Dynamic embedded wallets and Wagmi hooks in a Next.js dApp on Rootstock. Secured by over 85% of Bitcoin's hash power through merge mining."
 tags: [rsk, Dynamic, developers, Kit, rootstock, Starter, dApps, smart contracts]
 ---
 
@@ -17,9 +17,15 @@ For more details on Dynamic Embedded Wallets,
 refer to the official [Dynamic Embedded Wallets Documentation](https://www.dynamic.xyz/features/embedded-wallets).
 :::
 
+## What you'll achieve
+
+- Set up a Next.js project with Dynamic embedded wallets and Wagmi
+- Connect wallets and read balances on Rootstock
+- Send transactions and sign messages from your dApp
+
 ## **What is Dynamic?**
 
-**Dynamic** is a tool that simplifies wallet management and integration for Web3 applications. It provides developers with an "Embedded Wallet" solution, allowing seamless wallet interactions directly within the app without requiring users to switch to external wallet apps.
+**Dynamic** is a tool that simplifies wallet management and integration for Web3 applications. It provides developers with an "Embedded Wallet" solution, so users can sign transactions and manage keys inside the app without switching to external wallet apps.
 
 This makes it easier to create a smooth user experience and improves accessibility, particularly for those new to blockchain.
 
@@ -31,7 +37,7 @@ The **wagmi** library offers a set of React hooks specifically designed for Web3
 
  1. **Wallet Connection**
 
-This supports connecting wallets like **MetaMask** and **WalletConnect** to provide users with a seamless login into the dApp. MetaMask is a popular browser wallet, while WalletConnect enables connection to a variety of mobile wallets through QR code scanning. With wagmi hooks, handling wallet connections becomes simple, allowing users to securely and easily access the dApp. This removes the need for custom connection logic, making the process quick and straightforward.
+This supports connecting wallets like **MetaMask** and **WalletConnect** so users can log in without leaving the dApp. MetaMask is a popular browser wallet, while WalletConnect enables connection to a variety of mobile wallets through QR code scanning. With wagmi hooks, handling wallet connections becomes simple, allowing users to securely and easily access the dApp. This removes the need for custom connection logic, making the process quick and straightforward.
 
 2. **Balance Retrieval**
 
@@ -39,7 +45,7 @@ Retrieving token balances is essential for users to monitor their assets. It ena
 
 3. **Token Transfers**
 
-Token transfers allow users to send assets to other addresses directly from the dApp. This feature lets users select a token, specify an amount, and input a recipient address to complete the transfer. With wagmi’s transaction hooks, token transfers are handled seamlessly, removing the need for complex contract interactions. This functionality is useful for dApps where peer-to-peer payments or transfers are common, like in DeFi or tipping applications.
+Token transfers allow users to send assets to other addresses directly from the dApp. This feature lets users select a token, specify an amount, and input a recipient address to complete the transfer. With wagmi's transaction hooks, you can submit transfers without writing custom contract call logic. This functionality is useful for dApps where peer-to-peer payments or transfers are common, like in DeFi or tipping applications.
 
 4. **Message Signing and Verification**
 

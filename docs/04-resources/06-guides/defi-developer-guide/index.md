@@ -2,11 +2,11 @@
 sidebar_position: 1
 sidebar_label: Overview
 title: 'Rootstock DeFi Developer Guide'
-description: 'A structured guide for building DeFi protocols – token standards, oracles, AMMs, security, and templates. A DeFi 101 catalog of token standards and security patterns to review before deploying to production on Rootstock.'
+description: 'Structured guide for DeFi on Rootstock: token standards, oracles, AMMs, security patterns, and templates to review before mainnet deployment.'
 tags: [rsk, rootstock, defi, solidity, web3, developer-guide]
 ---
 
-Welcome to the **Rootstock DeFi Developer Guide**! This guide is your one-stop resource for building decentralized finance (DeFi) applications on Rootstock. Whether you're a seasoned Ethereum developer or new to DeFi, these guides will help you navigate the unique opportunities and considerations when deploying on Rootstock.
+The **Rootstock DeFi Developer Guide** covers token standards, oracle integration, AMM patterns, and security practices for protocols on Rootstock. Use it to review fundamentals before you deploy vault, lending, or stablecoin flows to mainnet.
 
 This guide provides practical workflows, example code, and best practices for building DeFi protocols on Rootstock.
 
@@ -16,11 +16,11 @@ This guide assumes you have basic knowledge of Solidity, blockchain fundamentals
 
 ## Why Rootstock for DeFi?
 
-- **Bitcoin Security**: Rootstock is merge-mined with Bitcoin, inheriting its robust security model.
-- **EVM Compatibility**: Write and deploy contracts in Solidity, just like on Ethereum.
-- **Low Fees**: Transactions on Rootstock are significantly cheaper than on Ethereum mainnet.
-- **Growing Ecosystem**: Access to a wide range of DeFi primitives, bridges, and tools.
-- **RBTC**: The native currency is Bitcoin-pegged (1 RBTC = 1 BTC), enabling Bitcoin holders to participate in DeFi.
+- **Bitcoin security**: Rootstock is merge-mined with Bitcoin and secured by over 85% of Bitcoin hash power.
+- **EVM compatibility**: Write and deploy contracts in Solidity with Ethereum-familiar tooling.
+- **Lower fees**: Transactions on Rootstock typically cost less than on Ethereum mainnet.
+- **DeFi tooling**: Bridges, oracles, and protocol integrations are documented in this portal.
+- **rBTC**: The native asset is Bitcoin-pegged (1 rBTC = 1 BTC). Bitcoin holders can use rBTC as gas and collateral in DeFi protocols.
 
 ## What You Will Learn
 
@@ -30,13 +30,13 @@ This guide is divided into five main sections, each building on the previous:
 Learn how to implement and extend ERC-20, ERC-721, and ERC-4626 tokens on Rootstock. Understand wrapping RBTC (wRBTC), gas optimization, and security considerations specific to token development.
 
 ### 2. [Oracle Integration](/use-cases/interoperability/oracle-chainlink-mock/)
-Discover how to fetch reliable off-chain data using Chainlink or other oracles. Implement price feeds, randomness (VRF), and secure oracle patterns to protect your protocol from manipulation.
+Fetch reliable off-chain data using Chainlink or other oracles. Implement price feeds, randomness (VRF), and oracle patterns that reduce manipulation risk.
 
 ### 3. [Automated Market Makers (AMM) Basics](/use-cases/interoperability/amm-constant-product/)
 Build a simple constant-product AMM from scratch. Understand liquidity pools, swap mechanics, fees, and slippage. Test your contract with Hardhat and integrate it with a React frontend.
 
 ### 4. [Security Patterns](/resources/guides/defi-developer-guide/security-patterns)
-Explore essential security practices for DeFi: reentrancy protection, access control, integer safety, upgradeability, circuit breakers, and flash loan resistance. Learn how to audit your code and avoid common pitfalls.
+Review security practices for DeFi: reentrancy protection, access control, integer safety, upgradeability, circuit breakers, and flash loan resistance. Learn how to audit your code and avoid common pitfalls.
 
 ### 5. Example Templates
 Get started quickly with full-stack templates. Each template includes smart contracts, Hardhat deployment scripts, and a React frontend with ethers.js integration. Templates cover price oracles, AMMs, ERC-20 with permit, yield vaults (ERC-4626), and upgradeable contracts.
@@ -172,5 +172,3 @@ Refer to the templates: The final section provides complete, working projects th
 - [Chainlink Documentation](https://docs.chain.link/)
 
 - [Hardhat Documentation](https://hardhat.org/docs/getting-started)
-
-Let's Get Started!

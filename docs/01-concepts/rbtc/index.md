@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: Smart Bitcoin rBTC Token on rBTC - BTC to rBTC
+title: "rBTC Token on Rootstock: BTC to rBTC"
 tags: [mainnet, testnet, tokens, rbtc, gas, rsk, rootstock]
 sidebar_label: rBTC Token
 ---
@@ -18,7 +18,7 @@ See [supported wallets](/dev-tools/wallets/).
 
 <Button href="https://rootstock.io/rbtc/#get-rbtc">Get rBTC</Button>
 
-## rBTC (Smart Bitcoin in Mainnet)
+## rBTC (Mainnet)
 
 <table >
   <tbody>
@@ -56,7 +56,7 @@ See [supported wallets](/dev-tools/wallets/).
   </tbody>
 </table>
 
-## tRBTC (Smart Bitcoin in Testnet)
+## tRBTC (Testnet)
 
 <table >
   <tbody>

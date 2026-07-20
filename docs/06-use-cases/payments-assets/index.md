@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Automate Payments
+title: Pay
 sidebar_label: Overview
 description: "Programmable payments on Rootstock: Prism splits, x402, ERC-20, rBTC, and RIF Relay."
 tags: [payments, assets, erc-20, stablecoins, checkout, fundamentals]

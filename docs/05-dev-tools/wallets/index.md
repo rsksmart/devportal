@@ -26,6 +26,7 @@ The following wallets support [RBTC](/concepts/rbtc/) and [RIF](/concepts/rif-su
   <CarouselItem image="/img/rsk/wallets/WigwamGreen.svg" href="https://wigwam.app/" />
   <CarouselItem image="/img/rsk/wallets/zerion.svg" href="https://zerion.io/" />
   <CarouselItem image="/img/rsk/wallets/rainbow-wallet-main.png" href="https://rainbow.me/en/" />
+  <CarouselItem image="/img/rsk/wallets/bittasker-logomark.png" href="/dev-tools/wallets/bittasker/" />
 </Carousel>
 ````
 
@@ -59,8 +60,4 @@ In the following matrix you can see the different features by wallet.
 |  [Rainbow Wallet](https://rainbow.me/en/) | ✔ | ✔ | -  | Chrome  | Mainnet, Testnet|
 |  [Coinomi](https://www.coinomi.com/) | - | - | -  | Desktop, Mobile  | Mainnet |
 |  [Para Wallet](https://www.getpara.com/) | - | - | -  | Desktop, Mobile  | Mainnet, Testnet |
-
-
-
-
-
+|  [BitTasker](/dev-tools/wallets/bittasker/) | ✔ | ✔ | -  | Android (Google Play, Zapstore), Web (iOS coming soon) | Mainnet |

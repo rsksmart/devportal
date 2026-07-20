@@ -1,13 +1,19 @@
 ---
 sidebar_label: AA with Etherspot
 sidebar_position: 101
-title: Account Abstraction using Etherspot Prime SDK
-description: 'In this guide, you will learn how to use the Etherspot Prime SDK to deploy an Account Abstraction dApp on the Rootstock network. By following these steps, you will empower your users to interact with your dApp without managing private keys directly.'
+title: Deploy Account Abstraction dApps with Etherspot on Rootstock
+description: 'Deploy an Account Abstraction dApp on Rootstock with the Etherspot Prime SDK. Secured by over 85% of Bitcoin''s hash power through merge mining.'
 tags: [rsk, rootstock, developers, quick starts, etherspot, dApps, account abstraction]
 ---
 
 In this guide, you will learn how to use the Etherspot Prime SDK to deploy an Account Abstraction dApp on the Rootstock network. 
 By following these steps, you'll empower your users to interact with your dApp without managing private keys directly.
+
+## What you'll achieve
+
+- Integrate the Etherspot Prime SDK with a Wagmi starter kit on Rootstock
+- Create smart accounts for users without direct private key management
+- Send transactions through account abstraction flows on Rootstock testnet
 
 ## Prerequisites
 

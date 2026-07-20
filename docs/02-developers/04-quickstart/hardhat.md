@@ -1,14 +1,20 @@
 ---
 sidebar_label: Hardhat
 sidebar_position: 103
-title: Rootstock Hardhat Starter Kit
-description: 'Whether you are a seasoned developer or just starting your journey into smart contract development, the hardhat starter kit provides a solid foundation for building decentralized applications (dApps) on the Rootstock network.'
+title: Deploy Smart Contracts with Hardhat on Rootstock
+description: 'Deploy and test ERC smart contracts on Rootstock with Hardhat. Secured by over 85% of Bitcoin''s hash power through merge mining.'
 tags: [rsk, rootstock, tutorials, developers, hardhat, quick starts, dApps, smart contracts]
 ---
 
 Whether you’re a seasoned developer or just starting your journey into smart contract development, the hardhat starter kit provides a solid foundation for building decentralized applications (dApps) on the Rootstock network.
 
 Rootstock is fully EVM (Ethereum Virtual Machine) compatible. It brings the power of smart contracts to Bitcoin, allowing developers to leverage Bitcoin’s security while benefiting from Ethereum’s ecosystem.
+
+## What you'll achieve
+
+- Clone and configure the Hardhat starter kit for Rootstock testnet
+- Deploy ERC-20, ERC-721, and ERC-1155 smart contract examples
+- Run tests and verify contracts on Rootstock Explorer
 
 ## Prerequisites
 

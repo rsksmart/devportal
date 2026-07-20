@@ -10,8 +10,9 @@
     word-break: break-word;
   }
   [data-theme='dark'] & {
+    color: var(--bs-black);
     & > span{
-      color: inherit;
+      color: var(--bs-black);
       padding: 0px 10px;
       -webkit-box-decoration-break: clone;
       box-decoration-break: clone;

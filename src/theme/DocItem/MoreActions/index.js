@@ -12,6 +12,7 @@ import IconPaste from "@theme/Icon/Paste";
 import IconCommunity from "@theme/Icon/Community";
 import IconChangelog from "@theme/Icon/Changelog";
 import IconFaucet from "../../Icon/Faucet";
+import IconRbtc from "../../Icon/Rbtc";
 
 import Link from '@docusaurus/Link';
 import { RequestArticle } from '../../../components/RequestArticle'
@@ -92,6 +93,26 @@ export default function MoreActions({editUrl}) {
               {links.devCheatsheet.title}
             </Translate>
           </Link>
+        </li>
+      )}
+      {links.getRbtc && (
+        <li className={`py-3`}>
+          <TrackedLink
+            href={links.getRbtc.url}
+            event="getRbtcClick"
+            componentId="get-rbtc-link"
+            componentLabel={links.getRbtc.title}
+            className={`link-base d-inline-flex gap-8 align-items-center`}
+            target={links.getRbtc.target}
+            rel={links.getRbtc.rel}
+          >
+            <IconRbtc/>
+            <Translate
+              id="theme.moreLinks.getRbtc"
+            >
+              {links.getRbtc.title}
+            </Translate>
+          </TrackedLink>
         </li>
       )}
       {links.trbtcFaucet && (

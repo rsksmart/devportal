@@ -3,12 +3,12 @@ sidebar_position: 1
 title: Developers Overview
 sidebar_label: Overview
 tags: [rsk, rootstock, developers, web3, starter kits, smart contracts, how-tos,]
-description: "Leverage your existing knowledge of Solidity and tools like Rust, Hardhat, and Wagmi to deploy and scale your dApps on the pioneering layer 2 solution that combines the best of Bitcoin security and Ethereum Smart Contract capabilities."
+description: "Quickstarts, smart contracts, integrations, RPC API, and libraries for building dApps on Rootstock, a Bitcoin sidechain secured by merge mining with EVM-compatible tooling."
 ---
 
-Welcome to the Rootstock Developers Overview section. 
+Welcome to the Rootstock Developers Overview section.
 
-This section enables developers getting started with the Rootstock blockchain. Developers can install a local development environment using Hardhat, etc, create and test contracts with the libraries provided and use the libraries to build decentralized applications 
+This section covers quickstarts, smart contract development, integrations, RPC API access, and libraries for Rootstock.
 
 :::info[Info]
 * Looking to quickly test your dApp on testnet before deploying to mainnet? Use the [Rootstock RPC API](https://rpc.rootstock.io/) or view the [json-rpc methods](/developers/rpc-api/rootstock/methods/) available on the RPC API.

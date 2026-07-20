@@ -1,14 +1,24 @@
 ---
 sidebar_position: 111
 sidebar_label: Ape
-title: Getting Started with Ape
-description: 'How to compile, deploy, and intereact with smart contracts with Ape on Rootstock'
+title: Compile and Deploy Smart Contracts with Ape on Rootstock
+description: 'Compile, deploy, and interact with smart contracts on Rootstock using the Ape Framework. Secured by over 85% of Bitcoin''s hash power through merge mining.'
 tags: [rsk, ape, apeworx, developers, developer tools, tRBTC, rootstock, testing, dApps, smart contracts]
+remix_label: "Try in Remix IDE"
+remix: "https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCmNvbnRyYWN0IEJveCB7CiAgICB1aW50MjU2IHByaXZhdGUgdmFsdWU7CgogICAgZXZlbnQgVmFsdWVDaGFuZ2VkKHVpbnQyNTYgbmV3VmFsdWUpOwoKICAgIGZ1bmN0aW9uIHN0b3JlKHVpbnQyNTYgbmV3VmFsdWUpIHB1YmxpYyB7CiAgICAgICAgdmFsdWUgPSBuZXdWYWx1ZTsKICAgICAgICBlbWl0IFZhbHVlQ2hhbmdlZChuZXdWYWx1ZSk7CiAgICB9CgogICAgZnVuY3Rpb24gcmV0cmlldmUoKSBwdWJsaWMgdmlldyByZXR1cm5zICh1aW50MjU2KSB7CiAgICAgICAgcmV0dXJuIHZhbHVlOwogICAgfQp9"
 ---
+
+import CodeBlock from '@theme/CodeBlock';
 
 The [Ape Framework](https://apeworx.io/framework/) is an easy-to-use Web3 development tool. Developers can compile, test, and interact with smart contracts all in one command line session. With its [modular plugin system](https://github.com/ApeWorX/ape?tab=readme-ov-file#plugin-system), Ape supports multiple contract languages and chains including Rootstock.
 
 In this guide, we will learn about the [Ape Framework](https://apeworx.io/framework/) and its benefits for smart contract development, how to setup your development environment, create a Ape project and execute a deployment script for Rootstock.
+
+## What you'll achieve
+
+- Create an Ape project configured for Rootstock testnet
+- Compile and deploy a smart contract with Ape scripts
+- Run tests and interact with contracts from the Ape CLI
 
 ## Prerequisites
 To get started with Ape, ensure the following tools are installed:
@@ -117,9 +127,8 @@ touch contracts/Box.sol
 
 Open the file and add the following contract to it:
 
-```solidity
-// SPDX-License-Identifier: MIT 
-pragma solidity ^0.8.1;
+export const boxSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
 
 contract Box {
     uint256 private value;
@@ -134,8 +143,17 @@ contract Box {
     function retrieve() public view returns (uint256) {
         return value;
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{boxSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `Box` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for Box: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCmNvbnRyYWN0IEJveCB7CiAgICB1aW50MjU2IHByaXZhdGUgdmFsdWU7CgogICAgZXZlbnQgVmFsdWVDaGFuZ2VkKHVpbnQyNTYgbmV3VmFsdWUpOwoKICAgIGZ1bmN0aW9uIHN0b3JlKHVpbnQyNTYgbmV3VmFsdWUpIHB1YmxpYyB7CiAgICAgICAgdmFsdWUgPSBuZXdWYWx1ZTsKICAgICAgICBlbWl0IFZhbHVlQ2hhbmdlZChuZXdWYWx1ZSk7CiAgICB9CgogICAgZnVuY3Rpb24gcmV0cmlldmUoKSBwdWJsaWMgdmlldyByZXR1cm5zICh1aW50MjU2KSB7CiAgICAgICAgcmV0dXJuIHZhbHVlOwogICAgfQp9 */}
+
+<RemixLaunchButton contractName="box" code={boxSource} />
+:::
 
 ## Compile the contract
 
