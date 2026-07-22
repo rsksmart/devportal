@@ -104,6 +104,8 @@ module.exports = function llmsI18nPlugin(_context, options = {}) {
           return;
         }
         await generateStandardLLMFiles(enhancedContext, allDocFiles);
+        const { fixLlmsFilesInDir } = require('./fix-llms-urls.js');
+        fixLlmsFilesInDir(outDir);
         console.log(`[llms-i18n] Generated llms.txt and llms-full.txt for locale ${currentLocale}.`);
       } catch (err) {
         console.error(`[llms-i18n] Error generating LLM files for locale ${currentLocale}:`, err.message);

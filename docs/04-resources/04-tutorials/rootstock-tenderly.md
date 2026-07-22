@@ -185,7 +185,7 @@ export async function setErc20Balance(erc20Address: string, walletAddress: strin
 Tenderly allows you to override smart contract storage in the TestNet, but we need to know the memory slot of the storage variable we want to modify. For [value type variables](https://docs.soliditylang.org/en/latest/types.html#value-types) like address or integer, we can just count the position of the variable in the contract.
 
 ```bash
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.30;
 contract SimpleStorage {
    uint256 public value1; // Stored at slot 0
    uint256 public value2; // Stored at slot 1

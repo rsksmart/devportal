@@ -4,7 +4,11 @@ sidebar_position: 4
 title: Zero-Knowledge Proofs on Rootstock with Noir
 description: "Building private decentralized applications (dApps) on Rootstock is key to ensuring user confidentiality and security. Zero-Knowledge Proofs (ZK proofs) and Noir form a powerful combination, blending advanced cryptography with a developer-friendly language to create privacy-focused solutions."
 tags: [zk, noir, zero-knowledge, privacy, tutorial, solidity, dapp, rootstock]
+remix_label: "Try in Remix IDE"
+remix: "https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCmludGVyZmFjZSBJVmVyaWZpZXIgewogICAgZnVuY3Rpb24gdmVyaWZ5KAogICAgICAgIGJ5dGVzIGNhbGxkYXRhIF9wcm9vZiwKICAgICAgICBieXRlczMyW10gY2FsbGRhdGEgX3B1YmxpY0lucHV0cwogICAgKSBleHRlcm5hbCB2aWV3IHJldHVybnMgKGJvb2wpOwp9Cgpjb250cmFjdCBTZWNyZXRORlRDbHViIHsKICAgIElWZXJpZmllciBwdWJsaWMgaW1tdXRhYmxlIHZlcmlmaWVyOwogICAgYnl0ZXMzMiBwdWJsaWMgaW1tdXRhYmxlIHNlY3JldEhhc2g7CgogICAgbWFwcGluZyhhZGRyZXNzID0%2BIGJvb2wpIHB1YmxpYyBoYXNKb2luZWQ7CiAgICBtYXBwaW5nKGFkZHJlc3MgPT4gdWludDI1NikgcHVibGljIG1lbWJlclRva2VuSWQ7CgogICAgdWludDI1NiBwcml2YXRlIF9uZXh0VG9rZW5JZDsKCiAgICBldmVudCBNZW1iZXJKb2luZWQoYWRkcmVzcyBpbmRleGVkIG1lbWJlciwgdWludDI1NiBpbmRleGVkIHRva2VuSWQpOwoKICAgIGVycm9yIEFscmVhZHlNZW1iZXIoKTsKICAgIGVycm9yIEludmFsaWRQcm9vZigpOwoKICAgIGNvbnN0cnVjdG9yKGJ5dGVzMzIgX3NlY3JldEhhc2gsIGFkZHJlc3MgX3ZlcmlmaWVyKSB7CiAgICAgICAgc2VjcmV0SGFzaCA9IF9zZWNyZXRIYXNoOwogICAgICAgIHZlcmlmaWVyID0gSVZlcmlmaWVyKF92ZXJpZmllcik7CiAgICB9CgogICAgZnVuY3Rpb24gam9pbihieXRlcyBjYWxsZGF0YSBwcm9vZikgZXh0ZXJuYWwgewogICAgICAgIGlmIChoYXNKb2luZWRbbXNnLnNlbmRlcl0pIHJldmVydCBBbHJlYWR5TWVtYmVyKCk7CgogICAgICAgIC8vIFByZXBhcmUgcHVibGljIGlucHV0cyAoanVzdCB0aGUgc2VjcmV0IGhhc2gpCiAgICAgICAgYnl0ZXMzMltdIG1lbW9yeSBwdWJsaWNJbnB1dHMgPSBuZXcgYnl0ZXMzMltdKDEpOwogICAgICAgIHB1YmxpY0lucHV0c1swXSA9IHNlY3JldEhhc2g7CgogICAgICAgIC8vIFZlcmlmeSB0aGUgemVyby1rbm93bGVkZ2UgcHJvb2YKICAgICAgICBpZiAoIXZlcmlmaWVyLnZlcmlmeShwcm9vZiwgcHVibGljSW5wdXRzKSkgcmV2ZXJ0IEludmFsaWRQcm9vZigpOwoKICAgICAgICAvLyBQcm9vZiB2ZXJpZmllZCEgR3JhbnQgbWVtYmVyc2hpcAogICAgICAgIHVpbnQyNTYgdG9rZW5JZCA9IF9uZXh0VG9rZW5JZCsrOwogICAgICAgIGhhc0pvaW5lZFttc2cuc2VuZGVyXSA9IHRydWU7CiAgICAgICAgbWVtYmVyVG9rZW5JZFttc2cuc2VuZGVyXSA9IHRva2VuSWQ7CgogICAgICAgIGVtaXQgTWVtYmVySm9pbmVkKG1zZy5zZW5kZXIsIHRva2VuSWQpOwogICAgfQoKICAgIGZ1bmN0aW9uIGlzTWVtYmVyKGFkZHJlc3MgYWNjb3VudCkgZXh0ZXJuYWwgdmlldyByZXR1cm5zIChib29sKSB7CiAgICAgICAgcmV0dXJuIGhhc0pvaW5lZFthY2NvdW50XTsKICAgIH0KCiAgICBmdW5jdGlvbiB0b3RhbE1lbWJlcnMoKSBleHRlcm5hbCB2aWV3IHJldHVybnMgKHVpbnQyNTYpIHsKICAgICAgICByZXR1cm4gX25leHRUb2tlbklkOwogICAgfQp9"
 ---
+
+import CodeBlock from '@theme/CodeBlock';
 
 [Zero-knowledge proofs](https://en.wikipedia.org/wiki/Zero-knowledge_proof) let a user prove they know something (a secret code, a credential, ownership) without ever revealing the secret itself on Rootstock.
 
@@ -283,9 +287,8 @@ You can delete all the existing template files in the `contracts` folder, i.e. t
 
 Then, create a new contract; `contracts/SecretNFTClub.sol`:
 
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.24;
+export const secretNFTClubSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
 
 interface IVerifier {
     function verify(
@@ -338,8 +341,17 @@ contract SecretNFTClub {
     function totalMembers() external view returns (uint256) {
         return _nextTokenId;
     }
-}
-```
+}`;
+
+<CodeBlock language="solidity">{secretNFTClubSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `SecretNFTClub` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for SecretNFTClub: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCmludGVyZmFjZSBJVmVyaWZpZXIgewogICAgZnVuY3Rpb24gdmVyaWZ5KAogICAgICAgIGJ5dGVzIGNhbGxkYXRhIF9wcm9vZiwKICAgICAgICBieXRlczMyW10gY2FsbGRhdGEgX3B1YmxpY0lucHV0cwogICAgKSBleHRlcm5hbCB2aWV3IHJldHVybnMgKGJvb2wpOwp9Cgpjb250cmFjdCBTZWNyZXRORlRDbHViIHsKICAgIElWZXJpZmllciBwdWJsaWMgaW1tdXRhYmxlIHZlcmlmaWVyOwogICAgYnl0ZXMzMiBwdWJsaWMgaW1tdXRhYmxlIHNlY3JldEhhc2g7CgogICAgbWFwcGluZyhhZGRyZXNzID0%2BIGJvb2wpIHB1YmxpYyBoYXNKb2luZWQ7CiAgICBtYXBwaW5nKGFkZHJlc3MgPT4gdWludDI1NikgcHVibGljIG1lbWJlclRva2VuSWQ7CgogICAgdWludDI1NiBwcml2YXRlIF9uZXh0VG9rZW5JZDsKCiAgICBldmVudCBNZW1iZXJKb2luZWQoYWRkcmVzcyBpbmRleGVkIG1lbWJlciwgdWludDI1NiBpbmRleGVkIHRva2VuSWQpOwoKICAgIGVycm9yIEFscmVhZHlNZW1iZXIoKTsKICAgIGVycm9yIEludmFsaWRQcm9vZigpOwoKICAgIGNvbnN0cnVjdG9yKGJ5dGVzMzIgX3NlY3JldEhhc2gsIGFkZHJlc3MgX3ZlcmlmaWVyKSB7CiAgICAgICAgc2VjcmV0SGFzaCA9IF9zZWNyZXRIYXNoOwogICAgICAgIHZlcmlmaWVyID0gSVZlcmlmaWVyKF92ZXJpZmllcik7CiAgICB9CgogICAgZnVuY3Rpb24gam9pbihieXRlcyBjYWxsZGF0YSBwcm9vZikgZXh0ZXJuYWwgewogICAgICAgIGlmIChoYXNKb2luZWRbbXNnLnNlbmRlcl0pIHJldmVydCBBbHJlYWR5TWVtYmVyKCk7CgogICAgICAgIC8vIFByZXBhcmUgcHVibGljIGlucHV0cyAoanVzdCB0aGUgc2VjcmV0IGhhc2gpCiAgICAgICAgYnl0ZXMzMltdIG1lbW9yeSBwdWJsaWNJbnB1dHMgPSBuZXcgYnl0ZXMzMltdKDEpOwogICAgICAgIHB1YmxpY0lucHV0c1swXSA9IHNlY3JldEhhc2g7CgogICAgICAgIC8vIFZlcmlmeSB0aGUgemVyby1rbm93bGVkZ2UgcHJvb2YKICAgICAgICBpZiAoIXZlcmlmaWVyLnZlcmlmeShwcm9vZiwgcHVibGljSW5wdXRzKSkgcmV2ZXJ0IEludmFsaWRQcm9vZigpOwoKICAgICAgICAvLyBQcm9vZiB2ZXJpZmllZCEgR3JhbnQgbWVtYmVyc2hpcAogICAgICAgIHVpbnQyNTYgdG9rZW5JZCA9IF9uZXh0VG9rZW5JZCsrOwogICAgICAgIGhhc0pvaW5lZFttc2cuc2VuZGVyXSA9IHRydWU7CiAgICAgICAgbWVtYmVyVG9rZW5JZFttc2cuc2VuZGVyXSA9IHRva2VuSWQ7CgogICAgICAgIGVtaXQgTWVtYmVySm9pbmVkKG1zZy5zZW5kZXIsIHRva2VuSWQpOwogICAgfQoKICAgIGZ1bmN0aW9uIGlzTWVtYmVyKGFkZHJlc3MgYWNjb3VudCkgZXh0ZXJuYWwgdmlldyByZXR1cm5zIChib29sKSB7CiAgICAgICAgcmV0dXJuIGhhc0pvaW5lZFthY2NvdW50XTsKICAgIH0KCiAgICBmdW5jdGlvbiB0b3RhbE1lbWJlcnMoKSBleHRlcm5hbCB2aWV3IHJldHVybnMgKHVpbnQyNTYpIHsKICAgICAgICByZXR1cm4gX25leHRUb2tlbklkOwogICAgfQp9 */}
+
+<RemixLaunchButton contractName="secretNFTClub" code={secretNFTClubSource} />
+:::
 
 Make sure to also copy the the `Verifier` contract from `./target/Verifier.sol` into your smart-contracts directory in a new file `contracts/Verifier.sol`. This contract will also be deployed and will be used on our `SecretNFTClub` contract to verify a proof.
 
@@ -387,10 +399,10 @@ export default defineConfig({
   solidity: {
     profiles: {
       default: {
-        version: "0.8.28",
+        version: "0.8.30",
       },
       production: {
-        version: "0.8.28",
+        version: "0.8.30",
         settings: {
           optimizer: {
             enabled: true,

@@ -1,19 +1,19 @@
 ---
 sidebar_position: 1
-title: AI Agents
+title: AI
 sidebar_label: Overview
-description: "Connect AI models to on-chain data and deploy autonomous agents for intelligent portfolio management. Build AI agents that stake, bridge, swap and transact on Rootstock with guardrails."
+description: "MCP server setup and agent patterns for on-chain reads and scoped actions on Rootstock."
 tags: [ai, mcp, agents, autonomous-finance, emerging-tech, fundamentals]
 ---
 
-This hub is for builders who ship Agents workflows and are looking to connect MCP clients to live chain data, submit transactions on the Rootstock network.
+This hub is for builders who ship agent workflows and connect MCP clients to live chain data and transactions on Rootstock.
 
 ## Core pillars
 
 | Pillar | Description | Primary tool |
 | :--- | :--- | :--- |
 | **Connectivity** | Expose chain reads and scoped actions to MCP clients. | [Rootstock MCP Server](https://github.com/rsksmart/rsk-mcp-server) |
-| **AI Agents** | A lightweight dApp that connects a conversational AI agent to the Rootstock testnet, allowing users to perform DeFi actions like checking token balances and sending tRBTC simply by chatting. | [AI Agent Rootstock](/use-cases/ai-automation/ai-agent-rootstock/) |
+| **AI Agents** | A dApp that connects a conversational agent to Rootstock testnet for balance checks, transfers, and other scoped actions. | [AI Agent Rootstock](/use-cases/ai-automation/ai-agent-rootstock/) |
 
 ## Key concepts
 
@@ -21,9 +21,9 @@ This hub is for builders who ship Agents workflows and are looking to connect MC
 
 MCP connects clients to tools and data sources. The **[Rootstock MCP Server](https://github.com/rsksmart/rsk-mcp-server)** can read balances, contract state, and gas estimates so responses reflect current chain data.
 
-### 2. Conversational Agents with Blockchain Actions
+### 2. Conversational agents with on-chain actions
 
-Build a lightweight dApp that connects a [conversational AI agent](/use-cases/ai-automation/ai-agent-rootstock/) to the Rootstock testnet, allowing users to perform DeFi actions like checking token balances and sending tRBTC simply by chatting. This is not just a chatbot—it is a minimal DeFi agent that can reason over wallet data, maintain conversational context, and issue token actions with a human-like touch.
+The [AI agent guide](/use-cases/ai-automation/ai-agent-rootstock/) walks through a minimal dApp that connects a conversational agent to Rootstock testnet. Users can check token balances and send tRBTC through chat. The agent reads wallet data, keeps conversational context, and submits scoped token actions.
 
 ## Tools
 

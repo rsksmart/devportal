@@ -1,8 +1,8 @@
 ---
 sidebar_label: Web3Auth
 sidebar_position: 110
-title: Rootstock Web3Auth Starter Kit
-description: "A step-to-step guide for developers to build and deploy passwordless dApps on Rootstock using Web3Auth and Wagmi starter dApp."
+title: Build Passwordless dApps with Web3Auth on Rootstock
+description: "Build and deploy passwordless dApps on Rootstock with Web3Auth and Wagmi. Secured by over 85% of Bitcoin's hash power through merge mining."
 tags: [rsk, rootstock, developers, web3auth, wagmi, quickstart, dApps, Smart Contracts]
 ---
 
@@ -11,6 +11,12 @@ The [blockchain trilemma](https://www.coinbase.com/en-gb/learn/crypto-glossary/w
 Web3Auth bridges this gap by offering a streamlined Single Factor Authentication (SFA) solution that simplifies user onboarding and wallet connections on Rootstock. Whether you're developing a decentralized application (dApp) for experienced crypto users or beginners new to blockchain, Web3Auth makes user interactions intuitive and secure.
 
 By the end of this guide, you will learn how to use the starter kit to integrate Web3Auth and configure your dApp for Rootstock.
+
+## What you'll achieve
+
+- Configure Web3Auth for passwordless login on Rootstock
+- Connect embedded wallets through Wagmi hooks
+- Deploy and interact with smart contracts from your Next.js dApp
 
 ## Who is this guide for?
 

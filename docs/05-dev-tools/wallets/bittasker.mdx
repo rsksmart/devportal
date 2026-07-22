@@ -1,0 +1,154 @@
+---
+sidebar_label: BitTasker Wallet SDK
+sidebar_position: 4
+title: BitTasker Wallet SDK on Rootstock
+tags: [dev tools, rootstock, rsk, wallets, bittasker]
+description: "Install @bittasker/wallet-core to add an embedded rBTC wallet with Lightning and Liquid swaps on Rootstock."
+---
+
+[BitTasker](https://bittasker.com/) is a freelance marketplace on Bitcoin and Nostr. 
+The BitTasker app provides an embedded rBTC wallet for the Rootstock Mainnet.
+
+The open-source [`@bittasker/wallet-core`](https://www.npmjs.com/package/@bittasker/wallet-core) package is the TypeScript SDK behind that wallet. 
+Install it in your web or mobile app to manage rBTC on Rootstock and route Lightning and Liquid swaps through [Boltz](https://boltz.exchange/). 
+The SDK also supports Rootstock Testnet and Regtest for development.
+
+For the complete API reference, see the [wallet-core repository README](https://github.com/BitTasker/wallet-core).
+
+## When to use this SDK
+
+Use `@bittasker/wallet-core` when you need:
+
+- BIP39/BIP44 HD wallets on Rootstock mainnet, testnet, or regtest
+- rBTC balances, transfers, and transaction history on Rootstock
+- Lightning and Liquid swaps into rBTC through [Boltz](https://boltz.exchange/)
+- A TypeScript library for React Native, Capacitor, Ionic, or web
+
+## Prerequisites
+
+- Node.js 18+
+- A BIP39 mnemonic stored securely (never hardcode in source)
+- For testnet work: [tRBTC from the faucet](https://faucet.rootstock.io/)
+
+## Wallet compatibility
+
+| Feature | Value |
+| :--- | :--- |
+| EIP-55 checksums | Yes |
+| Derivation path | `m/44'/60'/0'/0/0` |
+| Customizable dPath | No |
+| Rootstock networks | Mainnet (BitTasker app); Wallet SDK also supports Testnet and Regtest |
+| BitTasker app platforms | Android (Google Play, Zapstore), Web (iOS coming soon) |
+
+:::info[Roadmap]
+
+BitTasker does not currently support MetaMask, hardware wallets, Bitcoin, USDT, or rBTC/USDT swaps. These features are on the roadmap. 
+Check the [wallet-core repository](https://github.com/BitTasker/wallet-core) for future releases.
+
+:::
+
+## Get Started
+
+### Installation
+
+```bash
+npm install @bittasker/wallet-core
+```
+
+### Quick Start
+
+Import `WalletManager`, pass your network and mnemonic, then read balances or send rBTC.
+
+```javascript
+import { WalletManager } from '@bittasker/wallet-core';
+
+const walletManager = new WalletManager({
+  network: 'testnet',
+  mnemonic: await getSecureMnemonic(),
+});
+
+await walletManager.initialize();
+
+const balances = await walletManager.getBalances();
+console.log('rBTC:', balances.rsk.rbtc);
+
+const txHash = await walletManager.rskWallet.send(
+  '0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb',
+  '0.01',
+);
+console.log('Transaction:', txHash);
+```
+
+Replace `getSecureMnemonic()` with your app’s secure storage. Load mnemonics from a keystore, OS secure enclave, or equivalent. Do not commit seed phrases to source control.
+
+### Read addresses and balances
+
+```javascript
+const addresses = walletManager.getAddresses();
+console.log('Rootstock address:', addresses.rsk);
+
+const rskBalance = await walletManager.rskWallet.getBalance();
+console.log('Balance:', rskBalance.formatted, 'rBTC');
+```
+
+### Custom Rootstock RPC
+
+Point the SDK at your own node or an RPC provider when the default endpoints are not enough.
+
+```javascript
+const walletManager = new WalletManager({
+  network: 'mainnet',
+  mnemonic: await getSecureMnemonic(),
+  rskConfig: {
+    rpcUrl: 'https://public-node.rsk.co',
+    explorerApiUrl: 'https://rootstock.blockscout.com/api',
+  },
+});
+```
+
+See [Rootstock RPC API](/developers/rpc-api/rootstock/setup/) for provider options.
+
+### Lightning and Liquid swaps
+
+The SDK routes Lightning and Liquid swaps through Boltz. Users hold rBTC on Rootstock as the settlement asset, in the same role L-BTC plays on Liquid in wallets such as Aqua.
+
+```javascript
+const swap = await walletManager.reverseSwapService.createReverseSwap({
+  amountSats: 100000,
+  rbtcAddress: walletManager.rskWallet.getAddress(),
+  walletSigner: walletManager.rskWallet.getWallet(),
+});
+
+console.log('Pay this Lightning invoice:', swap.invoice);
+console.log('Swap ID:', swap.swapId);
+```
+
+Check swap limits before you build production flows:
+
+```javascript
+const limits = await walletManager.getSwapLimits();
+console.log('Lightning min:', limits.lightning.minimal, 'sats');
+```
+
+## Security Best Practices
+
+Refer to the [BitTasker Wallet Core Security Best Practices](https://github.com/BitTasker/wallet-core#security-best-practices).
+
+- Store mnemonics in secure storage, not in plain text or environment variables checked into git.
+- Validate recipient addresses with `ethers.isAddress()` before you send rBTC.
+- Test on Rootstock Testnet before mainnet deployments.
+- Report security issues to [security@bittasker.com](mailto:security@bittasker.com).
+
+## Resources
+
+Use these links for the BitTasker app, source code, and npm package.
+
+- [BitTasker app](https://bittasker.com/)
+- [wallet-core on GitHub](https://github.com/BitTasker/wallet-core)
+- [@bittasker/wallet-core on npm](https://www.npmjs.com/package/@bittasker/wallet-core)
+
+## Next steps
+
+- [Configure MetaMask for Rootstock](/dev-tools/wallets/metamask/) if your dApp also supports browser extension wallets
+- [rBTC concepts](/concepts/rbtc/) for peg mechanics and gas
+- [Rootstock RPC API](/developers/rpc-api/rootstock/setup/) for production RPC endpoints

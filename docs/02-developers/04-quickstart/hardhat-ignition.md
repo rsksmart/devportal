@@ -1,8 +1,8 @@
 ---
 sidebar_label: Hardhat Ignition
 sidebar_position: 104
-title: Rootstock Hardhat Ignition Starter Kit
-description: This guide is designed to help you deploy smart contracts on the Rootstock blockchain, with a focus on using Hardhat Ignition. While standard Hardhat guides cover general Rootstock development, this guide specifically showcases how Hardhat Ignition can make deployment more efficient by enabling programmatic and declarative approaches tailored for Rootstock.
+title: Deploy Smart Contracts with Hardhat Ignition on Rootstock
+description: Deploy smart contracts on Rootstock with Hardhat Ignition. Secured by over 85% of Bitcoin's hash power through merge mining.
 tags: [rsk, rootstock, hardhat Ignition, starter kit, mainnet, testnet, developers, hardhat, quick starts, dApps, smart contracts]
 ---
 
@@ -12,11 +12,11 @@ While standard [Hardhat guides](/developers/smart-contracts/hardhat/) cover gene
 
 Hardhat Ignition streamlines smart contract deployment by enabling programmatic definition, testing, and execution of deployment plans. This declarative approach significantly improves efficiency and manageability, making the deployment process smoother and more predictable.
 
-With Ignition, you can easily manage complex deployment workflows, handle dependencies between contracts, and ensure smooth deployment processes.
+With Ignition, you can manage complex deployment workflows, handle dependencies between contracts, and keep deployments predictable.
 
-Don’t worry if you’re new to this—every step will be explained in simple terms, making it accessible even if you’re just starting out.
+If you are new to Hardhat Ignition, each step is explained in plain terms.
 
-## **What You'll Learn**
+## What you'll achieve
 
 * Set up a project to deploy smart contracts on Rootstock.
 * Understand the project structure.

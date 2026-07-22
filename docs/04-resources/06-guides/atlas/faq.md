@@ -81,7 +81,5 @@ If the transaction is still pending, wait for the expected confirmation window f
 * Contact support with transaction hash, provider name, and timestamp
 
 ## Where can I learn more?
-
-* Official Rootstock [documentation](https://dev.rootstock.io/)
 * Join community support on [Rootstock Discord](https://rootstock.io/discord)
-* Reach out through [Rootstock Contact Us](https://rootstock.io/contact/)
+* [Rootstock Contact Us](https://rootstock.io/contact/)

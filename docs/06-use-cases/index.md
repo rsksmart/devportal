@@ -2,51 +2,89 @@
 sidebar_position: 1
 title: Use Cases
 sidebar_label: Overview
-tags: [rsk, rootstock, use cases, solutions, guides, tutorials, institutions, users, developers]
+tags: [rsk, rootstock, use cases, solutions, guides, tutorials, developers]
 description: "Implementation guides for building and integrating on Rootstock."
 ---
 
-The **Use Cases** hub organizes implementation guides for Rootstock. You use them for yield, onboarding, bridging, AI and automation, RIF economy, governance, and payments.
+The **Use Cases** hub groups implementation guides by goal: **Bitcoin DeFi**, **Bridge**, **Onboard**, **Pay**, and **AI**. Each guide lists prerequisites, expected outcomes, and risks where they apply.
 
-Each guide lists prerequisites and highlights possible risks when building. It documents concrete steps you follow to build and deploy.
+:::note[Contribute a guide]
 
-:::note[Expand the library]
-
-If you want a new guide in this hub, use the links below.
+To propose a new guide, use the links below.
 
 * [**Submit a Docs / Tooling Idea on the Hacktivator Marketplace**](https://hacktivator-marketplace.rootstock.io/)
 * [**Join the Rootstock Discord**](https://discord.gg/rootstock)
 
 :::
 
-## Explore by use case
+## Browse by use case
 
-Use the filters to narrow by goal. Links go only to **published** guides or section overviews.
+Use the filters to narrow by goal. Links go to published guides or section overviews.
 
 <Filter
 values={[
-  {label: 'Generate Yield', value: 'btcfi'},
-  {label: 'Onboard Users', value: 'ux'},
-  {label: 'AI Agents', value: 'agents'},
-  {label: 'Bridge Assets', value: 'interop'},
-  {label: 'RIF economy and governance', value: 'rif'},
-  {label: 'Payments', value: 'payments'}
+  {label: 'Bitcoin DeFi', value: 'btcfi'},
+  {label: 'Bridge', value: 'interop'},
+  {label: 'Onboard', value: 'ux'},
+  {label: 'Pay', value: 'payments'},
+  {label: 'AI', value: 'agents'},
+  {label: 'RIF economy and governance', value: 'rif'}
 ]}>
 
 <FilterItem
   value="btcfi"
-  title="Generate Yield"
-  subtitle="BTCFi"
+  title="Bitcoin DeFi"
+  subtitle="Bitcoin DeFi"
   color="orange"
   linkHref="/use-cases/btcfi-finance-yield/"
   linkTitle="View section"
-  description="How Rootstock fits BTCFi, rBTC, and vault-related work. See Generate Yield for the USDRIF Vaults SDK walkthrough."
+  description="Lending, vaults, and stablecoin flows with rBTC and on-chain assets."
+/>
+
+<FilterItem
+  value="btcfi"
+  title="Rootstock DeFi developer guide"
+  subtitle="Foundations"
+  color="orange"
+  linkHref="/resources/guides/defi-developer-guide/"
+  linkTitle="View guide"
+  description="Token standards, security patterns, and protocol basics for DeFi on Rootstock."
+/>
+
+<FilterItem
+  value="btcfi"
+  title="Integrate USDRIF Vault on Rootstock"
+  subtitle="Bitcoin DeFi"
+  color="orange"
+  linkHref="/use-cases/btcfi-finance-yield/yield-vaults-sdk/"
+  linkTitle="View guide"
+  description="Use the Vaults SDK and viem to read vault state, approve USDRIF, and deposit with slippage protection."
+/>
+
+<FilterItem
+  value="btcfi"
+  title="Cross-Chain rBTC Lending with USDT0"
+  subtitle="Bitcoin DeFi"
+  color="orange"
+  linkHref="/use-cases/btcfi-finance-yield/cross-chain-lending-rbtc/"
+  linkTitle="View guide"
+  description="Deploy an over-collateralized lending protocol on Rootstock with LayerZero cross-chain collateral and oracle routing."
+/>
+
+<FilterItem
+  value="btcfi"
+  title="Constant-product AMM tutorial"
+  subtitle="Bitcoin DeFi"
+  color="orange"
+  linkHref="/use-cases/interoperability/amm-constant-product/"
+  linkTitle="View guide"
+  description="Rootstock testnet tutorial for a constant-product AMM and pool interactions."
 />
 
 <FilterItem
   value="interop"
-  title="Bridge Assets"
-  subtitle="Interoperability"
+  title="Bridge"
+  subtitle="Bridge"
   color="cyan"
   linkHref="/use-cases/interoperability/"
   linkTitle="View section"
@@ -56,7 +94,7 @@ values={[
 <FilterItem
   value="interop"
   title="Build Omnichain Fungible Tokens (OFTs) with LayerZero"
-  subtitle="Interoperability"
+  subtitle="Bridge"
   color="cyan"
   linkHref="/use-cases/interoperability/rootstock-layerzero/"
   linkTitle="View guide"
@@ -66,7 +104,7 @@ values={[
 <FilterItem
   value="interop"
   title="Omnichain Liquidity Routing with LI.FI"
-  subtitle="Interoperability"
+  subtitle="Bridge"
   color="cyan"
   linkHref="/use-cases/interoperability/integrate-lifi/"
   linkTitle="View guide"
@@ -75,8 +113,18 @@ values={[
 
 <FilterItem
   value="ux"
+  title="Onboard"
+  subtitle="Onboard"
+  color="green"
+  linkHref="/use-cases/onboarding-ux/"
+  linkTitle="View section"
+  description="Wallet connection, social login, and low-connectivity onboarding patterns."
+/>
+
+<FilterItem
+  value="ux"
   title="Getting Started with Para"
-  subtitle="Onboarding"
+  subtitle="Onboard"
   color="green"
   linkHref="/use-cases/onboarding-ux/para/"
   linkTitle="View guide"
@@ -86,7 +134,7 @@ values={[
 <FilterItem
   value="ux"
   title="Internet-Free DeFi with USSD"
-  subtitle="Onboarding"
+  subtitle="Onboard"
   color="green"
   linkHref="/use-cases/onboarding-ux/ussd-rootstock-defi/"
   linkTitle="View guide"
@@ -95,31 +143,32 @@ values={[
 
 <FilterItem
   value="agents"
+  title="AI"
+  subtitle="AI"
+  color="pink"
+  linkHref="/use-cases/ai-automation/"
+  linkTitle="View section"
+  description="MCP server setup and agent patterns for on-chain reads and actions."
+/>
+
+<FilterItem
+  value="agents"
   title="Conversational App with On-Chain Actions"
-  subtitle="Automation and AI"
+  subtitle="AI"
   color="pink"
   linkHref="/use-cases/ai-automation/ai-agent-rootstock/"
   linkTitle="View guide"
   description="Connect a chat-style UI to Rootstock testnet for balance checks and simple transactions."
 />
+
 <FilterItem
   value="agents"
   title="Model Context Protocol (MCP) on Rootstock"
-  subtitle="AI Agents"
+  subtitle="AI"
   color="pink"
   linkHref="/use-cases/ai-automation/mcp-rootstock/"
   linkTitle="View guide"
   description="How MCP connects AI clients to Rootstock reads and scoped actions."
-/>
-
-<FilterItem
-  value="btcfi"
-  title="DeFi tutorials (AMM + oracles)"
-  subtitle="DeFi"
-  color="orange"
-  linkHref="/use-cases/interoperability/"
-  linkTitle="View section"
-  description="Practical Rootstock testnet tutorials for a constant-product AMM and a mock Chainlink-style oracle consumer."
 />
 
 <FilterItem
@@ -134,28 +183,28 @@ values={[
 
 <FilterItem
   value="payments"
-  title="Automate Payments"
-  subtitle="Payments"
+  title="Pay"
+  subtitle="Pay"
   color="orange"
   linkHref="/use-cases/payments-assets/"
   linkTitle="View section"
-  description="Tokens, rBTC settlement, and programmable payment patterns."
+  description="Programmable payments, splits, and pay-per-use APIs on Rootstock."
 />
 
 <FilterItem
   value="payments"
   title="Integrating x402 Payments with Rootstock"
-  subtitle="Tutorials"
+  subtitle="Pay"
   color="orange"
   linkHref="/use-cases/payments-assets/integrate-x402/"
   linkTitle="View tutorial"
-  description="HTTP 402 style pay-per-use APIs on Rootstock."
+  description="HTTP 402 pay-per-use APIs on Rootstock."
 />
 
 <FilterItem
   value="payments"
   title="Prism payment splits"
-  subtitle="Payments"
+  subtitle="Pay"
   color="orange"
   linkHref="/use-cases/payments-assets/prism-payment-splits/"
   linkTitle="View guide"

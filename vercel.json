@@ -661,6 +661,8 @@
     {"source": "/developers/use-cases/ai/ai-agent-rootstock/", "destination": "/use-cases/ai-automation/ai-agent-rootstock/"},
     {"source": "/developers/use-cases/ai/mcp-rootstock/", "destination": "/use-cases/ai-automation/mcp-rootstock/"},
     {"source": "/developers/use-cases/defi/rootstock-layerzero/", "destination": "/use-cases/interoperability/rootstock-layerzero/"},
+    {"source": "/developers/use-cases/defi/cross-chain-lending-rbtc/", "destination": "/use-cases/btcfi-finance-yield/cross-chain-lending-rbtc/"},
+    {"source": "/developers/use-cases/defi/cross-chain-lending-rbtc", "destination": "/use-cases/btcfi-finance-yield/cross-chain-lending-rbtc/"},
     {"source": "/developers/use-cases/ussd-rootstock-defi", "destination": "/use-cases/onboarding-ux/ussd-rootstock-defi/"},
     {"source": "/developers/use-cases/ussd-rootstock-defi/(.*)", "destination": "/use-cases/onboarding-ux/ussd-rootstock-defi/$1"},
     {"source": "/developers/use-cases/", "destination": "/use-cases/"},
@@ -686,11 +688,58 @@
     {"source": "/resources/guides/tokenbridge/usingmycrypto/", "destination": "/resources/guides/atlas/"},
     {"source": "/dev-tools/no-code/forward-protocol/", "destination": "/dev-tools/"}
   ],
+  "rewrites": [
+    {
+      "source": "/:section(concepts|developers|node-operators|resources|dev-tools|use-cases)/:path+/",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": "(.*)text/markdown(.*)"
+        }
+      ],
+      "destination": "/:section/:path+/index.md"
+    },
+    {
+      "source": "/:section(concepts|developers|node-operators|resources|dev-tools|use-cases)/",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": "(.*)text/markdown(.*)"
+        }
+      ],
+      "destination": "/:section/index.md"
+    },
+    {
+      "source": "/:locale(es|ja|ko)/:section(concepts|developers|node-operators|resources|dev-tools|use-cases)/:path+/",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": "(.*)text/markdown(.*)"
+        }
+      ],
+      "destination": "/:locale/:section/:path+/index.md"
+    },
+    {
+      "source": "/:locale(es|ja|ko)/:section(concepts|developers|node-operators|resources|dev-tools|use-cases)/",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": "(.*)text/markdown(.*)"
+        }
+      ],
+      "destination": "/:locale/:section/index.md"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)\\.md",
       "headers": [
-        {"key": "Content-Type", "value": "text/plain; charset=utf-8"},
+        {"key": "Content-Type", "value": "text/markdown; charset=utf-8"},
+        {"key": "Vary", "value": "Accept"},
         {"key": "X-Content-Type-Options", "value": "nosniff"},
         {"key": "X-Robots-Tag", "value": "googlebot: noindex, nofollow, bingbot: noindex, nofollow"},
         {"key": "Cache-Control", "value": "public, max-age=3600, must-revalidate"}

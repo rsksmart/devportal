@@ -14,7 +14,7 @@ Satoshi consensus, based on proof-of-work (PoW), is the only consensus system th
 - Stable phase: Merge-mining is between 30% and 60% of Bitcoin hashrate.
 - Mature phase: Merge-mining is higher than 60% of Bitcoin hashrate.
 
-Rootstock has left behind its bootstrapping phase, when rogue merge-miners could theoretically revert Rootstock blockchain at a low cost. As of December 2021, more than 50% of Bitcoin miners are engaged in Rootstock merge-mining. But as Rootstock fees remain low compared to Bitcoin block reward, the cost to attack Rootstock through double-spending is lower than Bitcoin’s.
+Rootstock has left behind its bootstrapping phase, when rogue merge-miners could theoretically revert Rootstock blockchain at a low cost. Over 85% of Bitcoin hash power now secures Rootstock through merge mining. But as Rootstock fees remain low compared to Bitcoin block reward, the cost to attack Rootstock through double-spending is lower than Bitcoin’s.
 Rootstock has some properties to reduce the risk of double-spend attacks, such as long miner rewards maturity. Still RootstockLabs research team has developed several protections to prevent attacks during the stable and mature phases of the project:
 
 * ___Signed notifications:___ Rootstock clients can make use of signed notifications by notaries. Nodes can use these notifications to detect Sybil attacks and inform the user.

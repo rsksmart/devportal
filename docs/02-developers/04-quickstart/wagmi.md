@@ -1,8 +1,8 @@
 ---
 sidebar_label: Wagmi
 sidebar_position: 107
-title: Rootstock Wagmi Starter Kit
-description: 'The Rootstock Wagmi Starter Kit provides a solid foundation for developing decentralized applications (dApps) on the Rootstock blockchain. It streamlines development by leveraging the React, Wagmi, and Shadcn libraries.'
+title: Build a dApp with Wagmi on Rootstock
+description: 'Build a React dApp on Rootstock with Wagmi and Shadcn. Secured by over 85% of Bitcoin''s hash power through merge mining.'
 tags: [rsk, rootstock, developers, wagmi, quickstart, dApps, Smart Contracts]
 ---
 
@@ -12,6 +12,12 @@ It leverages the security of Bitcoin and the flexibility of Ethereum.
 The kit uses [Wagmi](https://wagmi.sh/), a React Hooks library, to simplify smart contracts and blockchain network interactions and and [Shadcn libraries](https://ui.shadcn.com/). 
 
 > This starter kit is designed to help developers jump-start their dApp development journey on Rootstock.
+
+## What you'll achieve
+
+- Set up the Wagmi starter kit and connect a wallet to Rootstock
+- Read contract state and send transactions from a React frontend
+- Customize the UI with Shadcn components for your dApp
 
 ## Prerequisites
 - **Node.js and Git:** Ensure to have Node.js and Git installed on your system. 

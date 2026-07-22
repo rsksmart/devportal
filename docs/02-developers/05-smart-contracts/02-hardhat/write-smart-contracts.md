@@ -4,6 +4,8 @@ sidebar_position: 103
 title: Write a Smart Contract
 description: "Learn how to write a smart contract using Solidity and OpenZeppellin"
 tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethers]
+remix_label: "Try in Remix IDE"
+remix: "https://remix.ethereum.org/#url=https://github.com/rsksmart/rootstock-quick-start-guide/blob/feat/complete/contracts/MyToken.sol"
 ---
 
 In this section, we'll learn how to write a smart contract using the [OpenZeppelin library](https://www.openzeppelin.com/contracts) and Solidity. OpenZeppelin is widely used for its secure, community-vetted, and standardized codebase, which simplifies developing robust and secure smart contracts.
@@ -32,7 +34,7 @@ To configure an ERC20 token, copy the code snippet below and paste it in your to
         
 ```shell
     // SPDX-License-Identifier: MIT
-    pragma solidity ^0.8.20;
+    pragma solidity ^0.8.30;
 
     import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
@@ -44,6 +46,14 @@ To configure an ERC20 token, copy the code snippet below and paste it in your to
 ```
 
 This contract defines an `ERC20` token named `MyToken` with the symbol `MTK`, using OpenZeppelin's ERC20 standard implementation.
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `MyToken.sol` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for MyToken.sol: https://remix.ethereum.org/#url=https://github.com/rsksmart/rootstock-quick-start-guide/blob/feat/complete/contracts/MyToken.sol */}
+
+<RemixLaunchButton contractName="MyToken" contractUrl="https://github.com/rsksmart/rootstock-quick-start-guide/blob/feat/complete/contracts/MyToken.sol" />
+:::
 
 ## Compile the Contract
 
@@ -57,7 +67,7 @@ This will compile your smart contracts and generate artifacts:
 
 ```shell
 % npx hardhat compile
-Downloading compiler 0.8.20
+Downloading compiler 0.8.30
 Compiled 6 Solidity files successfully (evm target: paris).
 ```
 

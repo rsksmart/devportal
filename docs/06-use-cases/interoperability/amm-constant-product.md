@@ -4,7 +4,15 @@ sidebar_position: 1
 title: Build a Constant-Product AMM on Rootstock (Testnet)
 description: Build, test, and deploy a minimal constant-product AMM (x*y=k) on Rootstock testnet, then wire it to a simple frontend.
 tags: [rsk, rootstock, defi, amm, uniswap, solidity, testnet]
+remix_label: "Try in Remix IDE"
+remix_contracts:
+  - label: "SimpleAMM"
+    remix: "https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvdG9rZW4vRVJDMjAvSUVSQzIwLnNvbCI7Cgpjb250cmFjdCBTaW1wbGVBTU0gewogICAgSUVSQzIwIHB1YmxpYyB0b2tlbkE7CiAgICBJRVJDMjAgcHVibGljIHRva2VuQjsKCiAgICB1aW50MjU2IHB1YmxpYyByZXNlcnZlQTsKICAgIHVpbnQyNTYgcHVibGljIHJlc2VydmVCOwoKICAgIHVpbnQyNTYgcHVibGljIHRvdGFsTGlxdWlkaXR5OwogICAgbWFwcGluZyhhZGRyZXNzID0%2BIHVpbnQyNTYpIHB1YmxpYyBsaXF1aWRpdHk7CgogICAgLy8gRXZlbnRzIGZvciB0cmFja2luZwogICAgZXZlbnQgTGlxdWlkaXR5QWRkZWQoYWRkcmVzcyBpbmRleGVkIHByb3ZpZGVyLCB1aW50MjU2IGFtb3VudEEsIHVpbnQyNTYgYW1vdW50Qik7CiAgICBldmVudCBMaXF1aWRpdHlSZW1vdmVkKGFkZHJlc3MgaW5kZXhlZCBwcm92aWRlciwgdWludDI1NiBhbW91bnRBLCB1aW50MjU2IGFtb3VudEIpOwogICAgZXZlbnQgU3dhcHBlZChhZGRyZXNzIGluZGV4ZWQgc3dhcHBlciwgYWRkcmVzcyB0b2tlbkluLCB1aW50MjU2IGFtb3VudEluLCBhZGRyZXNzIHRva2VuT3V0LCB1aW50MjU2IGFtb3VudE91dCk7CgogICAgY29uc3RydWN0b3IoYWRkcmVzcyBfdG9rZW5BLCBhZGRyZXNzIF90b2tlbkIpIHsKICAgICAgICB0b2tlbkEgPSBJRVJDMjAoX3Rva2VuQSk7CiAgICAgICAgdG9rZW5CID0gSUVSQzIwKF90b2tlbkIpOwogICAgfQoKICAgIGZ1bmN0aW9uIGFkZExpcXVpZGl0eSh1aW50MjU2IGFtb3VudEEsIHVpbnQyNTYgYW1vdW50QikgZXh0ZXJuYWwgewogICAgICAgIHJlcXVpcmUoYW1vdW50QSA%2BIDAgJiYgYW1vdW50QiA%2BIDAsICJBbW91bnRzIG11c3QgYmUgPjAiKTsKCiAgICAgICAgLy8gVHJhbnNmZXIgdG9rZW5zIGZyb20gdXNlciB0byBjb250cmFjdAogICAgICAgIHRva2VuQS50cmFuc2ZlckZyb20obXNnLnNlbmRlciwgYWRkcmVzcyh0aGlzKSwgYW1vdW50QSk7CiAgICAgICAgdG9rZW5CLnRyYW5zZmVyRnJvbShtc2cuc2VuZGVyLCBhZGRyZXNzKHRoaXMpLCBhbW91bnRCKTsKCiAgICAgICAgdWludDI1NiBscFRva2VuczsKICAgICAgICBpZiAodG90YWxMaXF1aWRpdHkgPT0gMCkgewogICAgICAgICAgICAvLyBGaXJzdCBkZXBvc2l0OiBMUCB0b2tlbnMgPSBzcXJ0KGFtb3VudEEgKiBhbW91bnRCKQogICAgICAgICAgICBscFRva2VucyA9IHNxcnQoYW1vdW50QSAqIGFtb3VudEIpOwogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgIC8vIFN1YnNlcXVlbnQgZGVwb3NpdHM6IHByb3BvcnRpb25hbCB0byBleGlzdGluZyByZXNlcnZlcwogICAgICAgICAgICBscFRva2VucyA9IG1pbigKICAgICAgICAgICAgICAgIChhbW91bnRBICogdG90YWxMaXF1aWRpdHkpIC8gcmVzZXJ2ZUEsCiAgICAgICAgICAgICAgICAoYW1vdW50QiAqIHRvdGFsTGlxdWlkaXR5KSAvIHJlc2VydmVCCiAgICAgICAgICAgICk7CiAgICAgICAgfQogICAgICAgIHJlcXVpcmUobHBUb2tlbnMgPiAwLCAiSW5zdWZmaWNpZW50IGxpcXVpZGl0eSBtaW50ZWQiKTsKCiAgICAgICAgbGlxdWlkaXR5W21zZy5zZW5kZXJdICs9IGxwVG9rZW5zOwogICAgICAgIHRvdGFsTGlxdWlkaXR5ICs9IGxwVG9rZW5zOwoKICAgICAgICByZXNlcnZlQSArPSBhbW91bnRBOwogICAgICAgIHJlc2VydmVCICs9IGFtb3VudEI7CgogICAgICAgIGVtaXQgTGlxdWlkaXR5QWRkZWQobXNnLnNlbmRlciwgYW1vdW50QSwgYW1vdW50Qik7CiAgICB9CgogICAgZnVuY3Rpb24gcmVtb3ZlTGlxdWlkaXR5KHVpbnQyNTYgbHBUb2tlbnMpIGV4dGVybmFsIHsKICAgICAgICByZXF1aXJlKGxwVG9rZW5zID4gMCAmJiBsaXF1aWRpdHlbbXNnLnNlbmRlcl0gPj0gbHBUb2tlbnMsICJJbnN1ZmZpY2llbnQgTFAgdG9rZW5zIik7CgogICAgICAgIHVpbnQyNTYgYW1vdW50QSA9IChscFRva2VucyAqIHJlc2VydmVBKSAvIHRvdGFsTGlxdWlkaXR5OwogICAgICAgIHVpbnQyNTYgYW1vdW50QiA9IChscFRva2VucyAqIHJlc2VydmVCKSAvIHRvdGFsTGlxdWlkaXR5OwogICAgICAgIHJlcXVpcmUoYW1vdW50QSA%2BIDAgJiYgYW1vdW50QiA%2BIDAsICJJbnN1ZmZpY2llbnQgdG9rZW5zIHdpdGhkcmF3biIpOwoKICAgICAgICBsaXF1aWRpdHlbbXNnLnNlbmRlcl0gLT0gbHBUb2tlbnM7CiAgICAgICAgdG90YWxMaXF1aWRpdHkgLT0gbHBUb2tlbnM7CiAgICAgICAgcmVzZXJ2ZUEgLT0gYW1vdW50QTsKICAgICAgICByZXNlcnZlQiAtPSBhbW91bnRCOwoKICAgICAgICB0b2tlbkEudHJhbnNmZXIobXNnLnNlbmRlciwgYW1vdW50QSk7CiAgICAgICAgdG9rZW5CLnRyYW5zZmVyKG1zZy5zZW5kZXIsIGFtb3VudEIpOwoKICAgICAgICBlbWl0IExpcXVpZGl0eVJlbW92ZWQobXNnLnNlbmRlciwgYW1vdW50QSwgYW1vdW50Qik7CiAgICB9CgogICAgZnVuY3Rpb24gc3dhcEFmb3JCKHVpbnQyNTYgYW1vdW50QUluLCB1aW50MjU2IGFtb3VudEJPdXRNaW4pIGV4dGVybmFsIHsKICAgICAgICByZXF1aXJlKGFtb3VudEFJbiA%2BIDAsICJBbW91bnQgaW4gbXVzdCBiZSA%2BMCIpOwogICAgICAgIHVpbnQyNTYgYW1vdW50Qk91dCA9IGdldEFtb3VudE91dChhbW91bnRBSW4sIHJlc2VydmVBLCByZXNlcnZlQik7CiAgICAgICAgcmVxdWlyZShhbW91bnRCT3V0ID49IGFtb3VudEJPdXRNaW4sICJTbGlwcGFnZSB0b28gaGlnaCIpOwogICAgICAgIHJlcXVpcmUoYW1vdW50Qk91dCA8PSByZXNlcnZlQiwgIkluc3VmZmljaWVudCBsaXF1aWRpdHkiKTsKCiAgICAgICAgdG9rZW5BLnRyYW5zZmVyRnJvbShtc2cuc2VuZGVyLCBhZGRyZXNzKHRoaXMpLCBhbW91bnRBSW4pOwogICAgICAgIHRva2VuQi50cmFuc2Zlcihtc2cuc2VuZGVyLCBhbW91bnRCT3V0KTsKCiAgICAgICAgcmVzZXJ2ZUEgKz0gYW1vdW50QUluOwogICAgICAgIHJlc2VydmVCIC09IGFtb3VudEJPdXQ7CgogICAgICAgIGVtaXQgU3dhcHBlZChtc2cuc2VuZGVyLCBhZGRyZXNzKHRva2VuQSksIGFtb3VudEFJbiwgYWRkcmVzcyh0b2tlbkIpLCBhbW91bnRCT3V0KTsKICAgIH0KCiAgICBmdW5jdGlvbiBzd2FwQmZvckEodWludDI1NiBhbW91bnRCSW4sIHVpbnQyNTYgYW1vdW50QU91dE1pbikgZXh0ZXJuYWwgewogICAgICAgIHJlcXVpcmUoYW1vdW50QkluID4gMCwgIkFtb3VudCBpbiBtdXN0IGJlID4wIik7CiAgICAgICAgdWludDI1NiBhbW91bnRBT3V0ID0gZ2V0QW1vdW50T3V0KGFtb3VudEJJbiwgcmVzZXJ2ZUIsIHJlc2VydmVBKTsKICAgICAgICByZXF1aXJlKGFtb3VudEFPdXQgPj0gYW1vdW50QU91dE1pbiwgIlNsaXBwYWdlIHRvbyBoaWdoIik7CiAgICAgICAgcmVxdWlyZShhbW91bnRBT3V0IDw9IHJlc2VydmVBLCAiSW5zdWZmaWNpZW50IGxpcXVpZGl0eSIpOwoKICAgICAgICB0b2tlbkIudHJhbnNmZXJGcm9tKG1zZy5zZW5kZXIsIGFkZHJlc3ModGhpcyksIGFtb3VudEJJbik7CiAgICAgICAgdG9rZW5BLnRyYW5zZmVyKG1zZy5zZW5kZXIsIGFtb3VudEFPdXQpOwoKICAgICAgICByZXNlcnZlQiArPSBhbW91bnRCSW47CiAgICAgICAgcmVzZXJ2ZUEgLT0gYW1vdW50QU91dDsKCiAgICAgICAgZW1pdCBTd2FwcGVkKG1zZy5zZW5kZXIsIGFkZHJlc3ModG9rZW5CKSwgYW1vdW50QkluLCBhZGRyZXNzKHRva2VuQSksIGFtb3VudEFPdXQpOwogICAgfQoKICAgIGZ1bmN0aW9uIGdldEFtb3VudE91dCh1aW50MjU2IGFtb3VudEluLCB1aW50MjU2IHJlc2VydmVJbiwgdWludDI1NiByZXNlcnZlT3V0KSBwdWJsaWMgcHVyZSByZXR1cm5zICh1aW50MjU2KSB7CiAgICAgICAgdWludDI1NiBhbW91bnRJbldpdGhGZWUgPSBhbW91bnRJbiAqIDk5NzsgLy8gMC4zJSBmZWUKICAgICAgICB1aW50MjU2IG51bWVyYXRvciA9IGFtb3VudEluV2l0aEZlZSAqIHJlc2VydmVPdXQ7CiAgICAgICAgdWludDI1NiBkZW5vbWluYXRvciA9IChyZXNlcnZlSW4gKiAxMDAwKSArIGFtb3VudEluV2l0aEZlZTsKICAgICAgICByZXR1cm4gbnVtZXJhdG9yIC8gZGVub21pbmF0b3I7CiAgICB9CgogICAgZnVuY3Rpb24gc3FydCh1aW50MjU2IHkpIGludGVybmFsIHB1cmUgcmV0dXJucyAodWludDI1NiB6KSB7CiAgICAgICAgaWYgKHkgPiAzKSB7CiAgICAgICAgICAgIHogPSB5OwogICAgICAgICAgICB1aW50MjU2IHggPSB5IC8gMiArIDE7CiAgICAgICAgICAgIHdoaWxlICh4IDwgeikgewogICAgICAgICAgICAgICAgeiA9IHg7CiAgICAgICAgICAgICAgICB4ID0gKHkgLyB4ICsgeCkgLyAyOwogICAgICAgICAgICB9CiAgICAgICAgfSBlbHNlIGlmICh5ICE9IDApIHsKICAgICAgICAgICAgeiA9IDE7CiAgICAgICAgfQogICAgfQoKICAgIGZ1bmN0aW9uIG1pbih1aW50MjU2IGEsIHVpbnQyNTYgYikgaW50ZXJuYWwgcHVyZSByZXR1cm5zICh1aW50MjU2KSB7CiAgICAgICAgcmV0dXJuIGEgPCBiID8gYSA6IGI7CiAgICB9Cn0%3D"
+  - label: "ERC20Mock"
+    remix: "https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvdG9rZW4vRVJDMjAvRVJDMjAuc29sIjsKCmNvbnRyYWN0IEVSQzIwTW9jayBpcyBFUkMyMCB7CiAgICB1aW50OCBwcml2YXRlIGltbXV0YWJsZSBfY3VzdG9tRGVjaW1hbHM7CgogICAgY29uc3RydWN0b3IoCiAgICAgICAgc3RyaW5nIG1lbW9yeSBuYW1lLAogICAgICAgIHN0cmluZyBtZW1vcnkgc3ltYm9sLAogICAgICAgIHVpbnQ4IGRlY2ltYWxzXwogICAgKSBFUkMyMChuYW1lLCBzeW1ib2wpIHsKICAgICAgICBfY3VzdG9tRGVjaW1hbHMgPSBkZWNpbWFsc187CiAgICB9CgogICAgLy8gT1ogdjUgcmVtb3ZlZCBfc2V0dXBEZWNpbWFsczsgb3ZlcnJpZGUgZGVjaW1hbHMoKSB0byBzZXQgYSBjdXN0b20gdmFsdWUKICAgIGZ1bmN0aW9uIGRlY2ltYWxzKCkgcHVibGljIHZpZXcgdmlydHVhbCBvdmVycmlkZSByZXR1cm5zICh1aW50OCkgewogICAgICAgIHJldHVybiBfY3VzdG9tRGVjaW1hbHM7CiAgICB9CgogICAgZnVuY3Rpb24gbWludChhZGRyZXNzIHRvLCB1aW50MjU2IGFtb3VudCkgZXh0ZXJuYWwgewogICAgICAgIF9taW50KHRvLCBhbW91bnQpOwogICAgfQp9"
 ---
+
+import CodeBlock from '@theme/CodeBlock';
 
 # Build a Constant-Product AMM on Rootstock (Testnet)
 
@@ -38,7 +46,7 @@ We'll build a contract that supports:
 
 ```solidity
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.30;
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
@@ -247,6 +255,147 @@ function min(uint256 a, uint256 b) internal pure returns (uint256) {
 
 The sqrt function implements the Babylonian method (Newton's method) for integer square roots.
 
+### Complete `SimpleAMM` contract
+
+The full contract below assembles the skeleton, liquidity, swap, and helper functions from the steps above into a single file you can deploy directly.
+
+export const simpleAMMSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
+
+import "@openzeppelin/contracts@5.6.1/token/ERC20/IERC20.sol";
+
+contract SimpleAMM {
+    IERC20 public tokenA;
+    IERC20 public tokenB;
+
+    uint256 public reserveA;
+    uint256 public reserveB;
+
+    uint256 public totalLiquidity;
+    mapping(address => uint256) public liquidity;
+
+    // Events for tracking
+    event LiquidityAdded(address indexed provider, uint256 amountA, uint256 amountB);
+    event LiquidityRemoved(address indexed provider, uint256 amountA, uint256 amountB);
+    event Swapped(address indexed swapper, address tokenIn, uint256 amountIn, address tokenOut, uint256 amountOut);
+
+    constructor(address _tokenA, address _tokenB) {
+        tokenA = IERC20(_tokenA);
+        tokenB = IERC20(_tokenB);
+    }
+
+    function addLiquidity(uint256 amountA, uint256 amountB) external {
+        require(amountA > 0 && amountB > 0, "Amounts must be >0");
+
+        // Transfer tokens from user to contract
+        tokenA.transferFrom(msg.sender, address(this), amountA);
+        tokenB.transferFrom(msg.sender, address(this), amountB);
+
+        uint256 lpTokens;
+        if (totalLiquidity == 0) {
+            // First deposit: LP tokens = sqrt(amountA * amountB)
+            lpTokens = sqrt(amountA * amountB);
+        } else {
+            // Subsequent deposits: proportional to existing reserves
+            lpTokens = min(
+                (amountA * totalLiquidity) / reserveA,
+                (amountB * totalLiquidity) / reserveB
+            );
+        }
+        require(lpTokens > 0, "Insufficient liquidity minted");
+
+        liquidity[msg.sender] += lpTokens;
+        totalLiquidity += lpTokens;
+
+        reserveA += amountA;
+        reserveB += amountB;
+
+        emit LiquidityAdded(msg.sender, amountA, amountB);
+    }
+
+    function removeLiquidity(uint256 lpTokens) external {
+        require(lpTokens > 0 && liquidity[msg.sender] >= lpTokens, "Insufficient LP tokens");
+
+        uint256 amountA = (lpTokens * reserveA) / totalLiquidity;
+        uint256 amountB = (lpTokens * reserveB) / totalLiquidity;
+        require(amountA > 0 && amountB > 0, "Insufficient tokens withdrawn");
+
+        liquidity[msg.sender] -= lpTokens;
+        totalLiquidity -= lpTokens;
+        reserveA -= amountA;
+        reserveB -= amountB;
+
+        tokenA.transfer(msg.sender, amountA);
+        tokenB.transfer(msg.sender, amountB);
+
+        emit LiquidityRemoved(msg.sender, amountA, amountB);
+    }
+
+    function swapAforB(uint256 amountAIn, uint256 amountBOutMin) external {
+        require(amountAIn > 0, "Amount in must be >0");
+        uint256 amountBOut = getAmountOut(amountAIn, reserveA, reserveB);
+        require(amountBOut >= amountBOutMin, "Slippage too high");
+        require(amountBOut <= reserveB, "Insufficient liquidity");
+
+        tokenA.transferFrom(msg.sender, address(this), amountAIn);
+        tokenB.transfer(msg.sender, amountBOut);
+
+        reserveA += amountAIn;
+        reserveB -= amountBOut;
+
+        emit Swapped(msg.sender, address(tokenA), amountAIn, address(tokenB), amountBOut);
+    }
+
+    function swapBforA(uint256 amountBIn, uint256 amountAOutMin) external {
+        require(amountBIn > 0, "Amount in must be >0");
+        uint256 amountAOut = getAmountOut(amountBIn, reserveB, reserveA);
+        require(amountAOut >= amountAOutMin, "Slippage too high");
+        require(amountAOut <= reserveA, "Insufficient liquidity");
+
+        tokenB.transferFrom(msg.sender, address(this), amountBIn);
+        tokenA.transfer(msg.sender, amountAOut);
+
+        reserveB += amountBIn;
+        reserveA -= amountAOut;
+
+        emit Swapped(msg.sender, address(tokenB), amountBIn, address(tokenA), amountAOut);
+    }
+
+    function getAmountOut(uint256 amountIn, uint256 reserveIn, uint256 reserveOut) public pure returns (uint256) {
+        uint256 amountInWithFee = amountIn * 997; // 0.3% fee
+        uint256 numerator = amountInWithFee * reserveOut;
+        uint256 denominator = (reserveIn * 1000) + amountInWithFee;
+        return numerator / denominator;
+    }
+
+    function sqrt(uint256 y) internal pure returns (uint256 z) {
+        if (y > 3) {
+            z = y;
+            uint256 x = y / 2 + 1;
+            while (x < z) {
+                z = x;
+                x = (y / x + x) / 2;
+            }
+        } else if (y != 0) {
+            z = 1;
+        }
+    }
+
+    function min(uint256 a, uint256 b) internal pure returns (uint256) {
+        return a < b ? a : b;
+    }
+}`;
+
+<CodeBlock language="solidity">{simpleAMMSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `SimpleAMM` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for SimpleAMM: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvdG9rZW4vRVJDMjAvSUVSQzIwLnNvbCI7Cgpjb250cmFjdCBTaW1wbGVBTU0gewogICAgSUVSQzIwIHB1YmxpYyB0b2tlbkE7CiAgICBJRVJDMjAgcHVibGljIHRva2VuQjsKCiAgICB1aW50MjU2IHB1YmxpYyByZXNlcnZlQTsKICAgIHVpbnQyNTYgcHVibGljIHJlc2VydmVCOwoKICAgIHVpbnQyNTYgcHVibGljIHRvdGFsTGlxdWlkaXR5OwogICAgbWFwcGluZyhhZGRyZXNzID0%2BIHVpbnQyNTYpIHB1YmxpYyBsaXF1aWRpdHk7CgogICAgLy8gRXZlbnRzIGZvciB0cmFja2luZwogICAgZXZlbnQgTGlxdWlkaXR5QWRkZWQoYWRkcmVzcyBpbmRleGVkIHByb3ZpZGVyLCB1aW50MjU2IGFtb3VudEEsIHVpbnQyNTYgYW1vdW50Qik7CiAgICBldmVudCBMaXF1aWRpdHlSZW1vdmVkKGFkZHJlc3MgaW5kZXhlZCBwcm92aWRlciwgdWludDI1NiBhbW91bnRBLCB1aW50MjU2IGFtb3VudEIpOwogICAgZXZlbnQgU3dhcHBlZChhZGRyZXNzIGluZGV4ZWQgc3dhcHBlciwgYWRkcmVzcyB0b2tlbkluLCB1aW50MjU2IGFtb3VudEluLCBhZGRyZXNzIHRva2VuT3V0LCB1aW50MjU2IGFtb3VudE91dCk7CgogICAgY29uc3RydWN0b3IoYWRkcmVzcyBfdG9rZW5BLCBhZGRyZXNzIF90b2tlbkIpIHsKICAgICAgICB0b2tlbkEgPSBJRVJDMjAoX3Rva2VuQSk7CiAgICAgICAgdG9rZW5CID0gSUVSQzIwKF90b2tlbkIpOwogICAgfQoKICAgIGZ1bmN0aW9uIGFkZExpcXVpZGl0eSh1aW50MjU2IGFtb3VudEEsIHVpbnQyNTYgYW1vdW50QikgZXh0ZXJuYWwgewogICAgICAgIHJlcXVpcmUoYW1vdW50QSA%2BIDAgJiYgYW1vdW50QiA%2BIDAsICJBbW91bnRzIG11c3QgYmUgPjAiKTsKCiAgICAgICAgLy8gVHJhbnNmZXIgdG9rZW5zIGZyb20gdXNlciB0byBjb250cmFjdAogICAgICAgIHRva2VuQS50cmFuc2ZlckZyb20obXNnLnNlbmRlciwgYWRkcmVzcyh0aGlzKSwgYW1vdW50QSk7CiAgICAgICAgdG9rZW5CLnRyYW5zZmVyRnJvbShtc2cuc2VuZGVyLCBhZGRyZXNzKHRoaXMpLCBhbW91bnRCKTsKCiAgICAgICAgdWludDI1NiBscFRva2VuczsKICAgICAgICBpZiAodG90YWxMaXF1aWRpdHkgPT0gMCkgewogICAgICAgICAgICAvLyBGaXJzdCBkZXBvc2l0OiBMUCB0b2tlbnMgPSBzcXJ0KGFtb3VudEEgKiBhbW91bnRCKQogICAgICAgICAgICBscFRva2VucyA9IHNxcnQoYW1vdW50QSAqIGFtb3VudEIpOwogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgIC8vIFN1YnNlcXVlbnQgZGVwb3NpdHM6IHByb3BvcnRpb25hbCB0byBleGlzdGluZyByZXNlcnZlcwogICAgICAgICAgICBscFRva2VucyA9IG1pbigKICAgICAgICAgICAgICAgIChhbW91bnRBICogdG90YWxMaXF1aWRpdHkpIC8gcmVzZXJ2ZUEsCiAgICAgICAgICAgICAgICAoYW1vdW50QiAqIHRvdGFsTGlxdWlkaXR5KSAvIHJlc2VydmVCCiAgICAgICAgICAgICk7CiAgICAgICAgfQogICAgICAgIHJlcXVpcmUobHBUb2tlbnMgPiAwLCAiSW5zdWZmaWNpZW50IGxpcXVpZGl0eSBtaW50ZWQiKTsKCiAgICAgICAgbGlxdWlkaXR5W21zZy5zZW5kZXJdICs9IGxwVG9rZW5zOwogICAgICAgIHRvdGFsTGlxdWlkaXR5ICs9IGxwVG9rZW5zOwoKICAgICAgICByZXNlcnZlQSArPSBhbW91bnRBOwogICAgICAgIHJlc2VydmVCICs9IGFtb3VudEI7CgogICAgICAgIGVtaXQgTGlxdWlkaXR5QWRkZWQobXNnLnNlbmRlciwgYW1vdW50QSwgYW1vdW50Qik7CiAgICB9CgogICAgZnVuY3Rpb24gcmVtb3ZlTGlxdWlkaXR5KHVpbnQyNTYgbHBUb2tlbnMpIGV4dGVybmFsIHsKICAgICAgICByZXF1aXJlKGxwVG9rZW5zID4gMCAmJiBsaXF1aWRpdHlbbXNnLnNlbmRlcl0gPj0gbHBUb2tlbnMsICJJbnN1ZmZpY2llbnQgTFAgdG9rZW5zIik7CgogICAgICAgIHVpbnQyNTYgYW1vdW50QSA9IChscFRva2VucyAqIHJlc2VydmVBKSAvIHRvdGFsTGlxdWlkaXR5OwogICAgICAgIHVpbnQyNTYgYW1vdW50QiA9IChscFRva2VucyAqIHJlc2VydmVCKSAvIHRvdGFsTGlxdWlkaXR5OwogICAgICAgIHJlcXVpcmUoYW1vdW50QSA%2BIDAgJiYgYW1vdW50QiA%2BIDAsICJJbnN1ZmZpY2llbnQgdG9rZW5zIHdpdGhkcmF3biIpOwoKICAgICAgICBsaXF1aWRpdHlbbXNnLnNlbmRlcl0gLT0gbHBUb2tlbnM7CiAgICAgICAgdG90YWxMaXF1aWRpdHkgLT0gbHBUb2tlbnM7CiAgICAgICAgcmVzZXJ2ZUEgLT0gYW1vdW50QTsKICAgICAgICByZXNlcnZlQiAtPSBhbW91bnRCOwoKICAgICAgICB0b2tlbkEudHJhbnNmZXIobXNnLnNlbmRlciwgYW1vdW50QSk7CiAgICAgICAgdG9rZW5CLnRyYW5zZmVyKG1zZy5zZW5kZXIsIGFtb3VudEIpOwoKICAgICAgICBlbWl0IExpcXVpZGl0eVJlbW92ZWQobXNnLnNlbmRlciwgYW1vdW50QSwgYW1vdW50Qik7CiAgICB9CgogICAgZnVuY3Rpb24gc3dhcEFmb3JCKHVpbnQyNTYgYW1vdW50QUluLCB1aW50MjU2IGFtb3VudEJPdXRNaW4pIGV4dGVybmFsIHsKICAgICAgICByZXF1aXJlKGFtb3VudEFJbiA%2BIDAsICJBbW91bnQgaW4gbXVzdCBiZSA%2BMCIpOwogICAgICAgIHVpbnQyNTYgYW1vdW50Qk91dCA9IGdldEFtb3VudE91dChhbW91bnRBSW4sIHJlc2VydmVBLCByZXNlcnZlQik7CiAgICAgICAgcmVxdWlyZShhbW91bnRCT3V0ID49IGFtb3VudEJPdXRNaW4sICJTbGlwcGFnZSB0b28gaGlnaCIpOwogICAgICAgIHJlcXVpcmUoYW1vdW50Qk91dCA8PSByZXNlcnZlQiwgIkluc3VmZmljaWVudCBsaXF1aWRpdHkiKTsKCiAgICAgICAgdG9rZW5BLnRyYW5zZmVyRnJvbShtc2cuc2VuZGVyLCBhZGRyZXNzKHRoaXMpLCBhbW91bnRBSW4pOwogICAgICAgIHRva2VuQi50cmFuc2Zlcihtc2cuc2VuZGVyLCBhbW91bnRCT3V0KTsKCiAgICAgICAgcmVzZXJ2ZUEgKz0gYW1vdW50QUluOwogICAgICAgIHJlc2VydmVCIC09IGFtb3VudEJPdXQ7CgogICAgICAgIGVtaXQgU3dhcHBlZChtc2cuc2VuZGVyLCBhZGRyZXNzKHRva2VuQSksIGFtb3VudEFJbiwgYWRkcmVzcyh0b2tlbkIpLCBhbW91bnRCT3V0KTsKICAgIH0KCiAgICBmdW5jdGlvbiBzd2FwQmZvckEodWludDI1NiBhbW91bnRCSW4sIHVpbnQyNTYgYW1vdW50QU91dE1pbikgZXh0ZXJuYWwgewogICAgICAgIHJlcXVpcmUoYW1vdW50QkluID4gMCwgIkFtb3VudCBpbiBtdXN0IGJlID4wIik7CiAgICAgICAgdWludDI1NiBhbW91bnRBT3V0ID0gZ2V0QW1vdW50T3V0KGFtb3VudEJJbiwgcmVzZXJ2ZUIsIHJlc2VydmVBKTsKICAgICAgICByZXF1aXJlKGFtb3VudEFPdXQgPj0gYW1vdW50QU91dE1pbiwgIlNsaXBwYWdlIHRvbyBoaWdoIik7CiAgICAgICAgcmVxdWlyZShhbW91bnRBT3V0IDw9IHJlc2VydmVBLCAiSW5zdWZmaWNpZW50IGxpcXVpZGl0eSIpOwoKICAgICAgICB0b2tlbkIudHJhbnNmZXJGcm9tKG1zZy5zZW5kZXIsIGFkZHJlc3ModGhpcyksIGFtb3VudEJJbik7CiAgICAgICAgdG9rZW5BLnRyYW5zZmVyKG1zZy5zZW5kZXIsIGFtb3VudEFPdXQpOwoKICAgICAgICByZXNlcnZlQiArPSBhbW91bnRCSW47CiAgICAgICAgcmVzZXJ2ZUEgLT0gYW1vdW50QU91dDsKCiAgICAgICAgZW1pdCBTd2FwcGVkKG1zZy5zZW5kZXIsIGFkZHJlc3ModG9rZW5CKSwgYW1vdW50QkluLCBhZGRyZXNzKHRva2VuQSksIGFtb3VudEFPdXQpOwogICAgfQoKICAgIGZ1bmN0aW9uIGdldEFtb3VudE91dCh1aW50MjU2IGFtb3VudEluLCB1aW50MjU2IHJlc2VydmVJbiwgdWludDI1NiByZXNlcnZlT3V0KSBwdWJsaWMgcHVyZSByZXR1cm5zICh1aW50MjU2KSB7CiAgICAgICAgdWludDI1NiBhbW91bnRJbldpdGhGZWUgPSBhbW91bnRJbiAqIDk5NzsgLy8gMC4zJSBmZWUKICAgICAgICB1aW50MjU2IG51bWVyYXRvciA9IGFtb3VudEluV2l0aEZlZSAqIHJlc2VydmVPdXQ7CiAgICAgICAgdWludDI1NiBkZW5vbWluYXRvciA9IChyZXNlcnZlSW4gKiAxMDAwKSArIGFtb3VudEluV2l0aEZlZTsKICAgICAgICByZXR1cm4gbnVtZXJhdG9yIC8gZGVub21pbmF0b3I7CiAgICB9CgogICAgZnVuY3Rpb24gc3FydCh1aW50MjU2IHkpIGludGVybmFsIHB1cmUgcmV0dXJucyAodWludDI1NiB6KSB7CiAgICAgICAgaWYgKHkgPiAzKSB7CiAgICAgICAgICAgIHogPSB5OwogICAgICAgICAgICB1aW50MjU2IHggPSB5IC8gMiArIDE7CiAgICAgICAgICAgIHdoaWxlICh4IDwgeikgewogICAgICAgICAgICAgICAgeiA9IHg7CiAgICAgICAgICAgICAgICB4ID0gKHkgLyB4ICsgeCkgLyAyOwogICAgICAgICAgICB9CiAgICAgICAgfSBlbHNlIGlmICh5ICE9IDApIHsKICAgICAgICAgICAgeiA9IDE7CiAgICAgICAgfQogICAgfQoKICAgIGZ1bmN0aW9uIG1pbih1aW50MjU2IGEsIHVpbnQyNTYgYikgaW50ZXJuYWwgcHVyZSByZXR1cm5zICh1aW50MjU2KSB7CiAgICAgICAgcmV0dXJuIGEgPCBiID8gYSA6IGI7CiAgICB9Cn0%3D */}
+
+<RemixLaunchButton contractName="simpleAMM" code={simpleAMMSource} />
+:::
+
 ## Deploying and Testing with Hardhat
 
 Now we'll write tests to ensure our AMM works correctly.
@@ -261,32 +410,41 @@ We'll use Hardhat with ethers and Chai for testing. First, create a test file `t
 
 You'll also need a mock ERC20 token for testing. Create `contracts/ERC20Mock.sol`:
 
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+export const erc20MockSource = `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.30;
 
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts@5.6.1/token/ERC20/ERC20.sol";
 
 contract ERC20Mock is ERC20 {
+    uint8 private immutable _customDecimals;
+
     constructor(
         string memory name,
         string memory symbol,
-        uint8 decimals
+        uint8 decimals_
     ) ERC20(name, symbol) {
-        _setupDecimals(decimals);
+        _customDecimals = decimals_;
     }
-    
+
+    // OZ v5 removed _setupDecimals; override decimals() to set a custom value
+    function decimals() public view virtual override returns (uint8) {
+        return _customDecimals;
+    }
+
     function mint(address to, uint256 amount) external {
         _mint(to, amount);
     }
-    
-    function _setupDecimals(uint8 decimals_) internal {
-        _decimals = decimals_;
-    }
-    
-    uint8 private _decimals;
-}
-```
+}`;
+
+<CodeBlock language="solidity">{erc20MockSource}</CodeBlock>
+
+:::info[Try this contract in Remix]
+Want to deploy and interact with `ERC20Mock` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
+
+{/* Remix deep-link for ERC20Mock: https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANS42LjEvdG9rZW4vRVJDMjAvRVJDMjAuc29sIjsKCmNvbnRyYWN0IEVSQzIwTW9jayBpcyBFUkMyMCB7CiAgICB1aW50OCBwcml2YXRlIGltbXV0YWJsZSBfY3VzdG9tRGVjaW1hbHM7CgogICAgY29uc3RydWN0b3IoCiAgICAgICAgc3RyaW5nIG1lbW9yeSBuYW1lLAogICAgICAgIHN0cmluZyBtZW1vcnkgc3ltYm9sLAogICAgICAgIHVpbnQ4IGRlY2ltYWxzXwogICAgKSBFUkMyMChuYW1lLCBzeW1ib2wpIHsKICAgICAgICBfY3VzdG9tRGVjaW1hbHMgPSBkZWNpbWFsc187CiAgICB9CgogICAgLy8gT1ogdjUgcmVtb3ZlZCBfc2V0dXBEZWNpbWFsczsgb3ZlcnJpZGUgZGVjaW1hbHMoKSB0byBzZXQgYSBjdXN0b20gdmFsdWUKICAgIGZ1bmN0aW9uIGRlY2ltYWxzKCkgcHVibGljIHZpZXcgdmlydHVhbCBvdmVycmlkZSByZXR1cm5zICh1aW50OCkgewogICAgICAgIHJldHVybiBfY3VzdG9tRGVjaW1hbHM7CiAgICB9CgogICAgZnVuY3Rpb24gbWludChhZGRyZXNzIHRvLCB1aW50MjU2IGFtb3VudCkgZXh0ZXJuYWwgewogICAgICAgIF9taW50KHRvLCBhbW91bnQpOwogICAgfQp9 */}
+
+<RemixLaunchButton contractName="erc20Mock" code={erc20MockSource} />
+:::
 
 Now create the test file:
 

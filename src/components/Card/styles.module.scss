@@ -10,4 +10,7 @@
   li + li {
     margin-top: 8px;
   }
+  .badge[class*='bg-'] {
+    color: var(--bs-black) !important;
+  }
 }
