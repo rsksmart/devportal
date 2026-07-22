@@ -41,7 +41,14 @@ function buildTheme(isDark) {
     tooltip: { showTooltip: false },
     chatWindow: {
       title: 'Rootstock AI Assistant',
-      welcomeMessage: 'Hi! How can I help you with Rootstock development today?',
+      welcomeMessage: "Hi, I'm Rootstock AI Assistant, your Rootstock guide. Try one of these to get started, or ask me anything.",
+      starterPrompts: [
+        "Deploy my first smart contract",
+        "Add Rootstock to my wallet",
+        "How does the USDRIF Vault work?",
+        "Find a starter kit for my stack",
+        "I'm evaluating Rootstock for my company"
+      ],
       fontSize: 14,
       backgroundColor: t.bg,
       botMessage: {

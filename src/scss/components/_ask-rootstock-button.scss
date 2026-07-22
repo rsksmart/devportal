@@ -1,0 +1,51 @@
+// "Ask Rootstock" AI assistant trigger (Flowise) — high-contrast pill.
+// Style reference: the Ask Cookbook button (PR #165), which renders a
+// light-on-dark / dark-on-light pill. We reuse the existing contrast tokens
+// so it inverts automatically with the theme:
+//   --bs-contrast        → black (light) / white (dark)  → pill background
+//   --rsk-contrast-color → white (light) / black (dark)  → text + icon badge
+.ask-rootstock-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 16px 4px 4px;
+  border: 0;
+  border-radius: 40px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: $font-family-base;
+  color: var(--rsk-contrast-color);
+  background-color: var(--bs-contrast);
+  // Subtle -26.5deg sheen (matches the Cookbook reference); mid-gray overlay
+  // works over both the light and the dark base color.
+  background-image: linear-gradient(-26.5deg, rgba(128, 128, 128, 0) 0%, rgba(128, 128, 128, 0.2) 100%);
+  transition: opacity .15s ease;
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background-color: var(--rsk-contrast-color);
+
+    svg {
+      display: block;
+      width: 16px;
+      height: 18px;
+    }
+  }
+
+  &__label {
+    font-size: $f14;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+
+  &:hover {
+    opacity: .85;
+  }
+}
