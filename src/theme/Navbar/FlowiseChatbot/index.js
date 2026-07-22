@@ -165,6 +165,87 @@ function buildShadowCSS(isDark) {
     [data-fb-rating="down"] button[title="Thumbs Down"] svg * {
       stroke: #8B0000 !important; /* matches flowise THUMBS_DOWN color */
     }
+
+    /* ── Code blocks: dark panel in BOTH themes + readable text ──
+       flowise renders bare <pre><code> with no background and forces white text
+       via an inner --bot-markdown-code-color:#FFFFFF, so on the light-mode bubble
+       the code was invisible. We give it a dark code panel (like the DevPortal's
+       own code blocks) and override the text color with !important, which beats
+       flowise's var-based rule regardless of the inner var value. */
+    .bot-markdown-content pre {
+      position: relative;
+      background-color: #1e1e1e !important;
+      padding: 12px 42px 12px 14px !important;
+      border-radius: 8px !important;
+      overflow-x: auto !important;
+    }
+    .bot-markdown-content pre,
+    .bot-markdown-content pre code {
+      color: #e8e8e8 !important;
+    }
+    .bot-markdown-content pre .rsk-code-copy {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      padding: 0;
+      border: 1px solid rgba(255, 255, 255, .22);
+      border-radius: 6px;
+      background-color: rgba(255, 255, 255, .08);
+      color: #e8e8e8;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity .12s ease, background-color .12s ease, color .12s ease, border-color .12s ease;
+    }
+    .bot-markdown-content pre:hover .rsk-code-copy,
+    .bot-markdown-content pre .rsk-code-copy:focus-visible { opacity: 1; }
+    .bot-markdown-content pre .rsk-code-copy:hover { background-color: rgba(255, 255, 255, .16); }
+    @media (hover: none) {
+      .bot-markdown-content pre .rsk-code-copy { opacity: .7; }
+    }
+    .rsk-code-copy svg { width: 15px; height: 15px; display: block; }
+    .rsk-code-copy .rsk-check-ico { display: none; }
+    .rsk-code-copy[data-copied] {
+      color: #ff9100;
+      border-color: #ff9100;
+      opacity: 1;
+    }
+    .rsk-code-copy[data-copied] .rsk-copy-ico { display: none; }
+    .rsk-code-copy[data-copied] .rsk-check-ico { display: inline-flex; }
+
+    /* ── Inline code: readable + click-to-copy affordance (chain IDs, RPC URLs, addresses) ── */
+    .bot-markdown-content code:not(pre code) {
+      position: relative;
+      cursor: pointer;
+      color: ${isDark ? '#ff9d33' : '#b45309'} !important;
+      background-color: ${isDark ? 'rgba(255,255,255,.07)' : 'rgba(0,0,0,.05)'} !important;
+      border-radius: 4px;
+      padding: 1px 5px;
+      transition: background-color .12s ease;
+    }
+    .bot-markdown-content code:not(pre code):hover {
+      background-color: ${isDark ? 'rgba(255,255,255,.14)' : 'rgba(0,0,0,.09)'} !important;
+    }
+    .bot-markdown-content code:not(pre code)[data-copied]::after {
+      content: 'Copied';
+      position: absolute;
+      bottom: calc(100% + 4px);
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: ${t.brand};
+      color: #fff;
+      font-size: 11px;
+      line-height: 1;
+      padding: 3px 6px;
+      border-radius: 4px;
+      white-space: nowrap;
+      pointer-events: none;
+      z-index: 10;
+    }
   `;
 }
 
@@ -246,12 +327,127 @@ function setupFeedbackPatch(shadowRoot) {
   }, true);
 }
 
+// SVG icons for the code-block copy button (stroke = currentColor).
+const COPY_SVG =
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+const CHECK_SVG =
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>';
+
+// Copy helper: Clipboard API with a legacy execCommand fallback (non-secure ctx).
+async function copyText(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch (_) {
+    try {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      return true;
+    } catch (_) {
+      return false;
+    }
+  }
+}
+
+// Transient "copied" state — injected CSS reacts to the data-copied attribute.
+function flashCopied(el, ms) {
+  el.dataset.copied = '1';
+  window.clearTimeout(el._copyTimer);
+  el._copyTimer = window.setTimeout(() => {
+    delete el.dataset.copied;
+  }, ms);
+}
+
+// Adds a copy button to every bot code block that doesn't already have one.
+// Idempotent AND self-healing: keyed on the presence of OUR button (not a marker
+// on <pre>), so if a SolidJS re-render wipes the button, the next observer tick
+// re-injects it. flowise's own JSON display blocks (.ndd-json) are left alone.
+function injectCopyButtons(root) {
+  root.querySelectorAll('.bot-markdown-content pre').forEach((pre) => {
+    if (pre.classList.contains('ndd-json')) return;
+    if (pre.querySelector(':scope > button[data-rsk-copy-btn]')) return;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'rsk-code-copy';
+    btn.setAttribute('data-rsk-copy-btn', '');
+    btn.setAttribute('aria-label', 'Copy code');
+    btn.setAttribute('title', 'Copy code');
+    btn.innerHTML =
+      `<span class="rsk-copy-ico" aria-hidden="true">${COPY_SVG}</span>` +
+      `<span class="rsk-check-ico" aria-hidden="true">${CHECK_SVG}</span>`;
+    pre.appendChild(btn);
+  });
+}
+
+// Enables copy-to-clipboard inside bot messages:
+//   • a copy button on every code block (flowise renders bare <pre><code>)
+//   • click-to-copy on inline code (chain IDs, RPC URLs, addresses in backticks)
+// Shadow-DOM mutations don't bubble to the document.body observer, so this mounts
+// its own observer on the shadow root to (re)inject buttons as messages stream in.
+// The click handler is delegated on the shadow root (survives re-renders); the
+// visual state is a transient data-copied attribute driven by injected CSS.
+function setupCopyPatch(shadowRoot) {
+  if (shadowRoot._copyPatched) return;
+  shadowRoot._copyPatched = true;
+
+  shadowRoot.addEventListener('click', async (e) => {
+    // Code-block copy button (the click may land on the inner <svg>).
+    const copyBtn = e.target?.closest('button[data-rsk-copy-btn]');
+    if (copyBtn) {
+      const code = copyBtn.closest('pre')?.querySelector('code');
+      const text = (code?.textContent ?? '').replace(/\n$/, '');
+      if (!text) return;
+      if (await copyText(text)) {
+        const langClass = [...(code?.classList || [])].find((c) => c.startsWith('lang-'));
+        pushDataLayer('aiChatbotCodeCopy', {
+          componentId: 'flowise-chatbot-code-copy',
+          language: langClass ? langClass.slice(5) : 'text',
+        });
+        flashCopied(copyBtn, 1500);
+      }
+      return;
+    }
+
+    // Inline code → copy its value (skip code inside <pre>; that's the block above).
+    const inline = e.target?.closest('code');
+    if (inline && !inline.closest('pre') && inline.closest('.bot-markdown-content')) {
+      const text = inline.textContent ?? '';
+      if (!text.trim()) return;
+      if (await copyText(text)) {
+        pushDataLayer('aiChatbotValueCopy', { componentId: 'flowise-chatbot-value-copy' });
+        flashCopied(inline, 1200);
+      }
+    }
+  });
+
+  // Batch streaming mutations; re-inject buttons as new code blocks appear.
+  let scheduled = null;
+  const observer = new MutationObserver(() => {
+    if (scheduled) return;
+    scheduled = window.setTimeout(() => {
+      scheduled = null;
+      injectCopyButtons(shadowRoot);
+    }, 60);
+  });
+  observer.observe(shadowRoot, { childList: true, subtree: true });
+  shadowRoot._copyObserver = observer;
+
+  injectCopyButtons(shadowRoot);
+}
+
 function applyTheme() {
   const el = document.querySelector('flowise-chatbot');
   if (!el?.shadowRoot) return;
 
   setupFloatingButtonPatch(el.shadowRoot);
   setupFeedbackPatch(el.shadowRoot);
+  setupCopyPatch(el.shadowRoot);
 
   const dark = isDarkMode();
   const t = dark ? DARK : LIGHT;
@@ -317,6 +513,7 @@ function FlowiseChatbotInner({ apiHost, chatflowId }) {
     return () => {
       bodyObserver?.disconnect();
       themeObserver?.disconnect();
+      document.querySelector('flowise-chatbot')?.shadowRoot?._copyObserver?.disconnect();
       Chatbot?.destroy();
     };
   }, []);
