@@ -21,7 +21,7 @@ flowchart LR
   Comp{"Compare solution<br/>to difficulties"}
 
   BTC["Bitcoin block<br/>(>= BTC difficulty)"]
-  RSK["Rootstock block<br/>(>= Rootstock,<br/>< Bitcoin)"]
+  RSK["Rootstock block<br/>(>= Rootstock,<br/>&lt; Bitcoin)"]
   Share["Pool share only<br/>(not broadcast)"]
 
   Pool -->|"1. Job includes<br/>Rootstock block ref"| Miner

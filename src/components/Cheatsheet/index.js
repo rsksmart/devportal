@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import Button from '/src/components/Button';
+import {addRootstockNetwork} from '/src/components/AddNetworkButtons';
 import CheatsheetQr from './CheatsheetQr';
 import {
   AI_TOOLS,
@@ -188,39 +189,14 @@ function KitCard({kit}) {
 }
 
 function MetaMaskButtons() {
-  const addNetwork = useCallback(async (networkKey) => {
-    if (typeof window === 'undefined' || !window.ethereum) {
-      window.alert('MetaMask is not installed. Install MetaMask to add Rootstock networks.');
-      return;
-    }
-
-    const network = NETWORKS[networkKey];
-    const params = {
-      chainId: network.chainIdHex,
-      chainName: network.name,
-      rpcUrls: [network.rpcUrl],
-      blockExplorerUrls: [network.explorer],
-      nativeCurrency: network.nativeCurrency,
-    };
-
-    try {
-      const currentChainId = await window.ethereum.request({method: 'eth_chainId'});
-      if (currentChainId === params.chainId) {
-        return;
-      }
-      await window.ethereum.request({
-        method: 'wallet_addEthereumChain',
-        params: [params],
-      });
-    } catch (error) {
-      window.alert(`Failed to add ${network.name}: ${error.message}`);
-    }
-  }, []);
-
   return (
     <div className={styles.buttonRow}>
-      <CheatsheetButton onClick={() => addNetwork('testnet')}>Add Rootstock Testnet</CheatsheetButton>
-      <CheatsheetButton onClick={() => addNetwork('mainnet')}>Add Rootstock Mainnet</CheatsheetButton>
+      <CheatsheetButton onClick={() => addRootstockNetwork('testnet')}>
+        Add Rootstock Testnet
+      </CheatsheetButton>
+      <CheatsheetButton onClick={() => addRootstockNetwork('mainnet')}>
+        Add Rootstock Mainnet
+      </CheatsheetButton>
     </div>
   );
 }

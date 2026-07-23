@@ -103,7 +103,7 @@ Build a Next.js dApp on Rootstock with **Dynamic** embedded wallets and **Wagmi*
 
 | Step | Action |
 |------|--------|
-| 1 | Clone `https://github.com/RookieCol/rootstock-dynamic` |
+| 1 | Clone `https://github.com/rsksmart/rootstock-dynamic` |
 | 2 | Install dependencies with `bun install` or `yarn install` |
 | 3 | Create a free [Dynamic dashboard](https://app.dynamic.xyz/dashboard/overview) account |
 | 4 | Copy **Environment ID** from Developers → SDK & API Keys |
@@ -134,7 +134,7 @@ Build a Next.js dApp on Rootstock with **Dynamic** embedded wallets and **Wagmi*
    Clone the repository to use the starter kit locally.
 
 ```bash
-git clone https://github.com/RookieCol/rootstock-dynamic
+git clone https://github.com/rsksmart/rootstock-dynamic
 cd rootstock-dynamic
 ```
   </Step>
@@ -230,10 +230,10 @@ Visit [http://localhost:3000](http://localhost:3000) in your browser to view you
   </Step>
   <Step title="Check Token Balances">
 
-   The [`Balances`](https://github.com/RookieCol/rootstock-dynamic/blob/main/components/Balances.tsx) component fetches and displays the wallet's token balances, supporting multiple tokens like rBTC, tRIF, and DOC.
+   The [`Balances`](https://github.com/rsksmart/rootstock-dynamic/blob/main/components/Balances.tsx) component fetches and displays the wallet's token balances, supporting multiple tokens like rBTC, tRIF, and DOC.
   </Step>
   <Step title="Send Tokens">
-   Through the [`Transfer`](https://github.com/RookieCol/rootstock-dynamic/blob/main/components/Transfer.tsx) component, users can transfer tokens directly within the dApp. It includes fields to specify the recipient address and token amount, along with secure hooks to initiate the transfer.
+   Through the [`Transfer`](https://github.com/rsksmart/rootstock-dynamic/blob/main/components/Transfer.tsx) component, users can transfer tokens directly within the dApp. It includes fields to specify the recipient address and token amount, along with secure hooks to initiate the transfer.
 
    **Features:**
 
@@ -246,7 +246,7 @@ Visit [http://localhost:3000](http://localhost:3000) in your browser to view you
   </Step>
 
   <Step title="Sign Messages">
-   The [`SignMessage`](https://github.com/RookieCol/rootstock-dynamic/blob/main/components/SignMessage.tsx) component enables the user to sign arbitrary messages using the connected wallet. This feature is useful for activities like authentication or data validation.
+   The [`SignMessage`](https://github.com/rsksmart/rootstock-dynamic/blob/main/components/SignMessage.tsx) component enables the user to sign arbitrary messages using the connected wallet. This feature is useful for activities like authentication or data validation.
 
   </Step>
 </Steps>

@@ -34,7 +34,7 @@ const SUPPLEMENTARY_HUB_ENTRIES = [
   ['Runes on Rootstock', '/developers/use-cases/runes-rootstock/', 'Developer guides for Runes on Rootstock.'],
   ['Verify Smart Contracts', '/developers/verify-smart-contracts/', 'Verify contract source on Rootstock explorers.'],
   ['EAS Attestations', '/dev-tools/attestations/eas/', 'Ethereum Attestation Service on Rootstock.'],
-  ['DeFi Developer Guide', '/category/rootstock-defi-developer-guide', 'Patterns and standards for DeFi on Rootstock.'],
+  ['DeFi Developer Guide', '/resources/guides/defi-developer-guide/', 'Patterns and standards for DeFi on Rootstock.'],
   ['User Guides', '/resources/guides/', 'PowPeg, Atlas, Runes, and other Rootstock user guides.'],
   ['PowPeg App Guide', '/resources/guides/powpeg-app/', 'Use the PowPeg App for BTC and rBTC transfers.'],
   ['Runes Airdrop Machine', '/resources/guides/runes-rootstock/airdrop-giveaway-machine/', 'Build a Runes airdrop machine on Rootstock.'],
