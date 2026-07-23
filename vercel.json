@@ -1,692 +1,2790 @@
 {
-  "trailingSlash" : true,
+  "trailingSlash": true,
   "redirects": [
-    {"source" : "/guides/rif-rollup/", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/rif-rollup/transfer-funds-on-rif-rollup/", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/rif-rollup/account-activation/", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/rif-rollup/transfer-funds-on-rif-rollup/withdraw-funds-rootstock/", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/rif-rollup/transfer-funds-on-rif-rollup/account-activation/", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/rif-rollup/withdraw-funds-rootstock/account-activation/", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/rif-rollup/using-rif-rollup-block-explorer/", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/rif-rollup/withdraw-funds-rootstock/", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/quickstart/browser/cryptography/", "destination" : "/developers/blockchain-essentials/browser#cryptography"},
-    {"source" : "/guides/quickstart/transactions/rbtc-balance-decrease/", "destination" : "/developers/blockchain-essentials/transactions#rbtc-balance-decrease"},
-    {"source" : "/guides/quickstart/hardhat/test-smart-contract/", "destination" : "/developers/smart-contracts/hardhat/test-smart-contracts"},
-    {"source" : "/guides/quickstart/hardhat/debugging-and-troubleshooting/", "destination" : "/developers/smart-contracts/hardhat/troubleshooting/"},
-    {"source" : "/guides/quickstart/transactions/block-explorer/", "destination" : "/developers/blockchain-essentials/transactions#block-explorer"},
-    {"source" : "/guides/quickstart/overview/powpeg/", "destination" : "/developers/blockchain-essentials/overview#powpeg"},
-    {"source" : "/guides/nft/overview", "destination" : "https://blog.rootstock.io/"},
-    {"source" : "/guides/nft/configure-nft-metadata", "destination" : "https://blog.rootstock.io/"},
-    {"source" : "/guides/two-way-peg-app/pegout/deriving-electrum", "destination" : "/resources/guides/two-way-peg-app/pegout/deriving-electrum/"},
-    {"source" : "/resources/guides/two-way-peg-app/pegout/deriving-electrum", "destination" : "/resources/guides/powpeg-app/pegout/deriving-electrum/"},
-    {"source" : "/guides/rif-relay/smart-wallets", "destination" : "/developers/integrate/rif-relay/smart-wallets/"},
-    {"source" : "/guides/nft/create-smart-contract", "destination" : "https://blog.rootstock.io/"},
-    {"source" : "/guides/quickstart/transactions/rbtc-balance-decrease", "destination" : "/developers/blockchain-essentials/transactions#rbtc-balance-decrease"},
-    {"source" : "/rif/libs", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/architecture/registry", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/specs/resolvers", "destination" : "/developers/integrate/"},
-    {"source" : "/rns/architecture/registry", "destination" : "/developers/integrate/"},
-    {"source" : "/specs/resolvers", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/operations/resolve", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/architecture/ReverseSuite/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/try-rns", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/run-locally", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/integrate", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/specs", "destination" : "/developers/integrate/"},
-    {"source" : "/operations/resolve", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/specs/registry", "destination" : "/developers/integrate/"},
-    {"source" : "/rsk/node/cli/", "destination" : "/node-operators/setup/configuration/cli/"},
-    {"source" : "/rif/rns/libs/resolver/string-resolver", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/specs/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/set-reverse", "destination" : "/developers/integrate/"},
-    {"source" : "/js/main.js", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/rsk-registrar", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/set-btc-address", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/integrate-addr-resolution", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/architecture/registrars/fifs", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/registry", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/renew", "destination" : "/developers/integrate/"},
-    {"source" : "/img/circles/semi-circle-left.png", "destination" : "/"},
-    {"source" : "/rif/rns/get-reverse", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/register", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/libs/resolver", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/dev-reference/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/resolve", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/MultiCryptoResolver", "destination" : "/developers/integrate/"},
-    {"source" : "/rsk/reproducible", "destination" : "/node-operators/setup/reproducible-build/"},
-    {"source" : "/rif/rns/register-subdomain", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/overview/", "destination" : "/concepts/rif-suite/"},
-    {"source" : "/rif/rns/architecture/rskowner", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rlogin/vc-json-schemas-parser", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/architecture/renewers/renewer", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/transfer", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/resolvers", "destination" : "/developers/integrate/"},
-    {"source" : "/img/circles/circle-blue.png", "destination" : "/"},
-    {"source" : "/rif/rns/reverse-suite/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/architecture/rsk-registrar/fifs", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/set-resolver", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/architecture/other/nameprice", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/set-addr", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/two-way-peg-app/advanced-operations", "destination" : "/resources/guides/two-way-peg-app/advanced-operations/"},
-    {"source" : "/resources/guides/two-way-peg-app/advanced-operations", "destination" : "/resources/guides/powpeg-app/advanced-operations/"},
-    {"source" : "/guides/nft/deploy-nft-on-rsk", "destination" : "https://blog.rootstock.io/"},
-    {"source" : "/guides/quickstart/transactions/view-network-stats", "destination" : "/developers/blockchain-essentials/transactions#view-network-stats"},
-    {"source" : "/rif/rns/architecture/reverse-suite/ReverseRegistrar/", "destination" : "/developers/integrate/"},
-    {"source" : "/solutions/wakeuplabs/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/guides/get-crypto-on-rsk/rbtc-wallets", "destination" : "https://blog.rootstock.io/"},
-    {"source" : "/rif/rns/architecture/rsk-registrar/registrars/", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/get-crypto-on-rsk/rbtc-exchanges", "destination" : "https://blog.rootstock.io/"},
-    {"source" : "/rif/wallet/user-guide/sending-and-receiving-tokens/", "destination" : "/developers/integrate/"},
-    {"source" : "/rsk/node/architecture/json-rpc/management-api-methods/", "destination" : "/node-operators/json-rpc/management-api-methods/"},
-    {"source" : "/kb/hardhat-verify-plugin/", "destination" : "/developers/smart-contracts/verify-smart-contracts/"},
-    {"source" : "/rif/wallet/dev-reference/interact-with-the-wallet/", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/quickstart/transactions/view-transactions", "destination" : "/developers/blockchain-essentials/transactions#view-transactions"},
-    {"source" : "/guides/quickstart/transactions/transfer-trif", "destination" : "/developers/blockchain-essentials/transactions#transfer-trif"},
-    {"source" : "/guides/two-way-peg-app/prerequisites", "destination" : "/resources/guides/two-way-peg-app/prerequisites/"},
-    {"source" : "/resources/guides/two-way-peg-app/prerequisites", "destination" : "/resources/guides/powpeg-app/prerequisites/"},
-    {"source" : "/rsk/node/architecture/json-rpc/json-rpc-methods/", "destination" : "/node-operators/json-rpc/methods/"},
-    {"source" : "/rif/wallet/user-guide/registering-a-username/", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/rif-relay/deployment", "destination" : "/developers/integrate/rif-relay/deployment/"},
-    {"source" : "/tools/foundry/", "destination" : "/dev-tools/foundry/"},
-    {"source" : "/dev-tools/foundry/", "destination" : "/dev-tools/dev-environments/foundry/"},
-    {"source" : "/rif/rns/libs/javascript/Advanced-usage", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/operations/migrate-from-auction", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/integrate/integrate-addr-resolution", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/quickstart/browser", "destination" : "/developers/blockchain-essentials/browser/"},
-    {"source" : "/rif/rns/tools/MyCrypto", "destination" : "/developers/integrate/"},
-    {"source" : "/rsk/node/configure/reference", "destination" : "/node-operators/setup/configuration/reference/"},
-    {"source" : "/rif/rns/operations/set-reverse", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/architecture/registry", "destination" : "/developers/integrate/"},
-    {"source" : "/rsk/architecture/mining/implementation-guide", "destination" : "/node-operators/merged-mining/getting-started/"},
-    {"source" : "/rsk/architecture/turing-complete/", "destination" : "/concepts/"},
-    {"source" : "/tutorials/interface-registry/", "destination" : "/developers/smart-contracts/interface-registry/"},
-    {"source" : "/rsk/public-nodes/", "destination" : "/node-operators/public-nodes/"},
-    {"source" : "/tutorials/interact-with-smart-contracts/", "destination" : "/developers/smart-contracts/hardhat/interact-with-frontend/"},
-    {"source" : "/defi/", "destination" : "/developers/"},
-    {"source" : "/rsk/rbtc/conversion/networks/mainnet/", "destination" : "/concepts/rbtc/networks/"},
-    {"source" : "/discord/", "destination" : "http://discord.gg/rootstock"},
-    {"source" : "/tutorials/rsk-api/", "destination" : "/resources/tutorials/"},
-    {"source" : "/wallet/", "destination" : "/dev-tools/wallets/"},
-    {"source" : "/tutorials/", "destination" : "/resources/tutorials/"},
-    {"source" : "/libraries/", "destination" : "/developers/libraries/"},
-    {"source" : "/kb/get-crypto-on-rsk/powpeg-btc-rbtc/", "destination" : "https://blog.rootstock.io/get-crypto-on-rsk/"},
-    {"source" : "/develop/apps/wallets/", "destination" : "/dev-tools/wallets/"},
-    {"source" : "/develop/apps/wallets/metamask/", "destination" : "/dev-tools/wallets/metamask/"},
-    {"source" : "/rsk/node/install/java/", "destination" : "/node-operators/setup/installation/java/"},
-    {"source" : "/tutorials/compile-smart-contracts-go/", "destination" : "/developers/smart-contracts/"},
-    {"source" : "/kb/get-crypto-on-rsk/cryptocurrency-vs-token/", "destination" : "https://blog.rootstock.io/cryptocurrency-vs-token/"},
-    {"source" : "/rsk/node/configure/autominer/", "destination" : "/node-operators/merged-mining/autominer/"},
-    {"source" : "/tutorials/send-tokens-through-metamask/", "destination" : "/dev-tools/wallets/metamask/"},
-    {"source" : "/rif/wallet/overview", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/specs/registry", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/quickstart/transactions/transfer-trbtc", "destination" : "/developers/blockchain-essentials/transactions#transfer-trbtc"},
-    {"source" : "/rsk/rbtc/conversion/with-node-and-console", "destination" : "/concepts/rbtc/conversion/with-node-and-console/"},
-    {"source" : "/rif/rns/tools/RNS-Manager", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/operations/Resolve-a-name", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/token", "destination" : "/concepts/rif-suite/token/"},
-    {"source" : "/guides/quickstart/hardhat/configure-hardhat", "destination" : "/developers/smart-contracts/hardhat/configure-hardhat/"},
-    {"source" : "/rif/rns/libs/Android", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/tools/Subdomain-tool", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/wallet", "destination" : "/developers/integrate/"},
-    {"source" : "/rsk/node/architecture/json-rpc/management-api-methods", "destination" : "/node-operators/json-rpc/management-api-methods/"},
-    {"source" : "/rif/rns/libs/smart-contracts", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/rif-relay/installation-requirements", "destination" : "/developers/integrate/rif-relay/installation-requirements/"},
-    {"source" : "/develop/apps/integrate", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/libs/javascript", "destination" : "/developers/integrate/"},
-    {"source" : "/rsk/node/contribute/linux", "destination" : "/node-operators/setup/node-runner/linux/"},
-    {"source" : "/assets/rsk/architecture/powpeg-hsm-attestation/pnetwork.html", "destination" : "/concepts/powpeg/hsm-firmware-attestation/"},
-    {"source" : "/guides/two-way-peg-app/overview", "destination" : "/resources/guides/two-way-peg-app/overview/"},
-    {"source" : "/resources/guides/two-way-peg-app/overview", "destination" : "/resources/guides/powpeg-app/overview/"},
-    {"source" : "/rif/rns/try-rns", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/starter-kits/hackathon-starter", "destination" : "/resources/hackathon/"},
-    {"source" : "/rif/rns/testnet", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/libs/javascript/Getting-started", "destination" : "/developers/integrate/"},
-    {"source" : "/rsk/node/contribute/windows", "destination" : "/node-operators/setup/node-runner/windows/"},
-    {"source" : "/rsk/node/configure", "destination" : "/node-operators/setup/configuration/"},
-    {"source" : "/rif/rns/libs", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/operations/set-btc-address", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/two-way-peg-app/pegout/pegout-common-errors", "destination" : "/resources/guides/two-way-peg-app/pegout/pegout-common-errors/"},
-    {"source" : "/resources/guides/two-way-peg-app/pegout/pegout-common-errors", "destination" : "/resources/guides/powpeg-app/pegout/pegout-common-errors/"},
-    {"source" : "/rif/rlogin/libraries/express-did-auth", "destination" : "/developers/integrate/"},
-    {"source" : "/rsk/rbtc/conversion/with-ledger", "destination" : "/concepts/rbtc/conversion-with-ledger/"},
-    {"source" : "/rif/rns/operations/register-subdomain", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/architecture/definitive-resolver", "destination" : "/developers/integrate/"},
-    {"source" : "/rsk/architecture/flyover", "destination" : "/developers/integrate/flyover/"},
-    {"source" : "/rif/rns/operations/renew", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/dex/dexes-on-rsk", "destination" : "https://blog.rootstock.io/"},
-    {"source" : "/rif/rns/architecture/Registrar", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/libs/iOS", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/operations/set-addr", "destination" : "/developers/integrate/"},
-    {"source" : "/assets/rsk/architecture/powpeg-hsm-attestation/sovryn.html", "destination" : "/concepts/powpeg/hsm-firmware-attestation/"},
-    {"source" : "/rif/rns/architecture/NameResolver", "destination" : "/developers/integrate/"},
-    {"source" : "/rsk/node/security-chain", "destination" : "/node-operators/setup/security-chain/"},
-    {"source" : "/rsk/node/configure/verbosity", "destination" : "/node-operators/setup/configuration/verbosity/"},
-    {"source" : "/rif/rlogin/integrations", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/dex/overview", "destination" : "https://blog.rootstock.io/"},
-    {"source" : "/rif/rns/libs/javascript/Utils", "destination" : "/developers/integrate/"},
-    {"source" : "/rsk/architecture/mining/reference", "destination" : "/node-operators/merged-mining/reference/"},
-    {"source" : "/rsk/node/architecture/json-rpc/transport-protocols", "destination" : "/node-operators/json-rpc/transport-protocols/"},
-    {"source" : "/rsk/architecture/account-based", "destination" : "/concepts/account-based-addresses/"},
-    {"source" : "/rif/rns/libs/Python", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/operations/get-reverse", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/specs/resolvers", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/libs/rns-artifacts", "destination" : "/developers/integrate/"},
-    {"source" : "/rsk/node/contribute/cli", "destination" : "/node-operators/setup/node-runner/cli/"},
-    {"source" : "/rif/rns/architecture/Resolver", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/relay/contracts", "destination" : "/developers/integrate/rif-relay/contracts/"},
-    {"source" : "/rif/rollup/dev-reference/sdk", "destination" : "/developers/integrate/"},
-    {"source" : "/rsk/node/contribute/macos", "destination" : "/node-operators/setup/node-runner/macos/"},
-    {"source" : "/rif/rns/architecture/rsk-registrar/registrars/fifsaddr", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/operations/set-resolver", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/flyover/get-started", "destination" : "/developers/integrate/flyover/"},
-    {"source" : "/guides/flyover/design-architecture", "destination" : "/developers/integrate/flyover/"},
-    {"source" : "/rif/rns/libs/javascript/RNS-instance", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/flyover/tools", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rlogin/libraries/modal", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/specs", "destination" : "/developers/integrate/"},
-    {"source" : "/rsk/node/contribute", "destination" : "/node-operators/setup/node-runner/"},
-    {"source" : "/rif/rlogin/samples", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rlogin/features", "destination" : "/developers/integrate/"},
-    {"source" : "/tutorials", "destination" : "/resources/tutorials/"},
-    {"source" : "/rif/rollup", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/operations/resolve", "destination" : "/developers/integrate/"},
-    {"source" : "/rsk/node/reproducible", "destination" : "/node-operators/setup/reproducible-build/"},
-    {"source" : "/rif/rns/libs/javascript/Operations", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/architecture/rsk-registrar/registrars/fifs", "destination" : "/developers/integrate/"},
-    {"source" : "/rsk/node/configure/switch-network", "destination" : "/node-operators/setup/configuration/switch-network/"},
-    {"source" : "/rif/rns/architecture/MultiCryptoResolver", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/operations", "destination" : "/developers/integrate/"},
-    {"source" : "/rsk/rbtc", "destination" : "/concepts/rbtc/"},
-    {"source" : "/rif/rlogin/libraries/vc-json-schemas", "destination" : "/developers/integrate/"},
-    {"source" : "/develop/wallet/use", "destination" : "/dev-tools/wallets/"},
-    {"source" : "/rif/rns/operations/register", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/architecture", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/architecture/ReverseRegistrar", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/architecture/rsk-registrar/renewers/renewer", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/libs/javascript/Errors", "destination" : "/developers/integrate/"},
-    {"source" : "/rsk/rbtc/conversion/networks/testnet", "destination" : "/concepts/rbtc/networks/"},
-    {"source" : "/rif/rns/operations/transfer", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/integrate", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rollup/glossary", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/wallet/user-guide/create-and-import", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/libs/javascript/Contribute", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/tools/Web3", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/architecture/rsk-registrar/rskowner", "destination" : "/developers/integrate/"},
-    {"source" : "/rsk/node/architecture/json-rpc/configuration-limits", "destination" : "/node-operators/json-rpc/configuration-limits/"},
-    {"source" : "/rif/rns/architecture/RSKResolver", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rlogin/libraries/did-auth-client/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/operations/Resolve-a-name/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/architecture/NameResolver/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/libs/rns-artifacts/resolver/string-resolver/", "destination" : "/developers/integrate/"},
-    {"source" : "/kb/configure-truffle-to-rsk", "destination" : "/resources/tutorials/"},
-    {"source" : "/rif/", "destination" : "/concepts/rif-suite/"},
-    {"source" : "/develop/wallet/use/metamask/", "destination" : "/dev-tools/wallets/metamask/"},
-    {"source" : "/wallet/use/metamask/", "destination" : "/dev-tools/wallets/metamask/"},
-    {"source" : "/wallet/use/", "destination" : "/dev-tools/wallets/"},
-    {"source" : "/tutorials/deploy-smart-contracts/", "destination" : "/developers/smart-contracts/hardhat/deploy-smart-contracts"},
-    {"source" : "/kb/first-frontend-web3-injected/", "destination" : "/developers/smart-contracts/hardhat/interact-with-frontend"},
-    {"source" : "/rsk/", "destination" : "/concepts/"},
-    {"source" : "/tools/tokenbridge/", "destination" : "/resources/guides/atlas/"},
-    {"source" : "/guides/get-crypto-on-rsk/rbtc-exchanges/", "destination" : "https://rootstock.io/rbtc/"},
-    {"source" : "/kb/frontend-web3-local/", "destination" : "/developers/smart-contracts/hardhat/interact-with-frontend"},
-    {"source" : "/rsk/node/use/", "destination" : "/node-operators/setup/"},
-    {"source" : "/tools/faucet/", "destination" : "/dev-tools/"},
-    {"source" : "/rsk/rbtc/conversion/networks/testnet/", "destination" : "/concepts/rbtc/networks/"},
-    {"source" : "/kb/geth-attach-deploy-smart-contracts/", "destination" : "/developers/smart-contracts/hardhat/deploy-smart-contracts"},
-    {"source" : "/guides/quickstart/transactions/", "destination" : "/developers/blockchain-essentials/transactions/"},
-    {"source" : "/rsk/architecture/powpeg/", "destination" : "/concepts/powpeg/"},
-    {"source" : "/rsk/rbtc/conversion/", "destination" : "/concepts/rbtc/conversion/"},
-    {"source" : "/rsk/rbtc/gas/", "destination" : "/concepts/rbtc/gas/"},
-    {"source" : "/kb/faqs/", "destination" : "/resources/faqs/"},
-    {"source" : "/guides/nft/configure-nft-metadata/", "destination" : "https://blog.rootstock.io/"},
-    {"source" : "/kb/compile-smart-contracts-go/", "destination" : "/developers/smart-contracts/"},
-    {"source" : "/guides/stablecoin/stablecoin-on-bitcoin/", "destination" : "https://blog.rootstock.io/stablecoin-vs-digital-asset/"},
-    {"source" : "/guides/get-crypto-on-rsk/powpeg-btc-rbtc/", "destination" : "https://rootstock.io/rbtc/"},
-    {"source" : "/rsk/node/architecture/json-rpc/", "destination" : "/node-operators/json-rpc/"},
-    {"source" : "/kb/rsk-api/", "destination" : "/developers/rpc-api/"},
-    {"source" : "/rsk/rbtc/", "destination" : "/concepts/rbtc/"},
-    {"source" : "/solutions/moneyonchain/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/kb/hardhat-setup-on-rsk/", "destination" : "/developers/quickstart/"},
-    {"source" : "/solutions/sovryn/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/kb/remix-and-metamask-with-rsk-testnet/", "destination" : "/developers/quickstart/remix/"},
-    {"source" : "/rsk/architecture/account-based/", "destination" : "/concepts/account-based-addresses/"},
-    {"source" : "/tools/tokenbridge/faq/", "destination" : "/resources/guides/atlas/"},
-    {"source" : "/rsk/architecture/mining/", "destination" : "/concepts/merged-mining/"},
-    {"source" : "/kb/send-tokens-through-metamask/", "destination" : "/resources/tutorials/"},
-    {"source" : "/guides/stablecoin/how-to-get-stablecoins/", "destination" : "https://blog.rootstock.io/"},
-    {"source" : "/rif/token/", "destination" : "/concepts/rif-suite/token/"},
-    {"source" : "/guides/get-crypto-on-rsk/rbtc-wallets/", "destination" : "https://rootstock.io/rbtc/"},
-    {"source" : "/rsk/rbtc/conversion/networks/", "destination" : "/concepts/rbtc/networks/"},
-    {"source" : "/solutions/fireblocks/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/kb/deploy-smart-contracts/", "destination" : "/developers/smart-contracts/hardhat/"},
-    {"source" : "/rif/rns/", "destination" : "/developers/integrate/"},
-    {"source" : "/tools/tokenbridge/contractaddresses/", "destination" : "/resources/guides/atlas/"},
-    {"source" : "/guides/stablecoin/how-to-use-rsk-tokenbridge/", "destination" : "https://blog.rootstock.io/"},
-    {"source" : "/tools/explorer/", "destination" : "/dev-tools/explorers/"},
-    {"source" : "/develop/wallet/use/ledger/", "destination" : "/dev-tools/wallets/"},
-    {"source" : "/guides/dex/dexes-on-rsk/", "destination" : "https://blog.rootstock.io/"},
-    {"source" : "/guides/full-stack-dapp-on-rsk/part1-overview/", "destination" : "/developers/smart-contracts/"},
-    {"source" : "/quick-start/step1-install-rsk-local-node", "destination" : "/developers/rpc-api/setup/"},
-    {"source" : "/kb/create-a-token/", "destination" : "/resources/tutorials/"},
-    {"source" : "/tools/tokenbridge/dappguide/", "destination" : "/resources/guides/atlas/"},
-    {"source" : "/rsk/node/configure/reference/", "destination" : "/node-operators/setup/configuration/reference/"},
-    {"source" : "/guides/stablecoin/overview/", "destination" : "https://blog.rootstock.io/"},
-    {"source" : "/rsk/rbtc/conversion/with-ledger/", "destination" : "/concepts/rbtc/conversion-with-ledger/"},
-    {"source" : "/rsk/node/", "destination" : "/node-operators/"},
-    {"source" : "/guides/get-crypto-on-rsk/overview/", "destination" : "https://blog.rootstock.io/"},
-    {"source" : "/guides/dex/overview/", "destination" : "https://blog.rootstock.io/"},
-    {"source" : "/rif/rlogin/", "destination" : "/developers/integrate/"},
-    {"source" : "/quick-start/step1-install-rsk-local-node/", "destination" : "/developers/rpc-api/setup/"},
-    {"source" : "/guides/nft/overview/", "destination" : "https://blog.rootstock.io/"},
-    {"source" : "/kb/verify-address-ownership/", "destination" : "/resources/tutorials/"},
-    {"source" : "/tools/explorer/blockscout/", "destination" : "/dev-tools/explorers/blockscout/"},
-    {"source" : "/rif/rns/operations/register/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/dex/", "destination" : "https://blog.rootstock.io/"},
-    {"source" : "/rif/rollup/", "destination" : "/developers/integrate/"},
-    {"source" : "/rsk/architecture/flyover/", "destination" : "/developers/integrate/flyover/"},
-    {"source" : "/rsk/architecture/mining/remasc/", "destination" : "/node-operators/merged-mining/remasc/"},
-    {"source" : "/courses/blockchain-developer/", "destination" : "/resources/courses/"},
-    {"source" : "/solutions/oraclemoneyonchain/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/rsk/node/install/operating-systems/", "destination" : "/node-operators/setup/installation/"},
-    {"source" : "/rif/rns/tools/Web3/", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/rlogin/connect-frontend/", "destination" : "/developers/integrate/"},
-    {"source" : "/kb/getblock-rpc/", "destination" : "/resources/tutorials/"},
-    {"source" : "/guides/quickstart/overview/", "destination" : "/developers/blockchain-essentials/overview/"},
-    {"source" : "/rif/relay/", "destination" : "/developers/integrate/rif-relay/"},
-    {"source" : "/contribute/bug-bounty-program/", "destination" : "/resources/contribute/bug-bounty/"},
-    {"source" : "/guides/nft/create-smart-contract/", "destination" : "/resources/tutorials/"},
-    {"source" : "/rsk/node/install/requirements/", "destination" : "/node-operators/setup/installation/"},
-    {"source" : "/kb/geth-attach-local-node/", "destination" : "/resources/tutorials/"},
-    {"source" : "/rsk/architecture/security/", "destination" : "/concepts/powpeg/security-model/"},
-    {"source" : "/solutions/babelfish/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/kb/create-a-collectable-token/", "destination" : "/resources/tutorials/"},
-    {"source" : "/develop/json-rpc-api", "destination" : "/developers/rpc-api/setup/"},
-    {"source" : "/solutions/nownodes/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/develop/json-rpc-api/", "destination" : "/developers/rpc-api/setup/"},
-    {"source" : "/develop/wallet/use/mycrypto/", "destination" : "/dev-tools/wallets/"},
-    {"source" : "/guides/stablecoin/how-to-store-stablecoins/", "destination" : "https://blog.rootstock.io/stablecoin-vs-digital-asset/"},
-    {"source" : "/rsk/rbtc/conversion/with-trezor-t/", "destination" : "/concepts/rbtc/conversion-with-trezor/"},
-    {"source" : "/solutions/liquality/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/solutions/defiant/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/kb/rootstock-metamask/", "destination" : "/resources/tutorials/rootstock-metamask/"},
-    {"source" : "/kb/tokenbridge-troubleshooting/", "destination" : "/resources/guides/atlas/"},
-    {"source" : "/kb/rskj/", "destination" : "/developers/rpc-api/setup/"},
-    {"source" : "/develop/wallet/use/json-rpc/", "destination" : "/dev-tools/wallets/"},
-    {"source" : "/rsk/node/configure/cli/", "destination" : "/node-operators/setup/configuration/cli/"},
-    {"source" : "/solutions/getblock/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/rsk/node/configure/", "destination" : "/node-operators/setup/configuration/"},
-    {"source" : "/solutions/edge/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/rsk/node/configure/mining/", "destination" : "/node-operators/merged-mining/configure-mining/"},
-    {"source" : "/guides/two-way-peg-app/overview/", "destination" : "/resources/guides/two-way-peg-app/overview/"},
-    {"source" : "/resources/guides/two-way-peg-app/overview/", "destination" : "/resources/guides/powpeg-app/overview/"},
-    {"source" : "/guides/flyover/", "destination" : "/developers/integrate/flyover/"},
-    {"source" : "/develop/apps/tools/gas-station/", "destination" : "/dev-tools/"},
-    {"source" : "/rsk/architecture/", "destination" : "/concepts/fundamentals/"},
-    {"source" : "/rsk/node/install/operating-systems/ubuntu/", "destination" : "/node-operators/setup/installation/ubuntu/"},
-    {"source" : "/guides/rif-relay/smart-wallets/", "destination" : "/developers/integrate/rif-relay/smart-wallets/"},
-    {"source" : "/tools/rpc-api/", "destination" : "/developers/rpc-api/"},
-    {"source" : "/guides/quickstart/browser/", "destination" : "/developers/blockchain-essentials/browser/"},
-    {"source" : "/develop/libs/json-rpc/", "destination" : "/node-operators/json-rpc/"},
-    {"source" : "/rsk/architecture/mining/implementation-guide/", "destination" : "/node-operators/merged-mining/getting-started/"},
-    {"source" : "/rsk/node/install/", "destination" : "/node-operators/setup/installation/"},
-    {"source" : "/kb/defillama/", "destination" : "/resources/tutorials/defillama/"},
-    {"source" : "/rsk/node/troubleshooting/", "destination" : "/node-operators/troubleshooting/"},
-    {"source" : "/rsk/architecture/mining/reference/", "destination" : "/node-operators/merged-mining/reference/"},
-    {"source" : "/rif/rns/tools/RNS-Manager/", "destination" : "/developers/integrate/"},
-    {"source" : "/rsk/node/install/update/", "destination" : "/node-operators/maintenance/update/"},
-    {"source" : "/rsk/node/architecture/json-rpc/configuration-limits/", "destination" : "/node-operators/json-rpc/configuration-limits/"},
-    {"source" : "/guides/full-stack-dapp-on-rsk/part3-front-end/", "destination" : "/developers/smart-contracts/hardhat/"},
-    {"source" : "/kb/interact-with-smart-contracts/", "destination" : "/developers/smart-contracts/hardhat/interact-with-frontend"},
-    {"source" : "/develop/wallet/", "destination" : "/dev-tools/wallets/"},
-    {"source" : "/rsk/node/install/operating-systems/java/", "destination" : "/node-operators/setup/installation/java/"},
-    {"source" : "/rif/rns/libs/Python/", "destination" : "/developers/integrate/"},
-    {"source" : "/rsk/node/configure/verbosity/", "destination" : "/node-operators/setup/configuration/verbosity/"},
-    {"source" : "/the-stack/", "destination" : "/concepts/fundamentals/stack/"},
-    {"source" : "/solutions/math-wallet/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/solutions/chainlink/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/guides/two-way-peg-app/pegout/deriving-electrum/", "destination" : "/resources/guides/two-way-peg-app/pegout/deriving-electrum/"},
-    {"source" : "/resources/guides/two-way-peg-app/pegout/deriving-electrum/", "destination" : "/resources/guides/powpeg-app/pegout/deriving-electrum/"},
-    {"source" : "/solutions/api3/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/solutions/kriptonmarket/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/kb/rskj-for-developers/", "destination" : "/devlopers/rpc-api/"},
-    {"source" : "/kb/interface-registry/", "destination" : "/developers/smart-contracts/interface-registry/"},
-    {"source" : "/guides/two-way-peg-app/faqs/", "destination" : "/resources/guides/two-way-peg-app/faqs/"},
-    {"source" : "/resources/guides/two-way-peg-app/faqs/", "destination" : "/resources/guides/powpeg-app/faqs/"},
-    {"source" : "/rif/wallet/dev-reference/troubleshooting/", "destination" : "/developers/integrate/"},
-    {"source" : "/kb/the-graph-rootstock/", "destination" : "/dev-tools/thegraph/"},
-    {"source" : "/tools/thegraph/", "destination" : "/dev-tools/thegraph/"},
-    {"source" : "/dev-tools/thegraph/", "destination" : "/dev-tools/data/thegraph/"},
-    {"source" : "/solutions/tenderly/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/guides/full-stack-dapp-on-rsk/", "destination" : "/developers/smart-contracts/"},
-    {"source" : "/rif/rns/libs/javascript/", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/full-stack-dapp-on-rsk/part2-smart-contracts/", "destination" : "/developers/smart-contracts/"},
-    {"source" : "/rif/rns/guide/getting-started/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/guide/brave/", "destination" : "/developers/integrate/"},
-    {"source" : "/kb/", "destination" : "/resources/tutorials/"},
-    {"source" : "/kb/build-with-tenderly/", "destination" : "/resources/tutorials/"},
-    {"source" : "/rsk/architecture/fast-payments/", "destination" : "/concepts/fundamentals/"},
-    {"source" : "/kb/create-a-token-02/", "destination" : "/resources/tutorials/"},
-    {"source" : "/rsk/node/contribute/linux/", "destination" : "/node-operators/setup/node-runner/linux/"},
-    {"source" : "/courses/", "destination" : "/resources/courses/"},
-    {"source" : "/kb/configure-truffle-to-rsk/", "destination" : "/resources/tutorials/"},
-    {"source" : "/guides/armadillo/overview/", "destination" : "/concepts/"},
-    {"source" : "/tools/", "destination" : "/dev-tools/"},
-    {"source" : "/rsk/architecture/powpeg", "destination" : "/concepts/powpeg/"},
-    {"source" : "/solutions/covalent/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/solutions/bullanetwork/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/rsk/node/contribute/macos/", "destination" : "/node-operators/setup/node-runner/macos/"},
-    {"source" : "/kb/ethereum-dapp-to-rsk/", "destination" : "/resources/guides/"},
-    {"source" : "/rsk/node/reproducible/", "destination" : "/node-operators/setup/reproducible-build/"},
-    {"source" : "/guides/rif-relay/", "destination" : "/developers/integrate/rif-relay/"},
-    {"source" : "/rif/rns/testnet/", "destination" : "/developers/integrate/"},
-    {"source" : "/develop/wallet/rif-wallet/", "destination" : "/dev-tools/wallets/"},
-    {"source" : "/solutions/chainbeat/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/guides/flyover/design-architecture/", "destination" : "/developers/integrate/flyover/"},
-    {"source" : "/guides/armadillo/", "destination" : "/concepts/"},
-    {"source" : "/guides/armadillo/merged-mining/", "destination" : "/node-operators/merged-mining/"},
-    {"source" : "/rsk/node/configure/switch-network/", "destination" : "/node-operators/setup/configuration/switch-network/"},
-    {"source" : "/rsk/node/architecture/json-rpc/personal-module-methods/", "destination" : "/node-operators/json-rpc/personal-module-methods/"},
-    {"source" : "/develop/apps/integrate/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/wallet/user-guide/create-and-import/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/relay/architecture/", "destination" : "/developers/integrate/rif-relay/architecture/"},
-    {"source" : "/assets/files/mining-config/miner3.conf", "destination" : "/node-operators/merged-mining/configure-mining/"},
-    {"source" : "/solutions/envio/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/solutions/givetrack/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/guides/two-way-peg-app/", "destination" : "/resources/guides/two-way-peg-app/"},
-    {"source" : "/resources/guides/two-way-peg-app/", "destination" : "/resources/guides/powpeg-app/"},
-    {"source" : "/guides/quickstart/hardhat/interact-with-frontend/", "destination" : "/developers/smart-contracts/hardhat/interact-with-frontend/"},
-    {"source" : "/guides/two-way-peg-app/pegin/", "destination" : "/resources/guides/two-way-peg-app/pegin/"},
-    {"source" : "/resources/guides/two-way-peg-app/pegin/", "destination" : "/resources/guides/powpeg-app/pegin/"},
-    {"source" : "/guides/quickstart/hardhat/deploy-smart-contract/", "destination" : "/developers/smart-contracts/hardhat/deploy-smart-contract/"},
-    {"source" : "/rsk/node/security-chain/", "destination" : "/node-operators/setup/security-chain/"},
-    {"source" : "/rif/rollup/overview/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/guide/value-proposition/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/wallet/dev-reference/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/tools/Subdomain-tool/", "destination" : "/developers/integrate/"},
-    {"source" : "/kb/fungible-tokens-standard/", "destination" : "/resources/tutorials/"},
-    {"source" : "/assets/files/mining-config/miner1.conf", "destination" : "/node-operators/merged-mining/configure-mining/"},
-    {"source" : "/solutions/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/solutions/beexo/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/guides/quickstart/", "destination" : "/developers/quickstart/"},
-    {"source" : "/guides/quickstart/hardhat/configure-hardhat/", "destination" : "/developers/smart-contracts/hardhat/configure-hardhat/"},
-    {"source" : "/guides/nft/deploy-nft-on-rsk/", "destination" : "/resources/tutorials/"},
-    {"source" : "/guides/quickstart/overview/rootstock-ethereum-differences/", "destination" : "/developers/blockchain-essentials/overview#rootstock-ethereum-differences"},
-    {"source" : "/guides/starter-kits/dapp-automation-cucumber/", "destination" : "/resources/tutorials/dapp-automation-cucumber/"},
-    {"source" : "/guides/flyover/get-started/", "destination" : "/developers/integrate/flyover/sdk/"},
-    {"source" : "/rsk/architecture/privacy/", "destination" : "/concepts/fundamentals/"},
-    {"source" : "/rsk/node/contribute/cli/", "destination" : "/node-operators/setup/node-runner/cli/"},
-    {"source" : "/rsk/node/peer-scoring-system/", "destination" : "/node-operators/setup/configuration/peer-scoring-system/"},
-    {"source" : "/rif/rns/integrate/integrate-wallet/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/architecture/MultiCryptoResolver/", "destination" : "/developers/integrate/"},
-    {"source" : "/rsk/architecture/mining/remasc", "destination" : "/node-operators/merged-mining/remasc/"},
-    {"source" : "/guides/nft/", "destination" : "/resources/tutorials/"},
-    {"source" : "/guides/quickstart/overview/evm-compatibility/", "destination" : "/developers/blockchain-essentials/overview#evm-compatibility"},
-    {"source" : "/guides/two-way-peg-app/pegout/ledger/", "destination" : "/resources/guides/two-way-peg-app/pegout/ledger/"},
-    {"source" : "/resources/guides/two-way-peg-app/pegout/ledger/", "destination" : "/resources/guides/powpeg-app/pegout/ledger/"},
-    {"source" : "/guides/quickstart/hardhat/", "destination" : "/developers/quickstart/hardhat/"},
-    {"source" : "/rsk/node/configure/mining/autominer/", "destination" : "/node-operators/merged-mining/autominer/"},
-    {"source" : "/rif/rlogin/authentication/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/wallet/overview/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rlogin/libraries/express-did-auth/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/operations/set-reverse/", "destination" : "/developers/integrate/"},
-    {"source" : "/solutions/dcent/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/guides/quickstart/browser/custom-network-and-token/", "destination" : "/developers/browser/custom-network-and-token/"},
-    {"source" : "/guides/starter-kits/", "destination" : "/developers/quickstart/"},
-    {"source" : "/guides/two-way-peg-app/advanced-operations/", "destination" : "/resources/guides/two-way-peg-app/advanced-operations/"},
-    {"source" : "/resources/guides/two-way-peg-app/advanced-operations/", "destination" : "/resources/guides/powpeg-app/advanced-operations/"},
-    {"source" : "/guides/two-way-peg-app/pegin/ledger/", "destination" : "/resources/guides/two-way-peg-app/pegin/ledger/"},
-    {"source" : "/resources/guides/two-way-peg-app/pegin/ledger/", "destination" : "/resources/guides/powpeg-app/pegin/ledger/"},
-    {"source" : "/guides/stablecoin/", "destination" : "https://blog.rootstock.io/stablecoin/"},
-    {"source" : "/guides/armadillo/network-under-attack/", "destination" : "/concepts/"},
-    {"source" : "/develop/wallet/use/", "destination" : "/dev-tools/wallets/"},
-    {"source" : "/develop/libs/", "destination" : "/developers/libraries/"},
-    {"source" : "/rsk/node/network-upgrade/", "destination" : "/node-operators/maintenance/network-upgrades/"},
-    {"source" : "/guides/rif-relay/deployment/", "destination" : "/developers/integrate/rif-relay/deployment/"},
-    {"source" : "/rif/rns/architecture/definitive-resolver/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/guide/operations/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/relay/contracts/", "destination" : "/developers/integrate/rif-relay/contracts/"},
-    {"source" : "/rif/rns/architecture/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/libs/javascript/Errors/", "destination" : "/developers/integrate/"},
-    {"source" : "/contribute/writing-contests/", "destination" : "/resources/contribute/writing-contest/"},
-    {"source" : "/rsk/node/architecture/json-rpc", "destination" : "/node-operators/json-rpc/"},
-    {"source" : "/guides/two-way-peg-app/advanced-operations/supported-browsers/", "destination" : "/resources/guides/two-way-peg-app/advanced-operations/supported-browsers/"},
-    {"source" : "/resources/guides/two-way-peg-app/advanced-operations/supported-browsers/", "destination" : "/resources/guides/powpeg-app/advanced-operations/supported-browsers/"},
-    {"source" : "/guides/two-way-peg-app/pegout/metamask/", "destination" : "/resources/guides/two-way-peg-app/pegout/metamask/"},
-    {"source" : "/resources/guides/two-way-peg-app/pegout/metamask/", "destination" : "/resources/guides/powpeg-app/pegout/metamask/"},
-    {"source" : "/guides/two-way-peg-app/pegin/status/", "destination" : "/resources/guides/two-way-peg-app/pegin/status/"},
-    {"source" : "/resources/guides/two-way-peg-app/pegin/status/", "destination" : "/resources/guides/powpeg-app/pegin/status/"},
-    {"source" : "/guides/two-way-peg-app/advanced-operations/supported-addresses/", "destination" : "/resources/guides/two-way-peg-app/advanced-operations/supported-addresses/"},
-    {"source" : "/resources/guides/two-way-peg-app/advanced-operations/supported-addresses/", "destination" : "/resources/guides/powpeg-app/advanced-operations/supported-addresses/"},
-    {"source" : "/resources/guides/two-way-peg-app/advanced-operations/supported-addresses/", "destination" : "/resources/guides/powpeg-app/pegout/pegout-common-errors/"},
-    {"source" : "/resources/guides/two-way-peg-app/pegout/pegout-common-errors/", "destination" : "/resources/guides/powpeg-app/pegout/pegout-common-errors/"},
-    {"source" : "/guides/two-way-peg-app/advanced-operations/design-architecture/", "destination" : "/resources/guides/two-way-peg-app/advanced-operations/design-architecture/"},
-    {"source" : "/resources/guides/two-way-peg-app/advanced-operations/design-architecture/", "destination" : "/resources/guides/powpeg-app/advanced-operations/design-architecture/"},
-    {"source" : "/guides/rlogin/", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/starter-kits/hackathon-starter/", "destination" : "/resources/hackathon/"},
-    {"source" : "/guides/armadillo/glossary/", "destination" : "/concepts/"},
-    {"source" : "/rif/rns/architecture/rsk-registrar/rskowner/", "destination" : "/developers/integrate/"},
-    {"source" : "/rsk/node/install/operating-systems/docker/", "destination" : "/node-operators/setup/installation/docker/"},
-    {"source" : "/rif/rns/architecture/RSKResolver/", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/rif-relay/develop/", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/rif-relay/integrate/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/guide/advanced/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/architecture/reverse-suite/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/tools/MyCrypto/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/wallet/user-guide/funding-a-wallet/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/mainnet/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/operations/set-btc-address/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/relay/versions/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/guide/setup/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rollup/dev-reference/sdk/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/libs/Android/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/relay/gas-costs/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/operations/resolve/", "destination" : "/developers/integrate/"},
-    {"source" : "/tools/tokenbridge/usingmycrypto/", "destination" : "/resources/guides/atlas/"},
-    {"source" : "/contribute/", "destination" : "/resources/contribute/"},
-    {"source" : "/webinars/", "destination" : "https://rootstock.io/events?_gl=1*1804h96*_gcl_au*NTk3NjcxMTguMTcxOTE0NzgyNw.."},
-    {"source" : "/guides/two-way-peg-app/glossary/", "destination" : "/resources/guides/two-way-peg-app/glossary/"},
-    {"source" : "/resources/guides/two-way-peg-app/glossary/", "destination" : "/resources/guides/powpeg-app/glossary/"},
-    {"source" : "/guides/quickstart/hardhat/write-smart-contract/", "destination" : "/developers/smart-contracts/hardhat/write-smart-contract/"},
-    {"source" : "/guides/two-way-peg-app/pegout/trezor/", "destination" : "/resources/guides/two-way-peg-app/pegout/trezor/"},
-    {"source" : "/resources/guides/two-way-peg-app/pegout/trezor/", "destination" : "/resources/guides/powpeg-app/pegout/trezor/"},
-    {"source" : "/guides/two-way-peg-app/advanced-operations/supported-wallets/", "destination" : "/resources/guides/two-way-peg-app/advanced-operations/supported-wallets/"},
-    {"source" : "/resources/guides/two-way-peg-app/advanced-operations/supported-wallets/", "destination" : "/resources/guides/powpeg-app/advanced-operations/supported-wallets/"},
-    {"source" : "/guides/quickstart/browser/install-metamask/", "destination" : "/developers/blockchain-essentials/browser/install-metamask"},
-    {"source" : "/guides/two-way-peg-app/pegin/liquality/", "destination" : "/resources/guides/two-way-peg-app/pegin/liquality/"},
-    {"source" : "/resources/guides/two-way-peg-app/pegin/liquality/", "destination" : "/resources/guides/poweg/pegin/liquality/"},
-    {"source" : "/guides/two-way-peg-app/pegout/", "destination" : "/resources/guides/two-way-peg-app/pegout/"},
-    {"source" : "/resources/guides/two-way-peg-app/pegout/", "destination" : "/resources/guides/powpeg-app/pegout/"},
-    {"source" : "/guides/", "destination" : "/resources/guides/"},
-    {"source" : "/guides/get-crypto-on-rsk/", "destination" : "https://blog.rootstock.io/get-crypto-on-rsk/"},
-    {"source" : "/guides/flyover/tools/", "destination" : "/developers/integrate/flyover/"},
-    {"source" : "/guides/flyover/glossary/", "destination" : "/developers/integrate/flyover/glossary/"},
-    {"source" : "/guides/armadillo/about/", "destination" : "/concepts/"},
-    {"source" : "/kb/transaction-rate-limiter-rskj/", "destination" : "/resources/tutorials/"},
-    {"source" : "/rif/scheduler/services/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/identity/specs/identity-layout/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/identity/libraries/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/identity/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/scheduler/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/marketplace/", "destination" : "/developers/integrate/"},
-    {"source" : "/community-calls/", "destination" : "https://lu.ma/btchackathons"},
-    {"source" : "/rsk/node/architecture/", "destination" : "/node-operators/setup/configuration/"},
-    {"source" : "/rsk/node/contribute/", "destination" : "/node-operators/setup/node-runner/"},
-    {"source" : "/rsk/node/architecture/json-rpc/transport-protocols/", "destination" : "/node-operators/json-rpc/transport-protocols/"},
-    {"source" : "/rif/rns/architecture/rsk-registrar/", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/quickstart/transactions/transfer-trif/", "destination" : "/developers/blockchain-essentials/transactions#transfer-trif"},
-    {"source" : "/rif/rlogin/features/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/operations/migrate-from-auction/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/wallet/dev-reference/running-with-local-server/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/wallet/dev-reference/rif-wallet-libs/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rollup/dev-reference/design/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/guide/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/wallet/user-guide/viewing-transaction-history/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rollup/dev-reference/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rlogin/faqs/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/specs/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rlogin/libraries/vc-json-schemas/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/libs/javascript/Operations/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/operations/get-reverse/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rlogin/design-and-architecture/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/libs/javascript/Advanced-usage/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/integrate/integrate-dapp/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/architecture/registry/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/architecture/reverse-suite/NameResolver/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/libs/javascript/Utils/", "destination" : "/concepts/rif-suite/"},
-    {"source" : "/rif/rns/architecture/Registrar/", "destination" : "/developers/integrate/"},
-    {"source" : "/kb/using-blockmason/", "destination" : "/resources/tutorials/"},
-    {"source" : "/rsk", "destination" : "/concepts/fundamentals/"},
-    {"source" : "/solutions/3xpl/", "destination" : "https://rootstock.io/ecosystem/"},
-    {"source" : "/rsk/rbtc/conversion/with-node-and-console/", "destination" : "/concepts/rbtc/conversion/with-node-and-console/"},
-    {"source" : "/develop/libs/rsk-precompiled-abis/", "destination" : "/developers/libraries/rsk-precompiled-abis/"},
-    {"source" : "/develop/wallet/integrate/", "destination" : "/dev-tools/wallets/"},
-    {"source" : "/rsk/node/contribute/windows/", "destination" : "/node-operators/setup/node-runner/windows/"},
-    {"source" : "/develop/", "destination" : "/developers/"},
-    {"source" : "/guides/two-way-peg-app/pegout/ledger-liquality/", "destination" : "/resources/guides/two-way-peg-app/pegout/ledger-liquality/"},
-    {"source" : "/resources/guides/two-way-peg-app/pegout/ledger-liquality/", "destination" : "/resources/guides/powpeg-app/pegout/ledger-liquality/"},
-    {"source" : "/guides/two-way-peg-app/pegin/leather/", "destination" : "/resources/guides/two-way-peg-app/pegin/leather/"},
-    {"source" : "/resources/guides/two-way-peg-app/pegin/leather/", "destination" : "/resources/guides/powpeg-app/pegin/leather/"},
-    {"source" : "/guides/quickstart/overview/merged-mining/", "destination" : "/concepts/merged-mining/"},
-    {"source" : "/guides/two-way-peg-app/pegout/status/", "destination" : "/resources/guides/two-way-peg-app/pegout/status/"},
-    {"source" : "/resources/guides/two-way-peg-app/pegout/status/", "destination" : "/resources/guides/powpeg-app/pegout/status/"},
-    {"source" : "/guides/quickstart/transactions/view-transactions/", "destination" : "/developers/blockchain-essentials/transactions#view-transactions"},
-    {"source" : "/guides/quickstart/transactions/view-network-stats/", "destination" : "/developers/blockchain-essentials/transactions#view-network-stats"},
-    {"source" : "/guides/two-way-peg-app/prerequisites/", "destination" : "/resources/guides/two-way-peg-app/prerequisites/"},
-    {"source" : "/resources/guides/two-way-peg-app/prerequisites/", "destination" : "/resources/guides/powpeg-app/prerequisites/"},
-    {"source" : "/guides/quickstart/transactions/transfer-trbtc/", "destination" : "/developers/blockchain-essentials/transactions#transfer-trbtc"},
-    {"source" : "/guides/two-way-peg-app/pegin/trezor/", "destination" : "/resources/guides/two-way-peg-app/pegin/trezor/"},
-    {"source" : "/resources/guides/two-way-peg-app/pegin/trezor/", "destination" : "/resources/guides/powpeg-app/pegin/trezor/"},
-    {"source" : "/guides/quickstart/overview/what-is-rootstock/", "destination" : "/developers/blockchain-essentials/overview#what-is-rootstock/"},
-    {"source" : "/guides/quickstart/hardhat/create-hardhat-project/", "destination" : "/developers/smart-contracts/hardhat/create-hardhat-project/"},
-    {"source" : "/guides/flyover/faqs/", "destination" : "/developers/integrate/flyover/faqs/"},
-    {"source" : "/rif/wallet/user-guide/deploy-a-wallet/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/wallet/user-guide/", "destination" : "/concepts/rif-suite/"},
-    {"source" : "/rif/rns/libs/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/guide/intro/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/wallet/dev-reference/design-architecture/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rollup/security/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/wallet/dev-reference/running-the-wallet/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/operations/register-subdomain/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rollup/glossary/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rlogin/develop/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/integrate/integrate-addr-resolution/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/architecture/rsk-registrar/renewers/renewer/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rlogin/libraries/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/operations/renew/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/operations/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/libs/iOS/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/operations/set-resolver/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/specs/registry/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rlogin/samples/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/wallet/dev-reference/security/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/operations/set-addr/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/operations/transfer/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/libs/javascript/Getting-started/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rollup/dapps/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/architecture/rsk-registrar/registrars/fifsaddr/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rollup/faqs/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/libs/rns-artifacts/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/architecture/rsk-registrar/other/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/wallet/user-guide/security-and-privacy/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/integrate/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/architecture/rsk-registrar/renewers/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/relay/overview/", "destination" : "/developers/integrate/rif-relay/overview/"},
-    {"source" : "/rif/rns/tools/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/libs/javascript/RNS-instance/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/architecture/rsk-registrar/registrars/fifs/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rlogin/integrations/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rollup/dev-reference/troubleshooting/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/specs/resolvers/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rlogin/libraries/modal/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/libs/javascript/Contribute/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/wallet/user-guide/wallet-backup/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/wallet/user-guide/switch-networks/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rlogin/migrating/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/wallet/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/wallet/faqs/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/architecture/Resolver/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/architecture/ReverseRegistrar/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/libs/smart-contracts/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rlogin/libraries/vc-json-schemas-parser/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/operations/register-auction-deprecated/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/run-locally/", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/try-rns/", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/rif-relay/installation-requirements/", "destination" : "/developers/integrate/rif-relay/installation-requirements/"},
-    {"source" : "/tools/hardhat/", "destination" : "/dev-tools/hardhat/"},
-    {"source" : "/dev-tools/hardhat/", "destination" : "/dev-tools/dev-environments/hardhat/"},
-    {"source" : "/courses/user-course/", "destination" : "/resources/courses/"},
-    {"source" : "/assets/files/mining-config/miner2.conf", "destination" : "/node-operators/merged-mining/configure-mining/"},
-    {"source" : "/rsk/node/install", "destination" : "/node-operators/setup/installation/"},
-    {"source" : "/rif", "destination" : "/concepts/rif-suite/"},
-    {"source" : "/the-stack", "destination" : "/concepts/fundamentals/stack/"},
-    {"source" : "/webinars", "destination" : "/"},
-    {"source" : "/rsk/node/troubleshooting", "destination" : "/node-operators/troubleshooting/"},
-    {"source" : "/rif/rns/architecture/rsk-registrar", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/wallet/dev-reference/running-with-local-server", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/run-locally", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/libs/rns-artifacts/resolver/string-resolver", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rlogin/libraries/vc-json-schemas-parser", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rns/operations/register-auction-deprecated", "destination" : "/developers/integrate/"},
-    {"source" : "/rif/rlogin/libraries/did-auth-client", "destination" : "/developers/integrate/"},
-    {"source" : "/guides/two-way-peg-app/pegout/status", "destination" : "/resources/guides/two-way-peg-app/pegout/status/"},
-    {"source" : "/resources/guides/two-way-peg-app/pegout/status/", "destination" : "/resources/guides/powpeg-app/pegout/status/"},
-    {"source" : "/guides/rif-relay/starter-kit", "destination" : "/developers/integrate/rif-relay/sample-dapp/"},
-    {"source" : "/guides/dex/dex-vs-cex", "destination" : "https://blog.rootstock.io/noticia/dex-vs-cex/"},
-    {"source" : "/guides/get-crypto-on-rsk/cryptocurrency-vs-token", "destination" : "https://blog.rootstock.io/noticia/cryptocurrency-vs-token/"},
-    {"source" : "/guides/stablecoin/stablecoin-vs-digital-assets", "destination" : "https://blog.rootstock.io/noticia/stablecoin-vs-digital-asset/"},
-    {"source" : "/guides/dex/features-of-a-dex", "destination" : "https://blog.rootstock.io/noticia/features-of-a-dex/"},
-    {"source" : "/developers/quickstart/alchemy/", "destination" : "/developers/rpc-api/alchemy/"},
-    {"source" : "/developers/rpc-api/setup/", "destination" : "/developers/rpc-api/rootstock/setup/"},
-    {"source" : "/developers/smart-contracts/eas/", "destination" : "/dev-tools/attestations/eas/"},
-    {"source" : "/developers/smart-contracts/eas/overview/", "destination" : "/dev-tools/attestations/eas/"},
-    {"source" : "/developers/quickstart/dynamic-starter-kit/", "destination" : "/developers/quickstart/dynamic/"},
-    {"source" : "/resources/contribute/hacktivator-program/", "destination" : "/resources/contribute/hacktivator/"},
-    {"source" : "/getting-started/", "destination" : "/developers/quickstart/"},
-    {"source" : "/smart-contracts/", "destination" : "/developers/smart-contracts/"},
-    {"source" : "/rsk-cli/", "destination" : "/developers/smart-contracts/rsk-cli/"},
-    {"source" : "/dev-tools/cross-chain-bridges/hyperlanebridge/", "destination" : "/dev-tools/cross-chain-bridges/hyperlane-bridge/"},
-    {"source" : "/dev-tools/cross-chain-bridges/routerprotocol/", "destination" : "/dev-tools/cross-chain-bridges/router-protocol/"},
-    {"source" : "/dev-tools/attestations/eas/", "destination" : "/dev-tools/attestations/ras/"},
-    {"source": "/developers/smart-contracts/verify-smart-contracts/", "destination": "/developers/smart-contracts/verify-smart-contracts/hardhat-verify-plugin/"},
-    {"source": "/resources/contribute/writing-contest/", "destination": "/resources/contribute/"},
-    {"source": "/resources/guides/eas/", "destination": "/dev-tools/attestations/eas/"},
-    {"source": "/resources/guides/eas/overview/", "destination": "/dev-tools/attestations/eas/overview/"},
-    {"source": "/resources/guides/eas/user-guide/", "destination": "/dev-tools/attestations/eas/user-guide/"},
-    {"source": "/developers/quickstart/para", "destination": "/use-cases/onboarding-ux/para/"},
-    {"source": "/developers/quickstart/para/", "destination": "/use-cases/onboarding-ux/para/"},
-    {"source": "/use-cases/onboarding-ux/smart-wallet-para-sdk/", "destination": "/use-cases/onboarding-ux/para/"},
-    {"source": "/developers/use-cases/rootstock-layerzero/", "destination": "/developers/use-cases/defi/rootstock-layerzero/"},
-    {"source": "/developers/use-cases/ai-agent-rootstock/", "destination": "/developers/use-cases/ai/ai-agent-rootstock/"},
-    {"source": "/developers/use-cases/ai/ai-agent-rootstock/", "destination": "/use-cases/ai-automation/ai-agent-rootstock/"},
-    {"source": "/developers/use-cases/ai/mcp-rootstock/", "destination": "/use-cases/ai-automation/mcp-rootstock/"},
-    {"source": "/developers/use-cases/defi/rootstock-layerzero/", "destination": "/use-cases/interoperability/rootstock-layerzero/"},
-    {"source": "/developers/use-cases/defi/cross-chain-lending-rbtc/", "destination": "/use-cases/btcfi-finance-yield/cross-chain-lending-rbtc/"},
-    {"source": "/developers/use-cases/defi/cross-chain-lending-rbtc", "destination": "/use-cases/btcfi-finance-yield/cross-chain-lending-rbtc/"},
-    {"source": "/developers/use-cases/ussd-rootstock-defi", "destination": "/use-cases/onboarding-ux/ussd-rootstock-defi/"},
-    {"source": "/developers/use-cases/ussd-rootstock-defi/(.*)", "destination": "/use-cases/onboarding-ux/ussd-rootstock-defi/$1"},
-    {"source": "/developers/use-cases/", "destination": "/use-cases/"},
-    {"source": "/use-cases/ai-emerging/ai-agent-rootstock/", "destination": "/use-cases/ai-automation/ai-agent-rootstock/"},
-    {"source": "/use-cases/ai-emerging/mcp-rootstock/", "destination": "/use-cases/ai-automation/mcp-rootstock/"},
-    {"source": "/use-cases/ai-agents/:path*", "destination": "/use-cases/ai-automation/:path*"},
-    {"source": "/use-cases/btcfi-finance/:path*", "destination": "/use-cases/btcfi-finance-yield/:path*"},
-    {"source": "/use-cases/interoperability/integrate-super-bridge-sdk/", "destination": "/use-cases/interoperability/"},
-    {"source": "/use-cases/interoperability/integrate-atlas-bridge-sdk/", "destination": "/use-cases/interoperability/"},
-    {"source": "/use-cases/btcfi-finance-yield/yield-vaults", "destination": "/use-cases/btcfi-finance-yield/yield-vaults-sdk/"},
-    {"source": "/use-cases/btcfi-finance-yield/yield-vaults/", "destination": "/use-cases/btcfi-finance-yield/yield-vaults-sdk/"},
-    {"source": "/use-cases/btcfi-finance-yield/automate-yield-vault/", "destination": "/use-cases/btcfi-finance-yield/"},
-    {"source": "/use-cases/payments-assets/agentic-commerce/", "destination": "/use-cases/payments-assets/"},
-    {"source": "/dev-tools/node-rpc/blast-api/", "destination": "/dev-tools/node-rpc/"},
-    {"source": "/dev-tools/no-code/cryptodo/", "destination": "/dev-tools/no-code/"},
-    {"source": "/dev-tools/oracles/umbrellanetwork/", "destination": "/dev-tools/oracles/"},
-    {"source": "/dev-tools/cross-chain-bridges/tokenbridge/", "destination": "/dev-tools/cross-chain-bridges/atlas/"},
-    {"source": "/resources/guides/tokenbridge/", "destination": "/resources/guides/atlas/"},
-    {"source": "/resources/guides/tokenbridge/faq/", "destination": "/resources/guides/atlas/"},
-    {"source": "/resources/guides/tokenbridge/dappguide/", "destination": "/resources/guides/atlas/"},
-    {"source": "/resources/guides/tokenbridge/contractaddresses/", "destination": "/resources/guides/atlas/"},
-    {"source": "/resources/guides/tokenbridge/troubleshooting/", "destination": "/resources/guides/atlas/"},
-    {"source": "/resources/guides/tokenbridge/usingmycrypto/", "destination": "/resources/guides/atlas/"},
-    {"source": "/dev-tools/no-code/forward-protocol/", "destination": "/dev-tools/"}
+    {
+      "source": "/concepts/foundations/security/model",
+      "destination": "/concepts/foundations/security/security-model/"
+    },
+    {
+      "source": "/concepts/foundations/security/model/",
+      "destination": "/concepts/foundations/security/security-model/"
+    },
+    {
+      "source": "/concepts/fundamentals",
+      "destination": "/concepts/foundations/"
+    },
+    {
+      "source": "/concepts/fundamentals/",
+      "destination": "/concepts/foundations/"
+    },
+    {
+      "source": "/concepts/fundamentals/stack",
+      "destination": "/concepts/foundations/stack/"
+    },
+    {
+      "source": "/concepts/fundamentals/stack/",
+      "destination": "/concepts/foundations/stack/"
+    },
+    {
+      "source": "/concepts/security",
+      "destination": "/concepts/foundations/security/"
+    },
+    {
+      "source": "/concepts/security/",
+      "destination": "/concepts/foundations/security/"
+    },
+    {
+      "source": "/concepts/stack",
+      "destination": "/concepts/foundations/stack/"
+    },
+    {
+      "source": "/concepts/stack/",
+      "destination": "/concepts/foundations/stack/"
+    },
+    {
+      "source": "/guides/rif-rollup/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/rif-rollup/transfer-funds-on-rif-rollup/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/rif-rollup/account-activation/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/rif-rollup/transfer-funds-on-rif-rollup/withdraw-funds-rootstock/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/rif-rollup/transfer-funds-on-rif-rollup/account-activation/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/rif-rollup/withdraw-funds-rootstock/account-activation/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/rif-rollup/using-rif-rollup-block-explorer/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/rif-rollup/withdraw-funds-rootstock/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/quickstart/browser/cryptography/",
+      "destination": "/developers/blockchain-essentials/browser#cryptography"
+    },
+    {
+      "source": "/guides/quickstart/transactions/rbtc-balance-decrease/",
+      "destination": "/developers/blockchain-essentials/transactions#rbtc-balance-decrease"
+    },
+    {
+      "source": "/guides/quickstart/hardhat/test-smart-contract/",
+      "destination": "/developers/smart-contracts/hardhat/test-smart-contracts"
+    },
+    {
+      "source": "/guides/quickstart/hardhat/debugging-and-troubleshooting/",
+      "destination": "/developers/smart-contracts/hardhat/troubleshooting/"
+    },
+    {
+      "source": "/guides/quickstart/transactions/block-explorer/",
+      "destination": "/developers/blockchain-essentials/transactions#block-explorer"
+    },
+    {
+      "source": "/guides/quickstart/overview/powpeg/",
+      "destination": "/developers/blockchain-essentials/overview#powpeg"
+    },
+    {
+      "source": "/guides/nft/overview",
+      "destination": "https://blog.rootstock.io/"
+    },
+    {
+      "source": "/guides/nft/configure-nft-metadata",
+      "destination": "https://blog.rootstock.io/"
+    },
+    {
+      "source": "/guides/two-way-peg-app/pegout/deriving-electrum",
+      "destination": "/resources/guides/two-way-peg-app/pegout/deriving-electrum/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/pegout/deriving-electrum",
+      "destination": "/resources/guides/powpeg-app/pegout/deriving-electrum/"
+    },
+    {
+      "source": "/guides/rif-relay/smart-wallets",
+      "destination": "/developers/integrate/rif-relay/smart-wallets/"
+    },
+    {
+      "source": "/guides/nft/create-smart-contract",
+      "destination": "https://blog.rootstock.io/"
+    },
+    {
+      "source": "/guides/quickstart/transactions/rbtc-balance-decrease",
+      "destination": "/developers/blockchain-essentials/transactions#rbtc-balance-decrease"
+    },
+    {
+      "source": "/rif/libs",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/architecture/registry",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/specs/resolvers",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rns/architecture/registry",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/specs/resolvers",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/operations/resolve",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/architecture/ReverseSuite/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/try-rns",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/run-locally",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/integrate",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/specs",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/operations/resolve",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/specs/registry",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rsk/node/cli/",
+      "destination": "/node-operators/setup/configuration/cli/"
+    },
+    {
+      "source": "/rif/rns/libs/resolver/string-resolver",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/specs/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/set-reverse",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/js/main.js",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/rsk-registrar",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/set-btc-address",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/integrate-addr-resolution",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/architecture/registrars/fifs",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/registry",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/renew",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/img/circles/semi-circle-left.png",
+      "destination": "/"
+    },
+    {
+      "source": "/rif/rns/get-reverse",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/register",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/libs/resolver",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/dev-reference/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/resolve",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/MultiCryptoResolver",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rsk/reproducible",
+      "destination": "/node-operators/setup/reproducible-build/"
+    },
+    {
+      "source": "/rif/rns/register-subdomain",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/overview/",
+      "destination": "/concepts/rif-suite/"
+    },
+    {
+      "source": "/rif/rns/architecture/rskowner",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rlogin/vc-json-schemas-parser",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/architecture/renewers/renewer",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/transfer",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/resolvers",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/img/circles/circle-blue.png",
+      "destination": "/"
+    },
+    {
+      "source": "/rif/rns/reverse-suite/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/architecture/rsk-registrar/fifs",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/set-resolver",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/architecture/other/nameprice",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/set-addr",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/two-way-peg-app/advanced-operations",
+      "destination": "/resources/guides/two-way-peg-app/advanced-operations/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/advanced-operations",
+      "destination": "/resources/guides/powpeg-app/advanced-operations/"
+    },
+    {
+      "source": "/guides/nft/deploy-nft-on-rsk",
+      "destination": "https://blog.rootstock.io/"
+    },
+    {
+      "source": "/guides/quickstart/transactions/view-network-stats",
+      "destination": "/developers/blockchain-essentials/transactions#view-network-stats"
+    },
+    {
+      "source": "/rif/rns/architecture/reverse-suite/ReverseRegistrar/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/solutions/wakeuplabs/",
+      "destination": "https://rootstock.io/ecosystem/"
+    },
+    {
+      "source": "/guides/get-crypto-on-rsk/rbtc-wallets",
+      "destination": "https://blog.rootstock.io/"
+    },
+    {
+      "source": "/rif/rns/architecture/rsk-registrar/registrars/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/get-crypto-on-rsk/rbtc-exchanges",
+      "destination": "https://blog.rootstock.io/"
+    },
+    {
+      "source": "/rif/wallet/user-guide/sending-and-receiving-tokens/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rsk/node/architecture/json-rpc/management-api-methods/",
+      "destination": "/node-operators/json-rpc/management-api-methods/"
+    },
+    {
+      "source": "/kb/hardhat-verify-plugin/",
+      "destination": "/developers/smart-contracts/verify-smart-contracts/"
+    },
+    {
+      "source": "/rif/wallet/dev-reference/interact-with-the-wallet/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/quickstart/transactions/view-transactions",
+      "destination": "/developers/blockchain-essentials/transactions#view-transactions"
+    },
+    {
+      "source": "/guides/quickstart/transactions/transfer-trif",
+      "destination": "/developers/blockchain-essentials/transactions#transfer-trif"
+    },
+    {
+      "source": "/guides/two-way-peg-app/prerequisites",
+      "destination": "/resources/guides/two-way-peg-app/prerequisites/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/prerequisites",
+      "destination": "/resources/guides/powpeg-app/prerequisites/"
+    },
+    {
+      "source": "/rsk/node/architecture/json-rpc/json-rpc-methods/",
+      "destination": "/node-operators/json-rpc/methods/"
+    },
+    {
+      "source": "/rif/wallet/user-guide/registering-a-username/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/rif-relay/deployment",
+      "destination": "/developers/integrate/rif-relay/deployment/"
+    },
+    {
+      "source": "/tools/foundry/",
+      "destination": "/dev-tools/foundry/"
+    },
+    {
+      "source": "/dev-tools/foundry/",
+      "destination": "/dev-tools/dev-environments/foundry/"
+    },
+    {
+      "source": "/rif/rns/libs/javascript/Advanced-usage",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/operations/migrate-from-auction",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/integrate/integrate-addr-resolution",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/quickstart/browser",
+      "destination": "/developers/blockchain-essentials/browser/"
+    },
+    {
+      "source": "/rif/rns/tools/MyCrypto",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rsk/node/configure/reference",
+      "destination": "/node-operators/setup/configuration/reference/"
+    },
+    {
+      "source": "/rif/rns/operations/set-reverse",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/architecture/registry",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rsk/architecture/mining/implementation-guide",
+      "destination": "/node-operators/merged-mining/getting-started/"
+    },
+    {
+      "source": "/rsk/architecture/turing-complete/",
+      "destination": "/concepts/"
+    },
+    {
+      "source": "/tutorials/interface-registry/",
+      "destination": "/developers/smart-contracts/interface-registry/"
+    },
+    {
+      "source": "/rsk/public-nodes/",
+      "destination": "/node-operators/public-nodes/"
+    },
+    {
+      "source": "/tutorials/interact-with-smart-contracts/",
+      "destination": "/developers/smart-contracts/hardhat/interact-with-frontend/"
+    },
+    {
+      "source": "/defi/",
+      "destination": "/developers/"
+    },
+    {
+      "source": "/rsk/rbtc/conversion/networks/mainnet/",
+      "destination": "/concepts/rbtc/networks/"
+    },
+    {
+      "source": "/discord/",
+      "destination": "http://discord.gg/rootstock"
+    },
+    {
+      "source": "/tutorials/rsk-api/",
+      "destination": "/resources/tutorials/"
+    },
+    {
+      "source": "/wallet/",
+      "destination": "/dev-tools/wallets/"
+    },
+    {
+      "source": "/tutorials/",
+      "destination": "/resources/tutorials/"
+    },
+    {
+      "source": "/libraries/",
+      "destination": "/developers/libraries/"
+    },
+    {
+      "source": "/kb/get-crypto-on-rsk/powpeg-btc-rbtc/",
+      "destination": "https://blog.rootstock.io/get-crypto-on-rsk/"
+    },
+    {
+      "source": "/develop/apps/wallets/",
+      "destination": "/dev-tools/wallets/"
+    },
+    {
+      "source": "/develop/apps/wallets/metamask/",
+      "destination": "/dev-tools/wallets/metamask/"
+    },
+    {
+      "source": "/rsk/node/install/java/",
+      "destination": "/node-operators/setup/installation/java/"
+    },
+    {
+      "source": "/tutorials/compile-smart-contracts-go/",
+      "destination": "/developers/smart-contracts/"
+    },
+    {
+      "source": "/kb/get-crypto-on-rsk/cryptocurrency-vs-token/",
+      "destination": "https://blog.rootstock.io/cryptocurrency-vs-token/"
+    },
+    {
+      "source": "/rsk/node/configure/autominer/",
+      "destination": "/node-operators/merged-mining/autominer/"
+    },
+    {
+      "source": "/tutorials/send-tokens-through-metamask/",
+      "destination": "/dev-tools/wallets/metamask/"
+    },
+    {
+      "source": "/rif/wallet/overview",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/specs/registry",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/quickstart/transactions/transfer-trbtc",
+      "destination": "/developers/blockchain-essentials/transactions#transfer-trbtc"
+    },
+    {
+      "source": "/rsk/rbtc/conversion/with-node-and-console",
+      "destination": "/concepts/rbtc/conversion/with-node-and-console/"
+    },
+    {
+      "source": "/rif/rns/tools/RNS-Manager",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/operations/Resolve-a-name",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/token",
+      "destination": "/concepts/rif-suite/token/"
+    },
+    {
+      "source": "/guides/quickstart/hardhat/configure-hardhat",
+      "destination": "/developers/smart-contracts/hardhat/configure-hardhat/"
+    },
+    {
+      "source": "/rif/rns/libs/Android",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/tools/Subdomain-tool",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/wallet",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rsk/node/architecture/json-rpc/management-api-methods",
+      "destination": "/node-operators/json-rpc/management-api-methods/"
+    },
+    {
+      "source": "/rif/rns/libs/smart-contracts",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/rif-relay/installation-requirements",
+      "destination": "/developers/integrate/rif-relay/installation-requirements/"
+    },
+    {
+      "source": "/develop/apps/integrate",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/libs/javascript",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rsk/node/contribute/linux",
+      "destination": "/node-operators/setup/node-runner/linux/"
+    },
+    {
+      "source": "/assets/rsk/architecture/powpeg-hsm-attestation/pnetwork.html",
+      "destination": "/concepts/powpeg/hsm-firmware-attestation/"
+    },
+    {
+      "source": "/guides/two-way-peg-app/overview",
+      "destination": "/resources/guides/two-way-peg-app/overview/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/overview",
+      "destination": "/resources/guides/powpeg-app/overview/"
+    },
+    {
+      "source": "/rif/rns/try-rns",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/starter-kits/hackathon-starter",
+      "destination": "/resources/hackathon/"
+    },
+    {
+      "source": "/rif/rns/testnet",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/libs/javascript/Getting-started",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rsk/node/contribute/windows",
+      "destination": "/node-operators/setup/node-runner/windows/"
+    },
+    {
+      "source": "/rsk/node/configure",
+      "destination": "/node-operators/setup/configuration/"
+    },
+    {
+      "source": "/rif/rns/libs",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/operations/set-btc-address",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/two-way-peg-app/pegout/pegout-common-errors",
+      "destination": "/resources/guides/two-way-peg-app/pegout/pegout-common-errors/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/pegout/pegout-common-errors",
+      "destination": "/resources/guides/powpeg-app/pegout/pegout-common-errors/"
+    },
+    {
+      "source": "/rif/rlogin/libraries/express-did-auth",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rsk/rbtc/conversion/with-ledger",
+      "destination": "/concepts/rbtc/conversion-with-ledger/"
+    },
+    {
+      "source": "/rif/rns/operations/register-subdomain",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/architecture/definitive-resolver",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rsk/architecture/flyover",
+      "destination": "/developers/integrate/flyover/"
+    },
+    {
+      "source": "/rif/rns/operations/renew",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/dex/dexes-on-rsk",
+      "destination": "https://blog.rootstock.io/"
+    },
+    {
+      "source": "/rif/rns/architecture/Registrar",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/libs/iOS",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/operations/set-addr",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/assets/rsk/architecture/powpeg-hsm-attestation/sovryn.html",
+      "destination": "/concepts/powpeg/hsm-firmware-attestation/"
+    },
+    {
+      "source": "/rif/rns/architecture/NameResolver",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rsk/node/security-chain",
+      "destination": "/node-operators/setup/security-chain/"
+    },
+    {
+      "source": "/rsk/node/configure/verbosity",
+      "destination": "/node-operators/setup/configuration/verbosity/"
+    },
+    {
+      "source": "/rif/rlogin/integrations",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/dex/overview",
+      "destination": "https://blog.rootstock.io/"
+    },
+    {
+      "source": "/rif/rns/libs/javascript/Utils",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rsk/architecture/mining/reference",
+      "destination": "/node-operators/merged-mining/reference/"
+    },
+    {
+      "source": "/rsk/node/architecture/json-rpc/transport-protocols",
+      "destination": "/node-operators/json-rpc/transport-protocols/"
+    },
+    {
+      "source": "/rsk/architecture/account-based",
+      "destination": "/concepts/account-based-addresses/"
+    },
+    {
+      "source": "/rif/rns/libs/Python",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/operations/get-reverse",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/specs/resolvers",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/libs/rns-artifacts",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rsk/node/contribute/cli",
+      "destination": "/node-operators/setup/node-runner/cli/"
+    },
+    {
+      "source": "/rif/rns/architecture/Resolver",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/relay/contracts",
+      "destination": "/developers/integrate/rif-relay/contracts/"
+    },
+    {
+      "source": "/rif/rollup/dev-reference/sdk",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rsk/node/contribute/macos",
+      "destination": "/node-operators/setup/node-runner/macos/"
+    },
+    {
+      "source": "/rif/rns/architecture/rsk-registrar/registrars/fifsaddr",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/operations/set-resolver",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/flyover/get-started",
+      "destination": "/developers/integrate/flyover/"
+    },
+    {
+      "source": "/guides/flyover/design-architecture",
+      "destination": "/developers/integrate/flyover/"
+    },
+    {
+      "source": "/rif/rns/libs/javascript/RNS-instance",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/flyover/tools",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rlogin/libraries/modal",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/specs",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rsk/node/contribute",
+      "destination": "/node-operators/setup/node-runner/"
+    },
+    {
+      "source": "/rif/rlogin/samples",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rlogin/features",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/tutorials",
+      "destination": "/resources/tutorials/"
+    },
+    {
+      "source": "/rif/rollup",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/operations/resolve",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rsk/node/reproducible",
+      "destination": "/node-operators/setup/reproducible-build/"
+    },
+    {
+      "source": "/rif/rns/libs/javascript/Operations",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/architecture/rsk-registrar/registrars/fifs",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rsk/node/configure/switch-network",
+      "destination": "/node-operators/setup/configuration/switch-network/"
+    },
+    {
+      "source": "/rif/rns/architecture/MultiCryptoResolver",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/operations",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rsk/rbtc",
+      "destination": "/concepts/rbtc/"
+    },
+    {
+      "source": "/rif/rlogin/libraries/vc-json-schemas",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/develop/wallet/use",
+      "destination": "/dev-tools/wallets/"
+    },
+    {
+      "source": "/rif/rns/operations/register",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/architecture",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/architecture/ReverseRegistrar",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/architecture/rsk-registrar/renewers/renewer",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/libs/javascript/Errors",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rsk/rbtc/conversion/networks/testnet",
+      "destination": "/concepts/rbtc/networks/"
+    },
+    {
+      "source": "/rif/rns/operations/transfer",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/integrate",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rollup/glossary",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/wallet/user-guide/create-and-import",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/libs/javascript/Contribute",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/tools/Web3",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/architecture/rsk-registrar/rskowner",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rsk/node/architecture/json-rpc/configuration-limits",
+      "destination": "/node-operators/json-rpc/configuration-limits/"
+    },
+    {
+      "source": "/rif/rns/architecture/RSKResolver",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rlogin/libraries/did-auth-client/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/operations/Resolve-a-name/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/architecture/NameResolver/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/libs/rns-artifacts/resolver/string-resolver/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/kb/configure-truffle-to-rsk",
+      "destination": "/resources/tutorials/"
+    },
+    {
+      "source": "/rif/",
+      "destination": "/concepts/rif-suite/"
+    },
+    {
+      "source": "/develop/wallet/use/metamask/",
+      "destination": "/dev-tools/wallets/metamask/"
+    },
+    {
+      "source": "/wallet/use/metamask/",
+      "destination": "/dev-tools/wallets/metamask/"
+    },
+    {
+      "source": "/wallet/use/",
+      "destination": "/dev-tools/wallets/"
+    },
+    {
+      "source": "/tutorials/deploy-smart-contracts/",
+      "destination": "/developers/smart-contracts/hardhat/deploy-smart-contracts"
+    },
+    {
+      "source": "/kb/first-frontend-web3-injected/",
+      "destination": "/developers/smart-contracts/hardhat/interact-with-frontend"
+    },
+    {
+      "source": "/rsk/",
+      "destination": "/concepts/"
+    },
+    {
+      "source": "/tools/tokenbridge/",
+      "destination": "/resources/guides/atlas/"
+    },
+    {
+      "source": "/guides/get-crypto-on-rsk/rbtc-exchanges/",
+      "destination": "https://rootstock.io/rbtc/"
+    },
+    {
+      "source": "/kb/frontend-web3-local/",
+      "destination": "/developers/smart-contracts/hardhat/interact-with-frontend"
+    },
+    {
+      "source": "/rsk/node/use/",
+      "destination": "/node-operators/setup/"
+    },
+    {
+      "source": "/tools/faucet/",
+      "destination": "/dev-tools/"
+    },
+    {
+      "source": "/rsk/rbtc/conversion/networks/testnet/",
+      "destination": "/concepts/rbtc/networks/"
+    },
+    {
+      "source": "/kb/geth-attach-deploy-smart-contracts/",
+      "destination": "/developers/smart-contracts/hardhat/deploy-smart-contracts"
+    },
+    {
+      "source": "/guides/quickstart/transactions/",
+      "destination": "/developers/blockchain-essentials/transactions/"
+    },
+    {
+      "source": "/rsk/architecture/powpeg/",
+      "destination": "/concepts/powpeg/"
+    },
+    {
+      "source": "/rsk/rbtc/conversion/",
+      "destination": "/concepts/rbtc/conversion/"
+    },
+    {
+      "source": "/rsk/rbtc/gas/",
+      "destination": "/concepts/rbtc/gas/"
+    },
+    {
+      "source": "/kb/faqs/",
+      "destination": "/resources/faqs/"
+    },
+    {
+      "source": "/guides/nft/configure-nft-metadata/",
+      "destination": "https://blog.rootstock.io/"
+    },
+    {
+      "source": "/kb/compile-smart-contracts-go/",
+      "destination": "/developers/smart-contracts/"
+    },
+    {
+      "source": "/guides/stablecoin/stablecoin-on-bitcoin/",
+      "destination": "https://blog.rootstock.io/stablecoin-vs-digital-asset/"
+    },
+    {
+      "source": "/guides/get-crypto-on-rsk/powpeg-btc-rbtc/",
+      "destination": "https://rootstock.io/rbtc/"
+    },
+    {
+      "source": "/rsk/node/architecture/json-rpc/",
+      "destination": "/node-operators/json-rpc/"
+    },
+    {
+      "source": "/kb/rsk-api/",
+      "destination": "/developers/rpc-api/"
+    },
+    {
+      "source": "/rsk/rbtc/",
+      "destination": "/concepts/rbtc/"
+    },
+    {
+      "source": "/solutions/moneyonchain/",
+      "destination": "https://rootstock.io/ecosystem/"
+    },
+    {
+      "source": "/kb/hardhat-setup-on-rsk/",
+      "destination": "/developers/quickstart/"
+    },
+    {
+      "source": "/solutions/sovryn/",
+      "destination": "https://rootstock.io/ecosystem/"
+    },
+    {
+      "source": "/kb/remix-and-metamask-with-rsk-testnet/",
+      "destination": "/developers/quickstart/remix/"
+    },
+    {
+      "source": "/rsk/architecture/account-based/",
+      "destination": "/concepts/account-based-addresses/"
+    },
+    {
+      "source": "/tools/tokenbridge/faq/",
+      "destination": "/resources/guides/atlas/"
+    },
+    {
+      "source": "/rsk/architecture/mining/",
+      "destination": "/concepts/merged-mining/"
+    },
+    {
+      "source": "/kb/send-tokens-through-metamask/",
+      "destination": "/resources/tutorials/"
+    },
+    {
+      "source": "/guides/stablecoin/how-to-get-stablecoins/",
+      "destination": "https://blog.rootstock.io/"
+    },
+    {
+      "source": "/rif/token/",
+      "destination": "/concepts/rif-suite/token/"
+    },
+    {
+      "source": "/guides/get-crypto-on-rsk/rbtc-wallets/",
+      "destination": "https://rootstock.io/rbtc/"
+    },
+    {
+      "source": "/rsk/rbtc/conversion/networks/",
+      "destination": "/concepts/rbtc/networks/"
+    },
+    {
+      "source": "/solutions/fireblocks/",
+      "destination": "https://rootstock.io/ecosystem/"
+    },
+    {
+      "source": "/kb/deploy-smart-contracts/",
+      "destination": "/developers/smart-contracts/hardhat/"
+    },
+    {
+      "source": "/rif/rns/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/tools/tokenbridge/contractaddresses/",
+      "destination": "/resources/guides/atlas/"
+    },
+    {
+      "source": "/guides/stablecoin/how-to-use-rsk-tokenbridge/",
+      "destination": "https://blog.rootstock.io/"
+    },
+    {
+      "source": "/tools/explorer/",
+      "destination": "/dev-tools/explorers/"
+    },
+    {
+      "source": "/develop/wallet/use/ledger/",
+      "destination": "/dev-tools/wallets/"
+    },
+    {
+      "source": "/guides/dex/dexes-on-rsk/",
+      "destination": "https://blog.rootstock.io/"
+    },
+    {
+      "source": "/guides/full-stack-dapp-on-rsk/part1-overview/",
+      "destination": "/developers/smart-contracts/"
+    },
+    {
+      "source": "/quick-start/step1-install-rsk-local-node",
+      "destination": "/developers/rpc-api/setup/"
+    },
+    {
+      "source": "/kb/create-a-token/",
+      "destination": "/resources/tutorials/"
+    },
+    {
+      "source": "/tools/tokenbridge/dappguide/",
+      "destination": "/resources/guides/atlas/"
+    },
+    {
+      "source": "/rsk/node/configure/reference/",
+      "destination": "/node-operators/setup/configuration/reference/"
+    },
+    {
+      "source": "/guides/stablecoin/overview/",
+      "destination": "https://blog.rootstock.io/"
+    },
+    {
+      "source": "/rsk/rbtc/conversion/with-ledger/",
+      "destination": "/concepts/rbtc/conversion-with-ledger/"
+    },
+    {
+      "source": "/rsk/node/",
+      "destination": "/node-operators/"
+    },
+    {
+      "source": "/guides/get-crypto-on-rsk/overview/",
+      "destination": "https://blog.rootstock.io/"
+    },
+    {
+      "source": "/guides/dex/overview/",
+      "destination": "https://blog.rootstock.io/"
+    },
+    {
+      "source": "/rif/rlogin/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/quick-start/step1-install-rsk-local-node/",
+      "destination": "/developers/rpc-api/setup/"
+    },
+    {
+      "source": "/guides/nft/overview/",
+      "destination": "https://blog.rootstock.io/"
+    },
+    {
+      "source": "/kb/verify-address-ownership/",
+      "destination": "/resources/tutorials/"
+    },
+    {
+      "source": "/tools/explorer/blockscout/",
+      "destination": "/dev-tools/explorers/blockscout/"
+    },
+    {
+      "source": "/rif/rns/operations/register/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/dex/",
+      "destination": "https://blog.rootstock.io/"
+    },
+    {
+      "source": "/rif/rollup/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rsk/architecture/flyover/",
+      "destination": "/developers/integrate/flyover/"
+    },
+    {
+      "source": "/rsk/architecture/mining/remasc/",
+      "destination": "/node-operators/merged-mining/remasc/"
+    },
+    {
+      "source": "/courses/blockchain-developer/",
+      "destination": "/resources/courses/"
+    },
+    {
+      "source": "/solutions/oraclemoneyonchain/",
+      "destination": "https://rootstock.io/ecosystem/"
+    },
+    {
+      "source": "/rsk/node/install/operating-systems/",
+      "destination": "/node-operators/setup/installation/"
+    },
+    {
+      "source": "/rif/rns/tools/Web3/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/rlogin/connect-frontend/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/kb/getblock-rpc/",
+      "destination": "/resources/tutorials/"
+    },
+    {
+      "source": "/guides/quickstart/overview/",
+      "destination": "/developers/blockchain-essentials/overview/"
+    },
+    {
+      "source": "/rif/relay/",
+      "destination": "/developers/integrate/rif-relay/"
+    },
+    {
+      "source": "/contribute/bug-bounty-program/",
+      "destination": "/resources/contribute/bug-bounty/"
+    },
+    {
+      "source": "/guides/nft/create-smart-contract/",
+      "destination": "/resources/tutorials/"
+    },
+    {
+      "source": "/rsk/node/install/requirements/",
+      "destination": "/node-operators/setup/installation/"
+    },
+    {
+      "source": "/kb/geth-attach-local-node/",
+      "destination": "/resources/tutorials/"
+    },
+    {
+      "source": "/rsk/architecture/security/",
+      "destination": "/concepts/foundations/security/"
+    },
+    {
+      "source": "/solutions/babelfish/",
+      "destination": "https://rootstock.io/ecosystem/"
+    },
+    {
+      "source": "/kb/create-a-collectable-token/",
+      "destination": "/resources/tutorials/"
+    },
+    {
+      "source": "/develop/json-rpc-api",
+      "destination": "/developers/rpc-api/setup/"
+    },
+    {
+      "source": "/solutions/nownodes/",
+      "destination": "https://rootstock.io/ecosystem/"
+    },
+    {
+      "source": "/develop/json-rpc-api/",
+      "destination": "/developers/rpc-api/setup/"
+    },
+    {
+      "source": "/develop/wallet/use/mycrypto/",
+      "destination": "/dev-tools/wallets/"
+    },
+    {
+      "source": "/guides/stablecoin/how-to-store-stablecoins/",
+      "destination": "https://blog.rootstock.io/stablecoin-vs-digital-asset/"
+    },
+    {
+      "source": "/rsk/rbtc/conversion/with-trezor-t/",
+      "destination": "/concepts/rbtc/conversion-with-trezor/"
+    },
+    {
+      "source": "/solutions/liquality/",
+      "destination": "https://rootstock.io/ecosystem/"
+    },
+    {
+      "source": "/solutions/defiant/",
+      "destination": "https://rootstock.io/ecosystem/"
+    },
+    {
+      "source": "/kb/rootstock-metamask/",
+      "destination": "/resources/tutorials/rootstock-metamask/"
+    },
+    {
+      "source": "/kb/tokenbridge-troubleshooting/",
+      "destination": "/resources/guides/atlas/"
+    },
+    {
+      "source": "/kb/rskj/",
+      "destination": "/developers/rpc-api/setup/"
+    },
+    {
+      "source": "/develop/wallet/use/json-rpc/",
+      "destination": "/dev-tools/wallets/"
+    },
+    {
+      "source": "/rsk/node/configure/cli/",
+      "destination": "/node-operators/setup/configuration/cli/"
+    },
+    {
+      "source": "/solutions/getblock/",
+      "destination": "https://rootstock.io/ecosystem/"
+    },
+    {
+      "source": "/rsk/node/configure/",
+      "destination": "/node-operators/setup/configuration/"
+    },
+    {
+      "source": "/solutions/edge/",
+      "destination": "https://rootstock.io/ecosystem/"
+    },
+    {
+      "source": "/rsk/node/configure/mining/",
+      "destination": "/node-operators/merged-mining/configure-mining/"
+    },
+    {
+      "source": "/guides/two-way-peg-app/overview/",
+      "destination": "/resources/guides/two-way-peg-app/overview/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/overview/",
+      "destination": "/resources/guides/powpeg-app/overview/"
+    },
+    {
+      "source": "/guides/flyover/",
+      "destination": "/developers/integrate/flyover/"
+    },
+    {
+      "source": "/develop/apps/tools/gas-station/",
+      "destination": "/dev-tools/"
+    },
+    {
+      "source": "/rsk/architecture/",
+      "destination": "/concepts/foundations/"
+    },
+    {
+      "source": "/rsk/node/install/operating-systems/ubuntu/",
+      "destination": "/node-operators/setup/installation/ubuntu/"
+    },
+    {
+      "source": "/guides/rif-relay/smart-wallets/",
+      "destination": "/developers/integrate/rif-relay/smart-wallets/"
+    },
+    {
+      "source": "/tools/rpc-api/",
+      "destination": "/developers/rpc-api/"
+    },
+    {
+      "source": "/guides/quickstart/browser/",
+      "destination": "/developers/blockchain-essentials/browser/"
+    },
+    {
+      "source": "/develop/libs/json-rpc/",
+      "destination": "/node-operators/json-rpc/"
+    },
+    {
+      "source": "/rsk/architecture/mining/implementation-guide/",
+      "destination": "/node-operators/merged-mining/getting-started/"
+    },
+    {
+      "source": "/rsk/node/install/",
+      "destination": "/node-operators/setup/installation/"
+    },
+    {
+      "source": "/kb/defillama/",
+      "destination": "/resources/tutorials/defillama/"
+    },
+    {
+      "source": "/rsk/node/troubleshooting/",
+      "destination": "/node-operators/troubleshooting/"
+    },
+    {
+      "source": "/rsk/architecture/mining/reference/",
+      "destination": "/node-operators/merged-mining/reference/"
+    },
+    {
+      "source": "/rif/rns/tools/RNS-Manager/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rsk/node/install/update/",
+      "destination": "/node-operators/maintenance/update/"
+    },
+    {
+      "source": "/rsk/node/architecture/json-rpc/configuration-limits/",
+      "destination": "/node-operators/json-rpc/configuration-limits/"
+    },
+    {
+      "source": "/guides/full-stack-dapp-on-rsk/part3-front-end/",
+      "destination": "/developers/smart-contracts/hardhat/"
+    },
+    {
+      "source": "/kb/interact-with-smart-contracts/",
+      "destination": "/developers/smart-contracts/hardhat/interact-with-frontend"
+    },
+    {
+      "source": "/develop/wallet/",
+      "destination": "/dev-tools/wallets/"
+    },
+    {
+      "source": "/rsk/node/install/operating-systems/java/",
+      "destination": "/node-operators/setup/installation/java/"
+    },
+    {
+      "source": "/rif/rns/libs/Python/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rsk/node/configure/verbosity/",
+      "destination": "/node-operators/setup/configuration/verbosity/"
+    },
+    {
+      "source": "/the-stack/",
+      "destination": "/concepts/foundations/stack/"
+    },
+    {
+      "source": "/solutions/math-wallet/",
+      "destination": "https://rootstock.io/ecosystem/"
+    },
+    {
+      "source": "/solutions/chainlink/",
+      "destination": "https://rootstock.io/ecosystem/"
+    },
+    {
+      "source": "/guides/two-way-peg-app/pegout/deriving-electrum/",
+      "destination": "/resources/guides/two-way-peg-app/pegout/deriving-electrum/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/pegout/deriving-electrum/",
+      "destination": "/resources/guides/powpeg-app/pegout/deriving-electrum/"
+    },
+    {
+      "source": "/solutions/api3/",
+      "destination": "https://rootstock.io/ecosystem/"
+    },
+    {
+      "source": "/solutions/kriptonmarket/",
+      "destination": "https://rootstock.io/ecosystem/"
+    },
+    {
+      "source": "/kb/rskj-for-developers/",
+      "destination": "/devlopers/rpc-api/"
+    },
+    {
+      "source": "/kb/interface-registry/",
+      "destination": "/developers/smart-contracts/interface-registry/"
+    },
+    {
+      "source": "/guides/two-way-peg-app/faqs/",
+      "destination": "/resources/guides/two-way-peg-app/faqs/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/faqs/",
+      "destination": "/resources/guides/powpeg-app/faqs/"
+    },
+    {
+      "source": "/rif/wallet/dev-reference/troubleshooting/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/kb/the-graph-rootstock/",
+      "destination": "/dev-tools/thegraph/"
+    },
+    {
+      "source": "/tools/thegraph/",
+      "destination": "/dev-tools/thegraph/"
+    },
+    {
+      "source": "/dev-tools/thegraph/",
+      "destination": "/dev-tools/data/thegraph/"
+    },
+    {
+      "source": "/solutions/tenderly/",
+      "destination": "https://rootstock.io/ecosystem/"
+    },
+    {
+      "source": "/guides/full-stack-dapp-on-rsk/",
+      "destination": "/developers/smart-contracts/"
+    },
+    {
+      "source": "/rif/rns/libs/javascript/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/full-stack-dapp-on-rsk/part2-smart-contracts/",
+      "destination": "/developers/smart-contracts/"
+    },
+    {
+      "source": "/rif/rns/guide/getting-started/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/guide/brave/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/kb/",
+      "destination": "/resources/tutorials/"
+    },
+    {
+      "source": "/kb/build-with-tenderly/",
+      "destination": "/resources/tutorials/"
+    },
+    {
+      "source": "/rsk/architecture/fast-payments/",
+      "destination": "/concepts/foundations/"
+    },
+    {
+      "source": "/kb/create-a-token-02/",
+      "destination": "/resources/tutorials/"
+    },
+    {
+      "source": "/rsk/node/contribute/linux/",
+      "destination": "/node-operators/setup/node-runner/linux/"
+    },
+    {
+      "source": "/courses/",
+      "destination": "/resources/courses/"
+    },
+    {
+      "source": "/kb/configure-truffle-to-rsk/",
+      "destination": "/resources/tutorials/"
+    },
+    {
+      "source": "/guides/armadillo/overview/",
+      "destination": "/concepts/"
+    },
+    {
+      "source": "/tools/",
+      "destination": "/dev-tools/"
+    },
+    {
+      "source": "/rsk/architecture/powpeg",
+      "destination": "/concepts/powpeg/"
+    },
+    {
+      "source": "/solutions/covalent/",
+      "destination": "https://rootstock.io/ecosystem/"
+    },
+    {
+      "source": "/solutions/bullanetwork/",
+      "destination": "https://rootstock.io/ecosystem/"
+    },
+    {
+      "source": "/rsk/node/contribute/macos/",
+      "destination": "/node-operators/setup/node-runner/macos/"
+    },
+    {
+      "source": "/kb/ethereum-dapp-to-rsk/",
+      "destination": "/resources/guides/"
+    },
+    {
+      "source": "/rsk/node/reproducible/",
+      "destination": "/node-operators/setup/reproducible-build/"
+    },
+    {
+      "source": "/guides/rif-relay/",
+      "destination": "/developers/integrate/rif-relay/"
+    },
+    {
+      "source": "/rif/rns/testnet/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/develop/wallet/rif-wallet/",
+      "destination": "/dev-tools/wallets/"
+    },
+    {
+      "source": "/solutions/chainbeat/",
+      "destination": "https://rootstock.io/ecosystem/"
+    },
+    {
+      "source": "/guides/flyover/design-architecture/",
+      "destination": "/developers/integrate/flyover/"
+    },
+    {
+      "source": "/guides/armadillo/",
+      "destination": "/concepts/"
+    },
+    {
+      "source": "/guides/armadillo/merged-mining/",
+      "destination": "/node-operators/merged-mining/"
+    },
+    {
+      "source": "/rsk/node/configure/switch-network/",
+      "destination": "/node-operators/setup/configuration/switch-network/"
+    },
+    {
+      "source": "/rsk/node/architecture/json-rpc/personal-module-methods/",
+      "destination": "/node-operators/json-rpc/personal-module-methods/"
+    },
+    {
+      "source": "/develop/apps/integrate/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/wallet/user-guide/create-and-import/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/relay/architecture/",
+      "destination": "/developers/integrate/rif-relay/architecture/"
+    },
+    {
+      "source": "/assets/files/mining-config/miner3.conf",
+      "destination": "/node-operators/merged-mining/configure-mining/"
+    },
+    {
+      "source": "/solutions/envio/",
+      "destination": "https://rootstock.io/ecosystem/"
+    },
+    {
+      "source": "/solutions/givetrack/",
+      "destination": "https://rootstock.io/ecosystem/"
+    },
+    {
+      "source": "/guides/two-way-peg-app/",
+      "destination": "/resources/guides/two-way-peg-app/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/",
+      "destination": "/resources/guides/powpeg-app/"
+    },
+    {
+      "source": "/guides/quickstart/hardhat/interact-with-frontend/",
+      "destination": "/developers/smart-contracts/hardhat/interact-with-frontend/"
+    },
+    {
+      "source": "/guides/two-way-peg-app/pegin/",
+      "destination": "/resources/guides/two-way-peg-app/pegin/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/pegin/",
+      "destination": "/resources/guides/powpeg-app/pegin/"
+    },
+    {
+      "source": "/guides/quickstart/hardhat/deploy-smart-contract/",
+      "destination": "/developers/smart-contracts/hardhat/deploy-smart-contract/"
+    },
+    {
+      "source": "/rsk/node/security-chain/",
+      "destination": "/node-operators/setup/security-chain/"
+    },
+    {
+      "source": "/rif/rollup/overview/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/guide/value-proposition/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/wallet/dev-reference/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/tools/Subdomain-tool/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/kb/fungible-tokens-standard/",
+      "destination": "/resources/tutorials/"
+    },
+    {
+      "source": "/assets/files/mining-config/miner1.conf",
+      "destination": "/node-operators/merged-mining/configure-mining/"
+    },
+    {
+      "source": "/solutions/",
+      "destination": "https://rootstock.io/ecosystem/"
+    },
+    {
+      "source": "/solutions/beexo/",
+      "destination": "https://rootstock.io/ecosystem/"
+    },
+    {
+      "source": "/guides/quickstart/",
+      "destination": "/developers/quickstart/"
+    },
+    {
+      "source": "/guides/quickstart/hardhat/configure-hardhat/",
+      "destination": "/developers/smart-contracts/hardhat/configure-hardhat/"
+    },
+    {
+      "source": "/guides/nft/deploy-nft-on-rsk/",
+      "destination": "/resources/tutorials/"
+    },
+    {
+      "source": "/guides/quickstart/overview/rootstock-ethereum-differences/",
+      "destination": "/developers/blockchain-essentials/overview#rootstock-ethereum-differences"
+    },
+    {
+      "source": "/guides/starter-kits/dapp-automation-cucumber/",
+      "destination": "/resources/tutorials/dapp-automation-cucumber/"
+    },
+    {
+      "source": "/guides/flyover/get-started/",
+      "destination": "/developers/integrate/flyover/sdk/"
+    },
+    {
+      "source": "/rsk/architecture/privacy/",
+      "destination": "/concepts/foundations/"
+    },
+    {
+      "source": "/rsk/node/contribute/cli/",
+      "destination": "/node-operators/setup/node-runner/cli/"
+    },
+    {
+      "source": "/rsk/node/peer-scoring-system/",
+      "destination": "/node-operators/setup/configuration/peer-scoring-system/"
+    },
+    {
+      "source": "/rif/rns/integrate/integrate-wallet/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/architecture/MultiCryptoResolver/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rsk/architecture/mining/remasc",
+      "destination": "/node-operators/merged-mining/remasc/"
+    },
+    {
+      "source": "/guides/nft/",
+      "destination": "/resources/tutorials/"
+    },
+    {
+      "source": "/guides/quickstart/overview/evm-compatibility/",
+      "destination": "/developers/blockchain-essentials/overview#evm-compatibility"
+    },
+    {
+      "source": "/guides/two-way-peg-app/pegout/ledger/",
+      "destination": "/resources/guides/two-way-peg-app/pegout/ledger/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/pegout/ledger/",
+      "destination": "/resources/guides/powpeg-app/pegout/ledger/"
+    },
+    {
+      "source": "/guides/quickstart/hardhat/",
+      "destination": "/developers/quickstart/hardhat/"
+    },
+    {
+      "source": "/rsk/node/configure/mining/autominer/",
+      "destination": "/node-operators/merged-mining/autominer/"
+    },
+    {
+      "source": "/rif/rlogin/authentication/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/wallet/overview/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rlogin/libraries/express-did-auth/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/operations/set-reverse/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/solutions/dcent/",
+      "destination": "https://rootstock.io/ecosystem/"
+    },
+    {
+      "source": "/guides/quickstart/browser/custom-network-and-token/",
+      "destination": "/developers/browser/custom-network-and-token/"
+    },
+    {
+      "source": "/guides/starter-kits/",
+      "destination": "/developers/quickstart/"
+    },
+    {
+      "source": "/guides/two-way-peg-app/advanced-operations/",
+      "destination": "/resources/guides/two-way-peg-app/advanced-operations/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/advanced-operations/",
+      "destination": "/resources/guides/powpeg-app/advanced-operations/"
+    },
+    {
+      "source": "/guides/two-way-peg-app/pegin/ledger/",
+      "destination": "/resources/guides/two-way-peg-app/pegin/ledger/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/pegin/ledger/",
+      "destination": "/resources/guides/powpeg-app/pegin/ledger/"
+    },
+    {
+      "source": "/guides/stablecoin/",
+      "destination": "https://blog.rootstock.io/stablecoin/"
+    },
+    {
+      "source": "/guides/armadillo/network-under-attack/",
+      "destination": "/concepts/"
+    },
+    {
+      "source": "/develop/wallet/use/",
+      "destination": "/dev-tools/wallets/"
+    },
+    {
+      "source": "/develop/libs/",
+      "destination": "/developers/libraries/"
+    },
+    {
+      "source": "/rsk/node/network-upgrade/",
+      "destination": "/node-operators/maintenance/network-upgrades/"
+    },
+    {
+      "source": "/guides/rif-relay/deployment/",
+      "destination": "/developers/integrate/rif-relay/deployment/"
+    },
+    {
+      "source": "/rif/rns/architecture/definitive-resolver/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/guide/operations/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/relay/contracts/",
+      "destination": "/developers/integrate/rif-relay/contracts/"
+    },
+    {
+      "source": "/rif/rns/architecture/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/libs/javascript/Errors/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/contribute/writing-contests/",
+      "destination": "/resources/contribute/writing-contest/"
+    },
+    {
+      "source": "/rsk/node/architecture/json-rpc",
+      "destination": "/node-operators/json-rpc/"
+    },
+    {
+      "source": "/guides/two-way-peg-app/advanced-operations/supported-browsers/",
+      "destination": "/resources/guides/two-way-peg-app/advanced-operations/supported-browsers/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/advanced-operations/supported-browsers/",
+      "destination": "/resources/guides/powpeg-app/advanced-operations/supported-browsers/"
+    },
+    {
+      "source": "/guides/two-way-peg-app/pegout/metamask/",
+      "destination": "/resources/guides/two-way-peg-app/pegout/metamask/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/pegout/metamask/",
+      "destination": "/resources/guides/powpeg-app/pegout/metamask/"
+    },
+    {
+      "source": "/guides/two-way-peg-app/pegin/status/",
+      "destination": "/resources/guides/two-way-peg-app/pegin/status/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/pegin/status/",
+      "destination": "/resources/guides/powpeg-app/pegin/status/"
+    },
+    {
+      "source": "/guides/two-way-peg-app/advanced-operations/supported-addresses/",
+      "destination": "/resources/guides/two-way-peg-app/advanced-operations/supported-addresses/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/advanced-operations/supported-addresses/",
+      "destination": "/resources/guides/powpeg-app/advanced-operations/supported-addresses/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/advanced-operations/supported-addresses/",
+      "destination": "/resources/guides/powpeg-app/pegout/pegout-common-errors/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/pegout/pegout-common-errors/",
+      "destination": "/resources/guides/powpeg-app/pegout/pegout-common-errors/"
+    },
+    {
+      "source": "/guides/two-way-peg-app/advanced-operations/design-architecture/",
+      "destination": "/resources/guides/two-way-peg-app/advanced-operations/design-architecture/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/advanced-operations/design-architecture/",
+      "destination": "/resources/guides/powpeg-app/advanced-operations/design-architecture/"
+    },
+    {
+      "source": "/guides/rlogin/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/starter-kits/hackathon-starter/",
+      "destination": "/resources/hackathon/"
+    },
+    {
+      "source": "/guides/armadillo/glossary/",
+      "destination": "/concepts/"
+    },
+    {
+      "source": "/rif/rns/architecture/rsk-registrar/rskowner/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rsk/node/install/operating-systems/docker/",
+      "destination": "/node-operators/setup/installation/docker/"
+    },
+    {
+      "source": "/rif/rns/architecture/RSKResolver/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/rif-relay/develop/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/rif-relay/integrate/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/guide/advanced/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/architecture/reverse-suite/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/tools/MyCrypto/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/wallet/user-guide/funding-a-wallet/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/mainnet/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/operations/set-btc-address/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/relay/versions/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/guide/setup/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rollup/dev-reference/sdk/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/libs/Android/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/relay/gas-costs/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/operations/resolve/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/tools/tokenbridge/usingmycrypto/",
+      "destination": "/resources/guides/atlas/"
+    },
+    {
+      "source": "/contribute/",
+      "destination": "/resources/contribute/"
+    },
+    {
+      "source": "/webinars/",
+      "destination": "https://rootstock.io/events?_gl=1*1804h96*_gcl_au*NTk3NjcxMTguMTcxOTE0NzgyNw.."
+    },
+    {
+      "source": "/guides/two-way-peg-app/glossary/",
+      "destination": "/resources/guides/two-way-peg-app/glossary/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/glossary/",
+      "destination": "/resources/guides/powpeg-app/glossary/"
+    },
+    {
+      "source": "/guides/quickstart/hardhat/write-smart-contract/",
+      "destination": "/developers/smart-contracts/hardhat/write-smart-contract/"
+    },
+    {
+      "source": "/guides/two-way-peg-app/pegout/trezor/",
+      "destination": "/resources/guides/two-way-peg-app/pegout/trezor/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/pegout/trezor/",
+      "destination": "/resources/guides/powpeg-app/pegout/trezor/"
+    },
+    {
+      "source": "/guides/two-way-peg-app/advanced-operations/supported-wallets/",
+      "destination": "/resources/guides/two-way-peg-app/advanced-operations/supported-wallets/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/advanced-operations/supported-wallets/",
+      "destination": "/resources/guides/powpeg-app/advanced-operations/supported-wallets/"
+    },
+    {
+      "source": "/guides/quickstart/browser/install-metamask/",
+      "destination": "/developers/blockchain-essentials/browser/install-metamask"
+    },
+    {
+      "source": "/guides/two-way-peg-app/pegin/liquality/",
+      "destination": "/resources/guides/two-way-peg-app/pegin/liquality/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/pegin/liquality/",
+      "destination": "/resources/guides/poweg/pegin/liquality/"
+    },
+    {
+      "source": "/guides/two-way-peg-app/pegout/",
+      "destination": "/resources/guides/two-way-peg-app/pegout/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/pegout/",
+      "destination": "/resources/guides/powpeg-app/pegout/"
+    },
+    {
+      "source": "/guides/",
+      "destination": "/resources/guides/"
+    },
+    {
+      "source": "/guides/get-crypto-on-rsk/",
+      "destination": "https://blog.rootstock.io/get-crypto-on-rsk/"
+    },
+    {
+      "source": "/guides/flyover/tools/",
+      "destination": "/developers/integrate/flyover/"
+    },
+    {
+      "source": "/guides/flyover/glossary/",
+      "destination": "/developers/integrate/flyover/glossary/"
+    },
+    {
+      "source": "/guides/armadillo/about/",
+      "destination": "/concepts/"
+    },
+    {
+      "source": "/kb/transaction-rate-limiter-rskj/",
+      "destination": "/resources/tutorials/"
+    },
+    {
+      "source": "/rif/scheduler/services/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/identity/specs/identity-layout/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/identity/libraries/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/identity/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/scheduler/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/marketplace/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/community-calls/",
+      "destination": "https://lu.ma/btchackathons"
+    },
+    {
+      "source": "/rsk/node/architecture/",
+      "destination": "/node-operators/setup/configuration/"
+    },
+    {
+      "source": "/rsk/node/contribute/",
+      "destination": "/node-operators/setup/node-runner/"
+    },
+    {
+      "source": "/rsk/node/architecture/json-rpc/transport-protocols/",
+      "destination": "/node-operators/json-rpc/transport-protocols/"
+    },
+    {
+      "source": "/rif/rns/architecture/rsk-registrar/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/quickstart/transactions/transfer-trif/",
+      "destination": "/developers/blockchain-essentials/transactions#transfer-trif"
+    },
+    {
+      "source": "/rif/rlogin/features/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/operations/migrate-from-auction/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/wallet/dev-reference/running-with-local-server/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/wallet/dev-reference/rif-wallet-libs/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rollup/dev-reference/design/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/guide/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/wallet/user-guide/viewing-transaction-history/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rollup/dev-reference/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rlogin/faqs/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/specs/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rlogin/libraries/vc-json-schemas/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/libs/javascript/Operations/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/operations/get-reverse/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rlogin/design-and-architecture/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/libs/javascript/Advanced-usage/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/integrate/integrate-dapp/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/architecture/registry/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/architecture/reverse-suite/NameResolver/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/libs/javascript/Utils/",
+      "destination": "/concepts/rif-suite/"
+    },
+    {
+      "source": "/rif/rns/architecture/Registrar/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/kb/using-blockmason/",
+      "destination": "/resources/tutorials/"
+    },
+    {
+      "source": "/rsk",
+      "destination": "/concepts/foundations/"
+    },
+    {
+      "source": "/solutions/3xpl/",
+      "destination": "https://rootstock.io/ecosystem/"
+    },
+    {
+      "source": "/rsk/rbtc/conversion/with-node-and-console/",
+      "destination": "/concepts/rbtc/conversion/with-node-and-console/"
+    },
+    {
+      "source": "/develop/libs/rsk-precompiled-abis/",
+      "destination": "/developers/libraries/rsk-precompiled-abis/"
+    },
+    {
+      "source": "/develop/wallet/integrate/",
+      "destination": "/dev-tools/wallets/"
+    },
+    {
+      "source": "/rsk/node/contribute/windows/",
+      "destination": "/node-operators/setup/node-runner/windows/"
+    },
+    {
+      "source": "/develop/",
+      "destination": "/developers/"
+    },
+    {
+      "source": "/guides/two-way-peg-app/pegout/ledger-liquality/",
+      "destination": "/resources/guides/two-way-peg-app/pegout/ledger-liquality/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/pegout/ledger-liquality/",
+      "destination": "/resources/guides/powpeg-app/pegout/ledger-liquality/"
+    },
+    {
+      "source": "/guides/two-way-peg-app/pegin/leather/",
+      "destination": "/resources/guides/two-way-peg-app/pegin/leather/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/pegin/leather/",
+      "destination": "/resources/guides/powpeg-app/pegin/leather/"
+    },
+    {
+      "source": "/guides/quickstart/overview/merged-mining/",
+      "destination": "/concepts/merged-mining/"
+    },
+    {
+      "source": "/guides/two-way-peg-app/pegout/status/",
+      "destination": "/resources/guides/two-way-peg-app/pegout/status/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/pegout/status/",
+      "destination": "/resources/guides/powpeg-app/pegout/status/"
+    },
+    {
+      "source": "/guides/quickstart/transactions/view-transactions/",
+      "destination": "/developers/blockchain-essentials/transactions#view-transactions"
+    },
+    {
+      "source": "/guides/quickstart/transactions/view-network-stats/",
+      "destination": "/developers/blockchain-essentials/transactions#view-network-stats"
+    },
+    {
+      "source": "/guides/two-way-peg-app/prerequisites/",
+      "destination": "/resources/guides/two-way-peg-app/prerequisites/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/prerequisites/",
+      "destination": "/resources/guides/powpeg-app/prerequisites/"
+    },
+    {
+      "source": "/guides/quickstart/transactions/transfer-trbtc/",
+      "destination": "/developers/blockchain-essentials/transactions#transfer-trbtc"
+    },
+    {
+      "source": "/guides/two-way-peg-app/pegin/trezor/",
+      "destination": "/resources/guides/two-way-peg-app/pegin/trezor/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/pegin/trezor/",
+      "destination": "/resources/guides/powpeg-app/pegin/trezor/"
+    },
+    {
+      "source": "/guides/quickstart/overview/what-is-rootstock/",
+      "destination": "/developers/blockchain-essentials/overview#what-is-rootstock/"
+    },
+    {
+      "source": "/guides/quickstart/hardhat/create-hardhat-project/",
+      "destination": "/developers/smart-contracts/hardhat/create-hardhat-project/"
+    },
+    {
+      "source": "/guides/flyover/faqs/",
+      "destination": "/developers/integrate/flyover/faqs/"
+    },
+    {
+      "source": "/rif/wallet/user-guide/deploy-a-wallet/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/wallet/user-guide/",
+      "destination": "/concepts/rif-suite/"
+    },
+    {
+      "source": "/rif/rns/libs/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/guide/intro/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/wallet/dev-reference/design-architecture/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rollup/security/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/wallet/dev-reference/running-the-wallet/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/operations/register-subdomain/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rollup/glossary/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rlogin/develop/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/integrate/integrate-addr-resolution/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/architecture/rsk-registrar/renewers/renewer/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rlogin/libraries/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/operations/renew/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/operations/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/libs/iOS/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/operations/set-resolver/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/specs/registry/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rlogin/samples/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/wallet/dev-reference/security/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/operations/set-addr/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/operations/transfer/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/libs/javascript/Getting-started/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rollup/dapps/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/architecture/rsk-registrar/registrars/fifsaddr/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rollup/faqs/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/libs/rns-artifacts/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/architecture/rsk-registrar/other/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/wallet/user-guide/security-and-privacy/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/integrate/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/architecture/rsk-registrar/renewers/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/relay/overview/",
+      "destination": "/developers/integrate/rif-relay/overview/"
+    },
+    {
+      "source": "/rif/rns/tools/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/libs/javascript/RNS-instance/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/architecture/rsk-registrar/registrars/fifs/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rlogin/integrations/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rollup/dev-reference/troubleshooting/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/specs/resolvers/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rlogin/libraries/modal/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/libs/javascript/Contribute/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/wallet/user-guide/wallet-backup/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/wallet/user-guide/switch-networks/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rlogin/migrating/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/wallet/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/wallet/faqs/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/architecture/Resolver/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/architecture/ReverseRegistrar/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/libs/smart-contracts/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rlogin/libraries/vc-json-schemas-parser/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/operations/register-auction-deprecated/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/run-locally/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/try-rns/",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/rif-relay/installation-requirements/",
+      "destination": "/developers/integrate/rif-relay/installation-requirements/"
+    },
+    {
+      "source": "/tools/hardhat/",
+      "destination": "/dev-tools/hardhat/"
+    },
+    {
+      "source": "/dev-tools/hardhat/",
+      "destination": "/dev-tools/dev-environments/hardhat/"
+    },
+    {
+      "source": "/courses/user-course/",
+      "destination": "/resources/courses/"
+    },
+    {
+      "source": "/assets/files/mining-config/miner2.conf",
+      "destination": "/node-operators/merged-mining/configure-mining/"
+    },
+    {
+      "source": "/rsk/node/install",
+      "destination": "/node-operators/setup/installation/"
+    },
+    {
+      "source": "/rif",
+      "destination": "/concepts/rif-suite/"
+    },
+    {
+      "source": "/the-stack",
+      "destination": "/concepts/foundations/stack/"
+    },
+    {
+      "source": "/webinars",
+      "destination": "/"
+    },
+    {
+      "source": "/rsk/node/troubleshooting",
+      "destination": "/node-operators/troubleshooting/"
+    },
+    {
+      "source": "/rif/rns/architecture/rsk-registrar",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/wallet/dev-reference/running-with-local-server",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/run-locally",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/libs/rns-artifacts/resolver/string-resolver",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rlogin/libraries/vc-json-schemas-parser",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rns/operations/register-auction-deprecated",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/rif/rlogin/libraries/did-auth-client",
+      "destination": "/developers/integrate/"
+    },
+    {
+      "source": "/guides/two-way-peg-app/pegout/status",
+      "destination": "/resources/guides/two-way-peg-app/pegout/status/"
+    },
+    {
+      "source": "/resources/guides/two-way-peg-app/pegout/status/",
+      "destination": "/resources/guides/powpeg-app/pegout/status/"
+    },
+    {
+      "source": "/guides/rif-relay/starter-kit",
+      "destination": "/developers/integrate/rif-relay/sample-dapp/"
+    },
+    {
+      "source": "/guides/dex/dex-vs-cex",
+      "destination": "https://blog.rootstock.io/noticia/dex-vs-cex/"
+    },
+    {
+      "source": "/guides/get-crypto-on-rsk/cryptocurrency-vs-token",
+      "destination": "https://blog.rootstock.io/noticia/cryptocurrency-vs-token/"
+    },
+    {
+      "source": "/guides/stablecoin/stablecoin-vs-digital-assets",
+      "destination": "https://blog.rootstock.io/noticia/stablecoin-vs-digital-asset/"
+    },
+    {
+      "source": "/guides/dex/features-of-a-dex",
+      "destination": "https://blog.rootstock.io/noticia/features-of-a-dex/"
+    },
+    {
+      "source": "/developers/quickstart/alchemy/",
+      "destination": "/developers/rpc-api/alchemy/"
+    },
+    {
+      "source": "/developers/rpc-api/setup/",
+      "destination": "/developers/rpc-api/rootstock/setup/"
+    },
+    {
+      "source": "/developers/smart-contracts/eas/",
+      "destination": "/dev-tools/attestations/eas/"
+    },
+    {
+      "source": "/developers/smart-contracts/eas/overview/",
+      "destination": "/dev-tools/attestations/eas/"
+    },
+    {
+      "source": "/developers/quickstart/dynamic-starter-kit/",
+      "destination": "/developers/quickstart/dynamic/"
+    },
+    {
+      "source": "/resources/contribute/hacktivator-program/",
+      "destination": "/resources/contribute/hacktivator/"
+    },
+    {
+      "source": "/getting-started/",
+      "destination": "/developers/quickstart/"
+    },
+    {
+      "source": "/smart-contracts/",
+      "destination": "/developers/smart-contracts/"
+    },
+    {
+      "source": "/rsk-cli/",
+      "destination": "/developers/smart-contracts/rsk-cli/"
+    },
+    {
+      "source": "/dev-tools/cross-chain-bridges/hyperlanebridge/",
+      "destination": "/dev-tools/cross-chain-bridges/hyperlane-bridge/"
+    },
+    {
+      "source": "/dev-tools/cross-chain-bridges/routerprotocol/",
+      "destination": "/dev-tools/cross-chain-bridges/router-protocol/"
+    },
+    {
+      "source": "/dev-tools/attestations/eas/",
+      "destination": "/dev-tools/attestations/ras/"
+    },
+    {
+      "source": "/developers/smart-contracts/verify-smart-contracts/",
+      "destination": "/developers/smart-contracts/verify-smart-contracts/hardhat-verify-plugin/"
+    },
+    {
+      "source": "/resources/contribute/writing-contest/",
+      "destination": "/resources/contribute/"
+    },
+    {
+      "source": "/resources/guides/eas/",
+      "destination": "/dev-tools/attestations/eas/"
+    },
+    {
+      "source": "/resources/guides/eas/overview/",
+      "destination": "/dev-tools/attestations/eas/overview/"
+    },
+    {
+      "source": "/resources/guides/eas/user-guide/",
+      "destination": "/dev-tools/attestations/eas/user-guide/"
+    },
+    {
+      "source": "/developers/quickstart/para",
+      "destination": "/use-cases/onboarding-ux/para/"
+    },
+    {
+      "source": "/developers/quickstart/para/",
+      "destination": "/use-cases/onboarding-ux/para/"
+    },
+    {
+      "source": "/use-cases/onboarding-ux/smart-wallet-para-sdk/",
+      "destination": "/use-cases/onboarding-ux/para/"
+    },
+    {
+      "source": "/developers/use-cases/rootstock-layerzero/",
+      "destination": "/developers/use-cases/defi/rootstock-layerzero/"
+    },
+    {
+      "source": "/developers/use-cases/ai-agent-rootstock/",
+      "destination": "/developers/use-cases/ai/ai-agent-rootstock/"
+    },
+    {
+      "source": "/developers/use-cases/ai/ai-agent-rootstock/",
+      "destination": "/use-cases/ai-automation/ai-agent-rootstock/"
+    },
+    {
+      "source": "/developers/use-cases/ai/mcp-rootstock/",
+      "destination": "/use-cases/ai-automation/mcp-rootstock/"
+    },
+    {
+      "source": "/developers/use-cases/defi/rootstock-layerzero/",
+      "destination": "/use-cases/interoperability/rootstock-layerzero/"
+    },
+    {
+      "source": "/developers/use-cases/defi/cross-chain-lending-rbtc/",
+      "destination": "/use-cases/btcfi-finance-yield/cross-chain-lending-rbtc/"
+    },
+    {
+      "source": "/developers/use-cases/defi/cross-chain-lending-rbtc",
+      "destination": "/use-cases/btcfi-finance-yield/cross-chain-lending-rbtc/"
+    },
+    {
+      "source": "/developers/use-cases/ussd-rootstock-defi",
+      "destination": "/use-cases/onboarding-ux/ussd-rootstock-defi/"
+    },
+    {
+      "source": "/developers/use-cases/ussd-rootstock-defi/(.*)",
+      "destination": "/use-cases/onboarding-ux/ussd-rootstock-defi/$1"
+    },
+    {
+      "source": "/developers/use-cases/",
+      "destination": "/use-cases/"
+    },
+    {
+      "source": "/use-cases/ai-emerging/ai-agent-rootstock/",
+      "destination": "/use-cases/ai-automation/ai-agent-rootstock/"
+    },
+    {
+      "source": "/use-cases/ai-emerging/mcp-rootstock/",
+      "destination": "/use-cases/ai-automation/mcp-rootstock/"
+    },
+    {
+      "source": "/use-cases/ai-agents/:path*",
+      "destination": "/use-cases/ai-automation/:path*"
+    },
+    {
+      "source": "/use-cases/btcfi-finance/:path*",
+      "destination": "/use-cases/btcfi-finance-yield/:path*"
+    },
+    {
+      "source": "/use-cases/interoperability/integrate-super-bridge-sdk/",
+      "destination": "/use-cases/interoperability/"
+    },
+    {
+      "source": "/use-cases/interoperability/integrate-atlas-bridge-sdk/",
+      "destination": "/use-cases/interoperability/"
+    },
+    {
+      "source": "/use-cases/btcfi-finance-yield/yield-vaults",
+      "destination": "/use-cases/btcfi-finance-yield/yield-vaults-sdk/"
+    },
+    {
+      "source": "/use-cases/btcfi-finance-yield/yield-vaults/",
+      "destination": "/use-cases/btcfi-finance-yield/yield-vaults-sdk/"
+    },
+    {
+      "source": "/use-cases/btcfi-finance-yield/automate-yield-vault/",
+      "destination": "/use-cases/btcfi-finance-yield/"
+    },
+    {
+      "source": "/use-cases/payments-assets/agentic-commerce/",
+      "destination": "/use-cases/payments-assets/"
+    },
+    {
+      "source": "/dev-tools/node-rpc/blast-api/",
+      "destination": "/dev-tools/node-rpc/"
+    },
+    {
+      "source": "/dev-tools/no-code/cryptodo/",
+      "destination": "/dev-tools/no-code/"
+    },
+    {
+      "source": "/dev-tools/oracles/umbrellanetwork/",
+      "destination": "/dev-tools/oracles/"
+    },
+    {
+      "source": "/dev-tools/cross-chain-bridges/tokenbridge/",
+      "destination": "/dev-tools/cross-chain-bridges/atlas/"
+    },
+    {
+      "source": "/resources/guides/tokenbridge/",
+      "destination": "/resources/guides/atlas/"
+    },
+    {
+      "source": "/resources/guides/tokenbridge/faq/",
+      "destination": "/resources/guides/atlas/"
+    },
+    {
+      "source": "/resources/guides/tokenbridge/dappguide/",
+      "destination": "/resources/guides/atlas/"
+    },
+    {
+      "source": "/resources/guides/tokenbridge/contractaddresses/",
+      "destination": "/resources/guides/atlas/"
+    },
+    {
+      "source": "/resources/guides/tokenbridge/troubleshooting/",
+      "destination": "/resources/guides/atlas/"
+    },
+    {
+      "source": "/resources/guides/tokenbridge/usingmycrypto/",
+      "destination": "/resources/guides/atlas/"
+    },
+    {
+      "source": "/dev-tools/no-code/forward-protocol/",
+      "destination": "/dev-tools/"
+    }
   ],
   "rewrites": [
     {
@@ -738,11 +2836,26 @@
     {
       "source": "/(.*)\\.md",
       "headers": [
-        {"key": "Content-Type", "value": "text/markdown; charset=utf-8"},
-        {"key": "Vary", "value": "Accept"},
-        {"key": "X-Content-Type-Options", "value": "nosniff"},
-        {"key": "X-Robots-Tag", "value": "googlebot: noindex, nofollow, bingbot: noindex, nofollow"},
-        {"key": "Cache-Control", "value": "public, max-age=3600, must-revalidate"}
+        {
+          "key": "Content-Type",
+          "value": "text/markdown; charset=utf-8"
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "googlebot: noindex, nofollow, bingbot: noindex, nofollow"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
       ]
     }
   ]

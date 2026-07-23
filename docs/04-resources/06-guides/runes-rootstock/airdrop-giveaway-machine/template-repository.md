@@ -707,7 +707,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 ```
 
 * **License and Version**: The first line specifies the license type (MIT). The comment indicates compatibility with OpenZeppelin Contracts version 5.0.0.
-* **Solidity Version**: The `pragma` statement specifies that this contract uses Solidity version 0.8.25 or higher.
+* **Solidity Version**: Set `pragma` to a version listed in [Development Prerequisites](/developers/requirements/). Confirm the EVM target in the [EVM Compatibility Explorer](https://rskj-evm-compatibility.rsk.co/).
 * **Imports**: The contract imports two modules from OpenZeppelin:
   * `ERC1155`: The base implementation of the ERC-1155 token standard, which allows for the creation of multiple token types in a single contract.
   * `Ownable`: A contract that provides basic authorization control functions, allowing only the owner of the contract to execute certain functions.

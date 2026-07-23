@@ -12,6 +12,41 @@ description: "How merge mining Rootstock with Bitcoin works, and its benefits."
 
 ## How it works
 
+Merged mining reuses Bitcoin hashrate. Pools include a Rootstock block reference in each job. When a miner finds a solution, the pool compares it to both network difficulties.
+
+```mermaid
+flowchart LR
+  Pool["Bitcoin mining pool"]
+  Miner["Miner hashrate"]
+  Comp{"Compare solution<br/>to difficulties"}
+
+  BTC["Bitcoin block<br/>(>= BTC difficulty)"]
+  RSK["Rootstock block<br/>(>= Rootstock,<br/>< Bitcoin)"]
+  Share["Pool share only<br/>(not broadcast)"]
+
+  Pool -->|"1. Job includes<br/>Rootstock block ref"| Miner
+  Miner -->|"2. Submit solution"| Comp
+  Comp -->|"3a. Meets Bitcoin"| BTC
+  Comp -->|"3b. Meets Rootstock only"| RSK
+  Comp -->|"3c. Below both"| Share
+  BTC -->|"4. Also valid<br/>for Rootstock"| RSK
+
+  classDef pool fill:#EDE7FF,stroke:#9E76FF,stroke-width:2px,color:#1a1a1a
+  classDef miner fill:#FCE4F6,stroke:#FF71E1,stroke-width:2px,color:#1a1a1a
+  classDef decision fill:#F5F5F5,stroke:#666666,stroke-width:2px,color:#1a1a1a
+  classDef btc fill:#FFF0D9,stroke:#FF9100,stroke-width:2px,color:#1a1a1a
+  classDef rsk fill:#E8F5D0,stroke:#79C600,stroke-width:2px,color:#1a1a1a
+  classDef share fill:#EEEEEE,stroke:#888888,stroke-width:2px,color:#1a1a1a
+
+  class Pool pool
+  class Miner miner
+  class Comp decision
+  class BTC btc
+  class RSK rsk
+  class Share share
+```
+
+A solution that meets Bitcoin difficulty also meets Rootstock difficulty because Rootstock difficulty is lower. That is why step 4 points from Bitcoin to Rootstock.
 Bitcoin mining pools include a reference to Rootstock's block in every mining job they deliver to miners.
 Every time miners find a solution, it is compared to both networks' difficulties (Bitcoin and Rootstock), delivering three possible outcomes:
 

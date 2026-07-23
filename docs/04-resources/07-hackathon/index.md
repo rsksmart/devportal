@@ -10,7 +10,7 @@ This guide details the necessary hardware and software requirements for developi
 
 It includes setup instructions for essential tools such as Java, Node.js, Hardhat, and RSKj, ensuring developers have a clear path to prepare their environment for Rootstock projects, whether for local development, testing, or deployment. 
 
-For IRL hackathons and events, download the [Hackathon Cheatsheet PDF with QR Codes](https://dev.rootstock.io/Rootstock_Developer_Cheatsheet.pdf).
+For IRL hackathons and events, use the [Developer Cheatsheet](/cheatsheet/) (network setup, starter kits, and QR-friendly quick reference). Check compiler and opcode support in the [EVM Compatibility Explorer](https://rskj-evm-compatibility.rsk.co/) before workshops.
 
 ## Prerequisites
 
@@ -97,7 +97,7 @@ For more information on specific requirements for developing on Rootstock, Visit
 <Card
   title="Rootstock Hackathon Cheatsheet"
   description="The Rootstock Hackathon Cheatsheet is a concise reference guide for developers aiming to deploy decentralized applications (dApps) on the Rootstock network."
-  link="https://dev.rootstock.io/Rootstock_Developer_Cheatsheet.pdf"
+  link="/cheatsheet/"
 />
 
 <br></br>

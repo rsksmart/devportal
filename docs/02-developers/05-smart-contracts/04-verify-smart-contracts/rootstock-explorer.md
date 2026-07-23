@@ -275,7 +275,7 @@ Then locate the Hardhat build-info file under `artifacts/build-info/*.json`; thi
       }
     },
     "remappings": [],
-    "evmVersion": "london"
+    "evmVersion": "cancun"
   }
 }
 ```

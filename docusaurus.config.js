@@ -64,9 +64,7 @@ const config = {
       },
       devCheatsheet : {
         title: 'Developer Cheatsheet',
-        url : 'https://dev.rootstock.io/Rootstock_Developer_Cheatsheet.pdf',
-        target: '_blank',
-        rel: "noopener noreferrer"
+        url : '/cheatsheet',
       },
       reportIssue : {
         title: 'Report an Issue',
@@ -108,6 +106,11 @@ const config = {
     process.env.DOCUSAURUS_BROKEN_MARKDOWN_LINKS,
   ),
   onBrokenAnchors: reportingSeverityFromEnv(process.env.DOCUSAURUS_BROKEN_ANCHORS),
+
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -191,6 +194,17 @@ const config = {
     }],
     './plugins/fix-llms-urls.js',
     './plugins/llms-txt-markdown-directive.js',
+    [
+      'docusaurus-plugin-mermaid-pan-zoom',
+      {
+        enableInlineWheelZoom: true,
+        enableZoomControls: true,
+        enableExpand: true,
+        enableCopy: true,
+        // Cap tall diagrams so pan/zoom is useful (Base-docs style viewport)
+        intrinsicHeightScale: 1.15,
+      },
+    ],
   ],
   presets: [
     [
@@ -242,6 +256,19 @@ const config = {
         defaultMode: 'dark',
         disableSwitch: false,
         respectPrefersColorScheme: false,
+      },
+      mermaid: {
+        theme: {light: 'neutral', dark: 'dark'},
+        options: {
+          flowchart: {
+            htmlLabels: true,
+            curve: 'basis',
+            padding: 12,
+            nodeSpacing: 36,
+            rankSpacing: 48,
+            wrappingWidth: 200,
+          },
+        },
       },
       // Replace with your project's social card
       image: 'img/og.png',

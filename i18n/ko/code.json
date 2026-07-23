@@ -1132,9 +1132,6 @@
   "Use Cases": {
     "message": "사용 사례"
   },
-  "Platform fundamentals, rBTC, PowPeg security, and the Rootstock stack.": {
-    "message": "플랫폼 기본 개념, rBTC, PowPeg 보안, Rootstock 스택."
-  },
   "Quickstarts, smart contracts, integrations, libraries, and RPC API.": {
     "message": "Quickstarts, 스마트 컨트랙트, 통합, 라이브러리, RPC API."
   },
@@ -1248,5 +1245,8 @@
   },
   "Open RootstockCollective": {
     "message": "RootstockCollective 열기"
+  },
+  "Platform foundations, rBTC, security model, and the Rootstock stack.": {
+    "message": "플랫폼 기본 개념, rBTC, PowPeg 보안, Rootstock 스택."
   }
 }

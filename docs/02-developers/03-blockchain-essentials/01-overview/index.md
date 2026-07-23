@@ -22,7 +22,7 @@ Rootstock’s full technology stack is built on top of Bitcoin:
 From Rootstock smart contracts to the Rootstock Infrastructure Framework.
 The stack is designed to create a more fair and inclusive financial system.
 
-> See [The Stack](/concepts/fundamentals/stack/)
+> See [The Stack](/concepts/foundations/stack/)
 
 Bitcoin, is a store and transfer of value.
 The blockchain is secure because miners with high infrastructure and energy costs create new blocks to be added to the blockchain every 10 minutes.
@@ -163,7 +163,7 @@ If you are familiar with smart contract development or dApp development using so
 So you can use the same code, tools, and libraries when developing with Rootstock too.
 Thus, the smart contract/dApp development skills that you’re used to will transfer across quite nicely too!
 
-> See supported Solidity version in [requirements](/developers/requirements/)
+> See supported Solidity and EVM versions in [requirements](/developers/requirements/) and the [EVM Compatibility Explorer](https://rskj-evm-compatibility.rsk.co/).
 
 ### Tools
 

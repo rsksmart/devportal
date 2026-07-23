@@ -14,7 +14,7 @@ description: Rootstockは、最初に登場したBitcoinのサイドチェーン
 
 Rootstockは、最初に登場したBitcoinのサイドチェーンで、最も長い歴史を誇ります。また、Bitcoinのプルーフ・オブ・ワークのセキュリティとEthereumのスマートコントラクト機能を組み合わせた唯一のレイヤー2ソリューションです。このプラットフォームはオープンソースで、EVMと互換性があり、60%以上のBitcoinハッシュパワーによって保護されているため、完全なトラストレスに向けて進化し続けるdAppsの活気あるエコシステムへのゲートウェイとなっています。
 
-[Rootstockスタック](/concepts/fundamentals/stack/)を見る。
+[Rootstockスタック](/concepts/foundations/stack/)を見る。
 
 ## RootstockとBitcoinとの関係について
 

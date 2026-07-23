@@ -1132,9 +1132,6 @@
   "Use Cases": {
     "message": "ユースケース"
   },
-  "Platform fundamentals, rBTC, PowPeg security, and the Rootstock stack.": {
-    "message": "プラットフォームの基礎、rBTC、PowPeg セキュリティ、Rootstock スタック。"
-  },
   "Quickstarts, smart contracts, integrations, libraries, and RPC API.": {
     "message": "Quickstarts、スマートコントラクト、統合、ライブラリ、RPC API。"
   },
@@ -1248,5 +1245,8 @@
   },
   "Open RootstockCollective": {
     "message": "RootstockCollective を開く"
+  },
+  "Platform foundations, rBTC, security model, and the Rootstock stack.": {
+    "message": "プラットフォームの基礎、rBTC、PowPeg セキュリティ、Rootstock スタック。"
   }
 }

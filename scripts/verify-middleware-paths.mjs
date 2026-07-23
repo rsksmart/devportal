@@ -56,6 +56,10 @@ const cases = [
     expected: null,
   },
   {
+    input: '/cheatsheet',
+    expected: '/cheatsheet.md',
+  },
+  {
     input: '/changelog/',
     expected: null,
   },

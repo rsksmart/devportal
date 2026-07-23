@@ -14,7 +14,7 @@ description: Rootstock는 최초이자 가장 오래 운영되고 있는 비트�
 
 Rootstock는 최초이자 가장 오래 지속되고 있는 비트코인 사이드체인으로, 비트코인 작업 증명(PoW)의 보안성과 이더리움의 스마트 컨트랙트 기능을 결합한 유일한 레이어 2 솔루션입니다. 이 플랫폼은 오픈 소스이며, EVM 호환이 가능하고, 비트코인 해시 파워의 60% 이상으로 보안을 유지하며 완전한 무신뢰(trustless)를 향해 계속해서 발전하는 활발한 dApp 생태계의 관문이 되고 있습니다.
 
-[Rootstock 스택](/concepts/fundamentals/stack/)을 참고하세요.
+[Rootstock 스택](/concepts/foundations/stack/)을 참고하세요.
 
 ## Rootstock은 비트코인과 어떻게 연결되어 있나요?
 

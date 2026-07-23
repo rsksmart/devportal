@@ -11,6 +11,45 @@ Atlas Bridge is a cross-chain bridge for the Rootstock ecosystem. You can use it
 - Peg-in means you move assets into Rootstock.
 - Peg-out means you move assets out of Rootstock.
 
+## How Atlas fits the stack
+
+Atlas is a client of the RSK Swap API. The web UI and the SDK both request quotes from the same API. Providers execute the peg-in or peg-out route. Settlement lands on the destination network you selected.
+
+```mermaid
+flowchart LR
+  Source["Source network<br/>(BTC, LN, or EVM)"]
+
+  subgraph Clients["Clients"]
+    direction TB
+    Atlas["Atlas Bridge UI"]
+    SDK["RSK Swap SDK<br/>(dApps / wallets)"]
+  end
+
+  API["RSK Swap API<br/>+ providers"]
+  Dest["Destination<br/>(often Rootstock)"]
+
+  Source -->|"1. Choose amount<br/>and route"| Atlas
+  Atlas -->|"2a. Quote / execute"| API
+  SDK -->|"2b. Quote / execute"| API
+  API -->|"3. Provider completes<br/>peg-in or peg-out"| Dest
+  API -.->|"4. Status / refund path"| Source
+
+  classDef source fill:#FFF0D9,stroke:#FF9100,stroke-width:2px,color:#1a1a1a
+  classDef ui fill:#FCE4F6,stroke:#FF71E1,stroke-width:2px,color:#1a1a1a
+  classDef sdk fill:#E0FFFA,stroke:#08FFD0,stroke-width:2px,color:#1a1a1a
+  classDef api fill:#EDE7FF,stroke:#9E76FF,stroke-width:2px,color:#1a1a1a
+  classDef dest fill:#E8F5D0,stroke:#79C600,stroke-width:2px,color:#1a1a1a
+
+  class Source source
+  class Atlas ui
+  class SDK sdk
+  class API api
+  class Dest dest
+```
+
+UI and SDK are parallel clients. They do not call each other. Destination depends on direction: peg-in usually targets Rootstock; peg-out returns value to the source network.
+Atlas compares provider routes before you connect a wallet. For programmatic quoting and swaps, use the RSK Swap SDK against the same API.
+
 ## Prerequisites
 You need a wallet for the source network and a wallet address for the destination network. You also need enough balance to cover both transfer amount and fees.
 

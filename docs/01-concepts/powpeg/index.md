@@ -12,7 +12,9 @@ Rootstock’s **PowPeg** protocol, has matured from its inception in 2018 as a f
 :::note Info
 - The PowPeg App is available on [Testnet](https://powpeg.testnet.rootstock.io/) and [Mainnet](https://powpeg.rootstock.io/).
 - For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the PowPeg, please refer to the [PowPeg user guide](/resources/guides/powpeg-app/).
-- Get information on the signatories and attestion in the [PowPeg HSM Firmware Attestation](/concepts/powpeg/hsm-firmware-attestation) section.
+- Get information on the signatories and attestation in the [PowPeg HSM Firmware Attestation](/concepts/powpeg/hsm-firmware-attestation) section.
+- For federation size and composition changes, see [PowPeg member updates](/concepts/powpeg/member-updates/).
+- For the full Rootstock security model (SSDLC, audits, verification), see [Security at Rootstock](/concepts/foundations/security/).
 - Read [Introducing Fast Mode: Getting rBTC via the PowPeg, but Faster](https://blog.rootstock.io/noticia/get-rbtc-fast-mode/) to learn about the difference between Native Mode and Fast Modes when using the PowPeg.
 :::
 
@@ -26,6 +28,51 @@ When the Rootstock genesis block was mined, the Rootstock Federation, an autonom
 
 ## The PowPeg Protocol in Rootstock
 
+The PowPeg moves value between Bitcoin and Rootstock. Peg-in locks BTC and credits rBTC. Peg-out burns rBTC and releases BTC after confirmations and PowHSM signatures.
+
+```mermaid
+flowchart LR
+  User["User / exchange"]
+
+  subgraph PegIn["Peg-in path"]
+    direction LR
+    PegAddr["PowPeg multisig<br/>on Bitcoin"]
+    Watch["PowPeg nodes<br/>(watchtower)"]
+    BridgeIn["Bridge contract"]
+    rBTCin["rBTC minted"]
+  end
+
+  subgraph PegOut["Peg-out path"]
+    direction LR
+    BridgeOut["Bridge contract"]
+    HSM["PowHSMs<br/>(SPV + cumulative work)"]
+    BTCOut["BTC released<br/>on Bitcoin"]
+  end
+
+  User -->|"1. Send BTC"| PegAddr
+  PegAddr -->|"2. Confirmed UTXO"| Watch
+  Watch -->|"3. SPV proof"| BridgeIn
+  User -.->|"3b. Optional notify"| BridgeIn
+  BridgeIn -->|"4. Mint"| rBTCin
+
+  User -->|"5. Request peg-out"| BridgeOut
+  BridgeOut -->|"6. Peg-out command<br/>after confirmations"| HSM
+  HSM -->|"7. Multisig signatures"| BTCOut
+
+  classDef user fill:#FCE4F6,stroke:#FF71E1,stroke-width:2px,color:#1a1a1a
+  classDef btc fill:#FFF0D9,stroke:#FF9100,stroke-width:2px,color:#1a1a1a
+  classDef custodian fill:#EDE7FF,stroke:#9E76FF,stroke-width:2px,color:#1a1a1a
+  classDef rsk fill:#E8F5D0,stroke:#79C600,stroke-width:2px,color:#1a1a1a
+  classDef token fill:#E0FFFA,stroke:#08FFD0,stroke-width:2px,color:#1a1a1a
+
+  class User user
+  class PegAddr,BTCOut btc
+  class Watch,HSM custodian
+  class BridgeIn,BridgeOut rsk
+  class rBTCin token
+```
+
+Peg-in and peg-out are separate paths. They share the Bridge contract and PowPeg infrastructure, but they do not run as a single bidirectional hop.
 The Rootstock researchers and developers strategy when designing the PowPeg differs from the one adopted by other teams that have built 2-way peg protocols. The Rootstock PowPeg is based on a layered security model, a practice we call “**defence-in-depth**”. Most other pegs rely on a single all-encompassing cryptographic protocol that solves a multi-party custody problem in an intricate way. These complex cryptographic protocols are delicate and very few entities can audit them thoroughly. Often these types of protocols become compromised, resulting in a sudden loss of security for users.
 
 Other recent 2-way peg designs focus on crypto-economic incentives that take advantage of high collateralization in a new token. However, using a different token for the core sidechain functionality is not aligned with Bitcoin values. The Rootstock PowPeg bridge, instead, relies on multiple defences, or layers, with each layer relatively simple to understand and test. This defence-in-depth approach is what has allowed Rootstock to grow from genesis to the current state without major problems, and without downtime. Since there is no collateral, the Rootstock PowPeg members are incentivized to participate by receiving a small portion of Rootstock transaction fees that is automatically channeled to them. As seen in the Ethereum ecosystem, transaction fees can eventually provide a sustained income for miners and sometimes [even higher](https://coinmetrics.io/ethereums-defi-evolution-how-defi-is-fueling-ethereums-growth/) than the blockchain subsidy.

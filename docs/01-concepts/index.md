@@ -14,12 +14,13 @@ This section equips you with the fundamental knowledge required to navigate the 
 
 | Resource                                                       | Description                                                                                    |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| [Rootstock Blockchain Overview](/concepts/fundamentals/) | Gain a comprehensive understanding of the Rootstock platform. |
-| [Rootstock Stack](/concepts/fundamentals/stack/) |  Learn about how Rootstock combines the security of Bitcoin PoW with Ethereum's smart contract functionality.|
+| [Rootstock Foundations](/concepts/foundations/) | Platform overview: how Rootstock connects to Bitcoin via merged mining and the PowPeg. |
+| [Rootstock Stack](/concepts/foundations/stack/) | Layers from applications down to Bitcoin merged mining. |
+| [Security at Rootstock](/concepts/foundations/security/) | Why Rootstock is secure, how it stays secure, and how you can verify the model. |
 | [Glossary](/concepts/glossary/) |  This glossary provides essential definitions for key terms related to Rootstock and blockchain technology.|
 | [rBTC Token](/concepts/rbtc/) | The rBTC token fuels transactions on the Rootstock network. Converting BTC to rBTC is straightforward using various methods. Visit the rBTC section for a comprehensive list of exchanges and applications facilitating rBTC acquisition. Visit the [rBTC section](https://rootstock.io/rbtc/) for a list of exchanges and apps to get rBTC.|
 | [RIF Suite](/concepts/rif-suite/) | Learn about the Rootstock Infrastructure Framework, a comprehensive set of Open-source tools and technologies designed to streamline and incentivize development on Bitcoin.|
-| [Rootstock Security](/concepts/powpeg/security-model/) | The Rootstock platform uses a security mechanism called the [PowPeg](/concepts/powpeg/), it is based on a layered security model, called “defence-in-depth”.|
+| [PowPeg Protocol](/concepts/powpeg/) | Transfer BTC to rBTC and back through the PowPeg. See also the [PowPeg security summary](/concepts/powpeg/security-model/).|
 | [PowPeg HSM Firmware](/concepts/powpeg/hsm-firmware-attestation/) | Learn how to verify PowPeg nodes using the HSM Firmware Attestation. |
 | [Account Based Addresses](/concepts/account-based-addresses/) | EIP-1191 chainId is used in Rootstock addresses as a checksum. m/44'/137'/0'/0 is the derivation path used for BIP-44 compatible wallets. |
 

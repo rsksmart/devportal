@@ -89,6 +89,43 @@ This is a starter kit designed for rapid prototyping. It is intended for educati
 
 :::
 
+## Summary
+
+Build a Next.js dApp on Rootstock with **Dynamic** embedded wallets and **Wagmi** hooks. Repo: [github.com/rsksmart/rootstock-dynamic](https://github.com/rsksmart/rootstock-dynamic).
+
+### What you'll achieve
+
+- Set up a Next.js project with Dynamic embedded wallets and Wagmi
+- Connect wallets and read balances on Rootstock testnet
+- Send token transfers and sign messages from the dApp
+
+### Setup steps
+
+| Step | Action |
+|------|--------|
+| 1 | Clone `https://github.com/RookieCol/rootstock-dynamic` |
+| 2 | Install dependencies with `bun install` or `yarn install` |
+| 3 | Create a free [Dynamic dashboard](https://app.dynamic.xyz/dashboard/overview) account |
+| 4 | Copy **Environment ID** from Developers → SDK & API Keys |
+| 5 | Create `.env.local` with `NEXT_PUBLIC_DYNAMIC_ENVIRONMENT_ID=YOUR_ENVIRONMENT_ID` |
+| 6 | Run `bun dev` or `yarn dev`. Open `http://localhost:3000` |
+
+### Frontend interactions
+
+| Feature | Component | Tokens supported |
+|---------|-----------|------------------|
+| Connect wallet | `DynamicWidget` | MetaMask, WalletConnect, social login |
+| Check balances | `Balances` | rBTC, tRIF, DOC |
+| Send tokens | `Transfer` | rBTC, tRIF, DOC |
+| Sign messages | `SignMessage` | Arbitrary message signing |
+
+### Prerequisites
+
+- Node.js 19.x or later
+- Bun 1.1.x+ or Yarn
+- Next.js, Wagmi, and Viem (included in starter kit)
+- Rootstock Testnet configured (chain ID 31)
+
 ## **Getting Started**
 
 ````mdx-code-block

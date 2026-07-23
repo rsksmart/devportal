@@ -82,7 +82,7 @@ const content = {
         },
         {
           title: <Translate>Read the security model</Translate>,
-          href: '/concepts/powpeg/security-model/',
+          href: '/concepts/foundations/security/',
         },
         {
           title: <Translate>Mainnet deployment checklist</Translate>,

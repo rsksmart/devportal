@@ -73,10 +73,10 @@ A Foundry starter project can be set up with preset configurations for the Roots
    src = "src"
    out = "out"
    libs = ["lib"]
-   solc_version = "0.8.24"
+   solc_version = "0.8.34"
    optimizer = true
    optimizer_runs = 200
-   evm_version = "london"
+   evm_version = "cancun"
 
    [rpc_endpoints]
    rskTestnet = "${RSK_TESTNET_RPC_URL}"
@@ -166,12 +166,12 @@ A Foundry starter project can be set up with preset configurations for the Roots
 5. **Deploy the Contract: Use a Foundry script to deploy the contract.**:
 
    ```bash
-   forge script script/deploy.s.sol --rpc-url $RSK_TESTNET_RPC_URL --broadcast --legacy --evm-version london
+   forge script script/deploy.s.sol --rpc-url $RSK_TESTNET_RPC_URL --broadcast --legacy --evm-version cancun
    ```
   
 
    ```bash
-   $ forge script script/deploy.s.sol --rpc-url $RSK_TESTNET_RPC_URL --broadcast --legacy --evm-version london
+   $ forge script script/deploy.s.sol --rpc-url $RSK_TESTNET_RPC_URL --broadcast --legacy --evm-version cancun
 
    # The response should look like this:
    [⠊] Compiling...

@@ -1135,9 +1135,6 @@
   "Use Cases": {
     "message": "Use Cases"
   },
-  "Platform fundamentals, rBTC, PowPeg security, and the Rootstock stack.": {
-    "message": "Platform fundamentals, rBTC, PowPeg security, and the Rootstock stack."
-  },
   "Quickstarts, smart contracts, integrations, libraries, and RPC API.": {
     "message": "Quickstarts, smart contracts, integrations, libraries, and RPC API."
   },
@@ -1251,5 +1248,8 @@
   },
   "Open RootstockCollective": {
     "message": "Open RootstockCollective"
+  },
+  "Platform foundations, rBTC, security model, and the Rootstock stack.": {
+    "message": "Platform foundations, rBTC, security model, and the Rootstock stack."
   }
 }
