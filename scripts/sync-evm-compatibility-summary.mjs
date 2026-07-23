@@ -98,34 +98,49 @@ function buildSummary() {
 }
 
 function updateCheatsheetMarkdown(summary) {
-  if (!fs.existsSync(CHEATSHEET_MD_PATH)) {
-    return;
+  let fd;
+  try {
+    // Open once and reuse the descriptor to avoid TOCTOU between exists/read/write.
+    fd = fs.openSync(CHEATSHEET_MD_PATH, 'r+');
+  } catch (error) {
+    if (error && error.code === 'ENOENT') {
+      return;
+    }
+    throw error;
   }
 
-  let md = fs.readFileSync(CHEATSHEET_MD_PATH, 'utf8');
-  const {recommended} = summary;
-  const solidity = recommended.solidityVersionDisplay;
-  const evm = recommended.evmVersionDisplay;
+  try {
+    const {size} = fs.fstatSync(fd);
+    const buffer = Buffer.alloc(size);
+    fs.readSync(fd, buffer, 0, size, 0);
+    let md = buffer.toString('utf8');
+    const {recommended} = summary;
+    const solidity = recommended.solidityVersionDisplay;
+    const evm = recommended.evmVersionDisplay;
 
-  md = md.replace(
-    /\| Supported Version \| up to [^\|]+ \|/,
-    `| Supported Version | ${solidity} |`,
-  );
-  md = md.replace(/\| EVM Version \| [^\|]+ \|/, `| EVM Version | ${evm} |`);
-  md = md.replace(
-    /\| Solidity \| up to [^\|]+ \| up to [^\|]+ \|/,
-    `| Solidity | ${solidity} | ${solidity} |`,
-  );
-  md = md.replace(/\| EVM \| [^\|]+ \| [^\|]+ \|/, `| EVM | ${evm} | ${evm} |`);
-
-  if (!md.includes('EVM Compatibility Explorer')) {
     md = md.replace(
-      '### 1.4 Solidity Compiler\n',
-      `### 1.4 Solidity Compiler\n\nFull opcode and compiler matrix: [EVM Compatibility Explorer](${EXPLORER_URL}) · [Requirements](https://dev.rootstock.io${REQUIREMENTS_PATH})\n`,
+      /\| Supported Version \| up to [^\|]+ \|/,
+      `| Supported Version | ${solidity} |`,
     );
-  }
+    md = md.replace(/\| EVM Version \| [^\|]+ \|/, `| EVM Version | ${evm} |`);
+    md = md.replace(
+      /\| Solidity \| up to [^\|]+ \| up to [^\|]+ \|/,
+      `| Solidity | ${solidity} | ${solidity} |`,
+    );
+    md = md.replace(/\| EVM \| [^\|]+ \| [^\|]+ \|/, `| EVM | ${evm} | ${evm} |`);
 
-  fs.writeFileSync(CHEATSHEET_MD_PATH, md);
+    if (!md.includes('EVM Compatibility Explorer')) {
+      md = md.replace(
+        '### 1.4 Solidity Compiler\n',
+        `### 1.4 Solidity Compiler\n\nFull opcode and compiler matrix: [EVM Compatibility Explorer](${EXPLORER_URL}) · [Requirements](https://dev.rootstock.io${REQUIREMENTS_PATH})\n`,
+      );
+    }
+
+    fs.ftruncateSync(fd, 0);
+    fs.writeSync(fd, md, 0, 'utf8');
+  } finally {
+    fs.closeSync(fd);
+  }
 }
 
 function main() {
