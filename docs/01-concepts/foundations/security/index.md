@@ -34,9 +34,9 @@ The federation currently operates as a **5-of-9** multi-signature, with a roadma
 
 Independent layers reinforce one another: Bitcoin hashpower, the multi-signature bridge, tamper-resistant hardware, and Bridge contract logic. The network is also monitored for anomalies such as attempts to revert transactions so participants can be alerted to potential attacks.
 
-| Orange | Green | Purple | Cyan | Pink |
-| --- | --- | --- | --- | --- |
-| Bitcoin PoW | Rootstock consensus | Bridge contract | PowHSM federation | Locked BTC |
+### Architecture diagram
+
+The diagram shows the path from Bitcoin PoW through Rootstock consensus and the Bridge contract to the PowHSM multi-sig that releases locked BTC.
 
 ```mermaid
 flowchart LR

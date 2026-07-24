@@ -14,9 +14,9 @@ description: "How merge mining Rootstock with Bitcoin works, and its benefits."
 
 Merged mining reuses Bitcoin hashrate. Pools include a Rootstock block reference in each job. When a miner finds a solution, the pool compares it to both network difficulties.
 
-| Purple | Pink | Grey | Orange | Green | Light grey |
-| --- | --- | --- | --- | --- | --- |
-| Mining pool | Miner hashrate | Difficulty check | Bitcoin outcome | Rootstock outcome | Pool share only |
+### Architecture diagram
+
+The diagram shows how a pool job reaches a miner, then how the pool compares the solution to Bitcoin and Rootstock difficulties. Outcomes are a Bitcoin block, a Rootstock-only block, or a pool share.
 
 ```mermaid
 flowchart LR

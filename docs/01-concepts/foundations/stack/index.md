@@ -50,9 +50,9 @@ Rootstock sits on Bitcoin via merged mining. dApps use EVM tooling on top of the
 
 When you build Bitcoin DeFi on Rootstock, you interact with the **Rootstock Virtual Machine (RVM)**. Because the RVM is fully EVM-compatible, you can use industry-standard tools like **Remix, Hardhat, and Foundry** to manage Bitcoin-native assets.
 
-| Pink | Purple | Cyan | Green | Orange |
-| --- | --- | --- | --- | --- |
-| Applications | Developer tooling | RIF services | RVM execution | Bitcoin merged mining |
+### Architecture diagram
+
+The diagram stacks applications, developer tooling, RIF services, and the RVM on Bitcoin merged mining. Solid arrows show dependency from applications toward the Bitcoin security base. Items in each layer are examples, not an exhaustive product list.
 
 ```mermaid
 flowchart TB
@@ -105,5 +105,3 @@ flowchart TB
   class RVM exec
   class BTC security
 ```
-
-Solid arrows show dependency from applications toward the Bitcoin security base. Items in each layer are examples, not an exhaustive product list.

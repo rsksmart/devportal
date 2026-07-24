@@ -28,13 +28,9 @@ rBTC is pegged 1:1 with BTC and is the native token used to pay for transaction 
 
 
 
-## Architecture Diagram
+## Architecture diagram
 
-| Pink | Orange | Green | Purple | Cyan |
-| --- | --- | --- | --- | --- |
-| User / dApp | Bitcoin | RVM execution | PowPeg bridge | rBTC |
-
-Rootstock is a Bitcoin sidechain. Merged mining provides security. The RVM runs EVM-compatible contracts. The PowPeg moves value between BTC and rBTC.
+Rootstock is a Bitcoin sidechain. Merged mining provides security. The RVM runs EVM-compatible contracts. The PowPeg moves value between BTC and rBTC. Merged mining (1) is continuous security, not a user click. Peg-in (3–4) and peg-out (5–6) are separate flows through the same Bridge.
 
 ```mermaid
 flowchart LR
@@ -70,8 +66,6 @@ flowchart LR
   class Peg peg
   class rBTC token
 ```
-
-Merged mining (1) is continuous security, not a user click. Peg-in (3–4) and peg-out (5–6) are separate flows through the same Bridge.
 
 ## Summary
 

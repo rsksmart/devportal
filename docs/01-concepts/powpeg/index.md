@@ -30,9 +30,9 @@ When the Rootstock genesis block was mined, the Rootstock Federation, an autonom
 
 The PowPeg moves value between Bitcoin and Rootstock. Peg-in locks BTC and credits rBTC. Peg-out burns rBTC and releases BTC after confirmations and PowHSM signatures.
 
-| Pink | Orange | Purple | Green | Cyan | Solid | Dotted |
-| --- | --- | --- | --- | --- | --- | --- |
-| User / exchange | Bitcoin custody / release | PowPeg nodes and PowHSMs | Bridge contract | rBTC | Required step | Optional notify |
+### Architecture diagram
+
+The diagram splits peg-in and peg-out into separate paths that share the Bridge contract. Solid arrows are required steps. The dotted line is an optional Bridge notify from the user.
 
 ```mermaid
 flowchart LR
