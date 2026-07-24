@@ -50,7 +50,8 @@ const SUPPLEMENTARY_HUB_ENTRIES = [
   ['Developer Cheatsheet', '/cheatsheet/', 'One-page Rootstock developer quick reference for network setup, kits, and AI tooling.'],
 ];
 
-const LLMS_DESCRIPTION_MAX_LENGTH = 55;
+/** Keep llms.txt under the 50KB agent-ingest budget used by CI. */
+const LLMS_DESCRIPTION_MAX_LENGTH = 50;
 
 function stripNumberedPrefix(segment) {
   return segment.replace(/^\d+-/, '');
