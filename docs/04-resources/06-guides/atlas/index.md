@@ -15,6 +15,10 @@ Atlas Bridge is a cross-chain bridge for the Rootstock ecosystem. You can use it
 
 Atlas is a client of the RSK Swap API. The web UI and the SDK both request quotes from the same API. Providers execute the peg-in or peg-out route. Settlement lands on the destination network you selected.
 
+| Orange | Pink | Cyan | Purple | Green | Solid | Dotted |
+| --- | --- | --- | --- | --- | --- | --- |
+| Source network | Atlas UI | SDK | API + providers | Destination | Primary path | Status / refund |
+
 ```mermaid
 flowchart LR
   Source["Source network<br/>(BTC, LN, or EVM)"]

@@ -45,6 +45,10 @@ No single safeguard is load-bearing. Independent layers reinforce one another:
 | Bridge contract logic | Builds peg-out transactions and enforces rules on-chain |
 | Monitoring | Detects anomalies such as attempts to revert transactions |
 
+| Orange | Green | Purple | Cyan |
+| --- | --- | --- | --- |
+| Bitcoin PoW | Rootstock / Bridge | PowPeg node and HSM | Verification controls |
+
 ```mermaid
 flowchart TB
   subgraph L1["Bitcoin security"]
