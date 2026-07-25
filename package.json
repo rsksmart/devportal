@@ -24,7 +24,8 @@
     "check-links:es": "node --no-warnings scripts/check-links.mjs --locale=es",
     "check-links:ja": "node --no-warnings scripts/check-links.mjs --locale=ja",
     "check-links:ko": "node --no-warnings scripts/check-links.mjs --locale=ko",
-"check-links:external": "node --no-warnings scripts/check-links.mjs --external",
+    "check-links:external": "node --no-warnings scripts/check-links.mjs --external",
+    "check-links:reliability": "yarn build && node --no-warnings scripts/check-links.mjs --external --report=artifacts/reliability.json",
     "verify-llms-build": "node scripts/verify-llms-build.mjs",
     "verify-middleware-paths": "node scripts/verify-middleware-paths.mjs"
 },
