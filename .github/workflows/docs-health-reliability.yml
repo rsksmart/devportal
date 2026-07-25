@@ -1,0 +1,75 @@
+name: Docs Health Reliability Report
+
+# Produces artifacts/reliability.json for the Devportal Health dashboard
+# (backoffice-template docs-health reliability import).
+#
+# Uses the existing Linkinator crawl (`yarn check-links:external`) against
+# a full `yarn build`. Docusaurus internal checking remains on PRs via
+# check-broken-links.yml.
+
+on:
+  schedule:
+    # Mondays 06:00 UTC — after weekend docs merges, before weekly Health AFDocs job
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reliability-report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build site + Linkinator crawl + Health JSON
+        id: crawl
+        continue-on-error: true
+        run: yarn check-links:reliability
+        env:
+          MENDABLE_KEY: ${{ secrets.MENDABLE_KEY }}
+          COOKBOOK_PUBLIC_API_KEY: ${{ secrets.COOKBOOK_PUBLIC_API_KEY }}
+          GTM_CONTAINER_ID: ${{ secrets.GTM_CONTAINER_ID }}
+
+      - name: Upload reliability artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs-health-reliability
+          path: artifacts/reliability.json
+          if-no-files-found: warn
+          retention-days: 90
+
+      - name: Summarize for Actions UI
+        if: always()
+        run: |
+          if [ -f artifacts/reliability.json ]; then
+            node -e "
+              const r = require('./artifacts/reliability.json');
+              console.log('Reliability %:', r.reliabilityPercent);
+              console.log('Valid/Total:', r.validLinks + '/' + r.totalLinks);
+              console.log('Broken:', r.brokenLinks);
+              console.log('Source:', r.source);
+            "
+          else
+            echo 'No reliability.json produced'
+            exit 1
+          fi
+
+      - name: Fail job if link check failed
+        if: steps.crawl.outcome == 'failure'
+        run: |
+          echo "Linkinator reported broken links (see artifact + logs)."
+          exit 1

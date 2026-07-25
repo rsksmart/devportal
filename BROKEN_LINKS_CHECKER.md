@@ -53,11 +53,40 @@ yarn install
 
 | Command                    | Description                              |
 |----------------------------|------------------------------------------|
-| `yarn check-links:external` | Check external links (requires build first) |
+| `yarn check-links:external` | Check external (+ crawl internal build URLs); requires build first |
+| `yarn check-links:reliability` | `yarn build` then Linkinator crawl + write `artifacts/reliability.json` for Devportal Health |
 
-> **Note:** External link checking requires a built site. Run `yarn build` first.
+> **Note:** External link checking requires a built site. Run `yarn build` first (or use `check-links:reliability`).
 
 > **Warning:** External link checking can take several minutes depending on the number of links.
+
+### Devportal Health reliability export
+
+The Health dashboard (`backoffice-template`) imports a Linkinator-compatible JSON snapshot:
+
+```bash
+# Local: build + crawl + write artifacts/reliability.json
+yarn check-links:reliability
+
+# Or after an existing build:
+yarn check-links:external --report=artifacts/reliability.json
+
+# Internal-only Docusaurus report (estimated denominator from markdown links):
+yarn check-links:en --report=artifacts/reliability-internal.json
+```
+
+CI workflow **Docs Health Reliability Report** (`.github/workflows/docs-health-reliability.yml`) runs weekly on `main` (and on `workflow_dispatch`), uploads the `docs-health-reliability` artifact (`reliability.json`).
+
+Import into the dashboard:
+
+```bash
+# Download the Actions artifact, then:
+docker compose exec backend npm run docs-health:import -- --file /app/docs-import/reliability.json
+```
+
+Schema: see backoffice-template `docs/reliability.example.json` / `docs/IMPORT_SCHEMAS.md`.
+
+The Linkinator crawl counts **internal build 404s** and **broken external URLs** toward `reliabilityPercent = validLinks / totalLinks`.
 
 ### How External Link Checker Works
 

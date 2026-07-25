@@ -2,18 +2,20 @@
 
 /**
  * Broken Links Checker for Rootstock DevPortal
- * Uses Docusaurus built-in link checker by running build with strict link checking
  *
- * Usage:
- *   yarn check-links              # Check all locales (internal links only)
- *   yarn check-links:en           # Check English only
- *   yarn check-links:es           # Check Spanish locale
- *   yarn check-links:ja           # Check Japanese locale
- *   yarn check-links:ko           # Check Korean locale
- *   yarn check-links:external     # Check external links (local only)
+ * Internal: Docusaurus built-in link checking (`yarn check-links`, `yarn build` path)
+ * External / full-site crawl: linkinator (`yarn check-links:external`)
+ *
+ * Devportal Health export:
+ *   yarn check-links:external --report=artifacts/reliability.json
+ *   yarn check-links:en --report=artifacts/reliability-internal.json
+ *
+ * The JSON shape matches backoffice-template docs/reliability.example.json
+ * (type: reliability | linkinator).
  */
 
 import { spawn } from 'child_process';
+import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { LinkChecker } from 'linkinator';
@@ -22,22 +24,24 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.join(__dirname, '..');
 
-// Import locales directly from docusaurus config
 import docusaurusConfig from '../docusaurus.config.js';
 const LOCALES = docusaurusConfig.i18n?.locales || ['en'];
+const SITE_URL = (docusaurusConfig.url || 'https://dev.rootstock.io').replace(/\/$/, '');
 
-// Parse command line arguments
 function parseArgs() {
   const args = process.argv.slice(2);
   const options = {
     locale: null,
     help: false,
     external: false,
+    report: null,
   };
 
   for (const arg of args) {
     if (arg.startsWith('--locale=')) {
       options.locale = arg.split('=')[1];
+    } else if (arg.startsWith('--report=')) {
+      options.report = arg.slice('--report='.length);
     } else if (arg === '--help' || arg === '-h') {
       options.help = true;
     } else if (arg === '--external' || arg === '-e') {
@@ -53,28 +57,75 @@ function showHelp() {
 Broken Links Checker for Rootstock DevPortal
 
 Usage:
-  yarn check-links              Check all locales (internal links only)
+  yarn check-links              Check all locales (internal / Docusaurus)
   yarn check-links:en           Check English only
-  yarn check-links:es           Check Spanish only
-  yarn check-links:ja           Check Japanese only
-  yarn check-links:ko           Check Korean only
-  yarn check-links:external     Check external links (local only, requires built site)
+  yarn check-links:external     Linkinator crawl (requires yarn build first)
+  yarn check-links:reliability  Build + linkinator crawl + write Health JSON
 
 Options:
   --locale=<locale>    Check specific locale (${LOCALES.join(', ')})
-  --external, -e       Check external links only (requires 'yarn build' first)
+  --external, -e       Linkinator crawl of the built site
+  --report=<path>      Write Devportal Health reliability JSON to <path>
   --help, -h           Show this help message
 
-How it works:
-  Internal links: Runs 'docusaurus build' and parses the output for
-  broken links and anchors warnings.
-
-  External links: Uses linkinator to crawl the built site and check
-  all external URLs. Requires running 'yarn build' first.
+Health dashboard:
+  Import the --report JSON via backoffice docs-health:import
+  (see https://github.com/rsksmart/backoffice-template docs/IMPORT_SCHEMAS.md).
 `);
 }
 
-// Run docusaurus build with link checking for a specific locale
+function todayUtc() {
+  return new Date().toISOString().slice(0, 10);
+}
+
+function ensureParentDir(filePath) {
+  const dir = path.dirname(path.resolve(filePath));
+  fs.mkdirSync(dir, { recursive: true });
+}
+
+/**
+ * Write a payload compatible with Devportal Health reliability import.
+ */
+function writeReliabilityReport(filePath, payload) {
+  ensureParentDir(filePath);
+  const absolute = path.resolve(filePath);
+  fs.writeFileSync(absolute, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
+  console.log(`\n📝 Wrote Devportal Health reliability report: ${absolute}`);
+  return absolute;
+}
+
+function buildReliabilityPayload({
+  totalLinks,
+  broken,
+  source,
+  components,
+}) {
+  const brokenLinks = broken.length;
+  const total = Math.max(totalLinks, brokenLinks);
+  const validLinks = Math.max(0, total - brokenLinks);
+  const reliabilityPercent = total > 0 ? Math.round((validLinks / total) * 10000) / 100 : 100;
+
+  return {
+    type: 'reliability',
+    snapshotDate: todayUtc(),
+    totalLinks: total,
+    validLinks,
+    brokenLinks,
+    reliabilityPercent,
+    broken: broken.slice(0, 50).map(row => ({
+      url: row.url,
+      status: typeof row.status === 'number' ? row.status : undefined,
+      statusText: typeof row.status === 'string' ? row.status : undefined,
+      parent: row.parent,
+    })),
+    source,
+    sourceUrl: SITE_URL,
+    ...(components ? { components } : {}),
+  };
+}
+
+// --- Internal (Docusaurus) -------------------------------------------------
+
 async function checkLocale(locale) {
   return new Promise((resolve) => {
     console.log(`\n🔍 Checking links for locale: ${locale.toUpperCase()}`);
@@ -90,7 +141,6 @@ async function checkLocale(locale) {
       stdio: 'pipe',
       env: {
         ...process.env,
-        // Use 'warn' to get full list of broken links, then we'll fail based on results
         DOCUSAURUS_BROKEN_LINKS: 'warn',
         DOCUSAURUS_BROKEN_MARKDOWN_LINKS: 'warn',
         DOCUSAURUS_BROKEN_ANCHORS: 'warn',
@@ -101,7 +151,6 @@ async function checkLocale(locale) {
     const brokenLinks = [];
     const brokenAnchors = [];
 
-    // Patterns to filter out from output (not related to broken links)
     const filterPatterns = [
       /For locale=\w+, a maximum of \d+ plural forms are expected/,
       /Browserslist: browsers data/,
@@ -112,23 +161,18 @@ async function checkLocale(locale) {
       /`yarn upgrade @docusaurus/,
     ];
 
-    const shouldFilterLine = (line) => {
-      return filterPatterns.some(pattern => pattern.test(line));
-    };
+    const shouldFilterLine = (line) => filterPatterns.some(pattern => pattern.test(line));
 
     const processOutput = (data) => {
       const text = data.toString();
       fullOutput += text;
 
-      // Filter output line by line
       const lines = text.split('\n');
       const filteredLines = lines.filter(line => !shouldFilterLine(line));
       if (filteredLines.length > 0) {
-        // Join and write, preserving original line structure
         const output = filteredLines.join('\n');
         if (output.trim()) {
           process.stdout.write(output);
-          // Add newline only if original text ended with one
           if (text.endsWith('\n') && !output.endsWith('\n')) {
             process.stdout.write('\n');
           }
@@ -140,7 +184,6 @@ async function checkLocale(locale) {
     build.stderr.on('data', processOutput);
 
     build.on('close', (code) => {
-      // Parse broken links and anchors from the full output
       const lines = fullOutput.split('\n');
       let currentSource = null;
       let parsingAnchors = false;
@@ -148,7 +191,6 @@ async function checkLocale(locale) {
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
 
-        // Detect if we're in the anchors section
         if (line.includes('Docusaurus found broken anchors')) {
           parsingAnchors = true;
         }
@@ -156,13 +198,11 @@ async function checkLocale(locale) {
           parsingAnchors = false;
         }
 
-        // Match "Broken link on source page path = /path/to/page:" or "Broken anchor on source page path = ..."
         const sourceMatch = line.match(/Broken (?:link|anchor) on source page path = ([^:]+):/);
         if (sourceMatch) {
           currentSource = sourceMatch[1];
         }
 
-        // Match "-> linking to /broken/link" or "-> linking to #anchor"
         const targetMatch = line.match(/-> linking to (.+)/);
         if (targetMatch && currentSource) {
           const target = targetMatch[1].trim();
@@ -179,7 +219,6 @@ async function checkLocale(locale) {
           }
         }
 
-        // Match MDX format: "Docs markdown link couldn't be resolved: (link) in source file "path""
         const mdxMatch = line.match(/Docs markdown link couldn't be resolved: \(([^)]+)\) in source file "([^"]+)"/);
         if (mdxMatch) {
           const source = mdxMatch[2].replace(ROOT_DIR + '/', '');
@@ -190,13 +229,11 @@ async function checkLocale(locale) {
           }
         }
 
-        // Match "MDX compilation failed for file" with broken link info
         const mdxFileMatch = line.match(/MDX compilation failed for file "([^"]+)"/);
         if (mdxFileMatch) {
           currentSource = mdxFileMatch[1].replace(ROOT_DIR + '/', '');
         }
 
-        // Match "Cause: Docs markdown link couldn't be resolved: (link)"
         const causeMatch = line.match(/Cause: Docs markdown link couldn't be resolved: \(([^)]+)\)/);
         if (causeMatch && currentSource) {
           const exists = brokenLinks.some(l => l.source === currentSource && l.target === causeMatch[1]);
@@ -232,7 +269,6 @@ async function checkLocale(locale) {
   });
 }
 
-// Format and display results
 function displayResults(results) {
   console.log('\n' + '='.repeat(60));
   console.log('📊 BROKEN LINKS REPORT');
@@ -250,7 +286,6 @@ function displayResults(results) {
     } else {
       hasErrors = true;
 
-      // Display broken links
       if (result.brokenLinks.length > 0) {
         totalBrokenLinks += result.brokenLinks.length;
         console.log(`\n   🔗 Broken Links (${result.brokenLinks.length}):`);
@@ -260,7 +295,6 @@ function displayResults(results) {
         }
       }
 
-      // Display broken anchors
       if (result.brokenAnchors.length > 0) {
         totalBrokenAnchors += result.brokenAnchors.length;
         console.log(`\n   ⚓ Broken Anchors (${result.brokenAnchors.length}):`);
@@ -284,13 +318,83 @@ function displayResults(results) {
   console.log(`   Status: ${hasErrors ? '❌ FAILED' : '✅ PASSED'}`);
   console.log('='.repeat(60) + '\n');
 
-  return hasErrors;
+  return { hasErrors, totalBrokenLinks, totalBrokenAnchors };
 }
 
-// Start a simple HTTP server for the build directory
+/** Estimate markdown/MDX link volume for internal reliability denominator. */
+function estimateMarkdownLinkCount() {
+  const roots = [path.join(ROOT_DIR, 'docs'), path.join(ROOT_DIR, 'i18n')];
+  const linkRe = /\[[^\]]*\]\(([^)]+)\)|<a\s+[^>]*href=["']([^"']+)["']/gi;
+  let count = 0;
+
+  const walk = (dir) => {
+    if (!fs.existsSync(dir)) return;
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        if (entry.name === 'node_modules' || entry.name === '.git') continue;
+        walk(full);
+        continue;
+      }
+      if (!/\.(md|mdx)$/i.test(entry.name)) continue;
+      const text = fs.readFileSync(full, 'utf8');
+      let match;
+      while ((match = linkRe.exec(text)) !== null) {
+        const href = (match[1] || match[2] || '').trim();
+        if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) continue;
+        count += 1;
+      }
+    }
+  };
+
+  for (const root of roots) walk(root);
+  return count;
+}
+
+function writeInternalReliabilityReport(reportPath, results) {
+  const broken = [];
+  for (const result of results) {
+    for (const link of result.brokenLinks) {
+      broken.push({
+        url: link.target,
+        status: 404,
+        parent: link.source,
+      });
+    }
+    for (const anchor of result.brokenAnchors) {
+      broken.push({
+        url: `${anchor.source}${anchor.target.startsWith('#') ? anchor.target : `#${anchor.target}`}`,
+        status: 404,
+        parent: anchor.source,
+      });
+    }
+  }
+
+  const estimatedTotal = estimateMarkdownLinkCount();
+  const totalLinks = Math.max(estimatedTotal, broken.length);
+
+  return writeReliabilityReport(
+    reportPath,
+    buildReliabilityPayload({
+      totalLinks,
+      broken,
+      source: 'docusaurus-internal',
+      components: {
+        internal: {
+          estimatedMarkdownLinks: estimatedTotal,
+          brokenLinks: results.reduce((n, r) => n + r.brokenLinks.length, 0),
+          brokenAnchors: results.reduce((n, r) => n + r.brokenAnchors.length, 0),
+          locales: results.map(r => r.locale),
+        },
+      },
+    })
+  );
+}
+
+// --- Linkinator (built site crawl) ----------------------------------------
+
 async function startServer(buildDir, port = 3001) {
   const http = await import('http');
-  const fs = await import('fs');
   const fsPath = await import('path');
   const url = await import('url');
 
@@ -298,12 +402,10 @@ async function startServer(buildDir, port = 3001) {
     const server = http.createServer((req, res) => {
       let filePath = fsPath.join(buildDir, url.parse(req.url).pathname);
 
-      // Default to index.html for directories
       if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
         filePath = fsPath.join(filePath, 'index.html');
       }
 
-      // Try adding .html extension
       if (!fs.existsSync(filePath) && !filePath.endsWith('.html')) {
         const htmlPath = filePath + '.html';
         if (fs.existsSync(htmlPath)) {
@@ -340,7 +442,6 @@ async function startServer(buildDir, port = 3001) {
 
     server.on('error', (err) => {
       if (err.code === 'EADDRINUSE') {
-        // Try next port
         resolve(startServer(buildDir, port + 1));
       } else {
         reject(err);
@@ -349,22 +450,18 @@ async function startServer(buildDir, port = 3001) {
   });
 }
 
-// Check external links using linkinator
-async function checkExternalLinks() {
+async function checkExternalLinks({ reportPath } = {}) {
   const buildDir = path.join(ROOT_DIR, 'build');
 
-  // Check if build directory exists
-  const fs = await import('fs');
   if (!fs.existsSync(buildDir)) {
     console.error('❌ Build directory not found. Please run "yarn build" first.');
     process.exit(1);
   }
 
-  console.log('🌐 External Links Checker');
-  console.log('   Checking external links in built site...');
+  console.log('🌐 Linkinator site crawl');
+  console.log('   Checks external URLs + internal pages served from build/');
   console.log('   Starting local server...');
 
-  // Start local server
   let server;
   let serverPort = 3001;
   try {
@@ -376,22 +473,24 @@ async function checkExternalLinks() {
     process.exit(1);
   }
 
-  console.log('   Crawling site for external links...');
+  console.log('   Crawling site...');
   console.log('   This may take several minutes...\n');
 
   const checker = new LinkChecker();
-  const brokenLinks = [];
+  const brokenExternal = [];
+  const brokenInternal = [];
   const unreachableLinks = [];
   const redirectLinks = [];
-  const allExternalLinks = new Map(); // Map of URL -> Set of parent pages
+  const allExternalLinks = new Map();
+  const uniqueChecked = new Set();
   let checkedCount = 0;
   let externalCount = 0;
+  let internalCount = 0;
 
-  const brokenUrlsReported = new Set(); // Track already reported broken URLs
-  const unreachableUrlsReported = new Set(); // Track already reported unreachable URLs
-  const redirectUrlsReported = new Set(); // Track already reported redirect URLs
+  const brokenUrlsReported = new Set();
+  const unreachableUrlsReported = new Set();
+  const redirectUrlsReported = new Set();
 
-  // Catch timeout/abort from internal streams so the script exits cleanly instead of crashing
   const timeoutHandler = (err) => {
     if (err?.message && /timeout|aborted|TimeoutError/i.test(err.message)) {
       console.warn('\n   ⚠️  External link check hit a timeout; exiting with partial results.');
@@ -405,127 +504,126 @@ async function checkExternalLinks() {
 
   checker.on('link', (result) => {
     checkedCount++;
+    uniqueChecked.add(result.url);
 
-    // Only track external links (http/https that are not localhost)
-    const isExternal = (result.url.startsWith('http://') || result.url.startsWith('https://')) &&
-                       !result.url.includes('localhost') &&
-                       !result.url.includes('127.0.0.1') &&
-                       !result.url.includes('0.0.0.0');
+    const isLocal =
+      result.url.includes('localhost') ||
+      result.url.includes('127.0.0.1') ||
+      result.url.includes('0.0.0.0');
 
-    if (isExternal) {
-      externalCount++;
+    const isHttp = result.url.startsWith('http://') || result.url.startsWith('https://');
+    const cleanParent = result.parent
+      ? result.parent.replace(/^http:\/\/localhost:\d+/, '') || '/'
+      : '/';
 
-      // Track all external links and their source pages
-      if (!allExternalLinks.has(result.url)) {
-        allExternalLinks.set(result.url, new Set());
-      }
-      if (result.parent) {
-        // Clean up parent path for readability
-        const cleanParent = result.parent.replace(/^http:\/\/localhost:\d+/, '');
-        allExternalLinks.get(result.url).add(cleanParent || '/');
-      }
+    // Internal pages from the local build (full-site reliability)
+    if (isLocal && isHttp) {
+      internalCount++;
+      const isInternalBroken =
+        result.state === 'BROKEN' &&
+        result.status &&
+        result.status >= 400;
 
-      // Check for redirects (3xx status codes)
-      const isRedirect = result.status >= 300 && result.status < 400;
-
-      // Broken with real error status (4xx or 5xx); ignore 401/403/429 (geo, bot-block, rate-limit)
-      const isReallyBroken = result.state === 'BROKEN' &&
-                             result.status &&
-                             result.status >= 400 &&
-                             result.status !== 401 &&
-                             result.status !== 403 &&
-                             result.status !== 429;
-
-      // Known broken redirect targets: we link to canonical URL (e.g. drpc.org) but server redirects to www and that returns 404
-      const brokenRedirectTargetSkip = [/^https:\/\/www\.drpc\.org\/?$/];
-      const skipAsBroken = brokenRedirectTargetSkip.some(re => re.test(result.url));
-
-      // Unreachable - marked as broken but no status (timeout, connection error, bot-blocked)
-      const isUnreachable = result.state === 'BROKEN' && !result.status;
-
-      if (isReallyBroken && !skipAsBroken) {
-        const cleanParent = result.parent ? result.parent.replace(/^http:\/\/localhost:\d+/, '') : '';
-
-        // Only add if not already in broken links (deduplicate by URL)
-        if (!brokenLinks.some(bl => bl.url === result.url)) {
-          brokenLinks.push({
-            url: result.url,
+      if (isInternalBroken) {
+        if (!brokenInternal.some(bl => bl.url === result.url)) {
+          brokenInternal.push({
+            url: result.url.replace(/^http:\/\/localhost:\d+/, '') || '/',
             status: result.status,
-            parent: cleanParent || '/',
+            parent: cleanParent,
           });
         }
-
-        // Only log each broken URL once
         if (!brokenUrlsReported.has(result.url)) {
           brokenUrlsReported.add(result.url);
-          console.log(`   ❌ ${result.url} (${result.status})`);
+          console.log(`   ❌ [internal] ${result.url.replace(/^http:\/\/localhost:\d+/, '') || '/'} (${result.status})`);
         }
-      } else if (isUnreachable) {
-        // Track unreachable links separately (timeouts, connection errors, bot-blocked)
-        if (!unreachableLinks.some(ul => ul.url === result.url)) {
-          unreachableLinks.push({
-            url: result.url,
-            status: 'unreachable',
-          });
-        }
+      }
+      return;
+    }
 
-        // Only log each unreachable URL once
-        if (!unreachableUrlsReported.has(result.url)) {
-          unreachableUrlsReported.add(result.url);
-          console.log(`   ⚠️  ${result.url} (unreachable)`);
-        }
-      } else if (isRedirect) {
-        // Track redirects separately
-        if (!redirectLinks.some(rl => rl.url === result.url)) {
-          redirectLinks.push({
-            url: result.url,
-            status: result.status,
-          });
-        }
+    const isExternal = isHttp && !isLocal;
+    if (!isExternal) return;
 
-        // Only log each redirect URL once
-        if (!redirectUrlsReported.has(result.url)) {
-          redirectUrlsReported.add(result.url);
-          console.log(`   ↪️  ${result.url} (${result.status} redirect)`);
-        }
+    externalCount++;
+
+    if (!allExternalLinks.has(result.url)) {
+      allExternalLinks.set(result.url, new Set());
+    }
+    allExternalLinks.get(result.url).add(cleanParent);
+
+    const isRedirect = result.status >= 300 && result.status < 400;
+    const isReallyBroken =
+      result.state === 'BROKEN' &&
+      result.status &&
+      result.status >= 400 &&
+      result.status !== 401 &&
+      result.status !== 403 &&
+      result.status !== 429;
+
+    const brokenRedirectTargetSkip = [/^https:\/\/www\.drpc\.org\/?$/];
+    const skipAsBroken = brokenRedirectTargetSkip.some(re => re.test(result.url));
+    const isUnreachable = result.state === 'BROKEN' && !result.status;
+
+    if (isReallyBroken && !skipAsBroken) {
+      if (!brokenExternal.some(bl => bl.url === result.url)) {
+        brokenExternal.push({
+          url: result.url,
+          status: result.status,
+          parent: cleanParent,
+        });
+      }
+      if (!brokenUrlsReported.has(result.url)) {
+        brokenUrlsReported.add(result.url);
+        console.log(`   ❌ [external] ${result.url} (${result.status})`);
+      }
+    } else if (isUnreachable) {
+      if (!unreachableLinks.some(ul => ul.url === result.url)) {
+        unreachableLinks.push({
+          url: result.url,
+          status: 'unreachable',
+        });
+      }
+      if (!unreachableUrlsReported.has(result.url)) {
+        unreachableUrlsReported.add(result.url);
+        console.log(`   ⚠️  ${result.url} (unreachable)`);
+      }
+    } else if (isRedirect) {
+      if (!redirectLinks.some(rl => rl.url === result.url)) {
+        redirectLinks.push({
+          url: result.url,
+          status: result.status,
+        });
+      }
+      if (!redirectUrlsReported.has(result.url)) {
+        redirectUrlsReported.add(result.url);
+        console.log(`   ↪️  ${result.url} (${result.status} redirect)`);
       }
     }
 
     if (checkedCount % 100 === 0) {
-      console.log(`   ✓ Checked ${checkedCount} links (${externalCount} external)...`);
+      console.log(`   ✓ Checked ${checkedCount} links (${externalCount} external, ${internalCount} internal)...`);
     }
   });
 
-  // Get site URL from docusaurus config to skip internal links pointing to production
-  const siteUrl = docusaurusConfig.url?.replace(/\/$/, '') || 'https://dev.rootstock.io';
-  const siteUrlPattern = new RegExp(siteUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+  const siteUrlPattern = new RegExp(SITE_URL.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
 
   try {
     await checker.check({
       path: `http://localhost:${serverPort}`,
       recurse: true,
       linksToSkip: [
-        // Skip links to own site (from docusaurus.config.js url)
         siteUrlPattern,
-        // Skip services links
         /public-node\.(testnet\.)?rsk\.co/,
-        // Skip Rootstock RPC endpoints (testnet/mainnet; JSON-RPC, not HTTP page)
         /^https?:\/\/rpc\.(testnet\.)?rootstock\.io(?:\/|$)/,
-        // Skip common false positives
         /example\.com/,
         /placeholder/,
         /your-domain/,
-        // Skip tracking/analytics
         /googletagmanager\.com/,
-        // Skip social media that often block bots
         /twitter\.com/,
         /x\.com/,
         /linkedin\.com/,
         /facebook\.com/,
         /instagram\.com/,
-        // Skip The Graph gateway APIs (auth/rate-limit when crawled)
         /^https?:\/\/network\.thegraph\.com\b/,
-        // Skip mailto and tel links
         /^mailto:/,
         /^tel:/,
         /^javascript:/,
@@ -543,23 +641,31 @@ async function checkExternalLinks() {
     process.off('uncaughtException', timeoutHandler);
   }
 
-  // Stop the server
   server.close();
 
-  // Display results
   console.log('\n' + '='.repeat(60));
-  console.log('📊 EXTERNAL LINKS REPORT');
+  console.log('📊 LINKINATOR FULL-SITE REPORT');
   console.log('='.repeat(60));
 
-  // Show broken links with all source files
-  if (brokenLinks.length === 0) {
-    console.log('\n   ✅ No broken external links found');
+  if (brokenInternal.length === 0) {
+    console.log('\n   ✅ No broken internal (build) links found');
   } else {
-    console.log(`\n   ❌ Broken External Links (${brokenLinks.length}):\n`);
-    for (const link of brokenLinks) {
+    console.log(`\n   ❌ Broken Internal Links (${brokenInternal.length}):\n`);
+    for (const link of brokenInternal) {
       console.log(`   • URL: ${link.url}`);
       console.log(`     Status: ${link.status}`);
-      // Get all pages where this broken link was found
+      console.log(`     Parent: ${link.parent}`);
+      console.log('');
+    }
+  }
+
+  if (brokenExternal.length === 0) {
+    console.log('\n   ✅ No broken external links found');
+  } else {
+    console.log(`\n   ❌ Broken External Links (${brokenExternal.length}):\n`);
+    for (const link of brokenExternal) {
+      console.log(`   • URL: ${link.url}`);
+      console.log(`     Status: ${link.status}`);
       const pages = allExternalLinks.get(link.url);
       if (pages && pages.size > 0) {
         console.log(`     Found in ${pages.size} page(s):`);
@@ -571,39 +677,59 @@ async function checkExternalLinks() {
     }
   }
 
-  // Show redirect links with all source files
   if (redirectLinks.length > 0) {
     console.log(`\n   ↪️  Redirect Links (${redirectLinks.length}):\n`);
     for (const link of redirectLinks) {
       console.log(`   • URL: ${link.url}`);
       console.log(`     Status: ${link.status} (redirect)`);
-      // Get all pages where this redirect link was found
-      const pages = allExternalLinks.get(link.url);
-      if (pages && pages.size > 0) {
-        console.log(`     Found in ${pages.size} page(s):`);
-        for (const page of pages) {
-          console.log(`       - ${page}`);
-        }
-      }
       console.log('');
     }
   }
 
+  const combinedBroken = [...brokenInternal, ...brokenExternal];
+  const totalLinks = Math.max(uniqueChecked.size, checkedCount, combinedBroken.length);
+
   console.log('='.repeat(60));
   console.log('📈 SUMMARY');
-  console.log(`   Total links checked: ${checkedCount}`);
+  console.log(`   Total link events: ${checkedCount}`);
+  console.log(`   Unique URLs: ${uniqueChecked.size}`);
+  console.log(`   Internal links seen: ${internalCount}`);
   console.log(`   External links found: ${externalCount}`);
   console.log(`   Unique external URLs: ${allExternalLinks.size}`);
-  console.log(`   Broken external links: ${brokenLinks.length}`);
-  console.log(`   Unreachable links: ${unreachableLinks.length}`);
+  console.log(`   Broken internal: ${brokenInternal.length}`);
+  console.log(`   Broken external: ${brokenExternal.length}`);
+  console.log(`   Unreachable (not counted as broken): ${unreachableLinks.length}`);
   console.log(`   Redirect links: ${redirectLinks.length}`);
-  console.log(`   Status: ${brokenLinks.length > 0 ? '❌ FAILED' : '✅ PASSED'}`);
+  console.log(`   Status: ${combinedBroken.length > 0 ? '❌ FAILED' : '✅ PASSED'}`);
   console.log('='.repeat(60) + '\n');
 
-  return brokenLinks.length > 0;
+  if (reportPath) {
+    writeReliabilityReport(
+      reportPath,
+      buildReliabilityPayload({
+        totalLinks,
+        broken: combinedBroken,
+        source: 'linkinator',
+        components: {
+          internal: {
+            linksSeen: internalCount,
+            brokenLinks: brokenInternal.length,
+          },
+          external: {
+            linksFound: externalCount,
+            uniqueUrls: allExternalLinks.size,
+            brokenLinks: brokenExternal.length,
+            unreachable: unreachableLinks.length,
+            redirects: redirectLinks.length,
+          },
+        },
+      })
+    );
+  }
+
+  return combinedBroken.length > 0;
 }
 
-// Main function
 async function main() {
   const options = parseArgs();
 
@@ -612,13 +738,11 @@ async function main() {
     process.exit(0);
   }
 
-  // External links check mode
   if (options.external) {
-    const hasErrors = await checkExternalLinks();
+    const hasErrors = await checkExternalLinks({ reportPath: options.report });
     process.exit(hasErrors ? 1 : 0);
   }
 
-  // Validate locale if provided
   if (options.locale && !LOCALES.includes(options.locale)) {
     console.error(`❌ Invalid locale: ${options.locale}`);
     console.error(`   Valid locales: ${LOCALES.join(', ')}`);
@@ -636,7 +760,12 @@ async function main() {
     results.push(result);
   }
 
-  const hasErrors = displayResults(results);
+  const { hasErrors } = displayResults(results);
+
+  if (options.report) {
+    writeInternalReliabilityReport(options.report, results);
+  }
+
   process.exit(hasErrors ? 1 : 0);
 }
 
