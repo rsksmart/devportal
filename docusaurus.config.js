@@ -339,14 +339,22 @@ const config = {
         // The application ID provided by Algolia
         appId: 'WAFPQL14PU',
 
-        // Public API key: it is safe to commit it
-        apiKey: '78aa26683ec349ff7e4a7c2d723e4cb7',
+        // Search-only API key (public). Safe to commit.
+        apiKey: '9e905931e536c00dbe951ca1fb06ae06',
 
         indexName: 'dev-rootstock',
 
         // Optional: see doc section below
         contextualSearch: true,
-      }
+
+        // Enables Algolia Insights + clickAnalytics on search requests
+        insights: true,
+
+        // Reinforce click tracking for Analytics CTR metrics
+        searchParameters: {
+          clickAnalytics: true,
+        },
+      },
     }),
 };
 
