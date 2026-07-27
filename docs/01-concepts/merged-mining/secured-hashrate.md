@@ -83,10 +83,10 @@ The sample size is also the denominator, not a hardcoded 1,000. If some blocks c
 Nobody can measure Bitcoin's hashrate directly, because miners do not report how many hashes they tried. It is inferred from two values the network does publish: how hard the mining puzzle is, and how fast blocks arrive.
 
 ```
-bitcoinHashrate ≈ difficulty × 2³² / 600
+bitcoinHashrate ≈ difficulty × 2^32 / 600
 ```
 
-At difficulty 1 a miner needs about 2³², or 4.29 billion, attempts to find a block. Scaling by the real difficulty and spreading the work over Bitcoin's 600 second target block time gives hashes per second. Using block 955,501's difficulty of about 1.249 × 10¹⁴, that formula returns roughly 894 EH/s, where one EH/s is 10¹⁸ hashes per second.
+At difficulty 1 a miner needs about 2^32, or 4.29 billion, attempts to find a block. Scaling by the real difficulty and spreading the work over Bitcoin's 600 second target block time gives hashes per second. Using block 955,501's difficulty of about 1.249 × 10^14, that formula returns roughly 894 EH/s, where one EH/s is 10^18 hashes per second.
 
 The Explorer does not use that formula. It reads the current network hashrate estimate that a Bitcoin data provider publishes, because the formula assumes a perfect 600 second block time while the provider derives its figure from the pace blocks actually arrived at. Read at the same moment, the two land within a few percent of each other, and the provider's figure tracks reality more closely when blocks run fast or slow.
 
@@ -122,12 +122,12 @@ Start by reading the published metrics.
 curl -s https://be.explorer.rootstock.io/api/v3/stats | jq '.data'
 ```
 
-Then check a single Bitcoin block for the tag. This looks up block 955,501 and prints any coinbase output script containing the tag bytes.
+Then check a single Bitcoin block for the tag. This looks up block 955,501 and prints any coinbase script, input or output, containing the tag bytes.
 
 ```bash
 HASH=$(curl -s https://mempool.space/api/block-height/955501)
 curl -s "https://mempool.space/api/block/$HASH/txs/0" \
-  | jq -r '.[0].vout[].scriptpubkey' \
+  | jq -r '.[0].vin[].scriptsig, .[0].vout[].scriptpubkey' \
   | grep -i 52534b424c4f434b3a
 ```
 
