@@ -141,7 +141,7 @@ curl -s -X POST https://public-node.rsk.co -H 'Content-Type: application/json' \
   | jq -r '.result.hashForMergedMining'
 ```
 
-It returns `0x410ac1c4...8922b6`, the exact 32 bytes sitting in the Bitcoin coinbase. The same response carries `bitcoinMergedMiningHeader`, the 80 byte Bitcoin block header whose proof of work seals this Rootstock block. Hash that header twice with SHA-256 and you get Bitcoin block 955,501's hash, which closes the loop: one unit of work, committed on both chains, checkable in both directions.
+It returns `0x410ac1c4...8922b6`, the exact 32 bytes sitting in the Bitcoin coinbase. The same response carries `bitcoinMergedMiningHeader`, the 80 byte Bitcoin block header whose proof of work seals this Rootstock block. Hash that header twice with SHA-256, reverse the byte order (explorers display block hashes big-endian), and you get Bitcoin block 955,501's hash, which closes the loop: one unit of work, committed on both chains, checkable in both directions.
 
 :::info[Reading the numbers]
 The figures on this page were measured over Bitcoin blocks 958,563 to 959,562, and the single-block walkthrough uses block 955,501. Difficulty, hashrate, and the merge-mining share all drift, so treat every number here as a worked example rather than the current state of the network. Read the endpoint for live values.
