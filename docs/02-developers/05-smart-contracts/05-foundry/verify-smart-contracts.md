@@ -136,7 +136,7 @@ jq '.input | {language, sources: (.sources | with_entries(select((.key | startsw
 
 Standard JSON accepts only `language`, `sources`, and `settings`, which is why the filter names them; Foundry's build info also keeps `allowPaths`, `basePath`, `includePaths`, and `version` under `.input` for its own use.
 
-The trim is part of the recipe, not a fallback: the Rootstock Explorer caps a Standard JSON submission at 100 sources and 1.5 MiB (1,572,864 bytes) of source content by default, and over either limit it returns `SOURCE_BUDGET_EXCEEDED` instead of compiling. The build this guidance comes from is 127 sources and 1,694,332 bytes; dropping `test/` and `script/` brings it to 77 sources and 1,209,091 bytes.
+The trim is part of the recipe, not a fallback: the Rootstock Explorer caps a Standard JSON submission at 100 sources and 1.5 MiB (1,572,864 bytes) of source content by default, and over either limit it returns `SOURCE_BUDGET_EXCEEDED` instead of compiling. The build this guidance comes from is 127 sources and 1,694,661 bytes; dropping `test/` and `script/` brings it to 77 sources and 1,209,404 bytes.
 
 Submit `standard-input.json` through the **Standard JSON Input** method on the [Rootstock Explorer](/developers/smart-contracts/verify-smart-contracts/rootstock-explorer/).
 

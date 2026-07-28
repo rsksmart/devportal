@@ -432,7 +432,7 @@ Verification compares the bytecode the explorer recompiles against the bytecode 
       ```
 
       - The `grep` picks the build-info file holding your target, since a project can accumulate several. The `jq` filter names three keys because Standard JSON accepts only `language`, `sources`, and `settings`; Foundry also stores `allowPaths`, `basePath`, `includePaths`, and `version` under `.input` for its own use.
-      - That trim is part of the recipe, not a fallback. This explorer caps a Standard JSON submission at 100 sources and 1.5 MiB (1,572,864 bytes) of source content by default, and over either limit it answers `SOURCE_BUDGET_EXCEEDED` instead of compiling. The build this guidance comes from is 127 sources and 1,694,332 bytes; dropping `test/` and `script/` brings it to 77 sources and 1,209,091 bytes.
+      - That trim is part of the recipe, not a fallback. This explorer caps a Standard JSON submission at 100 sources and 1.5 MiB (1,572,864 bytes) of source content by default, and over either limit it answers `SOURCE_BUDGET_EXCEEDED` instead of compiling. The build this guidance comes from is 127 sources and 1,694,661 bytes; dropping `test/` and `script/` brings it to 77 sources and 1,209,404 bytes.
       - Check the trim before submitting, because under via-IR removing sources can change the output. Recompile it with the same Solc version the deploy used (`solcVersion` in the build-info file) and compare the target's creation bytecode against the build info — the two digests must be equal, and if they differ, put the sources back:
 
       ```bash
