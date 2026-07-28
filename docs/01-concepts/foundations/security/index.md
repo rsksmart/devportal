@@ -41,7 +41,7 @@ BTC releases are authorized by Bitcoin's mining, not by the discretion of any op
 
 The federation currently signs as **5-of-9**, with a roadmap to expand toward **20** members after upcoming network upgrades. Composition changes follow an on-chain process described in [PowPeg member updates](/concepts/foundations/powpeg/member-updates/).
 
-Peg-out signing requires Bridge commands backed by on the order of **4000** Rootstock confirmation blocks, with cumulative proof of work currently equivalent to approximately **100** Bitcoin blocks. Exact thresholds are enforced by consensus and PowHSM firmware. Confirm current values in the Bridge and PowHSM documentation when you integrate.
+Peg-out signing requires Bridge commands backed by on the order of **4000** Rootstock confirmation blocks. That wait is about **100** Bitcoin blocks of cumulative work for the PowHSM gate, and about **200** Bitcoin blocks of wall-clock time. Exact thresholds are enforced by consensus and PowHSM firmware. Confirm current values in the Bridge and PowHSM documentation when you integrate.
 
 ### Defense in depth
 

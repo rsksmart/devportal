@@ -44,7 +44,7 @@ The more hashing power they provide, the more secure the network is.</p>
 
 ## Architecture overview
 
-Rootstock sits on Bitcoin via merged mining. dApps use EVM tooling on top of the Rootstock Virtual Machine (RVM) and RIF services. The stack below shows those layers from applications down to Bitcoin security. For how those layers are secured, see [Security at Rootstock](/concepts/foundations/security/).
+Rootstock sits on Bitcoin via merged mining. dApps call the Rootstock Virtual Machine (RVM) directly. Developer tools are used at build time. RIF services and RootstockCollective sit beside the stack. The PowPeg and rBTC connect value and gas to Bitcoin. For how those layers are secured, see [Security at Rootstock](/concepts/foundations/security/).
 
 ## The Stack
 
@@ -52,18 +52,18 @@ When you build Bitcoin DeFi on Rootstock, you interact with the **Rootstock Virt
 
 ### Architecture diagram
 
-The diagram stacks applications, developer tooling, RIF services, and the RVM on Bitcoin merged mining. Solid arrows show dependency from applications toward the Bitcoin security base. Items in each layer are examples, not an exhaustive product list.
+Applications and developer tools both call the RVM. RIF services and RootstockCollective also connect to the RVM. Below that sit the Bridge/PowPeg and rBTC. Bitcoin merged mining secures the base. Layer items are examples, not a full product list.
 
 ```mermaid
 flowchart TB
-  subgraph Apps["APPLICATIONS"]
+  subgraph Apps["Applications"]
     direction LR
     Yield["Yield vaults"]
     Stake["Staking"]
     AI["AI agents"]
   end
 
-  subgraph Tools["DEVTOOL"]
+  subgraph Tools["Developer tooling"]
     direction LR
     Remix["Remix"]
     Hardhat["Hardhat"]
@@ -72,36 +72,52 @@ flowchart TB
     DaoSdk["DAO SDK"]
   end
 
-  subgraph RIF["RIF SERVICES"]
+  subgraph RIF["RIF services"]
     direction LR
     Relay["RIF Relay"]
     RNS["RNS"]
     Flyover["Flyover"]
-    Collective["Collective DAO"]
   end
 
-  subgraph Exec["EXECUTION"]
-    RVM["Rootstock Virtual Machine (EVM-compatible)"]
+  Collective["RootstockCollective DAO"]
+
+  subgraph Exec["Execution"]
+    RVM["Rootstock Virtual Machine<br/>(EVM-compatible)"]
   end
 
-  subgraph Security["SECURITY"]
+  subgraph PegLayer["Value and gas"]
+    direction LR
+    Peg["Bridge / PowPeg"]
+    rBTC["rBTC (gas, 1:1 BTC)"]
+  end
+
+  subgraph Security["Security"]
     BTC["Bitcoin: merged mining"]
   end
 
-  Apps -->|"build with"| Tools
-  Tools -->|"integrate via"| RIF
-  RIF -->|"execute on"| RVM
+  Apps -->|"call contracts"| RVM
+  Tools -->|"compile and deploy"| RVM
+  RIF -.->|"RIF services"| RVM
+  Collective -.->|"governance"| RVM
+  RVM --> Peg
+  Peg --> rBTC
+  rBTC -->|"pays gas"| RVM
+  Peg -->|"secured with"| BTC
   RVM -->|"secured by"| BTC
 
   classDef apps fill:#FCE4F6,stroke:#FF71E1,stroke-width:2px,color:#1a1a1a
   classDef tools fill:#EDE7FF,stroke:#9E76FF,stroke-width:2px,color:#1a1a1a
   classDef rif fill:#E0FFFA,stroke:#08FFD0,stroke-width:2px,color:#1a1a1a
   classDef exec fill:#E8F5D0,stroke:#79C600,stroke-width:2px,color:#1a1a1a
+  classDef peg fill:#EDE7FF,stroke:#9E76FF,stroke-width:2px,color:#1a1a1a
+  classDef token fill:#E0FFFA,stroke:#08FFD0,stroke-width:2px,color:#1a1a1a
   classDef security fill:#FFF0D9,stroke:#FF9100,stroke-width:2px,color:#1a1a1a
 
   class Yield,Stake,AI apps
   class Remix,Hardhat,Foundry,OZ,DaoSdk tools
   class Relay,RNS,Flyover,Collective rif
   class RVM exec
+  class Peg peg
+  class rBTC token
   class BTC security
 ```

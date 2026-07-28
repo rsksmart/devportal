@@ -12,11 +12,11 @@ description: "How merge mining Rootstock with Bitcoin works, and its benefits."
 
 ## How it works
 
-Merged mining reuses Bitcoin hashrate. Pools include a Rootstock block reference in each job. When a miner finds a solution, the pool compares it to both network difficulties.
+Merged mining reuses Bitcoin hashrate. Pools include a hash commitment to the Rootstock block header in the Bitcoin coinbase of each job. When a miner finds a solution, the pool compares it to both network difficulties. A Rootstock block still requires submitting the merge-mining proof to a Rootstock node.
 
 ### Architecture diagram
 
-The diagram shows how a pool job reaches a miner, then how the pool compares the solution to Bitcoin and Rootstock difficulties. Outcomes are a Bitcoin block, a Rootstock-only block, or a pool share.
+A pool sends a job to a miner. The pool then checks the solution against Bitcoin and Rootstock difficulty. A valid Rootstock block still needs a merge-mining proof sent to a Rootstock node. Results can be a Bitcoin block, a Rootstock-only block, or a pool share.
 
 ```mermaid
 flowchart LR
@@ -24,16 +24,18 @@ flowchart LR
   Miner["Miner hashrate"]
   Comp{"Compare solution<br/>to difficulties"}
 
-  BTC["Bitcoin block<br/>(>= BTC difficulty)"]
-  RSK["Rootstock block<br/>(>= Rootstock,<br/>&lt; Bitcoin)"]
+  BTC["Bitcoin block<br/>(meets Bitcoin difficulty)"]
+  Proof["Submit merge-mining proof<br/>to Rootstock node"]
+  RSK["Rootstock block"]
   Share["Pool share only<br/>(not broadcast)"]
 
-  Pool -->|"1. Job includes<br/>Rootstock block ref"| Miner
+  Pool -->|"1. Job: coinbase hash<br/>commitment to Rootstock<br/>block header"| Miner
   Miner -->|"2. Submit solution"| Comp
   Comp -->|"3a. Meets Bitcoin"| BTC
-  Comp -->|"3b. Meets Rootstock only"| RSK
+  Comp -->|"3b. Meets Rootstock only<br/>(below Bitcoin difficulty)"| Proof
   Comp -->|"3c. Below both"| Share
-  BTC -->|"4. Also valid<br/>for Rootstock"| RSK
+  BTC -->|"4. Also build and submit<br/>merge-mining proof"| Proof
+  Proof -->|"5. Coinbase commitment,<br/>merkle proof, header"| RSK
 
   classDef pool fill:#EDE7FF,stroke:#9E76FF,stroke-width:2px,color:#1a1a1a
   classDef miner fill:#FCE4F6,stroke:#FF71E1,stroke-width:2px,color:#1a1a1a
@@ -41,6 +43,7 @@ flowchart LR
   classDef btc fill:#FFF0D9,stroke:#FF9100,stroke-width:2px,color:#1a1a1a
   classDef rsk fill:#E8F5D0,stroke:#79C600,stroke-width:2px,color:#1a1a1a
   classDef share fill:#EEEEEE,stroke:#888888,stroke-width:2px,color:#1a1a1a
+  classDef proof fill:#E0FFFA,stroke:#08FFD0,stroke-width:2px,color:#1a1a1a
 
   class Pool pool
   class Miner miner
@@ -48,17 +51,16 @@ flowchart LR
   class BTC btc
   class RSK rsk
   class Share share
+  class Proof proof
 ```
 
-A solution that meets Bitcoin difficulty also meets Rootstock difficulty because Rootstock difficulty is lower. That is why step 4 points from Bitcoin to Rootstock.
-Bitcoin mining pools include a reference to Rootstock's block in every mining job they deliver to miners.
-Every time miners find a solution, it is compared to both networks' difficulties (Bitcoin and Rootstock), delivering three possible outcomes:
+A solution that meets Bitcoin difficulty also meets Rootstock difficulty, because Rootstock difficulty is lower. You still submit a merge-mining proof (coinbase commitment, merkle proof, and header) to a Rootstock node. Path 3b is Rootstock-only when the solution is below Bitcoin difficulty.
 
-- Solution satisfies Bitcoin network difficulty. Hence, a block is assembled and sent to the network. Rootstock's merged mining reference will be included and ignored by Bitcoin network. Since Rootstock's network difficulty is lower than Bitcoin, this solution will also work for Rootstock and can be submitted to the network.
-- Solution does not satisfy Bitcoin network difficulty, but does satisfy Rootstock network difficulty. As a consequence, solution will be submitted to the Rootstock network, but not to the Bitcoin network.
-- Solution only satisfies pool difficulty, which is many times lower than Bitcoin or Rootstock network difficulty, and it is not submitted to any network.
+When miners find a solution, the pool checks both difficulties:
 
-Solution submitted to the network allows the node to build an SPV proof. If the proof is valid, it is included as part of the block that will be sent to the network.
+- Solution meets Bitcoin difficulty. A Bitcoin block is assembled and broadcast. The coinbase commitment is ignored by Bitcoin. The same work is used to build and submit a merge-mining proof to Rootstock.
+- Solution meets Rootstock difficulty only (below Bitcoin difficulty). The merge-mining proof is submitted to Rootstock, not to Bitcoin.
+- Solution meets pool difficulty only. It is not broadcast to either network.
 
 <div class="video-container">
   <iframe width="949" height="534" src="https://youtube.com/embed/l3DkV2tkjU0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

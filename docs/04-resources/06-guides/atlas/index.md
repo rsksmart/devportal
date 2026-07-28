@@ -13,46 +13,70 @@ Atlas Bridge is a cross-chain bridge for the Rootstock ecosystem. You can use it
 
 ## How Atlas fits the stack
 
-Atlas is a client of the RSK Swap API. The web UI and the SDK both request quotes from the same API. Providers execute the peg-in or peg-out route. Settlement lands on the destination network you selected.
+Atlas uses three client libraries. Each one opens a different bridge or swap path. Funds end on Bitcoin or Rootstock.
 
 ### Architecture diagram
 
-The diagram shows Atlas UI and the RSK Swap SDK as parallel clients of the RSK Swap API. Providers complete peg-in or peg-out to the destination. Solid arrows are the primary path. The dotted path covers status and refunds back to the source network.
+Atlas talks to three libraries: PowPeg, Flyover, and RSK Swap. Cross-chain swaps go through the RSK Swap API to LiFi, Symbiosis, Boltz, and Changelly. Flyover and native PowPeg use their own libraries. Every route ends on Bitcoin or Rootstock.
 
 ```mermaid
-flowchart LR
-  Source["Source network<br/>(BTC, LN, or EVM)"]
+flowchart TB
+  AtlasUI["Atlas Bridge UI"]
 
-  subgraph Clients["Clients"]
+  subgraph ClientSDKs["Client SDKs"]
     direction TB
-    Atlas["Atlas Bridge UI"]
-    SDK["RSK Swap SDK<br/>(dApps / wallets)"]
+    PowpegSdk["powpeg-sdk<br/>native PowPeg / BTC utilities"]
+    FlyoverSdk["flyover-sdk<br/>Flyover provider"]
+    RskSwapSdk["rsk-swap-sdk<br/>cross-chain swaps"]
   end
 
-  API["RSK Swap API<br/>+ providers"]
-  Dest["Destination<br/>(often Rootstock)"]
+  SwapApi["RSK Swap API"]
 
-  Source -->|"1. Choose amount<br/>and route"| Atlas
-  Atlas -->|"2a. Quote / execute"| API
-  SDK -->|"2b. Quote / execute"| API
-  API -->|"3. Provider completes<br/>peg-in or peg-out"| Dest
-  API -.->|"4. Status / refund path"| Source
+  subgraph SwapProviders["Swap providers"]
+    direction LR
+    LiFi["LiFi"]
+    Symbiosis["Symbiosis"]
+    Boltz["Boltz"]
+    Changelly["Changelly"]
+  end
 
-  classDef source fill:#FFF0D9,stroke:#FF9100,stroke-width:2px,color:#1a1a1a
+  Flyover["Flyover<br/>liquidity providers"]
+  NativePowPeg["Native PowPeg<br/>Union Bridge planned"]
+  Networks["Bitcoin and Rootstock"]
+
+  AtlasUI --> PowpegSdk
+  AtlasUI --> FlyoverSdk
+  AtlasUI --> RskSwapSdk
+  RskSwapSdk --> SwapApi
+  SwapApi --> LiFi
+  SwapApi --> Symbiosis
+  SwapApi --> Boltz
+  SwapApi --> Changelly
+  FlyoverSdk --> Flyover
+  PowpegSdk --> NativePowPeg
+  LiFi --> Networks
+  Symbiosis --> Networks
+  Boltz --> Networks
+  Changelly --> Networks
+  Flyover --> Networks
+  NativePowPeg --> Networks
+
   classDef ui fill:#FCE4F6,stroke:#FF71E1,stroke-width:2px,color:#1a1a1a
   classDef sdk fill:#E0FFFA,stroke:#08FFD0,stroke-width:2px,color:#1a1a1a
   classDef api fill:#EDE7FF,stroke:#9E76FF,stroke-width:2px,color:#1a1a1a
-  classDef dest fill:#E8F5D0,stroke:#79C600,stroke-width:2px,color:#1a1a1a
+  classDef provider fill:#FFF0D9,stroke:#FF9100,stroke-width:2px,color:#1a1a1a
+  classDef network fill:#E8F5D0,stroke:#79C600,stroke-width:2px,color:#1a1a1a
 
-  class Source source
-  class Atlas ui
-  class SDK sdk
-  class API api
-  class Dest dest
+  class AtlasUI ui
+  class PowpegSdk,FlyoverSdk,RskSwapSdk sdk
+  class SwapApi api
+  class LiFi,Symbiosis,Boltz,Changelly,Flyover,NativePowPeg provider
+  class Networks network
 ```
 
-UI and SDK are parallel clients. They do not call each other. Destination depends on direction: peg-in usually targets Rootstock; peg-out returns value to the source network.
-Atlas compares provider routes before you connect a wallet. For programmatic quoting and swaps, use the RSK Swap SDK against the same API.
+`rsk-swap-sdk` quotes and runs swaps through the RSK Swap API (LiFi, Symbiosis, Boltz, Changelly). `flyover-sdk` handles Flyover. `powpeg-sdk` handles native PowPeg and Bitcoin utilities. Union Bridge work is planned for `powpeg-sdk`.
+
+Atlas lets you compare routes before you connect a wallet. To quote and swap from your own app, start with the RSK Swap SDK.
 
 ## Prerequisites
 You need a wallet for the source network and a wallet address for the destination network. You also need enough balance to cover both transfer amount and fees.
@@ -64,7 +88,7 @@ To get started, read [How to use Atlas Bridge](/resources/guides/atlas/getting-s
 
 ## Integrate with the RSK Swap SDK
 
-[Atlas Bridge](https://atlas.rootstock.io) is the web interface for comparing provider routes before you connect a wallet. To quote and execute swaps from your own wallet, exchange, or dApp, use the [RSK Swap SDK](https://github.com/rsksmart/rsk-swap-sdk). The SDK calls the RSK Swap API. That API returns routes from third-party providers. Supported pairs and providers come from the API at request time. They can differ from the routes Atlas shows in the UI.
+[Atlas Bridge](https://atlas.rootstock.io) is the web interface for comparing provider routes before you connect a wallet. To quote and execute swaps from your own wallet, exchange, or dApp, use the [RSK Swap SDK](https://github.com/rsksmart/rsk-swap-sdk). The SDK calls the RSK Swap API. That API returns routes from LiFi, Symbiosis, Boltz, and Changelly. Supported pairs and providers come from the API at request time. They can differ from the routes Atlas shows in the UI.
 
 Install the package:
 
@@ -73,6 +97,13 @@ npm install @rsksmart/rsk-swap-sdk
 ```
 
 The SDK estimates routes, reads swap limits, broadcasts EVM transactions through your connected wallet, and returns BIP21 or BOLT11 strings for Bitcoin and Lightning steps. Chain IDs identify EVM networks. Pass `BTC` for Bitcoin and `LN` for Lightning. Use `BTC` or `tBTC` to select mainnet or testnet on those networks. See the [RSK Swap SDK repository](https://github.com/rsksmart/rsk-swap-sdk) for setup, examples, and API reference.
+
+### Related SDKs
+
+Atlas also uses these client SDKs for other routes:
+
+- [Flyover SDK](https://github.com/rsksmart/flyover-sdk) for the Flyover liquidity-provider path
+- [PowPeg SDK](https://github.com/rsksmart/powpeg-sdk) for native PowPeg and Bitcoin utilities. Union Bridge work is planned to land here.
 
 ### Store swap context securely
 

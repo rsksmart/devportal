@@ -30,29 +30,34 @@ rBTC is pegged 1:1 with BTC and is the native token used to pay for transaction 
 
 ## Architecture diagram
 
-Rootstock is a Bitcoin sidechain. Merged mining provides security. The RVM runs EVM-compatible contracts. The PowPeg moves value between BTC and rBTC. Merged mining (1) is continuous security, not a user click. Peg-in (3–4) and peg-out (5–6) are separate flows through the same Bridge.
+Rootstock is a Bitcoin sidechain. Merged mining secures consensus. The RVM runs EVM-compatible contracts. rBTC pays gas and moves through the PowPeg. Peg-in and peg-out use the same Bridge on separate paths.
 
 ```mermaid
 flowchart LR
   User["User / dApp"]
 
   subgraph Bitcoin["Bitcoin"]
-    BTC["Bitcoin PoW"]
+    direction TB
+    PoW["Bitcoin PoW<br/>(merged mining)"]
+    BTCNet["Bitcoin network"]
   end
 
   subgraph Rootstock["Rootstock"]
     direction TB
+    Consensus["Consensus / block production"]
     RVM["Rootstock Virtual Machine<br/>(EVM-compatible)"]
     Peg["PowPeg / Bridge"]
     rBTC["rBTC (1:1 with BTC)"]
   end
 
-  BTC -->|"1. Merged mining<br/>secures consensus"| RVM
-  User -->|"2. Deploy and call<br/>contracts"| RVM
-  User -->|"3. Peg-in BTC"| Peg
-  Peg -->|"4. Mint rBTC"| rBTC
-  User -->|"5. Peg-out rBTC"| Peg
-  Peg -->|"6. Release BTC<br/>after confirmations"| BTC
+  PoW -->|"Merged mining secures<br/>consensus"| Consensus
+  Consensus --> RVM
+  User -->|"Deploy and call contracts"| RVM
+  rBTC -->|"Pays gas"| RVM
+  User -->|"Peg-in BTC"| Peg
+  Peg -->|"Bridge releases rBTC"| rBTC
+  User -->|"Peg-out: return rBTC"| Peg
+  Peg -->|"Release BTC after<br/>confirmations"| BTCNet
 
   classDef user fill:#FCE4F6,stroke:#FF71E1,stroke-width:2px,color:#1a1a1a
   classDef btc fill:#FFF0D9,stroke:#FF9100,stroke-width:2px,color:#1a1a1a
@@ -61,8 +66,8 @@ flowchart LR
   classDef token fill:#E0FFFA,stroke:#08FFD0,stroke-width:2px,color:#1a1a1a
 
   class User user
-  class BTC btc
-  class RVM rsk
+  class PoW,BTCNet btc
+  class Consensus,RVM rsk
   class Peg peg
   class rBTC token
 ```
