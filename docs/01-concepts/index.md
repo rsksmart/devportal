@@ -6,7 +6,7 @@ tags: [rootstock, concepts, glossary, resources, rsk]
 description: "This section of the documentation covers the core concepts about the Rootstock blockchain. Working with Rootstock requires an understanding of blockchain technology, bitcoin and smart contracts."
 ---
 
-Rootstock is the first and longest-lasting Bitcoin sidechain. It combines the security of Bitcoin's proof of work with Ethereum's smart contract capabilities. The platform is open-source, EVM-compatible, and secured by over 85% of Bitcoin's hash power through merge mining.
+Rootstock is Bitcoin's financial infrastructure. It is an open-source, EVM-compatible Bitcoin sidechain secured by over 85% of Bitcoin's hash power through merge mining. Businesses, financial institutions, and builders use it to launch Bitcoin-secured lending, payments, yield, and treasury products with Ethereum tooling.
 
 This section equips you with the fundamental knowledge required to navigate the Rootstock blockchain. Familiarity with blockchain technology, Bitcoin, and smart contracts will be beneficial as you navigate deeper.
 
@@ -14,14 +14,15 @@ This section equips you with the fundamental knowledge required to navigate the 
 
 | Resource                                                       | Description                                                                                    |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| [Rootstock Foundations](/concepts/foundations/) | Platform overview: how Rootstock connects to Bitcoin via merged mining and the PowPeg. |
+| [Rootstock Foundations](/concepts/foundations/) | Platform overview: Stack, Security, [Merged mining](/concepts/foundations/merged-mining/), and the [PowPeg](/concepts/foundations/powpeg/). |
 | [Rootstock Stack](/concepts/foundations/stack/) | Layers from applications down to Bitcoin merged mining. |
 | [Security at Rootstock](/concepts/foundations/security/) | Why Rootstock is secure, how it stays secure, and how you can verify the model. |
+| [Merged Mining](/concepts/foundations/merged-mining/) | How merge mining Rootstock with Bitcoin works, and its benefits. |
+| [PowPeg Protocol](/concepts/foundations/powpeg/) | Transfer BTC to rBTC and back through the PowPeg. See also the [PowPeg security summary](/concepts/foundations/powpeg/security-model/). |
+| [PowPeg HSM Firmware](/concepts/foundations/powpeg/hsm-firmware-attestation/) | Learn how to verify PowPeg nodes using the HSM Firmware Attestation. |
 | [Glossary](/concepts/glossary/) |  This glossary provides essential definitions for key terms related to Rootstock and blockchain technology.|
 | [rBTC Token](/concepts/rbtc/) | The rBTC token fuels transactions on the Rootstock network. Converting BTC to rBTC is straightforward using various methods. Visit the rBTC section for a comprehensive list of exchanges and applications facilitating rBTC acquisition. Visit the [rBTC section](https://rootstock.io/rbtc/) for a list of exchanges and apps to get rBTC.|
 | [RIF Suite](/concepts/rif-suite/) | Learn about the Rootstock Infrastructure Framework, a comprehensive set of Open-source tools and technologies designed to streamline and incentivize development on Bitcoin.|
-| [PowPeg Protocol](/concepts/powpeg/) | Transfer BTC to rBTC and back through the PowPeg. See also the [PowPeg security summary](/concepts/powpeg/security-model/).|
-| [PowPeg HSM Firmware](/concepts/powpeg/hsm-firmware-attestation/) | Learn how to verify PowPeg nodes using the HSM Firmware Attestation. |
 | [Account Based Addresses](/concepts/account-based-addresses/) | EIP-1191 chainId is used in Rootstock addresses as a checksum. m/44'/137'/0'/0 is the derivation path used for BIP-44 compatible wallets. |
 
 ## Next Steps

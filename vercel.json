@@ -3,11 +3,67 @@
   "redirects": [
     {
       "source": "/concepts/foundations/security/model",
-      "destination": "/concepts/foundations/security/security-model/"
+      "destination": "/concepts/foundations/security/"
     },
     {
       "source": "/concepts/foundations/security/model/",
-      "destination": "/concepts/foundations/security/security-model/"
+      "destination": "/concepts/foundations/security/"
+    },
+    {
+      "source": "/concepts/foundations/security/security-model",
+      "destination": "/concepts/foundations/security/"
+    },
+    {
+      "source": "/concepts/foundations/security/security-model/",
+      "destination": "/concepts/foundations/security/"
+    },
+    {
+      "source": "/concepts/foundations/security/reports",
+      "destination": "/concepts/foundations/security/#security-reports"
+    },
+    {
+      "source": "/concepts/foundations/security/reports/",
+      "destination": "/concepts/foundations/security/#security-reports"
+    },
+    {
+      "source": "/concepts/powpeg",
+      "destination": "/concepts/foundations/powpeg/"
+    },
+    {
+      "source": "/concepts/powpeg/",
+      "destination": "/concepts/foundations/powpeg/"
+    },
+    {
+      "source": "/concepts/powpeg/hsm-firmware-attestation",
+      "destination": "/concepts/foundations/powpeg/hsm-firmware-attestation/"
+    },
+    {
+      "source": "/concepts/powpeg/hsm-firmware-attestation/",
+      "destination": "/concepts/foundations/powpeg/hsm-firmware-attestation/"
+    },
+    {
+      "source": "/concepts/powpeg/member-updates",
+      "destination": "/concepts/foundations/powpeg/member-updates/"
+    },
+    {
+      "source": "/concepts/powpeg/member-updates/",
+      "destination": "/concepts/foundations/powpeg/member-updates/"
+    },
+    {
+      "source": "/concepts/powpeg/security-model",
+      "destination": "/concepts/foundations/powpeg/security-model/"
+    },
+    {
+      "source": "/concepts/powpeg/security-model/",
+      "destination": "/concepts/foundations/powpeg/security-model/"
+    },
+    {
+      "source": "/concepts/merged-mining",
+      "destination": "/concepts/foundations/merged-mining/"
+    },
+    {
+      "source": "/concepts/merged-mining/",
+      "destination": "/concepts/foundations/merged-mining/"
     },
     {
       "source": "/concepts/fundamentals",
@@ -575,7 +631,7 @@
     },
     {
       "source": "/assets/rsk/architecture/powpeg-hsm-attestation/pnetwork.html",
-      "destination": "/concepts/powpeg/hsm-firmware-attestation/"
+      "destination": "/concepts/foundations/powpeg/hsm-firmware-attestation/"
     },
     {
       "source": "/guides/two-way-peg-app/overview",
@@ -667,7 +723,7 @@
     },
     {
       "source": "/assets/rsk/architecture/powpeg-hsm-attestation/sovryn.html",
-      "destination": "/concepts/powpeg/hsm-firmware-attestation/"
+      "destination": "/concepts/foundations/powpeg/hsm-firmware-attestation/"
     },
     {
       "source": "/rif/rns/architecture/NameResolver",
@@ -975,7 +1031,7 @@
     },
     {
       "source": "/rsk/architecture/powpeg/",
-      "destination": "/concepts/powpeg/"
+      "destination": "/concepts/foundations/powpeg/"
     },
     {
       "source": "/rsk/rbtc/conversion/",
@@ -1043,7 +1099,7 @@
     },
     {
       "source": "/rsk/architecture/mining/",
-      "destination": "/concepts/merged-mining/"
+      "destination": "/concepts/foundations/merged-mining/"
     },
     {
       "source": "/kb/send-tokens-through-metamask/",
@@ -1527,7 +1583,7 @@
     },
     {
       "source": "/rsk/architecture/powpeg",
-      "destination": "/concepts/powpeg/"
+      "destination": "/concepts/foundations/powpeg/"
     },
     {
       "source": "/solutions/covalent/",
@@ -1868,10 +1924,6 @@
     {
       "source": "/resources/guides/two-way-peg-app/advanced-operations/supported-addresses/",
       "destination": "/resources/guides/powpeg-app/advanced-operations/supported-addresses/"
-    },
-    {
-      "source": "/resources/guides/two-way-peg-app/advanced-operations/supported-addresses/",
-      "destination": "/resources/guides/powpeg-app/pegout/pegout-common-errors/"
     },
     {
       "source": "/resources/guides/two-way-peg-app/pegout/pegout-common-errors/",
@@ -2227,7 +2279,7 @@
     },
     {
       "source": "/guides/quickstart/overview/merged-mining/",
-      "destination": "/concepts/merged-mining/"
+      "destination": "/concepts/foundations/merged-mining/"
     },
     {
       "source": "/guides/two-way-peg-app/pegout/status/",
@@ -2558,10 +2610,6 @@
       "destination": "/resources/guides/two-way-peg-app/pegout/status/"
     },
     {
-      "source": "/resources/guides/two-way-peg-app/pegout/status/",
-      "destination": "/resources/guides/powpeg-app/pegout/status/"
-    },
-    {
       "source": "/guides/rif-relay/starter-kit",
       "destination": "/developers/integrate/rif-relay/sample-dapp/"
     },
@@ -2710,14 +2758,6 @@
       "destination": "/use-cases/ai-automation/mcp-rootstock/"
     },
     {
-      "source": "/use-cases/ai-agents/:path*",
-      "destination": "/use-cases/ai-automation/:path*"
-    },
-    {
-      "source": "/use-cases/btcfi-finance/:path*",
-      "destination": "/use-cases/btcfi-finance-yield/:path*"
-    },
-    {
       "source": "/use-cases/interoperability/integrate-super-bridge-sdk/",
       "destination": "/use-cases/interoperability/"
     },
@@ -2784,6 +2824,318 @@
     {
       "source": "/dev-tools/no-code/forward-protocol/",
       "destination": "/dev-tools/"
+    },
+    {
+      "source": "/use-cases/ai-agents",
+      "destination": "/use-cases/ai-automation/"
+    },
+    {
+      "source": "/use-cases/ai-agents/",
+      "destination": "/use-cases/ai-automation/"
+    },
+    {
+      "source": "/use-cases/ai-agents/ai-agent-rootstock",
+      "destination": "/use-cases/ai-automation/ai-agent-rootstock/"
+    },
+    {
+      "source": "/use-cases/ai-agents/ai-agent-rootstock/",
+      "destination": "/use-cases/ai-automation/ai-agent-rootstock/"
+    },
+    {
+      "source": "/use-cases/ai-agents/mcp-rootstock",
+      "destination": "/use-cases/ai-automation/mcp-rootstock/"
+    },
+    {
+      "source": "/use-cases/ai-agents/mcp-rootstock/",
+      "destination": "/use-cases/ai-automation/mcp-rootstock/"
+    },
+    {
+      "source": "/use-cases/btcfi-finance",
+      "destination": "/use-cases/btcfi-finance-yield/"
+    },
+    {
+      "source": "/use-cases/btcfi-finance/",
+      "destination": "/use-cases/btcfi-finance-yield/"
+    },
+    {
+      "source": "/use-cases/btcfi-finance/cross-chain-lending-rbtc",
+      "destination": "/use-cases/btcfi-finance-yield/cross-chain-lending-rbtc/"
+    },
+    {
+      "source": "/use-cases/btcfi-finance/cross-chain-lending-rbtc/",
+      "destination": "/use-cases/btcfi-finance-yield/cross-chain-lending-rbtc/"
+    },
+    {
+      "source": "/use-cases/btcfi-finance/yield-vaults-sdk",
+      "destination": "/use-cases/btcfi-finance-yield/yield-vaults-sdk/"
+    },
+    {
+      "source": "/use-cases/btcfi-finance/yield-vaults-sdk/",
+      "destination": "/use-cases/btcfi-finance-yield/yield-vaults-sdk/"
+    },
+    {
+      "source": "/es/concepts/powpeg",
+      "destination": "/es/concepts/foundations/powpeg/"
+    },
+    {
+      "source": "/ja/concepts/powpeg",
+      "destination": "/ja/concepts/foundations/powpeg/"
+    },
+    {
+      "source": "/ko/concepts/powpeg",
+      "destination": "/ko/concepts/foundations/powpeg/"
+    },
+    {
+      "source": "/es/concepts/powpeg/",
+      "destination": "/es/concepts/foundations/powpeg/"
+    },
+    {
+      "source": "/ja/concepts/powpeg/",
+      "destination": "/ja/concepts/foundations/powpeg/"
+    },
+    {
+      "source": "/ko/concepts/powpeg/",
+      "destination": "/ko/concepts/foundations/powpeg/"
+    },
+    {
+      "source": "/es/concepts/powpeg/hsm-firmware-attestation",
+      "destination": "/es/concepts/foundations/powpeg/hsm-firmware-attestation/"
+    },
+    {
+      "source": "/ja/concepts/powpeg/hsm-firmware-attestation",
+      "destination": "/ja/concepts/foundations/powpeg/hsm-firmware-attestation/"
+    },
+    {
+      "source": "/ko/concepts/powpeg/hsm-firmware-attestation",
+      "destination": "/ko/concepts/foundations/powpeg/hsm-firmware-attestation/"
+    },
+    {
+      "source": "/es/concepts/powpeg/hsm-firmware-attestation/",
+      "destination": "/es/concepts/foundations/powpeg/hsm-firmware-attestation/"
+    },
+    {
+      "source": "/ja/concepts/powpeg/hsm-firmware-attestation/",
+      "destination": "/ja/concepts/foundations/powpeg/hsm-firmware-attestation/"
+    },
+    {
+      "source": "/ko/concepts/powpeg/hsm-firmware-attestation/",
+      "destination": "/ko/concepts/foundations/powpeg/hsm-firmware-attestation/"
+    },
+    {
+      "source": "/es/concepts/powpeg/member-updates",
+      "destination": "/es/concepts/foundations/powpeg/member-updates/"
+    },
+    {
+      "source": "/ja/concepts/powpeg/member-updates",
+      "destination": "/ja/concepts/foundations/powpeg/member-updates/"
+    },
+    {
+      "source": "/ko/concepts/powpeg/member-updates",
+      "destination": "/ko/concepts/foundations/powpeg/member-updates/"
+    },
+    {
+      "source": "/es/concepts/powpeg/member-updates/",
+      "destination": "/es/concepts/foundations/powpeg/member-updates/"
+    },
+    {
+      "source": "/ja/concepts/powpeg/member-updates/",
+      "destination": "/ja/concepts/foundations/powpeg/member-updates/"
+    },
+    {
+      "source": "/ko/concepts/powpeg/member-updates/",
+      "destination": "/ko/concepts/foundations/powpeg/member-updates/"
+    },
+    {
+      "source": "/es/concepts/powpeg/security-model",
+      "destination": "/es/concepts/foundations/powpeg/security-model/"
+    },
+    {
+      "source": "/ja/concepts/powpeg/security-model",
+      "destination": "/ja/concepts/foundations/powpeg/security-model/"
+    },
+    {
+      "source": "/ko/concepts/powpeg/security-model",
+      "destination": "/ko/concepts/foundations/powpeg/security-model/"
+    },
+    {
+      "source": "/es/concepts/powpeg/security-model/",
+      "destination": "/es/concepts/foundations/powpeg/security-model/"
+    },
+    {
+      "source": "/ja/concepts/powpeg/security-model/",
+      "destination": "/ja/concepts/foundations/powpeg/security-model/"
+    },
+    {
+      "source": "/ko/concepts/powpeg/security-model/",
+      "destination": "/ko/concepts/foundations/powpeg/security-model/"
+    },
+    {
+      "source": "/es/concepts/merged-mining",
+      "destination": "/es/concepts/foundations/merged-mining/"
+    },
+    {
+      "source": "/ja/concepts/merged-mining",
+      "destination": "/ja/concepts/foundations/merged-mining/"
+    },
+    {
+      "source": "/ko/concepts/merged-mining",
+      "destination": "/ko/concepts/foundations/merged-mining/"
+    },
+    {
+      "source": "/es/concepts/merged-mining/",
+      "destination": "/es/concepts/foundations/merged-mining/"
+    },
+    {
+      "source": "/ja/concepts/merged-mining/",
+      "destination": "/ja/concepts/foundations/merged-mining/"
+    },
+    {
+      "source": "/ko/concepts/merged-mining/",
+      "destination": "/ko/concepts/foundations/merged-mining/"
+    },
+    {
+      "source": "/es/use-cases/ai-agents",
+      "destination": "/es/use-cases/ai-automation/"
+    },
+    {
+      "source": "/ja/use-cases/ai-agents",
+      "destination": "/ja/use-cases/ai-automation/"
+    },
+    {
+      "source": "/ko/use-cases/ai-agents",
+      "destination": "/ko/use-cases/ai-automation/"
+    },
+    {
+      "source": "/es/use-cases/ai-agents/",
+      "destination": "/es/use-cases/ai-automation/"
+    },
+    {
+      "source": "/ja/use-cases/ai-agents/",
+      "destination": "/ja/use-cases/ai-automation/"
+    },
+    {
+      "source": "/ko/use-cases/ai-agents/",
+      "destination": "/ko/use-cases/ai-automation/"
+    },
+    {
+      "source": "/es/use-cases/ai-agents/ai-agent-rootstock",
+      "destination": "/es/use-cases/ai-automation/ai-agent-rootstock/"
+    },
+    {
+      "source": "/ja/use-cases/ai-agents/ai-agent-rootstock",
+      "destination": "/ja/use-cases/ai-automation/ai-agent-rootstock/"
+    },
+    {
+      "source": "/ko/use-cases/ai-agents/ai-agent-rootstock",
+      "destination": "/ko/use-cases/ai-automation/ai-agent-rootstock/"
+    },
+    {
+      "source": "/es/use-cases/ai-agents/ai-agent-rootstock/",
+      "destination": "/es/use-cases/ai-automation/ai-agent-rootstock/"
+    },
+    {
+      "source": "/ja/use-cases/ai-agents/ai-agent-rootstock/",
+      "destination": "/ja/use-cases/ai-automation/ai-agent-rootstock/"
+    },
+    {
+      "source": "/ko/use-cases/ai-agents/ai-agent-rootstock/",
+      "destination": "/ko/use-cases/ai-automation/ai-agent-rootstock/"
+    },
+    {
+      "source": "/es/use-cases/ai-agents/mcp-rootstock",
+      "destination": "/es/use-cases/ai-automation/mcp-rootstock/"
+    },
+    {
+      "source": "/ja/use-cases/ai-agents/mcp-rootstock",
+      "destination": "/ja/use-cases/ai-automation/mcp-rootstock/"
+    },
+    {
+      "source": "/ko/use-cases/ai-agents/mcp-rootstock",
+      "destination": "/ko/use-cases/ai-automation/mcp-rootstock/"
+    },
+    {
+      "source": "/es/use-cases/ai-agents/mcp-rootstock/",
+      "destination": "/es/use-cases/ai-automation/mcp-rootstock/"
+    },
+    {
+      "source": "/ja/use-cases/ai-agents/mcp-rootstock/",
+      "destination": "/ja/use-cases/ai-automation/mcp-rootstock/"
+    },
+    {
+      "source": "/ko/use-cases/ai-agents/mcp-rootstock/",
+      "destination": "/ko/use-cases/ai-automation/mcp-rootstock/"
+    },
+    {
+      "source": "/es/use-cases/btcfi-finance",
+      "destination": "/es/use-cases/btcfi-finance-yield/"
+    },
+    {
+      "source": "/ja/use-cases/btcfi-finance",
+      "destination": "/ja/use-cases/btcfi-finance-yield/"
+    },
+    {
+      "source": "/ko/use-cases/btcfi-finance",
+      "destination": "/ko/use-cases/btcfi-finance-yield/"
+    },
+    {
+      "source": "/es/use-cases/btcfi-finance/",
+      "destination": "/es/use-cases/btcfi-finance-yield/"
+    },
+    {
+      "source": "/ja/use-cases/btcfi-finance/",
+      "destination": "/ja/use-cases/btcfi-finance-yield/"
+    },
+    {
+      "source": "/ko/use-cases/btcfi-finance/",
+      "destination": "/ko/use-cases/btcfi-finance-yield/"
+    },
+    {
+      "source": "/es/use-cases/btcfi-finance/cross-chain-lending-rbtc",
+      "destination": "/es/use-cases/btcfi-finance-yield/cross-chain-lending-rbtc/"
+    },
+    {
+      "source": "/ja/use-cases/btcfi-finance/cross-chain-lending-rbtc",
+      "destination": "/ja/use-cases/btcfi-finance-yield/cross-chain-lending-rbtc/"
+    },
+    {
+      "source": "/ko/use-cases/btcfi-finance/cross-chain-lending-rbtc",
+      "destination": "/ko/use-cases/btcfi-finance-yield/cross-chain-lending-rbtc/"
+    },
+    {
+      "source": "/es/use-cases/btcfi-finance/cross-chain-lending-rbtc/",
+      "destination": "/es/use-cases/btcfi-finance-yield/cross-chain-lending-rbtc/"
+    },
+    {
+      "source": "/ja/use-cases/btcfi-finance/cross-chain-lending-rbtc/",
+      "destination": "/ja/use-cases/btcfi-finance-yield/cross-chain-lending-rbtc/"
+    },
+    {
+      "source": "/ko/use-cases/btcfi-finance/cross-chain-lending-rbtc/",
+      "destination": "/ko/use-cases/btcfi-finance-yield/cross-chain-lending-rbtc/"
+    },
+    {
+      "source": "/es/use-cases/btcfi-finance/yield-vaults-sdk",
+      "destination": "/es/use-cases/btcfi-finance-yield/yield-vaults-sdk/"
+    },
+    {
+      "source": "/ja/use-cases/btcfi-finance/yield-vaults-sdk",
+      "destination": "/ja/use-cases/btcfi-finance-yield/yield-vaults-sdk/"
+    },
+    {
+      "source": "/ko/use-cases/btcfi-finance/yield-vaults-sdk",
+      "destination": "/ko/use-cases/btcfi-finance-yield/yield-vaults-sdk/"
+    },
+    {
+      "source": "/es/use-cases/btcfi-finance/yield-vaults-sdk/",
+      "destination": "/es/use-cases/btcfi-finance-yield/yield-vaults-sdk/"
+    },
+    {
+      "source": "/ja/use-cases/btcfi-finance/yield-vaults-sdk/",
+      "destination": "/ja/use-cases/btcfi-finance-yield/yield-vaults-sdk/"
+    },
+    {
+      "source": "/ko/use-cases/btcfi-finance/yield-vaults-sdk/",
+      "destination": "/ko/use-cases/btcfi-finance-yield/yield-vaults-sdk/"
     }
   ],
   "rewrites": [

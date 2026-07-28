@@ -22,7 +22,7 @@ This guide will walk you through porting your Ethereum dApp to the Rootstock net
 
 **1. Faster Transaction Speeds**
 
-Rootstock performs transactions by [merge-mining with Bitcoin](/concepts/merged-mining/). This means that Rootstock transactions benefit from the security of the Bitcoin network while achieving faster confirmation times compared to Ethereum.
+Rootstock performs transactions by [merge-mining with Bitcoin](/concepts/foundations/merged-mining/). This means that Rootstock transactions benefit from the security of the Bitcoin network while achieving faster confirmation times compared to Ethereum.
 
 **2. Lower Gas Fees**
 

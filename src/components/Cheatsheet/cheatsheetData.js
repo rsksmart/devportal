@@ -199,7 +199,7 @@ export const INSTITUTIONAL = [
   {
     product: 'PowPeg',
     description: 'Two-way Bitcoin peg secured by merged mining',
-    href: '/concepts/powpeg/',
+    href: '/concepts/foundations/powpeg/',
     internal: true,
   },
 ];

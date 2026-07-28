@@ -18,33 +18,20 @@ Learn about Rootstock, how it enables smart contract on Bitcoin, and its compati
 
 ## What is Rootstock?
 
-Rootstock’s full technology stack is built on top of Bitcoin:
-From Rootstock smart contracts to the Rootstock Infrastructure Framework.
-The stack is designed to create a more fair and inclusive financial system.
+Rootstock is Bitcoin's financial infrastructure. It is an open-source, EVM-compatible Bitcoin sidechain secured by over 85% of Bitcoin's hash power through merge mining. Businesses, financial institutions, and builders use it to launch Bitcoin-secured lending, payments, yield, and treasury products with Ethereum tooling.
 
-> See [The Stack](/concepts/foundations/stack/)
+The full technology stack runs on that Bitcoin-secured base: from smart contracts on the Rootstock Virtual Machine to services in the Rootstock Infrastructure Framework (RIF). See [The Stack](/concepts/foundations/stack/).
 
-Bitcoin, is a store and transfer of value.
-The blockchain is secure because miners with high infrastructure and energy costs create new blocks to be added to the blockchain every 10 minutes.
-The more hashing power they provide, the more secure the network is.
-Rootstock is the first open source smart contract platform that is powered by the bitcoin network.
-Rootstock’s goal is to add value and functionality to the bitcoin ecosystem by enabling smart-contracts,
-near instant payments, and higher-scalability.
-RIF is an all-in-one suite of open and decentralized infrastructure applications and services that enable faster,
-easier and scalable development of distributed applications (dApps) within a unified blockchain environment.
+Rootstock connects to Bitcoin through merged mining and through a shared unit of account. BTC locks in the [PowPeg](/concepts/foundations/powpeg/) and issues rBTC 1:1 on Rootstock. Rootstock is also compatible with Ethereum at the virtual machine and JSON-RPC layers, so Solidity tooling and familiar wallets work with little change.
 
-Rootstock is connected to Bitcoin in terms of how its blocks are mined,
-and also in terms of a common currency.
-Rootstock is also compatible with Ethereum in terms of its virtual machine (which executes smart contracts),
-as well as the RPC (external API) that it exposes.
-Let’s briefly look at each of these areas.
+Let's briefly look at each of these areas.
 
 ## PowPeg
 
 The second point of contact is the PowPeg.
 This component connects both networks to allow the transfer of bitcoins to Rootstock,
 thereby allowing developers to interact with smart contracts.
-They pay gas using the same bitcoin, the smart bitcoin.
+They pay gas using rBTC, which is pegged 1:1 with BTC.
 
 <div class="sprite-transform-animation-wrapper rsk-peg">
   <div class="sprite-transform-animation rsk-peg"></div>
@@ -191,7 +178,7 @@ This is another layer of compatibility, in addition to the virtual machine imple
 
 ## Merged Mining
 
-The bitcoin miners do what is known as [merged mining](/concepts/merged-mining/),
+The bitcoin miners do what is known as [merged mining](/concepts/foundations/merged-mining/),
 securing both networks with the same infrastructure and energy consumption.
 
 <div class="sprite-transform-animation-wrapper rsk-mining">

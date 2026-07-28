@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 title: Security reports
-sidebar_label: Reports
+sidebar_label: Security Reports
 tags: [rootstock, security, audit, Coinspect, reports]
 description: "Published Rootstock security audits and Coinspect quarterly reports. Linked from the official security repository."
 ---
@@ -20,5 +20,4 @@ Use this page to find published Rootstock security audits, Coinspect quarterly r
 ## Related
 
 - [Security at Rootstock](/concepts/foundations/security/)
-- [Security model](/concepts/foundations/security/security-model/)
 - [Immunefi bug bounty](https://immunefi.com/bug-bounty/rootstocklabs/information/)

@@ -1198,12 +1198,6 @@
   "Step-by-step guides for Bitcoin DeFi, Bridge, Onboard, and AI.": {
     "message": "Bitcoin DeFi、Bridge、Onboard、AI のステップバイステップガイド。"
   },
-  "Everything you need to build on Bitcoin.": {
-    "message": "Bitcoin 上で構築するために必要なものがすべてここに。"
-  },
-  "Build with familiar EVM tools on a network secured by over 85% of Bitcoin's hash power via merge mining.": {
-    "message": "おなじみの EVM ツールで構築できる、マージマイニングにより Bitcoin ハッシュパワーの 85% 以上で保護されたネットワーク。"
-  },
   "Find the right starting point for your journey on Rootstock: build smart contracts, integrate, or prepare for mainnet.": {
     "message": "Rootstock での旅に合った起点を見つけましょう。スマートコントラクトの構築、統合、またはメインネット準備。"
   },
@@ -1248,5 +1242,11 @@
   },
   "Platform foundations, rBTC, security model, and the Rootstock stack.": {
     "message": "プラットフォームの基礎、rBTC、PowPeg セキュリティ、Rootstock スタック。"
+  },
+  "Everything you need to build Bitcoin-secured financial products.": {
+    "message": "Bitcoinで担保された金融プロダクトを構築するために必要なすべて。"
+  },
+  "Use familiar EVM tools on a Bitcoin sidechain secured by over 85% of Bitcoin's hash power through merge mining.": {
+    "message": "マージマイニングによりBitcoinハッシュパワーの85%超で保護されたBitcoinサイドチェーン上で、使い慣れたEVMツールを利用できます。"
   }
 }

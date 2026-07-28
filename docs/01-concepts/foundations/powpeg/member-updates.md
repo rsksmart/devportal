@@ -10,7 +10,7 @@ The PowPeg is governed by a written protocol that establishes when it is possibl
 
 ## Current composition
 
-The federation currently operates as a **5-of-9** multi-signature (five signatures required). Public operators include independent entities across mining, custody, DeFi, and infrastructure. The roadmap expands toward **20** members after upcoming network upgrades, with longer-term plans for a larger set. Confirm the live signer set on the [PowPeg product page](https://rootstock.io/powpeg/) and via [HSM firmware attestation](/concepts/powpeg/hsm-firmware-attestation/).
+The federation currently operates as a **5-of-9** multi-signature (five signatures required). Public operators include independent entities across mining, custody, DeFi, and infrastructure. The roadmap expands toward **20** members after upcoming network upgrades, with longer-term plans for a larger set. Confirm the live signer set on the [PowPeg product page](https://rootstock.io/powpeg/) and via [HSM firmware attestation](/concepts/foundations/powpeg/hsm-firmware-attestation/).
 
 Pegnatories are awarded a portion of Rootstock transaction fees to cover hardware and maintenance costs. Their operational duty is to keep the PowHSM and PowPeg node online with high uptime. They do not extract multi-sig private keys from the PowHSM.
 
@@ -24,7 +24,6 @@ If the conditions to change composition are met, a pegnatory can send a message 
 
 ## Related
 
-- [PowPeg protocol](/concepts/powpeg/)
+- [PowPeg protocol](/concepts/foundations/powpeg/)
 - [Security at Rootstock](/concepts/foundations/security/)
-- [Security model](/concepts/foundations/security/security-model/)
-- [HSM firmware attestation](/concepts/powpeg/hsm-firmware-attestation/)
+- [HSM firmware attestation](/concepts/foundations/powpeg/hsm-firmware-attestation/)

@@ -120,7 +120,7 @@ PowPeg App glossary terms for BTC ↔ rBTC transfers. Mainnet: [powpeg.rootstock
   <Accordion.Item eventKey="12">
     <Accordion.Header as="h3">What's the PowPeg Protocol?</Accordion.Header>
     <Accordion.Body>
-      - The powpeg protocol is a unique 2-way peg system that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus. Read more about the [Powpeg](/concepts/powpeg/).
+      - The powpeg protocol is a unique 2-way peg system that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus. Read more about the [Powpeg](/concepts/foundations/powpeg/).
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="13">

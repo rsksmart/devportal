@@ -23,4 +23,4 @@ The PowPeg protocol is a robust mechanism for ensuring interoperability between 
 
 Discover more about the [Peg-in process](/resources/guides/powpeg-app/pegin/) and [Peg-out process](/resources/guides/powpeg-app/pegout/) to get started.
 
-<Button size="sm" href="/concepts/powpeg/">Try Powpeg</Button>
+<Button size="sm" href="/concepts/foundations/powpeg/">Try Powpeg</Button>

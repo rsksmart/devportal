@@ -119,7 +119,7 @@ The value field of the output structure is in satoshis.
 ## Hashing Transactions
 The hash algorithm used in the Bitcoin Network is just the `SHA256(SHA256())` of the serialized transaction. The library exposes one function that will apply this hash algorithm to any byte array passed to it, making it easy to calculate the transaction id of any raw transaction present in the contract.
 
-This function is specifically useful to interact with the [rootstock native bridge](/concepts/powpeg/), as many of its functions have a transaction id as parameter. For example, by using the transaction hash function, it is easy to know how many confirmations a Bitcoin block has inside a smart contract function.
+This function is specifically useful to interact with the [rootstock native bridge](/concepts/foundations/powpeg/), as many of its functions have a transaction id as parameter. For example, by using the transaction hash function, it is easy to know how many confirmations a Bitcoin block has inside a smart contract function.
 
 ### Example code with explanation
 Based on the example stated in the previous section, after validating that a specific transaction has an output paying a certain amount to an address. We need to know if that transaction has enough confirmations:

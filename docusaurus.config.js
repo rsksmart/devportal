@@ -141,13 +141,14 @@ const config = {
   clientModules: [
     './src/clientModules/renderEquations.js',
     './src/clientModules/docsearch-css.js',
+    './src/clientModules/legacyPathRedirects.js',
   ],
   plugins: [
     [
       'docusaurus-plugin-llms',
       {
         title: 'Rootstock Developers Portal',
-        description: 'Build EVM-compatible smart contracts on Rootstock, secured by over 85% of Bitcoin\'s hash power through merge mining.',
+        description: 'Build Bitcoin-secured financial products on Rootstock, an EVM-compatible Bitcoin sidechain secured by over 85% of Bitcoin\'s hash power through merge mining.',
         docsDir: 'docs',
         generateLLMsTxt: true,
         generateLLMsFullTxt: true,
@@ -166,7 +167,7 @@ const config = {
       './plugins/llms-i18n.js',
       {
         title: 'Rootstock Developers Portal',
-        description: 'Build EVM-compatible smart contracts on Rootstock, secured by over 85% of Bitcoin\'s hash power through merge mining.',
+        description: 'Build Bitcoin-secured financial products on Rootstock, an EVM-compatible Bitcoin sidechain secured by over 85% of Bitcoin\'s hash power through merge mining.',
         excludeImports: true,
         removeDuplicateHeadings: true,
         pathTransformation: { ignorePaths: ['docs'] },

@@ -3,7 +3,7 @@ sidebar_position: 1
 title: Developers Overview
 sidebar_label: Overview
 tags: [rsk, rootstock, developers, web3, starter kits, smart contracts, how-tos,]
-description: "Quickstarts, smart contracts, integrations, RPC API, and libraries for building dApps on Rootstock, a Bitcoin sidechain secured by merge mining with EVM-compatible tooling."
+description: "Quickstarts, smart contracts, integrations, RPC API, and libraries for building Bitcoin-secured financial products on Rootstock, an EVM-compatible Bitcoin sidechain secured by merge mining."
 ---
 
 Welcome to the Rootstock Developers Overview section.

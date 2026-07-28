@@ -128,7 +128,7 @@ In-docs AI assistant trained on Rootstock documentation. Open it with the **Ask 
 | Product | Description | Link |
 |---|---|---|
 | Atlas Bridge | Permissionless Bitcoin bridge to Rootstock | https://dev.rootstock.io/resources/guides/atlas/ |
-| PowPeg | Two-way Bitcoin peg secured by merged mining | https://dev.rootstock.io/concepts/powpeg/ |
+| PowPeg | Two-way Bitcoin peg secured by merged mining | https://dev.rootstock.io/concepts/foundations/powpeg/ |
 
 ---
 

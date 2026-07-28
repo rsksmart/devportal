@@ -5,11 +5,11 @@ import Translate from '@docusaurus/core/lib/client/exports/Translate';
 const content = {
   title: <Translate>Rootstock Documentation</Translate>,
   tagline: (
-    <Translate>Everything you need to build on Bitcoin.</Translate>
+    <Translate>Everything you need to build Bitcoin-secured financial products.</Translate>
   ),
   usp: (
     <Translate>
-      Build with familiar EVM tools on a network secured by over 85% of Bitcoin's hash power via merge mining.
+      Use familiar EVM tools on a Bitcoin sidechain secured by over 85% of Bitcoin's hash power through merge mining.
     </Translate>
   ),
   cta: {
@@ -78,7 +78,7 @@ const content = {
       list: [
         {
           title: <Translate>PowPeg protocol overview</Translate>,
-          href: '/concepts/powpeg/',
+          href: '/concepts/foundations/powpeg/',
         },
         {
           title: <Translate>Read the security model</Translate>,
