@@ -9,7 +9,7 @@ description: "Why Rootstock is secure, how it stays secure, and how you can veri
 Institutions, developers, and investors rely on Rootstock as Bitcoin's financial infrastructure. Rootstock has operated on Bitcoin since 2018. It remains open source, independently audited, and continuously hardened. This page answers three questions: why Rootstock is secure, how it stays secure, and how you can verify that for yourself.
 
 <div class="d-flex flex-wrap align-items-center mb-3">
-  <Button size="sm" className="me-3" href="/concepts/foundations/security/#security-reports">View security reports</Button>
+  <Button size="sm" className="me-3" href="https://github.com/rsksmart/security">View security reports</Button>
   &nbsp;
   <Button size="sm" href="https://immunefi.com/bug-bounty/rootstocklabs/information/">Bug bounty</Button>
 </div>
@@ -59,16 +59,22 @@ No single safeguard is load-bearing. Independent layers reinforce one another:
 
 Those security properties are the output. What sustains them is the system that produces and maintains the code: security embedded across the development lifecycle, validated by an independent partner, and reinforced continuously after code ships.
 
+### RootstockLabs security team
+
+The [RootstockLabs security team](https://github.com/rsksmart/security) owns security for Rootstock protocol software and related infrastructure. That includes design review for proofs of concept and RSKIPs, mandatory review of every pull request to release-candidate and default branches of `rskj` and `powpeg-node`, PowHSM release-candidate review, [bug bounty](https://immunefi.com/bug-bounty/rootstocklabs/information/) collaboration, and ongoing hardening of the chain and bridge.
+
+They work alongside [Coinspect](#coinspect), an independent external firm. Coinspect also publishes independent quarterly reports. The internal team sets the SSDLC and day-to-day security engineering.
+
 ### Secure development lifecycle
 
-Rootstock follows a secure software development lifecycle (SSDLC). Security is integrated into every phase of development rather than treated as a checkpoint before release. This maps to frameworks such as NIST SSDF (SP 800-218), OWASP SAMM, and the Microsoft Security Development Lifecycle. Vulnerabilities are surfaced early, when they are cheaper and safer to fix, and fewer latent risks reach production.
+Rootstock follows a secure software development lifecycle (SSDLC). Security is integrated into every phase of development rather than treated as a checkpoint before release. This maps to frameworks such as NIST SSDF (SP 800-218), OWASP SAMM, and the Microsoft Security Development Lifecycle. Vulnerabilities are discovered early, when they are cheaper and safer to fix, and fewer potential risks reach production.
 
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">Security by design</Accordion.Header>
     <Accordion.Body>
 
-Security involvement begins before production code exists. When the RootstockLabs Research and Incubation team builds a proof of concept or MVP that may land on the Rootstock blockchain, the security team reviews it while the design is still evolving. When that work is handed to development, security reviews the final proposal. Protocol-level changes proposed as RSKIPs are reviewed as part of the proposal process. By the time a change reaches the development pipeline, security has already weighed in on both the concept and the proposal.
+Security involvement begins before code is in production. When the RootstockLabs Research and Incubation team builds a proof of concept or MVP that may impact the Rootstock blockchain, the security team reviews it while the design is still evolving. When that work is handed to development, security reviews the final proposal. Protocol-level changes proposed as RSKIPs are reviewed as part of the proposal process. By the time a change reaches the development pipeline, security has already weighed in on both the concept and the proposal.
 
     </Accordion.Body>
   </Accordion.Item>
@@ -92,7 +98,7 @@ This applies to `rskj` (the node implementation) and `powpeg-node` (the bridge s
 
 All projects run the [OpenSSF Scorecard](https://securityscorecards.dev/), an open-source tool, maintained by the Open Source Security Foundation, that grades a repository against security best practices, including, among other checks, whether code review is required before merge, whether branch protections are enforced, and whether CI workflows follow least-privilege and dependency-pinning practices. The check runs on a schedule and whenever a branch-protection rule changes, and each repository publishes its current score as a Scorecard badge in its README, so a third party can independently confirm that the review controls described above are actually enforced.
 
-The repositories also run CodeQL static analysis and automated dependency review on incoming changes. Both repositories produce reproducible builds so a released binary can be checked against its source.
+The repositories also run CodeQL static analysis and automated dependency review on incoming changes. Both repositories produce reproducible builds so any released binary can be checked against its source.
 
     </Accordion.Body>
   </Accordion.Item>
@@ -104,12 +110,12 @@ Independent external review is a permanent part of the model, not an occasional 
 
 #### Coinspect
 
-[Coinspect](https://www.coinspect.com/), an independent blockchain security company, has worked with RootstockLabs since 2017. Early on they helped establish the security function. As the internal team matured, Coinspect became an organizationally independent partner integrated into day-to-day work. Their responsibilities include:
+[Coinspect](https://www.coinspect.com/), an independent blockchain security company, has worked with RootstockLabs since 2017. Early on, they helped establish the security function. As the internal team matured, Coinspect became an organizationally independent partner integrated into day-to-day work. Their responsibilities include:
 
-- co-review and approval of every PR merged to release-candidate and default branches of `rskj` and `powpeg-node`
-- security design reviews and feature proposal assessment
-- collaboration on bug bounty triage
-- independent quarterly security reports published in the [security repository](https://github.com/rsksmart/security)
+- Co-review and approval of every PR merged to release-candidate and default branches of `rskj` and `powpeg-node`
+- Security design reviews and feature proposal assessment
+- Collaboration on bug bounty triage
+- Independent quarterly security reports published in the [security repository](https://github.com/rsksmart/security)
 
 #### PowHSM
 
@@ -134,7 +140,7 @@ RootstockLabs has run a public bug bounty program since 2018, currently on [Immu
 | Smart contracts | up to US$100,000 |
 | Websites and applications | up to US$10,000 |
 
-The program is triaged by Immunefi, requires a working proof of concept for every submission, requires KYC for payout, and pays rewards in USDC. The highest tier is reserved for PowHSM firmware. Full scope and rules are on the Immunefi program page.
+The program is triaged by [Immunefi](https://immunefi.com), requires a working proof of concept for every submission, requires KYC for payout, and pays rewards in USDC. The highest tier is reserved for PowHSM firmware. Full scope and rules are on the Immunefi program page.
 
 #### Continuous improvement
 
@@ -167,17 +173,17 @@ Security claims should be independently verifiable. Use the resources below to c
     title="rskj Scorecard"
     subtitle="OpenSSF"
     color="green"
-    description="Open source node implementation with OpenSSF Scorecard badge and review controls."
-    linkHref="https://github.com/rsksmart/rskj"
-    linkTitle="View rskj"
+    description="OpenSSF Scorecard for the Rootstock node implementation, including review and supply-chain checks."
+    linkHref="https://scorecard.dev/viewer/?uri=github.com/rsksmart/rskj"
+    linkTitle="View Scorecard"
   />
   <CardsGridItem
     title="powpeg-node Scorecard"
     subtitle="OpenSSF"
     color="cyan"
-    description="Bridge software run by pegnatories, with Scorecard badge and reproducible builds."
-    linkHref="https://github.com/rsksmart/powpeg-node"
-    linkTitle="View powpeg-node"
+    description="OpenSSF Scorecard for powpeg-node, the bridge software run by pegnatories."
+    linkHref="https://scorecard.dev/viewer/?uri=github.com/rsksmart/powpeg-node"
+    linkTitle="View Scorecard"
   />
   <CardsGridItem
     title="PowHSM attestation"
@@ -199,13 +205,7 @@ Security claims should be independently verifiable. Use the resources below to c
 
 ### Security reports
 
-Published audits, Coinspect quarterly reports, and disclosure records live in the official security repository. Portal pages for individual Coinspect quarterly reports will be added here when Marketing and Security hand over the packages.
-
-:::note[Source of truth]
-
-Until those portal pages ship, treat [github.com/rsksmart/security](https://github.com/rsksmart/security) as the source of truth for audits, disclosures, and Coinspect reports.
-
-:::
+Published audits, Coinspect quarterly reports, and disclosure records live in the official security repository.
 
 <Button size="sm" href="https://github.com/rsksmart/security" align="left">Browse security reports</Button>
 
