@@ -26,7 +26,7 @@ Rootstock inherits its base security from Bitcoin while relying on multiple inde
 
 ### Bitcoin-backed security
 
-Through [merged mining](/concepts/foundations/merged-mining/), blocks are produced by the same miners that secure Bitcoin, at no extra cost to them. Over **85%** of Bitcoin's hash power currently secures Rootstock. This ties Rootstock block production, and bridge enforcement that depends on Rootstock confirmations, to Bitcoin's proof of work.
+Through [merged mining](/concepts/foundations/merged-mining/), blocks are produced by the same miners that secure Bitcoin, at no extra cost to them. Over **85%** of Bitcoin's hash power currently secures Rootstock. That links Rootstock block production to Bitcoin's proof of work. Bridge rules that depend on Rootstock confirmations inherit the same security.
 
 ### Layered PowPeg architecture
 
@@ -45,7 +45,7 @@ Peg-out signing requires Bridge commands backed by on the order of **4000** Root
 
 ### Defense in depth
 
-No single safeguard is load-bearing. Independent layers reinforce one another:
+Rootstock does not rely on one security control alone. Each layer supports the others:
 
 | Layer | Role |
 | --- | --- |
@@ -57,7 +57,7 @@ No single safeguard is load-bearing. Independent layers reinforce one another:
 
 ## How does Rootstock stay secure?
 
-Those security properties are the output. What sustains them is the system that produces and maintains the code: security embedded across the development lifecycle, validated by an independent partner, and reinforced continuously after code ships.
+The safeguards above describe how Rootstock is secured on-chain. This section covers how RootstockLabs keeps that model strong: secure development practices, independent review, and ongoing monitoring after code is deployed.
 
 ### RootstockLabs security team
 
@@ -96,7 +96,7 @@ This applies to `rskj` (the node implementation) and `powpeg-node` (the bridge s
     <Accordion.Header as="h3">Supply-chain integrity</Accordion.Header>
     <Accordion.Body>
 
-All projects run the [OpenSSF Scorecard](https://securityscorecards.dev/), an open-source tool, maintained by the Open Source Security Foundation, that grades a repository against security best practices, including, among other checks, whether code review is required before merge, whether branch protections are enforced, and whether CI workflows follow least-privilege and dependency-pinning practices. The check runs on a schedule and whenever a branch-protection rule changes, and each repository publishes its current score as a Scorecard badge in its README, so a third party can independently confirm that the review controls described above are actually enforced.
+All projects run the [OpenSSF Scorecard](https://securityscorecards.dev/). Scorecard is an Open Source Security Foundation tool that grades a repository against security best practices. Checks include required code review before merge, branch protection, least-privilege CI, and dependency pinning. It runs on a schedule and when branch-protection rules change. Each repository publishes its score as a README badge, so anyone can verify that those controls are enforced.
 
 The repositories also run CodeQL static analysis and automated dependency review on incoming changes. Both repositories produce reproducible builds so any released binary can be checked against its source.
 
@@ -123,7 +123,7 @@ PowHSM firmware follows a more conservative process. Each release candidate is r
 
 #### External audits
 
-Independent audits by specialist firms assess Rootstock infrastructure over time. These sit on top of the continuous review gate. Published reports are listed in [Security reports](#security-reports) and in the [security repository](https://github.com/rsksmart/security).
+Independent audits by specialist firms assess Rootstock infrastructure over time. They add point-in-time review on top of the continuous PR review process. Published reports are listed in [Security reports](#security-reports) and in the [security repository](https://github.com/rsksmart/security).
 
 ### Continuous security
 
@@ -144,7 +144,7 @@ The program is triaged by [Immunefi](https://immunefi.com), requires a working p
 
 #### Continuous improvement
 
-Beyond the bounty, the security team hardens the chain, the bridge, and user funds: participating in feature design and integrating security tooling where the return justifies it. Security is an ongoing engineering investment.
+Beyond the bounty, the security team continues to harden the chain and the bridge. That includes design reviews for new features and adding security tooling when it improves detection or reduces risk.
 
 ## Verification
 
