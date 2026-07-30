@@ -13,24 +13,29 @@ Atlas Bridge is a cross-chain bridge for the Rootstock ecosystem. You can use it
 
 ## How Atlas fits the stack
 
-Atlas uses three client libraries. Each one opens a different bridge or swap path. Funds end on Bitcoin or Rootstock.
+Atlas uses three client-side SDKs. Each one opens a different bridge or swap path. Funds end on Bitcoin or Rootstock.
 
 ### Architecture diagram
 
-Atlas talks to three libraries: PowPeg, Flyover, and RSK Swap. Cross-chain swaps go through the RSK Swap API to LiFi, Symbiosis, Boltz, and Changelly. Flyover and native PowPeg use their own libraries. Every route ends on Bitcoin or Rootstock.
+Atlas talks to three client-side SDKs: `@rsksmart/powpeg-sdk`, `@rsksmart/flyover-sdk`, and `@rsksmart/rsk-swap-sdk`. Cross-chain swaps go through `rsk-swap-api` to LiFi, Symbiosis, Boltz, and Changelly. `flyover-sdk` goes to Flyover liquidity providers, then Liquidity Provider Servers (LPS). `powpeg-sdk` goes to Native PowPeg, then `powpeg-api`. LPS, `powpeg-api`, and the swap providers talk to Bitcoin and Rootstock.
 
 ```mermaid
 flowchart TB
   AtlasUI["Atlas Bridge UI"]
 
-  subgraph ClientSDKs["Client SDKs"]
-    direction TB
-    PowpegSdk["powpeg-sdk<br/>native PowPeg / BTC utilities"]
-    FlyoverSdk["flyover-sdk<br/>Flyover provider"]
-    RskSwapSdk["rsk-swap-sdk<br/>cross-chain swaps"]
-  end
+  PowpegSdk["powpeg-sdk<br/>@rsksmart/powpeg-sdk"]
+  FlyoverSdk["flyover-sdk<br/>@rsksmart/flyover-sdk"]
+  RskSwapSdk["rsk-swap-sdk<br/>@rsksmart/rsk-swap-sdk"]
 
-  SwapApi["RSK Swap API"]
+  PowpegSdk -.- FlyoverSdk
+  FlyoverSdk -.- RskSwapSdk
+
+  NativePowPeg["Native PowPeg<br/>Union Bridge (planned)"]
+  FlyoverLP["Flyover liquidity providers"]
+  SwapApi["rsk-swap-api"]
+
+  PowPegApi["powpeg-api<br/>(2wp-api)"]
+  FlyoverLPS["Liquidity Provider Servers<br/>(LPS)"]
 
   subgraph SwapProviders["Swap providers"]
     direction LR
@@ -40,26 +45,29 @@ flowchart TB
     Changelly["Changelly"]
   end
 
-  Flyover["Flyover<br/>liquidity providers"]
-  NativePowPeg["Native PowPeg<br/>Union Bridge planned"]
   Networks["Bitcoin and Rootstock"]
 
   AtlasUI --> PowpegSdk
   AtlasUI --> FlyoverSdk
   AtlasUI --> RskSwapSdk
+
+  PowpegSdk --> NativePowPeg
+  FlyoverSdk --> FlyoverLP
   RskSwapSdk --> SwapApi
+
+  NativePowPeg --> PowPegApi
+  FlyoverLP --> FlyoverLPS
   SwapApi --> LiFi
   SwapApi --> Symbiosis
   SwapApi --> Boltz
   SwapApi --> Changelly
-  FlyoverSdk --> Flyover
-  PowpegSdk --> NativePowPeg
+
+  PowPegApi --> Networks
+  FlyoverLPS --> Networks
   LiFi --> Networks
   Symbiosis --> Networks
   Boltz --> Networks
   Changelly --> Networks
-  Flyover --> Networks
-  NativePowPeg --> Networks
 
   classDef ui fill:#FCE4F6,stroke:#FF71E1,stroke-width:2px,color:#1a1a1a
   classDef sdk fill:#E0FFFA,stroke:#08FFD0,stroke-width:2px,color:#1a1a1a
@@ -69,14 +77,15 @@ flowchart TB
 
   class AtlasUI ui
   class PowpegSdk,FlyoverSdk,RskSwapSdk sdk
-  class SwapApi api
-  class LiFi,Symbiosis,Boltz,Changelly,Flyover,NativePowPeg provider
+  class SwapApi,FlyoverLPS,PowPegApi api
+  class LiFi,Symbiosis,Boltz,Changelly,FlyoverLP,NativePowPeg provider
   class Networks network
+  linkStyle 0,1 stroke:none,fill:none
 ```
 
-`rsk-swap-sdk` quotes and runs swaps through the RSK Swap API (LiFi, Symbiosis, Boltz, Changelly). `flyover-sdk` handles Flyover. `powpeg-sdk` handles native PowPeg and Bitcoin utilities. Union Bridge work is planned for `powpeg-sdk`.
+`@rsksmart/rsk-swap-sdk` quotes and runs swaps through `rsk-swap-api` (LiFi, Symbiosis, Boltz, Changelly). `@rsksmart/flyover-sdk` talks to Flyover liquidity providers, which use Liquidity Provider Servers (LPS) to reach Bitcoin and Rootstock. `@rsksmart/powpeg-sdk` talks to Native PowPeg, which uses `powpeg-api` (2wp-api) to reach the chains. Union Bridge work is planned for the PowPeg path.
 
-Atlas lets you compare routes before you connect a wallet. To quote and swap from your own app, start with the RSK Swap SDK.
+Atlas lets you compare routes before you connect a wallet. To quote and swap from your own app, start with [`@rsksmart/rsk-swap-sdk`](https://github.com/rsksmart/rsk-swap-sdk).
 
 ## Prerequisites
 You need a wallet for the source network and a wallet address for the destination network. You also need enough balance to cover both transfer amount and fees.
@@ -88,7 +97,7 @@ To get started, read [How to use Atlas Bridge](/resources/guides/atlas/getting-s
 
 ## Integrate with the RSK Swap SDK
 
-[Atlas Bridge](https://atlas.rootstock.io) is the web interface for comparing provider routes before you connect a wallet. To quote and execute swaps from your own wallet, exchange, or dApp, use the [RSK Swap SDK](https://github.com/rsksmart/rsk-swap-sdk). The SDK calls the RSK Swap API. That API returns routes from LiFi, Symbiosis, Boltz, and Changelly. Supported pairs and providers come from the API at request time. They can differ from the routes Atlas shows in the UI.
+[Atlas Bridge](https://atlas.rootstock.io) is the web interface for comparing provider routes before you connect a wallet. To quote and execute swaps from your own wallet, exchange, or dApp, use [`@rsksmart/rsk-swap-sdk`](https://github.com/rsksmart/rsk-swap-sdk). The SDK calls `rsk-swap-api`. That API returns routes from LiFi, Symbiosis, Boltz, and Changelly. Supported pairs and providers come from the API at request time. They can differ from the routes Atlas shows in the UI.
 
 Install the package:
 
@@ -102,12 +111,12 @@ The SDK estimates routes, reads swap limits, broadcasts EVM transactions through
 
 Atlas also uses these client SDKs for other routes:
 
-- [Flyover SDK](https://github.com/rsksmart/flyover-sdk) for the Flyover liquidity-provider path
-- [PowPeg SDK](https://github.com/rsksmart/powpeg-sdk) for native PowPeg and Bitcoin utilities. Union Bridge work is planned to land here.
+- [`@rsksmart/flyover-sdk`](https://github.com/rsksmart/flyover-sdk) for the Flyover liquidity-provider path
+- [`@rsksmart/powpeg-sdk`](https://github.com/rsksmart/powpeg-sdk) for native PowPeg and Bitcoin utilities. Union Bridge work is planned to land here.
 
 ### Store swap context securely
 
-When you create a swap, the SDK returns a result object with a `context` field. That field holds provider-specific data for claiming or refunding the swap. Some providers include sensitive client-side material in `context`, such as keys for atomic swaps. The SDK generates this data in the browser or your app. It does not send `context` to the RSK Swap API.
+When you create a swap, the SDK returns a result object with a `context` field. That field holds provider-specific data for claiming or refunding the swap. Some providers include sensitive client-side material in `context`, such as keys for atomic swaps. The SDK generates this data in the browser or your app. It does not send `context` to `rsk-swap-api`.
 
 Persist the full swap result in storage you control. Treat `context` as secret. Do not log it, cache it in plain text, or send it to analytics or support channels unless your runbook requires it.
 
