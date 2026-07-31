@@ -302,6 +302,12 @@ Replace:
 
 > The `> <contract-name>.json` at the end of the command redirects the Standard JSON input output into a file in the current directory, which can then be uploaded as-is to the Rootstock Explorer verification tool.
 
+If your contract links external libraries, add one `--libraries` flag per library so they are written into `settings.libraries` of the generated JSON:
+
+```bash
+--libraries <library-file>:<library-name>:<library-address>
+```
+
 ### 4. Hardhat Verification
 
 Select Hardhat as your verification method to verify contracts directly from your Hardhat project. This method does not require uploading files through the interface. Instead, verification is performed using the Hardhat CLI.
@@ -363,6 +369,12 @@ Replace:
 - `<contract-name>` → name of the contract inside that file.
 - `<compiler-version>` → the Solidity compiler version used to compile and deploy the contract (for example, `v0.8.28`).
 
+If your contract links external libraries, add one `--libraries` flag per library. Verification does not reuse the linking from your deploy, so each library has to be named again:
+
+```bash
+--libraries <library-file>:<library-name>:<library-address>
+```
+
 Once the command finishes, your contract will appear as Verified on the Rootstock Explorer.
 
 For a detailed walkthrough, see [Verify Smart Contracts using Foundry](/developers/smart-contracts/foundry/verify-smart-contracts/).
@@ -391,33 +403,54 @@ Once you have entered all the details, click "Verify Contract".
 
 ## Troubleshooting
 
-- Here are some common errors and their solutions:
+Verification compares the bytecode the explorer recompiles against the bytecode on chain. The code body has to match; a metadata footer that differs is tolerated when it is the same length and still decodes as valid metadata. Every failure below is a real difference between the compilation you submitted and the one that produced the deployed bytecode — except where the failure happens in your local tooling, before anything reaches the explorer.
 
 <Accordion>
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">Compiler version mismatch</Accordion.Header>
     <Accordion.Body>
-      - Confirm the exact **Solc version** used to compile your contract.<br/>
-      - Retrieve the version from your compilation artifacts.
+      - Use the exact **Solc version** your deploy used, not the version shown in an example command. Do not read it off the `pragma` either: a pragma often only bounds the version, and even when it pins one exactly it omits the `+commit` hash that identifies the build.
+      - Foundry: read `solc_version` from `foundry.toml` (`solc` is the same setting; Foundry accepts either), or take the full version from `metadata.compiler.version` in `out/<File>.sol/<Contract>.json`.
+      - Hardhat: take `solcLongVersion` from the build info under `artifacts/build-info/` — it carries the `+commit.…` suffix that `solcVersion` omits. In your config it lives under `solidity` in Hardhat 2 (a bare version string, `solidity.version`, or an entry in `solidity.compilers[]`), and under the compiler profile in Hardhat 3.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
-    <Accordion.Header as="h3">Invalid constructor arguments</Accordion.Header>
+    <Accordion.Header as="h3">Library not found / address mismatch</Accordion.Header>
     <Accordion.Body>
-      - Verify the precise **encoding**, **order**, and **types** of your constructor arguments.
+      `forge verify-contract` submits **only** the libraries in your Foundry configuration for that command — the `--libraries` flags you pass, plus any `libraries` entry in `foundry.toml`. It never reads your deploy's broadcast file or artifacts, so the flags your deploy script passed have to be repeated here. A missing library leaves unresolved placeholders in the recompiled bytecode, so the comparison fails.
+
+      - Pass every deployed library, one `--libraries` flag each:
+
+      ```bash
+      --libraries src/libraries/MyLib.sol:MyLib:0x1111111111111111111111111111111111111111
+      ```
+
+      - The file part is the source path as the compiler sees it, after remappings. For a library that comes from a dependency, that is its path inside the dependency — for example `node_modules/@scope/pkg/contracts/MyLib.sol:MyLib:0x…`.
+      - The source of truth for names and addresses is the top-level `libraries[]` array in `broadcast/<script>.s.sol/<chainId>/run-latest.json`.
+      - To see what your command actually ships before submitting, dump the Standard JSON input and inspect its `settings.libraries`:
+
+      ```bash
+      forge verify-contract ... --show-standard-json-input > standard-input.json
+      ```
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">
-    <Accordion.Header as="h3">Library not found / address mismatch</Accordion.Header>
+    <Accordion.Header as="h3">Invalid constructor arguments</Accordion.Header>
     <Accordion.Body>
-      - Ensure **library names** match bytecode placeholders.<br/>
-      - Add the correct **deployed addresses** for each library.
+      - Verify the precise **encoding**, **order**, and **types** of your constructor arguments.
+      - Read the values from the `arguments` field of the deploying entry in `transactions[]` of `broadcast/<script>.s.sol/<chainId>/run-latest.json` (`null` when the constructor takes none). They are stored decoded, so ABI-encode them with [cast abi-encode](https://getfoundry.sh/cast/reference/abi-encode/) before passing them.
+      - `--guess-constructor-args` can fail its own preflight with `Local bytecode doesn't match on-chain bytecode` even when your local artifact and the deployed bytecode are identical. Drop `--guess-constructor-args` and `--rpc-url`, and pass the arguments explicitly instead:
+
+      ```bash
+      --constructor-args 0x00000000000000000000000000000000000000000000000000000000000003e8
+      ```
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="3">
-    <Accordion.Header as="h3">Optimization runs differ</Accordion.Header>
+    <Accordion.Header as="h3">Optimization settings differ</Accordion.Header>
     <Accordion.Body>
-      - Align the number of **optimization runs** with your compilation settings.
+      - The optimizer flag, the number of **runs**, and the **EVM version** all change the output bytecode. Each must match what you compiled with.
+      - Read them from `foundry.toml` (`optimizer`, `optimizer_runs`, `evm_version`) or from your Hardhat config. Do not assume the form defaults match your project.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="4">
@@ -429,14 +462,14 @@ Once you have entered all the details, click "Verify Contract".
   <Accordion.Item eventKey="5">
     <Accordion.Header as="h3">Proxy and Implementation</Accordion.Header>
     <Accordion.Body>
-      - Verify the **implementation contract**.<br/>
-      - Note any **proxy-aware UI** (if available) and how to link it.
+      - Verify the **implementation contract** and the proxy separately. Each is its own address with its own source and constructor arguments.
+      - A proxy's constructor arguments usually include the implementation address and the encoded initializer call. Read them from the deploy broadcast file rather than reconstructing them by hand.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
 
 :::tip[Tip]
-If verification keeps failing, try matching the compiler settings directly from your Hardhat or Foundry build artifacts.
+If verification keeps failing, stop adjusting the form and compare inputs instead. Take the Standard JSON your tooling actually submits (`forge verify-contract ... --show-standard-json-input`) and check it against the build info from the deploy. The difference between those two files is the reason verification fails.
 :::
 
 ## Resources

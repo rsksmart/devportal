@@ -6,7 +6,7 @@ description: "Learn how to verify your Rootstock smart contract using forge."
 tags: [guides, developers, smart contracts, rsk, rootstock, foundry, dApps, verify]
 ---
 
-In this section, you'll verify your `counter` smart contract to the Rootstock Explorer using Foundry, so the users of you dApp can be able to see the actual code of your contract to analyze that it doesn't have malicious code, and they can also interact with it.
+In this section, you'll verify your `counter` smart contract on the Rootstock Explorer using Foundry, so the users of your dApp can see the actual code of your contract, confirm it doesn't have malicious code, and interact with it.
 
 ## Verify simple contract
 
@@ -63,11 +63,11 @@ result:
 0x00000000000000000000000000000000000000000000000000000000000003e8
 ```
 
-And, then, you can run the verification command passing the constructor argment as ABI encoded:
+Then you can run the verification command passing the constructor argument as ABI encoded:
 
 ```bash
 forge verify-contract \
-    --constructor-args 0x00000000000000000000000000000000000000000000000000000000000003e8
+    --constructor-args 0x00000000000000000000000000000000000000000000000000000000000003e8 \
     --chain-id 31 \
     --watch \
     --compiler-version v0.8.30 \
@@ -75,4 +75,37 @@ forge verify-contract \
     --verifier-url https://be.explorer.testnet.rootstock.io/api/v3/etherscan \
     0x499e802a6825d30482582d9b9dd669ba82ba8ba4 \
     src/Counter.sol:Counter
+```
+
+:::tip[Tip]
+If you deployed with a script, you do not have to reconstruct the arguments from memory. Each entry in `transactions[]` of `broadcast/<script>.s.sol/<chainId>/run-latest.json` carries its own `arguments`, holding what was passed at deploy time — pick the transaction that created your contract. They are stored decoded, so run them through `cast abi-encode` before passing them to `--constructor-args`.
+:::
+
+## Verify a contract that uses libraries
+
+`forge verify-contract` submits only the libraries in your Foundry configuration for that command — the `--libraries` flags you pass, plus any `libraries` entry in `foundry.toml`. It **never** reads your deploy's broadcast file or artifacts, even when your deploy script passed those same flags, so a contract that deployed fine will fail verification if a library is left out. The recompiled bytecode keeps unresolved placeholders where the missing library should be, and the comparison against the deployed bytecode fails.
+
+Pass every deployed library, one flag each:
+
+```bash
+forge verify-contract \
+    --chain-id 31 \
+    --watch \
+    --compiler-version v0.8.30 \
+    --verifier custom \
+    --verifier-url https://be.explorer.testnet.rootstock.io/api/v3/etherscan \
+    --libraries src/libraries/MathLib.sol:MathLib:0x1111111111111111111111111111111111111111 \
+    --libraries src/libraries/QuoteLib.sol:QuoteLib:0x2222222222222222222222222222222222222222 \
+    <contract-address> \
+    src/Vault.sol:Vault
+```
+
+The file part of each flag is the source path as the compiler sees it, after remappings. A library that comes from a dependency keeps the path inside that dependency, for example `node_modules/@scope/pkg/contracts/MathLib.sol:MathLib:0x…`.
+
+The source of truth for library names and addresses is the top-level `libraries[]` array in `broadcast/<script>.s.sol/<chainId>/run-latest.json`. If you no longer have the broadcast file, the same linking is recorded as `metadata.settings.libraries` in the build artifact.
+
+To see exactly which libraries your command ships before you submit it, dump the Standard JSON input and inspect `settings.libraries`:
+
+```bash
+forge verify-contract ... --show-standard-json-input > standard-input.json
 ```
