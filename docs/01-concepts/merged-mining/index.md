@@ -33,7 +33,7 @@ Miners earn a high percentage of transaction fees from the Rootstock block they 
 
 You can see Rootstock network hashing power in the [Rootstock Stats Website](https://stats.rootstock.io).
 
-To find out how much of Bitcoin's hashpower merge mines Rootstock, and how that share is measured from Bitcoin blocks, see [Secured Hashrate](/concepts/merged-mining/secured-hashrate/).
+To find out how much of Bitcoin's hash power merge mines Rootstock, and how that share is measured from Bitcoin blocks, see [Secured Hashrate](/concepts/merged-mining/secured-hashrate/).
 
 ## Implementation details for mining software pools
 

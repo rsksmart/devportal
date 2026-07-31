@@ -3,12 +3,12 @@ sidebar_label: Secured Hashrate
 sidebar_position: 100
 title: How Rootstock Calculates Secured Hashrate
 tags: [concepts, rsk, rootstock, merged mining, hashrate]
-description: "How Rootstock measures the Bitcoin hashpower securing it, by counting merge-mining tags in Bitcoin coinbase transactions and scaling the Bitcoin hashrate."
+description: "How Rootstock measures the Bitcoin hash power securing it, by counting merge-mining tags in Bitcoin coinbase transactions and scaling the Bitcoin hashrate."
 ---
 
-Rootstock is secured by Bitcoin miners who [merge mine](/concepts/merged-mining/) both chains with the same proof of work. The share of Bitcoin's hashpower that does this is measurable. Every participating miner leaves a tag inside the Bitcoin block they mine, so you can count the tagged blocks and scale Bitcoin's total hashrate by that share.
+Rootstock is secured by Bitcoin miners who [merge mine](/concepts/merged-mining/) both chains with the same proof of work. The share of Bitcoin's hash power that does this is measurable. Every participating miner leaves a tag inside the Bitcoin block they mine, so you can count the tagged blocks and scale Bitcoin's total hashrate by that share.
 
-The Rootstock Explorer publishes the result. This page explains each step of the calculation, so anyone can independently verify the published numbers or re-derive them from raw chain data. One framing matters before the math: the metric measures participation, not security directly. It says how much hashpower takes part in merge mining, not what attacking Rootstock would cost.
+The Rootstock Explorer publishes the result. This page explains each step of the calculation, so anyone can independently verify the published numbers or re-derive them from raw chain data. One framing matters before the math: the metric measures participation, not security directly. It says how much hash power takes part in merge mining, not what attacking Rootstock would cost.
 
 ## The published metrics
 
@@ -19,7 +19,7 @@ The Explorer API serves the metrics at `GET /api/v3/stats`. It exposes four hash
 | `hashrate` | Rootstock network hashrate, reported by a Rootstock node | hashes per second, as a string |
 | `bitcoinHashrate` | Estimated total Bitcoin network hashrate | hashes per second, as a string |
 | `mergeMiningPercentage` | Share of recent Bitcoin blocks that carry the Rootstock merge-mining tag | ratio between 0 and 1, as a string |
-| `rootstockSecuredHashrate` | Bitcoin hashpower actively securing Rootstock | hashes per second, as a string |
+| `rootstockSecuredHashrate` | Bitcoin hash power actively securing Rootstock | hashes per second, as a string |
 
 A response looks like this.
 
@@ -74,7 +74,7 @@ One block tells you nothing about the network. The Explorer walks back from the 
 mergeMiningPercentage = mergeMinedBlocks / bitcoinBlocksSampled
 ```
 
-A 1,000 block window balances two errors. A short window swings wildly when a single large pool pauses for an afternoon. A long window averages in hashpower that stopped merge mining weeks ago. Seven days smooths out pool-level noise while still describing the network as it is today.
+A 1,000 block window balances two errors. A short window swings wildly when a single large pool pauses for an afternoon. A long window averages in hash power that stopped merge mining weeks ago. Seven days smooths out pool-level noise while still describing the network as it is today.
 
 The sample size is also the denominator, not a hardcoded 1,000. If some blocks cannot be fetched, the ratio uses the blocks that were actually classified, so a partial sample never reads as a drop in participation.
 
@@ -88,7 +88,7 @@ bitcoinHashrate ≈ difficulty × 2^32 / 600
 
 At difficulty 1 a miner needs about 2^32, or 4.29 billion, attempts to find a block. Scaling by the real difficulty and spreading the work over Bitcoin's 600 second target block time gives hashes per second. Using block 955,501's difficulty of about 1.249 × 10^14, that formula returns roughly 894 EH/s, where one EH/s is 10^18 hashes per second.
 
-That formula is background rather than implementation: it shows what a hashrate estimate means, but it assumes a perfect 600 second block time, which the network never delivers exactly. The Explorer intentionally reads the current network hashrate estimate that a Bitcoin data provider publishes instead, for two reasons. The provider derives its figure from the pace blocks actually arrived at, so it tracks reality more closely when blocks run fast or slow. And a published figure can be re-checked by anyone against the same public source. Read at the same moment, the formula and the provider land within a few percent of each other.
+That formula is background rather than implementation: it shows what a hashrate estimate means, but it assumes a perfect 600 second block time, which the network never delivers exactly. The Explorer intentionally reads a published network hashrate estimate instead, currently the one week figure from [mempool.space](https://mempool.space/), for two reasons. The provider derives its estimate from the pace blocks actually arrived at, so it tracks reality more closely when blocks run fast or slow. And a published figure can be re-checked by anyone against the same public source. Read at the same moment, the formula and the provider land within a few percent of each other. The provider is a configuration setting of the Explorer indexer rather than part of the API contract, so it can change.
 
 ## Step 4: Scale the Bitcoin hashrate by the share
 
@@ -98,7 +98,7 @@ The headline metric is a product of the previous two steps.
 rootstockSecuredHashrate = bitcoinHashrate × mergeMiningPercentage
 ```
 
-The Explorer API's example response in [the published metrics](#the-published-metrics) shows this product already computed: multiplying `bitcoinHashrate` (909 EH/s) by `mergeMiningPercentage` (0.622) gives the 565 EH/s published as `rootstockSecuredHashrate`. That is close to two thirds of Bitcoin's hashpower protecting a second chain, at no extra energy cost.
+The Explorer API's example response in [the published metrics](#the-published-metrics) shows this product already computed: multiplying `bitcoinHashrate` (909 EH/s) by `mergeMiningPercentage` (0.622) gives the 565 EH/s published as `rootstockSecuredHashrate`. That is close to two thirds of Bitcoin's hash power protecting a second chain, at no extra energy cost.
 
 The share moves in large steps rather than drifting. Merge mining is a setting that a pool enables once in its poolserver, so a participating pool tags nearly every block it finds and a non-participating pool tags none. Measured over 600 recent blocks, AntPool, F2Pool, ViaBTC, SECPOOL and Luxor tagged 100% of their blocks, while Foundry USA tagged 0% of its 161 blocks. One large pool changing its configuration moves the published metric by several percentage points.
 
@@ -192,7 +192,7 @@ The figures on this page were measured over Bitcoin blocks 958,563 to 959,562, a
 
 A few properties of this metric are easy to misread.
 
-- **The tag is a commitment, not a full proof.** Its presence shows that a miner claimed a Rootstock block. Verifying the claim means checking the merkle proof that links the two blocks, which Rootstock nodes do during consensus. For a participation share, the tag is the correct lightweight signal.
-- **Testnet reads zero, and that is accurate.** Almost no miners embed the tag on Bitcoin testnet, so `mergeMiningPercentage` there is legitimately 0 and `rootstockSecuredHashrate` follows it to 0. The `bitcoinHashrate` value stays non-zero, because testnet still has real hashpower behind it.
-- **The share is not a security guarantee on its own.** It measures how much hashpower participates. The [merged mining reference](/node-operators/merged-mining/reference/) covers the growth phases and the additional protections against double-spend attacks.
+- **The tag is a commitment, not a full proof.** Its presence shows that a miner claimed a Rootstock block. Verifying the claim means checking the Merkle proof that links the two blocks, which Rootstock nodes do during consensus. For a participation share, the tag is the correct lightweight signal.
+- **Testnet reads zero, and that is accurate.** Almost no miners embed the tag on Bitcoin testnet, so `mergeMiningPercentage` there is legitimately 0 and `rootstockSecuredHashrate` follows it to 0. The `bitcoinHashrate` value stays non-zero, because testnet still has real hash power behind it.
+- **The share is not a security guarantee on its own.** It measures how much hash power participates. The [merged mining reference](/node-operators/merged-mining/reference/) covers the growth phases and the additional protections against double-spend attacks.
 - **Precision is limited by the inputs.** The Bitcoin hashrate is an estimate read to a few significant digits, so the secured hashrate inherits that precision. Comparing two readings to the last digit is not meaningful.

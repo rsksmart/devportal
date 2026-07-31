@@ -23,7 +23,7 @@ This section equips you with the fundamental knowledge required to navigate the 
 | [PowPeg HSM Firmware](/concepts/powpeg/hsm-firmware-attestation/) | Learn how to verify PowPeg nodes using the HSM Firmware Attestation. |
 | [Account Based Addresses](/concepts/account-based-addresses/) | EIP-1191 chainId is used in Rootstock addresses as a checksum. m/44'/137'/0'/0 is the derivation path used for BIP-44 compatible wallets. |
 | [Merged Mining](/concepts/merged-mining/) | Rootstock is mined simultaneously with Bitcoin, because both chains use the same proof-of-work algorithm. |
-| [Secured Hashrate](/concepts/merged-mining/secured-hashrate/) | How much of Bitcoin's hashpower secures Rootstock, and how that share is measured from the merge-mining tag in Bitcoin coinbase transactions. |
+| [Secured Hashrate](/concepts/merged-mining/secured-hashrate/) | How much of Bitcoin's hash power secures Rootstock, and how that share is measured from the merge-mining tag in Bitcoin coinbase transactions. |
 
 ## Next Steps
 
