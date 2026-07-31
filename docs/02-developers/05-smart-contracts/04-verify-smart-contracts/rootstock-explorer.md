@@ -302,6 +302,10 @@ Replace:
 
 > The `> <contract-name>.json` at the end of the command redirects the Standard JSON input output into a file in the current directory, which can then be uploaded as-is to the Rootstock Explorer verification tool.
 
+:::warning[via-IR projects]
+`--show-standard-json-input` emits only the target contract and its imports. If your project compiles with `via_ir = true`, that is not the compilation unit that produced your bytecode, so this input is not guaranteed to reproduce it. Submit it, and if it comes back as a bytecode mismatch, rebuild the input from the build info your deploy wrote — see the via-IR entry under [Troubleshooting](#troubleshooting).
+:::
+
 If your contract links external libraries, add one `--libraries` flag per library so they are written into `settings.libraries` of the generated JSON:
 
 ```bash
@@ -415,6 +419,43 @@ Verification compares the bytecode the explorer recompiles against the bytecode 
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
+    <Accordion.Header as="h3">Bytecode mismatch with via-IR enabled</Accordion.Header>
+    <Accordion.Body>
+      With `via_ir = true`, Solc output for a contract depends on **which other sources were in the compilation unit**, not only on the contract and its imports. `forge verify-contract` submits just the target's import closure, a smaller set than the one your deploy compiled, so the recompiled bytecode can differ. Run the plain command first: on the project this guidance comes from, thirteen of the fourteen deployed contracts verified with it, and the one that failed was the largest. Once it fails for a given source tree it keeps failing, deterministically, until the input changes.
+
+      **For a contract that is already deployed**, the compilation unit it was deployed from is the one input guaranteed to reproduce its bytecode. Recover it from the build info of the deploy — the archived artifact if you kept one, otherwise a build of the exact commit you deployed, since a source added or removed since then can change the output — then drop `test/` and `script/` so the submission fits the explorer's budget:
+
+      ```bash
+      forge build --build-info
+      grep -l '"src/Vault.sol"' out/build-info/*.json
+      jq '.input | {language, sources: (.sources | with_entries(select((.key | startswith("test/")) or (.key | startswith("script/")) | not))), settings}' out/build-info/<hash>.json > standard-input.json
+      ```
+
+      - The `grep` picks the build-info file holding your target, since a project can accumulate several. The `jq` filter names three keys because Standard JSON accepts only `language`, `sources`, and `settings`; Foundry also stores `allowPaths`, `basePath`, `includePaths`, and `version` under `.input` for its own use.
+      - That trim is part of the recipe, not a fallback. This explorer caps a Standard JSON submission at 100 sources and 1.5 MiB (1,572,864 bytes) of source content by default, and over either limit it answers `SOURCE_BUDGET_EXCEEDED` instead of compiling. The build this guidance comes from is 127 sources and 1,694,661 bytes; dropping `test/` and `script/` brings it to 77 sources and 1,209,404 bytes.
+      - Check the trim before submitting, because under via-IR removing sources can change the output. Recompile it with the same Solc version the deploy used (`solcVersion` in the build-info file) and compare the target's creation bytecode against the build info — the two digests must be equal, and if they differ, put the sources back:
+
+      ```bash
+      jq -r '.output.contracts["src/Vault.sol"].Vault.evm.bytecode.object' out/build-info/<hash>.json | shasum -a 256
+      solc --standard-json standard-input.json > recompiled.json && jq -r '.errors // [] | map(select(.severity=="error")) | length' recompiled.json
+      jq -r '.contracts["src/Vault.sol"].Vault.evm.bytecode.object' recompiled.json | shasum -a 256
+      ```
+
+      - Submit the result through **Standard JSON Input**. Redeploying from a smaller tree is not an option here — the address and its state are already live — so reproducing the original compilation unit is the only path.
+
+      **Before your next deployment**, put the filters on the command that compiles the deploy and keep the build info that run writes:
+
+      ```bash
+      forge script script/Deploy.s.sol --rpc-url <rpc-url> --broadcast --build-info --skip 'test/**'
+      ```
+
+      - Use globs, not the bare `test` / `script` aliases. `--skip` filters which files compile as *targets*, not what ends up in the unit: anything a surviving target imports comes back. The aliases match only `.t.sol` and `.s.sol`, so a helper like `test/BaseTest.sol` survives and drags its imports with it. On this project, of 127 sources the aliases left 96, `'test/**'` left 83, and `'test/**' 'script/**'` — usable on `forge build`, not on the deploy command — left 55.
+      - Never pass `--skip script` to `forge script`: it skips the script being run, and the run stops with `Could not find target contract`.
+      - Keep the `out/build-info/<hash>.json` the deploy wrote, **outside** `out/`, since `forge build --force` clears that folder. Without it you are rebuilding from the deployed commit, where anything added or removed since the deploy can change the via-IR output. If the code body does reproduce, a metadata footer that differs by the same length still verifies here, though some other explorers record that as a partial match.
+      - Turning via-IR off is the other pre-deployment option and it removes the failure mode outright, since legacy codegen is not source-set sensitive. That is a decision about your contracts, not about verification.
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="2">
     <Accordion.Header as="h3">Library not found / address mismatch</Accordion.Header>
     <Accordion.Body>
       `forge verify-contract` submits **only** the libraries in your Foundry configuration for that command — the `--libraries` flags you pass, plus any `libraries` entry in `foundry.toml`. It never reads your deploy's broadcast file or artifacts, so the flags your deploy script passed have to be repeated here. A missing library leaves unresolved placeholders in the recompiled bytecode, so the comparison fails.
@@ -434,7 +475,7 @@ Verification compares the bytecode the explorer recompiles against the bytecode 
       ```
     </Accordion.Body>
   </Accordion.Item>
-  <Accordion.Item eventKey="2">
+  <Accordion.Item eventKey="3">
     <Accordion.Header as="h3">Invalid constructor arguments</Accordion.Header>
     <Accordion.Body>
       - Verify the precise **encoding**, **order**, and **types** of your constructor arguments.
@@ -446,20 +487,20 @@ Verification compares the bytecode the explorer recompiles against the bytecode 
       ```
     </Accordion.Body>
   </Accordion.Item>
-  <Accordion.Item eventKey="3">
+  <Accordion.Item eventKey="4">
     <Accordion.Header as="h3">Optimization settings differ</Accordion.Header>
     <Accordion.Body>
       - The optimizer flag, the number of **runs**, and the **EVM version** all change the output bytecode. Each must match what you compiled with.
       - Read them from `foundry.toml` (`optimizer`, `optimizer_runs`, `evm_version`) or from your Hardhat config. Do not assume the form defaults match your project.
     </Accordion.Body>
   </Accordion.Item>
-  <Accordion.Item eventKey="4">
+  <Accordion.Item eventKey="5">
     <Accordion.Header as="h3">Flattening / import issues</Accordion.Header>
     <Accordion.Body>
       - Consider using the **Standard JSON** verification method to avoid path or flattening issues.
     </Accordion.Body>
   </Accordion.Item>
-  <Accordion.Item eventKey="5">
+  <Accordion.Item eventKey="6">
     <Accordion.Header as="h3">Proxy and Implementation</Accordion.Header>
     <Accordion.Body>
       - Verify the **implementation contract** and the proxy separately. Each is its own address with its own source and constructor arguments.
