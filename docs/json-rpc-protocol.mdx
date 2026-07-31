@@ -1,0 +1,71 @@
+---
+id: json-rpc-protocol
+title: "JSON-RPC protocol"
+sidebar_label: "JSON-RPC protocol"
+slug: /rskj/json-rpc-protocol
+description: "The JSON-RPC 2.0 envelope and error handling used by every RSKj method."
+---
+
+# JSON-RPC protocol
+
+Every RSKj method is called the same way: an HTTP `POST` with a **JSON-RPC 2.0**
+envelope. Method pages document only what changes between methods — the
+positional `params` and the `result`. Everything on this page applies to **all
+50 methods** identically.
+
+## Request envelope
+
+| Field | Type | Value |
+|---|---|---|
+| `jsonrpc` | string | Always `"2.0"` — the protocol version. |
+| `method` | string | The method name, e.g. `"eth_call"`. |
+| `params` | array | Ordered array of positional parameters. Empty `[]` when a method takes none. |
+| `id` | integer \| string | Request identifier, echoed back in the response. |
+
+All four fields are required.
+
+```json
+{
+  "jsonrpc": "2.0",
+  "method": "eth_blockNumber",
+  "params": [],
+  "id": 1
+}
+```
+
+## Response envelope
+
+A successful call returns HTTP `200` with the return value in `result`:
+
+```json
+{ "jsonrpc": "2.0", "id": 1, "result": "0x137a3c2" }
+```
+
+## Error handling
+
+Nodes typically still respond with **HTTP 200** on failure — the error is
+carried in the body as an `error` object *instead of* `result`:
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "error": {
+    "code": -32602,
+    "message": "invalid argument 0: hex string without 0x prefix"
+  }
+}
+```
+
+Common error codes follow the [JSON-RPC 2.0 specification](https://www.jsonrpc.org/specification#error_object):
+`-32700` parse error · `-32600` invalid request · `-32601` method not found ·
+`-32602` invalid params · `-32603` internal error.
+
+## Endpoints
+
+| Network | Base URL |
+|---|---|
+| Testnet | `https://rpc.testnet.rootstock.io/{apiKey}` |
+| Mainnet | `https://rpc.mainnet.rootstock.io/{apiKey}` |
+
+`{apiKey}` — the API key segment from the Rootstock RPC dashboard.

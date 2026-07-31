@@ -112,8 +112,12 @@ const config = {
               groupPathsBy: "tag",
               categoryLinkSource: "tag",
             },
-            hideSendButton: false,
+            hideSendButton: true, // static examples instead of the live request form
             showSchemas: true,
+            markdownGenerators: {
+              // operationId as the H1, summary as a subtitle, positional-param names in props
+              createApiPageMD: require("./scripts/rskj-md-generators").customCreateApiPageMD,
+            },
           },
           rpcapi: {
             specPath: "open-api/rpcapi.yaml", // Path to your OpenAPI YAML file

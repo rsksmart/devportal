@@ -9,6 +9,7 @@ api: eJztWFFv4zYS/isDooCdnKw4dmKnOuxDrtdrttnbBHECXBH51rQ0sriRSZWkYruG/3sxpGzLybZ
 sidebar_class_name: "post api-method"
 info_path: rskj/rskj-json-rpc
 custom_edit_url: null
+hide_send_button: true
 ---
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
@@ -22,9 +23,11 @@ import Heading from "@theme/Heading";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Hashes data"}
+  children={"web3_sha3"}
 >
 </Heading>
+
+<p className={"openapi__method-summary"}>{"Hashes data"}</p>
 
 <MethodEndpoint
   method={"post"}
@@ -40,14 +43,6 @@ Returns Keccak-256 (`NOT` the standardized SHA3-256) of the given data
 
 Send a **JSON-RPC 2.0** request (`jsonrpc`, `method`, `params`, `id`) as in the example below.
 
-<Heading
-  id={"request"}
-  as={"h2"}
-  className={"openapi-tabs__heading"}
-  children={"Request"}
->
-</Heading>
-
 <ParamsDetails
   parameters={undefined}
 >
@@ -55,6 +50,7 @@ Send a **JSON-RPC 2.0** request (`jsonrpc`, `method`, `params`, `id`) as in the 
 </ParamsDetails>
 
 <RequestSchema
+  jsonrpcParams={[{"name":"data","description":"Data to hash using the Keccak-256 algorithm","required":false,"schema":{"title":"data","type":"string","pattern":"^0x[a-fA-F\\d]+$"}}]}
   title={"Body"}
   body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["jsonrpc","method","params","id"],"properties":{"jsonrpc":{"type":"string","enum":["2.0"]},"method":{"type":"string","enum":["web3_sha3"]},"params":{"type":"array","description":"Ordered JSON array of positional parameters for this method.","minItems":1,"maxItems":1,"items":{"oneOf":[{"title":"data","type":"string","pattern":"^0x[a-fA-F\\d]+$"}]}},"id":{"oneOf":[{"type":"integer"},{"type":"string"}],"example":1}}},"example":{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c6f20776f726c64"],"id":1}}}}}
 >
