@@ -64,4 +64,6 @@ Here you can find a list of rpc node providers on Rootstock.
   />
 </CardsGrid>
 
+## Compare RPC Provider Latency
 
+For live latency comparisons across these providers, see [OpenChainBench](https://openchainbench.com/benchmarks/rootstock-rpc) — an open benchmark that continuously measures free public RPC endpoints for Rootstock.
