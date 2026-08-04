@@ -1,5 +1,5 @@
 ---
-sidebar_label: Secured Hashrate
+sidebar_label: Secured Hashrate Calculator
 sidebar_position: 100
 title: How Rootstock Calculates Secured Hashrate
 tags: [concepts, rsk, rootstock, merged mining, hashrate]
