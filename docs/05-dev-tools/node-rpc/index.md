@@ -66,4 +66,10 @@ Here you can find a list of rpc node providers on Rootstock.
 
 ## Compare RPC Provider Latency
 
-For live latency comparisons across these providers, see [OpenChainBench](https://openchainbench.com/benchmarks/rootstock-rpc) — an open benchmark that continuously measures free public RPC endpoints for Rootstock.
+Documentation alone cannot tell you which provider is fastest from your users' location or which has the best uptime today. [OpenChainBench](https://openchainbench.com/benchmarks/rootstock-rpc) is an independent, open-source benchmarking tool — not an official Rootstock service — that continuously probes each public Rootstock RPC endpoint and publishes live measurements including:
+
+- **p50 / p90 / p99 latency** — how fast each provider responds under normal and peak conditions
+- **Success rate** — the share of requests returning a valid JSON-RPC response rather than an error or timeout
+- **Archive depth** — whether the endpoint supports historical queries beyond the default pruning window
+
+Results update in real time from three geographic probe regions (US East, EU West, Singapore), so developers can select the provider that best fits their users' location and reliability requirements. All benchmark data is published under CC BY 4.0.
