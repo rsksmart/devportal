@@ -6,7 +6,7 @@ description: "Building dApps on Rootstock involves interacting with the blockcha
 tags: [hardhat, quick start, developer tools, rsk, rootstock, ethereum, dApps, smart contracts]
 ---
 
-Building dApps on Rootstock involves interacting with the blockchain network. But how do you access this network? That's where node providers come in. Think of them as gateways to the blockchain.
+Building dApps on Rootstock involves interacting with the blockchain network. But how you access this network? That's where node providers come in. Think of them as gateways to the blockchain.
 
 ## What are Node Providers?
 
@@ -64,4 +64,8 @@ Here you can find a list of rpc node providers on Rootstock.
   />
 </CardsGrid>
 
+## Compare RPC Provider Latency
 
+Runtime characteristics such as latency, availability, and reliability vary by region and change over time. [OpenChainBench](https://openchainbench.com/benchmarks/rootstock-rpc) is an independent, open-source benchmarking tool — not an official Rootstock service — that regularly measures the free, no-key public Rootstock endpoints and publishes live results including response latency percentiles (p50, p90, p99) and success rate, from three geographic probe regions (US East, EU West, Singapore).
+
+Use the benchmark as an additional reference to complement testing against your application's own requirements.
