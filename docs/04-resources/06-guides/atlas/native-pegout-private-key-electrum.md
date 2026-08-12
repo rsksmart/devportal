@@ -10,7 +10,7 @@ This guide explains how to access the Bitcoin funds received from a **native peg
 
 ## Why use a private key to access funds?
 
-If you signed the native pegout with a wallet where you hold the private key directly, you don't need a derivation path to find your destination address. The private key itself is enough — once converted to the right format, you can import it directly into Electrum as a single address.
+If you signed the native pegout with a wallet where you hold the private key directly, you don't need a derivation path to find your destination address. The private key itself is enough, once converted to the right format, you can import it directly into Electrum as a single address.
 
 If instead you signed with a hardware wallet (Trezor or Ledger), use [Accessing the address derived by a native pegout](/resources/guides/atlas/native-pegout-hardware-wallet-electrum/) instead, which browses your account using the derivation path.
 
@@ -21,6 +21,8 @@ If instead you signed with a hardware wallet (Trezor or Ledger), use [Accessing 
 - [Rootstock Utils](https://github.com/rsksmart/utils)
 
 ## Getting your wallet private key
+
+Follow these steps to export your private key from your wallet.
 
 ### Using MetaMask
 
@@ -38,7 +40,7 @@ If instead you signed with a hardware wallet (Trezor or Ledger), use [Accessing 
 
 ## Converting your private key to WIF
 
-Before you can import the key into Electrum, convert it into a [Wallet Import Format (WIF)](https://learnmeabitcoin.com/technical/wif). A WIF private key is just another way of representing your original private key — it can always be converted back to its original format.
+Before you can import the key into Electrum, convert it into a [Wallet Import Format (WIF)](https://learnmeabitcoin.com/technical/wif). A WIF private key is just another way of representing your original private key, it can always be converted back to its original format.
 
 For more info on WIF, see the [Bitcoin Wiki](https://en.bitcoin.it/wiki/Wallet_import_format).
 
@@ -104,8 +106,6 @@ Download the `base58_encode` file [here](https://github.com/in3rsha/learnmeabitc
 require_relative 'checksum'
 require_relative 'base58_encode'
 
-##### Convert Private Key to WIF
-
 privatekey = "4fd050a8e4fd767f759d75492b9894bc97875e8201873e38443e3f5eae9c8db2f"
 extended = "80" + privatekey + "01"
 extendedchecksum = extended + checksum(extended)
@@ -143,7 +143,7 @@ cd /Applications/Electrum.app/Contents/MacOS
 
 Your BTC may have arrived even when Electrum shows a zero balance. Work through these checks in order:
 
-1. Confirm the transaction on a block explorer using the destination Bitcoin address from Atlas' transaction status.
+1. Confirm the transaction on a bitcoin block explorer using the destination Bitcoin address from Atlas' transaction status.
 2. Confirm the WIF value you imported matches the private key used to sign the native pegout.
 3. Confirm you selected the correct network (Mainnet or Testnet) both when converting to WIF and when launching Electrum.
 4. If the balance is still wrong, delete the Electrum wallet file and repeat the import with the correct WIF value.
