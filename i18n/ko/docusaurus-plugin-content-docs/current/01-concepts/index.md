@@ -24,7 +24,7 @@ Rootstock는 비트코인의 금융 인프라입니다. 오픈 소스이며 EVM 
 | [용어집](/concepts/glossary/)                                   | 이 용어집은 Rootstock 및 블록체인 기술과 관련된 필수 핵심 용어에 대한 정의를 제공합니다.                                                                                                                                            |
 | [RBTC 토큰](/concepts/rbtc/)                                   | RBTC 토큰은 Rootstock 네트워크상 트랜잭션에 연료를 공급합니다. 다양한 수단으로 BTC를 RBTC로 간단하게 전환할 수 있습니다. RBTC를 획득할 수 있는 거래소와 애플리케이션의 목록을 확인하려면 [RBTC 섹션](https://rootstock.io/rbtc/)을 방문하세요. |
 | [RIF 도구 모음](/concepts/rif-suite/)                            | 비트코인에 기반한 개발을 간소화하고 장려하기 위해 설계된 종합 오픈 소스 도구 및 기술 모음인 'Rootstock 인프라 프레임워크'에 관해 알아보세요.                                                                                                              |
-| [Powpeg 보안](/concepts/foundations/powpeg/security-model/)             | Powpeg 관련 보안 요약. 게시된 감사는 [보안 저장소](https://github.com/rsksmart/security)에 있습니다.                                           |
+| [Rootstock 보안](/concepts/foundations/security/)             | Rootstock 플랫폼은 [Powpeg](/concepts/foundations/powpeg/)라는 보안 메커니즘을 사용합니다. 이 메커니즘은 "심층 방어(defence-in-depth)"라는 계층적 보안 모델을 기반으로 합니다.                                           |
 | [Powpeg HSM 펌웨어](/concepts/foundations/powpeg/hsm-firmware-attestation/) | HSM 펌웨어 인증을 사용하여 Powpeg 노드를 식별하는 방법을 알아보세요.                                                                                                                                                        |
 | [계정 기반 주소](/concepts/account-based-addresses/)               | Rootstock 주소에서는 EIP-1191 체인 ID가 체크섬(checksum)으로 사용됩니다. BIP-44 호환 지갑의 파생 경로에는 m/44'/137'/0'/0이 사용됩니다.                                                            |
 

@@ -5,8 +5,20 @@
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 
 const REDIRECTS = {
+  // Security hub consolidations
+  '/concepts/foundations/security/model': '/concepts/foundations/security/',
+  '/concepts/foundations/security/model/': '/concepts/foundations/security/',
+  '/concepts/foundations/security/security-model':
+    '/concepts/foundations/security/',
+  '/concepts/foundations/security/security-model/':
+    '/concepts/foundations/security/',
+  '/concepts/foundations/security/reports':
+    '/concepts/foundations/security/#security-reports',
+  '/concepts/foundations/security/reports/':
+    '/concepts/foundations/security/#security-reports',
+  '/concepts/security': '/concepts/foundations/security/',
+  '/concepts/security/': '/concepts/foundations/security/',
   // PowPeg nested under Foundations
-  // Security Model hub redirects ship in Phase 1B after Coinspect / Security sign-off.
   '/concepts/powpeg': '/concepts/foundations/powpeg/',
   '/concepts/powpeg/': '/concepts/foundations/powpeg/',
   '/concepts/powpeg/hsm-firmware-attestation':
