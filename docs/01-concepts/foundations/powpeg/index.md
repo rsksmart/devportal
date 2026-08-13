@@ -14,7 +14,7 @@ Rootstock’s **PowPeg** protocol, has matured from its inception in 2018 as a f
 - For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the PowPeg, please refer to the [PowPeg user guide](/resources/guides/powpeg-app/).
 - Get information on the signatories and attestation in the [PowPeg HSM Firmware Attestation](/concepts/foundations/powpeg/hsm-firmware-attestation) section.
 - For federation size and composition changes, see [PowPeg member updates](/concepts/foundations/powpeg/member-updates/).
-- For the full Rootstock security model (SSDLC, audits, verification), see [Security at Rootstock](/concepts/foundations/security/).
+- For PowPeg-specific security properties, see the [PowPeg security summary](/concepts/foundations/powpeg/security-model/). Published audits live in the [security repository](https://github.com/rsksmart/security).
 - Read [Introducing Fast Mode: Getting rBTC via the PowPeg, but Faster](https://blog.rootstock.io/noticia/get-rbtc-fast-mode/) to learn about the difference between Native Mode and Fast Modes when using the PowPeg.
 :::
 

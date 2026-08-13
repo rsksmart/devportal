@@ -14,7 +14,7 @@ description: "Bitcoinの金融インフラ。貸付、決済、利回り、ト�
 
 RootstockはBitcoinの金融インフラです。オープンソースでEVM互換のBitcoinサイドチェーンであり、マージマイニングによりBitcoinハッシュパワーの85%超で保護されています。事業者、金融機関、ビルダーは、Ethereumツールを使って、Bitcoinで担保された貸付、決済、利回り、トレジャリー製品をローンチするために利用します。
 
-[Rootstockスタック](/concepts/foundations/stack/)と[Rootstockのセキュリティ](/concepts/foundations/security/)を参照してください。
+[Rootstockスタック](/concepts/foundations/stack/)、[マージマイニング](/concepts/foundations/merged-mining/)、[Powpeg](/concepts/foundations/powpeg/)を参照してください。
 
 ## RootstockとBitcoinとの関係について
 

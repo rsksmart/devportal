@@ -10,7 +10,7 @@ description: "Bitcoin's financial infrastructure: an EVM-compatible Bitcoin side
 
 Rootstock is Bitcoin's financial infrastructure. It is an open-source, EVM-compatible Bitcoin sidechain secured by over 85% of Bitcoin's hash power through merge mining. Businesses, financial institutions, and builders use it to launch Bitcoin-secured lending, payments, yield, and treasury products with Ethereum tooling.
 
-See the [Rootstock Stack](/concepts/foundations/stack/) and the [Security at Rootstock](/concepts/foundations/security/) hub.
+See the [Rootstock Stack](/concepts/foundations/stack/), [Merged mining](/concepts/foundations/merged-mining/), and the [PowPeg](/concepts/foundations/powpeg/).
 
 ## How is Rootstock connected to Bitcoin?
 
@@ -34,19 +34,11 @@ This component connects both networks so you can move bitcoin to Rootstock and i
 
 To peg in, you send bitcoin to a special address where it is locked on Bitcoin. The same amount of rBTC is then available on Rootstock. To peg out, you send rBTC to a special address on Rootstock and receive BTC back on Bitcoin.
 
-For the full security model behind merged mining, the PowPeg, and how RootstockLabs ships and verifies code, see [Security at Rootstock](/concepts/foundations/security/).
+For PowPeg-specific security properties, see the [PowPeg security summary](/concepts/foundations/powpeg/security-model/). Published audits live in the [security repository](https://github.com/rsksmart/security).
 
 ## Explore Foundations
 
 <CardsGrid>
-  <CardsGridItem
-    title="Security"
-    subtitle="security"
-    color="green"
-    description="Why Rootstock is secure, how it stays secure, and how you can verify the model."
-    linkHref="/concepts/foundations/security/"
-    linkTitle="Learn security"
-  />
   <CardsGridItem
     title="The Stack"
     subtitle="architecture"

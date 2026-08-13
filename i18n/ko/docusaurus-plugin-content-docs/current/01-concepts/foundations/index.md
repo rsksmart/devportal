@@ -14,7 +14,7 @@ description: "비트코인 금융 인프라: 대출, 결제, 수익, 재무를 �
 
 Rootstock는 비트코인의 금융 인프라입니다. 오픈 소스이며 EVM 호환인 비트코인 사이드체인이고, 머지 마이닝을 통해 비트코인 해시 파워의 85% 이상으로 보호됩니다. 기업, 금융기관, 빌더는 이더리움 도구로 비트코인으로 담보된 대출, 결제, 수익, 재무 상품을 출시하기 위해 사용합니다.
 
-[Rootstock 스택](/concepts/foundations/stack/)과 [Rootstock 보안](/concepts/foundations/security/)을 참고하세요.
+[Rootstock 스택](/concepts/foundations/stack/), [병합 채굴](/concepts/foundations/merged-mining/), [Powpeg](/concepts/foundations/powpeg/)을 참고하세요.
 
 ## Rootstock은 비트코인과 어떻게 연결되어 있나요?
 

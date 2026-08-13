@@ -81,8 +81,8 @@ const content = {
           href: '/concepts/foundations/powpeg/',
         },
         {
-          title: <Translate>Read the security model</Translate>,
-          href: '/concepts/foundations/security/',
+          title: <Translate>Read the PowPeg security summary</Translate>,
+          href: '/concepts/foundations/powpeg/security-model/',
         },
         {
           title: <Translate>Mainnet deployment checklist</Translate>,

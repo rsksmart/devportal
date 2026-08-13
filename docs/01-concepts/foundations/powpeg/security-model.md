@@ -6,7 +6,7 @@ tags: [Rootstock, security, powpeg, architecture, federation, 2-way peg]
 description: "How the PowPeg fits Rootstock defense in depth, and where to read the full security model."
 ---
 
-The [PowPeg](/concepts/foundations/powpeg/) is Rootstock's Bitcoin-native two-way peg. It locks BTC on Bitcoin and the Bridge releases rBTC 1:1 to the user (peg-in). Peg-out returns rBTC to the Bridge and releases BTC. All 21M rBTC exists from genesis. The Bridge holds the locked portion. This page summarizes PowPeg-specific security properties. For the full Rootstock security model (SSDLC, Coinspect, bug bounty, verification), see [Security at Rootstock](/concepts/foundations/security/).
+The [PowPeg](/concepts/foundations/powpeg/) is Rootstock's Bitcoin-native two-way peg. It locks BTC on Bitcoin and the Bridge releases rBTC 1:1 to the user (peg-in). Peg-out returns rBTC to the Bridge and releases BTC. All 21M rBTC exists from genesis. The Bridge holds the locked portion. This page summarizes PowPeg-specific security properties. Published audits and disclosures live in the [security repository](https://github.com/rsksmart/security).
 
 ## How the PowPeg is secured
 
@@ -34,7 +34,6 @@ PowPeg security is one layer of Rootstock's broader model:
 
 ## Read next
 
-- [Security at Rootstock](/concepts/foundations/security/): why Rootstock is secure, how it stays secure, and how to verify
-- [Security reports](/concepts/foundations/security/#security-reports): audits and Coinspect index
+- [Security repository](https://github.com/rsksmart/security): audits, disclosures, and Coinspect reports
 - [PowPeg protocol](/concepts/foundations/powpeg/): peg-in / peg-out architecture
 - [HSM firmware attestation](/concepts/foundations/powpeg/hsm-firmware-attestation/)

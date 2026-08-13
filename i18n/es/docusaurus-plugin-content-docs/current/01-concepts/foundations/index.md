@@ -14,7 +14,7 @@ description: "La infraestructura financiera de Bitcoin: una sidechain de Bitcoin
 
 Rootstock es la infraestructura financiera de Bitcoin. Es una sidechain de Bitcoin de código abierto y compatible con EVM, asegurada por más del 85% del poder de hash de Bitcoin mediante merge mining. Empresas, instituciones financieras y builders la usan para lanzar productos de lending, payments, yield y treasury asegurados por Bitcoin con tooling de Ethereum.
 
-Vea la [Stack de Rootstock](/concepts/foundations/stack/) y el hub de [Seguridad en Rootstock](/concepts/foundations/security/).
+Vea la [Stack de Rootstock](/concepts/foundations/stack/), la [minería fusionada](/concepts/foundations/merged-mining/) y el [Powpeg](/concepts/foundations/powpeg/).
 
 ## ¿Cómo se conecta Rootstock a bitcoin?
 

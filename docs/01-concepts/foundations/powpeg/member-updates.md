@@ -6,7 +6,7 @@ tags: [rootstock, powpeg, federation, pegnatory]
 description: "How PowPeg composition changes work: voting, delay, and funds migration."
 ---
 
-The PowPeg is governed by a written protocol that establishes when it is possible or required to add or remove a member. For the full Rootstock security model, see [Security at Rootstock](/concepts/foundations/security/).
+The PowPeg is governed by a written protocol that establishes when it is possible or required to add or remove a member. For PowPeg-specific security properties, see the [PowPeg security summary](/concepts/foundations/powpeg/security-model/).
 
 ## Current composition
 
@@ -25,5 +25,5 @@ If the conditions to change composition are met, a pegnatory can send a message 
 ## Related
 
 - [PowPeg protocol](/concepts/foundations/powpeg/)
-- [Security at Rootstock](/concepts/foundations/security/)
+- [PowPeg security summary](/concepts/foundations/powpeg/security-model/)
 - [HSM firmware attestation](/concepts/foundations/powpeg/hsm-firmware-attestation/)
