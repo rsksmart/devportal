@@ -6,7 +6,7 @@ description: "Two way peg design and architecture."
 tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-The [PowPeg App](https://powpeg.rootstock.io/) is converts BTC to RBTC and vice versa. It is secured by the powpeg protocol, which is a unique 2-way peg system that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus. See the history of the [PowPeg Protocol](/concepts/foundations/powpeg/).
+The [PowPeg App](https://powpeg.rootstock.io/) converts BTC to RBTC and vice versa. It is secured by the powpeg protocol, which is a unique 2-way peg system that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus. See the history of the [PowPeg Protocol](/concepts/foundations/powpeg/).
 
 In this section, we will cover the design and architecture used in building the PowPeg App. It comprises of a [web interface](#high-level) built with Vue.js, a [backend application](#components) built with Node.js, and made to run via [containers](#containers).
 
