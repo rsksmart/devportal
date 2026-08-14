@@ -1,14 +1,14 @@
 ---
 sidebar_position: 400
-sidebar_label: Derived address by native pegout
-title: "How to access derived address by native pegout"
-description: "Step-by-step guide to access the funds for derived address by native Pegout with Atlas."
+sidebar_label: Address derived by native pegout
+title: "How to access the address derived by a native pegout"
+description: "Step-by-step guide to access funds for the address derived by a native pegout with Atlas."
 tags: [rsk, rootstock, bridge, atlas, powpeg]
 ---
 
 This guide explains how to find and access the Bitcoin address that receives your funds after a **native pegout** on [Atlas Bridge](https://atlas.rootstock.io), using a hardware wallet and Electrum.
 
-## Why derive address using Electrum?
+## Why derive the address using Electrum?
 
 During a native pegout, the destination Bitcoin address is derived from your Rootstock account using the BIP44 path:
 
@@ -23,7 +23,7 @@ Atlas doesn't display this derivation path anywhere in its UI. To view or verify
 ## Prerequisites
 
 - The same hardware wallet (Trezor or Ledger) you used to sign the native pegout in Atlas.
-- [Electrum](https://electrum.org/#download) make sure you downloaded directly from **electrum.org**.
+- [Electrum](https://electrum.org/#download); make sure you download it directly from **electrum.org**.
 
 :::note[Using a software wallet instead?]
 If you signed the native pegout with a wallet where you hold the private key directly (for example MetaMask), you don't need a derivation path at all, see [Accessing native pegout funds with a private key](/resources/guides/atlas/native-pegout-private-key-electrum/) instead.

@@ -46,7 +46,7 @@ For more info on WIF, see the [Bitcoin Wiki](https://en.bitcoin.it/wiki/Wallet_i
 
 ### Using Rootstock Utils (Recommended) {#using-rootstock-utils}
 
-[Rootstock Utils](https://github.com/rsksmart/utils#rsk-utils) converts keys from BTC to Rootstock format offline, without exposing your key to a website.
+[Rootstock Utils](https://github.com/rsksmart/utils#rsk-utils) converts keys between Bitcoin and Rootstock formats offline, without exposing your key to a website.
 
 **Step 1**: Clone the [Rootstock Utils project](https://github.com/rsksmart/utils).
 
@@ -54,7 +54,7 @@ For more info on WIF, see the [Bitcoin Wiki](https://en.bitcoin.it/wiki/Wallet_i
 
 **Step 3**: Install webpack:
 
-```js
+```bash
 npm install webpack@4.46.0 -g
 npm i webpack-cli@3.3.12 -g
 npm install
@@ -106,10 +106,10 @@ Download the `base58_encode` file [here](https://github.com/in3rsha/learnmeabitc
 require_relative 'checksum'
 require_relative 'base58_encode'
 
-privatekey = "4fd050a8e4fd767f759d75492b9894bc97875e8201873e38443e3f5eae9c8db2f"
-extended = "80" + privatekey + "01"
-extendedchecksum = extended + checksum(extended)
-wif = base58_encode(extendedchecksum)
+privatekey = "<YOUR_32_BYTE_PRIVATE_KEY_HEX>"
+network_prefix = "80"          # Mainnet ("ef" for Testnet)
+compressed_suffix = "01"       # Omit for uncompressed keys
+extended = network_prefix + privatekey + compressed_suffix
 
 puts wif
 ```
