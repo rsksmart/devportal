@@ -10,12 +10,13 @@ tags: [rif, rootstock, solidity, bitcoin, smart contracts, libraries, bitcoin tr
 If you wish to suggest changes on this document, please open a PR on the [Bitcoin Transaction Solidity Helper](https://github.com/rsksmart/btc-transaction-solidity-helper.git)
 :::
 
+<img src="img/rootstock-docs.png" alt="RSK Logo" style="width:100%; height: auto;" />
 
 # BTC Transaction Solidity Helper
 
 Bitcoin, a decentralized digital currency, serves as both a store of value and a means of transferring wealth. Its security is rooted in the blockchain, a distributed ledger maintained by a network of miners. These miners expend significant computational power and energy to create new blocks, which are added to the blockchain every 10 minutes. The more hashing power contributed by miners, the more secure the network becomes. [Learn more about Bitcoin](https://developer.bitcoin.org/index.html).
 
-Rootstock, the pioneering open-source smart contract platform built on Bitcoin, aims to enhance the Bitcoin ecosystem by introducing smart contract functionality, near-instant payments, and improved scalability. Its comprehensive technology stack, encompassing Rootstock smart contracts and the Rootstock Infrastructure Framework, is designed to foster a more equitable and inclusive financial system. Read more about the [Rootstock Stack](/concepts/foundations/stack/).
+Rootstock, the pioneering open-source smart contract platform built on Bitcoin, aims to enhance the Bitcoin ecosystem by introducing smart contract functionality, near-instant payments, and improved scalability. Its comprehensive technology stack, encompassing Rootstock smart contracts and the Rootstock Infrastructure Framework, is designed to foster a more equitable and inclusive financial system. Read more about the [Rootstock Stack](/concepts/fundamentals/stack/).
 
 The [Bitcoin Solidity helper library](https://github.com/rsksmart/btc-transaction-solidity-helper) facilitates seamless interaction between Bitcoin transactions and Solidity smart contracts on the Rootstock platform. In this guide, we will learn how to handle Bitcoin transactions in a Solidity Smart contract, we will also learn how to parse transactions, hash transactions and validate scripts for bitcoin transactions. You can find the public repository for the [bitcoin transaction solidity helper library](https://github.com/rsksmart/btc-transaction-solidity-helper).
 
@@ -31,11 +32,11 @@ The features of the Bitcoin Solidity Helper library include:
 ## Versioning
 Current version is ![npm version](https://img.shields.io/npm/v/@rsksmart/btc-transaction-solidity-helper.svg)
 
-To check the NPM package, please check [Bitcoin Solidity Helper NPM Package.](https://www.npmjs.com/package/@rsksmart/btc-transaction-solidity-helper)
+To check the NPM package, please check [Bitcoin Solidity Helper NPM Package.](https://www.npmjs.com/.package/@rsksmart/btc-transaction-solidity-helper)
 
 ## Prerequisites
 * Knowledge of Solidity and how to write smart contracts.
-* [Bitcoin Solidity Helper package](https://github.com/rsksmart/btc-transaction-solidity-helper) ([npm](https://www.npmjs.com/package/@rsksmart/btc-transaction-solidity-helper))
+* [Bitcoin Solidity Helper Package.](https://github.com/rsksmart/btc-transaction-solidity-helper/pkgs/npm/btc-transaction-solidity-helper)
 
 ## Setup
 To setup the Solidity helper library in your project, run the following npm command:
@@ -97,7 +98,7 @@ struct TxRawOutput {
     }
 ```
 
-After finishing the processing of each output, the library returns an ordered output array, so the user can take advantage of this information in its solidity contract.
+After finishing the processing of each output, the library returns an ordered output array, so the user can take advantage of this information in its solidity contract.  
 
 In order to show the benefits of this library, we’ll use the example of the [Flyover Protocol](/developers/integrate/flyover/). In this protocol, there is a smart contract that one party uses to claim a refund, in order to claim this refund, they need to prove that there was a payment with a specific amount done to a specific address in the Bitcoin Network, in order to do this, the smart contract receives the Bitcoin raw transaction. Since making this validation is not a trivial process, as it requires to parse the whole transaction, here is where we can see the utility of the library.
 
@@ -119,7 +120,7 @@ The value field of the output structure is in satoshis.
 ## Hashing Transactions
 The hash algorithm used in the Bitcoin Network is just the `SHA256(SHA256())` of the serialized transaction. The library exposes one function that will apply this hash algorithm to any byte array passed to it, making it easy to calculate the transaction id of any raw transaction present in the contract.
 
-This function is specifically useful to interact with the [rootstock native bridge](/concepts/foundations/powpeg/), as many of its functions have a transaction id as parameter. For example, by using the transaction hash function, it is easy to know how many confirmations a Bitcoin block has inside a smart contract function.
+This function is specifically useful to interact with the [rootstock native bridge](/concepts/powpeg/), as many of its functions have a transaction id as parameter. For example, by using the transaction hash function, it is easy to know how many confirmations a Bitcoin block has inside a smart contract function.
 
 ### Example code with explanation
 Based on the example stated in the previous section, after validating that a specific transaction has an output paying a certain amount to an address. We need to know if that transaction has enough confirmations:
@@ -146,13 +147,12 @@ Read more about the [bridge functionality.](https://github.com/rsksmart/rskj/blo
 ## Script Validation for Bitcoin Transaction Output
 In the Bitcoin network, when a user wants to send funds to another, the user creates a transaction and adds an output with the value that it wants to send. The other user doesn’t “receive” this amount directly, instead, we call receiving to the ability of providing the proper input to the output script so it returns `true`:
 
-````mdx-code-block
 <Quote caption="Bitcoin Script Documentation">
+
   A transaction is valid if nothing in the combined script triggers failure and the top stack item is True (non-zero) when the script exits. Read more info in [Bitcoin Script](https://en.bitcoin.it/wiki/Script)
 </Quote>
-````
 
-> By having knowledge of the structure of the outputs that each type of address has, we can process and validate any arbitrary output extracted with the functions explained in the previous sections. In the same way, we can parse those outputs to obtain the specific value that later is encoded (in base58check, bech32 or bech32m) and presented as the “destination address”.
+> By having knowledge of the structure of the outputs that each type of address has, we can process and validate any arbitrary output extracted with the functions explained in the previous sections. In the same way, we can parse those outputs to obtain the specific value that later is encoded (in base58check, bech32 or bech32m) and presented as the “destination address”. 
 
 The output that the library supports and is able to parse to an address are:
 * P2PKH (Pay to public key hash)
