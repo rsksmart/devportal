@@ -68,15 +68,15 @@ Two properties of this check matter for correctness. First, classification depen
 
 ## Step 2: Count tagged blocks across a window
 
-One block tells you nothing about the network. The Explorer walks back from the Bitcoin tip over the latest 1,000 blocks, roughly seven days, and classifies each one.
+One block tells you nothing about the network. The Explorer classifies every Bitcoin block it indexes and stores the result, then measures the share over the most recent 1,000 stored heights, roughly seven days.
 
 ```
-mergeMiningPercentage = mergeMinedBlocks / bitcoinBlocksSampled
+mergeMiningPercentage = mergeMinedBlocks / bitcoinBlocks
 ```
 
 A 1,000 block window balances two errors. A short window swings wildly when a single large pool pauses for an afternoon. A long window averages in hash power that stopped merge mining weeks ago. Seven days smooths out pool-level noise while still describing the network as it is today.
 
-The sample size is also the denominator, not a hardcoded 1,000. If some blocks cannot be fetched, the ratio uses the blocks that were actually classified, so a partial sample never reads as a drop in participation.
+The window is a complete count over a stated range of heights rather than a sample of it, and the snapshot records the first and last height it covered. That is what makes the published share auditable: anyone can count the same heights and arrive at the same number. It also removes an ambiguity a sample cannot avoid, where a lower figure could mean either less merge mining or fewer blocks examined.
 
 ## Step 3: Estimate the total Bitcoin hashrate
 
@@ -88,7 +88,9 @@ bitcoinHashrate ≈ difficulty × 2^32 / 600
 
 At difficulty 1 a miner needs about 2^32, or 4.29 billion, attempts to find a block. Scaling by the real difficulty and spreading the work over Bitcoin's 600 second target block time gives hashes per second. Using block 955,501's difficulty of about 1.249 × 10^14, that formula returns roughly 894 EH/s, where one EH/s is 10^18 hashes per second.
 
-That formula is background rather than implementation: it shows what a hashrate estimate means, but it assumes a perfect 600 second block time, which the network never delivers exactly. The Explorer intentionally reads a published network hashrate estimate instead, currently the one week figure from [mempool.space](https://mempool.space/), for two reasons. The provider derives its estimate from the pace blocks actually arrived at, so it tracks reality more closely when blocks run fast or slow. And a published figure can be re-checked by anyone against the same public source. Read at the same moment, the formula and the provider land within a few percent of each other. The provider is a configuration setting of the Explorer indexer rather than part of the API contract, so it can change.
+That formula is background rather than implementation: it shows what a hashrate estimate means, but it assumes a perfect 600 second block time, which the network never delivers exactly. The Explorer asks Bitcoin itself instead, through the standard `getnetworkhashps` RPC method, which derives the estimate from how fast blocks actually arrived rather than from the target rate. Any Bitcoin node answers it, so the figure can be re-checked against a node of your own.
+
+Two arguments go with the call, and both matter. The first is how many blocks to average over, which is the same 1,000 as the window above. The second is the height to measure up to, which is the window's last height rather than the node's current tip. Without it the two factors of the published product would describe different stretches of the chain: a share counted over one range, multiplied by a hashrate read over another. Passing the height keeps them aligned and makes the result reproducible, because the same call at the same height returns the same number tomorrow.
 
 ## Step 4: Scale the Bitcoin hashrate by the share
 
@@ -106,15 +108,17 @@ That per-pool split is also a useful check on an independent implementation. Res
 
 ## How the Explorer produces and serves the numbers
 
-The calculation runs on a schedule rather than on request. A daily job in the Explorer indexer samples the window, computes the three values, and stores one snapshot per day keyed by date. The `/api/v3/stats` endpoint reads the most recent snapshot, so a request never triggers a walk over 1,000 Bitcoin blocks and response times stay flat.
+The calculation runs on a schedule rather than on request, and it runs in two parts. An hourly job in the Explorer indexer fetches Bitcoin blocks it has not seen yet, classifies each one, and stores it. A daily job then counts the stored rows over the window, computes the three values, and writes one snapshot per day keyed by date. The `/api/v3/stats` endpoint reads the most recent snapshot, so a request never touches Bitcoin at all and response times stay flat.
 
-The daily cadence is deliberate. The metric summarises a seven day window, so it barely moves within a single day, and a faster refresh would repeat a 1,000 block walk to produce the same numbers. One date-keyed row per day also builds a clean historical series for charts, and a re-run on the same day updates that row in place instead of duplicating it.
+Splitting the work that way is what decouples the published metric from provider availability. The daily job reads a database table, not a Bitcoin endpoint, so an outage delays ingestion instead of costing a day of statistics. It also means the block table can answer questions the snapshot does not, such as the merge-mining share on a particular day, without fetching anything.
+
+The daily cadence is deliberate. The metric summarises a seven day window, so it barely moves within a single day, and a faster refresh would recount the same thousand rows to produce the same numbers. One date-keyed row per day also builds a clean historical series for charts, and a re-run on the same day updates that row in place instead of duplicating it.
 
 Three behaviours follow from that design, and they matter if you consume the endpoint.
 
-- The Bitcoin metrics are up to a day old. They describe a seven day window, so they move slowly and a daily refresh is enough resolution.
+- The Bitcoin metrics trail the Bitcoin tip, by up to a day from the refresh cadence and by a further hundred blocks by design. The Explorer only indexes blocks buried deep enough that they can no longer be reorganised out, because it never revisits a height once stored. Against a seven day average that lag is not visible.
 - The three fields are `null` until the first snapshot exists. Handle that case rather than assuming a number is always present.
-- A snapshot only gets written when the job could classify at least 90% of the window. If a data provider degrades, the job fails and leaves the previous snapshot in place, so the endpoint keeps serving the last good reading instead of a value skewed by missing blocks.
+- A snapshot only gets written when at least 98% of the window's heights are stored. Below that the job refuses and leaves the previous snapshot in place, rather than publishing a share divided by a materially smaller denominator. Between 98% and 100% it publishes over the heights it has and records the count, which is why the stored block count is worth reading alongside the range.
 
 ## Reproduce the calculation yourself
 
@@ -170,7 +174,7 @@ Both paths print the same single line of hex, the `OP_RETURN` script shown in st
 
 ### 3. Audit the share across a window
 
-Repeat the check across a range of recent heights and divide the number of matches by the number of blocks you checked. Pace your requests: public APIs rate-limit bulk access and hosted provider plans meter request volume; the Explorer's own job waits 250 ms between blocks.
+Repeat the check across a range of recent heights and divide the number of matches by the number of blocks you checked. Pace your requests: public APIs rate-limit bulk access and hosted provider plans meter request volume, and each height costs three calls. The Explorer's own job holds a sustained 25 requests per second and honours `Retry-After`, a rate established by measurement rather than by a short benchmark, because burst capacity hides a provider's real limit for the first few seconds.
 
 ### 4. Close the loop from the Rootstock side
 
