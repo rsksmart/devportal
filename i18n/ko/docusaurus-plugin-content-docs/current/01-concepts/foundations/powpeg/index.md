@@ -20,7 +20,7 @@ Rootstock의 **PowPeg** 프로토콜은 2018년 연합으로 시작된 이후 �
 
 - PowPeg 앱은 [테스트넷](https://powpeg.testnet.rootstock.io/) 및 [메인넷](https://powpeg.rootstock.io/)에서 사용할 수 있습니다.
 - 설계 및 아키텍처에 관한 일반 정보, Ledger와 Trezor를 사용해 peg-in 트랜잭션을 수행하는 방법, 자주 묻는 질문 및 PowPeg에서 수행할 수 있는 고급 옵션에 대한 내용은 [PowPeg 사용자 가이드](/resources/guides/powpeg-app/)를 참고해 주세요.
-- 서명자와 인증에 관한 정보는 [PowPeg HSM 펌웨어 인증](/concepts/powpeg/hsm-firmware-attestation) 섹션에서 확인할 수 있습니다.
+- 서명자와 인증에 관한 정보는 [PowPeg HSM 펌웨어 인증](/concepts/foundations/powpeg/hsm-firmware-attestation) 섹션에서 확인할 수 있습니다.
 - PowPeg 사용 시 기본 모드와 고속 모드의 차이점에 대해 알아보려면 [고속 모드 소개: PowPeg를 이용 시, 더 빠르게 RBTC를 획득하는 방법](https://blog.rootstock.io/noticia/get-rbtc-fast-mode/)을 참조하세요
   :::
 
@@ -28,7 +28,7 @@ Rootstock의 **PowPeg** 프로토콜은 2018년 연합으로 시작된 이후 �
 
 고유한 블록 형식을 가진 두 개의 블록체인은 한 블록체인이 다른 블록체인의 컨센서스 규칙을 평가할 수 있으며, 체인 사이의 메시지가 장기간 검열되지 않은 경우 완전히 탈중앙화된 방식으로 통신할 수 있습니다. 현재는 "튜링 완전" 스마트 컨트랙트를 갖춘 플랫폼만 다른 블록체인의 컨센서스 규칙을 평가할 수 있습니다. 비트코인은 좋든 나쁘든 임의의 조건에 따라 코인을 락업 해제하는 기능이 없습니다. 따라서 Rootstock이 만들어졌을 때, 여러 참여자 간에 신뢰를 분산시키기 위해 사용할 수 있었던 유일한 기술은 멀티시그(multi-signatures)였습니다. 멀티시그를 사용하면, 공증인 그룹에 락업된 비트코인을 보호하는 작업을 부여하여 일정 수준의 악의적이거나, 해킹되거나, 이용 불가능한 당사자를 허용할 수 있습니다.
 
-Rootstock 제네시스 블록이 채굴되었을 때, 멀티시그를 보호하기 위해 구성된 자율적인 운영 주체의 집합인 Rootstock 페더레이션(연합)이 탄생했습니다. 이 연합은 Rootstock 상에서 실행되는 중단 불가능한 스마트 컨트랙트인 Rootstock 브릿지에 의해 관리되며, 탄생 이후 지금까지 안정적으로 운영되어 왔습니다. 그러다 2020년 Rootstock 커뮤니티는 보안과 검열 저항성 두 가지 측면에서 Rootstock Peg를 성장시킬 시점이라고 판단하고 연합체 중심의 구조를 PowPeg 시스템으로 발전시켰습니다. PowPeg은 비트코인의 합의 알고리즘과 동일한 해시레이트로, 락업된 비트코인을 보호하는, Rootstock 고유의 양방향 페그 시스템입니다. PowPeg 도입 이후에도 운영 주체들은 여전히 존재하지만, 이들의 역할은 비트코인 멀티시그 개인 키를 직접 제어하는 것이 아니라, 자신들의 하드웨어와 노드를 항상 온라인 상태로 유지하는 것입니다. 자세한 내용은 [PowPeg HSM 펌웨어 인증](/concepts/powpeg/hsm-firmware-attestation)을 참고하세요.
+Rootstock 제네시스 블록이 채굴되었을 때, 멀티시그를 보호하기 위해 구성된 자율적인 운영 주체의 집합인 Rootstock 페더레이션(연합)이 탄생했습니다. 이 연합은 Rootstock 상에서 실행되는 중단 불가능한 스마트 컨트랙트인 Rootstock 브릿지에 의해 관리되며, 탄생 이후 지금까지 안정적으로 운영되어 왔습니다. 그러다 2020년 Rootstock 커뮤니티는 보안과 검열 저항성 두 가지 측면에서 Rootstock Peg를 성장시킬 시점이라고 판단하고 연합체 중심의 구조를 PowPeg 시스템으로 발전시켰습니다. PowPeg은 비트코인의 합의 알고리즘과 동일한 해시레이트로, 락업된 비트코인을 보호하는, Rootstock 고유의 양방향 페그 시스템입니다. PowPeg 도입 이후에도 운영 주체들은 여전히 존재하지만, 이들의 역할은 비트코인 멀티시그 개인 키를 직접 제어하는 것이 아니라, 자신들의 하드웨어와 노드를 항상 온라인 상태로 유지하는 것입니다. 자세한 내용은 [PowPeg HSM 펌웨어 인증](/concepts/foundations/powpeg/hsm-firmware-attestation)을 참고하세요.
 
 ## Rootstock의 PowPeg 프로토콜
 

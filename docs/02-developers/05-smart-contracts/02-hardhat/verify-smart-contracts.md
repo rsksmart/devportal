@@ -61,7 +61,12 @@ module.exports = {
   solidity: {
     compilers: [
       {
-        version: '0.8.25',
+        // Supported versions: https://dev.rootstock.io/developers/requirements/
+        // EVM matrix: https://rskj-evm-compatibility.rsk.co/
+        version: '0.8.34',
+        settings: {
+          evmVersion: 'cancun',
+        },
       },
     ],
   },

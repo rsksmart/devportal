@@ -89,10 +89,19 @@ for (const locale of LOCALES) {
 
 const requiredMarkdownPaths = [
   'index.md',
+  'cheatsheet.md',
   'concepts/glossary/index.md',
   'developers/quickstart/index.md',
   'developers/integrate/flyover/index.md',
+  'dev-tools/index.md',
+  'dev-tools/node-rpc/index.md',
   'dev-tools/additional-tools/index.md',
+  'resources/tutorials/index.md',
+  'resources/guides/powpeg-app/glossary.md',
+  'resources/guides/powpeg-app/faqs.md',
+  'developers/smart-contracts/hardhat/troubleshooting.md',
+  'developers/smart-contracts/rsk-cli/cli-commands.md',
+  'developers/quickstart/dynamic.md',
 ];
 
 for (const relPath of requiredMarkdownPaths) {

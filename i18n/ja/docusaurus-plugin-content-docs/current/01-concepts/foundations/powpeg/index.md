@@ -20,7 +20,7 @@ Rootstockの**PowPeg**プロトコルは、2018年にフェデレーションと
 
 - PowPegアプリは、[テストネット](https://powpeg.testnet.rootstock.io/)と[メインネット](https://powpeg.rootstock.io/)で利用できます。
 - 設計とアーキテクチャーに関する概要説明、LedgerとTrezorを使用したペグイントランザクションの実行方法、よくある質問、およびPowPegで実行できる高度な操作については、[PowPegユーザーガイド](/resources/guides/powpeg-app/)をご覧ください。
-- 署名者と証明に関する情報は、[PowPeg HSMファームウェア証明](/concepts/powpeg/hsm-firmware-attestation)セクションを参照してください。
+- 署名者と証明に関する情報は、[PowPeg HSMファームウェア証明](/concepts/foundations/powpeg/hsm-firmware-attestation)セクションを参照してください。
 - PowPegを使用する際のネイティブモードとファーストモードの違いについては、「[ファーストモードの導入：PowPeg経由でRBTCをより速く取得する（Introducing Fast Mode: Getting RBTC via the PowPeg, but Faster）](https://blog.rootstock.io/noticia/get-rbtc-fast-mode/)」をご覧ください。
   :::
 
@@ -28,7 +28,7 @@ Rootstockの**PowPeg**プロトコルは、2018年にフェデレーションと
 
 ブロック形式が異なる2つのブロックチェーンは、それぞれがもう一方のコンセンサスルールを評価でき、クロスチェーンメッセージが長期間検閲されていない場合、完全に分散化された方法で通信することができます。現在、他のブロックチェーンのコンセンサスルールを評価できるのは、「チューリング完全」なスマートコントラクトを持つプラットフォームだけです。Bitcoinは、良くも悪くも、任意の述語でコインのロックを解除する能力を持っていません。そのため、Rootstockが作られた際は、当事者間で信頼を分散するために、Bitcoinで利用可能な唯一の技術であるマルチシグを使用する必要がありました。マルチシグを使えば、ロックされたビットコインを保護する役割を公証人グループに与えることができ、悪意のある当事者、ハッキングされた当事者、またはアクセス不能な当事者を一定の範囲で許容することができます。
 
-Rootstockのジェネシスブロックがマイニングされた際、マルチシグの保護を目的とした自律的な複数のファンクショナリーで構成されるRootstock Federationが誕生しました。このフェデレーションは、Rootstock上で実行される停止不可能なスマートコントラクトのRootstock Bridgeによって制御され、その誕生以来、順調に機能してきました。2020年、Rootstockコミュニティは、セキュリティと検閲耐性の両方においてRootstockペグの成長時期であると判断し、フェデレーションシステムからPowPegへと進化させます。PowPegとは、コンセンサスを確立するのと同じBitcoinハッシュレートでロックされたビットコインを保護する、独自の双方向ペグシステムです。ファンクショナリーはまだ存在しますが、その役割は主にハードウェアとノードを常に接続し、生存させておくことにあり、Bitcoinのマルチシグ秘密鍵を直接管理することはありません。詳しくは、「[PowPeg HSMファームウェア認証](/concepts/powpeg/hsm-firmware-attestation)」をご参照ください。
+Rootstockのジェネシスブロックがマイニングされた際、マルチシグの保護を目的とした自律的な複数のファンクショナリーで構成されるRootstock Federationが誕生しました。このフェデレーションは、Rootstock上で実行される停止不可能なスマートコントラクトのRootstock Bridgeによって制御され、その誕生以来、順調に機能してきました。2020年、Rootstockコミュニティは、セキュリティと検閲耐性の両方においてRootstockペグの成長時期であると判断し、フェデレーションシステムからPowPegへと進化させます。PowPegとは、コンセンサスを確立するのと同じBitcoinハッシュレートでロックされたビットコインを保護する、独自の双方向ペグシステムです。ファンクショナリーはまだ存在しますが、その役割は主にハードウェアとノードを常に接続し、生存させておくことにあり、Bitcoinのマルチシグ秘密鍵を直接管理することはありません。詳しくは、「[PowPeg HSMファームウェア認証](/concepts/foundations/powpeg/hsm-firmware-attestation)」をご参照ください。
 
 ## RootstockのPowPegプロトコル
 

@@ -64,9 +64,7 @@ const config = {
       },
       devCheatsheet : {
         title: 'Developer Cheatsheet',
-        url : 'https://dev.rootstock.io/Rootstock_Developer_Cheatsheet.pdf',
-        target: '_blank',
-        rel: "noopener noreferrer"
+        url : '/cheatsheet',
       },
       reportIssue : {
         title: 'Report an Issue',
@@ -109,6 +107,11 @@ const config = {
   ),
   onBrokenAnchors: reportingSeverityFromEnv(process.env.DOCUSAURUS_BROKEN_ANCHORS),
 
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
+
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
@@ -138,13 +141,14 @@ const config = {
   clientModules: [
     './src/clientModules/renderEquations.js',
     './src/clientModules/docsearch-css.js',
+    './src/clientModules/legacyPathRedirects.js',
   ],
   plugins: [
     [
       'docusaurus-plugin-llms',
       {
         title: 'Rootstock Developers Portal',
-        description: 'Build EVM-compatible smart contracts on Rootstock, secured by over 85% of Bitcoin\'s hash power through merge mining.',
+        description: 'Build Bitcoin-secured financial products on Rootstock, an EVM-compatible Bitcoin sidechain secured by over 85% of Bitcoin\'s hash power through merge mining.',
         docsDir: 'docs',
         generateLLMsTxt: true,
         generateLLMsFullTxt: true,
@@ -163,7 +167,7 @@ const config = {
       './plugins/llms-i18n.js',
       {
         title: 'Rootstock Developers Portal',
-        description: 'Build EVM-compatible smart contracts on Rootstock, secured by over 85% of Bitcoin\'s hash power through merge mining.',
+        description: 'Build Bitcoin-secured financial products on Rootstock, an EVM-compatible Bitcoin sidechain secured by over 85% of Bitcoin\'s hash power through merge mining.',
         excludeImports: true,
         removeDuplicateHeadings: true,
         pathTransformation: { ignorePaths: ['docs'] },
@@ -191,6 +195,17 @@ const config = {
     }],
     './plugins/fix-llms-urls.js',
     './plugins/llms-txt-markdown-directive.js',
+    [
+      'docusaurus-plugin-mermaid-pan-zoom',
+      {
+        enableInlineWheelZoom: true,
+        enableZoomControls: true,
+        enableExpand: true,
+        enableCopy: true,
+        // Cap tall diagrams so pan/zoom is useful (Base-docs style viewport)
+        intrinsicHeightScale: 1.15,
+      },
+    ],
   ],
   presets: [
     [
@@ -242,6 +257,19 @@ const config = {
         defaultMode: 'dark',
         disableSwitch: false,
         respectPrefersColorScheme: false,
+      },
+      mermaid: {
+        theme: {light: 'neutral', dark: 'dark'},
+        options: {
+          flowchart: {
+            htmlLabels: true,
+            curve: 'basis',
+            padding: 12,
+            nodeSpacing: 36,
+            rankSpacing: 48,
+            wrappingWidth: 200,
+          },
+        },
       },
       // Replace with your project's social card
       image: 'img/og.png',

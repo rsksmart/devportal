@@ -1,20 +1,20 @@
 ---
-sidebar_label: Rootstock 기본 개념
-sidebar_position: 2
+sidebar_label: Overview
+sidebar_position: 1
 title: Rootstock 기본 개념
 tags:
   - rsk
   - rootstock
   - 초급자
   - 개념
-description: Rootstock는 최초이자 가장 오래 운영되고 있는 비트코인 사이드체인으로, 비트코인 작업 증명(PoW)의 보안성과 Ethereum의 스마트 컨트랙트 기능을 결합한 유일한 레이어 2 솔루션입니다.
+description: "비트코인 금융 인프라: 대출, 결제, 수익, 재무를 위해 비트코인 해시 파워의 85% 이상으로 보호되는 EVM 호환 비트코인 사이드체인."
 ---
 
 ## Rootstock이란 무엇인가요?
 
-Rootstock는 최초이자 가장 오래 지속되고 있는 비트코인 사이드체인으로, 비트코인 작업 증명(PoW)의 보안성과 이더리움의 스마트 컨트랙트 기능을 결합한 유일한 레이어 2 솔루션입니다. 이 플랫폼은 오픈 소스이며, EVM 호환이 가능하고, 비트코인 해시 파워의 60% 이상으로 보안을 유지하며 완전한 무신뢰(trustless)를 향해 계속해서 발전하는 활발한 dApp 생태계의 관문이 되고 있습니다.
+Rootstock는 비트코인의 금융 인프라입니다. 오픈 소스이며 EVM 호환인 비트코인 사이드체인이고, 머지 마이닝을 통해 비트코인 해시 파워의 85% 이상으로 보호됩니다. 기업, 금융기관, 빌더는 이더리움 도구로 비트코인으로 담보된 대출, 결제, 수익, 재무 상품을 출시하기 위해 사용합니다.
 
-[Rootstock 스택](/concepts/fundamentals/stack/)을 참고하세요.
+[Rootstock 스택](/concepts/foundations/stack/), [병합 채굴](/concepts/foundations/merged-mining/), [Powpeg](/concepts/foundations/powpeg/)을 참고하세요.
 
 ## Rootstock은 비트코인과 어떻게 연결되어 있나요?
 
@@ -35,7 +35,7 @@ Rootstock에서는 스마트 컨트랙트의 실행을 보호하기 위해 30초
 
 ### 비트코인과 Powpeg
 
-두 번째 접점은 브릿지라고도 알려져 있는 [Powpeg](/concepts/powpeg/)입니다.
+두 번째 접점은 브릿지라고도 알려져 있는 [Powpeg](/concepts/foundations/powpeg/)입니다.
 
 이 구성 요소는 비트코인을 Rootstock으로 전송할 수 있도록 두 네트워크를 연결해줍니다.
 덕분에 개발자들은 Rootstock에서 스마트 컨트랙트와 상호작용할 수 있으며, 가스비는 동일한 비트코인, 즉 스마트 비트코인(RBTC)로 지불합니다.

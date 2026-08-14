@@ -1,20 +1,20 @@
 ---
-sidebar_label: Rootstockの基礎
-sidebar_position: 2
+sidebar_label: Overview
+sidebar_position: 1
 title: Rootstockの基礎
 tags:
   - rsk
   - rootstock
   - 初心者
   - 概念
-description: Rootstockは、最初に登場したBitcoinのサイドチェーンで、最も長い歴史を誇ります。また、Bitcoinのプルーフ・オブ・ワークのセキュリティとEthereumのスマートコントラクト機能を組み合わせた唯一のレイヤー2ソリューションです。
+description: "Bitcoinの金融インフラ。貸付、決済、利回り、トレジャリー向けに、Bitcoinハッシュパワーの85%超で保護されたEVM互換のBitcoinサイドチェーン。"
 ---
 
 ## Rootstockとは？
 
-Rootstockは、最初に登場したBitcoinのサイドチェーンで、最も長い歴史を誇ります。また、Bitcoinのプルーフ・オブ・ワークのセキュリティとEthereumのスマートコントラクト機能を組み合わせた唯一のレイヤー2ソリューションです。このプラットフォームはオープンソースで、EVMと互換性があり、60%以上のBitcoinハッシュパワーによって保護されているため、完全なトラストレスに向けて進化し続けるdAppsの活気あるエコシステムへのゲートウェイとなっています。
+RootstockはBitcoinの金融インフラです。オープンソースでEVM互換のBitcoinサイドチェーンであり、マージマイニングによりBitcoinハッシュパワーの85%超で保護されています。事業者、金融機関、ビルダーは、Ethereumツールを使って、Bitcoinで担保された貸付、決済、利回り、トレジャリー製品をローンチするために利用します。
 
-[Rootstockスタック](/concepts/fundamentals/stack/)を見る。
+[Rootstockスタック](/concepts/foundations/stack/)、[マージマイニング](/concepts/foundations/merged-mining/)、[Powpeg](/concepts/foundations/powpeg/)を参照してください。
 
 ## RootstockとBitcoinとの関係について
 
@@ -32,7 +32,7 @@ Rootstockでは、30秒ごとにブロックが生成され、スマートコン
 
 ### BitcoinとのPowpeg
 
-二つ目の接点は、ブリッジとして知られる[Powpeg](/concepts/powpeg/)です。
+二つ目の接点は、ブリッジとして知られる[Powpeg](/concepts/foundations/powpeg/)です。
 
 このコンポーネントは両ネットワークを接続し、Rootstockにビットコインを転送できるようにします。これにより、開発者はスマートコントラクトとやり取りができるようになります。開発者は同じビットコイン、いわゆるスマートビットコインを使ってガス代を支払います。
 

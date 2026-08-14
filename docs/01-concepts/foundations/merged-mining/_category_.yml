@@ -1,0 +1,6 @@
+label: Merged Mining
+position: 30
+description: How merge mining Rootstock with Bitcoin works, and its benefits.
+link:
+  type: doc
+  id: concepts/foundations/merged-mining/index

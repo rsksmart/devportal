@@ -24,8 +24,13 @@ This guide provides clear instructions for developers on the supported Solidity 
 Set up the necessary software for a easy development on Rootstock:
 
 - **Solidity Version:**
-  - Supported compiler version: **`solc 0.8.34`**.
+  - Supported compiler version: **`solc 0.8.34`** (see [EVM Compatibility Explorer](https://rskj-evm-compatibility.rsk.co/) for the full Solidity × RSKj matrix).
+  - Recommended EVM target: **`cancun`** for current Rootstock nodes.
   - Use compatible versions to avoid deployment errors.
+
+- **EVM Compatibility:**
+  - The [EVM Compatibility Explorer](https://rskj-evm-compatibility.rsk.co/) is the source of truth for opcode support, precompiles, and behavioral differences vs Ethereum.
+  - Before porting Ethereum contracts, check `block.difficulty`, `block.basefee`, and blob-related features in the matrix.
 
 - **Node RPC Access:**
   - Interact with Rootstock using its RPC API.

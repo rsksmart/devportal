@@ -15,7 +15,7 @@ If you wish to suggest changes on this document, please open a PR on the [Bitcoi
 
 Bitcoin, a decentralized digital currency, serves as both a store of value and a means of transferring wealth. Its security is rooted in the blockchain, a distributed ledger maintained by a network of miners. These miners expend significant computational power and energy to create new blocks, which are added to the blockchain every 10 minutes. The more hashing power contributed by miners, the more secure the network becomes. [Learn more about Bitcoin](https://developer.bitcoin.org/index.html).
 
-Rootstock, the pioneering open-source smart contract platform built on Bitcoin, aims to enhance the Bitcoin ecosystem by introducing smart contract functionality, near-instant payments, and improved scalability. Its comprehensive technology stack, encompassing Rootstock smart contracts and the Rootstock Infrastructure Framework, is designed to foster a more equitable and inclusive financial system. Read more about the [Rootstock Stack](/concepts/fundamentals/stack/).
+Rootstock, the pioneering open-source smart contract platform built on Bitcoin, aims to enhance the Bitcoin ecosystem by introducing smart contract functionality, near-instant payments, and improved scalability. Its comprehensive technology stack, encompassing Rootstock smart contracts and the Rootstock Infrastructure Framework, is designed to foster a more equitable and inclusive financial system. Read more about the [Rootstock Stack](/concepts/foundations/stack/).
 
 The [Bitcoin Solidity helper library](https://github.com/rsksmart/btc-transaction-solidity-helper) facilitates seamless interaction between Bitcoin transactions and Solidity smart contracts on the Rootstock platform. In this guide, we will learn how to handle Bitcoin transactions in a Solidity Smart contract, we will also learn how to parse transactions, hash transactions and validate scripts for bitcoin transactions. You can find the public repository for the [bitcoin transaction solidity helper library](https://github.com/rsksmart/btc-transaction-solidity-helper).
 
@@ -119,7 +119,7 @@ The value field of the output structure is in satoshis.
 ## Hashing Transactions
 The hash algorithm used in the Bitcoin Network is just the `SHA256(SHA256())` of the serialized transaction. The library exposes one function that will apply this hash algorithm to any byte array passed to it, making it easy to calculate the transaction id of any raw transaction present in the contract.
 
-This function is specifically useful to interact with the [rootstock native bridge](/concepts/powpeg/), as many of its functions have a transaction id as parameter. For example, by using the transaction hash function, it is easy to know how many confirmations a Bitcoin block has inside a smart contract function.
+This function is specifically useful to interact with the [rootstock native bridge](/concepts/foundations/powpeg/), as many of its functions have a transaction id as parameter. For example, by using the transaction hash function, it is easy to know how many confirmations a Bitcoin block has inside a smart contract function.
 
 ### Example code with explanation
 Based on the example stated in the previous section, after validating that a specific transaction has an output paying a certain amount to an address. We need to know if that transaction has enough confirmations:

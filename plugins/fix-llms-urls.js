@@ -15,6 +15,44 @@ const PATH_ALIASES = [
   ['/use-cases/shared-setup', '/use-cases/interoperability/shared-setup'],
 ];
 
+const SITE_ORIGIN = 'https://dev.rootstock.io';
+
+/** Hub and category pages in sitemap that the llms plugin may omit. */
+const SUPPLEMENTARY_HUB_ENTRIES = [
+  ['RIF Suite', '/concepts/rif-suite/', 'Open source tools that make it faster and more rewarding to build on Bitcoin.'],
+  ['Blockchain Essentials', '/developers/blockchain-essentials/', 'Interact with Rootstock, read transactions, and deploy your first smart contract.'],
+  ['New to Blockchain', '/developers/blockchain-essentials/new-to-blockchain/', 'Distributed ledgers, keys, wallets, gas, and transactions.'],
+  ['Rootstock Essentials', '/developers/blockchain-essentials/rootstock-essentials/', 'Architecture, smart contract fundamentals, and your first dApp.'],
+  ['Integrate', '/developers/integrate/', 'Integrate dApps with Rootstock SDKs and protocols.'],
+  ['RIF Relay Integration', '/developers/integrate/rif-relay/', 'Sponsored transactions with RIF Relay on Rootstock.'],
+  ['RNS Integration', '/developers/integrate/rns/', 'Integrate RIF Name Service in your dApp.'],
+  ['Libraries', '/developers/libraries/', 'SDKs and libraries for Rootstock development.'],
+  ['RPC API', '/developers/rpc-api/', 'JSON-RPC providers and API guides for Rootstock.'],
+  ['Smart Contracts', '/developers/smart-contracts/', 'Hardhat, Foundry, verification, and contract tooling.'],
+  ['RSK CLI', '/developers/smart-contracts/rsk-cli/', 'CLI for wallets, deployments, and contract interaction on Rootstock.'],
+  ['Thirdweb on Rootstock', '/developers/smart-contracts/thirdweb/', 'Build and deploy with the Thirdweb SDK on Rootstock.'],
+  ['Runes on Rootstock', '/developers/use-cases/runes-rootstock/', 'Developer guides for Runes on Rootstock.'],
+  ['Verify Smart Contracts', '/developers/verify-smart-contracts/', 'Verify contract source on Rootstock explorers.'],
+  ['EAS Attestations', '/dev-tools/attestations/eas/', 'Ethereum Attestation Service on Rootstock.'],
+  ['DeFi Developer Guide', '/resources/guides/defi-developer-guide/', 'Patterns and standards for DeFi on Rootstock.'],
+  ['User Guides', '/resources/guides/', 'PowPeg, Atlas, Runes, and other Rootstock user guides.'],
+  ['PowPeg App Guide', '/resources/guides/powpeg-app/', 'Use the PowPeg App for BTC and rBTC transfers.'],
+  ['Runes Airdrop Machine', '/resources/guides/runes-rootstock/airdrop-giveaway-machine/', 'Build a Runes airdrop machine on Rootstock.'],
+  ['Deploy MockBridge Contract', '/resources/guides/runes-rootstock/deploy-mockbridge-contract/', 'Deploy a MockBridge contract for Runes on Rootstock.'],
+  ['Node Setup', '/node-operators/setup/', 'Install and configure a Rootstock node.'],
+  ['Node Configuration', '/node-operators/setup/configuration/', 'Configure a Rootstock node for your environment.'],
+  ['Node Runner', '/node-operators/setup/node-runner/', 'Run a Rootstock node in production.'],
+  ['JSON-RPC', '/node-operators/json-rpc/', 'JSON-RPC methods for Rootstock node operators.'],
+  ['Merged Mining', '/node-operators/merged-mining/', 'Set up merge mining for Bitcoin and Rootstock.'],
+  ['Node Maintenance', '/node-operators/maintenance/', 'Operate and maintain a Rootstock node.'],
+  ['Shared Setup for Use Cases', '/use-cases/interoperability/shared-setup/', 'Common setup steps for Rootstock use case tutorials.'],
+  ['USSD Rootstock DeFi', '/use-cases/onboarding-ux/ussd-rootstock-defi/', 'USSD-based DeFi onboarding on Rootstock.'],
+  ['Developer Cheatsheet', '/cheatsheet/', 'One-page Rootstock developer quick reference for network setup, kits, and AI tooling.'],
+];
+
+/** Keep llms.txt under the 50KB agent-ingest budget used by CI. */
+const LLMS_DESCRIPTION_MAX_LENGTH = 50;
+
 function stripNumberedPrefix(segment) {
   return segment.replace(/^\d+-/, '');
 }
@@ -43,7 +81,73 @@ function fixUrl(rawUrl) {
   }
 }
 
-function fixLlmsFileContent(content) {
+function normalizeLlmsUrl(rawUrl) {
+  return fixUrl(rawUrl)?.replace(/\/$/, '') ?? null;
+}
+
+function llmsUrlsInContent(content) {
+  const urls = new Set();
+  for (const match of content.matchAll(URL_PATTERN)) {
+    const normalized = normalizeLlmsUrl(match[0]);
+    if (normalized) {
+      urls.add(normalized);
+    }
+  }
+  return urls;
+}
+
+function truncateDescription(description, maxLength = LLMS_DESCRIPTION_MAX_LENGTH) {
+  const trimmed = description.trim();
+  if (trimmed.length <= maxLength) {
+    return trimmed;
+  }
+  return `${trimmed.slice(0, maxLength - 3).trimEnd()}...`;
+}
+
+function truncateLlmsDescriptions(content) {
+  return content
+    .split('\n')
+    .map((line) => {
+      if (!line.startsWith('- [')) {
+        return line;
+      }
+      const match = line.match(/^- \[(.+?)\]\((https?:\/\/[^)]+)\): (.+)$/);
+      if (!match) {
+        return line;
+      }
+      const [, title, url, description] = match;
+      return `- [${title}](${url}): ${truncateDescription(description)}`;
+    })
+    .join('\n');
+}
+
+function appendSupplementaryHubEntries(content) {
+  const existing = llmsUrlsInContent(content);
+  const additions = [];
+
+  for (const [title, pathname, description] of SUPPLEMENTARY_HUB_ENTRIES) {
+    const url = `${SITE_ORIGIN}${pathname}`.replace(/\/$/, '') || SITE_ORIGIN;
+    const normalized = pathname === '/' ? SITE_ORIGIN : url;
+    if (existing.has(normalized)) {
+      continue;
+    }
+    additions.push(`- [${title}](${normalized}): ${truncateDescription(description)}`);
+    existing.add(normalized);
+  }
+
+  if (additions.length === 0) {
+    return content;
+  }
+
+  const sectionHeader = '## Hub and category pages';
+  if (content.includes(sectionHeader)) {
+    return `${content.trimEnd()}\n${additions.join('\n')}\n`;
+  }
+
+  return `${content.trimEnd()}\n\n${sectionHeader}\n\n${additions.join('\n')}\n`;
+}
+
+function fixLlmsFileContent(content, { truncateDescriptions = false, appendHubEntries = false } = {}) {
   const lines = content.split('\n').filter((line) => {
     if (!line.startsWith('- [')) {
       return true;
@@ -55,9 +159,19 @@ function fixLlmsFileContent(content) {
     return urls.every((rawUrl) => fixUrl(rawUrl) !== null);
   });
 
-  return lines
+  let updated = lines
     .join('\n')
     .replace(URL_PATTERN, (match) => fixUrl(match) ?? match);
+
+  if (appendHubEntries) {
+    updated = appendSupplementaryHubEntries(updated);
+  }
+
+  if (truncateDescriptions) {
+    updated = truncateLlmsDescriptions(updated);
+  }
+
+  return updated;
 }
 
 function fixLlmsFilesInDir(dir) {
@@ -73,7 +187,10 @@ function fixLlmsFilesInDir(dir) {
       }
       throw err;
     }
-    const updated = fixLlmsFileContent(original);
+    const updated = fixLlmsFileContent(original, {
+      truncateDescriptions: filename === 'llms.txt',
+      appendHubEntries: filename === 'llms.txt',
+    });
     if (updated !== original) {
       const tempPath = `${filePath}.tmp`;
       fs.writeFileSync(tempPath, updated, 'utf8');
@@ -100,3 +217,6 @@ module.exports = function fixLlmsUrlsPlugin() {
 };
 
 module.exports.fixLlmsFilesInDir = fixLlmsFilesInDir;
+module.exports.SITE_ORIGIN = SITE_ORIGIN;
+module.exports.SUPPLEMENTARY_HUB_ENTRIES = SUPPLEMENTARY_HUB_ENTRIES;
+module.exports.llmsUrlsInContent = llmsUrlsInContent;

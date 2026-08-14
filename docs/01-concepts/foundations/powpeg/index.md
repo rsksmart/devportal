@@ -1,7 +1,7 @@
 ---
+sidebar_position: 1
+sidebar_label: Overview
 title: "Building the Most Secure, Permissionless and Uncensorable Bitcoin Peg"
-sidebar_position: 4
-sidebar_label: PowPeg Protocol
 tags: [rsk, rootstock, rbtc, btc, architecture, powpeg protocol, powpeg app]
 description: "Transfer BTC to rBTC, and rBTC to BTC through the PowPeg Protocol."
 render_features: 'powpeg-hsm-attestation-frame'
@@ -12,7 +12,9 @@ Rootstock’s **PowPeg** protocol, has matured from its inception in 2018 as a f
 :::note Info
 - The PowPeg App is available on [Testnet](https://powpeg.testnet.rootstock.io/) and [Mainnet](https://powpeg.rootstock.io/).
 - For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the PowPeg, please refer to the [PowPeg user guide](/resources/guides/powpeg-app/).
-- Get information on the signatories and attestion in the [PowPeg HSM Firmware Attestation](/concepts/powpeg/hsm-firmware-attestation) section.
+- Get information on the signatories and attestation in the [PowPeg HSM Firmware Attestation](/concepts/foundations/powpeg/hsm-firmware-attestation) section.
+- For federation size and composition changes, see [PowPeg member updates](/concepts/foundations/powpeg/member-updates/).
+- For PowPeg-specific security properties, see the [PowPeg security summary](/concepts/foundations/powpeg/security-model/). Published audits live in the [security repository](https://github.com/rsksmart/security).
 - Read [Introducing Fast Mode: Getting rBTC via the PowPeg, but Faster](https://blog.rootstock.io/noticia/get-rbtc-fast-mode/) to learn about the difference between Native Mode and Fast Modes when using the PowPeg.
 :::
 
@@ -22,9 +24,51 @@ Rootstock’s **PowPeg** protocol, has matured from its inception in 2018 as a f
 
 Two blockchains with distinct block formats can communicate in a fully decentralized manner if each one can evaluate the other blockchain’s consensus rules, and if cross-chain messages are not censored for long periods of time. Currently, only platforms with “Turing-complete” smart contracts can evaluate other blockchain consensus rules. Bitcoin, for better or for worse, lacks the ability to unlock coins over arbitrary predicates. Therefore, when Rootstock was created, it had to use the only existing technology in Bitcoin to distribute trust among parties: multi-signatures. With a multi-signature it is possible to give a group of notaries the task to protect locked bitcoins, tolerating a certain amount of malicious, hacked or unavailable parties.
 
-When the Rootstock genesis block was mined, the Rootstock Federation, an autonomous set of functionaries aimed at protecting the multi-signature, was born. The federation was controlled by the Rootstock Bridge, an unstoppable smart-contract running on Rootstock, and has been successfully working since its creation. In 2020 the Rootstock community decided it was time for the Rootstock peg to grow, both in security and in censorship resistance, evolving from a federated system to the PowPeg. The PowPeg is a unique 2-way peg system that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus. The set of functionaries still exists, but their role is mainly to keep their hardware and nodes connected and alive at all times; they do not directly control the Bitcoin multisig private keys. See [PowPeg HSM Firmware Attestation](/concepts/powpeg/hsm-firmware-attestation)
+When the Rootstock genesis block was mined, the Rootstock Federation, an autonomous set of functionaries aimed at protecting the multi-signature, was born. The federation was controlled by the Rootstock Bridge, an unstoppable smart-contract running on Rootstock, and has been successfully working since its creation. In 2020 the Rootstock community decided it was time for the Rootstock peg to grow, both in security and in censorship resistance, evolving from a federated system to the PowPeg. The PowPeg is a unique 2-way peg system that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus. The set of functionaries still exists, but their role is mainly to keep their hardware and nodes connected and alive at all times; they do not directly control the Bitcoin multisig private keys. See [PowPeg HSM Firmware Attestation](/concepts/foundations/powpeg/hsm-firmware-attestation)
 
 ## The PowPeg Protocol in Rootstock
+
+The PowPeg moves value between Bitcoin and Rootstock. All 21M rBTC exists from genesis. The Bridge holds the locked portion. Peg-in locks BTC on Bitcoin and releases rBTC from the Bridge to the user. Peg-out returns rBTC to the Bridge and releases BTC after confirmations and PowHSM signatures.
+
+### Architecture diagram
+
+One Bridge handles peg-in and peg-out. Peg-in waits for 100 Bitcoin blocks. Peg-out waits for 4000 Rootstock blocks before PowHSMs sign. Solid arrows are required steps. The dotted arrow is the fallback if you register the peg-in yourself.
+
+```mermaid
+flowchart LR
+  User["User / exchange"]
+
+  PegAddr["PowPeg multisig<br/>on Bitcoin"]
+  Watch["PowPeg nodes<br/>(watchtower)"]
+  Bridge["Bridge contract"]
+  rBTC["rBTC held / released<br/>by Bridge"]
+  HSM["PowHSMs<br/>(SPV + cumulative work)"]
+  BTCOut["BTC released<br/>on Bitcoin"]
+
+  User -->|"Peg-in 1. Send BTC"| PegAddr
+  PegAddr -->|"Peg-in 2. After 100<br/>Bitcoin blocks"| Watch
+  Watch -->|"Peg-in 3. SPV proof"| Bridge
+  User -.->|"Peg-in 3b. User can register<br/>the peg-in themselves"| Bridge
+  Bridge -->|"Peg-in 4. Bridge releases<br/>rBTC to user"| rBTC
+
+  User -->|"Peg-out 1. Return rBTC<br/>to Bridge"| Bridge
+  Bridge -->|"Peg-out 2. Peg-out command<br/>after 4000 Rootstock blocks"| HSM
+  HSM -->|"Peg-out 3. Multisig signatures"| BTCOut
+
+  classDef user fill:#FCE4F6,stroke:#FF71E1,stroke-width:2px,color:#1a1a1a
+  classDef btc fill:#FFF0D9,stroke:#FF9100,stroke-width:2px,color:#1a1a1a
+  classDef custodian fill:#EDE7FF,stroke:#9E76FF,stroke-width:2px,color:#1a1a1a
+  classDef rsk fill:#E8F5D0,stroke:#79C600,stroke-width:2px,color:#1a1a1a
+  classDef token fill:#E0FFFA,stroke:#08FFD0,stroke-width:2px,color:#1a1a1a
+
+  class User user
+  class PegAddr,BTCOut btc
+  class Watch,HSM custodian
+  class Bridge rsk
+  class rBTC token
+```
+
+Peg-in and peg-out share one Bridge. Peg-in needs 100 Bitcoin blocks. Peg-out signing needs about 4000 Rootstock blocks (about 100 Bitcoin blocks of cumulative work, or about 200 Bitcoin blocks of wall-clock time). If watchtowers miss your peg-in, register it yourself.
 
 The Rootstock researchers and developers strategy when designing the PowPeg differs from the one adopted by other teams that have built 2-way peg protocols. The Rootstock PowPeg is based on a layered security model, a practice we call “**defence-in-depth**”. Most other pegs rely on a single all-encompassing cryptographic protocol that solves a multi-party custody problem in an intricate way. These complex cryptographic protocols are delicate and very few entities can audit them thoroughly. Often these types of protocols become compromised, resulting in a sudden loss of security for users.
 
@@ -84,7 +128,7 @@ The cumulative work required by the PowHSM also works as a rate limiter or **for
 
 ## Peg-in and Peg-out Finality
 
-Since the Bitcoin blockchain and the Rootstock sidechain are not entangled in a single blockchain or in a parent-child relation as in a [syncchain](https://blog.rootstock.io/noticia/syncchain-synchronized-sidechains-for-improved-security-and-usability/), the transfers of bitcoins between them must at some point in time be considered final. If not, bitcoins locked on one side would never be able to be safely unlocked on the other. **Therefore, peg-in and peg-out transactions require a high number of block confirmations. Peg-ins require 100 Bitcoin blocks (approximately 2000 Rootstock blocks), and peg-outs require 4000 Rootstock blocks (approximately 200 Bitcoin blocks)**. Transactions signed by federation nodes are considered final by Rootstock: these transactions are broadcast and assumed to be included sooner or later in the Bitcoin blockchain. Due to the need for finality, Rootstock consensus does not attempt to recover from an attack that manages to revert the blockchain deep enough to revert a final peg-in or peg-out transaction. If a huge reversal occurs, PowPeg nodes halt any future peg-out, and the malicious actors should not be able to double-spend the peg.
+Since the Bitcoin blockchain and the Rootstock sidechain are not entangled in a single blockchain or in a parent-child relation as in a [syncchain](https://blog.rootstock.io/noticia/syncchain-synchronized-sidechains-for-improved-security-and-usability/), the transfers of bitcoins between them must at some point in time be considered final. If not, bitcoins locked on one side would never be able to be safely unlocked on the other. **Therefore, peg-in and peg-out transactions require a high number of block confirmations. Peg-ins require 100 Bitcoin blocks (approximately 2000 Rootstock blocks). Peg-outs require 4000 Rootstock blocks. That peg-out wait is about 100 Bitcoin blocks of cumulative work for the PowHSM gate, and about 200 Bitcoin blocks of wall-clock time.** Transactions signed by federation nodes are considered final by Rootstock: these transactions are broadcast and assumed to be included sooner or later in the Bitcoin blockchain. Due to the need for finality, Rootstock consensus does not attempt to recover from an attack that manages to revert the blockchain deep enough to revert a final peg-in or peg-out transaction. If a huge reversal occurs, PowPeg nodes halt any future peg-out, and the malicious actors should not be able to double-spend the peg.
 
 :::note IRIS 3.0.0
 Since the IRIS 3.0.0 upgrade, minimum required values for peg-in and peg-out have been halved, Peg-in (BTC) minimum is now 0.005 and Peg-out (RBTC) minimum is now 0.004. Besides this minimum, the Bridge will estimate the fees required to pay for the pegout, if the remainder after paying the fees is too low (not enough to be spent in BTC) the pegout will be rejected. The funds will be reimbursed if the pegout is rejected by any of the conditions described above.

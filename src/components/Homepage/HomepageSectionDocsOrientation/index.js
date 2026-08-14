@@ -7,7 +7,7 @@ const sections = [
     title: <Translate>Concepts</Translate>,
     description: (
       <Translate>
-        Platform fundamentals, rBTC, PowPeg security, and the Rootstock stack.
+        Platform foundations, rBTC, security model, and the Rootstock stack.
       </Translate>
     ),
     href: '/concepts/',

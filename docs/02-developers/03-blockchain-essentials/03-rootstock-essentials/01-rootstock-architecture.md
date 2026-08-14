@@ -28,35 +28,56 @@ rBTC is pegged 1:1 with BTC and is the native token used to pay for transaction 
 
 
 
-## Architecture Diagram
+## Architecture diagram
 
-```text
-+------------------------------+
-|          Bitcoin             |
-|  (Merge-Mined – PoW)         |
-+--------------+---------------+
-               |
-         Merge-Mining
-               |
-+--------------v---------------+
-|          Rootstock           |
-|   EVM-Compatible Smart       |
-|         Contract Layer       |
-+--------------+---------------+
-               |
-           PowPeg
-               |
-+--------------v---------------+
-|              rBTC            |
-+------------------------------+
+Rootstock is a Bitcoin sidechain. Merged mining secures consensus. The RVM runs EVM-compatible contracts. rBTC pays gas and moves through the PowPeg. Peg-in and peg-out use the same Bridge on separate paths.
+
+```mermaid
+flowchart LR
+  User["User / dApp"]
+
+  subgraph Bitcoin["Bitcoin"]
+    direction TB
+    PoW["Bitcoin PoW<br/>(merged mining)"]
+    BTCNet["Bitcoin network"]
+  end
+
+  subgraph Rootstock["Rootstock"]
+    direction TB
+    Consensus["Consensus / block production"]
+    RVM["Rootstock Virtual Machine<br/>(EVM-compatible)"]
+    Peg["PowPeg / Bridge"]
+    rBTC["rBTC (1:1 with BTC)"]
+  end
+
+  PoW -->|"Merged mining secures<br/>consensus"| Consensus
+  Consensus --> RVM
+  User -->|"Deploy and call contracts"| RVM
+  rBTC -->|"Pays gas"| RVM
+  User -->|"Peg-in BTC"| Peg
+  Peg -->|"Bridge releases rBTC"| rBTC
+  User -->|"Peg-out: return rBTC"| Peg
+  Peg -->|"Release BTC after<br/>confirmations"| BTCNet
+
+  classDef user fill:#FCE4F6,stroke:#FF71E1,stroke-width:2px,color:#1a1a1a
+  classDef btc fill:#FFF0D9,stroke:#FF9100,stroke-width:2px,color:#1a1a1a
+  classDef rsk fill:#E8F5D0,stroke:#79C600,stroke-width:2px,color:#1a1a1a
+  classDef peg fill:#EDE7FF,stroke:#9E76FF,stroke-width:2px,color:#1a1a1a
+  classDef token fill:#E0FFFA,stroke:#08FFD0,stroke-width:2px,color:#1a1a1a
+
+  class User user
+  class PoW,BTCNet btc
+  class Consensus,RVM rsk
+  class Peg peg
+  class rBTC token
 ```
 
 ## Summary
 
 Rootstock combines:
-- **Bitcoin's security** via merge-mining
-- **Ethereum's programmability** via EVM compatibility
-- **Seamless BTC integration** via the PowPeg
+- **Bitcoin security** via merged mining
+- **EVM programmability** via the Rootstock Virtual Machine
+- **BTC ↔ rBTC transfers** via the PowPeg (peg-outs require confirmations and PowHSM signatures)
 
 :::note[Before You Continue]
 Make sure you've completed the [Development Prerequisites](/developers/requirements/) to set up your environment with Node.js, Hardhat, and wallet configuration.

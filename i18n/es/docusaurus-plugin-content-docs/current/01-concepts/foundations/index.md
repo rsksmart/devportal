@@ -1,20 +1,20 @@
 ---
-sidebar_label: Fundamentos de Rootstock
-sidebar_position: 2
+sidebar_label: Overview
+sidebar_position: 1
 title: Fundamentos de Rootstock
 tags:
   - rsk
   - rootstock
   - principiante
   - conceptos
-description: Rootstock es la primera cadena lateral de Bitcoin y la más duradera. Es la única solución de layer 2 que combina la seguridad de la prueba de trabajo de Bitcoin con las capacidades de contratos inteligentes de Ethereum.
+description: "La infraestructura financiera de Bitcoin: una sidechain de Bitcoin compatible con EVM, asegurada por más del 85% del hashrate de Bitcoin para lending, payments, yield y treasury."
 ---
 
 ## ¿Qué es Rootstock?
 
-Rootstock es la primera cadena lateral de Bitcoin y la más duradera. Es la única solución de layer 2 que combina la seguridad de la prueba de trabajo de Bitcoin con las capacidades de contratos inteligentes de Ethereum. La plataforma es de código abierto, compatible con la máquina virtual de Ethereum y asegurada por más del 60 % del poder de hashing de Bitcoin, lo que la convierte en la puerta de entrada a un floreciente ecosistema de dApp que continúa evolucionando para convertirse en una plataforma sin necesidad de intermediarios de confianza.
+Rootstock es la infraestructura financiera de Bitcoin. Es una sidechain de Bitcoin de código abierto y compatible con EVM, asegurada por más del 85% del poder de hash de Bitcoin mediante merge mining. Empresas, instituciones financieras y builders la usan para lanzar productos de lending, payments, yield y treasury asegurados por Bitcoin con tooling de Ethereum.
 
-Vea la [Stack de Rootstock](/concepts/fundamentals/stack/).
+Vea la [Stack de Rootstock](/concepts/foundations/stack/), la [minería fusionada](/concepts/foundations/merged-mining/) y el [Powpeg](/concepts/foundations/powpeg/).
 
 ## ¿Cómo se conecta Rootstock a bitcoin?
 
@@ -32,9 +32,9 @@ En Rootstock, los bloques se crean cada 30 segundos para asegurar la ejecución 
 
 ### Powpeg con Bitcoin
 
-El segundo punto de contacto es el [Powpeg](/concepts/powpeg/), también conocido como bridge.
+El segundo punto de contacto es el [Powpeg](/concepts/foundations/powpeg/), también conocido como bridge.
 
-Este componente conecta ambas redes para permitir la transferencia de bitcoins a Rootstock, lo que a su vez permite a los desarrolladores interactuar con contratos inteligentes. Ellos pagan el gas utilizando el mismo bitcoin, el smart bitcoin.
+Este componente conecta ambas redes para permitir la transferencia de bitcoins a Rootstock, lo que a su vez permite a los desarrolladores interactuar con contratos inteligentes. Ellos pagan el gas en rBTC, que está anclado 1:1 con BTC.
 
 Para ello, usted envía bitcoins a una dirección especial donde quedan bloqueados en la red de Bitcoin. A continuación, en la misma dirección en la red de Rootstock, esos mismos bitcoins son liberados al usuario para su uso en la red de Rootstock. Esto se llama peg-in.
 
