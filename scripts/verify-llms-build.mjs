@@ -85,7 +85,7 @@ for (const locale of LOCALES) {
         const sizeOk = chars < MAX_LLMS_TXT_CHARS;
         if (!sizeOk) failed = true;
         console.log(
-          `  ${sizeOk ? '✓' : '✗ OVER LIMIT'} ${file} size ${chars} chars (limit ${MAX_LLMS_TXT_CHARS})`,
+          `  ${sizeOk ? '✓' : '✗ OVER LIMIT'} ${file} size ${chars} chars (must be < ${MAX_LLMS_TXT_CHARS})`,
         );
       }
     }
