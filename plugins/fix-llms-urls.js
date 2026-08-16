@@ -19,39 +19,39 @@ const SITE_ORIGIN = 'https://dev.rootstock.io';
 
 /** Hub and category pages in sitemap that the llms plugin may omit. */
 const SUPPLEMENTARY_HUB_ENTRIES = [
-  ['RIF Suite', '/concepts/rif-suite/', 'Open source tools that make it faster and more rewarding to build on Bitcoin.'],
-  ['Blockchain Essentials', '/developers/blockchain-essentials/', 'Interact with Rootstock, read transactions, and deploy your first smart contract.'],
-  ['New to Blockchain', '/developers/blockchain-essentials/new-to-blockchain/', 'Distributed ledgers, keys, wallets, gas, and transactions.'],
-  ['Rootstock Essentials', '/developers/blockchain-essentials/rootstock-essentials/', 'Architecture, smart contract fundamentals, and your first dApp.'],
+  ['RIF Suite', '/concepts/rif-suite/', 'Open-source tools for building on Bitcoin.'],
+  ['Blockchain Essentials', '/developers/blockchain-essentials/', 'Read transactions and deploy your first contract.'],
+  ['New to Blockchain', '/developers/blockchain-essentials/new-to-blockchain/', 'Ledgers, keys, wallets, gas, and transactions.'],
+  ['Rootstock Essentials', '/developers/blockchain-essentials/rootstock-essentials/', 'Architecture, contracts, and your first dApp.'],
   ['Integrate', '/developers/integrate/', 'Integrate dApps with Rootstock SDKs and protocols.'],
-  ['RIF Relay Integration', '/developers/integrate/rif-relay/', 'Sponsored transactions with RIF Relay on Rootstock.'],
+  ['RIF Relay Integration', '/developers/integrate/rif-relay/', 'Sponsored transactions with RIF Relay.'],
   ['RNS Integration', '/developers/integrate/rns/', 'Integrate RIF Name Service in your dApp.'],
   ['Libraries', '/developers/libraries/', 'SDKs and libraries for Rootstock development.'],
-  ['RPC API', '/developers/rpc-api/', 'JSON-RPC providers and API guides for Rootstock.'],
-  ['Smart Contracts', '/developers/smart-contracts/', 'Hardhat, Foundry, verification, and contract tooling.'],
-  ['RSK CLI', '/developers/smart-contracts/rsk-cli/', 'CLI for wallets, deployments, and contract interaction on Rootstock.'],
-  ['Thirdweb on Rootstock', '/developers/smart-contracts/thirdweb/', 'Build and deploy with the Thirdweb SDK on Rootstock.'],
+  ['RPC API', '/developers/rpc-api/', 'JSON-RPC providers and API guides.'],
+  ['Smart Contracts', '/developers/smart-contracts/', 'Hardhat, Foundry, verification, and tooling.'],
+  ['RSK CLI', '/developers/smart-contracts/rsk-cli/', 'CLI for wallets, deploy, and interaction.'],
+  ['Thirdweb on Rootstock', '/developers/smart-contracts/thirdweb/', 'Build and deploy with Thirdweb on Rootstock.'],
   ['Runes on Rootstock', '/developers/use-cases/runes-rootstock/', 'Developer guides for Runes on Rootstock.'],
   ['Verify Smart Contracts', '/developers/verify-smart-contracts/', 'Verify contract source on Rootstock explorers.'],
   ['EAS Attestations', '/dev-tools/attestations/eas/', 'Ethereum Attestation Service on Rootstock.'],
   ['DeFi Developer Guide', '/resources/guides/defi-developer-guide/', 'Patterns and standards for DeFi on Rootstock.'],
-  ['User Guides', '/resources/guides/', 'PowPeg, Atlas, Runes, and other Rootstock user guides.'],
-  ['PowPeg App Guide', '/resources/guides/powpeg-app/', 'Use the PowPeg App for BTC and rBTC transfers.'],
+  ['User Guides', '/resources/guides/', 'PowPeg, Atlas, Runes, and other user guides.'],
+  ['PowPeg App Guide', '/resources/guides/powpeg-app/', 'BTC and rBTC transfers with the PowPeg App.'],
   ['Runes Airdrop Machine', '/resources/guides/runes-rootstock/airdrop-giveaway-machine/', 'Build a Runes airdrop machine on Rootstock.'],
-  ['Deploy MockBridge Contract', '/resources/guides/runes-rootstock/deploy-mockbridge-contract/', 'Deploy a MockBridge contract for Runes on Rootstock.'],
+  ['Deploy MockBridge Contract', '/resources/guides/runes-rootstock/deploy-mockbridge-contract/', 'Deploy a MockBridge contract for Runes.'],
   ['Node Setup', '/node-operators/setup/', 'Install and configure a Rootstock node.'],
   ['Node Configuration', '/node-operators/setup/configuration/', 'Configure a Rootstock node for your environment.'],
   ['Node Runner', '/node-operators/setup/node-runner/', 'Run a Rootstock node in production.'],
   ['JSON-RPC', '/node-operators/json-rpc/', 'JSON-RPC methods for Rootstock node operators.'],
   ['Merged Mining', '/node-operators/merged-mining/', 'Set up merge mining for Bitcoin and Rootstock.'],
   ['Node Maintenance', '/node-operators/maintenance/', 'Operate and maintain a Rootstock node.'],
-  ['Shared Setup for Use Cases', '/use-cases/interoperability/shared-setup/', 'Common setup steps for Rootstock use case tutorials.'],
+  ['Shared Setup for Use Cases', '/use-cases/interoperability/shared-setup/', 'Common setup for Rootstock use case tutorials.'],
   ['USSD Rootstock DeFi', '/use-cases/onboarding-ux/ussd-rootstock-defi/', 'USSD-based DeFi onboarding on Rootstock.'],
-  ['Developer Cheatsheet', '/cheatsheet/', 'One-page Rootstock developer quick reference for network setup, kits, and AI tooling.'],
+  ['Developer Cheatsheet', '/cheatsheet/', 'One-page Rootstock developer quick reference.'],
 ];
 
-/** Keep llms.txt under the 50KB agent-ingest budget used by CI. */
-const LLMS_DESCRIPTION_MAX_LENGTH = 50;
+/** Keep llms.txt under Fern's 50,000-character preferred agent-ingest budget. */
+const LLMS_DESCRIPTION_MAX_LENGTH = 40;
 
 function stripNumberedPrefix(segment) {
   return segment.replace(/^\d+-/, '');
