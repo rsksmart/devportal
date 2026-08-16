@@ -50,7 +50,7 @@ const SUPPLEMENTARY_HUB_ENTRIES = [
   ['Developer Cheatsheet', '/cheatsheet/', 'One-page Rootstock developer quick reference.'],
 ];
 
-/** Keep llms.txt under Fern's 50,000-character preferred agent-ingest budget. */
+/** Truncate per-entry descriptions to help keep llms.txt under Fern's 50,000-character preferred agent-ingest budget. */
 const LLMS_DESCRIPTION_MAX_LENGTH = 40;
 
 function stripNumberedPrefix(segment) {
