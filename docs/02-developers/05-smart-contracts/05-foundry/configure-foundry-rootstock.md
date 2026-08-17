@@ -6,9 +6,11 @@ description: "Learn how to configure your Foundry project for development on Roo
 tags: [guides, developers, smart contracts, rsk, rootstock, foundry, dApps, ethers]
 ---
 
-### Environment Configuration
+Configure Foundry for Rootstock testnet and mainnet by setting RPC and account environment variables, then load them before you forge or cast.
 
-Once you have an account with a private key, create a `.env` file in the root of the foundry project and add the variables. 
+## Environment configuration
+
+Once you have an account with a private key, create a `.env` file in the root of the foundry project and add the variables.
 
 Foundry automatically loads a `.env` file present in the project directory.
 
