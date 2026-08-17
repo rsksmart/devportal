@@ -44,7 +44,7 @@ The more hashing power they provide, the more secure the network is.</p>
 
 ## Architecture overview
 
-Rootstock sits on Bitcoin via merged mining. dApps call the Rootstock Virtual Machine (RVM) directly. Developer tools are used at build time. RIF services and RootstockCollective sit beside the stack. The PowPeg and rBTC connect value and gas to Bitcoin. For PowPeg-specific security properties, see the [PowPeg security summary](/concepts/foundations/powpeg/security-model/).
+Rootstock sits on Bitcoin via merged mining. dApps call the Rootstock Virtual Machine (RVM) directly. Developer tools are used at build time. RIF services and RootstockCollective sit beside the stack. The PowPeg and rBTC connect value and gas to Bitcoin. For how those layers are secured, see [Security at Rootstock](/concepts/foundations/security/).
 
 ## The Stack
 

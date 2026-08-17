@@ -1,0 +1,7 @@
+label: Security
+position: 10
+collapsed: false
+description: Why Rootstock is secure, how it stays secure, and how you can verify the model.
+link:
+  type: doc
+  id: concepts/foundations/security/index

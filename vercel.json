@@ -2,6 +2,46 @@
   "trailingSlash": true,
   "redirects": [
     {
+      "source": "/concepts/foundations/security/model",
+      "destination": "/concepts/foundations/security/",
+      "permanent": true
+    },
+    {
+      "source": "/concepts/foundations/security/model/",
+      "destination": "/concepts/foundations/security/",
+      "permanent": true
+    },
+    {
+      "source": "/concepts/foundations/security/security-model",
+      "destination": "/concepts/foundations/security/",
+      "permanent": true
+    },
+    {
+      "source": "/concepts/foundations/security/security-model/",
+      "destination": "/concepts/foundations/security/",
+      "permanent": true
+    },
+    {
+      "source": "/concepts/foundations/security/reports",
+      "destination": "/concepts/foundations/security/#security-reports",
+      "permanent": true
+    },
+    {
+      "source": "/concepts/foundations/security/reports/",
+      "destination": "/concepts/foundations/security/#security-reports",
+      "permanent": true
+    },
+    {
+      "source": "/concepts/security",
+      "destination": "/concepts/foundations/security/",
+      "permanent": true
+    },
+    {
+      "source": "/concepts/security/",
+      "destination": "/concepts/foundations/security/",
+      "permanent": true
+    },
+    {
       "source": "/concepts/powpeg",
       "destination": "/concepts/foundations/powpeg/"
     },
@@ -1255,7 +1295,7 @@
     },
     {
       "source": "/rsk/architecture/security/",
-      "destination": "/concepts/foundations/powpeg/security-model/"
+      "destination": "/concepts/foundations/security/"
     },
     {
       "source": "/solutions/babelfish/",
