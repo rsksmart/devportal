@@ -36,48 +36,44 @@ To learn more about Metatmask and how to add it to Rootstock programmatically, s
 
 To set up RIF relay contract, clone the RIF Relay Contracts Repository: https://github.com/rsksmart/rif-relay-contracts, then follow the [RIF Relay Deployment](/developers/integrate/rif-relay/deployment/) guide to deploy an RIF Relay contract, enable revenue sharing, and whitelist the token by allowing it.
 
-````mdx-code-block
-<Accordion>
-  <Accordion.Item eventKey="0">
-    <Accordion.Header as="h3">Check allowed tokens</Accordion.Header>
-    <Accordion.Body>
-       ```bash
-        npx hardhat allowed-tokens --network regtest
-       ```
-        Response:
-        ```bash
-            rif-relay-contracts % npx hardhat allowed-tokens --network regtest
-            deployVerifier [ '0x6f217dEd6c86A57f1211F464302e6fA544045B4f' ]
-            relayVerifier [ '0x6f217dEd6c86A57f1211F464302e6fA544045B4f' ]
-            customDeployVerifier [ '0x6f217dEd6c86A57f1211F464302e6fA544045B4f' ]
-            customRelayVerifier [ '0x6f217dEd6c86A57f1211F464302e6fA544045B4f' ]
-            nativeHolderDeployVerifier [ '0x6f217dEd6c86A57f1211F464302e6fA544045B4f' ]
-            nativeHolderRelayVerifier [ '0x6f217dEd6c86A57f1211F464302e6fA544045B4f' ]
-        ```
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="1">
-    <Accordion.Header as="h3">Mint token</Accordion.Header>
-    <Accordion.Body>
-        - To mint new units of the `UtilToken` into the Metamask wallet address:
-        - Go to the Metamask wallet, and copy the wallet address:
-        - Execute the command to mint the token, where:
-            - `--token-address` → this is the address for `UtilToken`
-            - `--amount` → quantity to be minted
-            - `--receiver` → wallet address
-            ```bash
-            npx hardhat mint \
-            --token-address 0x6f217dEd6c86A57f1211F464302e6fA544045B4f \
-            --amount 10000000000000000000 \
-            --receiver <wallet-address> \
-            --network regtest
-            ```
-        - Import the minted token into the wallet.
-        - To see the token in the wallet, click on “import tokens”, and then paste the token address.
-    </Accordion.Body>
-  </Accordion.Item>
-</Accordion>
-````
+### Check allowed tokens
+
+```bash
+npx hardhat allowed-tokens --network regtest
+```
+
+Response:
+
+```bash
+rif-relay-contracts % npx hardhat allowed-tokens --network regtest
+deployVerifier [ '0x6f217dEd6c86A57f1211F464302e6fA544045B4f' ]
+relayVerifier [ '0x6f217dEd6c86A57f1211F464302e6fA544045B4f' ]
+customDeployVerifier [ '0x6f217dEd6c86A57f1211F464302e6fA544045B4f' ]
+customRelayVerifier [ '0x6f217dEd6c86A57f1211F464302e6fA544045B4f' ]
+nativeHolderDeployVerifier [ '0x6f217dEd6c86A57f1211F464302e6fA544045B4f' ]
+nativeHolderRelayVerifier [ '0x6f217dEd6c86A57f1211F464302e6fA544045B4f' ]
+```
+
+### Mint token
+
+- To mint new units of the `UtilToken` into the Metamask wallet address:
+- Go to the Metamask wallet, and copy the wallet address:
+- Execute the command to mint the token, where:
+    - `--token-address` → this is the address for `UtilToken`
+    - `--amount` → quantity to be minted
+    - `--receiver` → wallet address
+
+```bash
+npx hardhat mint \
+--token-address 0x6f217dEd6c86A57f1211F464302e6fA544045B4f \
+--amount 10000000000000000000 \
+--receiver YOUR_WALLET_ADDRESS \
+--network regtest
+```
+
+- Import the minted token into the wallet.
+- To see the token in the wallet, click on “import tokens”, and then paste the token address.
+
 
 ### Step 4: Set up RIF Relay Server
 

@@ -55,10 +55,11 @@ npm -v
 
 ## Getting Started
 
-<Steps>
-  <Step title="Clone the Repository">
+Clone the starter kit, review the Ignition modules, set RPC credentials, then compile, test, deploy, and verify on Rootstock testnet.
 
- Open your terminal (Command Prompt, PowerShell, or any terminal you like) And type this command.
+## Clone the Repository
+
+Open your terminal (Command Prompt, PowerShell, or any terminal you like) And type this command.
 
 ```
 git clone https://github.com/rsksmart/rootstock-hardhat-ignition-starterkit.git
@@ -77,9 +78,9 @@ npm install
 
 This will download and set up everything the project needs.
 
-  </Step>
-  <Step title="Understand the Project Structure">
-    Once you’ve set up everything, your project files will look like this:
+## Understand the Project Structure
+
+Once you’ve set up everything, your project files will look like this:
 
 ```
 .
@@ -125,7 +126,6 @@ export default BoxModule;
 :::
 
 
-
 2. #### Lock.ts – Lock Module
 
 This script handles the deployment of the Lock contract with specific parameters for the unlock time and the locked amount.
@@ -166,11 +166,9 @@ const LockModule = buildModule("LockModule", (m) => {
 
 :::
 
+## Set Up Environment Variables
 
-
-  </Step>
-  <Step title="Set Up Environment Variables">
-    1. Create a file named .env in the root folder of your project.
+1. Create a file named .env in the root folder of your project.
 
 2. Add the following lines to the file:
 
@@ -194,9 +192,9 @@ PRIVATE_KEY=<your-deployer-account-private-key>
 
 :::
 
-  </Step>
-   <Step title="Compile and Test Your Smart Contracts">
-   - Run this command to compile the Contract:
+## Compile and Test Your Smart Contracts
+
+- Run this command to compile the Contract:
 
 ```
 npx hardhat compile
@@ -246,9 +244,10 @@ Compiled 2 Solidity files successfully (evm target: paris).
   12 passing (1s)
 
 ```
- </Step>
-   <Step title="Deploy the Smart Contract">
-    The following command is used to deploy a smart contract to the Rootstock Testnet:
+
+## Deploy the Smart Contract
+
+The following command is used to deploy a smart contract to the Rootstock Testnet:
 
 ```
 npx hardhat ignition deploy --network rskTestnet ignition/modules/Box.ts
@@ -342,23 +341,16 @@ The output includes the deployed contract's address, which you can use to intera
 
 :::
 
+## Verify the Deployment
 
-
-  </Step>
-   <Step title="Verify the Deployment">
-    1. Copy the contract address from the output (e.g., `0x4949D33d795dF56283EEB3cE7744038Ab229712f`).
+1. Copy the contract address from the output (e.g., `0x4949D33d795dF56283EEB3cE7744038Ab229712f`).
 2. Go to the [Rootstock Testnet Explorer](https://explorer.testnet.rsk.co/).
 3. Paste the address into the search bar and check that your contract has been deployed.
 
 
-<figure>
-<img src="/img/developers/quickstart/hardhat-ignition/rootstock-explorer.png" alt="Rootstock Testnet Explorer"/>
-  <figcaption>Rootstock Testnet Explorer (fig 1.)</figcaption>
-</figure>
+![Rootstock Testnet Explorer](/img/developers/quickstart/hardhat-ignition/rootstock-explorer.png)
 
-
-  </Step>
-</Steps>
+*Rootstock Testnet Explorer (fig 1.)*
 
 :::warning[Troubleshooting]
 

@@ -341,15 +341,15 @@ Proper MetaMask configuration is essential. Make sure an Rootstock testnet netwo
 
 ### Frontend folder structure
 
-<FileTree>
-  -- ==frontend==
-  ---- index.html
-  ---- vite.config.js
-  ---- ==src==
-  ------ main.jsx
-  ------ App.jsx
-  ------ contracts.js
-</FileTree>
+```
+frontend/
+  index.html
+  vite.config.js
+  src/
+    main.jsx
+    App.jsx
+    contracts.js
+```
 
 Notice that `contracts.js` exports the frontend-friendly contract objects using the ABIs from `artifacts/`.
 
