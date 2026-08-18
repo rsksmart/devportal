@@ -59,7 +59,7 @@ Clone the starter kit, review the Ignition modules, set RPC credentials, then co
 
 ## Clone the Repository
 
-Open your terminal (Command Prompt, PowerShell, or any terminal you like) And type this command.
+Open your terminal (Command Prompt, PowerShell, or any terminal you like) and type this command:
 
 ```
 git clone https://github.com/rsksmart/rootstock-hardhat-ignition-starterkit.git
