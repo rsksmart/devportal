@@ -69,10 +69,12 @@
     "linkinator": "^7.5.3"
   },
   "overrides": {
-    "seroval": "^1.6.2"
+    "seroval": "^1.6.2",
+    "solid-js": "^1.9.15"
   },
   "resolutions": {
-    "seroval": "^1.6.2"
+    "seroval": "^1.6.2",
+    "solid-js": "^1.9.15"
   },
   "browserslist": {
     "production": [
