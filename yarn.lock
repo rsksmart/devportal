@@ -1746,7 +1746,7 @@
     vfile "^6.0.1"
     webpack "^5.88.1"
 
-"@docusaurus/module-type-aliases@3.10.2", "@docusaurus/module-type-aliases@^3.8.0":
+"@docusaurus/module-type-aliases@3.10.2", "@docusaurus/module-type-aliases@^3.10.2":
   version "3.10.2"
   resolved "https://registry.yarnpkg.com/@docusaurus/module-type-aliases/-/module-type-aliases-3.10.2.tgz#7c3b940c77d72e71d33a1e76f0e003b418e6163a"
   integrity sha512-h/I5e4jaAhDHW4vaLENi1i2hnOEnXY1t9R+nnRTbgUl7ymVRzN/HF7dDfj8rKYGj8gfIge+Ef+iYRAMtbGvsrQ==
@@ -8148,17 +8148,17 @@ jszip@^3.10.1:
     readable-stream "~2.3.6"
     setimmediate "^1.0.5"
 
-katex@^0.16.11:
-  version "0.16.22"
-  resolved "https://registry.npmjs.org/katex/-/katex-0.16.22.tgz"
-  integrity sha512-XCHRdUw4lf3SKBaJe4EvgqIuWwkPSo9XoeO8GjQW94Bp7TWv9hNhzZjZ+OH9yf1UmLygb7DIT5GSFQiyt16zYg==
-  dependencies:
-    commander "^8.3.0"
-
 katex@^0.16.45:
   version "0.16.47"
   resolved "https://registry.yarnpkg.com/katex/-/katex-0.16.47.tgz#0a13a42c2deb4f74e61f162d440b9165a548030f"
   integrity sha512-Eeo8Ys1doU1z+x8AZsPpQu+p/QcZBI5PeOo7QGQdy2x2m0MU/hYagBbGOmXwr5KVbEfVuWv9LpnQWeehogurjg==
+  dependencies:
+    commander "^8.3.0"
+
+katex@^0.18.4:
+  version "0.18.4"
+  resolved "https://registry.yarnpkg.com/katex/-/katex-0.18.4.tgz#aa09d0bfbcbab71a9a0f9d420def6c0d0a227a94"
+  integrity sha512-IMPntbRLOU+eu88XDiFKqQ8Akhr9Tv7jDMXqPhjG9SI1JMA4DIgXk4x9k4skJz2NZJXBRbC+2pYBLj9olqcZow==
   dependencies:
     commander "^8.3.0"
 
