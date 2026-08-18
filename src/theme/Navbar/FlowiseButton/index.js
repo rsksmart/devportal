@@ -1,4 +1,5 @@
 import React from 'react';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { pushDataLayer } from '/src/_utils/analytics';
 
 function openChat() {
@@ -11,6 +12,13 @@ function openChat() {
 }
 
 export default function FlowiseButton() {
+  const { siteConfig: { customFields } } = useDocusaurusContext();
+  const { flowiseApiHost, flowiseChatflowId, flowiseChatbotEnabled } = customFields.keys;
+
+  // No point showing a button that opens a chatbot that never mounted
+  // (mirrors the guard in src/theme/Navbar/FlowiseChatbot/index.js).
+  if (!flowiseChatbotEnabled || !flowiseApiHost || !flowiseChatflowId) return null;
+
   return (
     <button
       className="ask-rootstock-btn"

@@ -523,9 +523,9 @@ function FlowiseChatbotInner({ apiHost, chatflowId }) {
 
 export default function FlowiseChatbot() {
   const { siteConfig: { customFields } } = useDocusaurusContext();
-  const { flowiseApiHost, flowiseChatflowId } = customFields.keys;
+  const { flowiseApiHost, flowiseChatflowId, flowiseChatbotEnabled } = customFields.keys;
 
-  if (!flowiseApiHost || !flowiseChatflowId) return null;
+  if (!flowiseChatbotEnabled || !flowiseApiHost || !flowiseChatflowId) return null;
 
   return (
     <BrowserOnly>

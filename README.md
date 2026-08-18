@@ -31,6 +31,10 @@ yarn start
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
+### Environment Variables
+
+- `FLOWISE_CHATBOT_ENABLED` (optional): set to `false` to disable the "Ask Rootstock AI" chatbot widget, navbar button, and code block button. Defaults to enabled.
+
 ## Usage 
 
 ### Production Build

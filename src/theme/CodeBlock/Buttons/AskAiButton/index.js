@@ -45,7 +45,7 @@ export default function AskAiButton({ className }) {
   const {
     siteConfig: { customFields },
   } = useDocusaurusContext();
-  const { flowiseApiHost, flowiseChatflowId } = customFields.keys;
+  const { flowiseApiHost, flowiseChatflowId, flowiseChatbotEnabled } = customFields.keys;
   const {
     metadata: { code, language },
   } = useCodeBlockContext();
@@ -80,7 +80,7 @@ export default function AskAiButton({ className }) {
 
   // No point showing the button when the Flowise widget isn't configured
   // (mirrors the guard in src/theme/Navbar/FlowiseChatbot/index.js).
-  if (!flowiseApiHost || !flowiseChatflowId) return null;
+  if (!flowiseChatbotEnabled || !flowiseApiHost || !flowiseChatflowId) return null;
 
   return (
     <Button
