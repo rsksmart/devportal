@@ -40,7 +40,7 @@ Below is an architecture illustration showing the high-level system flow:
 
 ## Why build on Rootstock?
 
-Rootstock is a Bitcoin sidechain secured by over 85% of Bitcoin's hash power through merge mining. Key benefits for developers:
+Rootstock is Bitcoin's financial infrastructure: an EVM-compatible Bitcoin sidechain secured by over 85% of Bitcoin's hash power through merge mining. Key benefits for developers:
 
 * **Bitcoin compatibility:** smart contracts can rely on rBTC and the Bitcoin security model.
 * **EVM compatibility:** use the same Solidity, Hardhat, ethers.js, Metamask, etc.

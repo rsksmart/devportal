@@ -11,7 +11,7 @@ tags:
 description: 이 섹션에서는 Rootstock 블록체인에 관한 핵심 개념을 다룹니다. Rootstock을 사용하려면 블록체인 기술, 비트코인, 스마트 컨트랙트에 대해 알아야 합니다.
 ---
 
-Rootstock은 최초이자 가장 오랫동안 운영되고 있는 비트코인 사이드체인입니다. 비트코인의 작업 증명(PoW) 보안성과 이더리움의 스마트 컨트랙트 기능을 동시에 갖춘 유일한 레이어 2 솔루션이기도 합니다. 오픈소스로 제공되며, EVM과 호환되고, 비트코인 해시 파워의 60% 이상에 의해 보호됩니다. 이러한 강력한 보안 모델 덕분에 개발자들은 신뢰에 의존하지 않는(trustless) 혁신적인 dApp을 생태계 안에서 자유롭게 구축할 수 있습니다.
+Rootstock는 비트코인의 금융 인프라입니다. 오픈 소스이며 EVM 호환인 비트코인 사이드체인이고, 머지 마이닝을 통해 비트코인 해시 파워의 85% 이상으로 보호됩니다. 기업, 금융기관, 빌더는 이더리움 도구로 비트코인으로 담보된 대출, 결제, 수익, 재무 상품을 출시하기 위해 사용합니다.
 
 이 섹션에서는 Rootstock 블록체인을 이해하고 활용하는 데 필요한 기본 지식을 제공합니다. 블록체인 기술, 비트코인, 스마트 컨트랙트에 대한 기본적인 이해가 있다면 내용을 더 쉽게 따라갈 수 있습니다.
 
@@ -19,13 +19,13 @@ Rootstock은 최초이자 가장 오랫동안 운영되고 있는 비트코인 �
 
 | 참고 자료                                                        | 설명                                                                                                                                                                                                                 |
 | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Rootstock 블록체인 개요](/concepts/fundamentals/)                 | Rootstock 플랫폼에 관해 종합적으로 알아보세요.                                                                                                                                                                     |
-| [Rootstock 스택](/concepts/fundamentals/stack/)                | Rootstock이 비트코인 PoW의 보안과 이더리움의 스마트 컨트랙트 기능을 어떻게 융합하는지 알아보세요.                                                                                                                                       |
+| [Rootstock 블록체인 개요](/concepts/foundations/)                 | Rootstock 플랫폼에 관해 종합적으로 알아보세요.                                                                                                                                                                     |
+| [Rootstock 스택](/concepts/foundations/stack/)                | Rootstock이 비트코인 PoW의 보안과 이더리움의 스마트 컨트랙트 기능을 어떻게 융합하는지 알아보세요.                                                                                                                                       |
 | [용어집](/concepts/glossary/)                                   | 이 용어집은 Rootstock 및 블록체인 기술과 관련된 필수 핵심 용어에 대한 정의를 제공합니다.                                                                                                                                            |
 | [RBTC 토큰](/concepts/rbtc/)                                   | RBTC 토큰은 Rootstock 네트워크상 트랜잭션에 연료를 공급합니다. 다양한 수단으로 BTC를 RBTC로 간단하게 전환할 수 있습니다. RBTC를 획득할 수 있는 거래소와 애플리케이션의 목록을 확인하려면 [RBTC 섹션](https://rootstock.io/rbtc/)을 방문하세요. |
 | [RIF 도구 모음](/concepts/rif-suite/)                            | 비트코인에 기반한 개발을 간소화하고 장려하기 위해 설계된 종합 오픈 소스 도구 및 기술 모음인 'Rootstock 인프라 프레임워크'에 관해 알아보세요.                                                                                                              |
-| [Rootstock 보안](/concepts/powpeg/security-model/)             | Rootstock 플랫폼은 [Powpeg](/concepts/powpeg/)라는 보안 메커니즘을 사용합니다. 이 메커니즘은 "심층 방어(defence-in-depth)"라는 계층적 보안 모델을 기반으로 합니다.                                           |
-| [Powpeg HSM 펌웨어](/concepts/powpeg/hsm-firmware-attestation/) | HSM 펌웨어 인증을 사용하여 Powpeg 노드를 식별하는 방법을 알아보세요.                                                                                                                                                        |
+| [Powpeg 보안](/concepts/foundations/powpeg/security-model/)             | Powpeg 관련 보안 요약. 게시된 감사는 [보안 저장소](https://github.com/rsksmart/security)에 있습니다.                                           |
+| [Powpeg HSM 펌웨어](/concepts/foundations/powpeg/hsm-firmware-attestation/) | HSM 펌웨어 인증을 사용하여 Powpeg 노드를 식별하는 방법을 알아보세요.                                                                                                                                                        |
 | [계정 기반 주소](/concepts/account-based-addresses/)               | Rootstock 주소에서는 EIP-1191 체인 ID가 체크섬(checksum)으로 사용됩니다. BIP-44 호환 지갑의 파생 경로에는 m/44'/137'/0'/0이 사용됩니다.                                                            |
 
 ## 다음 단계

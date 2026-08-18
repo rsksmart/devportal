@@ -6,7 +6,7 @@ description: "Building dApps on Rootstock involves interacting with the blockcha
 tags: [hardhat, quick start, developer tools, rsk, rootstock, ethereum, dApps, smart contracts]
 ---
 
-Building dApps on Rootstock involves interacting with the blockchain network. But how do you access this network? That's where node providers come in. Think of them as gateways to the blockchain.
+Building dApps on Rootstock involves interacting with the blockchain network. But how you access this network? That's where node providers come in. Think of them as gateways to the blockchain.
 
 ## What are Node Providers?
 
@@ -19,7 +19,28 @@ Imagine a vast library filled with information about everything happening on the
 
 ## RPC Node Providers on Rootstock
 
-Here you can find a list of rpc node providers on Rootstock. 
+Here you can find a list of rpc node providers on Rootstock.
+
+## Summary
+
+RPC node providers give JSON-RPC access to Rootstock full nodes. Use them to read chain data and submit transactions without running your own node.
+
+### Providers
+
+| Provider | Path | Description |
+|----------|------|-------------|
+| Rootstock RPC API | `/developers/rpc-api/rootstock/` | Official JSON-RPC interface for Rootstock nodes |
+| Alchemy | `/developers/rpc-api/alchemy/` | Web3 APIs and SDKs for Rootstock |
+| GetBlock | `/dev-tools/node-rpc/getblock/` | Multi-chain node access including Rootstock |
+| dRPC | `/dev-tools/node-rpc/drpc/` | Low-latency RPC platform for Web3 |
+| NOWNodes | `/dev-tools/node-rpc/nownodes/` | Blockchain-as-a-service nodes and explorers |
+
+### Network reference
+
+| Network | Chain ID | Public RPC |
+|---------|----------|------------|
+| Rootstock Mainnet | 30 | `https://public-node.rsk.co` |
+| Rootstock Testnet | 31 | `https://public-node.testnet.rsk.co` |
 
 <CardsGrid>
   <CardsGridItem
@@ -64,4 +85,8 @@ Here you can find a list of rpc node providers on Rootstock.
   />
 </CardsGrid>
 
+## Compare RPC Provider Latency
 
+Runtime characteristics such as latency, availability, and reliability vary by region and change over time. [OpenChainBench](https://openchainbench.com/benchmarks/rootstock-rpc) is an independent, open-source benchmarking tool — not an official Rootstock service — that regularly measures the free, no-key public Rootstock endpoints and publishes live results including response latency percentiles (p50, p90, p99) and success rate, from three geographic probe regions (US East, EU West, Singapore).
+
+Use the benchmark as an additional reference to complement testing against your application's own requirements.

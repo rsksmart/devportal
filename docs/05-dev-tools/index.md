@@ -6,6 +6,46 @@ tags: [rsk, rootstock, tools, developer tools]
 description: "Explore a curated selection of smart contract development tools and languages. From the familiar Solidity to Rust or Developer Tools like Hardhat, you'll find everything you need to interact and deploy your smart contracts on Rootstock."
 ---
 
+This page catalogs developer tools and infrastructure for Rootstock. Use the filters on the web page to narrow results by category.
+
+## Summary
+
+Rootstock dev tools cover bridges, wallets, RPC providers, explorers, smart contract frameworks, starter kits, oracles, data indexers, faucets, gas APIs, account abstraction, and AI integrations. Most tools are EVM-compatible and work on Rootstock mainnet (chain ID 30) and testnet (chain ID 31).
+
+### Featured entries
+
+| Tool | Path | Description |
+|------|------|-------------|
+| Atlas Bridge | `/resources/guides/atlas/` | Compare providers and bridge assets to Rootstock |
+| PowPeg App | `/resources/guides/powpeg-app/` | Native BTC ↔ rBTC peg |
+| Hardhat | `/dev-tools/dev-environments/hardhat/` | Solidity development environment |
+| Foundry | `/dev-tools/foundry/` | Smart contract toolchain (Forge, Cast, Anvil) |
+| MCP Server | `/developers/quickstart/mcp/` | Connect AI clients to Rootstock |
+| MetaMask | `/dev-tools/wallets/metamask/` | Add Rootstock network and tokens |
+| Rootstock Explorer | `/dev-tools/explorers/rootstock-explorer/` | Blocks, txs, contracts, verification |
+| RPC API | `/developers/rpc-api/rootstock/` | JSON-RPC for Rootstock nodes |
+| RBTC Flyover | `/developers/integrate/flyover/` | Fast BTC ↔ rBTC transfers |
+| Wagmi Starter Kit | `/developers/quickstart/wagmi/` | React dApp starter on Rootstock |
+
+### Categories
+
+- **Bridges:** PowPeg App, Atlas Bridge, RBTC Flyover, Wormhole, Chainport, LayerZero
+- **Dev environments:** Hardhat, Foundry, Remix, Thirdweb
+- **Starter kits:** Wagmi, Reown, Privy, Hardhat, Web3Auth, Dynamic, Etherspot AA kit, Rootstock Scaffold
+- **Wallets:** MetaMask, Rootstock Wallets hub, Para
+- **RPC / nodes:** Rootstock RPC API, Alchemy, GetBlock, dRPC, NOWNodes
+- **Explorers:** Rootstock Explorer, Blockscout, Blockchair
+- **Data / analytics:** The Graph, DefiLlama, Tenderly, Envio, Goldsky, Subquery, Rootstock Stats
+- **Oracles:** Redstone Finance, APRO Oracle
+- **AI:** MCP Server, AI Agent guide
+- **CLIs:** RSK CLI, Rootstock CLI (GitHub), Rootstock GO CLI
+- **Libraries / SDKs:** Ethers.js, Web3.js, RIF Relay, RIF Wallet, RNS
+- **Faucets:** Rootstock Faucet, RIF Testnet Faucet, Thirdweb Faucet
+- **Gas:** Blocknative Gas Price API
+- **Account abstraction:** Etherspot, Account Abstraction Kit
+- **Attestations:** Rootstock Attestation Service (RAS)
+- **Mining pools:** Antpool, F2Pool, ViaBTC, Luxor, BraiinsPool
+
 ````mdx-code-block
 <Filter
   values={[

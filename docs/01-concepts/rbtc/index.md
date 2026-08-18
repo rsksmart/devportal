@@ -5,7 +5,7 @@ tags: [mainnet, testnet, tokens, rbtc, gas, rsk, rootstock]
 sidebar_label: rBTC Token
 ---
 
-rBTC is the token used to [pay for the execution](/concepts/rbtc/gas/) of transactions in Rootstock. You can [convert BTC into rBTC](conversion.md) by sending BTC through the [Powpeg](/concepts/powpeg/) (both in Testnet and Mainnet), or by using the [faucet in Testnet](https://faucet.rootstock.io/), or via decentralized exchanges.
+rBTC is the token used to [pay for the execution](/concepts/rbtc/gas/) of transactions in Rootstock. You can [convert BTC into rBTC](conversion.md) by sending BTC through the [Powpeg](/concepts/foundations/powpeg/) (both in Testnet and Mainnet), or by using the [faucet in Testnet](https://faucet.rootstock.io/), or via decentralized exchanges.
 
 :::info[Additional Faucet Options (Please note these faucets may have daily limits)]
 

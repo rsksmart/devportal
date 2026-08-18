@@ -6,7 +6,9 @@ description: "Dev Environments provide a complete set of tools for writing, test
 tags: [hardhat, remix, foundry, developer tools, rsk, rootstock, ethereum, dApps, smart contracts]
 ---
 
-Dev Environments provide a complete set of tools for writing, testing, and deploying your smart contracts on Rootstock. 
+Dev Environments provide a complete set of tools for writing, testing, and deploying your smart contracts on Rootstock.
+
+Set your Solidity compiler and `evmVersion` to match [Development Prerequisites](/developers/requirements/). For opcode-level compatibility and Ethereum porting notes, use the [EVM Compatibility Explorer](https://rskj-evm-compatibility.rsk.co/).
 
 Some benefits of using a dev environment:
 

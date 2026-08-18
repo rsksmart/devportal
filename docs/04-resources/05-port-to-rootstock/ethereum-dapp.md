@@ -22,7 +22,7 @@ This guide will walk you through porting your Ethereum dApp to the Rootstock net
 
 **1. Faster Transaction Speeds**
 
-Rootstock performs transactions by [merge-mining with Bitcoin](/concepts/merged-mining/). This means that Rootstock transactions benefit from the security of the Bitcoin network while achieving faster confirmation times compared to Ethereum.
+Rootstock performs transactions by [merge-mining with Bitcoin](/concepts/foundations/merged-mining/). This means that Rootstock transactions benefit from the security of the Bitcoin network while achieving faster confirmation times compared to Ethereum.
 
 **2. Lower Gas Fees**
 
@@ -127,14 +127,15 @@ Before you begin, ensure that you have the following:
   ```
 
   At this point, your `hardhat.config.ts` should look like this:
-  ```typescript
-    import { HardhatUserConfig } from "hardhat/config";
-    import "@nomicfoundation/hardhat-toolbox";
-    import "@nomicfoundation/hardhat-ignition-ethers";
 
-    const config: HardhatUserConfig = {
-      solidity: "0.8.30",
-  };
+```typescript
+import { HardhatUserConfig } from "hardhat/config";
+import "@nomicfoundation/hardhat-toolbox";
+import "@nomicfoundation/hardhat-ignition-ethers";
+
+const config: HardhatUserConfig = {
+  solidity: "0.8.30",
+};
 
 export default config;
 ```
@@ -145,22 +146,17 @@ To configure the Rootstock networks, you'll need an RPC URL for both mainnet and
 
 To get the RPCs, go to the [RPC API dashboard from Rootstock Labs](https://dashboard.rpc.rootstock.io/dashboard) create an account if you don't have one, and get an API key for Rootstock testnet or Rootstock mainnet.
 
+Mainnet RPC URL should look similar to this:
 
-````mdx-code-block
-<Tabs>
-  <TabItem value="contribute" label="Mainnet RPC URL should look similar to this:" default>
-    ```
-https://rpc.mainnet.rootstock.io/<API-KEY>
+```text
+https://rpc.mainnet.rootstock.io/YOUR_API_KEY
 ```
-  </TabItem>
-  <TabItem value="contest" label="Testnet RPC URL should look similar to this:">
- ```
-https://rpc.testnet.rootstock.io/<API-KEY>
-```
-  </TabItem>
 
-</Tabs>
-````
+Testnet RPC URL should look similar to this:
+
+```text
+https://rpc.testnet.rootstock.io/YOUR_API_KEY
+```
 
 The next step is to retrieve your private key. If you don't know how to get the private key to your wallet, here's a [tutorial](https://support.metamask.io/managing-my-wallet/secret-recovery-phrase-and-private-keys/how-to-export-an-accounts-private-key/) on [Metamask](https://metamask.io/).
 
@@ -219,13 +215,13 @@ const config: HardhatUserConfig = {
   networks: {
     // Mainnet configuration
     rskMainnet: {
-      url: "https://rpc.mainnet.rootstock.io/<API-KEY>",
+      url: "https://rpc.mainnet.rootstock.io/YOUR_API_KEY",
       accounts: [process.env.PRIVATE_KEY],
     },
 
     // Testnet configuration
     rskTestnet: {
-      url: "https://rpc.testnet.rootstock.io/<API-KEY>",
+      url: "https://rpc.testnet.rootstock.io/YOUR_API_KEY",
       accounts: [process.env.PRIVATE_KEY],
     },
   },
@@ -233,7 +229,7 @@ const config: HardhatUserConfig = {
 
 export default config;
 ```
-Replace `<API-KEY>` with your actual API keys obtained from the Rootstock Labs dashboard. Also, store your private key securely (e.g., in a `.env` file).
+Replace `YOUR_API_KEY` with your actual API keys obtained from the Rootstock Labs dashboard. Also, store your private key securely (for example in a `.env` file).
 
 ### Copy Ethereum Contract Code and Tests
 
@@ -337,7 +333,7 @@ npx hardhat test
 
 The test results will show whether your contract behaves as expected. You should see something like this:
 
-```s
+```text
 SimpleStorage
     Deployment
       ✔ Should deploy and initialize favoriteNumber to 0

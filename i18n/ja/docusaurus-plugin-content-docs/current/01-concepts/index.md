@@ -11,7 +11,7 @@ tags:
 description: このドキュメントセクションでは、Rootstockブロックチェーンにおける中心概念について説明しています。Rootstockを使用するには、ブロックチェーン技術、Bitcoin、スマートコントラクトについての理解が必要です。
 ---
 
-Rootstockは、最初に登場したBitcoinのサイドチェーンで、最も長い歴史を誇ります。また、Bitcoinのプルーフ・オブ・ワークのセキュリティとEthereumのスマートコントラクト機能を組み合わせた唯一のレイヤー2ソリューションです。このプラットフォームはオープンソースで、EVMと互換性があり、60%以上のBitcoinハッシュパワーによって保護されています。この堅牢なセキュリティモデルにより、開発者は活気のあるエコシステム内でトラストレスかつ革新的なdAppsを構築することができます。
+RootstockはBitcoinの金融インフラです。オープンソースでEVM互換のBitcoinサイドチェーンであり、マージマイニングによりBitcoinハッシュパワーの85%超で保護されています。事業者、金融機関、ビルダーは、Ethereumツールを使って、Bitcoinで担保された貸付、決済、利回り、トレジャリー製品をローンチするために利用します。
 
 このセクションでは、Rootstockのブロックチェーンを活用するために必要な基本知識について解説します。コンテンツを掘り下げるにつれ、ブロックチェーン技術、Bitcoin、スマートコントラクトに関する知識が役立ちます。
 
@@ -19,13 +19,13 @@ Rootstockは、最初に登場したBitcoinのサイドチェーンで、最も�
 
 | リソース                                                            | 説明                                                                                                                                                                                                                         |
 | --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Rootstockブロックチェーンの概要](/concepts/fundamentals/)                 | Rootstockプラットフォームについて包括的に理解します。                                                                                                                                                                                            |
-| [Rootstockスタック](/concepts/fundamentals/stack/)                  | Rootstockが、Bitcoin PoWのセキュリティとEthereumのスマートコントラクト機能をどのように組み合わせているかを学びます。                                                                                                                                                   |
+| [Rootstockブロックチェーンの概要](/concepts/foundations/)                 | Rootstockプラットフォームについて包括的に理解します。                                                                                                                                                                                            |
+| [Rootstockスタック](/concepts/foundations/stack/)                  | Rootstockが、Bitcoin PoWのセキュリティとEthereumのスマートコントラクト機能をどのように組み合わせているかを学びます。                                                                                                                                                   |
 | [用語集](/concepts/glossary/)                                      | この用語集では、Rootstockとブロックチェーン技術に関連する重要な用語の定義を提供します。                                                                                                                                                                           |
 | [RBTCトークン](/concepts/rbtc/)                                     | RBTCトークンは、Rootstockネットワーク上のトランザクションを可能にします。BTCからRBTCへの変換は、さまざまな方法で簡単に行うことができます。RBTCの取得を促進する取引所とアプリケーションの包括的なリストは、RBTCセクションをご覧ください。また、[RBTCセクション](https://rootstock.io/rbtc/)にアクセスすると、RBTCを入手できる取引所とアプリケーションのリストをご確認いただけます。 |
 | [RIFスイート](/concepts/rif-suite/)                                 | Bitcoin上での開発を合理化し、インセンティブを与えるために設計されたオープンソースツールと技術の包括的コレクションであるRootstockインフラストラクチャーフレームワークについて学びます。                                                                                                                        |
-| [Rootstockセキュリティ](/concepts/powpeg/security-model/)             | Rootstockプラットフォームは「[Powpeg](/concepts/powpeg/)」と呼ばれるセキュリティメカニズムを使用しており、これは「多層防御」という多層セキュリティモデルに基づいています。                                                                                                                    |
-| [Powpeg HSMファームウェア](/concepts/powpeg/hsm-firmware-attestation/) | HSMファームウェア証明を使用して、Powpegノードを検証する方法を学びます。                                                                                                                                                                                   |
+| [Powpegのセキュリティ](/concepts/foundations/powpeg/security-model/)             | Powpeg固有のセキュリティ概要。[セキュリティリポジトリ](https://github.com/rsksmart/security)に監査レポートがあります。                                                                                                                    |
+| [Powpeg HSMファームウェア](/concepts/foundations/powpeg/hsm-firmware-attestation/) | HSMファームウェア証明を使用して、Powpegノードを検証する方法を学びます。                                                                                                                                                                                   |
 | [アカウントベースのアドレス](/concepts/account-based-addresses/)             | Rootstockアドレスでは、EIP-1191のチェーンIDがチェックサムとして使用されます。m/44'/137'/0'/0は、BIP-44互換ウォレットに使用する導出パスです。                                                                                                                                 |
 
 ## 次のステップ
