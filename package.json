@@ -62,7 +62,7 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.8.0",
-    "@docusaurus/types": "^3.8.0",
+    "@docusaurus/types": "^3.10.2",
     "docusaurus-plugin-llms": "^0.3.0",
     "dotenv": "16.4.7",
     "linkinator": "^7.5.3"
