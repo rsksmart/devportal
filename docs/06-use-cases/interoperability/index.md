@@ -23,23 +23,32 @@ Interoperability covers how assets and messages move between Bitcoin, Rootstock,
 ## Key Concepts
 
 ### 1. Peg-In (Bitcoin to Rootstock)
+
 A Peg-In occurs when you send native BTC to a designated vault address on the Bitcoin network. Once confirmed, the Rootstock network mints an equivalent amount of rBTC to your Rootstock address.
 
 ### 2. Peg-Out (Rootstock to Bitcoin)
+
 A Peg-Out is the reverse process: rBTC is burned on Rootstock, and the bridge infrastructure releases native BTC to your Bitcoin address.
 
 ### 3. Trust-Minimized Security (BitVMX)
+
 With the advent of **[BitVMX](https://bitvmx.org/)**, Rootstock bridges are moving toward an optimistic verification model. This allows for Bitcoin-native fraud proofs, meaning that as long as one participant is honest, the bridge remains secure.
 
 ## Top Tools for Developers
+
+These libraries and services are the usual starting point for bridge and messaging integrations.
+
 * **[Flyover SDK](https://github.com/rsksmart/flyover-sdk):** The primary library for integrating near-instant bridging into your frontend.
 * **[Swap SDK](https://github.com/rsksmart/rsk-swap-sdk):** Atlas Bridge is a cross-chain bridge for the Rootstock ecosystem. You can use it to move assets between Rootstock and other supported networks.
 * **[LI.FI](/use-cases/interoperability/integrate-lifi/):** Leading cross-chain liquidity aggregator to route swaps and bridges into Rootstock.
 * **[Rootstock Explorer](http://explorer.rootstock.io/):** Visually track cross-chain transactions and bridge health.
 
 ## Implementation Guides
+
 Explore the recipes below to start integrating bridging solutions into your application.
 
-import DocCardList from '@theme/DocCardList';
-
-<DocCardList />
+- **[Build Omnichain Fungible Token (OFTs) on Rootstock with Layerzero](/use-cases/interoperability/rootstock-layerzero/)**: Cross-chain token transfers using OFT between Rootstock and other supported chains.
+- **[Omnichain Liquidity Routing on Rootstock with LI.FI](/use-cases/interoperability/integrate-lifi/)**: Route swaps and bridges from Ethereum, Arbitrum, Base, and more into Rootstock.
+- **[Cross-Chain Messaging with Wormhole](/use-cases/interoperability/rootstock-wormhole-messaging/)**: Send arbitrary cross-chain messages to Rootstock using Verified Action Approvals (VAAs).
+- **[Build a Constant-Product AMM on Rootstock (Testnet)](/use-cases/interoperability/amm-constant-product/)**: Build, test, and deploy a minimal constant-product AMM on Rootstock testnet.
+- **[Integrate a Chainlink-Style Price Feed (Mock) on Rootstock (Testnet)](/use-cases/interoperability/oracle-chainlink-mock/)**: Build and test a mock Chainlink-style price feed consumer on Rootstock testnet.

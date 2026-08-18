@@ -6,71 +6,49 @@ description: "The Rootstock CLI tool enables users to manage wallets, check bala
 tags: [Rootstock CLI, developer tools, guides, rsk, rootstock, dApps, smart contracts, solidity, dev-environments]
 ---
 
-The Rootstock CLI (rsk-cli) tool enables users to manage wallets, check balances, send transactions, verify smart contracts, and interact with smart contracts on the Rootstock blockchain—a Bitcoin sidechain designed for smart contracts.
+The Rootstock CLI (rsk-cli) tool enables users to manage wallets, check balances, send transactions, verify smart contracts, and interact with smart contracts on Rootstock. Rootstock is a Bitcoin sidechain designed for smart contracts.
 
-It supports both mainnet and testnet environments. Additionally, the tool provides bridge interaction features, allowing users to seamlessly transfer assets between Rootstock and Bitcoin (or other supported blockchains) via integrated bridge protocols.
+It supports both mainnet and testnet environments. The tool also provides bridge interaction features so you can transfer assets between Rootstock and Bitcoin through integrated bridge protocols.
 
-The CLI allows you to interact with your Rootstock wallet directly from the terminal, giving you control over creating, managing, and funding your wallet with rBTC (Smart Bitcoin).
+The CLI lets you interact with your Rootstock wallet from the terminal. You can create, manage, and fund your wallet with rBTC.
 
 In this guide, we will explore how to use the Rootstock CLI to create a wallet, manage it securely, and add funds to it.
 
 ## Key Features
 
-````mdx-code-block
-<Accordion>
-  <Accordion.Item eventKey="3">
-    <Accordion.Header as="h3">1. Wallet Management</Accordion.Header>
-    <Accordion.Body>
-      The wallet command lets you manage Ethereum-compatible wallets on Rootstock. You can:
-      <ul>
-        <li>Create, import, or use an existing wallet.</li>
-        <li>List saved wallets, switch wallets, update wallet names, and delete wallets.</li>
-        <li>Wallets are securely encrypted with AES-256-CBC, and private keys are stored in a JSON file.</li>
-      </ul>
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="4">
-    <Accordion.Header as="h3">2. Checking Balance</Accordion.Header>
-    <Accordion.Body>
-      Use the <code>balance</code> command to view your wallet's current balance on the Rootstock blockchain.
-      This is supported on both mainnet and testnet.
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="5">
-    <Accordion.Header as="h3">3. Sending rBTC</Accordion.Header>
-    <Accordion.Body>
-      The <code>transfer</code> command enables sending rBTC to another address.
-      Transactions can be initiated on both mainnet and testnet.
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="6">
-    <Accordion.Header as="h3">4. View Transaction Status</Accordion.Header>
-    <Accordion.Body>
-      View the status of a transaction using the <code>tx</code> command by providing the transaction ID.
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="7">
-    <Accordion.Header as="h3">5. Deploying Smart Contracts</Accordion.Header>
-    <Accordion.Body>
-      The <code>deploy</code> command allows users to deploy smart contracts on the blockchain by providing the ABI [Application Binary Interface](/concepts/glossary/) and bytecode files.
-      This is supported on both mainnet and testnet.
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="8">
-    <Accordion.Header as="h3">6. Verifying Smart Contracts</Accordion.Header>
-    <Accordion.Body>
-      With the <code>verify</code> command, users can verify deployed smart contracts using Rootstock’s explorer API.
-      It supports both mainnet and testnet.
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="9">
-    <Accordion.Header as="h3">7. Interacting with Verified Contracts</Accordion.Header>
-    <Accordion.Body>
-      The <code>contract</code> command lets users interact with read-only functions of a verified smart contract, listing the available methods for interaction.
-    </Accordion.Body>
-  </Accordion.Item>
-</Accordion>
-````
+rsk-cli groups wallet, transfer, and contract commands behind a single CLI.
+
+### Wallet Management
+
+The `wallet` command lets you manage Ethereum-compatible wallets on Rootstock. You can:
+
+- Create, import, or use an existing wallet.
+- List saved wallets, switch wallets, update wallet names, and delete wallets.
+- Wallets are encrypted with AES-256-CBC. Private keys are stored in a JSON file.
+
+### Checking Balance
+
+Use the `balance` command to view your wallet's current balance on the Rootstock blockchain. This is supported on both mainnet and testnet.
+
+### Sending rBTC
+
+The `transfer` command enables sending rBTC to another address. Transactions can be initiated on both mainnet and testnet.
+
+### View Transaction Status
+
+View the status of a transaction using the `tx` command by providing the transaction ID.
+
+### Deploying Smart Contracts
+
+The `deploy` command allows users to deploy smart contracts on the blockchain by providing the ABI ([Application Binary Interface](/concepts/glossary/)) and bytecode files. This is supported on both mainnet and testnet.
+
+### Verifying Smart Contracts
+
+With the `verify` command, users can verify deployed smart contracts using Rootstock’s explorer API. It supports both mainnet and testnet.
+
+### Interacting with Verified Contracts
+
+The `contract` command lets users interact with read-only functions of a verified smart contract, listing the available methods for interaction.
 
 ## Prerequisites
 

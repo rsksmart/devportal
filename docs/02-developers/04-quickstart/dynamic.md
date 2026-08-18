@@ -126,47 +126,40 @@ Build a Next.js dApp on Rootstock with **Dynamic** embedded wallets and **Wagmi*
 - Next.js, Wagmi, and Viem (included in starter kit)
 - Rootstock Testnet configured (chain ID 31)
 
-## **Getting Started**
+## Getting Started
 
-````mdx-code-block
-<Steps>
-  <Step title=" Clone the Repository">
-   Clone the repository to use the starter kit locally.
+Clone the starter kit, install dependencies, add your Dynamic Environment ID, then run the Next.js app.
+
+### Clone the repository
+
+Clone the repository to use the starter kit locally.
 
 ```bash
 git clone https://github.com/rsksmart/rootstock-dynamic
 cd rootstock-dynamic
 ```
-  </Step>
-  <Step title="Install Dependencies">
-    Install the necessary dependencies with either Bun or Yarn.
-  <Tabs>
-  <TabItem value="contribute" label="Using Bun" default>
-    ```
-    bun install
-    ```
-  </TabItem>
-  <TabItem value="contest" label="Using Yarn">
-   ```
-   yarn install
-   ```
-  </TabItem>
 
-</Tabs>
+### Install dependencies
 
-  </Step>
-  <Step title="Get Environment Variables from Dynamic">
+Install the necessary dependencies with either Bun or Yarn.
 
-  :::note
-Create a FREE account on Dynamic and login to your Dashboard. Then obtain your `ENVIRONMENT_ID` from the [Dynamic dashboard](https://app.dynamic.xyz/dashboard/overview).
+```bash
+bun install
+```
 
-:::
+```bash
+yarn install
+```
+
+### Get environment variables from Dynamic
+
+Create a free account on Dynamic and log in to your dashboard. Then obtain your `ENVIRONMENT_ID` from the [Dynamic dashboard](https://app.dynamic.xyz/dashboard/overview).
 
 Follow these steps to locate and copy your Environment ID:
 
-<img src="/img/developers/quickstart/dynamic-starter-kit/image1.png" alt="Dynamic.xyz dashobard"/>
+<img src="/img/developers/quickstart/dynamic-starter-kit/image1.png" alt="Dynamic.xyz dashboard"/>
 
-An Environment ID is needed to configure and secure your application. Here’s how to get it:
+An Environment ID is needed to configure and secure your application.
 
 * **Open the Developer Section**:
    * Look at the menu on the left side of the screen. Find and click **Developers** to expand the options.
@@ -175,83 +168,67 @@ An Environment ID is needed to configure and secure your application. Here’s h
 * **Copy the Environment ID**:
    * Find the box labeled **Environment ID**. Click the copy icon next to the ID to copy it to your clipboard.
 
-</Step>
+### Set up environment variables
 
-   <Step title="Set Up Environment Variables">
-   Create a `.env.local` file in the project’s root directory to store environment variables.
+Create a `.env.local` file in the project’s root directory to store environment variables.
 
 ```bash
 mv .env.local.example .env.local
 ```
 
-Setting up the `.env.local` file is critical for securely storing your environment ID. This ID is necessary for accessing Dynamic’s features and connecting to the Web3 backend.
+Setting up the `.env.local` file stores your environment ID so the app can access Dynamic’s features and connect to the Web3 backend.
 
 Open the `.env.local` file and add your environment ID for Dynamic.
 
 ```bash
 NEXT_PUBLIC_DYNAMIC_ENVIRONMENT_ID=YOUR_ENVIRONMENT_ID
 ```
-  </Step>
-   <Step title="Run the Development Server">
-    Start the development server using Bun or Yarn.
-    <Tabs>
-  <TabItem value="contribute" label="Using Bun" default>
-    ```
-    bun dev
-    ```
-  </TabItem>
-  <TabItem value="contest" label="Using Yarn">
-   ```
-   yarn dev
-   ```
-  </TabItem>
 
-</Tabs>
+### Run the development server
 
+Start the development server using Bun or Yarn.
+
+```bash
+bun dev
+```
+
+```bash
+yarn dev
+```
 
 Visit [http://localhost:3000](http://localhost:3000) in your browser to view your project.
 
 <img src="/img/developers/quickstart/dynamic-starter-kit/image2.png" alt="The homepage of the Rootstock Dynamic Starterkit"/>
-  </Step>
 
-</Steps>
-````
+## Interacting with the Frontend
 
-## **Interacting with the Frontend**
+The starter kit includes React components for connecting a wallet, reading balances, sending tokens, and signing messages.
 
-````mdx-code-block
-<Steps>
-  <Step title="Connect Wallet">
-  * Use the `DynamicWidget` component for connecting to a wallet through options like MetaMask or WalletConnect. You can also offer social login options for enhanced accessibility.
-   * Once logged in, you will see a similar image like this
+### Connect wallet
+
+Use the `DynamicWidget` component to connect a wallet through MetaMask or WalletConnect. You can also offer social login.
+
+Once logged in, you will see a similar image like this:
 
 <img src="/img/developers/quickstart/dynamic-starter-kit/image3.png" alt="Connect wallet using DynamicWidget component"/>
 
-  </Step>
-  <Step title="Check Token Balances">
+### Check token balances
 
-   The [`Balances`](https://github.com/rsksmart/rootstock-dynamic/blob/main/components/Balances.tsx) component fetches and displays the wallet's token balances, supporting multiple tokens like rBTC, tRIF, and DOC.
-  </Step>
-  <Step title="Send Tokens">
-   Through the [`Transfer`](https://github.com/rsksmart/rootstock-dynamic/blob/main/components/Transfer.tsx) component, users can transfer tokens directly within the dApp. It includes fields to specify the recipient address and token amount, along with secure hooks to initiate the transfer.
+The [`Balances`](https://github.com/rsksmart/rootstock-dynamic/blob/main/components/Balances.tsx) component fetches and displays the wallet's token balances. It supports rBTC, tRIF, and DOC.
 
-   **Features:**
+### Send tokens
 
-   * **Dropdown**: Select a token from available options (**rBTC, tRIF, and DOC**)
-   * **Input Fields**:
+The [`Transfer`](https://github.com/rsksmart/rootstock-dynamic/blob/main/components/Transfer.tsx) component lets users transfer tokens in the dApp. It includes fields for the recipient address and token amount, plus hooks to initiate the transfer.
 
-      - **Amount:** Enter the amount to send.
+Features:
 
-      - **Recipient Address:** Enter the address to send tokens to.
-  </Step>
+* **Dropdown**: Select a token from available options (**rBTC, tRIF, and DOC**)
+* **Amount**: Enter the amount to send.
+* **Recipient Address**: Enter the address to send tokens to.
 
-  <Step title="Sign Messages">
-   The [`SignMessage`](https://github.com/rsksmart/rootstock-dynamic/blob/main/components/SignMessage.tsx) component enables the user to sign arbitrary messages using the connected wallet. This feature is useful for activities like authentication or data validation.
+### Sign messages
 
-  </Step>
-</Steps>
-<br/>
-````
+The [`SignMessage`](https://github.com/rsksmart/rootstock-dynamic/blob/main/components/SignMessage.tsx) component lets the user sign arbitrary messages with the connected wallet. Use this for authentication or data validation.
 
 By the end of this guide, we learned how to integrate Web3 features into a **Next.js** app using the **Dynamic Starter Kit for Rootstock**. With **wagmi hooks**, we can easily connect wallets, manage token balances, send tokens, and sign messages directly within your application.
 
