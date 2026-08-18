@@ -68,6 +68,12 @@
     "dotenv": "16.4.7",
     "linkinator": "^7.5.3"
   },
+  "overrides": {
+    "seroval": "^1.6.2"
+  },
+  "resolutions": {
+    "seroval": "^1.6.2"
+  },
   "browserslist": {
     "production": [
       ">0.5%",

@@ -11672,10 +11672,10 @@ serialize-javascript@^6.0.0, serialize-javascript@^6.0.1, serialize-javascript@^
   dependencies:
     randombytes "^2.1.0"
 
-seroval@^0.5.0:
-  version "0.5.1"
-  resolved "https://registry.npmjs.org/seroval/-/seroval-0.5.1.tgz"
-  integrity sha512-ZfhQVB59hmIauJG5Ydynupy8KHyr5imGNtdDhbZG68Ufh1Ynkv9KOYOAABf71oVbQxJ8VkWnMHAjEHE7fWkH5g==
+seroval@^0.5.0, seroval@^1.6.2:
+  version "1.6.2"
+  resolved "https://registry.npmjs.org/seroval/-/seroval-1.6.2.tgz"
+  integrity sha512-mPT+SD2TrlB6wvte1KkYOYUkubaTbd6pZ/6Kk3C9nxzrHmCZyhxOO7XGAeL7f+yLKZglzGtM9odUVvg/EhO+vQ==
 
 serve-handler@^6.1.7:
   version "6.1.7"
