@@ -5852,10 +5852,10 @@ dns-packet@^5.2.2:
   dependencies:
     "@leichtgewicht/ip-codec" "^2.0.1"
 
-docusaurus-markdown-source-plugin@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.npmjs.org/docusaurus-markdown-source-plugin/-/docusaurus-markdown-source-plugin-2.0.1.tgz"
-  integrity sha512-RiKMi+SDlrQQ25VkbOvz9M7glH9lcpAsz0WzepilnC2MgXA6uLNpl7PezrlY6nvW7MnhB4Aakwwonz+0WVBQAQ==
+docusaurus-markdown-source-plugin@^2.2.5:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/docusaurus-markdown-source-plugin/-/docusaurus-markdown-source-plugin-2.2.5.tgz#1dff40506104a390023f0e0b49fc8d71584a69b9"
+  integrity sha512-UP/ilYJ66Yyt+8wjFzRK7xYLm6z4QxZy6fo6myvjtV5MNi1SKhbaPTBMD/sZjn2icCtsFlpwL+rf9JEpaw3VSA==
   dependencies:
     fs-extra "^11.0.0"
 

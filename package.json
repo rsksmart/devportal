@@ -45,7 +45,7 @@
     "bootstrap": "5.3.3",
     "buffer": "^6.0.3",
     "clsx": "^2.0.0",
-    "docusaurus-markdown-source-plugin": "^2.0.1",
+    "docusaurus-markdown-source-plugin": "^2.2.5",
     "docusaurus-plugin-mermaid-pan-zoom": "^1.7.0",
     "docusaurus-plugin-sass": "^0.2.6",
     "jssha": "^3.3.1",
