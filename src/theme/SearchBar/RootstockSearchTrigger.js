@@ -7,7 +7,7 @@ function SearchIcon({size = 20, color = 'currentColor'}) {
     <svg
       width={size}
       height={size}
-      className="DocSearch-Search-Icon"
+      className="rs-search-trigger__icon"
       viewBox="0 0 24 24"
       aria-hidden="true">
       <circle
@@ -30,8 +30,8 @@ function SearchIcon({size = 20, color = 'currentColor'}) {
 }
 
 /**
- * Rootstock navbar search control. Matches DocSearch DOM and class names expected by
- * `src/scss/components/_search.scss` and NotFound (`.DocSearch-Button`).
+ * Rootstock navbar search control. Uses `rs-search-trigger` so DocSearch v4 CSS
+ * cannot restyle the button. Keeps `DocSearch-Button` for NotFound click-through.
  */
 const RootstockSearchTrigger = forwardRef(function RootstockSearchTrigger(
   {translations = {}, keyboardShortcuts = defaultKeyboardShortcuts, ...rest},
@@ -55,26 +55,26 @@ const RootstockSearchTrigger = forwardRef(function RootstockSearchTrigger(
   return (
     <button
       type="button"
-      className="DocSearch DocSearch-Button"
+      className="rs-search-trigger DocSearch-Button"
       aria-label={showCmdK ? `${buttonAriaLabel} (${ariaShortcut})` : buttonAriaLabel}
       aria-keyshortcuts={showCmdK ? ariaShortcut : undefined}
       ref={ref}
       {...rest}>
-      <span className="DocSearch-Button-Container">
+      <span className="rs-search-trigger__inner">
         <SearchIcon />
-        <span className="DocSearch-Button-Placeholder">{buttonText}</span>
+        <span className="rs-search-trigger__placeholder">{buttonText}</span>
       </span>
       {showCmdK && modKey !== null && (
-        <span className="DocSearch-Button-Keys">
+        <span className="rs-search-trigger__keys">
           <kbd
             className={
               modKey === '⌘'
-                ? 'DocSearch-Button-Key'
-                : 'DocSearch-Button-Key DocSearch-Button-Key--ctrl'
+                ? 'rs-search-trigger__key'
+                : 'rs-search-trigger__key rs-search-trigger__key--ctrl'
             }>
             {modKey}
           </kbd>
-          <kbd className="DocSearch-Button-Key">K</kbd>
+          <kbd className="rs-search-trigger__key">K</kbd>
         </span>
       )}
     </button>
