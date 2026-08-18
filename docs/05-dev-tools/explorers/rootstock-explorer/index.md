@@ -6,7 +6,20 @@ tags: [rootstock, use cases, explorer, guides, tutorials, developers]
 description: "Guides to use the Rootstock Explorer: navigate the UI, search, and submit dApps."
 ---
 
-````mdx-code-block
+The Rootstock Explorer is the block explorer for Rootstock mainnet and testnet. Use these guides to search the chain, read transactions, add networks and tokens to MetaMask, submit a dApp, and verify contract source.
+
+## Guides
+
+| Guide | Path | Description |
+|-------|------|-------------|
+| Navigating the Rootstock Explorer | `/dev-tools/explorers/rootstock-explorer/intro-to-explorer/` | Search, switch networks, view blocks and transactions, tokens, addresses, dApps, and statistics. |
+| How to Read a Transaction | `/dev-tools/explorers/rootstock-explorer/understanding-transactions/` | Find a transaction and interpret the main fields on a transaction page. |
+| Add a Token to MetaMask | `/dev-tools/explorers/rootstock-explorer/add-token-to-metamask/` | Import ERC-20 tokens from a token page using the MetaMask icon. |
+| Use the Advanced Transactions Filter | `/dev-tools/explorers/rootstock-explorer/advanced-transactions-filter/` | Filter the transaction list by type, status, block, date, from and to addresses, and AND/OR address logic. |
+| Add the Rootstock Network to MetaMask | `/dev-tools/explorers/rootstock-explorer/add-rootstock-network-to-metamask/` | Add Rootstock mainnet or testnet from the explorer with RPC URL, chain ID, and symbol prefilled. |
+| Submit a dApp to the Rootstock Explorer | `/dev-tools/explorers/rootstock-explorer/submit-your-dapps/` | Add your dApp to the explorer so others can discover it. |
+| Verify a smart contract | `/developers/smart-contracts/verify-smart-contracts/rootstock-explorer/` | Verify and publish contract source so users can read and interact with it. |
+
 <Filter
 values={[
   {label: 'Explorer Basics', value: 'basics'},
@@ -76,4 +89,3 @@ values={[
   description="Verify and publish contract source code on the explorer so users can read and interact with it."
 />
 </Filter>
-````

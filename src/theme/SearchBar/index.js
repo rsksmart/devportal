@@ -1,11 +1,10 @@
 /**
- * Swizzled from @docusaurus/theme-search-algolia SearchBar (3.8.x).
- * Replaces DocSearchButton with RootstockSearchTrigger; keep logic aligned with the
- * installed theme-search-algolia version when you upgrade Docusaurus.
+ * Swizzled from @docusaurus/theme-search-algolia SearchBar (3.10.x / DocSearch v4).
+ * Replaces DocSearchButton with RootstockSearchTrigger.
  */
 import React, {useCallback, useMemo, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
-import {useDocSearchKeyboardEvents} from '@docsearch/react';
+import {useDocSearchKeyboardEvents} from '@docsearch/react/useDocSearchKeyboardEvents';
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
 import {useHistory} from '@docusaurus/router';
@@ -16,6 +15,8 @@ import {
 import {
   useAlgoliaContextualFacetFilters,
   useSearchResultUrlProcessor,
+  useAlgoliaAskAi,
+  mergeFacetFilters,
 } from '@docusaurus/theme-search-algolia/client';
 import Translate from '@docusaurus/Translate';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -99,10 +100,6 @@ function ResultsFooter({state, onClose}) {
   );
 }
 function useSearchParameters({contextualSearch, ...props}) {
-  function mergeFacetFilters(f1, f2) {
-    const normalize = (f) => (typeof f === 'string' ? [f] : f);
-    return [...normalize(f1), ...normalize(f2)];
-  }
   const contextualSearchFacetFilters = useAlgoliaContextualFacetFilters();
   const configFacetFilters = props.searchParameters?.facetFilters ?? [];
   const facetFilters = contextualSearch
@@ -122,6 +119,8 @@ function DocSearch({externalUrlRegex, ...props}) {
   const searchButtonRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const [initialQuery, setInitialQuery] = useState(undefined);
+  const {isAskAiActive, currentPlaceholder, onAskAiToggle, extraAskAiProps} =
+    useAlgoliaAskAi(props);
   const prepareSearchContainer = useCallback(() => {
     if (!searchContainer.current) {
       const divElement = document.createElement('div');
@@ -137,7 +136,8 @@ function DocSearch({externalUrlRegex, ...props}) {
     setIsOpen(false);
     searchButtonRef.current?.focus();
     setInitialQuery(undefined);
-  }, []);
+    onAskAiToggle(false);
+  }, [onAskAiToggle]);
   const handleInput = useCallback(
     (event) => {
       if (event.key === 'f' && (event.metaKey || event.ctrlKey)) {
@@ -156,6 +156,8 @@ function DocSearch({externalUrlRegex, ...props}) {
     onClose: closeModal,
     onInput: handleInput,
     searchButtonRef,
+    isAskAiActive: isAskAiActive ?? false,
+    onAskAiToggle: onAskAiToggle ?? (() => {}),
   });
   return (
     <>
@@ -174,6 +176,7 @@ function DocSearch({externalUrlRegex, ...props}) {
         onClick={openModal}
         ref={searchButtonRef}
         translations={props.translations?.button ?? translations.button}
+        keyboardShortcuts={props.keyboardShortcuts}
       />
 
       {isOpen &&
@@ -191,17 +194,22 @@ function DocSearch({externalUrlRegex, ...props}) {
             {...(props.searchPagePath && {
               resultsFooterComponent,
             })}
-            placeholder={translations.placeholder}
+            placeholder={currentPlaceholder}
             {...props}
             translations={props.translations?.modal ?? translations.modal}
             searchParameters={searchParameters}
+            {...extraAskAiProps}
           />,
           searchContainer.current,
         )}
     </>
   );
 }
-export default function SearchBar() {
+export default function SearchBar(props) {
   const {siteConfig} = useDocusaurusContext();
-  return <DocSearch {...siteConfig.themeConfig.algolia} />;
+  const docSearchProps = {
+    ...siteConfig.themeConfig.algolia,
+    ...props,
+  };
+  return <DocSearch {...docSearchProps} />;
 }

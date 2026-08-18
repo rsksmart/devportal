@@ -140,7 +140,6 @@ const config = {
 
   clientModules: [
     './src/clientModules/renderEquations.js',
-    './src/clientModules/docsearch-css.js',
     './src/clientModules/legacyPathRedirects.js',
   ],
   plugins: [

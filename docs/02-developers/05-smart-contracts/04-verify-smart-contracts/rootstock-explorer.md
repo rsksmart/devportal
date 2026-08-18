@@ -407,21 +407,17 @@ Once you have entered all the details, click "Verify Contract".
 
 ## Troubleshooting
 
-Verification compares the bytecode the explorer recompiles against the bytecode on chain. The code body has to match; a metadata footer that differs is tolerated when it is the same length and still decodes as valid metadata. Every failure below is a real difference between the compilation you submitted and the one that produced the deployed bytecode — except where the failure happens in your local tooling, before anything reaches the explorer.
+Verification compares the bytecode the explorer recompiles against the bytecode on chain. The code body has to match; a metadata footer that differs is tolerated when it is the same length and still decodes as valid metadata. Every failure below is a real difference between the compilation you submitted and the one that produced the deployed bytecode. The exception is when the failure happens in your local tooling, before anything reaches the explorer.
 
-<Accordion>
-  <Accordion.Item eventKey="0">
-    <Accordion.Header as="h3">Compiler version mismatch</Accordion.Header>
-    <Accordion.Body>
-      - Use the exact **Solc version** your deploy used, not the version shown in an example command. Do not read it off the `pragma` either: a pragma often only bounds the version, and even when it pins one exactly it omits the `+commit` hash that identifies the build.
+### Compiler version mismatch
+
+- Use the exact **Solc version** your deploy used, not the version shown in an example command. Do not read it off the `pragma` either: a pragma often only bounds the version, and even when it pins one exactly it omits the `+commit` hash that identifies the build.
       - Foundry: read `solc_version` from `foundry.toml` (`solc` is the same setting; Foundry accepts either), or take the full version from `metadata.compiler.version` in `out/<File>.sol/<Contract>.json`.
       - Hardhat: take `solcLongVersion` from the build info under `artifacts/build-info/` — it carries the `+commit.…` suffix that `solcVersion` omits. In your config it lives under `solidity` in Hardhat 2 (a bare version string, `solidity.version`, or an entry in `solidity.compilers[]`), and under the compiler profile in Hardhat 3.
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="1">
-    <Accordion.Header as="h3">Bytecode mismatch with via-IR enabled</Accordion.Header>
-    <Accordion.Body>
-      With `via_ir = true`, Solc output for a contract depends on **which other sources were in the compilation unit**, not only on the contract and its imports. `forge verify-contract` submits just the target's import closure, a smaller set than the one your deploy compiled, so the recompiled bytecode can differ. Run the plain command first: on the project this guidance comes from, thirteen of the fourteen deployed contracts verified with it, and the one that failed was the largest. Once it fails for a given source tree it keeps failing, deterministically, until the input changes.
+
+### Bytecode mismatch with via-IR enabled
+
+With `via_ir = true`, Solc output for a contract depends on **which other sources were in the compilation unit**, not only on the contract and its imports. `forge verify-contract` submits just the target's import closure, a smaller set than the one your deploy compiled, so the recompiled bytecode can differ. Run the plain command first: on the project this guidance comes from, thirteen of the fourteen deployed contracts verified with it, and the one that failed was the largest. Once it fails for a given source tree it keeps failing, deterministically, until the input changes.
 
       **For a contract that is already deployed**, the compilation unit it was deployed from is the one input guaranteed to reproduce its bytecode. Recover it from the build info of the deploy — the archived artifact if you kept one, otherwise a build of the exact commit you deployed, since a source added or removed since then can change the output — then drop `test/` and `script/` so the submission fits the explorer's budget:
 
@@ -453,12 +449,10 @@ Verification compares the bytecode the explorer recompiles against the bytecode 
       - Never pass `--skip script` to `forge script`: it skips the script being run, and the run stops with `Could not find target contract`.
       - Keep the `out/build-info/<hash>.json` the deploy wrote, **outside** `out/`, since `forge build --force` clears that folder. Without it you are rebuilding from the deployed commit, where anything added or removed since the deploy can change the via-IR output. If the code body does reproduce, a metadata footer that differs by the same length still verifies here, though some other explorers record that as a partial match.
       - Turning via-IR off is the other pre-deployment option and it removes the failure mode outright, since legacy codegen is not source-set sensitive. That is a decision about your contracts, not about verification.
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="2">
-    <Accordion.Header as="h3">Library not found / address mismatch</Accordion.Header>
-    <Accordion.Body>
-      `forge verify-contract` submits **only** the libraries in your Foundry configuration for that command — the `--libraries` flags you pass, plus any `libraries` entry in `foundry.toml`. It never reads your deploy's broadcast file or artifacts, so the flags your deploy script passed have to be repeated here. A missing library leaves unresolved placeholders in the recompiled bytecode, so the comparison fails.
+
+### Library not found / address mismatch
+
+`forge verify-contract` submits **only** the libraries in your Foundry configuration for that command — the `--libraries` flags you pass, plus any `libraries` entry in `foundry.toml`. It never reads your deploy's broadcast file or artifacts, so the flags your deploy script passed have to be repeated here. A missing library leaves unresolved placeholders in the recompiled bytecode, so the comparison fails.
 
       - Pass every deployed library, one `--libraries` flag each:
 
@@ -473,41 +467,30 @@ Verification compares the bytecode the explorer recompiles against the bytecode 
       ```bash
       forge verify-contract ... --show-standard-json-input > standard-input.json
       ```
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="3">
-    <Accordion.Header as="h3">Invalid constructor arguments</Accordion.Header>
-    <Accordion.Body>
-      - Verify the precise **encoding**, **order**, and **types** of your constructor arguments.
+
+### Invalid constructor arguments
+
+- Verify the precise **encoding**, **order**, and **types** of your constructor arguments.
       - Read the values from the `arguments` field of the deploying entry in `transactions[]` of `broadcast/<script>.s.sol/<chainId>/run-latest.json` (`null` when the constructor takes none). They are stored decoded, so ABI-encode them with [cast abi-encode](https://getfoundry.sh/cast/reference/abi-encode/) before passing them.
       - `--guess-constructor-args` can fail its own preflight with `Local bytecode doesn't match on-chain bytecode` even when your local artifact and the deployed bytecode are identical. Drop `--guess-constructor-args` and `--rpc-url`, and pass the arguments explicitly instead:
 
       ```bash
       --constructor-args 0x00000000000000000000000000000000000000000000000000000000000003e8
       ```
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="4">
-    <Accordion.Header as="h3">Optimization settings differ</Accordion.Header>
-    <Accordion.Body>
-      - The optimizer flag, the number of **runs**, and the **EVM version** all change the output bytecode. Each must match what you compiled with.
+
+### Optimization settings differ
+
+- The optimizer flag, the number of **runs**, and the **EVM version** all change the output bytecode. Each must match what you compiled with.
       - Read them from `foundry.toml` (`optimizer`, `optimizer_runs`, `evm_version`) or from your Hardhat config. Do not assume the form defaults match your project.
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="5">
-    <Accordion.Header as="h3">Flattening / import issues</Accordion.Header>
-    <Accordion.Body>
-      - Consider using the **Standard JSON** verification method to avoid path or flattening issues.
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="6">
-    <Accordion.Header as="h3">Proxy and Implementation</Accordion.Header>
-    <Accordion.Body>
-      - Verify the **implementation contract** and the proxy separately. Each is its own address with its own source and constructor arguments.
+
+### Flattening / import issues
+
+- Consider using the **Standard JSON** verification method to avoid path or flattening issues.
+
+### Proxy and Implementation
+
+- Verify the **implementation contract** and the proxy separately. Each is its own address with its own source and constructor arguments.
       - A proxy's constructor arguments usually include the implementation address and the encoded initializer call. Read them from the deploy broadcast file rather than reconstructing them by hand.
-    </Accordion.Body>
-  </Accordion.Item>
-</Accordion>
 
 :::tip[Tip]
 If verification keeps failing, stop adjusting the form and compare inputs instead. Take the Standard JSON your tooling actually submits (`forge verify-contract ... --show-standard-json-input`) and check it against the build info from the deploy. The difference between those two files is the reason verification fails.

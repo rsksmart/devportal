@@ -12,11 +12,7 @@ This repository contains multiple smart contracts designed to facilitate and man
 
 Each supporting contract is assigned a distinct role, working in together with `AirdropManager.sol` to coordinate and execute airdrop processes smoothly. The following sections provide a detailed breakdown of the codebase.
 
-````mdx-code-block
-<Accordion>
-  <Accordion.Item eventKey="0">
-    <Accordion.Header as="h3">1. Administrable.sol</Accordion.Header>
-    <Accordion.Body>
+## 1. Administrable.sol
 
 This contract serves as the base contract for managing administrator roles within the system.
 
@@ -71,12 +67,9 @@ contract Administrable {
   * `removeAdmin`: Allows an admin to remove another admin by setting their status to false in the `_admins` mapping.
 
 
-   </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="1">
-    <Accordion.Header as="h3">2. AirdropManager.sol</Accordion.Header>
-    <Accordion.Body>
-      This contract is responsible for managing different airdrop contracts and facilitating the claiming process.
+## 2. AirdropManager.sol
+
+This contract is responsible for managing different airdrop contracts and facilitating the claiming process.
 
 ```
 // SPDX-License-Identifier: MIT
@@ -225,12 +218,9 @@ function getAirdropInfo(address airdropAddress) public view returns(AirdropInfo 
 function getTotalAirdropAmount(address airdropAddress) public view returns(uint256) {
     IAirdrop1155 airdrop = IAirdrop1155(
 ```
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="2">
-    <Accordion.Header as="h3">3. CustomAirdrop1155.sol</Accordion.Header>
-    <Accordion.Body>
-    This contract would implement the logic specific to airdrops using the ERC-1155 standard (multi-token standard). It allows for the distribution of tokens as part of an airdrop.
+## 3. CustomAirdrop1155.sol
+
+This contract would implement the logic specific to airdrops using the ERC-1155 standard (multi-token standard). It allows for the distribution of tokens as part of an airdrop.
 
 
 ```
@@ -363,7 +353,6 @@ constructor(
 
 The constructor also initializes the `_tokenContract` with the provided token address.
 
-###
 
 ```
 function claim(address user, uint256 amount, bytes32[] calldata proof) public onlyOwner {
@@ -395,7 +384,6 @@ If all checks pass, the function:
 
 It then emits the `Claim` event to notify about the successful claim.
 
-###
 
 These functions provide information without modifying the state.
 
@@ -431,7 +419,6 @@ function hasExpired() public view returns(bool) {
   * `hasClaimed`: Checks if a specific address has already claimed tokens.
   * `hasExpired`: Checks if the airdrop has expired based on the current timestamp.
 
-###
 
 These functions manage which addresses can claim tokens.
 
@@ -452,15 +439,10 @@ function disallowAddresses(address[] memory addresses) public onlyOwner {
     for (uint i; i < addresses.length
 ```
 
-    </Accordion.Body>
-  </Accordion.Item>
+## 4. CustomAirdrop1155ClaimMerkle.sol
 
-   <Accordion.Item eventKey="4">
-    <Accordion.Header as="h3">4. CustomAirdrop1155ClaimMerkle.sol</Accordion.Header>
-    <Accordion.Body>
 This contract likely extends the functionality of `CustomAirdrop1155.sol` by implementing a Merkle tree structure for validating claims. It allows airdrop managers to verify claims against a list of eligible addresses efficiently.
 
-###
 
 ```
 // SPDX-License-Identifier: MIT
@@ -476,7 +458,6 @@ import { MerkleProof } from "@openzeppelin/contracts/utils/cryptography/MerklePr
   * `Ownable` from OpenZeppelin, which provides basic authorization control functions.
   * `MerkleProof`, which includes utilities for verifying Merkle proofs.
 
-###
 
 ```
 interface IERC1155 {
@@ -489,7 +470,6 @@ interface IERC1155 {
   * `safeTransferFrom`: Safely transfers tokens from one address to another.
   * `balanceOf`: Retrieves the balance of a specific token ID for a given address.
 
-###
 
 ```
 enum AirdropType {
@@ -519,7 +499,6 @@ struct AirdropInfo {
   * `expirationDate`: The expiration date of the airdrop.
   * `airdropType`: The type of the airdrop.
 
-###
 
 ```
 contract CustomAirdrop1155Merkle is Ownable {
@@ -527,7 +506,6 @@ contract CustomAirdrop1155Merkle is Ownable {
 
 * **Contract Definition**: This line declares a new smart contract named `CustomAirdrop1155Merkle`, inheriting from `Ownable`. This means it will have owner-related functionalities to manage permissions.
 
-###
 
 ```
 event Claim(address recipient, uint256 amount);
@@ -570,7 +548,6 @@ mapping(bytes32 => bool) public claimedLeaf;
   * `_addressesThatAlreadyClaimed`: Keeps track of addresses that have claimed their tokens.
   * `claimedLeaf`: Tracks which leaves (combinations of user addresses and amounts) have already been claimed.
 
-###
 
 ```
 constructor(
@@ -604,7 +581,6 @@ constructor(
 
 The constructor also initializes the `_tokenContract` with the provided token address.
 
-###
 
 ```
 function setRoot(bytes32 _root) public onlyOwner {
@@ -615,7 +591,6 @@ function setRoot(bytes32 _root) public onlyOwner {
 
 * **setRoot Function**: This function allows the owner to set the Merkle root for the airdrop, which defines which users are eligible for claiming tokens.
 
-###
 
 ```
 function claim(address user, uint256 amount, bytes32[] calldata proof) external onlyOwner {
@@ -625,7 +600,6 @@ function claim(address user, uint256 amount, bytes32[] calldata proof) external 
 
 * **Claim Function**: This function allows the contract owner to initiate a claim for a specified user. It calls the internal `_claim` function, which contains the actual logic for processing the claim.
 
-###
 
 ```
 function _claim(address origin_, uint256 amount_, bytes32[] calldata proof_) internal {
@@ -657,7 +631,6 @@ function _claim(address origin_, uint256 amount_, bytes32[] calldata proof_) int
   * Marks the user as having claimed their tokens.
   * Emits the `Claim` event.
 
-###
 
 ```
 function _buildLeaf(address origin_, uint256 amount_) internal pure returns (bytes32) {
@@ -667,7 +640,6 @@ function _buildLeaf(address origin_, uint256 amount_) internal pure returns (byt
 
 * **Internal `_buildLeaf` Function**: This function creates a leaf node for the Merkle tree by hashing the user's address and the claim amount together. The resulting hash (leaf) will be used for verification.
 
-###
 
 These functions provide information about the airdrop without modifying the state.
 
@@ -687,15 +659,10 @@ function hasClaimed(address _address) public view returns(bool) {
 function hasExpired() public view returns(bool) {
     return _
 ```
-    </Accordion.Body>
-  </Accordion.Item>
+## 5. Erc1155.sol
 
-   <Accordion.Item eventKey="5">
-    <Accordion.Header as="h3">5. Erc1155.sol</Accordion.Header>
-    <Accordion.Body>
 This contract implements the ERC-1155 standard, providing the foundational structure for managing multiple tokens and enabling the transfer of various token types in a single contract.
 
-###
 
 ```
 // SPDX-License-Identifier: MIT
@@ -712,7 +679,6 @@ import "@openzeppelin/contracts/access/Ownable.sol";
   * `ERC1155`: The base implementation of the ERC-1155 token standard, which allows for the creation of multiple token types in a single contract.
   * `Ownable`: A contract that provides basic authorization control functions, allowing only the owner of the contract to execute certain functions.
 
-###
 
 ```
 contract MyToken is ERC1155, Ownable {
@@ -720,7 +686,6 @@ contract MyToken is ERC1155, Ownable {
 
 * **Contract Definition**: This line declares a new smart contract named `MyToken`, which inherits from both `ERC1155` and `Ownable`. This means it will have the functionality of an ERC-1155 token as well as ownership control features.
 
-###
 
 ```
 constructor(address initialOwner) ERC1155("") Ownable(initialOwner) {}
@@ -731,7 +696,6 @@ constructor(address initialOwner) ERC1155("") Ownable(initialOwner) {}
   * `ERC1155("")`: Calls the constructor of the ERC1155 contract with an empty URI string, which can be set later. The URI is usually used to provide metadata about the tokens.
   * `Ownable(initialOwner)`: Calls the constructor of the Ownable contract to set the initial owner.
 
-###
 
 ```
 function setURI(string memory newuri) public onlyOwner {
@@ -742,7 +706,6 @@ function setURI(string memory newuri) public onlyOwner {
 * **setURI Function**: This public function allows the contract owner to set the URI for the tokens. It uses the `onlyOwner` modifier, ensuring that only the owner can change the URI.
 * **Internal Call**: `_setURI(newuri)` is a function inherited from the ERC1155 contract that updates the token URI.
 
-###
 
 ```
 function mint(address account, uint256 id, uint256 amount, bytes memory data)
@@ -761,7 +724,6 @@ function mint(address account, uint256 id, uint256 amount, bytes memory data)
     * `data`: Additional data that can be sent along with the minting operation (can be empty).
 * **Internal Call**: `_mint(account, id, amount, data)` is a function inherited from the ERC1155 contract that performs the actual minting of tokens.
 
-###
 
 ```
 function mintBatch(address to, uint256[] memory ids, uint256[] memory amounts, bytes memory data)
@@ -781,12 +743,6 @@ function mintBatch(address to, uint256[] memory ids, uint256[] memory amounts, b
 
  **Internal Call**: `_mintBatch(to, ids, amounts, data)` is a function inherited from the ERC1155 contract that performs the batch minting of tokens.
 
-
-
-   </Accordion.Body>
-  </Accordion.Item>
-</Accordion>
-````
 
 ## Complete Codebase
 > [https://github.com/rsksmart/airdrop-template/tree/main/contracts](https://github.com/rsksmart/airdrop-template/tree/main/contracts)
