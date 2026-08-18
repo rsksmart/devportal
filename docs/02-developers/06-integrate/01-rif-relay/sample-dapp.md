@@ -56,8 +56,8 @@ nativeHolderRelayVerifier [ '0x6f217dEd6c86A57f1211F464302e6fA544045B4f' ]
 
 ### Mint token
 
-- To mint new units of the `UtilToken` into the Metamask wallet address:
-- Go to the Metamask wallet, and copy the wallet address:
+- To mint new units of the `UtilToken` into the MetaMask wallet address:
+- Go to the MetaMask wallet, and copy the wallet address:
 - Execute the command to mint the token, where:
     - `--token-address` → this is the address for `UtilToken`
     - `--amount` → quantity to be minted
