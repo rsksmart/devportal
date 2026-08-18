@@ -70,11 +70,13 @@
   },
   "overrides": {
     "seroval": "^1.6.2",
-    "solid-js": "^1.9.15"
+    "solid-js": "^1.9.15",
+    "multer": "^2.2.0"
   },
   "resolutions": {
     "seroval": "^1.6.2",
-    "solid-js": "^1.9.15"
+    "solid-js": "^1.9.15",
+    "multer": "^2.2.0"
   },
   "browserslist": {
     "production": [
