@@ -1,14 +1,22 @@
 import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { pushDataLayer } from '/src/_utils/analytics';
+import { ensureChatOpen, getShadowRoot } from '/src/_utils/flowiseChat';
 
-function openChat() {
-  pushDataLayer('aiChatbotOpen', { componentId: 'flowise-chatbot-button' });
-  document
-    .querySelector('flowise-chatbot')
-    ?.shadowRoot
-    ?.querySelector('button')
-    ?.click();
+// This is an entry point, not a toggle: it only ever opens the chat. Clicking
+// the widget's own toggle while the window is open would close it, so the open
+// state is checked first (see ensureChatOpen).
+async function openChat() {
+  const root = getShadowRoot();
+  if (!root) return;
+
+  // Report only an open that actually happened — not a click that found the
+  // chat already open. Mirrors the floating-button tracking in
+  // src/theme/Navbar/FlowiseChatbot/index.js.
+  const { opened } = await ensureChatOpen(root);
+  if (opened) {
+    pushDataLayer('aiChatbotOpen', { componentId: 'flowise-chatbot-button' });
+  }
 }
 
 export default function FlowiseButton() {

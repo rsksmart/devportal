@@ -2,15 +2,17 @@
  * Sends a code block to the Rootstock AI Assistant (flowise-embed).
  *
  * flowise-embed 3.1.6 exposes no public "send message" API (only init /
- * initFull / destroy / clearChat), so we drive its Shadow DOM directly — the
- * same coupling the theming logic in
- * src/theme/Navbar/FlowiseChatbot/index.js already relies on.
+ * initFull / destroy / clearChat), so we drive its Shadow DOM directly. The
+ * selectors and open-state handling are shared with the navbar button and the
+ * theming logic — see /src/_utils/flowiseChat.js.
  *
  * The Rootstock assistant is a retrieval bot indexed over the devportal docs,
  * so we DON'T need to ship the whole code block: a head+tail excerpt plus a
  * locator (page path + nearest heading + language) is enough for it to pull
  * the full snippet from its knowledge base.
  */
+
+import { ensureChatOpen, getShadowRoot, waitFor } from '/src/_utils/flowiseChat';
 
 // Keep the visible message small. The bot recovers the full block via RAG.
 const MAX_CODE_CHARS = 1500;
@@ -90,57 +92,6 @@ function setNativeValue(el, value) {
   else el.value = value;
 }
 
-// Poll until `getter` returns a truthy value or the timeout elapses.
-function waitFor(getter, timeout = 4000, interval = 60) {
-  return new Promise((resolve) => {
-    const start = performance.now();
-    const tick = () => {
-      let val = null;
-      try {
-        val = getter();
-      } catch (_) {
-        /* shadow DOM not ready yet */
-      }
-      if (val) return resolve(val);
-      if (performance.now() - start >= timeout) return resolve(null);
-      window.setTimeout(tick, interval);
-    };
-    tick();
-  });
-}
-
-// Is the chat window actually visible? flowise keeps the window (`[part="bot"]`,
-// which contains the textarea) MOUNTED after it's been opened once and merely
-// hides it with `transform: scale(0)` when closed. So the presence of a
-// <textarea> is NOT a reliable "open" signal — checking it caused the "sends
-// but the window never opens" bug (we injected into the hidden input). We
-// detect the open state by the window's real rendered size instead.
-function isChatOpen(root) {
-  const win = root.querySelector('[part="bot"]');
-  if (!win) return false;
-  const r = win.getBoundingClientRect();
-  return r.width > 50 && r.height > 50;
-}
-
-// The floating toggle is the button that lives OUTSIDE the chat window
-// (`[part="bot"]`); the window's own buttons — send, etc. — stay in the DOM
-// while it's hidden, so "first button" isn't reliable once the window exists.
-function getToggle(root) {
-  const buttons = Array.from(root.querySelectorAll('button'));
-  return buttons.find((b) => !b.closest('[part="bot"]')) || buttons[0] || null;
-}
-
-// Makes the chat window visible. No-ops if it's already open (clicking the
-// toggle again would CLOSE it). Waits for the toggle to exist first, since
-// flowise-embed loads asynchronously (this was the "doesn't always open" bug).
-async function ensureChatOpen(root) {
-  if (isChatOpen(root)) return true;
-  const toggle = await waitFor(() => getToggle(root), 4000);
-  if (!toggle) return false;
-  toggle.click();
-  return Boolean(await waitFor(() => (isChatOpen(root) ? true : null), 4000));
-}
-
 /**
  * Opens the chat window and prefills the input with `message`, then focuses it.
  * It deliberately does NOT submit — the user reviews the prefilled question and
@@ -148,11 +99,10 @@ async function ensureChatOpen(root) {
  * available.
  */
 export async function openChatWithPrompt(message) {
-  const host = document.querySelector('flowise-chatbot');
-  const root = host && host.shadowRoot;
+  const root = getShadowRoot();
   if (!root) return false;
 
-  if (!(await ensureChatOpen(root))) return false;
+  if (!(await ensureChatOpen(root)).ok) return false;
 
   const textarea = await waitFor(() => root.querySelector('textarea'), 5000);
   if (!textarea) return false;

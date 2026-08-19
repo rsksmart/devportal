@@ -3,6 +3,7 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useColorMode } from '@docusaurus/theme-common';
 import { pushDataLayer } from '/src/_utils/analytics';
+import { getToggle, isChatOpen, TOGGLE_SELECTOR } from '/src/_utils/flowiseChat';
 
 // Portal design system tokens (from src/scss/abstracts/_variables.scss)
 const LIGHT = {
@@ -253,6 +254,25 @@ function isDarkMode() {
   return document.documentElement.getAttribute('data-theme') === 'dark';
 }
 
+// Tracks when the user opens the chat via the floating bubble button.
+//
+// The listener is in the CAPTURE phase so it runs BEFORE flowise's own handler
+// (SolidJS delegates click on the top-level document, i.e. the bubble phase).
+// That's what makes the isChatOpen() check below read the pre-click state, so
+// we can tell an open from a close — the toggle does both.
+function setupFloatingButtonPatch(shadowRoot) {
+  if (shadowRoot._floatingPatched) return;
+  shadowRoot._floatingPatched = true;
+
+  shadowRoot.addEventListener('click', (e) => {
+    if (!e.target?.closest(TOGGLE_SELECTOR)) return;
+    // The click is about to CLOSE the window, not open it.
+    if (isChatOpen(shadowRoot)) return;
+
+    pushDataLayer('aiChatbotOpen', { componentId: 'flowise-chatbot-floating-button' });
+  }, true);
+}
+
 // Patches feedback (thumbs up/down) buttons to disable after a rating is given.
 //
 // Root cause (flowise-embed 3.1.6): a message's rating is read via
@@ -267,30 +287,6 @@ function isDarkMode() {
 // the action row with data-fb-rating="up"|"down" so injected CSS can reproduce the
 // rated look (hide the opposite thumb, recolor + disable the chosen one), and also
 // toggle the native `disabled` attribute as a non-CSS safeguard.
-// Tracks when the user opens the chat via the floating button.
-// The floating button has no title attribute (unlike Close/Reset/Thumbs), so we
-// identify it by exclusion. We only fire on open (not close) by checking that
-// the chat window is currently hidden before the click.
-function setupFloatingButtonPatch(shadowRoot) {
-  if (shadowRoot._floatingPatched) return;
-  shadowRoot._floatingPatched = true;
-
-  const TITLED = 'button[title]';
-
-  shadowRoot.addEventListener('click', (e) => {
-    const btn = e.target?.closest('button');
-    if (!btn || btn.matches(TITLED)) return;
-
-    // Only 1 untitled button exists when chat is closed (the floating toggle).
-    // When chat is open there are 2 (toggle + send). Guard: fire only if it's
-    // the sole untitled button, meaning the chat is currently closed.
-    const untitled = shadowRoot.querySelectorAll(`button:not(${TITLED})`);
-    if (untitled.length !== 1) return;
-
-    pushDataLayer('aiChatbotOpen', { componentId: 'flowise-chatbot-floating-button' });
-  }, true);
-}
-
 function setupFeedbackPatch(shadowRoot) {
   if (shadowRoot._feedbackPatched) return;
   shadowRoot._feedbackPatched = true;
@@ -441,9 +437,11 @@ function setupCopyPatch(shadowRoot) {
   injectCopyButtons(shadowRoot);
 }
 
+// Applies the theme and installs the shadow-DOM patches. Returns false while the
+// widget hasn't mounted yet, which is the signal the caller waits on.
 function applyTheme() {
   const el = document.querySelector('flowise-chatbot');
-  if (!el?.shadowRoot) return;
+  if (!el?.shadowRoot) return false;
 
   setupFloatingButtonPatch(el.shadowRoot);
   setupFeedbackPatch(el.shadowRoot);
@@ -475,9 +473,13 @@ function applyTheme() {
   }
   style.textContent = buildShadowCSS(dark);
 
-  // Update the floating button — flowise sets its bg as an inline style
-  const btn = el.shadowRoot.querySelector('button');
+  // Update the floating button — flowise sets its bg as an inline style.
+  // Select it by part attribute: once the chat window is mounted it keeps its own
+  // buttons in the DOM, so "first button" could style the wrong control.
+  const btn = getToggle(el.shadowRoot);
   if (btn) btn.style.setProperty('background-color', t.brand);
+
+  return true;
 }
 
 function FlowiseChatbotInner({ apiHost, chatflowId }) {
@@ -496,10 +498,6 @@ function FlowiseChatbotInner({ apiHost, chatflowId }) {
         theme: buildTheme(colorMode === 'dark'),
       });
 
-      // Wait for the flowise-chatbot shadow DOM to be ready
-      bodyObserver = new MutationObserver(applyTheme);
-      bodyObserver.observe(document.body, { childList: true, subtree: true });
-
       // Watch data-theme changes on <html> to reapply on mode switch
       themeObserver = new MutationObserver(applyTheme);
       themeObserver.observe(document.documentElement, {
@@ -507,7 +505,21 @@ function FlowiseChatbotInner({ apiHost, chatflowId }) {
         attributeFilter: ['data-theme'],
       });
 
-      applyTheme();
+      // Wait for the flowise-chatbot shadow DOM to be ready. This observes the
+      // whole body subtree, so it disconnects the moment the widget mounts —
+      // otherwise it would re-run applyTheme on every DOM mutation in the app
+      // for the lifetime of the page. Nothing is lost by stopping: theme changes
+      // come from themeObserver, and shadow-DOM re-renders are handled by the
+      // shadow-root observer in setupCopyPatch (shadow mutations never reach a
+      // document.body observer anyway).
+      if (!applyTheme()) {
+        bodyObserver = new MutationObserver(() => {
+          if (!applyTheme()) return;
+          bodyObserver.disconnect();
+          bodyObserver = null;
+        });
+        bodyObserver.observe(document.body, { childList: true, subtree: true });
+      }
     });
 
     return () => {
