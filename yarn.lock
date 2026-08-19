@@ -8133,10 +8133,10 @@ jsonfile@^6.0.1:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
-jssha@^3.3.1:
-  version "3.3.1"
-  resolved "https://registry.npmjs.org/jssha/-/jssha-3.3.1.tgz"
-  integrity sha512-VCMZj12FCFMQYcFLPRm/0lOBbLi8uM2BhXPTqw3U4YAfs4AZfiApOoBLoN8cQE60Z50m1MYMTQVCfgF/KaCVhQ==
+jssha@^3.3.2:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/jssha/-/jssha-3.3.2.tgz#30c51b5ab8bf8b1ecf2416015803d44f5cbf069e"
+  integrity sha512-0RhFxzijV4W0qTXa97D5b6twAWXX7SEOpw8qzAZyZ+oeGOP9e84PnDSLjl7SBB1vBQ+chSUwsZR06i1AzA+nEA==
 
 jszip@^3.10.1:
   version "3.10.1"

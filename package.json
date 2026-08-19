@@ -48,7 +48,7 @@
     "docusaurus-markdown-source-plugin": "^2.0.1",
     "docusaurus-plugin-mermaid-pan-zoom": "^1.7.0",
     "docusaurus-plugin-sass": "^0.2.6",
-    "jssha": "^3.3.1",
+    "jssha": "^3.3.2",
     "katex": "^0.16.11",
     "mermaid-diagram-pan-zoom": "^1.7.0",
     "prism-react-renderer": "^2.3.0",
