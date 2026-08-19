@@ -47,7 +47,7 @@ These libraries and services are the usual starting point for bridge and messagi
 
 Explore the recipes below to start integrating bridging solutions into your application.
 
-- **[Build Omnichain Fungible Token (OFTs) on Rootstock with Layerzero](/use-cases/interoperability/rootstock-layerzero/)**: Cross-chain token transfers using OFT between Rootstock and other supported chains.
+- **[Build Omnichain Fungible Token (OFTs) on Rootstock with LayerZero](/use-cases/interoperability/rootstock-layerzero/)**: Cross-chain token transfers using OFT between Rootstock and other supported chains.
 - **[Omnichain Liquidity Routing on Rootstock with LI.FI](/use-cases/interoperability/integrate-lifi/)**: Route swaps and bridges from Ethereum, Arbitrum, Base, and more into Rootstock.
 - **[Cross-Chain Messaging with Wormhole](/use-cases/interoperability/rootstock-wormhole-messaging/)**: Send arbitrary cross-chain messages to Rootstock using Verified Action Approvals (VAAs).
 - **[Build a Constant-Product AMM on Rootstock (Testnet)](/use-cases/interoperability/amm-constant-product/)**: Build, test, and deploy a minimal constant-product AMM on Rootstock testnet.
