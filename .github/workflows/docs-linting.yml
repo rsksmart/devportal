@@ -15,7 +15,7 @@ jobs:
           git clone https://github.com/rsksmart/docs-style-guide.git ./docs-style-guide
 
       - name: Install and run Vale linting
-        uses: errata-ai/vale-action@v2
+        uses: errata-ai/vale-action@v3
         with:
             filter_mode: diff_context
             files: docs/
