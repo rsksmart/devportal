@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@cookbookdev/docsbot": "^4.24.7",
-    "@crowdin/cli": "^4.7.0",
+    "@crowdin/cli": "^4.15.0",
     "@docusaurus/core": "^3.10.2",
     "@docusaurus/plugin-google-tag-manager": "^3.10.2",
     "@docusaurus/preset-classic": "^3.10.2",
