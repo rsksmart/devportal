@@ -33,7 +33,7 @@ This command starts a local development server and opens up a browser window. Mo
 
 ### Environment Variables
 
-- `FLOWISE_CHATBOT_ENABLED` (optional): set to `false` to disable the "Ask Rootstock AI" chatbot widget, navbar button, and code block button. Defaults to enabled.
+- `FLOWISE_CHATBOT_ENABLED` (optional): set to `true` to enable the "Ask Rootstock AI" chatbot widget, navbar button, and code block button. Defaults to disabled.
 
 ## Usage 
 
