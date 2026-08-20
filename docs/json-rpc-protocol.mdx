@@ -63,9 +63,25 @@ Common error codes follow the [JSON-RPC 2.0 specification](https://www.jsonrpc.o
 
 ## Endpoints
 
-| Network | Base URL |
-|---|---|
-| Testnet | `https://rpc.testnet.rootstock.io/{apiKey}` |
-| Mainnet | `https://rpc.mainnet.rootstock.io/{apiKey}` |
+Every method can be called two ways: through the **public nodes**, which need no
+credentials, or through the **Rootstock RPC API**, which authenticates you with
+an API key carried in the URL path.
 
-`{apiKey}` — the API key segment from the Rootstock RPC dashboard.
+| Access | Network | Base URL | API key |
+|---|---|---|---|
+| Public node | Testnet | `https://public-node.testnet.rsk.co` | not required |
+| Public node | Mainnet | `https://public-node.rsk.co` | not required |
+| RPC API | Testnet | `https://rpc.testnet.rootstock.io/{apiKey}` | required |
+| RPC API | Mainnet | `https://rpc.mainnet.rootstock.io/{apiKey}` | required |
+
+`{apiKey}` — the API key segment from the [Rootstock RPC API dashboard](https://rpc.rootstock.io/).
+Create a free account and generate a key in [RPC API setup](/developers/rpc-api/rootstock/setup/).
+
+The **Endpoint** picker on every method page switches the samples between these,
+so the request you copy is already pointed at the endpoint you use. Paste your
+key there once and it applies across the reference — it stays in your browser
+and is never sent to Rootstock.
+
+The public nodes are provided by RootstockLabs [for testing purposes](/node-operators/public-nodes/):
+they are `HTTP` only — no WebSockets — and rate limited. For production, run
+[your own node](/node-operators/setup/node-runner/) or use the RPC API.

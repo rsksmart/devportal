@@ -557,13 +557,22 @@
   pre { margin-bottom: 0; }
 }
 
-.openapi-network-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+/* Endpoint picker above the request sample: access × network, key or custom
+ * URL, and the resolved endpoint that the samples below print. */
+.openapi-endpoint {
   padding-bottom: 10px;
   margin-bottom: 10px;
   border-bottom: 1px solid var(--ifm-color-emphasis-200);
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+
+    &--sub { margin-top: -2px; }
+  }
 
   &__label {
     font-size: 10.5px;
@@ -571,7 +580,9 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--ifm-color-emphasis-600);
+    min-width: 62px;
   }
+
   &__tab {
     font-size: 11.5px;
     font-weight: 600;
@@ -581,10 +592,148 @@
     padding: 5px 10px;
     cursor: pointer;
     color: var(--ifm-color-emphasis-600);
+    &:hover { border-color: var(--ifm-color-emphasis-500); }
     &.active {
       color: var(--ifm-color-primary);
       border-color: var(--ifm-color-primary);
     }
+  }
+
+  &__select { position: relative; }
+  &__select-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11.5px;
+    font-weight: 600;
+    background: none;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: var(--ifm-font-color-base);
+    &:hover { border-color: var(--ifm-color-emphasis-600); }
+  }
+  &__chev { font-size: 9px; color: var(--ifm-color-emphasis-500); }
+  &__menu {
+    position: absolute;
+    left: 0;
+    top: calc(100% + 6px);
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+    background: var(--ifm-background-surface-color);
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 8px;
+    padding: 5px;
+    z-index: 30;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  }
+  &__menu-item {
+    text-align: left;
+    font-size: 12.5px;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 10px;
+    cursor: pointer;
+    color: var(--ifm-color-emphasis-700);
+    &:hover { background: var(--ifm-color-emphasis-100); color: var(--ifm-font-color-base); }
+    &.active { color: var(--ifm-color-primary); font-weight: 700; }
+  }
+
+  &__input {
+    flex: 1 1 190px;
+    min-width: 0;
+    font-family: var(--ifm-font-family-monospace);
+    font-size: 11.5px;
+    background: var(--ifm-background-color);
+    color: var(--ifm-font-color-base);
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 5px;
+    padding: 6px 9px;
+
+    &:focus {
+      outline: none;
+      border-color: var(--ifm-color-primary);
+    }
+    &.warn { border-color: var(--ifm-color-warning); }
+    &::placeholder { color: var(--ifm-color-emphasis-500); }
+  }
+
+  &__verify {
+    font-size: 11.5px;
+    font-weight: 600;
+    background: none;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: var(--ifm-color-emphasis-700);
+
+    &:hover:not(:disabled) {
+      border-color: var(--ifm-color-primary);
+      color: var(--ifm-color-primary);
+    }
+    &:disabled { opacity: 0.45; cursor: default; }
+  }
+
+  &__remember {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+    font-size: 11.5px;
+    color: var(--ifm-color-emphasis-700);
+    cursor: pointer;
+    input { margin: 0; }
+  }
+
+  &__note {
+    font-size: 11.5px;
+    color: var(--ifm-color-emphasis-600);
+    a { color: inherit; text-decoration: underline; }
+  }
+
+  &__msg {
+    font-size: 11.5px;
+    margin: -2px 0 8px;
+
+    &--after { margin: 6px 0 0; }
+    &.warn { color: var(--ifm-color-warning-dark); }
+    &.fail { color: var(--ifm-color-danger); }
+    &.ok { color: var(--ifm-color-success); }
+    &.pending { color: var(--ifm-color-emphasis-600); }
+  }
+
+  &__resolved {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    code {
+      font-size: 11.5px;
+      word-break: break-all;
+      background: none;
+      border: none;
+      padding: 0;
+      color: var(--ifm-color-emphasis-700);
+    }
+  }
+
+  &__copy {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    font-size: 10.5px;
+    background: none;
+    border: none;
+    padding: 2px;
+    cursor: pointer;
+    color: var(--ifm-color-emphasis-500);
+
+    &:hover { color: var(--ifm-color-primary); }
+    svg { fill: currentColor; stroke: currentColor; }
   }
 }
 
