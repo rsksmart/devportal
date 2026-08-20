@@ -15,6 +15,7 @@ import ErrorPageContent from '@theme/ErrorPageContent';
 import styles from './styles.module.css';
 import SVGSprite from "./SVGSprite";
 import AskCookbook from '../Navbar/AskCookbook/index';
+import FlowiseChatbot from '../Navbar/FlowiseChatbot/index';
 
 export default function Layout(props) {
   const {
@@ -50,6 +51,7 @@ export default function Layout(props) {
       {!noFooter && <Footer />}
       <SVGSprite />
       <AskCookbook />
+      <FlowiseChatbot />
     </LayoutProvider>
   );
 }

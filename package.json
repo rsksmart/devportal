@@ -48,6 +48,7 @@
     "docusaurus-markdown-source-plugin": "^2.0.1",
     "docusaurus-plugin-mermaid-pan-zoom": "^1.7.0",
     "docusaurus-plugin-sass": "^0.2.6",
+    "flowise-embed": "^3.1.6",
     "jssha": "^3.3.1",
     "katex": "^0.16.11",
     "mermaid-diagram-pan-zoom": "^1.7.0",
@@ -66,6 +67,16 @@
     "docusaurus-plugin-llms": "^0.3.0",
     "dotenv": "16.4.7",
     "linkinator": "^7.5.3"
+  },
+  "overrides": {
+    "seroval": "^1.6.2",
+    "solid-js": "^1.9.15",
+    "multer": "^2.2.0"
+  },
+  "resolutions": {
+    "seroval": "^1.6.2",
+    "solid-js": "^1.9.15",
+    "multer": "^2.2.0"
   },
   "browserslist": {
     "production": [
