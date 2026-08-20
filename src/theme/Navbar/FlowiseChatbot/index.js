@@ -437,6 +437,39 @@ function setupCopyPatch(shadowRoot) {
   injectCopyButtons(shadowRoot);
 }
 
+// Shields the chat input from single-key shortcuts that belong to the page
+// around it. The Vercel Toolbar injected into preview deployments ate the "c" of
+// "rootstock" — its Comment shortcut is the bare key "C" — and opened its popup.
+//
+// Its handler (vercel.live/_next-live/feedback/feedback.js) boils down to:
+//   window.addEventListener('keydown', (e) => {
+//     const d = e.target;
+//     if (e.key && (hasModifier || !d.closest('input,textarea,[contenteditable]')))
+//       { runShortcut(); e.preventDefault(); }
+//   }, true);
+//
+// Our input lives in a shadow root, so by the time a listener outside the widget
+// sees the event its target has been RETARGETED to the <flowise-chatbot> host,
+// and closest() cannot pierce a shadow boundary → the guard concludes that no
+// field is focused. (Vercel hit the same wall with their own shadow root and
+// special-cased only their own element, VERCEL-LIVE-FEEDBACK, by reading
+// shadowRoot.activeElement.)
+//
+// Listening from inside the widget cannot fix this: their listener sits on
+// `window` in the CAPTURE phase — the first stop on the event's path — so it has
+// already called preventDefault() before anything in our shadow tree runs.
+// Satisfying the guard does work: `[contenteditable]` matches on attribute
+// PRESENCE, so contenteditable="false" on the host makes closest() match, and
+// "false" is exactly the value that changes nothing about the widget (it is the
+// default editability state — the inner textarea stays editable). Modifier
+// combos still reach the page, since the guard lets those through anyway.
+//
+// Takes the host element, not the shadow root: the attribute has to sit on the
+// node that events are retargeted to.
+function setupKeyShieldPatch(el) {
+  el.setAttribute('contenteditable', 'false');
+}
+
 // Applies the theme and installs the shadow-DOM patches. Returns false while the
 // widget hasn't mounted yet, which is the signal the caller waits on.
 function applyTheme() {
@@ -446,6 +479,7 @@ function applyTheme() {
   setupFloatingButtonPatch(el.shadowRoot);
   setupFeedbackPatch(el.shadowRoot);
   setupCopyPatch(el.shadowRoot);
+  setupKeyShieldPatch(el);
 
   const dark = isDarkMode();
   const t = dark ? DARK : LIGHT;
