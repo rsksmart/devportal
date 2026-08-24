@@ -35,7 +35,15 @@ function buildTheme(isDark) {
     button: {
       backgroundColor: t.brand,
       right: 20,
-      bottom: 20,
+      // Stacked ABOVE the accessiBe trigger, which also sits bottom-right at
+      // offset 20/20 with a 48px medium trigger and z-index 2147483647 — it was
+      // covering this bubble completely on desktop and partially on mobile.
+      // accessiBe's placement comes from its remote dashboard config
+      // (cdn.acsbapp.com/config/<domain>/config.json), NOT from the acsbJS.init()
+      // options in src/components/AccessibeWidget — so it can only be moved from
+      // the accessiBe admin, and this side is the one we control in code.
+      // 20 (its offset) + 48 (its size) + 20 (gap) = 88.
+      bottom: 88,
       size: 48,
       iconColor: 'white',
     },
