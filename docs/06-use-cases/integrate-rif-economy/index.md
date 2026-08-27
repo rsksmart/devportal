@@ -29,4 +29,6 @@ Explore the recipes below to start building secure governance and custody system
 
 import DocCardList from '@theme/DocCardList';
 
-<DocCardList />
+<div data-markdown-ignore>
+  <DocCardList />
+</div>

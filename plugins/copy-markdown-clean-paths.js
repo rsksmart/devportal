@@ -39,6 +39,11 @@ function walkDocFiles(dir, callback, relativeBase = dir) {
     return;
   }
   for (const entry of fs.readdirSync(dir, {withFileTypes: true})) {
+    // `_`-prefixed docs are excluded from the site, so they must not be
+    // mirrored onto public routes where they would have no HTML counterpart.
+    if (entry.name.startsWith('_')) {
+      continue;
+    }
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
       walkDocFiles(fullPath, callback, relativeBase);

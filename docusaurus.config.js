@@ -232,7 +232,18 @@ const config = {
           lastmod: 'date',
           changefreq: 'weekly',
           priority: 0.5,
-          ignorePatterns: ['/tags/**'],
+          // Utility pages, not documentation. Excluding them keeps agent
+          // tooling from treating them as doc pages that need markdown.
+          ignorePatterns: [
+            '/tags/**',
+            '/search/**',
+            '/search',
+            '/components/**',
+            '/components',
+            '/changelog/**',
+            '/changelog',
+            '/category/**',
+          ],
           filename: 'sitemap.xml',
           createSitemapItems: async (params) => {
             const {defaultCreateSitemapItems, ...rest} = params;

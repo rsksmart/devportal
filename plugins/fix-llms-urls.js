@@ -10,15 +10,21 @@ const path = require('path');
 
 const URL_PATTERN = /https?:\/\/[^\s)\]]+/g;
 
-/** Paths in llms.txt that differ from filesystem-derived URLs. */
-const PATH_ALIASES = [
-  ['/use-cases/shared-setup', '/use-cases/interoperability/shared-setup'],
-];
+/**
+ * Paths in llms.txt that differ from filesystem-derived URLs. Aliases are
+ * applied after numbered prefixes are stripped, so use the clean form.
+ *
+ * Prefer aligning a doc's file path with its frontmatter slug over adding an
+ * alias here, because the markdown export is also path-derived and an alias
+ * would leave the slug URL without a markdown counterpart.
+ */
+const PATH_ALIASES = [];
 
 const SITE_ORIGIN = 'https://dev.rootstock.io';
 
 /** Hub and category pages in sitemap that the llms plugin may omit. */
 const SUPPLEMENTARY_HUB_ENTRIES = [
+  ['Rootstock Developers Portal', '/', 'Start here for Rootstock development.'],
   ['RIF Suite', '/concepts/rif-suite/', 'Open-source tools for building on Bitcoin.'],
   ['Blockchain Essentials', '/developers/blockchain-essentials/', 'Read transactions and deploy your first contract.'],
   ['New to Blockchain', '/developers/blockchain-essentials/new-to-blockchain/', 'Ledgers, keys, wallets, gas, and transactions.'],
@@ -67,14 +73,16 @@ function fixUrl(rawUrl) {
     if (hasPrivateSegment(url.pathname)) {
       return null;
     }
+    const segments = url.pathname.split('/').filter(Boolean).map(stripNumberedPrefix);
+    const trailingSlash = url.pathname.endsWith('/') ? '/' : '';
+    url.pathname = segments.length ? `/${segments.join('/')}${trailingSlash}` : '/';
+    // Aliases run after prefix stripping because the llms plugin emits the
+    // numbered form (/06-use-cases/...), which the clean aliases never matched.
     for (const [from, to] of PATH_ALIASES) {
       if (url.pathname.includes(from)) {
         url.pathname = url.pathname.replace(from, to);
       }
     }
-    const segments = url.pathname.split('/').filter(Boolean).map(stripNumberedPrefix);
-    const trailingSlash = url.pathname.endsWith('/') ? '/' : '';
-    url.pathname = segments.length ? `/${segments.join('/')}${trailingSlash}` : '/';
     return url.toString();
   } catch {
     return rawUrl;

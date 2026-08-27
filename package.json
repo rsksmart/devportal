@@ -66,7 +66,13 @@
     "@docusaurus/types": "^3.10.2",
     "docusaurus-plugin-llms": "^0.3.0",
     "dotenv": "16.4.7",
-    "linkinator": "^7.5.3"
+    "linkinator": "^7.5.3",
+    "remark-frontmatter": "^5.0.0",
+    "remark-gfm": "^4.0.0",
+    "remark-mdx": "^3.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-stringify": "^11.0.0",
+    "unified": "^11.0.5"
   },
   "overrides": {
     "seroval": "^1.6.2",

@@ -32,8 +32,18 @@ const EXCLUDED_EXACT = new Set([
   `${SITE_ORIGIN}/search`,
 ]);
 
+/**
+ * Collapses a URL to the form used for coverage comparison. llms.txt links
+ * point at the markdown exports, so `/index.md` and `.md` are stripped to match
+ * the HTML URLs in the sitemap, the same normalization agent scorers apply.
+ */
 function normalizeUrl(url) {
-  return url.replace(/\/$/, '') || SITE_ORIGIN;
+  return (
+    url
+      .replace(/\/index\.mdx?$/i, '/')
+      .replace(/\.mdx?$/i, '')
+      .replace(/\/$/, '') || SITE_ORIGIN
+  );
 }
 
 function shouldExclude(url) {
@@ -75,7 +85,7 @@ function main() {
   }
 
   const llmsContent = fs.readFileSync(llmsPath, 'utf8');
-  const llmsUrls = llmsUrlsInContent(llmsContent);
+  const llmsUrls = new Set([...llmsUrlsInContent(llmsContent)].map(normalizeUrl));
   const sitemapUrls = readSitemapUrls(sitemapPath).filter((url) => !shouldExclude(url));
   const missing = sitemapUrls.filter((url) => !llmsUrls.has(url));
   const coverage = sitemapUrls.length

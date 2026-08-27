@@ -8,17 +8,6 @@ tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethe
 
 This section provides help on some potential issues you may run into and tips on how to resolve them.
 
-## Summary
-
-Common Hardhat errors when developing on Rootstock and how to fix them.
-
-| Error | Fix |
-|-------|-----|
-| **HH8: Invalid account in config** (`Expected string, received undefined` for `rskMainnet` / `rskTestnet`) | Match `.env` values to `hardhat.config.js`. Run `source .env` in the project root |
-| **Nothing to compile** | Delete the `artifacts` folder. Run `npx hardhat compile` again |
-| **GET /MyToken.json 404** | Confirm contracts compiled and `artifacts` exists. Follow [interact with frontend](/developers/smart-contracts/hardhat/interact-with-frontend/) steps in order |
-| **HH601: Script scripts/deploy.js doesn't exist** | Run `npx hardhat run --network hardhat scripts/deploy.js` from the project root directory |
-
 ## Errors
 
 ````mdx-code-block
