@@ -50,11 +50,15 @@ function findCategoryFiles(dir, found = []) {
  */
 function categoryRoutes(docsDir) {
   const routes = [];
+  const skipped = [];
+
   for (const file of findCategoryFiles(docsDir)) {
+    const source = path.relative(docsDir, file);
     let parsed;
     try {
       parsed = yaml.load(fs.readFileSync(file, 'utf8'));
-    } catch {
+    } catch (err) {
+      skipped.push(`${source}: ${err.message}`);
       continue;
     }
     if (!parsed || typeof parsed !== 'object') continue;
@@ -62,12 +66,19 @@ function categoryRoutes(docsDir) {
     if (!link || link.type !== 'generated-index') continue;
 
     const slug = link.slug || `/category/${slugify(String(parsed.label || ''))}`;
-    routes.push({
-      route: `/${String(slug).replace(/^\/|\/$/g, '')}`,
-      source: path.relative(docsDir, file),
-    });
+    const route = `/${String(slug).replace(/^\/|\/$/g, '')}`;
+
+    // The slug reaches path.join below, so a traversal segment would let a
+    // category write outside the build directory.
+    if (route.split('/').includes('..')) {
+      skipped.push(`${source}: slug escapes the build directory (${slug})`);
+      continue;
+    }
+
+    routes.push({route, source});
   }
-  return routes;
+
+  return {routes, skipped};
 }
 
 function parseGeneratedIndex(html) {
@@ -117,44 +128,46 @@ function renderMarkdown({title, description, cards}) {
  */
 function writeGeneratedIndexMarkdown({projectRoot, outDir}) {
   const docsDir = path.join(projectRoot, 'docs');
-  const routes = categoryRoutes(docsDir);
+  const {routes, skipped} = categoryRoutes(docsDir);
   const written = [];
-  const skipped = [];
 
   for (const {route, source} of routes) {
     const pageDir = path.join(outDir, route);
     const htmlPath = path.join(pageDir, 'index.html');
 
-    let html;
     try {
-      html = fs.readFileSync(htmlPath, 'utf8');
+      const html = fs.readFileSync(htmlPath, 'utf8');
+
+      // A page with a real markdown source already exported its own flat file.
+      if (fs.existsSync(path.join(outDir, `${route}.md`))) {
+        continue;
+      }
+
+      const parsed = parseGeneratedIndex(html);
+      if (!parsed) {
+        skipped.push(`${route}: could not parse rendered HTML`);
+        continue;
+      }
+
+      // Writing exclusively never clobbers markdown another step already wrote,
+      // and avoids the gap an existence check leaves before the write.
+      fs.writeFileSync(path.join(pageDir, 'index.md'), renderMarkdown(parsed), {
+        encoding: 'utf8',
+        flag: 'wx',
+      });
+      written.push({route, cards: parsed.cards.length});
     } catch (err) {
-      if (err.code !== 'ENOENT') throw err;
-      skipped.push(`${route}: no rendered HTML (from ${source})`);
-      continue;
-    }
-
-    // A page with a real markdown source already exported its own flat file.
-    if (fs.existsSync(path.join(outDir, `${route}.md`))) {
-      continue;
-    }
-
-    const parsed = parseGeneratedIndex(html);
-    if (!parsed) {
-      skipped.push(`${route}: could not parse rendered HTML`);
-      continue;
-    }
-
-    // Writing exclusively never clobbers markdown another step already wrote,
-    // and avoids the gap an existence check leaves before the write.
-    const indexMd = path.join(pageDir, 'index.md');
-    try {
-      fs.writeFileSync(indexMd, renderMarkdown(parsed), {encoding: 'utf8', flag: 'wx'});
-    } catch (err) {
+      // The site itself has already built by this point, so filesystem trouble
+      // on one category page is reported rather than allowed to fail the
+      // deploy. Errors without a code are programmer mistakes and still surface.
+      if (!err.code) throw err;
       if (err.code === 'EEXIST') continue;
-      throw err;
+      skipped.push(
+        err.code === 'ENOENT'
+          ? `${route}: no rendered HTML (from ${source})`
+          : `${route}: ${err.message}`,
+      );
     }
-    written.push({route, cards: parsed.cards.length});
   }
 
   return {written, skipped, total: routes.length};

@@ -160,27 +160,33 @@ function writeRenderedPageMarkdown({outDir, routes}) {
   for (const route of routes) {
     const clean = route.replace(/^\/|\/$/g, '');
     const htmlPath = path.join(outDir, clean, 'index.html');
-    if (!fs.existsSync(htmlPath)) {
-      skipped.push(`${route}: no rendered HTML`);
-      continue;
-    }
 
-    const markdown = htmlMainToMarkdown(fs.readFileSync(htmlPath, 'utf8'));
-    if (!markdown) {
-      skipped.push(`${route}: no <main> content`);
-      continue;
-    }
+    try {
+      const markdown = htmlMainToMarkdown(fs.readFileSync(htmlPath, 'utf8'));
+      if (!markdown) {
+        skipped.push(`${route}: no <main> content`);
+        continue;
+      }
 
-    // Match the location the build already publishes for this route.
-    const flatMd = path.join(outDir, `${clean}.md`);
-    const target =
-      clean !== '' && fs.existsSync(flatMd) ? flatMd : path.join(outDir, clean, 'index.md');
-    fs.mkdirSync(path.dirname(target), {recursive: true});
-    fs.writeFileSync(target, markdown, 'utf8');
-    written.push(path.relative(outDir, target));
+      // Match the location the build already publishes for this route.
+      const flatMd = path.join(outDir, `${clean}.md`);
+      const target =
+        clean !== '' && fs.existsSync(flatMd) ? flatMd : path.join(outDir, clean, 'index.md');
+      fs.mkdirSync(path.dirname(target), {recursive: true});
+      fs.writeFileSync(target, markdown, 'utf8');
+      written.push(path.relative(outDir, target));
+    } catch (err) {
+      // The site itself has already built by this point, so filesystem trouble
+      // on one page is reported rather than allowed to fail the deploy. Errors
+      // without a code are programmer mistakes and still surface.
+      if (!err.code) throw err;
+      skipped.push(
+        err.code === 'ENOENT' ? `${route}: no rendered HTML` : `${route}: ${err.message}`,
+      );
+    }
   }
 
   return {written, skipped};
 }
 
-module.exports = {writeRenderedPageMarkdown, htmlMainToMarkdown};
+module.exports = {writeRenderedPageMarkdown};

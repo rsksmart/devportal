@@ -234,14 +234,15 @@ const config = {
           priority: 0.5,
           // Utility pages, not documentation. Excluding them keeps agent
           // tooling from treating them as doc pages that need markdown.
+          // `/changelog` stays listed: it is a real page worth discovering.
           ignorePatterns: [
             '/tags/**',
             '/search/**',
             '/search',
             '/components/**',
             '/components',
-            '/changelog/**',
-            '/changelog',
+            // Defensive, and matches nothing today. Every category sets an
+            // explicit slug, so this only applies if one is ever added without.
             '/category/**',
           ],
           filename: 'sitemap.xml',

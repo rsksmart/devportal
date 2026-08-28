@@ -66,6 +66,7 @@
     "@docusaurus/types": "^3.10.2",
     "docusaurus-plugin-llms": "^0.3.0",
     "dotenv": "16.4.7",
+    "js-yaml": "^4.1.0",
     "linkinator": "^7.5.3",
     "remark-frontmatter": "^5.0.0",
     "remark-gfm": "^4.0.0",
