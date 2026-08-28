@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
+const {decodeEntities, stripTags} = require('./html-text');
 
 /**
  * Docusaurus renders `link: type: generated-index` category pages from
@@ -21,19 +22,12 @@ function slugify(label) {
     .replace(/^-|-$/g, '');
 }
 
-function decodeEntities(text) {
-  return text
-    .replace(/<[^>]+>/g, '')
-    .replace(/&nbsp;/g, ' ')
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(Number(code)))
-    .replace(/&#x([0-9a-f]+);/gi, (_, code) => String.fromCharCode(parseInt(code, 16)))
-    .replace(/&[a-z]+;/gi, '')
-    .replace(/\s+/g, ' ')
-    .trim();
+/**
+ * Tags come off before entities are decoded, so an escaped `&lt;script&gt;`
+ * stays literal text in the export instead of becoming a tag and being removed.
+ */
+function toText(html) {
+  return decodeEntities(stripTags(html)).replace(/\s+/g, ' ').trim();
 }
 
 function findCategoryFiles(dir, found = []) {
@@ -79,7 +73,7 @@ function categoryRoutes(docsDir) {
 function parseGeneratedIndex(html) {
   const headingMatch = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/);
   if (!headingMatch) return null;
-  const title = decodeEntities(headingMatch[1]);
+  const title = toText(headingMatch[1]);
   if (!title) return null;
 
   // The category description is the paragraph between the h1 and </header>.
@@ -87,13 +81,13 @@ function parseGeneratedIndex(html) {
   const headerEnd = headerTail.indexOf('</header>');
   const descriptionMatch =
     headerEnd === -1 ? null : headerTail.slice(0, headerEnd).match(/<p[^>]*>([\s\S]*?)<\/p>/);
-  const description = descriptionMatch ? decodeEntities(descriptionMatch[1]) : '';
+  const description = descriptionMatch ? toText(descriptionMatch[1]) : '';
 
   const cards = [];
   for (const [, block] of html.matchAll(ARTICLE_RE)) {
-    const cardTitle = decodeEntities((block.match(/<h[23][^>]*>([\s\S]*?)<\/h[23]>/) || [])[1] || '');
-    const cardDescription = decodeEntities((block.match(/<p[^>]*>([\s\S]*?)<\/p>/) || [])[1] || '');
-    const href = (block.match(/href="([^"]+)"/) || [])[1] || '';
+    const cardTitle = toText((block.match(/<h[23][^>]*>([\s\S]*?)<\/h[23]>/) || [])[1] || '');
+    const cardDescription = toText((block.match(/<p[^>]*>([\s\S]*?)<\/p>/) || [])[1] || '');
+    const href = decodeEntities((block.match(/href="([^"]+)"/) || [])[1] || '');
     if (cardTitle || cardDescription) {
       cards.push({title: cardTitle, description: cardDescription, href});
     }
@@ -130,23 +124,36 @@ function writeGeneratedIndexMarkdown({projectRoot, outDir}) {
   for (const {route, source} of routes) {
     const pageDir = path.join(outDir, route);
     const htmlPath = path.join(pageDir, 'index.html');
-    if (!fs.existsSync(htmlPath)) {
+
+    let html;
+    try {
+      html = fs.readFileSync(htmlPath, 'utf8');
+    } catch (err) {
+      if (err.code !== 'ENOENT') throw err;
       skipped.push(`${route}: no rendered HTML (from ${source})`);
       continue;
     }
-    const directMd = path.join(outDir, `${route}.md`);
-    const indexMd = path.join(pageDir, 'index.md');
-    if (fs.existsSync(indexMd) || fs.existsSync(directMd)) {
+
+    // A page with a real markdown source already exported its own flat file.
+    if (fs.existsSync(path.join(outDir, `${route}.md`))) {
       continue;
     }
 
-    const parsed = parseGeneratedIndex(fs.readFileSync(htmlPath, 'utf8'));
+    const parsed = parseGeneratedIndex(html);
     if (!parsed) {
       skipped.push(`${route}: could not parse rendered HTML`);
       continue;
     }
 
-    fs.writeFileSync(indexMd, renderMarkdown(parsed), 'utf8');
+    // Writing exclusively never clobbers markdown another step already wrote,
+    // and avoids the gap an existence check leaves before the write.
+    const indexMd = path.join(pageDir, 'index.md');
+    try {
+      fs.writeFileSync(indexMd, renderMarkdown(parsed), {encoding: 'utf8', flag: 'wx'});
+    } catch (err) {
+      if (err.code === 'EEXIST') continue;
+      throw err;
+    }
     written.push({route, cards: parsed.cards.length});
   }
 

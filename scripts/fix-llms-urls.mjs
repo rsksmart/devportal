@@ -51,6 +51,11 @@ Developer documentation for building on Rootstock, a Bitcoin sidechain secured b
 
 const SITE_ORIGIN = 'https://dev.rootstock.io';
 
+/** Escapes a literal for use in a RegExp, so the dots in the origin stay dots. */
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 /**
  * Resolves the published markdown URL for a page path, or null when the page
  * has no markdown export. Mirrors the candidate order agents use: `page.md`
@@ -83,15 +88,21 @@ function markdownUrlFor(urlPath, buildDir) {
  */
 function pointLlmsLinksAtMarkdown(llmsDir, buildDir) {
   const filePath = path.join(llmsDir, 'llms.txt');
-  if (!fs.existsSync(filePath)) {
-    return {rewritten: 0, left: 0};
-  }
 
   let rewritten = 0;
   let left = 0;
-  const original = fs.readFileSync(filePath, 'utf8');
+  let original;
+  try {
+    original = fs.readFileSync(filePath, 'utf8');
+  } catch (err) {
+    if (err.code === 'ENOENT') {
+      return {rewritten: 0, left: 0};
+    }
+    throw err;
+  }
+
   const updated = original.replace(
-    new RegExp(`${SITE_ORIGIN}([^\\s)\\]]*)`, 'g'),
+    new RegExp(`${escapeRegExp(SITE_ORIGIN)}([^\\s)\\]]*)`, 'g'),
     (match, urlPath) => {
       if (/\.mdx?$/i.test(urlPath)) {
         return match;

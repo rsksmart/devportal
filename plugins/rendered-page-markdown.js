@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const {decodeEntities} = require('./html-text');
 
 /**
  * Derives markdown for standalone React pages, which have no doc source for the
@@ -20,18 +21,20 @@ const BLOCK_ELEMENTS = new Set([
 
 const HEADING_ELEMENTS = new Set(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']);
 
+/**
+ * Destinations worth carrying into markdown. Fragment-only links say nothing
+ * once the surrounding page is gone, and the allowlist keeps `javascript:` and
+ * `data:` URLs out of the export.
+ */
+const LINKABLE_HREF = /^(?:https?:\/\/|mailto:|\/|\.{1,2}\/)/i;
+
 const TOKEN_RE = /<!--[\s\S]*?-->|<\/?([a-zA-Z][a-zA-Z0-9]*)\b[^>]*>|[^<]+/g;
 
-function decodeEntities(text) {
-  return text
-    .replace(/&nbsp;/g, ' ')
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(Number(code)))
-    .replace(/&#x([0-9a-f]+);/gi, (_, code) => String.fromCharCode(parseInt(code, 16)))
-    .replace(/&[a-z]+;/gi, '');
+/** Renders an inline link, keeping the label readable if the URL is awkward. */
+function inlineLink(label, href) {
+  const safeLabel = label.replace(/([[\]])/g, '\\$1');
+  const safeHref = /[\s()]/.test(href) ? `<${href}>` : href;
+  return `[${safeLabel}](${safeHref})`;
 }
 
 /**
@@ -52,12 +55,16 @@ function htmlMainToMarkdown(html) {
   // The llms.txt directive is injected into markdown separately.
   let ignoreDepth = 0;
   let ignoreTag = null;
+  let anchorHref = null;
+  let anchorStart = 0;
 
   const flush = () => {
     const text = current.replace(/\s+/g, ' ').trim();
     if (text) blocks.push(`${prefix}${text}`);
     current = '';
     prefix = '';
+    // A link cannot span two blocks, so drop any anchor still open.
+    anchorHref = null;
   };
 
   for (const [token, rawTag] of mainMatch[1].matchAll(TOKEN_RE)) {
@@ -100,6 +107,21 @@ function htmlMainToMarkdown(html) {
       if (!token.endsWith('/>')) {
         ignoreDepth = 1;
         ignoreTag = tag;
+      }
+      continue;
+    }
+
+    if (tag === 'a') {
+      if (!isClosing) {
+        const href = decodeEntities((token.match(/\shref="([^"]*)"/i) || [])[1] || '');
+        anchorHref = LINKABLE_HREF.test(href) ? href : null;
+        anchorStart = current.length;
+      } else if (anchorHref) {
+        const label = current.slice(anchorStart).replace(/\s+/g, ' ').trim();
+        if (label) {
+          current = `${current.slice(0, anchorStart)}${inlineLink(label, anchorHref)}`;
+        }
+        anchorHref = null;
       }
       continue;
     }

@@ -417,10 +417,22 @@ function outsideCode(text, edit) {
  */
 function stripMdxHazards(source) {
   return outsideCode(source, (text) =>
-    text
-      .replace(/<!--[\s\S]*?-->/g, '')
-      .replace(/^(#{1,6}[ \t].*?)[ \t]*\{#[^}\n]*\}[ \t]*$/gm, '$1'),
+    stripHtmlComments(text).replace(/^(#{1,6}[ \t].*?)[ \t]*\{#[^}\n]*\}[ \t]*$/gm, '$1'),
   );
+}
+
+/**
+ * Removes HTML comments, repeating until stable. Removing a nested comment in
+ * one pass can leave the outer `<!--` behind, which then aborts the MDX parse.
+ */
+function stripHtmlComments(text) {
+  let out = text;
+  let previous;
+  do {
+    previous = out;
+    out = out.replace(/<!--[\s\S]*?-->/g, '');
+  } while (out !== previous);
+  return out;
 }
 
 /**
