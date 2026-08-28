@@ -30,10 +30,17 @@ const LINKABLE_HREF = /^(?:https?:\/\/|mailto:|\/|\.{1,2}\/)/i;
 
 const TOKEN_RE = /<!--[\s\S]*?-->|<\/?([a-zA-Z][a-zA-Z0-9]*)\b[^>]*>|[^<]+/g;
 
-/** Renders an inline link, keeping the label readable if the URL is awkward. */
+/**
+ * Renders an inline link. The label escapes backslashes alongside the brackets,
+ * since escaping brackets alone lets an existing backslash consume the escape.
+ * The URL percent-encodes the characters that would end the link early.
+ */
 function inlineLink(label, href) {
-  const safeLabel = label.replace(/([[\]])/g, '\\$1');
-  const safeHref = /[\s()]/.test(href) ? `<${href}>` : href;
+  const safeLabel = label.replace(/[\\[\]]/g, (char) => `\\${char}`);
+  const safeHref = href.replace(
+    /[\s<>()]/g,
+    (char) => `%${char.charCodeAt(0).toString(16).toUpperCase().padStart(2, '0')}`,
+  );
   return `[${safeLabel}](${safeHref})`;
 }
 
