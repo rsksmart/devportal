@@ -73,7 +73,7 @@ function NetworkParams({networkKey}) {
   ];
 
   return (
-    <div className={styles.networkTable}>
+    <div className={styles.networkTable} data-markdown-ignore="true">
       {rows.map(([key, value]) => (
         <div className={styles.networkRow} key={key}>
           <span className={styles.networkKey}>{key}</span>
@@ -120,7 +120,7 @@ function CheatsheetButton({href, children, internal, onClick}) {
 
 function ExplorerNetworkLinks() {
   return (
-    <div className={styles.buttonRow}>
+    <div className={styles.buttonRow} data-markdown-ignore="true">
       {EXPLORER_NETWORK_LINKS.map((link) => (
         <CheatsheetButton key={link.href} href={link.href} internal={link.internal}>
           {link.label}
@@ -190,7 +190,7 @@ function KitCard({kit}) {
 
 function MetaMaskButtons() {
   return (
-    <div className={styles.buttonRow}>
+    <div className={styles.buttonRow} data-markdown-ignore="true">
       <CheatsheetButton onClick={() => addRootstockNetwork('testnet')}>
         Add Rootstock Testnet
       </CheatsheetButton>
@@ -277,14 +277,14 @@ export default function Cheatsheet() {
             <div className={styles.sectionBody}>
               <div className={styles.itemCard}>
                 <ItemHeading>1.1 Add Rootstock to MetaMask</ItemHeading>
-                <p className={styles.itemText}>
+                <p className={styles.itemText} data-markdown-ignore="true">
                   Click a button below or copy network details into your wallet.
                 </p>
                 <p className={styles.itemSubLabel}>MetaMask</p>
                 <BrowserOnly fallback={null}>{() => <MetaMaskButtons />}</BrowserOnly>
                 <p className={styles.itemSubLabel}>Rootstock Explorer</p>
                 <ExplorerNetworkLinks />
-                <div className={styles.buttonRow}>
+                <div className={styles.buttonRow} data-markdown-ignore="true">
                   <CheatsheetButton href="/dev-tools/wallets/metamask/" internal>
                     MetaMask setup guide
                   </CheatsheetButton>
@@ -319,7 +319,7 @@ export default function Cheatsheet() {
                 <p className={styles.itemText}>
                   Production-grade RPC API for Rootstock. Create a free API key for higher limits.
                 </p>
-                <div className={styles.buttonRow}>
+                <div className={styles.buttonRow} data-markdown-ignore="true">
                   <CheatsheetButton href="https://rpc.rootstock.io">rpc.rootstock.io</CheatsheetButton>
                   <CheatsheetButton href="https://rpc.rootstock.io/doc">RPC API Sandbox</CheatsheetButton>
                   <CheatsheetButton href="/developers/rpc-api/rootstock/setup/" internal>
@@ -334,7 +334,7 @@ export default function Cheatsheet() {
                   Recommended compiler settings for Rootstock. See the EVM compatibility matrix for
                   opcode support and behavioral differences vs Ethereum.
                 </p>
-                <div className={styles.networkTable}>
+                <div className={styles.networkTable} data-markdown-ignore="true">
                   <div className={styles.networkRow}>
                     <span className={styles.networkKey}>Supported Version</span>
                     <code className={styles.networkValue}>{EVM_COMPILER.solidityVersionDisplay}</code>
@@ -346,7 +346,7 @@ export default function Cheatsheet() {
                     <CopyButton value={EVM_COMPILER.evmVersion} label="EVM version" />
                   </div>
                 </div>
-                <div className={styles.buttonRow}>
+                <div className={styles.buttonRow} data-markdown-ignore="true">
                   <CheatsheetButton href={EVM_COMPILER.explorerUrl}>
                     EVM Compatibility Explorer
                   </CheatsheetButton>
@@ -421,7 +421,7 @@ export default function Cheatsheet() {
                   <ItemHeading>{tool.title}</ItemHeading>
                   <p className={styles.itemText}>{tool.description}</p>
                   {tool.snippet ? <pre className={styles.codeBlock}>{tool.snippet}</pre> : null}
-                  <div className={styles.buttonRow}>
+                  <div className={styles.buttonRow} data-markdown-ignore="true">
                     {tool.links.map((link) => (
                       <CheatsheetButton key={link.href} href={link.href} internal={link.internal}>
                         {link.label}
@@ -485,7 +485,7 @@ export default function Cheatsheet() {
               desc="Get help and stay connected."
             />
             <div className={styles.sectionBody}>
-              <div className={styles.buttonRow}>
+              <div className={styles.buttonRow} data-markdown-ignore="true">
                 {SUPPORT_LINKS.map((link) => (
                   <CheatsheetButton key={link.href} href={link.href}>
                     {link.label}
@@ -531,7 +531,7 @@ export default function Cheatsheet() {
                 </table>
               </div>
               <p className={styles.relatedLabel}>Related guides</p>
-              <div className={styles.buttonRow}>
+              <div className={styles.buttonRow} data-markdown-ignore="true">
                 {REFERENCE_GUIDES.map((guide) => (
                   <CheatsheetButton
                     key={guide.href}

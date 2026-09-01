@@ -6,40 +6,7 @@ description: "Frequently asked questions about the PowPeg App."
 tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-Here, you can find a list of frequently asked questions (FAQs) about the PowPeg App.
-
-## Summary
-
-Frequently asked questions about the [PowPeg App](https://powpeg.rootstock.io/). For prerequisites, supported wallets, and supported browsers, see the linked guides below.
-
-### Questions and answers
-
-| # | Question | Answer |
-|---|----------|--------|
-| 1 | Requirements to use PowPeg App? | See [prerequisites](/resources/guides/powpeg-app/prerequisites/) |
-| 2 | Common peg-out errors? | See [peg-out common errors](/resources/guides/powpeg-app/pegout/pegout-common-errors) |
-| 3 | Derive BTC private key after peg-out? | See [deriving electrum](/resources/guides/powpeg-app/pegout/deriving-electrum#getting-a-wallet-private-key) |
-| 4 | SegWit vs Legacy addresses? | Legacy is the original format. SegWit separates witness data and has lower fees |
-| 5 | Address types for peg-in? | See [supported addresses](/resources/guides/powpeg-app/advanced-operations/supported-addresses/) |
-| 6 | Why use PowPeg App vs protocol directly? | Simpler peg-in UX. See [overview](/resources/guides/powpeg-app/overview#why-use-the-powpeg) |
-| 7 | Supported browsers? | See [supported browsers](/resources/guides/powpeg-app/advanced-operations/supported-browsers/) |
-| 8 | Supported wallets? | See [supported wallets](/resources/guides/powpeg-app/advanced-operations/supported-wallets/) |
-| 9 | Native peg-in completion time? | ~17 hours |
-| 10 | Fast Mode peg-in time? | ~20 minutes via liquidity providers |
-| 11 | Native peg-out completion time? | ~34 hours |
-| 12 | Fast Mode peg-out time? | ~20 minutes via liquidity providers |
-| 13 | Peg-in min and max? | Min 0.005 BTC. Max 10 BTC |
-| 14 | Peg-out min and max? | Min 0.004 rBTC. Max 10 rBTC |
-| 15 | Native peg-out BTC destination? | Derived from your signature. See [derivation details](/resources/guides/powpeg-app/pegout/deriving-electrum/) |
-| 16 | Trezor "Forbidden key path" error? | Set **Perform Safety Checks** to **PROMPT** in Trezor Suite |
-| 17 | Cannot connect Trezor? | Allow pop-ups for PowPeg domain. Confirm Trezor Suite safety checks. Retry connection |
-| 18 | Peg-out complete but no BTC in Trezor/Electrum? | Use Electrum with correct derivation path. See [deriving electrum troubleshooting](/resources/guides/powpeg-app/pegout/deriving-electrum#troubleshooting-zero-balance) |
-
-### Related guides
-
-- [Glossary](/resources/guides/powpeg-app/glossary/)
-- [Peg-in guides](/resources/guides/powpeg-app/pegin/)
-- [Peg-out guides](/resources/guides/powpeg-app/pegout/)
+Here, you can find a list of frequently asked questions (FAQs) about the [PowPeg App](https://powpeg.rootstock.io/).
 
 ````mdx-code-block
 <Accordion>
@@ -178,4 +145,4 @@ Frequently asked questions about the [PowPeg App](https://powpeg.rootstock.io/).
 
 ## Next
 
-See [Glossary](/resources/guides/powpeg-app/glossary/) section for explanation of terms.
+See the [Glossary](/resources/guides/powpeg-app/glossary/) for an explanation of terms. For step-by-step instructions, see the [peg-in guides](/resources/guides/powpeg-app/pegin/) and the [peg-out guides](/resources/guides/powpeg-app/pegout/).

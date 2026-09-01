@@ -11,6 +11,7 @@ import DocVersionBadge from '@theme/DocVersionBadge';
 import DocBreadcrumbs from '@theme/DocBreadcrumbs';
 import Heading from '@theme/Heading';
 import HomepageAside from "/src/components/Homepage/Aside";
+import LlmsTxtDirective from "/src/components/LlmsTxtDirective";
 import clsx from "clsx";
 
 function DocCategoryGeneratedIndexPageMetadata({categoryGeneratedIndex}) {
@@ -35,6 +36,7 @@ function DocCategoryGeneratedIndexPageContent({categoryGeneratedIndex}) {
             <DocBreadcrumbs/>
             <DocVersionBadge/>
           </div>
+          <LlmsTxtDirective />
           <header className={`mb-24`}>
             <Heading as="h1" className={`h1 mb-26`}>
               {categoryGeneratedIndex.title}

@@ -6,36 +6,7 @@ description: "Welcome to the glossary section for the PowPeg App documentation."
 tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-See a list of terms about/related to the PowPeg App and their meanings.
-
-## Summary
-
-PowPeg App glossary terms for BTC ↔ rBTC transfers. Mainnet: [powpeg.rootstock.io](https://powpeg.rootstock.io/). Testnet: [powpeg.testnet.rootstock.io](https://powpeg.testnet.rootstock.io/).
-
-### Key terms
-
-| Term | Definition |
-|------|------------|
-| PowPeg App | Web app for BTC and rBTC exchange between Bitcoin and Rootstock |
-| Peg-in | BTC to rBTC. Final after ~100 Bitcoin block confirmations |
-| Peg-out | rBTC to BTC. Locks rBTC on Rootstock and releases BTC on Bitcoin |
-| Flyover transactions | Fast peg-in option via liquidity providers. See `/developers/integrate/flyover/` |
-| Amount in BTC | Minimum peg-in amount: 0.005 BTC |
-| Device account address | Bitcoin address you send from |
-| Destination Rootstock address | Rootstock address that receives rBTC |
-| Refund Bitcoin address | Bitcoin address for refunds |
-| Legacy address | Original BTC address format. Higher transaction fees |
-| SegWit address | Newer format with lower fees. Segregates witness data |
-| Native SegWit address | Bech32 format. Lower fees when supported |
-| Hardware wallet | Physical device (Ledger, Trezor) for key storage |
-| Software wallet | App on computer or phone that stores private keys |
-| BIP39 passphrase | Optional 25th word extending a hardware wallet seed |
-| Mainnet | Production network. Assets have real value |
-| Testnet | Development network. Use tRBTC from [faucet.rootstock.io](https://faucet.rootstock.io/) |
-| Network fee | Fee paid to the blockchain network for a transfer |
-| Transaction fee | Fee shown in BTC and USD |
-| Transaction total | BTC amount plus selected transaction fee |
-| PowPeg Protocol | 2-way peg secured by Bitcoin merge-mining hash rate |
+See a list of terms about/related to the PowPeg App and their meanings. The app runs on mainnet at [powpeg.rootstock.io](https://powpeg.rootstock.io/) and on testnet at [powpeg.testnet.rootstock.io](https://powpeg.testnet.rootstock.io/).
 
 ````mdx-code-block
 <Accordion>

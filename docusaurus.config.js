@@ -232,7 +232,19 @@ const config = {
           lastmod: 'date',
           changefreq: 'weekly',
           priority: 0.5,
-          ignorePatterns: ['/tags/**'],
+          // Utility pages, not documentation. Excluding them keeps agent
+          // tooling from treating them as doc pages that need markdown.
+          // `/changelog` stays listed: it is a real page worth discovering.
+          ignorePatterns: [
+            '/tags/**',
+            '/search/**',
+            '/search',
+            '/components/**',
+            '/components',
+            // Defensive, and matches nothing today. Every category sets an
+            // explicit slug, so this only applies if one is ever added without.
+            '/category/**',
+          ],
           filename: 'sitemap.xml',
           createSitemapItems: async (params) => {
             const {defaultCreateSitemapItems, ...rest} = params;

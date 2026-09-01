@@ -21,20 +21,6 @@ Imagine a vast library filled with information about everything happening on the
 
 Here you can find a list of rpc node providers on Rootstock.
 
-## Summary
-
-RPC node providers give JSON-RPC access to Rootstock full nodes. Use them to read chain data and submit transactions without running your own node.
-
-### Providers
-
-| Provider | Path | Description |
-|----------|------|-------------|
-| Rootstock RPC API | `/developers/rpc-api/rootstock/` | Official JSON-RPC interface for Rootstock nodes |
-| Alchemy | `/developers/rpc-api/alchemy/` | Web3 APIs and SDKs for Rootstock |
-| GetBlock | `/dev-tools/node-rpc/getblock/` | Multi-chain node access including Rootstock |
-| dRPC | `/dev-tools/node-rpc/drpc/` | Low-latency RPC platform for Web3 |
-| NOWNodes | `/dev-tools/node-rpc/nownodes/` | Blockchain-as-a-service nodes and explorers |
-
 ### Network reference
 
 | Network | Chain ID | Public RPC |

@@ -143,9 +143,11 @@ cd rootstock-dynamic
 
 Install the necessary dependencies with either Bun or Yarn (choose one).
 
-    bun install
-    # or
-    yarn install
+```bash
+bun install
+# or
+yarn install
+```
 
 ### Get environment variables from Dynamic
 

@@ -49,12 +49,16 @@ Use MetaMask buttons on the web page, or add the network from the Rootstock Expl
 
 ### 1.2 Get Testnet Tokens
 
+Get tRBTC from the faucet. Promo codes for events are posted on the faucet site.
+
 | Field | Value |
 |---|---|
 | Faucet URL | https://faucet.rootstock.io |
 | Promo Code | TBD (event codes posted at faucet) |
 
 ### 1.3 RPC Provider
+
+Production-grade RPC API for Rootstock. Create a free API key for higher limits.
 
 | Field | Value |
 |---|---|
@@ -63,6 +67,8 @@ Use MetaMask buttons on the web page, or add the network from the Rootstock Expl
 | Setup guide | https://dev.rootstock.io/developers/rpc-api/rootstock/setup/ |
 
 ### 1.4 Solidity Compiler
+
+Recommended compiler settings for Rootstock. See the EVM compatibility matrix for opcode support and behavioral differences vs Ethereum.
 
 Full opcode and compiler matrix: [EVM Compatibility Explorer](https://rskj-evm-compatibility.rsk.co/) · [Requirements](https://dev.rootstock.io/developers/requirements/)
 
@@ -84,8 +90,8 @@ Full opcode and compiler matrix: [EVM Compatibility Explorer](https://rskj-evm-c
 
 ## 3.0 Verify and Observe
 
-- **Testnet Explorer.** Browse blocks, addresses, and transactions. https://explorer.testnet.rootstock.io
-- **Verify smart contracts.** Hardhat verify plugin and explorer guide. https://dev.rootstock.io/developers/smart-contracts/hardhat/verify-smart-contracts/
+- **Testnet Explorer.** Browse blocks, addresses, and transactions on testnet. https://explorer.testnet.rootstock.io
+- **Verify smart contracts.** Hardhat verify plugin and explorer submission guide. https://dev.rootstock.io/developers/smart-contracts/hardhat/verify-smart-contracts/
 - **Deploy and verify with Remix.** Write, compile, deploy, and verify in Remix IDE. https://dev.rootstock.io/developers/quickstart/remix/
 
 ---
@@ -93,6 +99,8 @@ Full opcode and compiler matrix: [EVM Compatibility Explorer](https://rskj-evm-c
 ## 4.0 Build with AI
 
 ### MCP Server
+
+Connect your AI agent to Rootstock via MCP.
 
 ```json
 {
@@ -111,6 +119,8 @@ Full opcode and compiler matrix: [EVM Compatibility Explorer](https://rskj-evm-c
 
 ### Rootstock Skills
 
+Install agent skills for Claude Code and Cursor.
+
 ```bash
 npx skills add rootstock/skills
 ```
@@ -119,7 +129,9 @@ npx skills add rootstock/skills
 
 ### Rootstock AI Assistant
 
-In-docs AI assistant trained on Rootstock documentation. Open it with the **Ask Rootstock AI** button in the developer portal (https://dev.rootstock.io).
+In-docs AI assistant trained on Rootstock documentation. Open it with the Ask Rootstock AI button in the portal.
+
+- Developer portal: https://dev.rootstock.io
 
 ---
 

@@ -37,4 +37,6 @@ Explore the recipes below to start building a frictionless experience on Rootsto
 
 import DocCardList from '@theme/DocCardList';
 
-<DocCardList />
+<div data-markdown-ignore>
+  <DocCardList />
+</div>

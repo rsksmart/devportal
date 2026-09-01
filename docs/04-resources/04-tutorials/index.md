@@ -16,43 +16,7 @@ tags:
 description: "Tutorials and learning resources"
 ---
 
-This page catalogs tutorials and learning resources for Rootstock developers. Use the filters on the web page to narrow by skill level or topic.
-
-## Summary
-
-These tutorials cover language integrations, cross-chain development, DeFi, AI agents, testing, porting from Ethereum, and explorer workflows. Most tutorials target Rootstock testnet (chain ID 31).
-
-### All tutorials
-
-| Tutorial | Path | Topics |
-|----------|------|--------|
-| Move USDRIF to USDC on Symbiosis | `/resources/tutorials/symbiosis-rootstock/` | DeFi, cross-chain |
-| Move USDRIF to USDC on OKU | `/resources/tutorials/oku-rootstock/` | DeFi, cross-chain |
-| Zero-Knowledge Proofs with Noir | `/resources/tutorials/zk-proofs-with-noir/` | ZK proofs, privacy |
-| Interacting with Rootstock using Viem | `/resources/tutorials/rootstock-viem/` | TypeScript, Viem |
-| Deploy a Vyper Smart Contract | `/developers/quickstart/rootstock-vyper/` | Vyper, Python |
-| Omnichain Fungible Token (OFT) with LayerZero | `/use-cases/interoperability/rootstock-layerzero/` | Cross-chain, OFT |
-| Conversational app with on-chain actions | `/use-cases/ai-automation/ai-agent-rootstock/` | AI agents |
-| Token-Gated NFT Minting dApp | `/resources/tutorials/tokengated-nft-minting/` | NFT, Thirdweb |
-| Interact with Rootstock using Rust | `/resources/tutorials/rootstock-rust/` | Rust |
-| Interact with Rootstock using Go | `/resources/tutorials/rootstock-go/` | Go |
-| Deploy with Remix and Explorer | `/developers/quickstart/remix/` | Remix, verification |
-| dApp Automation with Cucumber and Playwright | `/resources/tutorials/dapp-automation-cucumber/` | Testing, BDD |
-| Port an Ethereum dApp to Rootstock | `/resources/port-to-rootstock/ethereum-dapp/` | Porting |
-| Virtual Testnets with Tenderly | `/resources/tutorials/rootstock-tenderly/` | Testing, Tenderly |
-| Add a Protocol to DefiLlama | `/resources/tutorials/defillama/` | DeFi, analytics |
-| Run Hyperlane Bridge on Rootstock | `/resources/tutorials/hyperlane-bridge/` | Cross-chain |
-| Integrating x402 Payments | `/use-cases/payments-assets/integrate-x402/` | Payments |
-| Rootstock Explorer tutorials | `/dev-tools/explorers/rootstock-explorer/` | Explorer |
-
-### Filter categories
-
-- **Beginner:** Go, Remix, Explorer tutorials
-- **Advanced:** ZK proofs, Rust, Tenderly, DefiLlama, Hyperlane, NFT minting
-- **Port to Rootstock:** Ethereum dApp porting guide
-- **DeFi:** Symbiosis, OKU bridging tutorials
-- **AI:** Conversational on-chain actions guide
-- **Explorer:** Rootstock Explorer feature walkthroughs
+This page catalogs tutorials and learning resources for Rootstock developers. Use the filters below to narrow by skill level or topic. Most tutorials target Rootstock testnet (chain ID 31).
 
 ```mdx-code-block
 <Filter
