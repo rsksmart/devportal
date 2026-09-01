@@ -1,0 +1,2781 @@
+{
+  "openrpc" : "1.2.6",
+  "info" : {
+    "version" : "9.1.0-SNAPSHOT",
+    "title" : "RSKj JSON-RPC",
+    "description" : "This API lets you interact with a RSK client via JSON-RPC",
+    "license" : {
+      "name" : "GNU Lesser General Public License",
+      "url" : "https://www.gnu.org/licenses/lgpl-3.0.en.html"
+    }
+  },
+  "methods" : [ {
+    "name" : "eth_accounts",
+    "summary" : "Returns the addresses of the accounts held by this client.",
+    "description" : "Returns the list of addresses this node holds a key for and can therefore sign with. It is empty unless the node was started with a wallet.",
+    "params" : [ ],
+    "result" : {
+      "name" : "accounts",
+      "description" : "The addresses held by this client",
+      "schema" : {
+        "title" : "accounts",
+        "type" : "array",
+        "description" : "The addresses held by this client",
+        "items" : {
+          "$ref" : "#/components/schemas/Address"
+        }
+      }
+    },
+    "examples" : [ {
+      "name" : "accountsExample",
+      "params" : [ ],
+      "result" : {
+        "name" : "accountsResult",
+        "value" : [ "0x7986b3df570230288501eea3d890bd66948c9b79", "0x0dc4a4c0c5c9f1a6bb0d84b6b0a0d0b5d6b34d9d" ]
+      }
+    } ]
+  }, {
+    "name" : "eth_blockNumber",
+    "summary" : "Returns the number of most recent block.",
+    "params" : [ ],
+    "result" : {
+      "$ref" : "#/components/contentDescriptors/BlockNumberResult"
+    },
+    "examples" : [ {
+      "name" : "blockNumber",
+      "params" : [ ],
+      "result" : {
+        "name" : "blockNumber",
+        "value" : "0xc94"
+      }
+    } ]
+  }, {
+    "name" : "eth_bridgeState",
+    "summary" : "Returns the current state of the Bridge contract.",
+    "description" : "Returns a debugging view of the Bridge, the precompiled contract that holds the two-way peg with Bitcoin, as seen from the best block.",
+    "params" : [ ],
+    "result" : {
+      "name" : "bridgeState",
+      "description" : "The current state of the Bridge contract",
+      "schema" : {
+        "title" : "bridgeState",
+        "type" : "object",
+        "properties" : {
+          "btcBlockchainBestChainHeight" : {
+            "title" : "btcBlockchainBestChainHeight",
+            "type" : "integer",
+            "description" : "Height of the best chain of the Bitcoin headers the Bridge has stored"
+          },
+          "rskTxsWaitingForSignatures" : {
+            "title" : "rskTxsWaitingForSignatures",
+            "type" : "array",
+            "description" : "Hashes of the transactions waiting to be signed by the federation. Unlike every other hash in this reference these arrive unprefixed, as bare hex",
+            "items" : {
+              "title" : "unprefixedTransactionHash",
+              "type" : "string",
+              "description" : "Hex representation of a Keccak 256 hash, without the `0x` prefix",
+              "pattern" : "^[a-fA-F\\d]{64}$"
+            }
+          }
+        }
+      }
+    },
+    "examples" : [ {
+      "name" : "bridgeStateExample",
+      "params" : [ ],
+      "result" : {
+        "name" : "bridgeStateResult",
+        "value" : {
+          "btcBlockchainBestChainHeight" : 826542,
+          "rskTxsWaitingForSignatures" : [ "7bf47e6a5a3a3e37d4b0e0f7c0b3a4b1b04ac9b6de8b5ff1a0e5a51e9c3a1f42" ]
+        }
+      }
+    } ]
+  }, {
+    "name" : "eth_call",
+    "summary" : "Executes a new message call (locally) immediately without creating a transaction on the block chain.",
+    "params" : [ {
+      "$ref" : "#/components/contentDescriptors/TransactionCreate"
+    }, {
+      "$ref" : "#/components/contentDescriptors/BlockRefOrExecutionNumberOrTag"
+    } ],
+    "result" : {
+      "name" : "returnValue",
+      "description" : "The return value of the executed contract",
+      "schema" : {
+        "$ref" : "#/components/schemas/Bytes"
+      }
+    },
+    "examples" : [ {
+      "name" : "callExample",
+      "description" : "callExample",
+      "params" : [ {
+        "$ref" : "#/components/schemas/TransactionCreateExampleParam"
+      }, {
+        "name" : "blockRef",
+        "value" : "latest"
+      } ],
+      "result" : {
+        "name" : "result",
+        "value" : "0x"
+      }
+    } ]
+  }, {
+    "name" : "eth_chainId",
+    "summary" : "Returns the currently configured chain id",
+    "description" : "Returns the currently configured chain id, a value used in replay-protected transaction signing as introduced by **EIP-155**.",
+    "params" : [ ],
+    "result" : {
+      "name" : "chainId",
+      "description" : "hex format integer of the current chain id. Defaults are `Mainnet=30`, `Testnet=31`",
+      "schema" : {
+        "$ref" : "#/components/schemas/IntegerHex"
+      }
+    },
+    "examples" : [ {
+      "name" : "rskMainnetChainId",
+      "params" : [ ],
+      "result" : {
+        "name" : "rskMainnetChainId",
+        "value" : "0x1e"
+      }
+    }, {
+      "name" : "rskTestnetChainId",
+      "params" : [ ],
+      "result" : {
+        "name" : "rskTestnetChainId",
+        "value" : "0x1f"
+      }
+    } ]
+  }, {
+    "name" : "eth_coinbase",
+    "summary" : "Returns the client coinbase address.",
+    "params" : [ ],
+    "result" : {
+      "name" : "address",
+      "description" : "The address owned by the client that is used as default for things like the mining reward",
+      "schema" : {
+        "$ref" : "#/components/schemas/Address"
+      }
+    },
+    "examples" : [ {
+      "name" : "coinbaseAddress",
+      "params" : [ ],
+      "result" : {
+        "name" : "coinbaseAddress",
+        "value" : "0xc94770007dda54cF92009BFF0dE90c06F603a09f"
+      }
+    } ]
+  }, {
+    "name" : "eth_estimateGas",
+    "description" : "Generates and returns an estimate of how much gas is necessary to allow the transaction to complete. The transaction will not be added to the blockchain. Note that the estimate may be significantly more than the amount of gas actually used by the transaction, for a variety of reasons including EVM mechanics and node performance. \n\n See `eth_call` parameters, expect that all properties are optional. If no gas limit is specified geth uses the block gas limit from the pending block as an upper bound. As a result the returned estimate might not be enough to executed the call/transaction when the amount of gas is higher than the pending block gas limit.",
+    "summary" : "Calculates an estimate of how much gas is necessary to allow the transaction to complete",
+    "params" : [ {
+      "$ref" : "#/components/contentDescriptors/TransactionCreate"
+    }, {
+      "$ref" : "#/components/contentDescriptors/ExecutionBlockNumberOrTag"
+    } ],
+    "result" : {
+      "name" : "gasUsed",
+      "description" : "The amount of gas used",
+      "schema" : {
+        "$ref" : "#/components/schemas/IntegerHex"
+      }
+    },
+    "examples" : [ {
+      "name" : "gasEstimation",
+      "params" : [ {
+        "$ref" : "#/components/schemas/TransactionCreateExampleParam"
+      }, {
+        "name" : "blockNumberOrTag",
+        "value" : "latest"
+      } ],
+      "result" : {
+        "name" : "result",
+        "value" : "0x5208"
+      }
+    } ]
+  }, {
+    "name" : "eth_gasPrice",
+    "summary" : "Returns the current price per gas in wei",
+    "params" : [ ],
+    "result" : {
+      "$ref" : "#/components/contentDescriptors/GasPrice"
+    },
+    "examples" : [ {
+      "name" : "gasPrice",
+      "params" : [ ],
+      "result" : {
+        "name" : "gasPrice",
+        "value" : "0x09184e72a000"
+      }
+    } ]
+  }, {
+    "name" : "eth_getBalance",
+    "summary" : "Returns the balance of the account of the given address, `0x0` if the address is not found.",
+    "params" : [ {
+      "name" : "address",
+      "required" : true,
+      "description" : "Address to check for balance",
+      "schema" : {
+        "$ref" : "#/components/schemas/Address"
+      }
+    }, {
+      "$ref" : "#/components/contentDescriptors/BlockRefOrNumberOrTag"
+    } ],
+    "result" : {
+      "name" : "getBalanceResult",
+      "schema" : {
+        "title" : "integer",
+        "type" : "string",
+        "pattern" : "^0x[a-fA-F0-9]+$",
+        "description" : "Hex representation of the integer, `0x0` if the address is not found"
+      }
+    },
+    "examples" : [ {
+      "name" : "getBalanceExample",
+      "description" : "getBalanceExample",
+      "params" : [ {
+        "name" : "address",
+        "value" : "0xc94770007dda54cF92009BFF0dE90c06F603a09f"
+      }, {
+        "name" : "blockTag",
+        "value" : "latest"
+      } ],
+      "result" : {
+        "name" : "result",
+        "value" : "0x0234c8a3397aab58"
+      }
+    }, {
+      "name" : "getBalanceAtBlockHashExample",
+      "description" : "Referencing the block by hash instead of by tag, using the block reference object form. `requireCanonical` travels as the JSON string `\"true\"`, not as a boolean.",
+      "params" : [ {
+        "name" : "address",
+        "value" : "0xc94770007dda54cF92009BFF0dE90c06F603a09f"
+      }, {
+        "name" : "blockRef",
+        "value" : {
+          "blockHash" : "0xf1652d8322a880e520f996f7d28b645814a58a202d7d2ab7f058e5566fe4f9f3",
+          "requireCanonical" : "true"
+        }
+      } ],
+      "result" : {
+        "name" : "result",
+        "value" : "0x0234c8a3397aab58"
+      }
+    } ]
+  }, {
+    "name" : "eth_getBlockByHash",
+    "summary" : "Returns information about a block by hash",
+    "params" : [ {
+      "name" : "blockHash",
+      "required" : true,
+      "schema" : {
+        "$ref" : "#/components/schemas/BlockHash"
+      }
+    }, {
+      "name" : "fullTransactionObjects",
+      "description" : "If `true` this method returns the full transaction objects, if `false` only the hashes of the transactions.",
+      "required" : true,
+      "schema" : {
+        "title" : "fullTransactionObjects",
+        "type" : "boolean"
+      }
+    } ],
+    "result" : {
+      "name" : "getBlockByHashResult",
+      "schema" : {
+        "$ref" : "#/components/schemas/BlockOrNull"
+      }
+    },
+    "examples" : [ {
+      "name" : "blockWithFullTransactions",
+      "description" : "blockWithFullTransactions",
+      "params" : [ {
+        "name" : "blockHash",
+        "value" : "0xf1652d8322a880e520f996f7d28b645814a58a202d7d2ab7f058e5566fe4f9f3"
+      }, {
+        "name" : "fullTransactionObjects",
+        "value" : true
+      } ],
+      "result" : {
+        "$ref" : "#/components/schemas/BlockExampleResultFullTransaction"
+      }
+    }, {
+      "name" : "blockWithTransactionHash",
+      "description" : "blockWithTransactionHash",
+      "params" : [ {
+        "name" : "blockHash",
+        "value" : "0xf1652d8322a880e520f996f7d28b645814a58a202d7d2ab7f058e5566fe4f9f3"
+      }, {
+        "name" : "fullTransactionObjects",
+        "value" : false
+      } ],
+      "result" : {
+        "$ref" : "#/components/schemas/BlockExampleResultTransactionHash"
+      }
+    } ]
+  }, {
+    "name" : "eth_getBlockByNumber",
+    "summary" : "Returns information about a block by block number",
+    "params" : [ {
+      "$ref" : "#/components/contentDescriptors/BlockNumberOrTag"
+    }, {
+      "name" : "fullTransactionObjects",
+      "description" : "If `true` returns the full transaction objects, if `false` only the hashes of the transactions.",
+      "required" : true,
+      "schema" : {
+        "title" : "fullTransactionObjects",
+        "type" : "boolean"
+      }
+    } ],
+    "result" : {
+      "name" : "getBlockByNumberResult",
+      "schema" : {
+        "$ref" : "#/components/schemas/BlockOrNull"
+      }
+    },
+    "examples" : [ {
+      "name" : "blockWithFullTransactions",
+      "description" : "blockWithFullTransactions",
+      "params" : [ {
+        "name" : "blockNumber",
+        "value" : "0x1b4"
+      }, {
+        "name" : "fullTransactionObjects",
+        "value" : true
+      } ],
+      "result" : {
+        "$ref" : "#/components/schemas/BlockExampleResultFullTransaction"
+      }
+    }, {
+      "name" : "blockWithTransactionHash",
+      "description" : "blockWithTransactionHash",
+      "params" : [ {
+        "name" : "blockNumber",
+        "value" : "0x1b4"
+      }, {
+        "name" : "fullTransactionObjects",
+        "value" : false
+      } ],
+      "result" : {
+        "$ref" : "#/components/schemas/BlockExampleResultTransactionHash"
+      }
+    } ]
+  }, {
+    "name" : "eth_getBlockTransactionCountByHash",
+    "summary" : "Returns the number of transactions in a block from a block matching the given block hash.",
+    "params" : [ {
+      "$ref" : "#/components/contentDescriptors/BlockHash"
+    } ],
+    "result" : {
+      "name" : "blockTransactionCountByHash",
+      "description" : "The Number of total transactions in the given block",
+      "schema" : {
+        "$ref" : "#/components/schemas/IntegerOrNull"
+      }
+    },
+    "examples" : [ {
+      "name" : "blockWithTransactions",
+      "params" : [ {
+        "name" : "blockHash",
+        "value" : "0xb125fbdfa4a07258e2653c4c7412d060362928aaf062b5f91321d5ceed66854a"
+      } ],
+      "result" : {
+        "name" : "blockWithTransactions",
+        "value" : "0x2"
+      }
+    }, {
+      "name" : "blockWithoutTransactions (just coinbase)",
+      "params" : [ {
+        "name" : "blockHash",
+        "value" : "0x4ed6a09e66f012643bebd2944a79b4eaf96faf822d11fa3904b6bb7c4b16d66c"
+      } ],
+      "result" : {
+        "name" : "blockWithoutTransactions",
+        "value" : "0x1"
+      }
+    } ]
+  }, {
+    "name" : "eth_getBlockTransactionCountByNumber",
+    "summary" : "Returns the number of transactions in a block from a block matching the given block number.",
+    "params" : [ {
+      "$ref" : "#/components/contentDescriptors/BlockNumberOrTag"
+    } ],
+    "result" : {
+      "name" : "blockTransactionCountByNumber",
+      "description" : "The Number of total transactions in the given block",
+      "schema" : {
+        "$ref" : "#/components/schemas/IntegerHex"
+      }
+    },
+    "examples" : [ {
+      "name" : "blockWithTransactions",
+      "params" : [ {
+        "name" : "blockNumer",
+        "value" : "0x2e5e54"
+      } ],
+      "result" : {
+        "name" : "blockWithTransactions",
+        "value" : "0x2"
+      }
+    }, {
+      "name" : "blockWithoutTransactions (just coinbase)",
+      "params" : [ {
+        "name" : "blockNumer",
+        "value" : "0x2e5e56"
+      } ],
+      "result" : {
+        "name" : "blockWithoutTransactions",
+        "value" : "0x1"
+      }
+    } ]
+  }, {
+    "name" : "eth_getBlocksByNumber",
+    "summary" : "Returns every block known at the given height, canonical or not.",
+    "description" : "Where `eth_getBlockByNumber` answers with the one block on the main chain, this returns all blocks the node has stored at that height and flags which of them is canonical. That makes reorganisations at a given height observable. The height accepts a hex quantity or a plain decimal string; block tags such as `latest` are not accepted.",
+    "params" : [ {
+      "name" : "blockNumber",
+      "required" : true,
+      "description" : "The height to look up, as a hex quantity or a decimal string",
+      "schema" : {
+        "title" : "blockNumberHexOrDecimal",
+        "oneOf" : [ {
+          "$ref" : "#/components/schemas/BlockNumberHex"
+        }, {
+          "title" : "blockNumberDecimalString",
+          "type" : "string",
+          "description" : "The block's height as a plain decimal string",
+          "pattern" : "^[0-9]+$"
+        } ]
+      }
+    } ],
+    "result" : {
+      "name" : "blocks",
+      "description" : "Every block stored at that height; empty if the node has none",
+      "schema" : {
+        "title" : "blocksAtHeight",
+        "type" : "array",
+        "description" : "Every block stored at that height",
+        "items" : {
+          "$ref" : "#/components/schemas/BlockInformation"
+        }
+      }
+    },
+    "examples" : [ {
+      "name" : "getBlocksByNumberExample",
+      "description" : "A height with one canonical block and one sibling left behind by a reorganisation",
+      "params" : [ {
+        "name" : "blockNumber",
+        "value" : "0x1b4"
+      } ],
+      "result" : {
+        "name" : "blocksAtHeightResult",
+        "value" : [ {
+          "hash" : "0x1cd0e5cbd3ba2c9b48eb6ff5bc0be6ba9d5a0e1b7c4ec9b3e6cb1d1b3f7a1e0d",
+          "totalDifficulty" : "0x4a817c800",
+          "inMainChain" : true
+        }, {
+          "hash" : "0x7bf47e6a5a3a3e37d4b0e0f7c0b3a4b1b04ac9b6de8b5ff1a0e5a51e9c3a1f42",
+          "totalDifficulty" : "0x4a817c7f0",
+          "inMainChain" : false
+        } ]
+      }
+    } ]
+  }, {
+    "name" : "eth_getCode",
+    "summary" : "Returns code at a given contract address",
+    "params" : [ {
+      "name" : "address",
+      "required" : true,
+      "description" : "The address of the contract",
+      "schema" : {
+        "$ref" : "#/components/schemas/Address"
+      }
+    }, {
+      "$ref" : "#/components/contentDescriptors/BlockRefOrNumberOrTag"
+    } ],
+    "result" : {
+      "name" : "code",
+      "description" : "The code from the given address",
+      "schema" : {
+        "$ref" : "#/components/schemas/Bytes"
+      }
+    },
+    "examples" : [ {
+      "name" : "getCodeExample",
+      "params" : [ {
+        "name" : "transaction",
+        "value" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b"
+      }, {
+        "name" : "blockNumber",
+        "value" : "0x2"
+      } ],
+      "result" : {
+        "name" : "result",
+        "value" : "0x600160008035811a818181146012578301005b601b6001356025565b8060005260206000f25b600060078202905091905056"
+      }
+    } ]
+  }, {
+    "name" : "eth_getFilterChanges",
+    "summary" : "Polling method for a filter, which returns an array of logs which occurred since last poll.",
+    "externalDocs" : {
+      "description" : "Result of this method is too big for this doc, please check more info on",
+      "url" : "https://developers.rsk.co/rsk/node/architecture/json-rpc/"
+    },
+    "params" : [ {
+      "name" : "filterId",
+      "required" : true,
+      "schema" : {
+        "$ref" : "#/components/schemas/FilterId"
+      }
+    } ],
+    "result" : {
+      "name" : "logResult",
+      "schema" : {
+        "title" : "logResult",
+        "type" : "array",
+        "description" : "Array of log objects, or an empty array if nothing has changed since last poll. For more info check https://developers.rsk.co/rsk/node/architecture/json-rpc/",
+        "items" : {
+          "$ref" : "#/components/schemas/Log"
+        }
+      }
+    },
+    "examples" : [ {
+      "name" : "logResult",
+      "params" : [ {
+        "name" : "filterId",
+        "value" : "0x16"
+      } ],
+      "result" : {
+        "$ref" : "#/components/schemas/LogExampleResult"
+      }
+    } ]
+  }, {
+    "name" : "eth_getFilterLogs",
+    "summary" : "Returns an array of all logs matching filter with given id.",
+    "externalDocs" : {
+      "description" : "Result of this method is too big for this doc, please check more info on",
+      "url" : "https://developers.rsk.co/rsk/node/architecture/json-rpc/"
+    },
+    "params" : [ {
+      "name" : "filterId",
+      "required" : true,
+      "schema" : {
+        "$ref" : "#/components/schemas/FilterId"
+      }
+    } ],
+    "result" : {
+      "$ref" : "#/components/contentDescriptors/Logs"
+    },
+    "examples" : [ {
+      "name" : "logsResult",
+      "params" : [ {
+        "name" : "filterId",
+        "value" : "0x16"
+      } ],
+      "result" : {
+        "$ref" : "#/components/schemas/LogExampleResult"
+      }
+    } ]
+  }, {
+    "name" : "eth_getLogs",
+    "summary" : "Returns an array of all logs matching a given filter object.",
+    "params" : [ {
+      "$ref" : "#/components/contentDescriptors/Filter"
+    } ],
+    "result" : {
+      "$ref" : "#/components/contentDescriptors/Logs"
+    },
+    "examples" : [ {
+      "name" : "logsByTopic",
+      "params" : [ {
+        "name" : "filter",
+        "value" : {
+          "topics" : [ "0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b" ]
+        }
+      } ],
+      "result" : {
+        "$ref" : "#/components/schemas/LogExampleResult"
+      }
+    } ]
+  }, {
+    "name" : "eth_getStorageAt",
+    "summary" : "Gets a storage value from a contract address, a position and a block.",
+    "params" : [ {
+      "$ref" : "#/components/contentDescriptors/Address"
+    }, {
+      "$ref" : "#/components/contentDescriptors/Position"
+    }, {
+      "$ref" : "#/components/contentDescriptors/BlockRefOrNumberOrTag"
+    } ],
+    "result" : {
+      "name" : "dataWord",
+      "schema" : {
+        "$ref" : "#/components/schemas/DataWord"
+      }
+    },
+    "examples" : [ {
+      "name" : "storageValue",
+      "description" : "See example explanation in [Dev Portal](https://developers.rsk.co/rsk/node/architecture/json-rpc/)",
+      "params" : [ {
+        "name" : "address",
+        "value" : "0x295a70b2de5e3953354a6a8344e616ed314d7251"
+      }, {
+        "name" : "position",
+        "value" : "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9"
+      }, {
+        "name" : "blockTag",
+        "value" : "latest"
+      } ],
+      "result" : {
+        "name" : "result",
+        "value" : "0x000000000000000000000000000000000000000000000000000000000000162e"
+      }
+    } ]
+  }, {
+    "name" : "eth_getTransactionByBlockHashAndIndex",
+    "summary" : "Returns information about a transaction by block hash and transaction index position.",
+    "params" : [ {
+      "$ref" : "#/components/contentDescriptors/BlockHash"
+    }, {
+      "name" : "index",
+      "description" : "The ordering in which a transaction is mined within its block.",
+      "required" : true,
+      "schema" : {
+        "$ref" : "#/components/schemas/IntegerHex"
+      }
+    } ],
+    "result" : {
+      "$ref" : "#/components/contentDescriptors/TransactionResult"
+    },
+    "examples" : [ {
+      "name" : "existingExample",
+      "params" : [ {
+        "name" : "blockHash",
+        "value" : "0x0297ed9012b044e671a86a8e88bc7cfc79311a1da38b807783ac87b9b89b1b69"
+      }, {
+        "name" : "index",
+        "value" : "0x0"
+      } ],
+      "result" : {
+        "name" : "transaction",
+        "value" : {
+          "$ref" : "#/components/schemas/TransactionExampleResult"
+        }
+      }
+    }, {
+      "name" : "nullExample",
+      "params" : [ {
+        "name" : "blockHash",
+        "value" : "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef"
+      }, {
+        "name" : "index",
+        "value" : "0x0"
+      } ],
+      "result" : {
+        "name" : "noTransaction",
+        "value" : null
+      }
+    } ]
+  }, {
+    "name" : "eth_getTransactionByBlockNumberAndIndex",
+    "summary" : "Returns the information about a transaction requested by the block number and index of which it was mined.",
+    "params" : [ {
+      "$ref" : "#/components/contentDescriptors/BlockNumberOrTag"
+    }, {
+      "name" : "index",
+      "description" : "The ordering in which a transaction is mined within its block.",
+      "required" : true,
+      "schema" : {
+        "$ref" : "#/components/schemas/IntegerHex"
+      }
+    } ],
+    "result" : {
+      "$ref" : "#/components/contentDescriptors/TransactionResult"
+    },
+    "examples" : [ {
+      "name" : "existingExample",
+      "params" : [ {
+        "name" : "blockNumber",
+        "value" : "0x29c"
+      }, {
+        "name" : "index",
+        "value" : "0x0"
+      } ],
+      "result" : {
+        "name" : "transaction",
+        "value" : {
+          "$ref" : "#/components/schemas/TransactionExampleResult"
+        }
+      }
+    }, {
+      "name" : "nullExample",
+      "params" : [ {
+        "name" : "blockNumber",
+        "value" : "0x174876e800"
+      }, {
+        "name" : "index",
+        "value" : "0x0"
+      } ],
+      "result" : {
+        "name" : "nullResultExample",
+        "value" : null
+      }
+    } ]
+  }, {
+    "name" : "eth_getTransactionByHash",
+    "summary" : "Returns the information about a transaction requested by transaction hash.",
+    "params" : [ {
+      "$ref" : "#/components/contentDescriptors/TransactionHash"
+    } ],
+    "result" : {
+      "$ref" : "#/components/contentDescriptors/TransactionResult"
+    },
+    "examples" : [ {
+      "name" : "transactionFound",
+      "params" : [ {
+        "name" : "txHash",
+        "value" : "0x05140aca6b0312a2d7dce35a3227b86b8a973fc69e508c5d4beb2b3c88fa28a1"
+      } ],
+      "result" : {
+        "name" : "transaction",
+        "value" : {
+          "$ref" : "#/components/schemas/TransactionExampleResult"
+        }
+      }
+    }, {
+      "name" : "transactionNotFound",
+      "params" : [ {
+        "name" : "txHash",
+        "value" : "0x52ba75091ea97266d10a1d8c827c449464321729f33f9bb25bacc9816a4bccaa"
+      } ],
+      "result" : {
+        "name" : "noTransaction",
+        "value" : null
+      }
+    } ]
+  }, {
+    "name" : "eth_getTransactionCount",
+    "summary" : "Returns the number of transactions `sent` from an address",
+    "params" : [ {
+      "$ref" : "#/components/contentDescriptors/Address"
+    }, {
+      "$ref" : "#/components/contentDescriptors/BlockRefOrNumberOrTag"
+    } ],
+    "result" : {
+      "name" : "transactionCount",
+      "schema" : {
+        "title" : "nonceOrNull",
+        "oneOf" : [ {
+          "$ref" : "#/components/schemas/Nonce"
+        }, {
+          "$ref" : "#/components/schemas/Null"
+        } ]
+      }
+    },
+    "examples" : [ {
+      "name" : "found",
+      "params" : [ {
+        "name" : "address",
+        "value" : "0xc94770007dda54cF92009BFF0dE90c06F603a09f"
+      }, {
+        "name" : "blockTag",
+        "value" : "latest"
+      } ],
+      "result" : {
+        "name" : "nonce",
+        "value" : "0x1"
+      }
+    }, {
+      "name" : "notFound",
+      "params" : [ {
+        "name" : "address",
+        "value" : "0x546bf98e30785c887cdb23267cbffefeb4b0a72b"
+      }, {
+        "name" : "blockTag",
+        "value" : "latest"
+      } ],
+      "result" : {
+        "name" : "nonce",
+        "value" : "null"
+      }
+    } ]
+  }, {
+    "name" : "eth_getTransactionReceipt",
+    "summary" : "Returns the receipt information of a transaction by its hash.",
+    "description" : "**Note** that the receipt is not available for pending transactions.",
+    "params" : [ {
+      "$ref" : "#/components/contentDescriptors/TransactionHash"
+    } ],
+    "result" : {
+      "name" : "transactionReceiptResult",
+      "description" : "returns either a receipt or null",
+      "schema" : {
+        "title" : "transactionReceiptOrNull",
+        "oneOf" : [ {
+          "$ref" : "#/components/schemas/Receipt"
+        }, {
+          "$ref" : "#/components/schemas/Null"
+        } ]
+      }
+    },
+    "examples" : [ {
+      "name" : "receiptResult",
+      "params" : [ {
+        "name" : "transactionHash",
+        "value" : "0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"
+      } ],
+      "result" : {
+        "name" : "result",
+        "value" : [ {
+          "transactionHash" : "0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238",
+          "transactionIndex" : "0x1",
+          "blockNumber" : "0xb",
+          "blockHash" : "0xc6ef2fc5426d6ad6fd9e2a26abeab0aa2411b7ab17f30a99d3cb96aed1d1055b",
+          "cumulativeGasUsed" : "0x33bc",
+          "gasUsed" : "0x4dc",
+          "contractAddress" : "0xb60e8dd61c5d32be8058bb8eb970870f07233155",
+          "logs" : [ {
+            "logIndex" : "0x1",
+            "blockNumber" : "0x1b4",
+            "blockHash" : "0x8216c5785ac562ff41e2dcfdf5785ac562ff41e2dcfdf829c5a142f1fccd7d",
+            "transactionHash" : "0xdf829c5a142f1fccd7d8216c5785ac562ff41e2dcfdf5785ac562ff41e2dcf",
+            "transactionIndex" : "0x0",
+            "address" : "0x16c5785ac562ff41e2dcfdf829c5a142f1fccd7d",
+            "data" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "topics" : [ "0x59ebeb90bc63057b6515673c3ecf9438e5058bca0f92585014eced636878c9a5" ]
+          } ],
+          "logsBloom" : "0x00...0",
+          "status" : "0x1",
+          "type" : "0x0",
+          "effectiveGasPrice" : "0x1"
+        } ]
+      }
+    } ]
+  }, {
+    "name" : "eth_getUncleByBlockHashAndIndex",
+    "summary" : "Returns information about a uncle of a block by hash and uncle index position.",
+    "params" : [ {
+      "$ref" : "#/components/contentDescriptors/BlockHash"
+    }, {
+      "name" : "index",
+      "description" : "The ordering in which a uncle is included within its block.",
+      "required" : true,
+      "schema" : {
+        "$ref" : "#/components/schemas/IntegerHex"
+      }
+    } ],
+    "result" : {
+      "name" : "uncle",
+      "schema" : {
+        "$ref" : "#/components/schemas/BlockOrNull"
+      }
+    },
+    "examples" : [ {
+      "name" : "uncleBlockFound",
+      "params" : [ {
+        "name" : "blockHash",
+        "value" : "0x0297ed9012b044e671a86a8e88bc7cfc79311a1da38b807783ac87b9b89b1b69"
+      }, {
+        "name" : "uncleIndex",
+        "value" : "0x0"
+      } ],
+      "result" : {
+        "$ref" : "#/components/schemas/BlockExampleResultFullTransaction"
+      }
+    }, {
+      "name" : "uncleBlockNotFound",
+      "params" : [ {
+        "name" : "blockHash",
+        "value" : "0x0297ed9012b044e671a86a8e88bc7cfc79311a1da38b807783ac87b9b89b1b69"
+      }, {
+        "name" : "uncleIndex",
+        "value" : "0x0"
+      } ],
+      "result" : {
+        "name" : "nullResult",
+        "value" : null
+      }
+    } ]
+  }, {
+    "name" : "eth_getUncleByBlockNumberAndIndex",
+    "summary" : "Returns information about an uncle of a block by block number and uncle index position.",
+    "params" : [ {
+      "$ref" : "#/components/contentDescriptors/BlockNumberOrTag"
+    }, {
+      "name" : "index",
+      "description" : "The ordering in which a uncle is included within its block.",
+      "required" : true,
+      "schema" : {
+        "$ref" : "#/components/schemas/IntegerHex"
+      }
+    } ],
+    "result" : {
+      "name" : "uncleResult",
+      "description" : "returns an uncle block or null",
+      "schema" : {
+        "$ref" : "#/components/schemas/BlockOrNull"
+      }
+    },
+    "examples" : [ {
+      "name" : "uncleBlockFound",
+      "params" : [ {
+        "name" : "blockNumber",
+        "value" : "0x29c"
+      }, {
+        "name" : "uncleIndex",
+        "value" : "0x0"
+      } ],
+      "result" : {
+        "$ref" : "#/components/schemas/BlockExampleResultFullTransaction"
+      }
+    }, {
+      "name" : "uncleBlockNotFound",
+      "params" : [ {
+        "name" : "blockNumber",
+        "value" : "0x0"
+      }, {
+        "name" : "uncleIndex",
+        "value" : "0x0"
+      } ],
+      "result" : {
+        "name" : "nullResultExample",
+        "value" : null
+      }
+    } ]
+  }, {
+    "name" : "eth_getUncleCountByBlockHash",
+    "summary" : "Returns the number of uncles in a block from a block matching the given block hash.",
+    "params" : [ {
+      "$ref" : "#/components/contentDescriptors/BlockHash"
+    } ],
+    "result" : {
+      "name" : "uncleCountResult",
+      "description" : "The Number of total uncles in the given block",
+      "schema" : {
+        "$ref" : "#/components/schemas/IntegerOrNull"
+      }
+    },
+    "examples" : [ {
+      "name" : "uncleCount",
+      "description" : "uncleCount",
+      "params" : [ {
+        "name" : "blockHash",
+        "value" : "0xf1652d8322a880e520f996f7d28b645814a58a202d7d2ab7f058e5566fe4f9f3"
+      } ],
+      "result" : {
+        "name" : "result",
+        "value" : "0x2"
+      }
+    } ]
+  }, {
+    "name" : "eth_getUncleCountByBlockNumber",
+    "summary" : "Returns the number of uncles in a block from a block matching the given block number.",
+    "params" : [ {
+      "$ref" : "#/components/contentDescriptors/BlockNumberOrTag"
+    } ],
+    "result" : {
+      "$ref" : "#/components/contentDescriptors/UncleCountResult"
+    },
+    "examples" : [ {
+      "name" : "uncleBlockFound",
+      "params" : [ {
+        "name" : "blockNumberOrTag",
+        "value" : "0x1b4"
+      } ],
+      "result" : {
+        "name" : "result",
+        "value" : "0x2"
+      }
+    } ]
+  }, {
+    "name" : "eth_hashrate",
+    "summary" : "Returns the number of hashes per second that the node is mining with.",
+    "params" : [ ],
+    "result" : {
+      "name" : "hashesPerSecond",
+      "description" : "hex value of the number of hashes per second",
+      "schema" : {
+        "$ref" : "#/components/schemas/IntegerHex"
+      }
+    },
+    "examples" : [ {
+      "name" : "hashRate",
+      "params" : [ ],
+      "result" : {
+        "name" : "result",
+        "value" : "0x38a"
+      }
+    } ]
+  }, {
+    "name" : "eth_mining",
+    "summary" : "Returns true if client is actively mining new blocks.",
+    "params" : [ ],
+    "result" : {
+      "name" : "mining",
+      "description" : "Whether or not the client is mining",
+      "schema" : {
+        "type" : "boolean"
+      }
+    },
+    "examples" : [ {
+      "name" : "isMining",
+      "params" : [ ],
+      "result" : {
+        "name" : "result",
+        "value" : true
+      }
+    } ]
+  }, {
+    "name" : "eth_newBlockFilter",
+    "summary" : "Creates a filter in the node, to notify when a new block arrives. To check if the state has changed, call eth_getFilterChanges.",
+    "params" : [ ],
+    "result" : {
+      "$ref" : "#/components/contentDescriptors/FilterId"
+    },
+    "examples" : [ {
+      "name" : "newBlockFilter",
+      "params" : [ ],
+      "result" : {
+        "name" : "filterId",
+        "value" : "0x1"
+      }
+    } ]
+  }, {
+    "name" : "eth_newFilter",
+    "summary" : "Creates a filter object, based on filter options, to notify when the state changes (logs).",
+    "description" : "To check if the state has changed, call `eth_getFilterChanges`.\n\n**A note on specifying topic filters**:\nTopics are order-dependent. A transaction with a log with topics `[A, B]` will be matched by the following topic filters:\n\n`[]` anything\n`[A]` A in first position (and anything after)\n`[null, B]` anything in first position AND B in second position (and anything after)\n`[A, B]` A in first position AND B in second position (and anything after)\n`[[A, B], [A, B]]` (A OR B) in first position AND (A OR B) in second position (and anything after)",
+    "params" : [ {
+      "$ref" : "#/components/contentDescriptors/Filter"
+    } ],
+    "result" : {
+      "name" : "filterId",
+      "description" : "The filter ID for use in `eth_getFilterChanges`",
+      "schema" : {
+        "$ref" : "#/components/schemas/IntegerHex"
+      }
+    },
+    "examples" : [ {
+      "name" : "newFilter",
+      "params" : [ {
+        "name" : "filter",
+        "value" : {
+          "fromBlock" : "0x1",
+          "toBlock" : "0x2",
+          "address" : "0x8888f1f195afa192cfee860698584c030f4c9db1",
+          "topics" : [ "0x0000000000000000000000000000000000000000000000000000000012341234" ]
+        }
+      } ],
+      "result" : {
+        "name" : "filterId",
+        "value" : "0x1"
+      }
+    } ]
+  }, {
+    "name" : "eth_newPendingTransactionFilter",
+    "summary" : "Creates a filter in the node, to notify when new pending transactions arrive.",
+    "description" : "To check if the state has changed, call `eth_getFilterChanges`.",
+    "params" : [ ],
+    "result" : {
+      "$ref" : "#/components/contentDescriptors/FilterId"
+    },
+    "examples" : [ {
+      "name" : "newPendingTransactionFilter",
+      "params" : [ ],
+      "result" : {
+        "name" : "filterId",
+        "value" : "0x1"
+      }
+    } ]
+  }, {
+    "name" : "eth_protocolVersion",
+    "summary" : "Returns the current ethereum protocol version.",
+    "params" : [ ],
+    "result" : {
+      "name" : "protocolVersion",
+      "description" : "The current ethereum protocol version",
+      "schema" : {
+        "$ref" : "#/components/schemas/IntegerDec"
+      }
+    },
+    "examples" : [ {
+      "name" : "protocolVersion",
+      "params" : [ ],
+      "result" : {
+        "name" : "protocolVersion",
+        "value" : "62"
+      }
+    } ]
+  }, {
+    "name" : "eth_sendRawTransaction",
+    "summary" : "Creates new message call transaction or a contract creation for signed transactions.",
+    "params" : [ {
+      "name" : "signedTransactionData",
+      "required" : true,
+      "description" : "The signed transaction data",
+      "schema" : {
+        "$ref" : "#/components/schemas/Bytes"
+      }
+    } ],
+    "result" : {
+      "name" : "transactionHash",
+      "description" : "The transaction hash, or the zero hash if the transaction is not yet available.\n\nUse `eth_getTransactionReceipt` to get the contract address, after the transaction was mined, when you created a contract.",
+      "schema" : {
+        "$ref" : "#/components/schemas/Keccak"
+      }
+    },
+    "examples" : [ {
+      "name" : "rawTransaction",
+      "params" : [ {
+        "name" : "rawTransaction",
+        "value" : "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675"
+      } ],
+      "result" : {
+        "name" : "transactionHash",
+        "value" : "0x0297ed9012b044e671a86a8e88bc7cfc79311a1da38b807783ac87b9b89b1b69"
+      }
+    } ]
+  }, {
+    "name" : "eth_sendTransaction",
+    "summary" : "Creates new message call transaction or a contract creation, if the data field contains code.",
+    "params" : [ {
+      "$ref" : "#/components/contentDescriptors/TransactionCreate"
+    } ],
+    "result" : {
+      "name" : "transactionHash",
+      "description" : "The transaction hash, or `zero` hash if the transaction is not yet available.\n\nUse `eth_getTransactionReceipt` to get the contract address, after the transaction was mined, when you created a contract.",
+      "schema" : {
+        "$ref" : "#/components/schemas/Keccak"
+      }
+    },
+    "examples" : [ {
+      "name" : "transaction",
+      "params" : [ {
+        "$ref" : "#/components/schemas/TransactionCreateExampleParam"
+      } ],
+      "result" : {
+        "name" : "transactionHash",
+        "value" : "0x0297ed9012b044e671a86a8e88bc7cfc79311a1da38b807783ac87b9b89b1b69"
+      }
+    } ]
+  }, {
+    "name" : "eth_sign",
+    "summary" : "Calculates an Ethereum specific signature",
+    "description" : "The sign method calculates an Ethereum specific signature with: `sign(keccak256(\"\\x19Ethereum Signed Message:\\n\" + len(message) + message)))`.\n\nBy adding a prefix to the message makes the calculated signature recognisable as an Ethereum specific signature. This prevents misuse where a malicious DApp can sign arbitrary data (e.g. transaction) and use the signature to impersonate the victim.\n\n**Note** the address to sign with must be unlocked.\n\n",
+    "params" : [ {
+      "name" : "address",
+      "required" : true,
+      "description" : "Unlocked address to sign",
+      "schema" : {
+        "$ref" : "#/components/schemas/Address"
+      }
+    }, {
+      "name" : "message",
+      "required" : true,
+      "description" : "Message to be signed",
+      "schema" : {
+        "$ref" : "#/components/schemas/Bytes"
+      }
+    } ],
+    "result" : {
+      "name" : "signedMessage",
+      "description" : "The signed message",
+      "schema" : {
+        "title" : "message",
+        "type" : "string"
+      }
+    },
+    "examples" : [ {
+      "name" : "messageToSign",
+      "params" : [ {
+        "name" : "address",
+        "value" : "0x9b2055d370f73ec7d8a03e965129118dc8f5bf83"
+      }, {
+        "name" : "message",
+        "value" : "0xdeadbeaf"
+      } ],
+      "result" : {
+        "name" : "signedMessage",
+        "value" : "0xa3f20717a250c2b0b729b7e5becbff67fdaef7e0699da4de7ca5895b02a170a12d887fd3b17bfdce3481f10bea41f45ba9f709d39ce8325427b57afcfc994cee1b"
+      }
+    } ]
+  }, {
+    "name" : "eth_syncing",
+    "summary" : "Returns an object with data about the sync status or false.",
+    "params" : [ ],
+    "result" : {
+      "name" : "syncing",
+      "schema" : {
+        "title" : "isSyncingResult",
+        "oneOf" : [ {
+          "title" : "syncingData",
+          "description" : "An object with sync status data",
+          "type" : "object",
+          "properties" : {
+            "startingBlock" : {
+              "title" : "syncingDataStartingBlock",
+              "description" : "Block at which the import started (will only be reset, after the sync reached his head)",
+              "$ref" : "#/components/schemas/IntegerHex"
+            },
+            "currentBlock" : {
+              "title" : "syncingDataCurrentBlock",
+              "description" : "The current block, same as eth_blockNumber",
+              "$ref" : "#/components/schemas/IntegerHex"
+            },
+            "highestBlock" : {
+              "title" : "syncingDataHighestBlock",
+              "description" : "The estimated highest block",
+              "$ref" : "#/components/schemas/IntegerHex"
+            },
+            "knownStates" : {
+              "title" : "syncingDataKnownStates",
+              "description" : "The known states",
+              "$ref" : "#/components/schemas/IntegerHex"
+            },
+            "pulledStates" : {
+              "title" : "syncingDataPulledStates",
+              "description" : "The pulled states",
+              "$ref" : "#/components/schemas/IntegerHex"
+            }
+          }
+        }, {
+          "title" : "notSyncing",
+          "type" : "boolean"
+        } ]
+      }
+    },
+    "examples" : [ {
+      "name" : "whenSyncing",
+      "params" : [ ],
+      "result" : {
+        "name" : "result",
+        "value" : {
+          "startingBlock" : "0x384",
+          "currentBlock" : "0x386",
+          "highestBlock" : "0x454"
+        }
+      }
+    }, {
+      "name" : "whenNotSyncing",
+      "params" : [ ],
+      "result" : {
+        "name" : "result",
+        "value" : false
+      }
+    } ]
+  }, {
+    "name" : "eth_uninstallFilter",
+    "summary" : "Uninstalls a filter with given id. Should always be called when watch is no longer needed.",
+    "description" : "Additionally Filters timeout when they aren't requested with `eth_getFilterChanges` for a period of time.",
+    "params" : [ {
+      "name" : "filterId",
+      "required" : true,
+      "schema" : {
+        "$ref" : "#/components/schemas/FilterId"
+      }
+    } ],
+    "result" : {
+      "name" : "filterUninstalledSuccess",
+      "description" : "returns `true` if the filter was successfully uninstalled, `false` otherwise.",
+      "schema" : {
+        "type" : "boolean"
+      }
+    },
+    "examples" : [ {
+      "name" : "uninstallSuccessExample",
+      "params" : [ {
+        "name" : "filterId",
+        "value" : "0xb"
+      } ],
+      "result" : {
+        "name" : "uninstallSuccessExample",
+        "value" : true
+      }
+    } ]
+  }, {
+    "name" : "net_listening",
+    "summary" : "Returns client listening status",
+    "description" : "Determines if this client is actively listening for new network connections.",
+    "params" : [ ],
+    "result" : {
+      "name" : "netListeningResult",
+      "description" : "`true` if listening is active, `false` otherwise",
+      "schema" : {
+        "title" : "isNetListening",
+        "type" : "boolean"
+      }
+    },
+    "examples" : [ {
+      "name" : "peerCount",
+      "params" : [ ],
+      "result" : {
+        "name" : "count",
+        "value" : "0x2"
+      }
+    } ]
+  }, {
+    "name" : "net_peerCount",
+    "summary" : "Number of peers",
+    "description" : "Returns the number of peers currently connected to this client.",
+    "params" : [ ],
+    "result" : {
+      "name" : "quantity",
+      "description" : "Hex of the number of connected peers.",
+      "schema" : {
+        "title" : "numConnectedPeers",
+        "description" : "Hex representation of number of connected peers",
+        "type" : "string"
+      }
+    },
+    "examples" : [ {
+      "name" : "peerCount",
+      "params" : [ ],
+      "result" : {
+        "name" : "peerCount",
+        "value" : "0x2"
+      }
+    } ]
+  }, {
+    "name" : "net_peerList",
+    "summary" : "List of peers",
+    "description" : "Returns the list of peers currently connected to this client.",
+    "params" : [ ],
+    "result" : {
+      "name" : "array",
+      "description" : "The list of peers",
+      "schema" : {
+        "title" : "connectedPeers",
+        "description" : "The list of peers",
+        "type" : "array"
+      }
+    },
+    "examples" : [ {
+      "name" : "connectedPeersExample",
+      "description" : "Example with connected peers",
+      "params" : [ ],
+      "result" : {
+        "name" : "connectedPeersResult",
+        "value" : [ "3fd44f66 | ec2-52-15-37-171.us-east-2.compute.amazonaws.com/52.15.37.171:5050", "50517861 | bootstrap14.rsk.co/54.169.136.187:5050", "434f8932 | bootstrap07.rsk.co/54.169.12.15:5050" ]
+      }
+    } ]
+  }, {
+    "name" : "net_version",
+    "summary" : "Network identifier associated with network",
+    "description" : "Returns the current network id.\n\nMainnet Chain Id = `30`, Testnet Chain Id = `31`.",
+    "params" : [ ],
+    "result" : {
+      "name" : "networkId",
+      "description" : "Network ID associated with the current network",
+      "schema" : {
+        "title" : "networkId",
+        "type" : "string",
+        "pattern" : "^[\\d]+$"
+      }
+    },
+    "examples" : [ {
+      "name" : "rskMainnetId",
+      "params" : [ ],
+      "result" : {
+        "name" : "rskMainnetId",
+        "value" : 30
+      }
+    }, {
+      "name" : "rskTestnetID",
+      "params" : [ ],
+      "result" : {
+        "name" : "rskTestnetID",
+        "value" : 31
+      }
+    } ]
+  }, {
+    "name" : "rpc_modules",
+    "summary" : "Returns the JSON-RPC modules this node serves.",
+    "description" : "Returns a map of enabled module name to module version. A namespace absent from this map is not routed by this node, so every method in it will be rejected.",
+    "params" : [ ],
+    "result" : {
+      "name" : "modules",
+      "description" : "The enabled modules, mapped to their version",
+      "schema" : {
+        "title" : "modules",
+        "type" : "object",
+        "description" : "The enabled modules, mapped to their version",
+        "additionalProperties" : {
+          "type" : "string"
+        }
+      }
+    },
+    "examples" : [ {
+      "name" : "modulesExample",
+      "params" : [ ],
+      "result" : {
+        "name" : "modulesResult",
+        "value" : {
+          "eth" : "1.0",
+          "net" : "1.0",
+          "rpc" : "1.0",
+          "web3" : "1.0",
+          "evm" : "1.0",
+          "personal" : "1.0",
+          "txpool" : "1.0",
+          "rsk" : "1.0"
+        }
+      }
+    } ]
+  }, {
+    "name" : "rsk_getRawBlockHeaderByHash",
+    "summary" : "Returns the RLP-encoded header of the block with the given hash.",
+    "description" : "Returns the block header exactly as it is encoded for consensus, so it can be hashed or verified independently. Returns `null` when the node holds no block with that hash.",
+    "params" : [ {
+      "$ref" : "#/components/contentDescriptors/BlockHash"
+    } ],
+    "result" : {
+      "name" : "rawBlockHeader",
+      "description" : "The RLP-encoded block header, or `null` if the block is unknown",
+      "schema" : {
+        "$ref" : "#/components/schemas/BytesOrNull"
+      }
+    },
+    "examples" : [ {
+      "name" : "getRawBlockHeaderByHashExample",
+      "description" : "The result is abridged; a real encoded header is several hundred bytes long",
+      "params" : [ {
+        "name" : "blockHash",
+        "value" : "0x1cd0e5cbd3ba2c9b48eb6ff5bc0be6ba9d5a0e1b7c4ec9b3e6cb1d1b3f7a1e0d"
+      } ],
+      "result" : {
+        "name" : "rawBlockHeaderResult",
+        "value" : "0xf90218a01cd0e5cbd3ba2c9b48eb6ff5bc0be6ba9d5a0e1b7c4ec9b3e6cb1d1b3f7a1e0d"
+      }
+    } ]
+  }, {
+    "name" : "rsk_getRawBlockHeaderByNumber",
+    "summary" : "Returns the RLP-encoded header of the block at the given number or tag.",
+    "description" : "Returns the block header exactly as it is encoded for consensus, so it can be hashed or verified independently. Returns `null` when no block matches the given number or tag.",
+    "params" : [ {
+      "$ref" : "#/components/contentDescriptors/BlockNumberOrTag"
+    } ],
+    "result" : {
+      "name" : "rawBlockHeader",
+      "description" : "The RLP-encoded block header, or `null` if no block matches",
+      "schema" : {
+        "$ref" : "#/components/schemas/BytesOrNull"
+      }
+    },
+    "examples" : [ {
+      "name" : "getRawBlockHeaderByNumberExample",
+      "description" : "The result is abridged; a real encoded header is several hundred bytes long",
+      "params" : [ {
+        "name" : "blockNumberOrTag",
+        "value" : "latest"
+      } ],
+      "result" : {
+        "name" : "rawBlockHeaderResult",
+        "value" : "0xf90218a01cd0e5cbd3ba2c9b48eb6ff5bc0be6ba9d5a0e1b7c4ec9b3e6cb1d1b3f7a1e0d"
+      }
+    } ]
+  }, {
+    "name" : "rsk_getRawTransactionReceiptByHash",
+    "summary" : "Returns the RLP-encoded receipt of the given transaction.",
+    "description" : "Returns the receipt exactly as it is encoded into the receipts trie, so it can be verified against a block header. Only transactions on the main chain are considered; anything else returns `null`.",
+    "params" : [ {
+      "$ref" : "#/components/contentDescriptors/TransactionHash"
+    } ],
+    "result" : {
+      "name" : "rawTransactionReceipt",
+      "description" : "The RLP-encoded transaction receipt, or `null` if the transaction is not on the main chain",
+      "schema" : {
+        "$ref" : "#/components/schemas/BytesOrNull"
+      }
+    },
+    "examples" : [ {
+      "name" : "getRawTransactionReceiptByHashExample",
+      "description" : "The result is abridged; a real encoded receipt also carries the bloom filter and the logs",
+      "params" : [ {
+        "name" : "transactionHash",
+        "value" : "0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"
+      } ],
+      "result" : {
+        "name" : "rawTransactionReceiptResult",
+        "value" : "0xf9010c8302a3f8825208b9010000000000000000000000000000000000000000"
+      }
+    } ]
+  }, {
+    "name" : "rsk_getTransactionReceiptNodesByHash",
+    "summary" : "Returns the receipts-trie nodes proving a transaction receipt.",
+    "description" : "Returns the encoded trie nodes on the path between the receipt of the given transaction and the receipts-trie root of the given block, so that the receipt can be proved against the block header. The path is ordered **leaf first**: element 0 is the node holding the receipt and the last element is the root. Returns `null` when the transaction is not in that block.",
+    "params" : [ {
+      "$ref" : "#/components/contentDescriptors/BlockHash"
+    }, {
+      "$ref" : "#/components/contentDescriptors/TransactionHash"
+    } ],
+    "result" : {
+      "name" : "receiptNodes",
+      "description" : "The encoded trie nodes proving the receipt, or `null` if the transaction is not in the block",
+      "schema" : {
+        "title" : "receiptNodesOrNull",
+        "oneOf" : [ {
+          "title" : "receiptNodes",
+          "type" : "array",
+          "description" : "The encoded trie nodes, leaf first: element 0 holds the receipt, the last element is the receipts-trie root",
+          "items" : {
+            "$ref" : "#/components/schemas/Bytes"
+          }
+        }, {
+          "$ref" : "#/components/schemas/Null"
+        } ]
+      }
+    },
+    "examples" : [ {
+      "name" : "getTransactionReceiptNodesByHashExample",
+      "description" : "The nodes are abridged; real trie nodes are longer",
+      "params" : [ {
+        "name" : "blockHash",
+        "value" : "0x1cd0e5cbd3ba2c9b48eb6ff5bc0be6ba9d5a0e1b7c4ec9b3e6cb1d1b3f7a1e0d"
+      }, {
+        "name" : "transactionHash",
+        "value" : "0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"
+      } ],
+      "result" : {
+        "name" : "receiptNodesResult",
+        "value" : [ "0x2080011ca01cd0e5cbd3ba2c9b48eb6ff5bc0be6ba9d5a0e1b7c4ec9b3e6cb1d1b", "0x300801b6a0c4d9a4b1a0e5a51e9c3a1f427bf47e6a5a3a3e37d4b0e0f7c0b3a4b1" ]
+      }
+    } ]
+  }, {
+    "name" : "rsk_protocolVersion",
+    "summary" : "Returns the highest RSK wire protocol version this node supports.",
+    "params" : [ ],
+    "result" : {
+      "name" : "protocolVersion",
+      "description" : "The highest supported RSK wire protocol version",
+      "schema" : {
+        "$ref" : "#/components/schemas/IntegerHex"
+      }
+    },
+    "examples" : [ {
+      "name" : "protocolVersionExample",
+      "params" : [ ],
+      "result" : {
+        "name" : "protocolVersionResult",
+        "value" : "0x3e"
+      }
+    } ]
+  }, {
+    "name" : "txpool_content",
+    "summary" : "Returns the transactions currently in the pool, in full.",
+    "description" : "Returns two maps, `pending` and `queued`, keyed by sender address and then by decimal nonce. `pending` holds transactions eligible for the next block; `queued` holds those whose nonce leaves a gap and which therefore cannot be executed yet.\n\nThe sender address appears twice in every entry, formatted two different ways: bare hex as the map key, and `0x`-prefixed as the transaction's `from`. Both name the same account. Key off the prefixed form or normalise the key before comparing.",
+    "params" : [ ],
+    "result" : {
+      "name" : "content",
+      "description" : "The pending and queued transactions, in full",
+      "schema" : {
+        "title" : "txPoolContent",
+        "type" : "object",
+        "properties" : {
+          "pending" : {
+            "$ref" : "#/components/schemas/TxPoolTransactionsBySender"
+          },
+          "queued" : {
+            "$ref" : "#/components/schemas/TxPoolTransactionsBySender"
+          }
+        }
+      }
+    },
+    "examples" : [ {
+      "name" : "contentExample",
+      "description" : "One ordinary transfer and one contract creation from the same sender. The creation carries `0x00` in `to`, which is how an empty receive address is rendered here.",
+      "params" : [ ],
+      "result" : {
+        "name" : "contentResult",
+        "value" : {
+          "pending" : {
+            "7986b3df570230288501eea3d890bd66948c9b79" : {
+              "12" : [ {
+                "blockHash" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+                "blockNumber" : null,
+                "transactionIndex" : null,
+                "from" : "0x7986b3df570230288501eea3d890bd66948c9b79",
+                "gas" : "0x5208",
+                "gasPrice" : "0x3b9aca00",
+                "hash" : "0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238",
+                "input" : "0x",
+                "nonce" : "0xc",
+                "to" : "0x0dc4a4c0c5c9f1a6bb0d84b6b0a0d0b5d6b34d9d",
+                "value" : "0x2386f26fc10000"
+              } ],
+              "13" : [ {
+                "blockHash" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+                "blockNumber" : null,
+                "transactionIndex" : null,
+                "from" : "0x7986b3df570230288501eea3d890bd66948c9b79",
+                "gas" : "0x33450",
+                "gasPrice" : "0x3b9aca00",
+                "hash" : "0x4b1d9f0e2b8a3c7d6e5f4a3b2c1d0e9f8a7b6c5d4e3f2a1b0c9d8e7f6a5b4c3d",
+                "input" : "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2",
+                "nonce" : "0xd",
+                "to" : "0x00",
+                "value" : "0x0"
+              } ]
+            }
+          },
+          "queued" : { }
+        }
+      }
+    } ]
+  }, {
+    "name" : "txpool_inspect",
+    "summary" : "Returns a summary of the transactions currently in the pool.",
+    "description" : "The same `pending` and `queued` grouping as `txpool_content`, but each transaction is reduced to a single `recipient: value wei + gas x gasPrice gas` string, so the pool can be inspected without transferring it in full.\n\nBoth addresses here are bare hex without the `0x` prefix: the sender as the map key, and the recipient at the head of the summary string. The value and the gas price are decimal wei, not hex. A transaction that creates a contract has no recipient, so its summary begins with the empty string and a colon.",
+    "params" : [ ],
+    "result" : {
+      "name" : "inspect",
+      "description" : "The pending and queued transactions, one summary string each",
+      "schema" : {
+        "title" : "txPoolInspect",
+        "type" : "object",
+        "properties" : {
+          "pending" : {
+            "$ref" : "#/components/schemas/TxPoolSummariesBySender"
+          },
+          "queued" : {
+            "$ref" : "#/components/schemas/TxPoolSummariesBySender"
+          }
+        }
+      }
+    },
+    "examples" : [ {
+      "name" : "inspectExample",
+      "description" : "The same two transactions as the `txpool_content` example. The contract creation has no recipient, so its summary begins with a bare colon.",
+      "params" : [ ],
+      "result" : {
+        "name" : "inspectResult",
+        "value" : {
+          "pending" : {
+            "7986b3df570230288501eea3d890bd66948c9b79" : {
+              "12" : [ "0dc4a4c0c5c9f1a6bb0d84b6b0a0d0b5d6b34d9d: 10000000000000000 wei + 21000 x 1000000000 gas" ],
+              "13" : [ ": 0 wei + 210000 x 1000000000 gas" ]
+            }
+          },
+          "queued" : { }
+        }
+      }
+    } ]
+  }, {
+    "name" : "txpool_status",
+    "summary" : "Returns how many transactions the pool is holding.",
+    "description" : "Returns the number of transactions eligible for the next block (`pending`) and the number held back because their nonce leaves a gap (`queued`). Both are plain integers, not hex quantities.",
+    "params" : [ ],
+    "result" : {
+      "name" : "status",
+      "description" : "The pending and queued transaction counts",
+      "schema" : {
+        "title" : "txPoolStatus",
+        "type" : "object",
+        "properties" : {
+          "pending" : {
+            "title" : "pending",
+            "type" : "integer",
+            "description" : "Transactions eligible for the next block"
+          },
+          "queued" : {
+            "title" : "queued",
+            "type" : "integer",
+            "description" : "Transactions whose nonce leaves a gap and cannot be executed yet"
+          }
+        }
+      }
+    },
+    "examples" : [ {
+      "name" : "statusExample",
+      "params" : [ ],
+      "result" : {
+        "name" : "statusResult",
+        "value" : {
+          "pending" : 3,
+          "queued" : 1
+        }
+      }
+    } ]
+  }, {
+    "name" : "web3_clientVersion",
+    "description" : "Returns the version of the current client",
+    "summary" : "current client version",
+    "params" : [ ],
+    "result" : {
+      "name" : "clientVersion",
+      "description" : "Client version",
+      "schema" : {
+        "title" : "clientVersion",
+        "type" : "string"
+      }
+    },
+    "examples" : [ {
+      "name" : "basicExample",
+      "params" : [ ],
+      "result" : {
+        "name" : "version",
+        "description" : "Current client version",
+        "value" : "RskJ/3.3.1/Linux/Java1.8/IRIS-58406e0"
+      }
+    } ]
+  }, {
+    "name" : "web3_sha3",
+    "summary" : "Hashes data",
+    "description" : "Returns Keccak-256 (`NOT` the standardized SHA3-256) of the given data",
+    "params" : [ {
+      "name" : "data",
+      "description" : "Data to hash using the Keccak-256 algorithm",
+      "summary" : "Data to hash",
+      "schema" : {
+        "title" : "data",
+        "type" : "string",
+        "pattern" : "^0x[a-fA-F\\d]+$"
+      }
+    } ],
+    "result" : {
+      "name" : "hashedData",
+      "description" : "Keccak-256 hash of the given data",
+      "schema" : {
+        "$ref" : "#/components/schemas/Keccak"
+      }
+    },
+    "examples" : [ {
+      "name" : "sha3Example",
+      "params" : [ {
+        "name" : "sha3ParamExample",
+        "value" : "0x68656c6c6f20776f726c64"
+      } ],
+      "result" : {
+        "name" : "sha3ResultExample",
+        "value" : "0x47173285a8d7341e5e972fc677286384f802f8ef42a5ec5f03bbfa254cb01fad"
+      }
+    } ]
+  } ],
+  "components" : {
+    "schemas" : {
+      "BlockNumberOrTag" : {
+        "title" : "blockNumberOrTag",
+        "description" : "A block, given as its height in hex or as a tag. A height in decimal is rejected: the block is looked up by `Web3InformationRetriever`, which parses the number as hex and requires the `0x` prefix.\n\nA 32-byte block hash is also accepted in this position and resolves to that block. It is deliberately left out of the union above: the node does not distinguish a hash-length hex string from a height, so the capability is a side effect of how the identifier is parsed rather than a designed one, and publishing it would make it breaking to narrow. Look a block up by hash through the block reference object instead.",
+        "oneOf" : [ {
+          "$ref" : "#/components/schemas/BlockNumberHex"
+        }, {
+          "$ref" : "#/components/schemas/BlockNumberTag"
+        } ]
+      },
+      "Null" : {
+        "title" : "null",
+        "type" : "null",
+        "description" : "Null"
+      },
+      "Address" : {
+        "title" : "address",
+        "type" : "string",
+        "description" : "EOA or Contract address",
+        "pattern" : "^0x[a-fA-F\\d]{40}$"
+      },
+      "DataWord" : {
+        "title" : "dataWord",
+        "type" : "string",
+        "description" : "Hex representation of a 256 bit unit of data",
+        "pattern" : "^0x([a-fA-F\\d]{64})?$"
+      },
+      "FilterId" : {
+        "title" : "filterId",
+        "type" : "string",
+        "description" : "An identifier used to reference the filter."
+      },
+      "BloomFilter" : {
+        "title" : "bloomFilter",
+        "type" : "string",
+        "description" : "A 2048 bit bloom filter from the logs of the transaction. Each log sets 3 bits though taking the low-order 11 bits of each of the first three pairs of bytes in a Keccak 256 hash of the log's byte series"
+      },
+      "Addresses" : {
+        "title" : "addresses",
+        "type" : "array",
+        "description" : "List of contract addresses from which to monitor events",
+        "items" : {
+          "$ref" : "#/components/schemas/Address"
+        }
+      },
+      "Bytes" : {
+        "title" : "bytes",
+        "type" : "string",
+        "description" : "Hex representation of a variable length byte array",
+        "pattern" : "^0x([a-fA-F0-9]?)+$"
+      },
+      "PoolDestinationAddress" : {
+        "title" : "poolTo",
+        "description" : "Destination address of the transaction, or `0x00` when the transaction creates a contract. A creation transaction carries an empty receive address, and the pool renders empty bytes as the sentinel `0x00` rather than as null. This is specific to the pool: `eth_getTransactionByHash` reports the same transaction's `to` as null.",
+        "oneOf" : [ {
+          "$ref" : "#/components/schemas/Address"
+        }, {
+          "title" : "contractCreationSentinel",
+          "type" : "string",
+          "description" : "The transaction creates a contract and has no destination address",
+          "enum" : [ "0x00" ]
+        } ]
+      },
+      "ExecutionBlockNumberOrTag" : {
+        "title" : "executionBlockNumberOrTag",
+        "description" : "A block to execute against, given as its height in hex or in decimal, or as a tag. The decimal form is accepted because the block is resolved by `ExecutionBlockRetriever`, which parses both bases; the block-reading methods resolve through `Web3InformationRetriever`, which parses hex only and answers `invalid blocknumber` for a decimal height. It is not the only place decimal is taken -- `eth_getBlocksByNumber` parses its own height and accepts both bases too -- but among the methods that take a block parameter it is what separates executing from reading.",
+        "oneOf" : [ {
+          "$ref" : "#/components/schemas/BlockNumberHex"
+        }, {
+          "$ref" : "#/components/schemas/BlockNumberDec"
+        }, {
+          "$ref" : "#/components/schemas/BlockNumberTag"
+        } ]
+      },
+      "BlockExampleResultFullTransaction" : {
+        "name" : "block",
+        "value" : {
+          "number" : "0x1b4",
+          "hash" : "0xf1652d8322a880e520f996f7d28b645814a58a202d7d2ab7f058e5566fe4f9f3",
+          "parentHash" : "0x9203a97b2595a44e8d31dd7bf607155620dd50982ac282fc776e21a58b2f7795",
+          "sha3Uncles" : "0x2f752c2e72d38f3677bfa47bd54ec10441141a6415f3be121341d94276dfd732",
+          "logsBloom" : "0x00000008000000800000000000000000000000000000000000000000000008000000000000040000000000000000000050000000000000000000000000000000000000000000000000000000005000000010000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000200000000000200000000000001040000000000000400000000000000000000100000000000000010000000000000000000001000000000000001000001000000000000000000000000000020000000000080200000100000000000000000000000000000000000000000000000000000000000000000000000",
+          "transactionsRoot" : "0xe94962ab91fe305207670ca17d958ce15bdd553aa6630eba07476c0f35a65b50",
+          "stateRoot" : "0xa12e5b995ec8056d6c2d2558c6f4e1ab7f0d6d3eaed868e84c00923cf58bb642",
+          "receiptsRoot" : "0x2cdc6fdc519baad55c4f9d86d1415dbfe21265c6b2ba1f283e1391e015735c42",
+          "miner" : "0x1fab9a0e24ffc209b01faa5a61ad4366982d0b7f",
+          "difficulty" : "0x1aa2b738",
+          "totalDifficulty" : "0x1f61daa8d6",
+          "extraData" : "0x",
+          "size" : "0xafe",
+          "gasLimit" : "0x67c280",
+          "gasUsed" : "0x0",
+          "timestamp" : "0x5d1f7c06",
+          "transactions" : [ {
+            "$ref" : "#/components/schemas/TransactionExampleResult"
+          } ],
+          "uncles" : [ "0x6d12270d24b591931974b75c1a753d1db8c22372baf1aaaa79253858caeed52b", "0x9ea21e7d69ffb54face62769a04b08434d606a40c12e1348c4da348d91a9f5e4" ],
+          "minimumGasPrice" : "0x0",
+          "bitcoinMergedMiningHeader" : "0x000000202d17c9a169c4c93eaf376bc35ff6561d0b743880600f3d8370020000000000008d31ad07fc72224ddd23632463f2119d977defc86f1b0ebf16171225bf9c316c117c1f5d531d041a8046d09f",
+          "bitcoinMergedMiningCoinbaseTransaction" : "0x000000000000008075aec68cfceb2bda1dcc166c1564517793f90ee07fcd446699d440628290564f6088ac0000000000000000266a24aa21a9ed08ade7f48a09603efcf910361380e3ce1ebc9813eb4a7d85473a9c170d79017e00000000000000002a6a52534b424c4f434b3ac4d2419792f08338d4fa5fd21c61ad79484c875f1ac9b483f253842edb96c92400000000",
+          "bitcoinMergedMiningMerkleProof" : "0x91062f54a2ea641bebaa19e4d58df522a395bc89e6e230f98cc343d39a8deb070f190492c042ea5ebb75f6e9488345eedf5ff35219fd3ac21be0778e7feed9fc117db6cd70f02ddc5635577981626db173937a041ae38c9cebd10e645fd4ddc00d8662b4bbb4e4309ff07fb30ca6c3365bea0f823a5fe83f60750a3b0f62da5ec8ca82637afafe9869ecfdb26e5136c849080b46f6230090773949a1010a91ce82b1c65d92f57836e28e9f2f90133d4dc2376ea337bd76836058e5cc9ae6975e6211f67ff7f76793b2f505a621ef7c1f90f0f4d4badc62aaa70a20f223160961",
+          "hashForMergedMining" : "0xc4d2419792f08338d4fa5fd21c61ad79484c875f1ac9b483f253842edb96c924",
+          "paidFees" : "0x0",
+          "cumulativeDifficulty" : "0x4ff04782"
+        }
+      },
+      "BytesOrNull" : {
+        "title" : "bytesOrNull",
+        "oneOf" : [ {
+          "$ref" : "#/components/schemas/Bytes"
+        }, {
+          "$ref" : "#/components/schemas/Null"
+        } ]
+      },
+      "IntegerHex" : {
+        "title" : "integer hex",
+        "type" : "string",
+        "pattern" : "^0x[a-fA-F0-9]+$",
+        "description" : "Hex representation of the integer"
+      },
+      "Receipt" : {
+        "title" : "receipt",
+        "type" : "object",
+        "description" : "The receipt of a transaction",
+        "required" : [ "blockHash", "blockNumber", "contractAddress", "cumulativeGasUsed", "from", "gasUsed", "logs", "logsBloom", "to", "transactionHash", "transactionIndex", "type", "effectiveGasPrice" ],
+        "properties" : {
+          "blockHash" : {
+            "$ref" : "#/components/schemas/BlockHash"
+          },
+          "blockNumber" : {
+            "$ref" : "#/components/schemas/BlockNumberHex"
+          },
+          "contractAddress" : {
+            "title" : "ReceiptContractAddress",
+            "description" : "The contract address created, if the transaction was a contract creation, otherwise null",
+            "$ref" : "#/components/schemas/AddressOrNull"
+          },
+          "cumulativeGasUsed" : {
+            "title" : "ReceiptCumulativeGasUsed",
+            "description" : "The gas units used by the transaction",
+            "$ref" : "#/components/schemas/IntegerHex"
+          },
+          "from" : {
+            "title" : "From",
+            "description" : "The sender of the transaction",
+            "$ref" : "#/components/schemas/Address"
+          },
+          "gasUsed" : {
+            "title" : "ReceiptGasUsed",
+            "description" : "The total gas used by the transaction",
+            "$ref" : "#/components/schemas/IntegerHex"
+          },
+          "logs" : {
+            "title" : "logs",
+            "type" : "array",
+            "description" : "An array of all the logs triggered during the transaction",
+            "items" : {
+              "$ref" : "#/components/schemas/Log"
+            }
+          },
+          "logsBloom" : {
+            "$ref" : "#/components/schemas/BloomFilter"
+          },
+          "to" : {
+            "$ref" : "#/components/schemas/DestinationAddress"
+          },
+          "transactionHash" : {
+            "$ref" : "#/components/schemas/TransactionHash"
+          },
+          "transactionIndex" : {
+            "$ref" : "#/components/schemas/TransactionIndex"
+          },
+          "postTransactionState" : {
+            "title" : "ReceiptPostTransactionState",
+            "description" : "The intermediate stateRoot directly after transaction execution.",
+            "$ref" : "#/components/schemas/Keccak"
+          },
+          "status" : {
+            "title" : "ReceiptStatus",
+            "description" : "Whether or not the transaction threw an error.",
+            "type" : "boolean"
+          },
+          "type" : {
+            "title" : "ReceiptType",
+            "description" : "is a positive unsigned 8-bit number that represents the type of the transaction.",
+            "type" : "string"
+          },
+          "effectiveGasPrice" : {
+            "title" : "ReceiptEffectiveGasPrice",
+            "description" : "The actual value per gas deducted on the transaction.",
+            "$ref" : "#/components/schemas/IntegerHex"
+          },
+          "root" : {
+            "title" : "Receipt Root",
+            "description" : "32 bytes of post-transaction `stateroot` (pre Byzantium).",
+            "type" : "string"
+          }
+        }
+      },
+      "BlockExampleResultTransactionHash" : {
+        "name" : "block",
+        "value" : {
+          "number" : "0x1b4",
+          "hash" : "0xf1652d8322a880e520f996f7d28b645814a58a202d7d2ab7f058e5566fe4f9f3",
+          "parentHash" : "0x9203a97b2595a44e8d31dd7bf607155620dd50982ac282fc776e21a58b2f7795",
+          "sha3Uncles" : "0x2f752c2e72d38f3677bfa47bd54ec10441141a6415f3be121341d94276dfd732",
+          "logsBloom" : "0x00000008000000800000000000000000000000000000000000000000000008000000000000040000000000000000000050000000000000000000000000000000000000000000000000000000005000000010000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000200000000000200000000000001040000000000000400000000000000000000100000000000000010000000000000000000001000000000000001000001000000000000000000000000000020000000000080200000100000000000000000000000000000000000000000000000000000000000000000000000",
+          "transactionsRoot" : "0xe94962ab91fe305207670ca17d958ce15bdd553aa6630eba07476c0f35a65b50",
+          "stateRoot" : "0xa12e5b995ec8056d6c2d2558c6f4e1ab7f0d6d3eaed868e84c00923cf58bb642",
+          "receiptsRoot" : "0x2cdc6fdc519baad55c4f9d86d1415dbfe21265c6b2ba1f283e1391e015735c42",
+          "miner" : "0x1fab9a0e24ffc209b01faa5a61ad4366982d0b7f",
+          "difficulty" : "0x1aa2b738",
+          "totalDifficulty" : "0x1f61daa8d6",
+          "extraData" : "0x",
+          "size" : "0xafe",
+          "gasLimit" : "0x67c280",
+          "gasUsed" : "0x0",
+          "timestamp" : "0x5d1f7c06",
+          "transactions" : [ "0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b" ],
+          "uncles" : [ "0x6d12270d24b591931974b75c1a753d1db8c22372baf1aaaa79253858caeed52b", "0x9ea21e7d69ffb54face62769a04b08434d606a40c12e1348c4da348d91a9f5e4" ],
+          "minimumGasPrice" : "0x0",
+          "bitcoinMergedMiningHeader" : "0x000000202d17c9a169c4c93eaf376bc35ff6561d0b743880600f3d8370020000000000008d31ad07fc72224ddd23632463f2119d977defc86f1b0ebf16171225bf9c316c117c1f5d531d041a8046d09f",
+          "bitcoinMergedMiningCoinbaseTransaction" : "0x000000000000008075aec68cfceb2bda1dcc166c1564517793f90ee07fcd446699d440628290564f6088ac0000000000000000266a24aa21a9ed08ade7f48a09603efcf910361380e3ce1ebc9813eb4a7d85473a9c170d79017e00000000000000002a6a52534b424c4f434b3ac4d2419792f08338d4fa5fd21c61ad79484c875f1ac9b483f253842edb96c92400000000",
+          "bitcoinMergedMiningMerkleProof" : "0x91062f54a2ea641bebaa19e4d58df522a395bc89e6e230f98cc343d39a8deb070f190492c042ea5ebb75f6e9488345eedf5ff35219fd3ac21be0778e7feed9fc117db6cd70f02ddc5635577981626db173937a041ae38c9cebd10e645fd4ddc00d8662b4bbb4e4309ff07fb30ca6c3365bea0f823a5fe83f60750a3b0f62da5ec8ca82637afafe9869ecfdb26e5136c849080b46f6230090773949a1010a91ce82b1c65d92f57836e28e9f2f90133d4dc2376ea337bd76836058e5cc9ae6975e6211f67ff7f76793b2f505a621ef7c1f90f0f4d4badc62aaa70a20f223160961",
+          "hashForMergedMining" : "0xc4d2419792f08338d4fa5fd21c61ad79484c875f1ac9b483f253842edb96c924",
+          "paidFees" : "0x0",
+          "cumulativeDifficulty" : "0x4ff04782"
+        }
+      },
+      "IntegerOrNull" : {
+        "title" : "integerOrNull",
+        "oneOf" : [ {
+          "$ref" : "#/components/schemas/IntegerHex"
+        }, {
+          "$ref" : "#/components/schemas/Null"
+        } ]
+      },
+      "Log" : {
+        "title" : "log",
+        "type" : "object",
+        "description" : "An indexed event generated during a transaction",
+        "properties" : {
+          "address" : {
+            "title" : "LogAddress",
+            "description" : "Sender of the transaction",
+            "$ref" : "#/components/schemas/Address"
+          },
+          "blockHash" : {
+            "$ref" : "#/components/schemas/BlockHash"
+          },
+          "blockNumber" : {
+            "$ref" : "#/components/schemas/BlockNumberHex"
+          },
+          "data" : {
+            "title" : "LogData",
+            "description" : "The data/input string sent along with the transaction",
+            "$ref" : "#/components/schemas/Bytes"
+          },
+          "logIndex" : {
+            "title" : "LogIndex",
+            "description" : "The index of the event within its transaction, null when its pending",
+            "$ref" : "#/components/schemas/IntegerHex"
+          },
+          "removed" : {
+            "title" : "logIsRemoved",
+            "description" : "Whether or not the log was orphaned off the main chain",
+            "type" : "boolean"
+          },
+          "topics" : {
+            "$ref" : "#/components/schemas/Topics"
+          },
+          "transactionHash" : {
+            "$ref" : "#/components/schemas/TransactionHash"
+          },
+          "transactionIndex" : {
+            "$ref" : "#/components/schemas/TransactionIndex"
+          }
+        }
+      },
+      "Position" : {
+        "title" : "position",
+        "type" : "string",
+        "description" : "Hex representation of the storage slot where the variable exists",
+        "pattern" : "^0x([a-fA-F0-9]?)+$"
+      },
+      "NonceOrNull" : {
+        "title" : "nonceOrNull",
+        "description" : "Randomly selected number to satisfy the proof-of-work or null when its the pending block",
+        "oneOf" : [ {
+          "$ref" : "#/components/schemas/Nonce"
+        }, {
+          "$ref" : "#/components/schemas/Null"
+        } ]
+      },
+      "TransactionCreate" : {
+        "title" : "transaction",
+        "type" : "object",
+        "required" : [ "from", "data" ],
+        "properties" : {
+          "from" : {
+            "title" : "From",
+            "description" : "The address the transaction is send from",
+            "$ref" : "#/components/schemas/Address"
+          },
+          "to" : {
+            "$ref" : "#/components/schemas/DestinationAddress",
+            "description" : "The address the transaction is directed to. Optional when creating new contract."
+          },
+          "gas" : {
+            "title" : "transactionGas",
+            "type" : "string",
+            "description" : "Integer of the gas provided for the transaction execution. It will return unused gas. Default: 90000."
+          },
+          "gasPrice" : {
+            "title" : "transactionGasPrice",
+            "type" : "string",
+            "description" : "Integer of the gasPrice used for each paid gas."
+          },
+          "value" : {
+            "title" : "transactionValue",
+            "description" : "Integer of the value sent with this transaction",
+            "$ref" : "#/components/schemas/IntegerHex"
+          },
+          "data" : {
+            "title" : "transactionData",
+            "description" : "The compiled code of a contract OR the hash of the invoked method signature and encoded parameters. For details see https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI or https://docs.soliditylang.org/en/latest/abi-spec.html.",
+            "$ref" : "#/components/schemas/Bytes"
+          },
+          "nonce" : {
+            "title" : "transactionNonce",
+            "description" : "The total number of prior transactions made by the sender",
+            "$ref" : "#/components/schemas/Nonce"
+          }
+        }
+      },
+      "TxPoolSummariesBySender" : {
+        "title" : "txPoolSummariesBySender",
+        "type" : "object",
+        "description" : "Transaction summaries keyed by sender address in bare hex, without the `0x` prefix, then by decimal nonce",
+        "additionalProperties" : {
+          "title" : "txPoolSummariesByNonce",
+          "type" : "object",
+          "description" : "Summaries of one sender's transactions, keyed by decimal nonce",
+          "additionalProperties" : {
+            "type" : "array",
+            "items" : {
+              "title" : "txPoolSummary",
+              "type" : "string",
+              "description" : "`recipient: value wei + gas x gasPrice gas`, where the recipient is bare hex without the `0x` prefix, and the value and gas price are decimal wei. The recipient is empty when the transaction creates a contract."
+            }
+          }
+        }
+      },
+      "Nonce" : {
+        "title" : "nonce",
+        "description" : "A number only to be used once",
+        "$ref" : "#/components/schemas/IntegerHex"
+      },
+      "Transactions" : {
+        "title" : "transactions",
+        "description" : "An array of transactions",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/Transaction"
+        }
+      },
+      "Transaction" : {
+        "title" : "transaction",
+        "type" : "object",
+        "required" : [ "gas", "gasPrice", "nonce" ],
+        "properties" : {
+          "blockHash" : {
+            "$ref" : "#/components/schemas/BlockHashOrNull"
+          },
+          "blockNumber" : {
+            "$ref" : "#/components/schemas/BlockNumberOrNull"
+          },
+          "from" : {
+            "title" : "From",
+            "description" : "The sender of the transaction",
+            "$ref" : "#/components/schemas/Address"
+          },
+          "gas" : {
+            "title" : "transactionGas",
+            "type" : "string",
+            "description" : "The gas limit provided by the sender in Wei"
+          },
+          "gasPrice" : {
+            "title" : "transactionGasPrice",
+            "type" : "string",
+            "description" : "The gas price willing to be paid by the sender in Wei"
+          },
+          "hash" : {
+            "$ref" : "#/components/schemas/TransactionHash"
+          },
+          "input" : {
+            "title" : "transactionInput",
+            "type" : "string",
+            "description" : "The data field sent with the transaction"
+          },
+          "nonce" : {
+            "title" : "transactionNonce",
+            "description" : "The total number of prior transactions made by the sender",
+            "$ref" : "#/components/schemas/Nonce"
+          },
+          "to" : {
+            "$ref" : "#/components/schemas/DestinationAddress"
+          },
+          "transactionIndex" : {
+            "$ref" : "#/components/schemas/TransactionIndex"
+          },
+          "value" : {
+            "title" : "transactionValue",
+            "description" : "Value of Ether being transferred in Wei",
+            "$ref" : "#/components/schemas/IntegerHex"
+          },
+          "v" : {
+            "title" : "transactionSigV",
+            "type" : "string",
+            "description" : "ECDSA recovery id"
+          },
+          "r" : {
+            "title" : "transactionSigR",
+            "type" : "string",
+            "description" : "ECDSA signature r"
+          },
+          "s" : {
+            "title" : "transactionSigS",
+            "type" : "string",
+            "description" : "ECDSA signature s"
+          },
+          "type" : {
+            "title" : "ReceiptType",
+            "description" : "is a positive unsigned 8-bit number that represents the type of the transaction.",
+            "type" : "string"
+          }
+        }
+      },
+      "Block" : {
+        "title" : "Block",
+        "description" : "The Block is the collection of relevant pieces of information (known as the block header), together with information corresponding to the comprised transactions, and a set of other block headers that are known to have a parent equal to the present block’s parent’s parent.",
+        "type" : "object",
+        "properties" : {
+          "number" : {
+            "$ref" : "#/components/schemas/BlockNumberOrNull"
+          },
+          "hash" : {
+            "$ref" : "#/components/schemas/BlockHashOrNull"
+          },
+          "parentHash" : {
+            "$ref" : "#/components/schemas/BlockHash"
+          },
+          "nonce" : {
+            "$ref" : "#/components/schemas/NonceOrNull"
+          },
+          "sha3Uncles" : {
+            "title" : "blockShaUncles",
+            "description" : "Keccak hash of the uncles data in the block",
+            "$ref" : "#/components/schemas/Keccak"
+          },
+          "logsBloom" : {
+            "title" : "blockLogsBloom",
+            "type" : "string",
+            "description" : "The bloom filter for the logs of the block or null when its the pending block",
+            "pattern" : "^0x[a-fA-F\\d]+$"
+          },
+          "transactionsRoot" : {
+            "title" : "blockTransactionsRoot",
+            "description" : "The root of the transactions trie of the block.",
+            "$ref" : "#/components/schemas/Keccak"
+          },
+          "stateRoot" : {
+            "title" : "blockStateRoot",
+            "description" : "The root of the final state trie of the block",
+            "$ref" : "#/components/schemas/Keccak"
+          },
+          "receiptsRoot" : {
+            "title" : "blockReceiptsRoot",
+            "description" : "The root of the receipts trie of the block",
+            "$ref" : "#/components/schemas/Keccak"
+          },
+          "miner" : {
+            "$ref" : "#/components/schemas/AddressOrNull"
+          },
+          "difficulty" : {
+            "title" : "blockDifficulty",
+            "type" : "string",
+            "description" : "Integer of the difficulty for this block"
+          },
+          "totalDifficulty" : {
+            "title" : "blockTotalDifficulty",
+            "description" : "Integer of the total difficulty of the chain until this block",
+            "$ref" : "#/components/schemas/IntegerOrNull"
+          },
+          "extraData" : {
+            "title" : "blockExtraData",
+            "type" : "string",
+            "description" : "The 'extra data' field of this block"
+          },
+          "size" : {
+            "title" : "blockSize",
+            "type" : "string",
+            "description" : "Integer the size of this block in bytes"
+          },
+          "gasLimit" : {
+            "title" : "blockGasLimit",
+            "type" : "string",
+            "description" : "The maximum gas allowed in this block"
+          },
+          "gasUsed" : {
+            "title" : "blockGasUsed",
+            "type" : "string",
+            "description" : "The total used gas by all transactions in this block"
+          },
+          "timestamp" : {
+            "title" : "blockTimeStamp",
+            "type" : "string",
+            "description" : "The unix timestamp for when the block was collated"
+          },
+          "transactions" : {
+            "title" : "transactionsOrHashes",
+            "description" : "Array of transaction objects, or 32 Bytes transaction hashes depending on the last given parameter",
+            "type" : "array",
+            "items" : {
+              "title" : "transactionOrTransactionHash",
+              "oneOf" : [ {
+                "$ref" : "#/components/schemas/Transaction"
+              }, {
+                "$ref" : "#/components/schemas/TransactionHash"
+              } ]
+            }
+          },
+          "uncles" : {
+            "title" : "uncleHashes",
+            "description" : "Array of uncle hashes",
+            "type" : "array",
+            "items" : {
+              "title" : "uncleHash",
+              "description" : "Block hash of the RLP encoding of an uncle block",
+              "$ref" : "#/components/schemas/Keccak"
+            }
+          },
+          "bitcoinMergedMiningHeader" : {
+            "title" : "bitcoinMergedMiningHeader",
+            "type" : "string",
+            "description" : "The 80-byte bitcoin block header for merged mining"
+          },
+          "bitcoinMergedMiningCoinbaseTransaction" : {
+            "title" : "bitcoinMergedMiningCoinbaseTransaction",
+            "type" : "string",
+            "description" : "The bitcoin protobuf serialized coinbase tx for merged mining"
+          },
+          "bitcoinMergedMiningMerkleProof" : {
+            "title" : "bitcoinMergedMiningMerkleProof",
+            "type" : "string",
+            "description" : "The bitcoin merkle proof of coinbase tx for merged mining"
+          },
+          "hashForMergedMining" : {
+            "title" : "hashForMergedMining",
+            "type" : "string",
+            "description" : "The the base hash for merged mining"
+          },
+          "paidFees" : {
+            "title" : "paidFees",
+            "$ref" : "#/components/schemas/IntegerHex"
+          }
+        }
+      },
+      "IntegerDec" : {
+        "title" : "integer dec",
+        "type" : "string",
+        "pattern" : "^[0-9]+$",
+        "description" : "Decimal representation of the integer"
+      },
+      "TransactionHash" : {
+        "title" : "transactionHash",
+        "type" : "string",
+        "description" : "Keccak 256 Hash of the RLP encoding of a transaction",
+        "$ref" : "#/components/schemas/Keccak"
+      },
+      "Keccak" : {
+        "title" : "keccak",
+        "type" : "string",
+        "description" : "Hex representation of a Keccak 256 hash",
+        "pattern" : "^0x[a-fA-F\\d]{64}$"
+      },
+      "BlockHashOrNull" : {
+        "title" : "blockHashOrNull",
+        "description" : "The block hash or null when its the pending block",
+        "$ref" : "#/components/schemas/KeccakOrPending"
+      },
+      "RequireCanonical" : {
+        "title" : "requireCanonical",
+        "type" : "string",
+        "description" : "Whether a block that is not on the canonical chain is acceptable. Send it as the JSON string `\"true\"` or `\"false\"`, not as a JSON boolean: the node reads the whole object as a map of strings, so a non-string value fails during deserialisation, before this field is inspected. A string other than those two is rejected with `Invalid input: requireCanonical must be a String \"true\" or \"false\"`. It is only consulted alongside `blockHash`; when it is `\"true\"` and the referenced block is not on the canonical chain, the node answers with a block-not-found error stating the block is not canonical.",
+        "enum" : [ "true", "false" ]
+      },
+      "LogExampleResult" : {
+        "name" : "result",
+        "value" : [ {
+          "logIndex" : "0x1",
+          "blockNumber" : "0x1b4",
+          "blockHash" : "0x8216c5785ac562ff41e2dcfdf5785ac562ff41e2dcfdf829c5a142f1fccd7d",
+          "transactionHash" : "0xdf829c5a142f1fccd7d8216c5785ac562ff41e2dcfdf5785ac562ff41e2dcf",
+          "transactionIndex" : "0x0",
+          "address" : "0x16c5785ac562ff41e2dcfdf829c5a142f1fccd7d",
+          "data" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "topics" : [ "0x59ebeb90bc63057b6515673c3ecf9438e5058bca0f92585014eced636878c9a5" ]
+        } ]
+      },
+      "BlockNumberTag" : {
+        "title" : "blockNumberTag",
+        "type" : "string",
+        "description" : "A fixed tag describing block height, check options below.",
+        "enum" : [ "earliest", "latest", "pending" ]
+      },
+      "BlockNumberHex" : {
+        "title" : "blockNumberHex",
+        "type" : "string",
+        "description" : "The hex representation of the block's height",
+        "$ref" : "#/components/schemas/IntegerHex"
+      },
+      "TransactionCreateExampleParam" : {
+        "name" : "transactionData",
+        "value" : {
+          "from" : "0xa7d9ddbe1f17865597fbd27ec712455208b6b76d",
+          "to" : "0xf02c1c8e6114b1dbe8937a39260b5b0a374432bb",
+          "gas" : "0xc350",
+          "gasPrice" : "0x4a817c800",
+          "value" : "0xf3dbb76162000",
+          "data" : "0x0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      },
+      "TransactionIndex" : {
+        "title" : "transactionIndex",
+        "description" : "The index of the transaction. null when its pending",
+        "$ref" : "#/components/schemas/IntegerOrNull"
+      },
+      "BlockRef" : {
+        "title" : "blockRef",
+        "type" : "object",
+        "description" : "Object defining block references, for a method that reads the block. At least one of `blockHash` or `blockNumber` must be present; the node rejects an object carrying neither with `Invalid block input`. `blockNumber` is hex only here -- a decimal height is answered with `invalid blocknumber`. The method that executes against the block rather than reading it takes `executionBlockRef`, which also accepts decimal.",
+        "properties" : {
+          "blockHash" : {
+            "$ref" : "#/components/schemas/BlockHash"
+          },
+          "blockNumber" : {
+            "$ref" : "#/components/schemas/BlockNumberHex"
+          },
+          "requireCanonical" : {
+            "$ref" : "#/components/schemas/RequireCanonical"
+          }
+        },
+        "anyOf" : [ {
+          "required" : [ "blockHash" ]
+        }, {
+          "required" : [ "blockNumber" ]
+        } ]
+      },
+      "Topic" : {
+        "title" : "topic",
+        "description" : "32 Bytes DATA of indexed log arguments. (In solidity: The first topic is the hash of the signature of the event (e.g. Deposit(address,bytes32,uint256))",
+        "$ref" : "#/components/schemas/DataWord"
+      },
+      "Topics" : {
+        "title" : "LogTopics",
+        "description" : "Topics are order-dependent. Each topic can also be an array of DATA with `or` options.",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/Topic"
+        }
+      },
+      "BlockNumberDec" : {
+        "title" : "blockNumberDec",
+        "type" : "string",
+        "description" : "The decimal representation of the block's height",
+        "$ref" : "#/components/schemas/IntegerDec"
+      },
+      "TransactionExampleResult" : {
+        "blockHash" : "0xf1652d8322a880e520f996f7d28b645814a58a202d7d2ab7f058e5566fe4f9f3",
+        "blockNumber" : "0x1b4",
+        "from" : "0xa7d9ddbe1f17865597fbd27ec712455208b6b76d",
+        "gas" : "0xc350",
+        "gasPrice" : "0x4a817c800",
+        "hash" : "0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b",
+        "input" : "0x68656c6c6f21",
+        "nonce" : "0x15",
+        "to" : "0xf02c1c8e6114b1dbe8937a39260b5b0a374432bb",
+        "transactionIndex" : "0x41",
+        "value" : "0xf3dbb76162000",
+        "v" : "0x25",
+        "r" : "0x1b5e176d927f8e9ab405058b2d2457392da3e20f328b16ddabcebc33eaac5fea",
+        "s" : "0x4ba69724e8f69de52f0125ad8b3c5c2cef33019bac3249e2c0a2192766d1721c",
+        "type" : "0x0"
+      },
+      "ProofNode" : {
+        "title" : "proofNode",
+        "description" : "An individual node used to prove a path down a merkle-patricia-tree",
+        "$ref" : "#/components/schemas/Bytes"
+      },
+      "DestinationAddress" : {
+        "title" : "To",
+        "description" : "Destination address of the transaction. Null if it was a contract create.",
+        "oneOf" : [ {
+          "$ref" : "#/components/schemas/Address"
+        }, {
+          "$ref" : "#/components/schemas/Null"
+        } ]
+      },
+      "BlockOrNull" : {
+        "title" : "blockOrNull",
+        "oneOf" : [ {
+          "$ref" : "#/components/schemas/Block"
+        }, {
+          "$ref" : "#/components/schemas/Null"
+        } ]
+      },
+      "ExecutionBlockRef" : {
+        "title" : "executionBlockRef",
+        "type" : "object",
+        "description" : "A block reference for a method that executes against the block rather than reading it. It is the same object as `blockRef`, except that `blockNumber` may be given in decimal as well as in hex: the height is resolved by `ExecutionBlockRetriever`, which parses both bases, where the reading methods go through `Web3InformationRetriever` and take hex only. At least one of `blockHash` or `blockNumber` must be present; the node rejects an object carrying neither with `Invalid block input`.",
+        "properties" : {
+          "blockHash" : {
+            "$ref" : "#/components/schemas/BlockHash"
+          },
+          "blockNumber" : {
+            "title" : "executionBlockNumber",
+            "description" : "The block's height, in hex or in decimal",
+            "oneOf" : [ {
+              "$ref" : "#/components/schemas/BlockNumberHex"
+            }, {
+              "$ref" : "#/components/schemas/BlockNumberDec"
+            } ]
+          },
+          "requireCanonical" : {
+            "$ref" : "#/components/schemas/RequireCanonical"
+          }
+        },
+        "anyOf" : [ {
+          "required" : [ "blockHash" ]
+        }, {
+          "required" : [ "blockNumber" ]
+        } ]
+      },
+      "BlockNumberOrNull" : {
+        "title" : "blockNumberOrNull",
+        "description" : "The block number or null when its the pending block",
+        "oneOf" : [ {
+          "$ref" : "#/components/schemas/BlockNumberHex"
+        }, {
+          "$ref" : "#/components/schemas/Null"
+        } ]
+      },
+      "BlockHash" : {
+        "title" : "blockHash",
+        "type" : "string",
+        "pattern" : "^0x[a-fA-F\\d]{64}$",
+        "description" : "The hex representation of the Keccak 256 of the RLP encoded block"
+      },
+      "TxPoolTransactionsBySender" : {
+        "title" : "txPoolTransactionsBySender",
+        "type" : "object",
+        "description" : "Transactions keyed by sender address in bare hex, without the `0x` prefix, then by decimal nonce",
+        "additionalProperties" : {
+          "title" : "txPoolTransactionsByNonce",
+          "type" : "object",
+          "description" : "Transactions of one sender, keyed by decimal nonce",
+          "additionalProperties" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/TxPoolTransaction"
+            }
+          }
+        }
+      },
+      "TxPoolTransaction" : {
+        "title" : "txPoolTransaction",
+        "type" : "object",
+        "description" : "A transaction as the pool reports it. It has not been mined, so `blockNumber` and `transactionIndex` are null and `blockHash` is zero",
+        "properties" : {
+          "blockHash" : {
+            "$ref" : "#/components/schemas/BlockHash"
+          },
+          "blockNumber" : {
+            "$ref" : "#/components/schemas/BlockNumberOrNull"
+          },
+          "transactionIndex" : {
+            "$ref" : "#/components/schemas/IntegerOrNull"
+          },
+          "from" : {
+            "$ref" : "#/components/schemas/Address"
+          },
+          "gas" : {
+            "$ref" : "#/components/schemas/IntegerHex"
+          },
+          "gasPrice" : {
+            "$ref" : "#/components/schemas/IntegerHex"
+          },
+          "hash" : {
+            "$ref" : "#/components/schemas/TransactionHash"
+          },
+          "input" : {
+            "$ref" : "#/components/schemas/Bytes"
+          },
+          "nonce" : {
+            "$ref" : "#/components/schemas/Nonce"
+          },
+          "to" : {
+            "$ref" : "#/components/schemas/PoolDestinationAddress"
+          },
+          "value" : {
+            "$ref" : "#/components/schemas/IntegerHex"
+          }
+        }
+      },
+      "BlockInformation" : {
+        "title" : "blockInformation",
+        "type" : "object",
+        "description" : "A block at a given height, with enough information to tell canonical from orphaned",
+        "properties" : {
+          "hash" : {
+            "$ref" : "#/components/schemas/BlockHash"
+          },
+          "totalDifficulty" : {
+            "$ref" : "#/components/schemas/IntegerHex"
+          },
+          "inMainChain" : {
+            "title" : "inMainChain",
+            "type" : "boolean",
+            "description" : "Whether this block is the canonical one at its height"
+          }
+        }
+      },
+      "KeccakOrPending" : {
+        "title" : "keccakOrPending",
+        "oneOf" : [ {
+          "$ref" : "#/components/schemas/Keccak"
+        }, {
+          "$ref" : "#/components/schemas/Null"
+        } ]
+      },
+      "AddressOrNull" : {
+        "title" : "addressOrNull",
+        "oneOf" : [ {
+          "$ref" : "#/components/schemas/Address"
+        }, {
+          "$ref" : "#/components/schemas/Null"
+        } ]
+      }
+    },
+    "contentDescriptors" : {
+      "BlockNumberOrTag" : {
+        "name" : "blockNumberOrTag",
+        "description" : "The block to read, given as its height in hex or as a tag",
+        "required" : true,
+        "schema" : {
+          "$ref" : "#/components/schemas/BlockNumberOrTag"
+        }
+      },
+      "TransactionResult" : {
+        "name" : "transactionResult",
+        "description" : "Returns a transaction or null",
+        "schema" : {
+          "title" : "TransactionOrNull",
+          "oneOf" : [ {
+            "$ref" : "#/components/schemas/Transaction"
+          }, {
+            "$ref" : "#/components/schemas/Null"
+          } ]
+        }
+      },
+      "Address" : {
+        "name" : "address",
+        "required" : true,
+        "schema" : {
+          "$ref" : "#/components/schemas/Address"
+        }
+      },
+      "Position" : {
+        "name" : "key",
+        "required" : true,
+        "schema" : {
+          "$ref" : "#/components/schemas/Position"
+        }
+      },
+      "BlockRefOrExecutionNumberOrTag" : {
+        "name" : "blockRefOrNumberOrTag",
+        "description" : "The block to execute against, given as its height in hex or in decimal, as a tag, or as a block reference object",
+        "required" : true,
+        "schema" : {
+          "title" : "blockRefOrExecutionNumberOrTag",
+          "oneOf" : [ {
+            "$ref" : "#/components/schemas/ExecutionBlockRef"
+          }, {
+            "$ref" : "#/components/schemas/ExecutionBlockNumberOrTag"
+          } ]
+        }
+      },
+      "Logs" : {
+        "name" : "logs",
+        "description" : "An array of all logs matching filter with given id.",
+        "schema" : {
+          "title" : "setOfLogs",
+          "type" : "array",
+          "description" : "Array of log objects, or an empty array if nothing has changed since last poll.",
+          "items" : {
+            "$ref" : "#/components/schemas/Log"
+          }
+        }
+      },
+      "TransactionCreate" : {
+        "name" : "transactionData",
+        "required" : true,
+        "description" : "The transaction data",
+        "schema" : {
+          "$ref" : "#/components/schemas/TransactionCreate"
+        }
+      },
+      "FilterId" : {
+        "name" : "filterId",
+        "schema" : {
+          "$ref" : "#/components/schemas/FilterId"
+        }
+      },
+      "BlockRefOrNumberOrTag" : {
+        "name" : "blockRefOrNumberOrTag",
+        "description" : "The block to read, given as its height in hex, as a tag, or as a block reference object",
+        "required" : true,
+        "schema" : {
+          "title" : "blockRefOrNumberOrTag",
+          "oneOf" : [ {
+            "$ref" : "#/components/schemas/BlockRef"
+          }, {
+            "$ref" : "#/components/schemas/BlockNumberOrTag"
+          } ]
+        }
+      },
+      "UncleCountResult" : {
+        "name" : "uncleCountResult",
+        "description" : "The Number of total uncles in the given block",
+        "schema" : {
+          "$ref" : "#/components/schemas/IntegerOrNull"
+        }
+      },
+      "ExecutionBlockNumberOrTag" : {
+        "name" : "blockNumberOrTag",
+        "description" : "The block to execute against, given as its height in hex or in decimal, or as a tag. Optional: the call is executed against the best block when it is omitted.",
+        "required" : false,
+        "schema" : {
+          "$ref" : "#/components/schemas/ExecutionBlockNumberOrTag"
+        }
+      },
+      "Transaction" : {
+        "required" : true,
+        "name" : "transaction",
+        "schema" : {
+          "$ref" : "#/components/schemas/Transaction"
+        }
+      },
+      "Filter" : {
+        "name" : "filter",
+        "required" : true,
+        "schema" : {
+          "title" : "filter",
+          "type" : "object",
+          "description" : "A filter used to monitor the blockchain for log/events",
+          "properties" : {
+            "fromBlock" : {
+              "$ref" : "#/components/schemas/BlockNumberHex"
+            },
+            "toBlock" : {
+              "$ref" : "#/components/schemas/BlockNumberHex"
+            },
+            "address" : {
+              "title" : "oneOrArrayOfAddresses",
+              "oneOf" : [ {
+                "$ref" : "#/components/schemas/Address"
+              }, {
+                "$ref" : "#/components/schemas/Addresses"
+              } ]
+            },
+            "topics" : {
+              "$ref" : "#/components/schemas/Topics"
+            }
+          }
+        }
+      },
+      "BlockHash" : {
+        "name" : "blockHash",
+        "required" : true,
+        "schema" : {
+          "$ref" : "#/components/schemas/BlockHash"
+        }
+      },
+      "Block" : {
+        "name" : "block",
+        "description" : "A block object",
+        "schema" : {
+          "$ref" : "#/components/schemas/Block"
+        }
+      },
+      "GasPrice" : {
+        "name" : "gasPrice",
+        "required" : true,
+        "schema" : {
+          "title" : "gasPriceResult",
+          "description" : "Integer of the gas price",
+          "$ref" : "#/components/schemas/IntegerHex"
+        }
+      },
+      "TransactionHash" : {
+        "name" : "transactionHash",
+        "required" : true,
+        "schema" : {
+          "$ref" : "#/components/schemas/TransactionHash"
+        }
+      },
+      "BlockNumberResult" : {
+        "name" : "blockNumber",
+        "description" : "The height of the most recent block, in hex",
+        "schema" : {
+          "$ref" : "#/components/schemas/BlockNumberHex"
+        }
+      }
+    }
+  }
+}
