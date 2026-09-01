@@ -39,7 +39,7 @@
     "@docusaurus/preset-classic": "^3.10.2",
     "@docusaurus/theme-mermaid": "3.10.2",
     "@formspark/use-formspark": "^0.1.39",
-    "@mdx-js/react": "^3.0.0",
+    "@mdx-js/react": "^3.1.1",
     "@mendable/search": "^0.0.206",
     "@splidejs/react-splide": "^0.7.12",
     "bootstrap": "5.3.3",
