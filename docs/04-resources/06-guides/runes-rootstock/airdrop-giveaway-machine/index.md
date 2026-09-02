@@ -8,15 +8,6 @@ tags: [rsk, rootstock, resources, tutorials, runes, nft, airdrop]
 
 This guide covers building a giveaway airdrop machine on Rootstock. You will learn how the contracts work and how to set up and deploy a Runes Giveaway Machine so users can claim tokens.
 
-## Guides
-
-| Guide | Path | Description |
-|-------|------|-------------|
-| Introduction | `/resources/guides/runes-rootstock/airdrop-giveaway-machine/Intro-to-airdrops/` | What airdrops are and how they work on Bitcoin and Rootstock. |
-| Template repository | `/resources/guides/runes-rootstock/airdrop-giveaway-machine/template-repository/` | Walk through the AirdropManager and supporting contracts. |
-| Setup | `/resources/guides/runes-rootstock/airdrop-giveaway-machine/setup-airdrop/` | Set up your own airdrop giveaway machine. |
-| Deploy | `/resources/guides/runes-rootstock/airdrop-giveaway-machine/deploy-airdrop-machine/` | Deploy the airdrop machine with Remix IDE. |
-
 <Filter
 values={[
 {label: 'Learn', value: 'learn'},

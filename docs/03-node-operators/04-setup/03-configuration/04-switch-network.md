@@ -8,7 +8,7 @@ description: "How to switch your RSK node between the Mainnet, Testnet, and RegT
 
 If you want to switch your node to Mainnet, Testnet, or RegTest networks:
 
-1\. If your node is not in `localhost`, connect your computer to the node over `ssh`.
+1. If your node is not in `localhost`, connect your computer to the node over `ssh`.
 
 ```shell
 ssh user@server

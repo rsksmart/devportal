@@ -8,15 +8,6 @@ tags: [guides, developers, blockchain, rsk, rootstock]
 
 Rootstock Essentials covers how Rootstock works under the hood, then walks you through writing, deploying, and building a first dApp.
 
-## Guides
-
-| Guide | Path | Description |
-|-------|------|-------------|
-| Rootstock Architecture | `/developers/blockchain-essentials/rootstock-essentials/rootstock-architecture/` | Bitcoin peg, merge-mining, and the Rootstock Virtual Machine. |
-| Smart Contract Fundamentals | `/developers/blockchain-essentials/rootstock-essentials/smart-contract-fundamentals/` | Foundational concepts of smart contracts on Rootstock. |
-| Deploy Your First Contract | `/developers/blockchain-essentials/rootstock-essentials/deploy-first-contract/` | Write, compile, deploy, and interact on Rootstock testnet. |
-| Build Your First dApp | `/developers/blockchain-essentials/rootstock-essentials/build-first-dapp/` | Connect a frontend to a contract with Ethers.js and a wallet. |
-
 <Filter
 values={[
 {label: 'Concepts', value: 'concepts'},

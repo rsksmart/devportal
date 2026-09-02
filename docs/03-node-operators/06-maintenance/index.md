@@ -8,13 +8,6 @@ tags: [rsk, rskj, node, contribute, upgrade, rootstock]
 
 Use these guides to apply network upgrades and update a running Rootstock node.
 
-## Guides
-
-| Guide | Path | Description |
-|-------|------|-------------|
-| Network upgrades | `/node-operators/maintenance/network-upgrades/` | Introduce consensus rule changes with a network upgrade. |
-| Updating the node | `/node-operators/maintenance/update/` | Download a new rskj release and restart the node. |
-
 <Filter
 values={[
 {label: 'Upgrades', value: 'upgrades'},

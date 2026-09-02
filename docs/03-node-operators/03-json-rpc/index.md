@@ -8,16 +8,6 @@ tags: [rsk, rskj, node, rpc, rpc api, node operators, rootstock]
 
 Rootstock nodes expose a JSON-RPC interface for reading chain data, submitting transactions, and operating the node. Start with the method list, then the transport, personal, limits, and management guides.
 
-## Guides
-
-| Guide | Path | Description |
-|-------|------|-------------|
-| RPC methods | `/node-operators/json-rpc/methods/` | JSON-RPC methods supported by Rootstock nodes. |
-| Transport protocols | `/node-operators/json-rpc/transport-protocols/` | HTTP, WebSocket, and other transports. |
-| Personal module | `/node-operators/json-rpc/personal-module-methods/` | Account management methods on the personal module. |
-| Configuration limits | `/node-operators/json-rpc/configuration-limits/` | Limits for the JSON-RPC interface. |
-| Management API methods | `/node-operators/json-rpc/management-api-methods/` | Node management JSON-RPC methods. |
-
 <Filter
 values={[
 {label: 'Methods', value: 'methods'},
