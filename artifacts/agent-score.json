@@ -1,12 +1,12 @@
 {
   "type": "agent-score",
   "snapshotDate": "2026-09-02",
-  "overallScore": 96,
-  "grade": "A",
+  "overallScore": 100,
+  "grade": "A+",
   "checksTotal": 23,
   "checksPassed": 19,
-  "checksWarned": 1,
-  "checksFailed": 1,
+  "checksWarned": 2,
+  "checksFailed": 0,
   "checksSkipped": 2,
   "categories": {
     "content-discoverability": {
@@ -14,12 +14,12 @@
       "grade": "A+"
     },
     "markdown-availability": {
-      "score": 64,
-      "grade": "D"
+      "score": 100,
+      "grade": "A+"
     },
     "page-size": {
-      "score": 95,
-      "grade": "A"
+      "score": 100,
+      "grade": "A+"
     },
     "content-structure": {
       "score": 100,
@@ -43,7 +43,7 @@
       "id": "llms-txt-exists",
       "category": "content-discoverability",
       "status": "pass",
-      "message": "llms.txt found at http://127.0.0.1:3456/llms.txt"
+      "message": "llms.txt found at https://dev.rootstock.io/llms.txt"
     },
     {
       "id": "llms-txt-valid",
@@ -55,13 +55,13 @@
       "id": "llms-txt-size",
       "category": "content-discoverability",
       "status": "pass",
-      "message": "llms.txt is 48,407 characters (under 50,000 threshold)"
+      "message": "llms.txt is 48,584 characters (under 50,000 threshold)"
     },
     {
       "id": "llms-txt-links-resolve",
       "category": "content-discoverability",
       "status": "pass",
-      "message": "All 50 same-origin sampled links resolve (335 total links)"
+      "message": "All 50 same-origin sampled links resolve (330 total links)"
     },
     {
       "id": "llms-txt-links-markdown",
@@ -90,8 +90,8 @@
     {
       "id": "content-negotiation",
       "category": "markdown-availability",
-      "status": "fail",
-      "message": "Server ignores Accept: text/markdown header (0/50 sampled pages return markdown)"
+      "status": "pass",
+      "message": "50/50 sampled pages support content negotiation (100%)"
     },
     {
       "id": "rendering-strategy",
@@ -102,38 +102,38 @@
     {
       "id": "page-size-markdown",
       "category": "page-size",
-      "status": "pass",
-      "message": "All 50 pages under 50K chars (median 5K, max 35K)"
+      "status": "warn",
+      "message": "1 of 50 pages between 50K–100K chars (max 81K)"
     },
     {
       "id": "page-size-html",
       "category": "page-size",
-      "status": "pass",
-      "message": "All 50 sampled pages under 50K chars (median 70K HTML → 10K markdown (86% boilerplate))"
+      "status": "warn",
+      "message": "1 of 50 sampled pages convert to 50K–100K chars (max 532K HTML → 81K markdown (87% boilerplate))"
     },
     {
       "id": "content-start-position",
       "category": "page-size",
-      "status": "warn",
-      "message": "36 of 50 sampled pages have content starting at 10–50% (worst 48%)"
+      "status": "pass",
+      "message": "Content starts within first 10% on all 50 sampled pages (median 2%)"
     },
     {
       "id": "tabbed-content-serialization",
       "category": "content-structure",
       "status": "pass",
-      "message": "8 tab group(s) across 3 of 50 sampled pages; all serialize under 50K chars"
+      "message": "2 tab group(s) across 1 of 50 sampled pages; all serialize under 50K chars"
     },
     {
       "id": "section-header-quality",
       "category": "content-structure",
       "status": "skip",
-      "message": "3 page(s) with tabs found, but no section headers inside tab panels to evaluate"
+      "message": "1 page(s) with tabs found, but no section headers inside tab panels to evaluate"
     },
     {
       "id": "markdown-code-fence-validity",
       "category": "content-structure",
       "status": "pass",
-      "message": "All 263 code fences properly closed across 51 pages"
+      "message": "All 231 code fences properly closed across 51 pages"
     },
     {
       "id": "http-status-codes",
@@ -145,13 +145,13 @@
       "id": "redirect-behavior",
       "category": "url-stability",
       "status": "pass",
-      "message": "All 46 redirect(s) across 50 sampled pages are same-host HTTP redirects"
+      "message": "All 41 redirect(s) across 50 sampled pages are same-host HTTP redirects"
     },
     {
       "id": "llms-txt-coverage",
       "category": "observability",
       "status": "pass",
-      "message": "llms.txt covers 100% of 335 sitemap doc pages"
+      "message": "llms.txt covers 100% of 330 sitemap doc pages"
     },
     {
       "id": "markdown-content-parity",
@@ -180,183 +180,55 @@
   ],
   "issues": [
     {
-      "id": "content-negotiation",
-      "category": "markdown-availability",
-      "status": "fail",
-      "message": "Server ignores Accept: text/markdown header (0/50 sampled pages return markdown)",
-      "totalPages": 334,
-      "testedPages": 50,
-      "skippedPages": 0,
-      "normalizedMdUrls": 0,
-      "softErrorPages": 0,
-      "sampled": true,
-      "markdownWithCorrectType": 0,
-      "markdownWithWrongType": 0,
-      "htmlOnly": 50,
-      "negotiationRate": 0,
-      "fetchErrors": 0,
-      "rateLimited": 0,
-      "discoveryWarnings": []
-    },
-    {
-      "id": "content-start-position",
+      "id": "page-size-markdown",
       "category": "page-size",
       "status": "warn",
-      "message": "36 of 50 sampled pages have content starting at 10–50% (worst 48%)",
-      "totalPages": 334,
+      "message": "1 of 50 pages between 50K–100K chars (max 81K)",
+      "totalPages": 50,
       "testedPages": 50,
-      "sampled": true,
-      "medianPercent": 15,
-      "maxPercent": 48,
-      "passBucket": 14,
-      "warnBucket": 36,
+      "sampled": false,
+      "median": 3301,
+      "max": 80724,
+      "passBucket": 49,
+      "warnBucket": 1,
       "failBucket": 0,
-      "fetchErrors": 0,
-      "discoveryWarnings": [],
-      "pagesAffected": 36,
+      "thresholds": {
+        "pass": 50000,
+        "fail": 100000
+      },
+      "pagesAffected": 1,
       "pages": [
         {
-          "url": "/use-cases/onboarding-ux/ussd-rootstock-defi/demo-and-testing",
+          "url": "/node-operators/json-rpc/methods",
           "status": "warn"
-        },
+        }
+      ]
+    },
+    {
+      "id": "page-size-html",
+      "category": "page-size",
+      "status": "warn",
+      "message": "1 of 50 sampled pages convert to 50K–100K chars (max 532K HTML → 81K markdown (87% boilerplate))",
+      "totalPages": 329,
+      "testedPages": 50,
+      "sampled": true,
+      "median": 8144,
+      "max": 81453,
+      "avgBoilerplatePercent": 87,
+      "passBucket": 49,
+      "warnBucket": 1,
+      "failBucket": 0,
+      "fetchErrors": 0,
+      "rateLimited": 0,
+      "thresholds": {
+        "pass": 50000,
+        "fail": 100000
+      },
+      "discoveryWarnings": [],
+      "pagesAffected": 1,
+      "pages": [
         {
-          "url": "/use-cases/onboarding-ux/para",
-          "status": "warn"
-        },
-        {
-          "url": "/resources/guides/runes-rootstock/build-mockbridge-contract/Intro-runes",
-          "status": "warn"
-        },
-        {
-          "url": "/dev-tools/explorers/rootstock-explorer/intro-to-explorer",
-          "status": "warn"
-        },
-        {
-          "url": "/dev-tools/gas/blocknative",
-          "status": "warn"
-        },
-        {
-          "url": "/resources/guides/runes-rootstock/runes-setup",
-          "status": "warn"
-        },
-        {
-          "url": "/concepts/foundations",
-          "status": "warn"
-        },
-        {
-          "url": "/dev-tools/explorers/blockchair",
-          "status": "warn"
-        },
-        {
-          "url": "/node-operators/setup/",
-          "status": "warn"
-        },
-        {
-          "url": "/developers/integrate/rif-relay/versions",
-          "status": "warn"
-        },
-        {
-          "url": "/dev-tools/oracles",
-          "status": "warn"
-        },
-        {
-          "url": "/developers/smart-contracts/foundry/interact-with-contract",
-          "status": "warn"
-        },
-        {
-          "url": "/developers/libraries/bitcoin-tx-solidity-helper",
-          "status": "warn"
-        },
-        {
-          "url": "/developers/smart-contracts/foundry/test-smart-contracts",
-          "status": "warn"
-        },
-        {
-          "url": "/resources/guides/powpeg-app/advanced-operations/supported-addresses",
-          "status": "warn"
-        },
-        {
-          "url": "/concepts/rif-suite/flyover",
-          "status": "warn"
-        },
-        {
-          "url": "/node-operators/maintenance",
-          "status": "warn"
-        },
-        {
-          "url": "/developers/requirements",
-          "status": "warn"
-        },
-        {
-          "url": "/developers/integrate/flyover/trusted-accounts",
-          "status": "warn"
-        },
-        {
-          "url": "/developers/blockchain-essentials/",
-          "status": "warn"
-        },
-        {
-          "url": "/developers/blockchain-essentials/rootstock-essentials",
-          "status": "warn"
-        },
-        {
-          "url": "/use-cases/btcfi-finance-yield/yield-vaults-sdk",
-          "status": "warn"
-        },
-        {
-          "url": "/resources/guides/powpeg-app/advanced-operations/design-architecture",
-          "status": "warn"
-        },
-        {
-          "url": "/dev-tools/attestations/eas/user-guide",
-          "status": "warn"
-        },
-        {
-          "url": "/node-operators/setup/node-runner/linux",
-          "status": "warn"
-        },
-        {
-          "url": "/developers/smart-contracts/verify-address-ownership",
-          "status": "warn"
-        },
-        {
-          "url": "/dev-tools/dev-environments/remix",
-          "status": "warn"
-        },
-        {
-          "url": "/concepts/rbtc/conversion-with-node-console",
-          "status": "warn"
-        },
-        {
-          "url": "/dev-tools/data/thegraph",
-          "status": "warn"
-        },
-        {
-          "url": "/developers/rpc-api/rootstock",
-          "status": "warn"
-        },
-        {
-          "url": "/resources/guides/defi-developer-guide",
-          "status": "warn"
-        },
-        {
-          "url": "/concepts/rbtc/gas",
-          "status": "warn"
-        },
-        {
-          "url": "/developers/blockchain-essentials/rootstock-essentials/rootstock-architecture",
-          "status": "warn"
-        },
-        {
-          "url": "/dev-tools/attestations/eas/",
-          "status": "warn"
-        },
-        {
-          "url": "/node-operators/setup/installation/java",
-          "status": "warn"
-        },
-        {
-          "url": "/dev-tools/account-abstraction",
+          "url": "/node-operators/json-rpc/methods",
           "status": "warn"
         }
       ]
@@ -364,12 +236,12 @@
   ],
   "source": "afdocs",
   "sourceVersion": "0.18.7",
-  "sourceUrl": "https://dev.rootstock.io (local build validation pre-deploy fix/agent-score-100)",
+  "sourceUrl": "https://dev.rootstock.io",
   "specUrl": "https://agentdocsspec.com/spec/",
   "sampling": "random",
   "discoverySources": [
     "llms-txt"
   ],
   "pagesTested": 50,
-  "measuredAt": "2026-09-02T01:40:33.190Z"
+  "measuredAt": "2026-09-02T14:00:55.804Z"
 }
