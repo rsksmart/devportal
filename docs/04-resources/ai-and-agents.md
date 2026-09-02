@@ -6,6 +6,8 @@ description: "How Agents, AI tools, and LLMs can discover and use Rootstock deve
 tags: [rootstock, rsk, llms, ai, agents, llms.txt, documentation, crawl]
 ---
 
+> For the complete documentation index, see [llms.txt](/llms.txt).
+
 This page describes how AI assistants, agents, and LLM-based tools can discover and use this documentation site in a structured way.
 
 ## Machine-readable entry points

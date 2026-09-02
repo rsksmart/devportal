@@ -8,18 +8,6 @@ tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 
 The PowPeg App converts BTC to rBTC and rBTC to BTC. It is secured by the PowPeg protocol, which uses the same Bitcoin hashrate that establishes Rootstock consensus.
 
-## Guides
-
-| Guide | Path | Description |
-|-------|------|-------------|
-| Overview | `/resources/guides/powpeg-app/overview/` | How the PowPeg App works, features, and why to use it. |
-| Prerequisites | `/resources/guides/powpeg-app/prerequisites/` | Wallets, apps, and setup before you peg in or out. |
-| Peg-in | `/resources/guides/powpeg-app/pegin/` | Send BTC to Rootstock and receive rBTC. |
-| Peg-out | `/resources/guides/powpeg-app/pegout/` | Send rBTC from Rootstock and receive BTC. |
-| Advanced operations | `/resources/guides/powpeg-app/advanced-operations/` | Supported addresses, wallets, and browsers. |
-| FAQs | `/resources/guides/powpeg-app/faqs/` | Common questions about the PowPeg App. |
-| Glossary | `/resources/guides/powpeg-app/glossary/` | Terms used in the PowPeg App docs. |
-
 <Filter
 values={[
 {label: 'Start here', value: 'start'},
