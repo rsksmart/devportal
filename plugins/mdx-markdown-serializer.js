@@ -31,6 +31,12 @@ const DROP = new Set([
 ]);
 
 /** Reads a plain string attribute, ignoring expression-valued props. */
+function hasMarkdownIgnore(node) {
+  return (node.attributes || []).some(
+    (a) => a.type === 'mdxJsxAttribute' && a.name === 'data-markdown-ignore',
+  );
+}
+
 function attr(node, name) {
   const found = (node.attributes || []).find(
     (a) => a.type === 'mdxJsxAttribute' && a.name === name,
@@ -168,12 +174,19 @@ function transform(nodes, constants = new Map()) {
       node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement';
 
     if (!isJsx) {
+      if (node.type === 'html' && /\bdata-markdown-ignore\b/i.test(String(node.value))) {
+        continue;
+      }
       if (node.children) node.children = transform(node.children, constants);
       out.push(node);
       continue;
     }
 
     const name = node.name || '';
+
+    if (name === 'MarkdownIgnore' || hasMarkdownIgnore(node)) {
+      continue;
+    }
 
     if (DROP.has(name)) continue;
 

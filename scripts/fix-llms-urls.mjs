@@ -18,6 +18,7 @@ const {
   copyMarkdownToCleanPaths,
   copyMdxSourcesToCleanPaths,
 } = require('../plugins/copy-markdown-clean-paths.js');
+const { trimLargeMarkdownInBuild } = require('../plugins/trim-large-markdown.js');
 const { serializeMarkdownInBuild } = require('../plugins/mdx-markdown-serializer.js');
 const { writeGeneratedIndexMarkdown } = require('../plugins/generated-index-markdown.js');
 const { writeRenderedPageMarkdown } = require('../plugins/rendered-page-markdown.js');
@@ -211,6 +212,12 @@ for (const locale of LOCALES) {
 const mdCopied = copyMarkdownToCleanPaths(BUILD_DIR);
 const mdxCopied = copyMdxSourcesToCleanPaths(PROJECT_ROOT, BUILD_DIR);
 
+let mdTrimmed = 0;
+for (const locale of ['en', ...LOCALES]) {
+  const outDir = locale === 'en' ? BUILD_DIR : path.join(BUILD_DIR, locale);
+  mdTrimmed += trimLargeMarkdownInBuild(outDir);
+}
+
 // Must follow the clean-route mirroring above: until that runs, doc markdown
 // only exists under its numbered source path, so the existence check would
 // reject nearly every link.
@@ -233,3 +240,4 @@ console.log(
 console.log(`[llms-txt-markdown-directive] Injected llms.txt blockquote into ${mdUpdated} markdown file(s).`);
 console.log(`[copy-markdown-clean-paths] Mirrored ${mdCopied} markdown file(s) onto clean public routes.`);
 console.log(`[copy-markdown-clean-paths] Exported ${mdxCopied} MDX source file(s) to clean public routes.`);
+console.log(`[trim-large-markdown] Trimmed ${mdTrimmed} oversized agent export(s).`);

@@ -21,20 +21,17 @@ This command lists all available read-only functions within the contract, allowi
 
 To use this command:
 
-````mdx-code-block
-<Tabs>
-  <TabItem value="contribute" label="Mainnet" default>
-    ```shell
-    rsk-cli contract --address <address>
-    ```
-  </TabItem>
-  <TabItem value="contest" label="Testnet">
-   ```shell
-   rsk-cli contract --address <address> --testnet
-   ```
-  </TabItem>
-</Tabs>
-````
+### Mainnet
+
+```shell
+rsk-cli contract --address <address>
+```
+
+### Testnet
+
+```shell
+rsk-cli contract --address <address> --testnet
+```
 
 Replace `<address\>` with the contract's address deployed, which is the one shown in the response of the deployed smart contract
 
@@ -71,7 +68,7 @@ For example, if you select name, you'll see:
 📜 You selected: name
 ```
 
-2. View the response**: After selecting a function, rsk-cli will call the function on the contract and display the result.
+2. **View the response**: After selecting a function, rsk-cli will call the function on the contract and display the result.
 
 ```bash
 ✅ Function name called successfully!
@@ -81,12 +78,9 @@ For example, if you select name, you'll see:
 
 3. Check on Explorer**: You can also view the contract and interaction details on the Rootstock testnet explorer by following the link provided.
 
-````mdx-code-block
-<figure>
-  <img src="/img/guides/rsk-cli/explorer.png" alt="Rootstock testnet explorer"/>
-  <figcaption>Rootstock testnet explorer (fig 1.)</figcaption>
-</figure>
-````
+![Rootstock testnet explorer](/img/guides/rsk-cli/explorer.png)
+
+*Rootstock testnet explorer (fig 1.)*
 
 ## Interact with RSK bridge contract
 
@@ -107,21 +101,17 @@ The bridge command allows you to interact with the RSK bridge contract on the Ro
 
 To start using the bridge command, open your terminal and use the following command:
 
-````mdx-code-block
-<Tabs>
-  <TabItem value="contribute" label="Mainnet" default>
-  ```shell
-  rsk-cli bridge
-  ```
-  </TabItem>
-  <TabItem value="contest" label="Testnet">
- ```shell
-  rsk-cli bridge --testnet
-  ```
-  </TabItem>
+### Mainnet
 
-</Tabs>
-````
+```shell
+rsk-cli bridge
+```
+
+### Testnet
+
+```shell
+rsk-cli bridge --testnet
+```
 
 - Once you select either the Mainnet or Testnet, you will see the following message:
 
@@ -137,11 +127,11 @@ To start using the bridge command, open your terminal and use the following comm
   write
 ```
 
-````mdx-code-block
-<Tabs>
-  <TabItem value="contribute" label="Selecting a Read Function" default>
-   - Use the **arrow keys** to highlight your choice and press **Enter**.
-- If you select **read**, you will see a list of available read functions:
+### Selecting a read function
+
+Use the **arrow keys** to highlight your choice and press **Enter**.
+
+If you select **read**, you will see a list of available read functions:
 
 ```text
 ? Select a read function to call:
@@ -154,8 +144,9 @@ To start using the bridge command, open your terminal and use the following comm
   isBtcTxHashAlreadyProcessed
 ```
 
-- Use the **arrow keys** to choose the read function you want to use (e.g., `getBtcBlockchainBestChainHeight`) and press **Enter**.
-- Response after executing a read function:
+Use the **arrow keys** to choose the read function you want to use (e.g., `getBtcBlockchainBestChainHeight`) and press **Enter**.
+
+Response after executing a read function:
 
 ```bash
 ✅ Function getBtcBlockchainBestChainHeight called successfully!
@@ -165,10 +156,9 @@ To start using the bridge command, open your terminal and use the following comm
 
 The result shows the output of the function, along with a link to view details on the blockchain explorer.
 
-</TabItem>
+### Selecting a write function
 
-  <TabItem value="contest" label="Selecting a Write Function">
-  If you select **write**, you will be presented with a list of write functions:
+If you select **write**, you will be presented with a list of write functions:
 
 ```bash
 ? Select a write function to call: (Use arrow keys)
@@ -179,20 +169,21 @@ The result shows the output of the function, along with a link to view details o
 
 Use the **arrow keys** to highlight your choice (e.g., registerBtcTransaction) and press **Enter**.
 
-- Once a write function is selected, you will need to provide the required arguments:
-- Enter the appropriate value for the tx argument and press **Enter**.
+Once a write function is selected, you will need to provide the required arguments:
+
+Enter the appropriate value for the tx argument and press **Enter**.
 
 ```bash
 ? Enter the value for argument tx (bytes):
 ```
 
-- Enter the height value and press **Enter**.
+Enter the height value and press **Enter**.
 
 ```bash
 ? Enter the value for argument height (int256): 334
 ```
 
-- Enter the pmt () value and press **Enter**.
+Enter the pmt () value and press **Enter**.
 
 ```bash
 ? Enter the value for argument pmt (bytes): 345
@@ -212,6 +203,3 @@ Type your password and press **Enter.**
 * `(int256)` values should be whole numbers, such as block heights or transaction numbers.
 * Ensure valid data: Make sure any data you input aligns with the specific function’s requirements and expected format to avoid errors.
 :::
-  </TabItem>
-</Tabs>
-````
