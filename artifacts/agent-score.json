@@ -4,10 +4,10 @@
   "overallScore": 100,
   "grade": "A+",
   "checksTotal": 23,
-  "checksPassed": 19,
-  "checksWarned": 2,
+  "checksPassed": 22,
+  "checksWarned": 0,
   "checksFailed": 0,
-  "checksSkipped": 2,
+  "checksSkipped": 1,
   "categories": {
     "content-discoverability": {
       "score": 100,
@@ -55,13 +55,13 @@
       "id": "llms-txt-size",
       "category": "content-discoverability",
       "status": "pass",
-      "message": "llms.txt is 48,584 characters (under 50,000 threshold)"
+      "message": "llms.txt is 49,412 characters (under 50,000 threshold)"
     },
     {
       "id": "llms-txt-links-resolve",
       "category": "content-discoverability",
       "status": "pass",
-      "message": "All 50 same-origin sampled links resolve (330 total links)"
+      "message": "All 50 same-origin sampled links resolve (335 total links)"
     },
     {
       "id": "llms-txt-links-markdown",
@@ -102,38 +102,38 @@
     {
       "id": "page-size-markdown",
       "category": "page-size",
-      "status": "warn",
-      "message": "1 of 50 pages between 50K–100K chars (max 81K)"
+      "status": "pass",
+      "message": "All 50 pages under 50K chars (median 5K, max 17K)"
     },
     {
       "id": "page-size-html",
       "category": "page-size",
-      "status": "warn",
-      "message": "1 of 50 sampled pages convert to 50K–100K chars (max 532K HTML → 81K markdown (87% boilerplate))"
+      "status": "pass",
+      "message": "All 50 sampled pages under 50K chars (median 75K HTML → 11K markdown (86% boilerplate))"
     },
     {
       "id": "content-start-position",
       "category": "page-size",
       "status": "pass",
-      "message": "Content starts within first 10% on all 50 sampled pages (median 2%)"
+      "message": "Content starts within first 10% on all 50 sampled pages (median 1%)"
     },
     {
       "id": "tabbed-content-serialization",
       "category": "content-structure",
       "status": "pass",
-      "message": "2 tab group(s) across 1 of 50 sampled pages; all serialize under 50K chars"
+      "message": "No tabbed content detected across 50 sampled pages"
     },
     {
       "id": "section-header-quality",
       "category": "content-structure",
-      "status": "skip",
-      "message": "1 page(s) with tabs found, but no section headers inside tab panels to evaluate"
+      "status": "pass",
+      "message": "No tabbed content found; header quality check not applicable"
     },
     {
       "id": "markdown-code-fence-validity",
       "category": "content-structure",
       "status": "pass",
-      "message": "All 231 code fences properly closed across 51 pages"
+      "message": "All 218 code fences properly closed across 51 pages"
     },
     {
       "id": "http-status-codes",
@@ -145,13 +145,13 @@
       "id": "redirect-behavior",
       "category": "url-stability",
       "status": "pass",
-      "message": "All 41 redirect(s) across 50 sampled pages are same-host HTTP redirects"
+      "message": "All 48 redirect(s) across 50 sampled pages are same-host HTTP redirects"
     },
     {
       "id": "llms-txt-coverage",
       "category": "observability",
       "status": "pass",
-      "message": "llms.txt covers 100% of 330 sitemap doc pages"
+      "message": "llms.txt covers 100% of 335 sitemap doc pages"
     },
     {
       "id": "markdown-content-parity",
@@ -178,62 +178,7 @@
       "message": "All docs pages are publicly accessible; no alternative access paths needed"
     }
   ],
-  "issues": [
-    {
-      "id": "page-size-markdown",
-      "category": "page-size",
-      "status": "warn",
-      "message": "1 of 50 pages between 50K–100K chars (max 81K)",
-      "totalPages": 50,
-      "testedPages": 50,
-      "sampled": false,
-      "median": 3301,
-      "max": 80724,
-      "passBucket": 49,
-      "warnBucket": 1,
-      "failBucket": 0,
-      "thresholds": {
-        "pass": 50000,
-        "fail": 100000
-      },
-      "pagesAffected": 1,
-      "pages": [
-        {
-          "url": "/node-operators/json-rpc/methods",
-          "status": "warn"
-        }
-      ]
-    },
-    {
-      "id": "page-size-html",
-      "category": "page-size",
-      "status": "warn",
-      "message": "1 of 50 sampled pages convert to 50K–100K chars (max 532K HTML → 81K markdown (87% boilerplate))",
-      "totalPages": 329,
-      "testedPages": 50,
-      "sampled": true,
-      "median": 8144,
-      "max": 81453,
-      "avgBoilerplatePercent": 87,
-      "passBucket": 49,
-      "warnBucket": 1,
-      "failBucket": 0,
-      "fetchErrors": 0,
-      "rateLimited": 0,
-      "thresholds": {
-        "pass": 50000,
-        "fail": 100000
-      },
-      "discoveryWarnings": [],
-      "pagesAffected": 1,
-      "pages": [
-        {
-          "url": "/node-operators/json-rpc/methods",
-          "status": "warn"
-        }
-      ]
-    }
-  ],
+  "issues": [],
   "source": "afdocs",
   "sourceVersion": "0.18.7",
   "sourceUrl": "https://dev.rootstock.io",
@@ -243,5 +188,5 @@
     "llms-txt"
   ],
   "pagesTested": 50,
-  "measuredAt": "2026-09-02T14:00:55.804Z"
+  "measuredAt": "2026-09-02T19:13:08.784Z"
 }
