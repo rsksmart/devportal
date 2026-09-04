@@ -10,7 +10,7 @@ tags: [rif, rootstock, solidity, bitcoin, smart contracts, libraries, bitcoin tr
 If you wish to suggest changes on this document, please open a PR on the [Bitcoin Transaction Solidity Helper](https://github.com/rsksmart/btc-transaction-solidity-helper.git)
 :::
 
-<img src="img/rootstock-docs.png" alt="RSK Logo" style={{ width: '100%', height: 'auto' }} />
+<img src="img/og.jpg" alt="RSK Logo" style={{ width: '100%', height: 'auto' }} />
 
 # BTC Transaction Solidity Helper
 
