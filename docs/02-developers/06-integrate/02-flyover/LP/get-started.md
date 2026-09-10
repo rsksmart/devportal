@@ -177,7 +177,7 @@ The LPS provides several utility scripts that can be helpful for liquidity provi
 - **resign_utils**: Resigns a liquidity provider and withdraws collateral from the contract.
 - **withdraw**: Withdraws liquidity locked in the contract (full balance or specific amount).
 
-For migration-specific examples, see [LP-Migration-Utils.md](https://github.com/rsksmart/liquidity-provider-server/blob/master/docs/LP-Migration-Utils.md).
+For migration-specific examples, see [docs/LP-Migration-Utils.md](./docs/LP-Migration-Utils.md).
 
 ## Monitoring Service
 

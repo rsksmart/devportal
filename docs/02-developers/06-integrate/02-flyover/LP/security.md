@@ -12,7 +12,7 @@ We are committed to conduct our security process in a professional and civil man
 
 ## Responsible Disclosure
 
-For all security related issues, RootstockLabs has two main points of contact. Reach us at [security@rootstocklabs.com](mailto:security@rootstocklabs.com) or refer to our [Bug Bounty Program](https://www.rootstocklabs.com/bug-bounty-program/). **Do not open up a GitHub issue if the bug is a security vulnerability**
+For all security related issues, RootstockLabs has two main points of contact. Reach us at <security@rootstocklabs.com> or refer to our [Bug Bounty Program](https://www.rootstocklabs.com/bug-bounty-program/). **Do not open up a GitHub issue if the bug is a security vulnerability**
 
 **Ensure the bug was not already reported** by searching on GitHub under [Issues](https://github.com/rsksmart/liquidity-provider-server/issues).
 
