@@ -111,6 +111,7 @@ jobs:
               console.log('Passed:', r.checksPassed);
               console.log('Warned:', r.checksWarned);
               console.log('Failed:', r.checksFailed);
+              console.log('Errored:', r.checksErrored);
               console.log('Source:', r.source, r.sourceVersion);
             "
           else

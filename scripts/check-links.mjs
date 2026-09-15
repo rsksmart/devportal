@@ -250,6 +250,7 @@ async function checkLocale(locale) {
 
       resolve({
         locale,
+        buildSucceeded: code === 0,
         success: code === 0 && !hasBrokenLinks,
         brokenLinks,
         brokenAnchors,
@@ -260,6 +261,7 @@ async function checkLocale(locale) {
     build.on('error', (error) => {
       resolve({
         locale,
+        buildSucceeded: false,
         success: false,
         brokenLinks: [],
         brokenAnchors: [],
@@ -552,6 +554,7 @@ async function checkExternalLinks({ reportPath } = {}) {
 
   checker.on('link', (result) => {
     checkedCount++;
+    if (result.state === 'SKIPPED') return;
     uniqueChecked.add(result.url);
 
     const isHttp = result.url.startsWith('http://') || result.url.startsWith('https://');
@@ -786,6 +789,10 @@ async function main() {
     process.exit(0);
   }
 
+  if (options.report) {
+    fs.rmSync(path.resolve(options.report), {force: true});
+  }
+
   if (options.external) {
     const hasErrors = await checkExternalLinks({ reportPath: options.report });
     process.exit(hasErrors ? 1 : 0);
@@ -810,8 +817,12 @@ async function main() {
 
   const { hasErrors } = displayResults(results);
 
-  if (options.report) {
+  const buildsSucceeded = results.every(({buildSucceeded}) => buildSucceeded);
+
+  if (options.report && buildsSucceeded) {
     writeInternalReliabilityReport(options.report, results);
+  } else if (options.report) {
+    console.error('❌ Reliability report was not written because a locale build failed.');
   }
 
   process.exit(hasErrors ? 1 : 0);

@@ -76,7 +76,9 @@ function buildSnapshot(run) {
   }));
 
   const issues = run.results
-    .filter(({status}) => status === 'warn' || status === 'fail')
+    .filter(({status}) => (
+      status === 'warn' || status === 'fail' || status === 'error'
+    ))
     .map((result) => {
       const details = result.details ?? {};
       const pageResults = Array.isArray(details.pageResults)
@@ -86,6 +88,7 @@ function buildSnapshot(run) {
         (page) => (
           page.status === 'warn'
           || page.status === 'fail'
+          || page.status === 'error'
           || page.found === false
         ),
       );
@@ -130,6 +133,7 @@ function buildSnapshot(run) {
     checksPassed: run.summary.pass,
     checksWarned: run.summary.warn,
     checksFailed: run.summary.fail,
+    checksErrored: run.summary.error ?? 0,
     checksSkipped: run.summary.skip,
     categories,
     checks,
@@ -159,9 +163,11 @@ console.log(`Wrote ${outputPath}`);
 console.log(`Agent score: ${snapshot.overallScore}/100 (${snapshot.grade})`);
 console.log(
   `Checks: ${snapshot.checksPassed} passed, ${snapshot.checksWarned} warned, `
-  + `${snapshot.checksFailed} failed, ${snapshot.checksSkipped} skipped`,
+  + `${snapshot.checksFailed} failed, ${snapshot.checksErrored} errored, `
+  + `${snapshot.checksSkipped} skipped`,
 );
 
-if (result.exitCode !== 0) {
-  process.exitCode = result.exitCode;
+const hasCheckErrors = snapshot.checks.some(({status}) => status === 'error');
+if (result.exitCode !== 0 || hasCheckErrors) {
+  process.exitCode = result.exitCode || 1;
 }
