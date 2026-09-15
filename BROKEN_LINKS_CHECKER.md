@@ -75,7 +75,7 @@ yarn check-links:external --report=artifacts/reliability.json
 yarn check-links:en --report=artifacts/reliability-internal.json
 ```
 
-CI workflow **Docs Health Reliability Report** (`.github/workflows/docs-health-reliability.yml`) runs weekly on `main` (and on `workflow_dispatch`), uploads the `docs-health-reliability` artifact (`reliability.json`).
+CI workflow **Docs Health Reports** (`.github/workflows/docs-health-reliability.yml`) runs weekly on `main` (and on `workflow_dispatch`), uploads the `docs-health-reliability` artifact (`reliability.json`).
 
 Import into the dashboard:
 

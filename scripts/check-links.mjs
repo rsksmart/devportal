@@ -321,11 +321,8 @@ function displayResults(results) {
   return { hasErrors, totalBrokenLinks, totalBrokenAnchors };
 }
 
-/** Estimate markdown/MDX link volume for internal reliability denominator. */
-function estimateMarkdownLinkCount() {
-  const roots = [path.join(ROOT_DIR, 'docs'), path.join(ROOT_DIR, 'i18n')];
-  const linkRe = /\[[^\]]*\]\(([^)]+)\)|<a\s+[^>]*href=["']([^"']+)["']/gi;
-  let count = 0;
+function listMarkdownFiles(root) {
+  const files = new Map();
 
   const walk = (dir) => {
     if (!fs.existsSync(dir)) return;
@@ -336,19 +333,63 @@ function estimateMarkdownLinkCount() {
         walk(full);
         continue;
       }
-      if (!/\.(md|mdx)$/i.test(entry.name)) continue;
-      const text = fs.readFileSync(full, 'utf8');
-      let match;
-      while ((match = linkRe.exec(text)) !== null) {
-        const href = (match[1] || match[2] || '').trim();
-        if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) continue;
-        count += 1;
+      if (/\.(md|mdx)$/i.test(entry.name)) {
+        files.set(path.relative(root, full), full);
       }
     }
   };
 
-  for (const root of roots) walk(root);
+  walk(root);
+  return files;
+}
+
+function countMarkdownLinks(filePath) {
+  const linkRe = /\[[^\]]*\]\(([^)]+)\)|<a\s+[^>]*href=["']([^"']+)["']/gi;
+  let count = 0;
+  const text = fs.readFileSync(filePath, 'utf8');
+  let match;
+  while ((match = linkRe.exec(text)) !== null) {
+    const href = (match[1] || match[2] || '').trim();
+    if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) {
+      continue;
+    }
+    count += 1;
+  }
   return count;
+}
+
+/**
+ * Estimate each requested locale using Docusaurus fallback behavior.
+ * A translated file replaces its source file. Missing translations use docs/.
+ */
+function estimateMarkdownLinkCounts(locales) {
+  const sourceFiles = listMarkdownFiles(path.join(ROOT_DIR, 'docs'));
+  const defaultLocale = docusaurusConfig.i18n?.defaultLocale || 'en';
+
+  return Object.fromEntries(locales.map((locale) => {
+    const translatedRoot = path.join(
+      ROOT_DIR,
+      'i18n',
+      locale,
+      'docusaurus-plugin-content-docs',
+      'current',
+    );
+    const translatedFiles = locale === defaultLocale
+      ? new Map()
+      : listMarkdownFiles(translatedRoot);
+    const relativePaths = new Set([
+      ...sourceFiles.keys(),
+      ...translatedFiles.keys(),
+    ]);
+    let count = 0;
+
+    for (const relativePath of relativePaths) {
+      const filePath = translatedFiles.get(relativePath) || sourceFiles.get(relativePath);
+      if (filePath) count += countMarkdownLinks(filePath);
+    }
+
+    return [locale, count];
+  }));
 }
 
 function writeInternalReliabilityReport(reportPath, results) {
@@ -370,7 +411,11 @@ function writeInternalReliabilityReport(reportPath, results) {
     }
   }
 
-  const estimatedTotal = estimateMarkdownLinkCount();
+  const estimatedLinksByLocale = estimateMarkdownLinkCounts(
+    results.map(({locale}) => locale),
+  );
+  const estimatedTotal = Object.values(estimatedLinksByLocale)
+    .reduce((total, count) => total + count, 0);
   const totalLinks = Math.max(estimatedTotal, broken.length);
 
   return writeReliabilityReport(
@@ -382,6 +427,7 @@ function writeInternalReliabilityReport(reportPath, results) {
       components: {
         internal: {
           estimatedMarkdownLinks: estimatedTotal,
+          estimatedLinksByLocale,
           brokenLinks: results.reduce((n, r) => n + r.brokenLinks.length, 0),
           brokenAnchors: results.reduce((n, r) => n + r.brokenAnchors.length, 0),
           locales: results.map(r => r.locale),
@@ -477,6 +523,7 @@ async function checkExternalLinks({ reportPath } = {}) {
   console.log('   This may take several minutes...\n');
 
   const checker = new LinkChecker();
+  const localOrigin = `http://localhost:${serverPort}`;
   const brokenExternal = [];
   const brokenInternal = [];
   const unreachableLinks = [];
@@ -490,6 +537,7 @@ async function checkExternalLinks({ reportPath } = {}) {
   const brokenUrlsReported = new Set();
   const unreachableUrlsReported = new Set();
   const redirectUrlsReported = new Set();
+  let crawlError = null;
 
   const timeoutHandler = (err) => {
     if (err?.message && /timeout|aborted|TimeoutError/i.test(err.message)) {
@@ -506,14 +554,11 @@ async function checkExternalLinks({ reportPath } = {}) {
     checkedCount++;
     uniqueChecked.add(result.url);
 
-    const isLocal =
-      result.url.includes('localhost') ||
-      result.url.includes('127.0.0.1') ||
-      result.url.includes('0.0.0.0');
-
     const isHttp = result.url.startsWith('http://') || result.url.startsWith('https://');
+    const parsedUrl = isHttp ? new URL(result.url) : null;
+    const isLocal = parsedUrl?.origin === localOrigin;
     const cleanParent = result.parent
-      ? result.parent.replace(/^http:\/\/localhost:\d+/, '') || '/'
+      ? result.parent.replace(localOrigin, '') || '/'
       : '/';
 
     // Internal pages from the local build (full-site reliability)
@@ -527,14 +572,14 @@ async function checkExternalLinks({ reportPath } = {}) {
       if (isInternalBroken) {
         if (!brokenInternal.some(bl => bl.url === result.url)) {
           brokenInternal.push({
-            url: result.url.replace(/^http:\/\/localhost:\d+/, '') || '/',
+            url: result.url.replace(localOrigin, '') || '/',
             status: result.status,
             parent: cleanParent,
           });
         }
         if (!brokenUrlsReported.has(result.url)) {
           brokenUrlsReported.add(result.url);
-          console.log(`   ❌ [internal] ${result.url.replace(/^http:\/\/localhost:\d+/, '') || '/'} (${result.status})`);
+          console.log(`   ❌ [internal] ${result.url.replace(localOrigin, '') || '/'} (${result.status})`);
         }
       }
       return;
@@ -604,7 +649,7 @@ async function checkExternalLinks({ reportPath } = {}) {
     }
   });
 
-  const siteUrlPattern = new RegExp(SITE_URL.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+  const siteUrlPattern = /^https:\/\/dev\.rootstock\.io(?:\/|$)/;
 
   try {
     await checker.check({
@@ -636,6 +681,7 @@ async function checkExternalLinks({ reportPath } = {}) {
       retryErrorsJitter: 1000,
     });
   } catch (error) {
+    crawlError = error;
     console.error(`\n❌ Error during link checking: ${error.message}`);
   } finally {
     process.off('uncaughtException', timeoutHandler);
@@ -687,7 +733,7 @@ async function checkExternalLinks({ reportPath } = {}) {
   }
 
   const combinedBroken = [...brokenInternal, ...brokenExternal];
-  const totalLinks = Math.max(uniqueChecked.size, checkedCount, combinedBroken.length);
+  const totalLinks = Math.max(uniqueChecked.size, combinedBroken.length);
 
   console.log('='.repeat(60));
   console.log('📈 SUMMARY');
@@ -700,10 +746,10 @@ async function checkExternalLinks({ reportPath } = {}) {
   console.log(`   Broken external: ${brokenExternal.length}`);
   console.log(`   Unreachable (not counted as broken): ${unreachableLinks.length}`);
   console.log(`   Redirect links: ${redirectLinks.length}`);
-  console.log(`   Status: ${combinedBroken.length > 0 ? '❌ FAILED' : '✅ PASSED'}`);
+  console.log(`   Status: ${crawlError || combinedBroken.length > 0 ? '❌ FAILED' : '✅ PASSED'}`);
   console.log('='.repeat(60) + '\n');
 
-  if (reportPath) {
+  if (reportPath && !crawlError) {
     writeReliabilityReport(
       reportPath,
       buildReliabilityPayload({
@@ -725,9 +771,11 @@ async function checkExternalLinks({ reportPath } = {}) {
         },
       })
     );
+  } else if (reportPath) {
+    console.error('❌ Reliability report was not written because the crawl failed.');
   }
 
-  return combinedBroken.length > 0;
+  return Boolean(crawlError) || combinedBroken.length > 0;
 }
 
 async function main() {

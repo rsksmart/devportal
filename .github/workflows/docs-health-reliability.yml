@@ -88,7 +88,9 @@ jobs:
       - name: Generate AFDocs Agent Score JSON
         id: agent_score
         continue-on-error: true
-        run: yarn check-agent-score
+        run: |
+          rm -f artifacts/agent-score.json
+          yarn check-agent-score
 
       - name: Upload agent score artifact
         if: always()
