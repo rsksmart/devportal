@@ -166,6 +166,15 @@ This page catalogs developer tools and infrastructure for Rootstock. Use the fil
     description="NOWNodes is a blockchain-as-a-service enterprise solution that lets users get access to full Nodes and blockbook Explorers via an API."
   />
 <FilterItem
+    value="rpc, smart contracts"
+    title="node101"
+    subtitle="json rpc"
+    color="orange"
+    linkHref="/dev-tools/node-rpc/node101/"
+    linkTitle="Request RPC access"
+    description="Paid Rootstock JSON-RPC and WebSocket access, managed dedicated nodes, and testnet and archive services on request."
+  />
+<FilterItem
     value="wallet, sc"
     title="MetaMask"
     subtitle="wallets"
