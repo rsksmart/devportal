@@ -43,7 +43,7 @@ jobs:
 
       - name: Upload reliability artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: docs-health-reliability
           path: artifacts/reliability.json
@@ -94,7 +94,7 @@ jobs:
 
       - name: Upload agent score artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: docs-health-agent-score
           path: artifacts/agent-score.json
