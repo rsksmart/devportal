@@ -10,7 +10,7 @@ tags: [Envio, indexers, data, subgraphs, dApps, smart contracts, developers, dev
 
 On Rootstock mainnet (chain ID 30), HyperIndex uses [HyperSync](https://docs.envio.dev/docs/HyperSync/overview), Envio's data retrieval layer, as its default data source. Handlers are written in TypeScript (the default) or ReScript. You can run an indexer locally, self-host it, or deploy it to [Envio Cloud](https://docs.envio.dev/docs/HyperIndex/hosted-service), Envio's managed hosting.
 
-Developers can start from a template (for example, ERC20 or Greeter), or use contract import to generate an indexer from an existing contract.
+Developers can start from a template (for example, ERC20 or Greeter), or use contract import to generate an indexer from an existing contract. You pick a template from the list that `envio init` shows. The template source code is in the [HyperIndex repository](https://github.com/enviodev/hyperindex/tree/main/packages/cli/templates/static).
 
 <Button size="sm" href="/dev-tools/data/envio/">Getting started with Envio</Button>
 
@@ -19,12 +19,12 @@ Developers can start from a template (for example, ERC20 or Greeter), or use con
 The following are required for Envio:
 
 * [Node.js](https://nodejs.org/en/download) <Shield version="22" /> or newer
-* [pnpm](https://pnpm.io/installation) (recommended)
+* [pnpm](https://pnpm.io/installation)
 * [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
-Docker is required only to run the Envio indexer locally.
+Docker is required only to run the Envio indexer locally. See [Run your indexer](#run-your-indexer).
 
-You also need an Envio API token to use HyperSync. You can create one in the [Envio app](https://envio.dev/app/api-tokens).
+You also need an Envio API token to use HyperSync. To create one, follow the [API tokens guide](https://docs.envio.dev/docs/HyperSync/api-tokens#generating-api-tokens), which walks through the [Envio app](https://envio.dev/app/api-tokens) step by step.
 
 ## Run the Envio CLI
 
@@ -40,7 +40,7 @@ The following files are required to run an Envio indexer:
 * GraphQL schema (`schema.graphql`)
 * Event handlers (`src/handlers/`)
 
-`envio init` generates these files from the template or contract you choose.
+`envio init` generates these files from the template or contract you choose. The templates are listed in the **Choose an initialization option** step below, next to the contract import options.
 
 ## Contract import tutorial
 
@@ -148,10 +148,10 @@ You can finish, or add more addresses for the same contract on the same network,
 [↑↓ to move, enter to select, type to filter]
 ```
 
-You can also run contract import without prompts. For a verified contract on Rootstock mainnet:
+You can also run contract import without prompts. Set your Envio API token in `ENVIO_API_TOKEN` so the CLI can write it to the `.env` file. For a verified contract on Rootstock mainnet:
 
 ```bash
-pnpx envio init contract-import explorer -b rsk -c <CONTRACT_ADDRESS> --single-contract --all-events -n my-indexer -d my-indexer
+ENVIO_API_TOKEN=<YOUR_API_TOKEN> pnpx envio init contract-import explorer -b rsk -c <CONTRACT_ADDRESS> --single-contract --all-events -n my-indexer -d my-indexer
 ```
 
 For more information, see the [HyperIndex quickstart](https://docs.envio.dev/docs/HyperIndex/quickstart).
