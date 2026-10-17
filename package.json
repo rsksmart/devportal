@@ -44,7 +44,7 @@
     "@mdx-js/react": "^3.0.0",
     "@mendable/search": "^0.0.206",
     "@splidejs/react-splide": "^0.7.12",
-    "bootstrap": "5.3.3",
+    "bootstrap": "5.3.8",
     "buffer": "^6.0.3",
     "clsx": "^2.0.0",
     "docusaurus-markdown-source-plugin": "^2.0.1",
