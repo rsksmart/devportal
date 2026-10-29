@@ -6,7 +6,7 @@ tags: [concepts, rsk, rootstock, merged mining, hashrate]
 description: "How Rootstock measures the Bitcoin hash power securing it, by counting merge-mining tags in Bitcoin coinbase transactions and scaling the Bitcoin hashrate."
 ---
 
-Rootstock is secured by Bitcoin miners who [merge mine](/concepts/merged-mining/) both chains with the same proof of work. The share of Bitcoin's hash power that does this is measurable. Every participating miner leaves a tag inside the Bitcoin block they mine, so you can count the tagged blocks and scale Bitcoin's total hashrate by that share.
+Rootstock is secured by Bitcoin miners who [merge mine](/concepts/foundations/merged-mining/) both chains with the same proof of work. The share of Bitcoin's hash power that does this is measurable. Every participating miner leaves a tag inside the Bitcoin block they mine, so you can count the tagged blocks and scale Bitcoin's total hashrate by that share.
 
 The Rootstock Explorer publishes the result. This page explains each step of the calculation, so anyone can independently verify the published numbers or re-derive them from raw chain data. One framing matters before the math: the metric measures participation, not security directly. It says how much hash power takes part in merge mining, not what attacking Rootstock would cost.
 
@@ -14,12 +14,12 @@ The Rootstock Explorer publishes the result. This page explains each step of the
 
 The Explorer API serves the metrics at `GET /api/v3/stats`. It exposes four hashrate related fields.
 
-| Field | Meaning | Unit |
-| ----- | ------- | ---- |
-| `hashrate` | Rootstock network hashrate, reported by a Rootstock node | hashes per second, as a string |
-| `bitcoinHashrate` | Estimated total Bitcoin network hashrate | hashes per second, as a string |
-| `mergeMiningPercentage` | Share of recent Bitcoin blocks that carry the Rootstock merge-mining tag | ratio between 0 and 1, as a string |
-| `rootstockSecuredHashrate` | Bitcoin hash power actively securing Rootstock | hashes per second, as a string |
+| Field                      | Meaning                                                                  | Unit                               |
+| -------------------------- | ------------------------------------------------------------------------ | ---------------------------------- |
+| `hashrate`                 | Rootstock network hashrate, reported by a Rootstock node                 | hashes per second, as a string     |
+| `bitcoinHashrate`          | Estimated total Bitcoin network hashrate                                 | hashes per second, as a string     |
+| `mergeMiningPercentage`    | Share of recent Bitcoin blocks that carry the Rootstock merge-mining tag | ratio between 0 and 1, as a string |
+| `rootstockSecuredHashrate` | Bitcoin hash power actively securing Rootstock                           | hashes per second, as a string     |
 
 A response looks like this.
 

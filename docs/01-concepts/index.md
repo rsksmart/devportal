@@ -17,14 +17,13 @@ This section equips you with the fundamental knowledge required to navigate the 
 | [Rootstock Foundations](/concepts/foundations/) | Platform overview: Stack, [Merged mining](/concepts/foundations/merged-mining/), and the [PowPeg](/concepts/foundations/powpeg/). |
 | [Rootstock Stack](/concepts/foundations/stack/) | Layers from applications down to Bitcoin merged mining. |
 | [Merged Mining](/concepts/foundations/merged-mining/) | How merge mining Rootstock with Bitcoin works, and its benefits. |
+| [Secured Hashrate](/concepts/foundations/merged-mining/secured-hashrate/) | How much of Bitcoin's hash power secures Rootstock, and how that share is measured from the merge-mining tag in Bitcoin coinbase transactions. |
 | [PowPeg Protocol](/concepts/foundations/powpeg/) | Transfer BTC to rBTC and back through the PowPeg. See also the [PowPeg security summary](/concepts/foundations/powpeg/security-model/). |
 | [PowPeg HSM Firmware](/concepts/foundations/powpeg/hsm-firmware-attestation/) | Learn how to verify PowPeg nodes using the HSM Firmware Attestation. |
 | [Glossary](/concepts/glossary/) |  This glossary provides essential definitions for key terms related to Rootstock and blockchain technology.|
 | [rBTC Token](/concepts/rbtc/) | The rBTC token fuels transactions on the Rootstock network. Converting BTC to rBTC is straightforward using various methods. Visit the rBTC section for a comprehensive list of exchanges and applications facilitating rBTC acquisition. Visit the [rBTC section](https://rootstock.io/rbtc/) for a list of exchanges and apps to get rBTC.|
 | [RIF Suite](/concepts/rif-suite/) | Learn about the Rootstock Infrastructure Framework, a comprehensive set of Open-source tools and technologies designed to streamline and incentivize development on Bitcoin.|
 | [Account Based Addresses](/concepts/account-based-addresses/) | EIP-1191 chainId is used in Rootstock addresses as a checksum. m/44'/137'/0'/0 is the derivation path used for BIP-44 compatible wallets. |
-| [Merged Mining](/concepts/merged-mining/) | Rootstock is mined simultaneously with Bitcoin, because both chains use the same proof-of-work algorithm. |
-| [Secured Hashrate](/concepts/merged-mining/secured-hashrate/) | How much of Bitcoin's hash power secures Rootstock, and how that share is measured from the merge-mining tag in Bitcoin coinbase transactions. |
 
 ## Next Steps
 
