@@ -183,11 +183,13 @@ Result:
 
 ```bash
 ape compile
-INFO: Compiling using Solidity compiler '0.8.25+commit.b61c2a91'.
+INFO: Compiling using Solidity compiler '0.8.34+commit...'.
 Input:
         contracts/Box.sol
 SUCCESS: 'local project' compiled.
 ```
+
+> Use a Solidity and EVM target from [Development Prerequisites](/developers/requirements/). Confirm opcode support in the [EVM Compatibility Explorer](https://rskj-evm-compatibility.rsk.co/).
 
 After compilation, you can find the bytecode and ABI for your contracts in the `.build` directory.
 

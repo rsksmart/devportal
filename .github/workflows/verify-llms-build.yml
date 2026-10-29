@@ -8,13 +8,19 @@ on:
       - 'i18n/**'
       - 'plugins/**'
       - 'lib/**'
+      - 'data/**'
       - 'middleware.js'
+      - 'scripts/audit-llms-coverage.mjs'
       - 'scripts/fix-llms-urls.mjs'
       - 'scripts/verify-llms-build.mjs'
       - 'scripts/verify-middleware-paths.mjs'
+      - 'scripts/verify-evm-compatibility-summary.mjs'
+      - 'scripts/sync-evm-compatibility-summary.mjs'
       - 'docusaurus.config.js'
       - 'vercel.json'
-      - '.github/workflows/verify-llms-build.yml'
+      - 'static/cheatsheet.md'
+      - 'src/pages/cheatsheet.js'
+      - 'src/components/Cheatsheet/**'
 
 jobs:
   verify-llms:
@@ -38,6 +44,9 @@ jobs:
       - name: Verify middleware path resolution
         run: yarn verify-middleware-paths
 
+      - name: Verify EVM compatibility summary
+        run: yarn verify-evm-compatibility
+
       - name: Build site
         run: yarn build
         env:
@@ -47,3 +56,6 @@ jobs:
 
       - name: Verify LLM and markdown artifacts
         run: yarn verify-llms-build
+
+      - name: Audit llms.txt coverage and size
+        run: yarn audit-llms-coverage

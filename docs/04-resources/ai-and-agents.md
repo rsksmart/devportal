@@ -20,7 +20,7 @@ This page describes how AI assistants, agents, and LLM-based tools can discover 
 
 ## Per-page markdown
 
-Each doc page is available as markdown at the same public path with a `.md` suffix or an `index.md` file (for example, `/concepts/glossary/index.md` or `/concepts/fundamentals/index.md`). This is produced by the [docusaurus-markdown-source-plugin](https://www.npmjs.com/package/docusaurus-markdown-source-plugin). Send `Accept: text/markdown` to a doc HTML URL to receive markdown via content negotiation.
+Each doc page is available as markdown at the same public path with a `.md` suffix or an `index.md` file (for example, `/concepts/glossary/index.md` or `/concepts/foundations/index.md`). This is produced by the [docusaurus-markdown-source-plugin](https://www.npmjs.com/package/docusaurus-markdown-source-plugin). Send `Accept: text/markdown` to a doc HTML URL to receive markdown via content negotiation.
 
 ## Locales
 

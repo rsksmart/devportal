@@ -60,6 +60,7 @@ export default async function middleware(request) {
 export const config = {
   matcher: [
     '/',
+    '/cheatsheet',
     '/concepts/:path*',
     '/developers/:path*',
     '/node-operators/:path*',

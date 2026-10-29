@@ -48,4 +48,6 @@ Explore the guides below to integrate vault flows, cross-chain lending, and yiel
 
 import DocCardList from '@theme/DocCardList';
 
-<DocCardList />
+<div data-markdown-ignore>
+  <DocCardList />
+</div>

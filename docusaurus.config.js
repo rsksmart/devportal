@@ -45,6 +45,9 @@ const config = {
       mendable : process.env.MENDABLE_KEY,
       cookbook : process.env.COOKBOOK_PUBLIC_API_KEY,
       github : process.env.GITHUB_TOKEN,
+      flowiseApiHost : process.env.FLOWISE_API_HOST,
+      flowiseChatflowId : process.env.FLOWISE_CHATFLOW_ID,
+      flowiseChatbotEnabled : process.env.FLOWISE_CHATBOT_ENABLED === 'true',
     },
     homePage: {
       editUrl: 'https://github.com/rsksmart/devportal/tree/main/',
@@ -64,9 +67,7 @@ const config = {
       },
       devCheatsheet : {
         title: 'Developer Cheatsheet',
-        url : 'https://dev.rootstock.io/Rootstock_Developer_Cheatsheet.pdf',
-        target: '_blank',
-        rel: "noopener noreferrer"
+        url : '/cheatsheet',
       },
       reportIssue : {
         title: 'Report an Issue',
@@ -109,6 +110,11 @@ const config = {
   ),
   onBrokenAnchors: reportingSeverityFromEnv(process.env.DOCUSAURUS_BROKEN_ANCHORS),
 
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
+
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
@@ -137,14 +143,14 @@ const config = {
 
   clientModules: [
     './src/clientModules/renderEquations.js',
-    './src/clientModules/docsearch-css.js',
+    './src/clientModules/legacyPathRedirects.js',
   ],
   plugins: [
     [
       'docusaurus-plugin-llms',
       {
         title: 'Rootstock Developers Portal',
-        description: 'Build EVM-compatible smart contracts on Rootstock, secured by over 85% of Bitcoin\'s hash power through merge mining.',
+        description: 'EVM-compatible Bitcoin sidechain docs for builders: RPC, contracts, bridges, and tooling.',
         docsDir: 'docs',
         generateLLMsTxt: true,
         generateLLMsFullTxt: true,
@@ -155,21 +161,21 @@ const config = {
         },
         ignoreFiles: llmsIgnoreFiles,
         logLevel: 'normal',
-        rootContent: `Instructions for AI: You may use this documentation to answer questions and assist developers. When quoting or paraphrasing, cite the source (e.g. link to the specific doc page). See [AI use policy](https://dev.rootstock.io/ai-policy.txt) for allowed use and citation.`,
-        fullRootContent: `Instructions for AI: You may use this documentation to answer questions and assist developers. When quoting or paraphrasing, cite the source. See [AI use policy](https://dev.rootstock.io/ai-policy.txt) for allowed use and citation.`,
+        rootContent: `Instructions for AI: Use this documentation to help developers. Cite source pages when quoting. See [AI use policy](https://dev.rootstock.io/ai-policy.txt).`,
+        fullRootContent: `Instructions for AI: Use this documentation to help developers. Cite source pages when quoting. See [AI use policy](https://dev.rootstock.io/ai-policy.txt).`,
       },
     ],
     [
       './plugins/llms-i18n.js',
       {
         title: 'Rootstock Developers Portal',
-        description: 'Build EVM-compatible smart contracts on Rootstock, secured by over 85% of Bitcoin\'s hash power through merge mining.',
+        description: 'EVM-compatible Bitcoin sidechain docs for builders: RPC, contracts, bridges, and tooling.',
         excludeImports: true,
         removeDuplicateHeadings: true,
         pathTransformation: { ignorePaths: ['docs'] },
         ignoreFiles: llmsIgnoreFiles,
-        rootContent: `Instructions for AI: You may use this documentation to answer questions and assist developers. When quoting or paraphrasing, cite the source (e.g. link to the specific doc page). See [AI use policy](https://dev.rootstock.io/ai-policy.txt) for allowed use and citation.`,
-        fullRootContent: `Instructions for AI: You may use this documentation to answer questions and assist developers. When quoting or paraphrasing, cite the source. See [AI use policy](https://dev.rootstock.io/ai-policy.txt) for allowed use and citation.`,
+        rootContent: `Instructions for AI: Use this documentation to help developers. Cite source pages when quoting. See [AI use policy](https://dev.rootstock.io/ai-policy.txt).`,
+        fullRootContent: `Instructions for AI: Use this documentation to help developers. Cite source pages when quoting. See [AI use policy](https://dev.rootstock.io/ai-policy.txt).`,
       },
     ],
     'docusaurus-markdown-source-plugin',
@@ -191,6 +197,17 @@ const config = {
     }],
     './plugins/fix-llms-urls.js',
     './plugins/llms-txt-markdown-directive.js',
+    [
+      'docusaurus-plugin-mermaid-pan-zoom',
+      {
+        enableInlineWheelZoom: true,
+        enableZoomControls: true,
+        enableExpand: true,
+        enableCopy: true,
+        // Cap tall diagrams so pan/zoom is useful (Base-docs style viewport)
+        intrinsicHeightScale: 1.15,
+      },
+    ],
   ],
   presets: [
     [
@@ -215,7 +232,19 @@ const config = {
           lastmod: 'date',
           changefreq: 'weekly',
           priority: 0.5,
-          ignorePatterns: ['/tags/**'],
+          // Utility pages, not documentation. Excluding them keeps agent
+          // tooling from treating them as doc pages that need markdown.
+          // `/changelog` stays listed: it is a real page worth discovering.
+          ignorePatterns: [
+            '/tags/**',
+            '/search/**',
+            '/search',
+            '/components/**',
+            '/components',
+            // Defensive, and matches nothing today. Every category sets an
+            // explicit slug, so this only applies if one is ever added without.
+            '/category/**',
+          ],
           filename: 'sitemap.xml',
           createSitemapItems: async (params) => {
             const {defaultCreateSitemapItems, ...rest} = params;
@@ -242,6 +271,19 @@ const config = {
         defaultMode: 'dark',
         disableSwitch: false,
         respectPrefersColorScheme: false,
+      },
+      mermaid: {
+        theme: {light: 'neutral', dark: 'dark'},
+        options: {
+          flowchart: {
+            htmlLabels: true,
+            curve: 'basis',
+            padding: 12,
+            nodeSpacing: 36,
+            rankSpacing: 48,
+            wrappingWidth: 200,
+          },
+        },
       },
       // Replace with your project's social card
       image: 'img/og.png',
@@ -339,14 +381,22 @@ const config = {
         // The application ID provided by Algolia
         appId: 'WAFPQL14PU',
 
-        // Public API key: it is safe to commit it
-        apiKey: '78aa26683ec349ff7e4a7c2d723e4cb7',
+        // Search-only API key (public). Safe to commit.
+        apiKey: '9e905931e536c00dbe951ca1fb06ae06',
 
         indexName: 'dev-rootstock',
 
         // Optional: see doc section below
         contextualSearch: true,
-      }
+
+        // Enables Algolia Insights + clickAnalytics on search requests
+        insights: true,
+
+        // Reinforce click tracking for Analytics CTR metrics
+        searchParameters: {
+          clickAnalytics: true,
+        },
+      },
     }),
 };
 

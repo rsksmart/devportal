@@ -6,7 +6,8 @@ tags: [rootstock, use cases, explorer, guides, tutorials, developers]
 description: "Guides to use the Rootstock Explorer: navigate the UI, search, and submit dApps."
 ---
 
-````mdx-code-block
+The Rootstock Explorer is the block explorer for Rootstock mainnet and testnet. Use these guides to search the chain, read transactions, add networks and tokens to MetaMask, submit a dApp, and verify contract source.
+
 <Filter
 values={[
   {label: 'Explorer Basics', value: 'basics'},
@@ -76,4 +77,3 @@ values={[
   description="Verify and publish contract source code on the explorer so users can read and interact with it."
 />
 </Filter>
-````

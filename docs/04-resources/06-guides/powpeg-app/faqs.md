@@ -6,7 +6,7 @@ description: "Frequently asked questions about the PowPeg App."
 tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-Here, you can find a list of frequently asked questions (FAQs) about the PowPeg App.
+Here, you can find a list of frequently asked questions (FAQs) about the [PowPeg App](https://powpeg.rootstock.io/).
 
 ````mdx-code-block
 <Accordion>
@@ -145,4 +145,4 @@ Here, you can find a list of frequently asked questions (FAQs) about the PowPeg 
 
 ## Next
 
-See [Glossary](/resources/guides/powpeg-app/glossary/) section for explanation of terms.
+See the [Glossary](/resources/guides/powpeg-app/glossary/) for an explanation of terms. For step-by-step instructions, see the [peg-in guides](/resources/guides/powpeg-app/pegin/) and the [peg-out guides](/resources/guides/powpeg-app/pegout/).

@@ -10,6 +10,36 @@ The **Rootstock CLI (rsk-cli)** allows for creating and managing wallets on the 
 
 With the Rootstock CLI, managing your wallet is simple. You can view saved wallets, switch between them, update wallet names, or delete wallets. Its user-friendly design ensures easy handling of all wallet tasks quickly and efficiently from the terminal.
 
+## Summary
+
+Command reference for **rsk-cli** wallet operations on Rootstock mainnet and testnet. Repo: [github.com/rsksmart/rsk-cli](https://github.com/rsksmart/rsk-cli). Try in [Replit sandbox](https://replit.com/@rootstockDevX/Rootstock-CLI).
+
+### Commands
+
+| Command | Purpose |
+|---------|---------|
+| `rsk-cli wallet` | Open wallet menu: create, import, list, switch, rename, or delete wallets |
+| `rsk-cli balance` | Check rBTC balance on mainnet |
+| `rsk-cli balance -t` | Check rBTC balance on testnet |
+| `rsk-cli transfer --address <addr> --value <amount>` | Send rBTC on mainnet |
+| `rsk-cli transfer --testnet --address <addr> --value <amount>` | Send rBTC on testnet |
+
+### Wallet menu actions
+
+| Action | Description |
+|--------|-------------|
+| Create a new wallet | Generates address and private key. Encrypt with password. Saves to `rootstock-wallet.json` |
+| Import existing wallet | Import via private key. Encrypt and save locally |
+| List saved wallets | Shows all saved wallet names and addresses |
+| Switch wallet | Set the active wallet for transactions |
+| Update wallet name | Rename a saved wallet |
+| Delete wallet | Remove a saved wallet from local storage (not from chain) |
+
+### Funding and verification
+
+- Fund testnet wallet: [faucet.rootstock.io](https://faucet.rootstock.io/)
+- Verify on explorer: [explorer.testnet.rootstock.io](https://explorer.testnet.rootstock.io/) or [explorer.rootstock.io](https://explorer.rootstock.io/)
+
 ## Managing Your Wallet
 
 To begin managing your wallet using Rootstock CLI, run the following command in your terminal:

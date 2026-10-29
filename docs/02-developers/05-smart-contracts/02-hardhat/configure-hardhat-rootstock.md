@@ -48,7 +48,14 @@ To configure your `rskMainnet` and `rskTestnet` private keys, you'll need to upd
 
 <!-- Hardhat configuration -->
   module.exports = {
-    solidity: "0.8.20",
+    solidity: {
+      version: "0.8.34",
+      settings: {
+        // Match the EVM target for Rootstock. See Development Prerequisites
+        // and the EVM Compatibility Explorer for the current matrix.
+        evmVersion: "cancun",
+      },
+    },
     networks: {
       rskMainnet: {
         url: "https://rpc.mainnet.rootstock.io/{YOUR_APIKEY}",

@@ -6,6 +6,8 @@ tags: [rsk, rootstock, tools, developer tools]
 description: "Explore a curated selection of smart contract development tools and languages. From the familiar Solidity to Rust or Developer Tools like Hardhat, you'll find everything you need to interact and deploy your smart contracts on Rootstock."
 ---
 
+This page catalogs developer tools and infrastructure for Rootstock. Use the filters below to narrow results by category. Most tools are EVM-compatible and work on Rootstock mainnet (chain ID 30) and testnet (chain ID 31).
+
 ````mdx-code-block
 <Filter
   values={[
@@ -467,7 +469,7 @@ description: "Explore a curated selection of smart contract development tools an
     color="orange"
     linkHref="https://envio.dev/"
     linkTitle="Access on-chain data"
-    description="Easily query on-chain data through a decentralized network of indexers."
+    description="Index real-time and historical Rootstock data with HyperIndex and query it through a GraphQL API."
   />
 <FilterItem
     value="data, sc"

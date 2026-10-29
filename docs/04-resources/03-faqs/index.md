@@ -15,7 +15,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">What is Rootstock?</Accordion.Header>
     <Accordion.Body>
-      Rootstock is the first and longest-lasting Bitcoin sidechain. It combines the security of Bitcoin's proof of work with Ethereum's smart contract capabilities. The platform is open-source, EVM-compatible, and secured by over 85% of Bitcoin's hash power through merge mining.
+      Rootstock is Bitcoin's financial infrastructure. It is an open-source, EVM-compatible Bitcoin sidechain secured by over 85% of Bitcoin's hash power through merge mining. Businesses, financial institutions, and builders use it to launch Bitcoin-secured lending, payments, yield, and treasury products with Ethereum tooling.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
@@ -27,10 +27,7 @@ Here are some frequently asked questions about the Rootstock and RIF Platforms.
   <Accordion.Item eventKey="2">
     <Accordion.Header as="h3">What is the purpose of Rootstock?</Accordion.Header>
     <Accordion.Body>
-      Rootstock's primary purpose is to enable Bitcoin users to create and execute smart contracts, thereby extending the functionality and use cases of the Bitcoin network. Rootstock achieves this by using a 2 way peg system that allows users to send Bitcoin directly to the Rootstock chain, where they become convertible to Rootstock's native cryptocurrency, rBTC. This rBTC can then be used within the Rootstock network to interact with smart contracts and dApps.
-      - In addition to smart contract functionality, Rootstock also focuses on providing solutions for faster transactions and higher scalability, two of the main challenges in the Bitcoin network. It also supports merged mining, allowing Bitcoin miners to mine both Bitcoin and rBTC simultaneously without additional computational resources.
-      - Furthermore, Rootstock is also home to the RIF (Rootstock Infrastructure Framework) which makes it easier, faster and more rewarding to build on Bitcoin. It also enables governance on [RootstockCollective DAO](https://rootstockcollective.xyz/).
-      - Finally, the purpose of Rootstock is to enhance the Bitcoin ecosystem by adding smart contract functionality and more without compromising the features that make Bitcoin unique such as security and decentralization.
+      Rootstock exists so Bitcoin can power programmable financial products. You move BTC to rBTC through the [PowPeg](/concepts/foundations/powpeg/), then build and integrate lending, payments, yield, and treasury applications on an EVM-compatible chain secured by Bitcoin merge mining. The same network serves product teams shipping those applications and the institutions and capital they serve.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="3">

@@ -39,6 +39,11 @@ function walkDocFiles(dir, callback, relativeBase = dir) {
     return;
   }
   for (const entry of fs.readdirSync(dir, {withFileTypes: true})) {
+    // `_`-prefixed docs are excluded from the site, so they must not be
+    // mirrored onto public routes where they would have no HTML counterpart.
+    if (entry.name.startsWith('_')) {
+      continue;
+    }
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
       walkDocFiles(fullPath, callback, relativeBase);
@@ -107,7 +112,15 @@ function mirrorDocToCleanRoutes(srcPath, relPath, cleanRoot, copied, {sanitize =
   }
   copied.count += 1;
 
-  if (!cleanRelative.endsWith('/index.md') && !cleanRelative.includes('/')) {
+  if (cleanRelative.endsWith('/index.md')) {
+    const parentMd = path.join(cleanRoot, cleanRelative.replace(/\/index\.md$/, '.md'));
+    if (sanitize) {
+      writeFileEnsuringDir(parentMd, fs.readFileSync(destPath, 'utf8'));
+    } else {
+      copyFileEnsuringDir(srcPath, parentMd);
+    }
+    copied.count += 1;
+  } else if (!cleanRelative.endsWith('/index.md') && !cleanRelative.includes('/')) {
     const slug = path.basename(cleanRelative, '.md');
     const indexDest = path.join(cleanRoot, slug, 'index.md');
     if (sanitize) {

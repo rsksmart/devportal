@@ -34,4 +34,6 @@ The [AI agent guide](/use-cases/ai-automation/ai-agent-rootstock/) walks through
 
 import DocCardList from '@theme/DocCardList';
 
-<DocCardList />
+<div data-markdown-ignore>
+  <DocCardList />
+</div>

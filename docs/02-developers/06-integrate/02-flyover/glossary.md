@@ -31,7 +31,7 @@ See a list of terms about the Flyover and their meanings.
     <Accordion.Item eventKey="2">
     <Accordion.Header as="h3">PowPeg Protocol</Accordion.Header>
     <Accordion.Body>
-      - The PowPeg protocol works by locking bitcoins in a multi-signature address on the Bitcoin side and releasing an equivalent amount of rBTC on the Rootstock side. The reverse process is also possible by burning rBTC on the Rootstock side and unlocking bitcoins on the Bitcoin side, Therefore, native peg-in and native peg-out transactions require a high number of block confirmations. Peg-ins require 100 Bitcoin blocks (approximately 16 hours), and peg-outs require 4000 Rootstock blocks (approximately 33 hours). Read more about [how the PowPeg Protocol works](/concepts/powpeg/).
+      - The PowPeg protocol works by locking bitcoins in a multi-signature address on the Bitcoin side and releasing an equivalent amount of rBTC on the Rootstock side. The reverse process is also possible by burning rBTC on the Rootstock side and unlocking bitcoins on the Bitcoin side, Therefore, native peg-in and native peg-out transactions require a high number of block confirmations. Peg-ins require 100 Bitcoin blocks (approximately 16 hours), and peg-outs require 4000 Rootstock blocks (approximately 33 hours). Read more about [how the PowPeg Protocol works](/concepts/foundations/powpeg/).
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">

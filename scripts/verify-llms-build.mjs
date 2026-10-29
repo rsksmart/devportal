@@ -57,6 +57,9 @@ function checkLlmsUrls(filePath) {
 
 const requiredFiles = ['llms.txt', 'llms-full.txt'];
 
+/** Fern Agent Score preferred llms.txt character budget. */
+const MAX_LLMS_TXT_CHARS = 50000;
+
 let failed = false;
 
 console.log('Verifying LLM and markdown build artifacts...\n');
@@ -77,6 +80,14 @@ for (const locale of LOCALES) {
       const urlStatus = urlCheck.ok ? '✓' : '✗ INVALID URLS';
       if (!urlCheck.ok) failed = true;
       console.log(`  ${urlStatus} ${file} URL check (${urlCheck.message})`);
+      if (file === 'llms.txt') {
+        const chars = fs.readFileSync(filePath, 'utf8').length;
+        const sizeOk = chars < MAX_LLMS_TXT_CHARS;
+        if (!sizeOk) failed = true;
+        console.log(
+          `  ${sizeOk ? '✓' : '✗ OVER LIMIT'} ${file} size ${chars} chars (must be < ${MAX_LLMS_TXT_CHARS})`,
+        );
+      }
     }
   }
 
@@ -89,10 +100,19 @@ for (const locale of LOCALES) {
 
 const requiredMarkdownPaths = [
   'index.md',
+  'cheatsheet.md',
   'concepts/glossary/index.md',
   'developers/quickstart/index.md',
   'developers/integrate/flyover/index.md',
+  'dev-tools/index.md',
+  'dev-tools/node-rpc/index.md',
   'dev-tools/additional-tools/index.md',
+  'resources/tutorials/index.md',
+  'resources/guides/powpeg-app/glossary.md',
+  'resources/guides/powpeg-app/faqs.md',
+  'developers/smart-contracts/hardhat/troubleshooting.md',
+  'developers/smart-contracts/rsk-cli/cli-commands.md',
+  'developers/quickstart/dynamic.md',
 ];
 
 for (const relPath of requiredMarkdownPaths) {

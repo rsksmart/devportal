@@ -51,7 +51,7 @@ In the left menu, click on **Solidity compiler** and set the compilation paramet
 
 :::tip[Tip]
 
-Current [supported solidity version](https://dev.rootstock.io/developers/requirements/) for Rootstock is `0.8.25`.
+Current supported Solidity and EVM versions are listed in [Development Prerequisites](/developers/requirements/). For opcode-level detail and Ethereum porting notes, use the [EVM Compatibility Explorer](https://rskj-evm-compatibility.rsk.co/).
 
 :::
 
@@ -157,7 +157,7 @@ Here’s the example code of an input value:
             }
         },
         "remappings": [],
-        "evmVersion": "paris"
+        "evmVersion": "cancun"
     }
 }
 ```

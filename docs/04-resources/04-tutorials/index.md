@@ -16,6 +16,8 @@ tags:
 description: "Tutorials and learning resources"
 ---
 
+This page catalogs tutorials and learning resources for Rootstock developers. Use the filters below to narrow by skill level or topic. Most tutorials target Rootstock testnet (chain ID 31).
+
 ```mdx-code-block
 <Filter
 values={[

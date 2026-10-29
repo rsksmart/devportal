@@ -40,4 +40,6 @@ Contracts can hold funds, release them on conditions, or stream them over time. 
 
 import DocCardList from '@theme/DocCardList';
 
-<DocCardList />
+<div data-markdown-ignore>
+  <DocCardList />
+</div>

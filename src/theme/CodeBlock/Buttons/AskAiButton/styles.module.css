@@ -1,0 +1,45 @@
+/* Mirrors the copy button's icon-crossfade so the two buttons feel identical:
+   the sparkle fades to a success check for a moment after the message is sent. */
+
+.askAiButtonIcons {
+  position: relative;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.askAiButtonIcon,
+.askAiButtonSuccessIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: currentColor;
+  opacity: inherit;
+  width: inherit;
+  height: inherit;
+  transition: all var(--ifm-transition-fast) ease;
+}
+
+.askAiButtonSuccessIcon {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.33);
+  opacity: 0;
+  color: #00d600;
+}
+
+.askAiButtonSent .askAiButtonIcon {
+  transform: scale(0.33);
+  opacity: 0;
+}
+
+.askAiButtonSent .askAiButtonSuccessIcon {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition-delay: 0.075s;
+}
+
+/* Rootstock-orange hint on hover/focus to read as an AI action. */
+.askAiButton:hover,
+.askAiButton:focus-visible {
+  color: var(--ifm-color-primary);
+}

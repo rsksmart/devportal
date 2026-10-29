@@ -1,0 +1,7 @@
+label: PowPeg
+position: 40
+collapsed: false
+description: Transfer BTC to rBTC and back through the PowPeg protocol.
+link:
+  type: doc
+  id: concepts/foundations/powpeg/index

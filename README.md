@@ -31,6 +31,18 @@ yarn start
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
+### Environment Variables
+
+Set these in a `.env` file in the root directory.
+
+The "Ask Rootstock AI" assistant (the floating chat bubble, the navbar button, and the code block buttons) is off unless **all three** of the following are set — any one of them missing hides it entirely:
+
+- `FLOWISE_CHATBOT_ENABLED`: set to `true` to enable the assistant. Defaults to disabled, so it must be set explicitly in every environment that should show it (including hosted previews and production).
+- `FLOWISE_API_HOST`: base URL of the **reverse proxy in front of Flowise** — `http://localhost` for the local `rootstock-chatbot` compose stack, or the public proxy origin in a deployment. Point this at the proxy, **not** at Flowise's own port: the proxy is what injects the API key server-side (so no key ever reaches the browser), allowlists the handful of endpoints the widget needs, and sends the CORS headers. Aiming it straight at Flowise bypasses all three — the browser then blocks the calls with `No 'Access-Control-Allow-Origin' header is present`, which surfaces as a chat that loads but can't send messages or feedback. The proxy also needs its `ALLOWED_ORIGIN` set to this site's exact origin, port included (`http://localhost:3000` for `yarn start`).
+- `FLOWISE_CHATFLOW_ID`: id of the chatflow to embed.
+
+These are read at **build time** (Docusaurus is a static site generator), so changing any of them requires a rebuild — they are not runtime toggles.
+
 ## Usage 
 
 ### Production Build

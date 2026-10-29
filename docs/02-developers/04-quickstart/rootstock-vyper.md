@@ -6,7 +6,7 @@ description: "Deploy Vyper smart contracts to Rootstock testnet with Python and 
 tags: [rsk, rootstock, developers, vyper, quickstart, python, Smart Contracts]
 ---
 
-Rootstock is a Bitcoin sidechain that combines the security of Bitcoin's proof of work with Ethereum's smart contract capabilities. The platform is open-source, EVM-compatible, and secured by over 85% of Bitcoin's hash power through merge mining. Some benefits for developers building on Bitcoin include:
+Rootstock is Bitcoin's financial infrastructure. It is an open-source, EVM-compatible Bitcoin sidechain secured by over 85% of Bitcoin's hash power through merge mining. Some benefits for developers building Bitcoin-secured products include:
 
 - **Bitcoin Compatibility**: Deploy smart contracts while leveraging Bitcoin's network security
 - **EVM Compatibility**: Use familiar Ethereum tools and practices while building on Bitcoin

@@ -1,0 +1,7 @@
+label: Foundations
+position: 2
+collapsed: false
+description: Platform overview covering security, the Rootstock Stack, merged mining, and the PowPeg.
+link:
+  type: doc
+  id: concepts/foundations/index

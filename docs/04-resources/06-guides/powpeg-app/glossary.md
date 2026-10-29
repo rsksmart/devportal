@@ -6,7 +6,7 @@ description: "Welcome to the glossary section for the PowPeg App documentation."
 tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-See a list of terms about/related to the PowPeg App and their meanings.
+See a list of terms about/related to the PowPeg App and their meanings. The app runs on mainnet at [powpeg.rootstock.io](https://powpeg.rootstock.io/) and on testnet at [powpeg.testnet.rootstock.io](https://powpeg.testnet.rootstock.io/).
 
 ````mdx-code-block
 <Accordion>
@@ -91,7 +91,7 @@ See a list of terms about/related to the PowPeg App and their meanings.
   <Accordion.Item eventKey="12">
     <Accordion.Header as="h3">What's the PowPeg Protocol?</Accordion.Header>
     <Accordion.Body>
-      - The powpeg protocol is a unique 2-way peg system that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus. Read more about the [Powpeg](/concepts/powpeg/).
+      - The powpeg protocol is a unique 2-way peg system that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus. Read more about the [Powpeg](/concepts/foundations/powpeg/).
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="13">

@@ -10,15 +10,14 @@ This guide explains how to navigate the provided interface, connect your wallet,
 
 ## Getting Started
 
-<figure>
-<img src="/img/guides/EAS/EAS-devtool-dash.png" alt="EAS Dashboard on DevTool"/>
-  <figcaption>EAS Dashboard on DevTool  (fig 1.)</figcaption>
-</figure>
+![EAS Dashboard on DevTool](/img/guides/EAS/EAS-devtool-dash.png)
 
-````mdx-code-block
-<Steps>
-  <Step title="Connecting Your Wallet">
-    1. **Locate the "Connect Wallet" Button**:
+*EAS Dashboard on DevTool  (fig 1.)*
+
+
+## Connecting Your Wallet
+
+1. **Locate the "Connect Wallet" Button**:
    * At the top-right corner of the page, you will see the **Connect Wallet** button.
 2. **Click the "Connect Wallet" Button**:
    * A wallet connection modal will open, allowing you to choose your preferred cryptocurrency wallet (e.g., MetaMask, WalletConnect, etc.).
@@ -28,22 +27,22 @@ This guide explains how to navigate the provided interface, connect your wallet,
 4. **Verify the Connection**:
    * Once connected, your wallet address will replace the **Connect Wallet** button, confirming the link.
 
-<figure>
-<img src="/img/guides/EAS/EAS-devtool-dash.png" alt="Connecting Your Wallet to EAS"/>
-  <figcaption>Connecting Your Wallet  (fig 2.)</figcaption>
-</figure>
+![Connecting Your Wallet to EAS](/img/guides/EAS/EAS-devtool-dash.png)
+
+*Connecting Your Wallet  (fig 2.)*
+
 
 > Adding your wallet only provides access to view your schema and attestations.
 
-  </Step>
-  <Step title="Creating an EAS Schema">
-     1. **Click "Create EAS Schema"**:
+## Creating an EAS Schema
+
+1. **Click "Create EAS Schema"**:
    * Located at the top-right corner of the interface.
 
-<figure>
-<img src="/img/guides/EAS/frontend-guide/eas-schema.png" alt="Creating an EAS Schema"/>
-  <figcaption>Creating an EAS Schema (fig 3.)</figcaption>
-</figure>
+![Creating an EAS Schema](/img/guides/EAS/frontend-guide/eas-schema.png)
+
+*Creating an EAS Schema (fig 3.)*
+
 
 2. **Fill Out the Schema Details**:
    * **Name**: Enter a descriptive name for the schema.
@@ -58,12 +57,12 @@ This guide explains how to navigate the provided interface, connect your wallet,
 4. **Confirmation**:
    * Upon successful submission, the schema appears in the list with a unique ID
 
-  </Step>
-  <Step title="Exploring the Schema List">
-     <figure>
-<img src="/img/guides/EAS/frontend-guide/shcema-list.png" alt="Exploring the Schema List"/>
-  <figcaption>Exploring the Schema List (fig 4.)</figcaption>
-</figure>
+## Exploring the Schema List
+
+![Exploring the Schema List](/img/guides/EAS/frontend-guide/shcema-list.png)
+
+*Exploring the Schema List (fig 4.)*
+
 
 1. **Schema Overview**
    * **All Schemas**: Displays the total number of schemas created.
@@ -78,12 +77,12 @@ This guide explains how to navigate the provided interface, connect your wallet,
 3. **Clicking on a Schema**:
    * Clicking on a schema opens detailed information about its attestations.
 
-  </Step>
-  <Step title="Viewing Attestation Details">
-     <figure>
-<img src="/img/guides/EAS/frontend-guide/view-attestation.png" alt="Viewing Attestation Details"/>
-  <figcaption>Viewing Attestation Details  (fig 5.)</figcaption>
-</figure>
+## Viewing Attestation Details
+
+![Viewing Attestation Details](/img/guides/EAS/frontend-guide/view-attestation.png)
+
+*Viewing Attestation Details  (fig 5.)*
+
 
 :::info[When you select a schema:]
 
@@ -104,11 +103,9 @@ This guide explains how to navigate the provided interface, connect your wallet,
    * **Attest this Schema**: Allows creating a new attestation under this schema.
 :::
 
+## Attesting to a Schema
 
-  </Step>
-
-<Step title="Attesting to a Schema">
-   Attesting to a schema allows you to associate specific data with an address based on the schema's structure.
+Attesting to a schema allows you to associate specific data with an address based on the schema's structure.
 
 ### **Initiating the Attestation**
 
@@ -123,10 +120,10 @@ This guide explains how to navigate the provided interface, connect your wallet,
        * For example, if the schema has a `string` field labeled "Testu," you will see:
          * `Testu (string):` followed by an input field to provide the corresponding value.
 
-<figure>
-<img src="/img/guides/EAS/frontend-guide/attest-to-schema.png" alt="Attest to schema"/>
-  <figcaption>Attest To Schema  (fig 6.)</figcaption>
-</figure>
+![Attest to schema](/img/guides/EAS/frontend-guide/attest-to-schema.png)
+
+*Attest To Schema  (fig 6.)*
+
 
 ### **Completing the Attestation**
 
@@ -149,18 +146,12 @@ This guide explains how to navigate the provided interface, connect your wallet,
 
 ### **Viewing the Completed Attestation**
 
-<figure>
-<img src="/img/guides/EAS/frontend-guide/completed-attestation.png" alt="Viewing the Completed Attestation"/>
-  <figcaption>Viewing the Completed Attestation  (fig 7.)</figcaption>
-</figure>
+![Viewing the Completed Attestation](/img/guides/EAS/frontend-guide/completed-attestation.png)
+
+*Viewing the Completed Attestation  (fig 7.)*
+
 
  **Post-Attestation View**:
    * Once confirmed, the attestation details will appear in the schema details page under its **Attestations** count.
    * The attestation data can now be viewed as part of the schema's record.
-  </Step>
-</Steps>
-````
-
-
-
 

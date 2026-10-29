@@ -50,14 +50,26 @@ i.e. from genesis block.
 This is typically expected to be used when connecting to Rootstock Regtest,
 or in select debugging scenarios.
 It is also used when switching between different databases,
-e.g. between `leveldb` and `rocksdb`.
+e.g. when moving from the deprecated `leveldb` to `rocksdb`.
 
 - `--import`:
-This indicates that the block database should be imported from an external source.
+This indicates that the block database should be imported from published bootstrap data
+instead of being synced from peers.
 This is typically expected to be used when connecting to Rootstock Testnet or Rootstock Mainnet,
 and when a reduction in "initial sync time" is desired.
 It is also used when switching between different databases,
-e.g. between `leveldb` and `rocksdb`.
+e.g. when moving from the deprecated `leveldb` to `rocksdb`.
+
+  :::danger[Import erases the database every time it runs]
+
+  A node started with import enabled **deletes its database directory** and downloads the
+  bootstrap data again, even if it was fully synced a minute earlier. Run it as a one-off on
+  the command line, and never leave `database.import.enabled = true` in a configuration file.
+
+  :::
+
+  Reading the bootstrap data published today requires RSKj **`VETIVER-9.0.4` or later**.
+  For the full procedure, see [Bootstrap a node using Import Sync](/node-operators/setup/import-sync/).
 
 ### Configuration related
 
@@ -220,7 +232,7 @@ The `RewindBlocks` command is used to rewind the Rootstock blockchain to a speci
 
 #### DbMigrate
 
-The `DbMigrate` command is a tool for migrating between different databases such as leveldb and rocksdb.
+The `DbMigrate` command is a tool for migrating between different databases, such as moving a node off the deprecated `leveldb` and onto `rocksdb`. Unlike [import sync](/node-operators/setup/import-sync/), it converts the database you already have and downloads nothing.
 
 **Usage:**
 
@@ -228,11 +240,11 @@ The `DbMigrate` command is a tool for migrating between different databases such
 
 **Options:**
 
-- `-t, --targetDb`: The target database to migrate to. (“leveldb” or “rocksdb”).
+- `-t, --targetDb`: The target database to migrate to (`rocksdb` or `leveldb`). Use `rocksdb` — `leveldb` is deprecated and will be removed in a future release.
 
 **Example:**
 
-In this example, the current database will be migrated from leveldb to rocksdb.
+In this example, the current database will be migrated from `leveldb` to `rocksdb`.
 
 `java -cp rsk.jar co.rsk.cli.tools.DbMigrate -t rocksdb`
 
@@ -281,6 +293,50 @@ The `ShowStateInfo` command is a tool for displaying state information of a spec
     INFO [clitool] [main]  Trie long values: 0
     INFO [clitool] [main]  Trie MB: 0.002902984619140625
     INFO [clitool] [main]  ShowStateInfo finished
+```
+
+#### ValidateState
+
+The `ValidateState` command walks the state trie of a block and reports every node and long value the trie references that is not present in the state database. It is meant for a state database that was populated out of band — restored from a snapshot, imported from bootstrap data, or copied between nodes — where an incomplete state would otherwise only show up later, at first state access.
+
+It checks **presence**, not integrity: it verifies that everything the trie references can be retrieved, not that the stored bytes hash to the key they are filed under. A report of "complete" therefore means nothing is missing, not that the state root is correct.
+
+The command exits `0` when the state is complete and non-zero when it is not, so it can gate a script.
+
+**Usage:**
+
+- `java -cp rsk.jar co.rsk.cli.tools.ValidateState [-b <block_number>] --<network_flag>`
+
+**Options:**
+
+- `-b, --block`: The block number, or "best", whose state should be validated. Defaults to `best`.
+
+**Example:**
+
+- `java -cp rsk.jar co.rsk.cli.tools.ValidateState -b best --testnet`
+
+**Output:**
+
+```shell
+    INFO [clitool] [main]  ValidateState started
+    INFO [clitool] [main]  Block number: 7654321
+    INFO [clitool] [main]  Block hash: 53fe6e9269d26a38d15f368a3b8b647ae6b66e4fe27bd6bd6ee5f4b675129753
+    INFO [clitool] [main]  State root: 587e0645e09d60af77ee04591ac843af14c99f6c498713aeb565f25f2d419cd0
+    INFO [clitool] [main]  Trie nodes visited: 16834271
+    INFO [clitool] [main]  Embedded nodes visited: 7415223
+    INFO [clitool] [main]  Long values visited: 183472
+    INFO [clitool] [main]  Gaps found: 0
+    INFO [clitool] [main]  State is complete
+    INFO [clitool] [main]  ValidateState finished
+```
+
+When something is missing, each gap is named (up to a capped sample) and the command reports the state as incomplete:
+
+```shell
+    INFO [clitool] [main]  Gaps found: 2
+    INFO [clitool] [main]  missing node: 4ce5c4861124fac10fdda43f62df4cf8137136e4c654305a8e9e3572f76b46c9
+    INFO [clitool] [main]  missing long value: 5c0700caa04b0e28aa38d3d4a74a560332c38111cb1ac2292a89512d009658d2
+    INFO [clitool] [main]  State is INCOMPLETE
 ```
 
 #### IndexBlooms

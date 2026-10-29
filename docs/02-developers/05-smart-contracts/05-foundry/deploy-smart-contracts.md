@@ -37,11 +37,11 @@ contract CounterScript is Script {
 Run the following command, replacing `https://public-node.testnet.rsk.co` with either `rskTestnet` or `rskMainnet` rpc url if you have, depending on your desired deployment environment:
 
 ```bash
-forge script script/Counter.s.sol --rpc-url https://public-node.testnet.rsk.co --broadcast --legacy --evm-version london
+forge script script/Counter.s.sol --rpc-url https://public-node.testnet.rsk.co --broadcast --legacy --evm-version cancun
 ```
 :::info[Info]
-- [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) is not supported or not activated on the Rootstock RPC url
-- To avoid Foundry's compatibility issues, we are using the `--evm-version london` flag.
+- [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) is not supported or not activated on the Rootstock RPC url.
+- Use `--evm-version cancun` for current Rootstock networks. Confirm the target in [Development Prerequisites](/developers/requirements/) and the [EVM Compatibility Explorer](https://rskj-evm-compatibility.rsk.co/).
 - The `--legacy` flag is passed to use legacy transactions instead of `EIP-1559`.
 - You can remove the `--broadcast` flag if you wan to simulate the transaction without broadcasting it.
 :::

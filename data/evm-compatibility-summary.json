@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceRepoUrl": "https://github.com/rsksmart/rskj-evm-compatibility",
+  "explorerUrl": "https://rskj-evm-compatibility.rsk.co/",
+  "requirementsPath": "/developers/requirements/",
+  "catalogVersion": "0.1.0",
+  "catalogUpdatedAt": "2025-02-18T00:00:00Z",
+  "syncedAt": "2026-07-07T05:43:38.893Z",
+  "recommended": {
+    "solidityVersion": "0.8.34",
+    "solidityVersionDisplay": "up to 0.8.35",
+    "evmVersion": "cancun",
+    "evmVersionDisplay": "Cancun",
+    "rskjVersion": "9.0.2",
+    "networkUpgrade": "vetiver900",
+    "compatible": true,
+    "warnings": [
+      "Some features behave differently than on Ethereum (see behavioral differences).",
+      "Block time ~30s; gas costs may differ from Ethereum."
+    ]
+  },
+  "behavioralDifferencesCount": 8
+}

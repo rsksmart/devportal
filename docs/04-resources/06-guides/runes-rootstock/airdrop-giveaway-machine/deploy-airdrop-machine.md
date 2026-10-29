@@ -30,7 +30,7 @@ This repository contains all the smart contract code you need to deploy the Aird
 
 <img src="/img/resources/runes/airdrop/prepare-contract-for-remix.png"/>
 
-**Note:** If you're using the latest Solidity version, be aware that some Rootstock contracts may not be fully compatible. We recommend using Solidity version **0.8.20** for better compatibility.
+**Note:** If you're using the latest Solidity version, check [Development Prerequisites](/developers/requirements/) and the [EVM Compatibility Explorer](https://rskj-evm-compatibility.rsk.co/) for the supported compiler and EVM target (`cancun` on current networks).
 
 ## **Step 3: Compile and Deploy the AirdropManager Contract**
 
@@ -38,7 +38,7 @@ After pasting the contracts into Remix IDE, follow these steps to successfully c
 
 * **Select Solidity Version**
 
-  * Ensure the compiler version is set to **0.8.20** to maintain compatibility with Rootstock contracts.
+  * Ensure the compiler version matches [Development Prerequisites](/developers/requirements/). Use EVM target `cancun` unless the [EVM Compatibility Explorer](https://rskj-evm-compatibility.rsk.co/) shows otherwise for your node version.
 
 * **Compile the AirdropManager.sol Contract**
 

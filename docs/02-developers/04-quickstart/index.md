@@ -174,6 +174,15 @@ values={[
     description="Easily query on-chain data through a decentralized network of indexers"
   />
 <FilterItem
+    value="data, advanced"
+    title="Get Started with Envio"
+    subtitle="quickstart"
+    color="orange"
+    linkHref="/dev-tools/data/envio/"
+    linkTitle="Get Started"
+    description="Index real-time and historical Rootstock data with HyperIndex and query it through a GraphQL API"
+  />
+<FilterItem
     value="beginner"
     title="Deploy Smart Contracts with Web3.py on Rootstock"
     subtitle="Web3.py"

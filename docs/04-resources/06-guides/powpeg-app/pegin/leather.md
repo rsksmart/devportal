@@ -98,7 +98,7 @@ In this section, we will see 2 options, Fast Mode and Native Mode:
 
 ![Fast mode option](/img/resources/powpeg/fast-pegin-review-details.png)
 
-- Native Mode uses [PowPeg Protocol](/concepts/powpeg/) that is decentralized, permissionless and uncensorable protocol created by Rootstock Labs, generally is slower than Fast mode and the user needs to pay only the network fees.
+- Native Mode uses [PowPeg Protocol](/concepts/foundations/powpeg/) that is decentralized, permissionless and uncensorable protocol created by Rootstock Labs, generally is slower than Fast mode and the user needs to pay only the network fees.
 
 ![Native mode option](/img/resources/powpeg/native-pegin-review-details.png)
 

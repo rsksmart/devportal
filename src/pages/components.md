@@ -61,13 +61,13 @@ Use this to present items in a specific sequence (ordered list) or without order
 - **Code**
 ```
 1. The PowPeg App is now available on [Testnet](https://powpeg.testnet.rootstock.io/) and [Mainnet](https://powpeg.rootstock.io/).
-2. For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the PowPeg App, please refer to the [PowPeg App user guide](/concepts/powpeg/).
-3. Get information on the signatories and attestion in the [Powpeg Protocol HSM Firmware Attestation](/concepts/powpeg/hsm-firmware-attestation) section.
+2. For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the PowPeg App, please refer to the [PowPeg App user guide](/concepts/foundations/powpeg/).
+3. Get information on the signatories and attestion in the [Powpeg Protocol HSM Firmware Attestation](/concepts/foundations/powpeg/hsm-firmware-attestation) section.
 ```
  **Result:**
 1. The PowPeg App is now available on [Testnet](https://powpeg.testnet.rootstock.io/) and [Mainnet](https://powpeg.rootstock.io/).
-2. For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the PowPeg App, please refer to the [PowPeg App user guide](/concepts/powpeg/).
-3. Get information on the signatories and attestion in the [PowPeg Protocol HSM Firmware Attestation](/concepts/powpeg/hsm-firmware-attestation) section.
+2. For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the PowPeg App, please refer to the [PowPeg App user guide](/concepts/foundations/powpeg/).
+3. Get information on the signatories and attestion in the [PowPeg Protocol HSM Firmware Attestation](/concepts/foundations/powpeg/hsm-firmware-attestation) section.
 
 ## Blockquote
 Use this to highlight quoted text, differentiating it from your own writing.
@@ -351,7 +351,7 @@ Use this to present collapsible sections of content, useful for long lists or fr
   <Accordion.Item eventKey="0">
     <Accordion.Header as="h3">What is Rootstock?</Accordion.Header>
     <Accordion.Body>
-      LRootstock is the first and longest-lasting Bitcoin sidechain. It is the only layer 2 solution that combines the security of Bitcoin's proof of work with Ethereum's smart contract capabilities. The platform is open-source, EVM-compatible, and secured by over 60% of Bitcoin’s hashing power, making it the gateway to a vibrant ecosystem of dApps that continues to evolve to become fully trustless.
+      Rootstock is Bitcoin's financial infrastructure. It is an open-source, EVM-compatible Bitcoin sidechain secured by over 85% of Bitcoin's hash power through merge mining. Businesses, financial institutions, and builders use it to launch Bitcoin-secured lending, payments, yield, and treasury products with Ethereum tooling.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">

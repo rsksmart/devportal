@@ -4,6 +4,9 @@
 # Production
 /build
 
+# Devportal Health / local link reports
+/artifacts
+
 # Generated files
 .docusaurus
 .cache-loader

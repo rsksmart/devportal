@@ -1,0 +1,23 @@
+// Mermaid diagram containers (Base-docs style framing + readable viewport)
+// Pan/zoom/reset/expand controls come from docusaurus-plugin-mermaid-pan-zoom
+.docusaurus-mermaid-container {
+  position: relative;
+  margin: 1.25rem 0 1.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  background: var(--ifm-background-surface-color, var(--ifm-card-background-color));
+  overflow: hidden;
+  // Taller viewport so architecture diagrams stay readable (Denitsa / TW feedback)
+  max-height: min(720px, 85vh) !important;
+  min-height: 420px;
+}
+
+[data-theme='dark'] .docusaurus-mermaid-container {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+[data-theme='light'] .docusaurus-mermaid-container {
+  border-color: rgba(0, 0, 0, 0.1);
+  background: #faf9f6;
+}

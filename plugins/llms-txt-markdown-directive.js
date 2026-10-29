@@ -34,11 +34,10 @@ function findMarkdownFiles(dir, fileList = []) {
 
 function upsertDirective(content, llmsPath) {
   const directiveLine = buildDirectiveLine(llmsPath);
+  // Keep or refresh the top-of-file blockquote only. Mentions of llms.txt later
+  // in the page (for example the AI and Agents guide) must not skip injection.
   if (content.startsWith(DIRECTIVE_PREFIX)) {
     return content.replace(/^> For the complete documentation index, see \[llms\.txt\]\([^)]+\)\.\n\n/, directiveLine);
-  }
-  if (content.includes('[llms.txt]')) {
-    return content;
   }
   return directiveLine + content;
 }

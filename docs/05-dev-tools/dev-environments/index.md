@@ -6,7 +6,9 @@ description: "Dev Environments provide a complete set of tools for writing, test
 tags: [hardhat, remix, foundry, developer tools, rsk, rootstock, ethereum, dApps, smart contracts]
 ---
 
-Dev Environments provide a complete set of tools for writing, testing, and deploying your smart contracts on Rootstock. 
+Dev Environments provide a complete set of tools for writing, testing, and deploying your smart contracts on Rootstock.
+
+Set your Solidity compiler and `evmVersion` to match [Development Prerequisites](/developers/requirements/). For opcode-level compatibility and Ethereum porting notes, use the [EVM Compatibility Explorer](https://rskj-evm-compatibility.rsk.co/).
 
 Some benefits of using a dev environment:
 
@@ -15,6 +17,10 @@ Some benefits of using a dev environment:
 * Error Reduction: Built-in features can help you catch bugs in your code before deployment.
 
 Here are supported dev environments for building and deploying smart contracts on Rootstock.
+
+- **[Hardhat](/dev-tools/dev-environments/hardhat/)**: Hardhat is an Ethereum development environment. Use it to write, test, and deploy smart contracts on Rootstock and other EVM-compatible chains.
+- **[Foundry](/dev-tools/dev-environments/foundry/)**: Foundry is a smart contract toolchain for Solidity. It manages dependencies, compiles, runs tests, deploys contracts, and talks to EVM-compatible chains through Forge.
+- **[Remix](/dev-tools/dev-environments/remix/)**: Remix is a browser IDE used to write, compile, deploy, and debug Solidity. Connect it to MetaMask to deploy to Rootstock Testnet and Mainnet.
 
 <CardsGrid>
   <CardsGridItem

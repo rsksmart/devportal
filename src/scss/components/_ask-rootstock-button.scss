@@ -1,0 +1,52 @@
+// "Ask Rootstock" AI assistant trigger (Flowise) — outline pill with a brand
+// badge. The pill is transparent with a subtle border so it sits alongside the
+// other navbar controls (e.g. the language dropdown); the orange logo badge is
+// the constant brand anchor. Everything flips with the theme via existing
+// tokens:
+//   --bs-contrast            → black (light) / white (dark)      → label text
+//   --rsk-input-border-color → gray-200 (light) / gray-800 (dark) → pill border
+//   --bs-primary             → orange #E68300 (light) / #FF9100 (dark) → badge
+.ask-rootstock-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  // asymmetric: extra left inset so the badge clears the rounded left edge
+  padding: 4px 16px 4px 10px;
+  border: 1px solid var(--rsk-input-border-color);
+  border-radius: 40px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: $font-family-base;
+  color: var(--bs-contrast);
+  background-color: transparent;
+  transition: opacity .15s ease;
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background-color: var(--bs-primary);
+    color: #fff; // logo uses fill="currentColor" → white on the orange badge
+
+    svg {
+      display: block;
+      width: 16px;
+      height: 18px;
+    }
+  }
+
+  &__label {
+    font-size: $f14;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+
+  &:hover {
+    opacity: .85;
+  }
+}

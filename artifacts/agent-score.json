@@ -1,0 +1,192 @@
+{
+  "type": "agent-score",
+  "snapshotDate": "2026-09-02",
+  "overallScore": 100,
+  "grade": "A+",
+  "checksTotal": 23,
+  "checksPassed": 22,
+  "checksWarned": 0,
+  "checksFailed": 0,
+  "checksSkipped": 1,
+  "categories": {
+    "content-discoverability": {
+      "score": 100,
+      "grade": "A+"
+    },
+    "markdown-availability": {
+      "score": 100,
+      "grade": "A+"
+    },
+    "page-size": {
+      "score": 100,
+      "grade": "A+"
+    },
+    "content-structure": {
+      "score": 100,
+      "grade": "A+"
+    },
+    "url-stability": {
+      "score": 100,
+      "grade": "A+"
+    },
+    "observability": {
+      "score": 100,
+      "grade": "A+"
+    },
+    "authentication": {
+      "score": 100,
+      "grade": "A+"
+    }
+  },
+  "checks": [
+    {
+      "id": "llms-txt-exists",
+      "category": "content-discoverability",
+      "status": "pass",
+      "message": "llms.txt found at https://dev.rootstock.io/llms.txt"
+    },
+    {
+      "id": "llms-txt-valid",
+      "category": "content-discoverability",
+      "status": "pass",
+      "message": "llms.txt follows the proposed structure (H1, blockquote, heading-delimited link sections)"
+    },
+    {
+      "id": "llms-txt-size",
+      "category": "content-discoverability",
+      "status": "pass",
+      "message": "llms.txt is 49,412 characters (under 50,000 threshold)"
+    },
+    {
+      "id": "llms-txt-links-resolve",
+      "category": "content-discoverability",
+      "status": "pass",
+      "message": "All 50 same-origin sampled links resolve (335 total links)"
+    },
+    {
+      "id": "llms-txt-links-markdown",
+      "category": "content-discoverability",
+      "status": "pass",
+      "message": "50/50 same-origin sampled links point to markdown content (100%)"
+    },
+    {
+      "id": "llms-txt-directive-html",
+      "category": "content-discoverability",
+      "status": "pass",
+      "message": "llms.txt directive found in HTML of all 50 sampled pages, near the top of content"
+    },
+    {
+      "id": "llms-txt-directive-md",
+      "category": "content-discoverability",
+      "status": "pass",
+      "message": "llms.txt directive found in markdown of all 50 sampled pages, near the top of content"
+    },
+    {
+      "id": "markdown-url-support",
+      "category": "markdown-availability",
+      "status": "pass",
+      "message": "50/50 sampled pages support .md URLs (100%)"
+    },
+    {
+      "id": "content-negotiation",
+      "category": "markdown-availability",
+      "status": "pass",
+      "message": "50/50 sampled pages support content negotiation (100%)"
+    },
+    {
+      "id": "rendering-strategy",
+      "category": "page-size",
+      "status": "pass",
+      "message": "All 50 sampled pages contain server-rendered content"
+    },
+    {
+      "id": "page-size-markdown",
+      "category": "page-size",
+      "status": "pass",
+      "message": "All 50 pages under 50K chars (median 5K, max 17K)"
+    },
+    {
+      "id": "page-size-html",
+      "category": "page-size",
+      "status": "pass",
+      "message": "All 50 sampled pages under 50K chars (median 75K HTML → 11K markdown (86% boilerplate))"
+    },
+    {
+      "id": "content-start-position",
+      "category": "page-size",
+      "status": "pass",
+      "message": "Content starts within first 10% on all 50 sampled pages (median 1%)"
+    },
+    {
+      "id": "tabbed-content-serialization",
+      "category": "content-structure",
+      "status": "pass",
+      "message": "No tabbed content detected across 50 sampled pages"
+    },
+    {
+      "id": "section-header-quality",
+      "category": "content-structure",
+      "status": "pass",
+      "message": "No tabbed content found; header quality check not applicable"
+    },
+    {
+      "id": "markdown-code-fence-validity",
+      "category": "content-structure",
+      "status": "pass",
+      "message": "All 218 code fences properly closed across 51 pages"
+    },
+    {
+      "id": "http-status-codes",
+      "category": "url-stability",
+      "status": "pass",
+      "message": "All 50 sampled pages return proper error codes for bad URLs"
+    },
+    {
+      "id": "redirect-behavior",
+      "category": "url-stability",
+      "status": "pass",
+      "message": "All 48 redirect(s) across 50 sampled pages are same-host HTTP redirects"
+    },
+    {
+      "id": "llms-txt-coverage",
+      "category": "observability",
+      "status": "pass",
+      "message": "llms.txt covers 100% of 335 sitemap doc pages"
+    },
+    {
+      "id": "markdown-content-parity",
+      "category": "observability",
+      "status": "pass",
+      "message": "All 50 pages have equivalent markdown and HTML content (avg 0% missing)"
+    },
+    {
+      "id": "cache-header-hygiene",
+      "category": "observability",
+      "status": "pass",
+      "message": "All 51 endpoints have appropriate cache headers"
+    },
+    {
+      "id": "auth-gate-detection",
+      "category": "authentication",
+      "status": "pass",
+      "message": "All 50 sampled pages are publicly accessible"
+    },
+    {
+      "id": "auth-alternative-access",
+      "category": "authentication",
+      "status": "skip",
+      "message": "All docs pages are publicly accessible; no alternative access paths needed"
+    }
+  ],
+  "issues": [],
+  "source": "afdocs",
+  "sourceVersion": "0.18.7",
+  "sourceUrl": "https://dev.rootstock.io",
+  "specUrl": "https://agentdocsspec.com/spec/",
+  "sampling": "random",
+  "discoverySources": [
+    "llms-txt"
+  ],
+  "pagesTested": 50,
+  "measuredAt": "2026-09-02T19:13:08.784Z"
+}

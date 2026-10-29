@@ -109,7 +109,7 @@ The direct listing feature allows users to list their NFTs for a set period of t
 
 You can find the script for this in the cloned repository: `./addDirectListing.ts`.
 
-```sh
+```ts
 import {
   defineChain,
   getContract,
@@ -174,25 +174,9 @@ If everything’s set up correctly, you’ll get a transaction hash in the conso
 
 ## Troubleshooting
 
-<Accordion>
-  <Accordion.Item eventKey="0">
-    <Accordion.Header as="h3">MetaMask - RPC Error: JsonRpcEngine: Response has no error or result for request</Accordion.Header>
-    <Accordion.Body>
-      ```
-      MetaMask - RPC Error: JsonRpcEngine: Response has no error or result for request:
-        {
-        "id": 8871128006200483,
-        "jsonrpc": "2.0",
-        "method": "eth_sendRawTransaction",
-        "params": [
-            "0xf9842b378401b580a08367c280944e59b44847b379578588920ca78fbf26c0b4956c80b983c5bb1731d56b3a25eff906f1aad67c00c4ba9c43dd33731f263b7d50ce37f20b6960e06040523480156200001157600080fd5b506040516200694538038062006945833981016040819052620000349162000914565b60208101518151805160009015620000815762000051826200019a565b6200007e8260405160200162000068919062000b88565b60408051601f1981840
-      ```
-
-      **Possible Fix:**
-        - Ensure to choose the correct version (`6.0.0`) specified for this guide before deploying the contract.
-    </Accordion.Body>
-  </Accordion.Item>
-</Accordion>
+:::warning[MetaMask RPC error]
+If MetaMask shows `JsonRpcEngine: Response has no error or result for request` when sending a transaction, choose Marketplace contract version `6.0.0` before deploying, as specified in this guide.
+:::
 
 ## What’s Next?
 
