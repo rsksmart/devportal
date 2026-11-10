@@ -17,6 +17,7 @@ This section equips you with the fundamental knowledge required to navigate the 
 | [Rootstock Foundations](/concepts/foundations/) | Platform overview: Stack, [Merged mining](/concepts/foundations/merged-mining/), and the [PowPeg](/concepts/foundations/powpeg/). |
 | [Rootstock Stack](/concepts/foundations/stack/) | Layers from applications down to Bitcoin merged mining. |
 | [Merged Mining](/concepts/foundations/merged-mining/) | How merge mining Rootstock with Bitcoin works, and its benefits. |
+| [Secured Hashrate](/concepts/foundations/merged-mining/secured-hashrate/) | How much of Bitcoin's hash power secures Rootstock, and how that share is measured from the merge-mining tag in Bitcoin coinbase transactions. |
 | [PowPeg Protocol](/concepts/foundations/powpeg/) | Transfer BTC to rBTC and back through the PowPeg. See also the [PowPeg security summary](/concepts/foundations/powpeg/security-model/). |
 | [PowPeg HSM Firmware](/concepts/foundations/powpeg/hsm-firmware-attestation/) | Learn how to verify PowPeg nodes using the HSM Firmware Attestation. |
 | [Glossary](/concepts/glossary/) |  This glossary provides essential definitions for key terms related to Rootstock and blockchain technology.|
