@@ -2,17 +2,19 @@
 title: Conversion with node and console
 sidebar_label: Node and Console
 tags: [rsk, rbtc, conversion, peg, 2-way, peg-in, peg-out, federation, node, cli]
-description: 'How to perform the Powpeg mechanism using node and console.'
+description: "Convert BTC to rBTC and rBTC to BTC with a Rootstock node and the JSON-RPC console. Covers peg-in to the federation and peg-out via the Bridge contract."
 sidebar_position: 305
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
-This section explains how to try the Powpeg mechanism using
+This section explains how to try the PowPeg mechanism using
 your Rootstock node and a command line.
 
 ## General Requirements
 - You need to be in full control of your BTC private key.
 - You need a BTC Wallet properly configured using said private key.
-- _[Only for release process]_ You need an Rootstock node up and running,
+- _[Only for release process]_ You need a Rootstock node up and running,
   with the RPC interface enabled, and the personal and eth modules enabled
   - See [how do I run an Rootstock Node?](/node-operators/setup/).
 
@@ -30,7 +32,7 @@ Read the [lock requirements](/concepts/rbtc/networks#mainnet-conversion)
 1. With your Bitcoin address,
    send a BTC transaction to the Rootstock Federation Address. See how to get the [Federation Address](/concepts/rbtc/networks/#btc-to-rbtc-conversion).
 2. Using your preferred BTC block explorer
-   (e.g. [Blocktrail](https://www.blockchain.com/explorer)),
+   (e.g. [blockchain.com](https://www.blockchain.com/explorer)),
    follow your transaction and wait the stipulated time.
 3. Convert the private key to Rootstock format with this tool:
    [https://github.com/rsksmart/utils](https://github.com/rsksmart/utils)),
@@ -66,6 +68,6 @@ Read the [release requirements](/concepts/rbtc/networks#rbtc-to-btc-conversion)
    Replace `RSKAddress`, `valueToReleaseInWeis`, `RSKNode` and `RSKNodePort`
    and run:
    ```shell
-   $ curl -X POST --data '{"method":"eth_sendTransaction", "params":[{"from": "<RSKAddress>", "to": "0x0000000000000000000000000000000001000006", "gasPrice": 59240000, "gas": 44000, "value": <valueToReleaseInWeis>}], "jsonrpc":"2.0", "id":1}' http://<RSKNode>:<RSKNodePort>
+   $ curl -X POST --data '{"method":"eth_sendTransaction", "params":[{"from": "<RSKAddress>", "to": "0x0000000000000000000000000000000001000006", "gasPrice": 59240000, "gas": 100000, "value": <valueToReleaseInWeis>}], "jsonrpc":"2.0", "id":1}' http://<RSKNode>:<RSKNodePort>}
    ```
 4. Wait the stipulated time and check your BTC balance.

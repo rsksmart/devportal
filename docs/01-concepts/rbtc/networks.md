@@ -2,8 +2,10 @@
 title: Converting BTC to rBTC and vice versa
 sidebar_label: Networks
 tags: [rsk, rootstock, rbtc, conversion, peg, 2-way, peg-in, peg-out, federation]
-description: 'Converting BTC to rBTC (peg-in) and rBTC to BTC (peg-out) on Mainnet and Testnet.'
+description: "Convert BTC to rBTC and rBTC to BTC on Rootstock Mainnet and Testnet. Covers federation addresses, confirmations, and the 0.005 BTC peg-in minimum value."
 sidebar_position: 303
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 ## Mainnet Conversion
@@ -28,9 +30,9 @@ Instructions on how to do a Mainnet peg-in.
         2. Install Electrum
         3. Start Electrum
         4. Once Electrum starts, create or import a wallet
-        5. Go to the third tab "Receive". You will see a Bitcoin Testnet address like below:
+        5. Go to the third tab "Receive". You will see a Bitcoin Mainnet address like below:
         <div align="left"><img width="70%" src="/img/legacy-private-key.png" alt="Create a Legacy (`p2pkh`) walletn"/></div>
-      > Note: Use a legacy Bitcoin wallet (not Segwit) with a public key beginning with `m` or `n`, and a private key prefixed by `p2pkh`.
+      > Note: Use a legacy Bitcoin wallet (not Segwit) with a public key beginning with `1`, and a private key prefixed by `p2pkh`.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">
@@ -69,7 +71,7 @@ Instructions on how to do a Mainnet peg-in.
     <Accordion.Header as="h3">5. Check rBTC balance</Accordion.Header>
     <Accordion.Body>
       You can check balance of rBTC address on Metamask, MyCrypto, or any [Rootstock compatible wallets](https://blog.rootstock.io/noticia/rootstock-wallets/).
-      > Note: You have to wait a minimum of 100 confirmations + a minimum of 5 minutes for checking your RBTC balance.
+      > Note: You have to wait a minimum of 100 confirmations + a minimum of 5 minutes for checking your rBTC balance.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
@@ -124,7 +126,7 @@ Instructions on how to do a Testnet peg-in.
     <Accordion.Body>
       We recommend to use Electrum BTC wallet for connecting to Bitcoin Testnet.
       - Download the wallet from
-        [Electrum Website](https://bitzuma.com/posts/a-beginners-guide-to-the-electrum-bitcoin-wallet/)
+        [Electrum Website](https://electrum.org/)
       - Install Electrum
       - Start Electrum in Testnet mode
         - For example on MacOS:
@@ -158,7 +160,7 @@ Instructions on how to do a Testnet peg-in.
         ![Get Federation Address](/img/concepts/rbtc/02-federation-address-testnet.png)
 
         Now, you can send Bitcoin to the Federation address via your Bitcoin address.
-        > Note: You must send a minimum amount of `0.01 tBTC`.
+        > Note: You must send a minimum amount of `0.005 tBTC`.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="3">
@@ -172,7 +174,7 @@ Instructions on how to do a Testnet peg-in.
     <Accordion.Header as="h3">5. Check tRBTC balance on Testnet</Accordion.Header>
     <Accordion.Body>
       - You can check the balance of the above tRBTC address on Metamask, MyCrypto or any Rootstock Testnet compatible wallets.
-      - You have to wait a minimum of 10 confirmations + a minimum of 5 minutes for checking your RBTC balance.
+      - You have to wait a minimum of 10 confirmations + a minimum of 5 minutes for checking your rBTC balance.
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>

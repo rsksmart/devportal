@@ -3,6 +3,9 @@ title: "rBTC Gas Fees: Optimizing Transaction Costs"
 sidebar_label: Gas
 tags: [gas, transactions, rbtc, mainnet, rsk, rootstock, conversion, bitcoin, gas-price]
 sidebar_position: 302
+description: "Learn how gas price, gas limit, and total gas work on Rootstock. Fees are paid in rBTC. Covers minimum gas price and how to estimate a transaction limit."
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 Gas is the internal pricing for running a transaction or contract.
@@ -56,7 +59,7 @@ web3.eth.getBlock('latest').minimumGasPrice
 
 :::tip[Gas Limit]
 
-The transaction gas limit per block is 6,800,000 units.
+The transaction gas limit per block is 10,000,000 units.
 
 :::
 
@@ -72,7 +75,7 @@ Instead of using `minimumGasPrice` as it is, you may [add 10% to its value](#how
 You can obtain the average gas price that is being paid in the network:
 
 ```javascript
-web3.eth.gasPrice()
+web3.eth.getGasPrice()
 ```
 
 Even though this value is greater than or equal to minimum gas price. (`gasPrice >= minimumGasPrice`), it is recommended to add a small percentage to increase the priority of your transaction.
@@ -123,7 +126,7 @@ function payBonus() {
   }
 ```
 
-In the code above, the problem is that if the type of `i` was declared as `var`, it would be taken as `uint8` because this is the smallest type that is required to hold the value 0. If the array has more than 255 elements, the loop will not finish successfully, resulting in wasted gas. You'd better use the explicit type `uint` for no surprises and higher limits. **Avoid declaring variables using `var` if possible.**
+Solidity 0.5 and later removed implicit `var`. Use an explicit `uint` for loop indexes. If you still see `var` in older examples, replace it. **Avoid declaring variables using `var`.**
 
 ### Looping large arrays
 

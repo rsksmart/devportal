@@ -60,6 +60,32 @@ tags: concepts, rsk, rootstock
 ---
 ```
 
+## **Review Stamp**
+
+Add a review stamp to a page's frontmatter after you complete a full accuracy review of that page:
+
+```yaml
+---
+freshness_review_date: 2026-10-08
+owner: your-github-handle
+---
+```
+
+- **freshness_review_date:** The date of the review, in `YYYY-MM-DD` format.
+- **owner:** The GitHub handle of the person who reviewed the page.
+
+Only stamp a page after you check all of the following:
+
+1. Commands, package versions, and tool flags still work.
+2. Network values are correct: chain IDs 30 and 31, RPC URLs, and explorer links.
+3. Internal and external links resolve.
+4. Terminology follows this guide (Rootstock, rBTC) and Vale passes.
+5. The `description` exists and is 150-160 characters.
+
+If the page is accurate, the stamp is the only change. Do not make cosmetic edits to justify a stamp.
+
+The stamp is not a duplicate of the "Last updated" time on each page. Git records when a page was edited. The stamp records when a person confirmed the page is still accurate. The Devportal Health dashboard reads the stamp to report content freshness and metadata coverage.
+
 ## **Versioning Docs**
 
 * Stay Updated: Regularly check for updates to our documentation to ensure you have the latest version.  

@@ -1,9 +1,11 @@
 ---
-title: Accessing and using funds that are not in accounts derived with Rootstock (RSK) dpath in Trezor T
+title: Accessing and using funds that are not in accounts derived with Rootstock dpath in Trezor T
 sidebar_label: With Trezor T
 tags: [rsk, rbtc, conversion, peg, 2-way, peg-in, peg-out, federation, trezor, dpath]
-description: 'How to configure a Trezor T hardware wallet to derive with a custom dpath.'
+description: "Move rBTC from a Trezor T account that uses a custom derivation path. Disable Trezor safety checks, send the funds, then restore strict safety checks."
 sidebar_position: 306
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 How to solve the problem of moving your funds when they are in an account that needs to
