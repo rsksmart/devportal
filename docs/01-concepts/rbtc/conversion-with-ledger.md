@@ -44,7 +44,7 @@ BTC Mainnet using Ledger hardware wallet.
 
 :::info[Note]
 The Bitcoin wallet needs to be legacy (not Segwit)
-whose public key starts with either `m` or `n`,
+whose address starts with either `m` or `n`,
 and private key starting with `p2pkh:`
 :::
 

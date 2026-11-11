@@ -32,7 +32,7 @@ Instructions on how to do a Mainnet peg-in.
         4. Once Electrum starts, create or import a wallet
         5. Go to the third tab "Receive". You will see a Bitcoin Mainnet address like below:
         <div align="left"><img width="70%" src="/img/legacy-private-key.png" alt="Create a Legacy (`p2pkh`) walletn"/></div>
-      > Note: Use a legacy Bitcoin wallet (not Segwit) with a public key beginning with `1`, and a private key prefixed by `p2pkh`.
+      > Note: Use a legacy Bitcoin wallet (not Segwit) with an address beginning with `1`, and a private key prefixed by `p2pkh`.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">
@@ -135,7 +135,7 @@ Instructions on how to do a Testnet peg-in.
       - Go to the third tab, "Receive".
         You will see a Bitcoin Testnet address like below.
       ![Create a Legacy (`p2pkh`) wallet](/img/legacy-private-key.png)
-      - Note: The Bitcoin wallet needs to be legacy (not Segwit) whose public key starts with either `m` or `n`, and private key starting with `p2pkh:`
+      - Note: The Bitcoin wallet needs to be legacy (not Segwit) whose address starts with either `m` or `n`, and private key starting with `p2pkh:`
       ![Get a Bitcoin Testnet address in Electrum Wallet](/img/electrum-wallet.png)
     </Accordion.Body>
   </Accordion.Item>
