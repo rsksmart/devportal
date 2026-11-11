@@ -3,7 +3,9 @@ sidebar_label: RIF Relay
 sidebar_position: 500
 title: "RIF Relay - Secure Sponsored Transaction System"
 tags: [rif, relay, gas station network, gsn, rootstock]
-description: "Information about the RIF Name Service, specs, how to use and integrate."
+description: "Learn how RIF Relay lets users pay Rootstock transaction fees in ERC-20 tokens instead of rBTC. Start with the sample dApp or the RIF Relay install guide."
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 RIF Relay is a secure sponsored transaction system that enables users to pay the transaction fees using ERC-20 tokens. This enables end users to transact entirely using one asset instead of having to manage a separate asset for gas.

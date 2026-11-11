@@ -2,9 +2,11 @@
 sidebar_label: Interact with the Front-end
 sidebar_position: 107
 title: Interact with the Front-end
-description: "Learn how to integrate your Rootstock smart contract with front-end applications."
+description: "Build a Next.js frontend with Wagmi and RainbowKit that connects a wallet and reads the balance of the token contract you deployed to Rootstock with Hardhat."
 tags:
   [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, wagmi]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 Creating a user-friendly web interface for smart contracts on the Rootstock network enhances user interaction. Here, we'll focus on using [Wagmi](https://wagmi.sh/) and [RainbowKit](https://www.rainbowkit.com/), some popular libraries for connecting your smart contracts to a web front-end.

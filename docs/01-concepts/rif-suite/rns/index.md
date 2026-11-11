@@ -3,7 +3,9 @@ sidebar_label: RNS
 sidebar_position: 400
 title: "RIF Name Service (RNS)"
 tags: [rif, rns, rif-name-service, rsk, rootstock]
-description: "Information about the RIF Name Service, specs, how to use and integrate."
+description: "Learn how the RIF Name Service maps human-readable names to Rootstock addresses. Covers the registry, resolvers, the registrar, and name renewal steps."
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 RNS provides an architecture which enables the identification of blockchain addresses by human-readable names.
@@ -55,7 +57,7 @@ RNS provides an architecture which enables the identification of blockchain addr
 
 By adding a name resolution service, also known as “alias”, the probability of errors is significantly reduced. In addition, centralizing the access to multiple resources associated with a human-readable name improves the blockchain platform user experience. As resource names may change over time, the system needs to be flexible to support frequent changes.
 
-Currently over the World Wide Web, the Domain Name System (DNS) is responsible for mapping human-readable names to IP addresses. RNS is a decentralized and secure service that works over RSK's blockchain.
+Currently over the World Wide Web, the Domain Name System (DNS) is responsible for mapping human-readable names to IP addresses. RNS is a decentralized and secure service that works over Rootstock's blockchain.
 
 Here’s a refined version of your text, maintaining the same tone and voice:
 
@@ -79,7 +81,7 @@ RNS has four major components:
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
 | **RNS Registry**  | The RNS Registry is a specification for a tree-structured namespace and the data associated with the names. Conceptually, each node and leaf in the domain name space tree represents a set of information. Query operations attempt to extract specific types of information from a particular set. A query specifies the domain name of interest and the type of resource information desired. | Specs |
 | **RNS Resolvers** | RNS Resolvers are contracts that provide information from a name in response to client requests. Resolvers must answer a query directly or use referrals to other resolvers. Typically, a resolver is a contract's public function that is directly accessible to user programs or other contracts. No specific protocol is required between the resolver and the user program. | Specs |
-| **RNS Registrar** | The RNS Registrar is a critical component within the RIF Name Service, managing the registration of `.rsk` domain names. This contract has the authority to register names in the RSK Owner contract, ensuring that new domain registrations are handled securely and efficiently. | Specs |
+| **RNS Registrar** | The RNS Registrar is a critical component within the RIF Name Service, managing the registration of `.rsk` domain names. This contract has the authority to register names in the `RSK Owner` contract to ensure that new domain registrations are handled securely and efficiently. | Specs |
 | **Renewer**       | The Renewer is a contract designed to facilitate the renewal of names registered in the Node Owner. It is equipped with permissions to renew these names and provides flexibility in how the renewal is executed.
 
 These fours components roughly correspond to the four layers or views of the domain system:

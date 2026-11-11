@@ -2,8 +2,10 @@
 title: "Understanding Gas and Transactions"
 sidebar_label: "Gas and Transactions"
 sidebar_position: 3
-description: "Learn how transactions work, what gas is, and how the EVM executes smart contracts."
+description: "Learn how Rootstock transactions work, what gas is, and how the EVM runs contracts. Fees are paid in rBTC. Mainnet chain ID is 30 and Testnet chain ID is 31."
 tags: [guides, developers, blockchain, rsk, rootstock, beginners, gas, evm]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 This module explains how transactions flow through the network, what gas is, and how the Ethereum Virtual Machine (EVM) executes smart contracts.

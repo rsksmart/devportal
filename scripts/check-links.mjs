@@ -444,11 +444,26 @@ function writeInternalReliabilityReport(reportPath, results) {
 async function startServer(buildDir, port = 3001) {
   const http = await import('http');
   const fsPath = await import('path');
-  const url = await import('url');
+  const rootDir = fsPath.resolve(buildDir);
 
   return new Promise((resolve, reject) => {
     const server = http.createServer((req, res) => {
-      let filePath = fsPath.join(buildDir, url.parse(req.url).pathname);
+      // Built ja/ko tag folders and asset names with spaces exist on disk decoded,
+      // so the percent-encoded request path must be decoded before lookup.
+      let pathname;
+      try {
+        pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+      } catch {
+        res.writeHead(400);
+        res.end('Bad request');
+        return;
+      }
+      let filePath = fsPath.resolve(rootDir, `.${pathname}`);
+      if (filePath !== rootDir && !filePath.startsWith(rootDir + fsPath.sep)) {
+        res.writeHead(403);
+        res.end('Forbidden');
+        return;
+      }
 
       if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
         filePath = fsPath.join(filePath, 'index.html');

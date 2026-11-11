@@ -2,9 +2,11 @@
 sidebar_label: Deploy Smart Contracts
 sidebar_position: 105
 title: Deploy Smart Contracts
-description: "Learn how to deploy your Rootstock smart contract on your local environment and the Rootstock network."
+description: "Deploy a Hardhat contract to local Hardhat, Rootstock Testnet, and Rootstock Mainnet. Rootstock Mainnet uses chain ID 30 and Testnet uses chain ID 31."
 tags:
   [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethers]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 In this section, we'll deploy your token contract to your local environment and also deploy and interact with the contract on the Rootstock network.

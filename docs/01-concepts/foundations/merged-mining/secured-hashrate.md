@@ -200,3 +200,7 @@ A few properties of this metric are easy to misread.
 - **Testnet reads zero, and that is accurate.** Almost no miners embed the tag on Bitcoin testnet, so `mergeMiningPercentage` there is legitimately 0 and `rootstockSecuredHashrate` follows it to 0. The `bitcoinHashrate` value stays non-zero, because testnet still has real hash power behind it.
 - **The share is not a security guarantee on its own.** It measures how much hash power participates. The [merged mining reference](/node-operators/merged-mining/reference/) covers the growth phases and the additional protections against double-spend attacks.
 - **Precision is limited by the inputs.** The Bitcoin hashrate is an estimate inferred from how fast blocks arrived, however many digits it is reported with, and the secured hashrate inherits that. Comparing two readings to the last digit is not meaningful.
+
+:::tip[Independent reference]
+For a weekly hashrate series computed from the chain since 2018, see the [independent Rootstock reference](https://rsk.zone/stats/). It's maintained independently of RootstockLabs.
+:::

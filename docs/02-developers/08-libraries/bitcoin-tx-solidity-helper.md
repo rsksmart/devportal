@@ -10,7 +10,7 @@ tags: [rif, rootstock, solidity, bitcoin, smart contracts, libraries, bitcoin tr
 If you wish to suggest changes on this document, please open a PR on the [Bitcoin Transaction Solidity Helper](https://github.com/rsksmart/btc-transaction-solidity-helper.git)
 :::
 
-<img src="img/og.jpg" alt="RSK Logo" style={{ width: '100%', height: 'auto' }} />
+<img src="/img/og.jpg" alt="Rootstock" style={{ width: '100%', height: 'auto' }} />
 
 # BTC Transaction Solidity Helper
 
@@ -36,7 +36,7 @@ To check the NPM package, please check [Bitcoin Solidity Helper NPM Package.](ht
 
 ## Prerequisites
 * Knowledge of Solidity and how to write smart contracts.
-* [Bitcoin Solidity Helper Package.](https://github.com/rsksmart/btc-transaction-solidity-helper/pkgs/npm/btc-transaction-solidity-helper)
+* [Bitcoin Solidity Helper Package.](https://www.npmjs.com/package/@rsksmart/btc-transaction-solidity-helper)
 
 ## Setup
 To setup the Solidity helper library in your project, run the following npm command:

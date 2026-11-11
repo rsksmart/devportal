@@ -76,6 +76,8 @@ You can see Rootstock network hashing power in the [Rootstock Stats Website](htt
 
 To find out how much of Bitcoin's hash power merge mines Rootstock, and how that share is measured from Bitcoin blocks, see [Secured Hashrate](/concepts/foundations/merged-mining/secured-hashrate/).
 
+To see which mining pools produce Rootstock blocks, counted from recent blocks with each merged-mining proof checked, see the [independent Rootstock reference](https://rsk.zone/merge-mining/#measured). It's maintained independently of RootstockLabs.
+
 ## Implementation details for mining software pools
 
 Check out the [Getting Started Implementation Guide](/node-operators/merged-mining/getting-started/).

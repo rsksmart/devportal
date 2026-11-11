@@ -46,15 +46,17 @@ Rootstock is compatible with the Ethereum Virtual Machine (EVM). This compatibil
 
 **1.Consensus Mechanisms**
 
-Ethereum currently uses a Proof of Stake (PoS) consensus mechanism, while Rootstock employs a hybrid PoW/PoS (Proof of Stake) consensus. Rootstock’s PoS component enhances scalability and energy efficiency.
+Ethereum uses Proof of Stake (PoS). Rootstock uses Proof of Work (PoW) through [merged mining](/concepts/foundations/merged-mining/). Bitcoin miners secure Rootstock blocks with the same hash power they use to mine Bitcoin. Rootstock has no staking in its consensus.
 
 **2. Token Standards**
 
-While Ethereum introduced popular token standards like ERC20 (fungible tokens) and ERC721 (non-fungible tokens), Rootstock has its own token standard called RRC20. Understanding the differences between these standards is crucial when porting tokens.
+The Rootstock Virtual Machine (RVM) is compatible with the EVM at the opcode level, so standard ERC20 and ERC721 contracts run on Rootstock. See [Fungible Token Standards](/developers/smart-contracts/fungible-token-standards/) for ERC20 and related standards such as ERC677 and ERC1363, and for how gas costs differ.
 
 **3. Network Fees**
 
 As mentioned earlier, Rootstock generally offers lower gas fees. Developers can take advantage of this cost savings when deploying and interacting with smart contracts.
+
+For where Rootstock's consensus rules differ from Ethereum's, such as gas pricing and call stack depth, see the [independent Rootstock reference](https://rsk.zone/evm/). It’s maintained independently of RootstockLabs.
 
 ## Getting Started
 
@@ -144,7 +146,7 @@ export default config;
 
 To configure the Rootstock networks, you'll need an RPC URL for both mainnet and testnet and a Private Key of the account that will deploy the contracts.
 
-To get the RPCs, go to the [RPC API dashboard from Rootstock Labs](https://dashboard.rpc.rootstock.io/dashboard) create an account if you don't have one, and get an API key for Rootstock testnet or Rootstock mainnet.
+To get the RPCs, go to the [RPC API dashboard from RootstockLabs](https://dashboard.rpc.rootstock.io/dashboard) create an account if you don't have one, and get an API key for Rootstock testnet or Rootstock mainnet.
 
 Mainnet RPC URL should look similar to this:
 
@@ -229,7 +231,7 @@ const config: HardhatUserConfig = {
 
 export default config;
 ```
-Replace `YOUR_API_KEY` with your actual API keys obtained from the Rootstock Labs dashboard. Also, store your private key securely (for example in a `.env` file).
+Replace `YOUR_API_KEY` with your actual API keys obtained from the RootstockLabs dashboard. Also, store your private key securely (for example in a `.env` file).
 
 ### Copy Ethereum Contract Code and Tests
 

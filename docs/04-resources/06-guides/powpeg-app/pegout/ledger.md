@@ -2,11 +2,11 @@
 sidebar_position: 1400
 sidebar_label:  Peg-out using Ledger
 title: "Performing a peg-out using Ledger Hardware Wallet"
-description: "Here, we will learn how to perform a peg-out using Ledger Hardware Wallet."
+description: "Perform a peg-out with a Ledger hardware wallet in the PowPeg App. Convert rBTC to BTC, connect your Ledger, sign the transaction, and track its status."
 tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
-### Performing a peg-in transaction with Ledger {#performing-a-peg-in-transaction-with-ledger}
+### Performing a peg-out transaction with Ledger {#performing-a-peg-in-transaction-with-ledger}
 
 ![PowPeg App (peg-out)](/img/resources/powpeg/pegout.gif)
 

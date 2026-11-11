@@ -2,8 +2,10 @@
 title: "Understanding Distributed Ledgers"
 sidebar_label: "Distributed Ledgers"
 sidebar_position: 1
-description: "Learn the fundamental concepts of blockchain technology: what blockchains are, how they work, and why they matter."
+description: "Learn what a blockchain is, how a distributed ledger stores data, and why Rootstock uses merge mining. Mainnet chain ID is 30 and Testnet chain ID is 31."
 tags: [guides, developers, blockchain, rsk, rootstock, beginners]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 This module introduces the core concepts a developer must understand before building on Rootstock. Even if you are familiar with Ethereum, this serves as a unified foundation for the course.

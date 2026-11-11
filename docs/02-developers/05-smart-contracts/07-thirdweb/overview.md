@@ -2,8 +2,10 @@
 sidebar_label: Overview
 sidebar_position: 101
 title: Getting Started with Thirdweb on Rootstock
-description: 'How to build and deploy dApps on Rootstock with Thirdweb'
+description: "Use the thirdweb SDK on Rootstock to deploy contracts and connect a marketplace frontend. Rootstock Mainnet uses chain ID 30 and Testnet uses chain ID 31."
 tags: [rsk, thirdweb, developers, developer tools, rootstock, sdk, dApps, smart contracts]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 [Thirdweb](https://thirdweb.com/rootstock) simplifies Web3 dApp development. It provides ready-to-use smart contracts and developer tools like SDKs, React hooks, and CLIs, reducing the need to build from scratch. This allows you to launch token or marketplace projects quickly with less boilerplate code on Rootstock.

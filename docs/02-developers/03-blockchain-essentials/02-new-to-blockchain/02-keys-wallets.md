@@ -2,8 +2,10 @@
 title: "Understanding Keys and Wallets"
 sidebar_label: "Keys and Wallets"
 sidebar_position: 2
-description: "Learn how cryptographic keys and wallets work in blockchain systems."
+description: "Learn how public keys, private keys, and wallets work on Rootstock. Covers seed phrases and accounts. Mainnet chain ID is 30 and Testnet chain ID is 31."
 tags: [guides, developers, blockchain, rsk, rootstock, beginners, wallets]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 This module explains how users interact with blockchains through cryptographic key pairs and wallet software.

@@ -17,7 +17,7 @@ In this guide, we will be performing a peg in transaction using the [PowPeg App]
 ## Verify if you have enabled **Perform Safety Checks** to **PROMPT**
 
     > - If is not enabled you will receive this error ![Trezor Error Key Path](/img/resources/powpeg/trezor-error.png) 
-    > - This video explains how to enable **Perform Safety Checks** to **PROMPT** on **Trezor Suite** [Enabling Prompt for Key Path](/img/resources/powpeg/trezor-error-fixed.mp4) 
+    > - This video explains how to enable **Perform Safety Checks** to **PROMPT** on **Trezor Suite** [Enabling Prompt for Key Path](pathname:///img/resources/powpeg/trezor-error-fixed.mp4) 
     <Video url="/img/resources/powpeg/trezor-error-fixed.mp4" thumbnail="/img/resources/powpeg/trezor-error.png" />
 
 :::note[Trezor Connect pop-up]
@@ -191,7 +191,7 @@ In this section, we will see 2 options, Fast Mode and Native Mode:
 
 ![Fast mode option](/img/resources/powpeg/fast-pegin-review-details.png)
 
-- Native Mode uses [PowPeg Protocol](/concepts/foundations/powpeg/) that is decentralized, permissionless and uncensorable protocol created by Rootstock Labs, generally is slower than Fast mode and the user needs to pay only the network fees.
+- Native Mode uses [PowPeg Protocol](/concepts/foundations/powpeg/) that is decentralized, permissionless and uncensorable protocol created by RootstockLabs, generally is slower than Fast mode and the user needs to pay only the network fees.
 
 ![Native mode option](/img/resources/powpeg/native-pegin-review-details.png)
 
