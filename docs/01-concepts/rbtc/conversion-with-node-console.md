@@ -68,6 +68,6 @@ Read the [release requirements](/concepts/rbtc/networks#rbtc-to-btc-conversion)
    Replace `RSKAddress`, `valueToReleaseInWeis`, `RSKNode` and `RSKNodePort`
    and run:
    ```shell
-   $ curl -X POST --data '{"method":"eth_sendTransaction", "params":[{"from": "<RSKAddress>", "to": "0x0000000000000000000000000000000001000006", "gasPrice": 59240000, "gas": 100000, "value": <valueToReleaseInWeis>}], "jsonrpc":"2.0", "id":1}' http://<RSKNode>:<RSKNodePort>}
+   $ curl -X POST --data '{"method":"eth_sendTransaction", "params":[{"from": "<RSKAddress>", "to": "0x0000000000000000000000000000000001000006", "gasPrice": 59240000, "gas": 100000, "value": <valueToReleaseInWeis>}], "jsonrpc":"2.0", "id":1}' http://<RSKNode>:<RSKNodePort>
    ```
 4. Wait the stipulated time and check your BTC balance.
