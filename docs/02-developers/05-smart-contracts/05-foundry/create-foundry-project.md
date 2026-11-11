@@ -2,7 +2,7 @@
 sidebar_label: Create a Foundry Project
 sidebar_position: 101
 title: Create a Foundry Project
-description: "Create a Foundry project for Rootstock and connect Forge to the public RPC nodes. Rootstock Mainnet uses chain ID 30 and Testnet uses chain ID 31 now."
+description: "Install the Foundry toolchain with Foundryup and run forge init to create a new project. This is the first step in the Foundry guide for Rootstock developers."
 tags: [guides, developers, smart contracts, rsk, rootstock, foundry, dApps]
 freshness_review_date: 2026-10-15
 owner: owans

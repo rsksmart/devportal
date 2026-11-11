@@ -2,7 +2,7 @@
 sidebar_position: 6
 sidebar_label: Rootstock CLI Sandbox
 title: Try the Rootstock CLI on Replit Sandbox
-description: "Try Rootstock CLI wallet and contract commands in the browser sandbox before you install it. Mainnet uses chain ID 30 and Testnet uses chain ID 31 now."
+description: "Run the Rootstock CLI in a Replit sandbox in your browser. Create a wallet, check balances, and try other commands before you install the CLI on your machine."
 tags: [Rootstock CLI, rsk-cli, developer tools, guides, rsk, rootstock, dApps, smart contracts, solidity, dev-environments]
 freshness_review_date: 2026-10-15
 owner: owans

@@ -2,7 +2,7 @@
 sidebar_label: Write a Smart Contract
 sidebar_position: 103
 title: Write a Smart Contract
-description: "Write a Solidity smart contract in a Hardhat project and compile it for Rootstock. Rootstock Mainnet uses chain ID 30 and Testnet uses chain ID 31 now."
+description: "Install OpenZeppelin Contracts in a Hardhat project, write the MyToken ERC20 contract in Solidity, and compile it before you deploy the token to Rootstock."
 tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethers]
 remix_label: "Try in Remix IDE"
 remix: "https://remix.ethereum.org/#url=https://github.com/rsksmart/rootstock-quick-start-guide/blob/145b60800105f2e1c9be05f006a4cd646f43b82d/contracts/MyToken.sol"

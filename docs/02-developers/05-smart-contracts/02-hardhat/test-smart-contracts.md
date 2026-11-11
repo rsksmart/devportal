@@ -2,7 +2,7 @@
 sidebar_label: Test Smart Contracts
 sidebar_position: 104
 title: Test Smart Contracts
-description: "Test a Hardhat smart contract for Rootstock with Mocha and Chai before you deploy. Rootstock Mainnet uses chain ID 30 and Testnet uses chain ID 31 now."
+description: "Install Mocha and Chai in your Hardhat project, write tests for the MyToken contract, and run them locally before you deploy the contract to Rootstock."
 tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethers]
 freshness_review_date: 2026-10-15
 owner: owans

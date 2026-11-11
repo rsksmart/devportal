@@ -2,7 +2,7 @@
 sidebar_label: Interact with the Front-end
 sidebar_position: 107
 title: Interact with the Front-end
-description: "Call a deployed Rootstock contract from a frontend after you deploy it with Hardhat. Rootstock Mainnet uses chain ID 30 and Testnet uses chain ID 31 now."
+description: "Build a Next.js frontend with Wagmi and RainbowKit that connects a wallet and reads the balance of the token contract you deployed to Rootstock with Hardhat."
 tags:
   [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, wagmi]
 freshness_review_date: 2026-10-15

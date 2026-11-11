@@ -2,7 +2,7 @@
 sidebar_position: 4
 sidebar_label: Verify Smart Contracts on Rootstock CLI
 title: Verify Smart Contracts on Rootstock CLI
-description: "Verify a Solidity contract on Rootstock Mainnet or Testnet with the Rootstock CLI. Rootstock Mainnet uses chain ID 30 and Testnet uses chain ID 31 now."
+description: "Verify a deployed Solidity contract on Rootstock Mainnet or Testnet. The Rootstock CLI sends the source code and metadata to the Rootstock Explorer API."
 tags: [Rootstock CLI, developer tools, guides, rsk, rootstock, dApps, smart contracts, solidity, dev-environments]
 freshness_review_date: 2026-10-15
 owner: owans
