@@ -44,3 +44,7 @@ What is M and what is N?</Accordion.Header>
   </Accordion.Item>
 </Accordion>
 ````
+
+:::tip[Independent reference]
+The [independent Rootstock reference](https://rsk.zone/powpeg/) tracks PowHSM firmware versions. It also explains what attestation proves and what it doesn't. It's maintained independently of RootstockLabs.
+:::

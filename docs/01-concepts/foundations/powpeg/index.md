@@ -147,3 +147,7 @@ Regarding the complete shutdown of the PowPeg by a single government, it would b
 ## Conclusion
 
 The Rootstock peg has matured from a federation to a PowPeg. As the peg grows over time, more bitcoins are being moved into Rootstock. Developers can find a unique opportunity to build their dApps on our secure and efficient money vault. Compared to alternatives, the PowPeg combines strong security based on layered protections, with maximum decentralization within the constraints established by the Bitcoin scripting system.
+
+:::tip[Independent reference]
+The [independent Rootstock reference](https://rsk.zone/powpeg/) rebuilds every PowPeg federation since genesis from the Bridge's own events. It lists each federation's signing threshold and the blocks where it was active. It's maintained independently of RootstockLabs.
+:::

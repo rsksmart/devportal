@@ -64,3 +64,7 @@ For PowPeg-specific security properties, see the [PowPeg security summary](/conc
     linkTitle="Learn PowPeg"
   />
 </CardsGrid>
+
+:::tip[Independent reference]
+The [independent Rootstock reference](https://rsk.zone/) reads its figures from a Rootstock Mainnet node and links each one to its primary source. It covers the history behind these foundations, from the 2015 whitepaper to the current network upgrade. It's maintained independently of RootstockLabs.
+:::
