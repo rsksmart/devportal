@@ -16,12 +16,20 @@ export default function LocaleDropdownNavbarItem({
     i18n: {currentLocale, locales, localeConfigs},
   } = useDocusaurusContext();
   const alternatePageUtils = useAlternatePageUtils();
-  const {search, hash} = useLocation();
+  const {pathname, search, hash} = useLocation();
+  // Tags are translated per locale, so the same tag slug rarely exists in
+  // another locale. Send locale switches from a tag page to that locale's tag index.
+  const isTagPage = /^\/(?:[a-z]{2}\/)?tags\/[^/]+\/?$/.test(pathname);
   const localeItems = locales.map((locale) => {
-    const baseTo = `pathname://${alternatePageUtils.createUrl({
+    const alternateUrl = alternatePageUtils.createUrl({
       locale,
       fullyQualified: false,
-    })}`;
+    });
+    const localeUrl =
+      isTagPage && locale !== currentLocale
+        ? alternateUrl.replace(/tags\/[^/]+\/?$/, 'tags/')
+        : alternateUrl;
+    const baseTo = `pathname://${localeUrl}`;
     // preserve ?search#hash suffix on locale switches
     const to = `${baseTo}${search}${hash}${queryString}`;
     return {

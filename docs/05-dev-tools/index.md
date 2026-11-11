@@ -458,7 +458,7 @@ This page catalogs developer tools and infrastructure for Rootstock. Use the fil
     title="Wormhole"
     subtitle="Cross-chain Bridges"
     color="orange"
-    linkHref="https://docs.wormhole.com/wormhole"
+    linkHref="https://wormhole.com/docs/"
     linkTitle="Start Building"
     description="Build and Deploy a Multi-chain dApp on Rootstock."
   />

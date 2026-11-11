@@ -125,7 +125,7 @@ async function connectProviderTo(network) {
 
 **Code Walkthrough**
 
-> The `connectProviderTo()` function initiates the connection to each of the Rootstock networks in Metamask, it uses the `window.ethereum` API to check if Metamask is installed then throws an error - **Please install Metamask**, if false, a popup appears triggered by `window.ethereum.request` method, this requests that the user provides an Ethereum address to be identified by. Once the request is accepted by the user it returns an Ethereum address and wallet is connected. See [https://docs.metamask.io/guide/rpc-api.html#restricted-methods](https://docs.metamask.io/guide/rpc-api.html#restricted-methods)
+> The `connectProviderTo()` function initiates the connection to each of the Rootstock networks in Metamask, it uses the `window.ethereum` API to check if Metamask is installed then throws an error - **Please install Metamask**, if false, a popup appears triggered by `window.ethereum.request` method, this requests that the user provides an Ethereum address to be identified by. Once the request is accepted by the user it returns an Ethereum address and wallet is connected. See [https://docs.metamask.io/wallet/reference/json-rpc-api/](https://docs.metamask.io/wallet/reference/json-rpc-api/)
 
 Before adding a network, we need to be sure Metamask has been installed, to do this, add the following code to the `try block`:
 
@@ -310,7 +310,7 @@ async function connectProviderTo(network) {
 }
 
 // see details in Metamask documentation:
-// https://docs.metamask.io/guide/rpc-api.html#wallet-addethereumchain
+// https://docs.metamask.io/wallet/reference/json-rpc-methods/wallet_addethereumchain/
 async function switchToNetwork(network) {
   try {
     // trying to switch to a network already added to Metamask

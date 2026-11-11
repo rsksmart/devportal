@@ -124,7 +124,7 @@ Create a `.env` file in the root directory with the following content:
 2. `INFURA_API_KEY`:
    * API key for Infura, a blockchain infrastructure provider.
    * Used for accessing Ethereum and IPFS (InterPlanetary File System) services.
-   * **Note:** Follow this guide to obtain your [API keys](https://docs.metamask.io/services/get-started/infura/#:~:text=View%20your%20API%20key%E2%80%8B&text=Infura%20automatically%20generates%20the%20My,can%20view%20your%20API%20key.).
+   * **Note:** Follow this guide to obtain your [API keys](https://docs.metamask.io/services/get-started/).
 3. `INFURA_IPFS_USER and INFURA_IPFS_PASS`:
    * Authentication credentials for accessing Infura’s IPFS gateway.
    **Note**: Replace these values with your credentials to ensure secure access.
