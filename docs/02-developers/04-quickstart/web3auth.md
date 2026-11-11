@@ -2,8 +2,10 @@
 sidebar_label: Web3Auth
 sidebar_position: 110
 title: Build Passwordless dApps with Web3Auth on Rootstock
-description: "Build and deploy passwordless dApps on Rootstock with Web3Auth and Wagmi. Secured by over 85% of Bitcoin's hash power through merge mining."
+description: "Build and deploy passwordless dApps on Rootstock with Web3Auth and Wagmi. Add social login on Testnet. Mainnet chain ID is 30 and Testnet chain ID is 31."
 tags: [rsk, rootstock, developers, web3auth, wagmi, quickstart, dApps, Smart Contracts]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 The [blockchain trilemma](https://www.coinbase.com/en-gb/learn/crypto-glossary/what-is-the-blockchain-trilemma) states that a blockchain can only optimally achieve two out of three desirable properties: decentralization, security, and scalability. This inherent limitation often translates into challenges for dApp developers and, more importantly, for users. It complicates user onboarding (setting up wallets and acquiring cryptocurrency), makes interactions cumbersome (managing wallets and transaction fees), raises security concerns (protecting private keys), and can lead to slow performance due to transaction speeds and fees which directly impacts the user experience of dApps.

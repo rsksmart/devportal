@@ -2,8 +2,10 @@
 sidebar_position: 113
 sidebar_label: Collective DAO
 title: Build with the Collective DAO Starter Kit on Rootstock
-description: Run the RootstockCollective sample dApp with staking, proposals, and voting. Secured by over 85% of Bitcoin's hash power through merge mining.
+description: "Run the RootstockCollective sample dApp with staking, proposals, and voting on Rootstock Testnet. Use chain ID 30 on Mainnet and chain ID 31 on Testnet."
 tags: [quickstart, collective-sdk, dao, governance, rootstock, wagmi, rif]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 This quick start points to the [RootstockCollective starter kit](https://github.com/rsksmart/rootstock-collective-starter-kit), a sample dApp that uses [`@rsksmart/collective-sdk`](https://www.npmjs.com/package/@rsksmart/collective-sdk) for staking RIF, listing proposals, and voting on Rootstock Mainnet or Testnet.

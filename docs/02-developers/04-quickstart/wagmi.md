@@ -2,8 +2,10 @@
 sidebar_label: Wagmi
 sidebar_position: 107
 title: Build a dApp with Wagmi on Rootstock
-description: 'Build a React dApp on Rootstock with Wagmi and Shadcn. Secured by over 85% of Bitcoin''s hash power through merge mining.'
+description: "Build a React dApp on Rootstock with Wagmi and Shadcn. Connect a wallet and send a Testnet transaction. Mainnet chain ID is 30 and Testnet chain ID is 31."
 tags: [rsk, rootstock, developers, wagmi, quickstart, dApps, Smart Contracts]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 The Rootstock Wagmi starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain. 
