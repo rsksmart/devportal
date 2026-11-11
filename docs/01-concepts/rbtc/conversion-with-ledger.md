@@ -43,9 +43,7 @@ BTC Mainnet using Ledger hardware wallet.
 - Go to the third tab "Receive". You will see a Bitcoin address.
 
 :::info[Note]
-The Bitcoin wallet needs to be legacy (not Segwit)
-whose address starts with either `m` or `n`,
-and private key starting with `p2pkh:`
+The Bitcoin wallet needs to be legacy (not Segwit), with an address that starts with `1`.
 :::
 
 ### Find a BTC address with balance
