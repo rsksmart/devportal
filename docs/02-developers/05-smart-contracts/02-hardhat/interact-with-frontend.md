@@ -2,9 +2,11 @@
 sidebar_label: Interact with the Front-end
 sidebar_position: 107
 title: Interact with the Front-end
-description: "Learn how to integrate your Rootstock smart contract with front-end applications."
+description: "Call a deployed Rootstock contract from a frontend after you deploy it with Hardhat. Rootstock Mainnet uses chain ID 30 and Testnet uses chain ID 31 now."
 tags:
   [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, wagmi]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 Creating a user-friendly web interface for smart contracts on the Rootstock network enhances user interaction. Here, we'll focus on using [Wagmi](https://wagmi.sh/) and [RainbowKit](https://www.rainbowkit.com/), some popular libraries for connecting your smart contracts to a web front-end.

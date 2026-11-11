@@ -2,10 +2,12 @@
 sidebar_position: 3
 sidebar_label: Deploy Smart Contracts using the Rootstock CLI
 title: Deploy a Smart Contract using the Rootstock CLI
-description: "The Rootstock CLI enables faster deployment of smart contracts to the Rootstock network."
+description: "Deploy a compiled contract to Rootstock Mainnet or Testnet with the Rootstock CLI. Rootstock Mainnet uses chain ID 30 and Testnet uses chain ID 31 now."
 tags: [Rootstock CLI, developer tools, guides, rsk, rootstock, dApps, smart contracts, solidity, dev-environments]
 remix_label: "Try in Remix IDE"
 remix: "https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCmNvbnRyYWN0IENvbnRhY3RJbmZvIHsKICAgIHN0cmluZyBwdWJsaWMgbmFtZTsKICAgIHN0cmluZyBwdWJsaWMgcGhvbmU7CgogICAgLy8gQ29uc3RydWN0b3IgdG8gaW5pdGlhbGl6ZSBuYW1lIGFuZCBwaG9uZQogICAgY29uc3RydWN0b3Ioc3RyaW5nIG1lbW9yeSBfbmFtZSwgc3RyaW5nIG1lbW9yeSBfcGhvbmUpIHsKICAgICAgICBuYW1lID0gX25hbWU7CiAgICAgICAgcGhvbmUgPSBfcGhvbmU7CiAgICB9CgogICAgLy8gRnVuY3Rpb24gdG8gc2V0IHRoZSBuYW1lIGFuZCBwaG9uZQogICAgZnVuY3Rpb24gc2V0Q29udGFjdEluZm8oc3RyaW5nIG1lbW9yeSBfbmFtZSwgc3RyaW5nIG1lbW9yeSBfcGhvbmUpIHB1YmxpYyB7CiAgICAgICAgbmFtZSA9IF9uYW1lOwogICAgICAgIHBob25lID0gX3Bob25lOwogICAgfQoKICAgIC8vIEZ1bmN0aW9uIHRvIGdldCB0aGUgY29udGFjdCBpbmZvCiAgICBmdW5jdGlvbiBnZXRDb250YWN0SW5mbygpIHB1YmxpYyB2aWV3IHJldHVybnMgKHN0cmluZyBtZW1vcnksIHN0cmluZyBtZW1vcnkpIHsKICAgICAgICByZXR1cm4gKG5hbWUsIHBob25lKTsKICAgIH0KfQ%3D%3D"
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 import CodeBlock from '@theme/CodeBlock';

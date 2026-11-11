@@ -2,8 +2,10 @@
 sidebar_position: 6
 sidebar_label: Rootstock CLI Sandbox
 title: Try the Rootstock CLI on Replit Sandbox
-description: "You can try out the Rootstock CLI (RSK-CLI) in an online sandbox environment like Replit without needing to set up everything locally"
+description: "Try Rootstock CLI wallet and contract commands in the browser sandbox before you install it. Mainnet uses chain ID 30 and Testnet uses chain ID 31 now."
 tags: [Rootstock CLI, rsk-cli, developer tools, guides, rsk, rootstock, dApps, smart contracts, solidity, dev-environments]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 The Rootstock CLI (rsk-cli) offers an online sandbox environment within Replit, enabling you to quickly set up and use the CLI without any local installation.

@@ -2,8 +2,10 @@
 sidebar_label: Test Smart Contract
 sidebar_position: 104
 title: Testing Smart Contracts using Foundry
-description: "Learn how to test your Rootstock smart contract using Foundry"
+description: "Test Foundry smart contracts for Rootstock with Forge before you broadcast them. Rootstock Mainnet uses chain ID 30 and Testnet uses chain ID 31 today."
 tags: [guides, developers, smart contracts, rsk, rootstock, foundry, dApps, ethers]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 In this section, you'll set up a smart contract test and test it using `forge`.

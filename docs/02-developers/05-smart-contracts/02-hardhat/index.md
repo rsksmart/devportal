@@ -2,8 +2,10 @@
 sidebar_label: Getting Started with Hardhat
 sidebar_position: 100
 title: Getting Started with Hardhat
-description: "Get started with creating a dApps on Rootstock using Hardhat."
+description: "Use Hardhat 2 to write, test, and deploy smart contracts on Rootstock Testnet and Mainnet. The guide runs from project setup to a working dApp frontend."
 tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethers]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 :::note[Before you begin]
@@ -12,7 +14,7 @@ tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethe
 
 > For your convenience, we've established a [GitHub repository](https://github.com/rsksmart/rootstock-quick-start-guide) dedicated to this guide. The [master branch](https://github.com/rsksmart/rootstock-quick-start-guide/tree/master) contains the initial project state, while the [feat/complete](https://github.com/rsksmart/rootstock-quick-start-guide/tree/feat/complete) branch features the complete project, equipped with all the necessary installations for your reference.
 
-> Note: This guide is optimized for Node.js version 18 or earlier. If you're using a later version, consider using a version manager like [NVM](https://github.com/nvm-sh/nvm/blob/master/README.md) to switch to a compatible version.
+> Note: Follow the linked starter, which pins Hardhat 2 (`^2.19.4`). An unpinned `npx hardhat` install uses Hardhat 3 and a different setup.
 
 > Need to ramp up fast and get started with Hardhat? Use the [Hardhat Starter Kit](/developers/quickstart/hardhat) or use the [Wagmi Starter Kit](https://github.com/rsksmart/rsk-wagmi-starter-kit)
 :::

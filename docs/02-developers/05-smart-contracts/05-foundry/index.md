@@ -2,8 +2,10 @@
 sidebar_label: Getting Started with Foundry
 sidebar_position: 200 
 title: Getting Started with Foundry
-description: 'How to write, test, and deploy smart contracts with Foundry'
+description: "Get started with Foundry on Rootstock. Install Forge and follow the contract guides. Rootstock Mainnet uses chain ID 30 and Testnet uses chain ID 31 now."
 tags: [rsk, foundry, developers, developer tools, rootstock, testing, dApps, smart contracts]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 :::note[Before you begin]

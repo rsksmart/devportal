@@ -2,8 +2,10 @@
 sidebar_label: Test Smart Contracts
 sidebar_position: 104
 title: Test Smart Contracts
-description: "Learn how to test your Rootstock smart contract"
+description: "Test a Hardhat smart contract for Rootstock with Mocha and Chai before you deploy. Rootstock Mainnet uses chain ID 30 and Testnet uses chain ID 31 now."
 tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethers]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 In this section, you'll set up a smart contract test and test your contract using Mocha and Chai testing frameworks. See DApps Automation using [Cucumber and Playwright](/resources/tutorials/dapp-automation-cucumber/).

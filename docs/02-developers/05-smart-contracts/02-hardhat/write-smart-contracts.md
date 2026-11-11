@@ -2,10 +2,12 @@
 sidebar_label: Write a Smart Contract
 sidebar_position: 103
 title: Write a Smart Contract
-description: "Learn how to write a smart contract using Solidity and OpenZeppellin"
+description: "Write a Solidity smart contract in a Hardhat project and compile it for Rootstock. Rootstock Mainnet uses chain ID 30 and Testnet uses chain ID 31 now."
 tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethers]
 remix_label: "Try in Remix IDE"
-remix: "https://remix.ethereum.org/#url=https://github.com/rsksmart/rootstock-quick-start-guide/blob/feat/complete/contracts/MyToken.sol"
+remix: "https://remix.ethereum.org/#url=https://github.com/rsksmart/rootstock-quick-start-guide/blob/145b60800105f2e1c9be05f006a4cd646f43b82d/contracts/MyToken.sol"
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 In this section, we'll learn how to write a smart contract using the [OpenZeppelin library](https://www.openzeppelin.com/contracts) and Solidity. OpenZeppelin is widely used for its secure, community-vetted, and standardized codebase, which simplifies developing robust and secure smart contracts.
@@ -30,7 +32,7 @@ Run the following command to install the OpenZeppelin's library of reusable smar
 
 - In the contracts directory, open the `MyToken.sol` file for your token contract:
     
-To configure an ERC20 token, copy the code snippet below and paste it in your token file or view the complete [`MyToken.sol` file](https://raw.githubusercontent.com/rsksmart/rootstock-quick-start-guide/feat/complete/contracts/MyToken.sol) on GitHub.
+To configure an ERC20 token, copy the code snippet below and paste it in your token file or view the complete [`MyToken.sol` file](https://raw.githubusercontent.com/rsksmart/rootstock-quick-start-guide/145b60800105f2e1c9be05f006a4cd646f43b82d/contracts/MyToken.sol) on GitHub.
         
 ```shell
     // SPDX-License-Identifier: MIT
@@ -50,9 +52,9 @@ This contract defines an `ERC20` token named `MyToken` with the symbol `MTK`, us
 :::info[Try this contract in Remix]
 Want to deploy and interact with `MyToken.sol` without any local setup? Use the button below to open it directly in the Remix IDE. You'll need MetaMask with [Rootstock Testnet configured](/dev-tools/wallets/metamask/) — see the full [Remix + Rootstock guide](/developers/quickstart/remix/) for the exact steps.
 
-{/* Remix deep-link for MyToken.sol: https://remix.ethereum.org/#url=https://github.com/rsksmart/rootstock-quick-start-guide/blob/feat/complete/contracts/MyToken.sol */}
+{/* Remix deep-link for MyToken.sol: https://remix.ethereum.org/#url=https://github.com/rsksmart/rootstock-quick-start-guide/blob/145b60800105f2e1c9be05f006a4cd646f43b82d/contracts/MyToken.sol */}
 
-<RemixLaunchButton contractName="MyToken" contractUrl="https://github.com/rsksmart/rootstock-quick-start-guide/blob/feat/complete/contracts/MyToken.sol" />
+<RemixLaunchButton contractName="MyToken" contractUrl="https://github.com/rsksmart/rootstock-quick-start-guide/blob/145b60800105f2e1c9be05f006a4cd646f43b82d/contracts/MyToken.sol" />
 :::
 
 ## Compile the Contract

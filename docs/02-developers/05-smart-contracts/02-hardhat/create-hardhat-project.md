@@ -2,8 +2,10 @@
 sidebar_label: Create a Hardhat Project
 sidebar_position: 101
 title: Create a Hardhat Project
-description: "Learn how to set up your environment for development using Hardhat"
+description: "Clone the Rootstock quick start repository, install its pinned Hardhat 2 dependencies, and run npx hardhat to check the install before you write contracts."
 tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethers]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 In this section, you will learn how to create a hardhat project and verify hardhat installation. 
@@ -32,6 +34,6 @@ Here, we will verify the installation of hardhat in your project.
 
 - To verify hardhat installation:
   - The [quickstart](https://github.com/rsksmart/rootstock-quick-start-guide) repository comes with Hardhat pre-installed. To check if Hardhat is installed, execute `npx hardhat` in the `rootstock-quick-start-guide` directory.
-  - `npx hardhat` not only verifies installation but also allows you to initiate a new Hardhat project if it doesn't exist. For a new project, you'll be prompted to choose from several options. To create a blank project, select **Create an empty hardhat.config.js**, or pick one of the other options to begin with a pre-set template.
+  - `npx hardhat` not only verifies installation but also allows you to initiate a new Hardhat project if it doesn't exist. For a new project, you'll be prompted to choose from several options. To create a blank project, select **Create an empty hardhat.config.js**, or pick one of the other options to begin with a pre-set template. That prompt is Hardhat 2, which this starter pins.
 
 Once setup is complete, you can verify Hardhat is installed correctly by running `npx hardhat` again. It should display a help message with available tasks, indicating that Hardhat is installed and ready to use.
