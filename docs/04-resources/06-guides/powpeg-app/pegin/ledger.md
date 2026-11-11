@@ -2,7 +2,7 @@
 sidebar_position: 1100
 sidebar_label:   Peg-in using Ledger Hardware Wallet
 title: "Performing a peg-in using Ledger Hardware Wallet"
-description: "Here, we will learn how to perform a peg-in transaction using the PowPeg App."
+description: "Perform a peg-in with a Ledger hardware wallet in the PowPeg App. Convert BTC to rBTC on Rootstock, connect your Ledger, sign, and track the transaction."
 tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 

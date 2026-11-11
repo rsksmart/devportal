@@ -4,4 +4,4 @@ position: 5
 link:
   type: generated-index
   slug: /developers/rpc-api/
-  description: "RPC API services for interacting with the Rootstock network."
+  description: "Call JSON-RPC methods on Rootstock mainnet and testnet. Get an API key and RPC endpoint from the Rootstock RPC API or Alchemy."

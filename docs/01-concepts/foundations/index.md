@@ -3,7 +3,7 @@ sidebar_label: Overview
 sidebar_position: 1
 title: Rootstock Foundations
 tags: [rsk, rootstock, beginner, concepts, foundations]
-description: "Bitcoin's financial infrastructure: an EVM-compatible Bitcoin sidechain secured by over 85% of Bitcoin's hash power for lending, payments, yield, and treasury products."
+description: "Rootstock is Bitcoin's financial infrastructure: an EVM-compatible sidechain secured by over 85% of Bitcoin's hash power through merge mining and the PowPeg."
 ---
 
 ## What is Rootstock?

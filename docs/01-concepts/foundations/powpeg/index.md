@@ -1,9 +1,9 @@
 ---
 sidebar_position: 1
 sidebar_label: Overview
-title: "Building the Most Secure, Permissionless and Uncensorable Bitcoin Peg"
+title: "PowPeg Protocol: Building the Most Secure, Permissionless and Uncensorable Bitcoin Peg"
 tags: [rsk, rootstock, rbtc, btc, architecture, powpeg protocol, powpeg app]
-description: "Transfer BTC to rBTC, and rBTC to BTC through the PowPeg Protocol."
+description: "Learn how the PowPeg protocol secures BTC and rBTC transfers between Bitcoin and Rootstock with PowHSMs, merge mining, and functionaries. Covers its history."
 render_features: 'powpeg-hsm-attestation-frame'
 ---
 
@@ -86,7 +86,7 @@ A large portion of Bitcoin miners participate in Rootstock merge-mining, providi
 
 ## Economic Actors and the Bridge Contract
 
-Economic actors such as merchants and exchanges, interact with the Rootstock PowPeg by sending and receiving peg-in and peg-out transactions (described in more detail below) to the Bridge smart contract through the Rootstock network. The Bridge is a pre-compiled smart contract living in the Rootstock blockchain. The role of the Bridge is to maintain an up-to-date view of the Bitcoin blockchain, verify peg-in requests and command peg-outs. To achieve this functionality, the Bridge contract manages a Bitcoin wallet in SPV ([Simple Payment Verification](https://en.bitcoinwiki.org/wiki/Simplified_Payment_Verification)) mode. In this mode, transactions are confirmed by block headers and block headers are minimally validated, but the validation includes the expected proof of work. These validations ensure the Bridge wallet follows the Bitcoin chain which has the highest chain work, but does not check that the chain is valid.
+Economic actors such as merchants and exchanges, interact with the Rootstock PowPeg by sending and receiving peg-in and peg-out transactions (described in more detail below) to the Bridge smart contract through the Rootstock network. The Bridge is a pre-compiled smart contract living in the Rootstock blockchain. The role of the Bridge is to maintain an up-to-date view of the Bitcoin blockchain, verify peg-in requests and command peg-outs. To achieve this functionality, the Bridge contract manages a Bitcoin wallet in SPV ([Simple Payment Verification](https://developer.bitcoin.org/devguide/operating_modes.html#simplified-payment-verification-spv)) mode. In this mode, transactions are confirmed by block headers and block headers are minimally validated, but the validation includes the expected proof of work. These validations ensure the Bridge wallet follows the Bitcoin chain which has the highest chain work, but does not check that the chain is valid.
 
 Normally the chain with the highest chain work is the network’s best chain. In the history of Bitcoin there was only a single [unintended network fork](https://bitcoinmagazine.com/articles/bitcoin-network-shaken-by-blockchain-fork-1363144448) where one branch was invalid according to pre-established consensus rules. The fork length was 24 blocks. Therefore, in order to prevent intended or unintended invalid forks, the Bridge is designed to wait for 100 confirmations before confirming a peg-in transaction.
 
