@@ -69,6 +69,14 @@ Here you can find a list of rpc node providers on Rootstock.
     linkHref="/dev-tools/node-rpc/nownodes/"
     linkTitle="Make First API Call"
   />
+  <CardsGridItem
+    title="eRPC"
+    subtitle="node-rpc"
+    color="cyan"
+    description="eRPC is an open-source, self-hosted RPC proxy that fails over between the providers above and caches responses."
+    linkHref="/dev-tools/node-rpc/erpc/"
+    linkTitle="Set Up Failover"
+  />
 </CardsGrid>
 
 ## Compare RPC Provider Latency
