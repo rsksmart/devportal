@@ -8,7 +8,7 @@ const REMIX_CODE_BASE = 'https://remix.ethereum.org/?#code='
 
 // Default Solidity file used when neither `contractUrl` nor `code` is provided.
 const DEFAULT_CONTRACT_URL =
-  'https://github.com/rsksmart/rootstock-quick-start-guide/blob/feat/complete/contracts/MyToken.sol'
+  'https://github.com/rsksmart/rootstock-quick-start-guide/blob/145b60800105f2e1c9be05f006a4cd646f43b82d/contracts/MyToken.sol'
 
 // UTF-8 safe base64 encode (btoa alone breaks on non-ASCII characters).
 function encodeBase64(source) {
