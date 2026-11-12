@@ -153,6 +153,10 @@ function cardListItem(node) {
 
 const REMIX_HOME = 'https://remix.ethereum.org/';
 const REMIX_GUIDE = '/developers/quickstart/remix/';
+// Same file the component opens when a button has no props.
+// Keep in sync with DEFAULT_CONTRACT_URL in src/components/RemixLaunchButton/index.js.
+const REMIX_DEFAULT_CONTRACT_URL =
+  'https://github.com/rsksmart/rootstock-quick-start-guide/blob/145b60800105f2e1c9be05f006a4cd646f43b82d/contracts/MyToken.sol';
 
 /** Returns the identifier passed to an expression prop such as `code={fooSource}`. */
 function attrIdentifier(node, name) {
@@ -175,7 +179,8 @@ function attrIdentifier(node, name) {
  * template-literal constant is already printed on the page, so the export gives
  * the steps instead of a base64 deep link that would only add bytes. Every
  * code button follows its own <CodeBlock>, so "shown above" holds. A button
- * that points at a file URL or a prebuilt deep link keeps that link.
+ * that points at a file URL or a prebuilt deep link keeps that link. A button
+ * with no source props links to the component's default contract file.
  */
 function remixParagraph(node, constants) {
   const deepLink = attr(node, 'deepLink');
@@ -186,10 +191,21 @@ function remixParagraph(node, constants) {
   const declared = code
     ? /^\s*(?:abstract\s+)?contract\s+([A-Za-z_]\w*)/m.exec(code)
     : null;
-  const label =
-    (declared && declared[1]) || attr(node, 'contractName') || 'the contract';
-  const url =
-    deepLink || (contractUrl ? `${REMIX_HOME}#url=${contractUrl}` : null);
+  const hasCode = (node.attributes || []).some(
+    (a) => a.type === 'mdxJsxAttribute' && a.name === 'code',
+  );
+  // With no source props, the component opens its default file, so the label
+  // names that file rather than any `contractName` passed alongside.
+  const usesDefault = !contractUrl && !deepLink && !hasCode;
+  const fileUrl = contractUrl || (usesDefault ? REMIX_DEFAULT_CONTRACT_URL : null);
+  const fileName = /([A-Za-z0-9_]+)\.sol\b/.exec(deepLink || fileUrl || '');
+  const label = usesDefault
+    ? fileName[1]
+    : (declared && declared[1]) ||
+      attr(node, 'contractName') ||
+      (fileName && fileName[1]) ||
+      'the contract';
+  const url = deepLink || (fileUrl ? `${REMIX_HOME}#url=${fileUrl}` : null);
 
   const children = [
     {type: 'strong', children: [{type: 'text', value: 'Try in Remix IDE:'}]},
