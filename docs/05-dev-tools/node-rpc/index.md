@@ -71,6 +71,10 @@ Here you can find a list of rpc node providers on Rootstock.
   />
 </CardsGrid>
 
+## Compare RPC Provider Plans
+
+For an additional, filterable view of hosted RPC and API plans, use the [Chain.Love Rootstock API directory](https://rootstock.chain.love/toolbox/apis), a third-party listing, not an official Rootstock service. Treat its entries as a discovery aid and confirm Rootstock support, the JSON-RPC methods your app needs, archive access, rate limits, and pricing in each provider's current documentation.
+
 ## Compare RPC Provider Latency
 
 Runtime characteristics such as latency, availability, and reliability vary by region and change over time. [OpenChainBench](https://openchainbench.com/benchmarks/rootstock-rpc) is an independent, open-source benchmarking tool — not an official Rootstock service — that regularly measures the free, no-key public Rootstock endpoints and publishes live results including response latency percentiles (p50, p90, p99) and success rate, from three geographic probe regions (US East, EU West, Singapore).
