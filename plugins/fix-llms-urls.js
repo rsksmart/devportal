@@ -42,7 +42,7 @@ const SUPPLEMENTARY_HUB_ENTRIES = [
   ['EAS Attestations', '/dev-tools/attestations/eas/', 'Ethereum Attestation Service on Rootstock.'],
   ['DeFi Developer Guide', '/resources/guides/defi-developer-guide/', 'Patterns and standards for DeFi on Rootstock.'],
   ['User Guides', '/resources/guides/', 'PowPeg, Atlas, Runes, and other user guides.'],
-  ['PowPeg App Guide', '/resources/guides/powpeg-app/', 'BTC and rBTC transfers with the PowPeg App.'],
+  ['Atlas Bridge Guide', '/resources/guides/atlas/', 'BTC and rBTC transfers with Atlas, including native PowPeg.'],
   ['Runes Airdrop Machine', '/resources/guides/runes-rootstock/airdrop-giveaway-machine/', 'Build a Runes airdrop machine on Rootstock.'],
   ['Deploy MockBridge Contract', '/resources/guides/runes-rootstock/deploy-mockbridge-contract/', 'Deploy a MockBridge contract for Runes.'],
   ['Node Setup', '/node-operators/setup/', 'Install and configure a Rootstock node.'],
