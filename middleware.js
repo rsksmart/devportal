@@ -17,9 +17,19 @@ function hasFileExtension(pathname) {
 }
 
 export default async function middleware(request) {
-  // Counts reads by AI tools before any early return. See lib/agent-read-log.js.
-  logAgentRead(request);
+  let response;
+  try {
+    response = await negotiateMarkdown(request);
+    return response;
+  } finally {
+    // Counts reads by AI tools on every path out, using what was actually
+    // served: "negotiated" only when Markdown was returned. See lib/agent-read-log.js.
+    logAgentRead(request, {negotiated: response !== undefined});
+  }
+}
 
+/** Returns a Markdown response for Accept: text/markdown, or undefined to serve HTML. */
+async function negotiateMarkdown(request) {
   if (!wantsMarkdownAccept(request.headers.get('accept'))) {
     return;
   }
@@ -94,5 +104,13 @@ export const config = {
     '/llms-full.txt',
     '/ai-policy.txt',
     '/.well-known/:path*',
+    '/index.md',
+    '/cheatsheet.md',
+    '/es/llms.txt',
+    '/es/llms-full.txt',
+    '/ja/llms.txt',
+    '/ja/llms-full.txt',
+    '/ko/llms.txt',
+    '/ko/llms-full.txt',
   ],
 };

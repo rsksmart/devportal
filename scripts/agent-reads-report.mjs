@@ -11,8 +11,13 @@
  * Only known fields and values are kept, so a malformed or hostile log line
  * cannot add data. Counts are estimates: user agents can be spoofed.
  *
+ * Paths are re-checked with publicPath(), so a log line written before that
+ * filter existed cannot put arbitrary client input into the report.
  * With --build-dir, reads of paths that do not exist in that build (scanner
- * probes, typos, removed pages) are dropped and counted separately.
+ * probes, typos, removed pages) are dropped and counted separately, and
+ * topPaths is filled in. Without it, topPaths stays empty because unverified
+ * paths are not published. The build directory must exist, so a missing build
+ * cannot be mistaken for zero traffic.
  *
  * Usage:
  *   node scripts/agent-reads-report.mjs --in vercel-logs.jsonl [--out artifacts/agent-reads.json] [--build-dir build]
@@ -22,7 +27,7 @@
 import fs from 'fs';
 import path from 'path';
 import {fileURLToPath} from 'url';
-import {FORMATS, KINDS} from '../lib/agent-read-log.js';
+import {FORMATS, KINDS, OTHER_PATH, publicPath} from '../lib/agent-read-log.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DEFAULT_OUT = path.join(__dirname, '..', 'artifacts', 'agent-reads.json');
@@ -51,7 +56,8 @@ export function parseEventLine(line) {
   if (!record || record.evt !== 'agent_read' || record.v !== 1) return null;
   const {day, path: pagePath, format, locale, family, kind} = record;
   if (
-    !DAY.test(String(day)) ||
+    typeof day !== 'string' ||
+    !DAY.test(day) ||
     typeof pagePath !== 'string' ||
     !pagePath.startsWith('/') ||
     pagePath.length > 200 ||
@@ -62,12 +68,19 @@ export function parseEventLine(line) {
   ) {
     return null;
   }
-  return {day, path: pagePath, format, locale, family, kind};
+  return {day, path: publicPath(pagePath), format, locale, family, kind};
 }
 
 /** True when the requested path maps to a file in the build output. */
 export function pathExistsInBuild(buildDir, pagePath) {
-  const clean = decodeURIComponent(pagePath).split('/').filter(Boolean);
+  if (pagePath === OTHER_PATH) return false;
+  let clean;
+  try {
+    clean = decodeURIComponent(pagePath).split('/').filter(Boolean);
+  } catch {
+    // Malformed percent escape: treat as an unknown path.
+    return false;
+  }
   if (clean.some((segment) => segment === '..')) return false;
   const base = path.join(buildDir, ...clean);
   const candidates = /\.[a-z0-9]+$/i.test(pagePath)
@@ -81,7 +94,12 @@ function bump(map, key) {
 }
 
 /** Aggregates clean events into the artifact shape. */
-export function aggregate(events, generatedAt = new Date().toISOString(), droppedUnknownPaths = 0) {
+export function aggregate(
+  events,
+  generatedAt = new Date().toISOString(),
+  droppedUnknownPaths = 0,
+  pathsVerified = false,
+) {
   const byDay = new Map();
   const totals = {reads: 0, byKind: {}, byFamily: {}, byFormat: {}};
   for (const event of events) {
@@ -112,10 +130,13 @@ export function aggregate(events, generatedAt = new Date().toISOString(), droppe
     .sort((a, b) => a.date.localeCompare(b.date))
     .map(({paths, ...rest}) => ({
       ...rest,
-      topPaths: Object.entries(paths)
-        .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-        .slice(0, TOP_PATHS)
-        .map(([pagePath, reads]) => ({path: pagePath, reads})),
+      topPaths: pathsVerified
+        ? Object.entries(paths)
+            .filter(([pagePath]) => pagePath !== OTHER_PATH)
+            .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+            .slice(0, TOP_PATHS)
+            .map(([pagePath, reads]) => ({path: pagePath, reads}))
+        : [],
     }));
   return {
     schema: 'agent-reads/v1',
@@ -126,8 +147,17 @@ export function aggregate(events, generatedAt = new Date().toISOString(), droppe
     window: {from: days[0]?.date ?? null, to: days.at(-1)?.date ?? null},
     totals,
     droppedUnknownPaths,
+    pathsVerified,
     days,
   };
+}
+
+function isDirectory(dir) {
+  try {
+    return fs.statSync(dir).isDirectory();
+  } catch {
+    return false;
+  }
 }
 
 function readInput(source) {
@@ -139,17 +169,26 @@ function main(argv) {
   for (let i = 0; i < argv.length; i += 2) args.set(argv[i], argv[i + 1]);
   const input = args.get('--in');
   if (!input) {
-    console.error('Usage: node scripts/agent-reads-report.mjs --in <log.jsonl|-> [--out <file>]');
+    console.error('Usage: node scripts/agent-reads-report.mjs --in <log.jsonl|-> [--out <file>] [--build-dir <dir>]');
     process.exit(2);
   }
   const out = args.get('--out') ?? DEFAULT_OUT;
   const lines = readInput(input).split('\n').filter(Boolean);
   const parsed = lines.map(parseEventLine).filter(Boolean);
   const buildDir = args.get('--build-dir');
+  if (buildDir !== undefined && !isDirectory(buildDir)) {
+    console.error(`--build-dir ${buildDir} is not a directory. Run yarn build first.`);
+    process.exit(2);
+  }
   const events = buildDir
     ? parsed.filter((event) => pathExistsInBuild(buildDir, event.path))
     : parsed;
-  const report = aggregate(events, new Date().toISOString(), parsed.length - events.length);
+  const report = aggregate(
+    events,
+    new Date().toISOString(),
+    parsed.length - events.length,
+    Boolean(buildDir),
+  );
   fs.mkdirSync(path.dirname(out), {recursive: true});
   fs.writeFileSync(out, `${JSON.stringify(report, null, 2)}\n`);
   console.log(

@@ -4,15 +4,19 @@
  * Usage: node scripts/verify-agent-read-log.mjs
  */
 
+import {spawnSync} from 'child_process';
 import fs from 'fs';
 import os from 'os';
 import path from 'path';
 import {fileURLToPath} from 'url';
 import {
   INTERNAL_FETCH_HEADER,
+  OTHER_PATH,
   buildAgentReadEvent,
   classifyUserAgent,
+  publicPath,
 } from '../lib/agent-read-log.js';
+import {MIDDLEWARE_MATCHERS} from '../lib/markdown-negotiation-paths.js';
 import {aggregate, parseEventLine, pathExistsInBuild} from './agent-reads-report.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -65,28 +69,54 @@ check('a word containing "node" in a browser UA is not a tool', classifyUserAgen
 
 // Events
 check('human HTML view is not logged',
-  buildAgentReadEvent(request(`${BASE}/developers/quickstart/`, {ua: 'Mozilla/5.0 Safari/605.1.15'}), NOW),
+  buildAgentReadEvent(request(`${BASE}/developers/quickstart/`, {ua: 'Mozilla/5.0 Safari/605.1.15'}), {now: NOW}),
   null);
 check('agent HTML view is logged without the query string',
-  buildAgentReadEvent(request(`${BASE}/developers/quickstart/?utm_source=chatgpt.com`, {ua: 'ChatGPT-User/1.0'}), NOW),
+  buildAgentReadEvent(request(`${BASE}/developers/quickstart/?utm_source=chatgpt.com`, {ua: 'ChatGPT-User/1.0'}), {now: NOW}),
   {evt: 'agent_read', v: 1, day: '2026-11-17', path: '/developers/quickstart/', format: 'html', locale: 'en', family: 'openai', kind: 'user'});
 check('unknown client reading llms.txt is unclassified',
-  buildAgentReadEvent(request(`${BASE}/llms.txt`, {ua: 'SomeAgent/0.1'}), NOW),
+  buildAgentReadEvent(request(`${BASE}/llms.txt`, {ua: 'SomeAgent/0.1'}), {now: NOW}),
   {evt: 'agent_read', v: 1, day: '2026-11-17', path: '/llms.txt', format: 'entry', locale: 'en', family: 'unknown', kind: 'unclassified'});
 check('negotiated markdown on a localized page',
-  buildAgentReadEvent(request(`${BASE}/es/concepts/glossary/`, {ua: 'Claude-User/1.0', accept: 'text/markdown'}), NOW),
+  buildAgentReadEvent(request(`${BASE}/es/concepts/glossary/`, {ua: 'Claude-User/1.0', accept: 'text/markdown'}), {negotiated: true, now: NOW}),
   {evt: 'agent_read', v: 1, day: '2026-11-17', path: '/es/concepts/glossary/', format: 'negotiated', locale: 'es', family: 'anthropic', kind: 'user'});
 check('direct .md export by a tool client',
-  buildAgentReadEvent(request(`${BASE}/developers/quickstart/index.md`, {ua: 'python-requests/2.32'}), NOW),
+  buildAgentReadEvent(request(`${BASE}/developers/quickstart/index.md`, {ua: 'python-requests/2.32'}), {now: NOW}),
   {evt: 'agent_read', v: 1, day: '2026-11-17', path: '/developers/quickstart/index.md', format: 'md', locale: 'en', family: 'tool-client', kind: 'tool'});
 check('HEAD is not a read',
-  buildAgentReadEvent(request(`${BASE}/llms.txt`, {ua: 'GPTBot/1.2', method: 'HEAD'}), NOW),
+  buildAgentReadEvent(request(`${BASE}/llms.txt`, {ua: 'GPTBot/1.2', method: 'HEAD'}), {now: NOW}),
   null);
 check("the middleware's own markdown fetch is not counted twice",
-  buildAgentReadEvent(request(`${BASE}/developers/quickstart/index.md`, {accept: 'text/markdown', extra: {[INTERNAL_FETCH_HEADER]: '1'}}), NOW),
+  buildAgentReadEvent(request(`${BASE}/developers/quickstart/index.md`, {accept: 'text/markdown', extra: {[INTERNAL_FETCH_HEADER]: '1'}}), {now: NOW}),
   null);
+check('asking for Markdown without getting it is not "negotiated"',
+  buildAgentReadEvent(request(`${BASE}/developers/quickstart/index.html`, {ua: 'Claude-User/1.0', accept: 'text/markdown'}), {now: NOW})?.format,
+  'html');
+check('unknown client that asked for Markdown but got HTML is not logged',
+  buildAgentReadEvent(request(`${BASE}/developers/quickstart/`, {ua: 'SomeAgent/0.1', accept: 'text/markdown'}), {now: NOW}),
+  null);
+check('localized llms.txt is an entry point',
+  buildAgentReadEvent(request(`${BASE}/ja/llms-full.txt`, {ua: 'SomeAgent/0.1'}), {now: NOW})?.format,
+  'entry');
+check('home page Markdown export is counted',
+  buildAgentReadEvent(request(`${BASE}/index.md`, {ua: 'SomeAgent/0.1'}), {now: NOW})?.format,
+  'md');
+
+// Paths are client input: only public route shapes reach the log
+check('an email in the path is not logged',
+  buildAgentReadEvent(request(`${BASE}/developers/alice@example.com/index.md`, {ua: 'curl/8.7.1'}), {now: NOW})?.path,
+  OTHER_PATH);
+check('a percent-encoded email is not logged', publicPath('/developers/alice%40example.com/'), OTHER_PATH);
+check('a long number is not logged', publicPath('/developers/5551234567/'), OTHER_PATH);
+check('a long hex string is not logged', publicPath('/dev-tools/0x3f5ce5fbfe3e9af3971dd833d26ba9b5c936f0be/'), OTHER_PATH);
+check('an unknown root is not logged', publicPath('/wp-admin/setup.php'), OTHER_PATH);
+check('an over-long path is not logged', publicPath(`/developers/${'a'.repeat(250)}`), OTHER_PATH);
+check('a normal docs route is kept', publicPath('/developers/05-smart-contracts/02-hardhat/'), '/developers/05-smart-contracts/02-hardhat/');
+check('a localized docs route is kept', publicPath('/ko/concepts/glossary/index.md'), '/ko/concepts/glossary/index.md');
+check('the cheatsheet is kept', publicPath('/cheatsheet.md'), '/cheatsheet.md');
+
 check('POST is never logged',
-  buildAgentReadEvent(request(`${BASE}/llms.txt`, {ua: 'GPTBot/1.2', method: 'POST'}), NOW),
+  buildAgentReadEvent(request(`${BASE}/llms.txt`, {ua: 'GPTBot/1.2', method: 'POST'}), {now: NOW}),
   null);
 
 // Report parsing rejects anything outside the schema
@@ -98,6 +128,12 @@ check('extra fields are dropped',
   ['day', 'path', 'format', 'locale', 'family', 'kind']);
 check('unknown kind is rejected', parseEventLine(good.replace('"user"', '"admin"')), null);
 check('non-JSON line is rejected', parseEventLine('GET /llms.txt 200'), null);
+check('a day that is not a string is rejected',
+  parseEventLine(JSON.stringify({...JSON.parse(good), day: ['2026-11-17']})),
+  null);
+check('a raw path in an old log line is re-filtered',
+  parseEventLine(JSON.stringify({...JSON.parse(good), path: '/developers/alice@example.com/'}))?.path,
+  OTHER_PATH);
 
 // Aggregation
 const events = [
@@ -105,12 +141,18 @@ const events = [
   {day: '2026-11-17', path: '/llms.txt', format: 'entry', locale: 'en', family: 'anthropic', kind: 'training'},
   {day: '2026-11-16', path: '/developers/quickstart/index.md', format: 'md', locale: 'en', family: 'tool-client', kind: 'tool'},
 ];
-const report = aggregate(events, '2026-11-17T12:00:00Z');
+const report = aggregate(events, '2026-11-17T12:00:00Z', 0, true);
 check('report window', report.window, {from: '2026-11-16', to: '2026-11-17'});
 check('report totals', report.totals.reads, 3);
 check('report kinds', report.totals.byKind, {user: 1, training: 1, tool: 1});
 check('report top path', report.days[1].topPaths, [{path: '/llms.txt', reads: 2}]);
 check('report is labelled an estimate', report.estimate, true);
+check('without a build check, no paths are published',
+  aggregate(events, '2026-11-17T12:00:00Z').days[1].topPaths,
+  []);
+check('the other-path bucket is never published',
+  aggregate([{...events[0], path: OTHER_PATH}], '2026-11-17T12:00:00Z', 0, true).days[0].topPaths,
+  []);
 
 // Unknown paths are dropped when a build directory is given
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'agent-reads-'));
@@ -121,11 +163,28 @@ check('existing page route is kept', pathExistsInBuild(tmp, '/developers/quickst
 check('existing entry file is kept', pathExistsInBuild(tmp, '/llms.txt'), true);
 check('probe for a missing page is dropped', pathExistsInBuild(tmp, '/wp-admin/'), false);
 check('traversal is rejected', pathExistsInBuild(tmp, '/developers/%2e%2e/%2e%2e/etc/passwd'), false);
+check('a malformed percent escape is an unknown path', pathExistsInBuild(tmp, '/developers/%ZZ/index.md'), false);
+
+// A missing build directory stops the report instead of writing zero reads
+const logFile = path.join(tmp, 'log.jsonl');
+const outFile = path.join(tmp, 'out.json');
+fs.writeFileSync(logFile, `${good}\n`);
+const run = spawnSync(process.execPath, [
+  path.join(__dirname, 'agent-reads-report.mjs'),
+  '--in', logFile, '--out', outFile, '--build-dir', path.join(tmp, 'missing-build'),
+], {encoding: 'utf8'});
+check('missing build directory exits with an error', run.status, 2);
+check('missing build directory writes no report', fs.existsSync(outFile), false);
 fs.rmSync(tmp, {recursive: true, force: true});
 
 // The middleware wires the kill switch and the internal-fetch header
 const middlewareSource = fs.readFileSync(path.join(__dirname, '..', 'middleware.js'), 'utf8');
-check('middleware logs before any early return', /middleware\(request\) \{\n[^]*?logAgentRead\(request\);[^]*?wantsMarkdownAccept/.test(middlewareSource), true);
+check('middleware logs on every exit with the negotiation outcome',
+  /finally \{[^]*?logAgentRead\(request, \{negotiated: response !== undefined\}\)/.test(middlewareSource),
+  true);
+check('localized llms files reach the middleware',
+  ['/es/llms.txt', '/ja/llms-full.txt', '/index.md', '/cheatsheet.md'].every((route) => MIDDLEWARE_MATCHERS.includes(route)),
+  true);
 check('middleware marks its own markdown fetch', middlewareSource.includes('[INTERNAL_FETCH_HEADER]'), true);
 
 if (failed) {
