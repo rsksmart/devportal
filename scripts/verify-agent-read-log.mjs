@@ -117,6 +117,7 @@ check('a listed route without the trailing slash is kept', publicPath('/develope
 check('a listed route as a Markdown export is kept', publicPath('/developers/quickstart/index.md'), '/developers/quickstart/index.md');
 check('a localized docs route is kept', publicPath('/ko/concepts/glossary/index.md'), '/ko/concepts/glossary/index.md');
 check('the cheatsheet is kept', publicPath('/cheatsheet.md'), '/cheatsheet.md');
+check('a section root written as index/index.md is kept', publicPath('/developers/index/index.md'), '/developers/index/index.md');
 check('the route list is not empty', PUBLIC_ROUTES.size > 100, true);
 
 check('POST is never logged',
