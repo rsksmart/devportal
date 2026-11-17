@@ -222,7 +222,8 @@ check('middleware logs after negotiation completes, with its outcome',
   /const response = await negotiateMarkdown\(request\);[^]*?logAgentRead\(request, \{negotiated: response !== undefined\}\);[^]*?return response;/.test(middlewareSource),
   true);
 check('localized home pages reach the middleware',
-  ['/es', '/es/index.md', '/ja', '/ja/index.md', '/ko', '/ko/index.md'].every((route) => MIDDLEWARE_MATCHERS.includes(route)),
+  ['/es', '/es/', '/es/index.md', '/ja', '/ja/', '/ja/index.md', '/ko', '/ko/', '/ko/index.md']
+    .every((route) => MIDDLEWARE_MATCHERS.includes(route)),
   true);
 
 // A failed negotiation fetch serves nothing, so it logs nothing

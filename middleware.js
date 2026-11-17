@@ -111,10 +111,13 @@ export const config = {
     '/ko/llms.txt',
     '/ko/llms-full.txt',
     '/es',
+    '/es/',
     '/es/index.md',
     '/ja',
+    '/ja/',
     '/ja/index.md',
     '/ko',
+    '/ko/',
     '/ko/index.md',
   ],
 };
