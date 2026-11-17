@@ -18,7 +18,13 @@ import {
 } from '../lib/agent-read-log.js';
 import {MIDDLEWARE_MATCHERS} from '../lib/markdown-negotiation-paths.js';
 import {PUBLIC_ROUTES} from '../lib/public-routes.js';
-import {aggregate, parseEventLine, pathExistsInBuild} from './agent-reads-report.mjs';
+import {
+  aggregate,
+  isDocsBuild,
+  parseArgs,
+  parseEventLine,
+  pathExistsInBuild,
+} from './agent-reads-report.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -117,6 +123,11 @@ check('a listed route without the trailing slash is kept', publicPath('/develope
 check('a listed route as a Markdown export is kept', publicPath('/developers/quickstart/index.md'), '/developers/quickstart/index.md');
 check('a localized docs route is kept', publicPath('/ko/concepts/glossary/index.md'), '/ko/concepts/glossary/index.md');
 check('the cheatsheet is kept', publicPath('/cheatsheet.md'), '/cheatsheet.md');
+check('a localized home page is kept', publicPath('/es/'), '/es/');
+check('a localized home page export is kept with its locale',
+  buildAgentReadEvent(request(`${BASE}/ja/index.md`, {ua: 'SomeAgent/0.1'}), {now: NOW}),
+  {evt: 'agent_read', v: 1, day: '2026-11-17', path: '/ja/index.md', format: 'md', locale: 'ja', family: 'unknown', kind: 'unclassified'});
+check('a locale-like prefix is not a locale', publicPath('/espanol/concepts/'), OTHER_PATH);
 check('a section root written as index/index.md is kept', publicPath('/developers/index/index.md'), '/developers/index/index.md');
 check('the route list is not empty', PUBLIC_ROUTES.size > 100, true);
 
@@ -132,6 +143,10 @@ check('extra fields are dropped',
   Object.keys(parseEventLine(JSON.stringify({...JSON.parse(good), ip: '1.2.3.4', ua: 'x'}))),
   ['day', 'path', 'format', 'locale', 'family', 'kind']);
 check('unknown kind is rejected', parseEventLine(good.replace('"user"', '"admin"')), null);
+check('a family the logger never writes is rejected', parseEventLine(good.replace('"openai"', '"constructor"')), null);
+check('a family that is not a string is rejected',
+  parseEventLine(JSON.stringify({...JSON.parse(good), family: {toString: 'x'}})),
+  null);
 check('non-JSON line is rejected', parseEventLine('GET /llms.txt 200'), null);
 check('a day that is not a string is rejected',
   parseEventLine(JSON.stringify({...JSON.parse(good), day: ['2026-11-17']})),
@@ -180,13 +195,55 @@ const run = spawnSync(process.execPath, [
 ], {encoding: 'utf8'});
 check('missing build directory exits with an error', run.status, 2);
 check('missing build directory writes no report', fs.existsSync(outFile), false);
+const emptyBuild = path.join(tmp, 'empty-build');
+fs.mkdirSync(emptyBuild);
+check('an empty folder is not a docs build', isDocsBuild(emptyBuild), false);
+const emptyRun = spawnSync(process.execPath, [
+  path.join(__dirname, 'agent-reads-report.mjs'),
+  '--in', logFile, '--out', outFile, '--build-dir', emptyBuild,
+], {encoding: 'utf8'});
+check('an empty build directory exits with an error', emptyRun.status, 2);
+check('an empty build directory writes no report', fs.existsSync(outFile), false);
+for (const marker of ['index.html', 'llms.txt', 'sitemap.xml']) fs.writeFileSync(path.join(emptyBuild, marker), '');
+check('a folder with the build markers is a docs build', isDocsBuild(emptyBuild), true);
+
+// Option parsing: a flag without a value is an error, never a silent default
+const throws = (fn) => { try { fn(); return false; } catch { return true; } };
+check('a trailing --build-dir without a value is rejected', throws(() => parseArgs(['--in', 'logs.jsonl', '--build-dir'])), true);
+check('a trailing --out without a value is rejected', throws(() => parseArgs(['--in', 'logs.jsonl', '--out'])), true);
+check('a flag followed by another flag is rejected', throws(() => parseArgs(['--build-dir', '--in', 'logs.jsonl'])), true);
+check('an unknown flag is rejected', throws(() => parseArgs(['--in', 'logs.jsonl', '--outt', 'x.json'])), true);
+check('valid options parse', [...parseArgs(['--in', '-', '--build-dir', 'build']).entries()], [['--in', '-'], ['--build-dir', 'build']]);
 fs.rmSync(tmp, {recursive: true, force: true});
 
 // The middleware wires the kill switch and the internal-fetch header
 const middlewareSource = fs.readFileSync(path.join(__dirname, '..', 'middleware.js'), 'utf8');
-check('middleware logs on every exit with the negotiation outcome',
-  /finally \{[^]*?logAgentRead\(request, \{negotiated: response !== undefined\}\)/.test(middlewareSource),
+check('middleware logs after negotiation completes, with its outcome',
+  /const response = await negotiateMarkdown\(request\);[^]*?logAgentRead\(request, \{negotiated: response !== undefined\}\);[^]*?return response;/.test(middlewareSource),
   true);
+check('localized home pages reach the middleware',
+  ['/es', '/es/index.md', '/ja', '/ja/index.md', '/ko', '/ko/index.md'].every((route) => MIDDLEWARE_MATCHERS.includes(route)),
+  true);
+
+// A failed negotiation fetch serves nothing, so it logs nothing
+const {default: middleware} = await import('../middleware.js');
+const realFetch = globalThis.fetch;
+const realLog = console.log;
+const logged = [];
+console.log = (line) => logged.push(line);
+globalThis.fetch = async () => { throw new Error('network down'); };
+let threw = false;
+try {
+  await middleware(request(`${BASE}/developers/quickstart/`, {ua: 'Claude-User/1.0', accept: 'text/markdown'}));
+} catch {
+  threw = true;
+}
+globalThis.fetch = async () => new Response('', {status: 404});
+await middleware(request(`${BASE}/developers/quickstart/`, {ua: 'Claude-User/1.0', accept: 'text/markdown'}));
+globalThis.fetch = realFetch;
+console.log = realLog;
+check('a failed negotiation fetch is not logged', threw && logged.length === 1, true);
+check('an HTML fallback after a 404 Markdown fetch is logged as html', JSON.parse(logged[0] ?? '{}').format, 'html');
 check('localized llms files reach the middleware',
   ['/es/llms.txt', '/ja/llms-full.txt', '/index.md', '/cheatsheet.md'].every((route) => MIDDLEWARE_MATCHERS.includes(route)),
   true);

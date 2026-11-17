@@ -16,8 +16,10 @@
  * With --build-dir, reads of paths that do not exist in that build (scanner
  * probes, typos, removed pages) are dropped and counted separately, and
  * topPaths is filled in. Without it, topPaths stays empty because unverified
- * paths are not published. The build directory must exist, so a missing build
- * cannot be mistaken for zero traffic.
+ * paths are not published. The build directory must be a complete docs build
+ * (index.html, llms.txt and sitemap.xml at its root), so a missing, empty or
+ * partial folder cannot be mistaken for zero traffic. A flag without a value
+ * is an error rather than falling back to a default.
  *
  * Usage:
  *   node scripts/agent-reads-report.mjs --in vercel-logs.jsonl [--out artifacts/agent-reads.json] [--build-dir build]
@@ -27,13 +29,12 @@
 import fs from 'fs';
 import path from 'path';
 import {fileURLToPath} from 'url';
-import {FORMATS, KINDS, OTHER_PATH, publicPath} from '../lib/agent-read-log.js';
+import {FAMILIES, FORMATS, KINDS, OTHER_PATH, publicPath} from '../lib/agent-read-log.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DEFAULT_OUT = path.join(__dirname, '..', 'artifacts', 'agent-reads.json');
 const TOP_PATHS = 10;
 const DAY = /^\d{4}-\d{2}-\d{2}$/;
-const FAMILY = /^[a-z0-9-]{1,32}$/;
 const LOCALES = new Set(['en', 'es', 'ja', 'ko']);
 
 /** Returns a clean event or null. Rejects anything outside the schema. */
@@ -64,7 +65,7 @@ export function parseEventLine(line) {
     !FORMATS.includes(format) ||
     !KINDS.includes(kind) ||
     !LOCALES.has(locale) ||
-    !FAMILY.test(String(family))
+    !FAMILIES.includes(family)
   ) {
     return null;
   }
@@ -89,6 +90,11 @@ export function pathExistsInBuild(buildDir, pagePath) {
   return candidates.some((candidate) => fs.existsSync(candidate));
 }
 
+/** Counts by key. Maps are null-prototype objects, so no key can hit an inherited property. */
+function counter() {
+  return Object.create(null);
+}
+
 function bump(map, key) {
   map[key] = (map[key] ?? 0) + 1;
 }
@@ -101,17 +107,17 @@ export function aggregate(
   pathsVerified = false,
 ) {
   const byDay = new Map();
-  const totals = {reads: 0, byKind: {}, byFamily: {}, byFormat: {}};
+  const totals = {reads: 0, byKind: counter(), byFamily: counter(), byFormat: counter()};
   for (const event of events) {
     if (!byDay.has(event.day)) {
       byDay.set(event.day, {
         date: event.day,
         reads: 0,
-        byKind: {},
-        byFamily: {},
-        byFormat: {},
-        byLocale: {},
-        paths: {},
+        byKind: counter(),
+        byFamily: counter(),
+        byFormat: counter(),
+        byLocale: counter(),
+        paths: counter(),
       });
     }
     const day = byDay.get(event.day);
@@ -152,12 +158,35 @@ export function aggregate(
   };
 }
 
-function isDirectory(dir) {
+/** Files every complete docs build has at its root. */
+const BUILD_MARKERS = ['index.html', 'llms.txt', 'sitemap.xml'];
+
+/** True when dir is a complete docs build, not a missing, empty or partial folder. */
+export function isDocsBuild(dir) {
   try {
-    return fs.statSync(dir).isDirectory();
+    if (!fs.statSync(dir).isDirectory()) return false;
   } catch {
     return false;
   }
+  return BUILD_MARKERS.every((file) => fs.existsSync(path.join(dir, file)));
+}
+
+const OPTIONS = new Set(['--in', '--out', '--build-dir']);
+
+/** Parses --flag value pairs. Throws on an unknown flag, a missing value or a repeat. */
+export function parseArgs(argv) {
+  const args = new Map();
+  for (let i = 0; i < argv.length; i += 2) {
+    const flag = argv[i];
+    const value = argv[i + 1];
+    if (!OPTIONS.has(flag)) throw new Error(`Unknown option ${flag}`);
+    if (value === undefined || value === '' || (value.startsWith('--') && OPTIONS.has(value))) {
+      throw new Error(`${flag} needs a value`);
+    }
+    if (args.has(flag)) throw new Error(`${flag} given twice`);
+    args.set(flag, value);
+  }
+  return args;
 }
 
 function readInput(source) {
@@ -165,21 +194,29 @@ function readInput(source) {
 }
 
 function main(argv) {
-  const args = new Map();
-  for (let i = 0; i < argv.length; i += 2) args.set(argv[i], argv[i + 1]);
+  const usage = 'Usage: node scripts/agent-reads-report.mjs --in <log.jsonl|-> [--out <file>] [--build-dir <dir>]';
+  let args;
+  try {
+    args = parseArgs(argv);
+  } catch (err) {
+    console.error(`${err.message}\n${usage}`);
+    process.exit(2);
+  }
   const input = args.get('--in');
   if (!input) {
-    console.error('Usage: node scripts/agent-reads-report.mjs --in <log.jsonl|-> [--out <file>] [--build-dir <dir>]');
+    console.error(usage);
+    process.exit(2);
+  }
+  const buildDir = args.get('--build-dir');
+  if (buildDir !== undefined && !isDocsBuild(buildDir)) {
+    console.error(
+      `--build-dir ${buildDir} is not a complete docs build (needs ${BUILD_MARKERS.join(', ')}). Run yarn build first.`,
+    );
     process.exit(2);
   }
   const out = args.get('--out') ?? DEFAULT_OUT;
   const lines = readInput(input).split('\n').filter(Boolean);
   const parsed = lines.map(parseEventLine).filter(Boolean);
-  const buildDir = args.get('--build-dir');
-  if (buildDir !== undefined && !isDirectory(buildDir)) {
-    console.error(`--build-dir ${buildDir} is not a directory. Run yarn build first.`);
-    process.exit(2);
-  }
   const events = buildDir
     ? parsed.filter((event) => pathExistsInBuild(buildDir, event.path))
     : parsed;
