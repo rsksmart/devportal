@@ -17,8 +17,9 @@
  * probes, typos, removed pages) are dropped and counted separately, and
  * topPaths is filled in. Without it, topPaths stays empty because unverified
  * paths are not published. The build directory must be a complete docs build
- * (index.html, llms.txt and sitemap.xml at its root), so a missing, empty or
- * partial folder cannot be mistaken for zero traffic. A flag without a value
+ * (index.html, index.md, llms.txt and sitemap.xml at its root), so a missing,
+ * empty or partial folder, including a yarn check-links build without the
+ * Markdown exports, cannot be mistaken for zero traffic. A flag without a value
  * is an error rather than falling back to a default.
  *
  * Usage:
@@ -158,8 +159,13 @@ export function aggregate(
   };
 }
 
-/** Files every complete docs build has at its root. */
-const BUILD_MARKERS = ['index.html', 'llms.txt', 'sitemap.xml'];
+/**
+ * Files every complete docs build has at its root. index.md is written only by
+ * the post-build step of yarn build (scripts/fix-llms-urls.mjs), so a
+ * yarn check-links build, which skips that step and has no Markdown exports,
+ * is rejected instead of silently dropping every .md read.
+ */
+export const BUILD_MARKERS = ['index.html', 'index.md', 'llms.txt', 'sitemap.xml'];
 
 /** True when dir is a complete docs build, not a missing, empty or partial folder. */
 export function isDocsBuild(dir) {
@@ -210,7 +216,7 @@ function main(argv) {
   const buildDir = args.get('--build-dir');
   if (buildDir !== undefined && !isDocsBuild(buildDir)) {
     console.error(
-      `--build-dir ${buildDir} is not a complete docs build (needs ${BUILD_MARKERS.join(', ')}). Run yarn build first.`,
+      `--build-dir ${buildDir} is not a complete docs build (needs ${BUILD_MARKERS.join(', ')}). Run yarn build (not yarn check-links) first.`,
     );
     process.exit(2);
   }

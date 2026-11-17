@@ -19,6 +19,7 @@ import {
 import {MIDDLEWARE_MATCHERS} from '../lib/markdown-negotiation-paths.js';
 import {PUBLIC_ROUTES} from '../lib/public-routes.js';
 import {
+  BUILD_MARKERS,
   aggregate,
   isDocsBuild,
   parseArgs,
@@ -205,7 +206,9 @@ const emptyRun = spawnSync(process.execPath, [
 check('an empty build directory exits with an error', emptyRun.status, 2);
 check('an empty build directory writes no report', fs.existsSync(outFile), false);
 for (const marker of ['index.html', 'llms.txt', 'sitemap.xml']) fs.writeFileSync(path.join(emptyBuild, marker), '');
-check('a folder with the build markers is a docs build', isDocsBuild(emptyBuild), true);
+check('a check-links build without the Markdown exports is not a docs build', isDocsBuild(emptyBuild), false);
+for (const marker of BUILD_MARKERS) fs.writeFileSync(path.join(emptyBuild, marker), '');
+check('a folder with every build marker is a docs build', isDocsBuild(emptyBuild), true);
 
 // Option parsing: a flag without a value is an error, never a silent default
 const throws = (fn) => { try { fn(); return false; } catch { return true; } };
