@@ -1,5 +1,6 @@
 /**
- * Vercel Edge Middleware: serve markdown when clients send Accept: text/markdown.
+ * Vercel Edge Middleware: serve markdown when clients send Accept: text/markdown,
+ * and count reads by AI tools (lib/agent-read-log.js).
  * Static index.html is served before vercel.json header rewrites on Docusaurus builds,
  * so negotiation must run here (before the filesystem).
  */
@@ -8,6 +9,7 @@ import {
   resolveMarkdownPath,
   wantsMarkdownAccept,
 } from './lib/markdown-negotiation-paths.js';
+import {INTERNAL_FETCH_HEADER, logAgentRead} from './lib/agent-read-log.js';
 
 function hasFileExtension(pathname) {
   const last = pathname.split('/').filter(Boolean).pop() ?? '';
@@ -15,6 +17,9 @@ function hasFileExtension(pathname) {
 }
 
 export default async function middleware(request) {
+  // Counts reads by AI tools before any early return. See lib/agent-read-log.js.
+  logAgentRead(request);
+
   if (!wantsMarkdownAccept(request.headers.get('accept'))) {
     return;
   }
@@ -38,7 +43,7 @@ export default async function middleware(request) {
   const markdownUrl = new URL(markdownPath, url.origin);
   const mdResponse = await fetch(markdownUrl.toString(), {
     method: request.method,
-    headers: {accept: 'text/markdown'},
+    headers: {accept: 'text/markdown', [INTERNAL_FETCH_HEADER]: '1'},
   });
 
   if (!mdResponse.ok) {
@@ -85,5 +90,9 @@ export const config = {
     '/ko/resources/:path*',
     '/ko/dev-tools/:path*',
     '/ko/use-cases/:path*',
+    '/llms.txt',
+    '/llms-full.txt',
+    '/ai-policy.txt',
+    '/.well-known/:path*',
   ],
 };

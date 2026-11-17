@@ -14,6 +14,8 @@ on:
       - 'scripts/fix-llms-urls.mjs'
       - 'scripts/verify-llms-build.mjs'
       - 'scripts/verify-middleware-paths.mjs'
+      - 'scripts/verify-agent-read-log.mjs'
+      - 'scripts/agent-reads-report.mjs'
       - 'scripts/verify-evm-compatibility-summary.mjs'
       - 'scripts/sync-evm-compatibility-summary.mjs'
       - 'docusaurus.config.js'
@@ -43,6 +45,9 @@ jobs:
 
       - name: Verify middleware path resolution
         run: yarn verify-middleware-paths
+
+      - name: Verify agent-read logging
+        run: yarn verify-agent-reads
 
       - name: Verify EVM compatibility summary
         run: yarn verify-evm-compatibility
