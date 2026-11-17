@@ -17,6 +17,7 @@ import {
   publicPath,
 } from '../lib/agent-read-log.js';
 import {MIDDLEWARE_MATCHERS} from '../lib/markdown-negotiation-paths.js';
+import {PUBLIC_ROUTES} from '../lib/public-routes.js';
 import {aggregate, parseEventLine, pathExistsInBuild} from './agent-reads-report.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -107,13 +108,16 @@ check('an email in the path is not logged',
   buildAgentReadEvent(request(`${BASE}/developers/alice@example.com/index.md`, {ua: 'curl/8.7.1'}), {now: NOW})?.path,
   OTHER_PATH);
 check('a percent-encoded email is not logged', publicPath('/developers/alice%40example.com/'), OTHER_PATH);
-check('a long number is not logged', publicPath('/developers/5551234567/'), OTHER_PATH);
-check('a long hex string is not logged', publicPath('/dev-tools/0x3f5ce5fbfe3e9af3971dd833d26ba9b5c936f0be/'), OTHER_PATH);
+check('a name shaped like a slug is not logged', publicPath('/developers/john-smith/'), OTHER_PATH);
+check('a percent-encoded spelling of a real route is not logged', publicPath('/developers/%71uickstart/'), OTHER_PATH);
 check('an unknown root is not logged', publicPath('/wp-admin/setup.php'), OTHER_PATH);
 check('an over-long path is not logged', publicPath(`/developers/${'a'.repeat(250)}`), OTHER_PATH);
-check('a normal docs route is kept', publicPath('/developers/05-smart-contracts/02-hardhat/'), '/developers/05-smart-contracts/02-hardhat/');
+check('a listed docs route is kept', publicPath('/developers/quickstart/'), '/developers/quickstart/');
+check('a listed route without the trailing slash is kept', publicPath('/developers/quickstart'), '/developers/quickstart');
+check('a listed route as a Markdown export is kept', publicPath('/developers/quickstart/index.md'), '/developers/quickstart/index.md');
 check('a localized docs route is kept', publicPath('/ko/concepts/glossary/index.md'), '/ko/concepts/glossary/index.md');
 check('the cheatsheet is kept', publicPath('/cheatsheet.md'), '/cheatsheet.md');
+check('the route list is not empty', PUBLIC_ROUTES.size > 100, true);
 
 check('POST is never logged',
   buildAgentReadEvent(request(`${BASE}/llms.txt`, {ua: 'GPTBot/1.2', method: 'POST'}), {now: NOW}),
