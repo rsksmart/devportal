@@ -37,24 +37,14 @@ description: スマートコントラクト開発ツールと言語のキュレ�
     {label: 'アテステーション', value: 'attest'},
   ]}>
 <FilterItem
-    value="bridge, exchange"
-    title="PowPeg アプリ"
-    subtitle="ブリッジ"
-    color="orange"
-    linkHref="/resources/guides/powpeg-app/"
-    target="_blank"
-    linkTitle="ドキュメント"
-    description="PowPegアプリを使ってBitcoinとRootstockをブリッジします。"
-/>
-<FilterItem
-    value="bridge, cc"
+    value="bridge, exchange, cc"
     title="Atlas Bridge"
     subtitle="ブリッジ"
     color="orange"
     linkHref="/resources/guides/atlas/"
     target="_blank"
     linkTitle="ドキュメント"
-    description="Atlas Bridgeでプロバイダーを比較し、Rootstockと他のネットワーク間で対応資産を移動します。"
+    description="Atlas BridgeでPowPegを通じてBTCをペグイン・ペグアウトし、プロバイダーを比較して、Rootstockと他のネットワーク間で対応資産を移動します。"
 />
 <FilterItem
     value="dev-environment, sc, platform-infra"
