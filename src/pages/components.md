@@ -60,13 +60,13 @@ Use this to present items in a specific sequence (ordered list) or without order
 #### Ordered List
 - **Code**
 ```
-1. The PowPeg App is now available on [Testnet](https://powpeg.testnet.rootstock.io/) and [Mainnet](https://powpeg.rootstock.io/).
-2. For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the PowPeg App, please refer to the [PowPeg App user guide](/concepts/foundations/powpeg/).
+1. Atlas is available on [Testnet](https://atlas.testnet.rootstock.io/) and [Mainnet](https://atlas.rootstock.io/).
+2. For step-by-step peg-in and peg-out instructions, please refer to the [Atlas user guide](/resources/guides/atlas/).
 3. Get information on the signatories and attestion in the [Powpeg Protocol HSM Firmware Attestation](/concepts/foundations/powpeg/hsm-firmware-attestation) section.
 ```
  **Result:**
-1. The PowPeg App is now available on [Testnet](https://powpeg.testnet.rootstock.io/) and [Mainnet](https://powpeg.rootstock.io/).
-2. For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the PowPeg App, please refer to the [PowPeg App user guide](/concepts/foundations/powpeg/).
+1. Atlas is available on [Testnet](https://atlas.testnet.rootstock.io/) and [Mainnet](https://atlas.rootstock.io/).
+2. For step-by-step peg-in and peg-out instructions, please refer to the [Atlas user guide](/resources/guides/atlas/).
 3. Get information on the signatories and attestion in the [PowPeg Protocol HSM Firmware Attestation](/concepts/foundations/powpeg/hsm-firmware-attestation) section.
 
 ## Blockquote

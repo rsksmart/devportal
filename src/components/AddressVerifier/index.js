@@ -41,11 +41,11 @@ export default function AddressVerifier () {
         if (isCanPegIn) {
           setResultTitle('Valid for Direct Peg-in')
           setResultType('success')
-          setResult(`The address ${displayAddress} is a valid ${displayAddressType} address, and may be used for a direct peg-in on ${displayNetwork}. Visit the <a href="https://powpeg.rootstock.io/" target="_blank">Powpeg App</a> to peg-in or peg-out on Rootstock.`)
+          setResult(`The address ${displayAddress} is a valid ${displayAddressType} address, and may be used for a direct peg-in on ${displayNetwork}. Visit <a href="https://atlas.rootstock.io/" target="_blank">Atlas</a> to peg-in or peg-out on Rootstock.`)
         } else if (info.type === ADDRESS_TYPES.BECH32) {
-          setResultTitle('Not valid for Legacy Peg-in, visit the PowPeg App')
+          setResultTitle('Not valid for Legacy Peg-in, use Atlas')
           setResultType('info')
-          setResult(`The address ${displayAddress} is a valid ${displayAddressType} address. However, a direct peg-in is not supported for this address type. Visit the <a href="https://powpeg.rootstock.io/" target="_blank">Powpeg App</a> to perform a peg-in transaction from this address.`)
+          setResult(`The address ${displayAddress} is a valid ${displayAddressType} address. However, a direct peg-in is not supported for this address type. Visit <a href="https://atlas.rootstock.io/" target="_blank">Atlas</a> to perform a peg-in transaction from this address.`)
         } else {
           setResultTitle('Not Valid for Peg-in')
           setResultType('warning')

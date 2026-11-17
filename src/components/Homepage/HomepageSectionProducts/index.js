@@ -26,8 +26,8 @@ const data = {
           href: '/developers/integrate/flyover/',
         },
         {
-          title: <Translate>PowPeg App</Translate>,
-          href: 'https://powpeg.rootstock.io',
+          title: <Translate>Atlas Bridge app</Translate>,
+          href: 'https://atlas.rootstock.io',
           target: '_blank',
         },
       ],

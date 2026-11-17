@@ -23,9 +23,9 @@ See a list of terms about the Flyover and their meanings.
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
-    <Accordion.Header as="h3">PowPeg App</Accordion.Header>
+    <Accordion.Header as="h3">Atlas</Accordion.Header>
     <Accordion.Body>
-      - The PowPeg App is a user-friendly interface developed by Rootstock that allows users to interact with both the traditional PowPeg protocol and the faster Flyover system for Bitcoin-Rootstock transfers. It uses the traditional powpeg protocol that allows users to natively transfer bitcoins from the Bitcoin blockchain to the Rootstock blockchain and vice versa, creating a token called rBTC that is pegged to the value of Bitcoin.
+      - Atlas is the RootstockLabs app for bridging assets into and out of Rootstock. It gives access to the native PowPeg protocol and to the faster Flyover protocol for transfers between Bitcoin and Rootstock. A native peg-in locks BTC on Bitcoin and makes the same amount of rBTC available on Rootstock. Atlas replaces the standalone PowPeg App.
     </Accordion.Body>
   </Accordion.Item>
     <Accordion.Item eventKey="2">

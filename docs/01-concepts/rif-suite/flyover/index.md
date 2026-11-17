@@ -24,11 +24,11 @@ An LP provides liquidity in Rootstock (rBTC) and Bitcoin (BTC) on behalf of user
 **For Developers**
 
 The [Flyover SDK](https://github.com/rsksmart/flyover-sdk) is currently available on Mainnet and Testnet. 
-To convert rBTC to BTC and vice versa, use the PowPeg App.
+To convert rBTC to BTC and vice versa, use [Atlas](https://atlas.rootstock.io/).
 
 **For General Users**
 
-Use the [PowPeg App](https://powpeg.rootstock.io) to Peg in and out of Rootstock, easily perform trust-minimized BTC and rBTC transfers between Bitcoin and Rootstock using Flyover. See section on [Using the PowPeg App](/resources/guides/powpeg-app/) to learn about how you can convert BTC - rBTC and vice versa.
+Use [Atlas](https://atlas.rootstock.io/) to peg in and out of Rootstock. Atlas offers fast, trust-minimized BTC and rBTC transfers with Flyover, and native transfers with the PowPeg. See [Bridge assets with Atlas](/resources/guides/atlas/) to learn how to convert BTC to rBTC and back.
 
 :::
 
@@ -56,8 +56,8 @@ Here's a detailed comparison of the PowPeg vs rBTC Flyover.
 :::note[Notes]
 1. Based on the number of Bitcoin block confirmations configured by the LP (currently set at 2 Bitcoin block confirmations for amounts `<= 0.1 BTC`). Bitcoin blocks can take longer to confirm.
 2. Based on the number of Rootstock block confirmations configured by the LP (currently set at 10 Rootstock confirmations for amounts `<= 0.1 rBTC`) + 1 Bitcoin block confirmation.
-3. An LP can set their own fees.  The initial LP In the PowPeg app has set its provider fee at `0.0001` rBTC so that the LP covers network fees when receiving and rebalancing funds from PowPeg.
-4. There is no technical limit for transfers.  It depends on the available liquidity and limitations set by the LP. The initial LP in the PowPeg app, has set the max transfer limits to `0.1 BTC/rBTC`.
+3. An LP can set their own fees. The initial LP has set its provider fee at `0.0001` rBTC so that the LP covers network fees when receiving and rebalancing funds from PowPeg.
+4. There is no technical limit for transfers. It depends on the available liquidity and limitations set by the LP. The initial LP has set the max transfer limits to `0.1 BTC/rBTC`.
 :::
 
 ## Use Cases

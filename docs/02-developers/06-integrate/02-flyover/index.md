@@ -69,7 +69,7 @@ flowchart LR
 ```
 
 **1. Get a quote**
-The user requests a quote through the PowPeg App. The quote shows the amount of rBTC the user will receive, fees, required Bitcoin confirmations, and a time estimate.
+The user requests a quote through Atlas. The quote shows the amount of rBTC the user will receive and the fees. It also shows the required Bitcoin confirmations and a time estimate.
 
 **2. Accept the quote**
 The user must carefully review the quote details — including the amount, fees, confirmations required, and time estimate — and explicitly accept it before proceeding. Once the user accepts, the LP generates a unique Bitcoin deposit address tied to this specific quote. The address is derived from the quote hash — every transaction gets its own address.
@@ -88,7 +88,7 @@ The LP registers the peg-in with the Rootstock Bridge, providing a Merkle proof 
 ```mermaid
 sequenceDiagram
     actor User
-    participant App as PowPeg App
+    participant App as Atlas
     participant LBC as Liquidity Bridge Contract
     participant LP as Liquidity Provider
     participant BTC as Bitcoin Network
@@ -167,7 +167,7 @@ The LP submits a Merkle proof of the BTC payment to the Liquidity Bridge Contrac
 ```mermaid
 sequenceDiagram
     actor User
-    participant App as PowPeg App
+    participant App as Atlas
     participant LBC as Liquidity Bridge Contract
     participant LP as Liquidity Provider
     participant BTC as Bitcoin Network
@@ -182,7 +182,7 @@ sequenceDiagram
     App->>LP: Accept quote
     LP-->>App: Signature
 
-    User->>LBC: Deposit rBTC (via PowPeg App)
+    User->>LBC: Deposit rBTC (via Atlas)
     LBC-)LP: Deposit event
 
     Note over LP: Waits for Rootstock confirmations
@@ -322,4 +322,4 @@ See [Flyover SDK Integration](/developers/integrate/flyover/sdk/) for the full g
 - [Flyover SDK on GitHub](https://github.com/rsksmart/flyover-sdk)
 - [LP Onboarding](/developers/integrate/flyover/LP/)
 - [LP Management API](/developers/integrate/flyover/LP/management/)
-- [PowPeg App](https://powpeg.rootstock.io)
+- [Atlas](https://atlas.rootstock.io/)
