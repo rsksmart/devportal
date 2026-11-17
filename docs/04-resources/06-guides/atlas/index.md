@@ -11,6 +11,10 @@ Atlas Bridge is a cross-chain bridge for the Rootstock ecosystem. You can use it
 - Peg-in means you move assets into Rootstock.
 - Peg-out means you move assets out of Rootstock.
 
+:::info[Atlas is out of beta]
+Atlas is out of beta. It's the RootstockLabs app for bridging assets into and out of Rootstock, and it replaces the standalone PowPeg App. Native PowPeg peg-ins and peg-outs are available in Atlas, alongside Flyover and supported third-party routes. The PowPeg protocol is unchanged.
+:::
+
 ## How Atlas fits the stack
 
 Atlas uses three client-side SDKs. Each one opens a different bridge or swap path. Funds end on Bitcoin or Rootstock.

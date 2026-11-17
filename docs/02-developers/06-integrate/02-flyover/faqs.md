@@ -64,11 +64,11 @@ To safeguard against financial loss, Liquidity Providers are responsible for the
 
 ### How can I use Flyover to transfer BTC to rBTC?
 
-The easiest way to use Flyover is through the PowPeg. This user-friendly interface guides you through the transfer process, allowing you to quickly and securely convert your BTC to rBTC.
+The easiest way to use Flyover is through [Atlas](https://atlas.rootstock.io/). Atlas guides you through the transfer so you can convert BTC to rBTC quickly and securely.
 
-### Does it cost money to use the PowPeg?
+### Does it cost money to use Flyover?
 
-The Flyover protocol maintains consistent fees across all integrated applications including the [PowPeg App](/resources/guides/powpeg-app/). Fee variations arise primarily from the specific Liquidity Provider (LP) chosen and the network transaction fees.
+The Flyover protocol maintains consistent fees across all integrated applications including [Atlas](/resources/guides/atlas/). Fee variations arise primarily from the specific Liquidity Provider (LP) chosen and the network transaction fees.
 
 ### Why is Flyover improving the user experience for the PowPeg?
 

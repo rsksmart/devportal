@@ -38,24 +38,14 @@ This page catalogs developer tools and infrastructure for Rootstock. Use the fil
     {label: 'Attestations', value: 'attest'},
   ]}>
 <FilterItem
-    value="bridge, exchange"
-    title="PowPeg App"
-    subtitle="bridges"
-    color="orange"
-    linkHref="/resources/guides/powpeg-app/"
-    target="_blank"
-    linkTitle="Documentation"
-    description="Bridge Bitcoin and Rootstock using the PowPeg App."
-  />
-<FilterItem
-    value="bridge, cc"
+    value="bridge, exchange, cc"
     title="Atlas Bridge"
     subtitle="bridges"
     color="orange"
     linkHref="/resources/guides/atlas/"
     target="_blank"
     linkTitle="Documentation"
-    description="Use Atlas Bridge to compare providers and move supported assets between Rootstock and other networks."
+    description="Use Atlas Bridge to peg BTC in and out through the PowPeg, compare providers, and move supported assets between Rootstock and other networks."
   />
 <FilterItem
     value="dev-tools, sc, deploy"

@@ -18,8 +18,8 @@ Rootstock의 **PowPeg** 프로토콜은 2018년 연합으로 시작된 이후 �
 
 :::note 정보
 
-- PowPeg 앱은 [테스트넷](https://powpeg.testnet.rootstock.io/) 및 [메인넷](https://powpeg.rootstock.io/)에서 사용할 수 있습니다.
-- 설계 및 아키텍처에 관한 일반 정보, Ledger와 Trezor를 사용해 peg-in 트랜잭션을 수행하는 방법, 자주 묻는 질문 및 PowPeg에서 수행할 수 있는 고급 옵션에 대한 내용은 [PowPeg 사용자 가이드](/resources/guides/powpeg-app/)를 참고해 주세요.
+- 네이티브 PowPeg 페그인과 페그아웃에는 [Atlas](https://atlas.rootstock.io/)를 사용하세요. Atlas는 [메인넷](https://atlas.rootstock.io/) 및 [테스트넷](https://atlas.testnet.rootstock.io/)에서 사용할 수 있습니다. Atlas는 독립형 PowPeg 앱을 대체합니다.
+- 단계별 페그인 및 페그아웃 방법은 [Atlas로 자산 브릿지하기](/resources/guides/atlas/)를 참고해 주세요.
 - 서명자와 인증에 관한 정보는 [PowPeg HSM 펌웨어 인증](/concepts/foundations/powpeg/hsm-firmware-attestation) 섹션에서 확인할 수 있습니다.
 - PowPeg 사용 시 기본 모드와 고속 모드의 차이점에 대해 알아보려면 [고속 모드 소개: PowPeg를 이용 시, 더 빠르게 RBTC를 획득하는 방법](https://blog.rootstock.io/noticia/get-rbtc-fast-mode/)을 참조하세요
   :::

@@ -27,8 +27,7 @@ The following bridges and messaging protocols connect Rootstock to other network
 | Bridge | URL | Description |
 |--------|-----|-------------|
 | Stargate | https://stargate.finance/ | Bridge rBTC, DOC, MOC, USDRIF, USDT0, and more from Rootstock to other chains. |
-| Atlas | https://atlas.rootstock.io | Bridge supported assets between Rootstock and other networks using provider routes shown in Atlas. |
-| PowPeg App | https://powpeg.rootstock.io/ | Convert BTC to rBTC and vice versa. The PowPeg protocol secures locked bitcoin using Bitcoin hashrate that also supports Rootstock consensus. |
+| Atlas | https://atlas.rootstock.io | Bridge supported assets between Rootstock and other networks, including native BTC to rBTC peg-ins and peg-outs through the PowPeg. |
 | Wormhole | https://wormhole.com/docs/build/start-building/supported-networks/evm/#rootstock | Platform overview and supported-network reference for developers building dApps that use multiple blockchains, including Rootstock. |
 | Hyperlane Bridge | `/resources/tutorials/hyperlane-bridge/` | Build dApps that communicate between Rootstock and other EVM-compatible chains. |
 | Layerzero | `/use-cases/interoperability/rootstock-layerzero/` | Cross-chain messaging protocol for moving Bitcoin-backed assets from Rootstock so developers can build omnichain applications (OApps). |
@@ -47,16 +46,8 @@ The following bridges and messaging protocols connect Rootstock to other network
     title="Atlas"
     subtitle="cross-chain"
     color="green"
-    description="Bridge supported assets between Rootstock and other networks using provider routes shown in Atlas."
+    description="Bridge supported assets between Rootstock and other networks, including native BTC to rBTC peg-ins and peg-outs through the PowPeg."
     linkHref="https://atlas.rootstock.io"
-    linkTitle="Start Bridging"
-  />
-  <CardsGridItem
-    title="PowPeg App"
-    subtitle="cross-chain"
-    color="green"
-    description="Convert BTC to rBTC and vice versa. The PowPeg protocol secures locked bitcoin using Bitcoin hashrate that also supports Rootstock consensus."
-    linkHref="https://powpeg.rootstock.io/"
     linkTitle="Start Bridging"
   />
   <CardsGridItem

@@ -36,24 +36,14 @@ values={[
 {label: 'Oráculos', value: 'oracles'},
 ]}>
 <FilterItem
-value="bridge, exchange"
-title="Aplicación PowPeg"
-subtitle="bridges"
-color="orange"
-linkHref="/resources/guides/powpeg-app/"
-target="_blank"
-linkTitle="Documentación"
-description="Conecte Bitcoin y Rootstock usando la app 2 Way Peg."
-/>
-<FilterItem
-value="bridge, cc"
+value="bridge, exchange, cc"
 title="Atlas Bridge"
 subtitle="bridges"
 color="orange"
 linkHref="/resources/guides/atlas/"
 target="_blank"
 linkTitle="Documentación"
-description="Use Atlas Bridge para comparar proveedores y mover activos admitidos entre Rootstock y otras redes."
+description="Use Atlas Bridge para hacer peg-in y peg-out de BTC a través del PowPeg, comparar proveedores y mover activos admitidos entre Rootstock y otras redes."
 />
 <FilterItem
 value="dev-environment, sc, platform-infra"
