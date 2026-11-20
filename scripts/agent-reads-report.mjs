@@ -179,14 +179,27 @@ export function isDocsBuild(dir) {
 
 const OPTIONS = new Set(['--in', '--out', '--build-dir']);
 
-/** Parses --flag value pairs. Throws on an unknown flag, a missing value or a repeat. */
+/**
+ * Flags without a value. --trust-route-list publishes topPaths without a build:
+ * every logged path already passed the committed route list (publicPath), and
+ * OTHER_PATH is never published, so a build check adds nothing for new logs.
+ */
+const FLAGS = new Set(['--trust-route-list']);
+
+/** Parses --flag value pairs and bare flags. Throws on an unknown flag, a missing value or a repeat. */
 export function parseArgs(argv) {
   const args = new Map();
   for (let i = 0; i < argv.length; i += 2) {
     const flag = argv[i];
+    if (FLAGS.has(flag)) {
+      if (args.has(flag)) throw new Error(`${flag} given twice`);
+      args.set(flag, true);
+      i -= 1;
+      continue;
+    }
     const value = argv[i + 1];
     if (!OPTIONS.has(flag)) throw new Error(`Unknown option ${flag}`);
-    if (value === undefined || value === '' || (value.startsWith('--') && OPTIONS.has(value))) {
+    if (value === undefined || value === '' || OPTIONS.has(value) || FLAGS.has(value)) {
       throw new Error(`${flag} needs a value`);
     }
     if (args.has(flag)) throw new Error(`${flag} given twice`);
@@ -200,7 +213,8 @@ function readInput(source) {
 }
 
 function main(argv) {
-  const usage = 'Usage: node scripts/agent-reads-report.mjs --in <log.jsonl|-> [--out <file>] [--build-dir <dir>]';
+  const usage =
+    'Usage: node scripts/agent-reads-report.mjs --in <log.jsonl|-> [--out <file>] [--build-dir <dir> | --trust-route-list]';
   let args;
   try {
     args = parseArgs(argv);
@@ -214,6 +228,10 @@ function main(argv) {
     process.exit(2);
   }
   const buildDir = args.get('--build-dir');
+  if (buildDir !== undefined && args.has('--trust-route-list')) {
+    console.error(`Use --build-dir or --trust-route-list, not both.\n${usage}`);
+    process.exit(2);
+  }
   if (buildDir !== undefined && !isDocsBuild(buildDir)) {
     console.error(
       `--build-dir ${buildDir} is not a complete docs build (needs ${BUILD_MARKERS.join(', ')}). Run yarn build (not yarn check-links) first.`,
@@ -230,7 +248,7 @@ function main(argv) {
     events,
     new Date().toISOString(),
     parsed.length - events.length,
-    Boolean(buildDir),
+    Boolean(buildDir) || args.get('--trust-route-list') === true,
   );
   fs.mkdirSync(path.dirname(out), {recursive: true});
   fs.writeFileSync(out, `${JSON.stringify(report, null, 2)}\n`);

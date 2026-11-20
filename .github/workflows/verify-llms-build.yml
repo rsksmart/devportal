@@ -17,6 +17,7 @@ on:
       - 'scripts/verify-agent-read-log.mjs'
       - 'scripts/agent-reads-report.mjs'
       - 'scripts/sync-public-routes.mjs'
+      - 'scripts/fetch-agent-reads.mjs'
       - 'scripts/verify-evm-compatibility-summary.mjs'
       - 'scripts/sync-evm-compatibility-summary.mjs'
       - 'docusaurus.config.js'

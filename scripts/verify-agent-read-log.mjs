@@ -26,6 +26,7 @@ import {
   parseEventLine,
   pathExistsInBuild,
 } from './agent-reads-report.mjs';
+import {extractEvents} from './fetch-agent-reads.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -217,6 +218,32 @@ check('a trailing --out without a value is rejected', throws(() => parseArgs(['-
 check('a flag followed by another flag is rejected', throws(() => parseArgs(['--build-dir', '--in', 'logs.jsonl'])), true);
 check('an unknown flag is rejected', throws(() => parseArgs(['--in', 'logs.jsonl', '--outt', 'x.json'])), true);
 check('valid options parse', [...parseArgs(['--in', '-', '--build-dir', 'build']).entries()], [['--in', '-'], ['--build-dir', 'build']]);
+check('the route-list flag needs no value',
+  [...parseArgs(['--in', '-', '--trust-route-list', '--out', 'x.json']).entries()],
+  [['--in', '-'], ['--trust-route-list', true], ['--out', 'x.json']]);
+check('a value cannot be a bare flag', throws(() => parseArgs(['--out', '--trust-route-list'])), true);
+check('route-list verification publishes top paths',
+  aggregate(events, '2026-11-17T12:00:00Z', 0, true).days[1].topPaths.length > 0,
+  true);
+
+// Vercel CLI output: keep only clean agent_read events, follow the cursor
+const cliEvent = {evt: 'agent_read', v: 1, day: '2026-11-17', path: '/llms.txt', format: 'entry', locale: 'en', family: 'openai', kind: 'user'};
+const cliPage = [
+  JSON.stringify({type: 'log', data: {message: JSON.stringify(cliEvent), requestId: 'abc', proxy: {clientIp: '192.0.2.1'}}}),
+  JSON.stringify({type: 'log', data: {message: 'unrelated log line'}}),
+  JSON.stringify({type: 'request', data: {path: '/llms.txt'}}),
+  'not json',
+  JSON.stringify({type: 'summary', recordsReturned: 3, pagination: {hasMore: true, next: 'cursor-2'}}),
+].join('\n');
+const extracted = extractEvents(cliPage);
+check('CLI output keeps only agent_read events', extracted.events, [cliEvent]);
+check('extracted events feed the report', parseEventLine(JSON.stringify(extracted.events[0]))?.path, '/llms.txt');
+check('CLI output drops request metadata', JSON.stringify(extracted.events).includes('192.0.2.1'), false);
+check('CLI cursor is followed when there is more', extracted.next, 'cursor-2');
+check('CLI log records are counted', extracted.records, 2);
+check('the last page has no cursor',
+  extractEvents(JSON.stringify({type: 'summary', pagination: {hasMore: false, next: 'x'}})).next,
+  null);
 fs.rmSync(tmp, {recursive: true, force: true});
 
 // The middleware wires the kill switch and the internal-fetch header

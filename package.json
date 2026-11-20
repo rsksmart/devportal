@@ -33,6 +33,7 @@
     "verify-agent-reads": "node scripts/verify-agent-read-log.mjs",
     "agent-reads-report": "node scripts/agent-reads-report.mjs",
     "sync:public-routes": "node scripts/sync-public-routes.mjs",
+    "fetch-agent-reads": "node scripts/fetch-agent-reads.mjs",
     "verify-public-routes": "node scripts/sync-public-routes.mjs --check",
     "sync:evm-compatibility": "node scripts/sync-evm-compatibility-summary.mjs --update-cheatsheet",
     "verify-evm-compatibility": "node scripts/verify-evm-compatibility-summary.mjs"
