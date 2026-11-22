@@ -15,7 +15,7 @@ Atlas Bridge is a cross-chain bridge for Rootstock. It helps you move supported 
 
 ## What happened to the PowPeg App?
 
-The standalone PowPeg App at `powpeg.rootstock.io` was retired on November 24, 2026, when Atlas came out of beta. Its native peg-in and peg-out flows are available in [Atlas](https://atlas.rootstock.io/). The PowPeg protocol itself is unchanged. To learn how it secures BTC and rBTC transfers, see [PowPeg protocol](/concepts/foundations/powpeg/).
+The standalone PowPeg App at `powpeg.rootstock.io` was retired on November 25, 2026, when Atlas came out of beta. Its native peg-in and peg-out flows are available in [Atlas](https://atlas.rootstock.io/). The PowPeg protocol itself is unchanged. To learn how it secures BTC and rBTC transfers, see [PowPeg protocol](/concepts/foundations/powpeg/).
 
 ## Which networks and assets does Atlas support?
 Support depends on provider availability and network conditions. Check the current supported pairs in the Atlas interface and in the [Atlas guide](/resources/guides/atlas/).
