@@ -33,8 +33,8 @@ Unlike hosted solutions, "Sovereign Mode" means your API acts as its own payment
 * **Redis** (Required for replay protection/idempotency)
 * **Rootstock Testnet Wallet** funded with tRBTC.
     * [**Rootstock Faucet**](https://faucet.rootstock.io/)
-* **RPC Endpoint:** * Testnet: `https://public-node.testnet.rsk.co`
-    * *Recommendation:* For production, use a dedicated RPC key from Rootstock RPC API or providers, such as Alchemy or NOWNodes (see [RPC Nodes tools](https://dev.rootstock.io/dev-tools/node-rpc/)) to avoid rate limits.
+* **RPC Endpoint:** *
+    * *Recommendation:* For production, use a dedicated RPC service provider such as the [Rootstock RPC Service](https://rpc.rootstock.io/) or NOWNodes (see [RPC Nodes tools](https://dev.rootstock.io/dev-tools/node-rpc/)) to avoid rate limits.
 
 
 ## 1. Project Setup
