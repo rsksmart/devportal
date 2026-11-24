@@ -69,6 +69,14 @@ Here you can find a list of rpc node providers on Rootstock.
     linkHref="/dev-tools/node-rpc/nownodes/"
     linkTitle="Make First API Call"
   />
+  <CardsGridItem
+    title="Tatum"
+    subtitle="node-rpc"
+    color="cyan"
+    description="Tatum runs Rootstock Mainnet and Testnet JSON-RPC endpoints that answer without an API key at 5 requests per minute, for development and testing."
+    linkHref="/dev-tools/node-rpc/tatum/"
+    linkTitle="Make First API Call"
+  />
 </CardsGrid>
 
 ## Compare RPC Provider Latency
