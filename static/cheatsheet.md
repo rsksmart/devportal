@@ -63,8 +63,7 @@ Production-grade RPC API for Rootstock. Create a free API key for higher limits.
 | Field | Value |
 |---|---|
 | Rootstock RPC Service | https://rpc.rootstock.io |
-| RPC API Sandbox | https://rpc.rootstock.io/doc |
-| Setup guide | https://dev.rootstock.io/developers/rpc-api/rootstock/setup/ |
+| RPC Service docs | https://rpc.rootstock.io/doc |
 
 ### 1.4 Solidity Compiler
 
@@ -158,7 +157,7 @@ In-docs AI assistant trained on Rootstock documentation. Open it with the Ask Ro
 Related guides:
 
 - [MetaMask setup](https://dev.rootstock.io/dev-tools/wallets/metamask/)
-- [RPC API setup](https://dev.rootstock.io/developers/rpc-api/rootstock/setup/)
+- [RPC Service docs](https://rpc.rootstock.io/doc)
 
 | Parameter | Testnet | Mainnet |
 |---|---|---|

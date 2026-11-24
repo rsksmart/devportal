@@ -19,7 +19,7 @@ Imagine a vast library filled with information about everything happening on the
 
 ## RPC Node Providers on Rootstock
 
-Here you can find a list of RPC node providers on Rootstock. The default RPC provider on Rootstock is the Rootstock RPC Service, and you can access it on [rpc.rootstock.io](https://rpc.rootstock.io)
+Here you can find a list of RPC node providers on Rootstock. The default RPC provider on Rootstock is the Rootstock RPC Service, and you can access it on [rpc.rootstock.io](https://rpc.rootstock.io).
 
 <CardsGrid>
   <CardsGridItem

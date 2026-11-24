@@ -186,18 +186,9 @@ values={[
     title="Rootstock RPC API入門"
     subtitle="RPC API"
     color="orange"
-    linkHref="/developers/rpc-api/rootstock/setup/"
+    linkHref="https://rpc.rootstock.io/doc"
     linkTitle="RPC APIを使う"
     description="Rootstock RPCサービスは、開発者がJSON-RPCメソッドを使ってRootstockノードとやり取りするためのシームレスで直感的なWebインターフェースを提供します。"
-  />
-    <FilterItem
-    value="beginner, rpc"
-    title="Alchemy入門"
-    subtitle="RPC API"
-    color="orange"
-    linkHref="/developers/rpc-api/alchemy/"
-    linkTitle="RPC APIを使う"
-    description="Alchemy RPCプロバイダーサービスを使ってRootstockネットワークとやり取りするためのステップガイドです。"
   />
 </Filter>
 ```

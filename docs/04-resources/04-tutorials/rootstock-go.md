@@ -21,7 +21,7 @@ Go is a fast language with a comparatively simple syntax and is especially popul
     ```bash
     go version
     ```
-- Valid Rootstock wallet (with test RBTC from a [faucet](https://dev.rootstock.io/dev-tools/additional-tools/#faucets)) and [API key](https://dev.rootstock.io/developers/rpc-api/rootstock/setup/)
+- Valid Rootstock wallet (with test RBTC from a [faucet](https://dev.rootstock.io/dev-tools/additional-tools/#faucets)) and [API key](https://rpc.rootstock.io/doc)
 
 
 
