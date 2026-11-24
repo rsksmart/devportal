@@ -27,7 +27,7 @@ Here you can find a list of RPC node providers on Rootstock. The default RPC pro
     subtitle="node-rpc"
     color="cyan"
     description="The Rootstock RPC Service provides a seamless and intuitive web interface for developers to interact with Rootstock nodes via JSON-RPC methods"
-    linkHref="/developers/rpc-api/rootstock/"
+    linkHref="/dev-tools/node-rpc/rpc-api/"
     linkTitle="Make First API Call"
   />
   <CardsGridItem
