@@ -3,7 +3,7 @@ sidebar_position: 3
 sidebar_label: RPC Node Providers
 title: RPC Node Providers
 description: "Building dApps on Rootstock involves interacting with the blockchain network. See available node rpc providers on Rootstock." 
-tags: [hardhat, quick start, developer tools, rsk, rootstock, ethereum, dApps, smart contracts]
+tags: [hardhat, quick start, developer tools, rsk, rootstock, ethereum, dApps, smart contracts, rpc]
 ---
 
 Building dApps on Rootstock involves interacting with the blockchain network. But how you access this network? That's where node providers come in. Think of them as gateways to the blockchain.
@@ -15,34 +15,19 @@ Imagine a vast library filled with information about everything happening on the
 ## How Node Providers Work
 
 * Full Nodes: Node providers operate by running full nodes on the Rootstock blockchain. These full nodes download and store the complete history of the blockchain, enabling them to verify transactions and maintain a consistent view of the network.  To interact with these full nodes, developers and applications utilize a remote procedure call (RPC) mechanism, specifically the JSON-RPC protocol. This protocol allows remote communication with the node, enabling the submission of requests and the receipt of responses.
-* API Access: Node providers like the Rootstock RPC API, Alchemy, GetBlock, dRPC, and NOWNodes offer an interface (API) that developers can use to communicate with these nodes and request specific data. This eliminates the need for developers to download the entire blockchain themselves, saving time and resources.
+* API Access: Node providers like the Rootstock RPC Service, GetBlock, dRPC, and NOWNodes offer an interface (API) that developers can use to communicate with these nodes and request specific data. This eliminates the need for developers to download the entire blockchain themselves, saving time and resources.
 
 ## RPC Node Providers on Rootstock
 
-Here you can find a list of rpc node providers on Rootstock.
-
-### Network reference
-
-| Network | Chain ID | Public RPC |
-|---------|----------|------------|
-| Rootstock Mainnet | 30 | `https://public-node.rsk.co` |
-| Rootstock Testnet | 31 | `https://public-node.testnet.rsk.co` |
+Here you can find a list of RPC node providers on Rootstock. The default RPC provider on Rootstock is the Rootstock RPC Service, and you can access it on [rpc.rootstock.io](https://rpc.rootstock.io).
 
 <CardsGrid>
   <CardsGridItem
-    title="RPC API"
+    title="Rootstock RPC Service"
     subtitle="node-rpc"
     color="cyan"
-    description="The RPC API provides a seamless and intuitive web interface for developers to interact with Rootstock nodes via JSON-RPC methods"
-    linkHref="/developers/rpc-api/rootstock/"
-    linkTitle="Make First API Call"
-  />
-  <CardsGridItem
-    title="Alchemy"
-    subtitle="node-rpc"
-    color="cyan"
-    description="Powerful APIs, SDKs, and tools to build and scale your web3 app with ease."
-    linkHref="/developers/rpc-api/alchemy/"
+    description="The Rootstock RPC Service provides a seamless and intuitive web interface for developers to interact with Rootstock nodes via JSON-RPC methods"
+    linkHref="/dev-tools/node-rpc/rpc-api/"
     linkTitle="Make First API Call"
   />
   <CardsGridItem

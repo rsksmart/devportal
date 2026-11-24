@@ -51,9 +51,8 @@ export const REFERENCE_GUIDES = [
     internal: true,
   },
   {
-    label: 'RPC API setup',
-    href: '/developers/rpc-api/rootstock/setup/',
-    internal: true,
+    label: 'RPC Service docs',
+    href: 'https://rpc.rootstock.io/doc',
   },
 ];
 

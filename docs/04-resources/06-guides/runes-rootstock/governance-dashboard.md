@@ -185,7 +185,7 @@ This is the RPC (Remote Procedure Call) URL that allows an application to intera
 
 :::tip[Tip]
 
-If you’re unsure how to navigate the Rootstock RPC Dashboard, refer to the [Getting Started with Rootstock RPC API](https://dev.rootstock.io/developers/rpc-api/rootstock/setup/).
+If you’re unsure how to navigate the Rootstock RPC Dashboard, refer to the [Getting Started with Rootstock RPC Service](https://rpc.rootstock.io/doc).
 
 :::
 

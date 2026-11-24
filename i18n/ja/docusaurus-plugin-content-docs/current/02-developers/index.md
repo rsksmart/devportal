@@ -19,7 +19,7 @@ Rootstockの開発者向け概要セクションへようこそ。
 
 :::info Info
 
-- メインネットにデプロイする前に、テストネットでdAppを素早くテストしたいですか？[Rootstock RPC API](https://rpc.rootstock.io/)を使用するか、RPC APIで利用可能な[json-rpcメソッド](/developers/rpc-api/rootstock/methods/)をご覧ください。
+- メインネットにデプロイする前に、テストネットでdAppを素早くテストしたいですか？[Rootstock RPC API](https://rpc.rootstock.io/)を使用するか、RPC APIで利用可能な[json-rpcメソッド](https://rpc.rootstock.io/doc)をご覧ください。
 - [ステップバイステップガイド](/developers/quickstart/)を参照して開発環境をセットアップし、最初のdAppをデプロイしましょう。
 
 :::

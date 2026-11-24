@@ -101,15 +101,6 @@ linkTitle="Haga su primera llamada de API"
 description="La API RPC de Rootstock facilita una interfaz web fluida e intuitiva para que los desarrolladores interactúen con los nodos Rootstock mediante métodos JSON-RPC."
 />
 <FilterItem
-value="rpc"
-title="Alchemy"
-subtitle="json rpc"
-color="orange"
-linkHref="/developers/rpc-api/alchemy/"
-linkTitle="Haga su primera llamada de API"
-description="Potentes API, kits de desarrollo de software y herramientas para crear y escalar su aplicación web3 con facilidad."
-/>
-<FilterItem
 value="rpc, smart contracts"
 title="GetBlock"
 subtitle="json rpc"

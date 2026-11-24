@@ -34,7 +34,7 @@ Set up the necessary software for a easy development on Rootstock:
 
 - **Node RPC Access:**
   - Interact with Rootstock using its RPC API.
-  - [Get an API Key](/developers/rpc-api/rootstock/setup/) and configure it in your applications.
+  - [Get an API Key](https://rpc.rootstock.io/doc) and configure it in your applications.
 
 - **Hardhat:**
   - Install Hardhat to streamline contract development and testing:

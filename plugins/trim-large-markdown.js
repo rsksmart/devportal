@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 /**
- * Agent exports for a few RPC catalog pages exceed the 50K soft limit because
+ * Agent exports for the node RPC catalog page exceed the 50K soft limit because
  * every method includes full curl examples. Humans still read the HTML page;
  * agents only need the method index.
  */
@@ -16,12 +16,6 @@ const NODE_RPC_METHODS = new Set([
   'node-operators/json-rpc/methods/index.md',
 ]);
 
-const DEV_RPC_METHODS = new Set([
-  '02-developers/07-rpc-api/02-rootstock/02-methods.md',
-  'developers/rpc-api/rootstock/methods.md',
-  'developers/rpc-api/rootstock/methods/index.md',
-]);
-
 function trimNodeOperatorMethods(markdown) {
   const marker = /^### JSON RPC method details/m;
   const match = marker.exec(markdown);
@@ -33,46 +27,11 @@ function trimNodeOperatorMethods(markdown) {
   return `${kept}${footer}`;
 }
 
-/** Keeps the intro and a bullet list of `##` method headings. */
-function trimDeveloperRpcMethods(markdown) {
-  const lines = markdown.split('\n');
-  const intro = [];
-  const methods = [];
-  let inIntro = true;
-
-  for (const line of lines) {
-    if (/^## /.test(line)) {
-      inIntro = false;
-      methods.push(line.replace(/^## /, '').trim());
-      continue;
-    }
-    if (inIntro) intro.push(line);
-  }
-
-  if (!methods.length) return markdown;
-
-  const body = [
-    intro.join('\n').trimEnd(),
-    '',
-    '## Methods',
-    '',
-    ...methods.map((name) => `- ${name}`),
-    '',
-    'Full curl examples and response schemas for each method stay on the HTML page.',
-    '',
-  ].join('\n');
-
-  return body;
-}
-
 function trimMarkdown(relPath, markdown) {
   const normalized = relPath.split(path.sep).join('/');
 
   if (NODE_RPC_METHODS.has(normalized)) {
     return trimNodeOperatorMethods(markdown);
-  }
-  if (DEV_RPC_METHODS.has(normalized)) {
-    return trimDeveloperRpcMethods(markdown);
   }
   return markdown;
 }

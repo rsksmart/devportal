@@ -16,7 +16,7 @@ and in accordance with the bitcoiners' maxim: **Don't trust. Verify.**
 
 :::info[RPC Node Providers]
 The Rootstock public nodes do not expose WebSockets, they are `HTTP` only.
-To work around this, you may either [run your own Rootstock node](/node-operators/setup/node-runner/), or use the [Rootstock RPC API](/developers/rpc-api/rootstock/setup/) or use a third-party node provider, such as [Getblock](https://getblock.io/nodes/rsk/), and [NowNodes](https://nownodes.io/nodes/rsk).
+To work around this, you may either [run your own Rootstock node](/node-operators/setup/node-runner/), or use the [Rootstock RPC Service](https://rpc.rootstock.io/doc) or use a third-party node provider, such as [Getblock](https://getblock.io/nodes/rsk/), and [NowNodes](https://nownodes.io/nodes/rsk).
 :::
 
 ## Testnet

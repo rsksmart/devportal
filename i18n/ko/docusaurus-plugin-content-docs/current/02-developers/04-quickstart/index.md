@@ -186,18 +186,9 @@ values={[
     title="Rootstock RPC API 시작하기"
     subtitle="RPC API"
     color="orange"
-    linkHref="/developers/rpc-api/rootstock/setup/"
+    linkHref="https://rpc.rootstock.io/doc"
     linkTitle="RPC API 사용"
     description="Rootstock RPC 서비스는 개발자가 JSON-RPC 메서드를 통해 Rootstock 노드와 쉽고 직관적으로 상호작용할 수 있도록 웹 인터페이스를 제공합니다."
-  />
-<FilterItem
-    value="beginner, rpc"
-    title="Alchemy 시작하기"
-    subtitle="RPC API"
-    color="orange"
-    linkHref="/developers/rpc-api/alchemy/"
-    linkTitle="RPC API 사용"
-    description="개발자가 Alchemy RPC Provider 서비스를 사용해 Rootstock 네트워크와 상호작용할 수 있도록 단계별로 안내하는 가이드입니다."
   />
 </Filter>
 ```

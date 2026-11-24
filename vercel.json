@@ -1127,7 +1127,7 @@
     },
     {
       "source": "/quick-start/step1-install-rsk-local-node",
-      "destination": "/developers/rpc-api/setup/"
+      "destination": "https://rpc.rootstock.io/doc"
     },
     {
       "source": "/kb/create-a-token/",
@@ -1167,7 +1167,7 @@
     },
     {
       "source": "/quick-start/step1-install-rsk-local-node/",
-      "destination": "/developers/rpc-api/setup/"
+      "destination": "https://rpc.rootstock.io/doc"
     },
     {
       "source": "/guides/nft/overview/",
@@ -1267,7 +1267,7 @@
     },
     {
       "source": "/develop/json-rpc-api",
-      "destination": "/developers/rpc-api/setup/"
+      "destination": "https://rpc.rootstock.io/doc"
     },
     {
       "source": "/solutions/nownodes/",
@@ -1275,7 +1275,7 @@
     },
     {
       "source": "/develop/json-rpc-api/",
-      "destination": "/developers/rpc-api/setup/"
+      "destination": "https://rpc.rootstock.io/doc"
     },
     {
       "source": "/develop/wallet/use/mycrypto/",
@@ -1307,7 +1307,7 @@
     },
     {
       "source": "/kb/rskj/",
-      "destination": "/developers/rpc-api/setup/"
+      "destination": "https://rpc.rootstock.io/doc"
     },
     {
       "source": "/develop/wallet/use/json-rpc/",
@@ -1459,7 +1459,7 @@
     },
     {
       "source": "/kb/rskj-for-developers/",
-      "destination": "/devlopers/rpc-api/"
+      "destination": "/developers/rpc-api/"
     },
     {
       "source": "/kb/interface-registry/",
@@ -2599,11 +2599,43 @@
     },
     {
       "source": "/developers/quickstart/alchemy/",
-      "destination": "/developers/rpc-api/alchemy/"
+      "destination": "/dev-tools/node-rpc/"
     },
     {
       "source": "/developers/rpc-api/setup/",
-      "destination": "/developers/rpc-api/rootstock/setup/"
+      "destination": "https://rpc.rootstock.io/doc"
+    },
+    {
+      "source": "/developers/rpc-api/rootstock/setup/",
+      "destination": "https://rpc.rootstock.io/doc"
+    },
+    {
+      "source": "/developers/rpc-api/rootstock/methods/",
+      "destination": "https://rpc.rootstock.io/doc"
+    },
+    {
+      "source": "/developers/rpc-api/rootstock/sandbox/",
+      "destination": "https://rpc.rootstock.io/doc"
+    },
+    {
+      "source": "/developers/rpc-api/rootstock/method-reference-part-1/",
+      "destination": "https://rpc.rootstock.io/doc"
+    },
+    {
+      "source": "/developers/rpc-api/rootstock/method-reference-part-2/",
+      "destination": "https://rpc.rootstock.io/doc"
+    },
+    {
+      "source": "/developers/rpc-api/rootstock/method-reference-part-3/",
+      "destination": "https://rpc.rootstock.io/doc"
+    },
+    {
+      "source": "/developers/rpc-api/alchemy/",
+      "destination": "/dev-tools/node-rpc/"
+    },
+    {
+      "source": "/dev-tools/node-rpc/alchemy/",
+      "destination": "/dev-tools/node-rpc/"
     },
     {
       "source": "/developers/smart-contracts/eas/",
