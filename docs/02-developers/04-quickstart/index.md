@@ -16,7 +16,7 @@ values={[
 {label: 'Wagmi', value: 'wagmi'},
 {label: 'Reown', value: 'reown'},
 {label: 'On-chain data', value: 'data'},
-{label: 'RPC API', value: 'rpc'},
+{label: 'RPC Service', value: 'rpc'},
 {label: 'Port to Rootstock', value: 'port-dapps'},
 {label: 'Governance', value: 'governance'}
 ]}>
@@ -211,21 +211,12 @@ values={[
   />
   <FilterItem
     value="beginner, rpc"
-    title="Get Started with Rootstock RPC API"
-    subtitle="RPC API"
+    title="Get Started with Rootstock RPC Service"
+    subtitle="RPC Service"
     color="orange"
-    linkHref="/developers/rpc-api/rootstock/setup/"
-    linkTitle="Use the RPC API"
+    linkHref="https://rpc.rootstock.io/doc"
+    linkTitle="Use the RPC Service"
     description="The Rootstock RPC Service provides a seamless and intuitive web interface for developers to interact with Rootstock nodes via JSON-RPC methods."
-  />
-    <FilterItem
-    value="beginner, rpc"
-    title="Get Started with Alchemy"
-    subtitle="RPC API"
-    color="orange"
-    linkHref="/developers/rpc-api/alchemy/"
-    linkTitle="Use the RPC API"
-    description="A step-to-step guide for developers to interact with Rootstock network with the Alchemy RPC Provider Service."
   />
   <FilterItem
     value="cli"
