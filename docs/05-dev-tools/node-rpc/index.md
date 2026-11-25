@@ -54,6 +54,14 @@ Here you can find a list of RPC node providers on Rootstock. The default RPC pro
     linkHref="/dev-tools/node-rpc/nownodes/"
     linkTitle="Make First API Call"
   />
+  <CardsGridItem
+    title="node101"
+    subtitle="node-rpc"
+    color="cyan"
+    description="Paid Rootstock JSON-RPC and WebSocket access, managed dedicated nodes, and testnet and archive services on request."
+    linkHref="/dev-tools/node-rpc/node101/"
+    linkTitle="Request RPC access"
+  />
 </CardsGrid>
 
 ## Compare RPC Provider Latency
