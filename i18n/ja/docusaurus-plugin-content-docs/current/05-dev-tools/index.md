@@ -111,15 +111,6 @@ description: スマートコントラクト開発ツールと言語のキュレ�
     description="Rootstock RPC APIは、開発者がJSON-RPCメソッドを介してRootstockノードとやり取りできる直感的なWebインターフェースを提供します。"
 />
 <FilterItem
-    value="rpc"
-    title="Alchemy"
-    subtitle="JSON RPC"
-    color="orange"
-    linkHref="/developers/rpc-api/alchemy/"
-    linkTitle="最初のAPIコールを実行"
-    description="強力なAPI、SDK、ツールでWeb3アプリを簡単に構築・スケールできます。"
-/>
-<FilterItem
     value="rpc, smart contracts"
     title="GetBlock"
     subtitle="JSON RPC"

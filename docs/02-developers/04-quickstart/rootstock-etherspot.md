@@ -2,8 +2,10 @@
 sidebar_label: AA with Etherspot
 sidebar_position: 101
 title: Deploy Account Abstraction dApps with Etherspot on Rootstock
-description: 'Deploy an Account Abstraction dApp on Rootstock with the Etherspot Prime SDK. Secured by over 85% of Bitcoin''s hash power through merge mining.'
+description: "Deploy an Account Abstraction dApp on Rootstock with the Etherspot Prime SDK and a smart account. Use chain ID 30 on Mainnet and chain ID 31 on Testnet."
 tags: [rsk, rootstock, developers, quick starts, etherspot, dApps, account abstraction]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 In this guide, you will learn how to use the Etherspot Prime SDK to deploy an Account Abstraction dApp on the Rootstock network. 

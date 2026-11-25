@@ -2,8 +2,10 @@
 sidebar_label: Using Rootstock in Browser
 sidebar_position: 4
 title: 'Using Rootstock with a Browser Extension'
-description: 'Learn how to interact with Rootstock in your web browser, how to look at Rootstock transactions, develop and deploy your very first smart contract to the Rootstock network.'
+description: "Learn how to use a browser wallet with Rootstock. Connect MetaMask, get test rBTC, and send a transaction. Mainnet chain ID is 30 and Testnet chain ID is 31."
 tags: [quick-starts, rsk, rootstock, blockchain, browser wallets, developers, beginners]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 As Rootstock is a blockchain with smart contract capabilities, it is possible to build decentralised applications (dApps) with it.

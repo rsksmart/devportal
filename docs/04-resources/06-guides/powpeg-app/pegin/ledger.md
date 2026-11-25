@@ -2,7 +2,7 @@
 sidebar_position: 1100
 sidebar_label:   Peg-in using Ledger Hardware Wallet
 title: "Performing a peg-in using Ledger Hardware Wallet"
-description: "Here, we will learn how to perform a peg-in transaction using the PowPeg App."
+description: "Perform a peg-in with a Ledger hardware wallet in the PowPeg App. Convert BTC to rBTC on Rootstock, connect your Ledger, sign, and track the transaction."
 tags: [powpeg app, peg-in, peg-out, bridge, rsk, rootstock]
 ---
 
@@ -160,7 +160,7 @@ In this section, we will see 2 options, Fast Mode and Native Mode:
 
 ![Fast mode option](/img/resources/powpeg/fast-pegin-review-details.png)
 
-- Native Mode uses [PowPeg Protocol](/concepts/foundations/powpeg/) that is decentralized, permissionless and uncensorable protocol created by Rootstock Labs, generally is slower than Fast mode and the user needs to pay only the network fees.
+- Native Mode uses [PowPeg Protocol](/concepts/foundations/powpeg/) that is decentralized, permissionless and uncensorable protocol created by RootstockLabs, generally is slower than Fast mode and the user needs to pay only the network fees.
 
 ![Native mode option](/img/resources/powpeg/native-pegin-review-details.png)
 

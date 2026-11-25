@@ -2,8 +2,10 @@
 sidebar_label: Test Smart Contracts
 sidebar_position: 104
 title: Test Smart Contracts
-description: "Learn how to test your Rootstock smart contract"
+description: "Install Mocha and Chai in your Hardhat project, write tests for the MyToken contract, and run them locally before you deploy the contract to Rootstock."
 tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethers]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 In this section, you'll set up a smart contract test and test your contract using Mocha and Chai testing frameworks. See DApps Automation using [Cucumber and Playwright](/resources/tutorials/dapp-automation-cucumber/).

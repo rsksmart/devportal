@@ -62,12 +62,9 @@ const data = {
           target: '_blank',
         },
         {
-          title: <Translate>First RPC call</Translate>,
-          href: '/developers/rpc-api/rootstock/setup/',
-        },
-        {
-          title: <Translate>RPC methods reference</Translate>,
-          href: '/developers/rpc-api/rootstock/methods/',
+          title: <Translate>RPC Service docs</Translate>,
+          href: 'https://rpc.rootstock.io/doc',
+          target: '_blank',
         },
       ],
     },

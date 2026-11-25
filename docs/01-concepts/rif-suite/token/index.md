@@ -3,7 +3,9 @@ sidebar_label: RIF Token
 sidebar_position: 2
 title: "RIF Token: Bringing Utility to Bitcoin"
 tags: [rif, token, erc677]
-description: "Information about the RIF token, where to obtain it, how to transfer it, and technical details on its token standard"
+description: "Learn what the RIF token is, where to get it, how to transfer it, and how staking RIF mints stRIF for RootstockCollective DAO governance votes and rewards."
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 The RIF (Rootstock Infrastructure Framework) token makes it easier, faster and more rewarding to build on Bitcoin. It also enables governance on [RootstockCollective DAO](https://rootstockcollective.xyz/). By staking RIF, users can mint stRIF; the governance token of the RootstockCollective used for voting, proposal creation, and rewards allocation. For more information, read the [Rootstock Collective Whitepaper](https://wiki.rootstockcollective.xyz/).

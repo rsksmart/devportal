@@ -2,8 +2,10 @@
 sidebar_label: Debugging and Troubleshooting
 sidebar_position: 108
 title:  Common Errors and Tips
-description: "Learn about some potential issues you can run into and tips on how to resolve them."
+description: "Fix common Foundry errors on Rootstock, including RPC, gas, and compiler issues. Rootstock Mainnet uses chain ID 30 and Testnet uses chain ID 31 today."
 tags: [guides, developers, smart contracts, rsk, rootstock, foundry, dApps, ethers]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 This section provides help on some potential issues you may run into and tips on how to resolve them.

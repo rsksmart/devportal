@@ -3,15 +3,17 @@ sidebar_label: rBTC Flyover
 sidebar_position: 100
 title: rBTC Flyover
 tags: [rsk, rootstock, rif, flyover, integrate, integration guide, rbtc, powpeg]
-description: The RBTC Flyover enables fast, trust-minimized onboarding of users into the Rootstock ecosystem from Bitcoin with less friction. It improves the usability for bitcoiners and integrators to interact with the Rootstock ecosystem via the Powpeg and Flyover SDK.
+description: "Learn how the rBTC Flyover shortens BTC and rBTC transfers compared with the PowPeg. Aimed at liquidity providers, developers, and the Flyover SDK users."
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 Flyover accelerates getting into Rootstock from Bitcoin by significantly reducing the wait times associated with the current PowPeg time. Developers, integrators or Liquidity Providers (LP) looking to provide rBTC access, Cross-chain swaps, and access to liquidity pools can integrate the Flyover SDK. Visit the [ LP integration section](/developers/integrate/flyover/LP/) to get started.
 
 ## Features of the Flyover
-* Flyover significantly reduces the amount of time required to transfer BTC and RBTC between the Bitcoin and Rootstock networks
+* Flyover significantly reduces the amount of time required to transfer BTC and rBTC between the Bitcoin and Rootstock networks
 * Uses a trustless intermediaries, a pool of Liquidity providers
-* Provides the same security guarantees as the Powpeg
+* Provides the same security guarantees as the PowPeg
 * Customizable SDK for LPs and integrators 
 
 :::info[Who is it for?]
@@ -26,7 +28,7 @@ To convert rBTC to BTC and vice versa, use the PowPeg App.
 
 **For General Users**
 
-Use the [PowPeg App](http://powpeg.rootstock.io) to Peg in and out of Rootstock, easily perform trust-minimized BTC and RBTC transfers between Bitcoin and Rootstock using Flyover. See section on [Using the PowPeg App](/resources/guides/powpeg-app/) to learn about how you can convert BTC - rBTC and vice versa.
+Use the [PowPeg App](https://powpeg.rootstock.io) to Peg in and out of Rootstock, easily perform trust-minimized BTC and rBTC transfers between Bitcoin and Rootstock using Flyover. See section on [Using the PowPeg App](/resources/guides/powpeg-app/) to learn about how you can convert BTC - rBTC and vice versa.
 
 :::
 
@@ -68,7 +70,7 @@ The Flyover offers a way for developers to integrate Flyover into wallets, dApps
 
 **With Flyover:**
 * Wallet or exchange platforms can integrate Flyover to offer a seamless experience for depositing and withdrawing BTC and rBTC within their platform utilizing the liquidity provided by the Flyover LP network. This eliminates the long wait times associated with traditional peg-in methods, allowing users to quickly move funds between their wallets to other platforms.
-* DeFi and Lending Platforms can integrate Flyover to allow users to easily deposit Bitcoin as collateral for borrowing assets on Rootstock. The faster peg-in times provided by Flyover would unlock borrowing opportunities for users who hold rBTC against other rootstock on-chain assets (MOC, USDRIF and others).
+* DeFi and Lending Platforms can integrate Flyover to allow users to easily deposit Bitcoin as collateral for borrowing assets on Rootstock. The faster peg-in times provided by Flyover would unlock borrowing opportunities for users who hold rBTC against other Rootstock on-chain assets (MOC, USDRIF and others).
 
 **Flyover offers;**
 
@@ -89,7 +91,7 @@ An LP provides liquidity in Rootstock (rBTC) and Bitcoin (BTC) on behalf of user
 * Assume both roles as an integrator and an LP, or may limit themselves as LPs by configuring the SDK accordingly.
 
 **Flyover Offers;**
-* Reduced friction in the peg-in/out processes: Flyover reduces the friction in the current Powpeg time. It solves the 100 blocks confirmation friction required in the native Powpeg.  With Flyover, a minimum of 1-2 bitcoin block confirmation is needed instead (~20 minutes). Note that LPs can configure the number of blocks.
+* Reduced friction in the peg-in/out processes: Flyover reduces the friction in the current PowPeg time. It solves the 100 blocks confirmation friction required in the native PowPeg.  With Flyover, a minimum of 1-2 bitcoin block confirmation is needed instead (~20 minutes). Note that LPs can configure the number of blocks.
 
 * Revenue potential: Flyover allows LPs to configure and earn revenue from users using their liquidity for BTC and rBTC transfers on the Flyover protocol. 
 

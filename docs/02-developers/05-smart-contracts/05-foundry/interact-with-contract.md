@@ -2,8 +2,10 @@
 sidebar_label:  Interact with the Smart Contract
 sidebar_position: 107
 title:  Interact with the Smart Contract
-description: "Learn how to interact with your smart contract using cast"
+description: "Call a deployed Rootstock contract with Cast after you deploy it using Foundry. Rootstock Mainnet uses chain ID 30 and Testnet uses chain ID 31 today."
 tags: [guides, developers, smart contracts, rsk, rootstock, hardhat, dApps, ethers]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 

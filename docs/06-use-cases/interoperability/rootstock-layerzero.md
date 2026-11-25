@@ -20,7 +20,7 @@ This tutorial shows how to implement OFT (Omnichain Fungible Token) transfers be
 ## Prerequisites
 To complete this tutorial, you'll need:
 - Node.js: v18.18.0+ 
-- RPC Providers ([Rootstock](/developers/rpc-api/rootstock/), [Alchemy](/developers/rpc-api/alchemy/)) 
+- RPC Providers: the [Rootstock RPC Service](https://rpc.rootstock.io/) for Rootstock, and a Sepolia provider such as [Alchemy](https://www.alchemy.com/chain-connect/endpoints/rpc-sepolia-sepolia)
 - Etherscan API Key
     - Sign up to get an [API Key](https://docs.etherscan.io/getting-started/viewing-api-usage-statistics). 
     This will be used for verifying the contracts.

@@ -23,6 +23,8 @@ The Rootstock Runes Mock Bridge opens up exciting opportunities for developers t
 
 These tools allow developers to create diverse Runes-based applications, further expanding the Rootstock ecosystem and promoting innovation.
 
+New to Rootstock? Read [Rootstock Foundations](/concepts/foundations/) first to learn how Rootstock connects to Bitcoin.
+
 In this guide, you will explore the exciting possibilities the Rootstock Runes Mock Bridge presents for developing Runes-focused applications within the Rootstock ecosystem. 
 
 You will gain an understanding of Bitcoin Runes, including how they operate on the Bitcoin blockchain using the Unspent Transaction Output (UTXO) model and the OP\_RETURN opcode.

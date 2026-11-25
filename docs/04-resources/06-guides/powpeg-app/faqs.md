@@ -115,7 +115,7 @@ Here, you can find a list of frequently asked questions (FAQs) about the [PowPeg
     <Accordion.Body>
         > - The latest versions of Trezor Suite have implemented a security rule to disable its use with non-standard key paths. Therefore, the user must explicitly set **Perform Safety Checks** to **PROMPT** option in **Trezor Suite** in order to use the **Trezor wallet** in the PowPeg application.
         > - If is not enabled you will receive this error ![Trezor Error Key Path](/img/resources/powpeg/trezor-error.png)
-        > - This video explains how to enable **Perform Safety Checks** to **PROMPT** on **Trezor Suite** [Enabling Prompt for Key Path](/img/resources/powpeg/trezor-error-fixed.mp4)
+        > - This video explains how to enable **Perform Safety Checks** to **PROMPT** on **Trezor Suite** [Enabling Prompt for Key Path](pathname:///img/resources/powpeg/trezor-error-fixed.mp4)
         <Video url="/img/resources/powpeg/trezor-error-fixed.mp4" thumbnail="/img/resources/powpeg/trezor-error.png" />
 
     </Accordion.Body>

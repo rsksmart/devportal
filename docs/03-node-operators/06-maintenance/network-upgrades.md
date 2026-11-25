@@ -87,3 +87,7 @@ public class ActivationConfigTest {
     ));
 }
 ```
+
+## Upgrade history
+
+This page covers how to code a consensus rule change. For the date each Mainnet network upgrade activated, read from the timestamp of its activation block, see the [independent Rootstock reference](https://rsk.zone/history/#upgrades). It also lists the [RSKIPs each upgrade activated](https://rsk.zone/rskips/). It's maintained independently of RootstockLabs.

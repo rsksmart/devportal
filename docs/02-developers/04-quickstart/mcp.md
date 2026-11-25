@@ -3,7 +3,9 @@ sidebar_label: MCP Server
 sidebar_position: 201
 title: Deploy and Interact with Rootstock using the MCP Server
 tags: [rsk, rootstock, mcp, ai agents, ai]
-description: "Connect AI clients to Rootstock through the MCP Server. Secured by over 85% of Bitcoin's hash power through merge mining."
+description: "Connect AI clients to Rootstock through the MCP Server. Set up the server and use supported AI tools. Mainnet chain ID is 30 and Testnet chain ID is 31."
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 Rootstock MCP Server is a Model Context Protocol (MCP) server that provides tools for interacting with the Rootstock blockchain. AI clients connect through it to run blockchain operations.

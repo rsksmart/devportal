@@ -42,7 +42,7 @@ const publicClient = createPublicClient({
 **Explanation:** 
 - You need to define a `Chain` and `Transport` for Rootstock-specific values. 
 - Chain values for the Rootstock chain could be `rootstock` for the mainnet or `rootstockTestnet` for the Testnet
-- It is recommended to set your `RPC_URL` as an environmental variable whose value can be obtained from the Rootstock [RPC API dashboard](https://dev.rootstock.io/developers/rpc-api/rootstock/setup/).
+- It is recommended to set your `RPC_URL` as an environmental variable whose value can be obtained from the Rootstock [RPC API dashboard](https://rpc.rootstock.io/doc).
 
 ```text
 RPC_URL='https://rpc.testnet.rootstock.io/<API_KEY>'

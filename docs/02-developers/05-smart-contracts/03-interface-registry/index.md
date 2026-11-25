@@ -2,8 +2,10 @@
 sidebar_label: Interface Registry
 sidebar_position: 601
 title: Universal Smart Contract Interface Registry
-description: "See the ERC1820 standard interface, address support and smart contract implementation"
+description: "Learn how the Rootstock interface registry lets contracts publish and look up interface IDs. Rootstock Mainnet uses chain ID 30 and Testnet uses chain ID 31."
 tags: [smart contracts, rsk, rootstock, developers, interface registry]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 The ERC1820 standard defines a universal registry smart contract where any address (contract or regular account) can register which interface it supports and which smart contract is responsible for its implementation.

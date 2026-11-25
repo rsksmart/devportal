@@ -2,8 +2,10 @@
 sidebar_label: Create a Foundry Project
 sidebar_position: 101
 title: Create a Foundry Project
-description: "Learn how to set up your environment for development using Foundry"
+description: "Install the Foundry toolchain with Foundryup and run forge init to create a new project. This is the first step in the Foundry guide for Rootstock developers."
 tags: [guides, developers, smart contracts, rsk, rootstock, foundry, dApps]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 

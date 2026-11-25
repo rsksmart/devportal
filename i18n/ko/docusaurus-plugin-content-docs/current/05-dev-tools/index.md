@@ -111,15 +111,6 @@ description: Rootstock에서 스마트 컨트랙트를 개발하고 배포하는
     description="Rootstock RPC API는 개발자가 JSON-RPC 메서드를 통해 Rootstock 노드와 쉽고 직관적으로 상호작용할 수 있는 웹 인터페이스를 제공합니다."
   />
 <FilterItem
-    value="rpc"
-    title="Alchemy"
-    subtitle="JSON RPC"
-    color="orange"
-    linkHref="/developers/rpc-api/alchemy/"
-    linkTitle="첫번째 API 호출하기"
-    description="Web3 앱을 쉽고 빠르게 개발하고 확장할 수 있도록 돕는 강력한 API, SDK, 그리고 다양한 도구들을 제공합니다."
-  />
-<FilterItem
     value="rpc, smart contracts"
     title="GetBlock"
     subtitle="JSON RPC"

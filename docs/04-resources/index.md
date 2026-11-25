@@ -23,3 +23,4 @@ The Rootstock Resources section serves as a comprehensive knowledge base compris
 | [Hackathons](/resources/hackathon/) | Hackathon and Workshop Resources.|
 | [For AI and Agents](/resources/ai-and-agents/) | How agents, AI tools, and LLMs can discover and use this documentation.|
 | [Rootstock Improvement Proposals (RSKIPs)](https://github.com/rsksmart/RSKIPs) | Rootstock Improvement Proposals.|
+| [Independent Rootstock reference](https://rsk.zone/) | Chain-measured figures, upgrade history and a reading list, maintained independently of RootstockLabs.|

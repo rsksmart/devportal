@@ -2,10 +2,12 @@
 title: "Deploy Your First Contract"
 sidebar_label: "Deploy Your First Contract"
 sidebar_position: 3
-description: "Write, compile, deploy, and interact with your first smart contract on Rootstock Testnet."
+description: "Write, compile, deploy, and interact with your first Solidity contract on Rootstock Testnet with Hardhat. Mainnet chain ID is 30 and Testnet chain ID is 31."
 tags: [guides, developers, blockchain, rsk, rootstock, deploy, hardhat]
 remix: "https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCmNvbnRyYWN0IEhlbGxvUm9vdHN0b2NrIHsKICAgIHN0cmluZyBwdWJsaWMgbWVzc2FnZTsKCiAgICBjb25zdHJ1Y3RvcihzdHJpbmcgbWVtb3J5IF9tZXNzYWdlKSB7CiAgICAgICAgbWVzc2FnZSA9IF9tZXNzYWdlOwogICAgfQoKICAgIGZ1bmN0aW9uIHVwZGF0ZU1lc3NhZ2Uoc3RyaW5nIG1lbW9yeSBfbmV3TWVzc2FnZSkgcHVibGljIHsKICAgICAgICBtZXNzYWdlID0gX25ld01lc3NhZ2U7CiAgICB9Cn0%3D"
 remix_label: "Try in Remix IDE"
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 import CodeBlock from '@theme/CodeBlock';

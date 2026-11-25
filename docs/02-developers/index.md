@@ -11,7 +11,7 @@ Welcome to the Rootstock Developers Overview section.
 This section covers quickstarts, smart contract development, integrations, RPC API access, and libraries for Rootstock.
 
 :::info[Info]
-* Looking to quickly test your dApp on testnet before deploying to mainnet? Use the [Rootstock RPC API](https://rpc.rootstock.io/) or view the [json-rpc methods](/developers/rpc-api/rootstock/methods/) available on the RPC API.
+* Looking to quickly test your dApp on testnet before deploying to mainnet? Use the [Rootstock RPC Service](https://rpc.rootstock.io/) or view the [json-rpc methods](https://rpc.rootstock.io/doc) available on the RPC API.
 * Dive right in with [step-by-step guides](/developers/quickstart/) to get your development environment set up and deploy your first dApp.
 :::
 

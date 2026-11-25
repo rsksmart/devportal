@@ -185,18 +185,9 @@ values={[
     title="Primeros pasos con la API RPC de Rootstock"
     subtitle="API RPC"
     color="orange"
-    linkHref="/developers/rpc-api/rootstock/setup/"
+    linkHref="https://rpc.rootstock.io/doc"
     linkTitle="Utilice la API RPC"
     description="El servicio RPC de Rootstock proporciona una interfaz web intuitiva y sin fisuras para que los desarrolladores interactúen con los nodos Rootstock a través de métodos JSON-RPC."
-  />
-    <FilterItem
-    value="beginner, rpc"
-    title="Primeros pasos con Alchemy"
-    subtitle="API RPC"
-    color="orange"
-    linkHref="/developers/rpc-api/alchemy/"
-    linkTitle="Utilice la API RPC"
-    description="Una guía paso a paso para que los desarrolladores interactúen con la red Rootstock con el servicio de proveedor RPC Alchemy."
   />
 </Filter>
 ```

@@ -2,10 +2,12 @@
 title: "Smart Contract Fundamentals"
 sidebar_label: "Smart Contract Fundamentals"
 sidebar_position: 2
-description: "Learn the foundational concepts of smart contracts on Rootstock."
+description: "Learn the foundational concepts of smart contracts on Rootstock. Covers Solidity and EVM contract state. Mainnet chain ID is 30 and Testnet chain ID is 31."
 tags: [guides, developers, blockchain, rsk, rootstock, solidity, smart-contracts]
 remix_label: "Try in Remix IDE"
 remix: "https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4zMDsKCmNvbnRyYWN0IEV4YW1wbGUgewogICAgdWludDI1NiBwdWJsaWMgdmFsdWU7CgogICAgZnVuY3Rpb24gc2V0VmFsdWUodWludDI1NiBfdikgZXh0ZXJuYWwgewogICAgICAgIHZhbHVlID0gX3Y7CiAgICB9Cn0%3D"
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 import CodeBlock from '@theme/CodeBlock';

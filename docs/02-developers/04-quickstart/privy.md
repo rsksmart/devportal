@@ -2,8 +2,10 @@
 sidebar_label: Privy
 sidebar_position: 109
 title: Onboard Users with Privy on Rootstock
-description: 'Onboard users with social logins and self-custodial wallets on Rootstock using Privy. Secured by over 85% of Bitcoin''s hash power through merge mining.'
+description: "Onboard users with social logins and self-custodial wallets on Rootstock using Privy on Testnet. Use chain ID 30 on Mainnet and chain ID 31 on Testnet."
 tags: [rsk, rootstock, developers, privy, wagmi, quickstart, dApps, Smart Contracts]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 The [Rootstock Privy Starter Kit](https://github.com/rsksmart/rsk-privy-starter-kit) empowers developers to onboard users with social logins and self custodial wallets while preserving control, privacy, and flexibility for dApps when building on Rootstock.

@@ -2,5 +2,5 @@ label: Create and Deploy a Runes Mock Bridge dApp on Rootstock
 position: 4
 link:
   type: generated-index
-  description: The Rootstock Runes Mock Bridge project opens up exciting opportunities for developers to build Runes-focused applications within the Rootstock ecosystem.
+  description: Build a Runes Mock Bridge dApp that represents Bitcoin Runes as ERC-1155 tokens on Rootstock. Set up the project, review the contract, and deploy it.
   slug: /resources/guides/runes-rootstock/deploy-mockbridge-contract/

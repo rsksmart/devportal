@@ -18,3 +18,4 @@ This section guides node operators performing merged mining operations or develo
 | [Public Nodes](/node-operators/public-nodes/) | Rootstock Nodes: Public nodes (Mainnet, Testnet).|
 | [Maintenance](/node-operators/maintenance/network-upgrades/) | How to upgrade and update the Rootstock nodes.|
 | [Troubleshooting](/node-operators/troubleshooting/) | Learn how to solve some known or frequently encountered issues when setting up the node.|
+| [Network clients (independent)](https://rsk.zone/clients/) | Compare RSKj with Rustock, an experimental Rust client, on a reference maintained outside RootstockLabs.|

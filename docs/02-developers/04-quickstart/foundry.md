@@ -2,8 +2,10 @@
 sidebar_label: Foundry
 sidebar_position: 500
 title: Deploy Smart Contracts with Foundry on Rootstock
-description: Deploy and test smart contracts on Rootstock with Foundry. Secured by over 85% of Bitcoin's hash power through merge mining.
+description: "Deploy and test smart contracts on Rootstock with Foundry. Install Foundryup and use the starter kit. Mainnet chain ID is 30 and Testnet chain ID is 31."
 tags: [rsk, rootstock, tutorials, developers, foundry, quick starts, dApps, smart contracts]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 :::info[Note]

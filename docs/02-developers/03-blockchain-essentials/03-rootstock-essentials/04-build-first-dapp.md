@@ -2,8 +2,10 @@
 title: "Build Your First dApp"
 sidebar_label: "Build Your First dApp"
 sidebar_position: 4
-description: "Build a simple decentralized application on Rootstock with a frontend and smart contract."
+description: "Build a simple dApp on Rootstock with a frontend and a smart contract. Connect a wallet on Testnet. Mainnet chain ID is 30 and Testnet chain ID is 31."
 tags: [guides, developers, blockchain, rsk, rootstock, dapp, nextjs, ethers]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 This module walks you through building a simple decentralized application (dApp) on Rootstock. You'll integrate a deployed smart contract with a frontend using Ethers.js and a wallet provider (MetaMask or Rabby). By the end, you'll have a fully functional dApp where users can read/write data on the Rootstock Testnet.

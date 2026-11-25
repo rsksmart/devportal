@@ -2,8 +2,10 @@
 sidebar_label: Interact with the Frontend
 sidebar_position: 103
 title: Interact with the Frontend for Your NFT Marketplace on Rootstock
-description: 'How to develop and interact with the frontend for Your NFT Marketplace with Thirdweb.'
+description: "Build an NFT marketplace frontend on Rootstock with the thirdweb SDK and a connected wallet. Rootstock Mainnet uses chain ID 30 and Testnet uses chain ID 31."
 tags: [rsk, thirdweb, developers, developer tools, rootstock, sdk, dApps, smart contracts]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 In [Part 1: Deploy a Marketplace Contract](/developers/smart-contracts/thirdweb/deploy-marketplace-contracts) of this two parts guide, we learnt how to set up an account on the Thirdweb marketplace and  deployed a smart contract on the Thirdweb marketplace and added the Direct Listing extension. In this section, we will build the core user-facing features of your NFT marketplace using the Thirdweb SDK, we will implement key marketplace functionalities such as listing NFTs for sale, purchasing listed assets, and canceling active offers.

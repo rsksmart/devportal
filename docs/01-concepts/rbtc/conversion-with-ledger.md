@@ -2,11 +2,13 @@
 title: Conversion using a Ledger hardware wallet
 sidebar_label: Ledger
 tags: [rsk, rootstock, rbtc, conversion, peg, peg-in, peg-out, federation, ledger]
-description: 'How to perform the Powpeg mechanism using Ledger.'
+description: "Convert BTC to rBTC and rBTC to BTC with a Ledger hardware wallet, Electrum, and the PowPeg. Covers peg-in wait times and the peg-out gas limit on Mainnet."
 sidebar_position: 304
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
-In this section, we will go over the steps of converting BTC to rBTC using Ledger hardware wallet, and vice versa on the Bitcoin and Rootstock (RSK) networks.
+In this section, we will go over the steps of converting BTC to rBTC using Ledger hardware wallet, and vice versa on the Bitcoin and Rootstock networks.
 
 ## General Requirements
 
@@ -41,9 +43,7 @@ BTC Mainnet using Ledger hardware wallet.
 - Go to the third tab "Receive". You will see a Bitcoin address.
 
 :::info[Note]
-The Bitcoin wallet needs to be legacy (not Segwit)
-whose public key starts with either `m` or `n`,
-and private key starting with `p2pkh:`
+The Bitcoin wallet needs to be legacy (not Segwit), with an address that starts with `1`.
 :::
 
 ### Find a BTC address with balance
@@ -132,7 +132,7 @@ Use Electrum to send BTCs to the Rootstock Federation Address. To do that:
 - Right click over it
 - Select the option "Spend From":
   ![Spend from](/img/concepts/peg-ledger/electrumSpendFromOption.png)
-- Finally make a payment to the RSK Federation Address
+- Finally make a payment to the Rootstock Federation Address
   ![Sending Payment](/img/concepts/peg-ledger/electrumSpendFrom.png)
 
 **4 Wait for BTC confirmations**
@@ -148,8 +148,8 @@ To ensure the transaction, we need to wait for 100 BTC confirmations, be patient
 Get the corresponding rBTC address from your Ledger hardware wallet, by following these steps:
 
 - Connect and unlock your Ledger device.
-- Open the RSK app.
-- Get RSK derived address running this scripts:
+- Open the Rootstock app.
+- Get the Rootstock derived address running this script:
   ```javascript
     const Transport = require("@ledgerhq/hw-transport-node-hid").default;
     const AppEth = require("@ledgerhq/hw-app-eth").default;
@@ -160,7 +160,7 @@ Get the corresponding rBTC address from your Ledger hardware wallet, by followin
           const eth = new AppEth(transport);
           const result = await eth.getAddress(derivationPath);
 
-          console.log('RSK Address');
+          console.log('Rootstock Address');
           console.log(result.address);
           console.log('Derivation Path: ' + derivationPath);
       }
@@ -207,7 +207,7 @@ Then do a transaction to the Bridge Contract.
 
 :::info[Note]
 
-- The minimum amount to send in a peg-out transaction must be greater than or equal to 0.004 **RBTC** for Mainnet and the minimum amount to send in a peg-in transaction must be greater than or equal to 0.005 **BTC** for Mainnet.
+- The minimum amount to send in a peg-out transaction must be greater than or equal to 0.004 **rBTC** for Mainnet and the minimum amount to send in a peg-in transaction must be greater than or equal to 0.005 **BTC** for Mainnet.
 - Gas Limit of the transaction needs to be manually set at 100,000 gas; otherwise the transaction will fail.
 - Gas Price can be set to 0.06 gwei.
 :::
@@ -220,5 +220,5 @@ You can either use Electrum wallet downloaded earlier or
 any Bitcoin explorer to check the balance.
 
 :::info[Note]
-The release process on Bitcoin network takes 4000 RSK block confirmations and at least 10 more minutes.
+The release process on Bitcoin network takes 4000 Rootstock block confirmations and at least 10 more minutes.
 :::

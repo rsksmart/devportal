@@ -2,11 +2,13 @@
 title: 'Exploring Rootstock Transactions'
 sidebar_position: 5
 sidebar_label: Rootstock Transactions
-description: 'Learn how to interact with Rootstock in your web browser, how to look at Rootstock transactions, develop and deploy your very first smart contract to the Rootstock network.'
+description: "Explore Rootstock transactions in a block explorer after you connect MetaMask. Read rBTC and RIF transfers. Mainnet chain ID is 30 and Testnet chain ID is 31."
 tags: [quick-starts, rsk, rootstock, blockchain, browser wallets, developers, beginners]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
-In the previous section on [blockchain overview](/developers/blockchain-essentials/overview/), we set up a browser extension that is a crypto wallet, MetaMask. We connected to the Rootstock Testnet, and loaded this up with Rootstock’s cryptocurrency, rBTC, and an Rootstock-based token, RIF.
+In the previous section on [blockchain overview](/developers/blockchain-essentials/overview/), we set up a browser extension that is a crypto wallet, MetaMask. We connected to the Rootstock Testnet, and loaded this up with Rootstock’s cryptocurrency, rBTC, and a Rootstock-based token, RIF.
 
 :::note[Using Rootstock in the browser]
 

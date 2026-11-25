@@ -1,7 +1,8 @@
 ---
 sidebar_label: Bug Bounty Program
 sidebar_position: 4
-title: Contribute to RootstockLabs platforms security
+title: Bug Bounty Program
+description: "Report security vulnerabilities in RootstockLabs platforms through the bug bounty program on Immunefi. Review the SLA, disclosure policy, scope, and rules."
 tags: [rsk, rif, bounty, security, rootstock]
 ---
 
@@ -24,10 +25,10 @@ We aim to keep you informed about the progress throughout the process.
 
 ### Disclosure Policy
 
-* Follow Immuefi's [disclosure guidelines](https://immunefi.com/responsible-publication/).
+* Follow Immunefi's [disclosure guidelines](https://immunefi.com/responsible-publication/).
 * Public disclosure of a vulnerability makes it ineligible for a bounty. If the user reports the vulnerability to other security teams (e.g. Ethereum or ETC, Ledger) but reports to RootstockLabs with considerable delay, then RootstockLabs may reduce or cancel the bounty.
 
 ### Scope and Rules
 
-Visit the [Scope Section on Immuefi](https://immunefi.com/bug-bounty/rootstocklabs/scope/#top) to view the scope / out of scope vulnerability, and the program rules.
+Visit the [Scope Section on Immunefi](https://immunefi.com/bug-bounty/rootstocklabs/scope/#top) to view the scope / out of scope vulnerability, and the program rules.
 

@@ -19,7 +19,7 @@ Esta sección permite a los desarrolladores iniciarse en la blockchain de Rootst
 
 :::info [Info]
 
-- ¿Quiere probar rápidamente su dApp en testnet antes de implementarla en mainnet? Use la [API RPC de Rootstock](https://rpc.rootstock.io/) o consulte los [métodos JSON-RPC](/developers/rpc-api/rootstock/methods/) disponibles en la API RPC.
+- ¿Quiere probar rápidamente su dApp en testnet antes de implementarla en mainnet? Use la [API RPC de Rootstock](https://rpc.rootstock.io/) o consulte los [métodos JSON-RPC](https://rpc.rootstock.io/doc) disponibles en la API RPC.
 - Sumérjase de lleno con estas [guías paso a paso](/developers/quickstart/) para configurar su entorno de desarrollo e implementar su primera dApp.
 
 :::

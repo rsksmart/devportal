@@ -27,3 +27,4 @@ If the conditions to change composition are met, a pegnatory can send a message 
 - [PowPeg protocol](/concepts/foundations/powpeg/)
 - [PowPeg security summary](/concepts/foundations/powpeg/security-model/)
 - [HSM firmware attestation](/concepts/foundations/powpeg/hsm-firmware-attestation/)
+- [PowPeg federation history](https://rsk.zone/powpeg/#history), from an independent reference maintained outside RootstockLabs

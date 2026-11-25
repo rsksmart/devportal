@@ -2,8 +2,10 @@
 sidebar_label: Hardhat
 sidebar_position: 103
 title: Deploy Smart Contracts with Hardhat on Rootstock
-description: 'Deploy and test ERC smart contracts on Rootstock with Hardhat. Secured by over 85% of Bitcoin''s hash power through merge mining.'
+description: "Deploy and test ERC smart contracts on Rootstock with Hardhat. Clone the starter kit and add RPC URLs. Mainnet chain ID is 30 and Testnet chain ID is 31."
 tags: [rsk, rootstock, tutorials, developers, hardhat, quick starts, dApps, smart contracts]
+freshness_review_date: 2026-10-15
+owner: owans
 ---
 
 Whether you’re a seasoned developer or just starting your journey into smart contract development, the hardhat starter kit provides a solid foundation for building decentralized applications (dApps) on the Rootstock network.
