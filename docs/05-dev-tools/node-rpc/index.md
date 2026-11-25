@@ -55,6 +55,14 @@ Here you can find a list of RPC node providers on Rootstock. The default RPC pro
     linkTitle="Make First API Call"
   />
   <CardsGridItem
+    title="Tatum"
+    subtitle="node-rpc"
+    color="cyan"
+    description="Tatum runs Rootstock Mainnet and Testnet JSON-RPC endpoints that answer without an API key at 5 requests per minute, for development and testing."
+    linkHref="/dev-tools/node-rpc/tatum/"
+    linkTitle="Make First API Call"
+  />
+  <CardsGridItem
     title="eRPC"
     subtitle="node-rpc"
     color="cyan"

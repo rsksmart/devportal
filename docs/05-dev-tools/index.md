@@ -157,6 +157,15 @@ This page catalogs developer tools and infrastructure for Rootstock. Use the fil
     description="NOWNodes is a blockchain-as-a-service enterprise solution that lets users get access to full Nodes and blockbook Explorers via an API."
   />
 <FilterItem
+    value="rpc"
+    title="Tatum"
+    subtitle="json rpc"
+    color="orange"
+    linkHref="/dev-tools/node-rpc/tatum/"
+    linkTitle="Make First API Call"
+    description="Tatum runs Rootstock Mainnet and Testnet JSON-RPC endpoints that answer without an API key at 5 requests per minute, for development and testing."
+  />
+<FilterItem
     value="rpc, smart contracts"
     title="node101"
     subtitle="json rpc"
