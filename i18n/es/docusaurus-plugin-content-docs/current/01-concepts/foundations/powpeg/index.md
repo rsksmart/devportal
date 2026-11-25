@@ -18,8 +18,8 @@ El protocolo **PowPeg** de Rootstock ha madurado desde su creación en 2018 como
 
 :::note Información
 
-- La aplicación PowPeg está disponible en [Testnet](https://powpeg.testnet.rootstock.io/) y en [Mainnet](https://powpeg.rootstock.io/).
-- Para obtener información general sobre el diseño y la arquitectura, cómo realizar una transacción peg-in utilizando Ledger y Trezor, preguntas frecuentes y operaciones avanzadas que puede realizar en el PowPeg, consulte la [Guía del usuario de PowPeg](/resources/guides/powpeg-app/).
+- Use [Atlas](https://atlas.rootstock.io/) para peg-ins y peg-outs nativos del PowPeg. Atlas está disponible en [Mainnet](https://atlas.rootstock.io/) y en [Testnet](https://atlas.testnet.rootstock.io/). Reemplaza a la aplicación PowPeg independiente.
+- Para obtener instrucciones paso a paso de peg-in y peg-out, consulte [Mover activos con Atlas](/resources/guides/atlas/).
 - Obtenga información sobre los signatarios y la atestación en la sección de [Atestación del firmware HSM de PowPeg](/concepts/foundations/powpeg/hsm-firmware-attestation).
 - Lea [Introducción al Modo Rápido: Obtenga RBTC a través de PowPeg, pero más rápido](https://blog.rootstock.io/noticia/get-rbtc-fast-mode/) para conocer la diferencia entre los Modos Nativo y Rápido al utilizar el PowPeg.
   :::

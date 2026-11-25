@@ -82,7 +82,7 @@ You are responsible for compliance, UX, and wallet policy in your jurisdiction. 
 | :--- | :--- |
 | Pay-per-request APIs for agents | [x402 on Rootstock](/use-cases/payments-assets/integrate-x402/) |
 | Gas paid in ERC-20 | [RIF Relay](/developers/integrate/rif-relay/overview/) |
-| BTC ↔ rBTC | [PowPeg App](/resources/guides/powpeg-app/) |
+| BTC ↔ rBTC | [Atlas](/resources/guides/atlas/) |
 | Rootstock vs Lightning | [FAQs](/resources/faqs/) |
 
 ## Resources

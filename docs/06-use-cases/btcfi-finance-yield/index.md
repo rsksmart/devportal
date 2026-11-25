@@ -26,7 +26,7 @@ Before you integrate vault or lending flows, review token standards, security pa
 
 ### 1. rBTC (Bitcoin-pegged gas and collateral)
 
-rBTC is the native asset on Rootstock. It is pegged 1:1 with BTC through the PowPeg. When you [peg in](/resources/guides/powpeg-app/pegin/), BTC is locked on Bitcoin and rBTC is available on Rootstock. You pay gas in rBTC and use it as collateral in DeFi protocols.
+rBTC is the native asset on Rootstock. It's pegged 1:1 with BTC through the PowPeg. When you [peg in](/resources/guides/atlas/getting-started-atlas/), BTC is locked on Bitcoin and rBTC is available on Rootstock. You pay gas in rBTC and use it as collateral in DeFi protocols.
 
 ### 2. USDRIF and stablecoins
 

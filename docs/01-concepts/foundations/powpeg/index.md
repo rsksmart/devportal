@@ -2,7 +2,7 @@
 sidebar_position: 1
 sidebar_label: Overview
 title: "PowPeg Protocol: Building the Most Secure, Permissionless and Uncensorable Bitcoin Peg"
-tags: [rsk, rootstock, rbtc, btc, architecture, powpeg protocol, powpeg app]
+tags: [rsk, rootstock, rbtc, btc, architecture, powpeg protocol]
 description: "Learn how the PowPeg protocol secures BTC and rBTC transfers between Bitcoin and Rootstock with PowHSMs, merge mining, and functionaries. Covers its history."
 render_features: 'powpeg-hsm-attestation-frame'
 ---
@@ -10,8 +10,8 @@ render_features: 'powpeg-hsm-attestation-frame'
 Rootstock’s **PowPeg** protocol, has matured from its inception in 2018 as a federation to now include many decentralized qualities. The protocol protects private keys stored in special purpose PowHSMs based on tamper-proof secure elements (SE). Each PowHSM runs a Rootstock node in SPV mode, and so signatures can only be commanded by chain cumulative proof of work. Security is established in the PowPeg through the simplicity of a layered design we refer to as defence-in-depth.
 
 :::note Info
-- The PowPeg App is available on [Testnet](https://powpeg.testnet.rootstock.io/) and [Mainnet](https://powpeg.rootstock.io/).
-- For general information about the design and architecture, how to perform a peg-in transaction using Ledger and Trezor, Frequently asked questions and advanced operations you can perform on the PowPeg, please refer to the [PowPeg user guide](/resources/guides/powpeg-app/).
+- Use [Atlas](https://atlas.rootstock.io/) for native PowPeg peg-ins and peg-outs. Atlas is available on [Mainnet](https://atlas.rootstock.io/) and [Testnet](https://atlas.testnet.rootstock.io/). It replaces the standalone PowPeg App.
+- For step-by-step peg-in and peg-out instructions, see [Bridge assets with Atlas](/resources/guides/atlas/).
 - Get information on the signatories and attestation in the [PowPeg HSM Firmware Attestation](/concepts/foundations/powpeg/hsm-firmware-attestation) section.
 - For federation size and composition changes, see [PowPeg member updates](/concepts/foundations/powpeg/member-updates/).
 - For PowPeg-specific security properties, see the [PowPeg security summary](/concepts/foundations/powpeg/security-model/). Published audits live in the [security repository](https://github.com/rsksmart/security).

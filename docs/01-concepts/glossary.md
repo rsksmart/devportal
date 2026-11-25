@@ -294,9 +294,9 @@ These are services that fetch external data for use in smart contracts, allowing
 
 ## PowPeg 
 
-This facilitates the conversion of Bitcoin (BTC) to Rootstock Bitcoin (RBTC) and vice versa. It operates under the PowPeg protocol, which secures locked bitcoins by leveraging the same Bitcoin hash rate that establishes consensus on the Bitcoin network. This unique mechanism ensures the integrity and security of asset transfers between the two currencies.
+This facilitates the conversion of Bitcoin (BTC) to rBTC and vice versa. It operates under the PowPeg protocol, which secures locked bitcoins by leveraging the same Bitcoin hash rate that establishes consensus on the Bitcoin network. This unique mechanism ensures the integrity and security of asset transfers between the two currencies.
 
-<Button size="sm" href="/resources/guides/powpeg-app/">Try PowPeg</Button>
+<Button size="sm" href="/resources/guides/atlas/">Peg in with Atlas</Button>
 <br/>
 <br/>
 

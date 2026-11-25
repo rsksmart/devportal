@@ -131,11 +131,11 @@
     },
     {
       "source": "/guides/two-way-peg-app/pegout/deriving-electrum",
-      "destination": "/resources/guides/two-way-peg-app/pegout/deriving-electrum/"
+      "destination": "/resources/guides/atlas/native-pegout-hardware-wallet-electrum/"
     },
     {
       "source": "/resources/guides/two-way-peg-app/pegout/deriving-electrum",
-      "destination": "/resources/guides/powpeg-app/pegout/deriving-electrum/"
+      "destination": "/resources/guides/atlas/native-pegout-hardware-wallet-electrum/"
     },
     {
       "source": "/guides/rif-relay/smart-wallets",
@@ -331,11 +331,11 @@
     },
     {
       "source": "/guides/two-way-peg-app/advanced-operations",
-      "destination": "/resources/guides/two-way-peg-app/advanced-operations/"
+      "destination": "/resources/guides/atlas/"
     },
     {
       "source": "/resources/guides/two-way-peg-app/advanced-operations",
-      "destination": "/resources/guides/powpeg-app/advanced-operations/"
+      "destination": "/resources/guides/atlas/"
     },
     {
       "source": "/guides/nft/deploy-nft-on-rsk",
@@ -391,11 +391,11 @@
     },
     {
       "source": "/guides/two-way-peg-app/prerequisites",
-      "destination": "/resources/guides/two-way-peg-app/prerequisites/"
+      "destination": "/resources/guides/atlas/#prerequisites"
     },
     {
       "source": "/resources/guides/two-way-peg-app/prerequisites",
-      "destination": "/resources/guides/powpeg-app/prerequisites/"
+      "destination": "/resources/guides/atlas/#prerequisites"
     },
     {
       "source": "/rsk/node/architecture/json-rpc/json-rpc-methods/",
@@ -603,11 +603,11 @@
     },
     {
       "source": "/guides/two-way-peg-app/overview",
-      "destination": "/resources/guides/two-way-peg-app/overview/"
+      "destination": "/resources/guides/atlas/"
     },
     {
       "source": "/resources/guides/two-way-peg-app/overview",
-      "destination": "/resources/guides/powpeg-app/overview/"
+      "destination": "/resources/guides/atlas/"
     },
     {
       "source": "/rif/rns/try-rns",
@@ -643,11 +643,11 @@
     },
     {
       "source": "/guides/two-way-peg-app/pegout/pegout-common-errors",
-      "destination": "/resources/guides/two-way-peg-app/pegout/pegout-common-errors/"
+      "destination": "/resources/guides/atlas/faq/#what-should-i-do-if-something-goes-wrong"
     },
     {
       "source": "/resources/guides/two-way-peg-app/pegout/pegout-common-errors",
-      "destination": "/resources/guides/powpeg-app/pegout/pegout-common-errors/"
+      "destination": "/resources/guides/atlas/faq/#what-should-i-do-if-something-goes-wrong"
     },
     {
       "source": "/rif/rlogin/libraries/express-did-auth",
@@ -1335,11 +1335,11 @@
     },
     {
       "source": "/guides/two-way-peg-app/overview/",
-      "destination": "/resources/guides/two-way-peg-app/overview/"
+      "destination": "/resources/guides/atlas/"
     },
     {
       "source": "/resources/guides/two-way-peg-app/overview/",
-      "destination": "/resources/guides/powpeg-app/overview/"
+      "destination": "/resources/guides/atlas/"
     },
     {
       "source": "/guides/flyover/",
@@ -1443,11 +1443,11 @@
     },
     {
       "source": "/guides/two-way-peg-app/pegout/deriving-electrum/",
-      "destination": "/resources/guides/two-way-peg-app/pegout/deriving-electrum/"
+      "destination": "/resources/guides/atlas/native-pegout-hardware-wallet-electrum/"
     },
     {
       "source": "/resources/guides/two-way-peg-app/pegout/deriving-electrum/",
-      "destination": "/resources/guides/powpeg-app/pegout/deriving-electrum/"
+      "destination": "/resources/guides/atlas/native-pegout-hardware-wallet-electrum/"
     },
     {
       "source": "/solutions/api3/",
@@ -1467,11 +1467,11 @@
     },
     {
       "source": "/guides/two-way-peg-app/faqs/",
-      "destination": "/resources/guides/two-way-peg-app/faqs/"
+      "destination": "/resources/guides/atlas/faq/"
     },
     {
       "source": "/resources/guides/two-way-peg-app/faqs/",
-      "destination": "/resources/guides/powpeg-app/faqs/"
+      "destination": "/resources/guides/atlas/faq/"
     },
     {
       "source": "/rif/wallet/dev-reference/troubleshooting/",
@@ -1635,11 +1635,11 @@
     },
     {
       "source": "/guides/two-way-peg-app/",
-      "destination": "/resources/guides/two-way-peg-app/"
+      "destination": "/resources/guides/atlas/"
     },
     {
       "source": "/resources/guides/two-way-peg-app/",
-      "destination": "/resources/guides/powpeg-app/"
+      "destination": "/resources/guides/atlas/"
     },
     {
       "source": "/guides/quickstart/hardhat/interact-with-frontend/",
@@ -1647,11 +1647,11 @@
     },
     {
       "source": "/guides/two-way-peg-app/pegin/",
-      "destination": "/resources/guides/two-way-peg-app/pegin/"
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
     },
     {
       "source": "/resources/guides/two-way-peg-app/pegin/",
-      "destination": "/resources/guides/powpeg-app/pegin/"
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
     },
     {
       "source": "/guides/quickstart/hardhat/deploy-smart-contract/",
@@ -1751,11 +1751,11 @@
     },
     {
       "source": "/guides/two-way-peg-app/pegout/ledger/",
-      "destination": "/resources/guides/two-way-peg-app/pegout/ledger/"
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
     },
     {
       "source": "/resources/guides/two-way-peg-app/pegout/ledger/",
-      "destination": "/resources/guides/powpeg-app/pegout/ledger/"
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
     },
     {
       "source": "/guides/quickstart/hardhat/",
@@ -1795,19 +1795,19 @@
     },
     {
       "source": "/guides/two-way-peg-app/advanced-operations/",
-      "destination": "/resources/guides/two-way-peg-app/advanced-operations/"
+      "destination": "/resources/guides/atlas/"
     },
     {
       "source": "/resources/guides/two-way-peg-app/advanced-operations/",
-      "destination": "/resources/guides/powpeg-app/advanced-operations/"
+      "destination": "/resources/guides/atlas/"
     },
     {
       "source": "/guides/two-way-peg-app/pegin/ledger/",
-      "destination": "/resources/guides/two-way-peg-app/pegin/ledger/"
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
     },
     {
       "source": "/resources/guides/two-way-peg-app/pegin/ledger/",
-      "destination": "/resources/guides/powpeg-app/pegin/ledger/"
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
     },
     {
       "source": "/guides/stablecoin/",
@@ -1863,47 +1863,47 @@
     },
     {
       "source": "/guides/two-way-peg-app/advanced-operations/supported-browsers/",
-      "destination": "/resources/guides/two-way-peg-app/advanced-operations/supported-browsers/"
+      "destination": "/resources/guides/atlas/faq/"
     },
     {
       "source": "/resources/guides/two-way-peg-app/advanced-operations/supported-browsers/",
-      "destination": "/resources/guides/powpeg-app/advanced-operations/supported-browsers/"
+      "destination": "/resources/guides/atlas/faq/"
     },
     {
       "source": "/guides/two-way-peg-app/pegout/metamask/",
-      "destination": "/resources/guides/two-way-peg-app/pegout/metamask/"
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
     },
     {
       "source": "/resources/guides/two-way-peg-app/pegout/metamask/",
-      "destination": "/resources/guides/powpeg-app/pegout/metamask/"
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
     },
     {
       "source": "/guides/two-way-peg-app/pegin/status/",
-      "destination": "/resources/guides/two-way-peg-app/pegin/status/"
+      "destination": "/resources/guides/atlas/getting-started-atlas/#status-indicators-users-will-see"
     },
     {
       "source": "/resources/guides/two-way-peg-app/pegin/status/",
-      "destination": "/resources/guides/powpeg-app/pegin/status/"
+      "destination": "/resources/guides/atlas/getting-started-atlas/#status-indicators-users-will-see"
     },
     {
       "source": "/guides/two-way-peg-app/advanced-operations/supported-addresses/",
-      "destination": "/resources/guides/two-way-peg-app/advanced-operations/supported-addresses/"
+      "destination": "/concepts/rbtc/conversion/#address-compatibility"
     },
     {
       "source": "/resources/guides/two-way-peg-app/advanced-operations/supported-addresses/",
-      "destination": "/resources/guides/powpeg-app/advanced-operations/supported-addresses/"
+      "destination": "/concepts/rbtc/conversion/#address-compatibility"
     },
     {
       "source": "/resources/guides/two-way-peg-app/pegout/pegout-common-errors/",
-      "destination": "/resources/guides/powpeg-app/pegout/pegout-common-errors/"
+      "destination": "/resources/guides/atlas/faq/#what-should-i-do-if-something-goes-wrong"
     },
     {
       "source": "/guides/two-way-peg-app/advanced-operations/design-architecture/",
-      "destination": "/resources/guides/two-way-peg-app/advanced-operations/design-architecture/"
+      "destination": "/concepts/foundations/powpeg/"
     },
     {
       "source": "/resources/guides/two-way-peg-app/advanced-operations/design-architecture/",
-      "destination": "/resources/guides/powpeg-app/advanced-operations/design-architecture/"
+      "destination": "/concepts/foundations/powpeg/"
     },
     {
       "source": "/guides/rlogin/",
@@ -1999,11 +1999,11 @@
     },
     {
       "source": "/guides/two-way-peg-app/glossary/",
-      "destination": "/resources/guides/two-way-peg-app/glossary/"
+      "destination": "/concepts/glossary/"
     },
     {
       "source": "/resources/guides/two-way-peg-app/glossary/",
-      "destination": "/resources/guides/powpeg-app/glossary/"
+      "destination": "/concepts/glossary/"
     },
     {
       "source": "/guides/quickstart/hardhat/write-smart-contract/",
@@ -2011,19 +2011,19 @@
     },
     {
       "source": "/guides/two-way-peg-app/pegout/trezor/",
-      "destination": "/resources/guides/two-way-peg-app/pegout/trezor/"
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
     },
     {
       "source": "/resources/guides/two-way-peg-app/pegout/trezor/",
-      "destination": "/resources/guides/powpeg-app/pegout/trezor/"
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
     },
     {
       "source": "/guides/two-way-peg-app/advanced-operations/supported-wallets/",
-      "destination": "/resources/guides/two-way-peg-app/advanced-operations/supported-wallets/"
+      "destination": "/resources/guides/atlas/faq/#what-wallets-are-supported"
     },
     {
       "source": "/resources/guides/two-way-peg-app/advanced-operations/supported-wallets/",
-      "destination": "/resources/guides/powpeg-app/advanced-operations/supported-wallets/"
+      "destination": "/resources/guides/atlas/faq/#what-wallets-are-supported"
     },
     {
       "source": "/guides/quickstart/browser/install-metamask/",
@@ -2031,19 +2031,19 @@
     },
     {
       "source": "/guides/two-way-peg-app/pegin/liquality/",
-      "destination": "/resources/guides/two-way-peg-app/pegin/liquality/"
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
     },
     {
       "source": "/resources/guides/two-way-peg-app/pegin/liquality/",
-      "destination": "/resources/guides/poweg/pegin/liquality/"
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
     },
     {
       "source": "/guides/two-way-peg-app/pegout/",
-      "destination": "/resources/guides/two-way-peg-app/pegout/"
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
     },
     {
       "source": "/resources/guides/two-way-peg-app/pegout/",
-      "destination": "/resources/guides/powpeg-app/pegout/"
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
     },
     {
       "source": "/guides/",
@@ -2231,19 +2231,19 @@
     },
     {
       "source": "/guides/two-way-peg-app/pegout/ledger-liquality/",
-      "destination": "/resources/guides/two-way-peg-app/pegout/ledger-liquality/"
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
     },
     {
       "source": "/resources/guides/two-way-peg-app/pegout/ledger-liquality/",
-      "destination": "/resources/guides/powpeg-app/pegout/ledger-liquality/"
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
     },
     {
       "source": "/guides/two-way-peg-app/pegin/leather/",
-      "destination": "/resources/guides/two-way-peg-app/pegin/leather/"
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
     },
     {
       "source": "/resources/guides/two-way-peg-app/pegin/leather/",
-      "destination": "/resources/guides/powpeg-app/pegin/leather/"
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
     },
     {
       "source": "/guides/quickstart/overview/merged-mining/",
@@ -2251,11 +2251,11 @@
     },
     {
       "source": "/guides/two-way-peg-app/pegout/status/",
-      "destination": "/resources/guides/two-way-peg-app/pegout/status/"
+      "destination": "/resources/guides/atlas/getting-started-atlas/#status-indicators-users-will-see"
     },
     {
       "source": "/resources/guides/two-way-peg-app/pegout/status/",
-      "destination": "/resources/guides/powpeg-app/pegout/status/"
+      "destination": "/resources/guides/atlas/getting-started-atlas/#status-indicators-users-will-see"
     },
     {
       "source": "/guides/quickstart/transactions/view-transactions/",
@@ -2267,11 +2267,11 @@
     },
     {
       "source": "/guides/two-way-peg-app/prerequisites/",
-      "destination": "/resources/guides/two-way-peg-app/prerequisites/"
+      "destination": "/resources/guides/atlas/#prerequisites"
     },
     {
       "source": "/resources/guides/two-way-peg-app/prerequisites/",
-      "destination": "/resources/guides/powpeg-app/prerequisites/"
+      "destination": "/resources/guides/atlas/#prerequisites"
     },
     {
       "source": "/guides/quickstart/transactions/transfer-trbtc/",
@@ -2279,11 +2279,11 @@
     },
     {
       "source": "/guides/two-way-peg-app/pegin/trezor/",
-      "destination": "/resources/guides/two-way-peg-app/pegin/trezor/"
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
     },
     {
       "source": "/resources/guides/two-way-peg-app/pegin/trezor/",
-      "destination": "/resources/guides/powpeg-app/pegin/trezor/"
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
     },
     {
       "source": "/guides/quickstart/overview/what-is-rootstock/",
@@ -2575,7 +2575,7 @@
     },
     {
       "source": "/guides/two-way-peg-app/pegout/status",
-      "destination": "/resources/guides/two-way-peg-app/pegout/status/"
+      "destination": "/resources/guides/atlas/getting-started-atlas/#status-indicators-users-will-see"
     },
     {
       "source": "/guides/rif-relay/starter-kit",
@@ -3136,6 +3136,598 @@
     {
       "source": "/ko/use-cases/btcfi-finance/yield-vaults-sdk/",
       "destination": "/ko/use-cases/btcfi-finance-yield/yield-vaults-sdk/"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/",
+      "destination": "/resources/guides/atlas/"
+    },
+    {
+      "source": "/es/resources/guides/powpeg-app/",
+      "destination": "/es/resources/guides/atlas/"
+    },
+    {
+      "source": "/ja/resources/guides/powpeg-app/",
+      "destination": "/ja/resources/guides/atlas/"
+    },
+    {
+      "source": "/ko/resources/guides/powpeg-app/",
+      "destination": "/ko/resources/guides/atlas/"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/overview/",
+      "destination": "/resources/guides/atlas/"
+    },
+    {
+      "source": "/es/resources/guides/powpeg-app/overview/",
+      "destination": "/es/resources/guides/atlas/"
+    },
+    {
+      "source": "/ja/resources/guides/powpeg-app/overview/",
+      "destination": "/ja/resources/guides/atlas/"
+    },
+    {
+      "source": "/ko/resources/guides/powpeg-app/overview/",
+      "destination": "/ko/resources/guides/atlas/"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/prerequisites/",
+      "destination": "/resources/guides/atlas/#prerequisites"
+    },
+    {
+      "source": "/es/resources/guides/powpeg-app/prerequisites/",
+      "destination": "/es/resources/guides/atlas/#prerequisites"
+    },
+    {
+      "source": "/ja/resources/guides/powpeg-app/prerequisites/",
+      "destination": "/ja/resources/guides/atlas/#prerequisites"
+    },
+    {
+      "source": "/ko/resources/guides/powpeg-app/prerequisites/",
+      "destination": "/ko/resources/guides/atlas/#prerequisites"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegin/",
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/es/resources/guides/powpeg-app/pegin/",
+      "destination": "/es/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/ja/resources/guides/powpeg-app/pegin/",
+      "destination": "/ja/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/ko/resources/guides/powpeg-app/pegin/",
+      "destination": "/ko/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegin/leather/",
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/es/resources/guides/powpeg-app/pegin/leather/",
+      "destination": "/es/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/ja/resources/guides/powpeg-app/pegin/leather/",
+      "destination": "/ja/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/ko/resources/guides/powpeg-app/pegin/leather/",
+      "destination": "/ko/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegin/ledger/",
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/es/resources/guides/powpeg-app/pegin/ledger/",
+      "destination": "/es/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/ja/resources/guides/powpeg-app/pegin/ledger/",
+      "destination": "/ja/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/ko/resources/guides/powpeg-app/pegin/ledger/",
+      "destination": "/ko/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegin/trezor/",
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/es/resources/guides/powpeg-app/pegin/trezor/",
+      "destination": "/es/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/ja/resources/guides/powpeg-app/pegin/trezor/",
+      "destination": "/ja/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/ko/resources/guides/powpeg-app/pegin/trezor/",
+      "destination": "/ko/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegin/status/",
+      "destination": "/resources/guides/atlas/getting-started-atlas/#status-indicators-users-will-see"
+    },
+    {
+      "source": "/es/resources/guides/powpeg-app/pegin/status/",
+      "destination": "/es/resources/guides/atlas/getting-started-atlas/#status-indicators-users-will-see"
+    },
+    {
+      "source": "/ja/resources/guides/powpeg-app/pegin/status/",
+      "destination": "/ja/resources/guides/atlas/getting-started-atlas/#status-indicators-users-will-see"
+    },
+    {
+      "source": "/ko/resources/guides/powpeg-app/pegin/status/",
+      "destination": "/ko/resources/guides/atlas/getting-started-atlas/#status-indicators-users-will-see"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegout/",
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/es/resources/guides/powpeg-app/pegout/",
+      "destination": "/es/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/ja/resources/guides/powpeg-app/pegout/",
+      "destination": "/ja/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/ko/resources/guides/powpeg-app/pegout/",
+      "destination": "/ko/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegout/ledger/",
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/es/resources/guides/powpeg-app/pegout/ledger/",
+      "destination": "/es/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/ja/resources/guides/powpeg-app/pegout/ledger/",
+      "destination": "/ja/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/ko/resources/guides/powpeg-app/pegout/ledger/",
+      "destination": "/ko/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegout/ledger-liquality/",
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/es/resources/guides/powpeg-app/pegout/ledger-liquality/",
+      "destination": "/es/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/ja/resources/guides/powpeg-app/pegout/ledger-liquality/",
+      "destination": "/ja/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/ko/resources/guides/powpeg-app/pegout/ledger-liquality/",
+      "destination": "/ko/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegout/metamask/",
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/es/resources/guides/powpeg-app/pegout/metamask/",
+      "destination": "/es/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/ja/resources/guides/powpeg-app/pegout/metamask/",
+      "destination": "/ja/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/ko/resources/guides/powpeg-app/pegout/metamask/",
+      "destination": "/ko/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegout/trezor/",
+      "destination": "/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/es/resources/guides/powpeg-app/pegout/trezor/",
+      "destination": "/es/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/ja/resources/guides/powpeg-app/pegout/trezor/",
+      "destination": "/ja/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/ko/resources/guides/powpeg-app/pegout/trezor/",
+      "destination": "/ko/resources/guides/atlas/getting-started-atlas/"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegout/status/",
+      "destination": "/resources/guides/atlas/getting-started-atlas/#status-indicators-users-will-see"
+    },
+    {
+      "source": "/es/resources/guides/powpeg-app/pegout/status/",
+      "destination": "/es/resources/guides/atlas/getting-started-atlas/#status-indicators-users-will-see"
+    },
+    {
+      "source": "/ja/resources/guides/powpeg-app/pegout/status/",
+      "destination": "/ja/resources/guides/atlas/getting-started-atlas/#status-indicators-users-will-see"
+    },
+    {
+      "source": "/ko/resources/guides/powpeg-app/pegout/status/",
+      "destination": "/ko/resources/guides/atlas/getting-started-atlas/#status-indicators-users-will-see"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegout/deriving-electrum/",
+      "destination": "/resources/guides/atlas/native-pegout-hardware-wallet-electrum/"
+    },
+    {
+      "source": "/es/resources/guides/powpeg-app/pegout/deriving-electrum/",
+      "destination": "/es/resources/guides/atlas/native-pegout-hardware-wallet-electrum/"
+    },
+    {
+      "source": "/ja/resources/guides/powpeg-app/pegout/deriving-electrum/",
+      "destination": "/ja/resources/guides/atlas/native-pegout-hardware-wallet-electrum/"
+    },
+    {
+      "source": "/ko/resources/guides/powpeg-app/pegout/deriving-electrum/",
+      "destination": "/ko/resources/guides/atlas/native-pegout-hardware-wallet-electrum/"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegout/pegout-common-errors/",
+      "destination": "/resources/guides/atlas/faq/#what-should-i-do-if-something-goes-wrong"
+    },
+    {
+      "source": "/es/resources/guides/powpeg-app/pegout/pegout-common-errors/",
+      "destination": "/es/resources/guides/atlas/faq/#what-should-i-do-if-something-goes-wrong"
+    },
+    {
+      "source": "/ja/resources/guides/powpeg-app/pegout/pegout-common-errors/",
+      "destination": "/ja/resources/guides/atlas/faq/#what-should-i-do-if-something-goes-wrong"
+    },
+    {
+      "source": "/ko/resources/guides/powpeg-app/pegout/pegout-common-errors/",
+      "destination": "/ko/resources/guides/atlas/faq/#what-should-i-do-if-something-goes-wrong"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/faqs/",
+      "destination": "/resources/guides/atlas/faq/"
+    },
+    {
+      "source": "/es/resources/guides/powpeg-app/faqs/",
+      "destination": "/es/resources/guides/atlas/faq/"
+    },
+    {
+      "source": "/ja/resources/guides/powpeg-app/faqs/",
+      "destination": "/ja/resources/guides/atlas/faq/"
+    },
+    {
+      "source": "/ko/resources/guides/powpeg-app/faqs/",
+      "destination": "/ko/resources/guides/atlas/faq/"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/glossary/",
+      "destination": "/concepts/glossary/"
+    },
+    {
+      "source": "/es/resources/guides/powpeg-app/glossary/",
+      "destination": "/es/concepts/glossary/"
+    },
+    {
+      "source": "/ja/resources/guides/powpeg-app/glossary/",
+      "destination": "/ja/concepts/glossary/"
+    },
+    {
+      "source": "/ko/resources/guides/powpeg-app/glossary/",
+      "destination": "/ko/concepts/glossary/"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/advanced-operations/",
+      "destination": "/resources/guides/atlas/"
+    },
+    {
+      "source": "/es/resources/guides/powpeg-app/advanced-operations/",
+      "destination": "/es/resources/guides/atlas/"
+    },
+    {
+      "source": "/ja/resources/guides/powpeg-app/advanced-operations/",
+      "destination": "/ja/resources/guides/atlas/"
+    },
+    {
+      "source": "/ko/resources/guides/powpeg-app/advanced-operations/",
+      "destination": "/ko/resources/guides/atlas/"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/advanced-operations/design-architecture/",
+      "destination": "/concepts/foundations/powpeg/"
+    },
+    {
+      "source": "/es/resources/guides/powpeg-app/advanced-operations/design-architecture/",
+      "destination": "/es/concepts/foundations/powpeg/"
+    },
+    {
+      "source": "/ja/resources/guides/powpeg-app/advanced-operations/design-architecture/",
+      "destination": "/ja/concepts/foundations/powpeg/"
+    },
+    {
+      "source": "/ko/resources/guides/powpeg-app/advanced-operations/design-architecture/",
+      "destination": "/ko/concepts/foundations/powpeg/"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/advanced-operations/supported-addresses/",
+      "destination": "/concepts/rbtc/conversion/#address-compatibility"
+    },
+    {
+      "source": "/es/resources/guides/powpeg-app/advanced-operations/supported-addresses/",
+      "destination": "/es/concepts/rbtc/conversion/#address-compatibility"
+    },
+    {
+      "source": "/ja/resources/guides/powpeg-app/advanced-operations/supported-addresses/",
+      "destination": "/ja/concepts/rbtc/conversion/#address-compatibility"
+    },
+    {
+      "source": "/ko/resources/guides/powpeg-app/advanced-operations/supported-addresses/",
+      "destination": "/ko/concepts/rbtc/conversion/#address-compatibility"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/advanced-operations/supported-browsers/",
+      "destination": "/resources/guides/atlas/faq/"
+    },
+    {
+      "source": "/es/resources/guides/powpeg-app/advanced-operations/supported-browsers/",
+      "destination": "/es/resources/guides/atlas/faq/"
+    },
+    {
+      "source": "/ja/resources/guides/powpeg-app/advanced-operations/supported-browsers/",
+      "destination": "/ja/resources/guides/atlas/faq/"
+    },
+    {
+      "source": "/ko/resources/guides/powpeg-app/advanced-operations/supported-browsers/",
+      "destination": "/ko/resources/guides/atlas/faq/"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/advanced-operations/supported-wallets/",
+      "destination": "/resources/guides/atlas/faq/#what-wallets-are-supported"
+    },
+    {
+      "source": "/es/resources/guides/powpeg-app/advanced-operations/supported-wallets/",
+      "destination": "/es/resources/guides/atlas/faq/#what-wallets-are-supported"
+    },
+    {
+      "source": "/ja/resources/guides/powpeg-app/advanced-operations/supported-wallets/",
+      "destination": "/ja/resources/guides/atlas/faq/#what-wallets-are-supported"
+    },
+    {
+      "source": "/ko/resources/guides/powpeg-app/advanced-operations/supported-wallets/",
+      "destination": "/ko/resources/guides/atlas/faq/#what-wallets-are-supported"
+    },
+    {
+      "source": "/dev-tools/cross-chain-bridges/powpeg/",
+      "destination": "/dev-tools/cross-chain-bridges/atlas/"
+    },
+    {
+      "source": "/es/dev-tools/cross-chain-bridges/powpeg/",
+      "destination": "/es/dev-tools/cross-chain-bridges/atlas/"
+    },
+    {
+      "source": "/ja/dev-tools/cross-chain-bridges/powpeg/",
+      "destination": "/ja/dev-tools/cross-chain-bridges/atlas/"
+    },
+    {
+      "source": "/ko/dev-tools/cross-chain-bridges/powpeg/",
+      "destination": "/ko/dev-tools/cross-chain-bridges/atlas/"
+    },
+    {
+      "source": "/resources/guides/powpeg-app.md",
+      "destination": "/resources/guides/atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/index.md",
+      "destination": "/resources/guides/atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/overview.md",
+      "destination": "/resources/guides/atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/overview/index.md",
+      "destination": "/resources/guides/atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/prerequisites.md",
+      "destination": "/resources/guides/atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/prerequisites/index.md",
+      "destination": "/resources/guides/atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegin.md",
+      "destination": "/resources/guides/atlas/getting-started-atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegin/index.md",
+      "destination": "/resources/guides/atlas/getting-started-atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegin/leather.md",
+      "destination": "/resources/guides/atlas/getting-started-atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegin/leather/index.md",
+      "destination": "/resources/guides/atlas/getting-started-atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegin/ledger.md",
+      "destination": "/resources/guides/atlas/getting-started-atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegin/ledger/index.md",
+      "destination": "/resources/guides/atlas/getting-started-atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegin/trezor.md",
+      "destination": "/resources/guides/atlas/getting-started-atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegin/trezor/index.md",
+      "destination": "/resources/guides/atlas/getting-started-atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegin/status.md",
+      "destination": "/resources/guides/atlas/getting-started-atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegin/status/index.md",
+      "destination": "/resources/guides/atlas/getting-started-atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegout.md",
+      "destination": "/resources/guides/atlas/getting-started-atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegout/index.md",
+      "destination": "/resources/guides/atlas/getting-started-atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegout/ledger.md",
+      "destination": "/resources/guides/atlas/getting-started-atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegout/ledger/index.md",
+      "destination": "/resources/guides/atlas/getting-started-atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegout/ledger-liquality.md",
+      "destination": "/resources/guides/atlas/getting-started-atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegout/ledger-liquality/index.md",
+      "destination": "/resources/guides/atlas/getting-started-atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegout/metamask.md",
+      "destination": "/resources/guides/atlas/getting-started-atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegout/metamask/index.md",
+      "destination": "/resources/guides/atlas/getting-started-atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegout/trezor.md",
+      "destination": "/resources/guides/atlas/getting-started-atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegout/trezor/index.md",
+      "destination": "/resources/guides/atlas/getting-started-atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegout/status.md",
+      "destination": "/resources/guides/atlas/getting-started-atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegout/status/index.md",
+      "destination": "/resources/guides/atlas/getting-started-atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegout/deriving-electrum.md",
+      "destination": "/resources/guides/atlas/native-pegout-hardware-wallet-electrum.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegout/deriving-electrum/index.md",
+      "destination": "/resources/guides/atlas/native-pegout-hardware-wallet-electrum.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegout/pegout-common-errors.md",
+      "destination": "/resources/guides/atlas/faq.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/pegout/pegout-common-errors/index.md",
+      "destination": "/resources/guides/atlas/faq.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/faqs.md",
+      "destination": "/resources/guides/atlas/faq.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/faqs/index.md",
+      "destination": "/resources/guides/atlas/faq.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/glossary.md",
+      "destination": "/concepts/glossary.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/glossary/index.md",
+      "destination": "/concepts/glossary.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/advanced-operations.md",
+      "destination": "/resources/guides/atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/advanced-operations/index.md",
+      "destination": "/resources/guides/atlas.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/advanced-operations/design-architecture.md",
+      "destination": "/concepts/foundations/powpeg.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/advanced-operations/design-architecture/index.md",
+      "destination": "/concepts/foundations/powpeg.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/advanced-operations/supported-addresses.md",
+      "destination": "/concepts/rbtc/conversion.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/advanced-operations/supported-addresses/index.md",
+      "destination": "/concepts/rbtc/conversion.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/advanced-operations/supported-browsers.md",
+      "destination": "/resources/guides/atlas/faq.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/advanced-operations/supported-browsers/index.md",
+      "destination": "/resources/guides/atlas/faq.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/advanced-operations/supported-wallets.md",
+      "destination": "/resources/guides/atlas/faq.md"
+    },
+    {
+      "source": "/resources/guides/powpeg-app/advanced-operations/supported-wallets/index.md",
+      "destination": "/resources/guides/atlas/faq.md"
+    },
+    {
+      "source": "/dev-tools/cross-chain-bridges/powpeg.md",
+      "destination": "/dev-tools/cross-chain-bridges/atlas.md"
+    },
+    {
+      "source": "/dev-tools/cross-chain-bridges/powpeg/index.md",
+      "destination": "/dev-tools/cross-chain-bridges/atlas.md"
+    },
+    {
+      "source": "/tags/powpeg-app/",
+      "destination": "/tags/atlas/"
+    },
+    {
+      "source": "/es/tags/powpeg-app/",
+      "destination": "/es/tags/atlas/"
+    },
+    {
+      "source": "/ja/tags/powpeg-app/",
+      "destination": "/ja/tags/atlas/"
+    },
+    {
+      "source": "/ko/tags/powpeg-app/",
+      "destination": "/ko/tags/atlas/"
     }
   ],
   "rewrites": [

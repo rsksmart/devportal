@@ -37,24 +37,14 @@ description: Rootstock에서 스마트 컨트랙트를 개발하고 배포하는
     {label: '검증', value: 'attest'},
   ]}>
 <FilterItem
-    value="bridge, exchange"
-    title="PowPeg 앱"
-    subtitle="브릿지"
-    color="orange"
-    linkHref="/resources/guides/powpeg-app/"
-    target="_blank"
-    linkTitle="문서"
-    description="PowPeg 앱을 사용해 비트코인과 Rootstock 간 자산을 브릿지하세요."
-  />
-<FilterItem
-    value="bridge, cc"
+    value="bridge, exchange, cc"
     title="Atlas Bridge"
     subtitle="브릿지"
     color="orange"
     linkHref="/resources/guides/atlas/"
     target="_blank"
     linkTitle="문서"
-    description="Atlas Bridge에서 제공자를 비교하고 Rootstock과 다른 네트워크 간 지원 자산을 이동할 수 있습니다."
+    description="Atlas Bridge에서 PowPeg를 통해 BTC를 페그인 및 페그아웃하고, 제공자를 비교하고, Rootstock과 다른 네트워크 간 지원 자산을 이동할 수 있습니다."
   />
 <FilterItem
     value="dev-environment, sc, platform-infra"
