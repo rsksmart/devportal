@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 8
 title: Tatum
 sidebar_label: Tatum
 tags: [dev tools, rsk, rootstock, rpc, tatum]
