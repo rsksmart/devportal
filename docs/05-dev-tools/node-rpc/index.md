@@ -55,6 +55,14 @@ Here you can find a list of RPC node providers on Rootstock. The default RPC pro
     linkTitle="Make First API Call"
   />
   <CardsGridItem
+    title="eRPC"
+    subtitle="node-rpc"
+    color="cyan"
+    description="eRPC is an open-source, self-hosted RPC proxy that fails over between the providers above and caches responses."
+    linkHref="/dev-tools/node-rpc/erpc/"
+    linkTitle="Set Up Failover"
+  />
+  <CardsGridItem
     title="node101"
     subtitle="node-rpc"
     color="cyan"
