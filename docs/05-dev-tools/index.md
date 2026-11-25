@@ -122,21 +122,12 @@ This page catalogs developer tools and infrastructure for Rootstock. Use the fil
   />
 <FilterItem
     value="rpc"
-    title="RPC API"
+    title="RPC Service"
     subtitle="json rpc"
     color="orange"
-    linkHref="/developers/rpc-api/rootstock/"
+    linkHref="https://rpc.rootstock.io/doc"
     linkTitle="Make First API Call"
-    description="The Rootstock RPC API provides a seamless and intuitive web interface for developers to interact with Rootstock nodes via JSON-RPC methods."
-  />
-<FilterItem
-    value="rpc"
-    title="Alchemy"
-    subtitle="json rpc"
-    color="orange"
-    linkHref="/developers/rpc-api/alchemy/"
-    linkTitle="Make First API Call"
-    description="Powerful APIs, SDKs, and tools to build and scale your web3 app with ease."
+    description="The Rootstock RPC Service provides a seamless and intuitive web interface for developers to interact with Rootstock nodes via JSON-RPC methods."
   />
 <FilterItem
     value="rpc, smart contracts"
@@ -173,6 +164,15 @@ This page catalogs developer tools and infrastructure for Rootstock. Use the fil
     linkHref="/dev-tools/node-rpc/tatum/"
     linkTitle="Make First API Call"
     description="Tatum runs Rootstock Mainnet and Testnet JSON-RPC endpoints that answer without an API key at 5 requests per minute, for development and testing."
+  />
+<FilterItem
+    value="rpc, smart contracts"
+    title="node101"
+    subtitle="json rpc"
+    color="orange"
+    linkHref="/dev-tools/node-rpc/node101/"
+    linkTitle="Request RPC access"
+    description="Paid Rootstock JSON-RPC and WebSocket access, managed dedicated nodes, and testnet and archive services on request."
   />
 <FilterItem
     value="wallet, sc"

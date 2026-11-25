@@ -321,10 +321,7 @@ export default function Cheatsheet() {
                 </p>
                 <div className={styles.buttonRow} data-markdown-ignore="true">
                   <CheatsheetButton href="https://rpc.rootstock.io">rpc.rootstock.io</CheatsheetButton>
-                  <CheatsheetButton href="https://rpc.rootstock.io/doc">RPC API Sandbox</CheatsheetButton>
-                  <CheatsheetButton href="/developers/rpc-api/rootstock/setup/" internal>
-                    RPC API setup guide
-                  </CheatsheetButton>
+                  <CheatsheetButton href="https://rpc.rootstock.io/doc">RPC Service docs</CheatsheetButton>
                 </div>
               </div>
 

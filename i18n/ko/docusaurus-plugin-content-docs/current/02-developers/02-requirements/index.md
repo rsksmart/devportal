@@ -38,7 +38,7 @@ description: Rootstock 실행을 위한 최소 하드웨어 사양
 
 - **노드 RPC 액세스:**
   - RPC API를 사용하여 Rootstock과 상호 작용하세요.
-  - [API 키 받기](/developers/rpc-api/rootstock/setup/)후 애플리케이션에서 설정하세요.
+  - [API 키 받기](https://rpc.rootstock.io/doc)후 애플리케이션에서 설정하세요.
 
 - **Hardhat:**
   - 스마트 컨트랙트 개발 및 테스트 과정을 간소화하려면 Hardhat을 설치하세요:
@@ -74,7 +74,7 @@ Rootstock 네트워크에 연결할 수 있도록 지갑을 설정하세요:
 
 - **MetaMask 연동:**
   - MetaMask를 Rootstock 메인넷 또는 테스트넷에 연결할 수 있도록 필요한 값을 설정하세요.
-  - 자세한 설정 방법은 [MetaMask 지갑 설정 가이드](/dev-tools/wallets/metamask/)/developers/rpc-api/rootstock/setup/)를 참고하세요.
+  - 자세한 설정 방법은 [MetaMask 지갑 설정 가이드](/dev-tools/wallets/metamask/)를 참고하세요.
 
 - **파생 경로:**
   - BIP-44 표준을 지원하는 지갑에서는 다음 경로를 사용하세요:

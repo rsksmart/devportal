@@ -158,7 +158,7 @@ USE_FIXED_ORACLE=true # force deterministic pricing on testnet
 USE_MOCK_USDT0=true # deploy a mock USDT0 token
 LTV_BPS=7000 # 70% Loan-to-Value ratio (in basis points)
 ```
-You can get your Rootstock RPC API URL by following the official guide on [Getting Started with the Rootstock RPC API](https://dev.rootstock.io/developers/rpc-api/rootstock/setup/).
+You can get your Rootstock RPC API URL by following the official guide on [Getting Started with the Rootstock RPC Service](https://rpc.rootstock.io/doc).
 
 :::warning[Warning]
 

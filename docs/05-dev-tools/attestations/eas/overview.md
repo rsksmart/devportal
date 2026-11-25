@@ -135,7 +135,7 @@ Create a `.env` file in the root directory with the following content:
 5. `ROOTSTOCK_TESTNET_API_KEY`:
    * API key for connecting to the Rootstock Testnet.
    * This enables interactions with the Rootstock blockchain for testing and indexing.
-   * **Note:** Follow this guide to obtain your [API keys](https://dev.rootstock.io/developers/rpc-api/rootstock/setup/).
+   * **Note:** Follow this guide to obtain your [API keys](https://rpc.rootstock.io/doc).
 6. `BATCH_SIZE`:
    * Defines the number of blocks fetched in a single request when syncing data from the blockchain.
    * Adjust this value based on your service provider's rate limits or API constraints.

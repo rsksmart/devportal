@@ -19,7 +19,7 @@ Rootstock 개발자 개요 섹션에 오신 것을 환영합니다.
 
 :::info Info
 
-- dApp을 메인넷에 배포하기 전에 테스트넷에서 빠르게 테스트해보고 싶으신가요? [Rootstock RPC API](https://rpc.rootstock.io/)를 사용하거나 RPC API에서 사용할 수 있는 [json-rpc 메서드](/developers/rpc-api/rootstock/methods/)를 확인해 보세요.
+- dApp을 메인넷에 배포하기 전에 테스트넷에서 빠르게 테스트해보고 싶으신가요? [Rootstock RPC API](https://rpc.rootstock.io/)를 사용하거나 RPC API에서 사용할 수 있는 [json-rpc 메서드](https://rpc.rootstock.io/doc)를 확인해 보세요.
 - [단계별 가이드](/developers/quickstart/)를 통해 바로 개발 환경을 설정하고 첫 번째 dApp을 배포해 보세요.
 
 :::
