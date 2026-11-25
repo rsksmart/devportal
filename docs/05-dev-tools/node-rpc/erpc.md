@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 7
 title: eRPC
 sidebar_label: eRPC
 tags: [rsk, rootstock, resources, tutorials, setup, eRPC, dApps, RPC, failover, proxy]
@@ -22,8 +22,8 @@ description: eRPC is an open-source, self-hosted RPC proxy that fails over betwe
   projects:
     - id: main
       upstreams:
-        - endpoint: https://public-node.rsk.co
-        - endpoint: https://rootstock-mainnet.g.alchemy.com/v2/YOUR_API_KEY
+        - endpoint: https://rpc.mainnet.rootstock.io/<your-apikey>
+        - endpoint: https://go.getblock.io/<ACCESS_TOKEN>
   ```
   </Step>
   <Step title="Run eRPC">
