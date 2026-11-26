@@ -78,6 +78,14 @@ Here you can find a list of RPC node providers on Rootstock. The default RPC pro
     linkHref="/dev-tools/node-rpc/node101/"
     linkTitle="Request RPC access"
   />
+  <CardsGridItem
+    title="Spectrum Nodes"
+    subtitle="node-rpc"
+    color="cyan"
+    description="Spectrum Nodes serves Rootstock Mainnet JSON-RPC from its self operated Tier III data centers, with archive data and debug and trace methods."
+    linkHref="/dev-tools/node-rpc/spectrum-nodes/"
+    linkTitle="Get an Endpoint"
+  />
 </CardsGrid>
 
 ## Compare RPC Provider Latency
