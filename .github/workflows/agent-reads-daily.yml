@@ -1,0 +1,114 @@
+name: Agent Reads Collection
+
+# Collects AI agent reads (agent_read lines from middleware.js) from Vercel
+# runtime logs. Vercel Pro keeps runtime logs for 1 day, so this runs every
+# 12 hours on the previous 12-hour block, well inside that window.
+#
+# Each run uploads clean events (schema fields only, no raw Vercel records) and
+# a report for its block. A day or week is any set of event files run through:
+#   cat events-*.jsonl | node scripts/agent-reads-report.mjs --in - --trust-route-list
+#
+# Needs the VERCEL_TOKEN repository secret (a Vercel token scoped to the
+# iov-labs-mkt team). Proof of concept: see PR #595.
+
+on:
+  schedule:
+    - cron: '17 0,12 * * *'
+  workflow_dispatch:
+    inputs:
+      since:
+        description: 'Window start, ISO 8601 (default: previous 12-hour block)'
+        required: false
+      until:
+        description: 'Window end, ISO 8601 (default: previous 12-hour block)'
+        required: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: agent-reads-collection
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      # Externally sourced: the Vercel CLI from npm, pinned.
+      - name: Install Vercel CLI
+        run: npm install --global --ignore-scripts vercel@65.12.0
+
+      - name: Work out the window
+        id: window
+        env:
+          INPUT_SINCE: ${{ inputs.since }}
+          INPUT_UNTIL: ${{ inputs.until }}
+        run: |
+          node -e "
+            const block = 12 * 60 * 60 * 1000;
+            const end = process.env.INPUT_UNTIL
+              ? new Date(process.env.INPUT_UNTIL)
+              : new Date(Math.floor(Date.now() / block) * block);
+            const start = process.env.INPUT_SINCE
+              ? new Date(process.env.INPUT_SINCE)
+              : new Date(end.getTime() - block);
+            if (Number.isNaN(start.getTime()) || Number.isNaN(end.getTime()) || start >= end) {
+              console.error('Invalid window'); process.exit(1);
+            }
+            const tag = start.toISOString().slice(0, 13).replace(/[-:]/g, '');
+            const out = require('fs');
+            out.appendFileSync(process.env.GITHUB_OUTPUT,
+              'since=' + start.toISOString() + '\n' +
+              'until=' + end.toISOString() + '\n' +
+              'tag=' + tag + '\n');
+            console.log('Window', start.toISOString(), 'to', end.toISOString());
+          "
+
+      - name: Fetch agent reads from Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_SCOPE: iov-labs-mkt
+          VERCEL_PROJECT: devportal-rootstock
+        run: |
+          if [ -z "$VERCEL_TOKEN" ]; then
+            echo "::error::VERCEL_TOKEN secret is not set. See the header of this workflow."
+            exit 1
+          fi
+          node scripts/fetch-agent-reads.mjs \
+            --since '${{ steps.window.outputs.since }}' \
+            --until '${{ steps.window.outputs.until }}' \
+            --out 'agent-reads/events-${{ steps.window.outputs.tag }}.jsonl'
+
+      - name: Build block report
+        run: |
+          node scripts/agent-reads-report.mjs \
+            --in 'agent-reads/events-${{ steps.window.outputs.tag }}.jsonl' \
+            --out 'agent-reads/agent-reads-${{ steps.window.outputs.tag }}.json' \
+            --trust-route-list
+
+      - name: Upload events and report
+        uses: actions/upload-artifact@v4
+        with:
+          name: agent-reads-${{ steps.window.outputs.tag }}
+          path: agent-reads/
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Summarize for Actions UI
+        run: |
+          node -e "
+            const r = require('./agent-reads/agent-reads-${{ steps.window.outputs.tag }}.json');
+            console.log('Agent reads in window:', r.totals.reads);
+            console.log('By kind:', JSON.stringify(r.totals.byKind));
+            console.log('By family:', JSON.stringify(r.totals.byFamily));
+          "

@@ -1,5 +1,6 @@
 /**
- * Vercel Edge Middleware: serve markdown when clients send Accept: text/markdown.
+ * Vercel Edge Middleware: serve markdown when clients send Accept: text/markdown,
+ * and count reads by AI tools (lib/agent-read-log.js).
  * Static index.html is served before vercel.json header rewrites on Docusaurus builds,
  * so negotiation must run here (before the filesystem).
  */
@@ -8,6 +9,7 @@ import {
   resolveMarkdownPath,
   wantsMarkdownAccept,
 } from './lib/markdown-negotiation-paths.js';
+import {INTERNAL_FETCH_HEADER, logAgentRead} from './lib/agent-read-log.js';
 
 function hasFileExtension(pathname) {
   const last = pathname.split('/').filter(Boolean).pop() ?? '';
@@ -15,6 +17,17 @@ function hasFileExtension(pathname) {
 }
 
 export default async function middleware(request) {
+  const response = await negotiateMarkdown(request);
+  // Counts reads by AI tools once negotiation has finished, using what is
+  // actually served: "negotiated" only when Markdown is returned. If the
+  // negotiation fetch throws, nothing is served and nothing is logged.
+  // See lib/agent-read-log.js.
+  logAgentRead(request, {negotiated: response !== undefined});
+  return response;
+}
+
+/** Returns a Markdown response for Accept: text/markdown, or undefined to serve HTML. */
+async function negotiateMarkdown(request) {
   if (!wantsMarkdownAccept(request.headers.get('accept'))) {
     return;
   }
@@ -38,7 +51,7 @@ export default async function middleware(request) {
   const markdownUrl = new URL(markdownPath, url.origin);
   const mdResponse = await fetch(markdownUrl.toString(), {
     method: request.method,
-    headers: {accept: 'text/markdown'},
+    headers: {accept: 'text/markdown', [INTERNAL_FETCH_HEADER]: '1'},
   });
 
   if (!mdResponse.ok) {
@@ -85,5 +98,26 @@ export const config = {
     '/ko/resources/:path*',
     '/ko/dev-tools/:path*',
     '/ko/use-cases/:path*',
+    '/llms.txt',
+    '/llms-full.txt',
+    '/ai-policy.txt',
+    '/.well-known/:path*',
+    '/index.md',
+    '/cheatsheet.md',
+    '/es/llms.txt',
+    '/es/llms-full.txt',
+    '/ja/llms.txt',
+    '/ja/llms-full.txt',
+    '/ko/llms.txt',
+    '/ko/llms-full.txt',
+    '/es',
+    '/es/',
+    '/es/index.md',
+    '/ja',
+    '/ja/',
+    '/ja/index.md',
+    '/ko',
+    '/ko/',
+    '/ko/index.md',
   ],
 };
