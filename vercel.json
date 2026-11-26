@@ -643,11 +643,11 @@
     },
     {
       "source": "/guides/two-way-peg-app/pegout/pegout-common-errors",
-      "destination": "/resources/guides/atlas/faq/#what-should-i-do-if-something-goes-wrong"
+      "destination": "/resources/guides/atlas/native-pegout-hardware-wallet-electrum/#legacy-pegout-paths"
     },
     {
       "source": "/resources/guides/two-way-peg-app/pegout/pegout-common-errors",
-      "destination": "/resources/guides/atlas/faq/#what-should-i-do-if-something-goes-wrong"
+      "destination": "/resources/guides/atlas/native-pegout-hardware-wallet-electrum/#legacy-pegout-paths"
     },
     {
       "source": "/rif/rlogin/libraries/express-did-auth",
@@ -1895,7 +1895,7 @@
     },
     {
       "source": "/resources/guides/two-way-peg-app/pegout/pegout-common-errors/",
-      "destination": "/resources/guides/atlas/faq/#what-should-i-do-if-something-goes-wrong"
+      "destination": "/resources/guides/atlas/native-pegout-hardware-wallet-electrum/#legacy-pegout-paths"
     },
     {
       "source": "/guides/two-way-peg-app/advanced-operations/design-architecture/",
@@ -3379,19 +3379,19 @@
     },
     {
       "source": "/resources/guides/powpeg-app/pegout/pegout-common-errors/",
-      "destination": "/resources/guides/atlas/faq/#what-should-i-do-if-something-goes-wrong"
+      "destination": "/resources/guides/atlas/native-pegout-hardware-wallet-electrum/#legacy-pegout-paths"
     },
     {
       "source": "/es/resources/guides/powpeg-app/pegout/pegout-common-errors/",
-      "destination": "/es/resources/guides/atlas/faq/#what-should-i-do-if-something-goes-wrong"
+      "destination": "/es/resources/guides/atlas/native-pegout-hardware-wallet-electrum/#legacy-pegout-paths"
     },
     {
       "source": "/ja/resources/guides/powpeg-app/pegout/pegout-common-errors/",
-      "destination": "/ja/resources/guides/atlas/faq/#what-should-i-do-if-something-goes-wrong"
+      "destination": "/ja/resources/guides/atlas/native-pegout-hardware-wallet-electrum/#legacy-pegout-paths"
     },
     {
       "source": "/ko/resources/guides/powpeg-app/pegout/pegout-common-errors/",
-      "destination": "/ko/resources/guides/atlas/faq/#what-should-i-do-if-something-goes-wrong"
+      "destination": "/ko/resources/guides/atlas/native-pegout-hardware-wallet-electrum/#legacy-pegout-paths"
     },
     {
       "source": "/resources/guides/powpeg-app/faqs/",
@@ -3643,11 +3643,11 @@
     },
     {
       "source": "/resources/guides/powpeg-app/pegout/pegout-common-errors.md",
-      "destination": "/resources/guides/atlas/faq.md"
+      "destination": "/resources/guides/atlas/native-pegout-hardware-wallet-electrum.md"
     },
     {
       "source": "/resources/guides/powpeg-app/pegout/pegout-common-errors/index.md",
-      "destination": "/resources/guides/atlas/faq.md"
+      "destination": "/resources/guides/atlas/native-pegout-hardware-wallet-electrum.md"
     },
     {
       "source": "/resources/guides/powpeg-app/faqs.md",

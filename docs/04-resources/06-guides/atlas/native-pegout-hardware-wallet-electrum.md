@@ -8,6 +8,10 @@ tags: [rsk, rootstock, bridge, atlas, powpeg]
 
 This guide explains how to find and access the Bitcoin address that receives your funds after a **native pegout** on [Atlas Bridge](https://atlas.rootstock.io), using a hardware wallet and Electrum.
 
+:::info[Peg-out made with the PowPeg App?]
+The retired PowPeg App used a different derivation path when you connected a Ledger or Trezor directly to it. If you made your peg-out that way, follow this guide with the path in [Peg-outs made with the PowPeg App](#legacy-pegout-paths).
+:::
+
 ## Why derive the address using Electrum?
 
 During a native pegout, the destination Bitcoin address is derived from your Rootstock account using the BIP44 path:
@@ -65,15 +69,32 @@ Custom derivation path:
 m/44'/60'/0'
 ```
 
+> NOTE: For a peg-out made with a Ledger or Trezor connected directly to the PowPeg App, use the path in [Peg-outs made with the PowPeg App](#legacy-pegout-paths) instead.
+
 :::note[Account path vs. full address path]
 Electrum asks for the **account-level** path (`m/44'/60'/0'`), then browses the `/0/0`, `/0/1`, etc. addresses under it. Your native pegout destination address is at index `/0/0`, so it should be the first address Electrum shows.
 :::
 
 > NOTE: For Ledger, you must approve the custom derivation path on the device.
 
-**Step 9**: Optionally check "Encrypt wallet file" and click "Next". This password encrypts the Electrum wallet file on your computer, it is not your hardware wallet's PIN or passphrase.
+**Step 9**: Optionally check "Encrypt wallet file" and click "Next". This password encrypts the Electrum wallet file on your computer. It's not your hardware wallet's PIN or passphrase.
 
 **Step 10**: Open the "Addresses" tab in Electrum to view the derived address and your funds.
+
+### Peg-outs made with the PowPeg App {#legacy-pegout-paths}
+
+The retired PowPeg App used different derivation paths when you connected a Ledger or Trezor directly to it. If you made your peg-out that way, use this account-level path in Step 8 instead of `m/44'/60'/0'`:
+
+```text
+Mainnet: m/44'/137'/0'
+Testnet: m/44'/37310'/0'
+```
+
+The PowPeg App showed the full path of the account you selected, such as `m/44'/137'/0'/0/0`. Compare the addresses in Electrum with the destination Bitcoin address of your peg-out to find the one that received your BTC.
+
+If you connected your hardware wallet through MetaMask instead, these paths don't apply. Your peg-out used the account you added to MetaMask, so use the account-level part of the HD path you chose there. For the BIP44 standard path, that's the `m/44'/60'/0'` path in Step 8.
+
+All other steps on this page stay the same.
 
 ### Hardware wallet passphrase in Electrum
 
@@ -94,11 +115,11 @@ Enter the same passphrase you used on the device when you signed the native pego
 Your BTC may have arrived even when Electrum shows a zero balance. Work through these checks in order:
 
 1. Confirm the transaction on a bitcoin block explorer using the destination Bitcoin address from Atlas' transaction status.
-2. Confirm the custom derivation path in Electrum is `m/44'/60'/0'` (see Step 8 preceding).
+2. Confirm the custom derivation path in Electrum is `m/44'/60'/0'` (see Step 8 preceding). For a peg-out made with a hardware wallet connected directly to the PowPeg App, use the path in [Peg-outs made with the PowPeg App](#legacy-pegout-paths).
 3. If you don't use a BIP39 passphrase on your device, leave the Electrum passphrase fields empty.
 4. If you use a passphrase on your device, enter the same value in Electrum.
 5. If the balance is still wrong, delete the Electrum wallet file and repeat the steps in this section with the correct passphrase and path.
 
 :::warning[Funds are tied to the passphrase]
-If you signed the native pegout with an empty passphrase but opened Electrum with a passphrase (or the reverse), you are viewing a different wallet. Your BTC is not lost — find the address on a block explorer and match the passphrase and path you used when signing.
+If you signed the native pegout with an empty passphrase but opened Electrum with a passphrase (or the reverse), you are viewing a different wallet. Your BTC isn't lost. Find the address on a block explorer and match the passphrase and path you used when signing.
 :::
