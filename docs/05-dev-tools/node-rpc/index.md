@@ -78,6 +78,14 @@ Here you can find a list of RPC node providers on Rootstock. The default RPC pro
     linkHref="/dev-tools/node-rpc/node101/"
     linkTitle="Request RPC access"
   />
+  <CardsGridItem
+    title="SolidRPC"
+    subtitle="node-rpc"
+    color="cyan"
+    description="Connect to Rootstock Mainnet or Testnet over HTTPS using an API key."
+    linkHref="https://solidrpc.io/docs/chains/rootstock"
+    linkTitle="Read RPC documentation"
+  />
 </CardsGrid>
 
 ## Compare RPC Provider Latency
