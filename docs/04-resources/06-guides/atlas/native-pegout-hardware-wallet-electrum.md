@@ -9,7 +9,7 @@ tags: [rsk, rootstock, bridge, atlas, powpeg]
 This guide explains how to find and access the Bitcoin address that receives your funds after a **native pegout** on [Atlas Bridge](https://atlas.rootstock.io), using a hardware wallet and Electrum.
 
 :::info[Peg-out made with the PowPeg App?]
-The retired PowPeg App used a different derivation path for hardware wallets. If you made your peg-out there, follow this guide with the path in [Peg-outs made with the PowPeg App](#legacy-pegout-paths).
+The retired PowPeg App used a different derivation path when you connected a Ledger or Trezor directly to it. If you made your peg-out that way, follow this guide with the path in [Peg-outs made with the PowPeg App](#legacy-pegout-paths).
 :::
 
 ## Why derive the address using Electrum?
@@ -69,7 +69,7 @@ Custom derivation path:
 m/44'/60'/0'
 ```
 
-> NOTE: For a peg-out made in the PowPeg App, use the path in [Peg-outs made with the PowPeg App](#legacy-pegout-paths) instead.
+> NOTE: For a peg-out made with a Ledger or Trezor connected directly to the PowPeg App, use the path in [Peg-outs made with the PowPeg App](#legacy-pegout-paths) instead.
 
 :::note[Account path vs. full address path]
 Electrum asks for the **account-level** path (`m/44'/60'/0'`), then browses the `/0/0`, `/0/1`, etc. addresses under it. Your native pegout destination address is at index `/0/0`, so it should be the first address Electrum shows.
@@ -83,7 +83,7 @@ Electrum asks for the **account-level** path (`m/44'/60'/0'`), then browses the 
 
 ### Peg-outs made with the PowPeg App {#legacy-pegout-paths}
 
-The retired PowPeg App used different derivation paths for hardware wallet peg-outs. If you made your peg-out in the PowPeg App, use this account-level path in Step 8 instead of `m/44'/60'/0'`:
+The retired PowPeg App used different derivation paths when you connected a Ledger or Trezor directly to it. If you made your peg-out that way, use this account-level path in Step 8 instead of `m/44'/60'/0'`:
 
 ```text
 Mainnet: m/44'/137'/0'
@@ -91,6 +91,8 @@ Testnet: m/44'/37310'/0'
 ```
 
 The PowPeg App showed the full path of the account you selected, such as `m/44'/137'/0'/0/0`. Compare the addresses in Electrum with the destination Bitcoin address of your peg-out to find the one that received your BTC.
+
+If you connected your hardware wallet through MetaMask instead, these paths don't apply. Your peg-out used the account you added to MetaMask, so use the account-level part of the HD path you chose there. For the BIP44 standard path, that's the `m/44'/60'/0'` path in Step 8.
 
 All other steps on this page stay the same.
 
@@ -113,7 +115,7 @@ Enter the same passphrase you used on the device when you signed the native pego
 Your BTC may have arrived even when Electrum shows a zero balance. Work through these checks in order:
 
 1. Confirm the transaction on a bitcoin block explorer using the destination Bitcoin address from Atlas' transaction status.
-2. Confirm the custom derivation path in Electrum is `m/44'/60'/0'` (see Step 8 preceding). For a peg-out made in the PowPeg App, use the path in [Peg-outs made with the PowPeg App](#legacy-pegout-paths).
+2. Confirm the custom derivation path in Electrum is `m/44'/60'/0'` (see Step 8 preceding). For a peg-out made with a hardware wallet connected directly to the PowPeg App, use the path in [Peg-outs made with the PowPeg App](#legacy-pegout-paths).
 3. If you don't use a BIP39 passphrase on your device, leave the Electrum passphrase fields empty.
 4. If you use a passphrase on your device, enter the same value in Electrum.
 5. If the balance is still wrong, delete the Electrum wallet file and repeat the steps in this section with the correct passphrase and path.
