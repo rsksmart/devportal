@@ -52,7 +52,7 @@
     "docusaurus-plugin-sass": "^0.2.6",
     "flowise-embed": "^3.1.6",
     "jssha": "^3.3.1",
-    "katex": "^0.16.11",
+    "katex": "^0.18.2",
     "mermaid-diagram-pan-zoom": "^1.7.0",
     "prism-react-renderer": "^2.3.0",
     "qr-code-styling": "^1.9.2",
@@ -68,7 +68,7 @@
     "@docusaurus/types": "^3.10.2",
     "docusaurus-plugin-llms": "^0.3.0",
     "dotenv": "16.4.7",
-    "js-yaml": "^4.3.2",
+    "js-yaml": "^5.4.1",
     "linkinator": "^7.5.3",
     "remark-frontmatter": "^5.0.0",
     "remark-gfm": "^4.0.0",
@@ -80,12 +80,12 @@
   "overrides": {
     "seroval": "^1.6.2",
     "solid-js": "^1.9.15",
-    "multer": "^2.2.0"
+    "multer": "^2.4.0"
   },
   "resolutions": {
     "seroval": "^1.6.2",
     "solid-js": "^1.9.15",
-    "multer": "^2.2.0"
+    "multer": "^2.4.0"
   },
   "browserslist": {
     "production": [
