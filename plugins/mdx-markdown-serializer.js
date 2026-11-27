@@ -151,6 +151,101 @@ function cardListItem(node) {
   };
 }
 
+const REMIX_HOME = 'https://remix.ethereum.org/';
+const REMIX_GUIDE = '/developers/quickstart/remix/';
+// Same file the component opens when a button has no props.
+// Keep in sync with DEFAULT_CONTRACT_URL in src/components/RemixLaunchButton/index.js.
+const REMIX_DEFAULT_CONTRACT_URL =
+  'https://github.com/rsksmart/rootstock-quick-start-guide/blob/145b60800105f2e1c9be05f006a4cd646f43b82d/contracts/MyToken.sol';
+
+/** Returns the identifier passed to an expression prop such as `code={fooSource}`. */
+function attrIdentifier(node, name) {
+  const found = (node.attributes || []).find(
+    (a) => a.type === 'mdxJsxAttribute' && a.name === name,
+  );
+  if (!found || !found.value || typeof found.value !== 'object') return null;
+  const first = (found.value.data?.estree?.body || [])[0];
+  if (
+    first?.type === 'ExpressionStatement' &&
+    first.expression?.type === 'Identifier'
+  ) {
+    return first.expression.name;
+  }
+  return null;
+}
+
+/**
+ * Turns <RemixLaunchButton> into one readable paragraph. A contract held in a
+ * template-literal constant is already printed on the page, so the export gives
+ * the steps instead of a base64 deep link that would only add bytes. Every
+ * code button follows its own <CodeBlock>, so "shown above" holds. A button
+ * that points at a file URL or a prebuilt deep link keeps that link. A button
+ * with no source props links to the component's default contract file.
+ */
+function remixParagraph(node, constants) {
+  const deepLink = attr(node, 'deepLink');
+  const contractUrl = attr(node, 'contractUrl');
+  const identifier = attrIdentifier(node, 'code');
+  const code =
+    identifier && constants.has(identifier) ? constants.get(identifier) : null;
+  const declared = code
+    ? /^\s*(?:abstract\s+)?contract\s+([A-Za-z_]\w*)/m.exec(code)
+    : null;
+  const hasCode = (node.attributes || []).some(
+    (a) => a.type === 'mdxJsxAttribute' && a.name === 'code',
+  );
+  // With no source props, the component opens its default file, so the label
+  // names that file rather than any `contractName` passed alongside.
+  const usesDefault = !contractUrl && !deepLink && !hasCode;
+  const fileUrl = contractUrl || (usesDefault ? REMIX_DEFAULT_CONTRACT_URL : null);
+  const fileName = /([A-Za-z0-9_]+)\.sol\b/.exec(deepLink || fileUrl || '');
+  const label = usesDefault
+    ? fileName[1]
+    : (declared && declared[1]) ||
+      attr(node, 'contractName') ||
+      (fileName && fileName[1]) ||
+      'the contract';
+  const url = deepLink || (fileUrl ? `${REMIX_HOME}#url=${fileUrl}` : null);
+
+  const children = [
+    {type: 'strong', children: [{type: 'text', value: 'Try in Remix IDE:'}]},
+    {type: 'text', value: ' '},
+  ];
+  if (url) {
+    children.push({
+      type: 'link',
+      url,
+      children: [{type: 'text', value: `Open ${label} in Remix`}],
+    });
+    children.push({type: 'text', value: '. '});
+  } else {
+    children.push({type: 'text', value: 'open '});
+    children.push({
+      type: 'link',
+      url: REMIX_HOME,
+      children: [{type: 'text', value: 'Remix'}],
+    });
+    children.push({type: 'text', value: ', create '});
+    children.push({type: 'inlineCode', value: `${label}.sol`});
+    children.push({
+      type: 'text',
+      value: ', and paste the contract code shown above. ',
+    });
+  }
+  children.push({
+    type: 'text',
+    value:
+      'Deploy to Rootstock Testnet with the Injected Provider - MetaMask environment. Setup steps are in the ',
+  });
+  children.push({
+    type: 'link',
+    url: REMIX_GUIDE,
+    children: [{type: 'text', value: 'Remix guide'}],
+  });
+  children.push({type: 'text', value: '.'});
+  return {type: 'paragraph', children};
+}
+
 /**
  * Rewrites a list of mdast nodes, replacing JSX elements with markdown
  * equivalents. Returns an array because one node can expand into several.
@@ -285,6 +380,11 @@ function transform(nodes, constants = new Map()) {
         continue;
       }
       out.push(...transform(node.children, constants));
+      continue;
+    }
+
+    if (name === 'RemixLaunchButton') {
+      out.push(remixParagraph(node, constants));
       continue;
     }
 
